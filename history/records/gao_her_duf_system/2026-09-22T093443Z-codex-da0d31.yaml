@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_her_duf_system.yaml
+  slug: gao_her_duf_system
+session:
+  id: 2026-09-22T093443Z-codex-da0d31
+  timestamp: '2026-09-22T09:34:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Gao-Her-DUF phage-defense system trait
+  details: Added traitmech:000361 for the DefenseFinder Gao_Her_DUF two-profile phage-defense
+    subsystem, reserved METPO:1031500 in proposals/metpo_traitmech_v238, recorded Gao et al.
+    and pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap discussion
+    for unresolved Her-DUF host, trigger, and effector details.

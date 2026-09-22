@@ -1,0 +1,159 @@
+identifier: traitmech:000361
+label: Gao-Her-DUF system
+definition: A phage defense system in which an organism possesses a Gao_Her_DUF locus
+  represented by DefenseFinder as a two-profile model requiring Gao_Her_DUF__DUF4297
+  and Gao_Her_DUF__HerA_DUF.
+definition_source: DOI:10.1126/science.aba0372
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Gao_Her_DUF
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Gao_Her_DUF__DUF4297
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Gao_Her_DUF__HerA_DUF
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:32855333
+  snippet: By systematic defense gene prediction and heterologous reconstitution,
+    here we discover 29 widespread antiviral gene cassettes, collectively present
+    in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.
+  notes: Gao et al. support a systematic defense-gene prediction and heterologous
+    reconstitution campaign that discovered widespread antiviral gene cassettes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Gao_Her | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes
+  notes: The DefenseFinder article registry maps the broader Gao_Her family key to
+    the Gao et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Gao_Her\tGao_Her_DUF\t2\t2\tGao_Her_DUF__DUF4297, Gao_Her_DUF__HerA_DUF"
+  notes: The DefenseFinder rules table models Gao_Her_DUF as a two-profile system
+    requiring Gao_Her_DUF__DUF4297 and Gao_Her_DUF__HerA_DUF.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_Her_DUF__DUF4297                             | Gao_Her_DUF__DUF4297                             |
+    Gao_Her_DUF            | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Gao_Her_DUF__DUF4297 under Gao_Her_DUF.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_Her_DUF__HerA_DUF                            | Gao_Her_DUF__HerA_DUF                            |
+    Gao_Her_DUF            | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Gao_Her_DUF__HerA_DUF under Gao_Her_DUF.
+causal_graphs:
+- graph_id: gao_her_duf_locus_restricts_phage
+  title: Gao-Her-DUF loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Gao_Her_DUF
+    locus to Gao et al. antiviral cassette defense without asserting the unresolved
+    Her-DUF component activities.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Gao-Her-DUF as a named DefenseFinder two-profile
+    Gao-family system while leaving natural hosts, DUF4297/HerA_DUF protein functions,
+    phage triggers, and direct effector activity unresolved.
+  nodes:
+  - node_id: gao_her_duf_locus
+    label: Gao_Her_DUF locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Gao_Her_DUF phage-defense locus represented by custom
+      DUF4297 and HerA_DUF profiles.
+  - node_id: gao_2020_antiviral_cassette_defense
+    label: Gao 2020 antiviral cassette defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage protection by one of the antiviral gene cassettes described
+      in the Gao et al. systematic defense-gene discovery campaign.
+  - node_id: gao_her_duf_system_trait
+    label: Gao-Her-DUF system
+    node_type: TRAIT
+    grounding: traitmech:000361
+    description: Possession of a genome-encoded Gao-Her-DUF phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gao_her_duf_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_2020_antiviral_cassette_defense
+    description: DefenseFinder maps the broader Gao_Her family key to the Gao et al.
+      systematic antiphage-system discovery paper and models Gao_Her_DUF as a two-profile
+      system requiring DUF4297 and HerA_DUF.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_Her | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the broader Gao_Her family key
+        to the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Her\tGao_Her_DUF\t2\t2\tGao_Her_DUF__DUF4297, Gao_Her_DUF__HerA_DUF"
+      notes: The DefenseFinder rules table models Gao_Her_DUF as a two-profile system
+        requiring Gao_Her_DUF__DUF4297 and Gao_Her_DUF__HerA_DUF.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Her_DUF__DUF4297                             | Gao_Her_DUF__DUF4297                             |
+        Gao_Her_DUF            | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Gao_Her_DUF__DUF4297 under Gao_Her_DUF.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Her_DUF__HerA_DUF                            | Gao_Her_DUF__HerA_DUF                            |
+        Gao_Her_DUF            | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Gao_Her_DUF__HerA_DUF under Gao_Her_DUF.
+  - subject: gao_2020_antiviral_cassette_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gao_her_duf_system_trait
+    description: Gao_Her_DUF-associated antiviral cassette defense realizes the Gao-Her-DUF
+      system trait.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+  - subject: gao_her_duf_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Gao-Her-DUF system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Her\tGao_Her_DUF\t2\t2\tGao_Her_DUF__DUF4297, Gao_Her_DUF__HerA_DUF"
+      notes: The DefenseFinder rules table models Gao_Her_DUF as a two-profile system
+        requiring Gao_Her_DUF__DUF4297 and Gao_Her_DUF__HerA_DUF.
+discussions:
+- discussion_id: gao-her-duf-mechanism-gap
+  prompt: Resolve Gao_Her_DUF natural hosts, DUF4297/HerA_DUF component functions,
+    phage triggers, and effector activity before minting narrower Gao_Her_DUF mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support widespread antiviral gene cassettes that mediate protection
+    against specific bacteriophages, and DefenseFinder models Gao_Her_DUF as a two-profile
+    system under the Gao_Her family key. The exact natural host breadth, DUF4297/HerA_DUF
+    component identities, phage trigger, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#gao_her_duf_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T09:33:34Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Gao-Her-DUF system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v238.
+  llm_assisted: true
