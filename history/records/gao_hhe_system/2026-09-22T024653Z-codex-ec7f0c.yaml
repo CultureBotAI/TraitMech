@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_hhe_system.yaml
+  slug: gao_hhe_system
+session:
+  id: 2026-09-22T024653Z-codex-ec7f0c
+  timestamp: '2026-09-22T02:46:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Hhe system
+  details: Minted traitmech:000353 for the DefenseFinder-backed Gao-Hhe system under phage
+    defense system with Gao et al. DOI/PMID evidence, pinned DefenseFinder article, rules,
+    and HMM registry evidence, a conservative nonmechanistic Gao-family graph, a mechanism-gap
+    discussion, and proposal metpo_traitmech_v230 reserving METPO:1030700 for upstream adoption.
