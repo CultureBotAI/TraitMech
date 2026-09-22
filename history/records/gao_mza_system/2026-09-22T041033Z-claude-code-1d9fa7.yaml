@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_mza_system.yaml
+  slug: gao_mza_system
+session:
+  id: 2026-09-22T041033Z-claude-code-1d9fa7
+  timestamp: '2026-09-22T04:10:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Mza system
+  details: Minted traitmech:000355 for the DefenseFinder-backed Gao-Mza system under phage
+    defense system with Gao et al. DOI/PMID evidence, pinned DefenseFinder article, rules,
+    and HMM registry evidence for five Gao_Mza profiles, a conservative nonmechanistic Gao-family
+    graph, a mechanism-gap discussion, and proposal metpo_traitmech_v232 reserving METPO:1030900
+    for upstream adoption.
