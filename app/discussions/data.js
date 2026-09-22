@@ -2100,6 +2100,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/mokosh_system.html#mokosh-mechanism-gap"
  },
  {
+  "discussion_id": "mqsrac-breadth-and-profile-gap",
+  "prompt": "Resolve MqsRAC natural phage breadth, phage-activation signals, the exact DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and cooperating restriction/modification contexts before minting narrower MqsRAC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MqsRAC system",
+  "source_id": "traitmech:000368",
+  "source_file": "mqsrac_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mqsrac_locus_promotes_persister_phage_defense"
+  ],
+  "rationale": "Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an Escherichia coli C496_10 toxin-antitoxin-chaperone system that inhibits T2 phage through persister-cell formation and in concert with restriction/modification systems, while DefenseFinder models MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth, the phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model, and cooperating restriction/modification contexts remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "PMID:38054715"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mqsrac_system.html#mqsrac-breadth-and-profile-gap"
+ },
+ {
   "discussion_id": "nantosuelta-mechanism-gap",
   "prompt": "Resolve Nantosuelta phage triggers and effector outputs before minting narrower Nantosuelta mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4359,9 +4380,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 237,
- "total_knowledge_gaps": 155,
- "total_source_entries": 235,
+ "total_discussions": 238,
+ "total_knowledge_gaps": 156,
+ "total_source_entries": 236,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

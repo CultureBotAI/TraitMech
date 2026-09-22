@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mqsrac_system.yaml
+  slug: mqsrac_system
+session:
+  id: 2026-09-22T150400Z-codex-c9d53a
+  timestamp: '2026-09-22T15:04:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add MqsRAC system genomics trait
+  details: Minted traitmech:000368 for MqsRAC system as a DOI-backed GENOMICS TraitRecord
+    under phage defense system. The record captures MqsR/MqsA/MqsC as an Escherichia coli
+    C496_10 toxin-antitoxin-chaperone phage-defense system, uses Fernandez-Garcia et al. for
+    T2 inhibition and persister-cell evidence, pins the DefenseFinder article, rule, and HMM
+    rows for the MqsRAC namespace, leaves phage breadth and profile-to-activity details open
+    as a knowledge gap, and reserves METPO:1032200 in proposals/metpo_traitmech_v245.
