@@ -60,8 +60,8 @@ evidence:
     RloC                   | Custom                  | 120    |'
   notes: The DefenseFinder HMM inventory records RloC__RloC under RloC.
 causal_graphs:
-- graph_id: rloc_locus_triggers_dna_break_responsive_acnase
-  title: RloC loci encode DNA-break-responsive anticodon nuclease activity
+- graph_id: rloc_locus_triggers_dna_break_responsive_activation
+  title: RloC loci encode DNA-break-responsive activation
   description: Conservative system-level sketch linking possession of a DefenseFinder
     RloC locus to DNA-break-responsive RloC anticodon nuclease activation without
     asserting natural host breadth, the endogenous phage trigger, or exact RloC profile-to-activity
@@ -76,11 +76,11 @@ causal_graphs:
     node_type: GENETIC_ELEMENT
     description: A DefenseFinder RloC phage-defense locus represented by the RloC__RloC
       profile.
-  - node_id: dna_break_responsive_rloc_acnase
-    label: DNA-break-responsive RloC anticodon nuclease activity
+  - node_id: dna_break_responsive_rloc_activation
+    label: DNA-break-responsive RloC activation
     node_type: BIOLOGICAL_PROCESS
-    description: RloC anticodon nuclease activation by double-stranded DNA breaks,
-      causing wobble nucleotide excision from tRNA.
+    description: Activation of RloC anticodon nuclease activity by double-stranded
+      DNA breaks, causing wobble nucleotide excision from tRNA.
   - node_id: rloc_system_trait
     label: RloC system
     node_type: TRAIT
@@ -96,7 +96,7 @@ causal_graphs:
   - subject: rloc_locus
     predicate: contributes to
     predicate_id: RO:0002326
-    object: dna_break_responsive_rloc_acnase
+    object: dna_break_responsive_rloc_activation
     description: RloC encodes a wobble nucleotide-excising anticodon nuclease, Acinetobacter
       baylyi RloC responds to T4 host DNA degradation when expressed in Escherichia
       coli, and DefenseFinder models RloC as a one-profile system.
@@ -131,7 +131,7 @@ causal_graphs:
       snippet: '| RloC__RloC                                       | RloC__RloC                                       |
         RloC                   | Custom                  | 120    |'
       notes: The DefenseFinder HMM inventory records RloC__RloC under RloC.
-  - subject: dna_break_responsive_rloc_acnase
+  - subject: dna_break_responsive_rloc_activation
     predicate: confers
     predicate_id: METPO:2007700
     object: rloc_system_trait
@@ -148,8 +148,9 @@ causal_graphs:
       snippet: Nonetheless, T4's plating efficiency was inefficiently impaired by
         AbaRloC, presumably due to a decoy function of the phage encoded tRNA target,
         the absence of which exacerbated the restriction.
-      notes: Bitton et al. support RloC-mediated restriction in a phage T4 expression
-        assay.
+      notes: Bitton et al. report that Acinetobacter baylyi RloC inefficiently impairs
+        wild-type T4 plating and more strongly restricts a phage mutant lacking the
+        decoy tRNA target.
   - subject: rloc_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -186,7 +187,7 @@ discussions:
     notes: Bitton et al. leave the natural role of conserved bacterial RloC unknown
       while comparing it to the phage T4-excluding PrrC ACNase.
   attaches_to:
-  - causal_graphs#rloc_locus_triggers_dna_break_responsive_acnase
+  - causal_graphs#rloc_locus_triggers_dna_break_responsive_activation
   posed_by: codex
   posed_date: '2026-09-22'
 curation_history:

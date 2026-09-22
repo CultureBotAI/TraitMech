@@ -2555,7 +2555,7 @@ window.searchData = [
   "source_id": "traitmech:000366",
   "source_file": "rloc_system.yaml",
   "attaches_to": [
-   "causal_graphs#rloc_locus_triggers_dna_break_responsive_acnase"
+   "causal_graphs#rloc_locus_triggers_dna_break_responsive_activation"
   ],
   "rationale": "Davidov and Kaufmann support RloC as a bacterial wobble nucleotide-excising tRNase, Bitton et al. show that Acinetobacter baylyi RloC responds to phage T4 host DNA degradation in an Escherichia coli expression context, and DefenseFinder models RloC as a one-profile system with an RloC__RloC marker. Natural host breadth, native phage triggers, restriction strength, and profile-to-activity mapping remain unresolved.",
   "num_experiments": 0,

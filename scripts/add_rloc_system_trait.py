@@ -194,8 +194,8 @@ RECORD: dict[str, Any] = {
     ],
     "causal_graphs": [
         {
-            "graph_id": "rloc_locus_triggers_dna_break_responsive_acnase",
-            "title": "RloC loci encode DNA-break-responsive anticodon nuclease activity",
+            "graph_id": "rloc_locus_triggers_dna_break_responsive_activation",
+            "title": "RloC loci encode DNA-break-responsive activation",
             "description": (
                 "Conservative system-level sketch linking possession of a "
                 "DefenseFinder RloC locus to DNA-break-responsive RloC "
@@ -221,11 +221,11 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "dna_break_responsive_rloc_acnase",
-                    "label": "DNA-break-responsive RloC anticodon nuclease activity",
+                    "node_id": "dna_break_responsive_rloc_activation",
+                    "label": "DNA-break-responsive RloC activation",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "RloC anticodon nuclease activation by "
+                        "Activation of RloC anticodon nuclease activity by "
                         "double-stranded DNA breaks, causing wobble "
                         "nucleotide excision from tRNA."
                     ),
@@ -256,7 +256,7 @@ RECORD: dict[str, Any] = {
                     "subject": "rloc_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "dna_break_responsive_rloc_acnase",
+                    "object": "dna_break_responsive_rloc_activation",
                     "description": (
                         "RloC encodes a wobble nucleotide-excising anticodon "
                         "nuclease, Acinetobacter baylyi RloC responds to T4 "
@@ -298,7 +298,7 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "dna_break_responsive_rloc_acnase",
+                    "subject": "dna_break_responsive_rloc_activation",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": f"{SLUG}_system_trait",
@@ -320,8 +320,10 @@ RECORD: dict[str, Any] = {
                             "reference": BITTON_PMID,
                             "snippet": T4_RESTRICTION_SNIPPET,
                             "notes": (
-                                "Bitton et al. support RloC-mediated "
-                                "restriction in a phage T4 expression assay."
+                                "Bitton et al. report that Acinetobacter "
+                                "baylyi RloC inefficiently impairs wild-type "
+                                "T4 plating and more strongly restricts a "
+                                "phage mutant lacking the decoy tRNA target."
                             ),
                         },
                     ],
@@ -376,7 +378,7 @@ RECORD: dict[str, Any] = {
                 }
             ],
             "attaches_to": [
-                "causal_graphs#rloc_locus_triggers_dna_break_responsive_acnase"
+                "causal_graphs#rloc_locus_triggers_dna_break_responsive_activation"
             ],
             "posed_by": CURATOR,
             "posed_date": "2026-09-22",
