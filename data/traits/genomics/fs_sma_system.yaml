@@ -1,0 +1,150 @@
+identifier: traitmech:000351
+label: FS-Sma system
+definition: A phage defense system in which an organism possesses an FS_Sma locus
+  represented by DefenseFinder as a single-profile model requiring FS_Sma__Sma.
+definition_source: DOI:10.1016/j.cell.2022.07.014
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: FS_Sma
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: FS_Sma__Sma
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:35985290
+  snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal
+    of defense mechanisms
+  notes: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of mobile-element defense mechanisms.
+- reference: PMID:35985290
+  snippet: These defense systems provide broad immunity, blocking not only phage reproduction,
+    but also plasmid and non-cognate PICI transfer.
+  notes: Fillol-Salom et al. support PICI-encoded defense systems as broad immunity
+    determinants against phage reproduction and other mobile genetic element transfer.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: FS_Sma | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+    mobilizing pathogenicity islands encoding immune systems against competitors
+  notes: The DefenseFinder article registry maps the named FS_Sma system to the Fillol-Salom
+    et al. PICI defense-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "FS_Sma\tFS_Sma\t1\t1\tFS_Sma__Sma"
+  notes: The DefenseFinder rules table models FS_Sma as a single-profile system requiring
+    the FS_Sma__Sma profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| FS_Sma__Sma                                      | FS_Sma__Sma                                      |
+    FS_Sma                 | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records FS_Sma__Sma under FS_Sma.
+causal_graphs:
+- graph_id: fs_sma_locus_restricts_phage
+  title: FS-Sma loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an FS_Sma locus
+    to broad mobile-element defense without asserting the unresolved phage trigger
+    or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures FS-Sma as a named DefenseFinder single-profile system
+    in the Fillol-Salom PICI defense family while leaving its natural host breadth,
+    helper-phage trigger, Sma component identity, and direct effector activity unresolved.
+  nodes:
+  - node_id: fs_sma_locus
+    label: FS_Sma locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder FS_Sma phage-defense locus represented by a custom
+      FS_Sma__Sma profile.
+  - node_id: pici_encoded_mobile_element_defense
+    label: PICI-encoded mobile-element defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Defense by phage-inducible chromosomal island loci against phage
+      reproduction, plasmid transfer, or non-cognate PICI transfer.
+  - node_id: fs_sma_system_trait
+    label: FS-Sma system
+    node_type: TRAIT
+    grounding: traitmech:000351
+    description: Possession of a genome-encoded FS-Sma phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: fs_sma_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pici_encoded_mobile_element_defense
+    description: DefenseFinder maps FS_Sma to the Fillol-Salom et al. PICI-encoded
+      immunity study and models it as a single-profile system requiring a custom FS_Sma__Sma
+      profile.
+    evidence:
+    - reference: PMID:35985290
+      snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive
+        arsenal of defense mechanisms
+      notes: Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element
+        defense mechanisms.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_Sma | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+        mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_Sma system to the
+        Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_Sma\tFS_Sma\t1\t1\tFS_Sma__Sma"
+      notes: The DefenseFinder rules table models FS_Sma as a single-profile system
+        requiring the FS_Sma__Sma profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| FS_Sma__Sma                                      | FS_Sma__Sma                                      |
+        FS_Sma                 | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records FS_Sma__Sma under FS_Sma.
+  - subject: pici_encoded_mobile_element_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: fs_sma_system_trait
+    description: FS_Sma-associated mobile-element defense realizes the FS-Sma system
+      trait.
+    evidence:
+    - reference: PMID:35985290
+      snippet: These defense systems provide broad immunity, blocking not only phage
+        reproduction, but also plasmid and non-cognate PICI transfer.
+      notes: Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element
+        immunity determinants.
+  - subject: fs_sma_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: FS-Sma system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_Sma | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+        mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_Sma system to the
+        Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_Sma\tFS_Sma\t1\t1\tFS_Sma__Sma"
+      notes: The DefenseFinder rules table models FS_Sma as a single-profile system
+        requiring the FS_Sma__Sma profile.
+discussions:
+- discussion_id: fs-sma-mechanism-gap
+  prompt: Resolve FS_Sma natural hosts, helper-phage triggers, Sma component identity,
+    and effector activity before minting narrower FS_Sma mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of defense systems that provide broad immunity, and DefenseFinder models FS_Sma
+    as a single-profile system. Its exact natural host breadth, helper-phage trigger,
+    component identity, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#fs_sma_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T00:54:34Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted FS-Sma system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v228.
+  llm_assisted: true

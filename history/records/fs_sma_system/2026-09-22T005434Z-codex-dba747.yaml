@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fs_sma_system.yaml
+  slug: fs_sma_system
+session:
+  id: 2026-09-22T005434Z-codex-dba747
+  timestamp: '2026-09-22T00:54:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add FS-Sma system trait
+  details: Minted traitmech:000351 for the DefenseFinder-backed FS-Sma system under phage
+    defense system with DOI-backed evidence from Fillol-Salom et al., pinned DefenseFinder
+    article, rules, and HMM registry evidence, a conservative nonmechanistic causal graph,
+    an open mechanism-gap discussion, and proposal metpo_traitmech_v228 reserving METPO:1030500
+    for upstream adoption.
