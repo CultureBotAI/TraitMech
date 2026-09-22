@@ -2398,6 +2398,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/prometheus_system.html#prometheus-mechanism-gap"
  },
  {
+  "discussion_id": "prrc-mechanism-gap",
+  "prompt": "Resolve natural PrrC homolog substrate specificity, exact EcoprrI accessory composition and profile matching, and phage trigger logic before minting narrower PrrC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PrrC system",
+  "source_id": "traitmech:000364",
+  "source_file": "prrc_system.yaml",
+  "attaches_to": [
+   "causal_graphs#prrc_locus_restricts_t4_phage"
+  ],
+  "rationale": "Uzan et al. summarize PrrC as a T4 phage-exclusion system, Blanga-Kanfi et al. support PrrC and EcoprrI homologs as genetically linked restriction RNases, and DefenseFinder models PrrC as a two-profile system with EcoprrI and PrrC markers plus type I restriction-modification accessories. The natural substrates, accessory composition, and phage trigger logic remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/prrc_system.html#prrc-mechanism-gap"
+ },
+ {
   "discussion_id": "psyrta-mechanism-gap",
   "prompt": "Resolve PsyrTA phage triggers and effector outputs before minting narrower PsyrTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4277,9 +4296,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 233,
- "total_knowledge_gaps": 151,
- "total_source_entries": 231,
+ "total_discussions": 234,
+ "total_knowledge_gaps": 152,
+ "total_source_entries": 232,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

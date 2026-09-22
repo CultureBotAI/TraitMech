@@ -1,0 +1,220 @@
+identifier: traitmech:000364
+label: PrrC system
+definition: A phage defense system in which an organism possesses a PrrC locus represented
+  by DefenseFinder as a two-profile model requiring PrrC__EcoprrI and PrrC__PrrC,
+  with type I restriction-modification components accepted as accessory markers.
+definition_source: DOI:10.1186/1743-422X-7-360
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PrrC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: PrrC__EcoprrI
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PrrC__PrrC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:21129205
+  snippet: phage exclusion systems that involve T4-mediated activation of a latent
+    endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
+    (Gol-Lit)
+  notes: Uzan et al. name PrrC as a T4-mediated phage-exclusion system that activates
+    a latent endoribonuclease.
+- reference: PMID:16790566
+  snippet: The tRNA(Lys) anticodon nuclease PrrC is associated in latent form with
+    the type Ic DNA restriction endonuclease EcoprrI and activated by a phage T4-encoded
+    inhibitor of EcoprrI.
+  notes: Blanga-Kanfi et al. support latent PrrC association with the EcoprrI restriction
+    endonuclease and activation by a T4-encoded EcoprrI inhibitor.
+- reference: PMID:16790566
+  snippet: This triad exists in all the known PrrC homologs but only some of them
+    feature residues needed for tRNA(Lys) recognition by the Escherichia coli prototype.
+  notes: Blanga-Kanfi et al. support a family of PrrC homologs whose substrate-recognition
+    residues can differ from the Escherichia coli prototype.
+- reference: PMID:16790566
+  snippet: The differential conservation and consistent genetic linkage of the PrrC
+    proteins with EcoprrI homologs portray them as a family of restriction RNases
+    of diverse substrate specificities that are mobilized when an associated DNA restriction
+    nuclease is compromised.
+  notes: Blanga-Kanfi et al. support genetic linkage between PrrC proteins and EcoprrI
+    homologs as a restriction-RNase family mobilized when an associated restriction
+    nuclease is compromised.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'PrrC | 10\.1186/1743-422X-7-360 | Post-transcriptional control by bacteriophage
+    T4: mRNA decay and inhibition of translation initiation'
+  notes: The DefenseFinder article registry maps the named PrrC system to the Uzan
+    et al. T4 post-transcriptional-control review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PrrC\tPrrC\t2\t2\tPrrC__EcoprrI, PrrC__PrrC\tRM__Type_I_REases, RM__Type_I_S"
+  notes: The DefenseFinder rules table models PrrC as a two-profile system requiring
+    the PrrC__EcoprrI and PrrC__PrrC profiles, with type I restriction-modification
+    components as accessory markers.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PrrC__EcoprrI                                    | PrrC__EcoprrI                                    |
+    PrrC                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PrrC__EcoprrI under PrrC.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PrrC__PrrC                                       | PrrC__PrrC                                       |
+    PrrC                   | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records PrrC__PrrC under PrrC.
+causal_graphs:
+- graph_id: prrc_locus_restricts_t4_phage
+  title: PrrC loci confer T4 phage exclusion
+  description: Conservative system-level sketch linking possession of a PrrC locus
+    to T4-induced PrrC restriction-RNase defense without asserting the exact T4 trigger,
+    natural substrate, or accessory component logic.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PrrC as a named DefenseFinder two-profile phage-exclusion
+    system while leaving natural homolog substrate specificity, the exact EcoprrI
+    accessory composition and profile matching, the phage trigger logic, and PrrC
+    profile-to-activity mapping unresolved.
+  nodes:
+  - node_id: prrc_locus
+    label: PrrC locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder PrrC phage-defense locus represented by PrrC__EcoprrI
+      and PrrC__PrrC profiles.
+  - node_id: t4_induced_prrc_rnase_defense
+    label: T4-induced PrrC RNase defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Mobilization of a PrrC-family restriction RNase during bacteriophage
+      T4 interference with the associated EcoprrI restriction nuclease.
+  - node_id: prrc_system_trait
+    label: PrrC system
+    node_type: TRAIT
+    grounding: traitmech:000364
+    description: Possession of a genome-encoded PrrC phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: prrc_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t4_induced_prrc_rnase_defense
+    description: PrrC proteins are genetically linked with EcoprrI homologs and can
+      be mobilized when associated DNA restriction nucleases are compromised, and
+      DefenseFinder models PrrC as a two-profile system.
+    evidence:
+    - reference: PMID:21129205
+      snippet: phage exclusion systems that involve T4-mediated activation of a latent
+        endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
+        (Gol-Lit)
+      notes: Uzan et al. identify PrrC as a latent endonuclease participating in T4-mediated
+        phage exclusion.
+    - reference: PMID:16790566
+      snippet: The tRNA(Lys) anticodon nuclease PrrC is associated in latent form
+        with the type Ic DNA restriction endonuclease EcoprrI and activated by a phage
+        T4-encoded inhibitor of EcoprrI.
+      notes: Blanga-Kanfi et al. connect PrrC to EcoprrI and T4 inhibitor-triggered
+        activation.
+    - reference: PMID:16790566
+      snippet: The differential conservation and consistent genetic linkage of the
+        PrrC proteins with EcoprrI homologs portray them as a family of restriction
+        RNases of diverse substrate specificities that are mobilized when an associated
+        DNA restriction nuclease is compromised.
+      notes: Blanga-Kanfi et al. generalize PrrC homologs as EcoprrI-linked restriction
+        RNases.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'PrrC | 10\.1186/1743-422X-7-360 | Post-transcriptional control by
+        bacteriophage T4: mRNA decay and inhibition of translation initiation'
+      notes: The DefenseFinder article registry maps the named PrrC system to the
+        Uzan et al. T4 post-transcriptional-control review.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PrrC\tPrrC\t2\t2\tPrrC__EcoprrI, PrrC__PrrC\tRM__Type_I_REases, RM__Type_I_S"
+      notes: The DefenseFinder rules table models PrrC as a two-profile system requiring
+        the PrrC__EcoprrI and PrrC__PrrC profiles, with type I restriction-modification
+        components as accessory markers.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PrrC__EcoprrI                                    | PrrC__EcoprrI                                    |
+        PrrC                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PrrC__EcoprrI under PrrC.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PrrC__PrrC                                       | PrrC__PrrC                                       |
+        PrrC                   | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records PrrC__PrrC under PrrC.
+  - subject: t4_induced_prrc_rnase_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: prrc_system_trait
+    description: T4-induced PrrC RNase defense realizes the PrrC system trait.
+    evidence:
+    - reference: PMID:16790566
+      snippet: The tRNA(Lys) anticodon nuclease PrrC is associated in latent form
+        with the type Ic DNA restriction endonuclease EcoprrI and activated by a phage
+        T4-encoded inhibitor of EcoprrI.
+      notes: Blanga-Kanfi et al. support latent PrrC activation by a T4-encoded inhibitor
+        of EcoprrI.
+    - reference: PMID:16790566
+      snippet: The differential conservation and consistent genetic linkage of the
+        PrrC proteins with EcoprrI homologs portray them as a family of restriction
+        RNases of diverse substrate specificities that are mobilized when an associated
+        DNA restriction nuclease is compromised.
+      notes: Blanga-Kanfi et al. support broader mobilization of EcoprrI-linked PrrC-family
+        restriction RNases.
+  - subject: prrc_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PrrC system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'PrrC | 10\.1186/1743-422X-7-360 | Post-transcriptional control by
+        bacteriophage T4: mRNA decay and inhibition of translation initiation'
+      notes: The DefenseFinder article registry maps the named PrrC system to the
+        Uzan et al. T4 post-transcriptional-control review.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PrrC\tPrrC\t2\t2\tPrrC__EcoprrI, PrrC__PrrC\tRM__Type_I_REases, RM__Type_I_S"
+      notes: The DefenseFinder rules table models PrrC as a two-profile system requiring
+        the PrrC__EcoprrI and PrrC__PrrC profiles, with type I restriction-modification
+        components as accessory markers.
+discussions:
+- discussion_id: prrc-mechanism-gap
+  prompt: Resolve natural PrrC homolog substrate specificity, exact EcoprrI accessory
+    composition and profile matching, and phage trigger logic before minting narrower
+    PrrC mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Uzan et al. summarize PrrC as a T4 phage-exclusion system, Blanga-Kanfi
+    et al. support PrrC and EcoprrI homologs as genetically linked restriction RNases,
+    and DefenseFinder models PrrC as a two-profile system with EcoprrI and PrrC markers
+    plus type I restriction-modification accessories. The natural substrates, accessory
+    composition, and phage trigger logic remain unresolved.
+  attaches_to:
+  - causal_graphs#prrc_locus_restricts_t4_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T11:25:19Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PrrC system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v241.
+  llm_assisted: true
+- timestamp: '2026-09-22T11:39:03Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the PrrC canonical_examples gap and left canonical_examples empty:
+    the current evidence supports a named PrrC phage-exclusion system, the pinned
+    DefenseFinder PrrC profiles, and EcoprrI-linked PrrC homologs, but does not cite
+    a directly observed natural microbial taxon with a source-backed PrrC locus. No
+    paid research was used. Fixes #1247.'
+  llm_assisted: true
+- timestamp: '2026-09-22T11:42:52Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Resolved PR #1245 review issue #1249 by removing the bare EcoprrI component
+    name from PrrC system related synonyms while retaining the DefenseFinder PrrC__EcoprrI
+    profile name and Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs.'
+  llm_assisted: true

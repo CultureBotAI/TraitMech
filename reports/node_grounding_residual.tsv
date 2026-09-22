@@ -1483,6 +1483,8 @@ dna damage / replication stress	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/prop
 reca* nucleoprotein filament	GENE_OR_PROTEIN	1	data/traits/genomics/prophage.yaml
 phage-plasmid	GENETIC_ELEMENT	1	data/traits/genomics/prophage.yaml
 extrachromosomal prophage maintenance	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
+prrc locus	GENETIC_ELEMENT	1	data/traits/genomics/prrc_system.yaml
+t4-induced prrc rnase defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/prrc_system.yaml
 psyrta locus	GENETIC_ELEMENT	1	data/traits/genomics/psyrta_system.yaml
 pycsar locus	GENETIC_ELEMENT	1	data/traits/genomics/pycsar_system.yaml
 phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml

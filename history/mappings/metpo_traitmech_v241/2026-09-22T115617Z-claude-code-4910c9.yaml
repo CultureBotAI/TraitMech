@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: proposals/metpo_traitmech_v241/metpo_proposal_classes_robot.tsv
+  slug: metpo_traitmech_v241
+session:
+  id: 2026-09-22T115617Z-claude-code-4910c9
+  timestamp: '2026-09-22T11:56:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1250
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  - synonyms
+  summary: Narrow PrrC proposal related synonyms
+  details: 'Addressed PR #1245 review issue #1250 by removing the bare EcoprrI component name
+    from the PrrC METPO proposal related_synonyms column. The proposal now matches the curated
+    TraitRecord synonym scope and keeps only PrrC plus the pinned DefenseFinder PrrC__EcoprrI
+    and PrrC__PrrC profile names.'

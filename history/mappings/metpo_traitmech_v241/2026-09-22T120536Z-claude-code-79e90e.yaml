@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: proposals/metpo_traitmech_v241/proposal.md
+  slug: metpo_traitmech_v241
+session:
+  id: 2026-09-22T120536Z-claude-code-79e90e
+  timestamp: '2026-09-22T12:05:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1251
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  - synonyms
+  summary: Sync PrrC proposal synonym count
+  details: 'Addressed PR #1245 review issue #1251 by updating the PrrC METPO proposal narrative
+    from four related shifted labels to three. This keeps the proposal prose aligned with
+    the related_synonyms TSV value after bare EcoprrI was removed.'
