@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_ppl_system.yaml
+  slug: gao_ppl_system
+session:
+  id: 2026-09-22T062448Z-claude-code-f903fc
+  timestamp: '2026-09-22T06:24:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Ppl system
+  details: Minted traitmech:000356 for the DefenseFinder-backed Gao-Ppl system under phage
+    defense system with Gao et al. DOI/PMID evidence, pinned DefenseFinder article, rules,
+    and HMM registry evidence for the Gao_Ppl profile, a conservative nonmechanistic Gao-family
+    graph, a mechanism-gap discussion, and proposal metpo_traitmech_v233 reserving METPO:1031000
+    for upstream adoption.

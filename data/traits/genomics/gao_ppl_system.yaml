@@ -1,0 +1,150 @@
+identifier: traitmech:000356
+label: Gao-Ppl system
+definition: A phage defense system in which an organism possesses a Gao_Ppl locus
+  represented by DefenseFinder as a single-profile model requiring Gao_Ppl__PplA.
+definition_source: DOI:10.1126/science.aba0372
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Gao_Ppl
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Gao_Ppl__PplA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:32855333
+  snippet: By systematic defense gene prediction and heterologous reconstitution,
+    here we discover 29 widespread antiviral gene cassettes, collectively present
+    in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.
+  notes: Gao et al. support a systematic defense-gene prediction and heterologous
+    reconstitution campaign that discovered widespread antiviral gene cassettes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Gao_Ppl | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes
+  notes: The DefenseFinder article registry maps the named Gao_Ppl system to the Gao
+    et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Gao_Ppl\tGao_Ppl\t1\t1\tGao_Ppl__PplA"
+  notes: The DefenseFinder rules table models Gao_Ppl as a single-mandatory-profile
+    system with the Gao_Ppl__PplA profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_Ppl__PplA                                    | Gao_Ppl__PplA                                    |
+    Gao_Ppl                | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records Gao_Ppl__PplA under Gao_Ppl.
+causal_graphs:
+- graph_id: gao_ppl_locus_restricts_phage
+  title: Gao-Ppl loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Gao_Ppl locus
+    to Gao et al. antiviral cassette defense without asserting the unresolved PplA
+    component activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Gao-Ppl as a named DefenseFinder single-profile
+    Gao-family system while leaving natural hosts, PplA protein function, phage triggers,
+    and direct effector activity unresolved.
+  nodes:
+  - node_id: gao_ppl_locus
+    label: Gao_Ppl locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Gao_Ppl phage-defense locus represented by a custom
+      PplA profile.
+  - node_id: gao_2020_antiviral_cassette_defense
+    label: Gao 2020 antiviral cassette defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage protection by one of the antiviral gene cassettes described
+      in the Gao et al. systematic defense-gene discovery campaign.
+  - node_id: gao_ppl_system_trait
+    label: Gao-Ppl system
+    node_type: TRAIT
+    grounding: traitmech:000356
+    description: Possession of a genome-encoded Gao-Ppl phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gao_ppl_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_2020_antiviral_cassette_defense
+    description: DefenseFinder maps Gao_Ppl to the Gao et al. systematic antiphage-system
+      discovery paper and models it as a single-profile system requiring PplA.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_Ppl | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_Ppl system to the
+        Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Ppl\tGao_Ppl\t1\t1\tGao_Ppl__PplA"
+      notes: The DefenseFinder rules table models Gao_Ppl as a single-mandatory-profile
+        system with the Gao_Ppl__PplA profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Ppl__PplA                                    | Gao_Ppl__PplA                                    |
+        Gao_Ppl                | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records Gao_Ppl__PplA under Gao_Ppl.
+  - subject: gao_2020_antiviral_cassette_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gao_ppl_system_trait
+    description: Gao_Ppl-associated antiviral cassette defense realizes the Gao-Ppl
+      system trait.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+  - subject: gao_ppl_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Gao-Ppl system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_Ppl | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_Ppl system to the
+        Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Ppl\tGao_Ppl\t1\t1\tGao_Ppl__PplA"
+      notes: The DefenseFinder rules table models Gao_Ppl as a single-mandatory-profile
+        system with the Gao_Ppl__PplA profile.
+discussions:
+- discussion_id: gao-ppl-mechanism-gap
+  prompt: Resolve Gao_Ppl natural hosts, PplA component function, phage triggers,
+    and effector activity before minting narrower Gao_Ppl mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support widespread antiviral gene cassettes that mediate protection
+    against specific bacteriophages, and DefenseFinder models Gao_Ppl as a single-profile
+    system. The exact natural host breadth, PplA component identity, phage trigger,
+    and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#gao_ppl_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T06:23:08Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Gao-Ppl system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v233.
+  llm_assisted: true
