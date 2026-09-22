@@ -63,7 +63,7 @@ shifted from this organism-level GENOMICS possession trait.
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with no
-  exact synonyms, four related shifted labels, and no exact external xrefs.
+  exact synonyms, three related shifted labels, and no exact external xrefs.
 
 ## Upstream Path
 
