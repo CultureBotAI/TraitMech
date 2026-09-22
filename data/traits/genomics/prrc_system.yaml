@@ -205,11 +205,11 @@ curation_history:
 - timestamp: '2026-09-22T11:39:03Z'
   curator: codex
   action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
-  changes: 'Reviewed the PrrC canonical_examples gap and left canonical_examples
-    empty: the current evidence supports a named PrrC phage-exclusion system, the
-    pinned DefenseFinder PrrC profiles, and EcoprrI-linked PrrC homologs, but does
-    not cite a directly observed natural microbial taxon with a source-backed PrrC
-    locus. No paid research was used. Fixes #1247.'
+  changes: 'Reviewed the PrrC canonical_examples gap and left canonical_examples empty:
+    the current evidence supports a named PrrC phage-exclusion system, the pinned
+    DefenseFinder PrrC profiles, and EcoprrI-linked PrrC homologs, but does not cite
+    a directly observed natural microbial taxon with a source-backed PrrC locus. No
+    paid research was used. Fixes #1247.'
   llm_assisted: true
 - timestamp: '2026-09-22T11:42:52Z'
   curator: codex
