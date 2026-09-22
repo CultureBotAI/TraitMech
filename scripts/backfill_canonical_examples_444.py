@@ -875,6 +875,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/fs_hsdr_like_system",
     "genomics/fs_sma_system",
     "genomics/gao_her_duf_system",
+    "genomics/gao_her_sir_system",
     "genomics/gao_hhe_system",
     "genomics/gao_iet_system",
     "genomics/gao_mza_system",

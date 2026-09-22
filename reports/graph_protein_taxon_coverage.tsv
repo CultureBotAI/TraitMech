@@ -227,6 +227,7 @@ data/traits/genomics/fs_sma_system.yaml	traitmech:000351	FS-Sma system	fs_sma_lo
 data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_ape_system.yaml	traitmech:000334	ApeA system	gao_ape_hepn_rnase_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_her_duf_system.yaml	traitmech:000361	Gao-Her-DUF system	gao_her_duf_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gao_her_sir_system.yaml	traitmech:000362	Gao-Her-SIR system	gao_her_sir_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_hhe_system.yaml	traitmech:000353	Gao-Hhe system	gao_hhe_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_iet_system.yaml	traitmech:000354	Gao-Iet system	gao_iet_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_mza_system.yaml	traitmech:000355	Gao-Mza system	gao_mza_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

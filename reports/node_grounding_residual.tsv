@@ -1,7 +1,7 @@
 node_label	node_type	node_count	example_files
 restricted phage propagation	BIOLOGICAL_PROCESS	82	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
-gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	10	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml
+gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	11	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_hhe_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
@@ -1310,6 +1310,7 @@ abortive phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_sys
 phage genomic rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 non-abortive rna-phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 gao_her_duf locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_her_duf_system.yaml
+gao_her_sir locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_her_sir_system.yaml
 gao_hhe locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_hhe_system.yaml
 gao_iet locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_iet_system.yaml
 gao_mza locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_mza_system.yaml
