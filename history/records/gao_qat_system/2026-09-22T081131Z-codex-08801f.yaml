@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_qat_system.yaml
+  slug: gao_qat_system
+session:
+  id: 2026-09-22T081131Z-codex-08801f
+  timestamp: '2026-09-22T08:11:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Gao-Qat phage-defense system trait
+  details: Added traitmech:000359 for the DefenseFinder Gao_Qat four-profile phage-defense
+    system, reserved METPO:1031300 in proposals/metpo_traitmech_v236, recorded Gao et al.
+    and pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap discussion
+    for unresolved Qat host, trigger, and effector details.
