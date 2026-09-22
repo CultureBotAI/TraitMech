@@ -1692,6 +1692,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_rl_system.html#gao-rl-mechanism-gap"
  },
  {
+  "discussion_id": "gao-tery-mechanism-gap",
+  "prompt": "Resolve Gao_TerY natural hosts, TerY component functions, phage triggers, and effector activity before minting narrower Gao_TerY mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-TerY system",
+  "source_id": "traitmech:000360",
+  "source_file": "gao_tery_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_tery_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_TerY as a three-profile system. The exact natural host breadth, TerYA/TerYB/TerYC component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_tery_system.html#gao-tery-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-tmn-mechanism-gap",
   "prompt": "Resolve Gao_Tmn natural hosts, TmnA component function, phage triggers, and effector activity before minting narrower Gao_Tmn mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4201,9 +4220,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 229,
- "total_knowledge_gaps": 147,
- "total_source_entries": 227,
+ "total_discussions": 230,
+ "total_knowledge_gaps": 148,
+ "total_source_entries": 228,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

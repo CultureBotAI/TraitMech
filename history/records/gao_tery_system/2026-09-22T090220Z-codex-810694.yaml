@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_tery_system.yaml
+  slug: gao_tery_system
+session:
+  id: 2026-09-22T090220Z-codex-810694
+  timestamp: '2026-09-22T09:02:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Gao-TerY phage-defense system trait
+  details: Added traitmech:000360 for the DefenseFinder Gao_TerY three-profile phage-defense
+    system, reserved METPO:1031400 in proposals/metpo_traitmech_v237, recorded Gao et al.
+    and pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap discussion
+    for unresolved TerY host, trigger, and effector details.
