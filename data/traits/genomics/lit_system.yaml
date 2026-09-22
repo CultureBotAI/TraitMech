@@ -1,0 +1,170 @@
+identifier: traitmech:000363
+label: Lit system
+definition: A phage defense system in which an organism possesses a Lit locus represented
+  by DefenseFinder as a single-profile model requiring Lit__Lit.
+definition_source: DOI:10.1021/bi0495026
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Lit
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Gol-Lit
+  synonym_type: RELATED_SYNONYM
+  source: PMID:21129205
+- synonym_text: Lit__Lit
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:15196039
+  snippet: Bacteriophage exclusion is a suicide response to viral infection. In strains
+    of Escherichia coli K-12 infected with T4 phage this process is mediated by the
+    host-encoded Lit peptidase. Lit is activated by a unique sequence in the major
+    head protein of the T4 phage (the Gol sequence) which then cleaves site-specifically
+    the host translation factor EF-Tu, ultimately leading to cell death.
+  notes: Copeland et al. support host Lit as a T4-activated bacteriophage-exclusion
+    peptidase that cleaves EF-Tu and leads to cell death.
+- reference: PMID:21129205
+  snippet: phage exclusion systems that involve T4-mediated activation of a latent
+    endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
+    (Gol-Lit)
+  notes: Uzan et al. name Gol-Lit as a T4 phage-exclusion system whose output is cofactor-assisted
+    activation of EF-Tu proteolysis.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'Lit | 10\.1186/1743-422X-7-360 | Post-transcriptional control by bacteriophage
+    T4: mRNA decay and inhibition of translation initiation'
+  notes: The DefenseFinder article registry maps the named Lit system to the Uzan
+    et al. T4 post-transcriptional-control review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Lit\tLit\t1\t1\tLit__Lit"
+  notes: The DefenseFinder rules table models Lit as a single-mandatory-profile system
+    with the Lit__Lit profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lit__Lit                                         | Lit__Lit                                         |
+    Lit                    | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Lit__Lit under Lit.
+causal_graphs:
+- graph_id: lit_locus_restricts_t4_phage
+  title: Lit loci confer T4 phage exclusion
+  description: Conservative system-level sketch linking possession of a Lit locus
+    to T4 Gol-Lit phage exclusion without asserting a protein-resolved Lit mechanism
+    node.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Lit as a named DefenseFinder single-profile phage-exclusion
+    system while leaving natural host breadth, non-e14 Lit loci, and the exact DefenseFinder
+    profile-to-activity mapping unresolved.
+  nodes:
+  - node_id: lit_locus
+    label: Lit locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Lit phage-defense locus represented by the Lit__Lit
+      profile.
+  - node_id: t4_gol_lit_phage_exclusion
+    label: T4 Gol-Lit phage exclusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage T4 exclusion mediated by Gol-activated Lit proteolysis
+      of the host translation factor EF-Tu.
+  - node_id: lit_system_trait
+    label: Lit system
+    node_type: TRAIT
+    grounding: traitmech:000363
+    description: Possession of a genome-encoded Lit phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: lit_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t4_gol_lit_phage_exclusion
+    description: Lit phage-defense loci can mediate T4 bacteriophage exclusion through
+      Gol-activated EF-Tu proteolysis, and DefenseFinder models Lit as a single-profile
+      system.
+    evidence:
+    - reference: PMID:15196039
+      snippet: Bacteriophage exclusion is a suicide response to viral infection. In
+        strains of Escherichia coli K-12 infected with T4 phage this process is mediated
+        by the host-encoded Lit peptidase. Lit is activated by a unique sequence in
+        the major head protein of the T4 phage (the Gol sequence) which then cleaves
+        site-specifically the host translation factor EF-Tu, ultimately leading to
+        cell death.
+      notes: Copeland et al. support Lit-mediated bacteriophage exclusion and EF-Tu
+        cleavage.
+    - reference: PMID:21129205
+      snippet: phage exclusion systems that involve T4-mediated activation of a latent
+        endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
+        (Gol-Lit)
+      notes: Uzan et al. identify Gol-Lit as a phage-exclusion system mediated by
+        EF-Tu proteolysis.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'Lit | 10\.1186/1743-422X-7-360 | Post-transcriptional control by bacteriophage
+        T4: mRNA decay and inhibition of translation initiation'
+      notes: The DefenseFinder article registry maps the named Lit system to the Uzan
+        et al. T4 post-transcriptional-control review.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lit\tLit\t1\t1\tLit__Lit"
+      notes: The DefenseFinder rules table models Lit as a single-mandatory-profile
+        system with the Lit__Lit profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lit__Lit                                         | Lit__Lit                                         |
+        Lit                    | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Lit__Lit under Lit.
+  - subject: t4_gol_lit_phage_exclusion
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lit_system_trait
+    description: T4 Gol-Lit phage exclusion realizes the Lit system trait.
+    evidence:
+    - reference: PMID:15196039
+      snippet: Bacteriophage exclusion is a suicide response to viral infection. In
+        strains of Escherichia coli K-12 infected with T4 phage this process is mediated
+        by the host-encoded Lit peptidase. Lit is activated by a unique sequence in
+        the major head protein of the T4 phage (the Gol sequence) which then cleaves
+        site-specifically the host translation factor EF-Tu, ultimately leading to
+        cell death.
+      notes: Copeland et al. connect host-encoded Lit to T4 bacteriophage exclusion.
+  - subject: lit_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Lit system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'Lit | 10\.1186/1743-422X-7-360 | Post-transcriptional control by bacteriophage
+        T4: mRNA decay and inhibition of translation initiation'
+      notes: The DefenseFinder article registry maps the named Lit system to the Uzan
+        et al. T4 post-transcriptional-control review.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lit\tLit\t1\t1\tLit__Lit"
+      notes: The DefenseFinder rules table models Lit as a single-mandatory-profile
+        system with the Lit__Lit profile.
+discussions:
+- discussion_id: lit-mechanism-gap
+  prompt: Resolve natural Lit loci, host breadth beyond Escherichia coli K-12 e14,
+    Gol-activation contexts, and Lit__Lit profile-to-activity mapping before minting
+    narrower Lit mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Copeland et al. support the T4-triggered e14 Lit peptidase as a bacteriophage-exclusion
+    determinant, Uzan et al. summarize Gol-Lit as a T4 phage-exclusion system, and
+    DefenseFinder models Lit as a single-profile system. The natural host breadth
+    and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#lit_locus_restricts_t4_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T10:38:17Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Lit system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v240.
+  llm_assisted: true

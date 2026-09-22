@@ -889,6 +889,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/hesat_system",
     "genomics/hypnos_system",
     "genomics/kamadhenu_system",
+    "genomics/lit_system",
     "genomics/lugos_system",
     "genomics/nantosuelta_system",
     "genomics/nemetona_system",

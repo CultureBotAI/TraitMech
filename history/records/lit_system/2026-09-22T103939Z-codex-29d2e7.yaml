@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lit_system.yaml
+  slug: lit_system
+session:
+  id: 2026-09-22T103939Z-codex-29d2e7
+  timestamp: '2026-09-22T10:39:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Lit phage-exclusion system trait
+  details: Added traitmech:000363 for the DefenseFinder Lit single-profile phage-exclusion
+    system, reserved METPO:1031700 in proposals/metpo_traitmech_v240, recorded Copeland and
+    Uzan literature plus pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap
+    discussion for unresolved natural Lit loci, host breadth, Gol-activation contexts, and
+    profile-to-activity mapping.
