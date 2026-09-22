@@ -293,6 +293,7 @@ data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	restr
 data/traits/genomics/retron_system.yaml	traitmech:000235	Retron system	retron_msdna_effector_abortive_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rexab_system.yaml	traitmech:000324	RexAB system	rexab_locus_mediates_rex_exclusion	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rhea_system.yaml	traitmech:000311	Rhea system	rhea_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/rloc_system.yaml	traitmech:000366	RloC system	rloc_locus_triggers_dna_break_responsive_activation	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rosmerta_system.yaml	traitmech:000256	RosmerTA system	rosmerta_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rugutis_system.yaml	traitmech:000315	Rugutis system	rugutis_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

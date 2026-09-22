@@ -1510,6 +1510,8 @@ effector-dependent abortive infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/
 rexab locus	GENETIC_ELEMENT	1	data/traits/genomics/rexab_system.yaml
 rex exclusion	BIOLOGICAL_PROCESS	1	data/traits/genomics/rexab_system.yaml
 rhea locus	GENETIC_ELEMENT	1	data/traits/genomics/rhea_system.yaml
+rloc locus	GENETIC_ELEMENT	1	data/traits/genomics/rloc_system.yaml
+dna-break-responsive rloc activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/rloc_system.yaml
 rosmerta locus	GENETIC_ELEMENT	1	data/traits/genomics/rosmerta_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml

@@ -2546,6 +2546,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rhea_system.html#rhea-mechanism-gap"
  },
  {
+  "discussion_id": "rloc-mechanism-gap",
+  "prompt": "Resolve natural RloC host breadth, endogenous RloC activation triggers, phage restriction strength, and RloC profile-to-activity mapping before minting narrower RloC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "RloC system",
+  "source_id": "traitmech:000366",
+  "source_file": "rloc_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rloc_locus_triggers_dna_break_responsive_activation"
+  ],
+  "rationale": "Davidov and Kaufmann support RloC as a bacterial wobble nucleotide-excising tRNase, Bitton et al. show that Acinetobacter baylyi RloC responds to phage T4 host DNA degradation in an Escherichia coli expression context, and DefenseFinder models RloC as a one-profile system with an RloC__RloC marker. Natural host breadth, native phage triggers, restriction strength, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "PMID:26031711"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rloc_system.html#rloc-mechanism-gap"
+ },
+ {
   "discussion_id": "rosmerta-mechanism-gap",
   "prompt": "Resolve RosmerTA phage triggers and effector outputs before minting narrower RosmerTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4317,9 +4338,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 235,
- "total_knowledge_gaps": 153,
- "total_source_entries": 233,
+ "total_discussions": 236,
+ "total_knowledge_gaps": 154,
+ "total_source_entries": 234,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
