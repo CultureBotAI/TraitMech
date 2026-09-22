@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rnlab_system.yaml
+  slug: rnlab_system
+session:
+  id: 2026-09-22T135513Z-claude-code-24dab3
+  timestamp: '2026-09-22T13:55:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add RnlAB phage-defense system trait
+  details: Minted traitmech:000367 for RnlAB system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system, using Koga et al. evidence for rnlA-rnlB toxin-antitoxin identity
+    and RNase LS antagonism of bacteriophage T4 dmd mutants, Otsuka and Yonesaki evidence
+    for the E. coli K-12 chromosomal RnlA/RnlB system and T4 Dmd evasion, and pinned DefenseFinder
+    article, rule, and HMM rows for the RnlAB namespace; reserved METPO:1032100 in proposals/metpo_traitmech_v244
+    for upstream replacement.
