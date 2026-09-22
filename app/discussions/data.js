@@ -1597,6 +1597,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_her_duf_system.html#gao-her-duf-mechanism-gap"
  },
  {
+  "discussion_id": "gao-her-sir-mechanism-gap",
+  "prompt": "Resolve Gao_Her_SIR natural hosts, HerA_SIR2/SIR2 component functions, phage triggers, and effector activity before minting narrower Gao_Her_SIR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Her-SIR system",
+  "source_id": "traitmech:000362",
+  "source_file": "gao_her_sir_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_her_sir_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Her_SIR as a two-profile system under the Gao_Her family key. The exact natural host breadth, HerA_SIR2/SIR2 component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_her_sir_system.html#gao-her-sir-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-hhe-mechanism-gap",
   "prompt": "Resolve Gao_Hhe natural hosts, HheA component function, phage triggers, and effector activity before minting narrower Gao_Hhe mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4239,9 +4258,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 231,
- "total_knowledge_gaps": 149,
- "total_source_entries": 229,
+ "total_discussions": 232,
+ "total_knowledge_gaps": 150,
+ "total_source_entries": 230,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
