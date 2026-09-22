@@ -1673,6 +1673,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_rl_system.html#gao-rl-mechanism-gap"
  },
  {
+  "discussion_id": "gao-tmn-mechanism-gap",
+  "prompt": "Resolve Gao_Tmn natural hosts, TmnA component function, phage triggers, and effector activity before minting narrower Gao_Tmn mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Tmn system",
+  "source_id": "traitmech:000357",
+  "source_file": "gao_tmn_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_tmn_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Tmn as a single-profile system. The exact natural host breadth, TmnA component identity, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_tmn_system.html#gao-tmn-mechanism-gap"
+ },
+ {
   "discussion_id": "gasdermin-family-breadth-and-card-nlr-scope-gap",
   "prompt": "Resolve natural GasderMIN family breadth and CARD-NLR gasdermin context before minting narrower gasdermin subfamily traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -4144,9 +4163,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 226,
- "total_knowledge_gaps": 144,
- "total_source_entries": 224,
+ "total_discussions": 227,
+ "total_knowledge_gaps": 145,
+ "total_source_entries": 225,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

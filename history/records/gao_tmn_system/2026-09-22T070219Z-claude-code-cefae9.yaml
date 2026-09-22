@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_tmn_system.yaml
+  slug: gao_tmn_system
+session:
+  id: 2026-09-22T070219Z-claude-code-cefae9
+  timestamp: '2026-09-22T07:02:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Tmn system
+  details: Minted traitmech:000357 for the DefenseFinder-backed Gao-Tmn system under phage
+    defense system with Gao et al. DOI/PMID evidence, pinned DefenseFinder article, rules,
+    and HMM registry evidence for the Gao_Tmn profile, a conservative nonmechanistic Gao-family
+    graph, a mechanism-gap discussion, and proposal metpo_traitmech_v234 reserving METPO:1031100
+    for upstream adoption.
