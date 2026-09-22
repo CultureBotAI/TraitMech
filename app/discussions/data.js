@@ -1986,6 +1986,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "lit-mechanism-gap",
+  "prompt": "Resolve natural Lit loci, host breadth beyond Escherichia coli K-12 e14, Gol-activation contexts, and Lit__Lit profile-to-activity mapping before minting narrower Lit mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lit system",
+  "source_id": "traitmech:000363",
+  "source_file": "lit_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lit_locus_restricts_t4_phage"
+  ],
+  "rationale": "Copeland et al. support the T4-triggered e14 Lit peptidase as a bacteriophage-exclusion determinant, Uzan et al. summarize Gol-Lit as a T4 phage-exclusion system, and DefenseFinder models Lit as a single-profile system. The natural host breadth and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lit_system.html#lit-mechanism-gap"
+ },
+ {
   "discussion_id": "lugos-mechanism-gap",
   "prompt": "Resolve Lugos phage triggers and effector outputs before minting narrower Lugos mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4258,9 +4277,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 232,
- "total_knowledge_gaps": 150,
- "total_source_entries": 230,
+ "total_discussions": 233,
+ "total_knowledge_gaps": 151,
+ "total_source_entries": 231,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
