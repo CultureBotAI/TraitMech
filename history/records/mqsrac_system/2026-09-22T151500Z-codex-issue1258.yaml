@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mqsrac_system.yaml
+  slug: mqsrac_system
+session:
+  id: 2026-09-22T151500Z-codex-issue1258
+  timestamp: '2026-09-22T15:15:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1258
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Remove unsupported MqsRAC process-to-process edge
+  details: >-
+    Addressed issue #1258 by replacing the MqsRAC persister-cell formation
+    to restriction/modification-assisted T2 inhibition edge with independent
+    MqsRAC locus to restriction/modification-assisted T2 inhibition and
+    MqsRAC-dependent persister formation to MqsRAC system trait edges. The
+    revised graph stays connected while avoiding an unsupported claim that
+    persister-cell formation is upstream of restriction/modification-assisted
+    T2 inhibition.

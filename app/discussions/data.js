@@ -2101,7 +2101,7 @@ window.searchData = [
  },
  {
   "discussion_id": "mqsrac-breadth-and-profile-gap",
-  "prompt": "Resolve MqsRAC natural phage breadth, phage-activation signals, the exact DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and non-McrBC effector contexts before minting narrower MqsRAC mechanism children.",
+  "prompt": "Resolve MqsRAC natural phage breadth, phage-activation signals, the exact DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and cooperating restriction/modification contexts before minting narrower MqsRAC mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -2111,7 +2111,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#mqsrac_locus_promotes_persister_phage_defense"
   ],
-  "rationale": "Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an Escherichia coli C496_10 toxin-antitoxin-chaperone system that inhibits T2 phage through persister-cell formation and McrBC-assisted restriction/modification, while DefenseFinder models MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth, the phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model, and the breadth of cooperating restriction/modification systems remain unresolved.",
+  "rationale": "Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an Escherichia coli C496_10 toxin-antitoxin-chaperone system that inhibits T2 phage through persister-cell formation and in concert with restriction/modification systems, while DefenseFinder models MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth, the phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model, and cooperating restriction/modification contexts remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [

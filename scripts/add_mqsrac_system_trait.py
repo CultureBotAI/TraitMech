@@ -57,6 +57,8 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-22T15:02:00Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-22T15:03:00Z"
+GRAPH_DIRECTION_REVIEW_TIMESTAMP = "2026-09-22T15:15:00Z"
+RM_SPECIFICITY_REVIEW_TIMESTAMP = "2026-09-22T15:18:00Z"
 IDENTIFIER = "traitmech:000368"
 PROPOSAL = "proposals/metpo_traitmech_v245"
 SLUG = "mqsrac"
@@ -208,8 +210,8 @@ RECORD: dict[str, Any] = {
                 "two-profile phage-defense system while leaving natural "
                 "phage breadth, upstream MqsRAC activation logic, the exact "
                 "relationship between the two DefenseFinder profiles and "
-                "the tripartite MqsR/MqsA/MqsC locus, and non-McrBC "
-                "effector contexts unresolved."
+                "the tripartite MqsR/MqsA/MqsC locus, and cooperating "
+                "restriction/modification contexts unresolved."
             ),
             "nodes": [
                 {
@@ -232,12 +234,12 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "mcrbc_assisted_t2_inhibition",
-                    "label": "McrBC-assisted T2 inhibition",
+                    "node_id": "rm_assisted_t2_inhibition",
+                    "label": "restriction/modification-assisted T2 inhibition",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
                         "Inhibition of T2 phage by MqsR/MqsA/MqsC in "
-                        "concert with McrBC restriction-modification."
+                        "concert with restriction/modification systems."
                     ),
                 },
                 {
@@ -297,29 +299,52 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "mqsrac_persister_formation",
+                    "subject": "mqsrac_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "mcrbc_assisted_t2_inhibition",
+                    "object": "rm_assisted_t2_inhibition",
                     "description": (
-                        "Fernandez-Garcia et al. report that MqsR/MqsA/MqsC "
+                        "Fernandez-Garcia et al. report that the "
+                        "MqsR/MqsA/MqsC toxin-antitoxin-chaperone system "
                         "works in concert with restriction/modification "
-                        "systems to inhibit T2 phage."
+                        "systems during T2 inhibition."
                     ),
                     "evidence": [
                         {
                             "reference": FERNANDEZ,
                             "snippet": MQSRAC_MCRBC_SNIPPET,
                             "notes": (
-                                "Fernandez-Garcia et al. connect MqsRAC "
-                                "and restriction/modification activity "
+                                "Fernandez-Garcia et al. connect the MqsRAC "
+                                "system to restriction/modification activity "
                                 "during T2 inhibition."
                             ),
                         }
                     ],
                 },
                 {
-                    "subject": "mcrbc_assisted_t2_inhibition",
+                    "subject": "mqsrac_persister_formation",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": f"{SLUG}_system_trait",
+                    "description": (
+                        "MqsRAC-dependent survival through persister-cell "
+                        "formation realizes the MqsRAC system trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": FERNANDEZ_PMID,
+                            "snippet": MQSRAC_PERSISTER_SNIPPET,
+                            "notes": (
+                                "Fernandez-Garcia et al. report "
+                                "MqsRAC-dependent host survival through "
+                                "persister-cell formation rather than cell "
+                                "suicide."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "subject": "rm_assisted_t2_inhibition",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": f"{SLUG}_system_trait",
@@ -362,8 +387,8 @@ RECORD: dict[str, Any] = {
             "prompt": (
                 "Resolve MqsRAC natural phage breadth, phage-activation "
                 "signals, the exact DefenseFinder profile-to-MqsR/MqsA/MqsC "
-                "relationship, and non-McrBC effector contexts before "
-                "minting narrower MqsRAC mechanism children."
+                "relationship, and cooperating restriction/modification "
+                "contexts before minting narrower MqsRAC mechanism children."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -371,12 +396,12 @@ RECORD: dict[str, Any] = {
                 "Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an "
                 "Escherichia coli C496_10 toxin-antitoxin-chaperone system "
                 "that inhibits T2 phage through persister-cell formation "
-                "and McrBC-assisted restriction/modification, while "
-                "DefenseFinder models MqsRAC through MqsRAC__mqsC and "
-                "MqsRAC__mqsR markers. Natural phage breadth, the phage "
-                "signal that activates MqsRAC, MqsA coverage in the "
-                "DefenseFinder model, and the breadth of cooperating "
-                "restriction/modification systems remain unresolved."
+                "and in concert with restriction/modification systems, "
+                "while DefenseFinder models MqsRAC through MqsRAC__mqsC "
+                "and MqsRAC__mqsR markers. Natural phage breadth, the "
+                "phage signal that activates MqsRAC, MqsA coverage in the "
+                "DefenseFinder model, and cooperating "
+                "restriction/modification contexts remain unresolved."
             ),
             "evidence": [
                 {
@@ -438,6 +463,33 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="GRAPH_EDGE_DIRECTION_REVIEW",
+        changes=(
+            "Addressed issue #1258 by replacing the unsupported MqsRAC "
+            "persister-cell formation to restriction/modification-assisted "
+            "T2 inhibition edge with independent MqsRAC locus to "
+            "restriction/modification-assisted T2 inhibition and "
+            "MqsRAC-dependent persister formation to MqsRAC system trait "
+            "edges."
+        ),
+        llm_assisted=True,
+        timestamp=GRAPH_DIRECTION_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVIEW_RESTRICTION_MODIFICATION_SPECIFICITY",
+        changes=(
+            "Addressed issue #1259 by generalizing unsupported "
+            "McrBC-specific wording to restriction/modification-assisted "
+            "T2 inhibition throughout the MqsRAC graph and discussion."
+        ),
+        llm_assisted=True,
+        timestamp=RM_SPECIFICITY_REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

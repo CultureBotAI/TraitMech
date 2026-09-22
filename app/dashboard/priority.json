@@ -6321,7 +6321,7 @@
       "slug": "mqsrac_system",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 4,
+      "edges": 5,
       "nodes": 5,
       "components": 1,
       "orphans": 0,
@@ -6333,7 +6333,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (4 edges) +12",
+        "thin graph (5 edges) +12",
         "canonical_examples reviewed empty +0"
       ]
     },

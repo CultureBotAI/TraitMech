@@ -51,8 +51,9 @@ toxin-antitoxin-chaperone locus represented by DefenseFinder as a two-profile
 model requiring `MqsRAC__mqsC` and `MqsRAC__mqsR`. It excludes the individual
 MqsR, MqsA, and MqsC components, the `MqsRAC__mqsC` and `MqsRAC__mqsR` HMM
 profiles, MqsR RNase activity outside a complete antiphage locus,
-MqsRAC-dependent persister formation, McrBC-assisted T2 inhibition, source
-database rows naming one MqsRAC model, and other phage-defense systems.
+MqsRAC-dependent persister formation, restriction/modification-assisted T2
+inhibition, source database rows naming one MqsRAC model, and other
+phage-defense systems.
 
 ## External Mappings
 

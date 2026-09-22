@@ -72,7 +72,7 @@ causal_graphs:
   scope_notes: The graph captures MqsRAC as a named DefenseFinder two-profile phage-defense
     system while leaving natural phage breadth, upstream MqsRAC activation logic,
     the exact relationship between the two DefenseFinder profiles and the tripartite
-    MqsR/MqsA/MqsC locus, and non-McrBC effector contexts unresolved.
+    MqsR/MqsA/MqsC locus, and cooperating restriction/modification contexts unresolved.
   nodes:
   - node_id: mqsrac_locus
     label: MqsRAC locus
@@ -84,10 +84,11 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Formation of persister cells during T2 phage attack in cells producing
       MqsR/MqsA/MqsC.
-  - node_id: mcrbc_assisted_t2_inhibition
-    label: McrBC-assisted T2 inhibition
+  - node_id: rm_assisted_t2_inhibition
+    label: restriction/modification-assisted T2 inhibition
     node_type: BIOLOGICAL_PROCESS
-    description: Inhibition of T2 phage by MqsR/MqsA/MqsC in concert with McrBC restriction-modification.
+    description: Inhibition of T2 phage by MqsR/MqsA/MqsC in concert with restriction/modification
+      systems.
   - node_id: mqsrac_system_trait
     label: MqsRAC system
     node_type: TRAIT
@@ -137,19 +138,33 @@ causal_graphs:
       snippet: '| MqsRAC__mqsR                                     | MqsRAC__mqsR                                     |
         MqsRAC                 | Custom                  | 20     |'
       notes: The DefenseFinder HMM inventory records MqsRAC__mqsR under MqsRAC.
-  - subject: mqsrac_persister_formation
+  - subject: mqsrac_locus
     predicate: contributes to
     predicate_id: RO:0002326
-    object: mcrbc_assisted_t2_inhibition
-    description: Fernandez-Garcia et al. report that MqsR/MqsA/MqsC works in concert
-      with restriction/modification systems to inhibit T2 phage.
+    object: rm_assisted_t2_inhibition
+    description: Fernandez-Garcia et al. report that the MqsR/MqsA/MqsC toxin-antitoxin-chaperone
+      system works in concert with restriction/modification systems during T2 inhibition.
     evidence:
     - reference: DOI:10.1128/spectrum.03388-23
       snippet: Therefore, MqsR/MqsA/MqsC works in concert with restriction/modification
         systems to inhibit T2 phage.
-      notes: Fernandez-Garcia et al. connect MqsRAC and restriction/modification activity
-        during T2 inhibition.
-  - subject: mcrbc_assisted_t2_inhibition
+      notes: Fernandez-Garcia et al. connect the MqsRAC system to restriction/modification
+        activity during T2 inhibition.
+  - subject: mqsrac_persister_formation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mqsrac_system_trait
+    description: MqsRAC-dependent survival through persister-cell formation realizes
+      the MqsRAC system trait.
+    evidence:
+    - reference: PMID:38054715
+      snippet: Therefore, our results are important since we show for the first time
+        that a phage-defense system, the MqsRAC toxin/antitoxin system, allows the
+        host to survive infection by forming persister cells, rather than inducing
+        cell suicide.
+      notes: Fernandez-Garcia et al. report MqsRAC-dependent host survival through
+        persister-cell formation rather than cell suicide.
+  - subject: rm_assisted_t2_inhibition
     predicate: confers
     predicate_id: METPO:2007700
     object: mqsrac_system_trait
@@ -179,16 +194,16 @@ causal_graphs:
 discussions:
 - discussion_id: mqsrac-breadth-and-profile-gap
   prompt: Resolve MqsRAC natural phage breadth, phage-activation signals, the exact
-    DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and non-McrBC effector contexts
-    before minting narrower MqsRAC mechanism children.
+    DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and cooperating restriction/modification
+    contexts before minting narrower MqsRAC mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an Escherichia coli
     C496_10 toxin-antitoxin-chaperone system that inhibits T2 phage through persister-cell
-    formation and McrBC-assisted restriction/modification, while DefenseFinder models
-    MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth, the
-    phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model,
-    and the breadth of cooperating restriction/modification systems remain unresolved.
+    formation and in concert with restriction/modification systems, while DefenseFinder
+    models MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth,
+    the phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model,
+    and cooperating restriction/modification contexts remain unresolved.
   evidence:
   - reference: PMID:38054715
     snippet: Moreover, we demonstrate that the MqsRAC system works in concert with
@@ -216,4 +231,19 @@ curation_history:
     coli C496_10 expressed from its natural promoter in a K-12 host, but it does not
     cite a directly observed natural microbial taxon broad enough for a canonical
     example of endogenous MqsRAC system possession. No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-22T15:15:00Z'
+  curator: codex
+  action: GRAPH_EDGE_DIRECTION_REVIEW
+  changes: 'Addressed issue #1258 by replacing the unsupported MqsRAC persister-cell
+    formation to restriction/modification-assisted T2 inhibition edge with independent
+    MqsRAC locus to restriction/modification-assisted T2 inhibition and MqsRAC-dependent
+    persister formation to MqsRAC system trait edges.'
+  llm_assisted: true
+- timestamp: '2026-09-22T15:18:00Z'
+  curator: codex
+  action: REVIEW_RESTRICTION_MODIFICATION_SPECIFICITY
+  changes: 'Addressed issue #1259 by generalizing unsupported McrBC-specific wording
+    to restriction/modification-assisted T2 inhibition throughout the MqsRAC graph
+    and discussion.'
   llm_assisted: true
