@@ -284,6 +284,7 @@ data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	
 data/traits/genomics/prithvi_system.yaml	traitmech:000290	Prithvi system	prithvi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prometheus_system.yaml	traitmech:000291	Prometheus system	prometheus_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/prrc_system.yaml	traitmech:000364	PrrC system	prrc_locus_restricts_t4_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/psyrta_system.yaml	traitmech:000257	PsyrTA system	psyrta_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pycsar_system.yaml	traitmech:000236	Pycsar system	pycsar_cyclic_pyrimidine_phage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/radar_system.yaml	traitmech:000238	RADAR system	radar_rdrab_deamination_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

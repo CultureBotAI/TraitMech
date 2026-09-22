@@ -53,6 +53,8 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-22T11:25:19Z"
+CANONICAL_EXAMPLES_TIMESTAMP = "2026-09-22T11:39:03Z"
+PR_REVIEW_TIMESTAMP = "2026-09-22T11:42:52Z"
 IDENTIFIER = "traitmech:000364"
 PROPOSAL = "proposals/metpo_traitmech_v241"
 SLUG = "prrc"
@@ -134,11 +136,6 @@ RECORD: dict[str, Any] = {
             "synonym_text": "PrrC",
             "synonym_type": "RELATED_SYNONYM",
             "source": DEFENSEFINDER_ARTICLES,
-        },
-        {
-            "synonym_text": "EcoprrI",
-            "synonym_type": "RELATED_SYNONYM",
-            "source": BLANGA_KANFI_PMID,
         },
         *[
             {
@@ -393,6 +390,34 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
+        changes=(
+            "Reviewed the PrrC canonical_examples gap and left "
+            "canonical_examples empty: the current evidence supports a named "
+            "PrrC phage-exclusion system, the pinned DefenseFinder PrrC "
+            "profiles, and EcoprrI-linked PrrC homologs, but does not cite a "
+            "directly observed natural microbial taxon with a source-backed "
+            "PrrC locus. No paid research was used. Fixes #1247."
+        ),
+        llm_assisted=True,
+        timestamp=CANONICAL_EXAMPLES_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Resolved PR #1245 review issue #1249 by removing the bare "
+            "EcoprrI component name from PrrC system related synonyms while "
+            "retaining the DefenseFinder PrrC__EcoprrI profile name and "
+            "Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs."
+        ),
+        llm_assisted=True,
+        timestamp=PR_REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

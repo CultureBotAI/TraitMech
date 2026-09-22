@@ -13,9 +13,6 @@ synonyms:
 - synonym_text: PrrC
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-- synonym_text: EcoprrI
-  synonym_type: RELATED_SYNONYM
-  source: PMID:16790566
 - synonym_text: PrrC__EcoprrI
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
@@ -204,4 +201,20 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v241.
+  llm_assisted: true
+- timestamp: '2026-09-22T11:39:03Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the PrrC canonical_examples gap and left canonical_examples
+    empty: the current evidence supports a named PrrC phage-exclusion system, the
+    pinned DefenseFinder PrrC profiles, and EcoprrI-linked PrrC homologs, but does
+    not cite a directly observed natural microbial taxon with a source-backed PrrC
+    locus. No paid research was used. Fixes #1247.'
+  llm_assisted: true
+- timestamp: '2026-09-22T11:42:52Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Resolved PR #1245 review issue #1249 by removing the bare EcoprrI component
+    name from PrrC system related synonyms while retaining the DefenseFinder PrrC__EcoprrI
+    profile name and Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs.'
   llm_assisted: true

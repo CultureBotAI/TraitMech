@@ -197,12 +197,10 @@
 
 
     <div class="card">
-      <h2>Synonyms (4)</h2>
+      <h2>Synonyms (3)</h2>
       <ul class="synonyms">
 
         <li>PrrC <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
-
-        <li>EcoprrI <span class="meta">RELATED_SYNONYM · PMID:16790566</span></li>
 
         <li>PrrC__EcoprrI <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
 
@@ -279,6 +277,18 @@
           <time>2026-09-22T11:25:19Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted PrrC system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v241.</p>
+        </li>
+
+        <li>
+          <time>2026-09-22T11:39:03Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed the PrrC canonical_examples gap and left canonical_examples empty: the current evidence supports a named PrrC phage-exclusion system, the pinned DefenseFinder PrrC profiles, and EcoprrI-linked PrrC homologs, but does not cite a directly observed natural microbial taxon with a source-backed PrrC locus. No paid research was used. Fixes #1247.</p>
+        </li>
+
+        <li>
+          <time>2026-09-22T11:42:52Z</time> ·
+          <strong>ADDRESS_PR_REVIEW</strong> · codex
+          <p class="changes">Resolved PR #1245 review issue #1249 by removing the bare EcoprrI component name from PrrC system related synonyms while retaining the DefenseFinder PrrC__EcoprrI profile name and Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs.</p>
         </li>
 
       </ol>
@@ -661,7 +671,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-22 11:25 UTC from
+      Record as of 2026-09-22 11:42 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 759 TraitRecords
       · embedding coverage 62.8%

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/prrc_system.yaml
+  slug: prrc_system
+session:
+  id: 2026-09-22T114330Z-claude-code-2bf5f2
+  timestamp: '2026-09-22T11:43:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1249
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - curation_history
+  summary: Narrow PrrC related synonyms
+  details: 'Addressed issue #1249 from PR #1245 review by removing the bare EcoprrI component
+    name from PrrC system related synonyms. PrrC__EcoprrI remains as a DefenseFinder profile
+    name, and the Blanga-Kanfi EcoprrI-linked PrrC-family evidence remains on the record without
+    representing EcoprrI itself as a system synonym.'
