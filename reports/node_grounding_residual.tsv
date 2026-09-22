@@ -3,10 +3,10 @@ restricted phage propagation	BIOLOGICAL_PROCESS	82	data/traits/genomics/abi2_sys
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
+gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	7	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_mza_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	6	data/traits/genomics/fs_giy_yig_system.yaml|data/traits/genomics/fs_hepn_tm_system.yaml|data/traits/genomics/fs_hp_sdh_sah_system.yaml
-gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	6	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_mza_system.yaml
 atp	CHEMICAL	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/oxygenic_photosynthesis.yaml
 acetyl-coa	CHEMICAL	6	data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 mreb	GENE_OR_PROTEIN	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccobacillus_shaped.yaml
@@ -1315,6 +1315,7 @@ gao_mza locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_mza_system.yaml
 gao_ppl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_ppl_system.yaml
 gao_rl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_rl_system.yaml
 gao_tmn locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_tmn_system.yaml
+gao_upx locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_upx_system.yaml
 bacterial gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/gasdermin_system.yaml
 caspase-like bgsdm cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml
 bacterial gasdermin pore assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml
