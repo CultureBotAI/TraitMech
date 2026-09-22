@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_iet_system.yaml
+  slug: gao_iet_system
+session:
+  id: 2026-09-22T033533Z-claude-code-2d172f
+  timestamp: '2026-09-22T03:35:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Iet system
+  details: Minted traitmech:000354 for the DefenseFinder-backed Gao-Iet system under phage
+    defense system with Gao et al. DOI/PMID evidence, pinned DefenseFinder article, rules,
+    and HMM registry evidence, a conservative nonmechanistic Gao-family graph, a mechanism-gap
+    discussion, and proposal metpo_traitmech_v231 reserving METPO:1030800 for upstream adoption.
