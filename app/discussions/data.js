@@ -1578,6 +1578,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_ape_system.html#apea-trigger-and-homolog-scope-gap"
  },
  {
+  "discussion_id": "gao-her-duf-mechanism-gap",
+  "prompt": "Resolve Gao_Her_DUF natural hosts, DUF4297/HerA_DUF component functions, phage triggers, and effector activity before minting narrower Gao_Her_DUF mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Her-DUF system",
+  "source_id": "traitmech:000361",
+  "source_file": "gao_her_duf_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_her_duf_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Her_DUF as a two-profile system under the Gao_Her family key. The exact natural host breadth, DUF4297/HerA_DUF component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_her_duf_system.html#gao-her-duf-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-hhe-mechanism-gap",
   "prompt": "Resolve Gao_Hhe natural hosts, HheA component function, phage triggers, and effector activity before minting narrower Gao_Hhe mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4220,9 +4239,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 230,
- "total_knowledge_gaps": 148,
- "total_source_entries": 228,
+ "total_discussions": 231,
+ "total_knowledge_gaps": 149,
+ "total_source_entries": 229,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
