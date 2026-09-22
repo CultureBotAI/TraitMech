@@ -1654,6 +1654,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_ppl_system.html#gao-ppl-mechanism-gap"
  },
  {
+  "discussion_id": "gao-qat-mechanism-gap",
+  "prompt": "Resolve Gao_Qat natural hosts, Qat component functions, phage triggers, and effector activity before minting narrower Gao_Qat mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Qat system",
+  "source_id": "traitmech:000359",
+  "source_file": "gao_qat_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_qat_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Qat as a four-profile system. The exact natural host breadth, QatA/QatB/QatC/QatD component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_qat_system.html#gao-qat-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-rl-mechanism-gap",
   "prompt": "Resolve Gao_RL natural hosts, RL_A/RL_B/RL_C/RL_D component functions, phage triggers, and effector activity before minting narrower Gao_RL mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4182,9 +4201,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 228,
- "total_knowledge_gaps": 146,
- "total_source_entries": 226,
+ "total_discussions": 229,
+ "total_knowledge_gaps": 147,
+ "total_source_entries": 227,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
