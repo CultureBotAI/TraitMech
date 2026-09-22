@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rloc_system.yaml
+  slug: rloc_system
+session:
+  id: 2026-09-22T130401Z-claude-code-b2408b
+  timestamp: '2026-09-22T13:04:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - grounding
+  summary: Add RloC phage-defense system trait
+  details: Minted traitmech:000366 for RloC system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system, using Davidov and Kaufmann evidence for RloC wobble nucleotide-excising
+    tRNase activity, Bitton et al. evidence for phage T4 DNA-break activation, and pinned
+    DefenseFinder article, rule, and HMM rows for the RloC namespace; reserved METPO:1032000
+    in proposals/metpo_traitmech_v243 for upstream replacement.
