@@ -1,0 +1,219 @@
+identifier: traitmech:000368
+label: MqsRAC system
+definition: A phage defense system in which an organism possesses a tripartite MqsRAC
+  toxin-antitoxin-chaperone locus represented by DefenseFinder as a two-profile model
+  requiring MqsRAC__mqsC and MqsRAC__mqsR.
+definition_source: DOI:10.1128/spectrum.03388-23
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: MqsRAC
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/spectrum.03388-23
+- synonym_text: MqsR/MqsA/MqsC
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/spectrum.03388-23
+- synonym_text: MqsRAC__mqsC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MqsRAC__mqsR
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:38054715
+  snippet: Therefore, our results are important since we show for the first time that
+    a phage-defense system, the MqsRAC toxin/antitoxin system, allows the host to
+    survive infection by forming persister cells, rather than inducing cell suicide.
+  notes: Fernandez-Garcia et al. support MqsRAC as a phage-defense system whose outcome
+    is host survival through persister-cell formation rather than cell suicide.
+- reference: PMID:38054715
+  snippet: Moreover, we demonstrate that the MqsRAC system works in concert with restriction/modification
+    systems.
+  notes: Fernandez-Garcia et al. connect the MqsRAC system to restriction/modification
+    systems during phage inhibition.
+- reference: DOI:10.1128/spectrum.03388-23
+  snippet: the tripartite system MqsR (RNase toxin)/MqsA (antitoxin)/MqsC (SecB-type
+    chaperone)
+  notes: Fernandez-Garcia et al. describe MqsR/MqsA/MqsC as a tripartite toxin-antitoxin-chaperone
+    phage-exclusion system from Escherichia coli C496_10.
+- reference: DOI:10.1128/spectrum.03388-23
+  snippet: We found there was a 2,100 to a 5,000-fold reduction in the EOP with phage
+    T2 when the cells produced MqsR/MqsA/MqsC
+  notes: Fernandez-Garcia et al. support MqsRAC-mediated reduction of T2 efficiency
+    of plating.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: MqsRAC | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+    defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named MqsRAC system to Vassallo
+    et al.'s E. coli pangenome phage-defense screen.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "MqsRAC\tMqsRAC\t2\t2\tMqsRAC__mqsC, MqsRAC__mqsR\t\t\t"
+  notes: The DefenseFinder rules table models MqsRAC as a two-profile system requiring
+    the MqsRAC__mqsC and MqsRAC__mqsR profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MqsRAC__mqsC                                     | MqsRAC__mqsC                                     |
+    MqsRAC                 | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records MqsRAC__mqsC under MqsRAC.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MqsRAC__mqsR                                     | MqsRAC__mqsR                                     |
+    MqsRAC                 | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records MqsRAC__mqsR under MqsRAC.
+causal_graphs:
+- graph_id: mqsrac_locus_promotes_persister_phage_defense
+  title: MqsRAC loci support T2 phage inhibition
+  description: Conservative system-level sketch linking possession of an MqsRAC locus
+    to persister-cell formation and T2 inhibition without asserting a universal phage
+    trigger, lethal abortive-infection route, or exact MqsRAC profile-to-activity
+    mapping.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures MqsRAC as a named DefenseFinder two-profile phage-defense
+    system while leaving natural phage breadth, upstream MqsRAC activation logic,
+    the exact relationship between the two DefenseFinder profiles and the tripartite
+    MqsR/MqsA/MqsC locus, and non-McrBC effector contexts unresolved.
+  nodes:
+  - node_id: mqsrac_locus
+    label: MqsRAC locus
+    node_type: GENETIC_ELEMENT
+    description: A toxin-antitoxin-chaperone locus represented by DefenseFinder MqsRAC__mqsC
+      and MqsRAC__mqsR profiles.
+  - node_id: mqsrac_persister_formation
+    label: MqsRAC-dependent persister cell formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of persister cells during T2 phage attack in cells producing
+      MqsR/MqsA/MqsC.
+  - node_id: mcrbc_assisted_t2_inhibition
+    label: McrBC-assisted T2 inhibition
+    node_type: BIOLOGICAL_PROCESS
+    description: Inhibition of T2 phage by MqsR/MqsA/MqsC in concert with McrBC restriction-modification.
+  - node_id: mqsrac_system_trait
+    label: MqsRAC system
+    node_type: TRAIT
+    grounding: traitmech:000368
+    description: Possession of a genome-encoded MqsRAC toxin-antitoxin-chaperone phage-defense
+      system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: mqsrac_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mqsrac_persister_formation
+    description: Fernandez-Garcia et al. show that the MqsR/MqsA/MqsC toxin-antitoxin-chaperone
+      system can promote persister-cell formation during T2 attack, and DefenseFinder
+      models MqsRAC as a two-profile system.
+    evidence:
+    - reference: PMID:38054715
+      snippet: Therefore, our results are important since we show for the first time
+        that a phage-defense system, the MqsRAC toxin/antitoxin system, allows the
+        host to survive infection by forming persister cells, rather than inducing
+        cell suicide.
+      notes: Fernandez-Garcia et al. connect the MqsRAC system to persister-cell formation.
+    - reference: DOI:10.1128/spectrum.03388-23
+      snippet: the tripartite system MqsR (RNase toxin)/MqsA (antitoxin)/MqsC (SecB-type
+        chaperone)
+      notes: Fernandez-Garcia et al. identify the system components as MqsR, MqsA,
+        and MqsC.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: MqsRAC | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+        defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named MqsRAC system to Vassallo
+        et al.'s E. coli pangenome phage-defense screen.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "MqsRAC\tMqsRAC\t2\t2\tMqsRAC__mqsC, MqsRAC__mqsR\t\t\t"
+      notes: The DefenseFinder rules table models MqsRAC as a two-profile system requiring
+        the MqsRAC__mqsC and MqsRAC__mqsR profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MqsRAC__mqsC                                     | MqsRAC__mqsC                                     |
+        MqsRAC                 | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records MqsRAC__mqsC under MqsRAC.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MqsRAC__mqsR                                     | MqsRAC__mqsR                                     |
+        MqsRAC                 | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records MqsRAC__mqsR under MqsRAC.
+  - subject: mqsrac_persister_formation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mcrbc_assisted_t2_inhibition
+    description: Fernandez-Garcia et al. report that MqsR/MqsA/MqsC works in concert
+      with restriction/modification systems to inhibit T2 phage.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03388-23
+      snippet: Therefore, MqsR/MqsA/MqsC works in concert with restriction/modification
+        systems to inhibit T2 phage.
+      notes: Fernandez-Garcia et al. connect MqsRAC and restriction/modification activity
+        during T2 inhibition.
+  - subject: mcrbc_assisted_t2_inhibition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mqsrac_system_trait
+    description: MqsR/MqsA/MqsC-mediated T2 inhibition realizes the MqsRAC system
+      trait.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03388-23
+      snippet: We found there was a 2,100 to a 5,000-fold reduction in the EOP with
+        phage T2 when the cells produced MqsR/MqsA/MqsC
+      notes: Fernandez-Garcia et al. report reduced T2 efficiency of plating in cells
+        producing MqsR/MqsA/MqsC.
+  - subject: mqsrac_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: MqsRAC system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: MqsRAC | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+        defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named MqsRAC system to Vassallo
+        et al.'s E. coli pangenome phage-defense screen.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "MqsRAC\tMqsRAC\t2\t2\tMqsRAC__mqsC, MqsRAC__mqsR\t\t\t"
+      notes: The DefenseFinder rules table models MqsRAC as a two-profile system requiring
+        the MqsRAC__mqsC and MqsRAC__mqsR profiles.
+discussions:
+- discussion_id: mqsrac-breadth-and-profile-gap
+  prompt: Resolve MqsRAC natural phage breadth, phage-activation signals, the exact
+    DefenseFinder profile-to-MqsR/MqsA/MqsC relationship, and non-McrBC effector contexts
+    before minting narrower MqsRAC mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Fernandez-Garcia et al. support MqsR/MqsA/MqsC as an Escherichia coli
+    C496_10 toxin-antitoxin-chaperone system that inhibits T2 phage through persister-cell
+    formation and McrBC-assisted restriction/modification, while DefenseFinder models
+    MqsRAC through MqsRAC__mqsC and MqsRAC__mqsR markers. Natural phage breadth, the
+    phage signal that activates MqsRAC, MqsA coverage in the DefenseFinder model,
+    and the breadth of cooperating restriction/modification systems remain unresolved.
+  evidence:
+  - reference: PMID:38054715
+    snippet: Moreover, we demonstrate that the MqsRAC system works in concert with
+      restriction/modification systems.
+    notes: Fernandez-Garcia et al. leave the MqsRAC and restriction/modification connection
+      at system-level resolution.
+  attaches_to:
+  - causal_graphs#mqsrac_locus_promotes_persister_phage_defense
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T15:02:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted MqsRAC system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v245.
+  llm_assisted: true
+- timestamp: '2026-09-22T15:03:00Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the MqsRAC canonical_examples gap and left canonical_examples
+    empty: the current evidence supports a MqsR/MqsA/MqsC system from Escherichia
+    coli C496_10 expressed from its natural promoter in a K-12 host, but it does not
+    cite a directly observed natural microbial taxon broad enough for a canonical
+    example of endogenous MqsRAC system possession. No paid research was used.'
+  llm_assisted: true
