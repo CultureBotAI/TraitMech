@@ -1589,7 +1589,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#gao_rl_locus_restricts_phage"
   ],
-  "rationale": "Gao et al. support widespread antiviral gene cassettes with diverse enzymatic activities, and DefenseFinder models Gao_RL as a four-profile system. The exact natural host breadth, RL component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_RL as a four-profile system. The exact natural host breadth, RL component identities, phage trigger, and profile-to-activity mapping remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

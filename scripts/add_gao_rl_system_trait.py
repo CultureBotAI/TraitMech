@@ -25,11 +25,6 @@ GAO_CASSETTES_SNIPPET = (
     "present in 32% of all sequenced bacterial and archaeal genomes, that "
     "mediate protection against specific bacteriophages."
 )
-GAO_ENZYMES_SNIPPET = (
-    "These systems incorporate enzymatic activities not previously implicated "
-    "in antiviral defense, including RNA editing and retron satellite DNA "
-    "synthesis."
-)
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -153,14 +148,6 @@ RECORD: dict[str, Any] = {
                 "widespread antiviral gene cassettes."
             ),
         },
-        {
-            "reference": GAO_PMID,
-            "snippet": GAO_ENZYMES_SNIPPET,
-            "notes": (
-                "Gao et al. support the diversity of enzymatic activities "
-                "among their newly discovered antiviral systems."
-            ),
-        },
         article_registry_evidence(),
         rules_evidence(),
         *all_hmm_evidence(),
@@ -260,11 +247,10 @@ RECORD: dict[str, Any] = {
                     "evidence": [
                         {
                             "reference": GAO_PMID,
-                            "snippet": GAO_ENZYMES_SNIPPET,
+                            "snippet": GAO_CASSETTES_SNIPPET,
                             "notes": (
-                                "Gao et al. support diverse enzymatic "
-                                "activities in newly discovered antiviral "
-                                "systems."
+                                "Gao et al. support bacteriophage protection "
+                                "by widespread antiviral gene cassettes."
                             ),
                         },
                     ],
@@ -294,11 +280,11 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Gao et al. support widespread antiviral gene cassettes with "
-                "diverse enzymatic activities, and DefenseFinder models "
-                "Gao_RL as a four-profile system. The exact natural host "
-                "breadth, RL component identities, phage trigger, and "
-                "profile-to-activity mapping remain unresolved."
+                "Gao et al. support widespread antiviral gene cassettes that "
+                "mediate protection against specific bacteriophages, and "
+                "DefenseFinder models Gao_RL as a four-profile system. The "
+                "exact natural host breadth, RL component identities, phage "
+                "trigger, and profile-to-activity mapping remain unresolved."
             ),
             "attaches_to": ["causal_graphs#gao_rl_locus_restricts_phage"],
             "posed_by": CURATOR,

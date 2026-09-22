@@ -33,11 +33,6 @@ evidence:
     against specific bacteriophages.
   notes: Gao et al. support a systematic defense-gene prediction and heterologous
     reconstitution campaign that discovered widespread antiviral gene cassettes.
-- reference: PMID:32855333
-  snippet: These systems incorporate enzymatic activities not previously implicated
-    in antiviral defense, including RNA editing and retron satellite DNA synthesis.
-  notes: Gao et al. support the diversity of enzymatic activities among their newly
-    discovered antiviral systems.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: Gao_RL | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
     antiviral immunity in prokaryotes
@@ -144,10 +139,12 @@ causal_graphs:
       system trait.
     evidence:
     - reference: PMID:32855333
-      snippet: These systems incorporate enzymatic activities not previously implicated
-        in antiviral defense, including RNA editing and retron satellite DNA synthesis.
-      notes: Gao et al. support diverse enzymatic activities in newly discovered antiviral
-        systems.
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
   - subject: gao_rl_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -169,10 +166,10 @@ discussions:
     triggers, and effector activity before minting narrower Gao_RL mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Gao et al. support widespread antiviral gene cassettes with diverse enzymatic
-    activities, and DefenseFinder models Gao_RL as a four-profile system. The exact
-    natural host breadth, RL component identities, phage trigger, and profile-to-activity
-    mapping remain unresolved.
+  rationale: Gao et al. support widespread antiviral gene cassettes that mediate protection
+    against specific bacteriophages, and DefenseFinder models Gao_RL as a four-profile
+    system. The exact natural host breadth, RL component identities, phage trigger,
+    and profile-to-activity mapping remain unresolved.
   attaches_to:
   - causal_graphs#gao_rl_locus_restricts_phage
   posed_by: codex
