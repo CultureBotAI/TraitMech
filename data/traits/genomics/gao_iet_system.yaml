@@ -1,0 +1,162 @@
+identifier: traitmech:000354
+label: Gao-Iet system
+definition: A phage defense system in which an organism possesses a Gao_Iet locus
+  represented by DefenseFinder as a two-profile model requiring Gao_Iet__IetA and
+  Gao_Iet__IetS.
+definition_source: DOI:10.1126/science.aba0372
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Gao_Iet
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Gao_Iet__IetA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Gao_Iet__IetS
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:32855333
+  snippet: By systematic defense gene prediction and heterologous reconstitution,
+    here we discover 29 widespread antiviral gene cassettes, collectively present
+    in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.
+  notes: Gao et al. support a systematic defense-gene prediction and heterologous
+    reconstitution campaign that discovered widespread antiviral gene cassettes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Gao_Iet | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes
+  notes: The DefenseFinder article registry maps the named Gao_Iet system to the Gao
+    et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Gao_Iet\tGao_Iet\t2\t2\tGao_Iet__IetA, Gao_Iet__IetS"
+  notes: The DefenseFinder rules table models Gao_Iet as a two-profile system requiring
+    the Gao_Iet__IetA and Gao_Iet__IetS profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_Iet__IetA                                    | Gao_Iet__IetA                                    |
+    Gao_Iet                | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records Gao_Iet__IetA under Gao_Iet.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_Iet__IetS                                    | Gao_Iet__IetS                                    |
+    Gao_Iet                | Custom                  | 50     |'
+  notes: The DefenseFinder HMM inventory records Gao_Iet__IetS under Gao_Iet.
+causal_graphs:
+- graph_id: gao_iet_locus_restricts_phage
+  title: Gao-Iet loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Gao_Iet locus
+    to Gao et al. antiviral cassette defense without asserting the unresolved IetA
+    or IetS component activities.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Gao-Iet as a named DefenseFinder two-profile Gao-family
+    system while leaving natural hosts, IetA/IetS protein functions, phage triggers,
+    and direct effector activity unresolved.
+  nodes:
+  - node_id: gao_iet_locus
+    label: Gao_Iet locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Gao_Iet phage-defense locus represented by custom
+      IetA and IetS profiles.
+  - node_id: gao_2020_antiviral_cassette_defense
+    label: Gao 2020 antiviral cassette defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage protection by one of the antiviral gene cassettes described
+      in the Gao et al. systematic defense-gene discovery campaign.
+  - node_id: gao_iet_system_trait
+    label: Gao-Iet system
+    node_type: TRAIT
+    grounding: traitmech:000354
+    description: Possession of a genome-encoded Gao-Iet phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gao_iet_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_2020_antiviral_cassette_defense
+    description: DefenseFinder maps Gao_Iet to the Gao et al. systematic antiphage-system
+      discovery paper and models it as a two-profile system requiring IetA and IetS.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_Iet | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_Iet system to the
+        Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Iet\tGao_Iet\t2\t2\tGao_Iet__IetA, Gao_Iet__IetS"
+      notes: The DefenseFinder rules table models Gao_Iet as a two-profile system
+        requiring the Gao_Iet__IetA and Gao_Iet__IetS profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Iet__IetA                                    | Gao_Iet__IetA                                    |
+        Gao_Iet                | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records Gao_Iet__IetA under Gao_Iet.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Iet__IetS                                    | Gao_Iet__IetS                                    |
+        Gao_Iet                | Custom                  | 50     |'
+      notes: The DefenseFinder HMM inventory records Gao_Iet__IetS under Gao_Iet.
+  - subject: gao_2020_antiviral_cassette_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gao_iet_system_trait
+    description: Gao_Iet-associated antiviral cassette defense realizes the Gao-Iet
+      system trait.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+  - subject: gao_iet_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Gao-Iet system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_Iet | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_Iet system to the
+        Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_Iet\tGao_Iet\t2\t2\tGao_Iet__IetA, Gao_Iet__IetS"
+      notes: The DefenseFinder rules table models Gao_Iet as a two-profile system
+        requiring the Gao_Iet__IetA and Gao_Iet__IetS profiles.
+discussions:
+- discussion_id: gao-iet-mechanism-gap
+  prompt: Resolve Gao_Iet natural hosts, IetA/IetS component functions, phage triggers,
+    and effector activity before minting narrower Gao_Iet mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support widespread antiviral gene cassettes that mediate protection
+    against specific bacteriophages, and DefenseFinder models Gao_Iet as a two-profile
+    system. The exact natural host breadth, Iet component identities, phage trigger,
+    and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#gao_iet_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T03:34:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Gao-Iet system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v231.
+  llm_assisted: true
