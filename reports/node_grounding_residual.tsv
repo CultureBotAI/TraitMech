@@ -30,6 +30,7 @@ amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutroph
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
 phage dna replication	BIOLOGICAL_PROCESS	4	data/traits/genomics/abir_system.yaml|data/traits/genomics/brex_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
 phage infection	BIOLOGICAL_PROCESS	4	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/lamassu_system.yaml
+gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	4	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_mza_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -57,7 +58,6 @@ temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
-gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	3	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_rl_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 phage propagation	BIOLOGICAL_PROCESS	3	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/stk2_system.yaml
@@ -1311,6 +1311,7 @@ phage genomic rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_sys
 non-abortive rna-phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 gao_hhe locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_hhe_system.yaml
 gao_iet locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_iet_system.yaml
+gao_mza locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_mza_system.yaml
 gao_rl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_rl_system.yaml
 bacterial gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/gasdermin_system.yaml
 caspase-like bgsdm cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml
