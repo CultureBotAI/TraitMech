@@ -1324,6 +1324,8 @@ gao_rl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_rl_system.yaml
 gao_tery locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_tery_system.yaml
 gao_tmn locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_tmn_system.yaml
 gao_upx locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_upx_system.yaml
+gaps1 locus	GENETIC_ELEMENT	1	data/traits/genomics/gaps1_system.yaml
+gaps1-induced cell dormancy	STATE	1	data/traits/genomics/gaps1_system.yaml
 bacterial gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/gasdermin_system.yaml
 caspase-like bgsdm cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml
 bacterial gasdermin pore assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml

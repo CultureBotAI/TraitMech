@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gaps1_system.yaml
+  slug: gaps1_system
+session:
+  id: 2026-09-25T042232Z-codex-b8771a
+  timestamp: '2026-09-25T04:22:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add GAPS1 system trait
+  details: Minted traitmech:000371 for the DOI-backed GAPS1 phage-defense system with Nature
+    Microbiology evidence for a GMT-island anti-phage system triggered by a phage capsid protein
+    to induce cell dormancy; recorded pinned DefenseFinder article, rules, and HMM rows; added
+    a conservative nonmechanistic graph and reserved METPO:1032500 in proposals/metpo_traitmech_v248.

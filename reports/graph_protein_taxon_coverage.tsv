@@ -238,6 +238,7 @@ data/traits/genomics/gao_rl_system.yaml	traitmech:000352	Gao-RL system	gao_rl_lo
 data/traits/genomics/gao_tery_system.yaml	traitmech:000360	Gao-TerY system	gao_tery_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_tmn_system.yaml	traitmech:000357	Gao-Tmn system	gao_tmn_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_upx_system.yaml	traitmech:000358	Gao-Upx system	gao_upx_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gaps1_system.yaml	traitmech:000371	GAPS1 system	gaps1_capsid_triggered_dormancy	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gasdermin_system.yaml	traitmech:000336	GasderMIN system	gasdermin_proteolysis_triggers_pore_cell_death	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

@@ -1808,6 +1808,28 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_upx_system.html#gao-upx-mechanism-gap"
  },
  {
+  "discussion_id": "gaps1-trigger-sibling-gap",
+  "prompt": "Resolve GAPS1 component activity, natural-host exemplars, and GAPS2/GAPS4/GAPS6 boundaries before minting narrower GAPS traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "GAPS1 system",
+  "source_id": "traitmech:000371",
+  "source_file": "gaps1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gaps1_capsid_triggered_dormancy"
+  ],
+  "rationale": "Mahata et al. support GAPS1 as one GMT-island anti-phage defense system triggered by a phage capsid protein to induce cell dormancy, and DefenseFinder represents GAPS1 as one GAPS1__GAPS1 profile. This first system-level record does not assert the GAPS1 component's molecular activity, the capsid trigger identity, a universal GAPS1 host range, or sibling GAPS2, GAPS4, or GAPS6 system boundaries.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-024-01840-5",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gaps1_system.html#gaps1-trigger-sibling-gap"
+ },
+ {
   "discussion_id": "gasdermin-family-breadth-and-card-nlr-scope-gap",
   "prompt": "Resolve natural GasderMIN family breadth and CARD-NLR gasdermin context before minting narrower gasdermin subfamily traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -4423,9 +4445,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 240,
- "total_knowledge_gaps": 158,
- "total_source_entries": 238,
+ "total_discussions": 241,
+ "total_knowledge_gaps": 159,
+ "total_source_entries": 239,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
