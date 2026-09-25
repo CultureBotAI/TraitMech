@@ -1,0 +1,296 @@
+identifier: traitmech:000370
+label: MADS system
+definition: A phage defense system in which an organism possesses a methylation-associated
+  defense system locus whose canonical architecture has mad1 through mad8 genes and
+  whose methylation-coupled self/non-self discrimination can restrict bacteriophage
+  infection.
+definition_source: DOI:10.1016/j.chom.2024.07.005
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: MADS
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.chom.2024.07.005
+- synonym_text: methylation-associated defense system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.chom.2024.07.005
+- synonym_text: MADS__mad1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad3
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad4
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad5
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad6
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad7
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: MADS__mad8
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1016/j.chom.2024.07.005
+  snippet: coined methylation-associated defense system (MADS)
+  notes: Maestri et al. coin methylation-associated defense system (MADS) for the
+    newly discovered phage-defense locus.
+- reference: DOI:10.1016/j.chom.2024.07.005
+  snippet: MADS interacts with a CRISPR-Cas system in its native host to provide robust
+    and durable resistance against phages
+  notes: Maestri et al. show that native-host MADS and CRISPR-Cas cooperate to provide
+    robust phage resistance.
+- reference: DOI:10.1016/j.chom.2024.07.005
+  snippet: MADS encodes a defense system that is active against at least 4 different
+    DNA phages
+  notes: Maestri et al. support MADS activity against DMS3vir and three additional
+    DNA phages.
+- reference: DOI:10.1016/j.chom.2024.07.005
+  snippet: MADS uses a methylation-based self/non-self discrimination mechanism
+  notes: Maestri et al. connect MADS to methylation-based self/non-self discrimination.
+- reference: DOI:10.1101/2023.03.30.534895
+  snippet: Bacterial defences interact synergistically by disrupting phage cooperation
+  notes: The bioRxiv version of Maestri et al. is the DOI cited in DefenseFinder's
+    MADS article-registry row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: MADS | 10\.1101/2023\.03\.30\.534895 | Bacterial defences interact synergistically
+    by disrupting phage cooperation
+  notes: The DefenseFinder article registry maps the named MADS system to the Maestri
+    et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "MADS\tMADS\t3\t3\tMADS__mad1, MADS__mad2, MADS__mad3, MADS__mad4, MADS__mad5,\
+    \ MADS__mad6, MADS__mad7, MADS__mad8\t\t\t"
+  notes: The DefenseFinder rules table models MADS with MADS__mad1 through MADS__mad8
+    profiles and a minimum of three mandatory matches.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad1                                       | MADS__mad1                                       |
+    MADS                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records MADS__mad1 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad2                                       | MADS__mad2                                       |
+    MADS                   | Custom                  | 150    |'
+  notes: The DefenseFinder HMM inventory records MADS__mad2 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad3                                       | MADS__mad3                                       |
+    MADS                   | Custom                  | 200    |'
+  notes: The DefenseFinder HMM inventory records MADS__mad3 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad4                                       | MADS__mad4                                       |
+    MADS                   | Custom                  | 50     |'
+  notes: The DefenseFinder HMM inventory records MADS__mad4 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad5                                       | MADS__mad5                                       |
+    MADS                   | Custom                  | 50     |'
+  notes: The DefenseFinder HMM inventory records MADS__mad5 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad6                                       | MADS__mad6                                       |
+    MADS                   | Custom                  | 150    |'
+  notes: The DefenseFinder HMM inventory records MADS__mad6 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad7                                       | MADS__mad7                                       |
+    MADS                   | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records MADS__mad7 under the MADS model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| MADS__mad8                                       | MADS__mad8                                       |
+    MADS                   | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records MADS__mad8 under the MADS model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Maestri et al. discovered MADS in the native Pseudomonas aeruginosa SMC4386
+    locus and showed that deleting the locus reduced resistance to phage DMS3vir.
+  reference: DOI:10.1016/j.chom.2024.07.005
+causal_graphs:
+- graph_id: mads_methylation_restricts_phage
+  title: MADS loci confer methylation-associated phage defense
+  description: Conservative system-level sketch linking possession of a MADS locus
+    to methylation-based self/non-self discrimination, restriction of DNA phages,
+    and the MADS system trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures MADS as a named eight-gene DefenseFinder profile
+    set whose activity is associated with methylation and DNA restriction while leaving
+    the exact mapping from the MADS__mad profiles to nuclease, ATPase, kinase, specificity,
+    and methyltransferase activities unresolved.
+  nodes:
+  - node_id: mads_locus
+    label: MADS locus
+    node_type: GENETIC_ELEMENT
+    description: A methylation-associated phage-defense locus in the MADS family.
+  - node_id: mads_self_nonself_discrimination
+    label: MADS self/non-self discrimination
+    node_type: BIOLOGICAL_PROCESS
+    description: Methylation-based discrimination between host DNA and unmethylated
+      mobile genetic element DNA by MADS.
+  - node_id: dna_phage_restriction
+    label: DNA phage restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of infecting DNA bacteriophages by the MADS locus.
+  - node_id: mads_system_trait
+    label: MADS system
+    node_type: TRAIT
+    grounding: traitmech:000370
+    description: Possession of a genome-encoded MADS phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: mads_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mads_self_nonself_discrimination
+    description: MADS loci encode an eight-gene methylation-associated defense system,
+      and DefenseFinder models MADS as an eight-profile rule with at least three mandatory
+      matches.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: coined methylation-associated defense system (MADS)
+      notes: Maestri et al. coin methylation-associated defense system (MADS) for
+        the newly discovered phage-defense locus.
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: MADS uses a methylation-based self/non-self discrimination mechanism
+      notes: Maestri et al. connect MADS to methylation-based self/non-self discrimination.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: MADS | 10\.1101/2023\.03\.30\.534895 | Bacterial defences interact
+        synergistically by disrupting phage cooperation
+      notes: The DefenseFinder article registry maps the named MADS system to the
+        Maestri et al. preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "MADS\tMADS\t3\t3\tMADS__mad1, MADS__mad2, MADS__mad3, MADS__mad4,\
+        \ MADS__mad5, MADS__mad6, MADS__mad7, MADS__mad8\t\t\t"
+      notes: The DefenseFinder rules table models MADS with MADS__mad1 through MADS__mad8
+        profiles and a minimum of three mandatory matches.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad1                                       | MADS__mad1                                       |
+        MADS                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records MADS__mad1 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad2                                       | MADS__mad2                                       |
+        MADS                   | Custom                  | 150    |'
+      notes: The DefenseFinder HMM inventory records MADS__mad2 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad3                                       | MADS__mad3                                       |
+        MADS                   | Custom                  | 200    |'
+      notes: The DefenseFinder HMM inventory records MADS__mad3 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad4                                       | MADS__mad4                                       |
+        MADS                   | Custom                  | 50     |'
+      notes: The DefenseFinder HMM inventory records MADS__mad4 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad5                                       | MADS__mad5                                       |
+        MADS                   | Custom                  | 50     |'
+      notes: The DefenseFinder HMM inventory records MADS__mad5 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad6                                       | MADS__mad6                                       |
+        MADS                   | Custom                  | 150    |'
+      notes: The DefenseFinder HMM inventory records MADS__mad6 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad7                                       | MADS__mad7                                       |
+        MADS                   | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records MADS__mad7 under the MADS model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| MADS__mad8                                       | MADS__mad8                                       |
+        MADS                   | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records MADS__mad8 under the MADS model
+        namespace.
+  - subject: mads_self_nonself_discrimination
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dna_phage_restriction
+    description: MADS-associated methylation-based self/non-self discrimination contributes
+      to DNA-phage restriction.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: MADS uses a methylation-based self/non-self discrimination mechanism
+      notes: Maestri et al. connect MADS to methylation-based self/non-self discrimination.
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: MADS encodes a defense system that is active against at least 4 different
+        DNA phages
+      notes: Maestri et al. support MADS activity against DMS3vir and three additional
+        DNA phages.
+  - subject: dna_phage_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mads_system_trait
+    description: MADS-mediated DNA-phage restriction realizes the MADS system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: MADS encodes a defense system that is active against at least 4 different
+        DNA phages
+      notes: Maestri et al. support MADS activity against DMS3vir and three additional
+        DNA phages.
+  - subject: mads_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: MADS system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: coined methylation-associated defense system (MADS)
+      notes: Maestri et al. coin methylation-associated defense system (MADS) for
+        the newly discovered phage-defense locus.
+    - reference: DOI:10.1016/j.chom.2024.07.005
+      snippet: MADS interacts with a CRISPR-Cas system in its native host to provide
+        robust and durable resistance against phages
+      notes: Maestri et al. show that native-host MADS and CRISPR-Cas cooperate to
+        provide robust phage resistance.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: MADS | 10\.1101/2023\.03\.30\.534895 | Bacterial defences interact
+        synergistically by disrupting phage cooperation
+      notes: The DefenseFinder article registry maps the named MADS system to the
+        Maestri et al. preprint.
+discussions:
+- discussion_id: mads-profile-activity-gap
+  prompt: Resolve MADS subtype boundaries, MADS3-4 relationships, and Mad1-Mad8 profile-to-activity
+    mappings before minting narrower MADS mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Maestri et al. support MADS as a methylation-associated defense system
+    active against DNA phages, and DefenseFinder models MADS as an eight-profile rule.
+    The pinned model does not resolve which combinations of MADS__mad profiles correspond
+    to methylation, specificity, nuclease, ATPase, or kinase activities, so this first
+    record stays at system level.
+  evidence:
+  - reference: DOI:10.1016/j.chom.2024.07.005
+    snippet: MADS encodes a defense system that is active against at least 4 different
+      DNA phages
+    notes: Maestri et al. support MADS activity against DMS3vir and three additional
+      DNA phages.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "MADS\tMADS\t3\t3\tMADS__mad1, MADS__mad2, MADS__mad3, MADS__mad4, MADS__mad5,\
+      \ MADS__mad6, MADS__mad7, MADS__mad8\t\t\t"
+    notes: The DefenseFinder rules table models MADS with MADS__mad1 through MADS__mad8
+      profiles and a minimum of three mandatory matches.
+  attaches_to:
+  - causal_graphs#mads_methylation_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-24'
+curation_history:
+- timestamp: '2026-09-25T03:36:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted MADS system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v247.
+  llm_assisted: true
