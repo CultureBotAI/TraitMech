@@ -772,6 +772,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/belisama_system.html#belisama-mechanism-gap"
  },
  {
+  "discussion_id": "bil-defensefinder-profile-gap",
+  "prompt": "Resolve Bil HMM profiles and rule rows before minting component-specific Bil mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Bil system",
+  "source_id": "traitmech:000369",
+  "source_file": "bil_system.yaml",
+  "attaches_to": [
+   "causal_graphs#bil_locus_impairs_phage_assembly"
+  ],
+  "rationale": "Hor et al. support Bil as a bacterial ubiquitin-like conjugation antiphage system that modifies the phage central tail fibre, and the pinned DefenseFinder article registry maps Bil to the Millman et al. discovery preprint. The same pinned HMM inventory and rules table do not include exact Bil rows, so the exact DefenseFinder profile set, component rule, and model coverage remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/bil_system.html#bil-defensefinder-profile-gap"
+ },
+ {
   "discussion_id": "borvo-mechanism-gap",
   "prompt": "Resolve Borvo phage triggers and effector outputs before minting narrower Borvo mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4380,9 +4401,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 238,
- "total_knowledge_gaps": 156,
- "total_source_entries": 236,
+ "total_discussions": 239,
+ "total_knowledge_gaps": 157,
+ "total_source_entries": 237,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

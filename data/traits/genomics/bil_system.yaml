@@ -1,0 +1,199 @@
+identifier: traitmech:000369
+label: Bil system
+definition: A phage defense system in which an organism possesses a Bil bacterial
+  ubiquitin-like conjugation locus that can covalently attach a ubiquitin-like protein
+  to the bacteriophage central tail fibre and impair phage infectivity.
+definition_source: DOI:10.1038/s41586-024-07616-5
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Bil
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Bil antiphage defence system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41586-024-07616-5
+evidence:
+- reference: DOI:10.1038/s41586-024-07616-5
+  snippet: Bil antiphage defence system
+  notes: Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense
+    system.
+- reference: DOI:10.1038/s41586-024-07616-5
+  snippet: phage central tail fibre is obstructed by the covalently attached ubiquitin-like
+    protein
+  notes: Hor et al. show that the Bil system obstructs the phage central tail fibre
+    with a covalently attached ubiquitin-like protein.
+- reference: DOI:10.1038/s41586-024-07616-5
+  snippet: These phages show severely impaired infectivity
+  notes: Hor et al. connect Bil-dependent particle production to reduced phage infectivity.
+- reference: DOI:10.1016/j.chom.2022.09.017
+  snippet: An expanded arsenal of immune systems that protect bacteria from phages
+  notes: Millman et al. published the discovery cohort that DefenseFinder maps to
+    its Bil article-registry row.
+- reference: DOI:10.1101/2022.05.11.491447
+  snippet: An expanding arsenal of immune systems that protect bacteria from phages
+  notes: The bioRxiv version of Millman et al. is the DOI cited in DefenseFinder's
+    Bil article-registry row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Bil | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune systems
+    that protect bacteria from phages
+  notes: The DefenseFinder article registry maps the named Bil system to the Millman
+    et al. antiphage-system discovery preprint.
+causal_graphs:
+- graph_id: bil_locus_impairs_phage_assembly
+  title: Bil loci impair bacteriophage infectivity
+  description: Conservative system-level sketch linking possession of a Bil ubiquitin-like
+    conjugation locus to central-tail-fibre obstruction and impaired phage infectivity
+    without asserting the exact DefenseFinder profile or rule set for Bil.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Bil as a named phage-defense system whose ubiquitin-like
+    protein is covalently attached to the phage central tail fibre while leaving the
+    exact Bil component composition, target-phage breadth, receptor-recognition consequences,
+    and DefenseFinder model profiles unresolved.
+  nodes:
+  - node_id: bil_locus
+    label: Bil locus
+    node_type: GENETIC_ELEMENT
+    description: A bacterial Bil ubiquitin-like conjugation locus that encodes an
+      antiphage defense system.
+  - node_id: bil_ubiquitin_like_conjugation
+    label: Bil ubiquitin-like conjugation
+    node_type: BIOLOGICAL_PROCESS
+    description: Covalent attachment of a Bil ubiquitin-like protein during phage
+      infection.
+  - node_id: central_tail_fibre_obstruction
+    label: central tail fibre obstruction
+    node_type: BIOLOGICAL_PROCESS
+    description: Obstruction of a bacteriophage central tail fibre by a covalently
+      attached ubiquitin-like protein.
+  - node_id: impaired_phage_infectivity
+    label: impaired phage infectivity
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced infectivity of phage particles released from cells encoding
+      the Bil defense system.
+  - node_id: bil_system_trait
+    label: Bil system
+    node_type: TRAIT
+    grounding: traitmech:000369
+    description: Possession of a genome-encoded Bil phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: bil_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: bil_ubiquitin_like_conjugation
+    description: Bil loci encode a bacterial antiphage system based on ubiquitin-like
+      conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: Bil antiphage defence system
+      notes: Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense
+        system.
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: An expanded arsenal of immune systems that protect bacteria from phages
+      notes: Millman et al. published the discovery cohort that DefenseFinder maps
+        to its Bil article-registry row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Bil | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: The DefenseFinder article registry maps the named Bil system to the Millman
+        et al. antiphage-system discovery preprint.
+  - subject: bil_ubiquitin_like_conjugation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: central_tail_fibre_obstruction
+    description: The Bil system can obstruct the phage central tail fibre by covalently
+      attaching a ubiquitin-like protein.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: phage central tail fibre is obstructed by the covalently attached ubiquitin-like
+        protein
+      notes: Hor et al. show that the Bil system obstructs the phage central tail
+        fibre with a covalently attached ubiquitin-like protein.
+  - subject: central_tail_fibre_obstruction
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: impaired_phage_infectivity
+    description: Central-tail-fibre obstruction by the Bil system impairs phage-particle
+      infectivity.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: phage central tail fibre is obstructed by the covalently attached ubiquitin-like
+        protein
+      notes: Hor et al. show that the Bil system obstructs the phage central tail
+        fibre with a covalently attached ubiquitin-like protein.
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: These phages show severely impaired infectivity
+      notes: Hor et al. connect Bil-dependent particle production to reduced phage
+        infectivity.
+  - subject: impaired_phage_infectivity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: bil_system_trait
+    description: Bil-mediated impairment of phage infectivity realizes the Bil system
+      trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: These phages show severely impaired infectivity
+      notes: Hor et al. connect Bil-dependent particle production to reduced phage
+        infectivity.
+  - subject: bil_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Bil system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07616-5
+      snippet: Bil antiphage defence system
+      notes: Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense
+        system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Bil | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: The DefenseFinder article registry maps the named Bil system to the Millman
+        et al. antiphage-system discovery preprint.
+discussions:
+- discussion_id: bil-defensefinder-profile-gap
+  prompt: Resolve Bil HMM profiles and rule rows before minting component-specific
+    Bil mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Hor et al. support Bil as a bacterial ubiquitin-like conjugation antiphage
+    system that modifies the phage central tail fibre, and the pinned DefenseFinder
+    article registry maps Bil to the Millman et al. discovery preprint. The same pinned
+    HMM inventory and rules table do not include exact Bil rows, so the exact DefenseFinder
+    profile set, component rule, and model coverage remain unresolved.
+  evidence:
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: Bil | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+      systems that protect bacteria from phages
+    notes: The DefenseFinder article registry maps the named Bil system to the Millman
+      et al. antiphage-system discovery preprint.
+  attaches_to:
+  - causal_graphs#bil_locus_impairs_phage_assembly
+  posed_by: codex
+  posed_date: '2026-09-24'
+curation_history:
+- timestamp: '2026-09-25T03:02:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Bil system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v246.
+  llm_assisted: true
+- timestamp: '2026-09-25T03:03:00Z'
+  curator: codex
+  action: REVIEW_DEFENSEFINDER_PROFILE_GAP
+  changes: Reviewed the DefenseFinder Bil article-registry row at commit afb0e5a8b466be53586b13266f5d38d98c3ac268
+    and left narrower Bil HMM/profile semantics unresolved because the pinned HMM
+    inventory and rules table have no exact Bil rows.
+  llm_assisted: true
