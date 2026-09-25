@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sanata_system.yaml
+  slug: sanata_system
+session:
+  id: 2026-09-25T060438Z-codex-f7d27d
+  timestamp: '2026-09-25T06:04:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add SanaTA system trait
+  details: Minted traitmech:000373 for the DOI-backed DefenseFinder SanaTA phage-defense system
+    under phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, history, or prior proposal record. Recorded Sberro et al. T7 mutant-resistance
+    evidence plus pinned DefenseFinder article, rule, and required HMM rows; added a conservative
+    NONMECHANISTIC graph and a knowledge-gap discussion for unresolved natural host breadth,
+    SanaA/SanaT molecular activities, T7 Gp4.5/Lon anti-defense logic, and SanaTA__SanaT_1
+    profile interpretation; and reserved METPO:1032700 in proposals/metpo_traitmech_v250.

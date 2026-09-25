@@ -2731,6 +2731,28 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rugutis_system.html#rugutis-mechanism-gap"
  },
  {
+  "discussion_id": "sanata-host-trigger-profile-gap",
+  "prompt": "Resolve SanaTA native host breadth, SanaA/SanaT molecular activities, T7 Gp4.5/Lon anti-defense logic, and the SanaTA__SanaT_1 profile before minting narrower SanaTA mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SanaTA system",
+  "source_id": "traitmech:000373",
+  "source_file": "sanata_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sanata_locus_restricts_t7_mutants"
+  ],
+  "rationale": "Sberro et al. support sanaTA as a Shewanella sp. ANA-3 two-gene toxin-antitoxin family that confers resistance to T7 phage mutants lacking gene 4.5 when expressed in Escherichia coli, and DefenseFinder models SanaTA with SanaTA__SanaA and SanaTA__SanaT. This first system-level record leaves the natural host range, SanaA/SanaT activities, T7 Gp4.5/Lon counter-defense sequence, and the extra non-rule SanaTA__SanaT_1 HMM unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "PMID:23478446",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sanata_system.html#sanata-host-trigger-profile-gap"
+ },
+ {
   "discussion_id": "sefir-mechanism-gap",
   "prompt": "Resolve SEFIR phage triggers and effector outputs before minting narrower SEFIR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4464,9 +4486,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 242,
- "total_knowledge_gaps": 160,
- "total_source_entries": 240,
+ "total_discussions": 243,
+ "total_knowledge_gaps": 161,
+ "total_source_entries": 241,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

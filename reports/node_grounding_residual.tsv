@@ -1532,6 +1532,8 @@ rosmerta locus	GENETIC_ELEMENT	1	data/traits/genomics/rosmerta_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
 rugutis locus	GENETIC_ELEMENT	1	data/traits/genomics/rugutis_system.yaml
+sanata locus	GENETIC_ELEMENT	1	data/traits/genomics/sanata_system.yaml
+t7 gene 4.5 mutant resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/sanata_system.yaml
 sefir locus	GENETIC_ELEMENT	1	data/traits/genomics/sefir_system.yaml
 septu locus	GENETIC_ELEMENT	1	data/traits/genomics/septu_system.yaml
 ptuab oligomer assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/septu_system.yaml
