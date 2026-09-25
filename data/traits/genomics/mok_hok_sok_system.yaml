@@ -1,0 +1,177 @@
+identifier: traitmech:000372
+label: Mok-Hok-Sok system
+definition: A phage defense system in which an organism possesses a hok/sok toxin-antitoxin
+  locus represented by DefenseFinder as the two-profile Mok_Hok_Sok model and experimentally
+  linked to bacteriophage T4 exclusion by the plasmid R1 hok/sok locus.
+definition_source: DOI:10.1128/jb.178.7.2044-2050.1996
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Mok_Hok_Sok
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: hok/sok
+  synonym_type: RELATED_SYNONYM
+  source: PMID:8606182
+- synonym_text: Mok_Hok_Sok__Hok
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Mok_Hok_Sok__Mok
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:8606182
+  snippet: To investigate whether the hok/sok locus evolved as a phage-exclusion mechanism,
+    Escherichia coli cells that contain hok/sok on a pBR322-based plasmid were challenged
+    with T1, T4, T5, T7, and lambda phage.
+  notes: Pecota and Wood tested whether a plasmid-carried hok/sok locus can act as
+    a phage-exclusion mechanism.
+- reference: PMID:8606182
+  snippet: The presence of hok/sok reduced the efficiency of plating of T4 by 42%
+    and decreased the plaque size by approximately 85%.
+  notes: Pecota and Wood show that hok/sok reduced bacteriophage T4 plating efficiency
+    and plaque size.
+- reference: PMID:8606182
+  snippet: Single-step growth experiments demonstrated that hok/sok decreased the
+    T4 burst size by 40%, increased the time to form mature phage (eclipse time) from
+    22 to 30 min, and increased the time to cell lysis (latent period) from 30 to
+    60 min.
+  notes: Pecota and Wood support delayed T4 development and a lower T4 burst size
+    in the presence of hok/sok.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Mok_Hok_Sok | 10\.1128/jb\.178\.7\.2044-2050\.1996 | Exclusion of T4 phage
+    by the hok/sok killer locus from plasmid R1
+  notes: The DefenseFinder article registry maps the named Mok_Hok_Sok system to the
+    Pecota and Wood plasmid R1 hok/sok phage-exclusion paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\t\
+    \t"
+  notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
+    the Hok and Mok profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Mok_Hok_Sok__Hok                                 | Mok_Hok_Sok__Hok                                 |
+    Mok_Hok_Sok            | Custom                  | 90     |'
+  notes: The DefenseFinder HMM inventory records Mok_Hok_Sok__Hok under Mok_Hok_Sok.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Mok_Hok_Sok__Mok                                 | Mok_Hok_Sok__Mok                                 |
+    Mok_Hok_Sok            | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Mok_Hok_Sok__Mok under Mok_Hok_Sok.
+causal_graphs:
+- graph_id: mok_hok_sok_locus_restricts_t4_phage
+  title: Mok-Hok-Sok loci exclude T4 phage
+  description: Conservative system-level sketch linking a DefenseFinder Mok_Hok_Sok
+    locus to bacteriophage T4 exclusion and the Mok-Hok-Sok system trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Mok_Hok_Sok as a named DefenseFinder two-profile
+    model tied to plasmid R1 hok/sok T4 exclusion while leaving natural host breadth,
+    Sok antisense-RNA representation, Hok toxin activation, and the exact DefenseFinder
+    Hok/Mok profile-to-activity mapping unresolved.
+  nodes:
+  - node_id: mok_hok_sok_locus
+    label: Mok_Hok_Sok locus
+    node_type: GENETIC_ELEMENT
+    description: A hok/sok toxin-antitoxin phage-defense locus represented by the
+      DefenseFinder Mok_Hok_Sok Hok and Mok profiles.
+  - node_id: t4_phage_exclusion
+    label: T4 phage exclusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of bacteriophage T4 plaque formation, burst size, and
+      lysis timing in a host carrying hok/sok.
+  - node_id: mok_hok_sok_system_trait
+    label: Mok-Hok-Sok system
+    node_type: TRAIT
+    grounding: traitmech:000372
+    description: Possession of a genome-encoded Mok-Hok-Sok phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: mok_hok_sok_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t4_phage_exclusion
+    description: The plasmid R1 hok/sok locus can mediate T4 phage exclusion, and
+      DefenseFinder models Mok_Hok_Sok as a Hok/Mok two-profile system.
+    evidence:
+    - reference: PMID:8606182
+      snippet: The presence of hok/sok reduced the efficiency of plating of T4 by
+        42% and decreased the plaque size by approximately 85%.
+      notes: Pecota and Wood connect hok/sok possession to bacteriophage T4 restriction.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\
+        \t\t"
+      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
+        the Hok and Mok profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Mok_Hok_Sok__Hok                                 | Mok_Hok_Sok__Hok                                 |
+        Mok_Hok_Sok            | Custom                  | 90     |'
+      notes: The DefenseFinder HMM inventory records Mok_Hok_Sok__Hok under Mok_Hok_Sok.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Mok_Hok_Sok__Mok                                 | Mok_Hok_Sok__Mok                                 |
+        Mok_Hok_Sok            | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Mok_Hok_Sok__Mok under Mok_Hok_Sok.
+  - subject: t4_phage_exclusion
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mok_hok_sok_system_trait
+    description: T4 phage exclusion realizes the Mok-Hok-Sok system trait.
+    evidence:
+    - reference: PMID:8606182
+      snippet: Single-step growth experiments demonstrated that hok/sok decreased
+        the T4 burst size by 40%, increased the time to form mature phage (eclipse
+        time) from 22 to 30 min, and increased the time to cell lysis (latent period)
+        from 30 to 60 min.
+      notes: Pecota and Wood show lower burst size and delayed T4 development when
+        hok/sok is present.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Mok_Hok_Sok | 10\.1128/jb\.178\.7\.2044-2050\.1996 | Exclusion of T4
+        phage by the hok/sok killer locus from plasmid R1
+      notes: The DefenseFinder article registry maps the named Mok_Hok_Sok system
+        to the Pecota and Wood plasmid R1 hok/sok phage-exclusion paper.
+  - subject: mok_hok_sok_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Mok-Hok-Sok system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Mok_Hok_Sok | 10\.1128/jb\.178\.7\.2044-2050\.1996 | Exclusion of T4
+        phage by the hok/sok killer locus from plasmid R1
+      notes: The DefenseFinder article registry maps the named Mok_Hok_Sok system
+        to the Pecota and Wood plasmid R1 hok/sok phage-exclusion paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\
+        \t\t"
+      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
+        the Hok and Mok profiles.
+discussions:
+- discussion_id: mok-hok-sok-natural-context-gap
+  prompt: Resolve the natural host range, Sok antisense-RNA representation, Hok toxin
+    activation, and Hok/Mok profile-to-activity mapping before minting narrower Mok-Hok-Sok
+    mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Pecota and Wood support T4 exclusion by the plasmid R1 hok/sok locus
+    carried on a pBR322-based plasmid, and DefenseFinder models Mok_Hok_Sok with Hok
+    and Mok protein profiles. This first record leaves the native biological breadth,
+    RNA antitoxin representation, Hok triggering, and profile-to-activity mapping
+    unresolved.
+  attaches_to:
+  - causal_graphs#mok_hok_sok_locus_restricts_t4_phage
+  posed_by: codex
+  posed_date: '2026-09-25'
+curation_history:
+- timestamp: '2026-09-25T05:02:42Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Mok-Hok-Sok system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v249.
+  llm_assisted: true
