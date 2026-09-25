@@ -196,8 +196,8 @@ curation_history:
 - timestamp: '2026-09-25T06:20:44Z'
   curator: codex
   action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
-  changes: Reviewed SanaTA during canonical-example issue 444 enforcement and
-    left canonical_examples empty because the source validates a broad DefenseFinder
-    toxin-antitoxin family in an Escherichia coli expression assay and does not establish
-    a direct native host exemplar. No paid research was used.
+  changes: Reviewed SanaTA during canonical-example issue 444 enforcement and left
+    canonical_examples empty because the source validates a broad DefenseFinder toxin-antitoxin
+    family in an Escherichia coli expression assay and does not establish a direct
+    native host exemplar. No paid research was used.
   llm_assisted: true

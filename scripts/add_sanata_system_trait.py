@@ -31,6 +31,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-25T06:02:46Z"
+CANONICAL_REVIEW_TIMESTAMP = "2026-09-25T06:20:44Z"
 IDENTIFIER = "traitmech:000373"
 PROPOSAL = "proposals/metpo_traitmech_v250"
 SLUG = "sanata"
@@ -374,6 +375,21 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
+        changes=(
+            "Reviewed SanaTA during canonical-example issue 444 "
+            "enforcement and left canonical_examples empty because the "
+            "source validates a broad DefenseFinder toxin-antitoxin "
+            "family in an Escherichia coli expression assay and does not "
+            "establish a direct native host exemplar. No paid research "
+            "was used."
+        ),
+        llm_assisted=True,
+        timestamp=CANONICAL_REVIEW_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)
