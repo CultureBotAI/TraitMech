@@ -75,7 +75,7 @@ def rules_evidence() -> dict[str, str]:
         "snippet": RULES_SNIPPET,
         "notes": (
             "The DefenseFinder rules table models Mok_Hok_Sok as a single "
-            "system requiring the Hok and Mok profiles."
+            "system listing Hok and Mok profiles with 1/1 thresholds."
         ),
     }
 

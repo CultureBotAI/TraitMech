@@ -49,8 +49,8 @@ evidence:
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
   snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\t\
     \t"
-  notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
-    the Hok and Mok profiles.
+  notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system listing
+    Hok and Mok profiles with 1/1 thresholds.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
   snippet: '| Mok_Hok_Sok__Hok                                 | Mok_Hok_Sok__Hok                                 |
     Mok_Hok_Sok            | Custom                  | 90     |'
@@ -106,8 +106,8 @@ causal_graphs:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\
         \t\t"
-      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
-        the Hok and Mok profiles.
+      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system
+        listing Hok and Mok profiles with 1/1 thresholds.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| Mok_Hok_Sok__Hok                                 | Mok_Hok_Sok__Hok                                 |
         Mok_Hok_Sok            | Custom                  | 90     |'
@@ -148,8 +148,8 @@ causal_graphs:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "Mok_Hok_Sok\tMok_Hok_Sok\t1\t1\tMok_Hok_Sok__Hok, Mok_Hok_Sok__Mok\t\
         \t\t"
-      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system requiring
-        the Hok and Mok profiles.
+      notes: The DefenseFinder rules table models Mok_Hok_Sok as a single system
+        listing Hok and Mok profiles with 1/1 thresholds.
 discussions:
 - discussion_id: mok-hok-sok-natural-context-gap
   prompt: Resolve the natural host range, Sok antisense-RNA representation, Hok toxin
