@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mok_hok_sok_system.yaml
+  slug: mok_hok_sok_system
+session:
+  id: 2026-09-25T050407Z-codex-e184a2
+  timestamp: '2026-09-25T05:04:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Mok-Hok-Sok system trait
+  details: Minted traitmech:000372 for the DOI-backed DefenseFinder Mok-Hok-Sok phage-defense
+    system under phage defense system after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record. Recorded Pecota and Wood
+    T4 phage-exclusion evidence plus pinned DefenseFinder article, rule, and HMM rows; added
+    a conservative NONMECHANISTIC graph and a knowledge-gap discussion for unresolved natural
+    host breadth, Sok antisense-RNA representation, Hok toxin activation, and Hok/Mok profile-to-activity
+    mapping; and reserved METPO:1032600 in proposals/metpo_traitmech_v249.

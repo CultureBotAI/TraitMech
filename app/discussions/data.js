@@ -2146,6 +2146,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/mmb_gp29_gp30_system.html#mmb_gp29_gp30-mechanism-gap"
  },
  {
+  "discussion_id": "mok-hok-sok-natural-context-gap",
+  "prompt": "Resolve the natural host range, Sok antisense-RNA representation, Hok toxin activation, and Hok/Mok profile-to-activity mapping before minting narrower Mok-Hok-Sok mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Mok-Hok-Sok system",
+  "source_id": "traitmech:000372",
+  "source_file": "mok_hok_sok_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mok_hok_sok_locus_restricts_t4_phage"
+  ],
+  "rationale": "Pecota and Wood support T4 exclusion by the plasmid R1 hok/sok locus carried on a pBR322-based plasmid, and DefenseFinder models Mok_Hok_Sok with Hok and Mok protein profiles. This first record leaves the native biological breadth, RNA antitoxin representation, Hok triggering, and profile-to-activity mapping unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mok_hok_sok_system.html#mok-hok-sok-natural-context-gap"
+ },
+ {
   "discussion_id": "mokosh-mechanism-gap",
   "prompt": "Resolve Mokosh phage triggers and effector outputs before minting narrower Mokosh mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4445,9 +4464,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 241,
- "total_knowledge_gaps": 159,
- "total_source_entries": 239,
+ "total_discussions": 242,
+ "total_knowledge_gaps": 160,
+ "total_source_entries": 240,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

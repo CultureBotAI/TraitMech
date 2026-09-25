@@ -1432,6 +1432,8 @@ integron integrase (inti)	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_
 atti/attc cassette recombination	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
 transduction of host dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
 antimicrobial resistance gene cargo	QUALITY	1	data/traits/genomics/mobile_genetic_element.yaml
+mok_hok_sok locus	GENETIC_ELEMENT	1	data/traits/genomics/mok_hok_sok_system.yaml
+t4 phage exclusion	BIOLOGICAL_PROCESS	1	data/traits/genomics/mok_hok_sok_system.yaml
 mokosh locus	GENETIC_ELEMENT	1	data/traits/genomics/mokosh_system.yaml
 mqsrac locus	GENETIC_ELEMENT	1	data/traits/genomics/mqsrac_system.yaml
 mqsrac-dependent persister cell formation	BIOLOGICAL_PROCESS	1	data/traits/genomics/mqsrac_system.yaml
