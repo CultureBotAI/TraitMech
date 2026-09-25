@@ -2045,6 +2045,28 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lugos_system.html#lugos-mechanism-gap"
  },
  {
+  "discussion_id": "mads-profile-activity-gap",
+  "prompt": "Resolve MADS subtype boundaries, MADS3-4 relationships, and Mad1-Mad8 profile-to-activity mappings before minting narrower MADS mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MADS system",
+  "source_id": "traitmech:000370",
+  "source_file": "mads_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mads_methylation_restricts_phage"
+  ],
+  "rationale": "Maestri et al. support MADS as a methylation-associated defense system active against DNA phages, and DefenseFinder models MADS as an eight-profile rule. The pinned model does not resolve which combinations of MADS__mad profiles correspond to methylation, specificity, nuclease, ATPase, or kinase activities, so this first record stays at system level.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2024.07.005",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mads_system.html#mads-profile-activity-gap"
+ },
+ {
   "discussion_id": "mazef-activation-breadth-gap",
   "prompt": "Resolve MazEF activation, direct MazF RNA targets, and RNA- versus DNA-phage breadth before minting narrower MazEF mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4401,9 +4423,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 239,
- "total_knowledge_gaps": 157,
- "total_source_entries": 237,
+ "total_discussions": 240,
+ "total_knowledge_gaps": 158,
+ "total_source_entries": 238,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

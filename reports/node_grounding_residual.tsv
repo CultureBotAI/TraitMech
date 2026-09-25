@@ -1412,6 +1412,9 @@ lmua effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_syste
 lit locus	GENETIC_ELEMENT	1	data/traits/genomics/lit_system.yaml
 t4 gol-lit phage exclusion	BIOLOGICAL_PROCESS	1	data/traits/genomics/lit_system.yaml
 lugos locus	GENETIC_ELEMENT	1	data/traits/genomics/lugos_system.yaml
+mads locus	GENETIC_ELEMENT	1	data/traits/genomics/mads_system.yaml
+mads self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/mads_system.yaml
+dna phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/mads_system.yaml
 mazef locus	GENETIC_ELEMENT	1	data/traits/genomics/mazef_system.yaml
 rna phage replication interference	BIOLOGICAL_PROCESS	1	data/traits/genomics/mazef_system.yaml
 menshen locus	GENETIC_ELEMENT	1	data/traits/genomics/menshen_system.yaml

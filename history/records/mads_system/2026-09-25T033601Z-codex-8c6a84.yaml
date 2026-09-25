@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mads_system.yaml
+  slug: mads_system
+session:
+  id: 2026-09-25T033601Z-codex-8c6a84
+  timestamp: '2026-09-25T03:36:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  - canonical_examples
+  summary: Added MADS system phage-defense TraitRecord
+  details: Created traitmech:000370 for the MADS methylation-associated phage-defense system,
+    backed it with the Maestri final and preprint DOIs plus the pinned DefenseFinder article-registry,
+    rule, and HMM URLs, reserved METPO:1032400 in proposals/metpo_traitmech_v247, added a
+    canonical Pseudomonas aeruginosa example, and recorded the MADS subtype/profile activity
+    boundary as a knowledge gap.
