@@ -1,0 +1,267 @@
+identifier: traitmech:000381
+label: GAPS6 system
+definition: A phage defense system in which an organism possesses a GMT-encoded GAPS6
+  locus represented by DefenseFinder as a two-profile model, GAPS6__GAPS6a and GAPS6__GAPS6b,
+  and experimentally linked to T7, T4, P1-vir, and lambda-vir protection when expressed
+  in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: GAPS6
+  synonym_type: EXACT_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+- synonym_text: GAPS6__GAPS6a
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: GAPS6__GAPS6b
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-024-01840-5
+  snippet: We reveal four anti-phage defence systems encoded within GMT islands and
+    further characterize one system, GAPS1, showing it is triggered by a phage capsid
+    protein to induce cell dormancy
+  notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+    islands.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+  snippet: GAPS6 is composed of two proteins, [GAPS6a](https://www.ncbi.nlm.nih.gov/protein/WP_248387294.1/)
+    and [GAPS6b](https://www.ncbi.nlm.nih.gov/protein/WP_248387295.1/). These two
+    proteins are encoded together in diverse Gram-negative bacteria.
+  notes: The DefenseFinder wiki describes GAPS6 as a two-protein system with GAPS6a
+    and GAPS6b encoded together.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+  snippet: GAPS6b is essential for the defense phenotype, however it is not known
+    whether GAPS6b could be sufficient.
+  notes: The DefenseFinder wiki reports that GAPS6b is essential for GAPS6 defense
+    but leaves GAPS6b sufficiency unresolved.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+  snippet: GAPS6b is composed of TPR repeats at the N-terminus, possibly allowing
+    ligand binding and a predicted RNAse domain (PINc, PF08745.14) at the C-terminus.
+    PINc domains have been implicated as toxins in bacterial toxin-antitoxin modules
+    :ref{doi=10.1093/protein/gzq081}. The PINc domain is required for the anti-phage
+    defense activity of GAPS6.
+  notes: The DefenseFinder wiki reports that GAPS6b carries TPR repeats and a PINc
+    domain required for GAPS6 anti-phage activity.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+  snippet: The GAPS6 system in *Escherichia coli* (GCF_013372365.1, NZ_CP054227) is
+    composed of 2 proteins GAPS6b (WP_096985931.1) GAPS6a (WP_000346990.1)
+  notes: The DefenseFinder wiki illustrates a predicted two-protein GAPS6 locus in
+    RefSeq assembly GCF_013372365.1 on NZ_CP054227.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+  snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+    \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a href='https://ncbi.nlm.nih.gov/protein/WP_248387294.1'>WP_248387294.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/WP_248387295.1'>WP_248387295.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T7\
+    \ & T4 & P1-vir & Lambda-vir"
+  notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+    a Vibrio parahaemolyticus GAPS6 source locus expressed in E. coli against T7,
+    T4, P1-vir, and Lambda-vir.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: GAPS6 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+    a new class of mobile elements rich in bacterial defensive and offensive tools
+  notes: The DefenseFinder article registry maps the named GAPS6 system to the Mahata
+    et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "GAPS6\tGAPS6\t2\t2\tGAPS6__GAPS6a, GAPS6__GAPS6b\t\t\t"
+  notes: The DefenseFinder rules table models GAPS6 as a two-profile system requiring
+    GAPS6__GAPS6a and GAPS6__GAPS6b.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GAPS6__GAPS6a                                    | GAPS6__GAPS6a                                    |
+    GAPS6                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records GAPS6__GAPS6a under the GAPS6 system
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GAPS6__GAPS6b                                    | GAPS6__GAPS6b                                    |
+    GAPS6                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records GAPS6__GAPS6b under the GAPS6 system
+    namespace.
+causal_graphs:
+- graph_id: gaps6_locus_restricts_phages
+  title: GAPS6 loci protect against T7, T4, P1-vir, and lambda-vir
+  description: Conservative system-level sketch linking GAPS6 locus possession to
+    protection against T7, T4, P1-vir, and lambda-vir.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GAPS6 as a named two-profile DefenseFinder phage-defense
+    system while leaving natural host breadth, the activity of GAPS6a, GAPS6b sufficiency
+    and trigger specificity, and exact GAPS6a/GAPS6b profile-to-protein correspondence
+    unresolved.
+  nodes:
+  - node_id: gaps6_locus
+    label: GAPS6 locus
+    node_type: GENETIC_ELEMENT
+    description: A GMT-encoded phage-defense locus represented by the GAPS6__GAPS6a
+      and GAPS6__GAPS6b DefenseFinder profiles.
+  - node_id: gaps6_listed_phage_protection
+    label: T7, T4, P1-vir, and lambda-vir protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T7, T4, P1-vir, and lambda-vir by GAPS6.
+  - node_id: gaps6_system_trait
+    label: GAPS6 system
+    node_type: TRAIT
+    grounding: traitmech:000381
+    description: Possession of a genome-encoded GAPS6 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gaps6_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gaps6_listed_phage_protection
+    description: The DefenseFinder wiki links a Vibrio parahaemolyticus GAPS6 locus
+      from Mahata et al. to protection against T7, T4, P1-vir, and lambda-vir, and
+      DefenseFinder models GAPS6 through two mandatory profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+      snippet: GAPS6 is composed of two proteins, [GAPS6a](https://www.ncbi.nlm.nih.gov/protein/WP_248387294.1/)
+        and [GAPS6b](https://www.ncbi.nlm.nih.gov/protein/WP_248387295.1/). These
+        two proteins are encoded together in diverse Gram-negative bacteria.
+      notes: The DefenseFinder wiki describes GAPS6 as a two-protein system with GAPS6a
+        and GAPS6b encoded together.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_248387294.1'>WP_248387294.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/WP_248387295.1'>WP_248387295.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T7 & T4 & P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS6 source locus expressed in E. coli against
+        T7, T4, P1-vir, and Lambda-vir.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS6\tGAPS6\t2\t2\tGAPS6__GAPS6a, GAPS6__GAPS6b\t\t\t"
+      notes: The DefenseFinder rules table models GAPS6 as a two-profile system requiring
+        GAPS6__GAPS6a and GAPS6__GAPS6b.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GAPS6__GAPS6a                                    | GAPS6__GAPS6a                                    |
+        GAPS6                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records GAPS6__GAPS6a under the GAPS6
+        system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GAPS6__GAPS6b                                    | GAPS6__GAPS6b                                    |
+        GAPS6                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records GAPS6__GAPS6b under the GAPS6
+        system namespace.
+  - subject: gaps6_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gaps6_system_trait
+    description: Protection against T7, T4, P1-vir, and lambda-vir realizes the GAPS6
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_248387294.1'>WP_248387294.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/WP_248387295.1'>WP_248387295.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T7 & T4 & P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS6 source locus expressed in E. coli against
+        T7, T4, P1-vir, and Lambda-vir.
+  - subject: gaps6_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: GAPS6 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01840-5
+      snippet: We reveal four anti-phage defence systems encoded within GMT islands
+        and further characterize one system, GAPS1, showing it is triggered by a phage
+        capsid protein to induce cell dormancy
+      notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+        islands.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: GAPS6 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+        a new class of mobile elements rich in bacterial defensive and offensive tools
+      notes: The DefenseFinder article registry maps the named GAPS6 system to the
+        Mahata et al. preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS6\tGAPS6\t2\t2\tGAPS6__GAPS6a, GAPS6__GAPS6b\t\t\t"
+      notes: The DefenseFinder rules table models GAPS6 as a two-profile system requiring
+        GAPS6__GAPS6a and GAPS6__GAPS6b.
+discussions:
+- discussion_id: gaps6-mechanism-gap
+  prompt: Resolve GAPS6 natural host breadth, GAPS6a activity, GAPS6b sufficiency
+    and trigger specificity, and exact GAPS6a/GAPS6b profile-to-protein correspondence
+    before minting narrower GAPS6 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mahata et al. support GAPS6 as a GMT-encoded anti-phage defense system
+    that protects E. coli against T7, T4, P1-vir, and lambda-vir when expressed from
+    a Vibrio parahaemolyticus locus, and DefenseFinder represents GAPS6 as a two-profile
+    system. Natural host breadth, GAPS6a activity, GAPS6b sufficiency, the phage trigger,
+    and exact profile-to-protein correspondence remain unresolved.
+  evidence:
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+    snippet: GAPS6 is composed of two proteins, [GAPS6a](https://www.ncbi.nlm.nih.gov/protein/WP_248387294.1/)
+      and [GAPS6b](https://www.ncbi.nlm.nih.gov/protein/WP_248387295.1/). These two
+      proteins are encoded together in diverse Gram-negative bacteria.
+    notes: The DefenseFinder wiki describes GAPS6 as a two-protein system with GAPS6a
+      and GAPS6b encoded together.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+    snippet: GAPS6b is essential for the defense phenotype, however it is not known
+      whether GAPS6b could be sufficient.
+    notes: The DefenseFinder wiki reports that GAPS6b is essential for GAPS6 defense
+      but leaves GAPS6b sufficiency unresolved.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+    snippet: GAPS6b is composed of TPR repeats at the N-terminus, possibly allowing
+      ligand binding and a predicted RNAse domain (PINc, PF08745.14) at the C-terminus.
+      PINc domains have been implicated as toxins in bacterial toxin-antitoxin modules
+      :ref{doi=10.1093/protein/gzq081}. The PINc domain is required for the anti-phage
+      defense activity of GAPS6.
+    notes: The DefenseFinder wiki reports that GAPS6b carries TPR repeats and a PINc
+      domain required for GAPS6 anti-phage activity.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps6.md
+    snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+      \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a\
+      \ href='https://ncbi.nlm.nih.gov/protein/WP_248387294.1'>WP_248387294.1</a>,\
+      \ <a href='https://ncbi.nlm.nih.gov/protein/WP_248387295.1'>WP_248387295.1</a>]\
+      \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+      \ T7 & T4 & P1-vir & Lambda-vir"
+    notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+      a Vibrio parahaemolyticus GAPS6 source locus expressed in E. coli against T7,
+      T4, P1-vir, and Lambda-vir.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "GAPS6\tGAPS6\t2\t2\tGAPS6__GAPS6a, GAPS6__GAPS6b\t\t\t"
+    notes: The DefenseFinder rules table models GAPS6 as a two-profile system requiring
+      GAPS6__GAPS6a and GAPS6__GAPS6b.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GAPS6__GAPS6a                                    | GAPS6__GAPS6a                                    |
+      GAPS6                  | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records GAPS6__GAPS6a under the GAPS6 system
+      namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GAPS6__GAPS6b                                    | GAPS6__GAPS6b                                    |
+      GAPS6                  | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records GAPS6__GAPS6b under the GAPS6 system
+      namespace.
+  attaches_to:
+  - causal_graphs#gaps6_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T11:58:13Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted GAPS6 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v258.
+  llm_assisted: true
+- timestamp: '2026-09-26T11:58:14Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed GAPS6 system canonical_examples and left them empty because the
+    current sources support a Vibrio parahaemolyticus accession-level experimental
+    validation graph, a DefenseFinder system model, and a RefSeq Escherichia coli
+    example, but not a direct native microbial isolate exemplar with experimentally
+    verified endogenous GAPS6 activity. No paid research was used.
+  llm_assisted: true
