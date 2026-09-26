@@ -1,0 +1,289 @@
+identifier: traitmech:000379
+label: GAPS4 system
+definition: A phage defense system in which an organism possesses a GMT-encoded GAPS4
+  locus represented by DefenseFinder as a two-profile model, GAPS4__GAPS4a and GAPS4__GAPS4b,
+  and experimentally linked to T7, T4, P1-vir, and lambda-vir protection when expressed
+  in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: GAPS4
+  synonym_type: EXACT_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+- synonym_text: GAPS4__GAPS4a
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: GAPS4__GAPS4b
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-024-01840-5
+  snippet: We reveal four anti-phage defence systems encoded within GMT islands and
+    further characterize one system, GAPS1, showing it is triggered by a phage capsid
+    protein to induce cell dormancy
+  notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+    islands.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: GAPS4 is a two genes system (GAPS4a and GAPS4b). GAPS stands for GMT-encoded
+    Anti-Phage System.
+  notes: The DefenseFinder wiki describes GAPS4 as a two-gene GMT-encoded anti-phage
+    system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: GAPS4 is present in both Gram-positive and Gram-negative GAPS4 activity
+    was assessed in *E. coli* and was shown to be active against T4, P1-vir and lambda-vir
+    and to reduce lysis plaque size of T7 :ref{doi=10.1101/2023.03.28.534373}.
+  notes: The DefenseFinder wiki summarizes GAPS4 activity against T4, P1-vir, lambda-vir,
+    and T7 plaque lysis in an E. coli assay.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
+    suggesting that the GAPS4 defense system is acting via DNA degradation. Both genes
+    are required for phage defense and were predicted to form a heterodimer. It was
+    shown that the system causes host DNA degradation upon infection by lambda-vir
+    only, which would suggest that GAPS4 is an abortive infection system :ref{doi=10.1101/2023.03.28.534373}.
+  notes: The DefenseFinder wiki summarizes evidence for PDDEXK-domain GAPS4a, dual-gene
+    requirement, and lambda-vir-associated host DNA degradation.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: The GAPS4 system in *Hafnia alvei* (GCF_902387815.1, NZ_LR699008) is composed
+    of 2 proteins GAPS4a (WP_111329122.1) GAPS4b (WP_111329123.1)
+  notes: The DefenseFinder wiki illustrates a predicted two-protein GAPS4 locus in
+    RefSeq assembly GCF_902387815.1 on NZ_LR699008.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+    \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a href='https://ncbi.nlm.nih.gov/protein/WP_055466293.1'>WP_055466293.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/WP_055466294.1'>WP_055466294.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T7\
+    \ & T4 & P1-vir & Lambda-vir"
+  notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+    a Vibrio parahaemolyticus GAPS4 source locus expressed in E. coli against T7,
+    T4, P1-vir, and Lambda-vir.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+  snippet: "subgraph Title4[Protects against]\n        T7\n        T4\n        P1-vir\n\
+    \        Lambda-vir"
+  notes: The DefenseFinder experimental-validation diagram lists T7, T4, P1-vir, and
+    Lambda-vir in the GAPS4 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: GAPS4 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+    a new class of mobile elements rich in bacterial defensive and offensive tools
+  notes: The DefenseFinder article registry maps the named GAPS4 system to the Mahata
+    et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "GAPS4\tGAPS4\t2\t2\tGAPS4__GAPS4a, GAPS4__GAPS4b\t\t\t"
+  notes: The DefenseFinder rules table models GAPS4 as a two-profile system requiring
+    GAPS4__GAPS4a and GAPS4__GAPS4b.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GAPS4__GAPS4a                                    | GAPS4__GAPS4a                                    |
+    GAPS4                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records GAPS4__GAPS4a under the GAPS4 system
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GAPS4__GAPS4b                                    | GAPS4__GAPS4b                                    |
+    GAPS4                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records GAPS4__GAPS4b under the GAPS4 system
+    namespace.
+causal_graphs:
+- graph_id: gaps4_locus_restricts_phages
+  title: GAPS4 loci protect against T7, T4, P1-vir, and lambda-vir
+  description: Conservative system-level sketch linking GAPS4 locus possession to
+    protection against T7, T4, P1-vir, and lambda-vir.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GAPS4 as a named two-profile DefenseFinder phage-defense
+    system while leaving natural host breadth, the lambda-vir trigger of host DNA
+    degradation, the abortive-infection mechanism, and exact GAPS4a/GAPS4b profile-to-protein
+    correspondence unresolved.
+  nodes:
+  - node_id: gaps4_locus
+    label: GAPS4 locus
+    node_type: GENETIC_ELEMENT
+    description: A GMT-encoded phage-defense locus represented by the GAPS4a and GAPS4b
+      DefenseFinder profiles.
+  - node_id: gaps4_listed_phage_protection
+    label: T7, T4, P1-vir, and lambda-vir protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T7, T4, P1-vir, and lambda-vir by GAPS4.
+  - node_id: gaps4_system_trait
+    label: GAPS4 system
+    node_type: TRAIT
+    grounding: traitmech:000379
+    description: Possession of a genome-encoded GAPS4 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gaps4_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gaps4_listed_phage_protection
+    description: The DefenseFinder wiki links a Vibrio parahaemolyticus GAPS4 locus
+      from Mahata et al. to protection against T7, T4, P1-vir, and lambda-vir, and
+      DefenseFinder models GAPS4 through GAPS4a and GAPS4b profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: GAPS4 is a two genes system (GAPS4a and GAPS4b). GAPS stands for GMT-encoded
+        Anti-Phage System.
+      notes: The DefenseFinder wiki describes GAPS4 as a two-gene GMT-encoded anti-phage
+        system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: GAPS4 is present in both Gram-positive and Gram-negative GAPS4 activity
+        was assessed in *E. coli* and was shown to be active against T4, P1-vir and
+        lambda-vir and to reduce lysis plaque size of T7 :ref{doi=10.1101/2023.03.28.534373}.
+      notes: The DefenseFinder wiki summarizes GAPS4 activity against T4, P1-vir,
+        lambda-vir, and T7 plaque lysis in an E. coli assay.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_055466293.1'>WP_055466293.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/WP_055466294.1'>WP_055466294.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T7 & T4 & P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS4 source locus expressed in E. coli against
+        T7, T4, P1-vir, and Lambda-vir.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: "subgraph Title4[Protects against]\n        T7\n        T4\n      \
+        \  P1-vir\n        Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram lists T7, T4, P1-vir,
+        and Lambda-vir in the GAPS4 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS4\tGAPS4\t2\t2\tGAPS4__GAPS4a, GAPS4__GAPS4b\t\t\t"
+      notes: The DefenseFinder rules table models GAPS4 as a two-profile system requiring
+        GAPS4__GAPS4a and GAPS4__GAPS4b.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GAPS4__GAPS4a                                    | GAPS4__GAPS4a                                    |
+        GAPS4                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records GAPS4__GAPS4a under the GAPS4
+        system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GAPS4__GAPS4b                                    | GAPS4__GAPS4b                                    |
+        GAPS4                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records GAPS4__GAPS4b under the GAPS4
+        system namespace.
+  - subject: gaps4_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gaps4_system_trait
+    description: Protection against T7, T4, P1-vir, and lambda-vir realizes the GAPS4
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: GAPS4 is present in both Gram-positive and Gram-negative GAPS4 activity
+        was assessed in *E. coli* and was shown to be active against T4, P1-vir and
+        lambda-vir and to reduce lysis plaque size of T7 :ref{doi=10.1101/2023.03.28.534373}.
+      notes: The DefenseFinder wiki summarizes GAPS4 activity against T4, P1-vir,
+        lambda-vir, and T7 plaque lysis in an E. coli assay.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_055466293.1'>WP_055466293.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/WP_055466294.1'>WP_055466294.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T7 & T4 & P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS4 source locus expressed in E. coli against
+        T7, T4, P1-vir, and Lambda-vir.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: "subgraph Title4[Protects against]\n        T7\n        T4\n      \
+        \  P1-vir\n        Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram lists T7, T4, P1-vir,
+        and Lambda-vir in the GAPS4 protects-against subgraph.
+  - subject: gaps4_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: GAPS4 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01840-5
+      snippet: We reveal four anti-phage defence systems encoded within GMT islands
+        and further characterize one system, GAPS1, showing it is triggered by a phage
+        capsid protein to induce cell dormancy
+      notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+        islands.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: GAPS4 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+        a new class of mobile elements rich in bacterial defensive and offensive tools
+      notes: The DefenseFinder article registry maps the named GAPS4 system to the
+        Mahata et al. preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS4\tGAPS4\t2\t2\tGAPS4__GAPS4a, GAPS4__GAPS4b\t\t\t"
+      notes: The DefenseFinder rules table models GAPS4 as a two-profile system requiring
+        GAPS4__GAPS4a and GAPS4__GAPS4b.
+discussions:
+- discussion_id: gaps4-mechanism-gap
+  prompt: Resolve GAPS4 natural host breadth, lambda-vir host-DNA-degradation triggers,
+    abortive-infection mechanism, and exact GAPS4a/GAPS4b profile-to-protein correspondence
+    before minting narrower GAPS4 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mahata et al. support GAPS4 as a GMT-encoded anti-phage defense system
+    that protects E. coli against T7, T4, P1-vir, and lambda-vir when expressed from
+    a Vibrio parahaemolyticus locus, and DefenseFinder represents GAPS4 as a two-profile
+    system. Natural host breadth, the lambda-vir-specific trigger of host DNA degradation,
+    the abortive-infection mechanism, and exact profile-to-protein correspondence
+    remain unresolved.
+  evidence:
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+    snippet: GAPS4 is present in both Gram-positive and Gram-negative GAPS4 activity
+      was assessed in *E. coli* and was shown to be active against T4, P1-vir and
+      lambda-vir and to reduce lysis plaque size of T7 :ref{doi=10.1101/2023.03.28.534373}.
+    notes: The DefenseFinder wiki summarizes GAPS4 activity against T4, P1-vir, lambda-vir,
+      and T7 plaque lysis in an E. coli assay.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+    snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
+      suggesting that the GAPS4 defense system is acting via DNA degradation. Both
+      genes are required for phage defense and were predicted to form a heterodimer.
+      It was shown that the system causes host DNA degradation upon infection by lambda-vir
+      only, which would suggest that GAPS4 is an abortive infection system :ref{doi=10.1101/2023.03.28.534373}.
+    notes: The DefenseFinder wiki summarizes evidence for PDDEXK-domain GAPS4a, dual-gene
+      requirement, and lambda-vir-associated host DNA degradation.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+    snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+      \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a\
+      \ href='https://ncbi.nlm.nih.gov/protein/WP_055466293.1'>WP_055466293.1</a>,\
+      \ <a href='https://ncbi.nlm.nih.gov/protein/WP_055466294.1'>WP_055466294.1</a>]\
+      \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+      \ T7 & T4 & P1-vir & Lambda-vir"
+    notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+      a Vibrio parahaemolyticus GAPS4 source locus expressed in E. coli against T7,
+      T4, P1-vir, and Lambda-vir.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "GAPS4\tGAPS4\t2\t2\tGAPS4__GAPS4a, GAPS4__GAPS4b\t\t\t"
+    notes: The DefenseFinder rules table models GAPS4 as a two-profile system requiring
+      GAPS4__GAPS4a and GAPS4__GAPS4b.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GAPS4__GAPS4a                                    | GAPS4__GAPS4a                                    |
+      GAPS4                  | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records GAPS4__GAPS4a under the GAPS4 system
+      namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GAPS4__GAPS4b                                    | GAPS4__GAPS4b                                    |
+      GAPS4                  | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records GAPS4__GAPS4b under the GAPS4 system
+      namespace.
+  attaches_to:
+  - causal_graphs#gaps4_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T10:47:13Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted GAPS4 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v256.
+  llm_assisted: true
+- timestamp: '2026-09-26T10:47:14Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed GAPS4 system canonical_examples and left them empty because the
+    current sources support a Vibrio parahaemolyticus accession-level experimental
+    validation graph, a DefenseFinder system model, and a RefSeq Hafnia alvei example,
+    but not a direct native microbial isolate exemplar with experimentally verified
+    endogenous GAPS4 activity. No paid research was used.
+  llm_assisted: true

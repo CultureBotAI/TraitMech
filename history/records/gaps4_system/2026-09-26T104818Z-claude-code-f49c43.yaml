@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gaps4_system.yaml
+  slug: gaps4_system
+session:
+  id: 2026-09-26T104818Z-claude-code-f49c43
+  timestamp: '2026-09-26T10:48:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add GAPS4 system trait
+  details: Minted traitmech:000379 for the DOI-backed DefenseFinder GAPS4 phage-defense system
+    with Mahata Gamma-Mobile-Trio evidence, pinned DefenseFinder wiki, article, rule, and
+    HMM rows, a conservative nonmechanistic graph, an open mechanism knowledge gap, and METPO:1033300
+    reserved in proposals/metpo_traitmech_v256.
