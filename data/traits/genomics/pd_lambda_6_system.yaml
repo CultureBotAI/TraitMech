@@ -1,0 +1,225 @@
+identifier: traitmech:000383
+label: PD-Lambda-6 system
+definition: A phage defense system in which an organism possesses a PD-Lambda-6 locus
+  represented by DefenseFinder as a single-profile model, PD-Lambda-6__PD-Lambda-6,
+  and experimentally linked to LambdaVir and T5 protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PD-Lambda-6
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+- synonym_text: PD-Lambda-6__PD-Lambda-6
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-Lambda-6 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+  snippet: 'The PD-Lambda-6 is composed of 1 protein: PD-Lambda-6.'
+  notes: The DefenseFinder wiki names PD-Lambda-6 as a single-protein system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+  snippet: 'The PD-Lambda-6 system in *Enterobacter asburiae* (GCF_013782005.1, NZ_CP056126)
+    is composed of 1 protein: PD-Lambda-6 (WP_181599444.1)'
+  notes: The DefenseFinder wiki illustrates a predicted one-protein PD-Lambda-6 locus
+    in RefSeq assembly GCF_013782005.1 on NZ_CP056126.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRK48647.1'>RRK48647.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> LambdaVir\
+    \ & T5"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-Lambda-6 source locus expressed in E. coli against LambdaVir and
+    T5.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+  snippet: "subgraph Title4[Protects against]\n        LambdaVir\n        T5"
+  notes: The DefenseFinder experimental-validation diagram lists LambdaVir and T5
+    in the PD-Lambda-6 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-Lambda-6 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+    anti-phage defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-Lambda-6 system to the
+    Vassallo et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-Lambda-6\tPD-Lambda-6\t1\t1\tPD-Lambda-6__PD-Lambda-6\t\t\t"
+  notes: The DefenseFinder rules table models PD-Lambda-6 as a single-profile system
+    requiring PD-Lambda-6__PD-Lambda-6.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-Lambda-6__PD-Lambda-6                         | PD-Lambda-6__PD-Lambda-6                         |
+    PD-Lambda-6            | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PD-Lambda-6__PD-Lambda-6 under the
+    PD-Lambda-6 system namespace.
+causal_graphs:
+- graph_id: pd_lambda_6_locus_restricts_lambda_vir_and_t5
+  title: PD-Lambda-6 loci restrict LambdaVir and T5
+  description: Conservative system-level sketch linking possession of a PD-Lambda-6
+    locus to protection against LambdaVir and T5.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-Lambda-6 as a named DefenseFinder phage-defense
+    system while leaving natural host breadth, the direct phage trigger, and the effector
+    mechanism unresolved.
+  nodes:
+  - node_id: pd_lambda_6_locus
+    label: PD-Lambda-6 locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-defense locus represented by the PD-Lambda-6 DefenseFinder
+      profile.
+  - node_id: pd_lambda_6_listed_phage_protection
+    label: LambdaVir and T5 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against LambdaVir and T5 by PD-Lambda-6.
+  - node_id: pd_lambda_6_system_trait
+    label: PD-Lambda-6 system
+    node_type: TRAIT
+    grounding: traitmech:000383
+    description: Possession of a genome-encoded PD-Lambda-6 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pd_lambda_6_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_lambda_6_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-Lambda-6 locus from Vassallo et
+      al. to protection against LambdaVir and T5, and DefenseFinder models PD-Lambda-6
+      through one mandatory profile.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+      snippet: 'The PD-Lambda-6 is composed of 1 protein: PD-Lambda-6.'
+      notes: The DefenseFinder wiki names PD-Lambda-6 as a single-protein system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRK48647.1'>RRK48647.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ LambdaVir & T5"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-Lambda-6 source locus expressed in E. coli against LambdaVir
+        and T5.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+      snippet: "subgraph Title4[Protects against]\n        LambdaVir\n        T5"
+      notes: The DefenseFinder experimental-validation diagram lists LambdaVir and
+        T5 in the PD-Lambda-6 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-Lambda-6\tPD-Lambda-6\t1\t1\tPD-Lambda-6__PD-Lambda-6\t\t\t"
+      notes: The DefenseFinder rules table models PD-Lambda-6 as a single-profile
+        system requiring PD-Lambda-6__PD-Lambda-6.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-Lambda-6__PD-Lambda-6                         | PD-Lambda-6__PD-Lambda-6                         |
+        PD-Lambda-6            | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PD-Lambda-6__PD-Lambda-6 under
+        the PD-Lambda-6 system namespace.
+  - subject: pd_lambda_6_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_lambda_6_system_trait
+    description: Protection against LambdaVir and T5 realizes the PD-Lambda-6 system
+      trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRK48647.1'>RRK48647.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ LambdaVir & T5"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-Lambda-6 source locus expressed in E. coli against LambdaVir
+        and T5.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+      snippet: "subgraph Title4[Protects against]\n        LambdaVir\n        T5"
+      notes: The DefenseFinder experimental-validation diagram lists LambdaVir and
+        T5 in the PD-Lambda-6 protects-against subgraph.
+  - subject: pd_lambda_6_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PD-Lambda-6 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-Lambda-6 and related conserved phage-defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-Lambda-6 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+        of anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-Lambda-6 system
+        to the Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-Lambda-6\tPD-Lambda-6\t1\t1\tPD-Lambda-6__PD-Lambda-6\t\t\t"
+      notes: The DefenseFinder rules table models PD-Lambda-6 as a single-profile
+        system requiring PD-Lambda-6__PD-Lambda-6.
+discussions:
+- discussion_id: pd-lambda-6-mechanism-gap
+  prompt: Resolve PD-Lambda-6 natural host breadth, direct phage trigger, and effector
+    mechanism before minting narrower PD-Lambda-6 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-Lambda-6 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against LambdaVir and T5, and DefenseFinder represents
+    the system with one profile. Natural host breadth, the direct phage trigger, and
+    effector logic remain unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-Lambda-6 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+    snippet: 'The PD-Lambda-6 is composed of 1 protein: PD-Lambda-6.'
+    notes: The DefenseFinder wiki names PD-Lambda-6 as a single-protein system.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-6.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRK48647.1'>RRK48647.1</a>]\
+      \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+      \ LambdaVir & T5"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-Lambda-6 source locus expressed in E. coli against LambdaVir
+      and T5.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-Lambda-6\tPD-Lambda-6\t1\t1\tPD-Lambda-6__PD-Lambda-6\t\t\t"
+    notes: The DefenseFinder rules table models PD-Lambda-6 as a single-profile system
+      requiring PD-Lambda-6__PD-Lambda-6.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-Lambda-6__PD-Lambda-6                         | PD-Lambda-6__PD-Lambda-6                         |
+      PD-Lambda-6            | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records PD-Lambda-6__PD-Lambda-6 under
+      the PD-Lambda-6 system namespace.
+  attaches_to:
+  - causal_graphs#pd_lambda_6_locus_restricts_lambda_vir_and_t5
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T13:07:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-Lambda-6 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v260.
+  llm_assisted: true
+- timestamp: '2026-09-26T13:07:27Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-Lambda-6 system canonical_examples and left them empty because
+    the current sources support an E. coli accession-level experimental validation
+    graph, a DefenseFinder system model, and a RefSeq Enterobacter asburiae example,
+    but not a direct native microbial isolate exemplar with experimentally verified
+    endogenous PD-Lambda-6 activity. No paid research was used.
+  llm_assisted: true
