@@ -15,10 +15,11 @@ events:
   sections:
   - synonyms
   - evidence
+  - causal_graphs
   - discussions
   summary: Record PD-T4-9 as CmdTAC alias
   details: Rejected PD-T4-9 as a new TraitRecord after an ignored-and-hidden duplicate search
     and current DefenseFinder review showed it aliases the existing CmdTAC system; recorded
     the PD-T4-9 source namespace as a related synonym, added stable DefenseFinder wiki/rule/HMM
-    evidence, refreshed the open CmdTAC knowledge gap, and updated proposal v212 so METPO
-    can carry the PD-T4-9 related synonym.
+    evidence, refreshed the CmdTAC graph scope and open knowledge gap, and updated
+    proposal v212 so METPO can carry the PD-T4-9 related synonym.

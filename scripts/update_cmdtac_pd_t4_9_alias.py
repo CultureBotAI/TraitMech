@@ -29,6 +29,7 @@ DEFENSEFINDER_PREFIX = (
     "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
     f"{DEFENSEFINDER_COMMIT}/"
 )
+DEFENSEFINDER_ARTICLES = f"{DEFENSEFINDER_PREFIX}List_system_article.md"
 DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 
@@ -75,6 +76,16 @@ HMM_SNIPPET = (
     "| PD-T4-9__PD-T4-9_C                               | "
     "PD-T4-9__PD-T4-9_C                               | "
     "PD-T4-9                | Custom                  | 20     |"
+)
+ARTICLE_REGISTRY_SNIPPET = (
+    r"CmdTAC | 10\.1038/s41586-024-08102-8 | "
+    "Anti-viral defence by an mRNA ADP-ribosyltransferase that blocks translation"
+)
+ARTICLE_REGISTRY_NOTES = (
+    "The DefenseFinder article registry maps the named CmdTAC system to the "
+    "Vassallo et al. CmdTAC mechanism paper. Its CmdTAC row is "
+    "name-to-paper evidence; the pinned rule and HMM rows model the same "
+    "DefenseFinder system under the former PD-T4-9 namespace."
 )
 
 PD_T4_9_SYNONYM = {
@@ -164,6 +175,29 @@ def evidence_key(item: dict[str, Any]) -> tuple[str | None, str | None]:
     return item.get("reference"), item.get("snippet")
 
 
+def update_article_registry_note(evidence: list[dict[str, Any]]) -> None:
+    for item in evidence:
+        if evidence_key(item) != (DEFENSEFINDER_ARTICLES, ARTICLE_REGISTRY_SNIPPET):
+            continue
+        notes = item.get("notes", "")
+        if (
+            "HMM inventory and rules table do not list CmdTAC" in notes
+            or notes == ARTICLE_REGISTRY_NOTES
+        ):
+            item["notes"] = ARTICLE_REGISTRY_NOTES
+            return
+        raise ValueError("CmdTAC article-registry note was already edited")
+    raise ValueError("CmdTAC article-registry evidence is missing")
+
+
+def set_discussion_evidence(discussion: dict[str, Any]) -> None:
+    evidence = discussion.get("evidence")
+    if evidence in (None, []) or evidence == PD_T4_9_EVIDENCE:
+        discussion["evidence"] = copy.deepcopy(PD_T4_9_EVIDENCE)
+        return
+    raise ValueError("CmdTAC model-coverage discussion evidence was already edited")
+
+
 def update_record(doc: dict[str, Any]) -> None:
     if doc.get("identifier") != "traitmech:000335":
         raise ValueError(f"unexpected identifier: {doc.get('identifier')}")
@@ -179,6 +213,7 @@ def update_record(doc: dict[str, Any]) -> None:
         synonyms.append(copy.deepcopy(PD_T4_9_SYNONYM))
 
     evidence = doc.setdefault("evidence", [])
+    update_article_registry_note(evidence)
     seen = {evidence_key(item) for item in evidence}
     for item in PD_T4_9_EVIDENCE:
         if evidence_key(item) not in seen:
@@ -208,7 +243,7 @@ def update_record(doc: dict[str, Any]) -> None:
             or rationale != DISCUSSION_RATIONALE
         ):
             raise ValueError("CmdTAC model-coverage rationale was already edited")
-        discussion["evidence"] = copy.deepcopy(PD_T4_9_EVIDENCE)
+        set_discussion_evidence(discussion)
         break
     else:
         raise ValueError("CmdTAC model-coverage discussion is missing")

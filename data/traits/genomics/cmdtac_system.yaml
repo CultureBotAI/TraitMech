@@ -58,9 +58,9 @@ evidence:
   snippet: CmdTAC | 10\.1038/s41586-024-08102-8 | Anti-viral defence by an mRNA ADP-ribosyltransferase
     that blocks translation
   notes: The DefenseFinder article registry maps the named CmdTAC system to the Vassallo
-    et al. CmdTAC mechanism paper; the pinned DefenseFinder HMM inventory and rules
-    table do not list CmdTAC, so this row is name-to-paper evidence rather than model-component
-    evidence.
+    et al. CmdTAC mechanism paper. Its CmdTAC row is name-to-paper evidence; the pinned
+    rule and HMM rows model the same DefenseFinder system under the former PD-T4-9
+    namespace.
 - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md
   snippet: 'The CmdTAC system operates through a hierarchy of components where roles
     are distinctly defined:
