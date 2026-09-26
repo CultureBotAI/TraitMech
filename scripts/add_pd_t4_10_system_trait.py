@@ -6,8 +6,11 @@ from __future__ import annotations
 import argparse
 import copy
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
+
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
@@ -16,6 +19,7 @@ from traitmech.curate.curation_event import record_curation_event  # noqa: E402
 from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "pd_t4_10_system.yaml"
+ABORTIVE = REPO_ROOT / "data" / "traits" / "genomics" / "abortive_infection_system.yaml"
 
 VASSALLO = "DOI:10.1038/s41564-022-01219-4"
 
@@ -36,6 +40,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-26T20:56:41Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-26T20:56:42Z"
+PARENT_TIMESTAMP = "2026-09-26T21:25:00Z"
 POSED_DATE = "2026-09-26"
 IDENTIFIER = "traitmech:000394"
 PROPOSAL = "proposals/metpo_traitmech_v271"
@@ -99,6 +104,64 @@ HMM_ROWS = (
     "| PD-T4-10__PD-T4-10_B                             | "
     "PD-T4-10__PD-T4-10_B                             | "
     "PD-T4-10               | Custom                  | 20     |"
+)
+
+PARENT_EXPECTED_FRAGMENTS = (
+    "AbiL, AbiN, AbiO, AbiP2, and AbiA are split out as ",
+    (
+        "traitmech:000340, traitmech:000341, traitmech:000342, "
+        "traitmech:000343, and traitmech:000344, respectively."
+    ),
+    (
+        "single-profile coliphage AbiP2 reverse-transcriptase-like "
+        "loci, lactococcal AbiA loci represented by DefenseFinder "
+        "AbiA-large and AbiA-small subrules, and other families."
+    ),
+)
+PARENT_REPLACEMENTS = (
+    (
+        "AbiL, AbiN, AbiO, AbiP2, and AbiA are split out as ",
+        "AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as ",
+    ),
+    (
+        (
+            "traitmech:000340, traitmech:000341, traitmech:000342, "
+            "traitmech:000343, and traitmech:000344, respectively."
+        ),
+        (
+            "traitmech:000340, traitmech:000341, traitmech:000342, "
+            "traitmech:000343, traitmech:000344, and "
+            f"{IDENTIFIER}, respectively."
+        ),
+    ),
+    (
+        (
+            "single-profile coliphage AbiP2 reverse-transcriptase-like "
+            "loci, lactococcal AbiA loci represented by DefenseFinder "
+            "AbiA-large and AbiA-small subrules, and other families."
+        ),
+        (
+            "single-profile coliphage AbiP2 reverse-transcriptase-like "
+            "loci, lactococcal AbiA loci represented by DefenseFinder "
+            "AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 "
+            "two-profile loci, and other families."
+        ),
+    ),
+)
+PARENT_APPLIED_FRAGMENTS = tuple(new for _, new in PARENT_REPLACEMENTS)
+PARENT_DUPLICATE_SOURCE_TEXT = (
+    "Odegrip et al., Dinsmore and Klaenhammer, Dinsmore et al., "
+    "and Vassallo et al. still support abortive infection"
+)
+PARENT_SOURCE_TEXT = (
+    "Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et "
+    "al. still support abortive infection"
+)
+PARENT_CHANGES = (
+    "Addressed review issue #1298 by documenting PD-T4-10 as split "
+    f"out in the open abortive-infection subfamily split-gap discussion "
+    f"after minting {IDENTIFIER} for the PD-T4-10 system; other "
+    "abortive-infection families remain open."
 )
 
 
@@ -393,10 +456,53 @@ RECORD: dict[str, Any] = {
 }
 
 
-def write_record(*, apply: bool) -> None:
+def load_trait(path: Path) -> dict[str, Any]:
+    with path.open() as handle:
+        return yaml.safe_load(handle)
+
+
+def update_abortive_parent(record: dict[str, Any]) -> dict[str, Any]:
+    assert record["identifier"] == "traitmech:000214"
+    assert record["label"] == "abortive infection system"
+    assert record["mapping_status"] == "PROPOSED"
+    assert record["parent_traits"] == ["traitmech:000209"]
+
+    discussion = next(
+        item
+        for item in record.get("discussions") or []
+        if item.get("discussion_id") == "abortive-infection-subfamily-split-gap"
+    )
+    assert discussion["status"] == "OPEN"
+    assert discussion["prompt"] == (
+        "Resolve other abortive-infection families before minting narrower "
+        "children under the broad abortive infection system parent."
+    )
+    discussion["rationale"] = discussion["rationale"].replace(
+        PARENT_DUPLICATE_SOURCE_TEXT, PARENT_SOURCE_TEXT, 1
+    )
+    if all(applied in discussion["rationale"] for applied in PARENT_APPLIED_FRAGMENTS):
+        return record
+
+    for expected in PARENT_EXPECTED_FRAGMENTS:
+        assert expected in discussion["rationale"]
+    assert IDENTIFIER not in discussion["rationale"]
+
+    for old, new in PARENT_REPLACEMENTS:
+        discussion["rationale"] = discussion["rationale"].replace(old, new, 1)
+
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="RESOLVE_DISCUSSION_SCOPE",
+        changes=PARENT_CHANGES,
+        llm_assisted=True,
+        timestamp=PARENT_TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict[str, Any]:
     record = copy.deepcopy(RECORD)
-    if TARGET.exists():
-        raise FileExistsError(f"{TARGET} already exists")
     record_curation_event(
         record,
         action="MINTED_TRAITMECH_ID",
@@ -427,10 +533,39 @@ def write_record(*, apply: bool) -> None:
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
     )
+    return record
+
+
+def assert_same_target(record: dict[str, Any]) -> None:
+    assert record["identifier"] == IDENTIFIER
+    assert record["label"] == "PD-T4-10 system"
+    assert record["mapping_status"] == "PROPOSED"
+    assert record["parent_traits"] == ["traitmech:000214"]
+
+
+def validate_outputs(record: dict[str, Any], parent: dict[str, Any]) -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        write_validated_trait(record, tmp_path / TARGET.name)
+        write_validated_trait(parent, tmp_path / ABORTIVE.name)
+
+
+def write_record(*, apply: bool) -> None:
+    record = build_record()
+    parent = update_abortive_parent(load_trait(ABORTIVE))
+    validate_outputs(record, parent)
+
     if apply:
+        if TARGET.exists():
+            assert_same_target(load_trait(TARGET))
         write_validated_trait(record, TARGET)
+        write_validated_trait(parent, ABORTIVE)
     else:
-        print(f"Would write {TARGET.relative_to(REPO_ROOT)}")
+        print(
+            "PD-T4-10 system trait validates; rerun with --apply to write "
+            f"{TARGET.relative_to(REPO_ROOT)} and update "
+            f"{ABORTIVE.relative_to(REPO_ROOT)}."
+        )
 
 
 def main() -> None:
