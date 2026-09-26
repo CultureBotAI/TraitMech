@@ -1809,7 +1809,7 @@ window.searchData = [
  },
  {
   "discussion_id": "gaps1-trigger-sibling-gap",
-  "prompt": "Resolve GAPS1 component activity, natural-host exemplars, and GAPS2/GAPS6 boundaries before minting narrower GAPS traits.",
+  "prompt": "Resolve GAPS1 component activity, natural-host exemplars, and GAPS6 boundaries before minting narrower GAPS traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -1819,7 +1819,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#gaps1_capsid_triggered_dormancy"
   ],
-  "rationale": "Mahata et al. support GAPS1 as one GMT-island anti-phage defense system triggered by a phage capsid protein to induce cell dormancy, and DefenseFinder represents GAPS1 as one GAPS1__GAPS1 profile. This first system-level record does not assert the GAPS1 component's molecular activity, the capsid trigger identity, a universal GAPS1 host range, or sibling GAPS2 or GAPS6 system boundaries.",
+  "rationale": "Mahata et al. support GAPS1 as one GMT-island anti-phage defense system triggered by a phage capsid protein to induce cell dormancy, and DefenseFinder represents GAPS1 as one GAPS1__GAPS1 profile. This first system-level record does not assert the GAPS1 component's molecular activity, the capsid trigger identity, a universal GAPS1 host range, or sibling GAPS6 system boundaries.",
   "num_experiments": 0,
   "num_evidence": 2,
   "evidence_refs": [
@@ -1828,6 +1828,32 @@ window.searchData = [
   ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/gaps1_system.html#gaps1-trigger-sibling-gap"
+ },
+ {
+  "discussion_id": "gaps2-mechanism-gap",
+  "prompt": "Resolve GAPS2 natural host breadth, BRCT-domain activity, phage trigger specificity, and exact GAPS2__GAPS2 profile-to-protein correspondence before minting narrower GAPS2 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "GAPS2 system",
+  "source_id": "traitmech:000380",
+  "source_file": "gaps2_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gaps2_locus_restricts_phages"
+  ],
+  "rationale": "Mahata et al. support GAPS2 as a GMT-encoded anti-phage defense system that protects E. coli against P1-vir and lambda-vir when expressed from a Vibrio parahaemolyticus locus, and DefenseFinder represents GAPS2 as a single-profile system. Natural host breadth, BRCT-domain activity, the phage trigger, and exact profile-to-protein correspondence remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gaps2_system.html#gaps2-mechanism-gap"
  },
  {
   "discussion_id": "gaps4-mechanism-gap",
@@ -4635,9 +4661,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 249,
- "total_knowledge_gaps": 167,
- "total_source_entries": 247,
+ "total_discussions": 250,
+ "total_knowledge_gaps": 168,
+ "total_source_entries": 248,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

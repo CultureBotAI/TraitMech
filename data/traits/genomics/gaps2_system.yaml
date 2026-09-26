@@ -1,0 +1,245 @@
+identifier: traitmech:000380
+label: GAPS2 system
+definition: A phage defense system in which an organism possesses a GMT-encoded GAPS2
+  locus represented by DefenseFinder as a single-profile model, GAPS2__GAPS2, and
+  experimentally linked to P1-vir and lambda-vir protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: GAPS2
+  synonym_type: EXACT_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+- synonym_text: GAPS2__GAPS2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-024-01840-5
+  snippet: We reveal four anti-phage defence systems encoded within GMT islands and
+    further characterize one system, GAPS1, showing it is triggered by a phage capsid
+    protein to induce cell dormancy
+  notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+    islands.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: The GAPS2 system is composed of a single protein. It was found in Gamma-Mobile-Trio
+    (GMT) protein containing genomic island in Vibrio, and cloned into E. coli K-12
+    :ref{doi=10.1101/2023.03.28.534373}. The name GAPS derives from the "GMT-encoded
+    Anti-Phage System" acronym.
+  notes: The DefenseFinder wiki describes GAPS2 as a single-protein GMT-encoded system
+    cloned from Vibrio into E. coli K-12.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: GAPS2 is composed of a single protein with a DNA BRCT domains :ref{doi=10.4161/cc.10.15.16312}.
+  notes: The DefenseFinder wiki reports a DNA BRCT domain in the single GAPS2 protein.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: As far as we are aware, the molecular mechanism is unknown.
+  notes: The DefenseFinder wiki records the GAPS2 mechanism as unknown.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: 'The GAPS2 system in *Mannheimia sp. USDA-ARS-USMARC-1261* (GCF_000521605.1,
+    NZ_CP006942) is composed of 1 protein: GAPS2 (WP_025236539.1)'
+  notes: The DefenseFinder wiki illustrates a predicted single-protein GAPS2 locus
+    in RefSeq assembly GCF_000521605.1 on NZ_CP006942.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+    \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a href='https://ncbi.nlm.nih.gov/protein/WP_174208646.1'>WP_174208646.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> P1-vir\
+    \ & Lambda-vir"
+  notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+    a Vibrio parahaemolyticus GAPS2 source locus expressed in E. coli against P1-vir
+    and Lambda-vir.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+  snippet: "subgraph Title4[Protects against]\n        P1-vir\n        Lambda-vir"
+  notes: The DefenseFinder experimental-validation diagram lists P1-vir and Lambda-vir
+    in the GAPS2 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: GAPS2 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+    a new class of mobile elements rich in bacterial defensive and offensive tools
+  notes: The DefenseFinder article registry maps the named GAPS2 system to the Mahata
+    et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "GAPS2\tGAPS2\t1\t1\tGAPS2__GAPS2\t\t\t"
+  notes: The DefenseFinder rules table models GAPS2 as a single-profile system requiring
+    GAPS2__GAPS2.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GAPS2__GAPS2                                     | GAPS2__GAPS2                                     |
+    GAPS2                  | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records GAPS2__GAPS2 under the GAPS2 system
+    namespace.
+causal_graphs:
+- graph_id: gaps2_locus_restricts_phages
+  title: GAPS2 loci protect against P1-vir and lambda-vir
+  description: Conservative system-level sketch linking GAPS2 locus possession to
+    protection against P1-vir and lambda-vir.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GAPS2 as a named single-profile DefenseFinder phage-defense
+    system while leaving natural host breadth, the molecular activity of the BRCT-domain
+    GAPS2 component, the phage trigger, and exact GAPS2__GAPS2 profile-to-protein
+    correspondence unresolved.
+  nodes:
+  - node_id: gaps2_locus
+    label: GAPS2 locus
+    node_type: GENETIC_ELEMENT
+    description: A GMT-encoded phage-defense locus represented by the GAPS2__GAPS2
+      DefenseFinder profile.
+  - node_id: gaps2_listed_phage_protection
+    label: P1-vir and lambda-vir protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against P1-vir and lambda-vir by GAPS2.
+  - node_id: gaps2_system_trait
+    label: GAPS2 system
+    node_type: TRAIT
+    grounding: traitmech:000380
+    description: Possession of a genome-encoded GAPS2 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gaps2_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gaps2_listed_phage_protection
+    description: The DefenseFinder wiki links a Vibrio parahaemolyticus GAPS2 locus
+      from Mahata et al. to protection against P1-vir and lambda-vir, and DefenseFinder
+      models GAPS2 through the GAPS2__GAPS2 profile.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: The GAPS2 system is composed of a single protein. It was found in Gamma-Mobile-Trio
+        (GMT) protein containing genomic island in Vibrio, and cloned into E. coli
+        K-12 :ref{doi=10.1101/2023.03.28.534373}. The name GAPS derives from the "GMT-encoded
+        Anti-Phage System" acronym.
+      notes: The DefenseFinder wiki describes GAPS2 as a single-protein GMT-encoded
+        system cloned from Vibrio into E. coli K-12.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_174208646.1'>WP_174208646.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS2 source locus expressed in E. coli against
+        P1-vir and Lambda-vir.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: "subgraph Title4[Protects against]\n        P1-vir\n        Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram lists P1-vir and Lambda-vir
+        in the GAPS2 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS2\tGAPS2\t1\t1\tGAPS2__GAPS2\t\t\t"
+      notes: The DefenseFinder rules table models GAPS2 as a single-profile system
+        requiring GAPS2__GAPS2.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GAPS2__GAPS2                                     | GAPS2__GAPS2                                     |
+        GAPS2                  | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records GAPS2__GAPS2 under the GAPS2
+        system namespace.
+  - subject: gaps2_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gaps2_system_trait
+    description: Protection against P1-vir and lambda-vir realizes the GAPS2 system
+      trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+        \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_174208646.1'>WP_174208646.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ P1-vir & Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram links Mahata et al.
+        to a Vibrio parahaemolyticus GAPS2 source locus expressed in E. coli against
+        P1-vir and Lambda-vir.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: "subgraph Title4[Protects against]\n        P1-vir\n        Lambda-vir"
+      notes: The DefenseFinder experimental-validation diagram lists P1-vir and Lambda-vir
+        in the GAPS2 protects-against subgraph.
+  - subject: gaps2_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: GAPS2 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01840-5
+      snippet: We reveal four anti-phage defence systems encoded within GMT islands
+        and further characterize one system, GAPS1, showing it is triggered by a phage
+        capsid protein to induce cell dormancy
+      notes: Mahata et al. identify four anti-phage defense systems in Gamma-Mobile-Trio
+        islands.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: GAPS2 | 10\.1101/2023\.03\.28\.534373 | Gamma-Mobile-Trio systems define
+        a new class of mobile elements rich in bacterial defensive and offensive tools
+      notes: The DefenseFinder article registry maps the named GAPS2 system to the
+        Mahata et al. preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GAPS2\tGAPS2\t1\t1\tGAPS2__GAPS2\t\t\t"
+      notes: The DefenseFinder rules table models GAPS2 as a single-profile system
+        requiring GAPS2__GAPS2.
+discussions:
+- discussion_id: gaps2-mechanism-gap
+  prompt: Resolve GAPS2 natural host breadth, BRCT-domain activity, phage trigger
+    specificity, and exact GAPS2__GAPS2 profile-to-protein correspondence before minting
+    narrower GAPS2 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mahata et al. support GAPS2 as a GMT-encoded anti-phage defense system
+    that protects E. coli against P1-vir and lambda-vir when expressed from a Vibrio
+    parahaemolyticus locus, and DefenseFinder represents GAPS2 as a single-profile
+    system. Natural host breadth, BRCT-domain activity, the phage trigger, and exact
+    profile-to-protein correspondence remain unresolved.
+  evidence:
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+    snippet: The GAPS2 system is composed of a single protein. It was found in Gamma-Mobile-Trio
+      (GMT) protein containing genomic island in Vibrio, and cloned into E. coli K-12
+      :ref{doi=10.1101/2023.03.28.534373}. The name GAPS derives from the "GMT-encoded
+      Anti-Phage System" acronym.
+    notes: The DefenseFinder wiki describes GAPS2 as a single-protein GMT-encoded
+      system cloned from Vibrio into E. coli K-12.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+    snippet: GAPS2 is composed of a single protein with a DNA BRCT domains :ref{doi=10.4161/cc.10.15.16312}.
+    notes: The DefenseFinder wiki reports a DNA BRCT domain in the single GAPS2 protein.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+    snippet: As far as we are aware, the molecular mechanism is unknown.
+    notes: The DefenseFinder wiki records the GAPS2 mechanism as unknown.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+    snippet: "Mahata_2023[<a href='https://doi.org/10.1101/2023.03.28.534373'>Mahata\
+      \ et al., 2023</a>] --> Origin_0\n    Origin_0[Vibrio parahaemolyticus \n<a\
+      \ href='https://ncbi.nlm.nih.gov/protein/WP_174208646.1'>WP_174208646.1</a>]\
+      \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+      \ P1-vir & Lambda-vir"
+    notes: The DefenseFinder experimental-validation diagram links Mahata et al. to
+      a Vibrio parahaemolyticus GAPS2 source locus expressed in E. coli against P1-vir
+      and Lambda-vir.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "GAPS2\tGAPS2\t1\t1\tGAPS2__GAPS2\t\t\t"
+    notes: The DefenseFinder rules table models GAPS2 as a single-profile system requiring
+      GAPS2__GAPS2.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GAPS2__GAPS2                                     | GAPS2__GAPS2                                     |
+      GAPS2                  | Custom                  | 100    |'
+    notes: The DefenseFinder HMM inventory records GAPS2__GAPS2 under the GAPS2 system
+      namespace.
+  attaches_to:
+  - causal_graphs#gaps2_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T11:26:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted GAPS2 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v257.
+  llm_assisted: true
+- timestamp: '2026-09-26T11:26:42Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed GAPS2 system canonical_examples and left them empty because the
+    current sources support a Vibrio parahaemolyticus accession-level experimental
+    validation graph, a DefenseFinder system model, and a RefSeq Mannheimia sp. example,
+    but not a direct native microbial isolate exemplar with experimentally verified
+    endogenous GAPS2 activity. No paid research was used.
+  llm_assisted: true
