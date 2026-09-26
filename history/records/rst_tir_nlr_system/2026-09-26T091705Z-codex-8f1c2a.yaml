@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_tir_nlr_system.yaml
+  slug: rst_tir_nlr_system
+session:
+  id: 2026-09-26T091705Z-codex-8f1c2a
+  timestamp: '2026-09-26T09:17:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Rst TIR-NLR system trait
+  details: Minted traitmech:000377 for the DOI-backed DefenseFinder Rst_TIR-NLR phage-defense
+    system with Rousset P4 TIR-NLR evidence, pinned DefenseFinder article, rule,
+    and HMM rows, a conservative nonmechanistic graph, an open mechanism knowledge
+    gap, and METPO:1033100 reserved in proposals/metpo_traitmech_v254.
