@@ -595,7 +595,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, and AbiA are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, and traitmech:000344, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, traitmech:000344, and traitmech:000394, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 two-profile loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -2603,6 +2603,32 @@ window.searchData = [
   ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/pd_lambda_6_system.html#pd-lambda-6-mechanism-gap"
+ },
+ {
+  "discussion_id": "pd-t4-10-mechanism-gap",
+  "prompt": "Resolve PD-T4-10 natural host breadth, direct phage trigger, the toxic PD-T4-10_B target, and PD-T4-10_A neutralization logic before minting narrower PD-T4-10 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-T4-10 system",
+  "source_id": "traitmech:000394",
+  "source_file": "pd_t4_10_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_t4_10_locus_restricts_t2_t4_t6_t5_and_secphi27"
+  ],
+  "rationale": "Vassallo et al. support PD-T4-10 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder represents the system with two mandatory profiles and an abortive-infection mechanism assignment. Natural host breadth, the direct phage trigger, the toxic PD-T4-10_B target, and the PD-T4-10_A neutralization logic remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_t4_10_system.html#pd-t4-10-mechanism-gap"
  },
  {
   "discussion_id": "pd-t4-1-mechanism-gap",
@@ -5000,9 +5026,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 263,
- "total_knowledge_gaps": 181,
- "total_source_entries": 261,
+ "total_discussions": 264,
+ "total_knowledge_gaps": 182,
+ "total_source_entries": 262,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

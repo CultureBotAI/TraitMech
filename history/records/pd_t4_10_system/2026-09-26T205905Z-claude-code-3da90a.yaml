@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_10_system.yaml
+  slug: pd_t4_10_system
+session:
+  id: 2026-09-26T205905Z-claude-code-3da90a
+  timestamp: '2026-09-26T20:59:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added PD-T4-10 system TraitRecord
+  details: Added traitmech:000394 for the PD-T4-10 DefenseFinder abortive-infection system,
+    reserved METPO:1034800 in proposals/metpo_traitmech_v271, kept individual PD-T4-10_A/B
+    HMM profiles as related synonyms and evidence only, and recorded the unresolved toxin-antitoxin
+    mechanism as a knowledge gap.

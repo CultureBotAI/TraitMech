@@ -1,0 +1,281 @@
+identifier: traitmech:000394
+label: PD-T4-10 system
+definition: An abortive infection system in which an organism possesses a PD-T4-10
+  locus represented by DefenseFinder as a two-profile model, PD-T4-10__PD-T4-10_A
+  and PD-T4-10__PD-T4-10_B, and experimentally linked to T2, T4, T6, T5, and SECphi27
+  protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: PD-T4-10
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+- synonym_text: PD-T4-10__PD-T4-10_A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PD-T4-10__PD-T4-10_B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-T4-10 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+  snippet: 'The PD-T4-10 system is composed of 2 proteins: PD-T4-10_B and, PD-T4-10_A.
+    These ORFs are overlapping and PD-T4-10_B is toxic while PD-T4-10_A neutralizes
+    its toxicity, hinting at a toxin-antitoxin (TA) mechanism. It confers resitance
+    to T2, T4, T6 and SECphi27 through an Abi defense mechanism :ref{doi=10.1038/s41564-022-01219-4}.'
+  notes: The DefenseFinder wiki describes PD-T4-10 as a two-protein Abi system whose
+    overlapping ORFs include a toxic PD-T4-10_B and neutralizing PD-T4-10_A.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+  snippet: 'The PD-T4-10 is composed of 2 proteins: PD-T4-10_A and PD-T4-10_B.'
+  notes: The DefenseFinder wiki names PD-T4-10_A and PD-T4-10_B as the two components
+    of the PD-T4-10 system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+  snippet: The PD-T4-10 system in *Escherichia fergusonii* (GCF_019047545.1, NZ_CP077242)
+    is composed of 2 proteins PD-T4-10_A (WP_032236482.1) PD-T4-10_B (WP_032236481.1)
+  notes: The DefenseFinder wiki illustrates a predicted PD-T4-10 locus in RefSeq assembly
+    GCF_019047545.1 on NZ_CP077242.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO36089.1'>RCO36089.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/RCO36088.1'>RCO36088.1</a>] --> Expressed_0[Escherichia\
+    \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & T5 & SECphi27"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-T4-10 source locus expressed in E. coli against T2, T4, T6, T5,
+    and SECphi27.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+  snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n        T6\n\
+    \        T5\n        SECphi27"
+  notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5, and
+    SECphi27 in the PD-T4-10 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-T4-10 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+    defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-T4-10 system to the
+    Vassallo et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-T4-10\tPD-T4-10\t2\t2\tPD-T4-10__PD-T4-10_A, PD-T4-10__PD-T4-10_B\t\
+    \t\t"
+  notes: The DefenseFinder rules table models PD-T4-10 as a two-profile system requiring
+    PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-10__PD-T4-10_A                             | PD-T4-10__PD-T4-10_A                             |
+    PD-T4-10               | Custom                  | 20     |
+
+    | PD-T4-10__PD-T4-10_B                             | PD-T4-10__PD-T4-10_B                             |
+    PD-T4-10               | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B
+    under the PD-T4-10 system namespace.
+causal_graphs:
+- graph_id: pd_t4_10_locus_restricts_t2_t4_t6_t5_and_secphi27
+  title: PD-T4-10 loci restrict T2, T4, T6, T5, and SECphi27
+  description: Conservative system-level sketch linking possession of a PD-T4-10 locus
+    to protection against T2, T4, T6, T5, and SECphi27.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-T4-10 as a named DefenseFinder abortive-infection
+    system while leaving natural host breadth, the direct phage trigger, the toxic
+    PD-T4-10_B target, and the PD-T4-10_A neutralization logic unresolved.
+  nodes:
+  - node_id: pd_t4_10_locus
+    label: PD-T4-10 locus
+    node_type: GENETIC_ELEMENT
+    description: A two-profile abortive-infection locus represented by the DefenseFinder
+      PD-T4-10_A and PD-T4-10_B profiles.
+  - node_id: pd_t4_10_listed_phage_protection
+    label: T2, T4, T6, T5, and SECphi27 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T2, T4, T6, T5, and SECphi27 by PD-T4-10.
+  - node_id: pd_t4_10_system_trait
+    label: PD-T4-10 system
+    node_type: TRAIT
+    grounding: traitmech:000394
+    description: Possession of a genome-encoded PD-T4-10 abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: pd_t4_10_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_10_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-T4-10 locus from Vassallo et al.
+      to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder models
+      PD-T4-10 through two mandatory profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: 'The PD-T4-10 system is composed of 2 proteins: PD-T4-10_B and, PD-T4-10_A.
+        These ORFs are overlapping and PD-T4-10_B is toxic while PD-T4-10_A neutralizes
+        its toxicity, hinting at a toxin-antitoxin (TA) mechanism. It confers resitance
+        to T2, T4, T6 and SECphi27 through an Abi defense mechanism :ref{doi=10.1038/s41564-022-01219-4}.'
+      notes: The DefenseFinder wiki describes PD-T4-10 as a two-protein Abi system
+        whose overlapping ORFs include a toxic PD-T4-10_B and neutralizing PD-T4-10_A.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: 'The PD-T4-10 is composed of 2 proteins: PD-T4-10_A and PD-T4-10_B.'
+      notes: The DefenseFinder wiki names PD-T4-10_A and PD-T4-10_B as the two components
+        of the PD-T4-10 system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO36089.1'>RCO36089.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCO36088.1'>RCO36088.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+        \ & T4 & T6 & T5 & SECphi27"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-10 source locus expressed in E. coli against T2, T4, T6,
+        T5, and SECphi27.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        T5\n        SECphi27"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5,
+        and SECphi27 in the PD-T4-10 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-10\tPD-T4-10\t2\t2\tPD-T4-10__PD-T4-10_A, PD-T4-10__PD-T4-10_B\t\
+        \t\t"
+      notes: The DefenseFinder rules table models PD-T4-10 as a two-profile system
+        requiring PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-10__PD-T4-10_A                             | PD-T4-10__PD-T4-10_A                             |
+        PD-T4-10               | Custom                  | 20     |
+
+        | PD-T4-10__PD-T4-10_B                             | PD-T4-10__PD-T4-10_B                             |
+        PD-T4-10               | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B
+        under the PD-T4-10 system namespace.
+  - subject: pd_t4_10_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_t4_10_system_trait
+    description: Protection against T2, T4, T6, T5, and SECphi27 realizes the PD-T4-10
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO36089.1'>RCO36089.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCO36088.1'>RCO36088.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+        \ & T4 & T6 & T5 & SECphi27"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-10 source locus expressed in E. coli against T2, T4, T6,
+        T5, and SECphi27.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        T5\n        SECphi27"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5,
+        and SECphi27 in the PD-T4-10 protects-against subgraph.
+  - subject: pd_t4_10_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system
+    description: PD-T4-10 system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-T4-10 and related conserved phage-defense systems.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+      snippet: 'The PD-T4-10 system is composed of 2 proteins: PD-T4-10_B and, PD-T4-10_A.
+        These ORFs are overlapping and PD-T4-10_B is toxic while PD-T4-10_A neutralizes
+        its toxicity, hinting at a toxin-antitoxin (TA) mechanism. It confers resitance
+        to T2, T4, T6 and SECphi27 through an Abi defense mechanism :ref{doi=10.1038/s41564-022-01219-4}.'
+      notes: The DefenseFinder wiki describes PD-T4-10 as a two-protein Abi system
+        whose overlapping ORFs include a toxic PD-T4-10_B and neutralizing PD-T4-10_A.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-T4-10 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+        anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-T4-10 system to
+        the Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-10\tPD-T4-10\t2\t2\tPD-T4-10__PD-T4-10_A, PD-T4-10__PD-T4-10_B\t\
+        \t\t"
+      notes: The DefenseFinder rules table models PD-T4-10 as a two-profile system
+        requiring PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B.
+discussions:
+- discussion_id: pd-t4-10-mechanism-gap
+  prompt: Resolve PD-T4-10 natural host breadth, direct phage trigger, the toxic PD-T4-10_B
+    target, and PD-T4-10_A neutralization logic before minting narrower PD-T4-10 mechanism
+    traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-T4-10 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder
+    represents the system with two mandatory profiles and an abortive-infection mechanism
+    assignment. Natural host breadth, the direct phage trigger, the toxic PD-T4-10_B
+    target, and the PD-T4-10_A neutralization logic remain unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-T4-10 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+    snippet: 'The PD-T4-10 system is composed of 2 proteins: PD-T4-10_B and, PD-T4-10_A.
+      These ORFs are overlapping and PD-T4-10_B is toxic while PD-T4-10_A neutralizes
+      its toxicity, hinting at a toxin-antitoxin (TA) mechanism. It confers resitance
+      to T2, T4, T6 and SECphi27 through an Abi defense mechanism :ref{doi=10.1038/s41564-022-01219-4}.'
+    notes: The DefenseFinder wiki describes PD-T4-10 as a two-protein Abi system whose
+      overlapping ORFs include a toxic PD-T4-10_B and neutralizing PD-T4-10_A.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+    snippet: 'The PD-T4-10 is composed of 2 proteins: PD-T4-10_A and PD-T4-10_B.'
+    notes: The DefenseFinder wiki names PD-T4-10_A and PD-T4-10_B as the two components
+      of the PD-T4-10 system.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO36089.1'>RCO36089.1</a>,\
+      \ <a href='https://ncbi.nlm.nih.gov/protein/RCO36088.1'>RCO36088.1</a>] -->\
+      \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+      \ & T4 & T6 & T5 & SECphi27"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-T4-10 source locus expressed in E. coli against T2, T4, T6,
+      T5, and SECphi27.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-T4-10\tPD-T4-10\t2\t2\tPD-T4-10__PD-T4-10_A, PD-T4-10__PD-T4-10_B\t\
+      \t\t"
+    notes: The DefenseFinder rules table models PD-T4-10 as a two-profile system requiring
+      PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-10__PD-T4-10_A                             | PD-T4-10__PD-T4-10_A                             |
+      PD-T4-10               | Custom                  | 20     |
+
+      | PD-T4-10__PD-T4-10_B                             | PD-T4-10__PD-T4-10_B                             |
+      PD-T4-10               | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B
+      under the PD-T4-10 system namespace.
+  attaches_to:
+  - causal_graphs#pd_t4_10_locus_restricts_t2_t4_t6_t5_and_secphi27
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T20:56:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-T4-10 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under abortive infection system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v271.
+  llm_assisted: true
+- timestamp: '2026-09-26T20:56:42Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-T4-10 system canonical_examples and left them empty because
+    the current sources support an E. coli accession-level experimental validation
+    graph, a DefenseFinder two-profile system model, and a RefSeq Escherichia fergusonii
+    example, but not a direct native microbial isolate exemplar with experimentally
+    verified endogenous PD-T4-10 activity. No paid research was used.
+  llm_assisted: true
