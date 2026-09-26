@@ -2605,6 +2605,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pd_lambda_6_system.html#pd-lambda-6-mechanism-gap"
  },
  {
+  "discussion_id": "pd-t4-10-mechanism-gap",
+  "prompt": "Resolve PD-T4-10 natural host breadth, direct phage trigger, the toxic PD-T4-10_B target, and PD-T4-10_A neutralization logic before minting narrower PD-T4-10 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-T4-10 system",
+  "source_id": "traitmech:000394",
+  "source_file": "pd_t4_10_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_t4_10_locus_restricts_t2_t4_t6_t5_and_secphi27"
+  ],
+  "rationale": "Vassallo et al. support PD-T4-10 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder represents the system with two mandatory profiles and an abortive-infection mechanism assignment. Natural host breadth, the direct phage trigger, the toxic PD-T4-10_B target, and the PD-T4-10_A neutralization logic remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_t4_10_system.html#pd-t4-10-mechanism-gap"
+ },
+ {
   "discussion_id": "pd-t4-1-mechanism-gap",
   "prompt": "Resolve PD-T4-1 natural host breadth, direct phage trigger, and effector mechanism before minting narrower PD-T4-1 mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -5000,9 +5026,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 263,
- "total_knowledge_gaps": 181,
- "total_source_entries": 261,
+ "total_discussions": 264,
+ "total_knowledge_gaps": 182,
+ "total_source_entries": 262,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
