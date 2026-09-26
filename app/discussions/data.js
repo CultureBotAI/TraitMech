@@ -1809,7 +1809,7 @@ window.searchData = [
  },
  {
   "discussion_id": "gaps1-trigger-sibling-gap",
-  "prompt": "Resolve GAPS1 component activity, natural-host exemplars, and GAPS2/GAPS4/GAPS6 boundaries before minting narrower GAPS traits.",
+  "prompt": "Resolve GAPS1 component activity, natural-host exemplars, and GAPS2/GAPS6 boundaries before minting narrower GAPS traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -1819,7 +1819,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#gaps1_capsid_triggered_dormancy"
   ],
-  "rationale": "Mahata et al. support GAPS1 as one GMT-island anti-phage defense system triggered by a phage capsid protein to induce cell dormancy, and DefenseFinder represents GAPS1 as one GAPS1__GAPS1 profile. This first system-level record does not assert the GAPS1 component's molecular activity, the capsid trigger identity, a universal GAPS1 host range, or sibling GAPS2, GAPS4, or GAPS6 system boundaries.",
+  "rationale": "Mahata et al. support GAPS1 as one GMT-island anti-phage defense system triggered by a phage capsid protein to induce cell dormancy, and DefenseFinder represents GAPS1 as one GAPS1__GAPS1 profile. This first system-level record does not assert the GAPS1 component's molecular activity, the capsid trigger identity, a universal GAPS1 host range, or sibling GAPS2 or GAPS6 system boundaries.",
   "num_experiments": 0,
   "num_evidence": 2,
   "evidence_refs": [
