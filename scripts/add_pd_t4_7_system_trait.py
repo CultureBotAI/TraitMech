@@ -37,6 +37,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-26T19:13:36Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-26T19:13:37Z"
 REVIEW_FIX_TIMESTAMP = "2026-09-26T19:42:30Z"
+PROVENANCE_REVIEW_TIMESTAMP = "2026-09-26T19:55:00Z"
 POSED_DATE = "2026-09-26"
 IDENTIFIER = "traitmech:000392"
 PROPOSAL = "proposals/metpo_traitmech_v269"
@@ -373,7 +374,7 @@ def write_record(*, apply: bool) -> None:
         action="MINTED_TRAITMECH_ID",
         changes=(
             "Minted PD-T4-7 system as a DOI- and DefenseFinder-backed "
-            "GENOMICS TraitRecord under abortive infection system after an "
+            "GENOMICS TraitRecord under phage defense system after an "
             "ignored-and-hidden duplicate review found no exact live "
             "TraitMech, METPO, history, or prior proposal record; the "
             f"replacement placeholder is reserved in {PROPOSAL}."
@@ -402,7 +403,7 @@ def write_record(*, apply: bool) -> None:
         curator=CURATOR,
         action="ADDRESS_SCOPE_NOTE_REVIEW",
         changes=(
-            "Addressed PR #1292 review issue #1293 by reparenting PD-T4-7 "
+            "Addressed PR 1292 review issue 1293 by reparenting PD-T4-7 "
             "under abortive infection system, updating the subclass graph "
             "node, and naming the DefenseFinder abortive-infection assignment "
             "while leaving natural host breadth, the direct phage trigger, "
@@ -410,6 +411,19 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=REVIEW_FIX_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="RESTORE_MINT_EVENT_PROVENANCE",
+        changes=(
+            "Addressed PR 1292 review issue 1294 by restoring the "
+            "original mint event to say PD-T4-7 was minted under phage "
+            "defense system; the later ADDRESS_SCOPE_NOTE_REVIEW event "
+            "records the abortive-infection reparenting."
+        ),
+        llm_assisted=True,
+        timestamp=PROVENANCE_REVIEW_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)

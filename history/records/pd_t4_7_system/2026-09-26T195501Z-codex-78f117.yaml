@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_7_system.yaml
+  slug: pd_t4_7_system
+session:
+  id: 2026-09-26T195501Z-codex-78f117
+  timestamp: '2026-09-26T19:55:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1294
+  - https://github.com/CultureBotAI/TraitMech/issues/1295
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1292
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct PD-T4-7 review provenance
+  details: Resolved PR 1292 review issues 1294 and 1295 by restoring the original mint event
+    to record that PD-T4-7 was minted under phage defense system, then appending this correction
+    to clarify that metpo_traitmech_v269 still reserves METPO:1034600 and now proposes METPO:1016800
+    as the parent.

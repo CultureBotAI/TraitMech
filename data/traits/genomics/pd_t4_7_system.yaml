@@ -224,7 +224,7 @@ curation_history:
   curator: codex
   action: MINTED_TRAITMECH_ID
   changes: Minted PD-T4-7 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
-    under abortive infection system after an ignored-and-hidden duplicate review found
+    under phage defense system after an ignored-and-hidden duplicate review found
     no exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v269.
   llm_assisted: true
@@ -244,4 +244,11 @@ curation_history:
     infection system, updating the subclass graph node, and naming the DefenseFinder
     abortive-infection assignment while leaving natural host breadth, the direct phage
     trigger, and direct effector logic unresolved.
+  llm_assisted: true
+- timestamp: '2026-09-26T19:55:00Z'
+  curator: codex
+  action: RESTORE_MINT_EVENT_PROVENANCE
+  changes: Addressed PR 1292 review issue 1294 by restoring the original mint event
+    to say PD-T4-7 was minted under phage defense system; the later ADDRESS_SCOPE_NOTE_REVIEW
+    event records the abortive-infection reparenting.
   llm_assisted: true
