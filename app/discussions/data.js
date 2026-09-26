@@ -2682,6 +2682,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pd_t4_3_system.html#pd-t4-3-mechanism-gap"
  },
  {
+  "discussion_id": "pd-t4-4-mechanism-gap",
+  "prompt": "Resolve PD-T4-4 natural host breadth, direct phage trigger, and effector mechanism before minting narrower PD-T4-4 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-T4-4 system",
+  "source_id": "traitmech:000389",
+  "source_file": "pd_t4_4_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_t4_4_locus_restricts_t2_t4_t6_and_secphi17"
+  ],
+  "rationale": "Vassallo et al. support PD-T4-4 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, T6, and SECphi17, and DefenseFinder represents the system with two mandatory profiles. Natural host breadth, the direct phage trigger, and direct effector logic remain unresolved, so the likely abortive-infection hypothesis is left unmodeled.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_t4_4_system.html#pd-t4-4-mechanism-gap"
+ },
+ {
   "discussion_id": "pfiat-mechanism-gap",
   "prompt": "Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas, Pf prophage production and immunity coupling, and PfiAT profile-to-activity mapping before minting narrower PfiAT mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4871,9 +4898,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 258,
- "total_knowledge_gaps": 176,
- "total_source_entries": 256,
+ "total_discussions": 259,
+ "total_knowledge_gaps": 177,
+ "total_source_entries": 257,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

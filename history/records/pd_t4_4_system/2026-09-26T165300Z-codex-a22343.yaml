@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_4_system.yaml
+  slug: pd_t4_4_system
+session:
+  id: 2026-09-26T165300Z-codex-a22343
+  timestamp: '2026-09-26T16:53:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add PD-T4-4 system phage-defense trait
+  details: Minted traitmech:000389 for the DOI- and DefenseFinder-backed PD-T4-4 phage-defense
+    system, backed by DOI:10.1038/s41564-022-01219-4, a pinned DefenseFinder wiki page, and
+    pinned DefenseFinder article, rules, and HMM registries. The record models PD-T4-4 as
+    a two-profile system-level GENOMICS trait under phage defense system, leaves canonical_examples
+    empty after reviewing the current evidence, adds a conservative nonmechanistic causal
+    graph and a mechanism-gap discussion, and reserves METPO:1034300 in proposals/metpo_traitmech_v266.
