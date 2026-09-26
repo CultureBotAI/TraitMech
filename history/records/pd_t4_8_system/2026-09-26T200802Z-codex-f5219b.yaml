@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_8_system.yaml
+  slug: pd_t4_8_system
+session:
+  id: 2026-09-26T200802Z-codex-f5219b
+  timestamp: '2026-09-26T20:08:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add PD-T4-8 system phage-defense trait
+  details: Minted traitmech:000393 for the DOI- and DefenseFinder-backed PD-T4-8 phage-defense
+    system, citing the Vassallo et al. E. coli pangenome screen and pinned DefenseFinder wiki,
+    article, rules, and HMM registries. The record models PD-T4-8 as a single-profile locus
+    connected to T2, T4, T6, SECphi18, and SECphi27 protection with a nonmechanistic causal
+    graph and a mechanism-gap discussion, and reserves METPO:1034700 in proposals/metpo_traitmech_v270.
