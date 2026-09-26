@@ -77,6 +77,16 @@ HMM_SNIPPET = (
     "PD-T4-9__PD-T4-9_C                               | "
     "PD-T4-9                | Custom                  | 20     |"
 )
+OLD_RULES_NOTES = (
+    "The pinned DefenseFinder rules table models PD-T4-9 with "
+    "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C as required "
+    "profiles and PD-T4-9__PD-T4-9_B as an exchangeable profile."
+)
+RULES_NOTES = (
+    "The pinned DefenseFinder rules table models PD-T4-9 with "
+    "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C as required profiles "
+    "and PD-T4-9__PD-T4-9_B as an accessory profile."
+)
 ARTICLE_REGISTRY_SNIPPET = (
     r"CmdTAC | 10\.1038/s41586-024-08102-8 | "
     "Anti-viral defence by an mRNA ADP-ribosyltransferase that blocks translation"
@@ -123,11 +133,7 @@ PD_T4_9_EVIDENCE = [
     {
         "reference": DEFENSEFINDER_RULES,
         "snippet": RULES_SNIPPET,
-        "notes": (
-            "The pinned DefenseFinder rules table models PD-T4-9 with "
-            "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C as required "
-            "profiles and PD-T4-9__PD-T4-9_B as an exchangeable profile."
-        ),
+        "notes": RULES_NOTES,
     },
     {
         "reference": DEFENSEFINDER_HMMS,
@@ -151,9 +157,13 @@ DISCUSSION_RATIONALE = (
     "PD-T4-9 page aliases the same system through former PD-T4-9 component "
     "names, and the pinned DefenseFinder HMM inventory and rules table model "
     "PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C "
-    "profiles plus optional PD-T4-9__PD-T4-9_B. Phage specificity beyond "
+    "profiles plus accessory PD-T4-9__PD-T4-9_B. Phage specificity beyond "
     "Tevenvirinae, escape routes, and natural family breadth remain "
     "unresolved."
+)
+OLD_DISCUSSION_RATIONALE = DISCUSSION_RATIONALE.replace(
+    "accessory PD-T4-9__PD-T4-9_B",
+    "optional PD-T4-9__PD-T4-9_B",
 )
 SCOPE_NOTES = (
     "The graph captures CmdTAC as a named toxin-antitoxin-chaperone "
@@ -190,11 +200,29 @@ def update_article_registry_note(evidence: list[dict[str, Any]]) -> None:
     raise ValueError("CmdTAC article-registry evidence is missing")
 
 
+def normalize_rules_notes(evidence: list[dict[str, Any]]) -> None:
+    for item in evidence:
+        if evidence_key(item) != (DEFENSEFINDER_RULES, RULES_SNIPPET):
+            continue
+        notes = item.get("notes", "")
+        if notes in {OLD_RULES_NOTES, RULES_NOTES}:
+            item["notes"] = RULES_NOTES
+            return
+        raise ValueError("CmdTAC DefenseFinder rules note was already edited")
+    raise ValueError("CmdTAC DefenseFinder rules evidence is missing")
+
+
 def set_discussion_evidence(discussion: dict[str, Any]) -> None:
     evidence = discussion.get("evidence")
-    if evidence in (None, []) or evidence == PD_T4_9_EVIDENCE:
+    if evidence in (None, []):
         discussion["evidence"] = copy.deepcopy(PD_T4_9_EVIDENCE)
         return
+    if isinstance(evidence, list):
+        normalized = copy.deepcopy(evidence)
+        normalize_rules_notes(normalized)
+        if normalized == PD_T4_9_EVIDENCE:
+            discussion["evidence"] = normalized
+            return
     raise ValueError("CmdTAC model-coverage discussion evidence was already edited")
 
 
@@ -218,6 +246,7 @@ def update_record(doc: dict[str, Any]) -> None:
     for item in PD_T4_9_EVIDENCE:
         if evidence_key(item) not in seen:
             evidence.append(copy.deepcopy(item))
+    normalize_rules_notes(evidence)
 
     graphs = doc.get("causal_graphs") or []
     if len(graphs) != 1 or graphs[0].get("graph_id") != "cmdtac_mrna_adp_ribosylation_aborts_phage":
@@ -235,14 +264,13 @@ def update_record(doc: dict[str, Any]) -> None:
         if discussion.get("status") != "OPEN":
             raise ValueError("CmdTAC model-coverage discussion is not open")
         rationale = discussion.get("rationale", "")
-        if "HMM inventory or rules table" in rationale:
-            discussion["prompt"] = DISCUSSION_PROMPT
-            discussion["rationale"] = DISCUSSION_RATIONALE
-        elif (
+        if "HMM inventory or rules table" not in rationale and (
             discussion.get("prompt") != DISCUSSION_PROMPT
-            or rationale != DISCUSSION_RATIONALE
+            or rationale not in {OLD_DISCUSSION_RATIONALE, DISCUSSION_RATIONALE}
         ):
             raise ValueError("CmdTAC model-coverage rationale was already edited")
+        discussion["prompt"] = DISCUSSION_PROMPT
+        discussion["rationale"] = DISCUSSION_RATIONALE
         set_discussion_evidence(discussion)
         break
     else:
