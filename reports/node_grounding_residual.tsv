@@ -1585,6 +1585,8 @@ transposable element insertion	BIOLOGICAL_PROCESS	1	data/traits/genomics/transpo
 target site duplication	QUALITY	1	data/traits/genomics/transposable_element.yaml
 gene disruption	BIOLOGICAL_PROCESS	1	data/traits/genomics/transposable_element.yaml
 homologous recombination between is copies	BIOLOGICAL_PROCESS	1	data/traits/genomics/transposable_element.yaml
+type iig restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iig_restriction_modification_system.yaml
+foreign unmethylated dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/type_iig_restriction_modification_system.yaml
 ukko locus	GENETIC_ELEMENT	1	data/traits/genomics/ukko_system.yaml
 uzume locus	GENETIC_ELEMENT	1	data/traits/genomics/uzume_system.yaml
 veles locus	GENETIC_ELEMENT	1	data/traits/genomics/veles_system.yaml

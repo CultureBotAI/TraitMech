@@ -1,0 +1,286 @@
+identifier: traitmech:000375
+label: type IIG restriction-modification system
+definition: A restriction-modification system in which an organism possesses a Type
+  IIG locus centered on a restriction-methyltransferase-specificity fusion gene represented
+  by DefenseFinder as the RM_Type_IIG subsystem.
+definition_source: DOI:10.1093/nar/gkr543
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000095
+synonyms:
+- synonym_text: RM_Type_IIG
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: RM_Type_IIG__Type_IIG
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: DOI:10.1093/nar/gkr543
+  snippet: Type IIG R–M systems also follow this general strategy for target recognition,
+    but instead of encoding separate REase, MTase and specificity subunits, they have
+    evolved to combine them within a single uninterrupted protein chain.
+  notes: Shen et al. define Type IIG restriction-modification systems as systems that
+    combine restriction, methyltransferase, and specificity subunits in one uninterrupted
+    protein chain.
+- reference: DOI:10.1093/nar/gkr543
+  snippet: The entire BpuSI R–M system consists of two MTase genes (M1 and M2) and
+    the R–M fusion gene.
+  notes: The characterized BpuSI Type IIG example carries two companion methyltransferase
+    genes and an R-M fusion gene, supporting a locus-level system trait rather than
+    a single protein trait.
+- reference: DOI:10.1038/srep03838
+  snippet: Type IIG (symmetric or asymmetric target sites; endonuclease activity affected
+    by AdoMet (SAM))
+  notes: Zhu et al. place Type IIG in the Type II restriction enzyme classification
+    and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease activity.
+- reference: DOI:10.1038/srep03838
+  snippet: Tth111II contains both endonuclease (R) and methylase (M) domains and a
+    shared specificity domain (S).
+  notes: The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity
+    domains in one polypeptide.
+- reference: DOI:10.1038/srep03838
+  snippet: The biological function of restriction-modification systems is to restrict/cleave
+    foreign invading DNA
+  notes: Zhu et al. frame the Type IIGS decision between cleaving and modifying unmodified
+    DNA in the broader restriction-modification role of cleaving foreign invading
+    DNA.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'RM_Type_IIG | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+    and modification: enzymes, genes and genomes'
+  notes: The pinned DefenseFinder article registry maps the named RM_Type_IIG model
+    to the REBASE update.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"
+  notes: The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that
+    requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM_Type_IIG__Type_IIG_1                          |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_2                          |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_3                          |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_4                          |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_5                          |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |
+
+    | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  |
+    RM_Type_IIG            | Custom                  | 300    |'
+  notes: The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG
+    system namespace.
+causal_graphs:
+- graph_id: type_iig_rm_locus_restricts_foreign_dna
+  title: Type IIG R-M loci mark self and restrict foreign DNA
+  description: Conservative system-level sketch linking Type IIG restriction-methyltransferase-specificity
+    fusion loci to restriction-modification-mediated foreign DNA cleavage.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the reusable Type IIG locus architecture and the
+    DefenseFinder RM_Type_IIG custom-profile namespace without asserting an accession-level
+    mapping between each custom HMM, BpuSI, Tth111II, or companion methyltransferases.
+  nodes:
+  - node_id: type_iig_rm_locus
+    label: type IIG restriction-modification locus
+    node_type: GENETIC_ELEMENT
+    description: A Type IIG R-M locus centered on a single restriction-methyltransferase-specificity
+      fusion gene and, in some systems, one or more companion methyltransferase genes.
+  - node_id: foreign_unmethylated_dna_cleavage
+    label: foreign unmethylated DNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of invading DNA that has not been protected by cognate
+      methylation.
+  - node_id: type_iig_restriction_modification_system_trait
+    label: type IIG restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000375
+    description: Possession of a genome-encoded type IIG restriction-modification
+      system.
+  - node_id: restriction_modification_system
+    label: restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000095
+    description: Possession of a methyltransferase and restriction endonuclease system
+      for self/non-self DNA discrimination.
+  edges:
+  - subject: type_iig_rm_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: foreign_unmethylated_dna_cleavage
+    description: Type IIG loci encode the fusion architecture and methyltransferase
+      context needed to cleave unprotected foreign DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gkr543
+      snippet: Type IIG R–M systems also follow this general strategy for target recognition,
+        but instead of encoding separate REase, MTase and specificity subunits, they
+        have evolved to combine them within a single uninterrupted protein chain.
+      notes: Shen et al. define Type IIG restriction-modification systems as systems
+        that combine restriction, methyltransferase, and specificity subunits in one
+        uninterrupted protein chain.
+    - reference: DOI:10.1093/nar/gkr543
+      snippet: The entire BpuSI R–M system consists of two MTase genes (M1 and M2)
+        and the R–M fusion gene.
+      notes: The characterized BpuSI Type IIG example carries two companion methyltransferase
+        genes and an R-M fusion gene, supporting a locus-level system trait rather
+        than a single protein trait.
+    - reference: DOI:10.1038/srep03838
+      snippet: Tth111II contains both endonuclease (R) and methylase (M) domains and
+        a shared specificity domain (S).
+      notes: The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and
+        specificity domains in one polypeptide.
+  - subject: foreign_unmethylated_dna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: type_iig_restriction_modification_system_trait
+    description: Type IIG restriction-modification activity realizes the organism-level
+      Type IIG R-M system trait.
+    evidence:
+    - reference: DOI:10.1038/srep03838
+      snippet: Type IIG (symmetric or asymmetric target sites; endonuclease activity
+        affected by AdoMet (SAM))
+      notes: Zhu et al. place Type IIG in the Type II restriction enzyme classification
+        and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease
+        activity.
+    - reference: DOI:10.1038/srep03838
+      snippet: The biological function of restriction-modification systems is to restrict/cleave
+        foreign invading DNA
+      notes: Zhu et al. frame the Type IIGS decision between cleaving and modifying
+        unmodified DNA in the broader restriction-modification role of cleaving foreign
+        invading DNA.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"
+      notes: The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that
+        requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.
+  - subject: type_iig_restriction_modification_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: restriction_modification_system
+    description: A Type IIG R-M system is a subtype of broader restriction-modification
+      system possession.
+    evidence:
+    - reference: DOI:10.1093/nar/gkr543
+      snippet: Type IIG R–M systems also follow this general strategy for target recognition,
+        but instead of encoding separate REase, MTase and specificity subunits, they
+        have evolved to combine them within a single uninterrupted protein chain.
+      notes: Shen et al. define Type IIG restriction-modification systems as systems
+        that combine restriction, methyltransferase, and specificity subunits in one
+        uninterrupted protein chain.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'RM_Type_IIG | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+        and modification: enzymes, genes and genomes'
+      notes: The pinned DefenseFinder article registry maps the named RM_Type_IIG
+        model to the REBASE update.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1                          |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_2                          |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_3                          |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_4                          |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_5                          |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |
+
+        | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  |
+        RM_Type_IIG            | Custom                  | 300    |'
+      notes: The DefenseFinder HMM inventory lists eight custom profiles under the
+        RM_Type_IIG system namespace.
+discussions:
+- discussion_id: type-iig-rm-profile-interpretation-gap
+  prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_IIG
+    custom profiles, characterized BpuSI- or Tth111II-like enzymes, and companion
+    methyltransferases before minting narrower Type IIG protein or subfamily traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Shen et al. and Zhu et al. support Type IIG R-M system architecture and
+    experimentally characterized BpuSI and Tth111II examples, while the pinned DefenseFinder
+    registry supports an RM_Type_IIG system-level namespace with eight custom HMM
+    rows. The evidence does not yet map each custom profile row to exact characterized
+    enzyme families or resolve companion methyltransferase requirements.
+  evidence:
+  - reference: DOI:10.1093/nar/gkr543
+    snippet: Type IIG R–M systems also follow this general strategy for target recognition,
+      but instead of encoding separate REase, MTase and specificity subunits, they
+      have evolved to combine them within a single uninterrupted protein chain.
+    notes: Shen et al. define Type IIG restriction-modification systems as systems
+      that combine restriction, methyltransferase, and specificity subunits in one
+      uninterrupted protein chain.
+  - reference: DOI:10.1038/srep03838
+    snippet: Tth111II contains both endonuclease (R) and methylase (M) domains and
+      a shared specificity domain (S).
+    notes: The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity
+      domains in one polypeptide.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"
+    notes: The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that
+      requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM_Type_IIG__Type_IIG_1                          |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_2                          |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_3                          |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_4                          |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_5                          |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |
+
+      | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  |
+      RM_Type_IIG            | Custom                  | 300    |'
+    notes: The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG
+      system namespace.
+  attaches_to:
+  - causal_graphs#type_iig_rm_locus_restricts_foreign_dna
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T08:04:20Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted type IIG restriction-modification system as a DOI-backed GENOMICS
+    TraitRecord under restriction-modification system after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v252.
+  llm_assisted: true
+- timestamp: '2026-09-26T08:14:20Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed type IIG restriction-modification system during canonical-example
+    issue 444 enforcement and left canonical_examples empty because the sources support
+    biochemically characterized BpuSI and Tth111II natural isolates plus a DefenseFinder
+    system model, but not a direct stable NCBITaxon strain exemplar with whole-system
+    Type IIG activity. No paid research was used.
+  llm_assisted: true
