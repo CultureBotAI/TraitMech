@@ -15,7 +15,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from render_trait_pages import corpus_timestamp, reciprocal_neighbor_edges  # noqa: E402
+from render_trait_pages import corpus_timestamp, reciprocal_neighbor_edges, write_html  # noqa: E402
 
 
 def _doc(*timestamps):
@@ -95,6 +95,14 @@ def test_real_corpus_yields_a_stamp():
         if isinstance(doc, dict):
             traits.append((p, doc))
     assert corpus_timestamp(traits), "no parsable curation_history timestamp in the corpus"
+
+
+def test_write_html_strips_trailing_whitespace(tmp_path):
+    out = tmp_path / "page.html"
+
+    write_html(out, "<pre>E. coli \n</pre>\n<p>kept</p>  \n   ")
+
+    assert out.read_text() == "<pre>E. coli\n</pre>\n<p>kept</p>\n"
 
 
 def test_reciprocal_neighbor_edges_are_unique_stable_and_in_scope():
