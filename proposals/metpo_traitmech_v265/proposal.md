@@ -50,9 +50,9 @@ mobile genetic elements as mobile elements, and other phage-defense systems.
 ## External Mappings
 
 No exact external mapping is proposed. Individual proteins, source database rows
-naming the DefenseFinder model, HMM profiles, RefSeq example loci, the GIY-YIG
-nuclease domain, and protection against T2, T4, or T6 are shifted from this
-organism-level GENOMICS possession trait.
+naming the DefenseFinder model, HMM profiles, RefSeq example loci, and protection
+against T2, T4, or T6 are shifted from this organism-level GENOMICS possession
+trait.
 
 ## Artifacts
 
