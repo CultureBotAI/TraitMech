@@ -1489,6 +1489,8 @@ t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	1	data/traits/genomic
 pd-t4-3 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_3_system.yaml
 pd-t4-4 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_4_system.yaml
 t2, t4, t6, and secphi17 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_t4_4_system.yaml
+pd-t4-5 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_5_system.yaml
+t4, t6, lambdavir, and t5 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_t4_5_system.yaml
 pfiat locus	GENETIC_ELEMENT	1	data/traits/genomics/pfiat_system.yaml
 pf4 phage production regulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pfiat_system.yaml
 bacteriophage pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/phage_defense_system.yaml
