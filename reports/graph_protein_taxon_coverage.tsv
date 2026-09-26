@@ -288,6 +288,7 @@ data/traits/genomics/pd_lambda_3_system.yaml	traitmech:000382	PD-Lambda-3 system
 data/traits/genomics/pd_lambda_4_system.yaml	traitmech:000384	PD-Lambda-4 system	pd_lambda_4_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_5_system.yaml	traitmech:000385	PD-Lambda-5 system	pd_lambda_5_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_6_system.yaml	traitmech:000383	PD-Lambda-6 system	pd_lambda_6_locus_restricts_lambda_vir_and_t5	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/pd_t4_1_system.yaml	traitmech:000386	PD-T4-1 system	pd_t4_1_locus_restricts_t2_t4_and_t6	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pfiat_system.yaml	traitmech:000365	PfiAT system	pfiat_locus_regulates_pf4_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense system	phage_defense_system_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phosphorothioate_defense_system.yaml	traitmech:000213	phosphorothioate defense system	phosphorothioate_dna_restriction_antiviral_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

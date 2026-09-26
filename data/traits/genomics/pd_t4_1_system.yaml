@@ -1,0 +1,224 @@
+identifier: traitmech:000386
+label: PD-T4-1 system
+definition: A phage defense system in which an organism possesses a PD-T4-1 locus
+  represented by DefenseFinder as a single-profile model, PD-T4-1__PD-T4-1, and experimentally
+  linked to T2, T4, and T6 protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PD-T4-1
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+- synonym_text: PD-T4-1__PD-T4-1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-T4-1 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+  snippet: 'The PD-T4-1 is composed of 1 protein: PD-T4-1.'
+  notes: The DefenseFinder wiki names PD-T4-1 as a single-protein system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+  snippet: 'The PD-T4-1 system in *Macrococcus armenti* (GCF_020097055.1, NZ_CP083595)
+    is composed of 1 protein: PD-T4-1 (WP_224185715.1)'
+  notes: The DefenseFinder wiki illustrates a predicted one-protein PD-T4-1 locus
+    in RefSeq assembly GCF_020097055.1 on NZ_CP083595.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRM93940.1'>RRM93940.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+    \ & T4 & T6"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-T4-1 source locus expressed in E. coli against T2, T4, and T6.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+  snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n        T6"
+  notes: The DefenseFinder experimental-validation diagram lists T2, T4, and T6 in
+    the PD-T4-1 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-T4-1 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+    defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-T4-1 system to the Vassallo
+    et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-T4-1\tPD-T4-1\t1\t1\tPD-T4-1__PD-T4-1\t\t\t"
+  notes: The DefenseFinder rules table models PD-T4-1 as a single-profile system requiring
+    PD-T4-1__PD-T4-1.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-1__PD-T4-1                                 | PD-T4-1__PD-T4-1                                 |
+    PD-T4-1                | Custom                  | 120    |'
+  notes: The DefenseFinder HMM inventory records PD-T4-1__PD-T4-1 under the PD-T4-1
+    system namespace.
+causal_graphs:
+- graph_id: pd_t4_1_locus_restricts_t2_t4_and_t6
+  title: PD-T4-1 loci restrict T2, T4, and T6
+  description: Conservative system-level sketch linking possession of a PD-T4-1 locus
+    to protection against T2, T4, and T6.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-T4-1 as a named DefenseFinder phage-defense system
+    while leaving natural host breadth, the direct phage trigger, and the effector
+    mechanism unresolved.
+  nodes:
+  - node_id: pd_t4_1_locus
+    label: PD-T4-1 locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-defense locus represented by the PD-T4-1 DefenseFinder profile.
+  - node_id: pd_t4_1_listed_phage_protection
+    label: T2, T4, and T6 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T2, T4, and T6 by PD-T4-1.
+  - node_id: pd_t4_1_system_trait
+    label: PD-T4-1 system
+    node_type: TRAIT
+    grounding: traitmech:000386
+    description: Possession of a genome-encoded PD-T4-1 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pd_t4_1_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_1_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-T4-1 locus from Vassallo et al.
+      to protection against T2, T4, and T6, and DefenseFinder models PD-T4-1 through
+      one mandatory profile.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+      snippet: 'The PD-T4-1 is composed of 1 protein: PD-T4-1.'
+      notes: The DefenseFinder wiki names PD-T4-1 as a single-protein system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRM93940.1'>RRM93940.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T2 & T4 & T6"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-1 source locus expressed in E. coli against T2, T4, and
+        T6.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, and T6
+        in the PD-T4-1 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-1\tPD-T4-1\t1\t1\tPD-T4-1__PD-T4-1\t\t\t"
+      notes: The DefenseFinder rules table models PD-T4-1 as a single-profile system
+        requiring PD-T4-1__PD-T4-1.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-1__PD-T4-1                                 | PD-T4-1__PD-T4-1                                 |
+        PD-T4-1                | Custom                  | 120    |'
+      notes: The DefenseFinder HMM inventory records PD-T4-1__PD-T4-1 under the PD-T4-1
+        system namespace.
+  - subject: pd_t4_1_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_t4_1_system_trait
+    description: Protection against T2, T4, and T6 realizes the PD-T4-1 system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRM93940.1'>RRM93940.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ T2 & T4 & T6"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-1 source locus expressed in E. coli against T2, T4, and
+        T6.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, and T6
+        in the PD-T4-1 protects-against subgraph.
+  - subject: pd_t4_1_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PD-T4-1 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-T4-1 and related conserved phage-defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-T4-1 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+        anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-T4-1 system to the
+        Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-1\tPD-T4-1\t1\t1\tPD-T4-1__PD-T4-1\t\t\t"
+      notes: The DefenseFinder rules table models PD-T4-1 as a single-profile system
+        requiring PD-T4-1__PD-T4-1.
+discussions:
+- discussion_id: pd-t4-1-mechanism-gap
+  prompt: Resolve PD-T4-1 natural host breadth, direct phage trigger, and effector
+    mechanism before minting narrower PD-T4-1 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-T4-1 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against T2, T4, and T6, and DefenseFinder represents
+    the system with one profile. Natural host breadth, the direct phage trigger, and
+    effector logic remain unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-T4-1 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+    snippet: 'The PD-T4-1 is composed of 1 protein: PD-T4-1.'
+    notes: The DefenseFinder wiki names PD-T4-1 as a single-protein system.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-1.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RRM93940.1'>RRM93940.1</a>]\
+      \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+      \ T2 & T4 & T6"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-T4-1 source locus expressed in E. coli against T2, T4, and
+      T6.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-T4-1\tPD-T4-1\t1\t1\tPD-T4-1__PD-T4-1\t\t\t"
+    notes: The DefenseFinder rules table models PD-T4-1 as a single-profile system
+      requiring PD-T4-1__PD-T4-1.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-1__PD-T4-1                                 | PD-T4-1__PD-T4-1                                 |
+      PD-T4-1                | Custom                  | 120    |'
+    notes: The DefenseFinder HMM inventory records PD-T4-1__PD-T4-1 under the PD-T4-1
+      system namespace.
+  attaches_to:
+  - causal_graphs#pd_t4_1_locus_restricts_t2_t4_and_t6
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T15:03:18Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-T4-1 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v263.
+  llm_assisted: true
+- timestamp: '2026-09-26T15:03:19Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-T4-1 system canonical_examples and left them empty because
+    the current sources support an E. coli accession-level experimental validation
+    graph, a DefenseFinder system model, and a RefSeq Macrococcus armenti example,
+    but not a direct native microbial isolate exemplar with experimentally verified
+    endogenous PD-T4-1 activity. No paid research was used.
+  llm_assisted: true
