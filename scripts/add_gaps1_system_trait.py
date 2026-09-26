@@ -175,7 +175,7 @@ RECORD: dict[str, Any] = {
                 "defense system represented in DefenseFinder by a single "
                 "GAPS1__GAPS1 profile while leaving its universal host range, "
                 "the molecular activity of the GAPS1 component, the exact "
-                "capsid-protein trigger, and sibling GAPS2 or GAPS6 systems "
+                "capsid-protein trigger, and sibling GAPS6 systems "
                 "unresolved."
             ),
             "nodes": [
@@ -269,8 +269,7 @@ RECORD: dict[str, Any] = {
             "discussion_id": "gaps1-trigger-sibling-gap",
             "prompt": (
                 "Resolve GAPS1 component activity, natural-host exemplars, "
-                "and GAPS2/GAPS6 boundaries before minting narrower "
-                "GAPS traits."
+                "and GAPS6 boundaries before minting narrower GAPS traits."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -281,7 +280,7 @@ RECORD: dict[str, Any] = {
                 "GAPS1__GAPS1 profile. This first system-level record does "
                 "not assert the GAPS1 component's molecular activity, the "
                 "capsid trigger identity, a universal GAPS1 host range, or "
-                "sibling GAPS2 or GAPS6 system boundaries."
+                "sibling GAPS6 system boundaries."
             ),
             "evidence": [
                 mahata_gaps1_dormancy_evidence(),
@@ -323,6 +322,17 @@ def write_record(*, apply: bool) -> None:
         ),
         curator=CURATOR,
         timestamp="2026-09-26T11:02:35Z",
+        llm_assisted=True,
+    )
+    record_curation_event(
+        record,
+        action="UPDATED_DISCUSSION",
+        changes=(
+            "Narrowed stale GAPS1 sibling-boundary references to GAPS6 "
+            "after GAPS2 was split into its own TraitRecord."
+        ),
+        curator=CURATOR,
+        timestamp="2026-09-26T11:26:43Z",
         llm_assisted=True,
     )
     if apply:
