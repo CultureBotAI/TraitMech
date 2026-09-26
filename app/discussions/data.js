@@ -2693,7 +2693,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#pd_t4_4_locus_restricts_t2_t4_t6_and_secphi17"
   ],
-  "rationale": "Vassallo et al. support PD-T4-4 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, T6, and SECphi17, and DefenseFinder represents the system with two mandatory profiles. Natural host breadth, the direct phage trigger, and effector logic remain unresolved.",
+  "rationale": "Vassallo et al. support PD-T4-4 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, T6, and SECphi17, and DefenseFinder represents the system with two mandatory profiles. Natural host breadth, the direct phage trigger, and direct effector logic remain unresolved, so the likely abortive-infection hypothesis is left unmodeled.",
   "num_experiments": 0,
   "num_evidence": 7,
   "evidence_refs": [

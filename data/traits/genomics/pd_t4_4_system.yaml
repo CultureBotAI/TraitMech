@@ -81,8 +81,9 @@ causal_graphs:
     to protection against T2, T4, T6, and SECphi17.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures PD-T4-4 as a named DefenseFinder phage-defense system
-    while leaving natural host breadth, the direct phage trigger, and the effector
-    mechanism unresolved.
+    while leaving natural host breadth, the direct phage trigger, and the hinted
+    abortive-infection effector mechanism unmodeled until direct mechanism evidence
+    is available.
   nodes:
   - node_id: pd_t4_4_locus
     label: PD-T4-4 locus
@@ -206,7 +207,8 @@ discussions:
     an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
     source locus to protection against T2, T4, T6, and SECphi17, and DefenseFinder
     represents the system with two mandatory profiles. Natural host breadth, the direct
-    phage trigger, and effector logic remain unresolved.
+    phage trigger, and direct effector logic remain unresolved, so the likely abortive-infection
+    hypothesis is left unmodeled.
   evidence:
   - reference: DOI:10.1038/s41564-022-01219-4
     snippet: Here we developed an experimental selection scheme agnostic to genomic
@@ -269,4 +271,12 @@ curation_history:
     graph, a DefenseFinder system model, and a RefSeq Thiothrix subterranea example,
     but not a direct native microbial isolate exemplar with experimentally verified
     endogenous PD-T4-4 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-26T17:24:43Z'
+  curator: codex
+  action: ADDRESS_SCOPE_NOTE_REVIEW
+  changes: Clarified after Claude Code Review issue 1288 that the DefenseFinder wiki
+    names abortive infection as the likely PD-T4-4 population-level protection route,
+    but the graph leaves that hypothesis unmodeled until direct mechanism evidence
+    is available.
   llm_assisted: true

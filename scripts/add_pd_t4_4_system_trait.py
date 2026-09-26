@@ -36,6 +36,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-26T16:51:00Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-26T16:51:01Z"
+REVIEW_SCOPE_TIMESTAMP = "2026-09-26T17:24:43Z"
 POSED_DATE = "2026-09-26"
 IDENTIFIER = "traitmech:000389"
 PROPOSAL = "proposals/metpo_traitmech_v266"
@@ -270,8 +271,9 @@ RECORD: dict[str, Any] = {
             "scope_notes": (
                 "The graph captures PD-T4-4 as a named DefenseFinder "
                 "phage-defense system while leaving natural host breadth, "
-                "the direct phage trigger, and the effector mechanism "
-                "unresolved."
+                "the direct phage trigger, and the hinted "
+                "abortive-infection effector mechanism unmodeled until "
+                "direct mechanism evidence is available."
             ),
             "nodes": [
                 {
@@ -380,8 +382,9 @@ RECORD: dict[str, Any] = {
                 "the DefenseFinder wiki maps the source locus to protection "
                 f"against {PHAGE_LIST}, and DefenseFinder represents the "
                 "system with two mandatory profiles. Natural host breadth, "
-                "the direct phage trigger, and effector logic remain "
-                "unresolved."
+                "the direct phage trigger, and direct effector logic remain "
+                "unresolved, so the likely abortive-infection hypothesis is "
+                "left unmodeled."
             ),
             "evidence": [
                 vassallo_screen_evidence(),
@@ -434,6 +437,20 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_SCOPE_NOTE_REVIEW",
+        changes=(
+            "Clarified after Claude Code Review issue 1288 that the "
+            "DefenseFinder wiki names abortive infection as the likely "
+            "PD-T4-4 population-level protection route, but the graph "
+            "leaves that hypothesis unmodeled until direct mechanism "
+            "evidence is available."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_SCOPE_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)
