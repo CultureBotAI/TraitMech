@@ -1,0 +1,205 @@
+identifier: traitmech:000374
+label: Rst_DUF4238 system
+definition: A phage defense system in which an organism possesses a single-gene Rst_DUF4238
+  locus represented by DefenseFinder as an Rst_DUF4238__DUF4238_Pers single-profile
+  model and experimentally linked to strong resistance against phage T7.
+definition_source: DOI:10.1016/j.chom.2022.02.018
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Rst_DUF4238
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Rst_DUF4238__DUF4238_Pers
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DUF4238_Pers
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+evidence:
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: The first system consists of a single protein with a DUF4238 domain (whose
+    molecular function is currently unknown) that provides strong resistance against
+    T7.
+  notes: Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded
+    hotspot and connect it to strong T7 resistance.
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Phage resistance heatmaps of the validated defense systems show the median
+    fold resistance of three independent replicates against a panel of eight phages
+  notes: The Figure 5 legend frames the cloned P2-hotspot hits, including the DUF4238
+    system, as validated defense systems in a replicated phage-resistance heatmap.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+  snippet: Rst_DUF4238 is a single gene system found in a screen of phage and phage-satellites
+    antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}. It was shown to provide
+    *E.coli* with a strong resistance against phage T7.
+  notes: The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene system
+    and links it to strong T7 resistance.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+  snippet: As far as we are aware, the molecular mechanism is unknown.
+  notes: The pinned DefenseFinder wiki page leaves the Rst_DUF4238 molecular mechanism
+    unresolved.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+  snippet: 'The Rst_DUF4238 is composed of 1 protein: DUF4238.'
+  notes: The pinned DefenseFinder wiki page describes Rst_DUF4238 as a one-component
+    DUF4238 system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Rst_DUF4238 | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+    of bacterial immune systems
+  notes: The DefenseFinder article registry maps the named Rst_DUF4238 system to the
+    Rousset et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"
+  notes: The DefenseFinder rules table models Rst_DUF4238 as a single-profile system
+    requiring Rst_DUF4238__DUF4238_Pers.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        |
+    Rst_DUF4238            | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under Rst_DUF4238.
+causal_graphs:
+- graph_id: rst_duf4238_locus_restricts_t7
+  title: Rst_DUF4238 loci restrict T7 phage
+  description: Conservative system-level sketch linking the named Rst_DUF4238 single-gene
+    locus model to strong T7 phage resistance.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Rst_DUF4238 as a named DefenseFinder single-profile
+    phage-defense system while leaving native host breadth, the molecular activity
+    of the DUF4238 component, exact DUF4238_Pers profile grounding, and the mechanism
+    of T7 restriction unresolved.
+  nodes:
+  - node_id: rst_duf4238_locus
+    label: Rst_DUF4238 locus
+    node_type: GENETIC_ELEMENT
+    description: A single-gene DUF4238 phage-defense locus represented by the custom
+      DefenseFinder Rst_DUF4238__DUF4238_Pers profile.
+  - node_id: t7_phage_resistance
+    label: T7 phage resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Strong resistance against phage T7 in a host expressing an Rst_DUF4238
+      locus.
+  - node_id: rst_duf4238_system_trait
+    label: Rst_DUF4238 system
+    node_type: TRAIT
+    grounding: traitmech:000374
+    description: Possession of a genome-encoded Rst_DUF4238 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: rst_duf4238_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t7_phage_resistance
+    description: Rousset et al. linked a cloned one-protein DUF4238 locus to strong
+      T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers
+      system.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: The first system consists of a single protein with a DUF4238 domain
+        (whose molecular function is currently unknown) that provides strong resistance
+        against T7.
+      notes: Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded
+        hotspot and connect it to strong T7 resistance.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"
+      notes: The DefenseFinder rules table models Rst_DUF4238 as a single-profile
+        system requiring Rst_DUF4238__DUF4238_Pers.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        |
+        Rst_DUF4238            | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under
+        Rst_DUF4238.
+  - subject: t7_phage_resistance
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: rst_duf4238_system_trait
+    description: Strong T7 resistance realizes the Rst_DUF4238 system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: The first system consists of a single protein with a DUF4238 domain
+        (whose molecular function is currently unknown) that provides strong resistance
+        against T7.
+      notes: Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded
+        hotspot and connect it to strong T7 resistance.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+      snippet: Rst_DUF4238 is a single gene system found in a screen of phage and
+        phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}.
+        It was shown to provide *E.coli* with a strong resistance against phage T7.
+      notes: The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene
+        system and links it to strong T7 resistance.
+  - subject: rst_duf4238_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Rst_DUF4238 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Phage resistance heatmaps of the validated defense systems show the
+        median fold resistance of three independent replicates against a panel of
+        eight phages
+      notes: The Figure 5 legend frames the cloned P2-hotspot hits, including the
+        DUF4238 system, as validated defense systems in a replicated phage-resistance
+        heatmap.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Rst_DUF4238 | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+        of bacterial immune systems
+      notes: The DefenseFinder article registry maps the named Rst_DUF4238 system
+        to the Rousset et al. preprint.
+discussions:
+- discussion_id: rst-duf4238-host-mechanism-gap
+  prompt: Resolve Rst_DUF4238 native host breadth, accession-level DUF4238 proteins,
+    and the molecular mechanism of T7 restriction before minting narrower Rst_DUF4238
+    mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Rousset et al. support a one-protein DUF4238 P2-hotspot system that provides
+    strong T7 resistance when expressed in Escherichia coli, and DefenseFinder represents
+    Rst_DUF4238 as a single-profile Rst_DUF4238__DUF4238_Pers model. This first system-level
+    record leaves native host breadth, accession-level component grounding, the profile-to-activity
+    mapping, and the T7 restriction mechanism unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.chom.2022.02.018
+    snippet: The first system consists of a single protein with a DUF4238 domain (whose
+      molecular function is currently unknown) that provides strong resistance against
+      T7.
+    notes: Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded
+      hotspot and connect it to strong T7 resistance.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+    snippet: As far as we are aware, the molecular mechanism is unknown.
+    notes: The pinned DefenseFinder wiki page leaves the Rst_DUF4238 molecular mechanism
+      unresolved.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+    snippet: 'The Rst_DUF4238 is composed of 1 protein: DUF4238.'
+    notes: The pinned DefenseFinder wiki page describes Rst_DUF4238 as a one-component
+      DUF4238 system.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"
+    notes: The DefenseFinder rules table models Rst_DUF4238 as a single-profile system
+      requiring Rst_DUF4238__DUF4238_Pers.
+  attaches_to:
+  - causal_graphs#rst_duf4238_locus_restricts_t7
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T07:22:10Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Rst_DUF4238 system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v251.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:32:10Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Rst_DUF4238 during canonical-example issue 444 enforcement and
+    left canonical_examples empty because the sources support a cloned P2-hotspot
+    DUF4238 locus assayed in Escherichia coli and a DefenseFinder RefSeq model example,
+    but not a direct native host exemplar with experimental Rst_DUF4238 activity.
+    No paid research was used.
+  llm_assisted: true
