@@ -1,8 +1,8 @@
 identifier: traitmech:000392
 label: PD-T4-7 system
-definition: An abortive infection system in which an organism possesses a PD-T4-7 locus
-  represented by DefenseFinder as a single-profile model, PD-T4-7__PD-T4-7, and experimentally
-  linked to T2, T4, and T6 protection when expressed in E. coli.
+definition: An abortive infection system in which an organism possesses a PD-T4-7
+  locus represented by DefenseFinder as a single-profile model, PD-T4-7__PD-T4-7,
+  and experimentally linked to T2, T4, and T6 protection when expressed in E. coli.
 definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-7.md
 trait_category: GENOMICS
 term_kind: CLASS
@@ -157,8 +157,8 @@ causal_graphs:
       notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
         uncovered PD-T4-7 and related conserved phage-defense systems.
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-7.md
-      snippet: Vassalo et al. :ref{doi=10.1038/s41564-022-01219-4} state that
-        PD-T4-7 functions through an abortive infection mechanism.
+      snippet: Vassalo et al. :ref{doi=10.1038/s41564-022-01219-4} state that PD-T4-7
+        functions through an abortive infection mechanism.
       notes: The DefenseFinder wiki reports an abortive-infection mechanism assignment
         for PD-T4-7 while leaving the direct substrate and effector logic unresolved.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
