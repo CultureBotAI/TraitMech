@@ -8,9 +8,9 @@
 ## Context
 
 The pinned METPO snapshot has no active exact class for PD-T4-7 system, the
-genome-level possession trait for a DefenseFinder-modeled anti-phage locus from
-Vassallo et al.'s *E. coli* pangenome screen. DefenseFinder models PD-T4-7 with
-one required HMM profile, `PD-T4-7__PD-T4-7`.
+genome-level possession trait for a DefenseFinder-modeled abortive-infection
+anti-phage locus from Vassallo et al.'s *E. coli* pangenome screen. DefenseFinder
+models PD-T4-7 with one required HMM profile, `PD-T4-7__PD-T4-7`.
 
 This cohort lifts one local class:
 
@@ -37,14 +37,15 @@ Subset tag: `metpo_traitmech_2026_09`.
 
 | ID | label | parent |
 |---|---|---|
-| `METPO:1034600` | PD-T4-7 system | `METPO:1016300` phage defense system |
+| `METPO:1034600` | PD-T4-7 system | `METPO:1016800` abortive infection system |
 
 PD-T4-7 system captures genome-level possession of a single-profile DefenseFinder
-phage-defense locus experimentally linked to T2, T4, and T6 protection when
+abortive-infection locus experimentally linked to T2, T4, and T6 protection when
 expressed in *E. coli*. It excludes the individual PD-T4-7 gene or protein, the
 DefenseFinder `PD-T4-7__PD-T4-7` profile, the source key `PD-T4-7`, phage
 protection outside a complete PD-T4-7 locus, RefSeq example loci without
-experimental validation, sibling PD-T4 systems, and other phage-defense systems.
+experimental validation, sibling PD-T4 systems, and other abortive-infection or
+phage-defense systems.
 
 ## External Mappings
 

@@ -2760,7 +2760,7 @@ window.searchData = [
  },
  {
   "discussion_id": "pd-t4-7-mechanism-gap",
-  "prompt": "Resolve PD-T4-7 natural host breadth, direct phage trigger, and effector mechanism before minting narrower PD-T4-7 mechanism traits.",
+  "prompt": "Resolve PD-T4-7 natural host breadth, direct phage trigger, and direct abortive-infection effector logic before minting narrower PD-T4-7 mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -2770,7 +2770,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#pd_t4_7_locus_restricts_t2_t4_and_t6"
   ],
-  "rationale": "Vassallo et al. support PD-T4-7 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, and T6, and DefenseFinder represents the system with one mandatory profile. Natural host breadth, the direct phage trigger, and effector logic remain unresolved.",
+  "rationale": "Vassallo et al. support PD-T4-7 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against T2, T4, and T6, and DefenseFinder represents the system with one mandatory profile and an abortive-infection mechanism assignment. Natural host breadth, the direct phage trigger, and direct effector logic remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [

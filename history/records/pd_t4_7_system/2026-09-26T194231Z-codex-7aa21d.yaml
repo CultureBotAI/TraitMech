@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_7_system.yaml
+  slug: pd_t4_7_system
+session:
+  id: 2026-09-26T194231Z-codex-7aa21d
+  timestamp: '2026-09-26T19:42:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1293
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1292
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - causal_graphs
+  - evidence
+  summary: Address PD-T4-7 abortive-infection review
+  details: Resolved PR 1292 review issue 1293 by reparenting PD-T4-7 to abortive infection
+    system, moving METPO v269 to METPO:1016800, and updating the graph, discussion, and proposal
+    language to acknowledge DefenseFinder's Abi assignment while keeping direct trigger and
+    effector gaps open.

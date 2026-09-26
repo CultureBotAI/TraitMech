@@ -36,6 +36,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-26T19:13:36Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-26T19:13:37Z"
+REVIEW_FIX_TIMESTAMP = "2026-09-26T19:42:30Z"
 POSED_DATE = "2026-09-26"
 IDENTIFIER = "traitmech:000392"
 PROPOSAL = "proposals/metpo_traitmech_v269"
@@ -190,7 +191,7 @@ RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "PD-T4-7 system",
     "definition": (
-        "A phage defense system in which an organism possesses a PD-T4-7 "
+        "An abortive infection system in which an organism possesses a PD-T4-7 "
         f"locus represented by DefenseFinder as a single-profile model, {PROFILE}, "
         f"and experimentally linked to {PHAGE_LIST} protection when expressed "
         "in E. coli."
@@ -199,7 +200,7 @@ RECORD: dict[str, Any] = {
     "trait_category": "GENOMICS",
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
-    "parent_traits": ["traitmech:000209"],
+    "parent_traits": ["traitmech:000214"],
     "synonyms": [
         {
             "synonym_text": "PD-T4-7",
@@ -234,8 +235,8 @@ RECORD: dict[str, Any] = {
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 "The graph captures PD-T4-7 as a named DefenseFinder "
-                "phage-defense system while leaving natural host breadth, "
-                "the direct phage trigger, and the effector mechanism "
+                "abortive-infection system while leaving natural host breadth, "
+                "the direct phage trigger, and the direct effector logic "
                 "unresolved."
             ),
             "nodes": [
@@ -265,13 +266,13 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "phage_defense_system",
-                    "label": "phage defense system",
+                    "node_id": "abortive_infection_system",
+                    "label": "abortive infection system",
                     "node_type": "TRAIT",
-                    "grounding": "traitmech:000209",
+                    "grounding": "traitmech:000214",
                     "description": (
-                        "Possession of one or more genome-encoded immune "
-                        "systems that inhibit bacteriophage infection."
+                        "Possession of a genome-encoded abortive-infection "
+                        "phage defense system."
                     ),
                 },
             ],
@@ -313,13 +314,14 @@ RECORD: dict[str, Any] = {
                     "subject": f"{SLUG}_system_trait",
                     "predicate": "is a",
                     "predicate_id": "rdfs:subClassOf",
-                    "object": "phage_defense_system",
+                    "object": "abortive_infection_system",
                     "description": (
-                        "PD-T4-7 system possession is a phage-defense-system "
+                        "PD-T4-7 system possession is an abortive-infection-system "
                         "trait."
                     ),
                     "evidence": [
                         vassallo_screen_evidence(),
+                        wiki_abortive_infection_evidence(),
                         article_registry_evidence(),
                         rules_evidence(),
                     ],
@@ -332,8 +334,8 @@ RECORD: dict[str, Any] = {
             "discussion_id": "pd-t4-7-mechanism-gap",
             "prompt": (
                 "Resolve PD-T4-7 natural host breadth, direct phage trigger, "
-                "and effector mechanism before minting narrower PD-T4-7 "
-                "mechanism traits."
+                "and direct abortive-infection effector logic before "
+                "minting narrower PD-T4-7 mechanism traits."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -342,8 +344,9 @@ RECORD: dict[str, Any] = {
                 "systems from an E. coli pangenome phage-defense selection, "
                 "the DefenseFinder wiki maps the source locus to protection "
                 f"against {PHAGE_LIST}, and DefenseFinder represents the "
-                "system with one mandatory profile. Natural host breadth, "
-                "the direct phage trigger, and effector logic remain unresolved."
+                "system with one mandatory profile and an abortive-infection "
+                "mechanism assignment. Natural host breadth, the direct phage "
+                "trigger, and direct effector logic remain unresolved."
             ),
             "evidence": [
                 vassallo_screen_evidence(),
@@ -370,7 +373,7 @@ def write_record(*, apply: bool) -> None:
         action="MINTED_TRAITMECH_ID",
         changes=(
             "Minted PD-T4-7 system as a DOI- and DefenseFinder-backed "
-            "GENOMICS TraitRecord under phage defense system after an "
+            "GENOMICS TraitRecord under abortive infection system after an "
             "ignored-and-hidden duplicate review found no exact live "
             "TraitMech, METPO, history, or prior proposal record; the "
             f"replacement placeholder is reserved in {PROPOSAL}."
@@ -393,6 +396,20 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_SCOPE_NOTE_REVIEW",
+        changes=(
+            "Addressed PR #1292 review issue #1293 by reparenting PD-T4-7 "
+            "under abortive infection system, updating the subclass graph "
+            "node, and naming the DefenseFinder abortive-infection assignment "
+            "while leaving natural host breadth, the direct phage trigger, "
+            "and direct effector logic unresolved."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FIX_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)
