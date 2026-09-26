@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/cmdtac_system.yaml
+  slug: cmdtac_system
+session:
+  id: 2026-09-26T215322Z-claude-code-982bda
+  timestamp: '2026-09-26T21:53:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Record PD-T4-9 as CmdTAC alias
+  details: Rejected PD-T4-9 as a new TraitRecord after an ignored-and-hidden duplicate search
+    and current DefenseFinder review showed it aliases the existing CmdTAC system; recorded
+    the PD-T4-9 source namespace as a related synonym, added stable DefenseFinder wiki/rule/HMM
+    evidence, refreshed the CmdTAC graph scope and open knowledge gap, and updated
+    proposal v212 so METPO can carry the PD-T4-9 related synonym.

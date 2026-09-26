@@ -14,7 +14,7 @@ anti-phage defense system in which CmdC senses viral capsid proteins, CmdA is
 degraded, and the liberated CmdT ADP-ribosyltransferase modifies mRNA to block
 translation and abort phage infection. The pinned DefenseFinder article
 registry maps CmdTAC to that Nature paper; the pinned DefenseFinder HMM
-inventory and rules table do not yet list CmdTAC.
+inventory and rules table record the PD-T4-9 namespace.
 
 This cohort lifts one local class:
 
@@ -52,7 +52,8 @@ toxin-antitoxin-chaperone locus. It excludes individual `cmdT`, `cmdA`, or
 `cmdC` genes; individual CmdT, CmdA, or CmdC proteins; CmdT mRNA
 ADP-ribosyltransferase activity; CmdC viral-capsid sensing; CmdA degradation;
 Tevenvirinae phage restriction as an outcome; source database rows naming a
-CmdTAC system; and other abortive-infection or phage-defense systems.
+CmdTAC or PD-T4-9 system; individual PD-T4-9 HMM profiles; and other
+abortive-infection or phage-defense systems.
 
 ## External Mappings
 
@@ -61,12 +62,14 @@ ADP-ribosyltransferase activity, CmdC viral-capsid sensing, CmdA degradation,
 and Tevenvirinae phage restriction are shifted from this organism-level
 GENOMICS possession trait. `cmdTAC toxin-antitoxin-chaperone locus` is kept as
 a related synonym because the locus label denotes the genomic determinant, not
-the organism-level possession trait itself.
+the organism-level possession trait itself. `PD-T4-9` is kept as a related
+synonym because Vassallo et al. report that PD-T4-9 was renamed CmdTAC, making
+it a prior name for the same system.
 
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with two
-  exact synonyms, one related locus synonym, and no exact external xrefs.
+  exact synonyms, two related synonyms, and no exact external xrefs.
 
 ## Upstream Path
 
@@ -78,3 +81,5 @@ the organism-level possession trait itself.
 
 - v212, 2026-09: lifts `traitmech:000335 CmdTAC system` into the
   `METPO:1028900` block.
+- v212, 2026-09: adds `PD-T4-9` as a related DefenseFinder synonym and cites
+  the pinned PD-T4-9 rules and HMM rows.
