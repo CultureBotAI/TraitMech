@@ -3073,6 +3073,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/toutatis_system.html#toutatis-mechanism-gap"
  },
  {
+  "discussion_id": "type-iig-rm-profile-interpretation-gap",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IIG custom profiles, characterized BpuSI- or Tth111II-like enzymes, and companion methyltransferases before minting narrower Type IIG protein or subfamily traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "type IIG restriction-modification system",
+  "source_id": "traitmech:000375",
+  "source_file": "type_iig_restriction_modification_system.yaml",
+  "attaches_to": [
+   "causal_graphs#type_iig_rm_locus_restricts_foreign_dna"
+  ],
+  "rationale": "Shen et al. and Zhu et al. support Type IIG R-M system architecture and experimentally characterized BpuSI and Tth111II examples, while the pinned DefenseFinder registry supports an RM_Type_IIG system-level namespace with eight custom HMM rows. The evidence does not yet map each custom profile row to exact characterized enzyme families or resolve companion methyltransferase requirements.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkr543",
+   "DOI:10.1038/srep03838",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/type_iig_restriction_modification_system.html#type-iig-rm-profile-interpretation-gap"
+ },
+ {
   "discussion_id": "ukko-mechanism-gap",
   "prompt": "Resolve Ukko phage triggers and effector outputs before minting narrower Ukko mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4510,9 +4534,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 244,
- "total_knowledge_gaps": 162,
- "total_source_entries": 242,
+ "total_discussions": 245,
+ "total_knowledge_gaps": 163,
+ "total_source_entries": 243,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
