@@ -1,0 +1,244 @@
+identifier: traitmech:000387
+label: PD-T4-2 system
+definition: A phage defense system in which an organism possesses a PD-T4-2 locus
+  represented by DefenseFinder as a two-profile model requiring PD-T4-2__PD-T4-2_A
+  and PD-T4-2__PD-T4-2_B, and experimentally linked to T2, T4, T6, T5, and SECphi27
+  protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PD-T4-2
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+- synonym_text: PD-T4-2__PD-T4-2_A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PD-T4-2__PD-T4-2_B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-T4-2 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+  snippet: 'The PD-T4-2 is composed of 2 proteins: PD-T4-2_A and PD-T4-2_B.'
+  notes: The DefenseFinder wiki names PD-T4-2 as a two-protein system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+  snippet: The PD-T4-2 system in *Jeotgalibaca sp. PTS2502* (GCF_001975685.1, NZ_CP019433)
+    is composed of 2 proteins PD-T4-2_A (WP_083686895.1) PD-T4-2_B (WP_076765701.1)
+  notes: The DefenseFinder wiki illustrates a predicted two-protein PD-T4-2 locus
+    in RefSeq assembly GCF_001975685.1 on NZ_CP019433.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli] --> Expressed_0[Escherichia\
+    \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & T5 & SECphi27"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-T4-2 source locus expressed in E. coli against T2, T4, T6, T5, and
+    SECphi27.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+  snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n        T6\n\
+    \        T5\n        SECphi27"
+  notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5, and
+    SECphi27 in the PD-T4-2 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-T4-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+    defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-T4-2 system to the Vassallo
+    et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-T4-2\tPD-T4-2\t2\t2\tPD-T4-2__PD-T4-2_A, PD-T4-2__PD-T4-2_B\t\t\t"
+  notes: The DefenseFinder rules table models PD-T4-2 as a two-profile system requiring
+    PD-T4-2__PD-T4-2_A and PD-T4-2__PD-T4-2_B.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-2__PD-T4-2_A                               | PD-T4-2__PD-T4-2_A                               |
+    PD-T4-2                | Custom                  | 150    |'
+  notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_A under the PD-T4-2
+    system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-2__PD-T4-2_B                               | PD-T4-2__PD-T4-2_B                               |
+    PD-T4-2                | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_B under the PD-T4-2
+    system namespace.
+causal_graphs:
+- graph_id: pd_t4_2_locus_restricts_phages
+  title: PD-T4-2 loci restrict T2, T4, T6, T5, and SECphi27
+  description: Conservative system-level sketch linking possession of a PD-T4-2 locus
+    to protection against T2, T4, T6, T5, and SECphi27.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-T4-2 as a named DefenseFinder phage-defense system
+    while leaving natural host breadth, the direct phage trigger, and the effector
+    mechanism unresolved.
+  nodes:
+  - node_id: pd_t4_2_locus
+    label: PD-T4-2 locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-defense locus represented by the PD-T4-2 DefenseFinder profiles.
+  - node_id: pd_t4_2_listed_phage_protection
+    label: T2, T4, T6, T5, and SECphi27 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T2, T4, T6, T5, and SECphi27 by PD-T4-2.
+  - node_id: pd_t4_2_system_trait
+    label: PD-T4-2 system
+    node_type: TRAIT
+    grounding: traitmech:000387
+    description: Possession of a genome-encoded PD-T4-2 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pd_t4_2_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_2_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-T4-2 locus from Vassallo et al.
+      to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder models
+      PD-T4-2 through two mandatory profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+      snippet: 'The PD-T4-2 is composed of 2 proteins: PD-T4-2_A and PD-T4-2_B.'
+      notes: The DefenseFinder wiki names PD-T4-2 as a two-protein system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli] --> Expressed_0[Escherichia\
+        \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & T5 & SECphi27"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-2 source locus expressed in E. coli against T2, T4, T6,
+        T5, and SECphi27.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        T5\n        SECphi27"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5,
+        and SECphi27 in the PD-T4-2 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-2\tPD-T4-2\t2\t2\tPD-T4-2__PD-T4-2_A, PD-T4-2__PD-T4-2_B\t\t\
+        \t"
+      notes: The DefenseFinder rules table models PD-T4-2 as a two-profile system
+        requiring PD-T4-2__PD-T4-2_A and PD-T4-2__PD-T4-2_B.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-2__PD-T4-2_A                               | PD-T4-2__PD-T4-2_A                               |
+        PD-T4-2                | Custom                  | 150    |'
+      notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_A under the
+        PD-T4-2 system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-2__PD-T4-2_B                               | PD-T4-2__PD-T4-2_B                               |
+        PD-T4-2                | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_B under the
+        PD-T4-2 system namespace.
+  - subject: pd_t4_2_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_t4_2_system_trait
+    description: Protection against T2, T4, T6, T5, and SECphi27 realizes the PD-T4-2
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli] --> Expressed_0[Escherichia\
+        \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & T5 & SECphi27"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-2 source locus expressed in E. coli against T2, T4, T6,
+        T5, and SECphi27.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        T5\n        SECphi27"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, T5,
+        and SECphi27 in the PD-T4-2 protects-against subgraph.
+  - subject: pd_t4_2_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PD-T4-2 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-T4-2 and related conserved phage-defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-T4-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+        anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-T4-2 system to the
+        Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-2\tPD-T4-2\t2\t2\tPD-T4-2__PD-T4-2_A, PD-T4-2__PD-T4-2_B\t\t\
+        \t"
+      notes: The DefenseFinder rules table models PD-T4-2 as a two-profile system
+        requiring PD-T4-2__PD-T4-2_A and PD-T4-2__PD-T4-2_B.
+discussions:
+- discussion_id: pd-t4-2-mechanism-gap
+  prompt: Resolve PD-T4-2 natural host breadth, direct phage trigger, and effector
+    mechanism before minting narrower PD-T4-2 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-T4-2 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against T2, T4, T6, T5, and SECphi27, and DefenseFinder
+    represents the system with two mandatory profiles. Natural host breadth, the direct
+    phage trigger, and effector logic remain unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-T4-2 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+    snippet: 'The PD-T4-2 is composed of 2 proteins: PD-T4-2_A and PD-T4-2_B.'
+    notes: The DefenseFinder wiki names PD-T4-2 as a two-protein system.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-2.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli] --> Expressed_0[Escherichia\
+      \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & T5 & SECphi27"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-T4-2 source locus expressed in E. coli against T2, T4, T6,
+      T5, and SECphi27.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-T4-2\tPD-T4-2\t2\t2\tPD-T4-2__PD-T4-2_A, PD-T4-2__PD-T4-2_B\t\t\t"
+    notes: The DefenseFinder rules table models PD-T4-2 as a two-profile system requiring
+      PD-T4-2__PD-T4-2_A and PD-T4-2__PD-T4-2_B.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-2__PD-T4-2_A                               | PD-T4-2__PD-T4-2_A                               |
+      PD-T4-2                | Custom                  | 150    |'
+    notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_A under the PD-T4-2
+      system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-2__PD-T4-2_B                               | PD-T4-2__PD-T4-2_B                               |
+      PD-T4-2                | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records PD-T4-2__PD-T4-2_B under the PD-T4-2
+      system namespace.
+  attaches_to:
+  - causal_graphs#pd_t4_2_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T15:35:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-T4-2 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v264.
+  llm_assisted: true
+- timestamp: '2026-09-26T15:35:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-T4-2 system canonical_examples and left them empty because
+    the current sources support an E. coli species-level experimental validation graph,
+    a DefenseFinder system model, and a RefSeq Jeotgalibaca sp. PTS2502 example, but
+    not a direct native microbial isolate exemplar with experimentally verified endogenous
+    PD-T4-2 activity. No paid research was used.
+  llm_assisted: true

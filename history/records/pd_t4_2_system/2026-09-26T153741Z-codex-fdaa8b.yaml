@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t4_2_system.yaml
+  slug: pd_t4_2_system
+session:
+  id: 2026-09-26T153741Z-codex-fdaa8b
+  timestamp: '2026-09-26T15:37:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add PD-T4-2 system trait
+  details: Added the DOI- and DefenseFinder-backed PD-T4-2 phage-defense system as a new GENOMICS
+    TraitRecord after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record. The curation minted traitmech:000387, reserved
+    METPO:1034100 in proposals/metpo_traitmech_v264, added a conservative nonmechanistic causal
+    graph for the pinned DefenseFinder T2, T4, T6, T5, and SECphi27 validation sketch, and
+    left canonical_examples empty until direct native microbial isolate evidence for endogenous
+    PD-T4-2 activity is available.
