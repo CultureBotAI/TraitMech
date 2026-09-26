@@ -99,16 +99,17 @@ RULES_SNIPPET = (
     "PD-Lambda-5\tPD-Lambda-5\t2\t2\tPD-Lambda-5__PD-Lambda-5_A, "
     "PD-Lambda-5__PD-Lambda-5_B\t\t\t"
 )
-PROFILES = {
-    "PD-Lambda-5__PD-Lambda-5_A": "20",
-    "PD-Lambda-5__PD-Lambda-5_B": "20",
-}
 HMM_ROWS = {
-    profile: (
-        f"| {profile:<49}| {profile:<49}| {'PD-Lambda-5':<23}| "
-        f"{'Custom':<24}| {cut:<7}|"
-    )
-    for profile, cut in PROFILES.items()
+    "PD-Lambda-5__PD-Lambda-5_A": (
+        "| PD-Lambda-5__PD-Lambda-5_A                       | "
+        "PD-Lambda-5__PD-Lambda-5_A                       | "
+        "PD-Lambda-5            | Custom                  | 20     |"
+    ),
+    "PD-Lambda-5__PD-Lambda-5_B": (
+        "| PD-Lambda-5__PD-Lambda-5_B                       | "
+        "PD-Lambda-5__PD-Lambda-5_B                       | "
+        "PD-Lambda-5            | Custom                  | 20     |"
+    ),
 }
 
 
@@ -255,7 +256,7 @@ RECORD: dict[str, Any] = {
                 "synonym_type": "RELATED_SYNONYM",
                 "source": DEFENSEFINDER_HMMS,
             }
-            for profile in PROFILES
+            for profile in HMM_ROWS
         ],
     ],
     "evidence": [
@@ -268,7 +269,7 @@ RECORD: dict[str, Any] = {
         wiki_protects_evidence(),
         article_registry_evidence(),
         rules_evidence(),
-        *[hmm_evidence(profile) for profile in PROFILES],
+        *[hmm_evidence(profile) for profile in HMM_ROWS],
     ],
     "causal_graphs": [
         {
@@ -340,7 +341,7 @@ RECORD: dict[str, Any] = {
                         wiki_validation_evidence(),
                         wiki_protects_evidence(),
                         rules_evidence(),
-                        *[hmm_evidence(profile) for profile in PROFILES],
+                        *[hmm_evidence(profile) for profile in HMM_ROWS],
                     ],
                 },
                 {
@@ -403,7 +404,7 @@ RECORD: dict[str, Any] = {
                 wiki_composition_evidence(),
                 wiki_validation_evidence(),
                 rules_evidence(),
-                *[hmm_evidence(profile) for profile in PROFILES],
+                *[hmm_evidence(profile) for profile in HMM_ROWS],
             ],
             "attaches_to": ["causal_graphs#pd_lambda_5_locus_restricts_phages"],
             "posed_by": CURATOR,
