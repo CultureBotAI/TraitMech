@@ -285,6 +285,7 @@ data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness
 data/traits/genomics/paris_system.yaml	traitmech:000237	PARIS system	paris_ariab_trna_cleavage_abortive_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_2_system.yaml	traitmech:000378	PD-Lambda-2 system	pd_lambda_2_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_3_system.yaml	traitmech:000382	PD-Lambda-3 system	pd_lambda_3_locus_restricts_lambda_vir	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/pd_lambda_4_system.yaml	traitmech:000384	PD-Lambda-4 system	pd_lambda_4_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_6_system.yaml	traitmech:000383	PD-Lambda-6 system	pd_lambda_6_locus_restricts_lambda_vir_and_t5	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pfiat_system.yaml	traitmech:000365	PfiAT system	pfiat_locus_regulates_pf4_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense system	phage_defense_system_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
