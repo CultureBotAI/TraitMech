@@ -2499,6 +2499,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pd_lambda_2_system.html#pd-lambda-2-mechanism-gap"
  },
  {
+  "discussion_id": "pd-lambda-3-mechanism-gap",
+  "prompt": "Resolve PD-Lambda-3 natural host breadth, direct phage trigger, effector mechanism, the third protein in the experimental source locus, and exact profile-to-protein correspondence before minting narrower PD-Lambda-3 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-Lambda-3 system",
+  "source_id": "traitmech:000382",
+  "source_file": "pd_lambda_3_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_lambda_3_locus_restricts_lambda_vir"
+  ],
+  "rationale": "Vassallo et al. support PD-Lambda-3 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against LambdaVir, and DefenseFinder represents the system with A and B profiles. Natural host breadth, the direct phage trigger, effector logic, the third protein in the experimental source locus, and exact profile-to-protein correspondence remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-3.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-3.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-3.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_lambda_3_system.html#pd-lambda-3-mechanism-gap"
+ },
+ {
   "discussion_id": "pfiat-mechanism-gap",
   "prompt": "Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas, Pf prophage production and immunity coupling, and PfiAT profile-to-activity mapping before minting narrower PfiAT mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4688,9 +4715,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 251,
- "total_knowledge_gaps": 169,
- "total_source_entries": 249,
+ "total_discussions": 252,
+ "total_knowledge_gaps": 170,
+ "total_source_entries": 250,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
