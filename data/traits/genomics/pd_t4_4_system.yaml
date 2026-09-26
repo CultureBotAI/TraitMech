@@ -81,9 +81,8 @@ causal_graphs:
     to protection against T2, T4, T6, and SECphi17.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures PD-T4-4 as a named DefenseFinder phage-defense system
-    while leaving natural host breadth, the direct phage trigger, and the hinted
-    abortive-infection effector mechanism unmodeled until direct mechanism evidence
-    is available.
+    while leaving natural host breadth, the direct phage trigger, and the hinted abortive-infection
+    effector mechanism unmodeled until direct mechanism evidence is available.
   nodes:
   - node_id: pd_t4_4_locus
     label: PD-T4-4 locus
