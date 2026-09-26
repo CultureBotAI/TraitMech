@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_duf4238_system.yaml
+  slug: rst_duf4238_system
+session:
+  id: 2026-09-26T072340Z-codex-37ed48
+  timestamp: '2026-09-26T07:23:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Rst_DUF4238 system trait
+  details: Minted traitmech:000374 for the DOI-backed DefenseFinder Rst_DUF4238 phage-defense
+    system under phage defense system after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record. Recorded Rousset et al.
+    DUF4238 T7-resistance evidence plus pinned DefenseFinder wiki, article, rule, and HMM
+    rows; added a conservative NONMECHANISTIC graph and a knowledge-gap discussion for unresolved
+    native host breadth, DUF4238 molecular activity, DUF4238_Pers profile grounding, and T7
+    restriction mechanism; and reserved METPO:1032800 in proposals/metpo_traitmech_v251.
