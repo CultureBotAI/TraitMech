@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gaps6_system.yaml
+  slug: gaps6_system
+session:
+  id: 2026-09-26T115944Z-codex-266590
+  timestamp: '2026-09-26T11:59:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - grounding
+  summary: Add GAPS6 system genomics trait
+  details: Minted traitmech:000381 for the DOI- and DefenseFinder-backed GAPS6 phage-defense
+    system with a pinned wiki source, pinned DefenseFinder article, rule, and HMM rows, a
+    conservative nonmechanistic graph, an open mechanism knowledge gap, a same-branch final
+    GAPS1 sibling-gap cleanup, and METPO:1033500 reserved in proposals/metpo_traitmech_v258.
