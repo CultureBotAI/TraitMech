@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t7_1_system.yaml
+  slug: pd_t7_1_system
+session:
+  id: 2026-09-26T231306Z-codex-160bdb
+  timestamp: '2026-09-26T23:13:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add PD-T7-1 system trait
+  details: Minted traitmech:000395 for the DOI- and DefenseFinder-backed PD-T7-1 phage-defense
+    system, reserved METPO:1034900 in proposals/metpo_traitmech_v272, kept PD-T7-1 and PD-T7-1__PD-T7-1
+    as related synonyms, and deferred direct protein mechanism and canonical examples until
+    native-host activity is resolved.
