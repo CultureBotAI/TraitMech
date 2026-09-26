@@ -2760,6 +2760,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rst_gop_beta_cll_system.html#rst-gop-beta-cll-mechanism-gap"
  },
  {
+  "discussion_id": "rst-tir-nlr-mechanism-gap",
+  "prompt": "Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence, direct phage trigger, and TIR/STAND activation before minting narrower Rst TIR-NLR mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst TIR-NLR system",
+  "source_id": "traitmech:000377",
+  "source_file": "rst_tir_nlr_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_tir_nlr_locus_restricts_phages"
+  ],
+  "rationale": "Rousset et al. support a P4-like TIR-NLR system that protects against virulent and P2-like phages, and DefenseFinder represents Rst_TIR-NLR as a single-profile model. This first system-level record leaves natural host breadth, profile-to-gene mapping, the direct phage trigger, and TIR/STAND effector logic unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_tir_nlr_system.html#rst-tir-nlr-mechanism-gap"
+ },
+ {
   "discussion_id": "rugutis-mechanism-gap",
   "prompt": "Resolve Rugutis phage triggers and effector outputs before minting narrower Rugutis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4558,9 +4582,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 246,
- "total_knowledge_gaps": 164,
- "total_source_entries": 244,
+ "total_discussions": 247,
+ "total_knowledge_gaps": 165,
+ "total_source_entries": 245,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

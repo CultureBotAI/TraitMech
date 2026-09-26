@@ -1,0 +1,199 @@
+identifier: traitmech:000377
+label: Rst TIR-NLR system
+definition: A phage defense system in which an organism possesses a P4-like TIR-NLR
+  locus represented by DefenseFinder as the Rst_TIR-NLR single-profile model and experimentally
+  linked to broad virulent-phage and P2-like phage restriction.
+definition_source: DOI:10.1016/j.chom.2022.02.018
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: TIR-NLR system
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.chom.2022.02.018
+- synonym_text: Rst_TIR-NLR
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Rst_TIR-NLR__TIR
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Here, we show that hotspots of genetic diversity within the P2-like phage
+    and P4-like satellite families constitute large reservoirs of anti-phage systems.
+  notes: Rousset et al. establish that P2-like phage and P4-like satellite hotspots
+    are large reservoirs of anti-phage systems.
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Validated systems also include a single-gene system with a TIR (toll/interleukin-1-receptor-like)
+    domain protein.
+  notes: Rousset et al. describe one validated P4 hotspot system as a single-gene
+    TIR-domain system.
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Out of the 18 tested systems, only the TIR-NLR system provided protection
+  notes: Rousset et al. report that TIR-NLR was the only P4 system in their tested
+    cohort that protected against P2-like phages.
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: This shows that while the TIR-NLR system protects against a broad range
+    of virulent phages, this comes at the cost of limiting the transduction of P4
+    by P2.
+  notes: Rousset et al. summarize broad virulent-phage protection by the TIR-NLR system
+    in the context of P4 transduction costs.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Rst_TIR-NLR | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+    of bacterial immune systems
+  notes: The DefenseFinder article registry maps the named Rst_TIR-NLR system to the
+    Rousset et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Rst_TIR-NLR\tRst_TIR-NLR\t1\t1\tRst_TIR-NLR__TIR\t\t\t"
+  notes: The DefenseFinder rules table models Rst_TIR-NLR as a single-profile system
+    requiring the Rst_TIR-NLR__TIR profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Rst_TIR-NLR__TIR                                 | Rst_TIR-NLR__TIR                                 |
+    Rst_TIR-NLR            | Custom                  | 70     |'
+  notes: The DefenseFinder HMM inventory records Rst_TIR-NLR__TIR under the Rst_TIR-NLR
+    system namespace.
+causal_graphs:
+- graph_id: rst_tir_nlr_locus_restricts_phages
+  title: Rst TIR-NLR loci restrict virulent and P2-like phages
+  description: Conservative system-level sketch linking a P4-like Rst TIR-NLR locus
+    to phage restriction.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Rst_TIR-NLR as a named DefenseFinder single-profile
+    phage-defense system while leaving source locus breadth, the phage trigger, TIR/STAND
+    activation, and exact Rst_TIR-NLR__TIR profile-to-gene correspondence unresolved.
+  nodes:
+  - node_id: rst_tir_nlr_locus
+    label: Rst TIR-NLR locus
+    node_type: GENETIC_ELEMENT
+    description: A P4-like TIR-NLR phage-defense locus represented by the Rst_TIR-NLR
+      DefenseFinder profile.
+  - node_id: virulent_and_p2_like_phage_restriction
+    label: virulent and P2-like phage restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of broad virulent phages and P2-like phages by the TIR-NLR
+      locus.
+  - node_id: rst_tir_nlr_system_trait
+    label: Rst TIR-NLR system
+    node_type: TRAIT
+    grounding: traitmech:000377
+    description: Possession of a genome-encoded TIR-NLR phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: rst_tir_nlr_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: virulent_and_p2_like_phage_restriction
+    description: Rousset et al. linked the TIR-NLR system to virulent and P2-like
+      phage protection, and DefenseFinder models Rst_TIR-NLR as a single-profile system.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Validated systems also include a single-gene system with a TIR (toll/interleukin-1-receptor-like)
+        domain protein.
+      notes: Rousset et al. describe one validated P4 hotspot system as a single-gene
+        TIR-domain system.
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Out of the 18 tested systems, only the TIR-NLR system provided protection
+      notes: Rousset et al. report that TIR-NLR was the only P4 system in their tested
+        cohort that protected against P2-like phages.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Rst_TIR-NLR\tRst_TIR-NLR\t1\t1\tRst_TIR-NLR__TIR\t\t\t"
+      notes: The DefenseFinder rules table models Rst_TIR-NLR as a single-profile
+        system requiring the Rst_TIR-NLR__TIR profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_TIR-NLR__TIR                                 | Rst_TIR-NLR__TIR                                 |
+        Rst_TIR-NLR            | Custom                  | 70     |'
+      notes: The DefenseFinder HMM inventory records Rst_TIR-NLR__TIR under the Rst_TIR-NLR
+        system namespace.
+  - subject: virulent_and_p2_like_phage_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: rst_tir_nlr_system_trait
+    description: Restriction of virulent and P2-like phages realizes the Rst TIR-NLR
+      system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: This shows that while the TIR-NLR system protects against a broad range
+        of virulent phages, this comes at the cost of limiting the transduction of
+        P4 by P2.
+      notes: Rousset et al. summarize broad virulent-phage protection by the TIR-NLR
+        system in the context of P4 transduction costs.
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Out of the 18 tested systems, only the TIR-NLR system provided protection
+      notes: Rousset et al. report that TIR-NLR was the only P4 system in their tested
+        cohort that protected against P2-like phages.
+  - subject: rst_tir_nlr_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Rst TIR-NLR system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Here, we show that hotspots of genetic diversity within the P2-like
+        phage and P4-like satellite families constitute large reservoirs of anti-phage
+        systems.
+      notes: Rousset et al. establish that P2-like phage and P4-like satellite hotspots
+        are large reservoirs of anti-phage systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Rst_TIR-NLR | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+        of bacterial immune systems
+      notes: The DefenseFinder article registry maps the named Rst_TIR-NLR system
+        to the Rousset et al. preprint.
+discussions:
+- discussion_id: rst-tir-nlr-mechanism-gap
+  prompt: Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence,
+    direct phage trigger, and TIR/STAND activation before minting narrower Rst TIR-NLR
+    mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Rousset et al. support a P4-like TIR-NLR system that protects against
+    virulent and P2-like phages, and DefenseFinder represents Rst_TIR-NLR as a single-profile
+    model. This first system-level record leaves natural host breadth, profile-to-gene
+    mapping, the direct phage trigger, and TIR/STAND effector logic unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.chom.2022.02.018
+    snippet: Validated systems also include a single-gene system with a TIR (toll/interleukin-1-receptor-like)
+      domain protein.
+    notes: Rousset et al. describe one validated P4 hotspot system as a single-gene
+      TIR-domain system.
+  - reference: DOI:10.1016/j.chom.2022.02.018
+    snippet: Out of the 18 tested systems, only the TIR-NLR system provided protection
+    notes: Rousset et al. report that TIR-NLR was the only P4 system in their tested
+      cohort that protected against P2-like phages.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Rst_TIR-NLR\tRst_TIR-NLR\t1\t1\tRst_TIR-NLR__TIR\t\t\t"
+    notes: The DefenseFinder rules table models Rst_TIR-NLR as a single-profile system
+      requiring the Rst_TIR-NLR__TIR profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Rst_TIR-NLR__TIR                                 | Rst_TIR-NLR__TIR                                 |
+      Rst_TIR-NLR            | Custom                  | 70     |'
+    notes: The DefenseFinder HMM inventory records Rst_TIR-NLR__TIR under the Rst_TIR-NLR
+      system namespace.
+  attaches_to:
+  - causal_graphs#rst_tir_nlr_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T09:17:05Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Rst TIR-NLR system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v254.
+  llm_assisted: true
+- timestamp: '2026-09-26T09:17:06Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Rst TIR-NLR system during canonical-example issue 444 enforcement
+    and left canonical_examples empty because the sources support cloned P4-like TIR-NLR
+    system assays and a DefenseFinder system model, but not a direct native microbial
+    isolate exemplar with experimentally verified Rst_TIR-NLR activity. No paid research
+    was used.
+  llm_assisted: true

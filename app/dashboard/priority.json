@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 771,
+    "records": 772,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 294,
+    "unresearched_mechanism_records": 295,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 98,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 205,
+      "DEEPEN_CAUSAL_GRAPH": 206,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 157
     }
@@ -6508,7 +6508,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 130,
+      "children": 131,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -6726,6 +6726,29 @@
       "label": "Rst gop-beta-cII system",
       "category": "genomics",
       "slug": "rst_gop_beta_cll_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
+        "canonical_examples reviewed empty +0"
+      ]
+    },
+    {
+      "identifier": "traitmech:000377",
+      "label": "Rst TIR-NLR system",
+      "category": "genomics",
+      "slug": "rst_tir_nlr_system",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
       "edges": 3,
