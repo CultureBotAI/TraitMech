@@ -1,0 +1,18 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-26T212800Z-claude-code-d5936a
+  timestamp: '2026-09-26T21:28:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Documented PD-T4-10 in abortive-infection split-gap
+  details: 'Addressed PR #1297 review issue #1301 by adding the abortive infection system
+    parent-side history companion for the PD-T4-10 child split; the parent discussion now
+    lists traitmech:000394 as split out and keeps other abortive-infection families open.'
