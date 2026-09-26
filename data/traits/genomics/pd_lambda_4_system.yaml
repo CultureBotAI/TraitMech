@@ -1,0 +1,259 @@
+identifier: traitmech:000384
+label: PD-Lambda-4 system
+definition: A phage defense system in which an organism possesses a PD-Lambda-4 locus
+  represented by DefenseFinder as a two-profile model, PD-Lambda-4__PD-Lambda-4_A
+  and PD-Lambda-4__PD-Lambda-4_B, and experimentally linked to T4, LambdaVir, SECphi27,
+  and T7 protection when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PD-Lambda-4
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+- synonym_text: PD-Lambda-4__PD-Lambda-4_A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PD-Lambda-4__PD-Lambda-4_B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-Lambda-4 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+  snippet: 'The PD-Lambda-4 is composed of 2 proteins: PD-Lambda-4_A and PD-Lambda-4_B.'
+  notes: The DefenseFinder wiki names PD-Lambda-4 as a two-protein system with PD-Lambda-4_A
+    and PD-Lambda-4_B.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+  snippet: The PD-Lambda-4 system in *Serratia sp. LS-1* (GCF_003719595.1, NZ_CP033504)
+    is composed of 2 proteins PD-Lambda-4_B (WP_123061920.1) PD-Lambda-4_A (WP_123061921.1)
+  notes: The DefenseFinder wiki illustrates a predicted two-protein PD-Lambda-4 locus
+    in RefSeq assembly GCF_003719595.1 on NZ_CP033504.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCP47953.1'>RCP47953.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/RCP47952.1'>RCP47952.1</a>] --> Expressed_0[Escherichia\
+    \ coli]\n    Expressed_0[Escherichia coli] ----> T4 & LambdaVir & SECphi27 & T7"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-Lambda-4 source locus expressed in E. coli against T4, LambdaVir,
+    SECphi27, and T7.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+  snippet: "subgraph Title4[Protects against]\n        T4\n        LambdaVir\n   \
+    \     SECphi27\n        T7"
+  notes: The DefenseFinder experimental-validation diagram lists T4, LambdaVir, SECphi27,
+    and T7 in the PD-Lambda-4 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-Lambda-4 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+    anti-phage defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-Lambda-4 system to the
+    Vassallo et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-Lambda-4\tPD-Lambda-4\t2\t2\tPD-Lambda-4__PD-Lambda-4_A, PD-Lambda-4__PD-Lambda-4_B\t\
+    \t\t"
+  notes: The DefenseFinder rules table models PD-Lambda-4 as a two-profile system
+    requiring PD-Lambda-4__PD-Lambda-4_A and PD-Lambda-4__PD-Lambda-4_B.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-Lambda-4__PD-Lambda-4_A                       | PD-Lambda-4__PD-Lambda-4_A                       |
+    PD-Lambda-4            | Custom                  | 400    |'
+  notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_A under
+    the PD-Lambda-4 system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-Lambda-4__PD-Lambda-4_B                       | PD-Lambda-4__PD-Lambda-4_B                       |
+    PD-Lambda-4            | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_B under
+    the PD-Lambda-4 system namespace.
+causal_graphs:
+- graph_id: pd_lambda_4_locus_restricts_phages
+  title: PD-Lambda-4 loci restrict T4, LambdaVir, SECphi27, and T7
+  description: Conservative system-level sketch linking possession of a PD-Lambda-4
+    locus to protection against T4, LambdaVir, SECphi27, and T7.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-Lambda-4 as a named DefenseFinder phage-defense
+    system while leaving natural host breadth, the direct phage trigger, the effector
+    mechanism, and exact PD-Lambda-4 profile-to-protein correspondence unresolved.
+  nodes:
+  - node_id: pd_lambda_4_locus
+    label: PD-Lambda-4 locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-defense locus represented by the PD-Lambda-4 DefenseFinder
+      profiles.
+  - node_id: pd_lambda_4_listed_phage_protection
+    label: T4, LambdaVir, SECphi27, and T7 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T4, LambdaVir, SECphi27, and T7 by PD-Lambda-4.
+  - node_id: pd_lambda_4_system_trait
+    label: PD-Lambda-4 system
+    node_type: TRAIT
+    grounding: traitmech:000384
+    description: Possession of a genome-encoded PD-Lambda-4 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pd_lambda_4_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_lambda_4_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-Lambda-4 locus from Vassallo et
+      al. to protection against T4, LambdaVir, SECphi27, and T7, and DefenseFinder
+      models PD-Lambda-4 through two mandatory profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+      snippet: 'The PD-Lambda-4 is composed of 2 proteins: PD-Lambda-4_A and PD-Lambda-4_B.'
+      notes: The DefenseFinder wiki names PD-Lambda-4 as a two-protein system with
+        PD-Lambda-4_A and PD-Lambda-4_B.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCP47953.1'>RCP47953.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCP47952.1'>RCP47952.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T4\
+        \ & LambdaVir & SECphi27 & T7"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-Lambda-4 source locus expressed in E. coli against T4, LambdaVir,
+        SECphi27, and T7.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+      snippet: "subgraph Title4[Protects against]\n        T4\n        LambdaVir\n\
+        \        SECphi27\n        T7"
+      notes: The DefenseFinder experimental-validation diagram lists T4, LambdaVir,
+        SECphi27, and T7 in the PD-Lambda-4 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-Lambda-4\tPD-Lambda-4\t2\t2\tPD-Lambda-4__PD-Lambda-4_A, PD-Lambda-4__PD-Lambda-4_B\t\
+        \t\t"
+      notes: The DefenseFinder rules table models PD-Lambda-4 as a two-profile system
+        requiring PD-Lambda-4__PD-Lambda-4_A and PD-Lambda-4__PD-Lambda-4_B.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-Lambda-4__PD-Lambda-4_A                       | PD-Lambda-4__PD-Lambda-4_A                       |
+        PD-Lambda-4            | Custom                  | 400    |'
+      notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_A under
+        the PD-Lambda-4 system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-Lambda-4__PD-Lambda-4_B                       | PD-Lambda-4__PD-Lambda-4_B                       |
+        PD-Lambda-4            | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_B under
+        the PD-Lambda-4 system namespace.
+  - subject: pd_lambda_4_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_lambda_4_system_trait
+    description: Protection against T4, LambdaVir, SECphi27, and T7 realizes the PD-Lambda-4
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCP47953.1'>RCP47953.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCP47952.1'>RCP47952.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T4\
+        \ & LambdaVir & SECphi27 & T7"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-Lambda-4 source locus expressed in E. coli against T4, LambdaVir,
+        SECphi27, and T7.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+      snippet: "subgraph Title4[Protects against]\n        T4\n        LambdaVir\n\
+        \        SECphi27\n        T7"
+      notes: The DefenseFinder experimental-validation diagram lists T4, LambdaVir,
+        SECphi27, and T7 in the PD-Lambda-4 protects-against subgraph.
+  - subject: pd_lambda_4_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PD-Lambda-4 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-Lambda-4 and related conserved phage-defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-Lambda-4 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+        of anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-Lambda-4 system
+        to the Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-Lambda-4\tPD-Lambda-4\t2\t2\tPD-Lambda-4__PD-Lambda-4_A, PD-Lambda-4__PD-Lambda-4_B\t\
+        \t\t"
+      notes: The DefenseFinder rules table models PD-Lambda-4 as a two-profile system
+        requiring PD-Lambda-4__PD-Lambda-4_A and PD-Lambda-4__PD-Lambda-4_B.
+discussions:
+- discussion_id: pd-lambda-4-mechanism-gap
+  prompt: Resolve PD-Lambda-4 natural host breadth, direct phage trigger, effector
+    mechanism, and profile-to-protein correspondence before minting narrower PD-Lambda-4
+    mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-Lambda-4 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against T4, LambdaVir, SECphi27, and T7, and DefenseFinder
+    represents the system with two mandatory profiles. Natural host breadth, the direct
+    phage trigger, effector logic, and exact profile-to-protein correspondence remain
+    unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-Lambda-4 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+    snippet: 'The PD-Lambda-4 is composed of 2 proteins: PD-Lambda-4_A and PD-Lambda-4_B.'
+    notes: The DefenseFinder wiki names PD-Lambda-4 as a two-protein system with PD-Lambda-4_A
+      and PD-Lambda-4_B.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCP47953.1'>RCP47953.1</a>,\
+      \ <a href='https://ncbi.nlm.nih.gov/protein/RCP47952.1'>RCP47952.1</a>] -->\
+      \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T4\
+      \ & LambdaVir & SECphi27 & T7"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-Lambda-4 source locus expressed in E. coli against T4, LambdaVir,
+      SECphi27, and T7.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-Lambda-4\tPD-Lambda-4\t2\t2\tPD-Lambda-4__PD-Lambda-4_A, PD-Lambda-4__PD-Lambda-4_B\t\
+      \t\t"
+    notes: The DefenseFinder rules table models PD-Lambda-4 as a two-profile system
+      requiring PD-Lambda-4__PD-Lambda-4_A and PD-Lambda-4__PD-Lambda-4_B.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-Lambda-4__PD-Lambda-4_A                       | PD-Lambda-4__PD-Lambda-4_A                       |
+      PD-Lambda-4            | Custom                  | 400    |'
+    notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_A under
+      the PD-Lambda-4 system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-Lambda-4__PD-Lambda-4_B                       | PD-Lambda-4__PD-Lambda-4_B                       |
+      PD-Lambda-4            | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records PD-Lambda-4__PD-Lambda-4_B under
+      the PD-Lambda-4 system namespace.
+  attaches_to:
+  - causal_graphs#pd_lambda_4_locus_restricts_phages
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T13:35:40Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-Lambda-4 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v261.
+  llm_assisted: true
+- timestamp: '2026-09-26T13:35:41Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-Lambda-4 system canonical_examples and left them empty because
+    the current sources support an E. coli accession-level experimental validation
+    graph, a DefenseFinder system model, and a RefSeq Serratia sp. LS-1 example, but
+    not a direct native microbial isolate exemplar with experimentally verified endogenous
+    PD-Lambda-4 activity. No paid research was used.
+  llm_assisted: true

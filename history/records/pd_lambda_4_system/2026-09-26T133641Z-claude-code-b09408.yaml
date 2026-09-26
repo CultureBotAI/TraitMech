@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_lambda_4_system.yaml
+  slug: pd_lambda_4_system
+session:
+  id: 2026-09-26T133641Z-claude-code-b09408
+  timestamp: '2026-09-26T13:36:41Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add PD-Lambda-4 system trait
+  details: Added the DOI- and DefenseFinder-backed PD-Lambda-4 phage-defense system as a new
+    GENOMICS TraitRecord after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record. The curation minted traitmech:000384,
+    reserved METPO:1033800 in proposals/metpo_traitmech_v261, added a conservative nonmechanistic
+    causal graph for the pinned DefenseFinder T4, LambdaVir, SECphi27, and T7 validation sketch,
+    and left canonical_examples empty until direct native microbial isolate evidence for endogenous
+    PD-Lambda-4 activity is available.
