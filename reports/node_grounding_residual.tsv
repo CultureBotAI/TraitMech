@@ -149,6 +149,7 @@ subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
+t2, t4, and t6 protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
@@ -1483,9 +1484,9 @@ t2, t4, t6, lambdavir, secphi17, secphi18, secphi27, t3, and t7 protection	BIOLO
 pd-lambda-6 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_6_system.yaml
 lambdavir and t5 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_lambda_6_system.yaml
 pd-t4-1 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_1_system.yaml
-t2, t4, and t6 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_t4_1_system.yaml
 pd-t4-2 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_2_system.yaml
 t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_t4_2_system.yaml
+pd-t4-3 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_t4_3_system.yaml
 pfiat locus	GENETIC_ELEMENT	1	data/traits/genomics/pfiat_system.yaml
 pf4 phage production regulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pfiat_system.yaml
 bacteriophage pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/phage_defense_system.yaml
