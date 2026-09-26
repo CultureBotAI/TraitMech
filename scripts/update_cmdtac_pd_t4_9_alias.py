@@ -36,6 +36,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 TIMESTAMP = "2026-09-26T21:51:06Z"
 
 VASSALLO_2022 = "DOI:10.1038/s41564-022-01219-4"
+VASSALLO_2024 = "DOI:10.1038/s41586-024-08102-8"
 
 OLD_COMPONENT_SNIPPET = (
     "The CmdTAC system operates through a hierarchy of components where "
@@ -78,6 +79,10 @@ PD_T4_9_RENAMED_CMDTAC_SNIPPET = (
     "PD-T4-9 also contains a third component, a SecB-like chaperone, "
     "suggesting that it is related to an enigmatic class of TA systems called "
     "toxin-antitoxin-chaperone (TAC) systems, so we renamed this system CmdTAC"
+)
+PD_T4_9_RENAMED_CMDTAC_NOTES = (
+    "Vassallo et al. state that PD-T4-9 was renamed CmdTAC after they "
+    "recognized its SecB-like chaperone component."
 )
 COMPOSITION_SNIPPET = (
     "The PD-T4-9 is composed of 3 proteins: PD-T4-9_A, PD-T4-9_B and "
@@ -141,21 +146,18 @@ OLD_ARTICLE_REGISTRY_NOTES = ARTICLE_REGISTRY_NOTES.replace(
 PD_T4_9_SYNONYM = {
     "synonym_text": "PD-T4-9",
     "synonym_type": "RELATED_SYNONYM",
-    "source": VASSALLO_2022,
+    "source": VASSALLO_2024,
 }
-OLD_PD_T4_9_SYNONYM = {
-    **PD_T4_9_SYNONYM,
-    "source": DEFENSEFINDER_WIKI,
-}
+OLD_PD_T4_9_SYNONYMS = (
+    {**PD_T4_9_SYNONYM, "source": DEFENSEFINDER_WIKI},
+    {**PD_T4_9_SYNONYM, "source": VASSALLO_2022},
+)
 
 PD_T4_9_EVIDENCE = [
     {
-        "reference": VASSALLO_2022,
+        "reference": VASSALLO_2024,
         "snippet": PD_T4_9_RENAMED_CMDTAC_SNIPPET,
-        "notes": (
-            "Vassallo et al. state that PD-T4-9 was renamed CmdTAC after they "
-            "recognized its SecB-like chaperone component."
-        ),
+        "notes": PD_T4_9_RENAMED_CMDTAC_NOTES,
     },
     {
         "reference": DEFENSEFINDER_WIKI,
@@ -265,7 +267,7 @@ def upsert_pd_t4_9_synonym(synonyms: list[dict[str, Any]]) -> None:
     for item in synonyms:
         if item.get("synonym_text") != "PD-T4-9":
             continue
-        if item in (OLD_PD_T4_9_SYNONYM, PD_T4_9_SYNONYM):
+        if item in (*OLD_PD_T4_9_SYNONYMS, PD_T4_9_SYNONYM):
             item.clear()
             item.update(copy.deepcopy(PD_T4_9_SYNONYM))
             return
@@ -312,6 +314,16 @@ def normalize_composition_notes(evidence: list[dict[str, Any]]) -> None:
     raise ValueError("CmdTAC PD-T4-9 composition evidence is missing")
 
 
+def normalize_rename_evidence(evidence: list[dict[str, Any]]) -> None:
+    for item in evidence:
+        if evidence_key(item) != (VASSALLO_2022, PD_T4_9_RENAMED_CMDTAC_SNIPPET):
+            continue
+        if item.get("notes") != PD_T4_9_RENAMED_CMDTAC_NOTES:
+            raise ValueError("CmdTAC PD-T4-9 rename evidence was already edited")
+        item["reference"] = VASSALLO_2024
+        return
+
+
 def remove_old_wiki_narrative_snippets(evidence: list[dict[str, Any]]) -> None:
     old_notes = {
         OLD_COMPONENT_SNIPPET: OLD_COMPONENT_NOTES,
@@ -337,6 +349,7 @@ def set_discussion_evidence(discussion: dict[str, Any]) -> None:
     if isinstance(evidence, list):
         normalized = copy.deepcopy(evidence)
         remove_old_wiki_narrative_snippets(normalized)
+        normalize_rename_evidence(normalized)
         normalize_composition_notes(normalized)
         normalize_rules_notes(normalized)
         if normalized in (PD_T4_9_EVIDENCE[1:], PD_T4_9_EVIDENCE):
@@ -361,6 +374,7 @@ def update_record(doc: dict[str, Any]) -> None:
     evidence = doc.setdefault("evidence", [])
     update_article_registry_note(evidence)
     remove_old_wiki_narrative_snippets(evidence)
+    normalize_rename_evidence(evidence)
     normalize_composition_notes(evidence)
     seen = {evidence_key(item) for item in evidence}
     for item in PD_T4_9_EVIDENCE:

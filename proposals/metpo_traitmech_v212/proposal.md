@@ -63,8 +63,8 @@ and Tevenvirinae phage restriction are shifted from this organism-level
 GENOMICS possession trait. `cmdTAC toxin-antitoxin-chaperone locus` is kept as
 a related synonym because the locus label denotes the genomic determinant, not
 the organism-level possession trait itself. `PD-T4-9` is kept as a related
-synonym because it is a DefenseFinder source-system namespace for the same
-system rather than the primary literature name.
+synonym because Vassallo et al. report that PD-T4-9 was renamed CmdTAC, making
+it a prior name for the same system.
 
 ## Artifacts
 

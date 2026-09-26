@@ -22,7 +22,7 @@ synonyms:
   source: DOI:10.1038/s41586-024-08102-8
 - synonym_text: PD-T4-9
   synonym_type: RELATED_SYNONYM
-  source: DOI:10.1038/s41564-022-01219-4
+  source: DOI:10.1038/s41586-024-08102-8
 evidence:
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: Here we characterize the widely distributed anti-phage defence system CmdTAC,
@@ -87,7 +87,7 @@ evidence:
     PD-T4-9                | Custom                  | 20     |'
   notes: The pinned DefenseFinder HMM inventory records PD-T4-9__PD-T4-9_A, PD-T4-9__PD-T4-9_B,
     and PD-T4-9__PD-T4-9_C under the PD-T4-9 system namespace.
-- reference: DOI:10.1038/s41564-022-01219-4
+- reference: DOI:10.1038/s41586-024-08102-8
   snippet: PD-T4-9 also contains a third component, a SecB-like chaperone, suggesting
     that it is related to an enigmatic class of TA systems called toxin-antitoxin-chaperone
     (TAC) systems, so we renamed this system CmdTAC
@@ -230,7 +230,7 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-21'
   evidence:
-  - reference: DOI:10.1038/s41564-022-01219-4
+  - reference: DOI:10.1038/s41586-024-08102-8
     snippet: PD-T4-9 also contains a third component, a SecB-like chaperone, suggesting
       that it is related to an enigmatic class of TA systems called toxin-antitoxin-chaperone
       (TAC) systems, so we renamed this system CmdTAC

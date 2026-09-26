@@ -1071,7 +1071,7 @@ window.searchData = [
   "num_experiments": 0,
   "num_evidence": 5,
   "evidence_refs": [
-   "DOI:10.1038/s41564-022-01219-4",
+   "DOI:10.1038/s41586-024-08102-8",
    "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md",
    "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
