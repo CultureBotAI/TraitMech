@@ -1,0 +1,272 @@
+identifier: traitmech:000389
+label: PD-T4-4 system
+definition: A phage defense system in which an organism possesses a PD-T4-4 locus
+  represented by DefenseFinder as a two-profile model requiring PD-T4-4__PD-T4-4_A
+  and PD-T4-4__PD-T4-4_B, and experimentally linked to T2, T4, T6, and SECphi17 protection
+  when expressed in E. coli.
+definition_source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PD-T4-4
+  synonym_type: RELATED_SYNONYM
+  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+- synonym_text: PD-T4-4__PD-T4-4_A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PD-T4-4__PD-T4-4_B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: Here we developed an experimental selection scheme agnostic to genomic
+    context to identify defence systems in 71 diverse E. coli strains. Our results
+    unveil 21 conserved defence systems, none of which were previously detected as
+    enriched in defence islands.
+  notes: Vassallo et al. developed the agnostic E. coli pangenome selection that uncovered
+    PD-T4-4 and related conserved phage-defense systems.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+  snippet: PD-T4-4 is a defense system composed of two proteins, a P-loop NTPase and
+    a nuclease, that is most likely protecting the bacterial population through abortive
+    infection. It was identified from an ICE in an *E. coli* genome.
+  notes: The DefenseFinder wiki describes PD-T4-4 as a two-protein system from an
+    E. coli integrative and conjugative element.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+  snippet: 'The PD-T4-4 is composed of 2 proteins: PD-T4-4_A and PD-T4-4_B.'
+  notes: The DefenseFinder wiki names PD-T4-4 as a two-protein system with PD-T4-4_A
+    and PD-T4-4_B components.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+  snippet: The PD-T4-4 system in *Thiothrix subterranea* (GCF_016772315.1, NZ_CP053482)
+    is composed of 2 proteins PD-T4-4_A (WP_202716711.1) PD-T4-4_B (WP_202716712.1)
+  notes: The DefenseFinder wiki illustrates a predicted two-protein PD-T4-4 locus
+    in RefSeq assembly GCF_016772315.1 on NZ_CP053482.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+  snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO57999.1'>RCO57999.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/RCO57988.1'>RCO57988.1</a>] --> Expressed_0[Escherichia\
+    \ coli]\n    Expressed_0[Escherichia coli] ----> T2 & T4 & T6 & SECphi17"
+  notes: The DefenseFinder experimental-validation diagram links Vassallo et al. to
+    an E. coli PD-T4-4 source locus expressed in E. coli against T2, T4, T6, and SECphi17.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+  snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n        T6\n\
+    \        SECphi17"
+  notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, and SECphi17
+    in the PD-T4-4 protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PD-T4-4 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of anti-phage
+    defense mechanisms in the E\. coli pangenome
+  notes: The DefenseFinder article registry maps the named PD-T4-4 system to the Vassallo
+    et al. E. coli pangenome phage-defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PD-T4-4\tPD-T4-4\t2\t2\tPD-T4-4__PD-T4-4_A, PD-T4-4__PD-T4-4_B\t\t\t"
+  notes: The DefenseFinder rules table models PD-T4-4 as a two-profile system requiring
+    PD-T4-4__PD-T4-4_A and PD-T4-4__PD-T4-4_B.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-4__PD-T4-4_A                               | PD-T4-4__PD-T4-4_A                               |
+    PD-T4-4                | Custom                  | 75     |'
+  notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_A under the PD-T4-4
+    system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PD-T4-4__PD-T4-4_B                               | PD-T4-4__PD-T4-4_B                               |
+    PD-T4-4                | Custom                  | 25     |'
+  notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_B under the PD-T4-4
+    system namespace.
+causal_graphs:
+- graph_id: pd_t4_4_locus_restricts_t2_t4_t6_and_secphi17
+  title: PD-T4-4 loci restrict T2, T4, T6, and SECphi17
+  description: Conservative system-level sketch linking possession of a PD-T4-4 locus
+    to protection against T2, T4, T6, and SECphi17.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PD-T4-4 as a named DefenseFinder phage-defense system
+    while leaving natural host breadth, the direct phage trigger, and the effector
+    mechanism unresolved.
+  nodes:
+  - node_id: pd_t4_4_locus
+    label: PD-T4-4 locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-defense locus represented by the two PD-T4-4 DefenseFinder
+      profiles.
+  - node_id: pd_t4_4_listed_phage_protection
+    label: T2, T4, T6, and SECphi17 protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against T2, T4, T6, and SECphi17 by PD-T4-4.
+  - node_id: pd_t4_4_system_trait
+    label: PD-T4-4 system
+    node_type: TRAIT
+    grounding: traitmech:000389
+    description: Possession of a genome-encoded PD-T4-4 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pd_t4_4_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_4_listed_phage_protection
+    description: The DefenseFinder wiki links a PD-T4-4 locus from Vassallo et al.
+      to protection against T2, T4, T6, and SECphi17, and DefenseFinder models PD-T4-4
+      through two mandatory profiles.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: PD-T4-4 is a defense system composed of two proteins, a P-loop NTPase
+        and a nuclease, that is most likely protecting the bacterial population through
+        abortive infection. It was identified from an ICE in an *E. coli* genome.
+      notes: The DefenseFinder wiki describes PD-T4-4 as a two-protein system from
+        an E. coli integrative and conjugative element.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: 'The PD-T4-4 is composed of 2 proteins: PD-T4-4_A and PD-T4-4_B.'
+      notes: The DefenseFinder wiki names PD-T4-4 as a two-protein system with PD-T4-4_A
+        and PD-T4-4_B components.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO57999.1'>RCO57999.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCO57988.1'>RCO57988.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+        \ & T4 & T6 & SECphi17"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-4 source locus expressed in E. coli against T2, T4, T6,
+        and SECphi17.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        SECphi17"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, and
+        SECphi17 in the PD-T4-4 protects-against subgraph.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-4\tPD-T4-4\t2\t2\tPD-T4-4__PD-T4-4_A, PD-T4-4__PD-T4-4_B\t\t\
+        \t"
+      notes: The DefenseFinder rules table models PD-T4-4 as a two-profile system
+        requiring PD-T4-4__PD-T4-4_A and PD-T4-4__PD-T4-4_B.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-4__PD-T4-4_A                               | PD-T4-4__PD-T4-4_A                               |
+        PD-T4-4                | Custom                  | 75     |'
+      notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_A under the
+        PD-T4-4 system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-4__PD-T4-4_B                               | PD-T4-4__PD-T4-4_B                               |
+        PD-T4-4                | Custom                  | 25     |'
+      notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_B under the
+        PD-T4-4 system namespace.
+  - subject: pd_t4_4_listed_phage_protection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pd_t4_4_system_trait
+    description: Protection against T2, T4, T6, and SECphi17 realizes the PD-T4-4
+      system trait.
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO57999.1'>RCO57999.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/RCO57988.1'>RCO57988.1</a>] -->\
+        \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+        \ & T4 & T6 & SECphi17"
+      notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+        to an E. coli PD-T4-4 source locus expressed in E. coli against T2, T4, T6,
+        and SECphi17.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+      snippet: "subgraph Title4[Protects against]\n        T2\n        T4\n      \
+        \  T6\n        SECphi17"
+      notes: The DefenseFinder experimental-validation diagram lists T2, T4, T6, and
+        SECphi17 in the PD-T4-4 protects-against subgraph.
+  - subject: pd_t4_4_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PD-T4-4 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01219-4
+      snippet: Here we developed an experimental selection scheme agnostic to genomic
+        context to identify defence systems in 71 diverse E. coli strains. Our results
+        unveil 21 conserved defence systems, none of which were previously detected
+        as enriched in defence islands.
+      notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+        uncovered PD-T4-4 and related conserved phage-defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-T4-4 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+        anti-phage defense mechanisms in the E\. coli pangenome
+      notes: The DefenseFinder article registry maps the named PD-T4-4 system to the
+        Vassallo et al. E. coli pangenome phage-defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PD-T4-4\tPD-T4-4\t2\t2\tPD-T4-4__PD-T4-4_A, PD-T4-4__PD-T4-4_B\t\t\
+        \t"
+      notes: The DefenseFinder rules table models PD-T4-4 as a two-profile system
+        requiring PD-T4-4__PD-T4-4_A and PD-T4-4__PD-T4-4_B.
+discussions:
+- discussion_id: pd-t4-4-mechanism-gap
+  prompt: Resolve PD-T4-4 natural host breadth, direct phage trigger, and effector
+    mechanism before minting narrower PD-T4-4 mechanism traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Vassallo et al. support PD-T4-4 as one of the conserved systems from
+    an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the
+    source locus to protection against T2, T4, T6, and SECphi17, and DefenseFinder
+    represents the system with two mandatory profiles. Natural host breadth, the direct
+    phage trigger, and effector logic remain unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: Here we developed an experimental selection scheme agnostic to genomic
+      context to identify defence systems in 71 diverse E. coli strains. Our results
+      unveil 21 conserved defence systems, none of which were previously detected
+      as enriched in defence islands.
+    notes: Vassallo et al. developed the agnostic E. coli pangenome selection that
+      uncovered PD-T4-4 and related conserved phage-defense systems.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+    snippet: PD-T4-4 is a defense system composed of two proteins, a P-loop NTPase
+      and a nuclease, that is most likely protecting the bacterial population through
+      abortive infection. It was identified from an ICE in an *E. coli* genome.
+    notes: The DefenseFinder wiki describes PD-T4-4 as a two-protein system from an
+      E. coli integrative and conjugative element.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+    snippet: 'The PD-T4-4 is composed of 2 proteins: PD-T4-4_A and PD-T4-4_B.'
+    notes: The DefenseFinder wiki names PD-T4-4 as a two-protein system with PD-T4-4_A
+      and PD-T4-4_B components.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+    snippet: "Vassallo_2022[<a href='https://doi.org/10.1038/s41564-022-01219-4'>Vassallo\
+      \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli \n<a href='https://ncbi.nlm.nih.gov/protein/RCO57999.1'>RCO57999.1</a>,\
+      \ <a href='https://ncbi.nlm.nih.gov/protein/RCO57988.1'>RCO57988.1</a>] -->\
+      \ Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T2\
+      \ & T4 & T6 & SECphi17"
+    notes: The DefenseFinder experimental-validation diagram links Vassallo et al.
+      to an E. coli PD-T4-4 source locus expressed in E. coli against T2, T4, T6,
+      and SECphi17.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "PD-T4-4\tPD-T4-4\t2\t2\tPD-T4-4__PD-T4-4_A, PD-T4-4__PD-T4-4_B\t\t\t"
+    notes: The DefenseFinder rules table models PD-T4-4 as a two-profile system requiring
+      PD-T4-4__PD-T4-4_A and PD-T4-4__PD-T4-4_B.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-4__PD-T4-4_A                               | PD-T4-4__PD-T4-4_A                               |
+      PD-T4-4                | Custom                  | 75     |'
+    notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_A under the PD-T4-4
+      system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| PD-T4-4__PD-T4-4_B                               | PD-T4-4__PD-T4-4_B                               |
+      PD-T4-4                | Custom                  | 25     |'
+    notes: The DefenseFinder HMM inventory records PD-T4-4__PD-T4-4_B under the PD-T4-4
+      system namespace.
+  attaches_to:
+  - causal_graphs#pd_t4_4_locus_restricts_t2_t4_t6_and_secphi17
+  posed_by: codex
+  posed_date: '2026-09-26'
+curation_history:
+- timestamp: '2026-09-26T16:51:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PD-T4-4 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v266.
+  llm_assisted: true
+- timestamp: '2026-09-26T16:51:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed PD-T4-4 system canonical_examples and left them empty because
+    the current sources support an E. coli accession-level experimental validation
+    graph, a DefenseFinder system model, and a RefSeq Thiothrix subterranea example,
+    but not a direct native microbial isolate exemplar with experimentally verified
+    endogenous PD-T4-4 activity. No paid research was used.
+  llm_assisted: true
