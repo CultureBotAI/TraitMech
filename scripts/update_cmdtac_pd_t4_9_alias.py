@@ -35,7 +35,7 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 
 TIMESTAMP = "2026-09-26T21:51:06Z"
 
-COMPONENT_SNIPPET = (
+OLD_COMPONENT_SNIPPET = (
     "The CmdTAC system operates through a hierarchy of components where "
     "roles are distinctly defined:\n"
     "* Effector: The CmdT protein (formerly PD-T4-9-A) is the Toxin. Its "
@@ -51,9 +51,33 @@ COMPONENT_SNIPPET = (
     "the Toxin (CmdT) and its controlled degradation is the essential switch "
     "mechanism for activation."
 )
+OLD_COMPONENT_NOTES = (
+    "The DefenseFinder PD-T4-9 page aliases the CmdT, CmdC, and "
+    "CmdA components to their former PD-T4-9-A, PD-T4-9-C, and "
+    "PD-T4-9-B labels."
+)
+OPERON_SNIPPET = (
+    "The CmdTAC system is encoded within a tri-cistronic operon, meaning the "
+    "three component genes are transcribed together. This organization is "
+    "crucial for the precise co-translational assembly and regulation of the "
+    "complex.\n"
+    "While the system is often found within prophages (integrated viral genomes) "
+    "in E. coli, the functional genes are arranged in a specific order:\n"
+    "* The gene for the Chaperone (CmdC) often initiates the operon.\n"
+    "* The Antitoxin gene (CmdA) typically follows, preceding the Toxin.\n"
+    "* The Toxin gene (CmdT) is usually the downstream component."
+)
 COMPOSITION_SNIPPET = (
     "The PD-T4-9 is composed of 3 proteins: PD-T4-9_A, PD-T4-9_B and "
     "PD-T4-9_C."
+)
+COMPOSITION_NOTES = (
+    "The DefenseFinder wiki names the three protein components in the "
+    "PD-T4-9 model."
+)
+OLD_COMPOSITION_NOTES = (
+    "The DefenseFinder wiki names the three PD-T4-9 profile "
+    "components in the CmdTAC system model."
 )
 REFSEQ_SNIPPET = (
     "The PD-T4-9 system in *Vibrio parahaemolyticus* "
@@ -95,7 +119,11 @@ ARTICLE_REGISTRY_NOTES = (
     "The DefenseFinder article registry maps the named CmdTAC system to the "
     "Vassallo et al. CmdTAC mechanism paper. Its CmdTAC row is "
     "name-to-paper evidence; the pinned rule and HMM rows model the same "
-    "DefenseFinder system under the former PD-T4-9 namespace."
+    "DefenseFinder system under the PD-T4-9 namespace."
+)
+OLD_ARTICLE_REGISTRY_NOTES = ARTICLE_REGISTRY_NOTES.replace(
+    "under the PD-T4-9 namespace",
+    "under the former PD-T4-9 namespace",
 )
 
 PD_T4_9_SYNONYM = {
@@ -107,20 +135,17 @@ PD_T4_9_SYNONYM = {
 PD_T4_9_EVIDENCE = [
     {
         "reference": DEFENSEFINDER_WIKI,
-        "snippet": COMPONENT_SNIPPET,
+        "snippet": OPERON_SNIPPET,
         "notes": (
-            "The DefenseFinder PD-T4-9 page aliases the CmdT, CmdC, and "
-            "CmdA components to their former PD-T4-9-A, PD-T4-9-C, and "
-            "PD-T4-9-B labels."
+            "The DefenseFinder PD-T4-9 page describes CmdTAC as a tri-cistronic "
+            "locus whose chaperone, antitoxin, and toxin genes match the "
+            "PD-T4-9_C, PD-T4-9_B, PD-T4-9_A order illustrated on the same page."
         ),
     },
     {
         "reference": DEFENSEFINDER_WIKI,
         "snippet": COMPOSITION_SNIPPET,
-        "notes": (
-            "The DefenseFinder wiki names the three PD-T4-9 profile "
-            "components in the CmdTAC system model."
-        ),
+        "notes": COMPOSITION_NOTES,
     },
     {
         "reference": DEFENSEFINDER_WIKI,
@@ -153,18 +178,38 @@ DISCUSSION_PROMPT = (
 DISCUSSION_RATIONALE = (
     "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone "
     "abortive-infection system in which CmdC senses viral capsid proteins "
-    "and liberates the CmdT mRNA ADP-ribosyltransferase. The DefenseFinder "
-    "PD-T4-9 page aliases the same system through former PD-T4-9 component "
-    "names, and the pinned DefenseFinder HMM inventory and rules table model "
-    "PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C "
-    "profiles plus accessory PD-T4-9__PD-T4-9_B. Phage specificity beyond "
-    "Tevenvirinae, escape routes, and natural family breadth remain "
-    "unresolved."
+    "and liberates the CmdT mRNA ADP-ribosyltransferase. The pinned "
+    "DefenseFinder wiki page, HMM inventory, and rules table record this "
+    "same three-component model under PD-T4-9 with required "
+    "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory "
+    "PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape "
+    "routes, and natural family breadth remain unresolved."
 )
-OLD_DISCUSSION_RATIONALE = DISCUSSION_RATIONALE.replace(
-    "accessory PD-T4-9__PD-T4-9_B",
-    "optional PD-T4-9__PD-T4-9_B",
-)
+OLD_DISCUSSION_RATIONALES = {
+    (
+        "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone "
+        "abortive-infection system in which CmdC senses viral capsid proteins "
+        "and liberates the CmdT mRNA ADP-ribosyltransferase. The DefenseFinder "
+        "PD-T4-9 page aliases the same system through former PD-T4-9 component "
+        "names, and the pinned DefenseFinder HMM inventory and rules table model "
+        "PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C "
+        "profiles plus optional PD-T4-9__PD-T4-9_B. Phage specificity beyond "
+        "Tevenvirinae, escape routes, and natural family breadth remain "
+        "unresolved."
+    ),
+    (
+        "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone "
+        "abortive-infection system in which CmdC senses viral capsid proteins "
+        "and liberates the CmdT mRNA ADP-ribosyltransferase. The DefenseFinder "
+        "PD-T4-9 page aliases the same system through former PD-T4-9 component "
+        "names, and the pinned DefenseFinder HMM inventory and rules table model "
+        "PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C "
+        "profiles plus accessory PD-T4-9__PD-T4-9_B. Phage specificity beyond "
+        "Tevenvirinae, escape routes, and natural family breadth remain "
+        "unresolved."
+    ),
+    DISCUSSION_RATIONALE,
+}
 SCOPE_NOTES = (
     "The graph captures CmdTAC as a named toxin-antitoxin-chaperone "
     "abortive-infection system from Escherichia coli ECOR22 and links "
@@ -192,7 +237,7 @@ def update_article_registry_note(evidence: list[dict[str, Any]]) -> None:
         notes = item.get("notes", "")
         if (
             "HMM inventory and rules table do not list CmdTAC" in notes
-            or notes == ARTICLE_REGISTRY_NOTES
+            or notes in {OLD_ARTICLE_REGISTRY_NOTES, ARTICLE_REGISTRY_NOTES}
         ):
             item["notes"] = ARTICLE_REGISTRY_NOTES
             return
@@ -212,6 +257,28 @@ def normalize_rules_notes(evidence: list[dict[str, Any]]) -> None:
     raise ValueError("CmdTAC DefenseFinder rules evidence is missing")
 
 
+def normalize_composition_notes(evidence: list[dict[str, Any]]) -> None:
+    for item in evidence:
+        if evidence_key(item) != (DEFENSEFINDER_WIKI, COMPOSITION_SNIPPET):
+            continue
+        notes = item.get("notes", "")
+        if notes in {OLD_COMPOSITION_NOTES, COMPOSITION_NOTES}:
+            item["notes"] = COMPOSITION_NOTES
+            return
+        raise ValueError("CmdTAC PD-T4-9 composition note was already edited")
+    raise ValueError("CmdTAC PD-T4-9 composition evidence is missing")
+
+
+def remove_old_component_snippet(evidence: list[dict[str, Any]]) -> None:
+    for index, item in enumerate(evidence):
+        if evidence_key(item) != (DEFENSEFINDER_WIKI, OLD_COMPONENT_SNIPPET):
+            continue
+        if item.get("notes") != OLD_COMPONENT_NOTES:
+            raise ValueError("CmdTAC component-role evidence was already edited")
+        del evidence[index]
+        return
+
+
 def set_discussion_evidence(discussion: dict[str, Any]) -> None:
     evidence = discussion.get("evidence")
     if evidence in (None, []):
@@ -219,9 +286,11 @@ def set_discussion_evidence(discussion: dict[str, Any]) -> None:
         return
     if isinstance(evidence, list):
         normalized = copy.deepcopy(evidence)
+        remove_old_component_snippet(normalized)
+        normalize_composition_notes(normalized)
         normalize_rules_notes(normalized)
-        if normalized == PD_T4_9_EVIDENCE:
-            discussion["evidence"] = normalized
+        if normalized in (PD_T4_9_EVIDENCE[1:], PD_T4_9_EVIDENCE):
+            discussion["evidence"] = copy.deepcopy(PD_T4_9_EVIDENCE)
             return
     raise ValueError("CmdTAC model-coverage discussion evidence was already edited")
 
@@ -242,6 +311,8 @@ def update_record(doc: dict[str, Any]) -> None:
 
     evidence = doc.setdefault("evidence", [])
     update_article_registry_note(evidence)
+    remove_old_component_snippet(evidence)
+    normalize_composition_notes(evidence)
     seen = {evidence_key(item) for item in evidence}
     for item in PD_T4_9_EVIDENCE:
         if evidence_key(item) not in seen:
@@ -266,7 +337,7 @@ def update_record(doc: dict[str, Any]) -> None:
         rationale = discussion.get("rationale", "")
         if "HMM inventory or rules table" not in rationale and (
             discussion.get("prompt") != DISCUSSION_PROMPT
-            or rationale not in {OLD_DISCUSSION_RATIONALE, DISCUSSION_RATIONALE}
+            or rationale not in OLD_DISCUSSION_RATIONALES
         ):
             raise ValueError("CmdTAC model-coverage rationale was already edited")
         discussion["prompt"] = DISCUSSION_PROMPT
