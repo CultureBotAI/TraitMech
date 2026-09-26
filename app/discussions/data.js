@@ -2736,6 +2736,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rst_duf4238_system.html#rst-duf4238-host-mechanism-gap"
  },
  {
+  "discussion_id": "rst-gop-beta-cll-mechanism-gap",
+  "prompt": "Resolve Rst_gop_beta_cll natural host breadth, exact beta and cll gene correspondence, direct phage trigger, and Gop or beta toxin-antitoxin activities before minting narrower P4 gop-beta-cII mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst gop-beta-cII system",
+  "source_id": "traitmech:000376",
+  "source_file": "rst_gop_beta_cll_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_gop_beta_cll_locus_restricts_lambda_p1"
+  ],
+  "rationale": "Rousset et al. support a canonical P4 gop-beta-cII system that protects against lambda and P1, and DefenseFinder represents Rst_gop_beta_cll as a required beta/cll/gop three-profile model. This first system-level record leaves natural host breadth, profile-to-gene mapping, the direct phage trigger, and the gop, beta, or cII effector logic unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_gop_beta_cll_system.html#rst-gop-beta-cll-mechanism-gap"
+ },
+ {
   "discussion_id": "rugutis-mechanism-gap",
   "prompt": "Resolve Rugutis phage triggers and effector outputs before minting narrower Rugutis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4534,9 +4558,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 245,
- "total_knowledge_gaps": 163,
- "total_source_entries": 243,
+ "total_discussions": 246,
+ "total_knowledge_gaps": 164,
+ "total_source_entries": 244,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
