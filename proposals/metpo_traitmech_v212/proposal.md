@@ -14,8 +14,7 @@ anti-phage defense system in which CmdC senses viral capsid proteins, CmdA is
 degraded, and the liberated CmdT ADP-ribosyltransferase modifies mRNA to block
 translation and abort phage infection. The pinned DefenseFinder article
 registry maps CmdTAC to that Nature paper; the pinned DefenseFinder HMM
-inventory and rules table model the same system under DefenseFinder's former
-PD-T4-9 namespace.
+inventory and rules table record the PD-T4-9 namespace.
 
 This cohort lifts one local class:
 

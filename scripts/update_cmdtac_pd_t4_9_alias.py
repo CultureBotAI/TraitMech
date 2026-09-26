@@ -35,6 +35,8 @@ DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 
 TIMESTAMP = "2026-09-26T21:51:06Z"
 
+VASSALLO_2022 = "DOI:10.1038/s41564-022-01219-4"
+
 OLD_COMPONENT_SNIPPET = (
     "The CmdTAC system operates through a hierarchy of components where "
     "roles are distinctly defined:\n"
@@ -56,7 +58,7 @@ OLD_COMPONENT_NOTES = (
     "CmdA components to their former PD-T4-9-A, PD-T4-9-C, and "
     "PD-T4-9-B labels."
 )
-OPERON_SNIPPET = (
+OLD_OPERON_SNIPPET = (
     "The CmdTAC system is encoded within a tri-cistronic operon, meaning the "
     "three component genes are transcribed together. This organization is "
     "crucial for the precise co-translational assembly and regulation of the "
@@ -66,6 +68,16 @@ OPERON_SNIPPET = (
     "* The gene for the Chaperone (CmdC) often initiates the operon.\n"
     "* The Antitoxin gene (CmdA) typically follows, preceding the Toxin.\n"
     "* The Toxin gene (CmdT) is usually the downstream component."
+)
+OLD_OPERON_NOTES = (
+    "The DefenseFinder PD-T4-9 page describes CmdTAC as a tri-cistronic "
+    "locus whose chaperone, antitoxin, and toxin genes match the "
+    "PD-T4-9_C, PD-T4-9_B, PD-T4-9_A order illustrated on the same page."
+)
+PD_T4_9_RENAMED_CMDTAC_SNIPPET = (
+    "PD-T4-9 also contains a third component, a SecB-like chaperone, "
+    "suggesting that it is related to an enigmatic class of TA systems called "
+    "toxin-antitoxin-chaperone (TAC) systems, so we renamed this system CmdTAC"
 )
 COMPOSITION_SNIPPET = (
     "The PD-T4-9 is composed of 3 proteins: PD-T4-9_A, PD-T4-9_B and "
@@ -129,17 +141,20 @@ OLD_ARTICLE_REGISTRY_NOTES = ARTICLE_REGISTRY_NOTES.replace(
 PD_T4_9_SYNONYM = {
     "synonym_text": "PD-T4-9",
     "synonym_type": "RELATED_SYNONYM",
+    "source": VASSALLO_2022,
+}
+OLD_PD_T4_9_SYNONYM = {
+    **PD_T4_9_SYNONYM,
     "source": DEFENSEFINDER_WIKI,
 }
 
 PD_T4_9_EVIDENCE = [
     {
-        "reference": DEFENSEFINDER_WIKI,
-        "snippet": OPERON_SNIPPET,
+        "reference": VASSALLO_2022,
+        "snippet": PD_T4_9_RENAMED_CMDTAC_SNIPPET,
         "notes": (
-            "The DefenseFinder PD-T4-9 page describes CmdTAC as a tri-cistronic "
-            "locus whose chaperone, antitoxin, and toxin genes match the "
-            "PD-T4-9_C, PD-T4-9_B, PD-T4-9_A order illustrated on the same page."
+            "Vassallo et al. state that PD-T4-9 was renamed CmdTAC after they "
+            "recognized its SecB-like chaperone component."
         ),
     },
     {
@@ -178,12 +193,12 @@ DISCUSSION_PROMPT = (
 DISCUSSION_RATIONALE = (
     "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone "
     "abortive-infection system in which CmdC senses viral capsid proteins "
-    "and liberates the CmdT mRNA ADP-ribosyltransferase. The pinned "
-    "DefenseFinder wiki page, HMM inventory, and rules table record this "
-    "same three-component model under PD-T4-9 with required "
+    "and liberates the CmdT mRNA ADP-ribosyltransferase. Vassallo et al. also "
+    "state that PD-T4-9 was renamed CmdTAC, and the pinned DefenseFinder HMM "
+    "inventory and rules table record PD-T4-9 with required "
     "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory "
-    "PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape "
-    "routes, and natural family breadth remain unresolved."
+    "PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape routes, "
+    "and natural family breadth remain unresolved."
 )
 OLD_DISCUSSION_RATIONALES = {
     (
@@ -208,14 +223,30 @@ OLD_DISCUSSION_RATIONALES = {
         "Tevenvirinae, escape routes, and natural family breadth remain "
         "unresolved."
     ),
+    (
+        "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone "
+        "abortive-infection system in which CmdC senses viral capsid proteins "
+        "and liberates the CmdT mRNA ADP-ribosyltransferase. The pinned "
+        "DefenseFinder wiki page, HMM inventory, and rules table record this "
+        "same three-component model under PD-T4-9 with required "
+        "PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory "
+        "PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape "
+        "routes, and natural family breadth remain unresolved."
+    ),
     DISCUSSION_RATIONALE,
 }
-SCOPE_NOTES = (
+OLD_SCOPE_NOTES = (
     "The graph captures CmdTAC as a named toxin-antitoxin-chaperone "
     "abortive-infection system from Escherichia coli ECOR22 and links "
     "DefenseFinder's PD-T4-9 model namespace to that same three-component "
     "system, while leaving phage specificity beyond Tevenvirinae, escape "
     "routes, and natural family breadth unresolved."
+)
+SCOPE_NOTES = (
+    "The graph captures CmdTAC as a named toxin-antitoxin-chaperone "
+    "abortive-infection system from Escherichia coli ECOR22 while leaving "
+    "phage specificity beyond Tevenvirinae, escape routes, and natural family "
+    "breadth unresolved."
 )
 CHANGE_NOTE = (
     "Recorded PD-T4-9 as a DefenseFinder related label for CmdTAC after an "
@@ -228,6 +259,18 @@ CHANGE_NOTE = (
 
 def evidence_key(item: dict[str, Any]) -> tuple[str | None, str | None]:
     return item.get("reference"), item.get("snippet")
+
+
+def upsert_pd_t4_9_synonym(synonyms: list[dict[str, Any]]) -> None:
+    for item in synonyms:
+        if item.get("synonym_text") != "PD-T4-9":
+            continue
+        if item in (OLD_PD_T4_9_SYNONYM, PD_T4_9_SYNONYM):
+            item.clear()
+            item.update(copy.deepcopy(PD_T4_9_SYNONYM))
+            return
+        raise ValueError("PD-T4-9 synonym was already edited")
+    synonyms.append(copy.deepcopy(PD_T4_9_SYNONYM))
 
 
 def update_article_registry_note(evidence: list[dict[str, Any]]) -> None:
@@ -269,12 +312,19 @@ def normalize_composition_notes(evidence: list[dict[str, Any]]) -> None:
     raise ValueError("CmdTAC PD-T4-9 composition evidence is missing")
 
 
-def remove_old_component_snippet(evidence: list[dict[str, Any]]) -> None:
+def remove_old_wiki_narrative_snippets(evidence: list[dict[str, Any]]) -> None:
+    old_notes = {
+        OLD_COMPONENT_SNIPPET: OLD_COMPONENT_NOTES,
+        OLD_OPERON_SNIPPET: OLD_OPERON_NOTES,
+    }
     for index, item in enumerate(evidence):
-        if evidence_key(item) != (DEFENSEFINDER_WIKI, OLD_COMPONENT_SNIPPET):
+        if item.get("reference") != DEFENSEFINDER_WIKI:
             continue
-        if item.get("notes") != OLD_COMPONENT_NOTES:
-            raise ValueError("CmdTAC component-role evidence was already edited")
+        snippet = item.get("snippet")
+        if snippet not in old_notes:
+            continue
+        if item.get("notes") != old_notes[snippet]:
+            raise ValueError("CmdTAC PD-T4-9 narrative evidence was already edited")
         del evidence[index]
         return
 
@@ -286,7 +336,7 @@ def set_discussion_evidence(discussion: dict[str, Any]) -> None:
         return
     if isinstance(evidence, list):
         normalized = copy.deepcopy(evidence)
-        remove_old_component_snippet(normalized)
+        remove_old_wiki_narrative_snippets(normalized)
         normalize_composition_notes(normalized)
         normalize_rules_notes(normalized)
         if normalized in (PD_T4_9_EVIDENCE[1:], PD_T4_9_EVIDENCE):
@@ -306,12 +356,11 @@ def update_record(doc: dict[str, Any]) -> None:
         raise ValueError(f"unexpected parents: {doc.get('parent_traits')}")
 
     synonyms = doc.setdefault("synonyms", [])
-    if not any(item.get("synonym_text") == "PD-T4-9" for item in synonyms):
-        synonyms.append(copy.deepcopy(PD_T4_9_SYNONYM))
+    upsert_pd_t4_9_synonym(synonyms)
 
     evidence = doc.setdefault("evidence", [])
     update_article_registry_note(evidence)
-    remove_old_component_snippet(evidence)
+    remove_old_wiki_narrative_snippets(evidence)
     normalize_composition_notes(evidence)
     seen = {evidence_key(item) for item in evidence}
     for item in PD_T4_9_EVIDENCE:
@@ -325,7 +374,9 @@ def update_record(doc: dict[str, Any]) -> None:
     old_scope = graphs[0].get("scope_notes", "")
     if "absence of pinned DefenseFinder HMM or rule rows unresolved" in old_scope:
         graphs[0]["scope_notes"] = SCOPE_NOTES
-    elif old_scope != SCOPE_NOTES:
+    elif old_scope in {OLD_SCOPE_NOTES, SCOPE_NOTES}:
+        graphs[0]["scope_notes"] = SCOPE_NOTES
+    else:
         raise ValueError("CmdTAC scope note was already edited")
 
     discussions = doc.get("discussions") or []

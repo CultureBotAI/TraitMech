@@ -22,7 +22,7 @@ synonyms:
   source: DOI:10.1038/s41586-024-08102-8
 - synonym_text: PD-T4-9
   synonym_type: RELATED_SYNONYM
-  source: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md
+  source: DOI:10.1038/s41564-022-01219-4
 evidence:
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: Here we characterize the widely distributed anti-phage defence system CmdTAC,
@@ -87,22 +87,12 @@ evidence:
     PD-T4-9                | Custom                  | 20     |'
   notes: The pinned DefenseFinder HMM inventory records PD-T4-9__PD-T4-9_A, PD-T4-9__PD-T4-9_B,
     and PD-T4-9__PD-T4-9_C under the PD-T4-9 system namespace.
-- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md
-  snippet: 'The CmdTAC system is encoded within a tri-cistronic operon, meaning the
-    three component genes are transcribed together. This organization is crucial for
-    the precise co-translational assembly and regulation of the complex.
-
-    While the system is often found within prophages (integrated viral genomes) in
-    E. coli, the functional genes are arranged in a specific order:
-
-    * The gene for the Chaperone (CmdC) often initiates the operon.
-
-    * The Antitoxin gene (CmdA) typically follows, preceding the Toxin.
-
-    * The Toxin gene (CmdT) is usually the downstream component.'
-  notes: The DefenseFinder PD-T4-9 page describes CmdTAC as a tri-cistronic locus
-    whose chaperone, antitoxin, and toxin genes match the PD-T4-9_C, PD-T4-9_B, PD-T4-9_A
-    order illustrated on the same page.
+- reference: DOI:10.1038/s41564-022-01219-4
+  snippet: PD-T4-9 also contains a third component, a SecB-like chaperone, suggesting
+    that it is related to an enigmatic class of TA systems called toxin-antitoxin-chaperone
+    (TAC) systems, so we renamed this system CmdTAC
+  notes: Vassallo et al. state that PD-T4-9 was renamed CmdTAC after they recognized
+    its SecB-like chaperone component.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
@@ -117,8 +107,7 @@ causal_graphs:
     and abortive phage defense.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures CmdTAC as a named toxin-antitoxin-chaperone abortive-infection
-    system from Escherichia coli ECOR22 and links DefenseFinder's PD-T4-9 model namespace
-    to that same three-component system, while leaving phage specificity beyond Tevenvirinae,
+    system from Escherichia coli ECOR22 while leaving phage specificity beyond Tevenvirinae,
     escape routes, and natural family breadth unresolved.
   nodes:
   - node_id: cmdtac_locus
@@ -231,9 +220,9 @@ discussions:
   status: OPEN
   rationale: Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection
     system in which CmdC senses viral capsid proteins and liberates the CmdT mRNA
-    ADP-ribosyltransferase. The pinned DefenseFinder wiki page, HMM inventory, and
-    rules table record this same three-component model under PD-T4-9 with required
-    PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory PD-T4-9__PD-T4-9_B.
+    ADP-ribosyltransferase. Vassallo et al. also state that PD-T4-9 was renamed CmdTAC,
+    and the pinned DefenseFinder HMM inventory and rules table record PD-T4-9 with
+    required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory PD-T4-9__PD-T4-9_B.
     Phage specificity beyond Tevenvirinae, escape routes, and natural family breadth
     remain unresolved.
   attaches_to:
@@ -241,22 +230,12 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-21'
   evidence:
-  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md
-    snippet: 'The CmdTAC system is encoded within a tri-cistronic operon, meaning
-      the three component genes are transcribed together. This organization is crucial
-      for the precise co-translational assembly and regulation of the complex.
-
-      While the system is often found within prophages (integrated viral genomes)
-      in E. coli, the functional genes are arranged in a specific order:
-
-      * The gene for the Chaperone (CmdC) often initiates the operon.
-
-      * The Antitoxin gene (CmdA) typically follows, preceding the Toxin.
-
-      * The Toxin gene (CmdT) is usually the downstream component.'
-    notes: The DefenseFinder PD-T4-9 page describes CmdTAC as a tri-cistronic locus
-      whose chaperone, antitoxin, and toxin genes match the PD-T4-9_C, PD-T4-9_B,
-      PD-T4-9_A order illustrated on the same page.
+  - reference: DOI:10.1038/s41564-022-01219-4
+    snippet: PD-T4-9 also contains a third component, a SecB-like chaperone, suggesting
+      that it is related to an enigmatic class of TA systems called toxin-antitoxin-chaperone
+      (TAC) systems, so we renamed this system CmdTAC
+    notes: Vassallo et al. state that PD-T4-9 was renamed CmdTAC after they recognized
+      its SecB-like chaperone component.
   - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md
     snippet: 'The PD-T4-9 is composed of 3 proteins: PD-T4-9_A, PD-T4-9_B and PD-T4-9_C.'
     notes: The DefenseFinder wiki names the three protein components in the PD-T4-9

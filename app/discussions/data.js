@@ -1067,11 +1067,11 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#cmdtac_mrna_adp_ribosylation_aborts_phage"
   ],
-  "rationale": "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection system in which CmdC senses viral capsid proteins and liberates the CmdT mRNA ADP-ribosyltransferase. The pinned DefenseFinder wiki page, HMM inventory, and rules table record this same three-component model under PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape routes, and natural family breadth remain unresolved.",
+  "rationale": "Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection system in which CmdC senses viral capsid proteins and liberates the CmdT mRNA ADP-ribosyltransferase. Vassallo et al. also state that PD-T4-9 was renamed CmdTAC, and the pinned DefenseFinder HMM inventory and rules table record PD-T4-9 with required PD-T4-9__PD-T4-9_A and PD-T4-9__PD-T4-9_C profiles plus accessory PD-T4-9__PD-T4-9_B. Phage specificity beyond Tevenvirinae, escape routes, and natural family breadth remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 5,
   "evidence_refs": [
-   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md",
+   "DOI:10.1038/s41564-022-01219-4",
    "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md",
    "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-9.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
