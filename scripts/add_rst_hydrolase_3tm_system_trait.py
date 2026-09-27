@@ -52,8 +52,8 @@ ROUSSET_T7_SNIPPET = (
     "HAD-like hydrolase associated with a transmembrane protein"
 )
 ROUSSET_VALIDATED_DEFENSES_SNIPPET = (
-    "Phage resistance heatmaps of the validated defense systems show the "
-    "median fold resistance of three independent replicates against a panel "
+    "Phage resistance heatmap of the validated defense systems shows the "
+    "mean fold resistance of three independent replicates against a panel "
     "of eight phages"
 )
 WIKI_STRUCTURE_SNIPPET = (
@@ -113,7 +113,7 @@ def rousset_validated_defenses_evidence() -> dict[str, str]:
         "reference": ROUSSET,
         "snippet": ROUSSET_VALIDATED_DEFENSES_SNIPPET,
         "notes": (
-            "The Figure 5 legend frames the cloned P4-hotspot hits, "
+            "The Figure 2 legend frames the cloned P4-hotspot hits, "
             "including the hydrolase plus transmembrane-protein system, "
             "as validated defense systems in a replicated "
             "phage-resistance heatmap."
