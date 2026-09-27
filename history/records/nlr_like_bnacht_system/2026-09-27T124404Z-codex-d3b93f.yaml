@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/nlr_like_bnacht_system.yaml
+  slug: nlr_like_bnacht_system
+session:
+  id: 2026-09-27T124404Z-codex-d3b93f
+  timestamp: '2026-09-27T12:44:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add NLR-like bNACHT system trait
+  details: Minted traitmech:000408 for the DOI-, PMID-, and stable-URL-backed NLR-like bNACHT
+    phage-defense system under phage defense system, added the v285 METPO placeholder proposal,
+    and recorded PMC plus pinned DefenseFinder article, rule, and HMM evidence.
