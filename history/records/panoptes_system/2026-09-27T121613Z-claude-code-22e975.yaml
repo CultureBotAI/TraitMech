@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/panoptes_system.yaml
+  slug: panoptes_system
+session:
+  id: 2026-09-27T121613Z-claude-code-22e975
+  timestamp: '2026-09-27T12:16:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1354
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1337
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Reviewed Panoptes canonical example evidence
+  details: 'Follow-up to session 2026-09-27T092423Z-codex-a1d5bb: reviewed the Vibrio navarrensis
+    canonical-example evidence gap, retained the species as the VnOptSE source exemplar, documented
+    that the native chromosomal Panoptes validation gap remains open, and appended REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+    to the TraitRecord curation history.'
