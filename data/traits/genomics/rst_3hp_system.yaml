@@ -1,0 +1,251 @@
+identifier: traitmech:000398
+label: Rst_3HP system
+definition: A phage defense system in which an organism possesses a three-protein
+  Rst_3HP locus represented by DefenseFinder as a three-profile model requiring Rst_3HP__Hp1,
+  Rst_3HP__Hp2, and Rst_3HP__Hp3 and experimentally linked to P1 protection when expressed
+  in Escherichia coli.
+definition_source: DOI:10.1016/j.chom.2022.02.018
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Rst_3HP
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Rst_3HP__Hp1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Rst_3HP__Hp2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Rst_3HP__Hp3
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: The second system comprises three genes that have no clear predicted domain
+    and protect against P1.
+  notes: Rousset et al. experimentally describe the unnamed three-gene P2-hotspot
+    system that DefenseFinder tracks as Rst_3HP.
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Phage resistance heatmaps of the validated defense systems show the median
+    fold resistance of three independent replicates against a panel of eight phages
+  notes: The Figure 5 legend frames the cloned P2-hotspot hits, including the three-gene
+    P1-restricting system, as validated defense systems in a replicated phage-resistance
+    heatmap.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: 'The Rst_3HP system is composed of 3 proteins: Hp1, Hp2 and, Hp3. These
+    proteins do not have clear predicted domains but they confer resistance against
+    the phage P1 in *Escherichia coli* E1114 :ref{doi=10.1016/j.chom.2022.02.018}.'
+  notes: The pinned DefenseFinder wiki page names Rst_3HP as a three-protein system
+    and links Hp1, Hp2, and Hp3 to P1 resistance in Escherichia coli E1114.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: As far as we are aware, the molecular mechanism is unknown.
+  notes: The pinned DefenseFinder wiki page leaves the Rst_3HP molecular mechanism
+    unresolved.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: 'The Rst_3HP is composed of 3 proteins: Hp1, Hp2 and Hp3.'
+  notes: The pinned DefenseFinder wiki page describes Rst_3HP as a three-component
+    Hp1/Hp2/Hp3 system.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: The Rst_3HP system in *Aquitalea denitrificans* (GCF_009856625.1, NZ_CP047241)
+    is composed of 3 proteins Hp1 (WP_159879082.1) Hp2 (WP_159879084.1) Hp3 (WP_159879086.1)
+  notes: The DefenseFinder wiki illustrates a predicted three-protein Rst_3HP locus
+    in RefSeq assembly GCF_009856625.1 on NZ_CP047241.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: "Rousset_2022[<a href='https://doi.org/10.1016/j.chom.2022.02.018'>Rousset\
+    \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli P2 loci \n<a href='https://ncbi.nlm.nih.gov/protein/WP_000508501.1'>WP_000508501.1</a>,\
+    \ <a href='https://ncbi.nlm.nih.gov/protein/WP_112026686.1'>WP_112026686.1</a>,\n\
+    <a href='https://ncbi.nlm.nih.gov/protein/WP_000756244.1'>WP_000756244.1</a>]\
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> P1"
+  notes: The DefenseFinder experimental-validation diagram links Rousset et al. to
+    an Escherichia coli P2-locus source expressed in Escherichia coli against P1.
+- reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+  snippet: "subgraph Title4[Protects against]\n        P1"
+  notes: The DefenseFinder experimental-validation diagram lists P1 in the Rst_3HP
+    protects-against subgraph.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Rst_3HP | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots of
+    bacterial immune systems
+  notes: The DefenseFinder article registry maps the named Rst_3HP system to the Rousset
+    et al. preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Rst_3HP\tRst_3HP\t3\t3\tRst_3HP__Hp1, Rst_3HP__Hp2, Rst_3HP__Hp3\t\t\t"
+  notes: The DefenseFinder rules table models Rst_3HP as a three-profile system requiring
+    Rst_3HP__Hp1, Rst_3HP__Hp2, and Rst_3HP__Hp3.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Rst_3HP__Hp1                                     | Rst_3HP__Hp1                                     |
+    Rst_3HP                | Custom                  | 67     |
+
+    | Rst_3HP__Hp2                                     | Rst_3HP__Hp2                                     |
+    Rst_3HP                | Custom                  | 26     |
+
+    | Rst_3HP__Hp3                                     | Rst_3HP__Hp3                                     |
+    Rst_3HP                | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Hp1, Hp2, and Hp3 custom profiles
+    under Rst_3HP.
+causal_graphs:
+- graph_id: rst_3hp_locus_restricts_p1
+  title: Rst_3HP loci restrict P1 phage
+  description: Conservative system-level sketch linking a named Rst_3HP three-gene
+    locus model to P1 phage resistance.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Rst_3HP as a named DefenseFinder three-profile phage-defense
+    system while leaving native host breadth, Hp1/Hp2/Hp3 molecular activities, profile-to-gene
+    mapping, the direct phage trigger, and the P1 restriction mechanism unresolved.
+  nodes:
+  - node_id: rst_3hp_locus
+    label: Rst_3HP locus
+    node_type: GENETIC_ELEMENT
+    description: A three-gene Hp1/Hp2/Hp3 phage-defense locus represented by the custom
+      DefenseFinder Rst_3HP profiles.
+  - node_id: p1_phage_resistance
+    label: P1 phage resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Resistance against phage P1 in a host expressing an Rst_3HP locus.
+  - node_id: rst_3hp_system_trait
+    label: Rst_3HP system
+    node_type: TRAIT
+    grounding: traitmech:000398
+    description: Possession of a genome-encoded Rst_3HP phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: rst_3hp_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: p1_phage_resistance
+    description: Rousset et al. linked a cloned three-gene P2-hotspot system to P1
+      protection, and DefenseFinder models Rst_3HP as a three-profile Hp1/Hp2/Hp3
+      system.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: The second system comprises three genes that have no clear predicted
+        domain and protect against P1.
+      notes: Rousset et al. experimentally describe the unnamed three-gene P2-hotspot
+        system that DefenseFinder tracks as Rst_3HP.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+      snippet: 'The Rst_3HP system is composed of 3 proteins: Hp1, Hp2 and, Hp3. These
+        proteins do not have clear predicted domains but they confer resistance against
+        the phage P1 in *Escherichia coli* E1114 :ref{doi=10.1016/j.chom.2022.02.018}.'
+      notes: The pinned DefenseFinder wiki page names Rst_3HP as a three-protein system
+        and links Hp1, Hp2, and Hp3 to P1 resistance in Escherichia coli E1114.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Rst_3HP\tRst_3HP\t3\t3\tRst_3HP__Hp1, Rst_3HP__Hp2, Rst_3HP__Hp3\t\
+        \t\t"
+      notes: The DefenseFinder rules table models Rst_3HP as a three-profile system
+        requiring Rst_3HP__Hp1, Rst_3HP__Hp2, and Rst_3HP__Hp3.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_3HP__Hp1                                     | Rst_3HP__Hp1                                     |
+        Rst_3HP                | Custom                  | 67     |
+
+        | Rst_3HP__Hp2                                     | Rst_3HP__Hp2                                     |
+        Rst_3HP                | Custom                  | 26     |
+
+        | Rst_3HP__Hp3                                     | Rst_3HP__Hp3                                     |
+        Rst_3HP                | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Hp1, Hp2, and Hp3 custom profiles
+        under Rst_3HP.
+  - subject: p1_phage_resistance
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: rst_3hp_system_trait
+    description: Rst_3HP-linked P1 resistance realizes the Rst_3HP system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: The second system comprises three genes that have no clear predicted
+        domain and protect against P1.
+      notes: Rousset et al. experimentally describe the unnamed three-gene P2-hotspot
+        system that DefenseFinder tracks as Rst_3HP.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+      snippet: "Rousset_2022[<a href='https://doi.org/10.1016/j.chom.2022.02.018'>Rousset\
+        \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli P2 loci \n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_000508501.1'>WP_000508501.1</a>,\
+        \ <a href='https://ncbi.nlm.nih.gov/protein/WP_112026686.1'>WP_112026686.1</a>,\n\
+        <a href='https://ncbi.nlm.nih.gov/protein/WP_000756244.1'>WP_000756244.1</a>]\
+        \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
+        \ P1"
+      notes: The DefenseFinder experimental-validation diagram links Rousset et al.
+        to an Escherichia coli P2-locus source expressed in Escherichia coli against
+        P1.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+      snippet: "subgraph Title4[Protects against]\n        P1"
+      notes: The DefenseFinder experimental-validation diagram lists P1 in the Rst_3HP
+        protects-against subgraph.
+  - subject: rst_3hp_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Rst_3HP system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Phage resistance heatmaps of the validated defense systems show the
+        median fold resistance of three independent replicates against a panel of
+        eight phages
+      notes: The Figure 5 legend frames the cloned P2-hotspot hits, including the
+        three-gene P1-restricting system, as validated defense systems in a replicated
+        phage-resistance heatmap.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Rst_3HP | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+        of bacterial immune systems
+      notes: The DefenseFinder article registry maps the named Rst_3HP system to the
+        Rousset et al. preprint.
+discussions:
+- discussion_id: rst-3hp-host-mechanism-gap
+  prompt: Resolve Rst_3HP native host breadth, Hp1/Hp2/Hp3 molecular activities, profile-to-gene
+    mapping, and the mechanism of P1 restriction before minting narrower Rst_3HP mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Rousset et al. support a three-gene P2-hotspot system with no clear predicted
+    domains that protects against P1, and DefenseFinder represents Rst_3HP as a required
+    Hp1/Hp2/Hp3 three-profile model. This first system-level record leaves native
+    host breadth, profile-to-gene mapping, the molecular activities of Hp1, Hp2, and
+    Hp3, and the P1 restriction mechanism unresolved.
+  evidence:
+  - reference: DOI:10.1016/j.chom.2022.02.018
+    snippet: The second system comprises three genes that have no clear predicted
+      domain and protect against P1.
+    notes: Rousset et al. experimentally describe the unnamed three-gene P2-hotspot
+      system that DefenseFinder tracks as Rst_3HP.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+    snippet: As far as we are aware, the molecular mechanism is unknown.
+    notes: The pinned DefenseFinder wiki page leaves the Rst_3HP molecular mechanism
+      unresolved.
+  - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md
+    snippet: 'The Rst_3HP is composed of 3 proteins: Hp1, Hp2 and Hp3.'
+    notes: The pinned DefenseFinder wiki page describes Rst_3HP as a three-component
+      Hp1/Hp2/Hp3 system.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Rst_3HP\tRst_3HP\t3\t3\tRst_3HP__Hp1, Rst_3HP__Hp2, Rst_3HP__Hp3\t\t\
+      \t"
+    notes: The DefenseFinder rules table models Rst_3HP as a three-profile system
+      requiring Rst_3HP__Hp1, Rst_3HP__Hp2, and Rst_3HP__Hp3.
+  attaches_to:
+  - causal_graphs#rst_3hp_locus_restricts_p1
+  posed_by: codex
+  posed_date: '2026-09-27'
+curation_history:
+- timestamp: '2026-09-27T01:03:20Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Rst_3HP system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v275.
+  llm_assisted: true
+- timestamp: '2026-09-27T01:03:21Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Rst_3HP during canonical-example issue 444 enforcement and left
+    canonical_examples empty because the sources support a cloned P2-hotspot Hp1/Hp2/Hp3
+    locus assayed in Escherichia coli and a DefenseFinder RefSeq model example, but
+    not a direct native microbial isolate exemplar with experimentally verified Rst_3HP
+    activity. No paid research was used.
+  llm_assisted: true

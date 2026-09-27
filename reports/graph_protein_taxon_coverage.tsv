@@ -322,6 +322,7 @@ data/traits/genomics/rloc_system.yaml	traitmech:000366	RloC system	rloc_locus_tr
 data/traits/genomics/rnlab_system.yaml	traitmech:000367	RnlAB system	rnlab_locus_antagonizes_t4_dmd_mutants	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rosmerta_system.yaml	traitmech:000256	RosmerTA system	rosmerta_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/rst_3hp_system.yaml	traitmech:000398	Rst_3HP system	rst_3hp_locus_restricts_p1	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rst_duf4238_system.yaml	traitmech:000374	Rst_DUF4238 system	rst_duf4238_locus_restricts_t7	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rst_gop_beta_cll_system.yaml	traitmech:000376	Rst gop-beta-cII system	rst_gop_beta_cll_locus_restricts_lambda_p1	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rst_tir_nlr_system.yaml	traitmech:000377	Rst TIR-NLR system	rst_tir_nlr_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

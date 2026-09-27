@@ -3241,6 +3241,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rosmerta_system.html#rosmerta-mechanism-gap"
  },
  {
+  "discussion_id": "rst-3hp-host-mechanism-gap",
+  "prompt": "Resolve Rst_3HP native host breadth, Hp1/Hp2/Hp3 molecular activities, profile-to-gene mapping, and the mechanism of P1 restriction before minting narrower Rst_3HP mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst_3HP system",
+  "source_id": "traitmech:000398",
+  "source_file": "rst_3hp_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_3hp_locus_restricts_p1"
+  ],
+  "rationale": "Rousset et al. support a three-gene P2-hotspot system with no clear predicted domains that protects against P1, and DefenseFinder represents Rst_3HP as a required Hp1/Hp2/Hp3 three-profile model. This first system-level record leaves native host breadth, profile-to-gene mapping, the molecular activities of Hp1, Hp2, and Hp3, and the P1 restriction mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_3hp.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_3hp_system.html#rst-3hp-host-mechanism-gap"
+ },
+ {
   "discussion_id": "rst-duf4238-host-mechanism-gap",
   "prompt": "Resolve Rst_DUF4238 native host breadth, accession-level DUF4238 proteins, and the molecular mechanism of T7 restriction before minting narrower Rst_DUF4238 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5111,9 +5135,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 267,
- "total_knowledge_gaps": 185,
- "total_source_entries": 265,
+ "total_discussions": 268,
+ "total_knowledge_gaps": 186,
+ "total_source_entries": 266,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
