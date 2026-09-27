@@ -154,6 +154,7 @@ t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	2	data/traits/genomic
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
+t7 phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/rst_duf4238_system.yaml|data/traits/genomics/rst_helicaseduf2290_system.yaml
 ssp single-stranded dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/sspabcd_sspe_system.yaml|data/traits/genomics/sspabcd_sspfgh_system.yaml
 light energy	ENVIRONMENTAL_FACTOR	2	data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 calvin-benson-bassham cycle	PATHWAY	2	data/traits/metabolism/carbon_fixation.yaml|data/traits/physiology/mixotrophic.yaml
@@ -1573,9 +1574,9 @@ multi-phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_2tm_1tm_tir
 rst_3hp locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_3hp_system.yaml
 p1 phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_3hp_system.yaml
 rst_duf4238 locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_duf4238_system.yaml
-t7 phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_duf4238_system.yaml
 rst gop-beta-cii locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_gop_beta_cll_system.yaml
 lambda and p1 phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_gop_beta_cll_system.yaml
+rst_helicaseduf2290 locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_helicaseduf2290_system.yaml
 rst tir-nlr locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_tir_nlr_system.yaml
 virulent and p2-like phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_tir_nlr_system.yaml
 rugutis locus	GENETIC_ELEMENT	1	data/traits/genomics/rugutis_system.yaml

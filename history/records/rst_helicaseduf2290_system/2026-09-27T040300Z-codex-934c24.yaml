@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_helicaseduf2290_system.yaml
+  slug: rst_helicaseduf2290_system
+session:
+  id: 2026-09-27T040300Z-codex-934c24
+  timestamp: '2026-09-27T04:03:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added Rst_HelicaseDUF2290 system trait
+  details: Minted traitmech:000401 for the DefenseFinder Rst_HelicaseDUF2290
+    phage-defense system, reserved METPO:1035500 in
+    proposals/metpo_traitmech_v278, and curated DOI/stable-URL evidence from
+    Rousset et al., the pinned DefenseFinder wiki, article registry, rules
+    table, and HMM inventory for the two-profile T7-resistance model.
