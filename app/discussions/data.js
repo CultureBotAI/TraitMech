@@ -3412,6 +3412,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rst_hydrolase_3tm_system.html#rst-hydrolase-3tm-host-mechanism-gap"
  },
  {
+  "discussion_id": "rst-rt-nitrilase-tm-host-mechanism-gap",
+  "prompt": "Resolve Rst_RT-nitrilase-Tm native host breadth, the Rst_RT-nitrilase-Tm and Rst_RT-Tm namespace relationship, accession-level RT/RT-Tm roles, the relationship to UG5-large source naming, and the mechanism of AL505_P2 restriction before minting narrower Rst_RT-nitrilase-Tm mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst_RT-nitrilase-Tm system",
+  "source_id": "traitmech:000403",
+  "source_file": "rst_rt_nitrilase_tm_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_rt_nitrilase_tm_locus_restricts_al505_p2"
+  ],
+  "rationale": "Rousset et al. support a two-gene P4-hotspot system that combines a group-5 reverse transcriptase with a C-terminal nitrilase domain and a transmembrane effector, and DefenseFinder maps Rst_RT-nitrilase-Tm to a required two-profile Rst_RT-Tm model. This first system-level record leaves native host breadth, exact profile-to-gene mapping, the model-namespace mismatch, the relationship to UG5-large source naming, the molecular activities of the RT and RT-Tm components, and the AL505_P2 restriction mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_rt-nitrilase-tm.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_rt_nitrilase_tm_system.html#rst-rt-nitrilase-tm-host-mechanism-gap"
+ },
+ {
   "discussion_id": "rst-tir-nlr-mechanism-gap",
   "prompt": "Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence, direct phage trigger, and TIR/STAND activation before minting narrower Rst TIR-NLR mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -5234,9 +5258,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 272,
- "total_knowledge_gaps": 190,
- "total_source_entries": 270,
+ "total_discussions": 273,
+ "total_knowledge_gaps": 191,
+ "total_source_entries": 271,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_rt_nitrilase_tm_system.yaml
+  slug: rst_rt_nitrilase_tm_system
+session:
+  id: 2026-09-27T063752Z-codex-63f27e
+  timestamp: '2026-09-27T06:37:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Rst_RT-nitrilase-Tm system trait
+  details: Minted traitmech:000403 for the DefenseFinder Rst_RT-nitrilase-Tm phage-defense
+    system, reserved METPO:1035700 in proposals/metpo_traitmech_v280, and curated DOI/stable-URL
+    evidence from Rousset et al., the pinned DefenseFinder wiki, and pinned DefenseFinder
+    registry rows for the Rst_RT-Tm profiles.
