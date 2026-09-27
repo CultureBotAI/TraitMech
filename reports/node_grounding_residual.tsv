@@ -1455,6 +1455,8 @@ nixi locus	GENETIC_ELEMENT	1	data/traits/genomics/nixi_system.yaml
 icp1 genome cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/nixi_system.yaml
 icp1 replication inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/nixi_system.yaml
 ogmios locus	GENETIC_ELEMENT	1	data/traits/genomics/ogmios_system.yaml
+old exonuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/old_exonuclease_system.yaml
+lambda phage interference	BIOLOGICAL_PROCESS	1	data/traits/genomics/old_exonuclease_system.yaml
 olokun locus	GENETIC_ELEMENT	1	data/traits/genomics/olokun_system.yaml
 ophion locus	GENETIC_ELEMENT	1	data/traits/genomics/ophion_system.yaml
 oshun locus	GENETIC_ELEMENT	1	data/traits/genomics/oshun_system.yaml
