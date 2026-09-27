@@ -878,6 +878,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/gaps1_system",
     "genomics/gao_her_duf_system",
     "genomics/gao_her_sir_system",
+    "genomics/gao_her_system",
     "genomics/gao_hhe_system",
     "genomics/gao_iet_system",
     "genomics/gao_mza_system",

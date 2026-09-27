@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_her_system.yaml
+  slug: gao_her_system
+session:
+  id: 2026-09-27T135317Z-codex-32f9c1
+  timestamp: '2026-09-27T13:53:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-Her phage-defense system parent
+  details: Added traitmech:000409 for the DefenseFinder Gao_Her phage-defense family, backed
+    by Gao et al. plus the pinned DefenseFinder article and rules registries. Reserved METPO:1036300
+    in proposals/metpo_traitmech_v286 and left subtype-specific triggers and effector activities
+    as an explicit knowledge gap.
