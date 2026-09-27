@@ -34,7 +34,7 @@ curation corpus. It found no exact same-scope Rst_3HP system record,
 `rst_3hp_system` slug, Hp1/Hp2/Hp3 source protein accessions,
 `traitmech:000398`, `metpo_traitmech_v275`, or `METPO:1035200`; the Rousset
 final DOI was already used by the distinct PARIS, Rst_DUF4238, and
-Rst_gop_beta_cll system records.
+Rst_gop_beta_cll and Rst_TIR-NLR system records.
 
 Subset tag: `metpo_traitmech_2026_09`.
 
