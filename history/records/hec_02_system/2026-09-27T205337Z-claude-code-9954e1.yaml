@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_02_system.yaml
+  slug: hec_02_system
+session:
+  id: 2026-09-27T205337Z-claude-code-9954e1
+  timestamp: '2026-09-27T20:53:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  - discussions
+  summary: Added HEC-02 system
+  details: Minted traitmech:000417 as the DOI-backed HEC-02 system GENOMICS trait under phage
+    defense system; added Payne et al. Hma-embedded-candidate evidence plus the pinned DefenseFinder
+    article and HMM inventory references; reserved METPO:1037100 in proposals/metpo_traitmech_v294
+    and kept narrower HEC-02 mechanism children blocked by native-host, sensitive-phage, profile-to-component,
+    molecular-output, and DefenseFinder rules coverage gaps.
