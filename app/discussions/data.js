@@ -2634,6 +2634,29 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/oshun_system.html#oshun-mechanism-gap"
  },
  {
+  "discussion_id": "pago-subfamily-boundary-gap",
+  "prompt": "Resolve pAgo subfamily boundaries, accessory-protein requirements, and substrate breadth before minting narrower long-pAgo or APAZ-associated defense children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "prokaryotic Argonaute defense system",
+  "source_id": "traitmech:000419",
+  "source_file": "pago_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pago_system_family_hierarchy"
+  ],
+  "rationale": "SPARTA and DdmDE support prokaryotic Argonaute defense systems as a reusable genomics family, and DefenseFinder models a pAgo namespace with long pAgo, SPARTA, and optional APAZ-associated profiles. This parent does not yet resolve whether every DefenseFinder pAgo submodel has the same plasmid or phage substrate range, whether standalone APAZ-associated profiles are exact children, or which native-host examples support each subfamily.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.1016/j.cell.2022.03.012",
+   "DOI:10.1038/s41586-024-07515-9",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pago_system.html#pago-subfamily-boundary-gap"
+ },
+ {
   "discussion_id": "panchino_gp28-mechanism-gap",
   "prompt": "Resolve the Panchino gp28 restriction target, methylation requirements, and homolog breadth before minting narrower Panchino gp28 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5698,9 +5721,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 292,
- "total_knowledge_gaps": 206,
- "total_source_entries": 286,
+ "total_discussions": 293,
+ "total_knowledge_gaps": 207,
+ "total_source_entries": 287,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

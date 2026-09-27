@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sparta_system.yaml
+  slug: sparta_system
+session:
+  id: 2026-09-27T221201Z-codex-b3698d
+  timestamp: '2026-09-27T22:12:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_traits
+  summary: Reparent SPARTA under pAgo
+  details: Reparented traitmech:000240 SPARTA system from METPO:1000188 quality to traitmech:000419
+    prokaryotic Argonaute defense system after minting the exact local pAgo-family parent;
+    SPARTA evidence, graph edges, and open mechanism discussion were not otherwise changed.

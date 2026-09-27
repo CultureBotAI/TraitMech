@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ddmde_system.yaml
+  slug: ddmde_system
+session:
+  id: 2026-09-27T221202Z-codex-388136
+  timestamp: '2026-09-27T22:12:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_traits
+  summary: Reparent DdmDE under pAgo
+  details: Reparented traitmech:000275 DdmDE system from METPO:1000188 quality to traitmech:000419
+    prokaryotic Argonaute defense system after minting the exact local pAgo-family parent;
+    DdmDE evidence, graph edges, and open substrate discussion were not otherwise changed.

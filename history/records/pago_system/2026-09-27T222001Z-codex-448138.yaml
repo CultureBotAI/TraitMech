@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pago_system.yaml
+  slug: pago_system
+session:
+  id: 2026-09-27T222001Z-codex-448138
+  timestamp: '2026-09-27T22:20:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Add pAgo prediction snippet
+  details: Added a contiguous Makarova et al. DOI snippet to the prokaryotic Argonaute defense
+    system evidence after audit_evidence_snippets flagged the initial DOI-only item as a new
+    missing-snippet finding.

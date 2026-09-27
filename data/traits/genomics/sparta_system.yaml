@@ -10,7 +10,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000188
+- traitmech:000419
 synonyms:
 - synonym_text: short prokaryotic Argonaute TIR-APAZ system
   synonym_type: EXACT_SYNONYM
@@ -187,4 +187,11 @@ curation_history:
   changes: Minted SPARTA system as a DOI-backed GENOMICS TraitRecord under the quality
     root after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v117.
+  llm_assisted: true
+- timestamp: '2026-09-27T22:11:00Z'
+  curator: codex
+  action: REPAIRED_PARENT_TRAIT
+  changes: Reparented SPARTA system from the generic quality root to the newly minted
+    prokaryotic Argonaute defense system parent without changing SPARTA-specific evidence
+    or mechanism claims.
   llm_assisted: true

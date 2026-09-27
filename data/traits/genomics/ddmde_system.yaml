@@ -8,7 +8,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000188
+- traitmech:000419
 synonyms:
 - synonym_text: DdmDE
   synonym_type: EXACT_SYNONYM
@@ -155,4 +155,11 @@ curation_history:
   changes: 'Resolved #1055 by simplifying the DdmDE causal graph to a source-supported
     target-DNA-recognition sketch and removing unsupported guide-target handover input
     edges.'
+  llm_assisted: true
+- timestamp: '2026-09-27T22:11:00Z'
+  curator: codex
+  action: REPAIRED_PARENT_TRAIT
+  changes: Reparented DdmDE system from the generic quality root to the newly minted
+    prokaryotic Argonaute defense system parent without changing DdmDE-specific evidence
+    or mechanism claims.
   llm_assisted: true
