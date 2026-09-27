@@ -2061,6 +2061,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hypnos_system.html#hypnos-mechanism-gap"
  },
  {
+  "discussion_id": "ice-family-resolution-gap",
+  "prompt": "Resolve bacterial ICE subfamilies, Actinomycete ICE boundaries, integrase/relaxase/T4SS signatures, and cargo-phenotype scope before minting narrower ICE mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "integrative conjugative element",
+  "source_id": "traitmech:000410",
+  "source_file": "integrative_conjugative_element.yaml",
+  "attaches_to": [
+   "causal_graphs#ice_excision_conjugation_integration"
+  ],
+  "rationale": "Johnson and Grossman define ICEs by host-genome integration and a functional type IV secretion conjugation system, while Bioteau et al. classify ICEs as self-transmissible genomic islands. This first record captures the genome-level possession trait without claiming exact molecular groundings for heterogeneous integrases, relaxases, T4SS variants, Actinomycete ICE machinery, or adaptive cargo phenotypes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/integrative_conjugative_element.html#ice-family-resolution-gap"
+ },
+ {
   "discussion_id": "jukab-vesicle-effector-family-gap",
   "prompt": "Resolve JukB vesicle-destabilization chemistry and the boundaries of other JukA-containing systems before minting narrower mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5484,9 +5503,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 283,
- "total_knowledge_gaps": 197,
- "total_source_entries": 277,
+ "total_discussions": 284,
+ "total_knowledge_gaps": 198,
+ "total_source_entries": 278,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
