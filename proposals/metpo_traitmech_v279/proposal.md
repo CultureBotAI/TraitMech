@@ -1,15 +1,41 @@
-# METPO proposal: Rst_Hydrolase-3Tm system
+# METPO ROBOT Template Proposal - Rst_Hydrolase-3Tm System (v279, 2026-09)
 
-## Scope
+> **Upstream submission:** to be consolidated into
+> [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535)
+> alongside the v1-v278 cohorts, requesting a real METPO ID for this Scope-A
+> `traitmech:` fallback.
 
-This Scope A cohort lifts one TraitMech-local synthetic class into METPO.
-Scope B and Scope C counts are zero for this cohort: it proposes no causal
-predicates and no schema enum values.
+## Context
 
-Rst_Hydrolase-3Tm system was minted as `traitmech:000402` on 2026-09-27
-because METPO has no exact organism-level possession trait for the
-DefenseFinder `Rst_Hydrolase-3Tm`/`Rst_Hydrolase-Tm` model. It has been used in
-one TraitMech record since minting.
+The pinned METPO snapshot has no active exact class for Rst_Hydrolase-3Tm
+system, the genome-level possession trait for a two-gene
+hydrolase/transmembrane phage-defense locus. The pinned DefenseFinder wiki
+describes the system as a two-protein Hydrolase/Hydrolase-Tm system.
+DefenseFinder maps the `Rst_Hydrolase-3Tm` key in the pinned rule table to a
+two-required-profile `Rst_Hydrolase-Tm` system,
+`Rst_Hydrolase-Tm__Hydrolase` and `Rst_Hydrolase-Tm__Hydrolase-Tm`, with two
+associated HMM rows.
+
+This cohort lifts one local class:
+
+| Scope | Rows | Why it belongs in METPO |
+|---|---:|---|
+| A - synthetic trait class lift | 1 | local fallback for Rst_Hydrolase-3Tm |
+| B - causal-graph predicate lift | 0 | no predicates are proposed |
+| C - schema enum lift | 0 | no schema vocabulary is proposed |
+
+## ID Block
+
+`METPO:1035600` is reserved for this one-row class cohort. The v278 cohort used
+`METPO:1035500`, so v279 starts at the next hundred block to keep cohorts
+visually separated and leave room for upstream minting.
+
+The pre-curation collision search included ignored and hidden files across the
+curation corpus. It found no exact same-scope Rst_Hydrolase-3Tm system record,
+`rst_hydrolase_3tm_system` slug, validation or RefSeq source protein
+accessions, `traitmech:000402`, `metpo_traitmech_v279`, or `METPO:1035600`.
+
+Subset tag: `metpo_traitmech_2026_09`.
 
 ## Proposed Class
 

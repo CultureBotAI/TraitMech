@@ -52,8 +52,8 @@ ROUSSET_T7_SNIPPET = (
     "HAD-like hydrolase associated with a transmembrane protein"
 )
 ROUSSET_VALIDATED_DEFENSES_SNIPPET = (
-    "Phage resistance heatmap of the validated defense systems shows the "
-    "mean fold resistance of three independent replicates against a panel "
+    "Phage resistance heatmaps of the validated defense systems show the "
+    "median fold resistance of three independent replicates against a panel "
     "of eight phages"
 )
 WIKI_STRUCTURE_SNIPPET = (
@@ -71,7 +71,8 @@ WIKI_VALIDATION_SNIPPET = (
     "    Origin_0[Escherichia coli P4 loci \n"
     "<a href='https://ncbi.nlm.nih.gov/protein/WP_000754434.1'>"
     "WP_000754434.1</a>, <a href='https://ncbi.nlm.nih.gov/protein/"
-    "WP_001401335.1</a>] --> Expressed_0[Escherichia coli]\n"
+    "WP_001401335.1'>WP_001401335.1</a>] --> "
+    "Expressed_0[Escherichia coli]\n"
     "    Expressed_0[Escherichia coli] ----> T7"
 )
 PROTECTS_SUBGRAPH_SNIPPET = "subgraph Title4[Protects against]\n        T7"
