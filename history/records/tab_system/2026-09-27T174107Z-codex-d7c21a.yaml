@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tab_system.yaml
+  slug: tab_system
+session:
+  id: 2026-09-27T174107Z-codex-d7c21a
+  timestamp: '2026-09-27T17:41:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added Tab system
+  details: Minted traitmech:000413 as the DOI-backed Tab system GENOMICS trait under phage
+    defense system; added Patel virion-assembly-inhibition evidence plus the pinned DefenseFinder
+    article row; reserved METPO:1036700 in proposals/metpo_traitmech_v290 and kept narrower
+    Tab children blocked by host-breadth, sensitive-phage, counter-defence, and DefenseFinder
+    HMM/rules coverage gaps.

@@ -1639,6 +1639,10 @@ stk2 kinase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yam
 host protein phosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
 host cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
 sucellos locus	GENETIC_ELEMENT	1	data/traits/genomics/sucellos_system.yaml
+tab prophage locus	GENETIC_ELEMENT	1	data/traits/genomics/tab_system.yaml
+tab-mediated virion assembly inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
+phage tail assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
+infectious virion formation	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
 taranis locus	GENETIC_ELEMENT	1	data/traits/genomics/taranis_system.yaml
 tgvab locus	GENETIC_ELEMENT	1	data/traits/genomics/tgvab_system.yaml
 glucosylated hmc phage dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/tgvab_system.yaml
