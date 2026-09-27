@@ -2486,6 +2486,47 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/panchino_gp28_system.html#panchino_gp28-mechanism-gap"
  },
  {
+  "discussion_id": "panoptes-defensefinder-model-gap",
+  "prompt": "Recheck DefenseFinder Panoptes rules and HMM profiles before using DefenseFinder model rows as optSE profile evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "Panoptes system",
+  "source_id": "traitmech:000407",
+  "source_file": "panoptes_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned DefenseFinder article registry maps Panoptes to Sullivan et al. and the Nature article title, but the pinned DefenseFinder rules and HMM inventories do not include Panoptes rows. This record therefore cites the DOI-backed article and treats the article registry as name-to-paper evidence rather than as profile support.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/panoptes_system.html#panoptes-defensefinder-model-gap"
+ },
+ {
+  "discussion_id": "panoptes-natural-host-gap",
+  "prompt": "Find a native endogenous microbial isolate with direct chromosomal Panoptes antiphage validation before adding canonical_examples.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Panoptes system",
+  "source_id": "traitmech:000407",
+  "source_file": "panoptes_system.yaml",
+  "attaches_to": [
+   "causal_graphs#panoptes_decoy_cyclic_nucleotide_defense"
+  ],
+  "rationale": "Sullivan et al. investigated a candidate Vibrio navarrensis optSE operon and showed that VnOptSE defended against Straboviridae phages when expressed in E. coli MG1655 from its endogenous promoter, but that heterologous challenge assay does not establish an endogenous V. navarrensis or E. coli chromosomal Panoptes canonical exemplar.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "DOI:10.1038/s41586-025-09557-z",
+   "DOI:10.1038/s41586-025-09557-z"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/panoptes_system.html#panoptes-natural-host-gap"
+ },
+ {
   "discussion_id": "paris-trigger-and-counterdefense-gap",
   "prompt": "Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA suppression, and non-Ocr phage triggers before minting narrower PARIS subtype children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5398,9 +5439,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 279,
- "total_knowledge_gaps": 194,
- "total_source_entries": 274,
+ "total_discussions": 281,
+ "total_knowledge_gaps": 195,
+ "total_source_entries": 275,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
