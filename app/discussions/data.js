@@ -3266,6 +3266,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rosmerta_system.html#rosmerta-mechanism-gap"
  },
  {
+  "discussion_id": "rst-2tm-1tm-tir-mechanism-gap",
+  "prompt": "Resolve Rst_2TM_1TM_TIR native host breadth, accession-level components, the proposed TIR-derived nucleotide messenger, and the downstream transmembrane activation mechanism before minting narrower Rst_2TM_1TM_TIR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst_2TM_1TM_TIR system",
+  "source_id": "traitmech:000400",
+  "source_file": "rst_2tm_1tm_tir_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_2tm_1tm_tir_locus_restricts_phages"
+  ],
+  "rationale": "The pinned DefenseFinder wiki supports a three-component AC1 Rst_2TM_1TM_TIR system that protects Escherichia coli C against multiple phages, and DefenseFinder represents Rst_2TM_1TM_TIR as a required three-profile model. Rousset et al. proposed that the TIR-containing protein could generate a nucleotide messenger to activate associated transmembrane proteins, but the wiki still records the molecular mechanism as unknown.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_2tm_1tm_tir_system.html#rst-2tm-1tm-tir-mechanism-gap"
+ },
+ {
   "discussion_id": "rst-3hp-host-mechanism-gap",
   "prompt": "Resolve Rst_3HP native host breadth, Hp1/Hp2/Hp3 molecular activities, profile-to-gene mapping, and the mechanism of P1 restriction before minting narrower Rst_3HP mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5160,9 +5185,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 269,
- "total_knowledge_gaps": 187,
- "total_source_entries": 267,
+ "total_discussions": 270,
+ "total_knowledge_gaps": 188,
+ "total_source_entries": 268,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
