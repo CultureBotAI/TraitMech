@@ -2385,6 +2385,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ogmios_system.html#ogmios-mechanism-gap"
  },
  {
+  "discussion_id": "old-exonuclease-tin-trigger-mechanism-gap",
+  "prompt": "Resolve Old_exonuclease natural host breadth, Tin accessory dependence, RecBCD-triggered activation, profile-to-protein mapping, and lambda interference mechanism before minting narrower Old nuclease mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Old exonuclease system",
+  "source_id": "traitmech:000399",
+  "source_file": "old_exonuclease_system.yaml",
+  "attaches_to": [
+   "causal_graphs#old_exonuclease_locus_interferes_with_lambda"
+  ],
+  "rationale": "The 1995 P2 Old paper supports Old nuclease activity and phage-lambda interference, and DefenseFinder represents Old_exonuclease as a required single-profile model. This first system-level record leaves Tin dependence in the Rousset et al. assay, natural host breadth, RecBCD-linked activation, profile-to-protein mapping, and the exact phage-interference mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1128/jb.177.3.497-501.1995",
+   "DOI:10.1128/jb.177.3.497-501.1995",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/old_exonuclease.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/old_exonuclease.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/old_exonuclease_system.html#old-exonuclease-tin-trigger-mechanism-gap"
+ },
+ {
   "discussion_id": "olokun-mechanism-gap",
   "prompt": "Resolve Olokun phage triggers and effector outputs before minting narrower Olokun mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5135,9 +5160,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 268,
- "total_knowledge_gaps": 186,
- "total_source_entries": 266,
+ "total_discussions": 269,
+ "total_knowledge_gaps": 187,
+ "total_source_entries": 267,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

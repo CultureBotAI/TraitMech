@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/old_exonuclease_system.yaml
+  slug: old_exonuclease_system
+session:
+  id: 2026-09-27T014756Z-codex-7bc4d9
+  timestamp: '2026-09-27T01:47:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added Old exonuclease system trait
+  details: Minted traitmech:000399 for the DefenseFinder Old_exonuclease phage-defense system,
+    reserved METPO:1035300 in proposals/metpo_traitmech_v276, and curated DOI/stable-URL evidence
+    from the P2 Old nuclease paper plus pinned DefenseFinder article, rule, HMM, and wiki
+    sources for the single-profile lambda-interference model.
