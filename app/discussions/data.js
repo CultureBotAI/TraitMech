@@ -3987,6 +3987,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sucellos_system.html#sucellos-mechanism-gap"
  },
  {
+  "discussion_id": "tab-defensefinder-model-gap",
+  "prompt": "Resolve Tab host breadth, sensitive-phage breadth, counter-defence specificity, and DefenseFinder HMM/rules coverage before minting narrower Tab mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Tab system",
+  "source_id": "traitmech:000413",
+  "source_file": "tab_system.yaml",
+  "attaches_to": [
+   "causal_graphs#tab_blocks_virion_assembly"
+  ],
+  "rationale": "Patel et al. support Tab as a prophage-encoded anti-phage defence protein that blocks invading phage-tail assembly and prevents release of infectious phage progeny, while the pinned DefenseFinder article registry names a Tab system. The pinned DefenseFinder HMM inventory and rules table have no Tab rows, and the evidence does not yet resolve host breadth, target-phage breadth, counter-defence specificity, or profile-to-activity modeling.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41467-024-45892-x",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/tab_system.html#tab-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "taranis-mechanism-gap",
   "prompt": "Resolve Taranis phage triggers and effector outputs before minting narrower Taranis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5547,9 +5571,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 286,
- "total_knowledge_gaps": 200,
- "total_source_entries": 280,
+ "total_discussions": 287,
+ "total_knowledge_gaps": 201,
+ "total_source_entries": 281,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

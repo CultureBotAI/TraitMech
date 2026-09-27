@@ -1,0 +1,186 @@
+identifier: traitmech:000413
+label: Tab system
+definition: A phage defense system in which an organism or resident prophage possesses
+  a Tab virion-assembly-inhibition locus that expresses the Tab tail-assembly-blocking
+  protein, blocks assembly of invading phage tails, prevents infectious virion formation,
+  and protects the bacterial community from phage spread.
+definition_source: DOI:10.1038/s41467-024-45892-x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Tab
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41467-024-45892-x
+evidence:
+- reference: DOI:10.1038/s41467-024-45892-x
+  snippet: a type of anti-phage defence that interferes with the virion assembly pathway
+    of invading phages
+  notes: Patel et al. define the Tab-associated anti-phage defence as interference
+    with the virion assembly pathway of invading phages.
+- reference: DOI:10.1038/s41467-024-45892-x
+  snippet: The protein that mediates this defence, which we call Tab
+  notes: Patel et al. name the protein mediating this prophage defence Tab.
+- reference: DOI:10.1038/s41467-024-45892-x
+  snippet: blocks assembly of the phage tail, thus preventing formation of infectious
+    virions
+  notes: Patel et al. show that Tab blocks phage-tail assembly and thereby prevents
+    production of infectious virions.
+- reference: DOI:10.1038/s41467-024-45892-x
+  snippet: there is no release of infectious phage progeny, and the bacterial community
+    is thereby protected from a phage epidemic
+  notes: Patel et al. connect Tab-mediated inhibition of infectious phage release
+    to protection of the bacterial community from a phage epidemic.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Tab | 10\.1038/s41467-024-45892-x | Anti-phage defence through inhibition
+    of virion assembly |'
+  notes: The pinned DefenseFinder article registry maps the named Tab system to the
+    Patel et al. virion-assembly-inhibition paper. The pinned HMM inventory (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md)
+    and pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv)
+    do not list Tab, so this row is name-to-paper evidence rather than model-component
+    evidence.
+causal_graphs:
+- graph_id: tab_blocks_virion_assembly
+  title: Tab blocks phage virion assembly
+  description: Conservative system-level sketch linking a Tab prophage-associated
+    locus to inhibition of invading phage tail assembly, blocked infectious virion
+    formation, and Tab system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Tab as a prophage-encoded virion-assembly-inhibition
+    system without asserting the full host range, full sensitive-phage range, Tab
+    counter-defence specificity, or profile-to-component DefenseFinder modeling.
+  nodes:
+  - node_id: tab_locus
+    label: Tab prophage locus
+    node_type: GENETIC_ELEMENT
+    description: A prophage locus expressing Tab, a phage tail assembly blocker.
+  - node_id: tab_virion_assembly_inhibition
+    label: Tab-mediated virion assembly inhibition
+    node_type: BIOLOGICAL_PROCESS
+    description: Tab-mediated interference with the virion assembly pathway of invading
+      phages.
+  - node_id: phage_tail_assembly
+    label: phage tail assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the phage tail during productive virion morphogenesis.
+  - node_id: infectious_virion_formation
+    label: infectious virion formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation and release of infectious phage progeny.
+  - node_id: tab_system_trait
+    label: Tab system
+    node_type: TRAIT
+    grounding: traitmech:000413
+    description: Possession of a genome-encoded Tab phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: tab_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: tab_virion_assembly_inhibition
+    description: A prophage-associated tab locus expresses the Tab protein that mediates
+      virion-assembly inhibition.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45892-x
+      snippet: The protein that mediates this defence, which we call Tab
+      notes: Patel et al. name Tab as the protein mediating this prophage anti-phage
+        defence.
+  - subject: tab_virion_assembly_inhibition
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_tail_assembly
+    description: Tab-mediated virion assembly inhibition blocks assembly of invading
+      phage tails.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45892-x
+      snippet: blocks assembly of the phage tail, thus preventing formation of infectious
+        virions
+      notes: Patel et al. connect Tab to blockade of phage-tail assembly.
+  - subject: tab_virion_assembly_inhibition
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: infectious_virion_formation
+    description: By blocking tail assembly, Tab-mediated defence prevents formation
+      and release of infectious phage progeny.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45892-x
+      snippet: there is no release of infectious phage progeny, and the bacterial
+        community is thereby protected from a phage epidemic
+      notes: Patel et al. report no infectious phage progeny release under Tab-mediated
+        defence.
+  - subject: tab_virion_assembly_inhibition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tab_system_trait
+    description: Virion assembly inhibition realizes the Tab system trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45892-x
+      snippet: Tab-mediated inhibition of virion assembly provides a new type of anti-phage
+        defence
+      notes: Patel et al. frame Tab-mediated virion assembly inhibition as a new anti-phage
+        defence type.
+  - subject: tab_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Tab system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45892-x
+      snippet: a type of anti-phage defence that interferes with the virion assembly
+        pathway of invading phages
+      notes: Patel et al. place Tab in anti-phage defence by virion assembly pathway
+        interference.
+discussions:
+- discussion_id: tab-defensefinder-model-gap
+  prompt: Resolve Tab host breadth, sensitive-phage breadth, counter-defence specificity,
+    and DefenseFinder HMM/rules coverage before minting narrower Tab mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Patel et al. support Tab as a prophage-encoded anti-phage defence protein
+    that blocks invading phage-tail assembly and prevents release of infectious phage
+    progeny, while the pinned DefenseFinder article registry names a Tab system. The
+    pinned DefenseFinder HMM inventory and rules table have no Tab rows, and the evidence
+    does not yet resolve host breadth, target-phage breadth, counter-defence specificity,
+    or profile-to-activity modeling.
+  evidence:
+  - reference: DOI:10.1038/s41467-024-45892-x
+    snippet: blocks assembly of the phage tail, thus preventing formation of infectious
+      virions
+    notes: Patel et al. support Tab blockade of phage-tail assembly.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Tab | 10\.1038/s41467-024-45892-x | Anti-phage defence through inhibition
+      of virion assembly |'
+    notes: The pinned DefenseFinder article registry maps the named Tab system to
+      the Patel et al. virion-assembly-inhibition paper. The pinned HMM inventory
+      (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md)
+      and pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv)
+      do not list Tab, so this row is name-to-paper evidence rather than model-component
+      evidence.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: The pinned DefenseFinder HMM inventory does not list Tab, leaving profile-level
+      components unresolved.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list Tab, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#tab_blocks_virion_assembly
+  posed_by: codex
+  posed_date: '2026-09-27'
+curation_history:
+- timestamp: '2026-09-27T17:41:07Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Tab system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; kept the graph at prophage-locus and
+    virion-assembly-inhibition level because the pinned DefenseFinder article row
+    is not backed by pinned HMM or rules rows; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v290.
+  llm_assisted: true
