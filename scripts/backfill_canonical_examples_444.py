@@ -909,6 +909,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/prithvi_system",
     "genomics/prometheus_system",
     "genomics/psyrta_system",
+    "genomics/razr_system",
     "genomics/rhea_system",
     "genomics/rosmerta_system",
     "genomics/rugutis_system",

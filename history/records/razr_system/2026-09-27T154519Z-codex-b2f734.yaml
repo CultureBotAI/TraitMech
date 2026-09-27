@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/razr_system.yaml
+  slug: razr_system
+session:
+  id: 2026-09-27T154519Z-codex-b2f734
+  timestamp: '2026-09-27T15:45:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added RAZR system
+  details: Minted traitmech:000411 for the RAZR system genomics trait, backed it with DOI
+    evidence from Zhang et al. and the pinned DefenseFinder article registry, added a nonmechanistic
+    RAZR ring-activated RNase graph, recorded the unresolved natural-host, phage-trigger,
+    RNA-substrate, and DefenseFinder model-coverage gaps, and reserved METPO:1036500 in proposals/metpo_traitmech_v288.
