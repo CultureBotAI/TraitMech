@@ -28,12 +28,12 @@ evidence:
   snippet: Here we show that proteins containing a NACHT module, the central feature
     of the animal nucleotide-binding domain and leucine-rich repeat-containing gene
     family (NLRs), are found in bacteria and defend against phages.
-  notes: Ofir et al. support NACHT-module proteins as bacterial NLR-related proteins
+  notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
     that defend against phages.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: We named this gene bacterial NACHT module-containing protein 1 (bNACHT01),
     and it did not appear to be in an operon with any other genes.
-  notes: Ofir et al. named the tested Klebsiella pneumoniae MGH 35 NACHT-module protein
+  notes: Kibby et al. named the tested Klebsiella pneumoniae MGH 35 NACHT-module protein
     bNACHT01.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: bNACHT01 conferred over a 100-fold increase in protection against phage
@@ -43,21 +43,21 @@ evidence:
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: bacteria expressing bNACHT01 restricted phage virion production and continued
     growing
-  notes: Ofir et al. observed restricted phage virion production in bacteria expressing
+  notes: Kibby et al. observed restricted phage virion production in bacteria expressing
     bNACHT01.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: Mutation of R214 to alanine maintained expression of the protein but abrogated
     phage defense
-  notes: An R214A NACHT-module mutation preserved bNACHT01 expression but abrogated
-    defense, supporting a NACHT-dependent output.
+  notes: An R214A mutation preserved bNACHT01 expression but abrogated defense, supporting
+    a NACHT-dependent output.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: Diverse bacterial NACHT proteins from different clades exhibited robust
     antiphage activity across a wide range of phages
-  notes: Ofir et al. observed antiphage activity across diverse bacterial NACHT proteins.
+  notes: Kibby et al. observed antiphage activity across diverse bacterial NACHT proteins.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: NLR | 10\.1101/2022\.07\.19\.500537 | Bacterial NLR-related proteins protect
     against phage
-  notes: The DefenseFinder article registry maps the NLR family key to the Ofir et
+  notes: The DefenseFinder article registry maps the NLR family key to the Kibby et
     al. bNACHT preprint.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
   snippet: "NLR\tNLR_like_bNACHT01\t1\t1\tNLR_like_bNACHT01__NLR_like_bNACHT01\t\t\
@@ -82,7 +82,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:573
   taxon_label: Klebsiella pneumoniae
-  note: Ofir et al. identified the bNACHT01 locus in Klebsiella pneumoniae MGH 35
+  note: Kibby et al. identified the bNACHT01 locus in Klebsiella pneumoniae MGH 35
     and found that bNACHT01 expressed from its endogenous promoter in Escherichia
     coli protected against phages T4, T5, and T6.
   reference: DOI:10.1016/j.cell.2023.04.015
@@ -93,7 +93,7 @@ causal_graphs:
     restriction while leaving subtype triggers and effector outputs unresolved.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures DefenseFinder NLR_like_bNACHT01 and NLR_like_bNACHT09
-    as named bNACHT phage-defense models supported by Ofir et al. bacterial NLR-related
+    as named bNACHT phage-defense models supported by Kibby et al. bacterial NLR-related
     protein experiments while leaving natural host breadth, phage triggers, the exact
     profile-to-bNACHT01 or profile-to-bNACHT09 correspondences, and subtype-specific
     effector mechanisms unresolved.
@@ -124,14 +124,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: bnacht_phage_restriction
-    description: Ofir et al. showed that bacterial NACHT proteins can restrict bacteriophages,
+    description: Kibby et al. showed that bacterial NACHT proteins can restrict bacteriophages,
       and DefenseFinder models two NLR_like_bNACHT subtypes.
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: Here we show that proteins containing a NACHT module, the central feature
         of the animal nucleotide-binding domain and leucine-rich repeat-containing
         gene family (NLRs), are found in bacteria and defend against phages.
-      notes: Ofir et al. support NACHT-module proteins as bacterial NLR-related proteins
+      notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
         that defend against phages.
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: bNACHT01 conferred over a 100-fold increase in protection against phage
@@ -141,7 +141,7 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: bacteria expressing bNACHT01 restricted phage virion production and
         continued growing
-      notes: Ofir et al. observed restricted phage virion production in bacteria expressing
+      notes: Kibby et al. observed restricted phage virion production in bacteria expressing
         bNACHT01.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "NLR\tNLR_like_bNACHT01\t1\t1\tNLR_like_bNACHT01__NLR_like_bNACHT01\t\
@@ -173,13 +173,13 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: bacteria expressing bNACHT01 restricted phage virion production and
         continued growing
-      notes: Ofir et al. observed restricted phage virion production in bacteria expressing
+      notes: Kibby et al. observed restricted phage virion production in bacteria expressing
         bNACHT01.
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: Mutation of R214 to alanine maintained expression of the protein but
         abrogated phage defense
-      notes: An R214A NACHT-module mutation preserved bNACHT01 expression but abrogated
-        defense, supporting a NACHT-dependent output.
+      notes: An R214A mutation preserved bNACHT01 expression but abrogated defense,
+        supporting a NACHT-dependent output.
   - subject: nlr_like_bnacht_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -190,17 +190,17 @@ causal_graphs:
       snippet: Here we show that proteins containing a NACHT module, the central feature
         of the animal nucleotide-binding domain and leucine-rich repeat-containing
         gene family (NLRs), are found in bacteria and defend against phages.
-      notes: Ofir et al. support NACHT-module proteins as bacterial NLR-related proteins
+      notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
         that defend against phages.
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: Diverse bacterial NACHT proteins from different clades exhibited robust
         antiphage activity across a wide range of phages
-      notes: Ofir et al. observed antiphage activity across diverse bacterial NACHT
+      notes: Kibby et al. observed antiphage activity across diverse bacterial NACHT
         proteins.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: NLR | 10\.1101/2022\.07\.19\.500537 | Bacterial NLR-related proteins
         protect against phage
-      notes: The DefenseFinder article registry maps the NLR family key to the Ofir
+      notes: The DefenseFinder article registry maps the NLR family key to the Kibby
         et al. bNACHT preprint.
 discussions:
 - discussion_id: nlr-like-bnacht-mechanism-gap
@@ -210,7 +210,7 @@ discussions:
     subtype traits.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Ofir et al. support bacterial NACHT proteins as NLR-related phage-defense
+  rationale: Kibby et al. support bacterial NACHT proteins as NLR-related phage-defense
     proteins and DefenseFinder models NLR_like_bNACHT01 and NLR_like_bNACHT09 as single-profile
     NLR-family subsystems. This first system-level record leaves profile-to-assayed-protein
     correspondence and subtype-specific trigger and effector mechanisms unresolved.
@@ -219,7 +219,7 @@ discussions:
     snippet: Here we show that proteins containing a NACHT module, the central feature
       of the animal nucleotide-binding domain and leucine-rich repeat-containing gene
       family (NLRs), are found in bacteria and defend against phages.
-    notes: Ofir et al. support NACHT-module proteins as bacterial NLR-related proteins
+    notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
       that defend against phages.
   - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
     snippet: bNACHT01 conferred over a 100-fold increase in protection against phage
@@ -263,7 +263,14 @@ curation_history:
   curator: codex
   action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
   changes: Reviewed NLR-like bNACHT system canonical-example evidence and kept the
-    example at the Klebsiella pneumoniae species level because Ofir et al. identified
+    example at the Klebsiella pneumoniae species level because Kibby et al. identified
     the tested bNACHT01 locus from K. pneumoniae MGH 35 but assayed the endogenous-promoter
     construct heterologously in Escherichia coli. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-27T13:11:20Z'
+  curator: codex
+  action: ADDRESS_REVIEW_FINDINGS
+  changes: Corrected the Cell paper attribution from Ofir et al. to Kibby et
+    al. and narrowed the R214A evidence note so it no longer places the residue
+    inside the NACHT module beyond the curated snippet.
   llm_assisted: true

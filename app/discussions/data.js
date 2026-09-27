@@ -2377,7 +2377,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#nlr_like_bnacht_loci_restrict_phage"
   ],
-  "rationale": "Ofir et al. support bacterial NACHT proteins as NLR-related phage-defense proteins and DefenseFinder models NLR_like_bNACHT01 and NLR_like_bNACHT09 as single-profile NLR-family subsystems. This first system-level record leaves profile-to-assayed-protein correspondence and subtype-specific trigger and effector mechanisms unresolved.",
+  "rationale": "Kibby et al. support bacterial NACHT proteins as NLR-related phage-defense proteins and DefenseFinder models NLR_like_bNACHT01 and NLR_like_bNACHT09 as single-profile NLR-family subsystems. This first system-level record leaves profile-to-assayed-protein correspondence and subtype-specific trigger and effector mechanisms unresolved.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [

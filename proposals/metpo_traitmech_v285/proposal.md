@@ -9,13 +9,13 @@
 
 The pinned METPO snapshot has no active exact class for NLR-like bNACHT
 system, the genome-level possession trait for bacterial NACHT-module
-phage-defense loci described by Ofir et al. These loci encode STAND-family
+phage-defense loci described by Kibby et al. These loci encode STAND-family
 NACHT proteins related to eukaryotic NLR proteins; bNACHT01 from Klebsiella
 pneumoniae MGH 35 protected a heterologous Escherichia coli host against
-phages T4, T5, and T6, and Ofir et al. observed robust antiphage activity
+phages T4, T5, and T6, and Kibby et al. observed robust antiphage activity
 across multiple bacterial NACHT proteins.
 
-The pinned DefenseFinder commit maps its broad `NLR` family key to the Ofir
+The pinned DefenseFinder commit maps its broad `NLR` family key to the Kibby
 et al. preprint, records `NLR_like_bNACHT01` and `NLR_like_bNACHT09` profile
 names in its HMM inventory, and models both as single-profile subsystems in
 its rules table.
@@ -36,7 +36,7 @@ visually separated and leave room for upstream minting.
 
 The pre-curation collision search included ignored and hidden files across the
 curation corpus. It found no exact same-scope NLR-like bNACHT system record,
-`bNACHT` label, `NLR_like_bNACHT01` or `NLR_like_bNACHT09` profile, Ofir
+`bNACHT` label, `NLR_like_bNACHT01` or `NLR_like_bNACHT09` profile, Kibby
 Cell or bioRxiv DOI, `traitmech:000408`, `metpo_traitmech_v285`, or
 `METPO:1036200`.
 

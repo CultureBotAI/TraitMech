@@ -33,6 +33,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-27T12:41:08Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-27T12:41:09Z"
+REVIEW_FIX_TIMESTAMP = "2026-09-27T13:11:20Z"
 POSED_DATE = "2026-09-27"
 IDENTIFIER = "traitmech:000408"
 PROPOSAL = "proposals/metpo_traitmech_v285"
@@ -100,7 +101,7 @@ def abstract_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": NACHT_ABSTRACT_SNIPPET,
         "notes": (
-            "Ofir et al. support NACHT-module proteins as bacterial "
+            "Kibby et al. support NACHT-module proteins as bacterial "
             "NLR-related proteins that defend against phages."
         ),
     }
@@ -111,7 +112,7 @@ def bnacht01_naming_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": BNACHT01_NAMING_SNIPPET,
         "notes": (
-            "Ofir et al. named the tested Klebsiella pneumoniae MGH 35 "
+            "Kibby et al. named the tested Klebsiella pneumoniae MGH 35 "
             "NACHT-module protein bNACHT01."
         ),
     }
@@ -133,7 +134,7 @@ def phage_production_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": PHAGE_PRODUCTION_SNIPPET,
         "notes": (
-            "Ofir et al. observed restricted phage virion production in "
+            "Kibby et al. observed restricted phage virion production in "
             "bacteria expressing bNACHT01."
         ),
     }
@@ -144,7 +145,7 @@ def walker_mutation_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": WALKER_MUTATION_SNIPPET,
         "notes": (
-            "An R214A NACHT-module mutation preserved bNACHT01 expression "
+            "An R214A mutation preserved bNACHT01 expression "
             "but abrogated defense, supporting a NACHT-dependent output."
         ),
     }
@@ -155,7 +156,7 @@ def bnacht_breadth_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": BNACHT_BREADTH_SNIPPET,
         "notes": (
-            "Ofir et al. observed antiphage activity across diverse "
+            "Kibby et al. observed antiphage activity across diverse "
             "bacterial NACHT proteins."
         ),
     }
@@ -167,7 +168,7 @@ def article_registry_evidence() -> dict[str, str]:
         "snippet": ARTICLE_REGISTRY_SNIPPET,
         "notes": (
             "The DefenseFinder article registry maps the NLR family key to "
-            "the Ofir et al. bNACHT preprint."
+            "the Kibby et al. bNACHT preprint."
         ),
     }
 
@@ -251,7 +252,7 @@ RECORD: dict[str, Any] = {
             "taxon_id": "NCBITaxon:573",
             "taxon_label": "Klebsiella pneumoniae",
             "note": (
-                "Ofir et al. identified the bNACHT01 locus in Klebsiella "
+                "Kibby et al. identified the bNACHT01 locus in Klebsiella "
                 "pneumoniae MGH 35 and found that bNACHT01 expressed from "
                 "its endogenous promoter in Escherichia coli protected "
                 "against phages T4, T5, and T6."
@@ -272,7 +273,7 @@ RECORD: dict[str, Any] = {
             "scope_notes": (
                 "The graph captures DefenseFinder NLR_like_bNACHT01 and "
                 "NLR_like_bNACHT09 as named bNACHT phage-defense models "
-                "supported by Ofir et al. bacterial NLR-related protein "
+                "supported by Kibby et al. bacterial NLR-related protein "
                 "experiments while leaving natural host breadth, phage "
                 "triggers, the exact profile-to-bNACHT01 or "
                 "profile-to-bNACHT09 correspondences, and subtype-specific "
@@ -325,7 +326,7 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "RO:0002326",
                     "object": "bnacht_phage_restriction",
                     "description": (
-                        "Ofir et al. showed that bacterial NACHT proteins "
+                        "Kibby et al. showed that bacterial NACHT proteins "
                         "can restrict bacteriophages, and DefenseFinder "
                         "models two NLR_like_bNACHT subtypes."
                     ),
@@ -384,7 +385,7 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Ofir et al. support bacterial NACHT proteins as "
+                "Kibby et al. support bacterial NACHT proteins as "
                 "NLR-related phage-defense proteins and DefenseFinder "
                 "models NLR_like_bNACHT01 and NLR_like_bNACHT09 as "
                 "single-profile NLR-family subsystems. This first "
@@ -433,13 +434,26 @@ def write_record(*, apply: bool) -> None:
         changes=(
             "Reviewed NLR-like bNACHT system canonical-example evidence and "
             "kept the example at the Klebsiella pneumoniae species level "
-            "because Ofir et al. identified the tested bNACHT01 locus from "
+            "because Kibby et al. identified the tested bNACHT01 locus from "
             "K. pneumoniae MGH 35 but assayed the endogenous-promoter "
             "construct heterologously in Escherichia coli. No paid "
             "research was used."
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_REVIEW_FINDINGS",
+        changes=(
+            "Corrected the Cell paper attribution from Ofir et al. to "
+            "Kibby et al. and narrowed the R214A evidence note so it no "
+            "longer places the residue inside the NACHT module beyond the "
+            "curated snippet."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FIX_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)
