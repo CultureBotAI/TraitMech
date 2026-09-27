@@ -1568,6 +1568,8 @@ rnla-dependent rnase ls activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/rnlab
 rosmerta locus	GENETIC_ELEMENT	1	data/traits/genomics/rosmerta_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
+rst_2tm_1tm_tir locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_2tm_1tm_tir_system.yaml
+multi-phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_2tm_1tm_tir_system.yaml
 rst_3hp locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_3hp_system.yaml
 p1 phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/rst_3hp_system.yaml
 rst_duf4238 locus	GENETIC_ELEMENT	1	data/traits/genomics/rst_duf4238_system.yaml

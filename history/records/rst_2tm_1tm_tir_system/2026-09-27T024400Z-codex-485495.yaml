@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_2tm_1tm_tir_system.yaml
+  slug: rst_2tm_1tm_tir_system
+session:
+  id: 2026-09-27T024400Z-codex-485495
+  timestamp: '2026-09-27T02:44:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added Rst_2TM_1TM_TIR system trait
+  details: Minted traitmech:000400 for the DefenseFinder Rst_2TM_1TM_TIR phage-defense system,
+    reserved METPO:1035400 in proposals/metpo_traitmech_v277, and curated stable-URL evidence
+    from the pinned DefenseFinder wiki, article registry, rules table, and HMM inventory for
+    the three-profile multi-phage-resistance model.
