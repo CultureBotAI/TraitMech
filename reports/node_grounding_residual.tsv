@@ -150,6 +150,7 @@ viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_
 subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
+reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	2	data/traits/genomics/hec_02_system.yaml|data/traits/genomics/hec_03_system.yaml
 ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 translation inhibition	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/razr_system.yaml
@@ -1406,7 +1407,7 @@ phage exonuclease challenge	BIOLOGICAL_PROCESS	1	data/traits/genomics/hailong_sy
 hala channel activation	MOLECULAR_FUNCTION	1	data/traits/genomics/hailong_system.yaml
 host cell growth arrest	STATE	1	data/traits/genomics/hailong_system.yaml
 hec-02 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_02_system.yaml
-reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	1	data/traits/genomics/hec_02_system.yaml
+hec-03 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_03_system.yaml
 hesat locus	GENETIC_ELEMENT	1	data/traits/genomics/hesat_system.yaml
 hna locus	GENETIC_ELEMENT	1	data/traits/genomics/hna_system.yaml
 phage ssb stimulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
