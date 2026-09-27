@@ -3363,6 +3363,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rst_gop_beta_cll_system.html#rst-gop-beta-cll-mechanism-gap"
  },
  {
+  "discussion_id": "rst-helicaseduf2290-host-mechanism-gap",
+  "prompt": "Resolve Rst_HelicaseDUF2290 native host breadth, accession-level DUF2290/helicase roles, the DUF2290_Pers profile relationship, and the mechanism of T7 restriction before minting narrower Rst_HelicaseDUF2290 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst_HelicaseDUF2290 system",
+  "source_id": "traitmech:000401",
+  "source_file": "rst_helicaseduf2290_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_helicaseduf2290_locus_restricts_t7"
+  ],
+  "rationale": "Rousset et al. support a two-gene ATP-dependent helicase plus DUF2290 P4-hotspot system that inhibits T7 growth, and DefenseFinder represents Rst_HelicaseDUF2290 as a required two-profile model. This first system-level record leaves native host breadth, profile-to-gene mapping, the role of the extra DUF2290_Pers HMM profile, the molecular activities of the DUF2290 and helicase components, and the T7 restriction mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_helicaseduf2290.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_helicaseduf2290.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_helicaseduf2290_system.html#rst-helicaseduf2290-host-mechanism-gap"
+ },
+ {
   "discussion_id": "rst-tir-nlr-mechanism-gap",
   "prompt": "Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence, direct phage trigger, and TIR/STAND activation before minting narrower Rst TIR-NLR mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -5185,9 +5210,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 270,
- "total_knowledge_gaps": 188,
- "total_source_entries": 268,
+ "total_discussions": 271,
+ "total_knowledge_gaps": 189,
+ "total_source_entries": 269,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
