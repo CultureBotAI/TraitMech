@@ -151,6 +151,7 @@ subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
+lambdavir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_lambda_1_system.yaml|data/traits/genomics/pd_lambda_3_system.yaml
 t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_t4_10_system.yaml|data/traits/genomics/pd_t4_2_system.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
@@ -1477,10 +1478,10 @@ foreign protein sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.y
 arib nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 lysine trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 translation inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+pd-lambda-1 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_1_system.yaml
 pd-lambda-2 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_2_system.yaml
 lambdavir, secphi17, secphi18, secphi27, and t3 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_lambda_2_system.yaml
 pd-lambda-3 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_3_system.yaml
-lambdavir protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_lambda_3_system.yaml
 pd-lambda-4 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_4_system.yaml
 t4, lambdavir, secphi27, and t7 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_lambda_4_system.yaml
 pd-lambda-5 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_5_system.yaml
