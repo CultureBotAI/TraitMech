@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_helicaseduf2290_system.yaml
+  slug: rst_helicaseduf2290_system
+session:
+  id: 2026-09-27T060938Z-codex-a1b639
+  timestamp: '2026-09-27T06:09:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1330
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1325
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Corrected Rousset Figure 2 evidence for Rst_HelicaseDUF2290
+  details: 'Corrected the DOI-backed Rousset et al. heatmap evidence in the Rst_HelicaseDUF2290
+    system record from the Figure 5 P2 median-fold-resistance legend to the Figure 2 P4 mean-fold-resistance
+    legend, aligning the P4-hotspot helicase/DUF2290 sibling with the Rst_Hydrolase-3Tm evidence
+    correction in PR #1325.'
