@@ -288,6 +288,7 @@ data/traits/genomics/old_exonuclease_system.yaml	traitmech:000399	Old exonucleas
 data/traits/genomics/olokun_system.yaml	traitmech:000254	Olokun system	olokun_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/ophion_system.yaml	traitmech:000331	Ophion system	ophion_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/oshun_system.yaml	traitmech:000293	Oshun system	oshun_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/pago_system.yaml	traitmech:000419	prokaryotic Argonaute defense system	pago_system_family_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/panchino_gp28_system.yaml	traitmech:000294	Panchino gp28 system	panchino_gp28_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness	pangenome_openness_hgt	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/panoptes_system.yaml	traitmech:000407	Panoptes system	panoptes_decoy_cyclic_nucleotide_defense	MECHANISTIC	2	2	0	1	1	2	2	PASS	0	0	-

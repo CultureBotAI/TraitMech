@@ -1,0 +1,166 @@
+identifier: traitmech:000419
+label: prokaryotic Argonaute defense system
+definition: A genomics trait describing possession of a prokaryotic Argonaute-centered
+  defense locus that uses a pAgo protein, alone or with cognate accessory proteins,
+  to defend against plasmids, bacteriophages, or other mobile genetic elements.
+definition_source: DOI:10.1186/1745-6150-4-29
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: pAgo
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1186/1745-6150-4-29
+  snippet: The hypothesis that pAgos are key components of a novel prokaryotic immune
+    system that employs guide RNA or DNA molecules to degrade nucleic acids of invading
+    mobile elements
+  notes: Makarova et al. link prokaryotic Argonaute homologs to a predicted defense
+    system against mobile genetic elements; later SPARTA and DdmDE experiments support
+    two branches of this family.
+- reference: DOI:10.1016/j.cell.2022.03.012
+  snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA) proteins
+    form heterodimeric complexes
+  notes: Koopal et al. support SPARTA as one experimentally resolved short pAgo and
+    TIR-APAZ defense system.
+- reference: DOI:10.1038/s41586-022-04546-y
+  snippet: These systems, termed DdmABC and DdmDE
+  notes: Jaskolska et al. support DdmDE as another prokaryotic Argonaute defense system
+    in Vibrio cholerae.
+- reference: DOI:10.1038/s41586-024-07515-9
+  snippet: DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo
+  notes: Bravo et al. directly identify DdmE as the DNA-targeting prokaryotic Argonaute
+    component of DdmDE.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| pAgo | 10\.1186/1745-6150-4-29 | Prokaryotic homologs of Argonaute proteins
+    are predicted to function as key components of a novel system of defense against
+    mobile genetic elements |'
+  notes: The pinned DefenseFinder article registry maps the pAgo model namespace to
+    the Makarova et al. prokaryotic Argonaute mobile genetic element defense paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "pAgo\tpAgo\t1\t3\tpAgo__pAgo_LongA, pAgo__pAgo_LongB, pAgo__pAgo_S1A,\
+    \ pAgo__pAgo_S2B, pAgo__pAgo_SPARTA\tpAgo__EabAgaM, pAgo__EcAgaN, pAgo__GbbAgaS,\
+    \ pAgo__SIR2APAZ, pAgo__TIRAPAZ, pAgo__XAPAZ\t\t"
+  notes: The pinned DefenseFinder rules table models pAgo as a system namespace with
+    long pAgo, SPARTA, and optional APAZ-associated profile groups.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| pAgo__pAgo_SPARTA                                | pAgo__pAgo_SPARTA                                |
+    pAgo                   | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records pAgo__pAgo_SPARTA under the
+    pAgo model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| pAgo__TIRAPAZ                                    | pAgo__TIRAPAZ                                    |
+    pAgo                   | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records pAgo__TIRAPAZ under the pAgo
+    model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:666
+  taxon_label: Vibrio cholerae
+  note: V. cholerae seventh pandemic strains carry the prokaryotic-Argonaute DdmDE
+    plasmid defense system.
+  reference: DOI:10.1038/s41586-022-04546-y
+causal_graphs:
+- graph_id: pago_system_family_hierarchy
+  title: Prokaryotic Argonaute systems include SPARTA and DdmDE defense loci
+  description: Nonmechanistic family sketch linking the pAgo possession trait to experimentally
+    curated SPARTA and DdmDE child systems.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph is deliberately limited to family hierarchy because long
+    pAgo, SPARTA, DdmDE, SIR2-APAZ, TIR-APAZ, and other APAZ-associated pAgo systems
+    can differ in effector chemistry, guide origin, accessory proteins, and plasmid
+    or phage target breadth.
+  nodes:
+  - node_id: sparta_system
+    label: SPARTA system
+    node_type: TRAIT
+    grounding: traitmech:000240
+    description: Possession of a short prokaryotic Argonaute TIR-APAZ defense system.
+  - node_id: ddmde_system
+    label: DdmDE system
+    node_type: TRAIT
+    grounding: traitmech:000275
+    description: Possession of a DNA-guided prokaryotic Argonaute DdmDE defense system.
+  - node_id: pago_system_trait
+    label: prokaryotic Argonaute defense system
+    node_type: TRAIT
+    grounding: traitmech:000419
+    description: Possession of a genome-encoded prokaryotic Argonaute-centered defense
+      system.
+  edges:
+  - subject: sparta_system
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: pago_system_trait
+    description: SPARTA is a short-pAgo TIR-APAZ system within the broader prokaryotic
+      Argonaute defense family.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.03.012
+      snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA) proteins
+        form heterodimeric complexes
+      notes: Koopal et al. define SPARTA around a short pAgo and TIR-APAZ protein
+        pair.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "pAgo\tpAgo\t1\t3\tpAgo__pAgo_LongA, pAgo__pAgo_LongB, pAgo__pAgo_S1A,\
+        \ pAgo__pAgo_S2B, pAgo__pAgo_SPARTA\tpAgo__EabAgaM, pAgo__EcAgaN, pAgo__GbbAgaS,\
+        \ pAgo__SIR2APAZ, pAgo__TIRAPAZ, pAgo__XAPAZ\t\t"
+      notes: The pinned DefenseFinder rules table models pAgo as a system namespace
+        with long pAgo, SPARTA, and optional APAZ-associated profile groups.
+  - subject: ddmde_system
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: pago_system_trait
+    description: DdmDE is an anti-plasmid defense system with a DNA-guided pAgo component.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07515-9
+      snippet: DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo
+      notes: Bravo et al. identify DdmE as the pAgo component of DdmDE.
+discussions:
+- discussion_id: pago-subfamily-boundary-gap
+  prompt: Resolve pAgo subfamily boundaries, accessory-protein requirements, and substrate
+    breadth before minting narrower long-pAgo or APAZ-associated defense children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: SPARTA and DdmDE support prokaryotic Argonaute defense systems as a reusable
+    genomics family, and DefenseFinder models a pAgo namespace with long pAgo, SPARTA,
+    and optional APAZ-associated profiles. This parent does not yet resolve whether
+    every DefenseFinder pAgo submodel has the same plasmid or phage substrate range,
+    whether standalone APAZ-associated profiles are exact children, or which native-host
+    examples support each subfamily.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2022.03.012
+    snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA) proteins
+      form heterodimeric complexes
+    notes: Koopal et al. support one short-pAgo branch as a paired SPARTA system.
+  - reference: DOI:10.1038/s41586-024-07515-9
+    snippet: DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo
+    notes: Bravo et al. support one DdmDE branch with DdmE as a DNA-guided pAgo.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "pAgo\tpAgo\t1\t3\tpAgo__pAgo_LongA, pAgo__pAgo_LongB, pAgo__pAgo_S1A,\
+      \ pAgo__pAgo_S2B, pAgo__pAgo_SPARTA\tpAgo__EabAgaM, pAgo__EcAgaN, pAgo__GbbAgaS,\
+      \ pAgo__SIR2APAZ, pAgo__TIRAPAZ, pAgo__XAPAZ\t\t"
+    notes: The pinned DefenseFinder rules table models pAgo as a system namespace
+      with long pAgo, SPARTA, and optional APAZ-associated profile groups.
+  attaches_to:
+  - causal_graphs#pago_system_family_hierarchy
+  posed_by: codex
+  posed_date: '2026-09-27'
+curation_history:
+- timestamp: '2026-09-27T22:11:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted prokaryotic Argonaute defense system as a DOI-backed GENOMICS TraitRecord
+    under the quality root after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, history, or prior proposal record; scoped the graph to
+    SPARTA and DdmDE family hierarchy and reserved the replacement placeholder in
+    proposals/metpo_traitmech_v296.
+  llm_assisted: true
+- timestamp: '2026-09-27T22:20:00Z'
+  curator: codex
+  action: LOCAL_VALIDATION_REPAIR
+  changes: Added a contiguous Makarova et al. abstract snippet after the evidence
+    snippet audit flagged the prokaryotic Argonaute defense system record as a new
+    MISSING_SNIPPET finding.
+  llm_assisted: true
