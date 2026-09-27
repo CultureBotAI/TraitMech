@@ -3894,6 +3894,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/six_a_mbl_system.html#six-a-mbl-mechanism-gap"
  },
  {
+  "discussion_id": "snipe-defensefinder-model-gap",
+  "prompt": "Resolve SNIPE host breadth, sensitive-phage breadth, direct tape-measure interaction specificity, and DefenseFinder HMM/rules coverage before minting narrower SNIPE mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SNIPE system",
+  "source_id": "traitmech:000414",
+  "source_file": "snipe_system.yaml",
+  "attaches_to": [
+   "causal_graphs#snipe_cleaves_injected_phage_dna"
+  ],
+  "rationale": "Saxton et al. support SNIPE as a membrane-localized anti-bacteriophage system that directly cleaves phage DNA during genome injection, while the pinned DefenseFinder article registry names a SNIPE system. The pinned DefenseFinder HMM inventory and rules table have no SNIPE rows, and the evidence does not yet resolve full host breadth, full target-phage breadth, direct tape-measure protein specificity, or profile-to-activity modeling.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41586-026-10207-1",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/snipe_system.html#snipe-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "sofic-mechanism-gap",
   "prompt": "Resolve SoFIC phage triggers and effector outputs before minting narrower SoFIC mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5571,9 +5595,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 287,
- "total_knowledge_gaps": 201,
- "total_source_entries": 281,
+ "total_discussions": 288,
+ "total_knowledge_gaps": 202,
+ "total_source_entries": 282,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
