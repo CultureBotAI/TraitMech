@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TgvAB system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>TgvAB system</h1>
+    <p class="curie"><code>traitmech:000412</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A restriction-modification system in which an organism possesses a two-gene TgvAB locus embedded in the Vibrio cholerae VPI-2 type I R-M cluster, encoding TgvA and TgvB modification-dependent restriction proteins related to GmrSD type IV restriction enzymes that restrict glucosylated hmC-containing T-even-like phage DNA.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>TgvAB restricts glucosylated T-even-like phage DNA</h2>
+      <p class="meta">Conservative system-level sketch linking a two-gene TgvAB locus to modification-dependent type IV restriction of glucosylated hmC-containing T-even-like phage DNA and TgvAB system possession.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures TgvAB at VPI-2, T-even-like-phage, and type-IV-restriction level without asserting complete native host breadth, exact TgvA/TgvB subunit stoichiometry, or a DefenseFinder rule-level profile combination.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>TgvAB restricts glucosylated T-even-like phage DNA</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for TgvAB system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>TgvAB locus</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>TgvAB-dependent type IV restriction</strong>
+            <code>RO:0002327</code>
+            <p>A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/jb.00145-24</code>
+                <span class="evidence-snippet">the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes</span>
+                <span class="meta">Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1128/jb.00143-24</code>
+                <span class="evidence-snippet">both TgvA and TgvB are required for defense against T2, T4, and T6</span>
+                <span class="meta">Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">| TgvAB | 10\.1128/jb\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |</span>
+                <span class="meta">The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>TgvAB-dependent type IV restriction</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>glucosylated hmC phage DNA</strong>
+            <code>METPO:2007407</code>
+            <p>TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/jb.00143-24</code>
+                <span class="evidence-snippet">TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases</span>
+                <span class="meta">Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>TgvAB-dependent type IV restriction</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>T-even-like phage propagation</strong>
+            <code>METPO:2007407</code>
+            <p>Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/jb.00145-24</code>
+                <span class="evidence-snippet">potent anti-phage activity against diverse members of the Tevenvirinae</span>
+                <span class="meta">Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1128/jb.00143-24</code>
+                <span class="evidence-snippet">TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases</span>
+                <span class="meta">Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>TgvAB-dependent type IV restriction</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>TgvAB system</strong>
+            <code>METPO:2007700</code>
+            <p>TgvAB-dependent type IV restriction realizes the TgvAB system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/jb.00145-24</code>
+                <span class="evidence-snippet">novel modification-dependent type IV restriction system that recognizes hypermodified cytosines</span>
+                <span class="meta">Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1128/jb.00143-24</code>
+                <span class="evidence-snippet">both TgvA and TgvB are required for defense against T2, T4, and T6</span>
+                <span class="meta">Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">| TgvAB | 10\.1128/jb\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |</span>
+                <span class="meta">The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>TgvAB system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>restriction-modification system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/jb.00145-24</code>
+                <span class="evidence-snippet">the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes</span>
+                <span class="meta">Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1128/jb.00145-24</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/restriction_modification_system.html" >restriction-modification system <code>traitmech:000095</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (3)</h2>
+      <ul class="synonyms">
+
+        <li>TgvAB <span class="meta">EXACT_SYNONYM · DOI:10.1128/jb.00145-24</span></li>
+
+        <li>TgvAB__TgvA <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>TgvAB__TgvB <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="tgvab-defensefinder-rule-gap">
+        <p class="discussion-prompt">Resolve TgvAB native host breadth, TgvA/TgvB biochemical roles, phage substrate breadth, and DefenseFinder rule or model coverage before minting narrower TgvAB mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>tgvab-defensefinder-rule-gap</code>
+          · raised by codex
+          · 2026-09-27
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#tgvab_type_iv_restriction</code>
+        </p>
+
+
+        <p>Vizzarro et al. and Gomez and Waters support TgvAB as a two-component VPI-2 type IV restriction system that restricts glucosylated hmC-containing T-even phage DNA, and the pinned DefenseFinder HMM inventory carries TgvA and TgvB custom profiles. The pinned DefenseFinder rules table has no TgvAB row, and the evidence does not yet resolve native host breadth, the individual TgvA versus TgvB biochemical roles, full phage substrate breadth, or a rule-level profile combination.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1128/jb.00145-24</code>
+
+            <blockquote>the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>DOI:10.1128/jb.00143-24</code>
+
+            <blockquote>TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-27T16:50:26Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted TgvAB system as a DOI-backed GENOMICS TraitRecord under restriction-modification system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; kept the graph at two-component TgvAB/type-IV-restriction level because the pinned DefenseFinder HMM rows are not backed by a pinned rules row; the replacement placeholder is reserved in proposals/metpo_traitmech_v289.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/tgvab_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/tgvab_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/tgvab_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/tgvab_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000412" target="_blank" rel="noopener"><code>traitmech:000412</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking a two-gene TgvAB locus to modification-dependent type IV restriction of glucosylated hmC-containing T-even-like phage DNA and TgvAB system possession.", "edges": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "tgvab_locus", "target": "tgvab_dependent_type_iv_restriction"}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "glucosylated_hmc_phage_dna"}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "t_even_like_phage_propagation"}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "tgvab_dependent_type_iv_restriction", "target": "tgvab_system_trait"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tgvab_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "TgvAB locus", "target": "TgvAB-dependent type IV restriction"}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "edge_id": "edge-2", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "target": "glucosylated hmC phage DNA"}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "edge_id": "edge-3", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "target": "T-even-like phage propagation"}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "TgvAB-dependent type IV restriction", "target": "TgvAB system"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "edge_id": "edge-5", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "TgvAB system", "target": "restriction-modification system"}], "graph_id": "tgvab_type_iv_restriction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "T-even-like bacteriophage DNA carrying glucosylated 5-hydroxymethylcytosine modifications.", "grounding": null, "id": "glucosylated_hmc_phage_dna", "is_orphan": false, "label": "glucosylated hmC phage DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Productive propagation of T-even-like phages whose genomes carry glucosylated hmC.", "grounding": null, "id": "t_even_like_phage_propagation", "is_orphan": false, "label": "T-even-like phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of hypermodified phage DNA by TgvAB.", "grounding": null, "id": "tgvab_dependent_type_iv_restriction", "is_orphan": false, "label": "TgvAB-dependent type IV restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A two-gene locus encoding TgvA and TgvB GmrSD-related modification-dependent restriction proteins.", "grounding": null, "id": "tgvab_locus", "is_orphan": false, "label": "TgvAB locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded TgvAB modification-dependent restriction system.", "grounding": "traitmech:000412", "id": "tgvab_system_trait", "is_orphan": false, "label": "TgvAB system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures TgvAB at VPI-2, T-even-like-phage, and type-IV-restriction level without asserting complete native host breadth, exact TgvA/TgvB subunit stoichiometry, or a DefenseFinder rule-level profile combination.", "scope_status": "NONMECHANISTIC", "title": "TgvAB restricts glucosylated T-even-like phage DNA"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-27 16:50 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 807 TraitRecords
+      · embedding coverage 59.1%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

@@ -1640,6 +1640,10 @@ host protein phosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_syst
 host cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
 sucellos locus	GENETIC_ELEMENT	1	data/traits/genomics/sucellos_system.yaml
 taranis locus	GENETIC_ELEMENT	1	data/traits/genomics/taranis_system.yaml
+tgvab locus	GENETIC_ELEMENT	1	data/traits/genomics/tgvab_system.yaml
+glucosylated hmc phage dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/tgvab_system.yaml
+tgvab-dependent type iv restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/tgvab_system.yaml
+t-even-like phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/tgvab_system.yaml
 thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
 thoeris tir cadpr-isomer production	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
 thsa nad depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml

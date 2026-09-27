@@ -3391,10 +3391,10 @@ window.searchData = [
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
- "posed_by": "codex",
- "page_url": "../../pages/traits/genomics/radar_system.html#radar-trigger-and-substrate-gap"
-},
-{
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/radar_system.html#radar-trigger-and-substrate-gap"
+ },
+ {
   "discussion_id": "razr-trigger-model-gap",
   "prompt": "Resolve RAZR natural hosts, phage ring triggers, RNA-substrate breadth, and model coverage before minting narrower RAZR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4004,6 +4004,31 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/taranis_system.html#taranis-mechanism-gap"
+ },
+ {
+  "discussion_id": "tgvab-defensefinder-rule-gap",
+  "prompt": "Resolve TgvAB native host breadth, TgvA/TgvB biochemical roles, phage substrate breadth, and DefenseFinder rule or model coverage before minting narrower TgvAB mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "TgvAB system",
+  "source_id": "traitmech:000412",
+  "source_file": "tgvab_system.yaml",
+  "attaches_to": [
+   "causal_graphs#tgvab_type_iv_restriction"
+  ],
+  "rationale": "Vizzarro et al. and Gomez and Waters support TgvAB as a two-component VPI-2 type IV restriction system that restricts glucosylated hmC-containing T-even phage DNA, and the pinned DefenseFinder HMM inventory carries TgvA and TgvB custom profiles. The pinned DefenseFinder rules table has no TgvAB row, and the evidence does not yet resolve native host breadth, the individual TgvA versus TgvB biochemical roles, full phage substrate breadth, or a rule-level profile combination.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1128/jb.00145-24",
+   "DOI:10.1128/jb.00143-24",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/tgvab_system.html#tgvab-defensefinder-rule-gap"
  },
  {
   "discussion_id": "thoeris-family-signal-and-trigger-gap",
@@ -5522,9 +5547,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 285,
- "total_knowledge_gaps": 199,
- "total_source_entries": 279,
+ "total_discussions": 286,
+ "total_knowledge_gaps": 200,
+ "total_source_entries": 280,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

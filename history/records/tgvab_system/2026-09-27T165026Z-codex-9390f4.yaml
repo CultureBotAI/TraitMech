@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tgvab_system.yaml
+  slug: tgvab_system
+session:
+  id: 2026-09-27T165026Z-codex-9390f4
+  timestamp: '2026-09-27T16:50:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added TgvAB system
+  details: Minted traitmech:000412 as the DOI-backed TgvAB system GENOMICS trait under restriction-modification
+    system; added Vizzarro and Gomez TgvAB evidence plus pinned DefenseFinder article and
+    HMM rows; reserved METPO:1036600 in proposals/metpo_traitmech_v289 and kept TgvAB narrower
+    biochemical children blocked by native-host, component-role, phage-substrate, and DefenseFinder
+    rules-table gaps.
