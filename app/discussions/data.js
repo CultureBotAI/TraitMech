@@ -3891,6 +3891,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sanata_system.html#sanata-host-trigger-profile-gap"
  },
  {
+  "discussion_id": "sdic1-defensefinder-model-gap",
+  "prompt": "Resolve SDIC1 natural host breadth, SDIC1A/SDIC1B component functions, phage triggers, ubiquitination substrates, population-immunity mechanism, and rule-level detection criteria before minting narrower SDIC1 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SDIC1 system",
+  "source_id": "traitmech:000420",
+  "source_file": "sdic1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sdic1_locus_restricts_phage"
+  ],
+  "rationale": "Bayer et al. support SDIC1 as a TIR-domain-containing anti-phage system with a ubiquitin-ligase-like component, and the pinned DefenseFinder HMM inventory records SDIC1A and SDIC1B profile rows. The pinned rules table has no SDIC1 row, and the first-pass record does not resolve natural host breadth, sensitive-phage breadth, the exact profile-to-component mapping, phage triggers, the direct TIR-dependent output, or the ubiquitination substrate.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1016/j.celrep.2024.115055",
+   "DOI:10.1016/j.celrep.2024.115055",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sdic1_system.html#sdic1-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "sefir-mechanism-gap",
   "prompt": "Resolve SEFIR phage triggers and effector outputs before minting narrower SEFIR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5721,9 +5747,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 293,
- "total_knowledge_gaps": 207,
- "total_source_entries": 287,
+ "total_discussions": 294,
+ "total_knowledge_gaps": 208,
+ "total_source_entries": 288,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

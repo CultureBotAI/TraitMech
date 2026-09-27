@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sdic1_system.yaml
+  slug: sdic1_system
+session:
+  id: 2026-09-27T225055Z-claude-code-1145b1
+  timestamp: '2026-09-27T22:50:55Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add SDIC1 system trait
+  details: Minted traitmech:000420 for the DOI-backed SDIC1 system under phage defense system.
+    DOI:10.1016/j.celrep.2024.115055 supports SDIC1 as a TIR-domain anti-phage system with
+    a ubiquitin-ligase-like component and population-wide immunity; the pinned DefenseFinder
+    article and HMM inventories map SDIC1 to the SDIC1A and SDIC1B custom profiles while the
+    pinned rules table has no SDIC1 row, so the graph stays nonmechanistic at candidate-locus
+    level. Reserved METPO:1037400 in proposals/metpo_traitmech_v297.
