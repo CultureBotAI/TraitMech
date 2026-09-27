@@ -2366,6 +2366,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/nixi_system.html#nixi-stix-and-satellite-scope-gap"
  },
  {
+  "discussion_id": "nlr-like-bnacht-mechanism-gap",
+  "prompt": "Resolve the exact mapping between DefenseFinder NLR_like_bNACHT01 and NLR_like_bNACHT09 profiles and the experimentally tested bNACHT proteins, natural host breadth, phage triggers, and bNACHT effector mechanisms before minting narrower bNACHT subtype traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "NLR-like bNACHT system",
+  "source_id": "traitmech:000408",
+  "source_file": "nlr_like_bnacht_system.yaml",
+  "attaches_to": [
+   "causal_graphs#nlr_like_bnacht_loci_restrict_phage"
+  ],
+  "rationale": "Kibby et al. support bacterial NACHT proteins as NLR-related phage-defense proteins and DefenseFinder models NLR_like_bNACHT01 and NLR_like_bNACHT09 as single-profile NLR-family subsystems. This first system-level record leaves profile-to-assayed-protein correspondence and subtype-specific trigger and effector mechanisms unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/nlr_like_bnacht_system.html#nlr-like-bnacht-mechanism-gap"
+ },
+ {
   "discussion_id": "ogmios-mechanism-gap",
   "prompt": "Resolve Ogmios phage triggers and effector outputs before minting narrower Ogmios mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5439,9 +5465,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 281,
- "total_knowledge_gaps": 195,
- "total_source_entries": 275,
+ "total_discussions": 282,
+ "total_knowledge_gaps": 196,
+ "total_source_entries": 276,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
