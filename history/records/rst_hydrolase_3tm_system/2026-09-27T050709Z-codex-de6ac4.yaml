@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rst_hydrolase_3tm_system.yaml
+  slug: rst_hydrolase_3tm_system
+session:
+  id: 2026-09-27T050709Z-codex-de6ac4
+  timestamp: '2026-09-27T05:07:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  - history
+  summary: Add Rst_Hydrolase-3Tm system trait
+  details: Added a DOI/stable-URL-backed GENOMICS TraitRecord for the DefenseFinder Rst_Hydrolase-3Tm
+    phage-defense system under phage defense system. The record cites Rousset et al. for the
+    experimentally linked HAD-like hydrolase plus transmembrane-protein T7 restriction phenotype
+    and pinned DefenseFinder wiki, rule, article-registry, and HMM sources for the Rst_Hydrolase-3Tm/Rst_Hydrolase-Tm
+    model identity and required Hydrolase/Hydrolase-Tm profiles. It also adds a conservative
+    nonmechanistic causal graph and an open knowledge-gap discussion for unresolved host breadth,
+    namespace, component, and mechanism details.

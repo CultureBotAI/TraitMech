@@ -3388,6 +3388,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rst_helicaseduf2290_system.html#rst-helicaseduf2290-host-mechanism-gap"
  },
  {
+  "discussion_id": "rst-hydrolase-3tm-host-mechanism-gap",
+  "prompt": "Resolve Rst_Hydrolase-3Tm native host breadth, the Rst_Hydrolase-3Tm and Rst_Hydrolase-Tm namespace relationship, accession-level Hydrolase/Hydrolase-Tm roles, and the mechanism of T7 restriction before minting narrower Rst_Hydrolase-3Tm mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rst_Hydrolase-3Tm system",
+  "source_id": "traitmech:000402",
+  "source_file": "rst_hydrolase_3tm_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rst_hydrolase_3tm_locus_restricts_t7"
+  ],
+  "rationale": "Rousset et al. support a two-gene HAD-like hydrolase plus transmembrane-protein P4-hotspot system that inhibits T7 growth, and DefenseFinder maps Rst_Hydrolase-3Tm to a required two-profile Rst_Hydrolase-Tm model. This first system-level record leaves native host breadth, profile-to-gene mapping, the model-namespace mismatch, the molecular activities of the Hydrolase and Hydrolase-Tm components, and the T7 restriction mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2022.02.018",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rst_hydrolase_3tm_system.html#rst-hydrolase-3tm-host-mechanism-gap"
+ },
+ {
   "discussion_id": "rst-tir-nlr-mechanism-gap",
   "prompt": "Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence, direct phage trigger, and TIR/STAND activation before minting narrower Rst TIR-NLR mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -5210,9 +5234,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 271,
- "total_knowledge_gaps": 189,
- "total_source_entries": 269,
+ "total_discussions": 272,
+ "total_knowledge_gaps": 190,
+ "total_source_entries": 270,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
