@@ -53,8 +53,7 @@ evidence:
   snippet: "Rousset_2022[<a href='https://doi.org/10.1016/j.chom.2022.02.018'>Rousset\
     \ et al., 2022</a>] --> Origin_0\n    Origin_0[Escherichia coli P4 loci \n<a href='https://ncbi.nlm.nih.gov/protein/WP_000754434.1'>WP_000754434.1</a>,\
     \ <a href='https://ncbi.nlm.nih.gov/protein/WP_001401335.1'>WP_001401335.1</a>]\
-    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ---->\
-    \ T7"
+    \ --> Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----> T7"
   notes: The DefenseFinder experimental-validation diagram links Rousset et al. to
     an Escherichia coli P4-locus source expressed in Escherichia coli against T7.
 - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md
@@ -178,8 +177,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.chom.2022.02.018
       snippet: Phage resistance heatmaps of the validated defense systems show the
-        median fold resistance of three independent replicates against a panel of eight
-        phages
+        median fold resistance of three independent replicates against a panel of
+        eight phages
       notes: The Figure 5 legend frames the cloned P4-hotspot hits, including the
         hydrolase plus transmembrane-protein system, as validated defense systems
         in a replicated phage-resistance heatmap.
