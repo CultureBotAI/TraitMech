@@ -29,6 +29,7 @@ DEFENSEFINDER_ARTICLES = (
 CURATOR = "codex"
 TIMESTAMP = "2026-09-27T09:24:21Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-27T09:24:22Z"
+GROUNDING_REVIEW_TIMESTAMP = "2026-09-27T11:38:27Z"
 POSED_DATE = "2026-09-27"
 IDENTIFIER = "traitmech:000407"
 PROPOSAL = "proposals/metpo_traitmech_v284"
@@ -332,8 +333,8 @@ RECORD: dict[str, Any] = {
                     "node_type": "GENE_OR_PROTEIN",
                     "grounding": "InterPro:IPR041208",
                     "description": (
-                        "S-2TMβ/Cap15-family transmembrane effector encoded "
-                        "by Panoptes operons."
+                        "OptE-family transmembrane effector encoded by "
+                        "Panoptes operons."
                     ),
                     "protein_examples": [
                         {
@@ -677,6 +678,23 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="VERIFY_PANOPTES_PROTEIN_GROUNDINGS",
+        changes=(
+            "Verified the Panoptes UniProt protein examples with "
+            "audit_uniprot_grounding.py: UniProtKB:A0A099LXT1 is a current "
+            "unreviewed V. navarrensis UP000029994 primary accession at "
+            "entry version 30 / sequence version 1, UniProtKB:A0A099LW44 is "
+            "a current unreviewed V. navarrensis UP000029994 primary "
+            "accession at entry version 37 / sequence version 1, and "
+            "UniProt cross-references link them to InterPro:IPR040942 "
+            "(Minimal_Cpol) and InterPro:IPR041208 (Cap15)."
+        ),
+        llm_assisted=True,
+        timestamp=GROUNDING_REVIEW_TIMESTAMP,
     )
     if apply:
         if TARGET.exists():

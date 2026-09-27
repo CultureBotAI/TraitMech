@@ -122,7 +122,7 @@ causal_graphs:
     label: OptE transmembrane effector
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR041208
-    description: S-2TMβ/Cap15-family transmembrane effector encoded by Panoptes operons.
+    description: OptE-family transmembrane effector encoded by Panoptes operons.
     protein_examples:
     - uniprot_id: UniProtKB:A0A099LW44
       protein_label: CD-NTase-associated protein 15 domain-containing protein
@@ -415,4 +415,14 @@ curation_history:
     the VnOptSE operon source for the mechanistic protein examples; direct native
     chromosomal Panoptes activity remains open because the current challenge assay
     used heterologous E. coli MG1655. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-27T11:38:27Z'
+  curator: codex
+  action: VERIFY_PANOPTES_PROTEIN_GROUNDINGS
+  changes: 'Verified the Panoptes UniProt protein examples with audit_uniprot_grounding.py:
+    UniProtKB:A0A099LXT1 is a current unreviewed V. navarrensis UP000029994 primary
+    accession at entry version 30 / sequence version 1, UniProtKB:A0A099LW44 is a
+    current unreviewed V. navarrensis UP000029994 primary accession at entry version
+    37 / sequence version 1, and UniProt cross-references link them to InterPro:IPR040942
+    (Minimal_Cpol) and InterPro:IPR041208 (Cap15).'
   llm_assisted: true
