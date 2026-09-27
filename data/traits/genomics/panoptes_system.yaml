@@ -90,6 +90,9 @@ causal_graphs:
     label: OptS cyclic-dinucleotide synthase
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR040942
+    grounding_notes: InterPro:IPR040942 is a Minimal_Cpol polymerase domain present
+      in VnOptS; it is broader than Panoptes-specific OptS and is retained as a domain-level
+      grounding because no narrower taxon-agnostic OptS family identifier is available.
     description: Minimal CRISPR polymerase domain protein that synthesizes cyclic
       dinucleotides in Panoptes operons.
     protein_examples:
@@ -122,6 +125,9 @@ causal_graphs:
     label: OptE transmembrane effector
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR041208
+    grounding_notes: InterPro:IPR041208 is the Cap15 family carried by VnOptE and
+      retained as the closest taxon-agnostic grounding for the OptE transmembrane
+      effector pending a narrower Panoptes-specific profile.
     description: OptE-family transmembrane effector encoded by Panoptes operons.
     protein_examples:
     - uniprot_id: UniProtKB:A0A099LW44
@@ -425,4 +431,11 @@ curation_history:
     current unreviewed V. navarrensis UP000029994 primary accession at entry version
     37 / sequence version 1, and UniProt cross-references link them to InterPro:IPR040942
     (Minimal_Cpol) and InterPro:IPR041208 (Cap15).'
+  llm_assisted: true
+- timestamp: '2026-09-27T11:59:19Z'
+  curator: codex
+  action: DOCUMENT_PANOPTES_INTERPRO_SCOPE
+  changes: 'Added grounding notes for the new Panoptes InterPro CURIEs: InterPro:IPR040942
+    is a broader Minimal_Cpol domain present in VnOptS rather than an OptS-only family,
+    and InterPro:IPR041208 is the Cap15 family carried by VnOptE.'
   llm_assisted: true

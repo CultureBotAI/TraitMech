@@ -30,6 +30,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-27T09:24:21Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-27T09:24:22Z"
 GROUNDING_REVIEW_TIMESTAMP = "2026-09-27T11:38:27Z"
+INTERPRO_SCOPE_REVIEW_TIMESTAMP = "2026-09-27T11:59:19Z"
 POSED_DATE = "2026-09-27"
 IDENTIFIER = "traitmech:000407"
 PROPOSAL = "proposals/metpo_traitmech_v284"
@@ -296,6 +297,13 @@ RECORD: dict[str, Any] = {
                     "label": "OptS cyclic-dinucleotide synthase",
                     "node_type": "GENE_OR_PROTEIN",
                     "grounding": "InterPro:IPR040942",
+                    "grounding_notes": (
+                        "InterPro:IPR040942 is a Minimal_Cpol polymerase "
+                        "domain present in VnOptS; it is broader than "
+                        "Panoptes-specific OptS and is retained as a "
+                        "domain-level grounding because no narrower "
+                        "taxon-agnostic OptS family identifier is available."
+                    ),
                     "description": (
                         "Minimal CRISPR polymerase domain protein that "
                         "synthesizes cyclic dinucleotides in Panoptes "
@@ -332,6 +340,12 @@ RECORD: dict[str, Any] = {
                     "label": "OptE transmembrane effector",
                     "node_type": "GENE_OR_PROTEIN",
                     "grounding": "InterPro:IPR041208",
+                    "grounding_notes": (
+                        "InterPro:IPR041208 is the Cap15 family carried by "
+                        "VnOptE and retained as the closest taxon-agnostic "
+                        "grounding for the OptE transmembrane effector "
+                        "pending a narrower Panoptes-specific profile."
+                    ),
                     "description": (
                         "OptE-family transmembrane effector encoded by "
                         "Panoptes operons."
@@ -695,6 +709,19 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=GROUNDING_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="DOCUMENT_PANOPTES_INTERPRO_SCOPE",
+        changes=(
+            "Added grounding notes for the new Panoptes InterPro CURIEs: "
+            "InterPro:IPR040942 is a broader Minimal_Cpol domain present in "
+            "VnOptS rather than an OptS-only family, and InterPro:IPR041208 "
+            "is the Cap15 family carried by VnOptE."
+        ),
+        llm_assisted=True,
+        timestamp=INTERPRO_SCOPE_REVIEW_TIMESTAMP,
     )
     if apply:
         if TARGET.exists():

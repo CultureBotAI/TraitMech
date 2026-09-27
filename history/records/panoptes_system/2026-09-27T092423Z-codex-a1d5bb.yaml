@@ -9,9 +9,18 @@ session:
   actors:
   - type: ai_agent
     name: codex
+    model: gpt-5
+    agent_tool: codex
 events:
 - type: CREATE
   outcome: changed
+  sections:
+  - identity
+  - proposal
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
   summary: Added Panoptes system trait
   details: Minted traitmech:000407 for the DOI-backed Panoptes optSE phage-defense system
     under phage defense system, added the v284 METPO placeholder proposal, rendered the Panoptes
