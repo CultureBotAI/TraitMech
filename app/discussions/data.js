@@ -2895,6 +2895,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pd_t7_2_system.html#pd-t7-2-mechanism-gap"
  },
  {
+  "discussion_id": "pd-t7-5-mechanism-gap",
+  "prompt": "Resolve PD-T7-5 natural host breadth, direct phage trigger, and PD(D/E)XK effector mechanism before minting narrower PD-T7-5 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-T7-5 system",
+  "source_id": "traitmech:000397",
+  "source_file": "pd_t7_5_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_t7_5_locus_restricts_phages"
+  ],
+  "rationale": "Vassallo et al. support PD-T7-5 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to protection against SECphi17, T3, and T7, and DefenseFinder represents the system with one profile. Natural host breadth, the direct phage trigger, and the PD(D/E)XK effector mechanism remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_t7_5_system.html#pd-t7-5-mechanism-gap"
+ },
+ {
   "discussion_id": "pfiat-mechanism-gap",
   "prompt": "Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas, Pf prophage production and immunity coupling, and PfiAT profile-to-activity mapping before minting narrower PfiAT mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5084,9 +5111,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 266,
- "total_knowledge_gaps": 184,
- "total_source_entries": 264,
+ "total_discussions": 267,
+ "total_knowledge_gaps": 185,
+ "total_source_entries": 265,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
