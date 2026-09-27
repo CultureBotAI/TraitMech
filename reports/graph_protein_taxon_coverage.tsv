@@ -283,7 +283,7 @@ data/traits/genomics/ophion_system.yaml	traitmech:000331	Ophion system	ophion_lo
 data/traits/genomics/oshun_system.yaml	traitmech:000293	Oshun system	oshun_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/panchino_gp28_system.yaml	traitmech:000294	Panchino gp28 system	panchino_gp28_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness	pangenome_openness_hgt	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/panoptes_system.yaml	traitmech:000407	Panoptes system	panoptes_decoy_cyclic_nucleotide_defense	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/panoptes_system.yaml	traitmech:000407	Panoptes system	panoptes_decoy_cyclic_nucleotide_defense	MECHANISTIC	2	2	0	1	1	2	2	PASS	0	0	-
 data/traits/genomics/paris_system.yaml	traitmech:000237	PARIS system	paris_ariab_trna_cleavage_abortive_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_1_system.yaml	traitmech:000404	PD-Lambda-1 system	pd_lambda_1_locus_restricts_lambda_vir	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pd_lambda_2_system.yaml	traitmech:000378	PD-Lambda-2 system	pd_lambda_2_locus_restricts_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

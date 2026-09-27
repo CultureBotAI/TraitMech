@@ -74,10 +74,6 @@ VIBRIO_ECOLI_CHALLENGE_SNIPPET = (
     "VnOptSE operon specifically defended against phages from the "
     "Straboviridae family"
 )
-OPTS_HOLDS_OPTE_SNIPPET = (
-    "OptS constitutively synthesizes 2′,3′-c-di-AMP and other cyclic "
-    "dinucleotides to hold OptE in an inactive state."
-)
 ACB2_RELEASES_OPTE_MODEL_SNIPPET = (
     "During phage infection, Acb2 or similar immune evasion proteins are "
     "produced that sequester the OptS-derived signalling molecule, leading "
@@ -186,18 +182,6 @@ def vibrio_ecoli_challenge_evidence() -> dict[str, str]:
     )
 
 
-def opts_holds_opte_evidence() -> dict[str, str]:
-    return evidence(
-        SULLIVAN,
-        OPTS_HOLDS_OPTE_SNIPPET,
-        (
-            "The Panoptes model places constitutive OptS cyclic "
-            "dinucleotide synthesis upstream of OptE inactive-state "
-            "repression."
-        ),
-    )
-
-
 def acb2_releases_opte_model_evidence() -> dict[str, str]:
     return evidence(
         SULLIVAN,
@@ -227,9 +211,9 @@ RECORD: dict[str, Any] = {
     "label": "Panoptes system",
     "definition": (
         "A phage defense system in which an organism possesses a two-gene "
-        "optSE locus encoding an OptS minimal CRISPR polymerase synthase that "
-        "constitutively produces cyclic dinucleotides and an OptE S-2TMβ "
-        "transmembrane effector that is released from cyclic-dinucleotide "
+        "optSE locus encoding an OptS protein that constitutively produces "
+        "cyclic dinucleotides and an OptE transmembrane effector that is "
+        "released from cyclic-dinucleotide "
         "repression when phage Acb2-like proteins sequester those signals, "
         "leading to inner-membrane disruption."
     ),
@@ -265,6 +249,18 @@ RECORD: dict[str, Any] = {
         vibrio_ecoli_challenge_evidence(),
         registry_evidence(),
     ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:29495",
+            "taxon_label": "Vibrio navarrensis",
+            "note": (
+                "Source species for the VnOptSE operon whose endogenous "
+                "promoter drove heterologous phage-defense assays in "
+                "E. coli MG1655."
+            ),
+            "reference": SULLIVAN,
+        },
+    ],
     "causal_graphs": [
         {
             "graph_id": "panoptes_decoy_cyclic_nucleotide_defense",
@@ -278,12 +274,12 @@ RECORD: dict[str, Any] = {
                 "Acb2-like sequestration of the OptS-derived signal, "
                 "inner-membrane disruption, and phage restriction."
             ),
-            "scope_status": "NONMECHANISTIC",
+            "scope_status": "MECHANISTIC",
             "scope_notes": (
-                "The graph captures Sullivan et al. Panoptes evidence without "
-                "asserting one universal cyclic-dinucleotide product, "
-                "anti-defense trigger, phage breadth, or OptE "
-                "oligomerization mechanism across all optSE homologs."
+                "The graph captures OptS/OptE/Acb2 coupling from Sullivan "
+                "et al. while leaving cyclic-dinucleotide identity, "
+                "anti-defense breadth, phage breadth, and OptE "
+                "oligomerization unspecified for untested optSE homologs."
             ),
             "nodes": [
                 {
@@ -293,6 +289,79 @@ RECORD: dict[str, Any] = {
                     "description": (
                         "A two-gene Panoptes locus encoding OptS and OptE."
                     ),
+                },
+                {
+                    "node_id": "vnopts_mcpol_synthase",
+                    "label": "VnOptS mCpol synthase",
+                    "node_type": "GENE_OR_PROTEIN",
+                    "grounding": "InterPro:IPR040942",
+                    "description": (
+                        "Vibrio navarrensis OptS minimal CRISPR polymerase "
+                        "domain protein that synthesizes cyclic "
+                        "dinucleotides in the VnOptSE Panoptes operon."
+                    ),
+                    "protein_examples": [
+                        {
+                            "uniprot_id": "UniProtKB:A0A099LXT1",
+                            "protein_label": (
+                                "Minimal CRISPR polymerase "
+                                "domain-containing protein"
+                            ),
+                            "gene_symbol": "optS",
+                            "taxon_id": "NCBITaxon:29495",
+                            "taxon_label": "Vibrio navarrensis",
+                            "proteome_id": "UP000029994",
+                            "entry_status": "UNREVIEWED",
+                            "retrieved_on": "2026-09-27",
+                            "entry_version": 30,
+                            "sequence_version": 1,
+                            "role": (
+                                "VnOptS is the OptS synthase encoded by the "
+                                "V. navarrensis optSE Panoptes operon."
+                            ),
+                            "evidence": [
+                                vibrio_operon_evidence(),
+                                vibrio_ecoli_challenge_evidence(),
+                            ],
+                        },
+                    ],
+                },
+                {
+                    "node_id": "vnopte_transmembrane_effector",
+                    "label": "VnOptE transmembrane effector",
+                    "node_type": "GENE_OR_PROTEIN",
+                    "grounding": "InterPro:IPR041208",
+                    "description": (
+                        "Vibrio navarrensis OptE S-2TMβ/Cap15-family "
+                        "transmembrane effector encoded by the VnOptSE "
+                        "Panoptes operon."
+                    ),
+                    "protein_examples": [
+                        {
+                            "uniprot_id": "UniProtKB:A0A099LW44",
+                            "protein_label": (
+                                "CD-NTase-associated protein 15 "
+                                "domain-containing protein"
+                            ),
+                            "gene_symbol": "optE",
+                            "taxon_id": "NCBITaxon:29495",
+                            "taxon_label": "Vibrio navarrensis",
+                            "proteome_id": "UP000029994",
+                            "entry_status": "UNREVIEWED",
+                            "retrieved_on": "2026-09-27",
+                            "entry_version": 37,
+                            "sequence_version": 1,
+                            "role": (
+                                "VnOptE is the OptE transmembrane effector "
+                                "encoded by the V. navarrensis optSE "
+                                "Panoptes operon."
+                            ),
+                            "evidence": [
+                                vibrio_operon_evidence(),
+                                vibrio_ecoli_challenge_evidence(),
+                            ],
+                        },
+                    ],
                 },
                 {
                     "node_id": "opts_cyclic_dinucleotide_synthesis",
@@ -320,6 +389,15 @@ RECORD: dict[str, Any] = {
                         "Sequestration or depletion of OptS-derived cyclic "
                         "nucleotides by phage Acb2 or similar immune-evasion "
                         "proteins."
+                    ),
+                },
+                {
+                    "node_id": "phage_infection",
+                    "label": "phage infection",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Infection by a bacteriophage that expresses Acb2 "
+                        "or similar cyclic-nucleotide sequestration proteins."
                     ),
                 },
                 {
@@ -364,15 +442,38 @@ RECORD: dict[str, Any] = {
             "edges": [
                 {
                     "subject": "optse_locus",
+                    "predicate": "encodes",
+                    "object": "vnopts_mcpol_synthase",
+                    "description": (
+                        "The V. navarrensis optSE locus encodes the "
+                        "VnOptS mCpol synthase."
+                    ),
+                    "evidence": [
+                        vibrio_operon_evidence(),
+                    ],
+                },
+                {
+                    "subject": "optse_locus",
+                    "predicate": "encodes",
+                    "object": "vnopte_transmembrane_effector",
+                    "description": (
+                        "The V. navarrensis optSE locus encodes the "
+                        "VnOptE transmembrane effector."
+                    ),
+                    "evidence": [
+                        vibrio_operon_evidence(),
+                    ],
+                },
+                {
+                    "subject": "vnopts_mcpol_synthase",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "opts_cyclic_dinucleotide_synthesis",
                     "description": (
-                        "The optSE locus encodes OptS, a predicted "
-                        "nucleotide-derived second-messenger synthase."
+                        "OptS is the Panoptes synthase that generates "
+                        "OptE-binding cyclic dinucleotides."
                     ),
                     "evidence": [
-                        two_gene_operon_evidence(),
                         opt_signal_binding_evidence(),
                     ],
                 },
@@ -388,7 +489,7 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         opt_signal_binding_evidence(),
-                        opts_holds_opte_evidence(),
+                        opts_represses_opte_evidence(),
                     ],
                 },
                 {
@@ -403,6 +504,33 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         opts_represses_opte_evidence(),
+                    ],
+                },
+                {
+                    "subject": "vnopte_transmembrane_effector",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "opte_inner_membrane_disruption",
+                    "description": (
+                        "OptE is the Panoptes effector whose released "
+                        "toxicity disrupts the inner membrane."
+                    ),
+                    "evidence": [
+                        acb2_membrane_release_evidence(),
+                    ],
+                },
+                {
+                    "subject": "phage_infection",
+                    "predicate": "activates",
+                    "predicate_id": "RO:0002213",
+                    "object": "acb2_like_signal_sequestration",
+                    "description": (
+                        "Phage infection produces Acb2 or similar "
+                        "immune-evasion proteins that sequester "
+                        "OptS-derived cyclic nucleotide signals."
+                    ),
+                    "evidence": [
+                        acb2_releases_opte_model_evidence(),
                     ],
                 },
                 {
@@ -456,7 +584,6 @@ RECORD: dict[str, Any] = {
                         "trait."
                     ),
                     "evidence": [
-                        two_gene_operon_evidence(),
                         optse_naming_evidence(),
                     ],
                 },
@@ -490,8 +617,8 @@ RECORD: dict[str, Any] = {
             "discussion_id": "panoptes-natural-host-gap",
             "prompt": (
                 "Find a native endogenous microbial isolate with direct "
-                "chromosomal Panoptes antiphage validation before adding "
-                "canonical_examples."
+                "chromosomal Panoptes antiphage validation beyond the "
+                "heterologous VnOptSE source-species exemplar."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -499,9 +626,10 @@ RECORD: dict[str, Any] = {
                 "Sullivan et al. investigated a candidate Vibrio navarrensis "
                 "optSE operon and showed that VnOptSE defended against "
                 "Straboviridae phages when expressed in E. coli MG1655 from "
-                "its endogenous promoter, but that heterologous challenge "
-                "assay does not establish an endogenous V. navarrensis or "
-                "E. coli chromosomal Panoptes canonical exemplar."
+                "its endogenous promoter. V. navarrensis is retained as the "
+                "operon source for mechanistic protein examples, but that "
+                "heterologous challenge assay does not establish a direct "
+                "endogenous V. navarrensis chromosomal Panoptes assay."
             ),
             "evidence": [
                 vibrio_operon_evidence(),
@@ -538,12 +666,12 @@ def write_record(*, apply: bool) -> None:
         curator=CURATOR,
         action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
         changes=(
-            "Reviewed Panoptes system canonical_examples and left them empty "
-            "because the current sources support V. navarrensis VnOptSE "
-            "activity in heterologous E. coli MG1655 challenge assays and a "
-            "pinned DefenseFinder article-registry row, but not a direct "
-            "native microbial isolate exemplar with experimentally verified "
-            "endogenous Panoptes activity. No paid research was used."
+            "Reviewed Panoptes system canonical_examples and added "
+            "V. navarrensis as the VnOptSE operon source for the "
+            "mechanistic protein examples; direct native chromosomal "
+            "Panoptes activity remains open because the current challenge "
+            "assay used heterologous E. coli MG1655. No paid research was "
+            "used."
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,

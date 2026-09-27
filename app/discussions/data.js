@@ -2506,7 +2506,7 @@ window.searchData = [
  },
  {
   "discussion_id": "panoptes-natural-host-gap",
-  "prompt": "Find a native endogenous microbial isolate with direct chromosomal Panoptes antiphage validation before adding canonical_examples.",
+  "prompt": "Find a native endogenous microbial isolate with direct chromosomal Panoptes antiphage validation beyond the heterologous VnOptSE source-species exemplar.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -2516,7 +2516,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#panoptes_decoy_cyclic_nucleotide_defense"
   ],
-  "rationale": "Sullivan et al. investigated a candidate Vibrio navarrensis optSE operon and showed that VnOptSE defended against Straboviridae phages when expressed in E. coli MG1655 from its endogenous promoter, but that heterologous challenge assay does not establish an endogenous V. navarrensis or E. coli chromosomal Panoptes canonical exemplar.",
+  "rationale": "Sullivan et al. investigated a candidate Vibrio navarrensis optSE operon and showed that VnOptSE defended against Straboviridae phages when expressed in E. coli MG1655 from its endogenous promoter. V. navarrensis is retained as the operon source for mechanistic protein examples, but that heterologous challenge assay does not establish a direct endogenous V. navarrensis chromosomal Panoptes assay.",
   "num_experiments": 0,
   "num_evidence": 2,
   "evidence_refs": [

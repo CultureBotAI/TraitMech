@@ -1,10 +1,10 @@
 identifier: traitmech:000407
 label: Panoptes system
 definition: A phage defense system in which an organism possesses a two-gene optSE
-  locus encoding an OptS minimal CRISPR polymerase synthase that constitutively produces
-  cyclic dinucleotides and an OptE S-2TMβ transmembrane effector that is released
-  from cyclic-dinucleotide repression when phage Acb2-like proteins sequester those
-  signals, leading to inner-membrane disruption.
+  locus encoding an OptS protein that constitutively produces cyclic dinucleotides
+  and an OptE transmembrane effector that is released from cyclic-dinucleotide repression
+  when phage Acb2-like proteins sequester those signals, leading to inner-membrane
+  disruption.
 definition_source: DOI:10.1038/s41586-025-09557-z
 trait_category: GENOMICS
 term_kind: CLASS
@@ -65,21 +65,93 @@ evidence:
     cyclic nucleotides to defend against phage |'
   notes: The pinned DefenseFinder article registry maps the Panoptes key to Sullivan
     et al.; the same pinned rules and HMM inventory omit a Panoptes model.
+canonical_examples:
+- taxon_id: NCBITaxon:29495
+  taxon_label: Vibrio navarrensis
+  note: Source species for the VnOptSE operon whose endogenous promoter drove heterologous
+    phage-defense assays in E. coli MG1655.
+  reference: DOI:10.1038/s41586-025-09557-z
 causal_graphs:
 - graph_id: panoptes_decoy_cyclic_nucleotide_defense
   title: Panoptes loci couple cyclic-nucleotide sequestration to OptE membrane disruption
   description: Evidence-backed process sketch linking an optSE locus to OptS cyclic-dinucleotide
     synthesis, OptE repression, Acb2-like sequestration of the OptS-derived signal,
     inner-membrane disruption, and phage restriction.
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph captures Sullivan et al. Panoptes evidence without asserting
-    one universal cyclic-dinucleotide product, anti-defense trigger, phage breadth,
-    or OptE oligomerization mechanism across all optSE homologs.
+  scope_status: MECHANISTIC
+  scope_notes: The graph captures OptS/OptE/Acb2 coupling from Sullivan et al. while
+    leaving cyclic-dinucleotide identity, anti-defense breadth, phage breadth, and
+    OptE oligomerization unspecified for untested optSE homologs.
   nodes:
   - node_id: optse_locus
     label: optSE locus
     node_type: GENETIC_ELEMENT
     description: A two-gene Panoptes locus encoding OptS and OptE.
+  - node_id: vnopts_mcpol_synthase
+    label: VnOptS mCpol synthase
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR040942
+    description: Vibrio navarrensis OptS minimal CRISPR polymerase domain protein
+      that synthesizes cyclic dinucleotides in the VnOptSE Panoptes operon.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A099LXT1
+      protein_label: Minimal CRISPR polymerase domain-containing protein
+      gene_symbol: optS
+      taxon_id: NCBITaxon:29495
+      taxon_label: Vibrio navarrensis
+      proteome_id: UP000029994
+      entry_status: UNREVIEWED
+      retrieved_on: '2026-09-27'
+      entry_version: 30
+      sequence_version: 1
+      role: VnOptS is the OptS synthase encoded by the V. navarrensis optSE Panoptes
+        operon.
+      evidence:
+      - reference: DOI:10.1038/s41586-025-09557-z
+        snippet: We investigated a candidate two-gene Panoptes operon from Vibrio
+          navarrensis.
+        notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
+          defense assays.
+      - reference: DOI:10.1038/s41586-025-09557-z
+        snippet: We expressed the operon from its endogenous promoter in Escherichia
+          coli MG1655 and challenged these bacteria with a panel of diverse phages.
+          The VnOptSE operon specifically defended against phages from the Straboviridae
+          family
+        notes: The V. navarrensis operon was expressed from its endogenous promoter
+          in E. coli MG1655 and protected the heterologous host against Straboviridae
+          phages.
+  - node_id: vnopte_transmembrane_effector
+    label: VnOptE transmembrane effector
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR041208
+    description: Vibrio navarrensis OptE S-2TMβ/Cap15-family transmembrane effector
+      encoded by the VnOptSE Panoptes operon.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A099LW44
+      protein_label: CD-NTase-associated protein 15 domain-containing protein
+      gene_symbol: optE
+      taxon_id: NCBITaxon:29495
+      taxon_label: Vibrio navarrensis
+      proteome_id: UP000029994
+      entry_status: UNREVIEWED
+      retrieved_on: '2026-09-27'
+      entry_version: 37
+      sequence_version: 1
+      role: VnOptE is the OptE transmembrane effector encoded by the V. navarrensis
+        optSE Panoptes operon.
+      evidence:
+      - reference: DOI:10.1038/s41586-025-09557-z
+        snippet: We investigated a candidate two-gene Panoptes operon from Vibrio
+          navarrensis.
+        notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
+          defense assays.
+      - reference: DOI:10.1038/s41586-025-09557-z
+        snippet: We expressed the operon from its endogenous promoter in Escherichia
+          coli MG1655 and challenged these bacteria with a panel of diverse phages.
+          The VnOptSE operon specifically defended against phages from the Straboviridae
+          family
+        notes: The V. navarrensis operon was expressed from its endogenous promoter
+          in E. coli MG1655 and protected the heterologous host against Straboviridae
+          phages.
   - node_id: opts_cyclic_dinucleotide_synthesis
     label: OptS cyclic dinucleotide synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -94,6 +166,11 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Sequestration or depletion of OptS-derived cyclic nucleotides by
       phage Acb2 or similar immune-evasion proteins.
+  - node_id: phage_infection
+    label: phage infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Infection by a bacteriophage that expresses Acb2 or similar cyclic-nucleotide
+      sequestration proteins.
   - node_id: opte_inner_membrane_disruption
     label: OptE inner membrane disruption
     node_type: BIOLOGICAL_PROCESS
@@ -117,18 +194,30 @@ causal_graphs:
       bacteriophage infection.
   edges:
   - subject: optse_locus
+    predicate: encodes
+    object: vnopts_mcpol_synthase
+    description: The V. navarrensis optSE locus encodes the VnOptS mCpol synthase.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: We investigated a candidate two-gene Panoptes operon from Vibrio navarrensis.
+      notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
+        defense assays.
+  - subject: optse_locus
+    predicate: encodes
+    object: vnopte_transmembrane_effector
+    description: The V. navarrensis optSE locus encodes the VnOptE transmembrane effector.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: We investigated a candidate two-gene Panoptes operon from Vibrio navarrensis.
+      notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
+        defense assays.
+  - subject: vnopts_mcpol_synthase
     predicate: contributes to
     predicate_id: RO:0002326
     object: opts_cyclic_dinucleotide_synthesis
-    description: The optSE locus encodes OptS, a predicted nucleotide-derived second-messenger
-      synthase.
+    description: OptS is the Panoptes synthase that generates OptE-binding cyclic
+      dinucleotides.
     evidence:
-    - reference: DOI:10.1038/s41586-025-09557-z
-      snippet: Panoptes is a two-gene operon, optSE, wherein OptS is predicted to
-        synthesize a nucleotide-derived second messenger and OptE is predicted to
-        bind that signal and drive effector-mediated defence.
-      notes: Sullivan et al. define Panoptes as the two-gene optSE system encoding
-        OptS and OptE.
     - reference: DOI:10.1038/s41586-025-09557-z
       snippet: OptS orthologues from two distinct Panoptes systems generated cyclic
         dinucleotide products, including 2′,3′-cyclic diadenosine monophosphate (2′,3′-c-di-AMP),
@@ -151,10 +240,10 @@ causal_graphs:
       notes: OptS orthologues produce cyclic dinucleotides, including 2′,3′-c-di-AMP,
         that can bind the soluble domain of the OptE transmembrane effector.
     - reference: DOI:10.1038/s41586-025-09557-z
-      snippet: OptS constitutively synthesizes 2′,3′-c-di-AMP and other cyclic dinucleotides
-        to hold OptE in an inactive state.
-      notes: The Panoptes model places constitutive OptS cyclic dinucleotide synthesis
-        upstream of OptE inactive-state repression.
+      snippet: we found that OptS constitutively produced signalling nucleotides to
+        repress OptE-mediated growth inhibition.
+      notes: OptS constitutive signalling nucleotide production represses OptE-mediated
+        growth inhibition.
   - subject: opte_cyclic_dinucleotide_repression
     predicate: negatively regulates
     predicate_id: RO:0002212
@@ -167,6 +256,34 @@ causal_graphs:
         repress OptE-mediated growth inhibition.
       notes: OptS constitutive signalling nucleotide production represses OptE-mediated
         growth inhibition.
+  - subject: vnopte_transmembrane_effector
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: opte_inner_membrane_disruption
+    description: OptE is the Panoptes effector whose released toxicity disrupts the
+      inner membrane.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: Our data support the idea that cyclic nucleotide sequestration by Acb2
+        releases OptE toxicity, thereby initiating inner membrane disruption, leading
+        to phage defence.
+      notes: Acb2 cyclic-nucleotide sequestration releases OptE toxicity and leads
+        to inner-membrane disruption.
+  - subject: phage_infection
+    predicate: activates
+    predicate_id: RO:0002213
+    object: acb2_like_signal_sequestration
+    description: Phage infection produces Acb2 or similar immune-evasion proteins
+      that sequester OptS-derived cyclic nucleotide signals.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: During phage infection, Acb2 or similar immune evasion proteins are
+        produced that sequester the OptS-derived signalling molecule, leading to a
+        population of OptE that is no longer bound to cyclic dinucleotide and is free
+        to become activated, in turn disrupting the bacterial membrane and resulting
+        in phage defence
+      notes: The Panoptes model links Acb2-like signal sequestration to OptE activation,
+        bacterial membrane disruption, and phage defense.
   - subject: acb2_like_signal_sequestration
     predicate: activates
     predicate_id: RO:0002213
@@ -215,12 +332,6 @@ causal_graphs:
     description: Panoptes system possession is a phage-defense-system trait.
     evidence:
     - reference: DOI:10.1038/s41586-025-09557-z
-      snippet: Panoptes is a two-gene operon, optSE, wherein OptS is predicted to
-        synthesize a nucleotide-derived second messenger and OptE is predicted to
-        bind that signal and drive effector-mediated defence.
-      notes: Sullivan et al. define Panoptes as the two-gene optSE system encoding
-        OptS and OptE.
-    - reference: DOI:10.1038/s41586-025-09557-z
       snippet: We named OptSE the Panoptes antiphage system for Argus Panoptes, the
         all-seeing, many-eyed giant in Greek mythology who was a faithful watchman
         to Hera.
@@ -246,14 +357,15 @@ discussions:
   posed_date: '2026-09-27'
 - discussion_id: panoptes-natural-host-gap
   prompt: Find a native endogenous microbial isolate with direct chromosomal Panoptes
-    antiphage validation before adding canonical_examples.
+    antiphage validation beyond the heterologous VnOptSE source-species exemplar.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Sullivan et al. investigated a candidate Vibrio navarrensis optSE operon
     and showed that VnOptSE defended against Straboviridae phages when expressed in
-    E. coli MG1655 from its endogenous promoter, but that heterologous challenge assay
-    does not establish an endogenous V. navarrensis or E. coli chromosomal Panoptes
-    canonical exemplar.
+    E. coli MG1655 from its endogenous promoter. V. navarrensis is retained as the
+    operon source for mechanistic protein examples, but that heterologous challenge
+    assay does not establish a direct endogenous V. navarrensis chromosomal Panoptes
+    assay.
   evidence:
   - reference: DOI:10.1038/s41586-025-09557-z
     snippet: We investigated a candidate two-gene Panoptes operon from Vibrio navarrensis.
@@ -281,9 +393,8 @@ curation_history:
 - timestamp: '2026-09-27T09:24:22Z'
   curator: codex
   action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
-  changes: Reviewed Panoptes system canonical_examples and left them empty because
-    the current sources support V. navarrensis VnOptSE activity in heterologous E.
-    coli MG1655 challenge assays and a pinned DefenseFinder article-registry row,
-    but not a direct native microbial isolate exemplar with experimentally verified
-    endogenous Panoptes activity. No paid research was used.
+  changes: Reviewed Panoptes system canonical_examples and added V. navarrensis as
+    the VnOptSE operon source for the mechanistic protein examples; direct native
+    chromosomal Panoptes activity remains open because the current challenge assay
+    used heterologous E. coli MG1655. No paid research was used.
   llm_assisted: true

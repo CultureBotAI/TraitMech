@@ -20,6 +20,7 @@ temperature decrease	ENVIRONMENTAL_FACTOR	5	data/traits/environment/mesophilic.y
 na+/h+ antiporters	GENE_OR_PROTEIN	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_delta_high.yaml
 maximal growth rate	QUALITY	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/pressure_optimum.yaml
 f0f1-atpase	GENE_OR_PROTEIN	5	data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_delta_mid1.yaml|data/traits/environment/ph_delta_mid3.yaml
+phage infection	BIOLOGICAL_PROCESS	5	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/lamassu_system.yaml
 formate	CHEMICAL	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 oxygen	CHEMICAL	5	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/morphology/carboxysome.yaml
 mrec	GENE_OR_PROTEIN	5	data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/cell_width_small.yaml|data/traits/morphology/fusiform_shaped.yaml
@@ -30,7 +31,6 @@ cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.y
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
 phage dna replication	BIOLOGICAL_PROCESS	4	data/traits/genomics/abir_system.yaml|data/traits/genomics/brex_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
-phage infection	BIOLOGICAL_PROCESS	4	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/lamassu_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
