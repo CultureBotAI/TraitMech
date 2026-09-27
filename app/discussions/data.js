@@ -3391,8 +3391,27 @@ window.searchData = [
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
+ "posed_by": "codex",
+ "page_url": "../../pages/traits/genomics/radar_system.html#radar-trigger-and-substrate-gap"
+},
+{
+  "discussion_id": "razr-trigger-model-gap",
+  "prompt": "Resolve RAZR natural hosts, phage ring triggers, RNA-substrate breadth, and model coverage before minting narrower RAZR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "RAZR system",
+  "source_id": "traitmech:000411",
+  "source_file": "razr_system.yaml",
+  "attaches_to": [
+   "causal_graphs#razr_ring_trigger_restricts_phage"
+  ],
+  "rationale": "Zhang et al. support RAZR as a ring-activated zinc-finger HEPN RNase that can oligomerize around unrelated phage ring scaffolds, but natural locus breadth, the full phage-trigger set, exact RNA-substrate preference, and absence from the pinned DefenseFinder HMM/rules rows need further review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
   "posed_by": "codex",
-  "page_url": "../../pages/traits/genomics/radar_system.html#radar-trigger-and-substrate-gap"
+  "page_url": "../../pages/traits/genomics/razr_system.html#razr-trigger-model-gap"
  },
  {
   "discussion_id": "retron-effector-trigger-gap",
@@ -5503,9 +5522,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 284,
- "total_knowledge_gaps": 198,
- "total_source_entries": 278,
+ "total_discussions": 285,
+ "total_knowledge_gaps": 199,
+ "total_source_entries": 279,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

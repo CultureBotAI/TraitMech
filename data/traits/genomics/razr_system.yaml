@@ -1,0 +1,216 @@
+identifier: traitmech:000411
+label: RAZR system
+definition: A phage defense system in which an organism possesses a locus encoding
+  a RAZR zinc-finger HEPN RNase that can form a phage-triggered higher-order ring
+  complex, cleave RNA broadly, inhibit translation, and restrict phage propagation.
+definition_source: DOI:10.1038/s41586-025-10060-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: RAZR
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41586-025-10060-8
+evidence:
+- reference: DOI:10.1038/s41586-025-10060-8
+  snippet: assembles into an active, 24-meric ring
+  notes: Zhang et al. define RAZR as a ring-activated zinc-finger RNase whose phage-triggered
+    higher-order assembly generates an active 24-subunit ring.
+- reference: DOI:10.1038/s41586-025-10060-8
+  snippet: cleave RNA nonspecifically to inhibit translation and restrict phage propagation
+  notes: Zhang et al. connect activated RAZR complexes to broad RNA cleavage, translational
+    shutdown, and restriction of phage growth.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| RAZR | 10\.1038/s41586-025-10060-8 | Bacterial immune activation via
+    supramolecular assembly with phage triggers |'
+  notes: The pinned DefenseFinder article registry maps the named RAZR system to the
+    Zhang et al. Nature article; the pinned DefenseFinder HMM inventory (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md)
+    and rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv)
+    do not list RAZR, so this row is name-to-paper evidence rather than model-component
+    evidence.
+causal_graphs:
+- graph_id: razr_ring_trigger_restricts_phage
+  title: RAZR ring assembly activates RNase defense
+  description: Conservative system-level sketch linking a RAZR locus and a phage ring
+    trigger to RAZR oligomerization, nonspecific RNA cleavage, translation inhibition,
+    phage-propagation restriction, and RAZR system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures RAZR as a named phage-defense RNase activated by
+    phage protein ring scaffolds while leaving natural hosts, the complete phage-trigger
+    set, exact RNA-substrate preference, and profile-to-component DefenseFinder modeling
+    unresolved.
+  nodes:
+  - node_id: razr_locus
+    label: RAZR locus
+    node_type: GENETIC_ELEMENT
+    description: A bacterial locus encoding a ring-activated zinc-finger HEPN RNase.
+  - node_id: phage_ring_trigger
+    label: phage ring trigger
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of a phage-encoded protein ring scaffold whose geometry
+      can promote RAZR assembly.
+  - node_id: razr_oligomerization
+    label: RAZR oligomerization
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of RAZR into a higher-order active RNase ring around a phage
+      protein ring scaffold.
+  - node_id: nonspecific_rna_cleavage
+    label: nonspecific RNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Broad RNA cleavage by activated RAZR ribonuclease complexes.
+  - node_id: translation_inhibition
+    label: translation inhibition
+    node_type: BIOLOGICAL_PROCESS
+    description: Suppression of translation downstream of activated RAZR-mediated
+      RNA cleavage.
+  - node_id: phage_propagation
+    label: phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Productive bacteriophage propagation.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of productive phage propagation in bacteria carrying
+      activated RAZR defense.
+  - node_id: razr_system_trait
+    label: RAZR system
+    node_type: TRAIT
+    grounding: traitmech:000411
+    description: Possession of a genome-encoded RAZR phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: razr_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: razr_oligomerization
+    description: A RAZR locus encodes the RNase that assembles into an active phage-triggered
+      ring complex.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: assembles into an active, 24-meric ring
+      notes: Zhang et al. connect the RAZR bacterial immunity protein to phage-triggered
+        active ring assembly.
+  - subject: phage_ring_trigger
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: razr_oligomerization
+    description: Phage-encoded ring scaffolds provide the geometry that activates
+      RAZR assembly.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: formed by two unrelated phage proteins
+      notes: Zhang et al. show that RAZR activation can be triggered by ring scaffolds
+        from unrelated phage proteins.
+  - subject: razr_oligomerization
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nonspecific_rna_cleavage
+    description: RAZR ring assembly activates broad RNase activity.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: enables RAZR to cleave RNA nonspecifically
+      notes: Zhang et al. place nonspecific RNA cleavage downstream of RAZR complex
+        formation.
+  - subject: nonspecific_rna_cleavage
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: translation_inhibition
+    description: Broad RAZR-mediated RNA cleavage inhibits cellular translation during
+      phage infection.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: inhibit translation
+      notes: Zhang et al. identify translation inhibition as an output of activated
+        RAZR-mediated RNA cleavage.
+  - subject: translation_inhibition
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_propagation
+    description: Translation inhibition caused by RAZR activation restricts phage
+      propagation.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: restrict phage propagation
+      notes: Zhang et al. connect RAZR-dependent translation inhibition to restricted
+        phage propagation.
+  - subject: translation_inhibition
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: RAZR-associated translation inhibition realizes restriction of phage
+      propagation.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: to inhibit translation and restrict phage propagation
+      notes: Zhang et al. report that the same activated RAZR RNase output inhibits
+        translation and restricts phage propagation.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: razr_system_trait
+    description: RAZR-mediated phage restriction realizes the RAZR system trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: cleave RNA nonspecifically to inhibit translation and restrict phage
+        propagation
+      notes: Zhang et al. support restricted phage propagation as an output of active
+        RAZR defense complexes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| RAZR | 10\.1038/s41586-025-10060-8 | Bacterial immune activation
+        via supramolecular assembly with phage triggers |'
+      notes: The pinned DefenseFinder article registry maps the named RAZR system
+        to the Zhang et al. Nature article; the pinned DefenseFinder HMM inventory
+        (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md)
+        and rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv)
+        do not list RAZR, so this row is name-to-paper evidence rather than model-component
+        evidence.
+  - subject: razr_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: RAZR system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-025-10060-8
+      snippet: assembles into an active, 24-meric ring
+      notes: Zhang et al. frame RAZR as a bacterial immune RNase whose activated state
+        restricts phage propagation.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| RAZR | 10\.1038/s41586-025-10060-8 | Bacterial immune activation
+        via supramolecular assembly with phage triggers |'
+      notes: The pinned DefenseFinder article registry maps the named RAZR system
+        to the Zhang et al. Nature article; the pinned DefenseFinder HMM inventory
+        (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md)
+        and rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv)
+        do not list RAZR, so this row is name-to-paper evidence rather than model-component
+        evidence.
+discussions:
+- discussion_id: razr-trigger-model-gap
+  prompt: Resolve RAZR natural hosts, phage ring triggers, RNA-substrate breadth,
+    and model coverage before minting narrower RAZR mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Zhang et al. support RAZR as a ring-activated zinc-finger HEPN RNase
+    that can oligomerize around unrelated phage ring scaffolds, but natural locus
+    breadth, the full phage-trigger set, exact RNA-substrate preference, and absence
+    from the pinned DefenseFinder HMM/rules rows need further review.
+  attaches_to:
+  - causal_graphs#razr_ring_trigger_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-27'
+curation_history:
+- timestamp: '2026-09-27T15:45:19Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted RAZR system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; left canonical_examples empty until
+    direct native-locus evidence supports a microbial exemplar; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v288.
+  llm_assisted: true

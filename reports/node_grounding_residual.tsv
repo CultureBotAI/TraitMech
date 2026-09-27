@@ -1,5 +1,5 @@
 node_label	node_type	node_count	example_files
-restricted phage propagation	BIOLOGICAL_PROCESS	82	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	83	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	12	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_her_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
@@ -31,6 +31,7 @@ cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.y
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
 phage dna replication	BIOLOGICAL_PROCESS	4	data/traits/genomics/abir_system.yaml|data/traits/genomics/brex_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
+phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/razr_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -61,7 +62,6 @@ halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
-phage propagation	BIOLOGICAL_PROCESS	3	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/stk2_system.yaml
 t7 phage resistance	BIOLOGICAL_PROCESS	3	data/traits/genomics/rst_duf4238_system.yaml|data/traits/genomics/rst_helicaseduf2290_system.yaml|data/traits/genomics/rst_hydrolase_3tm_system.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
 rod complex	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width_very_small.yaml|data/traits/morphology/rod_shaped.yaml
@@ -152,6 +152,7 @@ t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genom
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
+translation inhibition	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/razr_system.yaml
 lambdavir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_lambda_1_system.yaml|data/traits/genomics/pd_lambda_3_system.yaml
 t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_t4_10_system.yaml|data/traits/genomics/pd_t4_2_system.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
@@ -1487,7 +1488,6 @@ aria/arib immune complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/pari
 foreign protein sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 arib nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 lysine trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
-translation inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 pd-lambda-1 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_1_system.yaml
 pd-lambda-2 locus	GENETIC_ELEMENT	1	data/traits/genomics/pd_lambda_2_system.yaml
 lambdavir, secphi17, secphi18, secphi27, and t3 protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pd_lambda_2_system.yaml
@@ -1564,6 +1564,10 @@ radar locus	GENETIC_ELEMENT	1	data/traits/genomics/radar_system.yaml
 rdra/rdrb supramolecular complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
 radar adenosine-substrate deamination	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
 inosine nucleotide accumulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
+razr locus	GENETIC_ELEMENT	1	data/traits/genomics/razr_system.yaml
+phage ring trigger	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
+razr oligomerization	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
+nonspecific rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
 foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/restriction_modification_system.yaml
 cognate dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 host recognition site methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/restriction_modification_system.yaml
