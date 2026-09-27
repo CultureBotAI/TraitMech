@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_her_sir_system.yaml
+  slug: gao_her_sir_system
+session:
+  id: 2026-09-27T135318Z-codex-e1225c
+  timestamp: '2026-09-27T13:53:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - hierarchy
+  - causal_graphs
+  summary: Reparent Gao-Her-SIR below Gao-Her
+  details: Replaced the direct phage-defense-system parent on traitmech:000362 with the new
+    traitmech:000409 Gao-Her system parent and inserted the same Gao-Her parent into the nonmechanistic
+    subclass graph.

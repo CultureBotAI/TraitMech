@@ -8,7 +8,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- traitmech:000209
+- traitmech:000409
 synonyms:
 - synonym_text: Gao_Her_SIR
   synonym_type: RELATED_SYNONYM
@@ -70,12 +70,11 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000362
     description: Possession of a genome-encoded Gao-Her-SIR phage-defense system.
-  - node_id: phage_defense_system
-    label: phage defense system
+  - node_id: gao_her_system
+    label: Gao-Her system
     node_type: TRAIT
-    grounding: traitmech:000209
-    description: Possession of one or more genome-encoded immune systems that inhibit
-      bacteriophage infection.
+    grounding: traitmech:000409
+    description: Possession of a genome-encoded Gao-Her phage-defense system.
   edges:
   - subject: gao_her_sir_locus
     predicate: contributes to
@@ -127,13 +126,14 @@ causal_graphs:
   - subject: gao_her_sir_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
-    object: phage_defense_system
-    description: Gao-Her-SIR system possession is a phage-defense-system trait.
+    object: gao_her_system
+    description: Gao-Her-SIR system possession is a Gao-Her family phage-defense-system
+      trait.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"
-      notes: The DefenseFinder rules table models Gao_Her_SIR as a two-profile system
-        requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.
+      notes: The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her
+        subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.
 discussions:
 - discussion_id: gao-her-sir-mechanism-gap
   prompt: Resolve Gao_Her_SIR natural hosts, HerA_SIR2/SIR2 component functions, phage
@@ -157,4 +157,16 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v239.
+  llm_assisted: true
+- timestamp: '2026-09-27T13:51:19Z'
+  curator: codex
+  action: EDIT
+  changes: Reparented the record under traitmech:000409 Gao-Her system and added a
+    Gao-Her parent node plus subclass edge to the causal graph.
+  llm_assisted: true
+- timestamp: '2026-09-27T13:56:56Z'
+  curator: codex
+  action: EDIT
+  changes: Removed the redundant Gao-Her-to-phage subclass edge from the child graph;
+    the Gao-Her parent record now carries that edge.
   llm_assisted: true
