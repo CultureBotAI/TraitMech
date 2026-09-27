@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/clover_system.yaml
+  slug: clover_system
+session:
+  id: 2026-09-27T192335Z-claude-code-c52dc3
+  timestamp: '2026-09-27T19:23:35Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Added Clover system
+  details: Minted traitmech:000415 as the DOI-backed Clover system GENOMICS trait under phage
+    defense system; added Yu and Kranzusch CloA/CloB nucleotide-signal evidence plus the pinned
+    DefenseFinder article row; reserved METPO:1036900 in proposals/metpo_traitmech_v292 and
+    kept narrower Clover children blocked by native-host, sensitive-phage, profile-to-component,
+    and DefenseFinder HMM/rules coverage gaps.
