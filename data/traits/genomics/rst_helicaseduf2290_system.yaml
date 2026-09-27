@@ -34,9 +34,9 @@ evidence:
   notes: Rousset et al. experimentally linked an ATP-dependent helicase plus DUF2290
     protein pair to specific inhibition of phage T7 growth.
 - reference: DOI:10.1016/j.chom.2022.02.018
-  snippet: Phage resistance heatmap of the validated defense systems shows the mean
+  snippet: Phage resistance heatmaps of the validated defense systems show the median
     fold resistance of three independent replicates against a panel of eight phages
-  notes: The Figure 2 legend frames the cloned P4-hotspot hits, including the ATP-dependent
+  notes: The Figure 5 legend frames the cloned P4-hotspot hits, including the ATP-dependent
     helicase plus DUF2290 system, as validated defense systems in a replicated phage-resistance
     heatmap.
 - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_helicaseduf2290.md
@@ -197,10 +197,10 @@ causal_graphs:
     description: Rst_HelicaseDUF2290 system possession is a phage-defense-system trait.
     evidence:
     - reference: DOI:10.1016/j.chom.2022.02.018
-      snippet: Phage resistance heatmap of the validated defense systems shows the
-        mean fold resistance of three independent replicates against a panel of eight
+      snippet: Phage resistance heatmaps of the validated defense systems show the
+        median fold resistance of three independent replicates against a panel of eight
         phages
-      notes: The Figure 2 legend frames the cloned P4-hotspot hits, including the
+      notes: The Figure 5 legend frames the cloned P4-hotspot hits, including the
         ATP-dependent helicase plus DUF2290 system, as validated defense systems in
         a replicated phage-resistance heatmap.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
