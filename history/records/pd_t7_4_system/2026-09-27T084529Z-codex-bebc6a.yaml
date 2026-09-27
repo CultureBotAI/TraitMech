@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t7_4_system.yaml
+  slug: pd_t7_4_system
+session:
+  id: 2026-09-27T084529Z-codex-bebc6a
+  timestamp: '2026-09-27T08:45:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added PD-T7-4 system TraitRecord
+  details: Added traitmech:000406 for the PD-T7-4 DefenseFinder phage-defense system, reserved
+    METPO:1036000 in proposals/metpo_traitmech_v283, kept the PD-T7-4 model key and PD-T7-4__PD-T7-4
+    HMM profile label as related synonyms, left canonical_examples empty pending direct endogenous
+    microbial activity evidence, and supported the first NONMECHANISTIC graph with Vassallo
+    et al., the pinned DefenseFinder PD-T7-4 wiki, rules, and HMM registries.
