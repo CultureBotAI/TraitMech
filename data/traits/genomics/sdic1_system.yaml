@@ -22,22 +22,22 @@ synonyms:
 evidence:
 - reference: DOI:10.1016/j.celrep.2024.115055
   snippet: four newly identified anti-phage systems
-  notes: Bayer et al. identify SDIC1 in a cohort of Serratia defense-island candidate
+  notes: Cummins et al. identify SDIC1 in a cohort of Serratia defense-island candidate
     systems with anti-phage activity.
 - reference: DOI:10.1016/j.celrep.2024.115055
   snippet: previously unreported Toll/interleukin (IL)-1 receptor (TIR)-domain-containing
     system with population-wide immunity
-  notes: Bayer et al. support SDIC1 as a TIR-domain-containing phage-defense system
+  notes: Cummins et al. support SDIC1 as a TIR-domain-containing phage-defense system
     with a population-wide immunity phenotype.
 - reference: DOI:10.1016/j.celrep.2024.115055
   snippet: SDIC1 combines TIR and ubiquitin ligase
-  notes: Bayer et al. connect the SDIC1 system with TIR and ubiquitin-ligase-like
+  notes: Cummins et al. connect the SDIC1 system with TIR and ubiquitin-ligase-like
     components.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: SDIC1 | 10\.1016/j\.celrep\.2024\.115055 | Multi-conflict islands are a
     widespread trend within Serratia spp
   notes: The pinned DefenseFinder article registry maps the SDIC1 source key to the
-    Bayer et al. Serratia multi-conflict-island paper.
+    Cummins et al. Serratia multi-conflict-island paper.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
   snippet: '| SDIC1__SDIC1A                                    |                                                  |
     SDIC1                  | Custom                  | 350    |'
@@ -90,11 +90,11 @@ causal_graphs:
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: previously unreported Toll/interleukin (IL)-1 receptor (TIR)-domain-containing
         system with population-wide immunity
-      notes: Bayer et al. report population-wide immunity for the SDIC1 TIR-domain
+      notes: Cummins et al. report population-wide immunity for the SDIC1 TIR-domain
         system.
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: SDIC1 combines TIR and ubiquitin ligase
-      notes: Bayer et al. place TIR and ubiquitin-ligase-like activities in the SDIC1
+      notes: Cummins et al. place TIR and ubiquitin-ligase-like activities in the SDIC1
         system.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| SDIC1__SDIC1A                                    |                                                  |
@@ -114,7 +114,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: four newly identified anti-phage systems
-      notes: Bayer et al. identify SDIC1 in the newly reported anti-phage system cohort.
+      notes: Cummins et al. identify SDIC1 in the newly reported anti-phage system cohort.
   - subject: sdic1_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -123,12 +123,12 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: four newly identified anti-phage systems
-      notes: Bayer et al. identify SDIC1 among anti-phage systems.
+      notes: Cummins et al. identify SDIC1 among anti-phage systems.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: SDIC1 | 10\.1016/j\.celrep\.2024\.115055 | Multi-conflict islands are
         a widespread trend within Serratia spp
       notes: The pinned DefenseFinder article registry maps the SDIC1 source key to
-        the Bayer et al. Serratia multi-conflict-island paper.
+        the Cummins et al. Serratia multi-conflict-island paper.
 discussions:
 - discussion_id: sdic1-defensefinder-model-gap
   prompt: Resolve SDIC1 natural host breadth, SDIC1A/SDIC1B component functions, phage
@@ -136,7 +136,7 @@ discussions:
     detection criteria before minting narrower SDIC1 mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Bayer et al. support SDIC1 as a TIR-domain-containing anti-phage system
+  rationale: Cummins et al. support SDIC1 as a TIR-domain-containing anti-phage system
     with a ubiquitin-ligase-like component, and the pinned DefenseFinder HMM inventory
     records SDIC1A and SDIC1B profile rows. The pinned rules table has no SDIC1 row,
     and the first-pass record does not resolve natural host breadth, sensitive-phage
@@ -146,17 +146,17 @@ discussions:
   - reference: DOI:10.1016/j.celrep.2024.115055
     snippet: previously unreported Toll/interleukin (IL)-1 receptor (TIR)-domain-containing
       system with population-wide immunity
-    notes: Bayer et al. support SDIC1 as a TIR-domain anti-phage system with a population-level
+    notes: Cummins et al. support SDIC1 as a TIR-domain anti-phage system with a population-level
       output.
   - reference: DOI:10.1016/j.celrep.2024.115055
     snippet: SDIC1 combines TIR and ubiquitin ligase
-    notes: Bayer et al. connect SDIC1 with a TIR domain and a ubiquitin-ligase-like
+    notes: Cummins et al. connect SDIC1 with a TIR domain and a ubiquitin-ligase-like
       component.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
     snippet: SDIC1 | 10\.1016/j\.celrep\.2024\.115055 | Multi-conflict islands are
       a widespread trend within Serratia spp
     notes: The pinned DefenseFinder article registry maps the SDIC1 source key to
-      the Bayer et al. Serratia multi-conflict-island paper.
+      the Cummins et al. Serratia multi-conflict-island paper.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
     snippet: '| SDIC1__SDIC1A                                    |                                                  |
       SDIC1                  | Custom                  | 350    |'

@@ -9,7 +9,7 @@
 
 The pinned METPO snapshot has no active exact class for SDIC1 system, the
 genome-level possession trait for loci containing the SDIC1A and SDIC1B
-components from the Serratia defense-island candidate system 1 family. Bayer et
+components from the Serratia defense-island candidate system 1 family. Cummins et
 al. identify SDIC1 in a cohort of newly reported anti-phage systems from
 Serratia multi-conflict islands, connect SDIC1 to a TIR-domain and
 ubiquitin-ligase-like architecture, and the pinned DefenseFinder HMM inventory

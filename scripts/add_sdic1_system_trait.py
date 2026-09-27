@@ -64,7 +64,7 @@ def article_registry_evidence() -> dict[str, str]:
         "snippet": ARTICLE_ROW,
         "notes": (
             "The pinned DefenseFinder article registry maps the SDIC1 source "
-            "key to the Bayer et al. Serratia multi-conflict-island paper."
+            "key to the Cummins et al. Serratia multi-conflict-island paper."
         ),
     }
 
@@ -120,7 +120,7 @@ RECORD: dict[str, Any] = {
             "reference": BAYER,
             "snippet": SDIC_COHORT_SNIPPET,
             "notes": (
-                "Bayer et al. identify SDIC1 in a cohort of Serratia "
+                "Cummins et al. identify SDIC1 in a cohort of Serratia "
                 "defense-island candidate systems with anti-phage activity."
             ),
         },
@@ -128,7 +128,7 @@ RECORD: dict[str, Any] = {
             "reference": BAYER,
             "snippet": TIR_SYSTEM_SNIPPET,
             "notes": (
-                "Bayer et al. support SDIC1 as a TIR-domain-containing "
+                "Cummins et al. support SDIC1 as a TIR-domain-containing "
                 "phage-defense system with a population-wide immunity "
                 "phenotype."
             ),
@@ -137,7 +137,7 @@ RECORD: dict[str, Any] = {
             "reference": BAYER,
             "snippet": SDIC1_UBIQUITIN_SNIPPET,
             "notes": (
-                "Bayer et al. connect the SDIC1 system with TIR and "
+                "Cummins et al. connect the SDIC1 system with TIR and "
                 "ubiquitin-ligase-like components."
             ),
         },
@@ -217,7 +217,7 @@ RECORD: dict[str, Any] = {
                             "reference": BAYER,
                             "snippet": TIR_SYSTEM_SNIPPET,
                             "notes": (
-                                "Bayer et al. report population-wide "
+                                "Cummins et al. report population-wide "
                                 "immunity for the SDIC1 TIR-domain system."
                             ),
                         },
@@ -225,7 +225,7 @@ RECORD: dict[str, Any] = {
                             "reference": BAYER,
                             "snippet": SDIC1_UBIQUITIN_SNIPPET,
                             "notes": (
-                                "Bayer et al. place TIR and "
+                                "Cummins et al. place TIR and "
                                 "ubiquitin-ligase-like activities in the "
                                 "SDIC1 system."
                             ),
@@ -247,7 +247,7 @@ RECORD: dict[str, Any] = {
                             "reference": BAYER,
                             "snippet": SDIC_COHORT_SNIPPET,
                             "notes": (
-                                "Bayer et al. identify SDIC1 in the newly "
+                                "Cummins et al. identify SDIC1 in the newly "
                                 "reported anti-phage system cohort."
                             ),
                         }
@@ -267,7 +267,7 @@ RECORD: dict[str, Any] = {
                             "reference": BAYER,
                             "snippet": SDIC_COHORT_SNIPPET,
                             "notes": (
-                                "Bayer et al. identify SDIC1 among anti-phage "
+                                "Cummins et al. identify SDIC1 among anti-phage "
                                 "systems."
                             ),
                         },
@@ -290,7 +290,7 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Bayer et al. support SDIC1 as a TIR-domain-containing "
+                "Cummins et al. support SDIC1 as a TIR-domain-containing "
                 "anti-phage system with a ubiquitin-ligase-like component, "
                 "and the pinned DefenseFinder HMM inventory records SDIC1A "
                 "and SDIC1B profile rows. The pinned rules table has no "
@@ -304,7 +304,7 @@ RECORD: dict[str, Any] = {
                     "reference": BAYER,
                     "snippet": TIR_SYSTEM_SNIPPET,
                     "notes": (
-                        "Bayer et al. support SDIC1 as a TIR-domain "
+                        "Cummins et al. support SDIC1 as a TIR-domain "
                         "anti-phage system with a population-level output."
                     ),
                 },
@@ -312,7 +312,7 @@ RECORD: dict[str, Any] = {
                     "reference": BAYER,
                     "snippet": SDIC1_UBIQUITIN_SNIPPET,
                     "notes": (
-                        "Bayer et al. connect SDIC1 with a TIR domain and a "
+                        "Cummins et al. connect SDIC1 with a TIR domain and a "
                         "ubiquitin-ligase-like component."
                     ),
                 },

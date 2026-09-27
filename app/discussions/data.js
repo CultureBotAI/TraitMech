@@ -3902,7 +3902,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#sdic1_locus_restricts_phage"
   ],
-  "rationale": "Bayer et al. support SDIC1 as a TIR-domain-containing anti-phage system with a ubiquitin-ligase-like component, and the pinned DefenseFinder HMM inventory records SDIC1A and SDIC1B profile rows. The pinned rules table has no SDIC1 row, and the first-pass record does not resolve natural host breadth, sensitive-phage breadth, the exact profile-to-component mapping, phage triggers, the direct TIR-dependent output, or the ubiquitination substrate.",
+  "rationale": "Cummins et al. support SDIC1 as a TIR-domain-containing anti-phage system with a ubiquitin-ligase-like component, and the pinned DefenseFinder HMM inventory records SDIC1A and SDIC1B profile rows. The pinned rules table has no SDIC1 row, and the first-pass record does not resolve natural host breadth, sensitive-phage breadth, the exact profile-to-component mapping, phage triggers, the direct TIR-dependent output, or the ubiquitination substrate.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
