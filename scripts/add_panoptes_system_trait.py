@@ -254,9 +254,9 @@ RECORD: dict[str, Any] = {
             "taxon_id": "NCBITaxon:29495",
             "taxon_label": "Vibrio navarrensis",
             "note": (
-                "Source species for the VnOptSE operon whose endogenous "
-                "promoter drove heterologous phage-defense assays in "
-                "E. coli MG1655."
+                "Species carrying the assayed VnOptSE Panoptes system; "
+                "defense activity was tested heterologously from the "
+                "endogenous V. navarrensis promoter in E. coli MG1655."
             ),
             "reference": SULLIVAN,
         },
@@ -321,7 +321,7 @@ RECORD: dict[str, Any] = {
                             ),
                             "evidence": [
                                 vibrio_operon_evidence(),
-                                vibrio_ecoli_challenge_evidence(),
+                                opt_signal_binding_evidence(),
                             ],
                         },
                     ],
@@ -356,7 +356,8 @@ RECORD: dict[str, Any] = {
                                 "Panoptes operon."
                             ),
                             "evidence": [
-                                vibrio_operon_evidence(),
+                                two_gene_operon_evidence(),
+                                opt_signal_binding_evidence(),
                                 vibrio_ecoli_challenge_evidence(),
                             ],
                         },

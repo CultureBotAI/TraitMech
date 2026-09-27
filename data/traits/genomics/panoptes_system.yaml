@@ -68,8 +68,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:29495
   taxon_label: Vibrio navarrensis
-  note: Source species for the VnOptSE operon whose endogenous promoter drove heterologous
-    phage-defense assays in E. coli MG1655.
+  note: Species carrying the assayed VnOptSE Panoptes system; defense activity was
+    tested heterologously from the endogenous V. navarrensis promoter in E. coli MG1655.
   reference: DOI:10.1038/s41586-025-09557-z
 causal_graphs:
 - graph_id: panoptes_decoy_cyclic_nucleotide_defense
@@ -112,13 +112,12 @@ causal_graphs:
         notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
           defense assays.
       - reference: DOI:10.1038/s41586-025-09557-z
-        snippet: We expressed the operon from its endogenous promoter in Escherichia
-          coli MG1655 and challenged these bacteria with a panel of diverse phages.
-          The VnOptSE operon specifically defended against phages from the Straboviridae
-          family
-        notes: The V. navarrensis operon was expressed from its endogenous promoter
-          in E. coli MG1655 and protected the heterologous host against Straboviridae
-          phages.
+        snippet: OptS orthologues from two distinct Panoptes systems generated cyclic
+          dinucleotide products, including 2′,3′-cyclic diadenosine monophosphate
+          (2′,3′-c-di-AMP), which we showed were able to bind the soluble domain of
+          the OptE transmembrane effector.
+        notes: OptS orthologues produce cyclic dinucleotides, including 2′,3′-c-di-AMP,
+          that can bind the soluble domain of the OptE transmembrane effector.
   - node_id: opte_transmembrane_effector
     label: OptE transmembrane effector
     node_type: GENE_OR_PROTEIN
@@ -139,10 +138,18 @@ causal_graphs:
         optSE Panoptes operon.
       evidence:
       - reference: DOI:10.1038/s41586-025-09557-z
-        snippet: We investigated a candidate two-gene Panoptes operon from Vibrio
-          navarrensis.
-        notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
-          defense assays.
+        snippet: Panoptes is a two-gene operon, optSE, wherein OptS is predicted to
+          synthesize a nucleotide-derived second messenger and OptE is predicted to
+          bind that signal and drive effector-mediated defence.
+        notes: Sullivan et al. define Panoptes as the two-gene optSE system encoding
+          OptS and OptE.
+      - reference: DOI:10.1038/s41586-025-09557-z
+        snippet: OptS orthologues from two distinct Panoptes systems generated cyclic
+          dinucleotide products, including 2′,3′-cyclic diadenosine monophosphate
+          (2′,3′-c-di-AMP), which we showed were able to bind the soluble domain of
+          the OptE transmembrane effector.
+        notes: OptS orthologues produce cyclic dinucleotides, including 2′,3′-c-di-AMP,
+          that can bind the soluble domain of the OptE transmembrane effector.
       - reference: DOI:10.1038/s41586-025-09557-z
         snippet: We expressed the operon from its endogenous promoter in Escherichia
           coli MG1655 and challenged these bacteria with a panel of diverse phages.
