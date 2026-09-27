@@ -25,6 +25,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
+- reference: DOI:10.1016/j.chom.2022.02.018
+  snippet: Phage resistance heatmaps of the validated defense systems show the median
+    fold resistance of three independent replicates against a panel of eight phages
+  notes: The Figure 5 legend frames the cloned Rst_2TM_1TM_TIR hit as one of the validated
+    defense systems in a replicated phage-resistance heatmap.
 - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md
   snippet: The Rst_2TM_1TM_TIR system is carried by the P2-like phage AC1 and protects
     *Escherichia coli* C against lambda, LF82_P8 and P2 phages. This system is composed
@@ -187,12 +192,12 @@ causal_graphs:
     object: phage_defense_system
     description: Rst_2TM_1TM_TIR system possession is a phage-defense-system trait.
     evidence:
-    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md
-      snippet: Bacteria carry diverse genetic systems to defend against viral infection,
-        some of which are found within prophages where they inhibit competing viruses.
-      notes: The pinned DefenseFinder wiki page embeds the Rousset et al. abstract,
-        which describes P2-like phage hotspots as reservoirs of genetic systems that
-        defend against viral infection.
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Phage resistance heatmaps of the validated defense systems show the
+        median fold resistance of three independent replicates against a panel of
+        eight phages
+      notes: The Figure 5 legend frames the cloned Rst_2TM_1TM_TIR hit as one of the
+        validated defense systems in a replicated phage-resistance heatmap.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Rst_2TM_1TM_TIR | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded
         hotspots of bacterial immune systems

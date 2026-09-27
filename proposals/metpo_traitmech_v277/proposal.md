@@ -61,9 +61,9 @@ possession trait.
 
 ## Artifacts
 
-- `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with no
-  exact synonyms, no exact external xrefs, and four related source-key or
-  HMM-profile synonyms.
+- `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with a
+  primary Rousset et al. citation, no exact synonyms, no exact external xrefs,
+  and four related source-key or HMM-profile synonyms.
 
 ## Upstream Path
 

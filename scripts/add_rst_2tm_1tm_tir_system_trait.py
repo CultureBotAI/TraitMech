@@ -55,10 +55,10 @@ WIKI_DESCRIPTION_SNIPPET = (
     "Rst_2TM_TIR, that contains two TMs "
     ":ref{doi=10.1016/j.chom.2022.02.018}."
 )
-WIKI_ABSTRACT_SNIPPET = (
-    "Bacteria carry diverse genetic systems to defend against viral infection, "
-    "some of which are found within prophages where they inhibit competing "
-    "viruses."
+ROUSSET_VALIDATED_DEFENSES_SNIPPET = (
+    "Phage resistance heatmaps of the validated defense systems show the "
+    "median fold resistance of three independent replicates against a panel "
+    "of eight phages"
 )
 WIKI_HYPOTHESIS_SNIPPET = (
     "Rousset et al. suggested that the TIR-containing protein could "
@@ -134,14 +134,14 @@ def wiki_description_evidence() -> dict[str, str]:
     }
 
 
-def wiki_abstract_evidence() -> dict[str, str]:
+def rousset_validated_defenses_evidence() -> dict[str, str]:
     return {
-        "reference": DEFENSEFINDER_WIKI,
-        "snippet": WIKI_ABSTRACT_SNIPPET,
+        "reference": ROUSSET,
+        "snippet": ROUSSET_VALIDATED_DEFENSES_SNIPPET,
         "notes": (
-            "The pinned DefenseFinder wiki page embeds the Rousset et al. "
-            "abstract, which describes P2-like phage hotspots as reservoirs "
-            "of genetic systems that defend against viral infection."
+            "The Figure 5 legend frames the cloned Rst_2TM_1TM_TIR hit as "
+            "one of the validated defense systems in a replicated "
+            "phage-resistance heatmap."
         ),
     }
 
@@ -287,6 +287,7 @@ RECORD: dict[str, Any] = {
         ],
     ],
     "evidence": [
+        rousset_validated_defenses_evidence(),
         wiki_description_evidence(),
         wiki_hypothesis_evidence(),
         wiki_mechanism_evidence(),
@@ -399,7 +400,7 @@ RECORD: dict[str, Any] = {
                         "phage-defense-system trait."
                     ),
                     "evidence": [
-                        wiki_abstract_evidence(),
+                        rousset_validated_defenses_evidence(),
                         article_registry_evidence(),
                     ],
                 },
