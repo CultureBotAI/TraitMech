@@ -70,6 +70,7 @@ characterizes	3	unmapped		data/traits/environment/nacl_range_mid1.yaml|data/trai
 counteracts	3	unmapped		data/traits/environment/ph_optimum_low.yaml|data/traits/environment/temperature_delta_low.yaml|data/traits/environment/temperature_range_mid2.yaml
 lowers	3	unmapped		data/traits/environment/ph_range_low.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/physiology/photoautotrophic.yaml
 restricts	3	unmapped		data/traits/environment/pressure_delta.yaml|data/traits/morphology/amphitrichous.yaml
+encodes	3	blocked_by_node_type	METPO:2007813	data/traits/genomics/brex_system.yaml|data/traits/genomics/panoptes_system.yaml
 influences	3	unmapped		data/traits/genomics/codon_usage_bias.yaml|data/traits/genomics/gc_mid2.yaml|data/traits/morphology/gram_positive.yaml
 negatively associated with	3	unmapped		data/traits/genomics/genome_size.yaml|data/traits/genomics/pangenome_openness.yaml|data/traits/morphology/coccus_shaped.yaml
 shapes	3	unmapped		data/traits/genomics/pangenome_openness.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/triangular_shaped.yaml
@@ -297,7 +298,6 @@ exposes	1	unmapped		data/traits/environment/temperature_range_mid1.yaml
 opens	1	unmapped		data/traits/environment/temperature_range_mid2.yaml
 refolds	1	unmapped		data/traits/environment/thermophilic.yaml
 quenches	1	unmapped		data/traits/environment/uv_radiation_tolerant.yaml
-encodes	1	blocked_by_node_type	METPO:2007813	data/traits/genomics/brex_system.yaml
 strengthens selection for	1	unmapped		data/traits/genomics/codon_usage_bias.yaml
 integrates spacers via	1	unmapped		data/traits/genomics/crispr_cas_system.yaml
 carries	1	unmapped		data/traits/genomics/gc_content.yaml
