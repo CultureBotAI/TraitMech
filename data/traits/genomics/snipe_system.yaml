@@ -1,8 +1,9 @@
 identifier: traitmech:000414
 label: SNIPE system
-definition: A phage defense system in which an organism possesses a membrane-localized
-  SNIPE anti-bacteriophage locus that exploits the spatial organization of phage genome
-  injection and directly cleaves incoming phage DNA to block siphovirus infection.
+definition: A phage defense system in which an organism possesses a SNIPE anti-bacteriophage
+  system that localizes to the bacterial membrane, exploits the spatial organization
+  of phage genome injection, and directly cleaves incoming phage DNA to block siphovirus
+  infection.
 definition_source: DOI:10.1038/s41586-026-10207-1
 trait_category: GENOMICS
 term_kind: CLASS
@@ -54,7 +55,8 @@ causal_graphs:
   - node_id: snipe_locus
     label: SNIPE locus
     node_type: GENETIC_ELEMENT
-    description: A membrane-localized anti-bacteriophage SNIPE locus.
+    description: A SNIPE anti-bacteriophage locus encoding the membrane-localized
+      SNIPE defense activity.
   - node_id: snipe_direct_phage_dna_cleavage
     label: SNIPE direct phage DNA cleavage
     node_type: BIOLOGICAL_PROCESS

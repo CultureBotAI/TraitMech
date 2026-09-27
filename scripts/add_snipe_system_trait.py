@@ -74,9 +74,10 @@ RECORD: dict[str, Any] = {
     "label": "SNIPE system",
     "definition": (
         "A phage defense system in which an organism possesses a "
-        "membrane-localized SNIPE anti-bacteriophage locus that exploits the "
-        "spatial organization of phage genome injection and directly cleaves "
-        "incoming phage DNA to block siphovirus infection."
+        "SNIPE anti-bacteriophage system that localizes to the bacterial "
+        "membrane, exploits the spatial organization of phage genome "
+        "injection, and directly cleaves incoming phage DNA to block "
+        "siphovirus infection."
     ),
     "definition_source": SAXTON,
     "trait_category": "GENOMICS",
@@ -150,8 +151,8 @@ RECORD: dict[str, Any] = {
                     "label": "SNIPE locus",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        "A membrane-localized anti-bacteriophage SNIPE "
-                        "locus."
+                        "A SNIPE anti-bacteriophage locus encoding the "
+                        "membrane-localized SNIPE defense activity."
                     ),
                 },
                 {
