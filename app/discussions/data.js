@@ -2176,6 +2176,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "lanthivirin-defensefinder-model-gap",
+  "prompt": "Resolve Lanthiphage HMM-to-component coverage, rule-level detection criteria, sensitive-phage breadth, and exact lanthivirin effector identity before minting narrower lanthivirin mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lanthivirin system",
+  "source_id": "traitmech:000416",
+  "source_file": "lanthivirin_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lanthivirin_bgc_inhibits_phage_dna_replication"
+  ],
+  "rationale": "Serra et al. support lanthivirin biosynthetic gene clusters as anti-phage systems, and the pinned DefenseFinder HMM inventory records Lanthiphage profile rows. The pinned rules table has no Lanthiphage row, and the first-pass record does not yet resolve exact profile-to-component mapping, full native host breadth, phage target breadth, or the direct mature lanthivirin effector.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2026.06.017",
+   "DOI:10.1016/j.chom.2026.06.017",
+   "DOI:10.1016/j.chom.2026.06.017",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lanthivirin_system.html#lanthivirin-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "lit-mechanism-gap",
   "prompt": "Resolve natural Lit loci, host breadth beyond Escherichia coli K-12 e14, Gol-activation contexts, and Lit__Lit profile-to-activity mapping before minting narrower Lit mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5619,9 +5646,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 289,
- "total_knowledge_gaps": 203,
- "total_source_entries": 283,
+ "total_discussions": 290,
+ "total_knowledge_gaps": 204,
+ "total_source_entries": 284,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

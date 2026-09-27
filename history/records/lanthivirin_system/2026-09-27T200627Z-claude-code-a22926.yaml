@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lanthivirin_system.yaml
+  slug: lanthivirin_system
+session:
+  id: 2026-09-27T200627Z-claude-code-a22926
+  timestamp: '2026-09-27T20:06:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  - discussions
+  summary: Added lanthivirin system
+  details: Minted traitmech:000416 as the DOI-backed lanthivirin system GENOMICS trait under
+    phage defense system; added Serra et al. lanthivirin anti-phage evidence plus the pinned
+    DefenseFinder article and HMM inventory references; reserved METPO:1037000 in proposals/metpo_traitmech_v293
+    and kept narrower lanthivirin mechanism children blocked by native-host, sensitive-phage,
+    profile-to-component, effector-identity, and DefenseFinder rules coverage gaps.
