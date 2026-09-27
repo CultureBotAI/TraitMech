@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import copy
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -394,8 +395,6 @@ RECORD: dict[str, Any] = {
 
 def write_record(*, apply: bool) -> None:
     record = copy.deepcopy(RECORD)
-    if TARGET.exists():
-        raise FileExistsError(f"{TARGET} already exists")
     record_curation_event(
         record,
         action="MINTED_TRAITMECH_ID",
@@ -427,9 +426,22 @@ def write_record(*, apply: bool) -> None:
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
     )
     if apply:
+        if TARGET.exists():
+            raise FileExistsError(f"{TARGET} already exists")
         write_validated_trait(record, TARGET)
-    else:
-        print(f"Would write {TARGET.relative_to(REPO_ROOT)}")
+        return
+
+    with tempfile.TemporaryDirectory() as tmp:
+        check_path = Path(tmp) / TARGET.name
+        write_validated_trait(record, check_path)
+        if TARGET.exists():
+            if check_path.read_bytes() != TARGET.read_bytes():
+                raise SystemExit(
+                    f"{TARGET.relative_to(REPO_ROOT)} differs from generated output"
+                )
+            print(f"{TARGET.relative_to(REPO_ROOT)} matches generated output")
+        else:
+            print(f"Would write {TARGET.relative_to(REPO_ROOT)}")
 
 
 def main() -> None:
