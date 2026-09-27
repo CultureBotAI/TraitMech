@@ -42,9 +42,17 @@ PROPOSAL = "proposals/metpo_traitmech_v273"
 SLUG = "pd_t7_2"
 PHAGE_LIST = "T2, T4, T6, LambdaVir, T5, SECphi18, SECphi27, T3, and T7"
 PROFILES = ("PD-T7-2__PD-T7-2_A", "PD-T7-2__PD-T7-2_B")
-HMM_GA_CUTS = {
-    "PD-T7-2__PD-T7-2_A": "50",
-    "PD-T7-2__PD-T7-2_B": "100",
+HMM_SNIPPETS = {
+    "PD-T7-2__PD-T7-2_A": (
+        "| PD-T7-2__PD-T7-2_A                               | "
+        "PD-T7-2__PD-T7-2_A                               | "
+        "PD-T7-2                | Custom                  | 50     |"
+    ),
+    "PD-T7-2__PD-T7-2_B": (
+        "| PD-T7-2__PD-T7-2_B                               | "
+        "PD-T7-2__PD-T7-2_B                               | "
+        "PD-T7-2                | Custom                  | 100    |"
+    ),
 }
 
 VASSALLO_ABSTRACT_SNIPPET = (
@@ -178,11 +186,7 @@ def rules_evidence() -> dict[str, str]:
 def hmm_evidence(profile: str) -> dict[str, str]:
     return {
         "reference": DEFENSEFINDER_HMMS,
-        "snippet": (
-            f"| {profile:<49}| {profile:<49}| "
-            f"{'PD-T7-2':<23}| {'Custom':<24}| "
-            f"{HMM_GA_CUTS[profile]:<7}|"
-        ),
+        "snippet": HMM_SNIPPETS[profile],
         "notes": (
             f"The DefenseFinder HMM inventory records {profile} under the "
             "PD-T7-2 system namespace."
