@@ -34,6 +34,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-27T12:41:08Z"
 CANONICAL_REVIEW_TIMESTAMP = "2026-09-27T12:41:09Z"
 REVIEW_FIX_TIMESTAMP = "2026-09-27T13:11:20Z"
+SOURCE_STRAIN_TIMESTAMP = "2026-09-27T13:27:10Z"
 POSED_DATE = "2026-09-27"
 IDENTIFIER = "traitmech:000408"
 PROPOSAL = "proposals/metpo_traitmech_v285"
@@ -49,6 +50,10 @@ BNACHT01_NAMING_SNIPPET = (
     "We named this gene bacterial NACHT module-containing protein 1 "
     "(bNACHT01), and it did not appear to be in an operon with any other "
     "genes."
+)
+BNACHT01_SOURCE_SNIPPET = (
+    "Genome context of bNACHT01, which is located near a CBASS system in "
+    "Klebsiella pneumoniae MGH 35."
 )
 BNACHT01_PROTECTION_SNIPPET = (
     "bNACHT01 conferred over a 100-fold increase in protection against "
@@ -112,8 +117,18 @@ def bnacht01_naming_evidence() -> dict[str, str]:
         "reference": OFIR_PMC,
         "snippet": BNACHT01_NAMING_SNIPPET,
         "notes": (
-            "Kibby et al. named the tested Klebsiella pneumoniae MGH 35 "
-            "NACHT-module protein bNACHT01."
+            "Kibby et al. named the selected NACHT-module gene bNACHT01."
+        ),
+    }
+
+
+def bnacht01_source_evidence() -> dict[str, str]:
+    return {
+        "reference": OFIR_PMC,
+        "snippet": BNACHT01_SOURCE_SNIPPET,
+        "notes": (
+            "Kibby et al. identified a NACHT-module gene in Klebsiella "
+            "pneumoniae MGH 35 before naming it bNACHT01."
         ),
     }
 
@@ -236,6 +251,7 @@ RECORD: dict[str, Any] = {
     ],
     "evidence": [
         abstract_evidence(),
+        bnacht01_source_evidence(),
         bnacht01_naming_evidence(),
         bnacht01_protection_evidence(),
         phage_production_evidence(),
@@ -454,6 +470,19 @@ def write_record(*, apply: bool) -> None:
         ),
         llm_assisted=True,
         timestamp=REVIEW_FIX_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADD_BNACHT01_SOURCE_STRAIN_SNIPPET",
+        changes=(
+            "Added verbatim Kibby et al. evidence that the NACHT-module "
+            "gene later named bNACHT01 was identified in Klebsiella "
+            "pneumoniae MGH 35, directly supporting the canonical example "
+            "taxon."
+        ),
+        llm_assisted=True,
+        timestamp=SOURCE_STRAIN_TIMESTAMP,
     )
     if apply:
         write_validated_trait(record, TARGET)

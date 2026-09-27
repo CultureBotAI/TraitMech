@@ -31,10 +31,14 @@ evidence:
   notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
     that defend against phages.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
+  snippet: Genome context of bNACHT01, which is located near a CBASS system in Klebsiella
+    pneumoniae MGH 35.
+  notes: Kibby et al. identified a NACHT-module gene in Klebsiella pneumoniae MGH
+    35 before naming it bNACHT01.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: We named this gene bacterial NACHT module-containing protein 1 (bNACHT01),
     and it did not appear to be in an operon with any other genes.
-  notes: Kibby et al. named the tested Klebsiella pneumoniae MGH 35 NACHT-module protein
-    bNACHT01.
+  notes: Kibby et al. named the selected NACHT-module gene bNACHT01.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: bNACHT01 conferred over a 100-fold increase in protection against phage
     T4 and over a 1000-fold increase in protection against phages T5 and T6
@@ -141,8 +145,8 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: bacteria expressing bNACHT01 restricted phage virion production and
         continued growing
-      notes: Kibby et al. observed restricted phage virion production in bacteria expressing
-        bNACHT01.
+      notes: Kibby et al. observed restricted phage virion production in bacteria
+        expressing bNACHT01.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "NLR\tNLR_like_bNACHT01\t1\t1\tNLR_like_bNACHT01__NLR_like_bNACHT01\t\
         \t\t"
@@ -173,8 +177,8 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: bacteria expressing bNACHT01 restricted phage virion production and
         continued growing
-      notes: Kibby et al. observed restricted phage virion production in bacteria expressing
-        bNACHT01.
+      notes: Kibby et al. observed restricted phage virion production in bacteria
+        expressing bNACHT01.
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
       snippet: Mutation of R214 to alanine maintained expression of the protein but
         abrogated phage defense
@@ -270,7 +274,14 @@ curation_history:
 - timestamp: '2026-09-27T13:11:20Z'
   curator: codex
   action: ADDRESS_REVIEW_FINDINGS
-  changes: Corrected the Cell paper attribution from Ofir et al. to Kibby et
-    al. and narrowed the R214A evidence note so it no longer places the residue
-    inside the NACHT module beyond the curated snippet.
+  changes: Corrected the Cell paper attribution from Ofir et al. to Kibby et al. and
+    narrowed the R214A evidence note so it no longer places the residue inside the
+    NACHT module beyond the curated snippet.
+  llm_assisted: true
+- timestamp: '2026-09-27T13:27:10Z'
+  curator: codex
+  action: ADD_BNACHT01_SOURCE_STRAIN_SNIPPET
+  changes: Added verbatim Kibby et al. evidence that the NACHT-module gene later named
+    bNACHT01 was identified in Klebsiella pneumoniae MGH 35, directly supporting the
+    canonical example taxon.
   llm_assisted: true
