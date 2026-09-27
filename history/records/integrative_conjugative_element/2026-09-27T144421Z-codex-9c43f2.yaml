@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/integrative_conjugative_element.yaml
+  slug: integrative_conjugative_element
+session:
+  id: 2026-09-27T144421Z-codex-9c43f2
+  timestamp: '2026-09-27T14:44:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added integrative conjugative element
+  details: Minted traitmech:000410 for the integrative conjugative element genomics trait,
+    backed it with DOI evidence from Johnson-Grossman and Bioteau, added Johnson-Grossman
+    canonical examples for ICEBs1 and Tn916, added a nonmechanistic ICE life-cycle
+    graph, and reserved METPO:1036400 in proposals/metpo_traitmech_v287.

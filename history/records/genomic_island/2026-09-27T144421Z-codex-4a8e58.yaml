@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/genomic_island.yaml
+  slug: genomic_island
+session:
+  id: 2026-09-27T144421Z-codex-4a8e58
+  timestamp: '2026-09-27T14:44:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Grounded the genomic-island ICE node
+  details: Resolved the existing integrative_conjugative_element causal node by grounding
+    it to traitmech:000410, retyping it from a raw genetic element to the possession trait,
+    and adding a Bioteau-backed rdfs:subClassOf edge to the genomic-island trait.

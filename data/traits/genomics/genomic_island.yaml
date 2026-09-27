@@ -69,10 +69,11 @@ causal_graphs:
     description: DDE transposases or tyrosine/serine recombinases that mediate island
       integration and mobility.
   - node_id: integrative_conjugative_element
-    label: integrative conjugative element (ICE)
-    node_type: GENETIC_ELEMENT
-    description: Self-transmissible genomic island subclass that excises, transfers
-      by conjugation, and reintegrates.
+    label: integrative conjugative element
+    node_type: TRAIT
+    description: Possession of a self-transmissible integrative and conjugative genomic
+      island.
+    grounding: traitmech:000410
   - node_id: conjugation
     label: conjugation
     node_type: BIOLOGICAL_PROCESS
@@ -161,6 +162,20 @@ causal_graphs:
         as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid
         apparatus.
     predicate_id: RO:0002502
+  - subject: integrative_conjugative_element
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: gi_trait
+    description: Integrative-conjugative-element possession is a genomic-island possession
+      trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+        elements that exhibit various structures and gene contents, including prophages,
+        transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+        and integrative and conjugative elements (ICEs)
+      notes: Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element
+        subclasses encompassed by genomic islands.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -228,4 +243,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #701: removed the ICE rdfs:subClassOf
     genomic-island-trait edge because the source supports ICE as a genomic-island
     genetic element, not a subclass of the possession trait.'
+  llm_assisted: true
+- timestamp: '2026-09-27T14:42:32Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODES
+  changes: Resolved the exact ICE causal node by grounding it to traitmech:000410
+    and reintroducing an rdfs:subClassOf edge only after the node was retyped from
+    a raw genetic element to the possession trait.
   llm_assisted: true

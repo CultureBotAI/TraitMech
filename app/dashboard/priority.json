@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 804,
+    "records": 805,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 327,
+    "unresearched_mechanism_records": 328,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -25,7 +25,7 @@
       "BUILD_CAUSAL_GRAPH": 119,
       "DEEPEN_CAUSAL_GRAPH": 236,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 158
+      "CURATE_ROOT": 159
     }
   },
   "rows": [
@@ -5231,29 +5231,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000093",
-      "label": "genomic island",
-      "category": "genomics",
-      "slug": "genomic_island",
-      "score": 15.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 6,
-      "nodes": 8,
-      "components": 2,
-      "orphans": 0,
-      "examples": 2,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": true,
-      "reasons": [
-        "thin graph (6 edges) +12",
-        "2 components +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000238",
       "label": "RADAR system",
       "category": "genomics",
@@ -6385,6 +6362,28 @@
       "researched": false,
       "reasons": [
         "thin graph (5 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000410",
+      "label": "integrative conjugative element",
+      "category": "genomics",
+      "slug": "integrative_conjugative_element",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 6,
+      "nodes": 7,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (6 edges) +12"
       ]
     },
     {
@@ -11571,6 +11570,26 @@
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "traitmech:000093",
+      "label": "genomic island",
+      "category": "genomics",
+      "slug": "genomic_island",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 7,
+      "nodes": 8,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "canonical_examples_reviewed_empty": false,
+      "children": 1,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

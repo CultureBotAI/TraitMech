@@ -18,7 +18,6 @@ from review_genomic_island_graph_183 import (  # noqa: E402
     NODE_REPLACEMENTS,
     RECORD_EVIDENCE_REPLACEMENTS,
     SLUG,
-    STALE_EDGE_KEYS,
     _edge_key,
     transform,
 )
@@ -91,11 +90,49 @@ def test_review_adds_snippets_and_grounds_genomic_island_edges():
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
 
 
-def test_pr664_repair_drops_category_error_ice_trait_edge():
+def test_ice_subclass_edge_is_grounded_to_the_new_trait():
     doc = _current()
-    by_key = {_edge_key(edge): edge for edge in doc["causal_graphs"][0]["edges"]}
+    graph = doc["causal_graphs"][0]
+    nodes = {node["node_id"]: node for node in graph["nodes"]}
+    by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
-    assert STALE_EDGE_KEYS.isdisjoint(by_key)
+    assert nodes["integrative_conjugative_element"] == {
+        "node_id": "integrative_conjugative_element",
+        "label": "integrative conjugative element",
+        "node_type": "TRAIT",
+        "description": (
+            "Possession of a self-transmissible integrative and conjugative "
+            "genomic island."
+        ),
+        "grounding": "traitmech:000410",
+    }
+    assert by_key[("integrative_conjugative_element", "is a", "gi_trait")] == {
+        "subject": "integrative_conjugative_element",
+        "predicate": "is a",
+        "predicate_id": "rdfs:subClassOf",
+        "object": "gi_trait",
+        "description": (
+            "Integrative-conjugative-element possession is a genomic-island "
+            "possession trait."
+        ),
+        "evidence": [
+            {
+                "reference": "DOI:10.1093/nar/gkad644",
+                "snippet": (
+                    "The term ‘genomic island’ encompasses diverse types of mobile "
+                    "genetic elements that exhibit various structures and gene "
+                    "contents, including prophages, transposons, integrated "
+                    "plasmids, integrative and mobilizable elements (IMEs), and "
+                    "integrative and conjugative elements (ICEs)"
+                ),
+                "notes": (
+                    "Bioteau et al. place integrative and conjugative elements among "
+                    "the mobile-genetic-element subclasses encompassed by genomic "
+                    "islands."
+                ),
+            }
+        ],
+    }
 
 
 def test_repaired_record_is_exactly_idempotent():

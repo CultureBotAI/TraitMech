@@ -150,6 +150,7 @@ viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_
 subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
+ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 lambdavir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_lambda_1_system.yaml|data/traits/genomics/pd_lambda_3_system.yaml
 t2, t4, t6, t5, and secphi27 protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_t4_10_system.yaml|data/traits/genomics/pd_t4_2_system.yaml
@@ -1389,7 +1390,6 @@ metabolic cross-feeding	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streaml
 reduced cofactor/vitamin biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streamlining.yaml
 dependence on exogenous b-vitamin precursors	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streamlining.yaml
 integrase/recombinase/transposase mobility module	GENE_OR_PROTEIN	1	data/traits/genomics/genomic_island.yaml
-integrative conjugative element (ice)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
 integrative mobilizable element (ime)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
 hachiman locus	GENETIC_ELEMENT	1	data/traits/genomics/hachiman_system.yaml
 hamab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
@@ -1407,6 +1407,9 @@ phage ssb stimulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
 hna nuclease activation	MOLECULAR_FUNCTION	1	data/traits/genomics/hna_system.yaml
 abortive infection response	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
 hypnos locus	GENETIC_ELEMENT	1	data/traits/genomics/hypnos_system.yaml
+integrated ice locus	GENETIC_ELEMENT	1	data/traits/genomics/integrative_conjugative_element.yaml
+orit processing	BIOLOGICAL_PROCESS	1	data/traits/genomics/integrative_conjugative_element.yaml
+ice integration	BIOLOGICAL_PROCESS	1	data/traits/genomics/integrative_conjugative_element.yaml
 jukab locus	GENETIC_ELEMENT	1	data/traits/genomics/jukab_system.yaml
 juka gp241 epi-vesicle sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/jukab_system.yaml
 jukb effector recruitment	BIOLOGICAL_PROCESS	1	data/traits/genomics/jukab_system.yaml
@@ -1437,7 +1440,6 @@ origin of transfer (orit)	CELLULAR_LOCALIZATION	1	data/traits/genomics/mobile_ge
 type iv coupling protein	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
 conjugative dna transfer	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
 integrase and excisionase	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
-ice excision and circularization	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
 integron integrase (inti)	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
 atti/attc cassette recombination	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
 transduction of host dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/mobile_genetic_element.yaml
