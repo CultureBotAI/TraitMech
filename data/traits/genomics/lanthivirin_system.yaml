@@ -1,0 +1,197 @@
+identifier: traitmech:000416
+label: lanthivirin system
+definition: A phage defense system in which an organism possesses a lanthivirin lanthipeptide
+  biosynthetic gene cluster that can confer anti-phage activity in a native Streptomyces
+  context and after heterologous expression of complete lanthivirin systems.
+definition_source: DOI:10.1016/j.chom.2026.06.017
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: lanthivirin BGC
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.chom.2026.06.017
+- synonym_text: Lanthiphage
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1016/j.chom.2026.06.017
+  snippet: We demonstrate anti-phage activity both in a native Streptomyces context
+    and through heterologous expression of six distinct lanthivirin systems.
+  notes: Serra et al. support native Streptomyces anti-phage activity and activity
+    from multiple heterologously expressed lanthivirin systems.
+- reference: DOI:10.1016/j.chom.2026.06.017
+  snippet: lanthivirin maturation is required for anti-phage activity
+  notes: Serra et al. support the requirement for lanthivirin maturation in anti-phage
+    activity.
+- reference: DOI:10.1016/j.chom.2026.06.017
+  snippet: phage-protein-dependent inhibition of phage DNA replication
+  notes: Serra et al. link lanthivirins to inhibition of phage DNA replication.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Lanthiphage | 10\.1101/2024\.06\.26\.600839 | A family of lanthipeptides
+    with anti-phage function |'
+  notes: The pinned DefenseFinder article registry maps the Lanthiphage source key
+    to the lanthipeptide anti-phage preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lanthiphage__LphA                                |'
+  notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom
+    Lanthiphage profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lanthiphage__LphB1                               |'
+  notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a custom
+    Lanthiphage profile.
+causal_graphs:
+- graph_id: lanthivirin_bgc_inhibits_phage_dna_replication
+  title: Lanthivirin BGCs mediate anti-phage activity
+  description: Conservative system-level sketch linking possession of a lanthivirin
+    biosynthetic gene cluster to anti-phage activity and lanthivirin system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures lanthivirins at the biosynthetic gene cluster and
+    anti-phage-output level without asserting the full native host range, exact Lanthiphage
+    profile-to-component model, complete phage target breadth, or a DefenseFinder
+    detection rule absent from the pinned rules table.
+  nodes:
+  - node_id: lanthivirin_bgc
+    label: lanthivirin biosynthetic gene cluster
+    node_type: GENETIC_ELEMENT
+    description: A lanthivirin biosynthetic gene cluster represented in the pinned
+      DefenseFinder HMM inventory by Lanthiphage custom profiles.
+  - node_id: lanthivirin_maturation
+    label: lanthivirin maturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Maturation of a lanthivirin lanthipeptide by its biosynthetic gene
+      cluster.
+  - node_id: phage_dna_replication
+    label: phage DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Replication of infecting bacteriophage DNA.
+  - node_id: lanthivirin_system_trait
+    label: lanthivirin system
+    node_type: TRAIT
+    grounding: traitmech:000416
+    description: Possession of a genome-encoded lanthivirin anti-phage system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: lanthivirin_bgc
+    predicate: enables
+    predicate_id: RO:0002327
+    object: lanthivirin_maturation
+    description: A lanthivirin biosynthetic gene cluster encodes the machinery required
+      for lanthivirin maturation.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2026.06.017
+      snippet: lanthivirin maturation is required for anti-phage activity
+      notes: Serra et al. support the requirement for lanthivirin maturation in anti-phage
+        activity.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lanthiphage__LphA                                |'
+      notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a
+        custom Lanthiphage profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lanthiphage__LphB1                               |'
+      notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as
+        a custom Lanthiphage profile.
+  - subject: lanthivirin_maturation
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_dna_replication
+    description: Mature lanthivirins are associated with a phage-protein-dependent
+      inhibition of phage DNA replication.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2026.06.017
+      snippet: phage-protein-dependent inhibition of phage DNA replication
+      notes: Serra et al. link lanthivirins to inhibition of phage DNA replication.
+  - subject: lanthivirin_maturation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lanthivirin_system_trait
+    description: Lanthivirin maturation realizes the anti-phage activity of the lanthivirin
+      system.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2026.06.017
+      snippet: We demonstrate anti-phage activity both in a native Streptomyces context
+        and through heterologous expression of six distinct lanthivirin systems.
+      notes: Serra et al. support native Streptomyces anti-phage activity and activity
+        from multiple heterologously expressed lanthivirin systems.
+  - subject: lanthivirin_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Lanthivirin system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Lanthiphage | 10\.1101/2024\.06\.26\.600839 | A family of lanthipeptides
+        with anti-phage function |'
+      notes: The pinned DefenseFinder article registry maps the Lanthiphage source
+        key to the lanthipeptide anti-phage preprint.
+discussions:
+- discussion_id: lanthivirin-defensefinder-model-gap
+  prompt: Resolve Lanthiphage HMM-to-component coverage, rule-level detection criteria,
+    sensitive-phage breadth, and exact lanthivirin effector identity before minting
+    narrower lanthivirin mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Serra et al. support lanthivirin biosynthetic gene clusters as anti-phage
+    systems, and the pinned DefenseFinder HMM inventory records Lanthiphage profile
+    rows. The pinned rules table has no Lanthiphage row, and the first-pass record
+    does not yet resolve exact profile-to-component mapping, full native host breadth,
+    phage target breadth, or the direct mature lanthivirin effector.
+  evidence:
+  - reference: DOI:10.1016/j.chom.2026.06.017
+    snippet: We demonstrate anti-phage activity both in a native Streptomyces context
+      and through heterologous expression of six distinct lanthivirin systems.
+    notes: Serra et al. support native Streptomyces anti-phage activity and activity
+      from multiple heterologously expressed lanthivirin systems.
+  - reference: DOI:10.1016/j.chom.2026.06.017
+    snippet: lanthivirin maturation is required for anti-phage activity
+    notes: Serra et al. support the requirement for lanthivirin maturation in anti-phage
+      activity.
+  - reference: DOI:10.1016/j.chom.2026.06.017
+    snippet: phage-protein-dependent inhibition of phage DNA replication
+    notes: Serra et al. link lanthivirins to inhibition of phage DNA replication.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Lanthiphage | 10\.1101/2024\.06\.26\.600839 | A family of lanthipeptides
+      with anti-phage function |'
+    notes: The pinned DefenseFinder article registry maps the Lanthiphage source key
+      to the lanthipeptide anti-phage preprint.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Lanthiphage__LphA                                |'
+    notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom
+      Lanthiphage profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Lanthiphage__LphB1                               |'
+    notes: The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a
+      custom Lanthiphage profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list Lanthiphage, leaving
+      rule-level detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#lanthivirin_bgc_inhibits_phage_dna_replication
+  posed_by: codex
+  posed_date: '2026-09-27'
+curation_history:
+- timestamp: '2026-09-27T20:02:44Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted lanthivirin system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; kept the graph at lanthipeptide
+    biosynthetic-gene-cluster level because the pinned DefenseFinder HMM rows are
+    not backed by pinned rules rows; the replacement placeholder is reserved in proposals/metpo_traitmech_v293.
+  llm_assisted: true
+- timestamp: '2026-09-27T20:02:45Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed lanthivirin system during canonical-example issue 444 enforcement
+    and left canonical_examples empty because the sources support Streptomyces-context
+    and heterologous expression assays, plus DefenseFinder Lanthiphage HMM rows, but
+    not a direct named native microbial isolate exemplar with experimentally verified
+    endogenous lanthivirin activity. No paid research was used.
+  llm_assisted: true
