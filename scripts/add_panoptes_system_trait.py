@@ -291,14 +291,14 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "vnopts_mcpol_synthase",
-                    "label": "VnOptS mCpol synthase",
+                    "node_id": "opts_cyclic_dinucleotide_synthase",
+                    "label": "OptS cyclic-dinucleotide synthase",
                     "node_type": "GENE_OR_PROTEIN",
                     "grounding": "InterPro:IPR040942",
                     "description": (
-                        "Vibrio navarrensis OptS minimal CRISPR polymerase "
-                        "domain protein that synthesizes cyclic "
-                        "dinucleotides in the VnOptSE Panoptes operon."
+                        "Minimal CRISPR polymerase domain protein that "
+                        "synthesizes cyclic dinucleotides in Panoptes "
+                        "operons."
                     ),
                     "protein_examples": [
                         {
@@ -327,14 +327,13 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "node_id": "vnopte_transmembrane_effector",
-                    "label": "VnOptE transmembrane effector",
+                    "node_id": "opte_transmembrane_effector",
+                    "label": "OptE transmembrane effector",
                     "node_type": "GENE_OR_PROTEIN",
                     "grounding": "InterPro:IPR041208",
                     "description": (
-                        "Vibrio navarrensis OptE S-2TMβ/Cap15-family "
-                        "transmembrane effector encoded by the VnOptSE "
-                        "Panoptes operon."
+                        "S-2TMβ/Cap15-family transmembrane effector encoded "
+                        "by Panoptes operons."
                     ),
                     "protein_examples": [
                         {
@@ -443,29 +442,31 @@ RECORD: dict[str, Any] = {
                 {
                     "subject": "optse_locus",
                     "predicate": "encodes",
-                    "object": "vnopts_mcpol_synthase",
+                    "object": "opts_cyclic_dinucleotide_synthase",
                     "description": (
-                        "The V. navarrensis optSE locus encodes the "
-                        "VnOptS mCpol synthase."
+                        "Panoptes optSE loci encode OptS "
+                        "cyclic-dinucleotide synthases."
                     ),
                     "evidence": [
+                        two_gene_operon_evidence(),
                         vibrio_operon_evidence(),
                     ],
                 },
                 {
                     "subject": "optse_locus",
                     "predicate": "encodes",
-                    "object": "vnopte_transmembrane_effector",
+                    "object": "opte_transmembrane_effector",
                     "description": (
-                        "The V. navarrensis optSE locus encodes the "
-                        "VnOptE transmembrane effector."
+                        "Panoptes optSE loci encode OptE transmembrane "
+                        "effectors."
                     ),
                     "evidence": [
+                        two_gene_operon_evidence(),
                         vibrio_operon_evidence(),
                     ],
                 },
                 {
-                    "subject": "vnopts_mcpol_synthase",
+                    "subject": "opts_cyclic_dinucleotide_synthase",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "opts_cyclic_dinucleotide_synthesis",
@@ -507,7 +508,7 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "vnopte_transmembrane_effector",
+                    "subject": "opte_transmembrane_effector",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "opte_inner_membrane_disruption",

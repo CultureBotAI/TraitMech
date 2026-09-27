@@ -86,12 +86,12 @@ causal_graphs:
     label: optSE locus
     node_type: GENETIC_ELEMENT
     description: A two-gene Panoptes locus encoding OptS and OptE.
-  - node_id: vnopts_mcpol_synthase
-    label: VnOptS mCpol synthase
+  - node_id: opts_cyclic_dinucleotide_synthase
+    label: OptS cyclic-dinucleotide synthase
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR040942
-    description: Vibrio navarrensis OptS minimal CRISPR polymerase domain protein
-      that synthesizes cyclic dinucleotides in the VnOptSE Panoptes operon.
+    description: Minimal CRISPR polymerase domain protein that synthesizes cyclic
+      dinucleotides in Panoptes operons.
     protein_examples:
     - uniprot_id: UniProtKB:A0A099LXT1
       protein_label: Minimal CRISPR polymerase domain-containing protein
@@ -119,12 +119,11 @@ causal_graphs:
         notes: The V. navarrensis operon was expressed from its endogenous promoter
           in E. coli MG1655 and protected the heterologous host against Straboviridae
           phages.
-  - node_id: vnopte_transmembrane_effector
-    label: VnOptE transmembrane effector
+  - node_id: opte_transmembrane_effector
+    label: OptE transmembrane effector
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR041208
-    description: Vibrio navarrensis OptE S-2TMβ/Cap15-family transmembrane effector
-      encoded by the VnOptSE Panoptes operon.
+    description: S-2TMβ/Cap15-family transmembrane effector encoded by Panoptes operons.
     protein_examples:
     - uniprot_id: UniProtKB:A0A099LW44
       protein_label: CD-NTase-associated protein 15 domain-containing protein
@@ -195,23 +194,35 @@ causal_graphs:
   edges:
   - subject: optse_locus
     predicate: encodes
-    object: vnopts_mcpol_synthase
-    description: The V. navarrensis optSE locus encodes the VnOptS mCpol synthase.
+    object: opts_cyclic_dinucleotide_synthase
+    description: Panoptes optSE loci encode OptS cyclic-dinucleotide synthases.
     evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: Panoptes is a two-gene operon, optSE, wherein OptS is predicted to
+        synthesize a nucleotide-derived second messenger and OptE is predicted to
+        bind that signal and drive effector-mediated defence.
+      notes: Sullivan et al. define Panoptes as the two-gene optSE system encoding
+        OptS and OptE.
     - reference: DOI:10.1038/s41586-025-09557-z
       snippet: We investigated a candidate two-gene Panoptes operon from Vibrio navarrensis.
       notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
         defense assays.
   - subject: optse_locus
     predicate: encodes
-    object: vnopte_transmembrane_effector
-    description: The V. navarrensis optSE locus encodes the VnOptE transmembrane effector.
+    object: opte_transmembrane_effector
+    description: Panoptes optSE loci encode OptE transmembrane effectors.
     evidence:
+    - reference: DOI:10.1038/s41586-025-09557-z
+      snippet: Panoptes is a two-gene operon, optSE, wherein OptS is predicted to
+        synthesize a nucleotide-derived second messenger and OptE is predicted to
+        bind that signal and drive effector-mediated defence.
+      notes: Sullivan et al. define Panoptes as the two-gene optSE system encoding
+        OptS and OptE.
     - reference: DOI:10.1038/s41586-025-09557-z
       snippet: We investigated a candidate two-gene Panoptes operon from Vibrio navarrensis.
       notes: Sullivan et al. used a Vibrio navarrensis optSE locus for direct Panoptes
         defense assays.
-  - subject: vnopts_mcpol_synthase
+  - subject: opts_cyclic_dinucleotide_synthase
     predicate: contributes to
     predicate_id: RO:0002326
     object: opts_cyclic_dinucleotide_synthesis
@@ -256,7 +267,7 @@ causal_graphs:
         repress OptE-mediated growth inhibition.
       notes: OptS constitutive signalling nucleotide production represses OptE-mediated
         growth inhibition.
-  - subject: vnopte_transmembrane_effector
+  - subject: opte_transmembrane_effector
     predicate: contributes to
     predicate_id: RO:0002326
     object: opte_inner_membrane_disruption
