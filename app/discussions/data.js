@@ -1056,6 +1056,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/charlie_gp32_system.html#charlie_gp32-mechanism-gap"
  },
  {
+  "discussion_id": "clover-defensefinder-model-gap",
+  "prompt": "Resolve Clover native host breadth, sensitive-phage breadth, profile-to-component coverage, and DefenseFinder HMM/rules coverage before minting narrower Clover mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Clover system",
+  "source_id": "traitmech:000415",
+  "source_file": "clover_system.yaml",
+  "attaches_to": [
+   "causal_graphs#clover_dttp_p3dit_regulated_dgtpase"
+  ],
+  "rationale": "Yu and Kranzusch support Clover as a bacterial anti-phage defence system whose CloA dGTPase is activated and suppressed by nucleotide signals, while the pinned DefenseFinder article registry names a Clover system. The pinned DefenseFinder HMM inventory and rules table have no Clover rows, and the evidence does not yet resolve native host breadth, full target-phage breadth, or profile-to-activity modeling.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41586-026-10135-0",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/clover_system.html#clover-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "cmdtac-family-and-model-coverage-gap",
   "prompt": "Resolve CmdTAC family breadth and phage escape routes before minting narrower CmdTAC mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5595,9 +5619,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 288,
- "total_knowledge_gaps": 202,
- "total_source_entries": 282,
+ "total_discussions": 289,
+ "total_knowledge_gaps": 203,
+ "total_source_entries": 283,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

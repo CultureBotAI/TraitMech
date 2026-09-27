@@ -851,6 +851,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/ceres_system",
     "genomics/cernunnos_system",
     "genomics/charlie_gp32_system",
+    "genomics/clover_system",
     "genomics/damona_system",
     "genomics/darna_system",
     "genomics/dazbog_system",
