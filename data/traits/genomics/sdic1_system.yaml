@@ -94,8 +94,8 @@ causal_graphs:
         system.
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: SDIC1 combines TIR and ubiquitin ligase
-      notes: Cummins et al. place TIR and ubiquitin-ligase-like activities in the SDIC1
-        system.
+      notes: Cummins et al. place TIR and ubiquitin-ligase-like activities in the
+        SDIC1 system.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| SDIC1__SDIC1A                                    |                                                  |
         SDIC1                  | Custom                  | 350    |'
@@ -114,7 +114,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.celrep.2024.115055
       snippet: four newly identified anti-phage systems
-      notes: Cummins et al. identify SDIC1 in the newly reported anti-phage system cohort.
+      notes: Cummins et al. identify SDIC1 in the newly reported anti-phage system
+        cohort.
   - subject: sdic1_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
