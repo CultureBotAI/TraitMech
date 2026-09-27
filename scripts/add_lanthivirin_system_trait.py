@@ -132,7 +132,7 @@ RECORD: dict[str, Any] = {
     "synonyms": [
         {
             "synonym_text": "lanthivirin BGC",
-            "synonym_type": "EXACT_SYNONYM",
+            "synonym_type": "RELATED_SYNONYM",
             "source": SERRA,
         },
         {

@@ -56,14 +56,16 @@ system. This proposal uses `METPO:1016300`, the v86 placeholder for
 
 ## External Mappings
 
-No exact external mapping is proposed. `lanthivirin BGC` is included as an exact
-synonym. `Lanthiphage` is included as a related synonym because it is the
-DefenseFinder source key and not the peer-reviewed label for the same class.
+No exact external mapping or exact synonym is proposed. `lanthivirin BGC` is
+included as a related synonym because it names the genetic element rather than
+the possession trait. `Lanthiphage` is included as a related synonym because it
+is the DefenseFinder source key and not the peer-reviewed label for the same
+class.
 
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with the
-  `lanthivirin BGC` exact synonym and the `Lanthiphage` related synonym.
+  `lanthivirin BGC` and `Lanthiphage` related synonyms.
 
 ## Upstream Path
 
