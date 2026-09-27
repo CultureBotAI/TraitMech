@@ -2030,6 +2030,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hailong_system.html#hailong-mechanism-and-family-breadth-gap"
  },
  {
+  "discussion_id": "hec-02-defensefinder-model-gap",
+  "prompt": "Resolve HEC-02 native host breadth, exact HEC-02A/HEC-02B component functions, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower HEC-02 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "HEC-02 system",
+  "source_id": "traitmech:000417",
+  "source_file": "hec_02_system.yaml",
+  "attaches_to": [
+   "causal_graphs#hec_02_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "Payne et al. support HEC-02 as an Hma-embedded candidate anti-phage system whose two genes are both required for defense, and the pinned DefenseFinder HMM inventory records HEC-02A and HEC-02B profile rows. The pinned rules table has no HEC-02 row, and the first-pass record does not yet resolve natural host breadth, HEC-02 profile-to-component mapping, phage target breadth, or the direct molecular output.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1101/2024.01.29.577857",
+   "DOI:10.1101/2024.01.29.577857",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hec_02_system.html#hec-02-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "hesat-mechanism-gap",
   "prompt": "Resolve Hesat phage triggers and effector outputs before minting narrower Hesat mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5646,9 +5672,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 290,
- "total_knowledge_gaps": 204,
- "total_source_entries": 284,
+ "total_discussions": 291,
+ "total_knowledge_gaps": 205,
+ "total_source_entries": 285,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
