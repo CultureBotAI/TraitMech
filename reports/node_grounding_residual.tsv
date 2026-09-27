@@ -1617,6 +1617,10 @@ phage dna propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yam
 shosta locus	GENETIC_ELEMENT	1	data/traits/genomics/shosta_system.yaml
 sirona locus	GENETIC_ELEMENT	1	data/traits/genomics/sirona_system.yaml
 6a-mbl locus	GENETIC_ELEMENT	1	data/traits/genomics/six_a_mbl_system.yaml
+snipe locus	GENETIC_ELEMENT	1	data/traits/genomics/snipe_system.yaml
+snipe direct phage dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/snipe_system.yaml
+phage genome injection	BIOLOGICAL_PROCESS	1	data/traits/genomics/snipe_system.yaml
+siphovirus infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/snipe_system.yaml
 sofic locus	GENETIC_ELEMENT	1	data/traits/genomics/sofic_system.yaml
 sparta locus	GENETIC_ELEMENT	1	data/traits/genomics/sparta_system.yaml
 sparta heterodimer assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
