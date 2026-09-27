@@ -2503,6 +2503,53 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/paris_system.html#paris-trigger-and-counterdefense-gap"
  },
  {
+  "discussion_id": "pd-lambda-1-mechanism-gap",
+  "prompt": "Resolve PD-Lambda-1 natural host breadth, direct phage trigger, and effector mechanism before minting narrower PD-Lambda-1 mechanism traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-Lambda-1 system",
+  "source_id": "traitmech:000404",
+  "source_file": "pd_lambda_1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_lambda_1_locus_restricts_lambda_vir"
+  ],
+  "rationale": "Vassallo et al. support PD-Lambda-1 as one of the conserved systems from an E. coli pangenome phage-defense selection, the DefenseFinder wiki maps the source locus to LambdaVir protection, and DefenseFinder represents the system with one profile. Natural host breadth, the direct phage trigger, and effector logic remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-022-01219-4",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-1.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-1.md",
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-1.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_lambda_1_system.html#pd-lambda-1-mechanism-gap"
+ },
+ {
+  "discussion_id": "pd-lambda-1-defensefinder-article-registry-gap",
+  "prompt": "Recheck whether DefenseFinder adds a PD-Lambda-1 List_system_article.md row before using the article registry as direct PD-Lambda-1 model-to-paper evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "PD-Lambda-1 system",
+  "source_id": "traitmech:000404",
+  "source_file": "pd_lambda_1_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned DefenseFinder wiki, rules table, and HMM inventory all represent PD-Lambda-1, but the pinned List_system_article.md registry omits a PD-Lambda-1 row. The PD-Lambda-1 record therefore cites the pinned wiki plus the DOI-backed Vassallo et al. screen instead of inventing a missing article-registry entry.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-1.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_lambda_1_system.html#pd-lambda-1-defensefinder-article-registry-gap"
+ },
+ {
   "discussion_id": "pd-lambda-2-mechanism-gap",
   "prompt": "Resolve PD-Lambda-2 natural host breadth, direct phage trigger, effector mechanism, and exact profile-to-protein correspondence before minting narrower PD-Lambda-2 mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -5258,9 +5305,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 273,
- "total_knowledge_gaps": 191,
- "total_source_entries": 271,
+ "total_discussions": 275,
+ "total_knowledge_gaps": 192,
+ "total_source_entries": 272,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
