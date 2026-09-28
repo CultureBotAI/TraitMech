@@ -1105,6 +1105,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cmdtac_system.html#cmdtac-family-and-model-coverage-gap"
  },
  {
+  "discussion_id": "coconut-defensefinder-model-gap",
+  "prompt": "Resolve exact CoCoNuT type and subtype boundaries, native host breadth, direct RNA and DNA substrates, phage range, pseudo-CoCoNuT scope, CARF-regulated superoperon scope, and rule-level detection criteria before minting narrower CoCoNuT mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CoCoNuT system",
+  "source_id": "traitmech:000422",
+  "source_file": "coconut_system.yaml",
+  "attaches_to": [
+   "causal_graphs#coconut_system_family_hierarchy"
+  ],
+  "rationale": "Bell et al. support CoCoNuTs as a computationally defined McrBC/Type IV restriction branch predicted to target RNA and, for many loci, DNA; the pinned DefenseFinder HMM inventory records custom CoCoNut-I, CoCoNut-II, and CoCoNut-III profile rows. The pinned rules table has no CoCoNut row, and the first-pass record leaves exact profile-to-protein boundaries, pseudo-CoCoNuT inclusion, natural host breadth, phage range, and substrate-level mechanism unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.7554/eLife.94800.3",
+   "DOI:10.7554/eLife.94800.3",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/coconut_system.html#coconut-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "damona-mechanism-gap",
   "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5773,9 +5800,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 295,
- "total_knowledge_gaps": 209,
- "total_source_entries": 289,
+ "total_discussions": 296,
+ "total_knowledge_gaps": 210,
+ "total_source_entries": 290,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
