@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DS-15 system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>DS-15 system</h1>
+    <p class="curie"><code>traitmech:000438</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses the three-gene DefensePredictor-discovered system 15 locus cataloged as working transcriptional unit AAA1 and whose plasmid expression in E. coli MG1655 reduced bacteriophage plaquing.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>DS-15 locus reduces bacteriophage plaquing</h2>
+      <p class="meta">Conservative system-level sketch linking the three-gene DS-15 locus to reduced bacteriophage plaquing without resolving DS-15 component function or effector activity.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-15 as the validated AAA1 transcriptional unit with three product accessions, final Table S8 MinD ATPase and DUF6988 HHpred-domain rows, and three DefenseFinder DS-15 profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact AAA family ATPase or DUF6988 chemistry, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>DS-15 locus reduces bacteriophage plaquing</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for DS-15 system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>DS-15 locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>reduced bacteriophage plaquing</strong>
+            <code>RO:0002326</code>
+            <p>The DS-15/AAA1 locus contributes to reduced bacteriophage plaquing when plasmid expressed.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1126/science.adv7924</code>
+                <span class="evidence-snippet">To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain</span>
+                <span class="meta">DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+                <span class="evidence-snippet">AAA1	NZ_QOXE01000046.1	GCF_003334165.1	-	True	False	True	True	DefensePredictor hits	29629	31530	hypothetical protein, hypothetical protein, AAA family ATPase	WP_000957441.1, WP_060581740.1, WP_001619161.1	11.46862191778244	2.030866871531279	True	True	Predicted novel defense gene	DS-15</span>
+                <span class="meta">The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+                <span class="evidence-snippet">Bas1	4.2	pLAND	24-05-17_EV_HHNH.png	5000000	AAA1	24-05-17	24-05-17_VAME_AAA1_PD3A_PDP7.png	2	100		10000	2.6989700043360187		True		LB	37</span>
+                <span class="meta">The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| DS-15__DS-15A                                    |                                                  | DS-15                  | Custom                  | 300    |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records DS-15__DS-15A as a custom DS-15 profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| DS-15__DS-15B                                    |                                                  | DS-15                  | Custom                  | 20     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records DS-15__DS-15B as a custom DS-15 profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| DS-15__DS-15C                                    |                                                  | DS-15                  | Custom                  | 20     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records DS-15__DS-15C as a custom DS-15 profile.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>reduced bacteriophage plaquing</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>DS-15 system</strong>
+            <code>METPO:2007700</code>
+            <p>DS-15-mediated phage plaquing reduction realizes the DS-15 system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1126/science.adv7924</code>
+                <span class="evidence-snippet">We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8.</span>
+                <span class="meta">DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+                <span class="evidence-snippet">AAA1	NZ_QOXE01000046.1	GCF_003334165.1	-	True	False	True	True	DefensePredictor hits	29629	31530	hypothetical protein, hypothetical protein, AAA family ATPase	WP_000957441.1, WP_060581740.1, WP_001619161.1	11.46862191778244	2.030866871531279	True	True	Predicted novel defense gene	DS-15</span>
+                <span class="meta">The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+                <span class="evidence-snippet">Bas1	4.2	pLAND	24-05-17_EV_HHNH.png	5000000	AAA1	24-05-17	24-05-17_VAME_AAA1_PD3A_PDP7.png	2	100		10000	2.6989700043360187		True		LB	37</span>
+                <span class="meta">The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>DS-15 system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>DS-15 system possession is a phage-defense-system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1126/science.adv7924</code>
+                <span class="evidence-snippet">To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain</span>
+                <span class="meta">DeWeirdt et al. validate DSs as anti-phage systems.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">| DS-15 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | </span>
+                <span class="meta">The pinned DefenseFinder article registry maps the DS-15 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1126/science.adv7924</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (5)</h2>
+      <ul class="synonyms">
+
+        <li>DS-15 <span class="meta">EXACT_SYNONYM · DOI:10.1126/science.adv7924</span></li>
+
+        <li>AAA1 <span class="meta">RELATED_SYNONYM · https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</span></li>
+
+        <li>DS-15__DS-15A <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>DS-15__DS-15B <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>DS-15__DS-15C <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="ds-15-defensefinder-model-gap">
+        <p class="discussion-prompt">Resolve DS-15 native host breadth, exact profile-to-protein mapping, DS-15A/DS-15B/DS-15C component activities, sensitive-phage breadth, exact AAA family ATPase and DUF6988 chemistry, and rule-level DefenseFinder criteria before minting narrower DS-15 mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>ds-15-defensefinder-model-gap</code>
+          · raised by codex
+          · 2026-09-28
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#ds_15_locus_reduces_phage_plaquing</code>
+        </p>
+
+
+        <p>DeWeirdt et al. support DS-15 as the defensive AAA1 transcriptional unit that reduced Bas1 plaquing when cloned in E. coli MG1655, the final Table S8 HHpred sheet reports MinD ATPase and DUF6988 hits across two AAA1 products, and the pinned DefenseFinder HMM inventory records DS-15A, DS-15B, and DS-15C custom profile rows. The pinned rules table has no DS-15 row, and the first-pass record does not resolve native host breadth, exact profile-to-protein correspondence, direct ATPase or DUF6988 activity, phage target breadth, or endogenous DS-15 activity.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1126/science.adv7924</code>
+
+            <blockquote>To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>DOI:10.1126/science.adv7924</code>
+
+            <blockquote>We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+
+            <blockquote>AAA1	NZ_QOXE01000046.1	GCF_003334165.1	-	True	False	True	True	DefensePredictor hits	29629	31530	hypothetical protein, hypothetical protein, AAA family ATPase	WP_000957441.1, WP_060581740.1, WP_001619161.1	11.46862191778244	2.030866871531279	True	True	Predicted novel defense gene	DS-15</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+
+            <blockquote>Bas1	4.2	pLAND	24-05-17_EV_HHNH.png	5000000	AAA1	24-05-17	24-05-17_VAME_AAA1_PD3A_PDP7.png	2	100		10000	2.6989700043360187		True		LB	37</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>AAA1	DS-15	True</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>AAA1	1.0	281.0	WP_001619161.1	MinD ATPase	SCOP_d1hyqa_	c.37.1.10 (A:) Cell division regulator MinD {Archaeoglobus fulgidus [TaxId: 2234]} | CLASS: Alpha and beta proteins (a/b), FOLD: P-loop containing nucleoside triphosphate hydrolases, SUPFAM: P-loop containing nucleoside triphosphate hydrolases, FAM: Nitrogenase iron protein-like	hhpred_6736485.hhr	3.0	268.0	1.0	2024-07-29 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>AAA1	3.0	221.0	WP_000957441.1	DUF6988	PF22491.1	DUF6988 ; Family of unknown function (DUF6988)	hhpred_7907160.hhr	68.0	144.0	0.94	2024-07-29 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+
+            <blockquote>| DS-15 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | </blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| DS-15__DS-15A                                    |                                                  | DS-15                  | Custom                  | 300    |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| DS-15__DS-15B                                    |                                                  | DS-15                  | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| DS-15__DS-15C                                    |                                                  | DS-15                  | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-28T16:50:13Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted DS-15 system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; kept the graph at cloned AAA1 transcriptional-unit level because the pinned DefenseFinder DS-15 HMM rows are not backed by a rules row; proposals/metpo_traitmech_v315 reserves the replacement placeholder.</p>
+        </li>
+
+        <li>
+          <time>2026-09-28T16:50:14Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed DS-15 system canonical_examples and left them empty because DeWeirdt et al. support cloned AAA1 plaquing assays in E. coli MG1655 plus DefenseFinder DS-15 models, but not a direct named native microbial isolate exemplar with experimentally verified endogenous DS-15 activity. No paid research was used.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/ds_15_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/ds_15_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/ds_15_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/ds_15_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000438" target="_blank" rel="noopener"><code>traitmech:000438</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking the three-gene DS-15 locus to reduced bacteriophage plaquing without resolving DS-15 component function or effector activity.", "edges": [{"description": "The DS-15/AAA1 locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "AAA1\tNZ_QOXE01000046.1\tGCF_003334165.1\t-\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t29629\t31530\thypothetical protein, hypothetical protein, AAA family ATPase\tWP_000957441.1, WP_060581740.1, WP_001619161.1\t11.46862191778244\t2.030866871531279\tTrue\tTrue\tPredicted novel defense gene\tDS-15"}, {"notes": "The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t4.2\tpLAND\t24-05-17_EV_HHNH.png\t5000000\tAAA1\t24-05-17\t24-05-17_VAME_AAA1_PD3A_PDP7.png\t2\t100\t\t10000\t2.6989700043360187\t\tTrue\t\tLB\t37"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15A as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15A                                    |                                                  | DS-15                  | Custom                  | 300    |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15B as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15B                                    |                                                  | DS-15                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15C as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15C                                    |                                                  | DS-15                  | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_15_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-15-mediated phage plaquing reduction realizes the DS-15 system trait.", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "AAA1\tNZ_QOXE01000046.1\tGCF_003334165.1\t-\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t29629\t31530\thypothetical protein, hypothetical protein, AAA family ATPase\tWP_000957441.1, WP_060581740.1, WP_001619161.1\t11.46862191778244\t2.030866871531279\tTrue\tTrue\tPredicted novel defense gene\tDS-15"}, {"notes": "The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t4.2\tpLAND\t24-05-17_EV_HHNH.png\t5000000\tAAA1\t24-05-17\t24-05-17_VAME_AAA1_PD3A_PDP7.png\t2\t100\t\t10000\t2.6989700043360187\t\tTrue\t\tLB\t37"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_15_system_trait"}, {"description": "DS-15 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-15 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-15 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_15_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The DS-15/AAA1 locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "edge_id": "edge-1", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "AAA1\tNZ_QOXE01000046.1\tGCF_003334165.1\t-\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t29629\t31530\thypothetical protein, hypothetical protein, AAA family ATPase\tWP_000957441.1, WP_060581740.1, WP_001619161.1\t11.46862191778244\t2.030866871531279\tTrue\tTrue\tPredicted novel defense gene\tDS-15"}, {"notes": "The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t4.2\tpLAND\t24-05-17_EV_HHNH.png\t5000000\tAAA1\t24-05-17\t24-05-17_VAME_AAA1_PD3A_PDP7.png\t2\t100\t\t10000\t2.6989700043360187\t\tTrue\t\tLB\t37"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15A as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15A                                    |                                                  | DS-15                  | Custom                  | 300    |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15B as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15B                                    |                                                  | DS-15                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-15__DS-15C as a custom DS-15 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-15__DS-15C                                    |                                                  | DS-15                  | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-15 locus", "target": "reduced bacteriophage plaquing"}, {"description": "DS-15-mediated phage plaquing reduction realizes the DS-15 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id AAA1 to DS_name DS-15, marks the cloned transcriptional unit as defensive, and records NZ_QOXE01000046.1 positions 29629-31530 with product accessions WP_000957441.1, WP_060581740.1, and WP_001619161.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "AAA1\tNZ_QOXE01000046.1\tGCF_003334165.1\t-\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t29629\t31530\thypothetical protein, hypothetical protein, AAA family ATPase\tWP_000957441.1, WP_060581740.1, WP_001619161.1\t11.46862191778244\t2.030866871531279\tTrue\tTrue\tPredicted novel defense gene\tDS-15"}, {"notes": "The final Science supplementary Table S7 reports an AAA1 assay row with a Bas1 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t4.2\tpLAND\t24-05-17_EV_HHNH.png\t5000000\tAAA1\t24-05-17\t24-05-17_VAME_AAA1_PD3A_PDP7.png\t2\t100\t\t10000\t2.6989700043360187\t\tTrue\t\tLB\t37"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "target": "DS-15 system"}, {"description": "DS-15 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-15 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-15 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-15 system", "target": "phage defense system"}], "graph_id": "ds_15_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A three-gene DefensePredictor-discovered system locus represented in the pinned DefenseFinder HMM inventory by DS-15A, DS-15B, and DS-15C custom profiles.", "grounding": null, "id": "ds_15_locus", "is_orphan": false, "label": "DS-15 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-15 phage-defense system.", "grounding": "traitmech:000438", "id": "ds_15_system_trait", "is_orphan": false, "label": "DS-15 system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophage Bas1 in cells carrying cloned AAA1.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures DS-15 as the validated AAA1 transcriptional unit with three product accessions, final Table S8 MinD ATPase and DUF6988 HHpred-domain rows, and three DefenseFinder DS-15 profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact AAA family ATPase or DUF6988 chemistry, phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-15 locus reduces bacteriophage plaquing"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-28 16:50 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 833 TraitRecords
+      · embedding coverage 57.3%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
