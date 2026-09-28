@@ -1571,6 +1571,42 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_5_system.html#ds-5-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-6-defensefinder-model-gap",
+  "prompt": "Resolve DS-6 native host breadth, exact two-component activities, DS-6 profile-to-protein mapping, sensitive-phage breadth, DUF3037 and DUF1829 activity, HipA-like kinase substrates, and rule-level detection criteria before minting narrower DS-6 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-6 system",
+  "source_id": "traitmech:000430",
+  "source_file": "ds_6_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_6_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-6 as the defensive HIPA transcriptional unit that reduced Bas1 plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records two DS-6 profile rows. The pinned rules table has no DS-6 row, and the first-pass record does not resolve native host breadth, exact profile-to-protein correspondence, DUF3037 or HipA-like kinase activity, phage target breadth, or endogenous DS-6 activity.",
+  "num_experiments": 0,
+  "num_evidence": 16,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_6_system.html#ds-6-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "dsr-sirtuin-mechanism-gap",
   "prompt": "Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming collisions before minting narrower Dsr mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6008,9 +6044,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 303,
- "total_knowledge_gaps": 217,
- "total_source_entries": 297,
+ "total_discussions": 304,
+ "total_knowledge_gaps": 218,
+ "total_source_entries": 298,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

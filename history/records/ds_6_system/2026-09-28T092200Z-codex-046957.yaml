@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_6_system.yaml
+  slug: ds_6_system
+session:
+  id: 2026-09-28T092200Z-codex-046957
+  timestamp: '2026-09-28T09:22:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-6 system trait
+  details: Minted traitmech:000430 for the DOI-backed DS-6 phage-defense system under phage
+    defense system; added final Science Table S6/S7/S8 evidence for the HIPA/HipAD
+    locus, Bas1 plaquing assays, DS-6 domains, and the DS-6A D139A catalytic mutant,
+    pinned DefenseFinder article and HMM inventory evidence for DS-6A and DS-6B, a
+    nonmechanistic DS-6 locus-to-phage-plaquing graph, an open DefenseFinder rules knowledge
+    gap, an empty canonical-example review, and the metpo_traitmech_v307 proposal reserving
+    METPO:1038400.
