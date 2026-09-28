@@ -1673,6 +1673,41 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_8_system.html#ds-8-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-9-defensefinder-model-gap",
+  "prompt": "Resolve DS-9 native host breadth, DS-9A/DS-9B profile-to-protein mapping, sensitive-phage breadth, direct metallophosphoesterase substrate, HAD phosphatase target, and rule-level detection criteria before minting narrower DS-9 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-9 system",
+  "source_id": "traitmech:000433",
+  "source_file": "ds_9_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_9_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-9 as the defensive MHAD transcriptional unit that reduced Bas1 plaquing when cloned in E. coli MG1655, identify DS-9 as a two-gene system with metallophosphatase and HAD phosphatase domains, and report that DS-9A predicted catalytic-residue mutations caused a loss of defense. Final Science Table S7 mutant rows show D207A and N292A Bas1 protection loss relative to wild-type MHAD in a matched panel. The pinned DefenseFinder HMM inventory records two DS-9 profile rows. The pinned rules table has no DS-9 row, and the first-pass record does not resolve native host breadth, exact DS-9A/DS-9B profile-to-protein correspondence, direct metallophosphoesterase substrate, HAD phosphatase target, phage target breadth, endogenous DS-9 activity, or DefenseFinder rule-level detection criteria.",
+  "num_experiments": 0,
+  "num_evidence": 15,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_9_system.html#ds-9-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "dsr-sirtuin-mechanism-gap",
   "prompt": "Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming collisions before minting narrower Dsr mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6110,9 +6145,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 306,
- "total_knowledge_gaps": 220,
- "total_source_entries": 300,
+ "total_discussions": 307,
+ "total_knowledge_gaps": 221,
+ "total_source_entries": 301,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
