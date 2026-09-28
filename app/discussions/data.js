@@ -3944,6 +3944,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sdic1_system.html#sdic1-defensefinder-model-gap"
  },
  {
+  "discussion_id": "sdic3-defensefinder-model-gap",
+  "prompt": "Resolve SDIC3 natural host breadth, SDIC3A status, exact SDIC3B/SDIC3C/SDIC3D/SDIC3E/SDIC3F component functions, sensitive-phage breadth, ECOR61-system subtype scope, the direct trigger and molecular output, and rule-level detection criteria before minting narrower SDIC3 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SDIC3 system",
+  "source_id": "traitmech:000423",
+  "source_file": "sdic3_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sdic3_locus_restricts_phage"
+  ],
+  "rationale": "Cummins et al. support SDIC3 as a Serratia defense-island candidate anti-phage system that can strongly protect E. coli when plasmid expressed, and the pinned DefenseFinder HMM inventory records SDIC3B, SDIC3C, SDIC3D, SDIC3E, and SDIC3F profile rows. The pinned rules table has no SDIC3 row, and the first-pass record does not resolve natural host breadth, whether SDIC3A is part of the DefenseFinder-detectable system, phage target breadth, ECOR61 anti-phage-system boundaries, or the direct molecular output.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1016/j.celrep.2024.115055",
+   "DOI:10.1016/j.celrep.2024.115055",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sdic3_system.html#sdic3-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "sdic4-defensefinder-model-gap",
   "prompt": "Resolve SDIC4 natural host breadth, sensitive-phage breadth, type I versus type II component scope, SDIC4A/SDIC4B component functions, receptor or phage target, and rule-level detection criteria before minting narrower SDIC4 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5800,9 +5829,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 296,
- "total_knowledge_gaps": 210,
- "total_source_entries": 290,
+ "total_discussions": 297,
+ "total_knowledge_gaps": 211,
+ "total_source_entries": 291,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
