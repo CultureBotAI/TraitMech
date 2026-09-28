@@ -3917,6 +3917,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sdic1_system.html#sdic1-defensefinder-model-gap"
  },
  {
+  "discussion_id": "sdic4-defensefinder-model-gap",
+  "prompt": "Resolve SDIC4 natural host breadth, sensitive-phage breadth, type I versus type II component scope, SDIC4A/SDIC4B component functions, receptor or phage target, and rule-level detection criteria before minting narrower SDIC4 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SDIC4 system",
+  "source_id": "traitmech:000421",
+  "source_file": "sdic4_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sdic4_locus_reduces_phage_adsorption"
+  ],
+  "rationale": "Cummins et al. support SDIC4 as a VasI-like anti-phage system that reduces phage adsorption, and the pinned DefenseFinder HMM inventory records SDIC4A and SDIC4B profile rows. The pinned rules table has no SDIC4 row, and the first-pass record does not resolve natural host breadth, sensitive-phage breadth, type I versus type II system boundaries, the exact profile-to-component mapping, the SDIC4A/SDIC4B relationship, or the phage-adsorption target.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1016/j.celrep.2024.115055",
+   "DOI:10.1016/j.celrep.2024.115055",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sdic4_system.html#sdic4-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "sefir-mechanism-gap",
   "prompt": "Resolve SEFIR phage triggers and effector outputs before minting narrower SEFIR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5747,9 +5773,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 294,
- "total_knowledge_gaps": 208,
- "total_source_entries": 288,
+ "total_discussions": 295,
+ "total_knowledge_gaps": 209,
+ "total_source_entries": 289,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

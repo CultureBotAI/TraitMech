@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sdic4_system.yaml
+  slug: sdic4_system
+session:
+  id: 2026-09-27T234945Z-claude-code-560738
+  timestamp: '2026-09-27T23:49:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add SDIC4 system trait
+  details: Minted traitmech:000421 for the DOI-backed SDIC4 system under phage defense system.
+    DOI:10.1016/j.celrep.2024.115055 supports SDIC4 as a VasI-like anti-phage system that
+    decreases the bacteriophage adsorption rate; the pinned DefenseFinder article and HMM
+    inventories map SDIC4 to the SDIC4A and SDIC4B custom profiles while the pinned rules
+    table has no SDIC4 row, so the graph stays nonmechanistic at candidate-locus level and
+    the record keeps SDIC4 subtype boundaries unresolved. Reserved METPO:1037500 in proposals/metpo_traitmech_v298.
