@@ -41,9 +41,12 @@ IDENTIFIER = "traitmech:000424"
 PROPOSAL = "proposals/metpo_traitmech_v301"
 
 DS_VALIDATION_SNIPPET = (
-    "In total, 42 (45% of 94) of the cloned TUs produced smaller "
-    "plaque sizes or reduced the efficiency of plating (EOP) at least "
-    "ten-fold relative to an empty vector control strain"
+    "To test for anti-phage defense, we placed each TU with its predicted "
+    "native promoter region on a low-copy number plasmid in E. coli MG1655 "
+    "and challenged these strains with a panel of 24 diverse E. coli phages "
+    "(Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced "
+    "smaller plaque sizes or reduced the efficiency of plating (EOP) at "
+    "least ten-fold relative to an empty vector control strain"
 )
 DS_NAMING_SNIPPET = (
     "We refer to these validated TUs as DefensePredictor discovered systems "
@@ -146,9 +149,9 @@ RECORD: dict[str, Any] = {
     "label": "DS-1 system",
     "definition": (
         "A phage defense system in which an organism possesses the two-gene "
-        "DefensePredictor-discovered system 1 locus that was cloned as E. "
-        "coli transcriptional unit D390 and whose plasmid expression reduced "
-        "bacteriophage plaquing."
+        "DefensePredictor-discovered system 1 locus cataloged as working "
+        "transcriptional unit D390 and whose plasmid expression in E. coli "
+        "MG1655 reduced bacteriophage plaquing."
     ),
     "definition_source": DEWEIRDT,
     "trait_category": "GENOMICS",

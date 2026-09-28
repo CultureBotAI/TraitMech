@@ -1,8 +1,8 @@
 identifier: traitmech:000424
 label: DS-1 system
 definition: A phage defense system in which an organism possesses the two-gene DefensePredictor-discovered
-  system 1 locus that was cloned as E. coli transcriptional unit D390 and whose plasmid
-  expression reduced bacteriophage plaquing.
+  system 1 locus cataloged as working transcriptional unit D390 and whose plasmid
+  expression in E. coli MG1655 reduced bacteriophage plaquing.
 definition_source: DOI:10.1126/science.adv7924
 trait_category: GENOMICS
 term_kind: CLASS
@@ -24,9 +24,12 @@ synonyms:
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
 - reference: DOI:10.1126/science.adv7924
-  snippet: In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes
-    or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty
-    vector control strain
+  snippet: To test for anti-phage defense, we placed each TU with its predicted native
+    promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+    these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+    total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+    the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+    control strain
   notes: DeWeirdt et al. experimentally validated 42 predicted transcriptional units
     as phage-defense systems in E. coli.
 - reference: DOI:10.1126/science.adv7924
@@ -112,7 +115,10 @@ causal_graphs:
       when plasmid expressed.
     evidence:
     - reference: DOI:10.1126/science.adv7924
-      snippet: In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
         sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
         to an empty vector control strain
       notes: DeWeirdt et al. experimentally validate DefensePredictor-discovered systems
@@ -174,7 +180,10 @@ causal_graphs:
     description: DS-1 system possession is a phage-defense-system trait.
     evidence:
     - reference: DOI:10.1126/science.adv7924
-      snippet: In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
         sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
         to an empty vector control strain
       notes: DeWeirdt et al. validate DSs as anti-phage systems.
@@ -199,9 +208,12 @@ discussions:
     direct molecular output, or endogenous DS-1 activity.
   evidence:
   - reference: DOI:10.1126/science.adv7924
-    snippet: In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes
-      or reduced the efficiency of plating (EOP) at least ten-fold relative to an
-      empty vector control strain
+    snippet: To test for anti-phage defense, we placed each TU with its predicted
+      native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+      these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+      total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+      the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+      control strain
     notes: DeWeirdt et al. validate predicted transcriptional units by measuring plaquing
       relative to an empty vector control strain.
   - reference: DOI:10.1126/science.adv7924
@@ -267,4 +279,12 @@ curation_history:
     et al. support cloned D390 plaquing assays in E. coli MG1655 plus a DefenseFinder
     DS-1 model, but not a direct named native microbial isolate exemplar with experimentally
     verified endogenous DS-1 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-28T03:20:08Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: Addressed issue 1380 by rewriting the DS-1 definition so D390 is a DeWeirdt
+    et al. working transcriptional-unit identifier rather than an implied E. coli
+    transcriptional unit, expanding the DOI evidence snippets to explicitly state
+    E. coli MG1655 low-copy plasmid expression, and syncing the METPO proposal definition.
   llm_assisted: true
