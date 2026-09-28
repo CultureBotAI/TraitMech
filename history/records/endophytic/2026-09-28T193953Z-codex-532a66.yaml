@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/endophytic.yaml
+  slug: endophytic
+session:
+  id: 2026-09-28T193953Z-codex-532a66
+  timestamp: '2026-09-28T19:39:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add endophytic trait
+  details: Minted traitmech:000442 for the DOI-backed endophytic plant-host residence trait
+    under host-associated, added a conservative internal-plant-colonization graph, left canonical
+    examples empty after first-pass review, and reserved METPO:1039600 in proposals/metpo_traitmech_v319.
