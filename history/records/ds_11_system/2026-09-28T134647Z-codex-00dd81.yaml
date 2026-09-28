@@ -26,3 +26,12 @@ events:
     DS-11 knowledge gap for unresolved activation and effector chemistry, and leaves canonical_examples
     empty because the sources support cloned IMPD assays in E. coli MG1655 rather than experimentally
     verified endogenous DS-11 activity in a named native isolate.
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Address DS-11 PR review wording issue
+  details: >-
+    Broadened the reduced-phage-plaquing node description after PR #1403
+    review issue #1404 so it no longer names only T3 while the DS-11
+    evidence bundle includes Bas67 assay rows.

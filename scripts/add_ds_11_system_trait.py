@@ -36,6 +36,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-28T13:46:45Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-28T13:46:46Z"
+PR_REVIEW_TIMESTAMP = "2026-09-28T14:33:00Z"
 
 IDENTIFIER = "traitmech:000435"
 PROPOSAL = "proposals/metpo_traitmech_v312"
@@ -313,8 +314,8 @@ RECORD: dict[str, Any] = {
                     "label": "reduced bacteriophage plaquing",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "Reduced efficiency of plaquing by bacteriophage T3 "
-                        "in cells carrying cloned IMPD."
+                        "Reduced bacteriophage plaquing by cells carrying "
+                        "cloned IMPD."
                     ),
                 },
                 {
@@ -503,6 +504,19 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESSED_PR_REVIEW",
+        changes=(
+            "Resolved PR #1403 review issue #1404 by broadening the "
+            "DS-11 reduced-phage-plaquing node description so it no "
+            "longer names only T3 while the evidence bundle includes "
+            "Bas67 rows."
+        ),
+        llm_assisted=True,
+        timestamp=PR_REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
