@@ -271,6 +271,9 @@ the outermost table delimiters around that span; do not collapse padding,
 reorder columns, or normalize source profile names. Check the stored snippet
 against the pinned source file, because visual column alignment is easy to lose
 when copying DefenseFinder HMM inventory rows.
+Spreadsheet rows used as snippets must be rendered from raw cell values in
+column order and exact-matched with a structured reader such as `openpyxl`;
+record the stable sheet URL, not a derived CSV.
 
 For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
 that supports a definition, canonical example, graph edge, or curation
