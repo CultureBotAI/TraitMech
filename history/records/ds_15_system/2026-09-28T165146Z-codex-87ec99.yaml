@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_15_system.yaml
+  slug: ds_15_system
+session:
+  id: 2026-09-28T165146Z-codex-87ec99
+  timestamp: '2026-09-28T16:51:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DS-15 system trait
+  details: Minted traitmech:000438 as a DS-15 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor Science article, final Tables S6/S7/S8, and
+    the pinned DefenseFinder DS-15 article/HMM registries. The record keeps AAA1 and DS-15__DS-15A/DS-15B/DS-15C
+    as related source/profile synonyms, adds a nonmechanistic AAA1 transcriptional-unit graph,
+    leaves canonical examples empty, records the missing native-host, phage-breadth, profile-to-protein,
+    molecular-output, and DefenseFinder rules gaps, and reserves METPO:1039200 in proposals/metpo_traitmech_v315.

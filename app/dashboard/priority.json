@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 832,
+    "records": 833,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 355,
+    "unresearched_mechanism_records": 356,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 103,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 259,
+      "DEEPEN_CAUSAL_GRAPH": 260,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -6482,6 +6482,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000438",
+      "label": "DS-15 system",
+      "category": "genomics",
+      "slug": "ds_15_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
+        "canonical_examples reviewed empty +0"
+      ]
+    },
+    {
       "identifier": "traitmech:000424",
       "label": "DS-1 system",
       "category": "genomics",
@@ -7654,7 +7677,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 184,
+      "children": 185,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

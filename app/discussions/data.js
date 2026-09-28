@@ -1538,6 +1538,38 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_14_system.html#ds-14-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-15-defensefinder-model-gap",
+  "prompt": "Resolve DS-15 native host breadth, exact profile-to-protein mapping, DS-15A/DS-15B/DS-15C component activities, sensitive-phage breadth, exact AAA family ATPase and DUF6988 chemistry, and rule-level DefenseFinder criteria before minting narrower DS-15 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-15 system",
+  "source_id": "traitmech:000438",
+  "source_file": "ds_15_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_15_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-15 as the defensive AAA1 transcriptional unit that reduced Bas1 plaquing when cloned in E. coli MG1655, the final Table S8 HHpred sheet reports MinD ATPase and DUF6988 hits across two AAA1 products, and the pinned DefenseFinder HMM inventory records DS-15A, DS-15B, and DS-15C custom profile rows. The pinned rules table has no DS-15 row, and the first-pass record does not resolve native host breadth, exact profile-to-protein correspondence, direct ATPase or DUF6988 activity, phage target breadth, or endogenous DS-15 activity.",
+  "num_experiments": 0,
+  "num_evidence": 12,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_15_system.html#ds-15-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-1-defensefinder-model-gap",
   "prompt": "Resolve DS-1 native host breadth, exact DS-1A/DS-1B component functions, profile-to-component mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-1 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6261,9 +6293,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 311,
- "total_knowledge_gaps": 225,
- "total_source_entries": 305,
+ "total_discussions": 312,
+ "total_knowledge_gaps": 226,
+ "total_source_entries": 306,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
