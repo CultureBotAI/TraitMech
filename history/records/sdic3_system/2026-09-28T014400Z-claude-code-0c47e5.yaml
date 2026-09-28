@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sdic3_system.yaml
+  slug: sdic3_system
+session:
+  id: 2026-09-28T014400Z-claude-code-0c47e5
+  timestamp: '2026-09-28T01:44:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add SDIC3 system trait
+  details: Minted traitmech:000423 for the DOI-backed SDIC3 system under phage defense system.
+    DOI:10.1016/j.celrep.2024.115055 supports SDIC3 as a Serratia defense-island candidate
+    anti-phage system that can strongly protect plasmid-expressing E. coli against several
+    bacteriophages; the pinned DefenseFinder article and HMM inventories map SDIC3 to the
+    SDIC3B, SDIC3C, SDIC3D, SDIC3E, and SDIC3F custom profiles while the pinned rules table
+    has no SDIC3 row, so the graph stays nonmechanistic at candidate-locus level and the record
+    keeps SDIC3A scope, ECOR61-system boundaries, native host breadth, phage range, and direct
+    molecular output unresolved. Reserved METPO:1037700 in proposals/metpo_traitmech_v300.
