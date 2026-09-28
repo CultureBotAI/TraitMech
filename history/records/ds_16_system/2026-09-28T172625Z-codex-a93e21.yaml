@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_16_system.yaml
+  slug: ds_16_system
+session:
+  id: 2026-09-28T172625Z-codex-a93e21
+  timestamp: '2026-09-28T17:26:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DS-16 system trait
+  details: Minted traitmech:000439 as a DS-16 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor Science article, final Tables S6/S7/S8, and
+    the pinned DefenseFinder DS-16 article/HMM registries. The record keeps PLIK and DS-16__DS-16A/DS-16B
+    as related source/profile synonyms, adds a nonmechanistic PLIK transcriptional-unit graph,
+    leaves canonical examples empty, records the unresolved native-host, phage-breadth, profile-to-protein,
+    molecular-output, RelE/ABC ATPase chemistry, and DefenseFinder rules gaps, and reserves
+    METPO:1039300 in proposals/metpo_traitmech_v316.
