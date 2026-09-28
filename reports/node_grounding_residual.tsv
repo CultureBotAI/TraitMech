@@ -310,6 +310,8 @@ limited recombination	BIOLOGICAL_PROCESS	1	data/traits/ecology/endosymbiosis.yam
 host-symbiont amino-acid pathway complementarity	BIOLOGICAL_PROCESS	1	data/traits/ecology/endosymbiosis.yaml
 nutritional compensation	BIOLOGICAL_PROCESS	1	data/traits/ecology/endosymbiosis.yaml
 dependence on the intracellular environment	STATE	1	data/traits/ecology/endosymbiosis.yaml
+living external plant surface	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/epiphytic.yaml
+epiphytic colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/epiphytic.yaml
 environmental habitat	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/free_living.yaml
 complete metabolic capacity for carbon/nitrogen/sulfur/cofactors	CAPACITY	1	data/traits/ecology/free_living.yaml
 osmotic stress tolerance	BIOLOGICAL_PROCESS	1	data/traits/ecology/free_living.yaml

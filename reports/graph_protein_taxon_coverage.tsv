@@ -10,6 +10,7 @@ data/traits/ecology/biosafety_level_5.yaml	METPO:1001106	biosafety level 5	biosa
 data/traits/ecology/commensalism.yaml	traitmech:000042	commensalism	commensalism_neutral_host	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/endophytic.yaml	traitmech:000442	endophytic	endophytic_internal_plant_colonization	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/endosymbiosis.yaml	traitmech:000045	endosymbiosis	endosymbiosis_intracellular_genome_reduction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/ecology/epiphytic.yaml	traitmech:000443	epiphytic	epiphytic_plant_surface_colonization	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/free_living.yaml	traitmech:000048	free-living	free_living_environmental_habitat	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/gut_associated.yaml	traitmech:000052	gut-associated	gut_associated_microbiota_metabolism	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/habitat_association.yaml	traitmech:000047	habitat association	habitat_association_biogeographic_structure	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-

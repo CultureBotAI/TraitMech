@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/epiphytic.yaml
+  slug: epiphytic
+session:
+  id: 2026-09-28T202112Z-codex-eeb2ca
+  timestamp: '2026-09-28T20:21:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added epiphytic ecology trait
+  details: Minted traitmech:000443 as a DOI-backed epiphytic ECOLOGY record under host-associated,
+    supported by Lindow and Brandl 2003 plus Fones et al. 2024, left canonical examples empty
+    after first-pass review, and reserved METPO:1039700 in proposals/metpo_traitmech_v320.
