@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import copy
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -13,7 +14,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from traitmech.curate.curation_event import record_curation_event  # noqa: E402
-from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+from traitmech.validation.write_validated import (  # noqa: E402
+    emit_trait_yaml,
+    write_validated_trait,
+)
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "ds_16_system.yaml"
 
@@ -447,6 +451,11 @@ RECORD: dict[str, Any] = {
 }
 
 
+def validate_output(record: dict[str, Any]) -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -488,6 +497,7 @@ def main() -> int:
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
     )
+    validate_output(record)
 
     rel = TARGET.relative_to(REPO_ROOT)
     if args.apply:
@@ -496,9 +506,7 @@ def main() -> int:
         write_validated_trait(record, TARGET)
         print(f"Wrote {rel}")
     else:
-        import yaml
-
-        print(yaml.safe_dump(record, sort_keys=False, allow_unicode=True))
+        sys.stdout.write(emit_trait_yaml(record))
     return 0
 
 
