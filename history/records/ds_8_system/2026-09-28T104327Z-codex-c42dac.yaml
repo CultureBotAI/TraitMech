@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_8_system.yaml
+  slug: ds_8_system
+session:
+  id: 2026-09-28T104327Z-codex-c42dac
+  timestamp: '2026-09-28T10:43:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-8 system trait
+  details: Minted traitmech:000432 for the DOI-backed DS-8 phage-defense system under phage
+    defense system; added final Science Table S6/S7/S8 evidence for the MNAC locus, Bas1 plaquing
+    assays, DS-8 HHpred domain rows, pinned DefenseFinder article and HMM inventory evidence
+    for DS-8, a nonmechanistic DS-8 locus-to-phage-plaquing graph, an open DefenseFinder rules
+    knowledge gap, an empty canonical-example review, and the metpo_traitmech_v309 proposal
+    reserving METPO:1038600.
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Address DS-8 PR review findings
+  details: >-
+    Replaced the ambiguous DS-8A generic naming quote with DS-8-specific
+    single-protein and catalytic-mutant article snippets after issue #1397;
+    added final Science Table S7 MNAC K375A, N84A, and D52A Bas1 mutant evidence
+    after issue #1398; and narrowed the unresolved DS-8 knowledge gap to cyclic
+    nucleotide substrate identity, NACHT-mediated activation route, native-host
+    and phage breadth, exact DefenseFinder profile mapping, and DefenseFinder
+    rule-level criteria.
