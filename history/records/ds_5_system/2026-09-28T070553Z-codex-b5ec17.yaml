@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_5_system.yaml
+  slug: ds_5_system
+session:
+  id: 2026-09-28T070553Z-codex-b5ec17
+  timestamp: '2026-09-28T07:05:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-5 system trait
+  details: Minted traitmech:000428 for the DOI-backed DS-5 phage-defense system under phage
+    defense system; added final Science Table S6/S7/S8 evidence for the PN12 locus and Bas60
+    plaquing assay, pinned DefenseFinder article and HMM inventory evidence for DS-5A and
+    DS-5B, a nonmechanistic DS-5 locus-to-phage-plaquing graph, an open DefenseFinder rules
+    knowledge gap, an empty canonical-example review, and the metpo_traitmech_v305 proposal
+    reserving METPO:1038200.
