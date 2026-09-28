@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_18_system.yaml
+  slug: ds_18_system
+session:
+  id: 2026-09-28T185527Z-codex-83a741
+  timestamp: '2026-09-28T18:55:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-18 system trait
+  details: Minted traitmech:000441 as a DS-18 system GENOMICS record under phage defense system,
+    backed by DeWeirdt et al. DOI evidence, final Science Tables S6/S7/S8 OpenData rows for
+    6602, and the pinned DefenseFinder DS-18 article/HMM registries. The record keeps 6602
+    and DS-18__DS-18 as related source/profile labels, uses a nonmechanistic graph for reduced
+    bacteriophage plaquing, leaves native-host, molecular-output, PDDEXK chemistry, and DefenseFinder
+    rules gaps open, and reserves METPO:1039500 in proposals/metpo_traitmech_v318.
