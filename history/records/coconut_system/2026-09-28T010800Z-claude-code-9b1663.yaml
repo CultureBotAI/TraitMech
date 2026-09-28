@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/coconut_system.yaml
+  slug: coconut_system
+session:
+  id: 2026-09-28T010800Z-claude-code-9b1663
+  timestamp: '2026-09-28T01:08:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add CoCoNuT system trait
+  details: Minted traitmech:000422 for the DOI-backed CoCoNuT system under phage defense system.
+    DOI:10.7554/eLife.94800.3 supports CoCoNuTs as a predicted RNA-targeting McrBC Type IV
+    restriction-system branch, and the pinned DefenseFinder article and HMM inventories map
+    CoCoNut to representative CoCoNut-I, CoCoNut-II, and CoCoNut-III custom profiles while
+    the pinned rules table has no CoCoNut row, so the graph stays nonmechanistic at system-family
+    level and the record keeps profile-to-protein boundaries, pseudo-CoCoNuT scope, native
+    host breadth, phage range, and substrate-level mechanism unresolved. Reserved METPO:1037600
+    in proposals/metpo_traitmech_v299.
