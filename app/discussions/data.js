@@ -1481,6 +1481,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_12_system.html#ds-12-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-13-defensefinder-model-gap",
+  "prompt": "Resolve DS-13 working-identifier rows, preprint Table S5 and S6 context, final Science supplement omission, native host breadth, DS-13A/DS-13B profile-to-protein mapping, sensitive-phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-13 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-13 system",
+  "source_id": "traitmech:000437",
+  "source_file": "ds_13_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_13_locus_profile_model"
+  ],
+  "rationale": "The DeWeirdt et al. preprint supports the DefensePredictor discovered System naming convention, the pinned DefenseFinder article registry names DS-13 and maps it to that preprint, and the pinned HMM inventory records DS-13A and DS-13B custom profile rows. DS-13 is absent from the final Science Table S6, S7, and S8 files checked during this curation pass, the exact preprint per-TU rows were not recovered, the pinned DefenseFinder rules table has no DS-13 row, and the first-pass record does not resolve the working identifier, assayed phages, phage readout, native host, profile-to-component mapping, component activities, or complete detection criteria.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1101/2025.01.08.631726",
+   "DOI:10.1101/2025.01.08.631726",
+   "DOI:10.1101/2025.01.08.631726",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_13_system.html#ds-13-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-14-defensefinder-model-gap",
   "prompt": "Resolve DS-14 native host breadth, exact single-component activity, DS-14 remote-defense-homolog family identity, DS-14 profile-to-protein mapping, sensitive-phage breadth, exact AAA+ ATPase and PDDEXK nuclease chemistry, and rule-level detection criteria before minting narrower DS-14 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6234,9 +6261,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 310,
- "total_knowledge_gaps": 224,
- "total_source_entries": 304,
+ "total_discussions": 311,
+ "total_knowledge_gaps": 225,
+ "total_source_entries": 305,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
