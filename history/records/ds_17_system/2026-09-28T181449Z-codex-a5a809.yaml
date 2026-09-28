@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_17_system.yaml
+  slug: ds_17_system
+session:
+  id: 2026-09-28T181449Z-codex-a5a809
+  timestamp: '2026-09-28T18:14:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DS-17 system trait
+  details: Minted traitmech:000440 as a DS-17 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor Science article, final Tables S6/S7/S8, and
+    the pinned DefenseFinder DS-17 article/HMM registries. The record keeps NUCS and DS-17__DS-17
+    as related source/profile synonyms, adds a nonmechanistic NUCS transcriptional-unit graph,
+    leaves canonical examples empty, records the unresolved native-host, phage-breadth, profile-to-protein,
+    molecular-output, PDDEXK chemistry, and DefenseFinder rules gaps, and reserves METPO:1039400
+    in proposals/metpo_traitmech_v317.
