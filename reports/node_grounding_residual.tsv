@@ -22,6 +22,7 @@ maximal growth rate	QUALITY	5	data/traits/environment/nacl_optimum.yaml|data/tra
 f0f1-atpase	GENE_OR_PROTEIN	5	data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_delta_mid1.yaml|data/traits/environment/ph_delta_mid3.yaml
 phage dna replication	BIOLOGICAL_PROCESS	5	data/traits/genomics/abir_system.yaml|data/traits/genomics/brex_system.yaml|data/traits/genomics/lanthivirin_system.yaml
 phage infection	BIOLOGICAL_PROCESS	5	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/lamassu_system.yaml
+reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	5	data/traits/genomics/ds_1_system.yaml|data/traits/genomics/ds_2_system.yaml|data/traits/genomics/ds_3_system.yaml
 formate	CHEMICAL	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 oxygen	CHEMICAL	5	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/morphology/carboxysome.yaml
 mrec	GENE_OR_PROTEIN	5	data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/cell_width_small.yaml|data/traits/morphology/fusiform_shaped.yaml
@@ -31,7 +32,6 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
-reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	4	data/traits/genomics/ds_1_system.yaml|data/traits/genomics/ds_2_system.yaml|data/traits/genomics/hec_02_system.yaml
 phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/razr_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
@@ -1303,6 +1303,7 @@ drue helicase-nuclease dna processing	BIOLOGICAL_PROCESS	1	data/traits/genomics/
 downstream phage dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
 ds-1 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_1_system.yaml
 ds-2 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_2_system.yaml
+ds-3 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_3_system.yaml
 dsr locus	GENETIC_ELEMENT	1	data/traits/genomics/dsr_system.yaml
 sir2-domain antiphage activity	MOLECULAR_FUNCTION	1	data/traits/genomics/dsr_system.yaml
 eleos locus	GENETIC_ELEMENT	1	data/traits/genomics/eleos_system.yaml
