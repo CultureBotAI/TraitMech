@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_10_system.yaml
+  slug: ds_10_system
+session:
+  id: 2026-09-28T124854Z-codex-215d51
+  timestamp: '2026-09-28T12:48:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add DS-10 system trait
+  details: Created traitmech:000434 for the DS-10/ZAPB single-gene phage defense system with
+    DOI-backed DeWeirdt et al. evidence, final Science Table S6/S8 snippets, pinned DefenseFinder
+    article and HMM inventory references, no final Table S7 or rule-level DefenseFinder row,
+    a conservative nonmechanistic causal graph, an open knowledge-gap discussion for DS-10
+    mechanism and model coverage, and METPO proposal cohort v311.
