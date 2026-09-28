@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_1_system.yaml
+  slug: ds_1_system
+session:
+  id: 2026-09-28T032008Z-codex-issue1380
+  timestamp: '2026-09-28T03:20:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1380
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - curation_history
+  summary: Fix DS-1 definition host wording
+  details: >-
+    Addressed issue #1380 by replacing definition wording that could imply D390
+    is an E. coli transcriptional unit with wording that treats D390 as the
+    DeWeirdt et al. working transcriptional-unit identifier, explicitly keeping
+    E. coli MG1655 to the plasmid-expression assay. Expanded the shared Science
+    evidence snippet so the record itself supports the E. coli MG1655 assay
+    host and synchronized the METPO proposal definition.
