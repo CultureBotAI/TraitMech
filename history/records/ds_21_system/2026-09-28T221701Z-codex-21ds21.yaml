@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_21_system.yaml
+  slug: ds_21_system
+session:
+  id: 2026-09-28T221701Z-codex-21ds21
+  timestamp: '2026-09-28T22:17:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-21 system trait
+  details: Minted traitmech:000446 as a DS-21 system GENOMICS record under phage defense system,
+    backed by DeWeirdt et al. DOI evidence, final Science Tables S6/S7/S8 OpenData rows for
+    TOXO, and the pinned DefenseFinder DS-21 article/HMM registries. The record keeps TOXO
+    and DS-21__DS-21A/DS-21__DS-21B/DS-21__DS-21C as related source/profile labels, uses a
+    nonmechanistic graph for reduced bacteriophage plaquing, leaves native-host,
+    molecular-output, HHpred-domain, and DefenseFinder rules gaps open, and reserves
+    METPO:1040000 in proposals/metpo_traitmech_v323.
