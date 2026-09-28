@@ -303,6 +303,12 @@ audit-graph-protein-taxa *args:
 audit-uniprot *args:
     uv run python scripts/audit_uniprot_grounding.py {{args}}
 
+# Join normalized iModulonDB component-gene JSONL to existing taxon-paired
+# UniProt protein examples, writing review candidates under reports/imodulondb/.
+# Dry-run by default; pass --apply to materialize reports.
+stage-imodulondb *args:
+    uv run python scripts/stage_imodulondb_protein_contexts.py {{args}}
+
 # Check `EvidenceItem.snippet` strings against the sources they quote (#623).
 # Resolves each PMID:/DOI: reference through the Europe PMC REST API and reports
 # VERIFIED (exact substring of the abstract -- decisive), LIKELY_PARAPHRASE (a
