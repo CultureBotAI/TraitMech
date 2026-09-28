@@ -57,6 +57,9 @@ reports/robot/
 # meaning: the baseline is the frozen ratchet, this is just the current run.
 reports/evidence_snippet_audit.tsv
 
+# Regenerable iModulonDB staging reports.
+reports/imodulondb/
+
 # research/ is TRACKED. It was ignored as "large, regenerable" until the second
 # half of that turned out to be the expensive half: 342 of 353 reports were lost
 # because nothing outside one machine held them, and the manifest recorded 353
