@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_4_system.yaml
+  slug: ds_4_system
+session:
+  id: 2026-09-28T061330Z-codex-d7a663
+  timestamp: '2026-09-28T06:13:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-4 system trait
+  details: Minted traitmech:000427 for the DOI-backed DS-4 system under phage defense system.
+    DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-4 as
+    the DefensePredictor-discovered system corresponding to the five-gene NTTI transcriptional
+    unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder
+    article and HMM inventories map DS-4 to five custom profile rows while the pinned rules
+    table has no DS-4 row, so the graph stays nonmechanistic at cloned-transcriptional-unit
+    level and leaves native host breadth, component activities, profile-to-protein mapping,
+    phage target breadth, and direct molecular output unresolved. Reserved METPO:1038100 in
+    proposals/metpo_traitmech_v304.
