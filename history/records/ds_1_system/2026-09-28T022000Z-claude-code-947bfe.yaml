@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_1_system.yaml
+  slug: ds_1_system
+session:
+  id: 2026-09-28T022000Z-claude-code-947bfe
+  timestamp: '2026-09-28T02:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add DS-1 system trait
+  details: Minted traitmech:000424 for the DOI-backed DS-1 system under phage defense system.
+    DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-1 as
+    the DefensePredictor-discovered system corresponding to the two-gene D390 transcriptional
+    unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder
+    article and HMM inventories map DS-1 to the DS-1A and DS-1B custom profiles while the
+    pinned rules table has no DS-1 row, so the graph stays nonmechanistic at cloned-transcriptional-unit
+    level and the record keeps profile-to-component mapping, native host breadth, phage range,
+    and direct molecular output unresolved. Reserved METPO:1037800 in proposals/metpo_traitmech_v301.

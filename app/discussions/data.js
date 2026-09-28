@@ -1392,6 +1392,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "ds-1-defensefinder-model-gap",
+  "prompt": "Resolve DS-1 native host breadth, exact DS-1A/DS-1B component functions, profile-to-component mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-1 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-1 system",
+  "source_id": "traitmech:000424",
+  "source_file": "ds_1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_1_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-1 as the defensive D390 transcriptional unit that reduced plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records DS-1A and DS-1B profile rows. The pinned rules table has no DS-1 row, and the first-pass record does not resolve native host breadth, exact component activities, profile-to-component mapping, phage target breadth, the direct molecular output, or endogenous DS-1 activity.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_1_system.html#ds-1-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "dsr-sirtuin-mechanism-gap",
   "prompt": "Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming collisions before minting narrower Dsr mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5829,9 +5858,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 297,
- "total_knowledge_gaps": 211,
- "total_source_entries": 291,
+ "total_discussions": 298,
+ "total_knowledge_gaps": 212,
+ "total_source_entries": 292,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
