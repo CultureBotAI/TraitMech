@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_3_system.yaml
+  slug: ds_3_system
+session:
+  id: 2026-09-28T050652Z-codex-d94583
+  timestamp: '2026-09-28T05:06:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add DS-3 system trait
+  details: Minted traitmech:000426 for the DOI-backed DS-3 system under phage defense system.
+    DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-3 as
+    the DefensePredictor-discovered system corresponding to the one-gene PIN8 transcriptional
+    unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder
+    article and HMM inventories map DS-3 to a custom DS-3 profile while the pinned rules table
+    has no DS-3 row, so the graph stays nonmechanistic at cloned-transcriptional-unit level
+    and the record keeps profile-to-protein mapping, native host breadth, phage range, and
+    direct molecular output unresolved. Reserved METPO:1038000 in proposals/metpo_traitmech_v303.
