@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_2_system.yaml
+  slug: ds_2_system
+session:
+  id: 2026-09-28T041452Z-codex-78f45e
+  timestamp: '2026-09-28T04:14:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - evidence
+  summary: Add DS-2 system trait
+  details: Minted traitmech:000425 for the DOI-backed DS-2 system under phage defense system.
+    DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-2 as
+    the DefensePredictor-discovered system corresponding to the three-gene DISA transcriptional
+    unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder
+    article and HMM inventories map DS-2 to the DS-2C custom profile while the pinned rules
+    table has no DS-2 row, so the graph stays nonmechanistic at cloned-transcriptional-unit
+    level and the record keeps profile-to-component mapping, native host breadth, phage range,
+    and direct molecular output unresolved. Reserved METPO:1037900 in proposals/metpo_traitmech_v302.
