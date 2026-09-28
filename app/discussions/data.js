@@ -1393,7 +1393,7 @@ window.searchData = [
  },
  {
   "discussion_id": "ds-14-defensefinder-model-gap",
-  "prompt": "Resolve DS-14 native host breadth, exact single-component activity, DS-14 profile-to-protein mapping, sensitive-phage breadth, exact AAA+ ATPase and PDDEXK nuclease chemistry, and rule-level detection criteria before minting narrower DS-14 mechanism children.",
+  "prompt": "Resolve DS-14 native host breadth, exact single-component activity, DS-14 remote-defense-homolog family identity, DS-14 profile-to-protein mapping, sensitive-phage breadth, exact AAA+ ATPase and PDDEXK nuclease chemistry, and rule-level detection criteria before minting narrower DS-14 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -1403,7 +1403,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#ds_14_locus_reduces_phage_plaquing"
   ],
-  "rationale": "DeWeirdt et al. support DS-14 as the defensive RMOR transcriptional unit that reduced Bas50 plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records one DS-14 profile row. The pinned rules table has no DS-14 row, and the first-pass record does not resolve native host breadth, exact component activity, profile-to-protein mapping, phage target breadth, or endogenous DS-14 activity.",
+  "rationale": "DeWeirdt et al. support DS-14 as the defensive RMOR transcriptional unit that reduced Bas50 plaquing when cloned in E. coli MG1655, the final Table S6 classes RMOR as a Remote defense homolog, and the pinned DefenseFinder HMM inventory records one DS-14 profile row. The pinned rules table has no DS-14 row, and the first-pass record does not resolve native host breadth, exact component activity, remote defense family relationship, profile-to-protein mapping, phage target breadth, or endogenous DS-14 activity.",
   "num_experiments": 0,
   "num_evidence": 10,
   "evidence_refs": [
