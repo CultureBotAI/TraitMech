@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_20_system.yaml
+  slug: ds_20_system
+session:
+  id: 2026-09-28T214600Z-codex-09fc82
+  timestamp: '2026-09-28T21:46:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-20 system trait
+  details: Minted traitmech:000445 as a DS-20 system GENOMICS record under phage defense system,
+    backed by DeWeirdt et al. DOI evidence, final Science Tables S6/S7/S8 OpenData rows for
+    PDX1, and the pinned DefenseFinder DS-20 article/HMM registries. The record keeps PDX1
+    and DS-20__DS-20 as related source/profile labels, uses a nonmechanistic graph for reduced
+    bacteriophage plaquing, leaves native-host, molecular-output, HHpred-domain, and DefenseFinder
+    rules gaps open, and reserves METPO:1039900 in proposals/metpo_traitmech_v322.
