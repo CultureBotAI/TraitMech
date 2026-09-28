@@ -1,0 +1,315 @@
+identifier: traitmech:000428
+label: DS-5 system
+definition: A phage defense system in which an organism possesses the two-gene DefensePredictor-discovered
+  system 5 locus cataloged as working transcriptional unit PN12 and whose plasmid
+  expression in E. coli MG1655 reduced bacteriophage plaquing.
+definition_source: DOI:10.1126/science.adv7924
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: DS-5
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.adv7924
+- synonym_text: PN12
+  synonym_type: RELATED_SYNONYM
+  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+- synonym_text: DS-5__DS-5A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DS-5__DS-5B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.adv7924
+  snippet: To test for anti-phage defense, we placed each TU with its predicted native
+    promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+    these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+    total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+    the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+    control strain
+  notes: DeWeirdt et al. experimentally validated 42 predicted transcriptional units
+    as phage-defense systems in E. coli.
+- reference: DOI:10.1126/science.adv7924
+  snippet: We refer to these validated TUs as DefensePredictor discovered systems
+    (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A
+    is the first gene of DS-8.
+  notes: DeWeirdt et al. name validated transcriptional units as DefensePredictor
+    discovered systems.
+- reference: DOI:10.1126/science.adv7924
+  snippet: DS-5 is a two protein system that also features a PIN ribonuclease, though
+    not closely related to that of DS-3, along with a second protein containing a
+    DUF5830 and a domain homologous to the anti-CRISPR protein AcrIF4
+  notes: DeWeirdt et al. describe DS-5 as a two-protein system containing PIN, DUF5830,
+    and AcrIF4-like domains.
+- reference: DOI:10.1126/science.adv7924
+  snippet: Mutating the catalytic residues in the PIN domain eliminated defense. Deleting
+    the AcrIF4 domain-containing gene also ablated defense by DS-5 but did not lead
+    to unrestrained toxicity of the ribonuclease indicating that DS-5 is likely not
+    a TA system and that both components are essential to defense
+  notes: DeWeirdt et al. report that DS-5 phage defense requires the predicted PIN
+    catalytic residues and the AcrIF4-domain-containing gene.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+  snippet: "PN12\tNZ_QOYG01000008.1\tGCF_003333715.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+    DefensePredictor hits\t68231\t69878\thypothetical protein, PIN domain-containing\
+    \ protein\tWP_021513008.1, WP_021513009.1\t10.04757221593433\t-2.824774475410352\t\
+    True\tFalse\tPredicted novel defense gene\tDS-5"
+  notes: The final Science supplementary Table S6 maps working_id PN12 to DS_name
+    DS-5, marks the cloned transcriptional unit as defensive, and records NZ_QOYG01000008.1
+    positions 68231-69878 with product accessions WP_021513008.1 and WP_021513009.1.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+  snippet: "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tPN12\t24-03-09\t\
+    24-03-09_NTTI_SVIR_PN12_PIN8.png\t1\t100\t\t1000\t3.6989700043360187\tTrue\t\t\
+    \tLB\t37"
+  notes: The final Science supplementary Table S7 reports a PN12 assay row with a
+    Bas60 phage readout and a -log(EOP) value of 3.699.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "PN12\tDS-5\tTrue"
+  notes: The final Science supplementary Table S8 maps PN12 to replicated display
+    name DS-5.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DS-5 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine learning
+    model to discover novel prokaryotic immune systems | '
+  notes: The pinned DefenseFinder article registry maps the DS-5 source key to the
+    preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been
+    published in Science.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-5__DS-5A                                      |                                                  |
+    DS-5                   | Custom                  | 50     |'
+  notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5A as a custom DS-5
+    profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-5__DS-5B                                      |                                                  |
+    DS-5                   | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5B as a custom DS-5
+    profile.
+causal_graphs:
+- graph_id: ds_5_locus_reduces_phage_plaquing
+  title: DS-5 locus reduces bacteriophage plaquing
+  description: Conservative system-level sketch linking the two-gene DS-5 locus to
+    reduced bacteriophage plaquing without resolving DS-5 component functions or effector
+    activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DS-5 as the validated PN12 transcriptional unit
+    with two product accessions and with DefenseFinder DS-5A and DS-5B profile rows.
+    It does not assert native host breadth, exact profile-to-protein correspondence,
+    the direct viral trigger or substrate, exact PIN-family target, AcrIF4-like component
+    activity, phage target breadth, or DefenseFinder rule-level detection criteria.
+  nodes:
+  - node_id: ds_5_locus
+    label: DS-5 locus
+    node_type: GENETIC_ELEMENT
+    description: A two-gene DefensePredictor-discovered system locus represented in
+      the pinned DefenseFinder HMM inventory by DS-5A and DS-5B custom profiles.
+  - node_id: reduced_phage_plaquing
+    label: reduced bacteriophage plaquing
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced efficiency of plaquing by bacteriophage Bas60 in cells carrying
+      cloned PN12.
+  - node_id: ds_5_system_trait
+    label: DS-5 system
+    node_type: TRAIT
+    grounding: traitmech:000428
+    description: Possession of a genome-encoded DS-5 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ds_5_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: reduced_phage_plaquing
+    description: The DS-5/PN12 locus contributes to reduced bacteriophage plaquing
+      when plasmid expressed.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+        sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
+        to an empty vector control strain
+      notes: DeWeirdt et al. experimentally validate DefensePredictor-discovered systems
+        by assaying cloned transcriptional units against E. coli phages.
+    - reference: DOI:10.1126/science.adv7924
+      snippet: Mutating the catalytic residues in the PIN domain eliminated defense.
+        Deleting the AcrIF4 domain-containing gene also ablated defense by DS-5 but
+        did not lead to unrestrained toxicity of the ribonuclease indicating that
+        DS-5 is likely not a TA system and that both components are essential to defense
+      notes: DeWeirdt et al. show that DS-5 protection requires both the predicted
+        PIN catalytic residues and the first gene.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "PN12\tNZ_QOYG01000008.1\tGCF_003333715.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t68231\t69878\thypothetical protein, PIN domain-containing\
+        \ protein\tWP_021513008.1, WP_021513009.1\t10.04757221593433\t-2.824774475410352\t\
+        True\tFalse\tPredicted novel defense gene\tDS-5"
+      notes: The final Science supplementary Table S6 maps working_id PN12 to DS_name
+        DS-5, marks the cloned transcriptional unit as defensive, and records NZ_QOYG01000008.1
+        positions 68231-69878 with product accessions WP_021513008.1 and WP_021513009.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tPN12\t\
+        24-03-09\t24-03-09_NTTI_SVIR_PN12_PIN8.png\t1\t100\t\t1000\t3.6989700043360187\t\
+        True\t\t\tLB\t37"
+      notes: The final Science supplementary Table S7 reports a PN12 assay row with
+        a Bas60 phage readout and a -log(EOP) value of 3.699.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-5__DS-5A                                      |                                                  |
+        DS-5                   | Custom                  | 50     |'
+      notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5A as a custom
+        DS-5 profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-5__DS-5B                                      |                                                  |
+        DS-5                   | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5B as a custom
+        DS-5 profile.
+  - subject: reduced_phage_plaquing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ds_5_system_trait
+    description: DS-5-mediated phage plaquing reduction realizes the DS-5 system trait.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: We refer to these validated TUs as DefensePredictor discovered systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor
+        discovered system.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "PN12\tNZ_QOYG01000008.1\tGCF_003333715.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t68231\t69878\thypothetical protein, PIN domain-containing\
+        \ protein\tWP_021513008.1, WP_021513009.1\t10.04757221593433\t-2.824774475410352\t\
+        True\tFalse\tPredicted novel defense gene\tDS-5"
+      notes: The final Science supplementary Table S6 maps working_id PN12 to DS_name
+        DS-5, marks the cloned transcriptional unit as defensive, and records NZ_QOYG01000008.1
+        positions 68231-69878 with product accessions WP_021513008.1 and WP_021513009.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tPN12\t\
+        24-03-09\t24-03-09_NTTI_SVIR_PN12_PIN8.png\t1\t100\t\t1000\t3.6989700043360187\t\
+        True\t\t\tLB\t37"
+      notes: The final Science supplementary Table S7 reports a PN12 assay row with
+        a Bas60 phage readout and a -log(EOP) value of 3.699.
+  - subject: ds_5_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: DS-5 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+        sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
+        to an empty vector control strain
+      notes: DeWeirdt et al. validate DSs as anti-phage systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DS-5 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+        learning model to discover novel prokaryotic immune systems | '
+      notes: The pinned DefenseFinder article registry maps the DS-5 source key to
+        the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has
+        since been published in Science.
+discussions:
+- discussion_id: ds-5-defensefinder-model-gap
+  prompt: Resolve DS-5 native host breadth, exact two-component activities, DS-5 profile-to-protein
+    mapping, sensitive-phage breadth, DS-5 PIN nuclease target, AcrIF4-like component
+    function, and rule-level detection criteria before minting narrower DS-5 mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: DeWeirdt et al. support DS-5 as the defensive PN12 transcriptional unit
+    that reduced Bas60 plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder
+    HMM inventory records two DS-5 profile rows. The pinned rules table has no DS-5
+    row, and the first-pass record does not resolve native host breadth, exact component
+    activities, profile-to-protein mapping, phage target breadth, or endogenous DS-5
+    activity.
+  evidence:
+  - reference: DOI:10.1126/science.adv7924
+    snippet: To test for anti-phage defense, we placed each TU with its predicted
+      native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+      these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+      total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+      the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+      control strain
+    notes: DeWeirdt et al. validate predicted transcriptional units by measuring plaquing
+      relative to an empty vector control strain.
+  - reference: DOI:10.1126/science.adv7924
+    snippet: DS-5 is a two protein system that also features a PIN ribonuclease, though
+      not closely related to that of DS-3, along with a second protein containing
+      a DUF5830 and a domain homologous to the anti-CRISPR protein AcrIF4
+    notes: DeWeirdt et al. identify DS-5 as a two-protein system with PIN, DUF5830,
+      and AcrIF4-like domains.
+  - reference: DOI:10.1126/science.adv7924
+    snippet: Mutating the catalytic residues in the PIN domain eliminated defense.
+      Deleting the AcrIF4 domain-containing gene also ablated defense by DS-5 but
+      did not lead to unrestrained toxicity of the ribonuclease indicating that DS-5
+      is likely not a TA system and that both components are essential to defense
+    notes: DeWeirdt et al. show that DS-5 phage defense requires both proteins.
+  - reference: DOI:10.1126/science.adv7924
+    snippet: We refer to these validated TUs as DefensePredictor discovered systems
+      (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+      DS-8A is the first gene of DS-8.
+    notes: DeWeirdt et al. name validated TUs as DSs.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+    snippet: "PN12\tNZ_QOYG01000008.1\tGCF_003333715.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+      DefensePredictor hits\t68231\t69878\thypothetical protein, PIN domain-containing\
+      \ protein\tWP_021513008.1, WP_021513009.1\t10.04757221593433\t-2.824774475410352\t\
+      True\tFalse\tPredicted novel defense gene\tDS-5"
+    notes: The final Science supplementary Table S6 maps working_id PN12 to DS_name
+      DS-5, marks the cloned transcriptional unit as defensive, and records NZ_QOYG01000008.1
+      positions 68231-69878 with product accessions WP_021513008.1 and WP_021513009.1.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+    snippet: "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tPN12\t24-03-09\t\
+      24-03-09_NTTI_SVIR_PN12_PIN8.png\t1\t100\t\t1000\t3.6989700043360187\tTrue\t\
+      \t\tLB\t37"
+    notes: The final Science supplementary Table S7 reports a PN12 assay row with
+      a Bas60 phage readout and a -log(EOP) value of 3.699.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "PN12\tDS-5\tTrue"
+    notes: The final Science supplementary Table S8 maps PN12 to replicated display
+      name DS-5.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| DS-5 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+      learning model to discover novel prokaryotic immune systems | '
+    notes: The pinned DefenseFinder article registry maps the DS-5 source key to the
+      preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since
+      been published in Science.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-5__DS-5A                                      |                                                  |
+      DS-5                   | Custom                  | 50     |'
+    notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5A as a custom
+      DS-5 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-5__DS-5B                                      |                                                  |
+      DS-5                   | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records DS-5__DS-5B as a custom
+      DS-5 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list DS-5, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#ds_5_locus_reduces_phage_plaquing
+  posed_by: codex
+  posed_date: '2026-09-28'
+curation_history:
+- timestamp: '2026-09-28T07:02:46Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DS-5 system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; kept the graph at cloned PN12 transcriptional-unit
+    level because the pinned DefenseFinder DS-5 HMM rows are not backed by a rules
+    row; proposals/metpo_traitmech_v305 reserves the replacement placeholder.
+  llm_assisted: true
+- timestamp: '2026-09-28T07:02:47Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DS-5 system canonical_examples and left them empty because DeWeirdt
+    et al. support cloned PN12 plaquing assays in E. coli MG1655 plus a DefenseFinder
+    DS-5 model, but not a direct named native microbial isolate exemplar with experimentally
+    verified endogenous DS-5 activity. No paid research was used.
+  llm_assisted: true
