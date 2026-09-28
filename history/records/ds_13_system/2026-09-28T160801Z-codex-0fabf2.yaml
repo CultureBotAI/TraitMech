@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_13_system.yaml
+  slug: ds_13_system
+session:
+  id: 2026-09-28T160801Z-codex-0fabf2
+  timestamp: '2026-09-28T16:08:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DS-13 system trait
+  details: Minted traitmech:000437 as a DS-13 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor preprint and the pinned DefenseFinder DS-13
+    article/HMM registries. The record keeps DS-13__DS-13A and DS-13__DS-13B as related profile
+    synonyms, adds a nonmechanistic DS-13 source-key/profile-scope graph, leaves canonical
+    examples empty, records the missing preprint Table S5/S6, final Science supplement, native-host,
+    phage-breadth, profile-to-protein, molecular-output, and DefenseFinder rules gaps, and
+    reserves METPO:1039100 in proposals/metpo_traitmech_v314.
