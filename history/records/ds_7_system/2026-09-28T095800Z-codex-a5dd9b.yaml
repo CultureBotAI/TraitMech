@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_7_system.yaml
+  slug: ds_7_system
+session:
+  id: 2026-09-28T095800Z-codex-a5dd9b
+  timestamp: '2026-09-28T09:58:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-7 system trait
+  details: Minted traitmech:000431 for the DOI-backed DS-7 phage-defense system under phage
+    defense system; added final Science Table S6/S7/S8 evidence for the SVIR locus, Bas60
+    plaquing assays, SVIR H52A mutant assays, DS-7 domains, pinned DefenseFinder
+    article and HMM inventory evidence for DS-7, a nonmechanistic DS-7 locus-to-phage-plaquing
+    graph, an open DefenseFinder rules knowledge gap, an empty canonical-example review, and
+    the metpo_traitmech_v308 proposal reserving METPO:1038500.

@@ -1607,6 +1607,38 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_6_system.html#ds-6-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-7-defensefinder-model-gap",
+  "prompt": "Resolve DS-7 native host breadth, exact single-component activity, DS-7 profile-to-protein mapping, sensitive-phage breadth, HNH endonuclease activity, the role of the H52 residue, the phage-baseplate-like hit, and rule-level detection criteria before minting narrower DS-7 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-7 system",
+  "source_id": "traitmech:000431",
+  "source_file": "ds_7_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_7_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-7 as the defensive SVIR transcriptional unit that reduced Bas60 plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records one DS-7 profile row. The pinned rules table has no DS-7 row, and the first-pass record does not resolve native host breadth, exact profile-to-protein correspondence, HNH endonuclease activity, the function of the H52 residue, phage target breadth, or endogenous DS-7 activity.",
+  "num_experiments": 0,
+  "num_evidence": 12,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_7_system.html#ds-7-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "dsr-sirtuin-mechanism-gap",
   "prompt": "Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming collisions before minting narrower Dsr mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6044,9 +6076,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 304,
- "total_knowledge_gaps": 218,
- "total_source_entries": 298,
+ "total_discussions": 305,
+ "total_knowledge_gaps": 219,
+ "total_source_entries": 299,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
