@@ -300,6 +300,8 @@ extracellular glucan / eps production	BIOLOGICAL_PROCESS	1	data/traits/ecology/c
 eps biofilm matrix	CELLULAR_LOCALIZATION	1	data/traits/ecology/commensalism.yaml
 protection from shear and antimicrobials	QUALITY	1	data/traits/ecology/commensalism.yaml
 low virulence / no detectable host cost	QUALITY	1	data/traits/ecology/commensalism.yaml
+living internal plant tissue	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/endophytic.yaml
+endophytic colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/endophytic.yaml
 intracellular host localization	CELLULAR_LOCALIZATION	1	data/traits/ecology/endosymbiosis.yaml
 confined intracellular habitat	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/endosymbiosis.yaml
 metabolic gene loss	BIOLOGICAL_PROCESS	1	data/traits/ecology/endosymbiosis.yaml
