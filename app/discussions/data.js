@@ -1392,6 +1392,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "ds-10-defensefinder-model-gap",
+  "prompt": "Resolve DS-10 native host breadth, exact DS-10 component function, sensitive-phage breadth, molecular output, HHPred domain support, per-phage Table S7 readouts, and rule-level detection criteria before minting narrower DS-10 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-10 system",
+  "source_id": "traitmech:000434",
+  "source_file": "ds_10_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_10_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-10 as the defensive ZAPB transcriptional unit that reduced plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records one DS-10 profile row. The final Table S7 and HHPred-domain sheets have no ZAPB rows, the pinned rules table has no DS-10 row, and the first-pass record does not resolve native host breadth, exact component activity, phage target breadth, the direct molecular output, or endogenous DS-10 activity.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_10_system.html#ds-10-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-14-defensefinder-model-gap",
   "prompt": "Resolve DS-14 native host breadth, exact single-component activity, DS-14 remote-defense-homolog family identity, DS-14 profile-to-protein mapping, sensitive-phage breadth, exact AAA+ ATPase and PDDEXK nuclease chemistry, and rule-level detection criteria before minting narrower DS-14 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6145,9 +6172,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 307,
- "total_knowledge_gaps": 221,
- "total_source_entries": 301,
+ "total_discussions": 308,
+ "total_knowledge_gaps": 222,
+ "total_source_entries": 302,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
