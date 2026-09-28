@@ -142,7 +142,7 @@ causal_graphs:
         did not lead to unrestrained toxicity of the ribonuclease indicating that
         DS-5 is likely not a TA system and that both components are essential to defense
       notes: DeWeirdt et al. show that DS-5 protection requires both the predicted
-        PIN catalytic residues and the first gene.
+        PIN catalytic residues and the AcrIF4-domain-containing gene.
     - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
       snippet: "PN12\tNZ_QOYG01000008.1\tGCF_003333715.1\t+\tTrue\tFalse\tFalse\t\
         True\tDefensePredictor hits\t68231\t69878\thypothetical protein, PIN domain-containing\
@@ -312,4 +312,11 @@ curation_history:
     et al. support cloned PN12 plaquing assays in E. coli MG1655 plus a DefenseFinder
     DS-5 model, but not a direct named native microbial isolate exemplar with experimentally
     verified endogenous DS-5 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-28T07:38:24Z'
+  curator: codex
+  action: FIX_REVIEW_NOTE
+  changes: Reworded the DS-5 mutation evidence note after Claude Code Review issue
+    1387 so it cites the AcrIF4-domain-containing gene rather than asserting a first-gene
+    ordering that the source text and nonmechanistic graph do not establish.
   llm_assisted: true

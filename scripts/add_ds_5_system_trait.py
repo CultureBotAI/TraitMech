@@ -36,6 +36,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-28T07:02:46Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-28T07:02:47Z"
+REVIEW_NOTE_FIX_TIMESTAMP = "2026-09-28T07:38:24Z"
 
 IDENTIFIER = "traitmech:000428"
 PROPOSAL = "proposals/metpo_traitmech_v305"
@@ -321,7 +322,8 @@ RECORD: dict[str, Any] = {
                             "notes": (
                                 "DeWeirdt et al. show that DS-5 protection "
                                 "requires both the predicted PIN catalytic "
-                                "residues and the first gene."
+                                "residues and the AcrIF4-domain-containing "
+                                "gene."
                             ),
                         },
                         table_s6_evidence(),
@@ -491,6 +493,19 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="FIX_REVIEW_NOTE",
+        changes=(
+            "Reworded the DS-5 mutation evidence note after Claude Code "
+            "Review issue 1387 so it cites the AcrIF4-domain-containing "
+            "gene rather than asserting a first-gene ordering that the "
+            "source text and nonmechanistic graph do not establish."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_NOTE_FIX_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
