@@ -12,7 +12,7 @@ parent_traits:
 synonyms:
 - synonym_text: DS-22
   synonym_type: EXACT_SYNONYM
-  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  source: DOI:10.1126/science.adv7924
 - synonym_text: MVB1
   synonym_type: RELATED_SYNONYM
   source: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
@@ -271,4 +271,10 @@ curation_history:
   action: UPDATED_EVIDENCE
   changes: Added exact final Table S8 MVB1 HHpred-domain rows for the low-probability
     Mvb12 and JAB hits so the DS-22 mechanism gap quotes the evidence it defers.
+  llm_assisted: true
+- timestamp: '2026-09-29T00:11:21Z'
+  curator: codex
+  action: UPDATED_SYNONYM_SOURCE
+  changes: Aligned the DS-22 exact-synonym source with adjacent DS system records
+    by citing the DOI that defines the DS display-name convention.
   llm_assisted: true

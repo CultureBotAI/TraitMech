@@ -40,6 +40,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-28T23:30:13Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-28T23:30:14Z"
 HHPRED_EVIDENCE_TIMESTAMP = "2026-09-29T00:00:35Z"
+SYNONYM_SOURCE_REVIEW_TIMESTAMP = "2026-09-29T00:11:21Z"
 
 IDENTIFIER = "traitmech:000447"
 PROPOSAL = "proposals/metpo_traitmech_v324"
@@ -175,7 +176,7 @@ RECORD: dict[str, Any] = {
         {
             "synonym_text": "DS-22",
             "synonym_type": "EXACT_SYNONYM",
-            "source": TABLE_S8,
+            "source": DEWEIRDT,
         },
         {
             "synonym_text": "MVB1",
@@ -454,6 +455,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=HHPRED_EVIDENCE_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="UPDATED_SYNONYM_SOURCE",
+        changes=(
+            "Aligned the DS-22 exact-synonym source with adjacent DS system "
+            "records by citing the DOI that defines the DS display-name "
+            "convention."
+        ),
+        llm_assisted=True,
+        timestamp=SYNONYM_SOURCE_REVIEW_TIMESTAMP,
     )
     validate_output(record)
 
