@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_22_system.yaml
+  slug: ds_22_system
+session:
+  id: 2026-09-29T003551Z-codex-f94ebf
+  timestamp: '2026-09-29T00:35:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1419
+  - https://github.com/CultureBotAI/TraitMech/issues/1420
+  - https://github.com/CultureBotAI/TraitMech/issues/1421
+  - https://github.com/CultureBotAI/TraitMech/issues/1422
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1418
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Record DS-22 post-review fixes
+  details: 'Recorded the PR #1418 post-review fixes after the initial DS-22 CREATE history
+    record history/records/ds_22_system/2026-09-28T233013Z-codex-22ds22.yaml: #1419 added
+    exact final Table S8 HHpred rows for the low-probability MVB1 Mvb12 and JAB hits, #1420
+    aligned the DS-22 exact-synonym source with adjacent DS records, and #1421 split the two
+    HHpred rows into separate evidence items so each snippet quotes one source row. The TraitRecord
+    curation_history carries the matching UPDATED_EVIDENCE and UPDATED_SYNONYM_SOURCE events,
+    and the DS-22 page and discussions browser data were regenerated.'
