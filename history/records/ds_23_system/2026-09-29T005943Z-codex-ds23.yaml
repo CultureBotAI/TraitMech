@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_23_system.yaml
+  slug: ds_23_system
+session:
+  id: 2026-09-29T005943Z-codex-ds23
+  timestamp: '2026-09-29T00:59:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links: {}
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DS-23 system trait
+  details: Added data/traits/genomics/ds_23_system.yaml as a DOI-backed GENOMICS
+    TraitRecord under phage defense system after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record.
+    The record quotes the final Science Table S6 E2DP row, Table S7 Bas19 EOP row,
+    Table S8 DS-23 display plus ZF and PDDEXK HHpred rows, and the pinned
+    DefenseFinder DS-23 article and HMM rows; keeps the graph at E2DP
+    transcriptional-unit level; leaves the ZF, PDDEXK, and rule-level
+    interpretation as an open knowledge gap; and reserves METPO:1040200 in
+    proposals/metpo_traitmech_v325.
