@@ -1,6 +1,6 @@
 node_label	node_type	node_count	example_files
 restricted phage propagation	BIOLOGICAL_PROCESS	84	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
-reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	33	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
+reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	34	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	12	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_her_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
@@ -1329,6 +1329,7 @@ ds-31 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_31_system.yaml
 ds-32 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_32_system.yaml
 ds-33 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_33_system.yaml
 ds-34 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_34_system.yaml
+ds-35 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_35_system.yaml
 ds-3 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_3_system.yaml
 ds-4 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_4_system.yaml
 ds-5 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_5_system.yaml
