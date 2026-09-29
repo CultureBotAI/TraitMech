@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_25_system.yaml
+  slug: ds_25_system
+session:
+  id: 2026-09-29T202259Z-codex-323286
+  timestamp: '2026-09-29T20:22:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-25 system trait
+  details: Minted traitmech:000473 as a DS-25 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor preprint and the pinned DefenseFinder DS-25
+    article/HMM registries. The record keeps DS-25__DS-25A and DS-25__DS-25B as related profile-key
+    synonyms, adds a nonmechanistic DS-25 source-key/profile-scope graph, leaves canonical_examples
+    empty, opens a knowledge gap for unresolved preprint Table S5/S6 rows, phage readouts,
+    native host breadth, profile-to-protein mapping, molecular output, and DefenseFinder rules
+    coverage, and reserves METPO:1042700 in proposals/metpo_traitmech_v350.
