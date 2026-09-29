@@ -61,6 +61,13 @@ evidence:
     \ pEK499 p136\thhpred_5242066.hhr\t1.0\t153.0\t1.0\t2024-07-30 00:00:00"
   notes: The final Science supplementary Table S8 reports a high-probability HEPN
     HHpred hit for WP_000528930.1 in ANEX.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "ANEX\t2.0\t252.0\tWP_000494510.1\tTF\t6J9E_J\tRNA polymerase, transcription\
+    \ termination, anti-termination, RNAP clamp, phage, transcription initiation,\
+    \ P7, NusA, Xanthomonos oryzae, Xp10, transcription\thhpred_1617000.hhr\t143.0\t\
+    178.0\t0.326\t2024-07-30 00:00:00"
+  notes: The final Science supplementary Table S8 reports a lower-probability TF HHpred
+    hit for WP_000494510.1 in ANEX.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: '| DS-28 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
     learning model to discover novel prokaryotic immune systems | '
@@ -85,11 +92,12 @@ causal_graphs:
     output.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures DS-28 as the validated ANEX transcriptional unit
-    with two product accessions, one high-probability HEPN HHpred-domain row, and
-    two DefenseFinder DS-28 profile rows. It does not assert native host breadth,
-    exact profile-to-protein correspondence, DS-28 molecular activity, trigger, substrate,
-    complete phage breadth, transcription-factor HHpred-domain interpretation, or
-    DefenseFinder rule-level detection criteria.
+    with two product accessions, one high-probability HEPN HHpred-domain row, one
+    lower-probability TF HHpred-domain row, and two DefenseFinder DS-28 profile rows.
+    It does not assert native host breadth, exact profile-to-protein correspondence,
+    DS-28 molecular activity, trigger, substrate, complete phage breadth, HEPN or
+    transcription-factor HHpred-domain interpretation, or DefenseFinder rule-level
+    detection criteria.
   nodes:
   - node_id: ds_28_locus
     label: DS-28 locus
@@ -151,6 +159,13 @@ causal_graphs:
         \ pEK499 p136\thhpred_5242066.hhr\t1.0\t153.0\t1.0\t2024-07-30 00:00:00"
       notes: The final Science supplementary Table S8 reports a high-probability HEPN
         HHpred hit for WP_000528930.1 in ANEX.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+      snippet: "ANEX\t2.0\t252.0\tWP_000494510.1\tTF\t6J9E_J\tRNA polymerase, transcription\
+        \ termination, anti-termination, RNAP clamp, phage, transcription initiation,\
+        \ P7, NusA, Xanthomonos oryzae, Xp10, transcription\thhpred_1617000.hhr\t\
+        143.0\t178.0\t0.326\t2024-07-30 00:00:00"
+      notes: The final Science supplementary Table S8 reports a lower-probability
+        TF HHpred hit for WP_000494510.1 in ANEX.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| DS-28__DS-28A                                    |                                                  |
         DS-28                  | Custom                  | 100    |'
@@ -214,12 +229,12 @@ discussions:
   status: OPEN
   rationale: DeWeirdt et al. support DS-28 as the defensive ANEX transcriptional unit
     and final Science Tables S6/S7/S8 map it to product accessions WP_000494510.1
-    and WP_000528930.1, a Bas60 phage readout, display name DS-28, and a high-probability
-    HEPN HHpred row. The pinned DefenseFinder HMM inventory records two DS-28 custom
-    profile rows. The pinned rules table has no DS-28 row, and the first-pass record
-    does not resolve native host breadth, complete phage breadth, direct profile-to-protein
-    correspondence, HEPN or transcription-factor activity, molecular output, or endogenous
-    DS-28 activity.
+    and WP_000528930.1, a Bas60 phage readout, display name DS-28, a high-probability
+    HEPN HHpred row, and a lower-probability TF HHpred row. The pinned DefenseFinder
+    HMM inventory records two DS-28 custom profile rows. The pinned rules table has
+    no DS-28 row, and the first-pass record does not resolve native host breadth,
+    complete phage breadth, direct profile-to-protein correspondence, HEPN or transcription-factor
+    activity, molecular output, or endogenous DS-28 activity.
   evidence:
   - reference: DOI:10.1126/science.adv7924
     snippet: We refer to these validated TUs as DefensePredictor discovered systems
@@ -249,6 +264,13 @@ discussions:
       \ pEK499 p136\thhpred_5242066.hhr\t1.0\t153.0\t1.0\t2024-07-30 00:00:00"
     notes: The final Science supplementary Table S8 reports a high-probability HEPN
       HHpred hit for WP_000528930.1 in ANEX.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "ANEX\t2.0\t252.0\tWP_000494510.1\tTF\t6J9E_J\tRNA polymerase, transcription\
+      \ termination, anti-termination, RNAP clamp, phage, transcription initiation,\
+      \ P7, NusA, Xanthomonos oryzae, Xp10, transcription\thhpred_1617000.hhr\t143.0\t\
+      178.0\t0.326\t2024-07-30 00:00:00"
+    notes: The final Science supplementary Table S8 reports a lower-probability TF
+      HHpred hit for WP_000494510.1 in ANEX.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
     snippet: '| DS-28 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
       learning model to discover novel prokaryotic immune systems | '

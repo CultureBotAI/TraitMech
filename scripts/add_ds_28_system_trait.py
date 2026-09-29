@@ -172,6 +172,24 @@ def table_s8_hepn_evidence() -> dict[str, str]:
     }
 
 
+def table_s8_tf_evidence() -> dict[str, str]:
+    return {
+        "reference": TABLE_S8,
+        "snippet": (
+            "ANEX\t2.0\t252.0\tWP_000494510.1\tTF\t6J9E_J"
+            "\tRNA polymerase, transcription termination, anti-termination, "
+            "RNAP clamp, phage, transcription initiation, P7, NusA, "
+            "Xanthomonos oryzae, Xp10, transcription"
+            "\thhpred_1617000.hhr\t143.0\t178.0\t0.326"
+            "\t2024-07-30 00:00:00"
+        ),
+        "notes": (
+            "The final Science supplementary Table S8 reports a "
+            "lower-probability TF HHpred hit for WP_000494510.1 in ANEX."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "DS-28 system",
@@ -229,6 +247,7 @@ RECORD: dict[str, Any] = {
         table_s7_bas60_evidence(),
         table_s8_display_evidence(),
         table_s8_hepn_evidence(),
+        table_s8_tf_evidence(),
         article_registry_evidence(),
         hmm_inventory_a_evidence(),
         hmm_inventory_b_evidence(),
@@ -246,13 +265,14 @@ RECORD: dict[str, Any] = {
             "scope_notes": (
                 "The graph captures DS-28 as the validated ANEX "
                 "transcriptional unit with two product accessions, one "
-                "high-probability HEPN HHpred-domain row, and two "
+                "high-probability HEPN HHpred-domain row, one "
+                "lower-probability TF HHpred-domain row, and two "
                 "DefenseFinder DS-28 profile rows. It does not assert "
                 "native host breadth, exact profile-to-protein "
                 "correspondence, DS-28 molecular activity, trigger, "
-                "substrate, complete phage breadth, transcription-factor "
-                "HHpred-domain interpretation, or DefenseFinder rule-level "
-                "detection criteria."
+                "substrate, complete phage breadth, HEPN or "
+                "transcription-factor HHpred-domain interpretation, or "
+                "DefenseFinder rule-level detection criteria."
             ),
             "nodes": [
                 {
@@ -320,6 +340,7 @@ RECORD: dict[str, Any] = {
                         table_s7_bas60_evidence(),
                         table_s8_display_evidence(),
                         table_s8_hepn_evidence(),
+                        table_s8_tf_evidence(),
                         hmm_inventory_a_evidence(),
                         hmm_inventory_b_evidence(),
                     ],
@@ -388,10 +409,11 @@ RECORD: dict[str, Any] = {
                 "transcriptional unit and final Science Tables S6/S7/S8 "
                 "map it to product accessions WP_000494510.1 and "
                 "WP_000528930.1, a Bas60 phage readout, display name "
-                "DS-28, and a high-probability HEPN HHpred row. The "
-                "pinned DefenseFinder HMM inventory records two DS-28 "
-                "custom profile rows. The pinned rules table has no "
-                "DS-28 row, and the first-pass record does not resolve "
+                "DS-28, a high-probability HEPN HHpred row, and a "
+                "lower-probability TF HHpred row. The pinned DefenseFinder "
+                "HMM inventory records two DS-28 custom profile rows. The "
+                "pinned rules table has no DS-28 row, and the first-pass "
+                "record does not resolve "
                 "native host breadth, complete phage breadth, direct "
                 "profile-to-protein correspondence, HEPN or "
                 "transcription-factor activity, molecular output, or "
@@ -407,6 +429,7 @@ RECORD: dict[str, Any] = {
                 table_s7_bas60_evidence(),
                 table_s8_display_evidence(),
                 table_s8_hepn_evidence(),
+                table_s8_tf_evidence(),
                 article_registry_evidence(),
                 hmm_inventory_a_evidence(),
                 hmm_inventory_b_evidence(),

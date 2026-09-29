@@ -24,8 +24,8 @@ events:
   details: Added data/traits/genomics/ds_28_system.yaml as a DOI-backed GENOMICS TraitRecord
     under phage defense system after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, history, or prior proposal record. The record quotes the final
-    Science Table S6 ANEX row, Table S7 Bas60 EOP row, Table S8 DS-28 display and HEPN HHpred
-    rows, and the pinned DefenseFinder DS-28 article and HMM rows; keeps the graph at ANEX
+    Science Table S6 ANEX row, Table S7 Bas60 EOP row, Table S8 DS-28 display, HEPN
+    HHpred, and TF HHpred rows, and the pinned DefenseFinder DS-28 article and HMM rows; keeps the graph at ANEX
     transcriptional-unit level; leaves HEPN and transcription-factor activity, native-host,
     endogenous-activity, and rule-level interpretation as an open knowledge gap; and reserves
     METPO:1040600 in proposals/metpo_traitmech_v329.

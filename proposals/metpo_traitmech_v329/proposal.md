@@ -13,11 +13,12 @@ anti-phage locus from DeWeirdt et al.'s machine-learning search. DeWeirdt et
 al. mapped the working identifier `ANEX` to DS-28, marked the cloned
 transcriptional unit as defensive, and measured reduced Bas60 bacteriophage
 plaquing. The final Science Table S8 maps `ANEX` to the replicated DS-28
-display name and reports a high-probability HEPN HHpred row. The pinned
-DefenseFinder article registry maps DS-28 to the DefensePredictor preprint, the
-pinned DefenseFinder HMM inventory records two DS-28 custom profiles,
-`DS-28__DS-28A` and `DS-28__DS-28B`, and the pinned DefenseFinder rules table
-checked in this curation pass has no DS-28 row.
+display name and reports a high-probability HEPN HHpred row plus a
+lower-probability TF HHpred row. The pinned DefenseFinder article registry maps
+DS-28 to the DefensePredictor preprint, the pinned DefenseFinder HMM inventory
+records two DS-28 custom profiles, `DS-28__DS-28A` and `DS-28__DS-28B`, and the
+pinned DefenseFinder rules table checked in this curation pass has no DS-28
+row.
 
 This cohort lifts one local class:
 

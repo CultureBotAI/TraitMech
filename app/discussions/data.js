@@ -1894,13 +1894,14 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#ds_28_locus_reduces_phage_plaquing"
   ],
-  "rationale": "DeWeirdt et al. support DS-28 as the defensive ANEX transcriptional unit and final Science Tables S6/S7/S8 map it to product accessions WP_000494510.1 and WP_000528930.1, a Bas60 phage readout, display name DS-28, and a high-probability HEPN HHpred row. The pinned DefenseFinder HMM inventory records two DS-28 custom profile rows. The pinned rules table has no DS-28 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, HEPN or transcription-factor activity, molecular output, or endogenous DS-28 activity.",
+  "rationale": "DeWeirdt et al. support DS-28 as the defensive ANEX transcriptional unit and final Science Tables S6/S7/S8 map it to product accessions WP_000494510.1 and WP_000528930.1, a Bas60 phage readout, display name DS-28, a high-probability HEPN HHpred row, and a lower-probability TF HHpred row. The pinned DefenseFinder HMM inventory records two DS-28 custom profile rows. The pinned rules table has no DS-28 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, HEPN or transcription-factor activity, molecular output, or endogenous DS-28 activity.",
   "num_experiments": 0,
-  "num_evidence": 9,
+  "num_evidence": 10,
   "evidence_refs": [
    "DOI:10.1126/science.adv7924",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
