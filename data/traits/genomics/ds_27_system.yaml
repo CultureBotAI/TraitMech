@@ -1,0 +1,257 @@
+identifier: traitmech:000451
+label: DS-27 system
+definition: A phage defense system in which an organism possesses the single-gene
+  DefensePredictor-discovered system 27 locus cataloged as working transcriptional
+  unit SMEK and whose plasmid expression in E. coli MG1655 reduced bacteriophage plaquing.
+definition_source: DOI:10.1126/science.adv7924
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: DS-27
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.adv7924
+- synonym_text: SMEK
+  synonym_type: RELATED_SYNONYM
+  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+- synonym_text: DS-27__DS-27
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.adv7924
+  snippet: To test for anti-phage defense, we placed each TU with its predicted native
+    promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+    these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+    total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+    the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+    control strain
+  notes: DeWeirdt et al. experimentally validated 42 predicted transcriptional units
+    as phage-defense systems in E. coli.
+- reference: DOI:10.1126/science.adv7924
+  snippet: We refer to these validated TUs as DefensePredictor discovered systems
+    (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A
+    is the first gene of DS-8.
+  notes: DeWeirdt et al. name validated transcriptional units as DefensePredictor
+    discovered systems.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+  snippet: "SMEK\tNZ_QOXX01000051.1\tGCF_003334605.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+    DefensePredictor hits\t1216\t2115\tSMEK domain-containing protein\tWP_087896215.1\t\
+    7.030671187100836\t-2.208385407473748\tTrue\tFalse\tPredicted novel defense gene\t\
+    DS-27"
+  notes: The final Science supplementary Table S6 maps working_id SMEK to DS_name
+    DS-27, marks the cloned transcriptional unit as defensive, and records NZ_QOXX01000051.1
+    positions 1216-2115 with product accession WP_087896215.1.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+  snippet: "RB69\t6.2\tpLAND\t24-07-17_AAA2_VPUS_VAME_EV.png\t7000000\tSMEK\t24-07-25\t\
+    24-07-25_SLIP_TMO1_PDX1_SMEK.png\t3\t10\t\t10000\t2.845098040014257\t\t\tTrue\t\
+    LB\t37"
+  notes: The final Science supplementary Table S7 reports a SMEK assay row with an
+    RB69 phage readout and a -log(EOP) value of 2.845.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "SMEK\tDS-27\tTrue"
+  notes: The final Science supplementary Table S8 maps SMEK to replicated display
+    name DS-27.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DS-27 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+    learning model to discover novel prokaryotic immune systems | '
+  notes: The pinned DefenseFinder article registry maps the DS-27 source key to the
+    preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been
+    published in Science.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-27__DS-27                                     |                                                  |
+    DS-27                  | Custom                  | 220    |'
+  notes: The pinned DefenseFinder HMM inventory records DS-27__DS-27 as a custom DS-27
+    profile.
+causal_graphs:
+- graph_id: ds_27_locus_reduces_phage_plaquing
+  title: DS-27 locus reduces bacteriophage plaquing
+  description: Conservative system-level sketch linking the single-gene DS-27 locus
+    to reduced bacteriophage plaquing without resolving DS-27 component function or
+    molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DS-27 as the validated SMEK transcriptional unit
+    with one product accession and one DefenseFinder DS-27 profile row. It does not
+    assert native host breadth, exact profile-to-protein correspondence, DS-27 molecular
+    activity, trigger, substrate, complete phage breadth, HHpred-domain interpretation,
+    or DefenseFinder rule-level detection criteria.
+  nodes:
+  - node_id: ds_27_locus
+    label: DS-27 locus
+    node_type: GENETIC_ELEMENT
+    description: A single-gene DefensePredictor-discovered system 27 locus represented
+      in the pinned DefenseFinder HMM inventory by one DS-27 custom profile.
+  - node_id: reduced_phage_plaquing
+    label: reduced bacteriophage plaquing
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage plaquing in cells carrying cloned SMEK.
+  - node_id: ds_27_system_trait
+    label: DS-27 system
+    node_type: TRAIT
+    grounding: traitmech:000451
+    description: Possession of a genome-encoded DS-27 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ds_27_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: reduced_phage_plaquing
+    description: The DS-27/SMEK locus contributes to reduced bacteriophage plaquing
+      in heterologous E. coli MG1655 plasmid-expression assays.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+        sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
+        to an empty vector control strain
+      notes: DeWeirdt et al. describe the plasmid-based phage challenge used to validate
+        predicted transcriptional units.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "SMEK\tNZ_QOXX01000051.1\tGCF_003334605.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t1216\t2115\tSMEK domain-containing protein\t\
+        WP_087896215.1\t7.030671187100836\t-2.208385407473748\tTrue\tFalse\tPredicted\
+        \ novel defense gene\tDS-27"
+      notes: The final Science supplementary Table S6 maps working_id SMEK to DS_name
+        DS-27, marks the cloned transcriptional unit as defensive, and records NZ_QOXX01000051.1
+        positions 1216-2115 with product accession WP_087896215.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "RB69\t6.2\tpLAND\t24-07-17_AAA2_VPUS_VAME_EV.png\t7000000\tSMEK\t\
+        24-07-25\t24-07-25_SLIP_TMO1_PDX1_SMEK.png\t3\t10\t\t10000\t2.845098040014257\t\
+        \t\tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports a SMEK assay row with
+        an RB69 phage readout and a -log(EOP) value of 2.845.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+      snippet: "SMEK\tDS-27\tTrue"
+      notes: The final Science supplementary Table S8 maps SMEK to replicated display
+        name DS-27.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-27__DS-27                                     |                                                  |
+        DS-27                  | Custom                  | 220    |'
+      notes: The pinned DefenseFinder HMM inventory records DS-27__DS-27 as a custom
+        DS-27 profile.
+  - subject: reduced_phage_plaquing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ds_27_system_trait
+    description: DS-27-mediated phage plaquing reduction realizes the DS-27 system
+      trait.
+    evidence:
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "SMEK\tNZ_QOXX01000051.1\tGCF_003334605.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t1216\t2115\tSMEK domain-containing protein\t\
+        WP_087896215.1\t7.030671187100836\t-2.208385407473748\tTrue\tFalse\tPredicted\
+        \ novel defense gene\tDS-27"
+      notes: The final Science supplementary Table S6 maps working_id SMEK to DS_name
+        DS-27, marks the cloned transcriptional unit as defensive, and records NZ_QOXX01000051.1
+        positions 1216-2115 with product accession WP_087896215.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "RB69\t6.2\tpLAND\t24-07-17_AAA2_VPUS_VAME_EV.png\t7000000\tSMEK\t\
+        24-07-25\t24-07-25_SLIP_TMO1_PDX1_SMEK.png\t3\t10\t\t10000\t2.845098040014257\t\
+        \t\tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports a SMEK assay row with
+        an RB69 phage readout and a -log(EOP) value of 2.845.
+    - reference: DOI:10.1126/science.adv7924
+      snippet: We refer to these validated TUs as DefensePredictor discovered systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: The DS nomenclature is used for DefensePredictor discovered systems.
+  - subject: ds_27_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: DS-27 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: We refer to these validated TUs as DefensePredictor discovered systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: DeWeirdt et al. name validated TUs as DefensePredictor discovered systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DS-27 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+        learning model to discover novel prokaryotic immune systems | '
+      notes: The pinned DefenseFinder article registry maps the DS-27 source key to
+        the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has
+        since been published in Science.
+discussions:
+- discussion_id: ds-27-defensefinder-model-gap
+  prompt: Resolve DS-27 native host breadth, exact single-component activity, profile-to-protein
+    mapping, HHpred-domain interpretation, complete phage breadth, molecular output,
+    and rule-level DefenseFinder criteria before minting narrower DS-27 mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: DeWeirdt et al. support DS-27 as the defensive SMEK transcriptional unit
+    and final Science Tables S6/S7/S8 map it to product accession WP_087896215.1,
+    an RB69 phage readout, and display name DS-27. The pinned DefenseFinder HMM inventory
+    records one DS-27 custom profile row. The pinned rules table has no DS-27 row,
+    and the first-pass record does not resolve native host breadth, complete phage
+    breadth, direct profile-to-protein correspondence, HHpred-domain interpretation,
+    molecular output, or endogenous DS-27 activity.
+  evidence:
+  - reference: DOI:10.1126/science.adv7924
+    snippet: We refer to these validated TUs as DefensePredictor discovered systems
+      (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+      DS-8A is the first gene of DS-8.
+    notes: DeWeirdt et al. name validated TUs as DSs.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+    snippet: "SMEK\tNZ_QOXX01000051.1\tGCF_003334605.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+      DefensePredictor hits\t1216\t2115\tSMEK domain-containing protein\tWP_087896215.1\t\
+      7.030671187100836\t-2.208385407473748\tTrue\tFalse\tPredicted novel defense\
+      \ gene\tDS-27"
+    notes: The final Science supplementary Table S6 maps working_id SMEK to DS_name
+      DS-27, marks the cloned transcriptional unit as defensive, and records NZ_QOXX01000051.1
+      positions 1216-2115 with product accession WP_087896215.1.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+    snippet: "RB69\t6.2\tpLAND\t24-07-17_AAA2_VPUS_VAME_EV.png\t7000000\tSMEK\t24-07-25\t\
+      24-07-25_SLIP_TMO1_PDX1_SMEK.png\t3\t10\t\t10000\t2.845098040014257\t\t\tTrue\t\
+      LB\t37"
+    notes: The final Science supplementary Table S7 reports a SMEK assay row with
+      an RB69 phage readout and a -log(EOP) value of 2.845.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "SMEK\tDS-27\tTrue"
+    notes: The final Science supplementary Table S8 maps SMEK to replicated display
+      name DS-27.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| DS-27 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+      learning model to discover novel prokaryotic immune systems | '
+    notes: The pinned DefenseFinder article registry maps the DS-27 source key to
+      the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since
+      been published in Science.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-27__DS-27                                     |                                                  |
+      DS-27                  | Custom                  | 220    |'
+    notes: The pinned DefenseFinder HMM inventory records DS-27__DS-27 as a custom
+      DS-27 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list DS-27, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#ds_27_locus_reduces_phage_plaquing
+  posed_by: codex
+  posed_date: '2026-09-29'
+curation_history:
+- timestamp: '2026-09-29T04:13:10Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DS-27 system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; kept the graph at SMEK transcriptional-unit
+    level because HHpred domain interpretation and rule rows remain unresolved, and
+    proposals/metpo_traitmech_v328 reserves the replacement placeholder.
+  llm_assisted: true
+- timestamp: '2026-09-29T04:13:11Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DS-27 system canonical_examples and left them empty because DeWeirdt
+    et al. directly support cloned SMEK assays in E. coli MG1655 and a DefenseFinder
+    DS-27 model, but not a direct named native microbial isolate exemplar with experimentally
+    verified endogenous DS-27 activity. No paid research was used.
+  llm_assisted: true
