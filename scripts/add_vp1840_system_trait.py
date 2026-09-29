@@ -42,6 +42,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-29T02:26:23Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-29T02:26:24Z"
+EVIDENCE_CLARIFICATION_TIMESTAMP = "2026-09-29T02:51:42Z"
 
 IDENTIFIER = "traitmech:000450"
 PROPOSAL = "proposals/metpo_traitmech_v327"
@@ -60,6 +61,7 @@ VP1840_CONSTRUCT_SNIPPET = (
     "cloned into KpnI by In-Fusion\tThis Study"
 )
 VP1840_PSIBLAST_SNIPPET = (
+    "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \n"
     "Vibrio parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
 )
 ARTICLE_ROW = (
@@ -102,8 +104,9 @@ def bas21_plating_evidence() -> dict[str, str]:
         "reference": SUPPLEMENTARY_TABLES,
         "snippet": VP1840_BAS21_SNIPPET,
         "notes": (
-            "Supplementary Table 9 reports a 2e-09 fold-change phage-plating "
-            "readout for VP1840 against Bas21."
+            "Under Supplementary Table 9's Strain/Phage/Fold Change/Notes "
+            "header, the Bas21 row reports VP1840 with a Fold Change value "
+            "of 2e-09."
         ),
     }
 
@@ -113,8 +116,9 @@ def ll1_plating_evidence() -> dict[str, str]:
         "reference": SUPPLEMENTARY_TABLES,
         "snippet": VP1840_LL1_SNIPPET,
         "notes": (
-            "Supplementary Table 9 reports a zero fold-change phage-plating "
-            "readout for VP1840 against LL1."
+            "Under Supplementary Table 9's Strain/Phage/Fold Change/Notes "
+            "header, the LL1 row reports VP1840 with a Fold Change value "
+            "of 0."
         ),
     }
 
@@ -135,8 +139,9 @@ def psiblast_evidence() -> dict[str, str]:
         "reference": SUPPLEMENTARY_DATA,
         "snippet": VP1840_PSIBLAST_SNIPPET,
         "notes": (
-            "Supplementary Data 1 records a full-length 100% PSI-BLAST hit "
-            "to a Vibrio parahaemolyticus VP1840 homolog."
+            "Supplementary Data 1's VP1840 worksheet records a full-length "
+            "100% PSI-BLAST hit from the BAC60103.1 query to the separate "
+            "Vibrio parahaemolyticus homolog WP_229652597.1."
         ),
     }
 
@@ -418,6 +423,19 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CLARIFIED_EVIDENCE_SNIPPETS",
+        changes=(
+            "Clarified Supplementary Table 9 VP1840 phage-plating notes to "
+            "name the paper's Fold Change column and expanded the "
+            "Supplementary Data 1 VP1840 PSI-BLAST snippet with its column "
+            "header so the WP_229652597.1 hit is self-identifying."
+        ),
+        llm_assisted=True,
+        timestamp=EVIDENCE_CLARIFICATION_TIMESTAMP,
     )
     validate_output(record)
 

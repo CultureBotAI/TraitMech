@@ -37,16 +37,18 @@ evidence:
     to express vp1840 behind the lac promoter.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
   snippet: "VP1840\tBas21\t2e-09"
-  notes: Supplementary Table 9 reports a 2e-09 fold-change phage-plating readout for
-    VP1840 against Bas21.
+  notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
+    Bas21 row reports VP1840 with a Fold Change value of 2e-09.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
   snippet: "VP1840\tLL1\t0"
-  notes: Supplementary Table 9 reports a zero fold-change phage-plating readout for
-    VP1840 against LL1.
+  notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
+    LL1 row reports VP1840 with a Fold Change value of 0.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
-  snippet: "Vibrio parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
-  notes: Supplementary Data 1 records a full-length 100% PSI-BLAST hit to a Vibrio
-    parahaemolyticus VP1840 homolog.
+  snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
+    \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
+  notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
+    hit from the BAC60103.1 query to the separate Vibrio parahaemolyticus homolog
+    WP_229652597.1.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: '| VP1840 | 10\.1038/s41564-025-01927-7 | Integrons are anti-phage defence
     libraries in Vibrio parahaemolyticus | '
@@ -112,16 +114,18 @@ causal_graphs:
         used to express vp1840 behind the lac promoter.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
       snippet: "VP1840\tBas21\t2e-09"
-      notes: Supplementary Table 9 reports a 2e-09 fold-change phage-plating readout
-        for VP1840 against Bas21.
+      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
+        the Bas21 row reports VP1840 with a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
       snippet: "VP1840\tLL1\t0"
-      notes: Supplementary Table 9 reports a zero fold-change phage-plating readout
-        for VP1840 against LL1.
+      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
+        the LL1 row reports VP1840 with a Fold Change value of 0.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
-      snippet: "Vibrio parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
-      notes: Supplementary Data 1 records a full-length 100% PSI-BLAST hit to a Vibrio
-        parahaemolyticus VP1840 homolog.
+      snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
+        \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
+      notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
+        hit from the BAC60103.1 query to the separate Vibrio parahaemolyticus homolog
+        WP_229652597.1.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| VP1840__VP1840                                   |                                                  |
         VP1840                 | Custom                  | 75     |'
@@ -136,12 +140,12 @@ causal_graphs:
     evidence:
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
       snippet: "VP1840\tBas21\t2e-09"
-      notes: Supplementary Table 9 reports a 2e-09 fold-change phage-plating readout
-        for VP1840 against Bas21.
+      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
+        the Bas21 row reports VP1840 with a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
       snippet: "VP1840\tLL1\t0"
-      notes: Supplementary Table 9 reports a zero fold-change phage-plating readout
-        for VP1840 against LL1.
+      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
+        the LL1 row reports VP1840 with a Fold Change value of 0.
   - subject: vp1840_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -190,12 +194,14 @@ discussions:
       used to express vp1840 behind the lac promoter.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
     snippet: "VP1840\tBas21\t2e-09"
-    notes: Supplementary Table 9 reports a 2e-09 fold-change phage-plating readout
-      for VP1840 against Bas21.
+    notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
+      Bas21 row reports VP1840 with a Fold Change value of 2e-09.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
-    snippet: "Vibrio parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
-    notes: Supplementary Data 1 records a full-length 100% PSI-BLAST hit to a Vibrio
-      parahaemolyticus VP1840 homolog.
+    snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
+      \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
+    notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
+      hit from the BAC60103.1 query to the separate Vibrio parahaemolyticus homolog
+      WP_229652597.1.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
     snippet: '| VP1840 | 10\.1038/s41564-025-01927-7 | Integrons are anti-phage defence
       libraries in Vibrio parahaemolyticus | '
@@ -231,4 +237,11 @@ curation_history:
     and a DefenseFinder VP1840 model, but not a direct named native microbial isolate
     exemplar with experimentally verified endogenous VP1840 activity. No paid research
     was used.
+  llm_assisted: true
+- timestamp: '2026-09-29T02:51:42Z'
+  curator: codex
+  action: CLARIFIED_EVIDENCE_SNIPPETS
+  changes: Clarified Supplementary Table 9 VP1840 phage-plating notes to name the
+    paper's Fold Change column and expanded the Supplementary Data 1 VP1840 PSI-BLAST
+    snippet with its column header so the WP_229652597.1 hit is self-identifying.
   llm_assisted: true
