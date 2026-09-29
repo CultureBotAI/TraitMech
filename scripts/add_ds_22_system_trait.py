@@ -39,6 +39,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-28T23:30:13Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-28T23:30:14Z"
+HHPRED_EVIDENCE_TIMESTAMP = "2026-09-29T00:00:35Z"
 
 IDENTIFIER = "traitmech:000447"
 PROPOSAL = "proposals/metpo_traitmech_v324"
@@ -138,6 +139,24 @@ def table_s8_display_evidence() -> dict[str, str]:
     }
 
 
+def table_s8_hhpred_evidence() -> dict[str, str]:
+    return {
+        "reference": TABLE_S8,
+        "snippet": (
+            "MVB1\t1.0\t410.0\tWP_000162952.1\tMvb12\tPF09452.15"
+            "\tMvb12 ; ESCRT-I subunit Mvb12\thhpred_4626820.hhr"
+            "\t33.0\t64.0\t0.72\t2024-07-27 00:00:00\t\t\n"
+            "MVB1\t1.0\t410.0\tWP_000162952.1\tJAB\tPF04002.20"
+            "\tRadC-like JAB domain\thhpred_4626820.hhr\t258.0"
+            "\t324.0\t0.37\t2024-07-27 00:00:00\t\t"
+        ),
+        "notes": (
+            "The final Science supplementary Table S8 reports low-probability "
+            "Mvb12 and JAB HHpred hits for WP_000162952.1 in MVB1."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "DS-22 system",
@@ -189,6 +208,7 @@ RECORD: dict[str, Any] = {
         table_s6_evidence(),
         table_s7_bas11_evidence(),
         table_s8_display_evidence(),
+        table_s8_hhpred_evidence(),
         article_registry_evidence(),
         hmm_inventory_evidence(),
     ],
@@ -357,6 +377,7 @@ RECORD: dict[str, Any] = {
                 table_s6_evidence(),
                 table_s7_bas11_evidence(),
                 table_s8_display_evidence(),
+                table_s8_hhpred_evidence(),
                 article_registry_evidence(),
                 hmm_inventory_evidence(),
                 {
@@ -421,6 +442,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="UPDATED_EVIDENCE",
+        changes=(
+            "Added exact final Table S8 MVB1 HHpred-domain rows for the "
+            "low-probability Mvb12 and JAB hits so the DS-22 mechanism gap "
+            "quotes the evidence it defers."
+        ),
+        llm_assisted=True,
+        timestamp=HHPRED_EVIDENCE_TIMESTAMP,
     )
     validate_output(record)
 
