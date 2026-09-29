@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_45_system.yaml
+  slug: ds_45_system
+session:
+  id: 2026-09-29T170238Z-codex-472a39
+  timestamp: '2026-09-29T17:02:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Add DS-45 system trait
+  details: Minted traitmech:000469 for the DS-45 single-gene DefensePredictor-discovered phage-defense
+    system; added DOI-backed DeWeirdt et al. evidence, stable PMC spreadsheet evidence for
+    the 2971 transcriptional unit, the Bas50 plaquing readout, and the DUF2971 HHpred-domain
+    row, pinned DefenseFinder article and HMM evidence at commit afb0e5a8b466be53586b13266f5d38d98c3ac268,
+    a nonmechanistic locus-to-plaquing graph, an open rule-level detection gap because the
+    pinned DefenseFinder rules table has no DS-45 row, an empty canonical-example decision
+    for the lack of a native experimentally verified endogenous DS-45 exemplar, and the v346
+    METPO Scope-A lift reserving METPO:1042300.
