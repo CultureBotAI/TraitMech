@@ -53,11 +53,14 @@ evidence:
     name DS-22.
 - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
   snippet: "MVB1\t1.0\t410.0\tWP_000162952.1\tMvb12\tPF09452.15\tMvb12 ; ESCRT-I subunit\
-    \ Mvb12\thhpred_4626820.hhr\t33.0\t64.0\t0.72\t2024-07-27 00:00:00\t\t\nMVB1\t\
-    1.0\t410.0\tWP_000162952.1\tJAB\tPF04002.20\tRadC-like JAB domain\thhpred_4626820.hhr\t\
-    258.0\t324.0\t0.37\t2024-07-27 00:00:00\t\t"
-  notes: The final Science supplementary Table S8 reports low-probability Mvb12 and
-    JAB HHpred hits for WP_000162952.1 in MVB1.
+    \ Mvb12\thhpred_4626820.hhr\t33.0\t64.0\t0.72\t2024-07-27 00:00:00\t\t"
+  notes: The final Science supplementary Table S8 reports a low-probability Mvb12
+    HHpred hit for WP_000162952.1 in MVB1.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "MVB1\t1.0\t410.0\tWP_000162952.1\tJAB\tPF04002.20\tRadC-like JAB domain\t\
+    hhpred_4626820.hhr\t258.0\t324.0\t0.37\t2024-07-27 00:00:00\t\t"
+  notes: The final Science supplementary Table S8 reports a low-probability JAB HHpred
+    hit for WP_000162952.1 in MVB1.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: '| DS-22 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
     learning model to discover novel prokaryotic immune systems | '
@@ -226,10 +229,14 @@ discussions:
   - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
     snippet: "MVB1\t1.0\t410.0\tWP_000162952.1\tMvb12\tPF09452.15\tMvb12 ; ESCRT-I\
       \ subunit Mvb12\thhpred_4626820.hhr\t33.0\t64.0\t0.72\t2024-07-27 00:00:00\t\
-      \t\nMVB1\t1.0\t410.0\tWP_000162952.1\tJAB\tPF04002.20\tRadC-like JAB domain\t\
+      \t"
+    notes: The final Science supplementary Table S8 reports a low-probability Mvb12
+      HHpred hit for WP_000162952.1 in MVB1.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "MVB1\t1.0\t410.0\tWP_000162952.1\tJAB\tPF04002.20\tRadC-like JAB domain\t\
       hhpred_4626820.hhr\t258.0\t324.0\t0.37\t2024-07-27 00:00:00\t\t"
-    notes: The final Science supplementary Table S8 reports low-probability Mvb12
-      and JAB HHpred hits for WP_000162952.1 in MVB1.
+    notes: The final Science supplementary Table S8 reports a low-probability JAB
+      HHpred hit for WP_000162952.1 in MVB1.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
     snippet: '| DS-22 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
       learning model to discover novel prokaryotic immune systems | '
@@ -277,4 +284,10 @@ curation_history:
   action: UPDATED_SYNONYM_SOURCE
   changes: Aligned the DS-22 exact-synonym source with adjacent DS system records
     by citing the DOI that defines the DS display-name convention.
+  llm_assisted: true
+- timestamp: '2026-09-29T00:23:32Z'
+  curator: codex
+  action: UPDATED_EVIDENCE
+  changes: Split the MVB1 Mvb12 and JAB Table S8 HHpred rows into separate evidence
+    items so each snippet quotes one contiguous source row.
   llm_assisted: true

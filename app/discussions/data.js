@@ -1783,11 +1783,12 @@ window.searchData = [
   ],
   "rationale": "DeWeirdt et al. support DS-22 as the defensive MVB1 transcriptional unit that reduced Bas11 plaquing when cloned in E. coli MG1655, and the pinned DefenseFinder HMM inventory records one DS-22 profile row. The pinned rules table has no DS-22 row, and the first-pass record does not resolve native host breadth, exact component activity, direct profile-to-protein correspondence, the Mvb12 and JAB HHpred-domain rows, phage target breadth, molecular output, or endogenous DS-22 activity.",
   "num_experiments": 0,
-  "num_evidence": 8,
+  "num_evidence": 9,
   "evidence_refs": [
    "DOI:10.1126/science.adv7924",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
