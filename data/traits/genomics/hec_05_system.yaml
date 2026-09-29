@@ -1,0 +1,170 @@
+identifier: traitmech:000466
+label: HEC-05 system
+definition: A phage defense system in which an organism possesses the single-gene
+  HEC-05 Hma-embedded candidate locus, encoding a GmrSD-like protein closely matching
+  BrxU, that can reduce bacteriophage plaquing.
+definition_source: DOI:10.1101/2024.01.29.577857
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: HEC-05
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/2024.01.29.577857
+- synonym_text: HEC-05__HEC-05
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1101/2024.01.29.577857
+  snippet: two GmrSD-like proteins (HEC-05 and HEC-06)
+  notes: Payne et al. identify HEC-05 as one of the Hma-embedded GmrSD-like candidate
+    systems.
+- reference: DOI:10.1101/2024.01.29.577857
+  snippet: chosen HEC-05 homolog shares 99.2% amino acid identity
+  notes: Payne et al. report that the selected HEC-05 homolog closely matches the
+    independently characterized BrxU phage-defense protein.
+- reference: DOI:10.1101/2024.01.29.577857
+  snippet: these were able to reduce the EOP of at least two phages
+  notes: Payne et al. support reduced plaquing for the active Hma-embedded candidate
+    systems after excluding inactive HEC-01 and HEC-09 candidates.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| HEC-05 | 10\.1101/2024\.01\.29\.577857 | New antiviral defences are
+    genetically embedded within prokaryotic immune systems |'
+  notes: The pinned DefenseFinder article registry maps the HEC-05 source key to the
+    Payne et al. Hma-embedded-candidate preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| HEC-05__HEC-05                                   |                                                  |
+    HEC-05                 | Custom                  | 150    |'
+  notes: The pinned DefenseFinder HMM inventory records HEC-05__HEC-05 as a custom
+    HEC-05 profile.
+causal_graphs:
+- graph_id: hec_05_locus_reduces_phage_plaquing
+  title: HEC-05 loci reduce bacteriophage plaquing
+  description: Conservative system-level sketch linking the single-gene HEC-05 locus
+    to reduced bacteriophage plaquing and HEC-05 system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures HEC-05 at candidate locus and anti-phage-output
+    level without asserting native host breadth, the direct viral trigger or substrate,
+    exact GmrSD-like molecular output, or a DefenseFinder detection rule absent from
+    the pinned rules table.
+  nodes:
+  - node_id: hec_05_locus
+    label: HEC-05 locus
+    node_type: GENETIC_ELEMENT
+    description: A single-gene Hma-embedded candidate locus represented in the pinned
+      DefenseFinder HMM inventory by a HEC-05 custom profile.
+  - node_id: reduced_phage_plaquing
+    label: reduced bacteriophage plaquing
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced efficiency of plaquing by bacteriophages in cells carrying
+      a complete HEC-05 candidate system.
+  - node_id: hec_05_system_trait
+    label: HEC-05 system
+    node_type: TRAIT
+    grounding: traitmech:000466
+    description: Possession of a genome-encoded HEC-05 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: hec_05_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: reduced_phage_plaquing
+    description: The HEC-05 locus contributes to reduced bacteriophage plaquing as
+      a GmrSD-like Hma-embedded candidate.
+    evidence:
+    - reference: DOI:10.1101/2024.01.29.577857
+      snippet: two GmrSD-like proteins (HEC-05 and HEC-06)
+      notes: Payne et al. identify HEC-05 among the GmrSD-like Hma-embedded candidates.
+    - reference: DOI:10.1101/2024.01.29.577857
+      snippet: chosen HEC-05 homolog shares 99.2% amino acid identity
+      notes: Payne et al. tie the selected HEC-05 homolog to a close BrxU-like GmrSD-family
+        architecture.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| HEC-05__HEC-05                                   |                                                  |
+        HEC-05                 | Custom                  | 150    |'
+      notes: The pinned DefenseFinder HMM inventory records HEC-05__HEC-05 as a custom
+        HEC-05 profile.
+  - subject: reduced_phage_plaquing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: hec_05_system_trait
+    description: HEC-05-mediated plaquing reduction realizes the HEC-05 system trait.
+    evidence:
+    - reference: DOI:10.1101/2024.01.29.577857
+      snippet: these were able to reduce the EOP of at least two phages
+      notes: Payne et al. support reduced efficiency of plaquing for the active HEC
+        systems.
+  - subject: hec_05_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: HEC-05 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| HEC-05 | 10\.1101/2024\.01\.29\.577857 | New antiviral defences
+        are genetically embedded within prokaryotic immune systems |'
+      notes: The pinned DefenseFinder article registry maps the HEC-05 source key
+        to the Payne et al. Hma-embedded-candidate preprint.
+discussions:
+- discussion_id: hec-05-defensefinder-model-gap
+  prompt: Resolve HEC-05 native host breadth, sensitive-phage breadth, BrxU synonymy,
+    GmrSD-like molecular output, and rule-level detection criteria before minting
+    narrower HEC-05 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Payne et al. support HEC-05 as a single-gene Hma-embedded candidate anti-phage
+    system closely matching BrxU, and the pinned DefenseFinder HMM inventory records
+    one HEC-05 profile row. The pinned rules table has no HEC-05 row, and the first-pass
+    record does not yet resolve natural host breadth, phage target breadth, or the
+    direct molecular output.
+  evidence:
+  - reference: DOI:10.1101/2024.01.29.577857
+    snippet: two GmrSD-like proteins (HEC-05 and HEC-06)
+    notes: Payne et al. identify HEC-05 as one of the GmrSD-like Hma-embedded candidate
+      systems.
+  - reference: DOI:10.1101/2024.01.29.577857
+    snippet: chosen HEC-05 homolog shares 99.2% amino acid identity
+    notes: Payne et al. report that the selected HEC-05 homolog closely matches BrxU.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| HEC-05 | 10\.1101/2024\.01\.29\.577857 | New antiviral defences are
+      genetically embedded within prokaryotic immune systems |'
+    notes: The pinned DefenseFinder article registry maps the HEC-05 source key to
+      the Payne et al. Hma-embedded-candidate preprint.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| HEC-05__HEC-05                                   |                                                  |
+      HEC-05                 | Custom                  | 150    |'
+    notes: The pinned DefenseFinder HMM inventory records HEC-05__HEC-05 as a custom
+      HEC-05 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list HEC-05, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#hec_05_locus_reduces_phage_plaquing
+  posed_by: codex
+  posed_date: '2026-09-29'
+curation_history:
+- timestamp: '2026-09-29T16:05:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted HEC-05 system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; kept the graph at single-gene candidate-locus
+    level because the pinned DefenseFinder HEC-05 HMM row is not backed by a pinned
+    rules row; the replacement placeholder is reserved in proposals/metpo_traitmech_v343.
+  llm_assisted: true
+- timestamp: '2026-09-29T16:05:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed HEC-05 system during canonical-example issue 444 enforcement and
+    left canonical_examples empty because the sources support heterologous efficiency-of-plaquing
+    assays and a DefenseFinder HEC-05 HMM row, but not a direct named native microbial
+    isolate exemplar with experimentally verified endogenous HEC-05 activity. No paid
+    research was used.
+  llm_assisted: true
