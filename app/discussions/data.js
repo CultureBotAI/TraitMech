@@ -4370,6 +4370,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pd_lambda_6_system.html#pd-lambda-6-mechanism-gap"
  },
  {
+  "discussion_id": "pd-t2-1-mechanism-and-model-coverage-gap",
+  "prompt": "Resolve the PD-T2-1 direct sensor, effector output, native host breadth, and DefenseFinder HMM/rules model coverage before minting narrower PD-T2-1 mechanism or protein-component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PD-T2-1 system",
+  "source_id": "traitmech:000476",
+  "source_file": "pd_t2_1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pd_t2_1_locus_phage_protection"
+  ],
+  "rationale": "The final Goedecke et al. article supports PD-T2-1 as a two-gene operon activated by multiple phage tail-fiber proteins, links heterologous expression to protection against T2, T6, Bas18, T4, and T5, and argues that the system is not a canonical toxin-antitoxin system. The pinned DefenseFinder article registry names PD-T2-1 and maps it to the Goedecke et al. preprint, but the pinned HMM inventory and rules table do not contain PD-T2-1 rows, leaving profile coverage and detection criteria unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pd_t2_1_system.html#pd-t2-1-mechanism-and-model-coverage-gap"
+ },
+ {
   "discussion_id": "pd-t4-10-mechanism-gap",
   "prompt": "Resolve PD-T4-10 natural host breadth, direct phage trigger, the toxic PD-T4-10_B target, and PD-T4-10_A neutralization logic before minting narrower PD-T4-10 mechanism traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -7287,9 +7312,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 347,
- "total_knowledge_gaps": 261,
- "total_source_entries": 341,
+ "total_discussions": 348,
+ "total_knowledge_gaps": 262,
+ "total_source_entries": 342,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
