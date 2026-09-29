@@ -2412,6 +2412,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_45_system.html#ds-45-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-46-model-coverage-gap",
+  "prompt": "Resolve DS-46 phage-specific readouts, display-name and domain rows, DefenseFinder model coverage, native host breadth, exact component activities, molecular output, complete phage breadth, and endogenous activity before minting narrower DS-46 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-46 system",
+  "source_id": "traitmech:000471",
+  "source_file": "ds_46_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_46_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-46 as the defensive RMRT transcriptional unit and final Science Table S6 maps RMRT to two product accessions. A first-pass final Science Table S7/S8 review found no exact RMRT/DS-46 phage-specific readout, display-name row, or HHpred-domain row. The pinned DefenseFinder article, HMM, and rules registries also do not list DS-46 or RMRT, and the first-pass record therefore does not resolve native host breadth, complete phage breadth, exact component activities, molecular output, or endogenous DS-46 activity.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_46_system.html#ds-46-model-coverage-gap"
+ },
+ {
   "discussion_id": "ds-4-defensefinder-model-gap",
   "prompt": "Resolve DS-4 native host breadth, exact five-component activities, DS-4 profile-to-protein mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-4 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7152,9 +7179,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 342,
- "total_knowledge_gaps": 256,
- "total_source_entries": 336,
+ "total_discussions": 343,
+ "total_knowledge_gaps": 257,
+ "total_source_entries": 337,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
