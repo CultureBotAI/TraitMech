@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pd_t2_1_system.yaml
+  slug: pd_t2_1_system
+session:
+  id: 2026-09-29T225952Z-codex-307ce5
+  timestamp: '2026-09-29T22:59:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add PD-T2-1 system trait
+  details: Minted traitmech:000476 for the DOI-backed PD-T2-1 phage-defense-system possession
+    trait, added evidence from the final Goedecke et al. article and pinned DefenseFinder
+    article registry, kept DefenseFinder HMM/rules coverage and the direct mechanism as an
+    open knowledge gap, and reserved METPO:1043000 in proposals/metpo_traitmech_v353.
