@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_39_system.yaml
+  slug: ds_39_system
+session:
+  id: 2026-09-29T113508Z-codex-9e4852
+  timestamp: '2026-09-29T11:35:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the DS-39 system genomics trait.
+  details: Created data/traits/genomics/ds_39_system.yaml as traitmech:000461 for the single-gene
+    DS-39/AAA5 DefensePredictor phage-defense system. The record cites DeWeirdt et al. and
+    final Science Tables S6, S7, and S8 for the AAA5 locus, Bas1 and Bas3 plaquing readouts,
+    replicated DS-39 display mapping, and AAA+ ATPase, zinc-finger, and HTH HHpred rows. It
+    also records pinned DefenseFinder article and HMM rows, keeps rule-level DS-39 criteria
+    absent as an open KNOWLEDGE_GAP, leaves canonical_examples empty for lack of an experimentally
+    verified native isolate exemplar, and reserves METPO:1041500 in proposals/metpo_traitmech_v338
+    for the traitmech:000461 fallback.
