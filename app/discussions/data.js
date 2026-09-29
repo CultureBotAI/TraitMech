@@ -5190,7 +5190,7 @@ window.searchData = [
  },
  {
   "discussion_id": "vp1840-defensefinder-model-gap",
-  "prompt": "Resolve VP1840 native host breadth, exact single-component activity, profile-to-protein mapping, homolog boundary, full vibriophage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower VP1840 mechanism children.",
+  "prompt": "Resolve VP1840 native host breadth, exact single-component activity, profile-to-protein mapping, homolog boundary, full phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower VP1840 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -5198,7 +5198,7 @@ window.searchData = [
   "source_id": "traitmech:000450",
   "source_file": "vp1840_system.yaml",
   "attaches_to": [
-   "causal_graphs#vp1840_locus_reduces_vibriophage_plaquing"
+   "causal_graphs#vp1840_locus_reduces_bacteriophage_plaquing"
   ],
   "rationale": "Getz et al. support VP1840 as one of nine RIMD 2210633 integron-encoded cassettes whose cloned expression reduced phage plaquing, Supplementary Tables 8, 9, and 12 map VP1840 to VP_RS08920/Vp1840, WP_005483293.1, VSV105-vp1840, and phage-plating fold changes, and Supplementary Data 1 reports PSI-BLAST homologs. The pinned DefenseFinder HMM inventory records one VP1840 custom profile row. The pinned rules table has no VP1840 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, molecular output, or endogenous activity.",
   "num_experiments": 0,

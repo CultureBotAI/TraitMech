@@ -2,8 +2,8 @@ identifier: traitmech:000450
 label: VP1840 system
 definition: A phage defense system in which an organism possesses a VP1840-family
   locus represented by the DefenseFinder VP1840__VP1840 custom HMM profile and experimentally
-  linked to reduced vibriophage plaquing when the cloned Vibrio parahaemolyticus RIMD
-  2210633 vp1840 cassette is expressed from a VSV105 plasmid.
+  linked to reduced bacteriophage plaquing when the cloned Vibrio parahaemolyticus
+  RIMD 2210633 vp1840 cassette is expressed from a VSV105 plasmid.
 definition_source: DOI:10.1038/s41564-025-01927-7
 trait_category: GENOMICS
 term_kind: CLASS
@@ -36,13 +36,13 @@ evidence:
   notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid used
     to express vp1840 behind the lac promoter.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-  snippet: "VP1840\tBas21\t2e-09"
-  notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
-    Bas21 row reports VP1840 with a Fold Change value of 2e-09.
+  snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+  notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout as
+    a Fold Change value of 2e-09.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-  snippet: "VP1840\tLL1\t0"
-  notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
-    LL1 row reports VP1840 with a Fold Change value of 0.
+  snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+  notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout as
+    a Fold Change value of 0.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
   snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
   notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio parahaemolyticus
@@ -64,11 +64,11 @@ evidence:
   notes: The pinned DefenseFinder HMM inventory records VP1840__VP1840 as a custom
     VP1840 profile.
 causal_graphs:
-- graph_id: vp1840_locus_reduces_vibriophage_plaquing
-  title: VP1840 loci reduce vibriophage plaquing
+- graph_id: vp1840_locus_reduces_bacteriophage_plaquing
+  title: VP1840 loci reduce bacteriophage plaquing
   description: Conservative system-level sketch linking VP1840-family locus possession
-    to reduced vibriophage plaquing without resolving VP1840 component function or
-    molecular output.
+    to reduced bacteriophage plaquing without resolving VP1840 component function
+    or molecular output.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures VP1840 as a RIMD 2210633 integron cassette with
     cloned phage-plating readouts, a PSI-BLAST homolog lead, one pinned DefenseFinder
@@ -82,11 +82,10 @@ causal_graphs:
     node_type: GENETIC_ELEMENT
     description: A Vp1840-like integron cassette locus represented in the pinned DefenseFinder
       HMM inventory by the VP1840__VP1840 custom profile.
-  - node_id: reduced_vibriophage_plaquing
-    label: reduced vibriophage plaquing
+  - node_id: reduced_bacteriophage_plaquing
+    label: reduced bacteriophage plaquing
     node_type: BIOLOGICAL_PROCESS
-    description: Reduced plaquing of Vibrio-infecting bacteriophages in cells expressing
-      cloned vp1840.
+    description: Reduced plaquing of bacteriophages in cells expressing cloned vp1840.
   - node_id: vp1840_system_trait
     label: VP1840 system
     node_type: TRAIT
@@ -102,9 +101,9 @@ causal_graphs:
   - subject: vp1840_locus
     predicate: contributes to
     predicate_id: RO:0002326
-    object: reduced_vibriophage_plaquing
+    object: reduced_bacteriophage_plaquing
     description: The cloned V. parahaemolyticus vp1840 integron cassette contributes
-      to reduced vibriophage plaquing in VSV105 plasmid-expression assays, and DefenseFinder
+      to reduced bacteriophage plaquing in VSV105 plasmid-expression assays, and DefenseFinder
       represents the VP1840 family with one custom HMM profile.
     evidence:
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
@@ -117,13 +116,13 @@ causal_graphs:
       notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid
         used to express vp1840 behind the lac promoter.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "VP1840\tBas21\t2e-09"
-      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
-        the Bas21 row reports VP1840 with a Fold Change value of 2e-09.
+      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+      notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
+        as a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "VP1840\tLL1\t0"
-      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
-        the LL1 row reports VP1840 with a Fold Change value of 0.
+      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+      notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout
+        as a Fold Change value of 0.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
       snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
       notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio
@@ -139,21 +138,21 @@ causal_graphs:
         VP1840                 | Custom                  | 75     |'
       notes: The pinned DefenseFinder HMM inventory records VP1840__VP1840 as a custom
         VP1840 profile.
-  - subject: reduced_vibriophage_plaquing
+  - subject: reduced_bacteriophage_plaquing
     predicate: confers
     predicate_id: METPO:2007700
     object: vp1840_system_trait
-    description: VP1840-mediated vibriophage plaquing reduction realizes the VP1840
+    description: VP1840-mediated bacteriophage plaquing reduction realizes the VP1840
       system trait.
     evidence:
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "VP1840\tBas21\t2e-09"
-      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
-        the Bas21 row reports VP1840 with a Fold Change value of 2e-09.
+      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+      notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
+        as a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "VP1840\tLL1\t0"
-      notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
-        the LL1 row reports VP1840 with a Fold Change value of 0.
+      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+      notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout
+        as a Fold Change value of 0.
   - subject: vp1840_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -173,7 +172,7 @@ causal_graphs:
 discussions:
 - discussion_id: vp1840-defensefinder-model-gap
   prompt: Resolve VP1840 native host breadth, exact single-component activity, profile-to-protein
-    mapping, homolog boundary, full vibriophage breadth, molecular output, and rule-level
+    mapping, homolog boundary, full phage breadth, molecular output, and rule-level
     DefenseFinder criteria before minting narrower VP1840 mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
@@ -201,9 +200,9 @@ discussions:
     notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid
       used to express vp1840 behind the lac promoter.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-    snippet: "VP1840\tBas21\t2e-09"
-    notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
-      Bas21 row reports VP1840 with a Fold Change value of 2e-09.
+    snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+    notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
+      as a Fold Change value of 2e-09.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
     snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
     notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio parahaemolyticus
@@ -228,7 +227,7 @@ discussions:
     notes: The pinned DefenseFinder rules table does not list VP1840, leaving rule-level
       detection criteria unresolved.
   attaches_to:
-  - causal_graphs#vp1840_locus_reduces_vibriophage_plaquing
+  - causal_graphs#vp1840_locus_reduces_bacteriophage_plaquing
   posed_by: codex
   posed_date: '2026-09-29'
 curation_history:
@@ -262,4 +261,11 @@ curation_history:
   action: GROUNDED_PSIBLAST_QUERY_ACCESSION
   changes: Quoted the Supplementary Data 1 VP1840 worksheet query row so the BAC60103.1
     PSI-BLAST query named in the WP_229652597.1 homolog-hit note is directly evidenced.
+  llm_assisted: true
+- timestamp: '2026-09-29T03:27:44Z'
+  curator: codex
+  action: CLARIFIED_PHAGE_PLATING_SCOPE
+  changes: Quoted the Supplementary Table 9 Fold Change header in the Bas21 and LL1
+    snippets and neutralized unsupported VP1840 host-clade phrasing to bacteriophage
+    wording.
   llm_assisted: true

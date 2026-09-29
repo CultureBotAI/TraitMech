@@ -12,7 +12,7 @@ genome-level possession trait for the Vp1840-like Vibrio parahaemolyticus
 integron-defense locus represented by DefenseFinder model key VP1840.
 Getz et al. cloned V. parahaemolyticus RIMD 2210633 gene cassette vp1840,
 expressed it from the VSV105-vp1840 plasmid, and reported strong fold-change
-reductions in vibriophage plating assays. Supplementary Data 1 reports
+reductions in bacteriophage plating assays. Supplementary Data 1 reports
 PSI-BLAST homologs, the pinned DefenseFinder article registry maps VP1840 to
 the Getz et al. paper, the pinned DefenseFinder HMM inventory records one
 VP1840 custom profile, `VP1840__VP1840`, and the pinned DefenseFinder rules
@@ -51,7 +51,7 @@ VP1840 system captures genome-level possession of a Vp1840-like integron
 defense locus cataloged by DefenseFinder as VP1840 and represented by the
 custom VP1840__VP1840 HMM-profile row. It excludes the Vp1840 source locus
 tag, the VP_RS08920 locus tag, the VP1840 protein, the individual DefenseFinder
-HMM profile row, VSV105 plasmid-expression assays, vibriophage fold-change
+HMM profile row, VSV105 plasmid-expression assays, bacteriophage fold-change
 assay rows, PSI-BLAST homolog rows, the absent VP1840 rule-level DefenseFinder
 model, unresolved component activity, unresolved phage breadth, and other
 integron-encoded or phage-defense systems.

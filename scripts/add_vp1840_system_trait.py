@@ -44,6 +44,7 @@ TIMESTAMP = "2026-09-29T02:26:23Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-29T02:26:24Z"
 EVIDENCE_CLARIFICATION_TIMESTAMP = "2026-09-29T02:51:42Z"
 PSIBLAST_QUERY_CLARIFICATION_TIMESTAMP = "2026-09-29T03:13:39Z"
+PHAGE_PLATING_SCOPE_TIMESTAMP = "2026-09-29T03:27:44Z"
 
 IDENTIFIER = "traitmech:000450"
 PROPOSAL = "proposals/metpo_traitmech_v327"
@@ -55,8 +56,8 @@ DISCOVERY_SNIPPET = (
 VP1840_CLONE_SNIPPET = (
     "VP_RS08920\tVp1840\tY\tWP_005483293.1 \tHypothetical Protein"
 )
-VP1840_BAS21_SNIPPET = "VP1840\tBas21\t2e-09"
-VP1840_LL1_SNIPPET = "VP1840\tLL1\t0"
+VP1840_BAS21_SNIPPET = "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+VP1840_LL1_SNIPPET = "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
 VP1840_CONSTRUCT_SNIPPET = (
     "VSV105-vp1840\tVSV105 carrying gene vp1840 behind the lac promoter, "
     "cloned into KpnI by In-Fusion\tThis Study"
@@ -109,9 +110,8 @@ def bas21_plating_evidence() -> dict[str, str]:
         "reference": SUPPLEMENTARY_TABLES,
         "snippet": VP1840_BAS21_SNIPPET,
         "notes": (
-            "Under Supplementary Table 9's Strain/Phage/Fold Change/Notes "
-            "header, the Bas21 row reports VP1840 with a Fold Change value "
-            "of 2e-09."
+            "Supplementary Table 9 identifies the VP1840/Bas21 "
+            "phage-plating readout as a Fold Change value of 2e-09."
         ),
     }
 
@@ -121,9 +121,8 @@ def ll1_plating_evidence() -> dict[str, str]:
         "reference": SUPPLEMENTARY_TABLES,
         "snippet": VP1840_LL1_SNIPPET,
         "notes": (
-            "Under Supplementary Table 9's Strain/Phage/Fold Change/Notes "
-            "header, the LL1 row reports VP1840 with a Fold Change value "
-            "of 0."
+            "Supplementary Table 9 identifies the VP1840/LL1 "
+            "phage-plating readout as a Fold Change value of 0."
         ),
     }
 
@@ -192,7 +191,7 @@ RECORD: dict[str, Any] = {
     "definition": (
         "A phage defense system in which an organism possesses a VP1840-family "
         "locus represented by the DefenseFinder VP1840__VP1840 custom HMM "
-        "profile and experimentally linked to reduced vibriophage plaquing "
+        "profile and experimentally linked to reduced bacteriophage plaquing "
         "when the cloned Vibrio parahaemolyticus RIMD 2210633 vp1840 cassette "
         "is expressed from a VSV105 plasmid."
     ),
@@ -231,11 +230,11 @@ RECORD: dict[str, Any] = {
     ],
     "causal_graphs": [
         {
-            "graph_id": "vp1840_locus_reduces_vibriophage_plaquing",
-            "title": "VP1840 loci reduce vibriophage plaquing",
+            "graph_id": "vp1840_locus_reduces_bacteriophage_plaquing",
+            "title": "VP1840 loci reduce bacteriophage plaquing",
             "description": (
                 "Conservative system-level sketch linking VP1840-family "
-                "locus possession to reduced vibriophage plaquing without "
+                "locus possession to reduced bacteriophage plaquing without "
                 "resolving VP1840 component function or molecular output."
             ),
             "scope_status": "NONMECHANISTIC",
@@ -261,11 +260,11 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "reduced_vibriophage_plaquing",
-                    "label": "reduced vibriophage plaquing",
+                    "node_id": "reduced_bacteriophage_plaquing",
+                    "label": "reduced bacteriophage plaquing",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "Reduced plaquing of Vibrio-infecting bacteriophages "
+                        "Reduced plaquing of bacteriophages "
                         "in cells expressing cloned vp1840."
                     ),
                 },
@@ -295,10 +294,10 @@ RECORD: dict[str, Any] = {
                     "subject": "vp1840_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "reduced_vibriophage_plaquing",
+                    "object": "reduced_bacteriophage_plaquing",
                     "description": (
                         "The cloned V. parahaemolyticus vp1840 integron "
-                        "cassette contributes to reduced vibriophage "
+                        "cassette contributes to reduced bacteriophage "
                         "plaquing in VSV105 plasmid-expression assays, and "
                         "DefenseFinder represents the VP1840 family with one "
                         "custom HMM profile."
@@ -314,12 +313,12 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "reduced_vibriophage_plaquing",
+                    "subject": "reduced_bacteriophage_plaquing",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": "vp1840_system_trait",
                     "description": (
-                        "VP1840-mediated vibriophage plaquing reduction "
+                        "VP1840-mediated bacteriophage plaquing reduction "
                         "realizes the VP1840 system trait."
                     ),
                     "evidence": [
@@ -350,7 +349,7 @@ RECORD: dict[str, Any] = {
             "prompt": (
                 "Resolve VP1840 native host breadth, exact "
                 "single-component activity, profile-to-protein mapping, "
-                "homolog boundary, full vibriophage breadth, molecular "
+                "homolog boundary, full phage breadth, molecular "
                 "output, and rule-level DefenseFinder criteria before "
                 "minting narrower VP1840 mechanism children."
             ),
@@ -389,7 +388,7 @@ RECORD: dict[str, Any] = {
                 },
             ],
             "attaches_to": [
-                "causal_graphs#vp1840_locus_reduces_vibriophage_plaquing"
+                "causal_graphs#vp1840_locus_reduces_bacteriophage_plaquing"
             ],
             "posed_by": CURATOR,
             "posed_date": "2026-09-29",
@@ -468,6 +467,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=PSIBLAST_QUERY_CLARIFICATION_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CLARIFIED_PHAGE_PLATING_SCOPE",
+        changes=(
+            "Quoted the Supplementary Table 9 Fold Change header in the "
+            "Bas21 and LL1 snippets and neutralized unsupported VP1840 "
+            "host-clade phrasing to bacteriophage wording."
+        ),
+        llm_assisted=True,
+        timestamp=PHAGE_PLATING_SCOPE_TIMESTAMP,
     )
     validate_output(record)
 
