@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_06_system.yaml
+  slug: hec_06_system
+session:
+  id: 2026-09-29T152922Z-codex-f52bf1
+  timestamp: '2026-09-29T15:29:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Add HEC-06 system trait
+  details: Minted traitmech:000467 for the HEC-06 single-gene Hma-embedded GmrSD-like candidate
+    phage-defense system; added DOI-backed Payne et al. evidence, pinned DefenseFinder article
+    and HMM evidence at commit afb0e5a8b466be53586b13266f5d38d98c3ac268, a nonmechanistic
+    locus-to-plaquing graph, an open rule-level detection gap because the pinned DefenseFinder
+    rules table has no HEC-06 row, an empty canonical-example decision for the lack of a native
+    experimentally verified endogenous HEC-06 exemplar, and the v344 METPO Scope-A lift reserving
+    METPO:1042100.

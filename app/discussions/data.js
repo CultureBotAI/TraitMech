@@ -3290,6 +3290,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hec_05_system.html#hec-05-defensefinder-model-gap"
  },
  {
+  "discussion_id": "hec-06-defensefinder-model-gap",
+  "prompt": "Resolve HEC-06 native host breadth, sensitive-phage breadth, GmrSD-like molecular output, and rule-level detection criteria before minting narrower HEC-06 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "HEC-06 system",
+  "source_id": "traitmech:000467",
+  "source_file": "hec_06_system.yaml",
+  "attaches_to": [
+   "causal_graphs#hec_06_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "Payne et al. support HEC-06 as a single-gene Hma-embedded candidate anti-phage system encoding a GmrSD-like protein, and the pinned DefenseFinder HMM inventory records one HEC-06 profile row. The pinned rules table has no HEC-06 row, and the first-pass record does not yet resolve natural host breadth, phage target breadth, or the direct molecular output.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1101/2024.01.29.577857",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hec_06_system.html#hec-06-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "hesat-mechanism-gap",
   "prompt": "Resolve Hesat phage triggers and effector outputs before minting narrower Hesat mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7039,9 +7063,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 338,
- "total_knowledge_gaps": 252,
- "total_source_entries": 332,
+ "total_discussions": 339,
+ "total_knowledge_gaps": 253,
+ "total_source_entries": 333,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
