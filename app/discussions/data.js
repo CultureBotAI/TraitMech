@@ -1856,6 +1856,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_24_system.html#ds-24-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-25-defensefinder-model-gap",
+  "prompt": "Resolve DS-25 working-identifier rows, preprint Table S5 and S6 context, final Science supplement omission, native host breadth, DS-25A/DS-25B profile-to-protein mapping, sensitive-phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-25 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-25 system",
+  "source_id": "traitmech:000473",
+  "source_file": "ds_25_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_25_locus_profile_model"
+  ],
+  "rationale": "The DeWeirdt et al. preprint supports the DefensePredictor discovered System naming convention, the pinned DefenseFinder article registry names DS-25 and maps it to that preprint, and the pinned HMM inventory records DS-25A and DS-25B custom profile rows. DS-25 is absent from the final Science Table S6, S7, and S8 files checked during this curation pass, the exact preprint per-TU rows were not recovered, the pinned DefenseFinder rules table has no DS-25 row, and the first-pass record does not resolve the working identifier, assayed phages, phage readout, native host, profile-to-component mapping, component activities, or complete detection criteria.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1101/2025.01.08.631726",
+   "DOI:10.1101/2025.01.08.631726",
+   "DOI:10.1101/2025.01.08.631726",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_25_system.html#ds-25-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-26-defensefinder-model-gap",
   "prompt": "Resolve DS-26 native host breadth, exact component activity, PDDEXK/FokI HHpred-domain interpretation, nuclease chemistry, complete phage breadth, molecular output, and DefenseFinder model coverage before minting narrower DS-26 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7208,9 +7235,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 344,
- "total_knowledge_gaps": 258,
- "total_source_entries": 338,
+ "total_discussions": 345,
+ "total_knowledge_gaps": 259,
+ "total_source_entries": 339,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

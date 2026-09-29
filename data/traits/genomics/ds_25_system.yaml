@@ -1,0 +1,206 @@
+identifier: traitmech:000473
+label: DS-25 system
+definition: A phage defense system in which an organism possesses a genome-encoded
+  DefensePredictor-discovered system 25 locus represented in the pinned DefenseFinder
+  model inventory by DS-25A and DS-25B custom HMM profiles.
+definition_source: DOI:10.1101/2025.01.08.631726
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: DS-25
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: DS-25__DS-25A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DS-25__DS-25B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1101/2025.01.08.631726
+  snippet: To test for anti-phage defense, we placed each TU with its native promoter
+    region on a low-copy number plasmid in E. coli MG1655 and then challenged these
+    strains with a panel of 24 diverse E. coli phages (fig. S2). In total, 45 (42%
+    of 106) of the cloned TUs produced smaller plaque sizes or reduced the efficiency
+    of plating (EOP) at least ten-fold relative to an empty vector control strain
+  notes: DeWeirdt et al. experimentally validated 45 predicted transcriptional units
+    as phage-defense systems in E. coli; the first-pass DS-25 record uses this source
+    only for the DefensePredictor DS naming context, not for an exact DS-25 phage
+    readout.
+- reference: DOI:10.1101/2025.01.08.631726
+  snippet: We refer to these validated TUs as DefensePredictor discovered Systems
+    (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A
+    is the first gene of DS-8.
+  notes: DeWeirdt et al. name validated transcriptional units as DefensePredictor
+    discovered Systems.
+- reference: DOI:10.1101/2025.01.08.631726
+  snippet: To begin elucidating the function of the 45 validated TUs, we further annotated
+    their protein domains (see Methods; table S6).
+  notes: DeWeirdt et al. describe Table S6 as a protein-domain annotation table for
+    the validated DS transcriptional units; the exact preprint DS-25 row was not recovered
+    in this curation pass.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DS-25 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+    learning model to discover novel prokaryotic immune systems | '
+  notes: The pinned DefenseFinder article registry maps the DS-25 source key to the
+    DeWeirdt et al. DefensePredictor preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-25__DS-25A                                    |                                                  |
+    DS-25                  | Custom                  | 80     |'
+  notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom
+    DS-25 profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-25__DS-25B                                    |                                                  |
+    DS-25                  | Custom                  | 40     |'
+  notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom
+    DS-25 profile.
+causal_graphs:
+- graph_id: ds_25_locus_profile_model
+  title: DS-25 locus profile model
+  description: Conservative system-level sketch linking the DS-25 DefensePredictor-discovered
+    system key to DS-25 system possession and the broader phage-defense-system trait
+    without resolving DS-25 component function or a phage activity readout.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DS-25 as a DefensePredictor-discovered system with
+    DS-25A and DS-25B custom HMM rows in the pinned DefenseFinder HMM inventory. It
+    does not assert the preprint working identifier, preprint Table S5/S6 rows, final
+    Science supplement rows, native host breadth, profile-to-protein correspondence,
+    DS-25A or DS-25B molecular activity, exact phage target breadth, or DefenseFinder
+    rule-level detection criteria.
+  nodes:
+  - node_id: ds_25_locus
+    label: DS-25 locus
+    node_type: GENETIC_ELEMENT
+    description: A DefensePredictor-discovered system 25 locus represented in the
+      pinned DefenseFinder HMM inventory by DS-25A and DS-25B custom profiles.
+  - node_id: ds_25_system_trait
+    label: DS-25 system
+    node_type: TRAIT
+    grounding: traitmech:000473
+    description: Possession of a genome-encoded DS-25 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ds_25_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ds_25_system_trait
+    description: DefenseFinder links the DS-25 source key to the DefensePredictor
+      preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom
+      profiles.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DS-25 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+        learning model to discover novel prokaryotic immune systems | '
+      notes: The pinned DefenseFinder article registry maps the DS-25 source key to
+        the DeWeirdt et al. DefensePredictor preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-25__DS-25A                                    |                                                  |
+        DS-25                  | Custom                  | 80     |'
+      notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom
+        DS-25 profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-25__DS-25B                                    |                                                  |
+        DS-25                  | Custom                  | 40     |'
+      notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom
+        DS-25 profile.
+  - subject: ds_25_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: DS-25 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631726
+      snippet: We refer to these validated TUs as DefensePredictor discovered Systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: DeWeirdt et al. name validated TUs as DefensePredictor discovered Systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DS-25 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+        learning model to discover novel prokaryotic immune systems | '
+      notes: The pinned DefenseFinder article registry maps the DS-25 source key to
+        the DeWeirdt et al. DefensePredictor preprint.
+discussions:
+- discussion_id: ds-25-defensefinder-model-gap
+  prompt: Resolve DS-25 working-identifier rows, preprint Table S5 and S6 context,
+    final Science supplement omission, native host breadth, DS-25A/DS-25B profile-to-protein
+    mapping, sensitive-phage breadth, molecular output, and rule-level DefenseFinder
+    criteria before minting narrower DS-25 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The DeWeirdt et al. preprint supports the DefensePredictor discovered
+    System naming convention, the pinned DefenseFinder article registry names DS-25
+    and maps it to that preprint, and the pinned HMM inventory records DS-25A and
+    DS-25B custom profile rows. DS-25 is absent from the final Science Table S6, S7,
+    and S8 files checked during this curation pass, the exact preprint per-TU rows
+    were not recovered, the pinned DefenseFinder rules table has no DS-25 row, and
+    the first-pass record does not resolve the working identifier, assayed phages,
+    phage readout, native host, profile-to-component mapping, component activities,
+    or complete detection criteria.
+  evidence:
+  - reference: DOI:10.1101/2025.01.08.631726
+    snippet: To test for anti-phage defense, we placed each TU with its native promoter
+      region on a low-copy number plasmid in E. coli MG1655 and then challenged these
+      strains with a panel of 24 diverse E. coli phages (fig. S2). In total, 45 (42%
+      of 106) of the cloned TUs produced smaller plaque sizes or reduced the efficiency
+      of plating (EOP) at least ten-fold relative to an empty vector control strain
+    notes: DeWeirdt et al. validate predicted transcriptional units by measuring plaquing
+      relative to an empty vector control strain.
+  - reference: DOI:10.1101/2025.01.08.631726
+    snippet: We refer to these validated TUs as DefensePredictor discovered Systems
+      (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+      DS-8A is the first gene of DS-8.
+    notes: DeWeirdt et al. name validated TUs as DSs.
+  - reference: DOI:10.1101/2025.01.08.631726
+    snippet: To begin elucidating the function of the 45 validated TUs, we further
+      annotated their protein domains (see Methods; table S6).
+    notes: DeWeirdt et al. describe Table S6 as further protein-domain annotation
+      of validated TUs.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| DS-25 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+      learning model to discover novel prokaryotic immune systems | '
+    notes: The pinned DefenseFinder article registry maps the DS-25 source key to
+      the DeWeirdt et al. DefensePredictor preprint.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-25__DS-25A                                    |                                                  |
+      DS-25                  | Custom                  | 80     |'
+    notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom
+      DS-25 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-25__DS-25B                                    |                                                  |
+      DS-25                  | Custom                  | 40     |'
+    notes: The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom
+      DS-25 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list DS-25, DS-25A, or DS-25B,
+      leaving complete component coverage and rule-level detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#ds_25_locus_profile_model
+  posed_by: codex
+  posed_date: '2026-09-29'
+curation_history:
+- timestamp: '2026-09-29T20:21:54Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DS-25 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; kept the graph
+    at DS-25 source-key and HMM-profile level because preprint Table S5/S6 rows, final
+    Science supplement rows, and rule rows remain unresolved, and proposals/metpo_traitmech_v350
+    reserves the replacement placeholder.
+  llm_assisted: true
+- timestamp: '2026-09-29T20:21:55Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DS-25 system canonical_examples and left them empty because the
+    pinned DefenseFinder registries support DS-25 system identity and custom HMM coverage
+    but not a direct named native microbial isolate exemplar with experimentally verified
+    endogenous DS-25 activity. No paid research was used.
+  llm_assisted: true
