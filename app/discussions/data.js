@@ -1969,6 +1969,39 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_2_system.html#ds-2-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-30-lamassu-family-model-gap",
+  "prompt": "Resolve DS-30 native host breadth, exact profile-to-protein correspondence, DS-30/Lamassu-Fam component activities, Lamassu subtype and effector chemistry, LmuC requirement, complete phage breadth, and DS-30-specific DefenseFinder rule-level criteria before minting narrower DS-30 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-30 system",
+  "source_id": "traitmech:000470",
+  "source_file": "ds_30_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_30_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-30 as the defensive ABC3 transcriptional unit and final Science Tables S6/S7/S8 map it to four product accessions, a SECphi27 phage readout, four HHpred-domain rows, and display name DS-30. The pinned DefenseFinder HMM inventory records four Lamassu-Fam DS-30 custom profile rows. The pinned DefenseFinder rules table only lists generic Lamassu-Fam effector-subtype rows, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, LmuC requirement, molecular output, subtype-specific Lamassu chemistry, or endogenous DS-30 activity.",
+  "num_experiments": 0,
+  "num_evidence": 13,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_30_system.html#ds-30-lamassu-family-model-gap"
+ },
+ {
   "discussion_id": "ds-31-defensefinder-model-gap",
   "prompt": "Resolve DS-31 native host breadth, exact single-component activity, profile-to-protein mapping, PDDEXK HHpred-domain interpretation, complete phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-31 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7119,9 +7152,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 341,
- "total_knowledge_gaps": 255,
- "total_source_entries": 335,
+ "total_discussions": 342,
+ "total_knowledge_gaps": 256,
+ "total_source_entries": 336,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

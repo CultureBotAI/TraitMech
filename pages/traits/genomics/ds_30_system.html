@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DS-30 system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>DS-30 system</h1>
+    <p class="curie"><code>traitmech:000470</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses the four-gene DefensePredictor-discovered system 30 locus cataloged as working transcriptional unit ABC3 and whose plasmid expression in E. coli MG1655 reduced bacteriophage plaquing.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>DS-30 locus reduces bacteriophage plaquing</h2>
+      <p class="meta">Conservative system-level sketch linking the four-gene DS-30 locus to reduced bacteriophage plaquing without resolving DS-30 component functions or molecular output.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-30 as the validated ABC3 transcriptional unit with four product accessions, ABC-3C, SMC-family, and FtsL HHpred-domain rows, and four Lamassu-Fam custom HMM-profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, DS-30/Lamassu-Fam component activity, Lamassu subtype chemistry, LmuC requirement, complete phage breadth, or DS-30-specific DefenseFinder rule-level detection criteria.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>DS-30 locus reduces bacteriophage plaquing</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for DS-30 system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>DS-30 locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>reduced bacteriophage plaquing</strong>
+            <code>RO:0002326</code>
+            <p>The DS-30/ABC3 locus contributes to reduced bacteriophage plaquing in heterologous E. coli MG1655 plasmid-expression assays.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1126/science.adv7924</code>
+                <span class="evidence-snippet">To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain</span>
+                <span class="meta">DeWeirdt et al. describe the plasmid-based phage challenge used to validate predicted transcriptional units.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+                <span class="evidence-snippet">ABC3	NZ_QOYR01000032.1	GCF_003333645.1	+	True	False	True	True	DefensePredictor hits	1906	4621	hypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein	WP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1	8.95063706554687	6.906754778648663	True	True	Predicted novel defense gene	DS-30</span>
+                <span class="meta">The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+                <span class="evidence-snippet">SECphi27	5.1	pLAND	24-05-31_EV_CRDO_BRNT_ABC3.png	100000000	ABC3	24-05-31	24-05-31_EV_CRDO_BRNT_ABC3.png	5	1	Y	100000	3		True		M9	30</span>
+                <span class="meta">The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+                <span class="evidence-snippet">ABC3	DS-30	True</span>
+                <span class="meta">The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>reduced bacteriophage plaquing</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>DS-30 system</strong>
+            <code>METPO:2007700</code>
+            <p>DS-30-mediated phage plaquing reduction realizes the DS-30 system trait.</p>
+            <ul>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+                <span class="evidence-snippet">ABC3	NZ_QOYR01000032.1	GCF_003333645.1	+	True	False	True	True	DefensePredictor hits	1906	4621	hypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein	WP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1	8.95063706554687	6.906754778648663	True	True	Predicted novel defense gene	DS-30</span>
+                <span class="meta">The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+                <span class="evidence-snippet">SECphi27	5.1	pLAND	24-05-31_EV_CRDO_BRNT_ABC3.png	100000000	ABC3	24-05-31	24-05-31_EV_CRDO_BRNT_ABC3.png	5	1	Y	100000	3		True		M9	30</span>
+                <span class="meta">The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.</span>
+              </li>
+
+              <li>
+                <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+                <span class="evidence-snippet">ABC3	DS-30	True</span>
+                <span class="meta">The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1126/science.adv7924</code>
+                <span class="evidence-snippet">We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8.</span>
+                <span class="meta">The DS nomenclature is used for DefensePredictor discovered systems.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>DS-30 system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>Lamassu system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>DS-30 system possession is represented in DefenseFinder by DS-30 custom profiles under Lamassu-Fam.</p>
+            <ul>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Lamassu-Fam__Lmu_DS-30A                          |                                                  | Lamassu-Fam            | Custom                  | 50     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records Lamassu-Fam__Lmu_DS-30A as a custom Lamassu-Fam profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Lamassu-Fam__LmuA_DS-30B                         |                                                  | Lamassu-Fam            | Custom                  | 60     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuA_DS-30B as a custom Lamassu-Fam profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Lamassu-Fam__LmuB_DS-30D                         |                                                  | Lamassu-Fam            | Custom                  | 150    |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuB_DS-30D as a custom Lamassu-Fam profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Lamassu-Fam__LmuC_DS-30C                         |                                                  | Lamassu-Fam            | Custom                  | 20     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuC_DS-30C as a custom Lamassu-Fam profile.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1126/science.adv7924</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/lamassu_system.html" >Lamassu system <code>traitmech:000232</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (6)</h2>
+      <ul class="synonyms">
+
+        <li>DS-30 <span class="meta">EXACT_SYNONYM · https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</span></li>
+
+        <li>ABC3 <span class="meta">RELATED_SYNONYM · https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</span></li>
+
+        <li>Lamassu-Fam__Lmu_DS-30A <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Lamassu-Fam__LmuA_DS-30B <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Lamassu-Fam__LmuB_DS-30D <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Lamassu-Fam__LmuC_DS-30C <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="ds-30-lamassu-family-model-gap">
+        <p class="discussion-prompt">Resolve DS-30 native host breadth, exact profile-to-protein correspondence, DS-30/Lamassu-Fam component activities, Lamassu subtype and effector chemistry, LmuC requirement, complete phage breadth, and DS-30-specific DefenseFinder rule-level criteria before minting narrower DS-30 mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>ds-30-lamassu-family-model-gap</code>
+          · raised by codex
+          · 2026-09-29
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#ds_30_locus_reduces_phage_plaquing</code>
+        </p>
+
+
+        <p>DeWeirdt et al. support DS-30 as the defensive ABC3 transcriptional unit and final Science Tables S6/S7/S8 map it to four product accessions, a SECphi27 phage readout, four HHpred-domain rows, and display name DS-30. The pinned DefenseFinder HMM inventory records four Lamassu-Fam DS-30 custom profile rows. The pinned DefenseFinder rules table only lists generic Lamassu-Fam effector-subtype rows, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, LmuC requirement, molecular output, subtype-specific Lamassu chemistry, or endogenous DS-30 activity.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1126/science.adv7924</code>
+
+            <blockquote>We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx</code>
+
+            <blockquote>ABC3	NZ_QOYR01000032.1	GCF_003333645.1	+	True	False	True	True	DefensePredictor hits	1906	4621	hypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein	WP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1	8.95063706554687	6.906754778648663	True	True	Predicted novel defense gene	DS-30</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx</code>
+
+            <blockquote>SECphi27	5.1	pLAND	24-05-31_EV_CRDO_BRNT_ABC3.png	100000000	ABC3	24-05-31	24-05-31_EV_CRDO_BRNT_ABC3.png	5	1	Y	100000	3		True		M9	30</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>ABC3	DS-30	True</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>ABC3	2.0	182.0	WP_000534626.1	ABC-3C C-term	PF20275.3	CTD10 ; C-terminal domain 10 of the ABC-three component (ABC-3C) systems	hhpred_7102862.hhr	26.0	176.0	1.0	2024-07-30 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>ABC3	3.0	77.0	WP_000628292.1	ABC-3C Mid	PF20293.3	MC6 ; ABC-three component (ABC-3C) system Middle Component 6	hhpred_3406401.hhr	1.0	75.0	1.0	2024-07-30 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>ABC3	4.0	565.0	WP_087889773.1	ABC ATPase	5XEI_A	Chromosome partition protein Smc; Condensin, Smc, head domain, ABC-ATPase,	hhpred_6417130.hhr	1.0	540.0	1.0	2024-07-30 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx</code>
+
+            <blockquote>ABC3	1.0	86.0	WP_001553315.1	FtsL	8HHF_L	Cell division protein FtsL; Bacterial cell division, divisome, FtsB, FtsL, FtsQ, FtsBLQ, membrane protein complex, heterotrimer, MEMBRANE PROTEIN	hhpred_2515914.hhr	2.0	53.0	0.942	2024-07-30 00:00:00</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__Lmu_DS-30A                          |                                                  | Lamassu-Fam            | Custom                  | 50     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__LmuA_DS-30B                         |                                                  | Lamassu-Fam            | Custom                  | 60     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__LmuB_DS-30D                         |                                                  | Lamassu-Fam            | Custom                  | 150    |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__LmuC_DS-30C                         |                                                  | Lamassu-Fam            | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-29T17:57:26Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted DS-30 system as a DOI-backed GENOMICS TraitRecord under Lamassu system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; kept the graph at ABC3 transcriptional-unit level because native host breadth, exact DS-30 profile-to-component mapping, Lamassu subtype chemistry, LmuC requirement, complete phage breadth, and DefenseFinder rule-level criteria remain unresolved, and proposals/metpo_traitmech_v347 reserves the replacement placeholder.</p>
+        </li>
+
+        <li>
+          <time>2026-09-29T17:57:27Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed DS-30 system canonical_examples and left them empty because DeWeirdt et al. directly support cloned ABC3 assays in E. coli MG1655 and Lamassu-Fam DS-30 profile rows, but not a direct named native microbial isolate exemplar with experimentally verified endogenous DS-30 activity. No paid research was used.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/ds_30_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/ds_30_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/ds_30_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/ds_30_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000470" target="_blank" rel="noopener"><code>traitmech:000470</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking the four-gene DS-30 locus to reduced bacteriophage plaquing without resolving DS-30 component functions or molecular output.", "edges": [{"description": "The DS-30/ABC3 locus contributes to reduced bacteriophage plaquing in heterologous E. coli MG1655 plasmid-expression assays.", "evidence": [{"notes": "DeWeirdt et al. describe the plasmid-based phage challenge used to validate predicted transcriptional units.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "ABC3\tNZ_QOYR01000032.1\tGCF_003333645.1\t+\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t1906\t4621\thypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein\tWP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1\t8.95063706554687\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-30"}, {"notes": "The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "SECphi27\t5.1\tpLAND\t24-05-31_EV_CRDO_BRNT_ABC3.png\t100000000\tABC3\t24-05-31\t24-05-31_EV_CRDO_BRNT_ABC3.png\t5\t1\tY\t100000\t3\t\tTrue\t\tM9\t30"}, {"notes": "The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx", "snippet": "ABC3\tDS-30\tTrue"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_30_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-30-mediated phage plaquing reduction realizes the DS-30 system trait.", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "ABC3\tNZ_QOYR01000032.1\tGCF_003333645.1\t+\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t1906\t4621\thypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein\tWP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1\t8.95063706554687\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-30"}, {"notes": "The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "SECphi27\t5.1\tpLAND\t24-05-31_EV_CRDO_BRNT_ABC3.png\t100000000\tABC3\t24-05-31\t24-05-31_EV_CRDO_BRNT_ABC3.png\t5\t1\tY\t100000\t3\t\tTrue\t\tM9\t30"}, {"notes": "The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx", "snippet": "ABC3\tDS-30\tTrue"}, {"notes": "The DS nomenclature is used for DefensePredictor discovered systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_30_system_trait"}, {"description": "DS-30 system possession is represented in DefenseFinder by DS-30 custom profiles under Lamassu-Fam.", "evidence": [{"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__Lmu_DS-30A as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__Lmu_DS-30A                          |                                                  | Lamassu-Fam            | Custom                  | 50     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuA_DS-30B as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuA_DS-30B                         |                                                  | Lamassu-Fam            | Custom                  | 60     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuB_DS-30D as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuB_DS-30D                         |                                                  | Lamassu-Fam            | Custom                  | 150    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuC_DS-30C as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuC_DS-30C                         |                                                  | Lamassu-Fam            | Custom                  | 20     |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_30_system_trait", "target": "lamassu_system"}], "evidence_rows": [{"description": "The DS-30/ABC3 locus contributes to reduced bacteriophage plaquing in heterologous E. coli MG1655 plasmid-expression assays.", "edge_id": "edge-1", "evidence": [{"notes": "DeWeirdt et al. describe the plasmid-based phage challenge used to validate predicted transcriptional units.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "ABC3\tNZ_QOYR01000032.1\tGCF_003333645.1\t+\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t1906\t4621\thypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein\tWP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1\t8.95063706554687\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-30"}, {"notes": "The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "SECphi27\t5.1\tpLAND\t24-05-31_EV_CRDO_BRNT_ABC3.png\t100000000\tABC3\t24-05-31\t24-05-31_EV_CRDO_BRNT_ABC3.png\t5\t1\tY\t100000\t3\t\tTrue\t\tM9\t30"}, {"notes": "The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx", "snippet": "ABC3\tDS-30\tTrue"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-30 locus", "target": "reduced bacteriophage plaquing"}, {"description": "DS-30-mediated phage plaquing reduction realizes the DS-30 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id ABC3 to DS_name DS-30, marks the cloned transcriptional unit as defensive, and records four product accessions in NZ_QOYR01000032.1 positions 1906-4621.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "ABC3\tNZ_QOYR01000032.1\tGCF_003333645.1\t+\tTrue\tFalse\tTrue\tTrue\tDefensePredictor hits\t1906\t4621\thypothetical protein, hypothetical protein, hypothetical protein, DUF2326 domain-containing protein\tWP_001553315.1, WP_000534626.1, WP_000628292.1, WP_087889773.1\t8.95063706554687\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-30"}, {"notes": "The final Science supplementary Table S7 Systems sheet reports an ABC3 assay row with a SECphi27 phage readout, a smaller-plaque-size call, and a -log(EOP) value of 3.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "SECphi27\t5.1\tpLAND\t24-05-31_EV_CRDO_BRNT_ABC3.png\t100000000\tABC3\t24-05-31\t24-05-31_EV_CRDO_BRNT_ABC3.png\t5\t1\tY\t100000\t3\t\tTrue\t\tM9\t30"}, {"notes": "The final Science supplementary Table S8 maps ABC3 to replicated display name DS-30.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx", "snippet": "ABC3\tDS-30\tTrue"}, {"notes": "The DS nomenclature is used for DefensePredictor discovered systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "target": "DS-30 system"}, {"description": "DS-30 system possession is represented in DefenseFinder by DS-30 custom profiles under Lamassu-Fam.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__Lmu_DS-30A as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__Lmu_DS-30A                          |                                                  | Lamassu-Fam            | Custom                  | 50     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuA_DS-30B as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuA_DS-30B                         |                                                  | Lamassu-Fam            | Custom                  | 60     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuB_DS-30D as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuB_DS-30D                         |                                                  | Lamassu-Fam            | Custom                  | 150    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lamassu-Fam__LmuC_DS-30C as a custom Lamassu-Fam profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuC_DS-30C                         |                                                  | Lamassu-Fam            | Custom                  | 20     |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-30 system", "target": "Lamassu system"}], "graph_id": "ds_30_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A four-gene DefensePredictor-discovered system 30 locus cataloged as ABC3 and represented in the pinned DefenseFinder HMM inventory by four Lamassu-Fam DS-30 custom profiles.", "grounding": null, "id": "ds_30_locus", "is_orphan": false, "label": "DS-30 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-30 Lamassu-family phage-defense system.", "grounding": "traitmech:000470", "id": "ds_30_system_trait", "is_orphan": false, "label": "DS-30 system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Lamassu phage-defense system.", "grounding": "traitmech:000232", "id": "lamassu_system", "is_orphan": false, "label": "Lamassu system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage plaquing in cells carrying cloned ABC3.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures DS-30 as the validated ABC3 transcriptional unit with four product accessions, ABC-3C, SMC-family, and FtsL HHpred-domain rows, and four Lamassu-Fam custom HMM-profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, DS-30/Lamassu-Fam component activity, Lamassu subtype chemistry, LmuC requirement, complete phage breadth, or DS-30-specific DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-30 locus reduces bacteriophage plaquing"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-29 17:57 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 865 TraitRecords
+      · embedding coverage 55.1%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
