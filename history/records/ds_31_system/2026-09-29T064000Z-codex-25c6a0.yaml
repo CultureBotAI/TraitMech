@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_31_system.yaml
+  slug: ds_31_system
+session:
+  id: 2026-09-29T064000Z-codex-25c6a0
+  timestamp: '2026-09-29T06:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add DS-31 system trait
+  details: Added data/traits/genomics/ds_31_system.yaml as a DOI-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, history, or prior proposal record. The record quotes the final
+    Science Table S6 RED7 row, Table S7 Bas19 EOP row, Table S8 DS-31 display and PDDEXK HHpred
+    rows, and the pinned DefenseFinder DS-31 article and HMM rows; keeps the graph at RED7
+    transcriptional-unit level; leaves PDDEXK activity, native-host, endogenous-activity,
+    and rule-level interpretation as an open knowledge gap; and reserves METPO:1040800 in
+    proposals/metpo_traitmech_v331.
