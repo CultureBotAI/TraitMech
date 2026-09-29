@@ -1,6 +1,6 @@
 node_label	node_type	node_count	example_files
 restricted phage propagation	BIOLOGICAL_PROCESS	84	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
-reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	40	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
+reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	41	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	12	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_her_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
@@ -1450,6 +1450,7 @@ hala channel activation	MOLECULAR_FUNCTION	1	data/traits/genomics/hailong_system
 host cell growth arrest	STATE	1	data/traits/genomics/hailong_system.yaml
 hec-02 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_02_system.yaml
 hec-03 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_03_system.yaml
+hec-04 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_04_system.yaml
 hesat locus	GENETIC_ELEMENT	1	data/traits/genomics/hesat_system.yaml
 hna locus	GENETIC_ELEMENT	1	data/traits/genomics/hna_system.yaml
 phage ssb stimulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml

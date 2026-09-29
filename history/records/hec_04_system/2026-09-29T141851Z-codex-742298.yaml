@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_04_system.yaml
+  slug: hec_04_system
+session:
+  id: 2026-09-29T141851Z-codex-742298
+  timestamp: '2026-09-29T14:18:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add HEC-04 system trait
+  details: Minted traitmech:000465 for HEC-04 system as a Payne et al. DOI-backed GENOMICS
+    TraitRecord under phage defense system; added pinned DefenseFinder article and HMM inventory
+    evidence, kept the first causal graph at non-mechanistic locus-to-phage-plaquing level
+    because the pinned rules table has no HEC-04 row, reserved METPO:1041900 in proposals/metpo_traitmech_v342,
+    and left the native host breadth, sensitive-phage breadth, ATPase-TOPRIM molecular output,
+    and rule-level detection criteria as an attached knowledge gap.
