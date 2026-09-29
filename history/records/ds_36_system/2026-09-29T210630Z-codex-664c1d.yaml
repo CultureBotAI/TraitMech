@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_36_system.yaml
+  slug: ds_36_system
+session:
+  id: 2026-09-29T210630Z-codex-664c1d
+  timestamp: '2026-09-29T21:06:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DS-36 system trait
+  details: Minted traitmech:000474 as a DS-36 system GENOMICS record under phage defense system,
+    citing the DeWeirdt et al. DefensePredictor preprint and the pinned DefenseFinder DS-36
+    article/HMM registries. The record keeps DS-36__DS-36 as a related profile-key synonym,
+    adds a nonmechanistic DS-36 source-key/profile-scope graph, leaves canonical_examples
+    empty, opens a knowledge gap for unresolved preprint Table S5/S6 rows, phage readouts,
+    native host breadth, profile-to-protein mapping, molecular output, and DefenseFinder rules
+    coverage, and reserves METPO:1042800 in proposals/metpo_traitmech_v351.
