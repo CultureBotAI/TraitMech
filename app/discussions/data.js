@@ -1913,6 +1913,34 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_28_system.html#ds-28-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-29-defensefinder-model-gap",
+  "prompt": "Resolve DS-29 native host breadth, exact single-component activity, profile-to-protein mapping, HEPN-like HHpred-domain interpretation, complete phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-29 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-29 system",
+  "source_id": "traitmech:000453",
+  "source_file": "ds_29_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_29_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-29 as the defensive HEP3 transcriptional unit and final Science Tables S6/S7/S8 map it to product accession WP_061089765.1, a Bas60 phage readout, display name DS-29, and a HEPN-like HHpred row. The pinned DefenseFinder HMM inventory records one DS-29 custom profile row. The pinned rules table has no DS-29 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, HEPN-like activity, molecular output, or endogenous DS-29 activity.",
+  "num_experiments": 0,
+  "num_evidence": 8,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_29_system.html#ds-29-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-2-defensefinder-model-gap",
   "prompt": "Resolve DS-2 native host breadth, exact DS-2 component functions, DS-2C profile-to-component mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-2 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6636,9 +6664,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 324,
- "total_knowledge_gaps": 238,
- "total_source_entries": 318,
+ "total_discussions": 325,
+ "total_knowledge_gaps": 239,
+ "total_source_entries": 319,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
