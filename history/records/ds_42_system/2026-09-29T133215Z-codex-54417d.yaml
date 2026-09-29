@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_42_system.yaml
+  slug: ds_42_system
+session:
+  id: 2026-09-29T133215Z-codex-54417d
+  timestamp: '2026-09-29T13:32:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-42 system
+  details: Added the DOI-backed DS-42 system genomics TraitRecord under phage defense system,
+    with Science supplementary Table S6/S7/S8 rows for the PRO1 transcriptional unit, Bas1
+    plaquing readout, replicated DS-42 display mapping, MBL hydrolase and CHS5_N/Dimerization
+    HHpred rows, pinned DefenseFinder article and HMM inventory rows, an open DS-42 DefenseFinder
+    model knowledge gap, and proposals/metpo_traitmech_v341 reserving METPO:1041800.
