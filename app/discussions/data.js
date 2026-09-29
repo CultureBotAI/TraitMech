@@ -2292,6 +2292,37 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_41_system.html#ds-41-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-42-defensefinder-model-gap",
+  "prompt": "Resolve DS-42 native host breadth, exact component activity, profile-to-protein mapping, MBL hydrolase and CHS5_N interpretations, WP_249925928.1 function, complete phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-42 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-42 system",
+  "source_id": "traitmech:000464",
+  "source_file": "ds_42_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_42_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-42 as the defensive PRO1 transcriptional unit and final Science Tables S6/S7/S8 map it to three product accessions, a Bas1 phage readout, display name DS-42, a high-probability MBL hydrolase HHpred row, and a moderate-probability CHS5_N/Dimerization HHpred row. The pinned DefenseFinder HMM inventory records three DS-42 custom profile rows. The pinned rules table has no DS-42 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, component activities, molecular output, or endogenous DS-42 activity.",
+  "num_experiments": 0,
+  "num_evidence": 11,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_42_system.html#ds-42-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-4-defensefinder-model-gap",
   "prompt": "Resolve DS-4 native host breadth, exact five-component activities, DS-4 profile-to-protein mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-4 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6958,9 +6989,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 335,
- "total_knowledge_gaps": 249,
- "total_source_entries": 329,
+ "total_discussions": 336,
+ "total_knowledge_gaps": 250,
+ "total_source_entries": 330,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
