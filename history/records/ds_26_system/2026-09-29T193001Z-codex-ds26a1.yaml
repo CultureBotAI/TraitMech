@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_26_system.yaml
+  slug: ds_26_system
+session:
+  id: 2026-09-29T193001Z-codex-ds26a1
+  timestamp: '2026-09-29T19:30:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Add DS-26 system trait
+  details: Minted traitmech:000472 for the DS-26 single-gene DefensePredictor-discovered
+    phage-defense system; added DOI-backed DeWeirdt et al. evidence, stable PMC
+    spreadsheet evidence for the NERD transcriptional unit, Bas25 and Bas19 plaquing
+    readouts, the Table S8 DS-26 display row, and the PDDEXK/FokI HHpred-domain row,
+    a nonmechanistic locus-to-plaquing graph, an open mechanism and DefenseFinder
+    model gap because the pinned DefenseFinder article, HMM, and rules tables have
+    no exact DS-26 row, an empty canonical-example decision for the lack of a native
+    experimentally verified endogenous DS-26 exemplar, and the v349 METPO Scope-A
+    lift reserving METPO:1042600.
