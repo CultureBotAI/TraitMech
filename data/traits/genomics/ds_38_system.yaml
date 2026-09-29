@@ -61,12 +61,12 @@ evidence:
     \ CTCF,LIM domain-binding protein 1; PROTEIN-DNA COMPLEX, DNA BINDING PROTEIN,\
     \ transcription factor, zinc fingers, insulator/chromatin architecture, transcription-dna\
     \ complex, TRANSCRIPTION\thhpred_7553560.hhr\t206.0\t364.0\t0.9902\t2024-04-15\
-    \ 00:00:00"
+    \ 00:00:00\t\t"
   notes: The final Science supplementary Table S8 reports a high-probability zinc-finger
     HHpred hit for WP_001313577.1 in HEP2.
 - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
   snippet: "HEP2\t1.0\t366.0\tWP_001313577.1\tHEPN\tPF05168.18\tHEPN ; HEPN domain\t\
-    hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00"
+    hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00\t\t"
   notes: The final Science supplementary Table S8 reports a high-probability HEPN
     HHpred hit for WP_001313577.1 in HEP2.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
@@ -158,12 +158,12 @@ causal_graphs:
         \ CTCF,LIM domain-binding protein 1; PROTEIN-DNA COMPLEX, DNA BINDING PROTEIN,\
         \ transcription factor, zinc fingers, insulator/chromatin architecture, transcription-dna\
         \ complex, TRANSCRIPTION\thhpred_7553560.hhr\t206.0\t364.0\t0.9902\t2024-04-15\
-        \ 00:00:00"
+        \ 00:00:00\t\t"
       notes: The final Science supplementary Table S8 reports a high-probability zinc-finger
         HHpred hit for WP_001313577.1 in HEP2.
     - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
       snippet: "HEP2\t1.0\t366.0\tWP_001313577.1\tHEPN\tPF05168.18\tHEPN ; HEPN domain\t\
-        hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00"
+        hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00\t\t"
       notes: The final Science supplementary Table S8 reports a high-probability HEPN
         HHpred hit for WP_001313577.1 in HEP2.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
@@ -266,12 +266,12 @@ discussions:
       \ CTCF,LIM domain-binding protein 1; PROTEIN-DNA COMPLEX, DNA BINDING PROTEIN,\
       \ transcription factor, zinc fingers, insulator/chromatin architecture, transcription-dna\
       \ complex, TRANSCRIPTION\thhpred_7553560.hhr\t206.0\t364.0\t0.9902\t2024-04-15\
-      \ 00:00:00"
+      \ 00:00:00\t\t"
     notes: The final Science supplementary Table S8 reports a high-probability zinc-finger
       HHpred hit for WP_001313577.1 in HEP2.
   - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
     snippet: "HEP2\t1.0\t366.0\tWP_001313577.1\tHEPN\tPF05168.18\tHEPN ; HEPN domain\t\
-      hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00"
+      hhpred_7553560.hhr\t22.0\t153.0\t0.9662\t2024-04-15 00:00:00\t\t"
     notes: The final Science supplementary Table S8 reports a high-probability HEPN
       HHpred hit for WP_001313577.1 in HEP2.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md

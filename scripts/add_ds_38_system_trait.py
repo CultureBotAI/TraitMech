@@ -164,7 +164,7 @@ def table_s8_zf_evidence() -> dict[str, str]:
             "factor, zinc fingers, insulator/chromatin architecture, "
             "transcription-dna complex, TRANSCRIPTION"
             "\thhpred_7553560.hhr\t206.0\t364.0\t0.9902"
-            "\t2024-04-15 00:00:00"
+            "\t2024-04-15 00:00:00\t\t"
         ),
         "notes": (
             "The final Science supplementary Table S8 reports a "
@@ -180,7 +180,7 @@ def table_s8_hepn_evidence() -> dict[str, str]:
         "snippet": (
             "HEP2\t1.0\t366.0\tWP_001313577.1\tHEPN\tPF05168.18"
             "\tHEPN ; HEPN domain\thhpred_7553560.hhr\t22.0\t153.0"
-            "\t0.9662\t2024-04-15 00:00:00"
+            "\t0.9662\t2024-04-15 00:00:00\t\t"
         ),
         "notes": (
             "The final Science supplementary Table S8 reports a "
