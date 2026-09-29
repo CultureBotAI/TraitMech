@@ -505,6 +505,11 @@ when the new record changes child counts, series families, or overlap scores.
 Inspect those deltas before changing tests; do not preserve a stale assertion
 that `--unresearched-only` is equivalent to only `BUILD_CAUSAL_GRAPH`, because
 `CURATE_ROOT_WITH_SUBTYPES` is also a valid unresearched mechanism action.
+Rendered trait pages include corpus totals and embedding coverage in the
+footer, so a single new record can legitimately rewrite every existing
+`pages/traits/**/*.html` file; inspect a representative existing-page diff and
+verify it is limited to footer count/coverage churn before committing the
+regenerated pages.
 
 ## Review and merge
 
