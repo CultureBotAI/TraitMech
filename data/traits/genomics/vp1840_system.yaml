@@ -36,11 +36,11 @@ evidence:
   notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid used
     to express vp1840 behind the lac promoter.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-  snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+  snippet: "VP1840\tBas21\t2e-09"
   notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout as
     a Fold Change value of 2e-09.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-  snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+  snippet: "VP1840\tLL1\t0"
   notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout as
     a Fold Change value of 0.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
@@ -116,11 +116,11 @@ causal_graphs:
       notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid
         used to express vp1840 behind the lac promoter.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+      snippet: "VP1840\tBas21\t2e-09"
       notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
         as a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+      snippet: "VP1840\tLL1\t0"
       notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout
         as a Fold Change value of 0.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
@@ -146,11 +146,11 @@ causal_graphs:
       system trait.
     evidence:
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+      snippet: "VP1840\tBas21\t2e-09"
       notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
         as a Fold Change value of 2e-09.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-      snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+      snippet: "VP1840\tLL1\t0"
       notes: Supplementary Table 9 identifies the VP1840/LL1 phage-plating readout
         as a Fold Change value of 0.
   - subject: vp1840_system_trait
@@ -200,7 +200,7 @@ discussions:
     notes: Supplementary Table 12 records the VSV105-vp1840 lac-expression plasmid
       used to express vp1840 behind the lac promoter.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx
-    snippet: "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
+    snippet: "VP1840\tBas21\t2e-09"
     notes: Supplementary Table 9 identifies the VP1840/Bas21 phage-plating readout
       as a Fold Change value of 2e-09.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
@@ -268,4 +268,11 @@ curation_history:
   changes: Quoted the Supplementary Table 9 Fold Change header in the Bas21 and LL1
     snippets and neutralized unsupported VP1840 host-clade phrasing to bacteriophage
     wording.
+  llm_assisted: true
+- timestamp: '2026-09-29T03:45:05Z'
+  curator: codex
+  action: UNSTITCHED_PHAGE_PLATING_SNIPPETS
+  changes: Removed the non-contiguous Supplementary Table 9 Fold Change header prefix
+    from the Bas21 and LL1 snippets so each phage-plating snippet quotes only a contiguous
+    data row.
   llm_assisted: true

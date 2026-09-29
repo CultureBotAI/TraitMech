@@ -45,6 +45,7 @@ CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-29T02:26:24Z"
 EVIDENCE_CLARIFICATION_TIMESTAMP = "2026-09-29T02:51:42Z"
 PSIBLAST_QUERY_CLARIFICATION_TIMESTAMP = "2026-09-29T03:13:39Z"
 PHAGE_PLATING_SCOPE_TIMESTAMP = "2026-09-29T03:27:44Z"
+TABLE9_CONTIGUOUS_SNIPPETS_TIMESTAMP = "2026-09-29T03:45:05Z"
 
 IDENTIFIER = "traitmech:000450"
 PROPOSAL = "proposals/metpo_traitmech_v327"
@@ -56,8 +57,8 @@ DISCOVERY_SNIPPET = (
 VP1840_CLONE_SNIPPET = (
     "VP_RS08920\tVp1840\tY\tWP_005483293.1 \tHypothetical Protein"
 )
-VP1840_BAS21_SNIPPET = "Strain\tPhage\tFold Change\tNotes\nVP1840\tBas21\t2e-09"
-VP1840_LL1_SNIPPET = "Strain\tPhage\tFold Change\tNotes\nVP1840\tLL1\t0"
+VP1840_BAS21_SNIPPET = "VP1840\tBas21\t2e-09"
+VP1840_LL1_SNIPPET = "VP1840\tLL1\t0"
 VP1840_CONSTRUCT_SNIPPET = (
     "VSV105-vp1840\tVSV105 carrying gene vp1840 behind the lac promoter, "
     "cloned into KpnI by In-Fusion\tThis Study"
@@ -479,6 +480,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=PHAGE_PLATING_SCOPE_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="UNSTITCHED_PHAGE_PLATING_SNIPPETS",
+        changes=(
+            "Removed the non-contiguous Supplementary Table 9 Fold Change "
+            "header prefix from the Bas21 and LL1 snippets so each "
+            "phage-plating snippet quotes only a contiguous data row."
+        ),
+        llm_assisted=True,
+        timestamp=TABLE9_CONTIGUOUS_SNIPPETS_TIMESTAMP,
     )
     validate_output(record)
 
