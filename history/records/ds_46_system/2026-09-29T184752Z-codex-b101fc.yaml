@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_46_system.yaml
+  slug: ds_46_system
+session:
+  id: 2026-09-29T184752Z-codex-b101fc
+  timestamp: '2026-09-29T18:47:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Add DS-46 system trait
+  details: Minted traitmech:000471 for the DS-46 two-gene phage-defense system; added DOI-backed
+    DeWeirdt et al. evidence, stable PMC spreadsheet evidence for the RMRT transcriptional
+    unit on NZ_RRVG01000021.1, a nonmechanistic locus-to-plaquing graph under phage defense
+    system, open gaps for missing phage-specific Table S7 rows, Table S8 display-name and
+    HHpred-domain rows, DefenseFinder article/HMM/rules coverage, native host breadth, complete
+    phage breadth, exact component activities, molecular output, and endogenous DS-46 activity,
+    an empty canonical-example decision for the lack of a native experimentally verified endogenous
+    DS-46 exemplar, and the v348 METPO Scope-A lift reserving METPO:1042500.
