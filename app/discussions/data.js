@@ -2116,6 +2116,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ds_35_system.html#ds-35-defensefinder-model-gap"
  },
  {
+  "discussion_id": "ds-37-defensefinder-model-gap",
+  "prompt": "Resolve DS-37 native host breadth, exact component activity, profile-to-protein mapping, low-probability PDDEXK HHpred-domain interpretation, nuclease chemistry, complete phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower DS-37 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DS-37 system",
+  "source_id": "traitmech:000459",
+  "source_file": "ds_37_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ds_37_locus_reduces_phage_plaquing"
+  ],
+  "rationale": "DeWeirdt et al. support DS-37 as the defensive SC24 transcriptional unit and final Science Tables S6/S7/S8 map it to one product accession, Bas1 and Bas9 phage readouts, display name DS-37, and one low-probability PDDEXK HHpred row. The pinned DefenseFinder HMM inventory records one DS-37 custom profile row. The pinned rules table has no DS-37 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, PDDEXK domain interpretation, nuclease chemistry, molecular output, or endogenous DS-37 activity.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1126/science.adv7924",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ds_37_system.html#ds-37-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "ds-3-defensefinder-model-gap",
   "prompt": "Resolve DS-3 native host breadth, exact PIN ribonuclease activity, DS-3 profile-to-protein mapping, sensitive-phage breadth, molecular output, and rule-level detection criteria before minting narrower DS-3 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6811,9 +6840,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 330,
- "total_knowledge_gaps": 244,
- "total_source_entries": 324,
+ "total_discussions": 331,
+ "total_knowledge_gaps": 245,
+ "total_source_entries": 325,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

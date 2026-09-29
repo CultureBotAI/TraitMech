@@ -1,0 +1,295 @@
+identifier: traitmech:000459
+label: DS-37 system
+definition: A phage defense system in which an organism possesses the single-gene
+  DefensePredictor-discovered system 37 locus cataloged as working transcriptional
+  unit SC24 and whose plasmid expression in E. coli MG1655 reduced bacteriophage plaquing.
+definition_source: DOI:10.1126/science.adv7924
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: DS-37
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.adv7924
+- synonym_text: SC24
+  synonym_type: RELATED_SYNONYM
+  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+- synonym_text: DS-37__DS-37
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.adv7924
+  snippet: To test for anti-phage defense, we placed each TU with its predicted native
+    promoter region on a low-copy number plasmid in E. coli MG1655 and challenged
+    these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In
+    total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced
+    the efficiency of plating (EOP) at least ten-fold relative to an empty vector
+    control strain
+  notes: DeWeirdt et al. experimentally validated 42 predicted transcriptional units
+    as phage-defense systems in E. coli.
+- reference: DOI:10.1126/science.adv7924
+  snippet: We refer to these validated TUs as DefensePredictor discovered systems
+    (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A
+    is the first gene of DS-8.
+  notes: DeWeirdt et al. name validated transcriptional units as DefensePredictor
+    discovered systems.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+  snippet: "SC24\tNZ_QOXM01000003.1\tGCF_003334665.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+    DefensePredictor hits\t26984\t28375\thypothetical protein\tWP_000982358.1\t6.427335289528256\t\
+    -2.24248116892434\tTrue\tFalse\tPredicted novel defense gene\tDS-37"
+  notes: The final Science supplementary Table S6 maps working_id SC24 to DS_name
+    DS-37, marks the cloned transcriptional unit as defensive, and records NZ_QOXM01000003.1
+    positions 26984-28375 with product accession WP_000982358.1.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+  snippet: "Bas1\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t3000000\tSC24\t24-07-24\t\
+    24-07-24_TRNA_MF4L_SC24_EV.png\t0\t1\t\t1\t6.477121254719663\t\t\tTrue\tLB\t37"
+  notes: The final Science supplementary Table S7 reports an SC24 assay row with a
+    Bas1 phage readout and a -log(EOP) value of 6.477.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+  snippet: "Bas9\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t600000000\tSC24\t24-07-24\t\
+    24-07-24_TRNA_MF4L_SC24_EV.png\t3\t10\t\t10000\t4.778151250383644\t\t\tTrue\t\
+    LB\t37"
+  notes: The final Science supplementary Table S7 reports an SC24 assay row with a
+    Bas9 phage readout and a -log(EOP) value of 4.778.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "SC24\tDS-37\tTrue"
+  notes: The final Science supplementary Table S8 maps SC24 to replicated display
+    name DS-37.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+  snippet: "SC24\t1.0\t463.0\tWP_000982358.1\tPDDEXK\tPF08378.16\tNERD ; Nuclease-related\
+    \ domain\thhpred_2278954.hhr\t154.0\t204.0\t0.47\t2024-07-29 00:00:00\t210-212\t\
+    199.0"
+  notes: The final Science supplementary Table S8 reports a low-probability PDDEXK
+    HHpred lead for WP_000982358.1 in SC24; this first-pass record records it as source
+    context without resolving DS-37 molecular activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DS-37 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+    learning model to discover novel prokaryotic immune systems | '
+  notes: The pinned DefenseFinder article registry maps the DS-37 source key to the
+    preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been
+    published in Science.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DS-37__DS-37                                     |                                                  |
+    DS-37                  | Custom                  | 300    |'
+  notes: The pinned DefenseFinder HMM inventory records DS-37__DS-37 as a custom DS-37
+    profile.
+causal_graphs:
+- graph_id: ds_37_locus_reduces_phage_plaquing
+  title: DS-37 locus reduces bacteriophage plaquing
+  description: Conservative system-level sketch linking the single-gene DS-37 locus
+    to reduced bacteriophage plaquing without resolving DS-37 component function or
+    molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DS-37 as the validated SC24 transcriptional unit
+    with one product accession, one low-probability PDDEXK HHpred row for WP_000982358.1
+    in Table S8, and one DefenseFinder DS-37 profile row. It does not assert exact
+    profile-to-protein correspondence, PDDEXK domain interpretation, nuclease chemistry,
+    native host breadth, DS-37 molecular output, complete phage breadth, or DefenseFinder
+    rule-level detection criteria.
+  nodes:
+  - node_id: ds_37_locus
+    label: DS-37 locus
+    node_type: GENETIC_ELEMENT
+    description: A single-gene DefensePredictor-discovered system 37 locus represented
+      in the pinned DefenseFinder HMM inventory by one DS-37 custom profile.
+  - node_id: reduced_phage_plaquing
+    label: reduced bacteriophage plaquing
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage plaquing in cells carrying cloned SC24.
+  - node_id: ds_37_system_trait
+    label: DS-37 system
+    node_type: TRAIT
+    grounding: traitmech:000459
+    description: Possession of a genome-encoded DS-37 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ds_37_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: reduced_phage_plaquing
+    description: The DS-37/SC24 locus contributes to reduced bacteriophage plaquing
+      in heterologous E. coli MG1655 plasmid-expression assays.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: To test for anti-phage defense, we placed each TU with its predicted
+        native promoter region on a low-copy number plasmid in E. coli MG1655 and
+        challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3;
+        fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque
+        sizes or reduced the efficiency of plating (EOP) at least ten-fold relative
+        to an empty vector control strain
+      notes: DeWeirdt et al. describe the plasmid-based phage challenge used to validate
+        predicted transcriptional units.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "SC24\tNZ_QOXM01000003.1\tGCF_003334665.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t26984\t28375\thypothetical protein\tWP_000982358.1\t\
+        6.427335289528256\t-2.24248116892434\tTrue\tFalse\tPredicted novel defense\
+        \ gene\tDS-37"
+      notes: The final Science supplementary Table S6 maps working_id SC24 to DS_name
+        DS-37, marks the cloned transcriptional unit as defensive, and records NZ_QOXM01000003.1
+        positions 26984-28375 with product accession WP_000982358.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas1\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t3000000\tSC24\t\
+        24-07-24\t24-07-24_TRNA_MF4L_SC24_EV.png\t0\t1\t\t1\t6.477121254719663\t\t\
+        \tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports an SC24 assay row with
+        a Bas1 phage readout and a -log(EOP) value of 6.477.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas9\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t600000000\tSC24\t\
+        24-07-24\t24-07-24_TRNA_MF4L_SC24_EV.png\t3\t10\t\t10000\t4.778151250383644\t\
+        \t\tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports an SC24 assay row with
+        a Bas9 phage readout and a -log(EOP) value of 4.778.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+      snippet: "SC24\tDS-37\tTrue"
+      notes: The final Science supplementary Table S8 maps SC24 to replicated display
+        name DS-37.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DS-37__DS-37                                     |                                                  |
+        DS-37                  | Custom                  | 300    |'
+      notes: The pinned DefenseFinder HMM inventory records DS-37__DS-37 as a custom
+        DS-37 profile.
+  - subject: reduced_phage_plaquing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ds_37_system_trait
+    description: DS-37-mediated phage plaquing reduction realizes the DS-37 system
+      trait.
+    evidence:
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: "SC24\tNZ_QOXM01000003.1\tGCF_003334665.1\t+\tTrue\tFalse\tFalse\t\
+        True\tDefensePredictor hits\t26984\t28375\thypothetical protein\tWP_000982358.1\t\
+        6.427335289528256\t-2.24248116892434\tTrue\tFalse\tPredicted novel defense\
+        \ gene\tDS-37"
+      notes: The final Science supplementary Table S6 maps working_id SC24 to DS_name
+        DS-37, marks the cloned transcriptional unit as defensive, and records NZ_QOXM01000003.1
+        positions 26984-28375 with product accession WP_000982358.1.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas1\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t3000000\tSC24\t\
+        24-07-24\t24-07-24_TRNA_MF4L_SC24_EV.png\t0\t1\t\t1\t6.477121254719663\t\t\
+        \tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports an SC24 assay row with
+        a Bas1 phage readout and a -log(EOP) value of 6.477.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+      snippet: "Bas9\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t600000000\tSC24\t\
+        24-07-24\t24-07-24_TRNA_MF4L_SC24_EV.png\t3\t10\t\t10000\t4.778151250383644\t\
+        \t\tTrue\tLB\t37"
+      notes: The final Science supplementary Table S7 reports an SC24 assay row with
+        a Bas9 phage readout and a -log(EOP) value of 4.778.
+    - reference: DOI:10.1126/science.adv7924
+      snippet: We refer to these validated TUs as DefensePredictor discovered systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: The DS nomenclature is used for DefensePredictor discovered systems.
+  - subject: ds_37_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: DS-37 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.adv7924
+      snippet: We refer to these validated TUs as DefensePredictor discovered systems
+        (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+        DS-8A is the first gene of DS-8.
+      notes: DeWeirdt et al. name validated TUs as DefensePredictor discovered systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DS-37 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+        learning model to discover novel prokaryotic immune systems | '
+      notes: The pinned DefenseFinder article registry maps the DS-37 source key to
+        the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has
+        since been published in Science.
+discussions:
+- discussion_id: ds-37-defensefinder-model-gap
+  prompt: Resolve DS-37 native host breadth, exact component activity, profile-to-protein
+    mapping, low-probability PDDEXK HHpred-domain interpretation, nuclease chemistry,
+    complete phage breadth, molecular output, and rule-level DefenseFinder criteria
+    before minting narrower DS-37 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: DeWeirdt et al. support DS-37 as the defensive SC24 transcriptional unit
+    and final Science Tables S6/S7/S8 map it to one product accession, Bas1 and Bas9
+    phage readouts, display name DS-37, and one low-probability PDDEXK HHpred row.
+    The pinned DefenseFinder HMM inventory records one DS-37 custom profile row. The
+    pinned rules table has no DS-37 row, and the first-pass record does not resolve
+    native host breadth, complete phage breadth, direct profile-to-protein correspondence,
+    PDDEXK domain interpretation, nuclease chemistry, molecular output, or endogenous
+    DS-37 activity.
+  evidence:
+  - reference: DOI:10.1126/science.adv7924
+    snippet: We refer to these validated TUs as DefensePredictor discovered systems
+      (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g.,
+      DS-8A is the first gene of DS-8.
+    notes: DeWeirdt et al. name validated TUs as DSs.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+    snippet: "SC24\tNZ_QOXM01000003.1\tGCF_003334665.1\t+\tTrue\tFalse\tFalse\tTrue\t\
+      DefensePredictor hits\t26984\t28375\thypothetical protein\tWP_000982358.1\t\
+      6.427335289528256\t-2.24248116892434\tTrue\tFalse\tPredicted novel defense gene\t\
+      DS-37"
+    notes: The final Science supplementary Table S6 maps working_id SC24 to DS_name
+      DS-37, marks the cloned transcriptional unit as defensive, and records NZ_QOXM01000003.1
+      positions 26984-28375 with product accession WP_000982358.1.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+    snippet: "Bas1\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t3000000\tSC24\t24-07-24\t\
+      24-07-24_TRNA_MF4L_SC24_EV.png\t0\t1\t\t1\t6.477121254719663\t\t\tTrue\tLB\t\
+      37"
+    notes: The final Science supplementary Table S7 reports an SC24 assay row with
+      a Bas1 phage readout and a -log(EOP) value of 6.477.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx
+    snippet: "Bas9\t6.1\tpLAND\t24-07-17_MVB1_VPUS_VAME_EV.png\t600000000\tSC24\t\
+      24-07-24\t24-07-24_TRNA_MF4L_SC24_EV.png\t3\t10\t\t10000\t4.778151250383644\t\
+      \t\tTrue\tLB\t37"
+    notes: The final Science supplementary Table S7 reports an SC24 assay row with
+      a Bas9 phage readout and a -log(EOP) value of 4.778.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "SC24\tDS-37\tTrue"
+    notes: The final Science supplementary Table S8 maps SC24 to replicated display
+      name DS-37.
+  - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S8.xlsx
+    snippet: "SC24\t1.0\t463.0\tWP_000982358.1\tPDDEXK\tPF08378.16\tNERD ; Nuclease-related\
+      \ domain\thhpred_2278954.hhr\t154.0\t204.0\t0.47\t2024-07-29 00:00:00\t210-212\t\
+      199.0"
+    notes: The final Science supplementary Table S8 reports a low-probability PDDEXK
+      HHpred lead for WP_000982358.1 in SC24; this first-pass record records it as
+      source context without resolving DS-37 molecular activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| DS-37 | 10\.1101/2025\.01\.08\.631726 | DefensePredictor: A machine
+      learning model to discover novel prokaryotic immune systems | '
+    notes: The pinned DefenseFinder article registry maps the DS-37 source key to
+      the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since
+      been published in Science.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DS-37__DS-37                                     |                                                  |
+      DS-37                  | Custom                  | 300    |'
+    notes: The pinned DefenseFinder HMM inventory records DS-37__DS-37 as a custom
+      DS-37 profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list DS-37, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#ds_37_locus_reduces_phage_plaquing
+  posed_by: codex
+  posed_date: '2026-09-29'
+curation_history:
+- timestamp: '2026-09-29T10:28:09Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DS-37 system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; kept the graph at SC24 transcriptional-unit
+    level because the low-probability PDDEXK row and rule rows remain unresolved,
+    and proposals/metpo_traitmech_v336 reserves the replacement placeholder.
+  llm_assisted: true
+- timestamp: '2026-09-29T10:28:10Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DS-37 system canonical_examples and left them empty because DeWeirdt
+    et al. directly support cloned SC24 assays in E. coli MG1655 and a DefenseFinder
+    DS-37 model, but not a direct named native microbial isolate exemplar with experimentally
+    verified endogenous DS-37 activity. No paid research was used.
+  llm_assisted: true
