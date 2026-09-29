@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/vp1840_system.yaml
+  slug: vp1840_system
+session:
+  id: 2026-09-29T022753Z-claude-code-302976
+  timestamp: '2026-09-29T02:27:53Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add VP1840 system trait
+  details: Added data/traits/genomics/vp1840_system.yaml as a DOI-backed GENOMICS TraitRecord
+    under phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, history, or prior proposal record. The record quotes the Getz et
+    al. 9-system discovery sentence, Supplementary Table 8 VP1840 clone row, Supplementary
+    Table 9 phage-plating rows, Supplementary Table 12 VSV105-vp1840 construct row, Supplementary
+    Data 1 VP1840 PSI-BLAST row, and the pinned DefenseFinder VP1840 article and HMM rows;
+    keeps the graph at cloned integron-cassette level; leaves native host breadth, molecular
+    output, and rule-level DefenseFinder interpretation as an open knowledge gap; and reserves
+    METPO:1040400 in proposals/metpo_traitmech_v327.

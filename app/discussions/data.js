@@ -5189,6 +5189,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/viperin_system.html#viperin-product-and-subtype-gap"
  },
  {
+  "discussion_id": "vp1840-defensefinder-model-gap",
+  "prompt": "Resolve VP1840 native host breadth, exact single-component activity, profile-to-protein mapping, homolog boundary, full phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower VP1840 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "VP1840 system",
+  "source_id": "traitmech:000450",
+  "source_file": "vp1840_system.yaml",
+  "attaches_to": [
+   "causal_graphs#vp1840_locus_reduces_bacteriophage_plaquing"
+  ],
+  "rationale": "Getz et al. support VP1840 as one of nine RIMD 2210633 integron-encoded cassettes whose cloned expression reduced phage plaquing, Supplementary Tables 8, 9, and 12 map VP1840 to VP_RS08920/Vp1840, WP_005483293.1, VSV105-vp1840, and phage-plating fold changes, and Supplementary Data 1 reports PSI-BLAST homologs. The pinned DefenseFinder HMM inventory records one VP1840 custom profile row. The pinned rules table has no VP1840 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, molecular output, or endogenous activity.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-025-01927-7",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/vp1840_system.html#vp1840-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "wadjet-subfamily-and-substrate-gap",
   "prompt": "Resolve Wadjet subfamily architecture, plasmid substrate specificity, and activation cues before minting narrower Wadjet mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6550,9 +6579,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 321,
- "total_knowledge_gaps": 235,
- "total_source_entries": 315,
+ "total_discussions": 322,
+ "total_knowledge_gaps": 236,
+ "total_source_entries": 316,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
