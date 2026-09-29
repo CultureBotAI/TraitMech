@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_37_system.yaml
+  slug: ds_37_system
+session:
+  id: 2026-09-29T102158Z-codex-1a6b40
+  timestamp: '2026-09-29T10:21:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-37 system
+  details: Added the DOI-backed DS-37 system genomics TraitRecord under phage defense system,
+    with Science supplementary Table S6/S7/S8 rows for the SC24 transcriptional unit, Bas1
+    and Bas9 plaquing readouts, replicated DS-37 display mapping, a low-probability PDDEXK
+    HHpred domain lead, pinned DefenseFinder article and HMM inventory rows, an open DS-37
+    DefenseFinder model knowledge gap, and proposals/metpo_traitmech_v336 reserving METPO:1041300.
