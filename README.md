@@ -30,7 +30,7 @@ METPO source class and (optionally) to literature evidence.
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; `PROPOSED` records comprise two ecology records, three morphology
-records, 36 newer metabolism records, forty-eight physiology records, 243
+records, 36 newer metabolism records, forty-eight physiology records, 244
 genomics records, and one other record, and thirty-eight records are still
 `SEEDED` (one environment, one metabolism, four morphology, one physiology, and
 thirty-one other).
