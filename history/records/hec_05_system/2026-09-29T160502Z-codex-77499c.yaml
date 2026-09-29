@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_05_system.yaml
+  slug: hec_05_system
+session:
+  id: 2026-09-29T160502Z-codex-77499c
+  timestamp: '2026-09-29T16:05:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  - proposals
+  summary: Create HEC-05 system trait
+  details: Minted traitmech:000466 for the HEC-05 single-gene GmrSD-like Hma-embedded candidate
+    phage-defense system, backed it with Payne et al. DOI evidence plus pinned DefenseFinder
+    article and HMM registry rows, kept the causal graph at nonmechanistic candidate-locus
+    scope because the pinned rules table has no HEC-05 row, added the v343 METPO Scope-A lift
+    at METPO:1042000, and recorded the BrxU relationship as source evidence rather than a
+    narrower exact synonym or molecular child until native host breadth, phage breadth, and
+    direct output are resolved.
