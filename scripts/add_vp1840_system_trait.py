@@ -43,6 +43,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-29T02:26:23Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-29T02:26:24Z"
 EVIDENCE_CLARIFICATION_TIMESTAMP = "2026-09-29T02:51:42Z"
+PSIBLAST_QUERY_CLARIFICATION_TIMESTAMP = "2026-09-29T03:13:39Z"
 
 IDENTIFIER = "traitmech:000450"
 PROPOSAL = "proposals/metpo_traitmech_v327"
@@ -59,6 +60,10 @@ VP1840_LL1_SNIPPET = "VP1840\tLL1\t0"
 VP1840_CONSTRUCT_SNIPPET = (
     "VSV105-vp1840\tVSV105 carrying gene vp1840 behind the lac promoter, "
     "cloned into KpnI by In-Fusion\tThis Study"
+)
+VP1840_PSIBLAST_QUERY_SNIPPET = (
+    ">BAC60103.1 hypothetical protein "
+    "[Vibrio parahaemolyticus RIMD 2210633]"
 )
 VP1840_PSIBLAST_SNIPPET = (
     "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \n"
@@ -130,6 +135,18 @@ def construct_evidence() -> dict[str, str]:
         "notes": (
             "Supplementary Table 12 records the VSV105-vp1840 lac-expression "
             "plasmid used to express vp1840 behind the lac promoter."
+        ),
+    }
+
+
+def psiblast_query_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_DATA,
+        "snippet": VP1840_PSIBLAST_QUERY_SNIPPET,
+        "notes": (
+            "Supplementary Data 1's VP1840 worksheet labels BAC60103.1 "
+            "from Vibrio parahaemolyticus RIMD 2210633 as the PSI-BLAST "
+            "query protein."
         ),
     }
 
@@ -207,6 +224,7 @@ RECORD: dict[str, Any] = {
         construct_evidence(),
         bas21_plating_evidence(),
         ll1_plating_evidence(),
+        psiblast_query_evidence(),
         psiblast_evidence(),
         article_registry_evidence(),
         hmm_inventory_evidence(),
@@ -290,6 +308,7 @@ RECORD: dict[str, Any] = {
                         construct_evidence(),
                         bas21_plating_evidence(),
                         ll1_plating_evidence(),
+                        psiblast_query_evidence(),
                         psiblast_evidence(),
                         hmm_inventory_evidence(),
                     ],
@@ -356,6 +375,7 @@ RECORD: dict[str, Any] = {
                 cloned_vp1840_evidence(),
                 construct_evidence(),
                 bas21_plating_evidence(),
+                psiblast_query_evidence(),
                 psiblast_evidence(),
                 article_registry_evidence(),
                 hmm_inventory_evidence(),
@@ -436,6 +456,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=EVIDENCE_CLARIFICATION_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="GROUNDED_PSIBLAST_QUERY_ACCESSION",
+        changes=(
+            "Quoted the Supplementary Data 1 VP1840 worksheet query row so "
+            "the BAC60103.1 PSI-BLAST query named in the WP_229652597.1 "
+            "homolog-hit note is directly evidenced."
+        ),
+        llm_assisted=True,
+        timestamp=PSIBLAST_QUERY_CLARIFICATION_TIMESTAMP,
     )
     validate_output(record)
 

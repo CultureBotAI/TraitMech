@@ -44,6 +44,10 @@ evidence:
   notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
     LL1 row reports VP1840 with a Fold Change value of 0.
 - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
+  snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
+  notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio parahaemolyticus
+    RIMD 2210633 as the PSI-BLAST query protein.
+- reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
   snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
     \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
   notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
@@ -121,6 +125,10 @@ causal_graphs:
       notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header,
         the LL1 row reports VP1840 with a Fold Change value of 0.
     - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
+      snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
+      notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio
+        parahaemolyticus RIMD 2210633 as the PSI-BLAST query protein.
+    - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
       snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
         \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
       notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
@@ -197,6 +205,10 @@ discussions:
     notes: Under Supplementary Table 9's Strain/Phage/Fold Change/Notes header, the
       Bas21 row reports VP1840 with a Fold Change value of 2e-09.
   - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
+    snippet: '>BAC60103.1 hypothetical protein [Vibrio parahaemolyticus RIMD 2210633]'
+    notes: Supplementary Data 1's VP1840 worksheet labels BAC60103.1 from Vibrio parahaemolyticus
+      RIMD 2210633 as the PSI-BLAST query protein.
+  - reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx
     snippet: "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \nVibrio\
       \ parahaemolyticus\t1\t3e-121\t100\tWP_229652597.1"
     notes: Supplementary Data 1's VP1840 worksheet records a full-length 100% PSI-BLAST
@@ -244,4 +256,10 @@ curation_history:
   changes: Clarified Supplementary Table 9 VP1840 phage-plating notes to name the
     paper's Fold Change column and expanded the Supplementary Data 1 VP1840 PSI-BLAST
     snippet with its column header so the WP_229652597.1 hit is self-identifying.
+  llm_assisted: true
+- timestamp: '2026-09-29T03:13:39Z'
+  curator: codex
+  action: GROUNDED_PSIBLAST_QUERY_ACCESSION
+  changes: Quoted the Supplementary Data 1 VP1840 worksheet query row so the BAC60103.1
+    PSI-BLAST query named in the WP_229652597.1 homolog-hit note is directly evidenced.
   llm_assisted: true
