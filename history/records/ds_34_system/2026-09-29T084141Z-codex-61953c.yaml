@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ds_34_system.yaml
+  slug: ds_34_system
+session:
+  id: 2026-09-29T084141Z-codex-61953c
+  timestamp: '2026-09-29T08:41:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DS-34 system
+  details: Added the DOI-backed DS-34 system genomics TraitRecord under phage defense system,
+    with Science supplementary Table S6/S7/S8 rows for the CITO transcriptional unit, a Bas19
+    plaquing readout, replicated DS-34 display mapping, HHpred domain leads, pinned DefenseFinder
+    article and HMM inventory rows, an open DS-34 DefenseFinder model knowledge gap, and proposals/metpo_traitmech_v334
+    reserving METPO:1041100.
