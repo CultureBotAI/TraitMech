@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_08_system.yaml
+  slug: hec_08_system
+session:
+  id: 2026-09-30T013612Z-codex-b1807d
+  timestamp: '2026-09-30T01:36:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add HEC-08 system trait
+  details: Minted traitmech:000479 for HEC-08 system with Payne et al. DOI evidence, pinned
+    DefenseFinder article and HMM rows, a nonmechanistic HEC-08 locus graph, and a v356 METPO
+    proposal reserving METPO:1043300.
