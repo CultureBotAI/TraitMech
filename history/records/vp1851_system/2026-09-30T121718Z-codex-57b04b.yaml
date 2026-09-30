@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/vp1851_system.yaml
+  slug: vp1851_system
+session:
+  id: 2026-09-30T121718Z-codex-57b04b
+  timestamp: '2026-09-30T12:17:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add VP1851 system trait
+  details: Added a DOI-backed VP1851 system GENOMICS TraitRecord under phage defense system
+    with Springer supplementary-table snippets for the VSV105-vp1851 cloned integron cassette
+    and phage-plating evidence, a VP1851 PSI-BLAST worksheet snippet, pinned DefenseFinder
+    article and HMM evidence, an open DefenseFinder model-gap discussion, and a one-row METPO
+    proposal reserving METPO:1044500 for the local traitmech:000491 fallback.
