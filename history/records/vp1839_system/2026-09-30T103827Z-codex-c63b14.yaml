@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/vp1839_system.yaml
+  slug: vp1839_system
+session:
+  id: 2026-09-30T103827Z-codex-c63b14
+  timestamp: '2026-09-30T10:38:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add VP1839 system trait
+  details: Added a DOI-backed VP1839 system GENOMICS TraitRecord under phage defense system
+    with Springer supplementary-table snippets for the VSV105-vp1839 cloned integron cassette
+    and phage-plating evidence, a VP1839 PSI-BLAST worksheet snippet, pinned DefenseFinder
+    article and HMM evidence, an open DefenseFinder model-gap discussion, and a one-row METPO
+    proposal reserving METPO:1044300 for the local traitmech:000489 fallback.
