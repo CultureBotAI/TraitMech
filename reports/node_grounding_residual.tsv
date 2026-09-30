@@ -1748,6 +1748,9 @@ type i restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/typ
 type ii restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_ii_restriction_modification_system.yaml
 type iig restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iig_restriction_modification_system.yaml
 type iii restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iii_restriction_modification_system.yaml
+type iv restriction-enzyme locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
+modified foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
+modification-dependent dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
 ukko locus	GENETIC_ELEMENT	1	data/traits/genomics/ukko_system.yaml
 uzume locus	GENETIC_ELEMENT	1	data/traits/genomics/uzume_system.yaml
 veles locus	GENETIC_ELEMENT	1	data/traits/genomics/veles_system.yaml

@@ -6116,6 +6116,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/type_iii_restriction_modification_system.html#type-iii-rm-profile-interpretation-gap"
  },
  {
+  "discussion_id": "type-iv-rm-profile-interpretation-gap",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, McrBC, GmrSD, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "type IV modification-dependent restriction system",
+  "source_id": "traitmech:000496",
+  "source_file": "type_iv_modification_dependent_restriction_system.yaml",
+  "attaches_to": [
+   "causal_graphs#type_iv_modification_dependent_restriction"
+  ],
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, Bair and Black support GmrSD as one glucosylated-HMC-targeting Type IV enzyme, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, McrBC, GmrSD_RM_Type_IV, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkt747",
+   "DOI:10.1093/nar/gkt747",
+   "DOI:10.1016/j.jmb.2006.11.051",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/type_iv_modification_dependent_restriction_system.html#type-iv-rm-profile-interpretation-gap"
+ },
+ {
   "discussion_id": "ukko-mechanism-gap",
   "prompt": "Resolve Ukko phage triggers and effector outputs before minting narrower Ukko mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7821,9 +7847,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 367,
- "total_knowledge_gaps": 281,
- "total_source_entries": 361,
+ "total_discussions": 368,
+ "total_knowledge_gaps": 282,
+ "total_source_entries": 362,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
