@@ -1,0 +1,198 @@
+identifier: traitmech:000497
+label: Tha system
+definition: A phage defense system in which an organism possesses a Tha tail-activated
+  HEPN anti-phage locus that can be activated by incoming-phage minor tail proteins
+  to mediate nonspecific RNase-linked defense.
+definition_source: DOI:10.1038/s41564-024-01661-6
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Tha
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41564-024-01661-6
+- synonym_text: tail-activated, HEPN domain-containing anti-phage system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41564-024-01661-6
+- synonym_text: Tha__Tha
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-024-01661-6
+  snippet: multiple Staphylococcus aureus prophages encode Tha (tail-activated, HEPN
+    (higher eukaryotes and prokaryotes nucleotide-binding) domain-containing anti-phage
+    system)
+  notes: Rostol et al. define Tha as a tail-activated HEPN anti-phage system encoded
+    by multiple S. aureus prophages.
+- reference: DOI:10.1038/s41564-024-01661-6
+  snippet: We demonstrate the function of two Tha systems, Tha-1 and Tha-2, activated
+    by distinct tail proteins
+  notes: Rostol et al. support multiple experimentally tested Tha variants that are
+    activated by different phage tail proteins.
+- reference: DOI:10.1038/s41564-024-01661-6
+  snippet: Tha is a non-specific RNase that is activated by conserved minor tail proteins
+    from temperate phages
+  notes: Rostol et al. connect the Tha anti-phage system to minor-tail-protein activation
+    and nonspecific RNase activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Tha | 10\.1038/s41564-024-01661-6 | Bacteriophages avoid autoimmunity
+    from cognate immune systems as an intrinsic part of their life cycles | '
+  notes: The pinned DefenseFinder article registry maps the Tha source key to the
+    primary Nat Microbiol Tha paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Tha__Tha                                         |                                                  |
+    Tha                    | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory lists one Tha__Tha custom HMM row
+    under the Tha system namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Rostol et al. report that multiple Staphylococcus aureus prophages encode
+    Tha and experimentally test Tha-1 and Tha-2 antiphage defense in S. aureus RN4220.
+  reference: DOI:10.1038/s41564-024-01661-6
+causal_graphs:
+- graph_id: tha_tail_activated_hepn_rnase_defense
+  title: Tha systems activate HEPN RNase defense after tail cues
+  description: Conservative system-level sketch linking a Tha locus to incoming-phage
+    minor-tail-protein activation, Tha HEPN RNase activity, and phage-defense-system
+    possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Tha system at family scope without asserting
+    that all Tha variants sense the same minor tail protein, have the same cognate
+    Ith inhibitor, block the same phages, share the same native prophage organization,
+    or map to a DefenseFinder rules row.
+  nodes:
+  - node_id: tha_locus
+    label: Tha locus
+    node_type: GENETIC_ELEMENT
+    description: A phage-encoded Tha locus encoding a tail-activated HEPN anti-phage
+      system.
+  - node_id: minor_tail_protein_activation
+    label: minor-tail-protein activation
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of Tha by incoming-phage minor tail proteins during bacteriophage
+      infection.
+  - node_id: tha_hepn_rnase_activity
+    label: Tha HEPN RNase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Nonspecific RNase activity mediated by a Tha HEPN domain after activation
+      by a cognate minor tail protein.
+  - node_id: tha_system_trait
+    label: Tha system
+    node_type: TRAIT
+    grounding: traitmech:000497
+    description: Possession of a genome-encoded Tha phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: tha_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: minor_tail_protein_activation
+    description: Tha loci encode HEPN anti-phage proteins that can be activated by
+      structural tail proteins of incoming phages.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01661-6
+      snippet: a defence system activated by structural tail proteins of incoming
+        phages
+      notes: Rostol et al. define Tha as a defense system activated by incoming-phage
+        structural tail proteins.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Tha | 10\.1038/s41564-024-01661-6 | Bacteriophages avoid autoimmunity
+        from cognate immune systems as an intrinsic part of their life cycles | '
+      notes: The pinned DefenseFinder article registry maps the Tha source key to
+        the primary Nat Microbiol Tha paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Tha__Tha                                         |                                                  |
+        Tha                    | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory lists one Tha__Tha custom HMM
+        row under the Tha system namespace.
+  - subject: minor_tail_protein_activation
+    predicate: activates
+    predicate_id: RO:0002213
+    object: tha_hepn_rnase_activity
+    description: Incoming-phage minor tail proteins activate Tha HEPN-domain RNase
+      activity.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01661-6
+      snippet: Tha is a non-specific RNase that is activated by conserved minor tail
+        proteins from temperate phages
+      notes: Rostol et al. connect conserved minor tail proteins to Tha RNase activation.
+  - subject: tha_hepn_rnase_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tha_system_trait
+    description: Tha-mediated nonspecific RNase activity realizes the Tha system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01661-6
+      snippet: confirming that Tha-1 is a non-specific RNase
+      notes: Rostol et al. validate Tha-1 nonspecific RNase activity.
+  - subject: tha_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Tha system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01661-6
+      snippet: Tha-1 is an anti-phage system that causes autoimmunity when improperly
+        regulated
+      notes: Rostol et al. experimentally tested the anti-phage properties of Tha-1.
+discussions:
+- discussion_id: tha-variant-profile-rule-gap
+  prompt: Resolve Tha variant boundaries, exact minor-tail-protein triggers, Ith inhibitor
+    relationships, native host breadth, and DefenseFinder rule/profile coverage before
+    minting narrower Tha mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Rostol et al. support Tha-1 and Tha-2 as S. aureus prophage-encoded Tha
+    systems activated by distinct incoming-phage minor tail proteins. The pinned DefenseFinder
+    registries map the Tha source key to the same primary paper and list one Tha__Tha
+    custom HMM row, but no exact Tha system rule row was present in the pinned rules
+    table. The first TraitRecord therefore stays at Tha-system scope until separate
+    review resolves variant boundaries, exact activators, Ith inhibitor relationships,
+    native host breadth, and model coverage.
+  evidence:
+  - reference: DOI:10.1038/s41564-024-01661-6
+    snippet: Tha systems can also block reproduction of the induced tha-positive prophages
+    notes: Rostol et al. report Tha autoimmunity and inhibition by cognate overlapping
+      antisense Ith proteins.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Tha | 10\.1038/s41564-024-01661-6 | Bacteriophages avoid autoimmunity
+      from cognate immune systems as an intrinsic part of their life cycles | '
+    notes: The pinned DefenseFinder article registry maps the Tha source key to the
+      primary Nat Microbiol Tha paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Tha__Tha                                         |                                                  |
+      Tha                    | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory lists one Tha__Tha custom HMM row
+      under the Tha system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact Tha system row.
+  attaches_to:
+  - causal_graphs#tha_tail_activated_hepn_rnase_defense
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T17:20:02Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Tha system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v374.
+  llm_assisted: true
+- timestamp: '2026-09-30T17:20:03Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE
+  changes: Reviewed Tha system canonical_examples and kept Staphylococcus aureus because
+    Rostol et al. report that multiple S. aureus prophages encode Tha and experimentally
+    test plasmid-carried Tha-1 and Tha-2 in S. aureus RN4220 phage-challenge assays.
+    No paid research was used.
+  llm_assisted: true

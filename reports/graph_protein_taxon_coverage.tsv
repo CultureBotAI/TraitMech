@@ -423,6 +423,7 @@ data/traits/genomics/sucellos_system.yaml	traitmech:000266	Sucellos system	sucel
 data/traits/genomics/tab_system.yaml	traitmech:000413	Tab system	tab_blocks_virion_assembly	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/taranis_system.yaml	traitmech:000265	Taranis system	taranis_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/tgvab_system.yaml	traitmech:000412	TgvAB system	tgvab_type_iv_restriction	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/tha_system.yaml	traitmech:000497	Tha system	tha_tail_activated_hepn_rnase_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/thoeris_system.yaml	traitmech:000216	Thoeris system	thoeris_tir_signal_nad_depletion_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/tiamat_system.yaml	traitmech:000261	Tiamat system	tiamat_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/tir_i_system.yaml	traitmech:000480	TIR-I system	tir_i_locus_inhibits_phage_plaquing	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
