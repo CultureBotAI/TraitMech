@@ -1,0 +1,441 @@
+#!/usr/bin/env python3
+"""Add the VP1853 system genomics trait."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+import tempfile
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import (  # noqa: E402
+    emit_trait_yaml,
+    write_validated_trait,
+)
+
+TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "vp1853_system.yaml"
+
+GETZ = "DOI:10.1038/s41564-025-01927-7"
+
+SPRINGER_PREFIX = (
+    "https://media.springernature.com/original/springer-static/esm/"
+    "art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/"
+)
+SUPPLEMENTARY_TABLES = f"{SPRINGER_PREFIX}41564_2025_1927_MOESM2_ESM.xlsx"
+SUPPLEMENTARY_DATA = f"{SPRINGER_PREFIX}41564_2025_1927_MOESM3_ESM.xlsx"
+
+DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
+DEFENSEFINDER_PREFIX = (
+    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
+    f"{DEFENSEFINDER_COMMIT}/"
+)
+DEFENSEFINDER_ARTICLES = f"{DEFENSEFINDER_PREFIX}List_system_article.md"
+DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
+DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
+
+CURATOR = "codex"
+TIMESTAMP = "2026-09-30T12:56:22Z"
+CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-30T12:56:23Z"
+
+IDENTIFIER = "traitmech:000492"
+PROPOSAL = "proposals/metpo_traitmech_v369"
+
+DISCOVERY_SNIPPET = (
+    "Intrigued by this discovery, we cloned 57 integron gene cassettes "
+    "and identified 9 previously unrecognized systems that mediate defence."
+)
+VP1853_CLONE_SNIPPET = (
+    "VP_RS09025\tVp1853\tY\tWP_005483178.1\tTIGR02391 family protein"
+)
+VP1853_CONSTRUCT_SNIPPET = (
+    "VSV105-vp1853\tVSV105 carrying gene vp1853 behind the lac promoter, "
+    "cloned into KpnI by In-Fusion\tThis Study"
+)
+VP1853_LAMBDA_SNIPPET = "VP1853\tλ\t0.001\tSmall"
+VP1853_PSIBLAST_QUERY_SNIPPET = (
+    ">WP_005483178.1 TIGR02391 family protein [Vibrio parahaemolyticus]"
+)
+VP1853_PSIBLAST_SNIPPET = (
+    "Scientific Name\tQuery Cover\tE value\tPer. ident\tAccession  \n"
+    "Vibrio parahaemolyticus\t1\t0\t100\tWP_005483178.1\n"
+    "Vibrio parahaemolyticus\t1\t0\t100\tWP_049875404.1"
+)
+ARTICLE_ROW = (
+    "| VP1853 | 10\\.1038/s41564-025-01927-7 | Integrons are "
+    "anti-phage defence libraries in Vibrio parahaemolyticus | "
+)
+HMM_ROW = (
+    "| VP1853__VP1853                                   |"
+    "                                                  | VP1853"
+    "                 | Custom                  | 150    |"
+)
+
+
+def discovery_evidence() -> dict[str, str]:
+    return {
+        "reference": GETZ,
+        "snippet": DISCOVERY_SNIPPET,
+        "notes": (
+            "Getz et al. identify nine previously unrecognized "
+            "Vibrio parahaemolyticus integron cassettes as anti-phage "
+            "defense systems."
+        ),
+    }
+
+
+def cloned_vp1853_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_TABLES,
+        "snippet": VP1853_CLONE_SNIPPET,
+        "notes": (
+            "Supplementary Table 8 lists VP_RS09025/Vp1853 as a cloned "
+            "RIMD 2210633 integron cassette with protein accession "
+            "WP_005483178.1."
+        ),
+    }
+
+
+def construct_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_TABLES,
+        "snippet": VP1853_CONSTRUCT_SNIPPET,
+        "notes": (
+            "Supplementary Table 12 records the VSV105-vp1853 "
+            "lac-expression plasmid used to express vp1853 behind the "
+            "lac promoter."
+        ),
+    }
+
+
+def lambda_plating_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_TABLES,
+        "snippet": VP1853_LAMBDA_SNIPPET,
+        "notes": (
+            "Supplementary Table 9 identifies the VP1853/lambda "
+            "phage-plating readout as a Fold Change value of 0.001 "
+            "with a Small Plaque Size comment."
+        ),
+    }
+
+
+def psiblast_query_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_DATA,
+        "snippet": VP1853_PSIBLAST_QUERY_SNIPPET,
+        "notes": (
+            "Supplementary Data 1's VP1853 worksheet labels "
+            "WP_005483178.1 from Vibrio parahaemolyticus as the "
+            "PSI-BLAST query protein."
+        ),
+    }
+
+
+def psiblast_evidence() -> dict[str, str]:
+    return {
+        "reference": SUPPLEMENTARY_DATA,
+        "snippet": VP1853_PSIBLAST_SNIPPET,
+        "notes": (
+            "Supplementary Data 1's VP1853 worksheet records full-length "
+            "100% PSI-BLAST rows for WP_005483178.1 and WP_049875404.1."
+        ),
+    }
+
+
+def article_registry_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_ARTICLES,
+        "snippet": ARTICLE_ROW,
+        "notes": (
+            "The pinned DefenseFinder article registry maps the VP1853 "
+            "model namespace to the Getz et al. Vibrio parahaemolyticus "
+            "integron-defense paper."
+        ),
+    }
+
+
+def hmm_inventory_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": HMM_ROW,
+        "notes": (
+            "The pinned DefenseFinder HMM inventory records VP1853__VP1853 "
+            "as a custom VP1853 profile."
+        ),
+    }
+
+
+RECORD: dict[str, Any] = {
+    "identifier": IDENTIFIER,
+    "label": "VP1853 system",
+    "definition": (
+        "A phage defense system in which an organism possesses a VP1853-family "
+        "locus represented by the DefenseFinder VP1853__VP1853 custom HMM "
+        "profile and experimentally linked to reduced bacteriophage plaquing "
+        "when the cloned Vibrio parahaemolyticus RIMD 2210633 vp1853 cassette "
+        "is expressed from a VSV105 plasmid."
+    ),
+    "definition_source": GETZ,
+    "trait_category": "GENOMICS",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["traitmech:000209"],
+    "synonyms": [
+        {
+            "synonym_text": "VP1853",
+            "synonym_type": "EXACT_SYNONYM",
+            "source": DEFENSEFINDER_ARTICLES,
+        },
+        {
+            "synonym_text": "Vp1853",
+            "synonym_type": "RELATED_SYNONYM",
+            "source": SUPPLEMENTARY_TABLES,
+        },
+        {
+            "synonym_text": "VP1853__VP1853",
+            "synonym_type": "RELATED_SYNONYM",
+            "source": DEFENSEFINDER_HMMS,
+        },
+    ],
+    "evidence": [
+        discovery_evidence(),
+        cloned_vp1853_evidence(),
+        construct_evidence(),
+        lambda_plating_evidence(),
+        psiblast_query_evidence(),
+        psiblast_evidence(),
+        article_registry_evidence(),
+        hmm_inventory_evidence(),
+    ],
+    "causal_graphs": [
+        {
+            "graph_id": "vp1853_locus_reduces_bacteriophage_plaquing",
+            "title": "VP1853 loci reduce bacteriophage plaquing",
+            "description": (
+                "Conservative system-level sketch linking VP1853-family "
+                "locus possession to reduced bacteriophage plaquing without "
+                "resolving VP1853 component function or molecular output."
+            ),
+            "scope_status": "NONMECHANISTIC",
+            "scope_notes": (
+                "The graph captures VP1853 as a RIMD 2210633 integron "
+                "cassette with cloned phage-plating readouts, a PSI-BLAST "
+                "homolog lead, one pinned DefenseFinder custom HMM-profile "
+                "row, and no pinned DefenseFinder rule row. It does not "
+                "assert native host breadth, exact profile-to-protein "
+                "correspondence, molecular activity, phage trigger, "
+                "substrate, complete homolog boundary, endogenous activity, "
+                "or rule-level DefenseFinder detection criteria."
+            ),
+            "nodes": [
+                {
+                    "node_id": "vp1853_locus",
+                    "label": "VP1853 locus",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A Vp1853-like integron cassette locus represented "
+                        "in the pinned DefenseFinder HMM inventory by the "
+                        "VP1853__VP1853 custom profile."
+                    ),
+                },
+                {
+                    "node_id": "reduced_bacteriophage_plaquing",
+                    "label": "reduced bacteriophage plaquing",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Reduced plaquing of bacteriophages in cells "
+                        "expressing cloned vp1853."
+                    ),
+                },
+                {
+                    "node_id": "vp1853_system_trait",
+                    "label": "VP1853 system",
+                    "node_type": "TRAIT",
+                    "grounding": IDENTIFIER,
+                    "description": (
+                        "Possession of a genome-encoded VP1853 "
+                        "phage-defense system."
+                    ),
+                },
+                {
+                    "node_id": "phage_defense_system",
+                    "label": "phage defense system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000209",
+                    "description": (
+                        "Possession of one or more genome-encoded immune "
+                        "systems that inhibit bacteriophage infection."
+                    ),
+                },
+            ],
+            "edges": [
+                {
+                    "subject": "vp1853_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "reduced_bacteriophage_plaquing",
+                    "description": (
+                        "The cloned V. parahaemolyticus vp1853 integron "
+                        "cassette contributes to reduced bacteriophage "
+                        "plaquing in VSV105 plasmid-expression assays, and "
+                        "DefenseFinder represents the VP1853 family with "
+                        "one custom HMM profile."
+                    ),
+                    "evidence": [
+                        cloned_vp1853_evidence(),
+                        construct_evidence(),
+                        lambda_plating_evidence(),
+                        psiblast_query_evidence(),
+                        psiblast_evidence(),
+                        hmm_inventory_evidence(),
+                    ],
+                },
+                {
+                    "subject": "reduced_bacteriophage_plaquing",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": "vp1853_system_trait",
+                    "description": (
+                        "VP1853-mediated bacteriophage plaquing reduction "
+                        "realizes the VP1853 system trait."
+                    ),
+                    "evidence": [lambda_plating_evidence()],
+                },
+                {
+                    "subject": "vp1853_system_trait",
+                    "predicate": "is a",
+                    "predicate_id": "rdfs:subClassOf",
+                    "object": "phage_defense_system",
+                    "description": (
+                        "VP1853 system possession is a phage-defense-system "
+                        "trait."
+                    ),
+                    "evidence": [
+                        discovery_evidence(),
+                        article_registry_evidence(),
+                    ],
+                },
+            ],
+        }
+    ],
+    "discussions": [
+        {
+            "discussion_id": "vp1853-defensefinder-model-gap",
+            "prompt": (
+                "Resolve VP1853 native host breadth, exact "
+                "single-component activity, profile-to-protein mapping, "
+                "homolog boundary, full phage breadth, molecular output, "
+                "and rule-level DefenseFinder criteria before minting "
+                "narrower VP1853 mechanism children."
+            ),
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "Getz et al. support VP1853 as one of nine RIMD 2210633 "
+                "integron-encoded cassettes whose cloned expression reduced "
+                "phage plaquing, Supplementary Tables 8, 9, and 12 map "
+                "VP1853 to VP_RS09025/Vp1853, WP_005483178.1, "
+                "VSV105-vp1853, and a phage-plating fold change, and "
+                "Supplementary Data 1 reports PSI-BLAST homologs. The "
+                "pinned DefenseFinder HMM inventory records one VP1853 "
+                "custom profile row. The pinned rules table has no VP1853 "
+                "row, and the first-pass record does not resolve native "
+                "host breadth, complete phage breadth, direct "
+                "profile-to-protein correspondence, molecular output, or "
+                "endogenous activity."
+            ),
+            "evidence": [
+                discovery_evidence(),
+                cloned_vp1853_evidence(),
+                construct_evidence(),
+                lambda_plating_evidence(),
+                psiblast_query_evidence(),
+                psiblast_evidence(),
+                article_registry_evidence(),
+                hmm_inventory_evidence(),
+                {
+                    "reference": DEFENSEFINDER_RULES,
+                    "notes": (
+                        "The pinned DefenseFinder rules table does not "
+                        "list VP1853, leaving rule-level detection criteria "
+                        "unresolved."
+                    ),
+                },
+            ],
+            "attaches_to": [
+                "causal_graphs#vp1853_locus_reduces_bacteriophage_plaquing"
+            ],
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-30",
+        }
+    ],
+}
+
+
+def validate_output(record: dict[str, Any]) -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help=f"write {TARGET.relative_to(REPO_ROOT)}",
+    )
+    args = parser.parse_args()
+
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Minted VP1853 system as a DOI-backed GENOMICS TraitRecord "
+            "under phage defense system after an ignored-and-hidden "
+            "duplicate review found no exact same-scope live TraitMech, "
+            "METPO, history, or prior proposal record; kept the graph at "
+            "cloned integron-cassette level because molecular output, "
+            f"native activity, and rule rows remain unresolved; {PROPOSAL} "
+            "reserves the replacement placeholder."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
+        changes=(
+            "Reviewed VP1853 system canonical_examples and left them empty "
+            "because Getz et al. directly support cloned VP1853 "
+            "VSV105-plasmid assays, PSI-BLAST homologs, and a "
+            "DefenseFinder VP1853 model, but not a direct named native "
+            "microbial isolate exemplar with experimentally verified "
+            "endogenous VP1853 activity. No paid research was used."
+        ),
+        llm_assisted=True,
+        timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    validate_output(record)
+
+    rel = TARGET.relative_to(REPO_ROOT)
+    if args.apply:
+        if TARGET.exists():
+            raise SystemExit(f"{rel} already exists")
+        write_validated_trait(record, TARGET)
+        print(f"Wrote {rel}")
+    else:
+        sys.stdout.write(emit_trait_yaml(record))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
