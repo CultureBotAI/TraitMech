@@ -41,15 +41,19 @@ Subset tag: `metpo_traitmech_2026_09`.
 
 | ID | label | parent |
 |---|---|---|
-| `METPO:1032900` | type IIG restriction-modification system | `METPO:1007694` restriction-modification system |
+| `METPO:1032900` | type IIG restriction-modification system | `METPO:1044700` type II restriction-modification system |
 
 Type IIG restriction-modification system captures genome-level possession of a
 Type IIG R-M locus represented by DefenseFinder as the RM_Type_IIG subsystem. It
 excludes individual Type IIG enzymes, individual companion methyltransferases,
 the DefenseFinder `RM_Type_IIG__Type_IIG` profile group, the eight custom
 RM_Type_IIG HMM profiles, the source key `RM_Type_IIG`, BpuSI or Tth111II
-biochemistry outside a complete Type IIG locus, and the broader
-restriction-modification parent.
+biochemistry outside a complete Type IIG locus, and the broader Type II or
+restriction-modification parents.
+
+The 2026-09-30 revision reparents this placeholder under the v370
+`METPO:1044700` type II restriction-modification system placeholder to mirror
+the local `traitmech:000375` to `traitmech:000493` hierarchy.
 
 ## External Mappings
 
@@ -72,5 +76,8 @@ model are shifted from this organism-level GENOMICS possession trait.
 
 ## Change Log
 
+- v252, 2026-09 (revised 2026-09-30): reparented `METPO:1032900` under the
+  v370 `METPO:1044700 type II restriction-modification system` placeholder
+  after #1485.
 - v252, 2026-09: lifts `traitmech:000375 type IIG restriction-modification
   system` into the `METPO:1032900` block.

@@ -8,7 +8,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- traitmech:000095
+- traitmech:000493
 synonyms:
 - synonym_text: RM_Type_IIG
   synonym_type: RELATED_SYNONYM
@@ -283,4 +283,12 @@ curation_history:
     biochemically characterized BpuSI and Tth111II natural isolates plus a DefenseFinder
     system model, but not a direct stable NCBITaxon strain exemplar with whole-system
     Type IIG activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-30T13:40:54Z'
+  curator: codex
+  action: REPARENT_TO_TYPE_II_RM
+  changes: Reparented type IIG restriction-modification system from the broad restriction-modification
+    system to the newly minted type II restriction-modification system parent, preserving
+    Type IIG as a narrower Type II R-M architecture while keeping unresolved DefenseFinder
+    profile interpretations in an open knowledge gap.
   llm_assisted: true

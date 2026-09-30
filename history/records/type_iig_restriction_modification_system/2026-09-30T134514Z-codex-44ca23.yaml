@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/type_iig_restriction_modification_system.yaml
+  slug: type_iig_restriction_modification_system
+session:
+  id: 2026-09-30T134514Z-codex-44ca23
+  timestamp: '2026-09-30T13:45:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Reparent type IIG under type II restriction-modification system
+  details: Reparented the existing traitmech:000375 type IIG restriction-modification system
+    record from broad restriction-modification system to the newly minted traitmech:000493
+    type II restriction-modification system parent, preserving Type IIG as a specialized Type
+    II R-M branch while leaving its accession-level DefenseFinder profile interpretation gap
+    open.
