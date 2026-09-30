@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>type I restriction-modification system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>type I restriction-modification system</h1>
+    <p class="curie"><code>traitmech:000494</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A restriction-modification system in which an organism possesses a Type I R-M locus encoding a pentameric enzyme with HsdR-like restriction, HsdM-like methylation, and HsdS-like DNA sequence-recognition subunits, including RM_Type_I loci represented by DefenseFinder.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Type I R-M loci mark self and restrict foreign DNA</h2>
+      <p class="meta">Conservative system-level sketch linking Type I restriction-modification loci to restriction-modification-mediated foreign DNA cleavage.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures a reusable Type I R-M locus architecture and the DefenseFinder RM_Type_I system namespace without asserting an accession-level mapping between any custom HMM row and characterized HsdR, HsdM, or HsdS families.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Type I R-M loci mark self and restrict foreign DNA</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for type I restriction-modification system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>type I restriction-modification locus</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>foreign unmethylated DNA cleavage</strong>
+            <code>RO:0002327</code>
+            <p>Type I R-M loci encode the restriction, methylation, and specificity functions needed to recognize and cleave unprotected foreign DNA.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkt847</code>
+                <span class="evidence-snippet">Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.</span>
+                <span class="meta">Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">RM	RM_Type_I	2	2	RM__Type_I_MTases, RM__Type_I_REases	RM__Type_I_S		</span>
+                <span class="meta">The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory specificity-subunit group.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>foreign unmethylated DNA cleavage</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>type I restriction-modification system</strong>
+            <code>METPO:2007700</code>
+            <p>Type I restriction-modification activity realizes the organism-level Type I R-M system trait.</p>
+            <ul>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">RM_Type_I | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes</span>
+                <span class="meta">The pinned DefenseFinder article registry maps the RM_Type_I model namespace to the REBASE update.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| RM__Type_I_MTases_FAM_0                          |                                                  | RM                     | Custom                  | 150    |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase profiles under the broad RM system namespace.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  | RM                     | Custom                  | 34     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease profiles under the broad RM system namespace.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| RM__Type_I_S_01                                  |                                                  | RM                     | Custom                  | 75     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit profiles under the broad RM system namespace.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>type I restriction-modification system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>restriction-modification system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>A Type I R-M system is a subtype of broader restriction-modification system possession.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkt847</code>
+                <span class="evidence-snippet">Type I restriction enzymes (REases) are large pentameric proteins with separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits.</span>
+                <span class="meta">Loenen et al. define Type I restriction enzymes as pentameric systems with distinct restriction, methylation, and sequence-recognition subunits.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1093/nar/gkt847</code>
+                <span class="evidence-snippet">Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.</span>
+                <span class="meta">Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1093/nar/gkt847</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/restriction_modification_system.html" >restriction-modification system <code>traitmech:000095</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (4)</h2>
+      <ul class="synonyms">
+
+        <li>RM_Type_I <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
+
+        <li>RM__Type_I_MTases <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</span></li>
+
+        <li>RM__Type_I_REases <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</span></li>
+
+        <li>RM__Type_I_S <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="type-i-rm-profile-interpretation-gap">
+        <p class="discussion-prompt">Resolve the accession-level relationships between DefenseFinder RM Type I custom methyltransferase, restriction-endonuclease, and specificity-subunit profiles and characterized HsdR, HsdM, and HsdS families before minting narrower Type I protein or custom-profile traits.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>type-i-rm-profile-interpretation-gap</code>
+          · raised by codex
+          · 2026-09-30
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#type_i_rm_locus_restricts_foreign_dna</code>
+        </p>
+
+
+        <p>Loenen et al. support Type I R-M system architecture and restriction/modification activity, while the pinned DefenseFinder registry supports an RM_Type_I namespace with broad Type_I_MTases, Type_I_REases, and Type_I_S custom profile groups. The evidence does not yet map individual custom profile rows to exact characterized Hsd families or resolve whether each source-model boundary corresponds to a reusable organism-level trait below this class.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1093/nar/gkt847</code>
+
+            <blockquote>Type I restriction enzymes (REases) are large pentameric proteins with separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>DOI:10.1093/nar/gkt847</code>
+
+            <blockquote>Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+            <blockquote>RM	RM_Type_I	2	2	RM__Type_I_MTases, RM__Type_I_REases	RM__Type_I_S		</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| RM__Type_I_MTases_FAM_0                          |                                                  | RM                     | Custom                  | 150    |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  | RM                     | Custom                  | 34     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| RM__Type_I_S_01                                  |                                                  | RM                     | Custom                  | 75     |</blockquote>
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-30T14:49:40Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted type I restriction-modification system as a DOI-backed GENOMICS TraitRecord under restriction-modification system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v371.</p>
+        </li>
+
+        <li>
+          <time>2026-09-30T14:49:41Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed type I restriction-modification system during initial curation and left canonical_examples empty because the sources support a broad Type I R-M class, a DefenseFinder system model, and multiple biochemical enzyme examples, but not a single stable NCBITaxon strain exemplar for the whole broad Type I branch. No paid research was used.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/type_i_restriction_modification_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/type_i_restriction_modification_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/type_i_restriction_modification_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/type_i_restriction_modification_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000494" target="_blank" rel="noopener"><code>traitmech:000494</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking Type I restriction-modification loci to restriction-modification-mediated foreign DNA cleavage.", "edges": [{"description": "Type I R-M loci encode the restriction, methylation, and specificity functions needed to recognize and cleave unprotected foreign DNA.", "evidence": [{"notes": "Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I R\u2013M enzymes are pentameric proteins of composition 2R+2M+S."}, {"notes": "The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory specificity-subunit group.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_I\t2\t2\tRM__Type_I_MTases, RM__Type_I_REases\tRM__Type_I_S\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_i_rm_locus", "target": "foreign_unmethylated_dna_cleavage"}, {"description": "Type I restriction-modification activity realizes the organism-level Type I R-M system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the RM_Type_I model namespace to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_I | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_MTases_FAM_0                          |                                                  | RM                     | Custom                  | 150    |"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  | RM                     | Custom                  | 34     |"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_S_01                                  |                                                  | RM                     | Custom                  | 75     |"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign_unmethylated_dna_cleavage", "target": "type_i_restriction_modification_system_trait"}, {"description": "A Type I R-M system is a subtype of broader restriction-modification system possession.", "evidence": [{"notes": "Loenen et al. define Type I restriction enzymes as pentameric systems with distinct restriction, methylation, and sequence-recognition subunits.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I restriction enzymes (REases) are large pentameric proteins with separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits."}, {"notes": "Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I R\u2013M enzymes are pentameric proteins of composition 2R+2M+S."}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type_i_restriction_modification_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "Type I R-M loci encode the restriction, methylation, and specificity functions needed to recognize and cleave unprotected foreign DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I R\u2013M enzymes are pentameric proteins of composition 2R+2M+S."}, {"notes": "The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory specificity-subunit group.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_I\t2\t2\tRM__Type_I_MTases, RM__Type_I_REases\tRM__Type_I_S\t\t"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type I restriction-modification locus", "target": "foreign unmethylated DNA cleavage"}, {"description": "Type I restriction-modification activity realizes the organism-level Type I R-M system trait.", "edge_id": "edge-2", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the RM_Type_I model namespace to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_I | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_MTases_FAM_0                          |                                                  | RM                     | Custom                  | 150    |"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  | RM                     | Custom                  | 34     |"}, {"notes": "The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit profiles under the broad RM system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM__Type_I_S_01                                  |                                                  | RM                     | Custom                  | 75     |"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign unmethylated DNA cleavage", "target": "type I restriction-modification system"}, {"description": "A Type I R-M system is a subtype of broader restriction-modification system possession.", "edge_id": "edge-3", "evidence": [{"notes": "Loenen et al. define Type I restriction enzymes as pentameric systems with distinct restriction, methylation, and sequence-recognition subunits.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I restriction enzymes (REases) are large pentameric proteins with separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits."}, {"notes": "Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer with both restriction-endonuclease and methyltransferase activities.", "reference": "DOI:10.1093/nar/gkt847", "snippet": "Type I R\u2013M enzymes are pentameric proteins of composition 2R+2M+S."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type I restriction-modification system", "target": "restriction-modification system"}], "graph_id": "type_i_rm_locus_restricts_foreign_dna", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Restriction of invading DNA that has not been protected by cognate methylation.", "grounding": null, "id": "foreign_unmethylated_dna_cleavage", "is_orphan": false, "label": "foreign unmethylated DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded type I restriction-modification system.", "grounding": "traitmech:000494", "id": "type_i_restriction_modification_system_trait", "is_orphan": false, "label": "type I restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Type I R-M locus encoding restriction, methylation, and sequence-recognition subunits.", "grounding": null, "id": "type_i_rm_locus", "is_orphan": false, "label": "type I restriction-modification locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures a reusable Type I R-M locus architecture and the DefenseFinder RM_Type_I system namespace without asserting an accession-level mapping between any custom HMM row and characterized HsdR, HsdM, or HsdS families.", "scope_status": "NONMECHANISTIC", "title": "Type I R-M loci mark self and restrict foreign DNA"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-30 14:49 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 889 TraitRecords
+      · embedding coverage 53.7%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

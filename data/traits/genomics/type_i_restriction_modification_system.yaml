@@ -1,0 +1,221 @@
+identifier: traitmech:000494
+label: type I restriction-modification system
+definition: A restriction-modification system in which an organism possesses a Type
+  I R-M locus encoding a pentameric enzyme with HsdR-like restriction, HsdM-like methylation,
+  and HsdS-like DNA sequence-recognition subunits, including RM_Type_I loci represented
+  by DefenseFinder.
+definition_source: DOI:10.1093/nar/gkt847
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000095
+synonyms:
+- synonym_text: RM_Type_I
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: RM__Type_I_MTases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: RM__Type_I_REases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: RM__Type_I_S
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: DOI:10.1093/nar/gkt847
+  snippet: Type I restriction enzymes (REases) are large pentameric proteins with
+    separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits.
+  notes: Loenen et al. define Type I restriction enzymes as pentameric systems with
+    distinct restriction, methylation, and sequence-recognition subunits.
+- reference: DOI:10.1093/nar/gkt847
+  snippet: Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.
+  notes: Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer
+    with both restriction-endonuclease and methyltransferase activities.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'RM_Type_I | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+    and modification: enzymes, genes and genomes'
+  notes: The pinned DefenseFinder article registry maps the RM_Type_I model namespace
+    to the REBASE update.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "RM\tRM_Type_I\t2\t2\tRM__Type_I_MTases, RM__Type_I_REases\tRM__Type_I_S\t\
+    \t"
+  notes: The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring
+    Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory specificity-subunit
+    group.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM__Type_I_MTases_FAM_0                          |                                                  |
+    RM                     | Custom                  | 150    |'
+  notes: The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase
+    profiles under the broad RM system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  |
+    RM                     | Custom                  | 34     |'
+  notes: The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease
+    profiles under the broad RM system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM__Type_I_S_01                                  |                                                  |
+    RM                     | Custom                  | 75     |'
+  notes: The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit
+    profiles under the broad RM system namespace.
+causal_graphs:
+- graph_id: type_i_rm_locus_restricts_foreign_dna
+  title: Type I R-M loci mark self and restrict foreign DNA
+  description: Conservative system-level sketch linking Type I restriction-modification
+    loci to restriction-modification-mediated foreign DNA cleavage.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures a reusable Type I R-M locus architecture and the
+    DefenseFinder RM_Type_I system namespace without asserting an accession-level
+    mapping between any custom HMM row and characterized HsdR, HsdM, or HsdS families.
+  nodes:
+  - node_id: type_i_rm_locus
+    label: type I restriction-modification locus
+    node_type: GENETIC_ELEMENT
+    description: A Type I R-M locus encoding restriction, methylation, and sequence-recognition
+      subunits.
+  - node_id: foreign_unmethylated_dna_cleavage
+    label: foreign unmethylated DNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of invading DNA that has not been protected by cognate
+      methylation.
+  - node_id: type_i_restriction_modification_system_trait
+    label: type I restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000494
+    description: Possession of a genome-encoded type I restriction-modification system.
+  - node_id: restriction_modification_system
+    label: restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000095
+    description: Possession of a methyltransferase and restriction endonuclease system
+      for self/non-self DNA discrimination.
+  edges:
+  - subject: type_i_rm_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: foreign_unmethylated_dna_cleavage
+    description: Type I R-M loci encode the restriction, methylation, and specificity
+      functions needed to recognize and cleave unprotected foreign DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt847
+      snippet: Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.
+      notes: Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer
+        with both restriction-endonuclease and methyltransferase activities.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "RM\tRM_Type_I\t2\t2\tRM__Type_I_MTases, RM__Type_I_REases\tRM__Type_I_S\t\
+        \t"
+      notes: The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring
+        Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory
+        specificity-subunit group.
+  - subject: foreign_unmethylated_dna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: type_i_restriction_modification_system_trait
+    description: Type I restriction-modification activity realizes the organism-level
+      Type I R-M system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'RM_Type_I | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+        and modification: enzymes, genes and genomes'
+      notes: The pinned DefenseFinder article registry maps the RM_Type_I model namespace
+        to the REBASE update.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM__Type_I_MTases_FAM_0                          |                                                  |
+        RM                     | Custom                  | 150    |'
+      notes: The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase
+        profiles under the broad RM system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  |
+        RM                     | Custom                  | 34     |'
+      notes: The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease
+        profiles under the broad RM system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM__Type_I_S_01                                  |                                                  |
+        RM                     | Custom                  | 75     |'
+      notes: The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit
+        profiles under the broad RM system namespace.
+  - subject: type_i_restriction_modification_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: restriction_modification_system
+    description: A Type I R-M system is a subtype of broader restriction-modification
+      system possession.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt847
+      snippet: Type I restriction enzymes (REases) are large pentameric proteins with
+        separate restriction (R), methylation (M) and DNA sequence-recognition (S)
+        subunits.
+      notes: Loenen et al. define Type I restriction enzymes as pentameric systems
+        with distinct restriction, methylation, and sequence-recognition subunits.
+    - reference: DOI:10.1093/nar/gkt847
+      snippet: Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.
+      notes: Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer
+        with both restriction-endonuclease and methyltransferase activities.
+discussions:
+- discussion_id: type-i-rm-profile-interpretation-gap
+  prompt: Resolve the accession-level relationships between DefenseFinder RM Type
+    I custom methyltransferase, restriction-endonuclease, and specificity-subunit
+    profiles and characterized HsdR, HsdM, and HsdS families before minting narrower
+    Type I protein or custom-profile traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Loenen et al. support Type I R-M system architecture and restriction/modification
+    activity, while the pinned DefenseFinder registry supports an RM_Type_I namespace
+    with broad Type_I_MTases, Type_I_REases, and Type_I_S custom profile groups. The
+    evidence does not yet map individual custom profile rows to exact characterized
+    Hsd families or resolve whether each source-model boundary corresponds to a reusable
+    organism-level trait below this class.
+  evidence:
+  - reference: DOI:10.1093/nar/gkt847
+    snippet: Type I restriction enzymes (REases) are large pentameric proteins with
+      separate restriction (R), methylation (M) and DNA sequence-recognition (S) subunits.
+    notes: Loenen et al. define Type I restriction enzymes as pentameric systems with
+      distinct restriction, methylation, and sequence-recognition subunits.
+  - reference: DOI:10.1093/nar/gkt847
+    snippet: Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.
+    notes: Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer
+      with both restriction-endonuclease and methyltransferase activities.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "RM\tRM_Type_I\t2\t2\tRM__Type_I_MTases, RM__Type_I_REases\tRM__Type_I_S\t\
+      \t"
+    notes: The DefenseFinder rules table models RM_Type_I as an RM subsystem requiring
+      Type_I_MTases and Type_I_REases profile groups with Type_I_S as an accessory
+      specificity-subunit group.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM__Type_I_MTases_FAM_0                          |                                                  |
+      RM                     | Custom                  | 150    |'
+    notes: The pinned DefenseFinder HMM inventory lists custom Type I methyltransferase
+      profiles under the broad RM system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM__Type_I_REases_FAM_0.einsi_trimmed            |                                                  |
+      RM                     | Custom                  | 34     |'
+    notes: The pinned DefenseFinder HMM inventory lists custom Type I restriction-endonuclease
+      profiles under the broad RM system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM__Type_I_S_01                                  |                                                  |
+      RM                     | Custom                  | 75     |'
+    notes: The pinned DefenseFinder HMM inventory lists custom Type I specificity-subunit
+      profiles under the broad RM system namespace.
+  attaches_to:
+  - causal_graphs#type_i_rm_locus_restricts_foreign_dna
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T14:49:40Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted type I restriction-modification system as a DOI-backed GENOMICS
+    TraitRecord under restriction-modification system after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v371.
+  llm_assisted: true
+- timestamp: '2026-09-30T14:49:41Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed type I restriction-modification system during initial curation
+    and left canonical_examples empty because the sources support a broad Type I R-M
+    class, a DefenseFinder system model, and multiple biochemical enzyme examples,
+    but not a single stable NCBITaxon strain exemplar for the whole broad Type I branch.
+    No paid research was used.
+  llm_assisted: true
