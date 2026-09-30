@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/armada_system.yaml
+  slug: armada_system
+session:
+  id: 2026-09-30T000243Z-claude-code-29c2bf
+  timestamp: '2026-09-30T00:02:43Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add ARMADA system trait
+  details: Minted traitmech:000477 for the final-DOI-backed ARMADA phage-defense-system possession
+    trait, added evidence from Bell et al., the stable PMC preprint page, and the pinned DefenseFinder
+    article registry, kept DefenseFinder HMM/rules coverage and ARMADA subtype boundaries
+    as an open knowledge gap, and reserved METPO:1043100 in proposals/metpo_traitmech_v354.
