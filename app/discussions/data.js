@@ -5901,6 +5901,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tir_i_system.html#tir-i-detection-trigger-gap"
  },
  {
+  "discussion_id": "tir-iii-detection-trigger-gap",
+  "prompt": "Resolve TIR-III native host breadth, the TIR-III__TIR-III_A and TIR-III__TIR-III_B profile-to-component mapping, phage-trigger specificity, TIR-domain output chemistry, and rule-level DefenseFinder detection criteria before minting narrower TIR-III mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "TIR-III system",
+  "source_id": "traitmech:000481",
+  "source_file": "tir_iii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#tir_iii_locus_inhibits_phage_plaquing"
+  ],
+  "rationale": "Wang et al. support TIR-III as one of nine newly named TIR-domain anti-phage defense systems and note that TIR-III occurs in diverse domain contexts. The pinned DefenseFinder HMM inventory records TIR-III__TIR-III_A and TIR-III__TIR-III_B custom profile rows, but the pinned DefenseFinder rules table has no TIR-III row. This first record therefore does not assert profile requirement logic, accession-level components, a universal domain architecture, or a direct phage trigger.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41467-024-51738-3",
+   "DOI:10.1038/s41467-024-51738-3",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/tir_iii_system.html#tir-iii-detection-trigger-gap"
+ },
+ {
   "discussion_id": "toutatis-mechanism-gap",
   "prompt": "Resolve Toutatis phage triggers and effector outputs before minting narrower Toutatis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7410,9 +7434,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 352,
- "total_knowledge_gaps": 266,
- "total_source_entries": 346,
+ "total_discussions": 353,
+ "total_knowledge_gaps": 267,
+ "total_source_entries": 347,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
