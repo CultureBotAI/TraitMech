@@ -3933,6 +3933,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/menshen_system.html#menshen-mechanism-gap"
  },
  {
+  "discussion_id": "metis-subtype-and-model-coverage-gap",
+  "prompt": "Resolve Metis type I and type II locus composition, native host breadth, profile-to-component mapping, subtype-specific effector biochemistry, and DefenseFinder HMM/rule coverage before minting narrower Metis mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Metis system",
+  "source_id": "traitmech:000502",
+  "source_file": "metis_system.yaml",
+  "attaches_to": [
+   "causal_graphs#metis_m6damp_toxic_effector_defense"
+  ],
+  "rationale": "Osterman et al. support Metis as a bacterial defense system that senses m6dAMP from phage-mediated host-genome degradation and activates type-specific toxic effectors. The pinned DefenseFinder article registry maps the Metis source key to the Osterman et al. preprint, but the pinned HMM inventory and rules table have no exact Metis rows. This first-pass record therefore does not resolve the complete locus model, subtype component boundaries, direct HMM/profile mapping, or native host breadth.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1126/science.aed6782",
+   "DOI:10.1126/science.aed6782",
+   "DOI:10.1126/science.aed6782",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/metis_system.html#metis-subtype-and-model-coverage-gap"
+ },
+ {
   "discussion_id": "mmb_gp29_gp30-mechanism-gap",
   "prompt": "Resolve the MMB gp29 biochemical activity, MMB gp30 regulatory role, lytic trigger, gp29-gp30 interaction, counter-defense specificity, and homolog breadth before minting narrower MMB gp29-gp30 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7969,9 +7995,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 373,
- "total_knowledge_gaps": 287,
- "total_source_entries": 367,
+ "total_discussions": 374,
+ "total_knowledge_gaps": 288,
+ "total_source_entries": 368,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

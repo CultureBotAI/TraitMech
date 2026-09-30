@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 896,
+    "records": 897,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 419,
+    "unresearched_mechanism_records": 420,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 104,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 322,
+      "DEEPEN_CAUSAL_GRAPH": 323,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -8013,6 +8013,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000502",
+      "label": "Metis system",
+      "category": "genomics",
+      "slug": "metis_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 5,
+      "nodes": 6,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (5 edges) +12",
+        "canonical_examples reviewed empty +0"
+      ]
+    },
+    {
       "identifier": "traitmech:000368",
       "label": "MqsRAC system",
       "category": "genomics",
@@ -8665,7 +8688,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 242,
+      "children": 243,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
