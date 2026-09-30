@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/crouga_system.yaml
+  slug: crouga_system
+session:
+  id: 2026-09-30T205737Z-claude-code-873b4a
+  timestamp: '2026-09-30T20:57:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Crouga system
+  details: Minted traitmech:000500 for the P4-associated Crouga system under phage defense
+    system, citing de Sousa et al. for Crouga RM-like composition and P4 phage-protection
+    activity plus the pinned DefenseFinder Crouga article-registry row; added a same-PR METPO
+    proposal v377 reserving METPO:1045400.
