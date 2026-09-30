@@ -175,6 +175,7 @@ data/traits/genomics/aditi_system.yaml	traitmech:000247	Aditi system	aditi_locus
 data/traits/genomics/ambrosia_system.yaml	traitmech:000329	Ambrosia system	ambrosia_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/apsab_system.yaml	traitmech:000328	ApsAB system	apsab_locus_destabilizes_plasmids	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/aristaios_system.yaml	traitmech:000313	Aristaios system	aristaios_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/armada_system.yaml	traitmech:000477	ARMADA system	armada_locus_phage_protection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/audmula_system.yaml	traitmech:000312	Audmula system	audmula_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/avast_system.yaml	traitmech:000239	AVAST system	avast_stand_pattern_recognition_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/azaca_system.yaml	traitmech:000251	Azaca system	azaca_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

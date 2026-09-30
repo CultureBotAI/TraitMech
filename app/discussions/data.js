@@ -679,6 +679,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/aristaios_system.html#aristaios-mechanism-gap"
  },
  {
+  "discussion_id": "armada-subtype-model-and-mechanism-gap",
+  "prompt": "Resolve exact ARMADA Type I and Type II boundaries, DefenseFinder HMM/rules coverage, profile-to-component mapping, direct phage triggers or outputs, and native host breadth before minting narrower ARMADA mechanism, subtype, or protein-component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ARMADA system",
+  "source_id": "traitmech:000477",
+  "source_file": "armada_system.yaml",
+  "attaches_to": [
+   "causal_graphs#armada_locus_phage_protection"
+  ],
+  "rationale": "Bell et al. support ARMADA as a broad YprA-like-helicase system family that shares BrxHII-like and PglX-like components with DISARM Class I systems and splits into Type I and Type II subclades, and the article experimentally validates Type II protection from E. coli NCTC 12900 and ATCC 8739 loci. The pinned DefenseFinder article registry names Armada and maps it to the Bell et al. preprint, but the pinned HMM inventory and rules table do not contain Armada rows, leaving profile coverage and detection criteria unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1016/j.chom.2026.05.015",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/armada_system.html#armada-subtype-model-and-mechanism-gap"
+ },
+ {
   "discussion_id": "audmula-mechanism-gap",
   "prompt": "Resolve Audmula phage triggers and effector outputs before minting narrower Audmula mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7312,9 +7338,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 348,
- "total_knowledge_gaps": 262,
- "total_source_entries": 342,
+ "total_discussions": 349,
+ "total_knowledge_gaps": 263,
+ "total_source_entries": 343,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
