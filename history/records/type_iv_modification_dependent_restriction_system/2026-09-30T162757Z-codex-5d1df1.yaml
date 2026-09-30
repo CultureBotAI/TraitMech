@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
+  slug: type_iv_modification_dependent_restriction_system
+session:
+  id: 2026-09-30T162757Z-codex-5d1df1
+  timestamp: '2026-09-30T16:27:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add type IV modification-dependent restriction system
+  details: Minted traitmech:000496 for a Type IV modification-dependent restriction system
+    under phage defense system, citing Loenen and Raleigh for the broad modification-dependent
+    class, Bair and Black for GmrSD Type IV nuclease activity, and pinned DefenseFinder RM_Type_IV
+    rule/HMM and Other_Type_IV article rows; added a same-PR METPO proposal v373 reserving
+    METPO:1045000.
