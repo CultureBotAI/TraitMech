@@ -3765,6 +3765,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/kiwa_system.html#kiwa-activation-and-counterdefense-gap"
  },
  {
+  "discussion_id": "kongming-profile-host-and-component-gap",
+  "prompt": "Resolve Kongming natural host breadth, exact locus composition, phage nucleotide-kinase inputs, KomA/KomB/KomC profile boundaries, and DefenseFinder HMM/rule coverage before minting narrower Kongming mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Kongming system",
+  "source_id": "traitmech:000501",
+  "source_file": "kongming_system.yaml",
+  "attaches_to": [
+   "causal_graphs#kongming_ditp_nadase_defense"
+  ],
+  "rationale": "Zeng et al. support a bacterial antiphage system that uses system-encoded adenosine deaminase and phage nucleotide kinases to produce dITP messengers, and Li et al. connect the named Kongming system to dITP-driven activation of the KomBC NADase effector. The pinned DefenseFinder article registry maps the Kongming source key to the Zeng et al. Science paper, but the pinned HMM inventory and rules table have no exact Kongming rows. This first-pass record therefore does not resolve the complete locus model, direct HMM/profile mapping, or native host breadth.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1126/science.ads6055",
+   "DOI:10.1038/s41467-026-74710-9",
+   "DOI:10.1038/s41467-026-74710-9",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/kongming_system.html#kongming-profile-host-and-component-gap"
+ },
+ {
   "discussion_id": "lamassu-subtype-and-effector-gap",
   "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7943,9 +7969,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 372,
- "total_knowledge_gaps": 286,
- "total_source_entries": 366,
+ "total_discussions": 373,
+ "total_knowledge_gaps": 287,
+ "total_source_entries": 367,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

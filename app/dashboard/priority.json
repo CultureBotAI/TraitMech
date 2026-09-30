@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 895,
+    "records": 896,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 418,
+    "unresearched_mechanism_records": 419,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 104,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 321,
+      "DEEPEN_CAUSAL_GRAPH": 322,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -7901,6 +7901,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000501",
+      "label": "Kongming system",
+      "category": "genomics",
+      "slug": "kongming_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 5,
+      "nodes": 6,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (5 edges) +12",
+        "canonical_examples reviewed empty +0"
+      ]
+    },
+    {
       "identifier": "traitmech:000232",
       "label": "Lamassu system",
       "category": "genomics",
@@ -8642,7 +8665,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 241,
+      "children": 242,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/kongming_system.yaml
+  slug: kongming_system
+session:
+  id: 2026-09-30T220548Z-codex-b2e9b4
+  timestamp: '2026-09-30T22:05:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Kongming system
+  details: Minted traitmech:000501 for the dITP-signaling Kongming system under phage defense
+    system, citing Zeng et al. for nucleobase-modification antiphage signaling, Li et al.
+    for Kongming KomBC effector activation, and the pinned DefenseFinder Kongming article-registry
+    row; added a same-PR METPO proposal v378 reserving METPO:1045500.
