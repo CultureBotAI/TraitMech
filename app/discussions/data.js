@@ -6091,6 +6091,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/type_iig_restriction_modification_system.html#type-iig-rm-profile-interpretation-gap"
  },
  {
+  "discussion_id": "type-iii-rm-profile-interpretation-gap",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_III custom methyltransferase and restriction-endonuclease profiles and characterized Mod and Res families before minting narrower Type III protein or custom-profile traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "type III restriction-modification system",
+  "source_id": "traitmech:000495",
+  "source_file": "type_iii_restriction_modification_system.yaml",
+  "attaches_to": [
+   "causal_graphs#type_iii_rm_locus_restricts_foreign_dna"
+  ],
+  "rationale": "Butterer et al. support Type III R-M Res/Mod architecture, while the pinned DefenseFinder registry supports an RM_Type_III namespace with broad Type_III_MTases and Type_III_REases custom profile groups. The evidence does not yet map individual custom profile rows to exact characterized Res or Mod families or resolve whether each source-model boundary corresponds to a reusable organism-level trait below this class.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gku122",
+   "DOI:10.1093/nar/gku122",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/type_iii_restriction_modification_system.html#type-iii-rm-profile-interpretation-gap"
+ },
+ {
   "discussion_id": "ukko-mechanism-gap",
   "prompt": "Resolve Ukko phage triggers and effector outputs before minting narrower Ukko mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7796,9 +7821,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 366,
- "total_knowledge_gaps": 280,
- "total_source_entries": 360,
+ "total_discussions": 367,
+ "total_knowledge_gaps": 281,
+ "total_source_entries": 361,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,237 @@
+identifier: traitmech:000495
+label: type III restriction-modification system
+definition: A restriction-modification system in which an organism possesses a Type
+  III R-M locus encoding Mod-like DNA methyltransferase and Res-like ATP-dependent
+  restriction subunits, including RM_Type_III loci represented by DefenseFinder.
+definition_source: DOI:10.1093/nar/gku122
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000095
+synonyms:
+- synonym_text: RM_Type_III
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: RM_Type_III__Type_III_MTases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: RM_Type_III__Type_III_REases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: DOI:10.1093/nar/gku122
+  snippet: The Type III REs are hetero-oligomeric assemblies, comprising polypeptides
+    encoded by the res (restriction) and mod (modification) genes (4).
+  notes: Butterer et al. describe Type III restriction endonucleases as hetero-oligomeric
+    assemblies encoded by res restriction and mod modification genes.
+- reference: DOI:10.1093/nar/gku122
+  snippet: In this study, we present a series of results obtained by native mass spectrometry
+    and size exclusion chromatography with multi-angle light scattering consistent
+    with a 1:2 ratio of Res to Mod subunits in the EcoP15I, EcoPI and PstII complexes
+    as the main holoenzyme species and a 1:1 stoichiometry of specific DNA (sDNA)
+    binding by EcoP15I and EcoPI.
+  notes: Butterer et al. support a Type III R-M holoenzyme model with one Res subunit
+    and two Mod subunits for characterized EcoP15I, EcoPI, and PstII complexes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'RM_Type_III | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+    and modification: enzymes, genes and genomes'
+  notes: The pinned DefenseFinder article registry maps the RM_Type_III model namespace
+    to the REBASE update.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "RM\tRM_Type_III\t2\t2\tRM_Type_III__Type_III_MTases, RM_Type_III__Type_III_REases\t\
+    \t\t"
+  notes: The DefenseFinder rules table models RM_Type_III as an RM subsystem requiring
+    Type_III_MTases and Type_III_REases profile groups.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM_Type_III__Type_III_MTases_FAM_0               |                                                  |
+    RM_Type_III            | Custom                  | 100    |
+
+    | RM_Type_III__Type_III_MTases_FAM_1               |                                                  |
+    RM_Type_III            | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory lists custom Type III methyltransferase
+    profiles under the RM_Type_III system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM_Type_III__Type_III_REases_FAM_0.einsi_trimmed |                                                  |
+    RM_Type_III            | Custom                  | 22     |
+
+    | RM_Type_III__Type_III_REases_FAM_1.einsi_trimmed |                                                  |
+    RM_Type_III            | Custom                  | 22     |'
+  notes: The pinned DefenseFinder HMM inventory lists custom Type III restriction-endonuclease
+    profiles under the RM_Type_III system namespace.
+causal_graphs:
+- graph_id: type_iii_rm_locus_restricts_foreign_dna
+  title: Type III R-M loci mark self and restrict foreign DNA
+  description: Conservative system-level sketch linking Type III restriction-modification
+    loci to restriction-modification-mediated foreign DNA cleavage.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures a reusable Type III R-M locus architecture and the
+    DefenseFinder RM_Type_III custom-profile namespace without asserting an accession-level
+    mapping between any custom HMM row and characterized Res or Mod families.
+  nodes:
+  - node_id: type_iii_rm_locus
+    label: type III restriction-modification locus
+    node_type: GENETIC_ELEMENT
+    description: A Type III R-M locus encoding Mod-like and Res-like subunits.
+  - node_id: foreign_unmethylated_dna_cleavage
+    label: foreign unmethylated DNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of invading DNA that has not been protected by cognate
+      methylation.
+  - node_id: type_iii_restriction_modification_system_trait
+    label: type III restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000495
+    description: Possession of a genome-encoded type III restriction-modification
+      system.
+  - node_id: restriction_modification_system
+    label: restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000095
+    description: Possession of a methyltransferase and restriction endonuclease system
+      for self/non-self DNA discrimination.
+  edges:
+  - subject: type_iii_rm_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: foreign_unmethylated_dna_cleavage
+    description: Type III R-M loci encode the Mod and Res functions needed to recognize,
+      methylate, and cleave DNA at Type III recognition sites.
+    evidence:
+    - reference: DOI:10.1093/nar/gku122
+      snippet: The Type III REs are hetero-oligomeric assemblies, comprising polypeptides
+        encoded by the res (restriction) and mod (modification) genes (4).
+      notes: Butterer et al. describe Type III restriction endonucleases as hetero-oligomeric
+        assemblies encoded by res restriction and mod modification genes.
+    - reference: DOI:10.1093/nar/gku122
+      snippet: In this study, we present a series of results obtained by native mass
+        spectrometry and size exclusion chromatography with multi-angle light scattering
+        consistent with a 1:2 ratio of Res to Mod subunits in the EcoP15I, EcoPI and
+        PstII complexes as the main holoenzyme species and a 1:1 stoichiometry of
+        specific DNA (sDNA) binding by EcoP15I and EcoPI.
+      notes: Butterer et al. support a Type III R-M holoenzyme model with one Res
+        subunit and two Mod subunits for characterized EcoP15I, EcoPI, and PstII complexes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "RM\tRM_Type_III\t2\t2\tRM_Type_III__Type_III_MTases, RM_Type_III__Type_III_REases\t\
+        \t\t"
+      notes: The DefenseFinder rules table models RM_Type_III as an RM subsystem requiring
+        Type_III_MTases and Type_III_REases profile groups.
+  - subject: foreign_unmethylated_dna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: type_iii_restriction_modification_system_trait
+    description: Type III restriction-modification activity realizes the organism-level
+      Type III R-M system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'RM_Type_III | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+        and modification: enzymes, genes and genomes'
+      notes: The pinned DefenseFinder article registry maps the RM_Type_III model
+        namespace to the REBASE update.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_III__Type_III_MTases_FAM_0               |                                                  |
+        RM_Type_III            | Custom                  | 100    |
+
+        | RM_Type_III__Type_III_MTases_FAM_1               |                                                  |
+        RM_Type_III            | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory lists custom Type III methyltransferase
+        profiles under the RM_Type_III system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_III__Type_III_REases_FAM_0.einsi_trimmed |                                                  |
+        RM_Type_III            | Custom                  | 22     |
+
+        | RM_Type_III__Type_III_REases_FAM_1.einsi_trimmed |                                                  |
+        RM_Type_III            | Custom                  | 22     |'
+      notes: The pinned DefenseFinder HMM inventory lists custom Type III restriction-endonuclease
+        profiles under the RM_Type_III system namespace.
+  - subject: type_iii_restriction_modification_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: restriction_modification_system
+    description: A Type III R-M system is a subtype of broader restriction-modification
+      system possession.
+    evidence:
+    - reference: DOI:10.1093/nar/gku122
+      snippet: The Type III REs are hetero-oligomeric assemblies, comprising polypeptides
+        encoded by the res (restriction) and mod (modification) genes (4).
+      notes: Butterer et al. describe Type III restriction endonucleases as hetero-oligomeric
+        assemblies encoded by res restriction and mod modification genes.
+    - reference: DOI:10.1093/nar/gku122
+      snippet: In this study, we present a series of results obtained by native mass
+        spectrometry and size exclusion chromatography with multi-angle light scattering
+        consistent with a 1:2 ratio of Res to Mod subunits in the EcoP15I, EcoPI and
+        PstII complexes as the main holoenzyme species and a 1:1 stoichiometry of
+        specific DNA (sDNA) binding by EcoP15I and EcoPI.
+      notes: Butterer et al. support a Type III R-M holoenzyme model with one Res
+        subunit and two Mod subunits for characterized EcoP15I, EcoPI, and PstII complexes.
+discussions:
+- discussion_id: type-iii-rm-profile-interpretation-gap
+  prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_III
+    custom methyltransferase and restriction-endonuclease profiles and characterized
+    Mod and Res families before minting narrower Type III protein or custom-profile
+    traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Butterer et al. support Type III R-M Res/Mod architecture, while the
+    pinned DefenseFinder registry supports an RM_Type_III namespace with broad Type_III_MTases
+    and Type_III_REases custom profile groups. The evidence does not yet map individual
+    custom profile rows to exact characterized Res or Mod families or resolve whether
+    each source-model boundary corresponds to a reusable organism-level trait below
+    this class.
+  evidence:
+  - reference: DOI:10.1093/nar/gku122
+    snippet: The Type III REs are hetero-oligomeric assemblies, comprising polypeptides
+      encoded by the res (restriction) and mod (modification) genes (4).
+    notes: Butterer et al. describe Type III restriction endonucleases as hetero-oligomeric
+      assemblies encoded by res restriction and mod modification genes.
+  - reference: DOI:10.1093/nar/gku122
+    snippet: In this study, we present a series of results obtained by native mass
+      spectrometry and size exclusion chromatography with multi-angle light scattering
+      consistent with a 1:2 ratio of Res to Mod subunits in the EcoP15I, EcoPI and
+      PstII complexes as the main holoenzyme species and a 1:1 stoichiometry of specific
+      DNA (sDNA) binding by EcoP15I and EcoPI.
+    notes: Butterer et al. support a Type III R-M holoenzyme model with one Res subunit
+      and two Mod subunits for characterized EcoP15I, EcoPI, and PstII complexes.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "RM\tRM_Type_III\t2\t2\tRM_Type_III__Type_III_MTases, RM_Type_III__Type_III_REases\t\
+      \t\t"
+    notes: The DefenseFinder rules table models RM_Type_III as an RM subsystem requiring
+      Type_III_MTases and Type_III_REases profile groups.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM_Type_III__Type_III_MTases_FAM_0               |                                                  |
+      RM_Type_III            | Custom                  | 100    |
+
+      | RM_Type_III__Type_III_MTases_FAM_1               |                                                  |
+      RM_Type_III            | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory lists custom Type III methyltransferase
+      profiles under the RM_Type_III system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM_Type_III__Type_III_REases_FAM_0.einsi_trimmed |                                                  |
+      RM_Type_III            | Custom                  | 22     |
+
+      | RM_Type_III__Type_III_REases_FAM_1.einsi_trimmed |                                                  |
+      RM_Type_III            | Custom                  | 22     |'
+    notes: The pinned DefenseFinder HMM inventory lists custom Type III restriction-endonuclease
+      profiles under the RM_Type_III system namespace.
+  attaches_to:
+  - causal_graphs#type_iii_rm_locus_restricts_foreign_dna
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T15:29:46Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted type III restriction-modification system as a DOI-backed GENOMICS
+    TraitRecord under restriction-modification system after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v372.
+  llm_assisted: true
+- timestamp: '2026-09-30T15:29:47Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed type III restriction-modification system during initial curation
+    and left canonical_examples empty because the sources support a broad Type III
+    R-M class, a DefenseFinder system model, and multiple biochemical enzyme examples,
+    but not a single stable NCBITaxon strain exemplar for the whole broad Type III
+    branch. No paid research was used.
+  llm_assisted: true
