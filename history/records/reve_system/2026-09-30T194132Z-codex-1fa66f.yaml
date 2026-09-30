@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/reve_system.yaml
+  slug: reve_system
+session:
+  id: 2026-09-30T194132Z-codex-1fa66f
+  timestamp: '2026-09-30T19:41:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Reve system
+  details: Minted traitmech:000499 for the single-gene P4-associated Reve system under phage
+    defense system, citing de Sousa et al. for Reve composition and phage-protection activity
+    plus the pinned DefenseFinder Reve article-registry row; added a same-PR METPO proposal
+    v376 reserving METPO:1045300.
