@@ -5949,6 +5949,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tir_iv_system.html#tir-iv-detection-trigger-gap"
  },
  {
+  "discussion_id": "tir-vii-detection-trigger-gap",
+  "prompt": "Resolve TIR-VII native host breadth, the TIR-VII__TIR-VII_A and TIR-VII__TIR-VII_B profile-to-component mapping, phage-trigger specificity, TIR-domain output chemistry, and rule-level DefenseFinder detection criteria before minting narrower TIR-VII mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "TIR-VII system",
+  "source_id": "traitmech:000483",
+  "source_file": "tir_vii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#tir_vii_locus_inhibits_phage_plaquing"
+  ],
+  "rationale": "Wang et al. support TIR-VII as one of nine newly named TIR-domain anti-phage defense systems and note that TIR-VII was recovered in a single form with TIR-VIII. The pinned DefenseFinder HMM inventory records TIR-VII__TIR-VII_A and TIR-VII__TIR-VII_B custom profile rows, but the pinned DefenseFinder rules table has no TIR-VII row. This first record therefore does not assert profile requirement logic, accession-level components, a direct phage trigger, or TIR-domain output chemistry.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41467-024-51738-3",
+   "DOI:10.1038/s41467-024-51738-3",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/tir_vii_system.html#tir-vii-detection-trigger-gap"
+ },
+ {
   "discussion_id": "toutatis-mechanism-gap",
   "prompt": "Resolve Toutatis phage triggers and effector outputs before minting narrower Toutatis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7458,9 +7482,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 354,
- "total_knowledge_gaps": 268,
- "total_source_entries": 348,
+ "total_discussions": 355,
+ "total_knowledge_gaps": 269,
+ "total_source_entries": 349,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
