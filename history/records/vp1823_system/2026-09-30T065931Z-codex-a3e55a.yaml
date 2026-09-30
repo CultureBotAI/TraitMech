@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/vp1823_system.yaml
+  slug: vp1823_system
+session:
+  id: 2026-09-30T065931Z-codex-a3e55a
+  timestamp: '2026-09-30T06:59:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add VP1823 system trait
+  details: Minted traitmech:000485 for VP1823 system with Getz et al. DOI evidence, Springer
+    supplementary-table and PSI-BLAST snippets, pinned DefenseFinder article and HMM evidence,
+    no pinned DefenseFinder rules row, a conservative integron-cassette-level graph, a DefenseFinder
+    rule gap discussion, and a v362 METPO proposal reserving METPO:1043900.
