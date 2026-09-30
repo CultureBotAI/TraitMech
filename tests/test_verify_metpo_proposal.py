@@ -71,6 +71,71 @@ def test_twelve_column_class_header_checks_related_synonym_directive():
     ]
 
 
+def test_read_tsv_allows_missing_final_related_synonym_cell(tmp_path):
+    path = tmp_path / "metpo_proposal_classes_robot.tsv"
+    path.write_text(
+        "\t".join(
+            [
+                "proposed_id",
+                "label",
+                "definition",
+                "definition_source",
+                "parent",
+                "synonyms",
+                "xrefs",
+                "subset",
+                "priority",
+                "observations",
+                "traits_addressed",
+                "related_synonyms",
+            ]
+        )
+        + "\n"
+        + "\t".join(
+            [
+                "ID",
+                "LABEL",
+                "A IAO:0000115",
+                ">A IAO:0000119",
+                "SC %",
+                "A oboInOwl:hasExactSynonym SPLIT=|",
+                "A oboInOwl:hasDbXref SPLIT=|",
+                "A oboInOwl:inSubset",
+                "",
+                "",
+                "",
+                "A oboInOwl:hasRelatedSynonym SPLIT=|",
+            ]
+        )
+        + "\n"
+        + "\t".join(
+            [
+                "METPO:1045200",
+                "Toga system",
+                "A phage defense system.",
+                "DOI:10.1093/nar/gkag898",
+                "METPO:1016300",
+                "Toga",
+                "",
+                "metpo_traitmech_2026_09",
+                "HIGH",
+                "no related synonym cell",
+                "traitmech:000498",
+            ]
+        )
+        + "\n"
+    )
+
+    rows = vmp._read_tsv(path)
+    failures: list[str] = []
+
+    width = vmp.check_columns(rows, vmp.CLASS_COLS, "classes", failures)
+
+    assert width == 12
+    assert rows[2][-1] == ""
+    assert failures == []
+
+
 def _corpus(tmp_path: Path, *ids: str) -> Path:
     """A stand-in data/traits/ holding one YAML per synthetic id."""
     d = tmp_path / "traits"

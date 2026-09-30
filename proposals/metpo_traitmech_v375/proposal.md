@@ -62,8 +62,8 @@ possession trait.
 
 ## Artifacts
 
-- `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with one
-  exact synonym.
+- `metpo_proposal_classes_robot.tsv` - ROBOT class template with one exact
+  synonym.
 
 ## Upstream Path
 
