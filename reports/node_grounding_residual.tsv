@@ -35,6 +35,7 @@ amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutroph
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
 phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/razr_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
+foreign unmethylated dna cleavage	BIOLOGICAL_PROCESS	4	data/traits/genomics/type_i_restriction_modification_system.yaml|data/traits/genomics/type_ii_restriction_modification_system.yaml|data/traits/genomics/type_iig_restriction_modification_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -65,7 +66,6 @@ phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 t7 phage resistance	BIOLOGICAL_PROCESS	3	data/traits/genomics/rst_duf4238_system.yaml|data/traits/genomics/rst_helicaseduf2290_system.yaml|data/traits/genomics/rst_hydrolase_3tm_system.yaml
-foreign unmethylated dna cleavage	BIOLOGICAL_PROCESS	3	data/traits/genomics/type_i_restriction_modification_system.yaml|data/traits/genomics/type_ii_restriction_modification_system.yaml|data/traits/genomics/type_iig_restriction_modification_system.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
 rod complex	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width_very_small.yaml|data/traits/morphology/rod_shaped.yaml
 roda-pbp2 complex	GENE_OR_PROTEIN	3	data/traits/morphology/cell_length_medium.yaml|data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/rod_shaped.yaml
@@ -1747,6 +1747,7 @@ homologous recombination between is copies	BIOLOGICAL_PROCESS	1	data/traits/geno
 type i restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_i_restriction_modification_system.yaml
 type ii restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_ii_restriction_modification_system.yaml
 type iig restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iig_restriction_modification_system.yaml
+type iii restriction-modification locus	GENETIC_ELEMENT	1	data/traits/genomics/type_iii_restriction_modification_system.yaml
 ukko locus	GENETIC_ELEMENT	1	data/traits/genomics/ukko_system.yaml
 uzume locus	GENETIC_ELEMENT	1	data/traits/genomics/uzume_system.yaml
 veles locus	GENETIC_ELEMENT	1	data/traits/genomics/veles_system.yaml

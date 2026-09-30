@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/type_iii_restriction_modification_system.yaml
+  slug: type_iii_restriction_modification_system
+session:
+  id: 2026-09-30T153250Z-codex-3b8a0a
+  timestamp: '2026-09-30T15:32:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add type III restriction-modification system
+  details: Minted traitmech:000495 for a Type III restriction-modification system under the
+    restriction-modification parent with DOI-backed Butterer et al. Type III Res/Mod architecture
+    evidence, pinned DefenseFinder RM_Type_III article, rule, MTase-HMM, and REase-HMM evidence,
+    a nonmechanistic locus-level graph, an open profile-interpretation knowledge gap, and
+    METPO proposal v372 reserving METPO:1044900.
