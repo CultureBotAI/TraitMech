@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tir_iii_system.yaml
+  slug: tir_iii_system
+session:
+  id: 2026-09-30T033247Z-codex-08de5e
+  timestamp: '2026-09-30T03:32:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add TIR-III system trait
+  details: Minted traitmech:000481 for TIR-III system with Wang et al. DOI evidence, pinned
+    DefenseFinder article and HMM rows, a nonmechanistic TIR-III locus graph, an open DefenseFinder
+    rules and TIR-trigger knowledge gap, and a v358 METPO proposal reserving METPO:1043500.
