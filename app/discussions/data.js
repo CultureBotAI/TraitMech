@@ -6116,6 +6116,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/viperin_system.html#viperin-product-and-subtype-gap"
  },
  {
+  "discussion_id": "vp1823-defensefinder-model-gap",
+  "prompt": "Resolve VP1823 native host breadth, exact single-component activity, profile-to-protein mapping, homolog boundary, full phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower VP1823 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "VP1823 system",
+  "source_id": "traitmech:000485",
+  "source_file": "vp1823_system.yaml",
+  "attaches_to": [
+   "causal_graphs#vp1823_locus_reduces_bacteriophage_plaquing"
+  ],
+  "rationale": "Getz et al. support VP1823 as one of nine RIMD 2210633 integron-encoded cassettes whose cloned expression reduced phage plaquing, Supplementary Tables 8, 9, and 12 map VP1823 to VP_RS08795/VP1823, WP_079749463.1, VSV105-vp1823, and phage-plating fold changes, and Supplementary Data 1 reports PSI-BLAST homologs. The pinned DefenseFinder HMM inventory records one VP1823 custom profile row. The pinned rules table has no VP1823 row, and the first-pass record does not resolve native host breadth, complete phage breadth, direct profile-to-protein correspondence, molecular output, or endogenous activity.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-025-01927-7",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM2_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx",
+   "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-025-01927-7/MediaObjects/41564_2025_1927_MOESM3_ESM.xlsx",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/vp1823_system.html#vp1823-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "vp1840-defensefinder-model-gap",
   "prompt": "Resolve VP1840 native host breadth, exact single-component activity, profile-to-protein mapping, homolog boundary, full phage breadth, molecular output, and rule-level DefenseFinder criteria before minting narrower VP1840 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7506,9 +7535,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 356,
- "total_knowledge_gaps": 270,
- "total_source_entries": 350,
+ "total_discussions": 357,
+ "total_knowledge_gaps": 271,
+ "total_source_entries": 351,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
