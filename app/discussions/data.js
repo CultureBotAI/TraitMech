@@ -6016,6 +6016,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/toutatis_system.html#toutatis-mechanism-gap"
  },
  {
+  "discussion_id": "type-i-rm-profile-interpretation-gap",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM Type I custom methyltransferase, restriction-endonuclease, and specificity-subunit profiles and characterized HsdR, HsdM, and HsdS families before minting narrower Type I protein or custom-profile traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "type I restriction-modification system",
+  "source_id": "traitmech:000494",
+  "source_file": "type_i_restriction_modification_system.yaml",
+  "attaches_to": [
+   "causal_graphs#type_i_rm_locus_restricts_foreign_dna"
+  ],
+  "rationale": "Loenen et al. support Type I R-M system architecture and restriction/modification activity, while the pinned DefenseFinder registry supports an RM_Type_I namespace with broad Type_I_MTases, Type_I_REases, and Type_I_S custom profile groups. The evidence does not yet map individual custom profile rows to exact characterized Hsd families or resolve whether each source-model boundary corresponds to a reusable organism-level trait below this class.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkt847",
+   "DOI:10.1093/nar/gkt847",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/type_i_restriction_modification_system.html#type-i-rm-profile-interpretation-gap"
+ },
+ {
   "discussion_id": "type-ii-rm-profile-interpretation-gap",
   "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_II custom methyltransferase and restriction-endonuclease profiles, characterized Type II enzyme families, and Type IIG subclass boundaries before minting narrower Type II protein or custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -7770,9 +7796,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 365,
- "total_knowledge_gaps": 279,
- "total_source_entries": 359,
+ "total_discussions": 366,
+ "total_knowledge_gaps": 280,
+ "total_source_entries": 360,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

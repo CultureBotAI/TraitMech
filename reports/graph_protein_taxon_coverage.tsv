@@ -433,6 +433,7 @@ data/traits/genomics/tir_viii_system.yaml	traitmech:000484	TIR-VIII system	tir_v
 data/traits/genomics/toutatis_system.yaml	traitmech:000267	Toutatis system	toutatis_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/toxin_system.yaml	traitmech:000226	ToxIN system	toxin_type_iii_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/transposable_element.yaml	traitmech:000092	transposable element	te_transposition_rearrangement	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/type_i_restriction_modification_system.yaml	traitmech:000494	type I restriction-modification system	type_i_rm_locus_restricts_foreign_dna	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/type_ii_restriction_modification_system.yaml	traitmech:000493	type II restriction-modification system	type_ii_rm_locus_restricts_foreign_dna	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/type_iig_restriction_modification_system.yaml	traitmech:000375	type IIG restriction-modification system	type_iig_rm_locus_restricts_foreign_dna	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/ukko_system.yaml	traitmech:000292	Ukko system	ukko_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
