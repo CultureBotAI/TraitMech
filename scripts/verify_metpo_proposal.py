@@ -55,7 +55,13 @@ SUBSET_TAG = re.compile(r"^metpo_traitmech_\d{4}_\d{2}$")
 def _read_tsv(path: Path) -> list[list[str]]:
     if not path.exists():
         return []
-    return [line.rstrip("\n").split("\t") for line in path.read_text().splitlines()]
+    rows = [line.rstrip("\n").split("\t") for line in path.read_text().splitlines()]
+    if rows and rows[0][-1] == "related_synonyms":
+        width = len(rows[0])
+        for row in rows[2:]:
+            if len(row) == width - 1 and len(row) > 7 and SUBSET_TAG.match(row[7]):
+                row.append("")
+    return rows
 
 
 def _emit(failures: list[str], msg: str) -> None:

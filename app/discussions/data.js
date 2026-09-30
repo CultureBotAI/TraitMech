@@ -6021,6 +6021,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tir_viii_system.html#tir-viii-detection-trigger-gap"
  },
  {
+  "discussion_id": "toga-mechanism-and-modelling-gap",
+  "prompt": "Resolve Toga locus breadth, exact phage triggers, direct molecular output, source-system table rows, and DefenseFinder HMM/rule coverage before minting narrower Toga mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Toga system",
+  "source_id": "traitmech:000498",
+  "source_file": "toga_system.yaml",
+  "attaches_to": [
+   "causal_graphs#toga_locus_restricts_phage"
+  ],
+  "rationale": "de Sousa et al. support Toga as one of the novel P4-encoded systems with experimental phage-protection activity, and the pinned DefenseFinder article registry maps the Toga source key to the corresponding preprint. The pinned HMM inventory and rules table have no exact Toga rows, and this first-pass record does not resolve the tested source locus, complete phage breadth, exact trigger, molecular output, or detection rule.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkag898",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/toga_system.html#toga-mechanism-and-modelling-gap"
+ },
+ {
   "discussion_id": "toutatis-mechanism-gap",
   "prompt": "Resolve Toutatis phage triggers and effector outputs before minting narrower Toutatis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7871,9 +7895,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 369,
- "total_knowledge_gaps": 283,
- "total_source_entries": 363,
+ "total_discussions": 370,
+ "total_knowledge_gaps": 284,
+ "total_source_entries": 364,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

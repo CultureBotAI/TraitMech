@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/toga_system.yaml
+  slug: toga_system
+session:
+  id: 2026-09-30T181222Z-codex-1aa79f
+  timestamp: '2026-09-30T18:12:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Toga system
+  details: Minted traitmech:000498 for the single-protein P4-associated Toga
+    system under phage defense system, citing de Sousa et al. for Toga
+    composition and phage-protection activity plus the pinned DefenseFinder
+    Toga article-registry row; added a same-PR METPO proposal v375 reserving
+    METPO:1045200.
