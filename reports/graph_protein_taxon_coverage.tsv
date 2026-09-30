@@ -322,6 +322,7 @@ data/traits/genomics/integrative_conjugative_element.yaml	traitmech:000410	integ
 data/traits/genomics/jukab_system.yaml	traitmech:000305	JukAB system	jukab_recruits_effector_to_block_jumbo_phage	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/kamadhenu_system.yaml	traitmech:000310	Kamadhenu system	kamadhenu_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/kiwa_system.yaml	traitmech:000231	Kiwa system	kiwa_membrane_sensing_dna_binding	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/kongming_system.yaml	traitmech:000501	Kongming system	kongming_ditp_nadase_defense	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/lamassu_system.yaml	traitmech:000232	Lamassu system	lamassu_smc_dna_sensing_nuclease_activation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/lanthivirin_system.yaml	traitmech:000416	lanthivirin system	lanthivirin_bgc_inhibits_phage_dna_replication	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/lit_system.yaml	traitmech:000363	Lit system	lit_locus_restricts_t4_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
