@@ -17,6 +17,8 @@ updates:
     # Updates arrive through the shared canonical governance revision.
     exclude-paths:
       - ".github/workflows/pr-shepherd.yml"
+      - ".github/workflows/merge-queue-admission.yaml"
+      - ".github/workflows/verify-merge-integrity.yaml"
     schedule:
       interval: weekly
     # One PR per action rather than a lockstep bump: an action upgrade can break
