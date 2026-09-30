@@ -126,6 +126,22 @@ def test_conventions_pointer_must_be_the_first_line(tmp_path):
     assert "MISSING_CONVENTIONS_POINTER" in _checks(check_workflows(root))
 
 
+@pytest.mark.parametrize("name", ["merge-queue-admission.yaml", "verify-merge-integrity.yaml"])
+def test_governed_queue_workflow_paths_are_exempt_only_from_the_pointer(tmp_path, name):
+    """#1494: the canonical queue workflows are checked byte-for-byte elsewhere."""
+    root = _repo(tmp_path)
+    body = UNFILTERED_WF.split("\n", 1)[1]
+    (root / ".github/workflows" / name).write_text(body)
+    (root / ".github/workflows/local-queue.yaml").write_text(body)
+    flagged = [f["file"] for f in check_workflows(root)
+               if f["check"] == "MISSING_CONVENTIONS_POINTER"]
+    assert flagged == [".github/workflows/local-queue.yaml"]
+
+    (root / ".github/workflows" / name).write_text("name: x\n  bad: [indent\n")
+    assert any(f["check"] == "WORKFLOW_INVALID" and f["file"].endswith(name)
+               for f in check_workflows(root))
+
+
 def test_pointer_check_is_independent_of_yaml_validity(tmp_path):
     """An unparseable workflow still gets the pointer finding: the check reads
     the first line, so it must not be gated behind a successful yaml parse."""

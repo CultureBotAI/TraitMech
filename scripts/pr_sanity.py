@@ -110,6 +110,13 @@ CONVENTIONS_POINTER = "Conventions for this directory: docs/WORKFLOW_CONVENTIONS
 # fails on any local edit, so demanding the local pointer would demand a
 # change nobody here may make (culturebotai-claw#391).
 GOVERNED_BANNER = "# Governed by culturebotai-claw"
+# These additional canonical workflows have no banner. The independent
+# vendored-sync check enforces their complete bytes; only the local header
+# requirement is waived here, with all workflow validation retained (#1494).
+GOVERNED_QUEUE_WORKFLOWS = frozenset({
+    ".github/workflows/merge-queue-admission.yaml",
+    ".github/workflows/verify-merge-integrity.yaml",
+})
 
 # Triggers that resolve to the SAME pull request as a `pull_request` run, so
 # they can land in a group keyed on the PR — which is what made #215 possible:
@@ -517,7 +524,9 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
         rel = str(path.relative_to(root))
         text = path.read_text()
         first = text.split("\n", 1)[0].strip()
-        if first != f"# {CONVENTIONS_POINTER}" and not first.startswith(GOVERNED_BANNER):
+        if (first != f"# {CONVENTIONS_POINTER}"
+                and not first.startswith(GOVERNED_BANNER)
+                and rel not in GOVERNED_QUEUE_WORKFLOWS):
             findings.append({
                 "check": "MISSING_CONVENTIONS_POINTER", "file": rel,
                 "detail": (f"first line is not `# {CONVENTIONS_POINTER}` — an "
