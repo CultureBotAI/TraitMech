@@ -5112,6 +5112,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/retron_system.html#retron-effector-trigger-gap"
  },
  {
+  "discussion_id": "reve-mechanism-and-modelling-gap",
+  "prompt": "Resolve Reve locus breadth, exact phage triggers, ATPase/P-loop molecular roles, direct antiviral output, source-system table rows, and DefenseFinder HMM/rule coverage before minting narrower Reve mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Reve system",
+  "source_id": "traitmech:000499",
+  "source_file": "reve_system.yaml",
+  "attaches_to": [
+   "causal_graphs#reve_locus_restricts_phage"
+  ],
+  "rationale": "de Sousa et al. support Reve as one of the novel single-gene P4-encoded systems with experimental phage-protection activity, and the pinned DefenseFinder article registry maps the Reve source key to the corresponding preprint. The pinned HMM inventory and rules table have no exact Reve rows, and this first-pass record does not resolve the tested source locus, complete phage breadth, exact trigger, molecular output, or detection rule.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkag898",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/reve_system.html#reve-mechanism-and-modelling-gap"
+ },
+ {
   "discussion_id": "rexab-mechanism-gap",
   "prompt": "Resolve the direct RexAB phage trigger, RexA and RexB molecular coupling, ion-channel activity, lambda self-exclusion control, and sensitive-phage escape routes before minting narrower RexAB mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7895,9 +7919,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 370,
- "total_knowledge_gaps": 284,
- "total_source_entries": 364,
+ "total_discussions": 371,
+ "total_knowledge_gaps": 285,
+ "total_source_entries": 365,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
