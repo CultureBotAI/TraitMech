@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hec_07_system.yaml
+  slug: hec_07_system
+session:
+  id: 2026-09-30T005020Z-codex-2ea3fc
+  timestamp: '2026-09-30T00:50:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - canonical_examples
+  summary: Add HEC-07 system trait
+  details: Minted traitmech:000478 for the HEC-07 single-gene Hma-embedded RelE-domain candidate
+    phage-defense system; added DOI-backed Payne et al. evidence, pinned DefenseFinder article
+    and HMM evidence at commit afb0e5a8b466be53586b13266f5d38d98c3ac268, a nonmechanistic
+    locus-to-plaquing graph, an open rule-level detection gap because the pinned DefenseFinder
+    rules table has no HEC-07 row, an empty canonical-example decision for the lack of a native
+    experimentally verified endogenous HEC-07 exemplar, and the v355 METPO Scope-A lift reserving
+    METPO:1043200.
