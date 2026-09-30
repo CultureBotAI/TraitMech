@@ -1,0 +1,187 @@
+identifier: traitmech:000482
+label: TIR-IV system
+definition: A phage defense system in which an organism possesses a TIR-IV locus,
+  represented in the pinned DefenseFinder HMM inventory by TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B
+  custom profiles, that can inhibit bacteriophage plaquing.
+definition_source: DOI:10.1038/s41467-024-51738-3
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: TIR-IV
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-024-51738-3
+- synonym_text: TIR-IV__TIR-IV_A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: TIR-IV__TIR-IV_B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41467-024-51738-3
+  snippet: Twelve systems have defense activities against a variable number of phages,
+    and 9 of them are new defense systems and named TIR-I to IX
+  notes: Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage
+    defense systems with activity against variable phage subsets.
+- reference: DOI:10.1038/s41467-024-51738-3
+  snippet: The defense activity of the TIR systems against each phage was determined
+    based on their ability to inhibit plaque formation compared to the pSEC1 empty
+    vector control
+  notes: Wang et al. assayed cloned Escherichia coli TIR systems by efficiency-of-plating
+    reduction against a phage panel.
+- reference: DOI:10.1038/s41467-024-51738-3
+  snippet: TIR-I, TIR-III, and TIR-IV systems appear in diverse domains contexts,
+    whereas the TIR-VII and TIR-VIII systems were found in a single form
+  notes: Wang et al. found that TIR-IV, like TIR-I and TIR-III, occurs in diverse
+    domain contexts.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| TIR-IV | 10\.1038/s41467-024-51738-3 | The role of TIR domain-containing
+    proteins in bacterial defense against phages |'
+  notes: The pinned DefenseFinder article registry maps the named TIR-IV system to
+    the Wang et al. TIR-domain anti-phage system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| TIR-IV__TIR-IV_A                                 |                                                  |
+    TIR-IV                 | Custom                  | 100    |
+
+    | TIR-IV__TIR-IV_B                                 |                                                  |
+    TIR-IV                 | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B
+    custom profiles under the TIR-IV system namespace.
+causal_graphs:
+- graph_id: tir_iv_locus_inhibits_phage_plaquing
+  title: TIR-IV loci inhibit bacteriophage plaquing
+  description: Conservative system-level sketch linking a TIR-IV locus to inhibited
+    bacteriophage plaquing and TIR-IV system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures TIR-IV at TIR-system and anti-phage assay level
+    without asserting exact native-host breadth, one universal domain architecture,
+    a direct phage trigger, TIR-domain catalytic output, accession-level components,
+    or a DefenseFinder detection rule absent from the pinned rules table.
+  nodes:
+  - node_id: tir_iv_locus
+    label: TIR-IV locus
+    node_type: GENETIC_ELEMENT
+    description: A TIR-IV phage-defense locus represented in the pinned DefenseFinder
+      HMM inventory by TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles.
+  - node_id: inhibited_phage_plaquing
+    label: inhibited bacteriophage plaquing
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced efficiency of plaquing by bacteriophages in cells carrying
+      a complete TIR-IV system.
+  - node_id: tir_iv_system_trait
+    label: TIR-IV system
+    node_type: TRAIT
+    grounding: traitmech:000482
+    description: Possession of a genome-encoded TIR-IV phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: tir_iv_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: inhibited_phage_plaquing
+    description: Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder
+      records two custom TIR-IV system profiles.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51738-3
+      snippet: Twelve systems have defense activities against a variable number of
+        phages, and 9 of them are new defense systems and named TIR-I to IX
+      notes: Wang et al. report that TIR-IV belongs to nine newly named TIR-domain
+        anti-phage defense systems with activity against variable phage subsets.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| TIR-IV__TIR-IV_A                                 |                                                  |
+        TIR-IV                 | Custom                  | 100    |
+
+        | TIR-IV__TIR-IV_B                                 |                                                  |
+        TIR-IV                 | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B
+        custom profiles under the TIR-IV system namespace.
+  - subject: inhibited_phage_plaquing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tir_iv_system_trait
+    description: TIR-IV-mediated inhibition of bacteriophage plaquing realizes the
+      TIR-IV system trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51738-3
+      snippet: The defense activity of the TIR systems against each phage was determined
+        based on their ability to inhibit plaque formation compared to the pSEC1 empty
+        vector control
+      notes: Wang et al. measured cloned TIR-system activity by inhibited plaque formation
+        relative to an empty-vector control.
+  - subject: tir_iv_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: TIR-IV system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| TIR-IV | 10\.1038/s41467-024-51738-3 | The role of TIR domain-containing
+        proteins in bacterial defense against phages |'
+      notes: The pinned DefenseFinder article registry maps the named TIR-IV system
+        to the Wang et al. TIR-domain anti-phage system paper.
+discussions:
+- discussion_id: tir-iv-detection-trigger-gap
+  prompt: Resolve TIR-IV native host breadth, the TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B
+    profile-to-component mapping, phage-trigger specificity, TIR-domain output chemistry,
+    and rule-level DefenseFinder detection criteria before minting narrower TIR-IV
+    mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Wang et al. support TIR-IV as one of nine newly named TIR-domain anti-phage
+    defense systems and note that TIR-IV occurs in diverse domain contexts. The pinned
+    DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom
+    profile rows, but the pinned DefenseFinder rules table has no TIR-IV row. This
+    first record therefore does not assert profile requirement logic, accession-level
+    components, a universal domain architecture, or a direct phage trigger.
+  evidence:
+  - reference: DOI:10.1038/s41467-024-51738-3
+    snippet: Twelve systems have defense activities against a variable number of phages,
+      and 9 of them are new defense systems and named TIR-I to IX
+    notes: Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage
+      defense systems with activity against variable phage subsets.
+  - reference: DOI:10.1038/s41467-024-51738-3
+    snippet: TIR-I, TIR-III, and TIR-IV systems appear in diverse domains contexts,
+      whereas the TIR-VII and TIR-VIII systems were found in a single form
+    notes: Wang et al. support unresolved TIR-IV domain architecture breadth.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| TIR-IV__TIR-IV_A                                 |                                                  |
+      TIR-IV                 | Custom                  | 100    |
+
+      | TIR-IV__TIR-IV_B                                 |                                                  |
+      TIR-IV                 | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B
+      custom profiles under the TIR-IV system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: The pinned DefenseFinder rules table does not list TIR-IV, leaving rule-level
+      detection criteria unresolved.
+  attaches_to:
+  - causal_graphs#tir_iv_locus_inhibits_phage_plaquing
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T04:28:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted TIR-IV system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact same-scope
+    live TraitMech, METPO, history, or prior proposal record; kept the graph at TIR-system
+    and phage-plaquing level because TIR-IV direct triggers, profile-to-component
+    mapping, and rule-level DefenseFinder criteria remain unresolved; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v359.
+  llm_assisted: true
+- timestamp: '2026-09-30T04:28:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed TIR-IV system during canonical-example issue 444 enforcement and
+    left canonical_examples empty because Wang et al. support heterologous E. coli
+    MG1655 plaque assays and DefenseFinder TIR-IV HMM rows, but the first-pass curation
+    did not recover a direct named native microbial isolate exemplar with experimentally
+    verified endogenous TIR-IV activity. No paid research was used.
+  llm_assisted: true

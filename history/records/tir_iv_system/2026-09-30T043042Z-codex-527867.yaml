@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tir_iv_system.yaml
+  slug: tir_iv_system
+session:
+  id: 2026-09-30T043042Z-codex-527867
+  timestamp: '2026-09-30T04:30:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add TIR-IV system trait
+  details: Minted traitmech:000482 for TIR-IV system with Wang et al. DOI evidence, pinned
+    DefenseFinder article and HMM rows, a nonmechanistic TIR-IV locus graph, an open DefenseFinder
+    rule gap discussion, and METPO proposal v359.
