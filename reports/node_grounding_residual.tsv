@@ -1,5 +1,5 @@
 node_label	node_type	node_count	example_files
-restricted phage propagation	BIOLOGICAL_PROCESS	84	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	85	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
 reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	58	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	12	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_her_system.yaml
@@ -1738,6 +1738,7 @@ tir-iii locus	GENETIC_ELEMENT	1	data/traits/genomics/tir_iii_system.yaml
 tir-iv locus	GENETIC_ELEMENT	1	data/traits/genomics/tir_iv_system.yaml
 tir-vii locus	GENETIC_ELEMENT	1	data/traits/genomics/tir_vii_system.yaml
 tir-viii locus	GENETIC_ELEMENT	1	data/traits/genomics/tir_viii_system.yaml
+toga locus	GENETIC_ELEMENT	1	data/traits/genomics/toga_system.yaml
 toutatis locus	GENETIC_ELEMENT	1	data/traits/genomics/toutatis_system.yaml
 toxin locus	GENETIC_ELEMENT	1	data/traits/genomics/toxin_system.yaml
 toxin type iii toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/toxin_system.yaml
