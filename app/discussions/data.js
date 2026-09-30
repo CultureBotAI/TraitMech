@@ -5841,6 +5841,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tgvab_system.html#tgvab-defensefinder-rule-gap"
  },
  {
+  "discussion_id": "tha-variant-profile-rule-gap",
+  "prompt": "Resolve Tha variant boundaries, exact minor-tail-protein triggers, Ith inhibitor relationships, native host breadth, and DefenseFinder rule/profile coverage before minting narrower Tha mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Tha system",
+  "source_id": "traitmech:000497",
+  "source_file": "tha_system.yaml",
+  "attaches_to": [
+   "causal_graphs#tha_tail_activated_hepn_rnase_defense"
+  ],
+  "rationale": "Rostol et al. support Tha-1 and Tha-2 as S. aureus prophage-encoded Tha systems activated by distinct incoming-phage minor tail proteins. The pinned DefenseFinder registries map the Tha source key to the same primary paper and list one Tha__Tha custom HMM row, but no exact Tha system rule row was present in the pinned rules table. The first TraitRecord therefore stays at Tha-system scope until separate review resolves variant boundaries, exact activators, Ith inhibitor relationships, native host breadth, and model coverage.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-024-01661-6",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/tha_system.html#tha-variant-profile-rule-gap"
+ },
+ {
   "discussion_id": "thoeris-family-signal-and-trigger-gap",
   "prompt": "Resolve Thoeris family architecture, signal chemistry, and phage triggering before minting narrower Thoeris mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7847,9 +7871,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 368,
- "total_knowledge_gaps": 282,
- "total_source_entries": 362,
+ "total_discussions": 369,
+ "total_knowledge_gaps": 283,
+ "total_source_entries": 363,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

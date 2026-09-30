@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tha_system.yaml
+  slug: tha_system
+session:
+  id: 2026-09-30T172202Z-codex-17f05f
+  timestamp: '2026-09-30T17:22:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Tha system
+  details: Minted traitmech:000497 for a tail-activated HEPN Tha system under phage defense
+    system, citing Rostol et al. for S. aureus prophage-encoded Tha-1 and Tha-2 activation
+    by incoming-phage minor tail proteins plus nonspecific RNase-linked antiphage activity,
+    and the pinned DefenseFinder Tha article/HMM rows; added a same-PR METPO proposal v374
+    reserving METPO:1045100.
