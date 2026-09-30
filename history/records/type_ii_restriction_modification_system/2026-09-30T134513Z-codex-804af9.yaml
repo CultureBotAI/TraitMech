@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/type_ii_restriction_modification_system.yaml
+  slug: type_ii_restriction_modification_system
+session:
+  id: 2026-09-30T134513Z-codex-804af9
+  timestamp: '2026-09-30T13:45:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add type II restriction-modification system trait
+  details: Added a DOI-backed type II restriction-modification system GENOMICS TraitRecord
+    under restriction-modification system with Kirillov and Pingoud Type II R-M evidence snippets,
+    pinned DefenseFinder RM_Type_II article, rule, MTase-HMM, and REase-HMM evidence, an open
+    custom-profile interpretation knowledge gap, and a one-row METPO proposal reserving METPO:1044700
+    for the local traitmech:000493 fallback.

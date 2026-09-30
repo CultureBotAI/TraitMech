@@ -6016,6 +6016,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/toutatis_system.html#toutatis-mechanism-gap"
  },
  {
+  "discussion_id": "type-ii-rm-profile-interpretation-gap",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_II custom methyltransferase and restriction-endonuclease profiles, characterized Type II enzyme families, and Type IIG subclass boundaries before minting narrower Type II protein or custom-profile traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "type II restriction-modification system",
+  "source_id": "traitmech:000493",
+  "source_file": "type_ii_restriction_modification_system.yaml",
+  "attaches_to": [
+   "causal_graphs#type_ii_rm_locus_restricts_foreign_dna"
+  ],
+  "rationale": "Kirillov et al. and Pingoud et al. support Type II R-M system architecture and Type II restriction-endonuclease activity, while the pinned DefenseFinder registry supports an RM_Type_II namespace with broad custom MTase and REase profile groups. The evidence does not yet map individual custom profile rows to exact characterized enzyme families or resolve whether each source-model boundary corresponds to a reusable organism-level trait below this class.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkac1124",
+   "DOI:10.1093/nar/gku447",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/type_ii_restriction_modification_system.html#type-ii-rm-profile-interpretation-gap"
+ },
+ {
   "discussion_id": "type-iig-rm-profile-interpretation-gap",
   "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IIG custom profiles, characterized BpuSI- or Tth111II-like enzymes, and companion methyltransferases before minting narrower Type IIG protein or subfamily traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -7745,9 +7770,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 364,
- "total_knowledge_gaps": 278,
- "total_source_entries": 358,
+ "total_discussions": 365,
+ "total_knowledge_gaps": 279,
+ "total_source_entries": 359,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

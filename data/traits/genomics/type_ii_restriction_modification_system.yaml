@@ -1,0 +1,230 @@
+identifier: traitmech:000493
+label: type II restriction-modification system
+definition: A restriction-modification system in which an organism possesses a Type
+  II restriction endonuclease activity paired with cognate methyltransferase self-protection,
+  including conventional RM_Type_II loci represented by DefenseFinder.
+definition_source: DOI:10.1093/nar/gkac1124
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000095
+synonyms:
+- synonym_text: RM_Type_II
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: RM_Type_II__Type_II_MTases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: RM_Type_II__Type_II_REases
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: DOI:10.1093/nar/gkac1124
+  snippet: The action of Type II restriction-modification (RM) systems depends on
+    restriction endonuclease (REase), which cleaves foreign DNA at specific sites,
+    and methyltransferase (MTase), which protects host genome from restriction by
+    methylating the same sites.
+  notes: Kirillov et al. describe Type II restriction-modification systems as requiring
+    a restriction endonuclease that cleaves foreign DNA and a methyltransferase that
+    protects host DNA by methylating the same sites.
+- reference: DOI:10.1093/nar/gku447
+  snippet: Type II REases are produced by prokaryotes to combat bacteriophages. With
+    extreme accuracy, each recognizes a particular sequence in double-stranded DNA
+    and cleaves at a fixed position within or nearby.
+  notes: Pingoud et al. review Type II restriction endonucleases as prokaryotic phage-defense
+    enzymes that recognize specific double-stranded DNA sequences and cleave at fixed
+    positions within or near those sequences.
+- reference: DOI:10.1093/nar/gku447
+  snippet: REBASE (rebase.neb.com/rebase/rebase.html), the definitive source for information
+    on REases and their companion proteins
+  notes: Pingoud et al. point to REBASE as the source for restriction endonucleases
+    and companion proteins; DefenseFinder links its RM_Type_II model namespace to
+    the 2023 REBASE update.
+- reference: DOI:10.1038/srep03838
+  snippet: Type IIG (symmetric or asymmetric target sites; endonuclease activity affected
+    by AdoMet (SAM))
+  notes: Zhu et al. place Type IIG enzymes in the Type II restriction enzyme classification,
+    supporting the Type IIG child record's reparenting beneath this Type II R-M parent.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'RM_Type_II | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+    and modification: enzymes, genes and genomes'
+  notes: The pinned DefenseFinder article registry maps the RM_Type_II model namespace
+    to the REBASE update.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "RM\tRM_Type_II\t2\t2\tRM_Type_II__Type_II_MTases, RM_Type_II__Type_II_REases\t\
+    \t\t"
+  notes: The DefenseFinder rules table models RM_Type_II as an RM subsystem requiring
+    Type_II_MTases and Type_II_REases profile groups.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM_Type_II__Type_II_MTases_FAM_0                 |                                                  |
+    RM_Type_II             | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory lists custom methyltransferase profiles
+    under the RM_Type_II system namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| RM_Type_II__Type_II_REase01                      |                                                  |
+    RM_Type_II             | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory lists custom restriction endonuclease
+    profiles under the RM_Type_II system namespace.
+causal_graphs:
+- graph_id: type_ii_rm_locus_restricts_foreign_dna
+  title: Type II R-M loci mark self and restrict foreign DNA
+  description: Conservative system-level sketch linking Type II restriction-modification
+    loci to restriction-modification-mediated foreign DNA cleavage.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures a reusable Type II R-M locus architecture and the
+    DefenseFinder RM_Type_II custom-profile namespace without asserting an accession-level
+    mapping between any custom HMM row and characterized Type II restriction endonucleases
+    or methyltransferases.
+  nodes:
+  - node_id: type_ii_rm_locus
+    label: type II restriction-modification locus
+    node_type: GENETIC_ELEMENT
+    description: A Type II R-M locus encoding restriction endonuclease activity and
+      cognate DNA methyltransferase activity.
+  - node_id: foreign_unmethylated_dna_cleavage
+    label: foreign unmethylated DNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Restriction of invading DNA that has not been protected by cognate
+      methylation.
+  - node_id: type_ii_restriction_modification_system_trait
+    label: type II restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000493
+    description: Possession of a genome-encoded type II restriction-modification system.
+  - node_id: restriction_modification_system
+    label: restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000095
+    description: Possession of a methyltransferase and restriction endonuclease system
+      for self/non-self DNA discrimination.
+  edges:
+  - subject: type_ii_rm_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: foreign_unmethylated_dna_cleavage
+    description: Type II R-M loci encode the paired restriction and methylation functions
+      needed to cleave unprotected foreign DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gku447
+      snippet: Type II REases are produced by prokaryotes to combat bacteriophages.
+        With extreme accuracy, each recognizes a particular sequence in double-stranded
+        DNA and cleaves at a fixed position within or nearby.
+      notes: Pingoud et al. review Type II restriction endonucleases as prokaryotic
+        phage-defense enzymes that recognize specific double-stranded DNA sequences
+        and cleave at fixed positions within or near those sequences.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "RM\tRM_Type_II\t2\t2\tRM_Type_II__Type_II_MTases, RM_Type_II__Type_II_REases\t\
+        \t\t"
+      notes: The DefenseFinder rules table models RM_Type_II as an RM subsystem requiring
+        Type_II_MTases and Type_II_REases profile groups.
+  - subject: foreign_unmethylated_dna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: type_ii_restriction_modification_system_trait
+    description: Type II restriction-modification activity realizes the organism-level
+      Type II R-M system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'RM_Type_II | 10\.1093/nar/gkac975 | REBASE: a database for DNA restriction
+        and modification: enzymes, genes and genomes'
+      notes: The pinned DefenseFinder article registry maps the RM_Type_II model namespace
+        to the REBASE update.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_II__Type_II_MTases_FAM_0                 |                                                  |
+        RM_Type_II             | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory lists custom methyltransferase
+        profiles under the RM_Type_II system namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_II__Type_II_REase01                      |                                                  |
+        RM_Type_II             | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory lists custom restriction endonuclease
+        profiles under the RM_Type_II system namespace.
+  - subject: type_ii_restriction_modification_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: restriction_modification_system
+    description: A Type II R-M system is a subtype of broader restriction-modification
+      system possession.
+    evidence:
+    - reference: DOI:10.1093/nar/gkac1124
+      snippet: The action of Type II restriction-modification (RM) systems depends
+        on restriction endonuclease (REase), which cleaves foreign DNA at specific
+        sites, and methyltransferase (MTase), which protects host genome from restriction
+        by methylating the same sites.
+      notes: Kirillov et al. describe Type II restriction-modification systems as
+        requiring a restriction endonuclease that cleaves foreign DNA and a methyltransferase
+        that protects host DNA by methylating the same sites.
+    - reference: DOI:10.1093/nar/gku447
+      snippet: REBASE (rebase.neb.com/rebase/rebase.html), the definitive source for
+        information on REases and their companion proteins
+      notes: Pingoud et al. point to REBASE as the source for restriction endonucleases
+        and companion proteins; DefenseFinder links its RM_Type_II model namespace
+        to the 2023 REBASE update.
+discussions:
+- discussion_id: type-ii-rm-profile-interpretation-gap
+  prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_II
+    custom methyltransferase and restriction-endonuclease profiles, characterized
+    Type II enzyme families, and Type IIG subclass boundaries before minting narrower
+    Type II protein or custom-profile traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Kirillov et al. and Pingoud et al. support Type II R-M system architecture
+    and Type II restriction-endonuclease activity, while the pinned DefenseFinder
+    registry supports an RM_Type_II namespace with broad custom MTase and REase profile
+    groups. The evidence does not yet map individual custom profile rows to exact
+    characterized enzyme families or resolve whether each source-model boundary corresponds
+    to a reusable organism-level trait below this class.
+  evidence:
+  - reference: DOI:10.1093/nar/gkac1124
+    snippet: The action of Type II restriction-modification (RM) systems depends on
+      restriction endonuclease (REase), which cleaves foreign DNA at specific sites,
+      and methyltransferase (MTase), which protects host genome from restriction by
+      methylating the same sites.
+    notes: Kirillov et al. describe Type II restriction-modification systems as requiring
+      a restriction endonuclease that cleaves foreign DNA and a methyltransferase
+      that protects host DNA by methylating the same sites.
+  - reference: DOI:10.1093/nar/gku447
+    snippet: Type II REases are produced by prokaryotes to combat bacteriophages.
+      With extreme accuracy, each recognizes a particular sequence in double-stranded
+      DNA and cleaves at a fixed position within or nearby.
+    notes: Pingoud et al. review Type II restriction endonucleases as prokaryotic
+      phage-defense enzymes that recognize specific double-stranded DNA sequences
+      and cleave at fixed positions within or near those sequences.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "RM\tRM_Type_II\t2\t2\tRM_Type_II__Type_II_MTases, RM_Type_II__Type_II_REases\t\
+      \t\t"
+    notes: The DefenseFinder rules table models RM_Type_II as an RM subsystem requiring
+      Type_II_MTases and Type_II_REases profile groups.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM_Type_II__Type_II_MTases_FAM_0                 |                                                  |
+      RM_Type_II             | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory lists custom methyltransferase profiles
+      under the RM_Type_II system namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| RM_Type_II__Type_II_REase01                      |                                                  |
+      RM_Type_II             | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory lists custom restriction endonuclease
+      profiles under the RM_Type_II system namespace.
+  attaches_to:
+  - causal_graphs#type_ii_rm_locus_restricts_foreign_dna
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T13:40:53Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted type II restriction-modification system as a DOI-backed GENOMICS
+    TraitRecord under restriction-modification system after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v370.
+  llm_assisted: true
+- timestamp: '2026-09-30T13:40:55Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed type II restriction-modification system during initial curation
+    and left canonical_examples empty because the sources support a broad Type II
+    R-M class, a DefenseFinder system model, and many biochemical enzyme examples,
+    but not a single stable NCBITaxon strain exemplar for the whole broad Type II
+    branch. No paid research was used.
+  llm_assisted: true
