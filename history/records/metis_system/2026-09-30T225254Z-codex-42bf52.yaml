@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/metis_system.yaml
+  slug: metis_system
+session:
+  id: 2026-09-30T225254Z-codex-42bf52
+  timestamp: '2026-09-30T22:52:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Metis system
+  details: Minted traitmech:000502 for the m6dAMP-sensing Metis system under phage defense
+    system, citing Osterman et al. for phage-mediated host-genome-degradation sensing and
+    type-specific toxic effectors plus the pinned DefenseFinder Metis article-registry row;
+    added a same-PR METPO proposal v379 reserving METPO:1045600.

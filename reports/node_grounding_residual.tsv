@@ -1506,6 +1506,10 @@ dna phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/mads_system.yaml
 mazef locus	GENETIC_ELEMENT	1	data/traits/genomics/mazef_system.yaml
 rna phage replication interference	BIOLOGICAL_PROCESS	1	data/traits/genomics/mazef_system.yaml
 menshen locus	GENETIC_ELEMENT	1	data/traits/genomics/menshen_system.yaml
+metis locus	GENETIC_ELEMENT	1	data/traits/genomics/metis_system.yaml
+phage-mediated host genome degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
+modified mononucleotide sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
+type-specific toxic effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
 mmb gp29-gp30 locus	GENETIC_ELEMENT	1	data/traits/genomics/mmb_gp29_gp30_system.yaml
 genome plasticity	QUALITY	1	data/traits/genomics/mobile_genetic_element.yaml
 relaxase	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
