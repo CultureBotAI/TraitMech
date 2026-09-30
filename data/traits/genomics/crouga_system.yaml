@@ -1,0 +1,171 @@
+identifier: traitmech:000500
+label: Crouga system
+definition: A phage defense system in which an organism possesses a Crouga antiviral
+  locus that is encoded by P4-like phage satellites and can protect bacteria from
+  bacteriophage infection.
+definition_source: DOI:10.1093/nar/gkag898
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Crouga
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkag898
+evidence:
+- reference: DOI:10.1093/nar/gkag898
+  snippet: The Crouga system has some evidence of being an RM-like system, with one
+    of its proteins containing PFAM domains (ResIII, DEAD, and Helicase C) associated
+    with other RM systems
+  notes: de Sousa et al. identify Crouga as a named novel P4-associated system with
+    restriction-modification-like domain evidence.
+- reference: DOI:10.1093/nar/gkag898
+  snippet: We named the novel functional systems according to deities from Lusitanian
+    mythology
+  notes: de Sousa et al. introduce Crouga among the named novel functional P4 antiviral
+    systems.
+- reference: DOI:10.1093/nar/gkag898
+  snippet: Our experimental validation of anti-phage activity for 13 novel systems
+    encoded by P4 confirms that the contribution of defence functions to the pangenomes
+    of P4 and P2, as well as to the antiviral repertoire of their bacterial hosts,
+    will keep surprising us
+  notes: de Sousa et al. summarize the validated P4-encoded novel-system cohort in
+    their discussion.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Crouga | 10\.64898/2026\.02\.27\.708500 | Shuttling, swapping and mixing:
+    the rapid modular evolution of antiviral repertoires in temperate phages and their
+    satellites | '
+  notes: The pinned DefenseFinder article registry maps the Crouga source key to the
+    de Sousa et al. P4/P2 antiviral-repertoire paper preprint.
+causal_graphs:
+- graph_id: crouga_locus_restricts_phage
+  title: Crouga loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Crouga locus
+    to restricted bacteriophage propagation without asserting the unresolved trigger
+    or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Crouga as a named P4 anti-phage system while leaving
+    its source locus, phage trigger, restriction-modification-like molecular roles,
+    antiviral effector output, source-system table rows, and DefenseFinder HMM/rule
+    model coverage unresolved.
+  nodes:
+  - node_id: crouga_locus
+    label: Crouga locus
+    node_type: GENETIC_ELEMENT
+    description: A P4-associated Crouga anti-phage defense locus.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Crouga
+      system.
+  - node_id: crouga_system_trait
+    label: Crouga system
+    node_type: TRAIT
+    grounding: traitmech:000500
+    description: Possession of a genome-encoded Crouga phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: crouga_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Crouga loci are among the novel P4-encoded systems that can reduce
+      bacteriophage infection.
+    evidence:
+    - reference: DOI:10.1093/nar/gkag898
+      snippet: The Crouga system has some evidence of being an RM-like system, with
+        one of its proteins containing PFAM domains (ResIII, DEAD, and Helicase C)
+        associated with other RM systems
+      notes: de Sousa et al. place Crouga in the newly named functional-system set
+        and describe its RM-like domain evidence.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Crouga | 10\.64898/2026\.02\.27\.708500 | Shuttling, swapping and
+        mixing: the rapid modular evolution of antiviral repertoires in temperate
+        phages and their satellites | '
+      notes: The pinned DefenseFinder article registry maps the Crouga source key
+        to the de Sousa et al. P4/P2 antiviral-repertoire paper preprint.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: crouga_system_trait
+    description: Crouga-mediated phage protection realizes the Crouga system trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkag898
+      snippet: Our experimental validation of anti-phage activity for 13 novel systems
+        encoded by P4 confirms that the contribution of defence functions to the pangenomes
+        of P4 and P2, as well as to the antiviral repertoire of their bacterial hosts,
+        will keep surprising us
+      notes: de Sousa et al. connect the named novel P4-system cohort to anti-phage
+        activity.
+  - subject: crouga_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Crouga system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkag898
+      snippet: Our experimental validation of anti-phage activity for 13 novel systems
+        encoded by P4 confirms that the contribution of defence functions to the pangenomes
+        of P4 and P2, as well as to the antiviral repertoire of their bacterial hosts,
+        will keep surprising us
+      notes: de Sousa et al. frame the named Crouga cohort as newly validated P4-encoded
+        anti-phage defense functions.
+discussions:
+- discussion_id: crouga-mechanism-and-modelling-gap
+  prompt: Resolve Crouga locus breadth, exact phage triggers, restriction-modification-like
+    molecular roles, direct antiviral output, source-system table rows, and DefenseFinder
+    HMM/rule coverage before minting narrower Crouga mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: de Sousa et al. support Crouga as one of the novel P4-encoded systems
+    with experimental phage-protection activity, and the pinned DefenseFinder article
+    registry maps the Crouga source key to the corresponding preprint. The pinned
+    HMM inventory and rules table have no exact Crouga rows, and this first-pass record
+    does not resolve the tested source locus, complete phage breadth, exact trigger,
+    molecular output, or detection rule.
+  evidence:
+  - reference: DOI:10.1093/nar/gkag898
+    snippet: The Crouga system has some evidence of being an RM-like system, with
+      one of its proteins containing PFAM domains (ResIII, DEAD, and Helicase C) associated
+      with other RM systems
+    notes: de Sousa et al. support Crouga as a named RM-like defense system while
+      leaving exact mechanism for separate review.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Crouga | 10\.64898/2026\.02\.27\.708500 | Shuttling, swapping and
+      mixing: the rapid modular evolution of antiviral repertoires in temperate phages
+      and their satellites | '
+    notes: The pinned DefenseFinder article registry maps the Crouga source key to
+      the de Sousa et al. P4/P2 antiviral-repertoire paper preprint.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact Crouga row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact Crouga system row.
+  attaches_to:
+  - causal_graphs#crouga_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-30'
+curation_history:
+- timestamp: '2026-09-30T20:55:13Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Crouga system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v377.
+  llm_assisted: true
+- timestamp: '2026-09-30T20:55:14Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Crouga system canonical_examples and left them empty because de
+    Sousa et al. support P4-encoded Crouga phage protection and a DefenseFinder article-registry
+    row, but not a direct named native microbial isolate exemplar with experimentally
+    verified endogenous Crouga activity. No paid research was used.
+  llm_assisted: true

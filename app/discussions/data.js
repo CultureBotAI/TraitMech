@@ -1158,6 +1158,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/coconut_system.html#coconut-defensefinder-model-gap"
  },
  {
+  "discussion_id": "crouga-mechanism-and-modelling-gap",
+  "prompt": "Resolve Crouga locus breadth, exact phage triggers, restriction-modification-like molecular roles, direct antiviral output, source-system table rows, and DefenseFinder HMM/rule coverage before minting narrower Crouga mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Crouga system",
+  "source_id": "traitmech:000500",
+  "source_file": "crouga_system.yaml",
+  "attaches_to": [
+   "causal_graphs#crouga_locus_restricts_phage"
+  ],
+  "rationale": "de Sousa et al. support Crouga as one of the novel P4-encoded systems with experimental phage-protection activity, and the pinned DefenseFinder article registry maps the Crouga source key to the corresponding preprint. The pinned HMM inventory and rules table have no exact Crouga rows, and this first-pass record does not resolve the tested source locus, complete phage breadth, exact trigger, molecular output, or detection rule.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkag898",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/crouga_system.html#crouga-mechanism-and-modelling-gap"
+ },
+ {
   "discussion_id": "damona-mechanism-gap",
   "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7919,9 +7943,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 371,
- "total_knowledge_gaps": 285,
- "total_source_entries": 365,
+ "total_discussions": 372,
+ "total_knowledge_gaps": 286,
+ "total_source_entries": 366,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
