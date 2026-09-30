@@ -2,8 +2,9 @@ identifier: traitmech:000496
 label: type IV modification-dependent restriction system
 definition: A phage defense system in which an organism possesses a Type IV modification-dependent
   restriction locus, including DefenseFinder RM_Type_IV loci, whose restriction-enzyme
-  activity cleaves foreign DNA bearing modified bases rather than the unmodified targets
-  of canonical Type I-III restriction-modification systems.
+  activity cleaves foreign DNA carrying recognized base or backbone modifications
+  rather than the unmodified targets of canonical Type I-III restriction-modification
+  systems.
 definition_source: DOI:10.1093/nar/gkt747
 trait_category: GENOMICS
 term_kind: CLASS
@@ -346,4 +347,12 @@ curation_history:
     Type IV modification-dependent restriction class, a GmrSD enzyme example, and
     a DefenseFinder system model, but not a single stable NCBITaxon strain exemplar
     for the whole broad Type IV branch. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-09-30T16:57:37Z'
+  curator: codex
+  action: REVISED_DEFINITION
+  changes: 'Broadened the Type IV modification-dependent restriction system definition
+    from modified bases to recognized base or backbone DNA modifications after PR
+    #1488 local review found the original definition excluded phosphorothioated backbone
+    targets; fixes #1489.'
   llm_assisted: true

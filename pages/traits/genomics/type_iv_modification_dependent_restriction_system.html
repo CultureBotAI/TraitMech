@@ -31,7 +31,7 @@
     <h1>type IV modification-dependent restriction system</h1>
     <p class="curie"><code>traitmech:000496</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A phage defense system in which an organism possesses a Type IV modification-dependent restriction locus, including DefenseFinder RM_Type_IV loci, whose restriction-enzyme activity cleaves foreign DNA bearing modified bases rather than the unmodified targets of canonical Type I-III restriction-modification systems.</p>
+    <p class="definition">A phage defense system in which an organism possesses a Type IV modification-dependent restriction locus, including DefenseFinder RM_Type_IV loci, whose restriction-enzyme activity cleaves foreign DNA carrying recognized base or backbone modifications rather than the unmodified targets of canonical Type I-III restriction-modification systems.</p>
 
   </header>
 
@@ -374,6 +374,12 @@
           <time>2026-09-30T16:21:48Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed type IV modification-dependent restriction system during initial curation and left canonical_examples empty because the sources support a broad Type IV modification-dependent restriction class, a GmrSD enzyme example, and a DefenseFinder system model, but not a single stable NCBITaxon strain exemplar for the whole broad Type IV branch. No paid research was used.</p>
+        </li>
+
+        <li>
+          <time>2026-09-30T16:57:37Z</time> ·
+          <strong>REVISED_DEFINITION</strong> · codex
+          <p class="changes">Broadened the Type IV modification-dependent restriction system definition from modified bases to recognized base or backbone DNA modifications after PR #1488 local review found the original definition excluded phosphorothioated backbone targets; fixes #1489.</p>
         </li>
 
       </ol>
@@ -756,7 +762,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-30 16:21 UTC from
+      Record as of 2026-09-30 16:57 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 891 TraitRecords
       · embedding coverage 53.5%

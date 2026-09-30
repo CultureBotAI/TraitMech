@@ -189,8 +189,9 @@ RECORD: dict[str, Any] = {
         "A phage defense system in which an organism possesses a Type IV "
         "modification-dependent restriction locus, including DefenseFinder "
         "RM_Type_IV loci, whose restriction-enzyme activity cleaves foreign "
-        "DNA bearing modified bases rather than the unmodified targets of "
-        "canonical Type I-III restriction-modification systems."
+        "DNA carrying recognized base or backbone modifications rather than "
+        "the unmodified targets of canonical Type I-III "
+        "restriction-modification systems."
     ),
     "definition_source": LOENEN,
     "trait_category": "GENOMICS",
