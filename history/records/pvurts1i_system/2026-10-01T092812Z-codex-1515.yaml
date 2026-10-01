@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pvurts1i_system.yaml
+  slug: pvurts1i_system
+session:
+  id: 2026-10-01T092812Z-codex-1515
+  timestamp: '2026-10-01T09:28:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1515
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1514
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - curation_history
+  summary: Tighten PvuRts1I cleavage-distance wording
+  details: >-
+    Addressed PR #1514 adversarial review issue #1515 by tightening the
+    PvuRts1I system definition to say PvuRts1I-family enzymes cleave on the
+    3'-side away from the recognized modified cytosine instead of claiming a
+    fixed cleavage distance not directly stated by the cited Wang et al. snippet.

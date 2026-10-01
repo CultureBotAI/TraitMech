@@ -1655,6 +1655,9 @@ extrachromosomal prophage maintenance	BIOLOGICAL_PROCESS	1	data/traits/genomics/
 prrc locus	GENETIC_ELEMENT	1	data/traits/genomics/prrc_system.yaml
 t4-induced prrc rnase defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/prrc_system.yaml
 psyrta locus	GENETIC_ELEMENT	1	data/traits/genomics/psyrta_system.yaml
+pvurts1i-family locus	GENETIC_ELEMENT	1	data/traits/genomics/pvurts1i_system.yaml
+pvurts1i-targeted modified-hmc dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/pvurts1i_system.yaml
+pvurts1i modified-hmc restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/pvurts1i_system.yaml
 pycsar locus	GENETIC_ELEMENT	1	data/traits/genomics/pycsar_system.yaml
 phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 cyclic pyrimidine second messenger synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
