@@ -47,7 +47,7 @@ brcWGS21
 brc22
 brc23"""
 BRC76_ECOLI_CONSTRUCT_SNIPPET = "C933\npMBA brc76\nE. coli IJ1862"
-BRC76_KPNEUMONIAE_CONSTRUCT_SNIPPET = "C939\npMBA brc76\nK. pneumoniae"
+BRC76_KPNEUMONIAE_CONSTRUCT_SNIPPET = "C939\npMBA brc76\nK. pneumoniae\n\nKP5"
 ARTICLE_ROW = (
     "| gcu76 | 10\\.1126/science\\.ads0915 | Mobile integrons "
     "encode phage defense systems | "
