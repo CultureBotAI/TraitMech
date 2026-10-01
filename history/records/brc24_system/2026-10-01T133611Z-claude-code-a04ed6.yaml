@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brc24_system.yaml
+  slug: brc24_system
+session:
+  id: 2026-10-01T133611Z-claude-code-a04ed6
+  timestamp: '2026-10-01T13:36:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  - metpo
+  summary: Add Brc24 system trait
+  details: Minted traitmech:000516 for the DOI- and DefenseFinder-backed Brc24 bacteriophage-resistance
+    integron cassette, added conservative nonmechanistic phage-resistance evidence from Kieffer
+    et al. and the pinned gcu24 article-registry row, left exact HMM/rules coverage plus native
+    host and molecular-output questions as a knowledge gap, and reserved the METPO replacement
+    placeholder in proposals/metpo_traitmech_v393. Exact novelty searches used rg --no-ignore
+    --hidden across the repository, including ignored and hidden files.
