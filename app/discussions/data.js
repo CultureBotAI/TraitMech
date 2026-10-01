@@ -901,8 +901,10 @@ window.searchData = [
   ],
   "rationale": "Kieffer et al. identify brc167 as a bacteriophage-resistance integron cassette, and the pinned DefenseFinder article registry maps the gcu167 source key to the same Science article. The pinned HMM inventory and rules table have no exact gcu167 or Brc167 row, so the first-pass record leaves native-host breadth, profile boundaries, exact phage target breadth, and direct molecular output unresolved.",
   "num_experiments": 0,
-  "num_evidence": 6,
+  "num_evidence": 8,
   "evidence_refs": [
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
    "DOI:10.1126/science.ads0915",
    "DOI:10.1126/science.ads0915",
    "DOI:10.1126/science.ads0915",

@@ -39,6 +39,12 @@ BRIC_PROFILE_SNIPPET = (
     "defense profiles of identified Bacteriophage Resistance integron "
     "Cassettes (BRiCs) against a panel of different phages"
 )
+BRC167_LOW_MOI_PROFILE_SNIPPET = (
+    "brc167 L 38.3 26.3 16.8 18.5 59.8 0 25.6 21.3"
+)
+BRC167_HIGH_MOI_PROFILE_SNIPPET = (
+    "brc167 H 25.0 21.5 11.4 0 83.1 26.1 61.7 27.6"
+)
 BRC167_ECOLI_CONSTRUCT_SNIPPET = "C803\npMBA brc167\nE. coli IJ1862"
 BRC167_KPNEUMONIAE_CONSTRUCT_SNIPPET = "C813\npMBA brc167\nK. pneumoniae"
 ARTICLE_ROW = (
@@ -80,6 +86,32 @@ def bric_panel_evidence() -> dict[str, str]:
     }
 
 
+def brc167_low_moi_profile_evidence() -> dict[str, str]:
+    return {
+        "reference": KIEFFER,
+        "snippet": BRC167_LOW_MOI_PROFILE_SNIPPET,
+        "notes": (
+            "Manual transcription of the Supplementary Fig. S2 Brc167 low-MOI "
+            "E. coli IJ1862 heatmap row; the row shows reduced inhibition, "
+            "including 16.8% for T4, 18.5% for F1, 0% for prophage phi80, "
+            "25.6% for HK544, and 21.3% for F13."
+        ),
+    }
+
+
+def brc167_high_moi_profile_evidence() -> dict[str, str]:
+    return {
+        "reference": KIEFFER,
+        "snippet": BRC167_HIGH_MOI_PROFILE_SNIPPET,
+        "notes": (
+            "Manual transcription of the Supplementary Fig. S2 Brc167 high-MOI "
+            "E. coli IJ1862 heatmap row; the row shows reduced inhibition, "
+            "including 25.0% for MS2, 21.5% for G4, 11.4% for T4, 0% for "
+            "F1, and 27.6% for F13."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "Brc167 system",
@@ -106,6 +138,8 @@ RECORD: dict[str, Any] = {
         },
     ],
     "evidence": [
+        brc167_low_moi_profile_evidence(),
+        brc167_high_moi_profile_evidence(),
         brc_attc_evidence(),
         bric_panel_evidence(),
         {
@@ -197,15 +231,8 @@ RECORD: dict[str, Any] = {
                         "phage resistance during phage-panel assays."
                     ),
                     "evidence": [
-                        brc_attc_evidence(),
-                        {
-                            "reference": KIEFFER,
-                            "snippet": BRC167_ECOLI_CONSTRUCT_SNIPPET,
-                            "notes": (
-                                "Kieffer et al. cloned brc167 for E. coli "
-                                "IJ1862 phage-panel testing."
-                            ),
-                        },
+                        brc167_low_moi_profile_evidence(),
+                        brc167_high_moi_profile_evidence(),
                     ],
                 },
                 {
@@ -218,15 +245,9 @@ RECORD: dict[str, Any] = {
                         "Brc167 system possession trait."
                     ),
                     "evidence": [
+                        brc167_low_moi_profile_evidence(),
+                        brc167_high_moi_profile_evidence(),
                         bric_panel_evidence(),
-                        {
-                            "reference": KIEFFER,
-                            "snippet": BRC167_ECOLI_CONSTRUCT_SNIPPET,
-                            "notes": (
-                                "Kieffer et al. cloned brc167 for E. coli "
-                                "IJ1862 phage-panel testing."
-                            ),
-                        },
                     ],
                 },
                 {
@@ -267,6 +288,8 @@ RECORD: dict[str, Any] = {
                 "molecular output unresolved."
             ),
             "evidence": [
+                brc167_low_moi_profile_evidence(),
+                brc167_high_moi_profile_evidence(),
                 brc_attc_evidence(),
                 bric_panel_evidence(),
                 {
@@ -344,6 +367,19 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="RESOLVED_ADVERSARIAL_REVIEW",
+        changes=(
+            "Resolved PR #1521 adversarial review issue #1522 by replacing "
+            "Brc167 causal-edge support that relied on attC row-label and "
+            "construct-table fragments with exact low- and high-MOI Brc167 "
+            "heatmap row transcriptions from Supplementary Fig. S2."
+        ),
+        llm_assisted=True,
+        timestamp="2026-10-01T15:19:00Z",
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
