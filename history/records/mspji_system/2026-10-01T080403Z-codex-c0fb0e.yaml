@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mspji_system.yaml
+  slug: mspji_system
+session:
+  id: 2026-10-01T080403Z-codex-c0fb0e
+  timestamp: '2026-10-01T08:04:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add MspJI system
+  details: Minted traitmech:000510 for the MspJI system under the Type IV modification-dependent
+    restriction system parent, using DOI-backed MspJI-family and Type IV evidence from Cohen-Karni
+    et al., Zheng et al., and Loenen and Raleigh plus the pinned DefenseFinder article-registry
+    row. Kept MspJI as a related source-key synonym, left canonical_examples empty because
+    the available papers do not establish a single stable organism-level exemplar for this
+    system trait, added a conservative nonmechanistic system graph, and recorded a DefenseFinder
+    HMM/rules mapping gap after the pinned HMM inventory and rules table had no exact MspJI
+    rows. Validated the record with the guarded writer, strict LinkML validation, METPO proposal
+    verification, and Europe PMC snippet verification.

@@ -4218,6 +4218,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/mqsrac_system.html#mqsrac-breadth-and-profile-gap"
  },
  {
+  "discussion_id": "mspji-defensefinder-model-gap",
+  "prompt": "Resolve MspJI-family breadth, methylcytosine and hydroxymethylcytosine sequence-context specificity across natural hosts, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower MspJI mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MspJI system",
+  "source_id": "traitmech:000510",
+  "source_file": "mspji_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mspji_restricts_modified_cytosine_dna"
+  ],
+  "rationale": "Zheng et al. support MspJI as a methylcytosine- and hydroxymethylcytosine-dependent restriction endonuclease, Cohen-Karni et al. support MspJI homologs as a family of C5-modified-cytosine-dependent restriction endonucleases, and the pinned DefenseFinder article registry maps MspJI to the Cohen-Karni et al. paper. The pinned HMM inventory and rules table have no exact MspJI rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact accession-level protein examples, the breadth of MspJI-like systems across natural hosts, or the complete set of natural methylcytosine and hydroxymethylcytosine sequence contexts.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.1018448108",
+   "DOI:10.1073/pnas.1018448108",
+   "DOI:10.1093/nar/gkq327",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mspji_system.html#mspji-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "nantosuelta-mechanism-gap",
   "prompt": "Resolve Nantosuelta phage triggers and effector outputs before minting narrower Nantosuelta mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6446,7 +6472,7 @@ window.searchData = [
  },
  {
   "discussion_id": "type-iv-rm-profile-interpretation-gap",
-  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, MspJI, PvuRts1I, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, PvuRts1I, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -6456,7 +6482,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#type_iv_modification_dependent_restriction"
   ],
-  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, MspJI, PvuRts1I, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, PvuRts1I, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
@@ -8176,9 +8202,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 381,
- "total_knowledge_gaps": 295,
- "total_source_entries": 375,
+ "total_discussions": 382,
+ "total_knowledge_gaps": 296,
+ "total_source_entries": 376,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
