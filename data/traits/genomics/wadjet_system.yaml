@@ -139,15 +139,18 @@ causal_graphs:
         output.
 discussions:
 - discussion_id: wadjet-subfamily-and-substrate-gap
-  prompt: Resolve Wadjet subfamily architecture, plasmid substrate specificity, and
-    activation cues before minting narrower Wadjet mechanism children.
+  prompt: Resolve JetABCD, EptABCD, DefenseFinder Wadjet subtype boundaries, plasmid
+    substrate specificity, and activation cues before minting additional narrower
+    Wadjet mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Deep et al. and Liu et al. support JetABCD-mediated topology- or shape-biased
-    circular plasmid cleavage, and Weiss et al. support MksG-mediated plasmid degradation
-    in the MksBEFG subfamily, but Wadjet variants need separate review before TraitMech
-    asserts one exact target size threshold, linear-plasmid escape rule, loop-extrusion
-    endpoint, polar localization pattern, or nuclease activation model.
+    circular plasmid cleavage and the broad JetABCD/MksBEFG/EptABCD Wadjet family,
+    while the MksBEFG child now captures the Weiss et al. plasmid-degradation branch.
+    The parent still leaves JetABCD, EptABCD, DefenseFinder Wadjet I-III boundaries,
+    exact target size threshold, linear-plasmid escape rule, loop-extrusion endpoint,
+    polar localization pattern, and nuclease activation models for additional Wadjet
+    variants unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -157,4 +160,11 @@ curation_history:
   changes: Minted Wadjet system as a DOI-backed GENOMICS TraitRecord after an ignored-and-hidden
     duplicate review found no exact live TraitMech, METPO, or prior proposal record;
     the replacement placeholder is reserved in proposals/metpo_traitmech_v95.
+  llm_assisted: true
+- timestamp: '2026-10-01T21:15:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Documented MksBEFG as split out in the open Wadjet subfamily and substrate
+    discussion after minting traitmech:000526 for the MksBEFG system; JetABCD, EptABCD,
+    and DefenseFinder Wadjet subtype boundaries remain open.
   llm_assisted: true

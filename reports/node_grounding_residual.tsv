@@ -154,6 +154,7 @@ subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
+plasmid transformation	BIOLOGICAL_PROCESS	2	data/traits/genomics/mksbefg_system.yaml|data/traits/genomics/wadjet_system.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 translation inhibition	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/razr_system.yaml
 lambdavir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/pd_lambda_1_system.yaml|data/traits/genomics/pd_lambda_3_system.yaml
@@ -1551,6 +1552,9 @@ metis locus	GENETIC_ELEMENT	1	data/traits/genomics/metis_system.yaml
 phage-mediated host genome degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
 modified mononucleotide sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
 type-specific toxic effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml
+mksbefg locus	GENETIC_ELEMENT	1	data/traits/genomics/mksbefg_system.yaml
+mksbef atpase cycle	BIOLOGICAL_PROCESS	1	data/traits/genomics/mksbefg_system.yaml
+mksg plasmid dna degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/mksbefg_system.yaml
 mmb gp29-gp30 locus	GENETIC_ELEMENT	1	data/traits/genomics/mmb_gp29_gp30_system.yaml
 genome plasticity	QUALITY	1	data/traits/genomics/mobile_genetic_element.yaml
 relaxase	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
@@ -1839,7 +1843,6 @@ vp1853 locus	GENETIC_ELEMENT	1	data/traits/genomics/vp1853_system.yaml
 wadjet locus	GENETIC_ELEMENT	1	data/traits/genomics/wadjet_system.yaml
 wadjet smc atpase cycle	BIOLOGICAL_PROCESS	1	data/traits/genomics/wadjet_system.yaml
 wadjet plasmid dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/wadjet_system.yaml
-plasmid transformation	BIOLOGICAL_PROCESS	1	data/traits/genomics/wadjet_system.yaml
 phage invasion	BIOLOGICAL_PROCESS	1	data/traits/genomics/zorya_system.yaml
 zorya locus	GENETIC_ELEMENT	1	data/traits/genomics/zorya_system.yaml
 zorab ion-motor activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/zorya_system.yaml
