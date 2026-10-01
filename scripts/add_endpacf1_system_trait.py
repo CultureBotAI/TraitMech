@@ -31,6 +31,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-30T23:39:24Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-30T23:39:25Z"
+COPILOT_REVIEW_FIX_TIMESTAMP = "2026-10-01T00:24:07Z"
 IDENTIFIER = "traitmech:000503"
 PHAGE_DEFENSE_SYSTEM = "traitmech:000209"
 PROPOSAL = "proposals/metpo_traitmech_v380"
@@ -101,6 +102,24 @@ def yee_hypermodified_dna_evidence() -> dict[str, str]:
         "notes": (
             "Yee et al. connect ENDPaCF1 to protection against phages with "
             "multiple hypermodified-DNA chemistries."
+        ),
+    }
+
+
+def yee_native_deletion_evidence() -> dict[str, str]:
+    return {
+        "reference": YEE,
+        "snippet": (
+            "Here, we employed the CRISPR-based Cascade-Cas3 system to "
+            "delete defense islands in a Pseudomonas aeruginosa clinical "
+            "isolate to identify mechanisms of lytic phage antagonism. "
+            "Deletion of one island in a cystic fibrosis-derived clinical "
+            "isolate sensitized the strain to phages from the Pbunavirus "
+            "family, which are commonly used as therapeutics."
+        ),
+        "notes": (
+            "Yee et al. identified the ENDPaCF1 island as an endogenous "
+            "Pseudomonas aeruginosa phage-defense determinant."
         ),
     }
 
@@ -193,10 +212,24 @@ RECORD: dict[str, Any] = {
     "evidence": [
         yee_system_evidence(),
         yee_hypermodified_dna_evidence(),
+        yee_native_deletion_evidence(),
         yee_domain_evidence(),
         yee_end_nuclease_evidence(),
         yee_inhibitor_evidence(),
         article_registry_evidence(),
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:287",
+            "taxon_label": "Pseudomonas aeruginosa",
+            "note": (
+                "Yee et al. identified ENDPaCF1 in the cystic-fibrosis-"
+                "derived clinical isolate CF040 and showed that deleting "
+                "the ENDPaCF1-bearing defense island sensitized the native "
+                "Pseudomonas aeruginosa strain to Pbunavirus phages."
+            ),
+            "reference": YEE,
+        },
     ],
     "causal_graphs": [
         {
@@ -306,20 +339,6 @@ RECORD: dict[str, Any] = {
                     "evidence": [yee_hypermodified_dna_evidence()],
                 },
                 {
-                    "subject": "hypermodified_phage_dna_sensing",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "modification_dependent_phage_dna_cleavage",
-                    "description": (
-                        "ENDPaCF1-family iEndoIII-linked sensing is coupled "
-                        "to endonuclease cleavage of modified phage DNA."
-                    ),
-                    "evidence": [
-                        yee_domain_evidence(),
-                        yee_end_nuclease_evidence(),
-                    ],
-                },
-                {
                     "subject": "modification_dependent_phage_dna_cleavage",
                     "predicate": "mitigates",
                     "predicate_id": "METPO:2007407",
@@ -350,10 +369,10 @@ RECORD: dict[str, Any] = {
                         "ENDPaCF1 system possession is a "
                         "phage-defense-system trait."
                     ),
-                "evidence": [
-                    yee_system_evidence(),
-                    article_registry_evidence(),
-                ],
+                    "evidence": [
+                        yee_system_evidence(),
+                        article_registry_evidence(),
+                    ],
                 },
             ],
         }
@@ -441,6 +460,21 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_ENDPACF1_REVIEW_FINDINGS",
+        changes=(
+            "Addressed Copilot review issues #1501, #1502, and #1503: "
+            "added Pseudomonas aeruginosa (NCBITaxon:287) as a DOI-backed "
+            "native ENDPaCF1 canonical example, removed the unsupported "
+            "direct hypermodified-phage-DNA-sensing to modification-"
+            "dependent-phage-DNA-cleavage causal edge, and included the "
+            "discussions block in the repository CREATE history sections."
+        ),
+        llm_assisted=True,
+        timestamp=COPILOT_REVIEW_FIX_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

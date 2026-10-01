@@ -28,6 +28,14 @@ evidence:
   notes: Yee et al. connect ENDPaCF1 to protection against phages with multiple hypermodified-DNA
     chemistries.
 - reference: DOI:10.1101/2025.03.31.646159
+  snippet: Here, we employed the CRISPR-based Cascade-Cas3 system to delete defense
+    islands in a Pseudomonas aeruginosa clinical isolate to identify mechanisms of
+    lytic phage antagonism. Deletion of one island in a cystic fibrosis-derived clinical
+    isolate sensitized the strain to phages from the Pbunavirus family, which are
+    commonly used as therapeutics.
+  notes: Yee et al. identified the ENDPaCF1 island as an endogenous Pseudomonas aeruginosa
+    phage-defense determinant.
+- reference: DOI:10.1101/2025.03.31.646159
   snippet: In ENDPaCF1, the endonuclease domain is fused to a catalytically inactive
     Endonuclease III (iEndoIII), a domain that recognizes non-canonical bases to repair
     DNA in prokaryotes and eukaryotes.
@@ -49,6 +57,13 @@ evidence:
     defense systems targeting multiple hypermodified phage genomes | '
   notes: The pinned DefenseFinder article registry maps the ENDPaCF1 source key to
     the Yee et al. bioRxiv preprint.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Yee et al. identified ENDPaCF1 in the cystic-fibrosis-derived clinical isolate
+    CF040 and showed that deleting the ENDPaCF1-bearing defense island sensitized
+    the native Pseudomonas aeruginosa strain to Pbunavirus phages.
+  reference: DOI:10.1101/2025.03.31.646159
 causal_graphs:
 - graph_id: endpacf1_targets_hypermodified_phage_dna
   title: ENDPaCF1 targets hypermodified phage DNA
@@ -134,24 +149,6 @@ causal_graphs:
         is unlike typical type IV restriction endonucleases.
       notes: Yee et al. connect ENDPaCF1 to protection against phages with multiple
         hypermodified-DNA chemistries.
-  - subject: hypermodified_phage_dna_sensing
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: modification_dependent_phage_dna_cleavage
-    description: ENDPaCF1-family iEndoIII-linked sensing is coupled to endonuclease
-      cleavage of modified phage DNA.
-    evidence:
-    - reference: DOI:10.1101/2025.03.31.646159
-      snippet: In ENDPaCF1, the endonuclease domain is fused to a catalytically inactive
-        Endonuclease III (iEndoIII), a domain that recognizes non-canonical bases
-        to repair DNA in prokaryotes and eukaryotes.
-      notes: Yee et al. describe the ENDPaCF1 endonuclease plus inactive Endonuclease
-        III domain architecture.
-    - reference: DOI:10.1101/2025.03.31.646159
-      snippet: We therefore propose that nucleases containing an iEndoIII domain (END
-        nucleases) can sense diverse DNA hypermodifications.
-      notes: Yee et al. propose the END nuclease family around the iEndoIII domain's
-        ability to sense diverse DNA modifications.
   - subject: modification_dependent_phage_dna_cleavage
     predicate: mitigates
     predicate_id: METPO:2007407
@@ -268,4 +265,13 @@ curation_history:
     public preprint and DefenseFinder evidence supports the named phage-defense system
     but not a direct named native microbial isolate exemplar with experimentally verified
     endogenous ENDPaCF1 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-01T00:24:07Z'
+  curator: codex
+  action: ADDRESS_ENDPACF1_REVIEW_FINDINGS
+  changes: 'Addressed Copilot review issues #1501, #1502, and #1503: added Pseudomonas
+    aeruginosa (NCBITaxon:287) as a DOI-backed native ENDPaCF1 canonical example,
+    removed the unsupported direct hypermodified-phage-DNA-sensing to modification-dependent-phage-DNA-cleavage
+    causal edge, and included the discussions block in the repository CREATE history
+    sections.'
   llm_assisted: true
