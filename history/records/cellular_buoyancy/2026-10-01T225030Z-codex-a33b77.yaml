@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_buoyancy.yaml
+  slug: cellular_buoyancy
+session:
+  id: 2026-10-01T225030Z-codex-a33b77
+  timestamp: '2026-10-01T22:50:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Mint cellular buoyancy physiology trait
+  details: Minted traitmech:000528 as a DOI-backed gas-vesicle-mediated cellular buoyancy
+    physiology trait, added a compact organelle-level causal graph, cited Feng 2024 and Pfeifer
+    2022 for gas-vesicle buoyancy evidence, cited Mlouka 2004 for the Microcystis aeruginosa
+    canonical example, opened the exact-xref follow-up discussion, and reserved METPO:1048200
+    in proposals/metpo_traitmech_v405.

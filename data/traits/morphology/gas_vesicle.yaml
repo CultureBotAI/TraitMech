@@ -49,6 +49,7 @@ causal_graphs:
     label: cellular buoyancy
     node_type: TRAIT
     description: Reduced effective cell density permitting vertical positioning.
+    grounding: traitmech:000528
   - node_id: water_column_positioning
     label: water-column positioning
     node_type: BIOLOGICAL_PROCESS
@@ -331,4 +332,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-01T22:49:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE_TO_NEW_TRAIT
+  changes: Grounded the existing causal-graph buoyancy TRAIT node to newly minted
+    traitmech:000528 cellular buoyancy.
   llm_assisted: true

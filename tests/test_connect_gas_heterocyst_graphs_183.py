@@ -17,6 +17,7 @@ from connect_gas_heterocyst_graphs_183 import (  # noqa: E402
     ADDITIONS,
     EXPECTED_COMPONENTS,
     REMOVALS,
+    TIMESTAMP,
     _components,
     _edge_key,
     transform,
@@ -71,7 +72,12 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edges(slug: str)
             item.get("reference") and item.get("snippet")
             for item in expected["evidence"]
         )
-    assert doc["curation_history"][-1]["action"] == ACTION
+    events = [
+        event
+        for event in doc["curation_history"]
+        if event.get("timestamp") == TIMESTAMP and event.get("action") == ACTION
+    ]
+    assert len(events) == 1
 
 
 def test_unresolved_furc_promoter_island_is_removed_without_a_bridge():

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-10-01T225032Z-codex-5a57b5
+  timestamp: '2026-10-01T22:50:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Ground gas-vesicle buoyancy node
+  details: Grounded the existing cellular buoyancy TRAIT node in the gas_vesicle_buoyancy
+    graph to newly minted traitmech:000528 so the gas-vesicle structure now confers a concrete
+    cellular-buoyancy TraitRecord instead of an ungrounded local label.

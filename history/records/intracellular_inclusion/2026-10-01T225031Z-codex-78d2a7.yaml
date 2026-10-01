@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/intracellular_inclusion.yaml
+  slug: intracellular_inclusion
+session:
+  id: 2026-10-01T225031Z-codex-78d2a7
+  timestamp: '2026-10-01T22:50:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Ground inclusion buoyancy node
+  details: Grounded the existing buoyancy TRAIT node in the inclusion_compartmentalization
+    graph to newly minted traitmech:000528, preserving the nonmechanistic graph while linking
+    the gas-vesicle example to the explicit cellular-buoyancy physiology trait.
