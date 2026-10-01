@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gmrsd_system.yaml
+  slug: gmrsd_system
+session:
+  id: 2026-10-01T042102Z-claude-code-7fb3f4
+  timestamp: '2026-10-01T04:21:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added GmrSD system
+  details: Created traitmech:000506 GmrSD system under type IV modification-dependent
+    restriction system, backed by the Bair and Black GmrSD DOI, the Machnicka et
+    al. GmrSD family DOI, the Loenen and Raleigh Type IV DOI, and the pinned
+    DefenseFinder GmrSD_RM_Type_IV article-registry row. Kept the causal graph
+    nonmechanistic while leaving GmrS/GmrD domain activities, sugar-modified HMC
+    substrate breadth, split-versus-fused host breadth, phage IPI inhibition, and
+    DefenseFinder RM_Type_IV HMM/rules mapping open, and recorded the stable
+    canonical-example evidence gap.

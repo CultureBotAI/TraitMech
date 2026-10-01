@@ -3478,6 +3478,34 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/geb_system.html#geb-mechanism-gap"
  },
  {
+  "discussion_id": "gmrsd-defensefinder-model-gap",
+  "prompt": "Resolve exact GmrS/GmrD domain activities, complete sugar-modified HMC substrate breadth, split-versus-fused host breadth, phage IPI inhibition, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower GmrSD mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "GmrSD system",
+  "source_id": "traitmech:000506",
+  "source_file": "gmrsd_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gmrsd_restricts_glucosylated_hmc_dna"
+  ],
+  "rationale": "Bair and Black support split GmrS/GmrD as a Type IV modification-dependent restriction nuclease that targets glucosylated hydroxymethylcytosine DNA, Machnicka et al. support GmrSD homologs as either split or fused double-domain systems, and the pinned DefenseFinder article registry maps GmrSD_RM_Type_IV to Bair and Black. The pinned HMM inventory and rules table have no exact GmrSD or GmrSD_RM_Type_IV rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact split-versus-fused prevalence across natural hosts, the complete set of sugar-modified HMC targets, the exact domain contributions of GmrS and GmrD, or the relationship between phage IPI inhibition and the organism-level GmrSD system trait.",
+  "num_experiments": 0,
+  "num_evidence": 8,
+  "evidence_refs": [
+   "DOI:10.1016/j.jmb.2006.11.051",
+   "DOI:10.1016/j.jmb.2006.11.051",
+   "DOI:10.1186/s12859-015-0773-z",
+   "DOI:10.1186/s12859-015-0773-z",
+   "DOI:10.1186/s12859-015-0773-z",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gmrsd_system.html#gmrsd-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "hachiman-subtype-and-trigger-gap",
   "prompt": "Resolve Hachiman subtype effectors, DNA substrates, and activation triggers before minting narrower Hachiman mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6342,7 +6370,7 @@ window.searchData = [
  },
  {
   "discussion_id": "type-iv-rm-profile-interpretation-gap",
-  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, GmrSD, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -6352,7 +6380,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#type_iv_modification_dependent_restriction"
   ],
-  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, Bair and Black support GmrSD as one glucosylated-HMC-targeting Type IV enzyme, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, GmrSD_RM_Type_IV, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
@@ -8072,9 +8100,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 377,
- "total_knowledge_gaps": 291,
- "total_source_entries": 371,
+ "total_discussions": 378,
+ "total_knowledge_gaps": 292,
+ "total_source_entries": 372,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

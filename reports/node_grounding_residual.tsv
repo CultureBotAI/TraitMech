@@ -1457,6 +1457,9 @@ reduced cofactor/vitamin biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/
 dependence on exogenous b-vitamin precursors	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streamlining.yaml
 integrase/recombinase/transposase mobility module	GENE_OR_PROTEIN	1	data/traits/genomics/genomic_island.yaml
 integrative mobilizable element (ime)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
+gmrsd locus	GENETIC_ELEMENT	1	data/traits/genomics/gmrsd_system.yaml
+glucosylated hmc dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/gmrsd_system.yaml
+gmrsd-dependent type iv restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gmrsd_system.yaml
 hachiman locus	GENETIC_ELEMENT	1	data/traits/genomics/hachiman_system.yaml
 hamab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
 hachiman dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
