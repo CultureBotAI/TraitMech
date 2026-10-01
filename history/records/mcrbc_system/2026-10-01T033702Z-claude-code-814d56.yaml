@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mcrbc_system.yaml
+  slug: mcrbc_system
+session:
+  id: 2026-10-01T033702Z-claude-code-814d56
+  timestamp: '2026-10-01T03:37:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added McrBC system
+  details: Created traitmech:000505 McrBC system under type IV modification-dependent restriction
+    system, backed by the Panne et al. McrBC DOI, the Loenen and Raleigh Type IV DOI, and
+    the pinned DefenseFinder McrBC article-registry row. Kept the causal graph nonmechanistic
+    while leaving McrB/McrC component activities, modified-cytosine target breadth, natural
+    host breadth, and DefenseFinder RM_Type_IV HMM/rules mapping open.

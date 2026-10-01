@@ -260,7 +260,7 @@ causal_graphs:
 discussions:
 - discussion_id: type-iv-rm-profile-interpretation-gap
   prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_IV
-    custom Type_IV_REases profiles and characterized McrA, McrBC, GmrSD, MspJI, PvuRts1I,
+    custom Type_IV_REases profiles and characterized McrA, GmrSD, MspJI, PvuRts1I,
     EcoKMcrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile
     traits.
   kind: KNOWLEDGE_GAP
@@ -270,7 +270,7 @@ discussions:
     enzyme, and the pinned DefenseFinder registries support an RM_Type_IV namespace
     with a broad Type_IV_REases custom profile group. The evidence does not yet map
     any of the eight pinned RM_Type_IV HMM rows to exact characterized families or
-    resolve whether the Other_Type_IV, McrBC, GmrSD_RM_Type_IV, MspJI, PvuRts1I, EcoKMcrA,
+    resolve whether the Other_Type_IV, GmrSD_RM_Type_IV, MspJI, PvuRts1I, EcoKMcrA,
     ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level
     traits below this class.
   evidence:
@@ -355,4 +355,12 @@ curation_history:
     from modified bases to recognized base or backbone DNA modifications after PR
     #1488 local review found the original definition excluded phosphorothioated backbone
     targets; fixes #1489.'
+  llm_assisted: true
+- timestamp: '2026-10-01T03:37:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Documented McrBC as split out in the open Type IV modification-dependent
+    restriction profile-interpretation discussion after minting traitmech:000505 for
+    the McrBC system; other RM_Type_IV custom HMM and article-registry families remain
+    open.
   llm_assisted: true
