@@ -861,6 +861,34 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/borvo_system.html#borvo-mechanism-gap"
  },
  {
+  "discussion_id": "brc113-defensefinder-model-gap",
+  "prompt": "Resolve Brc113 native host breadth, exact sensitive-phage breadth, molecular output, and DefenseFinder article/HMM/rules coverage before minting narrower Brc113 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Brc113 system",
+  "source_id": "traitmech:000522",
+  "source_file": "brc113_system.yaml",
+  "attaches_to": [
+   "causal_graphs#brc113_integron_cassette_confers_phage_resistance"
+  ],
+  "rationale": "Kieffer et al. identify brc113 as a bacteriophage-resistance integron cassette. The pinned DefenseFinder article registry, HMM inventory, and rules table have no exact gcu113 or Brc113 row, so the first-pass record leaves native-host breadth, profile boundaries, exact phage target breadth, and direct molecular output unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 8,
+  "evidence_refs": [
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf",
+   "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brc113_system.html#brc113-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "brc142-defensefinder-model-gap",
   "prompt": "Resolve Brc142 native host breadth, exact sensitive-phage breadth, molecular output, and DefenseFinder HMM/rules coverage before minting narrower Brc142 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8504,9 +8532,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 393,
- "total_knowledge_gaps": 307,
- "total_source_entries": 387,
+ "total_discussions": 394,
+ "total_knowledge_gaps": 308,
+ "total_source_entries": 388,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
