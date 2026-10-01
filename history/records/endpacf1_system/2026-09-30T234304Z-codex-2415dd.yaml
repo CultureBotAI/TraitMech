@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/endpacf1_system.yaml
+  slug: endpacf1_system
+session:
+  id: 2026-09-30T234304Z-codex-2415dd
+  timestamp: '2026-09-30T23:43:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add ENDPaCF1 system trait
+  details: Minted traitmech:000503 for ENDPaCF1 system under phage defense system with the
+    Yee et al. bioRxiv DOI, the pinned DefenseFinder article-registry row, an explicit HMM/rules
+    coverage gap, no canonical examples, a conservative system-level causal graph, and a same-branch
+    v380 METPO placeholder proposal.
