@@ -8,8 +8,9 @@
 ## Context
 
 The pinned METPO snapshot has no active exact class for AbiF system, the
-genome-level possession trait for the pNP40/pCG1-derived Lactococcus abortive
-infection determinant that inhibits bacteriophage phi 712 DNA replication.
+genome-level possession trait for the pNP40-derived Lactococcus abortive
+infection determinant cloned on pCG1 that inhibits bacteriophage phi 712 DNA
+replication.
 Garvey et al. localized the determinant to a pCG1 subclone, showed that a
 frameshift inside the single complete open reading frame disrupted phage
 resistance, and designated the resulting abortive-infection mechanism AbiF.
@@ -43,7 +44,7 @@ Subset tag: `metpo_traitmech_2026_09`.
 |---|---|---|
 | `METPO:1045800` | AbiF system | `METPO:1016800` abortive infection system |
 
-AbiF system captures genome-level possession of the pCG1-derived
+AbiF system captures genome-level possession of the pNP40-derived
 abortive-infection locus in which the AbiF open reading frame is required for
 phage insensitivity and the determinant inhibits the rate of phage phi 712 DNA
 replication. It excludes individual AbiF proteins, the abiF open reading frame
@@ -76,3 +77,5 @@ possession trait.
 
 - v381, 2026-10: lifts `traitmech:000504 AbiF system` into the
   `METPO:1045800` placeholder block.
+- v381 review, 2026-10: clarifies pNP40 as the AbiF source plasmid and pCG1
+  as the recombinant plasmid clone.

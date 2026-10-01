@@ -1,7 +1,7 @@
 identifier: traitmech:000504
 label: AbiF system
-definition: An abortive infection system in which an organism possesses a plasmid
-  pCG1-derived abiF locus whose single complete open reading frame encodes a phage-insensitivity
+definition: An abortive infection system in which an organism possesses a pNP40-derived
+  abiF locus whose single complete open reading frame encodes a phage-insensitivity
   determinant that inhibits bacteriophage phi 712 DNA replication.
 definition_source: DOI:10.1128/AEM.61.12.4321-4328.1995
 trait_category: GENOMICS
@@ -13,20 +13,20 @@ evidence:
 - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
   snippet: Subcloning and deletion analysis of the recombinant plasmid pCG1 defined
     a 3.7-kb EcoRV-XbaI fragment as encoding phage insensitivity
-  notes: Garvey et al. localized the pNP40 AbiF determinant to the pCG1-derived EcoRV-XbaI
-    fragment.
+  notes: Garvey et al. localized the pNP40 AbiF determinant to the EcoRV-XbaI fragment
+    carried by recombinant plasmid pCG1.
 - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
   snippet: The introduction of a frameshift mutation at the unique BglII site within
     this ORF disrupted the phage resistance phenotype, confirming that this ORF is
     responsible for the observed phage insensitivity
-  notes: Garvey et al. showed that the single complete ORF in the pCG1-derived fragment
-    is required for AbiF-associated phage resistance.
+  notes: Garvey et al. showed that the single complete ORF in the pNP40-derived EcoRV-XbaI
+    fragment is required for AbiF-associated phage resistance.
 - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
   snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614
     conformed to the criteria defining abortive infection and were designated AbiE
     and AbiF, respectively
-  notes: Garvey et al. designated the pCG1-encoded pNP40 phage-insensitivity determinant
-    as AbiF.
+  notes: Garvey et al. designated the pNP40 phage-insensitivity determinant cloned
+    on pCG1 as AbiF.
 - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
   snippet: Analysis of the phage DNA content of phi 712-infected hosts containing
     AbiF demonstrated that it inhibited the rate of phage DNA replication
@@ -40,27 +40,27 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1358
   taxon_label: Lactococcus lactis
-  note: Garvey et al. cloned the pNP40 pCG1 AbiF determinant and showed that the pCG1-encoded
-    region conferred abortive-infection phage insensitivity in Lactococcus lactis
-    subsp. lactis MG1614.
+  note: Garvey et al. cloned the pNP40 AbiF determinant into pCG1 and showed that
+    the cloned pNP40 region conferred abortive-infection phage insensitivity in Lactococcus
+    lactis subsp. lactis MG1614.
   reference: DOI:10.1128/AEM.61.12.4321-4328.1995
 causal_graphs:
 - graph_id: abif_locus_inhibits_lactococcal_phage_dna_replication
   title: AbiF inhibits lactococcal phage DNA replication
-  description: Conservative system-level sketch linking a pCG1-derived abiF locus
+  description: Conservative system-level sketch linking a pNP40-derived abiF locus
     to inhibited phage phi 712 DNA replication, restricted phage propagation, and
     AbiF abortive-infection system possession.
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the original AbiF determinant as a pNP40 pCG1-derived
-    abortive-infection locus that inhibits the rate of phage phi 712 DNA replication
-    while leaving the exact AbiF protein function, phage trigger, host target, possible
-    AbiD/AbiD1 homology-derived family boundary, natural locus breadth, and phage
-    escape routes unresolved.
+  scope_notes: The graph captures the original AbiF determinant as a pNP40-derived
+    abortive-infection locus cloned on pCG1 that inhibits the rate of phage phi 712
+    DNA replication while leaving the exact AbiF protein function, phage trigger,
+    host target, possible AbiD/AbiD1 homology-derived family boundary, natural locus
+    breadth, and phage escape routes unresolved.
   nodes:
   - node_id: abif_locus
     label: abiF locus
     node_type: GENETIC_ELEMENT
-    description: A pCG1-derived abortive-infection locus containing the open reading
+    description: A pNP40-derived abortive-infection locus containing the open reading
       frame required for AbiF phage resistance.
   - node_id: restricted_phage_dna_replication
     label: restricted phage DNA replication
@@ -88,15 +88,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: restricted_phage_dna_replication
-    description: The pCG1 AbiF open reading frame is responsible for the phage-insensitivity
+    description: The pNP40 AbiF open reading frame is responsible for the phage-insensitivity
       phenotype and inhibits the rate of phage phi 712 DNA replication.
     evidence:
     - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
       snippet: The introduction of a frameshift mutation at the unique BglII site
         within this ORF disrupted the phage resistance phenotype, confirming that
         this ORF is responsible for the observed phage insensitivity
-      notes: Garvey et al. showed that the single complete ORF in the pCG1-derived
-        fragment is required for AbiF-associated phage resistance.
+      notes: Garvey et al. showed that the single complete ORF in the pNP40-derived
+        EcoRV-XbaI fragment is required for AbiF-associated phage resistance.
     - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
       snippet: Analysis of the phage DNA content of phi 712-infected hosts containing
         AbiF demonstrated that it inhibited the rate of phage DNA replication
@@ -112,8 +112,8 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
       snippet: Subcloning and deletion analysis of the recombinant plasmid pCG1 defined
         a 3.7-kb EcoRV-XbaI fragment as encoding phage insensitivity
-      notes: Garvey et al. localized the pNP40 AbiF determinant to the pCG1-derived
-        EcoRV-XbaI fragment.
+      notes: Garvey et al. localized the pNP40 AbiF determinant to the EcoRV-XbaI
+        fragment carried by recombinant plasmid pCG1.
     - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
       snippet: Analysis of the phage DNA content of phi 712-infected hosts containing
         AbiF demonstrated that it inhibited the rate of phage DNA replication
@@ -130,8 +130,8 @@ causal_graphs:
       snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis
         MG1614 conformed to the criteria defining abortive infection and were designated
         AbiE and AbiF, respectively
-      notes: Garvey et al. designated the pCG1-encoded pNP40 phage-insensitivity determinant
-        as AbiF.
+      notes: Garvey et al. designated the pNP40 phage-insensitivity determinant cloned
+        on pCG1 as AbiF.
     - reference: DOI:10.1093/femsre/fuag009
       snippet: 13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG,
         AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu
@@ -147,8 +147,8 @@ causal_graphs:
       snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis
         MG1614 conformed to the criteria defining abortive infection and were designated
         AbiE and AbiF, respectively
-      notes: Garvey et al. designated the pCG1-encoded pNP40 phage-insensitivity determinant
-        as AbiF.
+      notes: Garvey et al. designated the pNP40 phage-insensitivity determinant cloned
+        on pCG1 as AbiF.
     - reference: DOI:10.1093/femsre/fuag009
       snippet: 13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG,
         AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu
@@ -161,20 +161,21 @@ discussions:
     AbiF mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Garvey et al. support AbiF as a pCG1-encoded pNP40 determinant that conforms
-    to abortive-infection criteria, depends on a single complete open reading frame,
-    and inhibits the rate of phage phi 712 DNA replication; the FEMS review retains
-    AbiF among confirmed two-component lactococcal Abi-like systems. This first system-level
-    record therefore leaves the direct phage trigger, exact AbiF molecular activity,
-    relevant host target, AbiD/AbiD1-related family boundary, natural locus breadth,
-    cell-death or growth-arrest route, and phage escape routes unresolved.
+  rationale: Garvey et al. support AbiF as a pNP40 determinant cloned on pCG1 that
+    conforms to abortive-infection criteria, depends on a single complete open reading
+    frame, and inhibits the rate of phage phi 712 DNA replication; the FEMS review
+    retains AbiF among confirmed two-component lactococcal Abi-like systems. This
+    first system-level record therefore leaves the direct phage trigger, exact AbiF
+    molecular activity, relevant host target, AbiD/AbiD1-related family boundary,
+    natural locus breadth, cell-death or growth-arrest route, and phage escape routes
+    unresolved.
   evidence:
   - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
     snippet: The introduction of a frameshift mutation at the unique BglII site within
       this ORF disrupted the phage resistance phenotype, confirming that this ORF
       is responsible for the observed phage insensitivity
-    notes: Garvey et al. showed that the single complete ORF in the pCG1-derived fragment
-      is required for AbiF-associated phage resistance.
+    notes: Garvey et al. showed that the single complete ORF in the pNP40-derived
+      EcoRV-XbaI fragment is required for AbiF-associated phage resistance.
   - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
     snippet: Analysis of the phage DNA content of phi 712-infected hosts containing
       AbiF demonstrated that it inhibited the rate of phage DNA replication
@@ -197,4 +198,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v381.
+  llm_assisted: true
+- timestamp: '2026-10-01T03:14:00Z'
+  curator: codex
+  action: ADDRESS_ABIF_REVIEW_FINDING
+  changes: 'Addressed adversarial review issue #1505 by clarifying that pNP40 is the
+    AbiF determinant source context and that pCG1 is the recombinant plasmid clone
+    used in the Garvey et al. subcloning experiment.'
   llm_assisted: true

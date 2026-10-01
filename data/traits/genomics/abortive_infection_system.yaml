@@ -187,7 +187,7 @@ discussions:
     Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore
     and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically
     encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin,
-    pCG1-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related
+    pNP40-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related
     polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition,
     staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance,
     two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI
@@ -452,4 +452,11 @@ curation_history:
   changes: Documented AbiF as split out in the open abortive-infection subfamily split-gap
     discussion after minting traitmech:000504 for the AbiF system; other abortive-infection
     families remain open.
+  llm_assisted: true
+- timestamp: '2026-10-01T03:14:00Z'
+  curator: codex
+  action: ADDRESS_ABIF_REVIEW_FINDING
+  changes: 'Addressed adversarial review issue #1505 by clarifying that pNP40 is the
+    AbiF determinant source context and that pCG1 is the recombinant plasmid clone
+    used in the Garvey et al. subcloning experiment.'
   llm_assisted: true

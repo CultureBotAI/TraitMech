@@ -29,6 +29,7 @@ TIMESTAMP = "2026-10-01T01:32:44Z"
 PARENT_TIMESTAMP = "2026-10-01T01:32:45Z"
 IDENTIFIER = "traitmech:000504"
 PROPOSAL = "proposals/metpo_traitmech_v381"
+ABIF_REVIEW_FIX_TIMESTAMP = "2026-10-01T03:14:00Z"
 
 OLD_PARENT_RATIONALE = (
     "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, "
@@ -101,7 +102,7 @@ NEW_PARENT_RATIONALE = (
     "et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., "
     "Dinsmore and Klaenhammer, and Dinsmore et al. still support "
     "abortive infection as a genomically encoded phage defense strategy "
-    "that spans mechanistically diverse toxin-antitoxin, pCG1-derived "
+    "that spans mechanistically diverse toxin-antitoxin, pNP40-derived "
     "lactococcal AbiF DNA-replication-inhibition, premature-lysis, "
     "RT-related polymerase, two-component, translation-inhibition, "
     "prophage-encoded DNA-replication-inhibition, "
@@ -143,7 +144,7 @@ def garvey_pcg1_fragment_evidence() -> dict[str, str]:
         ),
         "notes": (
             "Garvey et al. localized the pNP40 AbiF determinant to the "
-            "pCG1-derived EcoRV-XbaI fragment."
+            "EcoRV-XbaI fragment carried by recombinant plasmid pCG1."
         ),
     }
 
@@ -159,8 +160,8 @@ def garvey_abif_orf_evidence() -> dict[str, str]:
         ),
         "notes": (
             "Garvey et al. showed that the single complete ORF in the "
-            "pCG1-derived fragment is required for AbiF-associated phage "
-            "resistance."
+            "pNP40-derived EcoRV-XbaI fragment is required for "
+            "AbiF-associated phage resistance."
         ),
     }
 
@@ -174,8 +175,8 @@ def garvey_designation_evidence() -> dict[str, str]:
             "infection and were designated AbiE and AbiF, respectively"
         ),
         "notes": (
-            "Garvey et al. designated the pCG1-encoded pNP40 "
-            "phage-insensitivity determinant as AbiF."
+            "Garvey et al. designated the pNP40 "
+            "phage-insensitivity determinant cloned on pCG1 as AbiF."
         ),
     }
 
@@ -214,7 +215,7 @@ RECORD: dict[str, Any] = {
     "label": "AbiF system",
     "definition": (
         "An abortive infection system in which an organism possesses a "
-        "plasmid pCG1-derived abiF locus whose single complete open reading "
+        "pNP40-derived abiF locus whose single complete open reading "
         "frame encodes a phage-insensitivity determinant that inhibits "
         "bacteriophage phi 712 DNA replication."
     ),
@@ -235,8 +236,8 @@ RECORD: dict[str, Any] = {
             "taxon_id": "NCBITaxon:1358",
             "taxon_label": "Lactococcus lactis",
             "note": (
-                "Garvey et al. cloned the pNP40 pCG1 AbiF determinant and "
-                "showed that the pCG1-encoded region conferred "
+                "Garvey et al. cloned the pNP40 AbiF determinant into "
+                "pCG1 and showed that the cloned pNP40 region conferred "
                 "abortive-infection phage insensitivity in Lactococcus "
                 "lactis subsp. lactis MG1614."
             ),
@@ -248,7 +249,7 @@ RECORD: dict[str, Any] = {
             "graph_id": "abif_locus_inhibits_lactococcal_phage_dna_replication",
             "title": "AbiF inhibits lactococcal phage DNA replication",
             "description": (
-                "Conservative system-level sketch linking a pCG1-derived "
+                "Conservative system-level sketch linking a pNP40-derived "
                 "abiF locus to inhibited phage phi 712 DNA replication, "
                 "restricted phage propagation, and AbiF "
                 "abortive-infection system possession."
@@ -256,8 +257,9 @@ RECORD: dict[str, Any] = {
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 "The graph captures the original AbiF determinant as a "
-                "pNP40 pCG1-derived abortive-infection locus that inhibits "
-                "the rate of phage phi 712 DNA replication while leaving "
+                "pNP40-derived abortive-infection locus cloned on pCG1 "
+                "that inhibits the rate of phage phi 712 DNA replication "
+                "while leaving "
                 "the exact AbiF protein function, phage trigger, host "
                 "target, possible AbiD/AbiD1 homology-derived family "
                 "boundary, natural locus breadth, and phage escape routes "
@@ -269,9 +271,9 @@ RECORD: dict[str, Any] = {
                     "label": "abiF locus",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        "A pCG1-derived abortive-infection locus containing "
-                        "the open reading frame required for AbiF phage "
-                        "resistance."
+                        "A pNP40-derived abortive-infection locus "
+                        "containing the open reading frame required for "
+                        "AbiF phage resistance."
                     ),
                 },
                 {
@@ -320,9 +322,9 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "RO:0002326",
                     "object": "restricted_phage_dna_replication",
                     "description": (
-                        "The pCG1 AbiF open reading frame is responsible for "
-                        "the phage-insensitivity phenotype and inhibits the "
-                        "rate of phage phi 712 DNA replication."
+                        "The pNP40 AbiF open reading frame is responsible "
+                        "for the phage-insensitivity phenotype and inhibits "
+                        "the rate of phage phi 712 DNA replication."
                     ),
                     "evidence": [
                         garvey_abif_orf_evidence(),
@@ -386,7 +388,7 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Garvey et al. support AbiF as a pCG1-encoded pNP40 "
+                "Garvey et al. support AbiF as a pNP40 "
                 "determinant that conforms to abortive-infection criteria, "
                 "depends on a single complete open reading frame, and "
                 "inhibits the rate of phage phi 712 DNA replication; the "
