@@ -1,0 +1,191 @@
+identifier: traitmech:000507
+label: Dag system
+definition: A phage defense system in which an organism possesses a Dag-family DNA-glycosylase
+  system whose Dag1 or Dag2 effectors selectively target phages carrying modified
+  guanine bases.
+definition_source: DOI:10.1038/s41564-026-02441-0
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Dag
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Dag1
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41564-026-02441-0
+- synonym_text: Dag2
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41564-026-02441-0
+evidence:
+- reference: DOI:10.1038/s41564-026-02441-0
+  snippet: using structure-guided discovery, we identified two widespread families
+    of anti-phage DNA glycosylases, Dag1 and Dag2
+  notes: Getz et al. identify Dag1 and Dag2 as widespread anti-phage DNA-glycosylase
+    families.
+- reference: DOI:10.1038/s41564-026-02441-0
+  snippet: Dag1 and Dag2 act as antiviral effectors that selectively target phages
+    carrying modified guanine bases.
+  notes: Getz et al. support the modified-guanine phage targeting scope of the Dag1
+    and Dag2 antiviral effectors.
+- reference: DOI:10.1038/s41564-026-02441-0
+  snippet: Together, these findings establish DNA glycosylases as a versatile class
+    of bacterial immune proteins
+  notes: Getz et al. frame defense-associated DNA glycosylases as bacterial immune
+    proteins.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Dag | 10\.1101/2025\.10\.29\.685425 | Antiviral defence is a conserved
+    function of diverse DNA glycosylases | '
+  notes: The pinned DefenseFinder article registry maps the Dag source key to the
+    Getz et al. DNA-glycosylase antiviral defense paper.
+causal_graphs:
+- graph_id: dag_effectors_target_modified_guanine_phages
+  title: Dag effectors target modified-guanine phages
+  description: Conservative system-level sketch linking the Dag DefenseFinder namespace
+    to Dag1 and Dag2 antiviral effector activity and the Dag phage-defense-system
+    trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Dag as a named DefenseFinder DNA-glycosylase phage-defense
+    system at system level and deliberately defers a protein-resolved glycosylase
+    mechanism. Getz et al. support Dag1 and Dag2 as anti-phage DNA glycosylase families
+    that target modified-guanine phages, but exact natural host exemplars, accession-level
+    Dag proteins, relationships between Dag1 and Dag2 families, and DefenseFinder
+    HMM/rules profiles are unresolved.
+  nodes:
+  - node_id: dag_locus
+    label: Dag locus
+    node_type: GENETIC_ELEMENT
+    description: A Dag-family DNA-glycosylase phage-defense locus represented by the
+      DefenseFinder Dag article namespace.
+  - node_id: modified_guanine_phage_targeting
+    label: modified-guanine phage targeting
+    node_type: BIOLOGICAL_PROCESS
+    description: Selective targeting of phages that carry modified guanine bases by
+      Dag1 or Dag2 antiviral effectors.
+  - node_id: dag_system_trait
+    label: Dag system
+    node_type: TRAIT
+    grounding: traitmech:000507
+    description: Possession of a genome-encoded Dag DNA-glycosylase phage-defense
+      system.
+  - node_id: phage_defense_system_trait
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: dag_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: modified_guanine_phage_targeting
+    description: Dag-family DNA-glycosylase systems encode Dag1 or Dag2 antiviral
+      effectors that selectively target modified-guanine phages.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: using structure-guided discovery, we identified two widespread families
+        of anti-phage DNA glycosylases, Dag1 and Dag2
+      notes: Getz et al. identify Dag1 and Dag2 as widespread anti-phage DNA-glycosylase
+        families.
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: Dag1 and Dag2 act as antiviral effectors that selectively target phages
+        carrying modified guanine bases.
+      notes: Getz et al. support the modified-guanine phage targeting scope of the
+        Dag1 and Dag2 antiviral effectors.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Dag | 10\.1101/2025\.10\.29\.685425 | Antiviral defence is a conserved
+        function of diverse DNA glycosylases | '
+      notes: The pinned DefenseFinder article registry maps the Dag source key to
+        the Getz et al. DNA-glycosylase antiviral defense paper.
+  - subject: modified_guanine_phage_targeting
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: dag_system_trait
+    description: Modified-guanine phage targeting realizes the organism-level Dag
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: Dag1 and Dag2 act as antiviral effectors that selectively target phages
+        carrying modified guanine bases.
+      notes: Getz et al. support the modified-guanine phage targeting scope of the
+        Dag1 and Dag2 antiviral effectors.
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: Together, these findings establish DNA glycosylases as a versatile
+        class of bacterial immune proteins
+      notes: Getz et al. frame defense-associated DNA glycosylases as bacterial immune
+        proteins.
+  - subject: dag_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system_trait
+    description: Dag system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: using structure-guided discovery, we identified two widespread families
+        of anti-phage DNA glycosylases, Dag1 and Dag2
+      notes: Getz et al. identify Dag1 and Dag2 as widespread anti-phage DNA-glycosylase
+        families.
+    - reference: DOI:10.1038/s41564-026-02441-0
+      snippet: Together, these findings establish DNA glycosylases as a versatile
+        class of bacterial immune proteins
+      notes: Getz et al. frame defense-associated DNA glycosylases as bacterial immune
+        proteins.
+discussions:
+- discussion_id: dag-defensefinder-profile-gap
+  prompt: Resolve exact Dag1 and Dag2 family boundaries, natural host exemplars, modified-guanine
+    phage target breadth, and DefenseFinder HMM/rules coverage before minting narrower
+    Dag mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Getz et al. support Dag1 and Dag2 as widespread families of anti-phage
+    DNA glycosylases that selectively target phages carrying modified guanine bases,
+    and the pinned DefenseFinder article registry maps the Dag key to the Getz et
+    al. preprint DOI. The pinned HMM inventory and rules table have no exact Dag rows.
+    This first-pass record therefore does not resolve exact Dag1 versus Dag2 family
+    boundaries, natural host exemplars, accession-level Dag proteins, full modified-guanine
+    phage target breadth, or a reusable DefenseFinder profile model.
+  evidence:
+  - reference: DOI:10.1038/s41564-026-02441-0
+    snippet: using structure-guided discovery, we identified two widespread families
+      of anti-phage DNA glycosylases, Dag1 and Dag2
+    notes: Getz et al. identify Dag1 and Dag2 as widespread anti-phage DNA-glycosylase
+      families.
+  - reference: DOI:10.1038/s41564-026-02441-0
+    snippet: Dag1 and Dag2 act as antiviral effectors that selectively target phages
+      carrying modified guanine bases.
+    notes: Getz et al. support the modified-guanine phage targeting scope of the Dag1
+      and Dag2 antiviral effectors.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Dag | 10\.1101/2025\.10\.29\.685425 | Antiviral defence is a conserved
+      function of diverse DNA glycosylases | '
+    notes: The pinned DefenseFinder article registry maps the Dag source key to the
+      Getz et al. DNA-glycosylase antiviral defense paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact Dag row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact Dag system row.
+  attaches_to:
+  - causal_graphs#dag_effectors_target_modified_guanine_phages
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T05:07:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Dag system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the phage defense system parent after an ignored-and-hidden duplicate review
+    found no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v384.
+  llm_assisted: true
+- timestamp: '2026-10-01T05:07:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Dag system during initial curation and left canonical_examples
+    empty because the accessible Getz et al. abstract supports Dag1 and Dag2 as widespread
+    anti-phage DNA-glycosylase families but does not name a stable NCBITaxon strain
+    exemplar for the organism-level Dag system trait. No paid research was used.
+  llm_assisted: true

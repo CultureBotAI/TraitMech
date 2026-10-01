@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dag_system.yaml
+  slug: dag_system
+session:
+  id: 2026-10-01T050702Z-codex-82b5ec
+  timestamp: '2026-10-01T05:07:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Added Dag system
+  details: Created traitmech:000507 Dag system under phage defense system, backed by the Getz
+    et al. Dag1/Dag2 DOI and the pinned DefenseFinder Dag article-registry row. Kept the causal
+    graph nonmechanistic while leaving Dag1/Dag2 family boundaries, natural host exemplars,
+    modified-guanine phage target breadth, and DefenseFinder HMM/rules coverage open, and
+    recorded the stable canonical-example evidence gap.

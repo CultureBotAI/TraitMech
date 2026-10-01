@@ -203,6 +203,7 @@ data/traits/genomics/coconut_system.yaml	traitmech:000422	CoCoNuT system	coconut
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/genomics/crouga_system.yaml	traitmech:000500	Crouga system	crouga_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/dag_system.yaml	traitmech:000507	Dag system	dag_effectors_target_modified_guanine_phages	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/damona_system.yaml	traitmech:000272	Damona system	damona_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/darna_system.yaml	traitmech:000273	DARNA system	darna_phage_ssb_ssdna_cleaves_trna	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dartg_system.yaml	traitmech:000243	DarTG system	dartg_dna_adp_ribosylation_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
