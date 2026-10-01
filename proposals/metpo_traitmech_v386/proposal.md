@@ -55,7 +55,7 @@ source key outside a complete organism-level system.
 
 `traitmech:000509` is a direct local child of `traitmech:000496` type IV
 modification-dependent restriction system. This proposal uses `METPO:1045000`,
-the v379 placeholder for `traitmech:000496`.
+the v373 placeholder for `traitmech:000496`.
 
 ## External Mappings
 
