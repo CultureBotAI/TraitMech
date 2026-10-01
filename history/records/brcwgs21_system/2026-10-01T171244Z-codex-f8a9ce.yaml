@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brcwgs21_system.yaml
+  slug: brcwgs21_system
+session:
+  id: 2026-10-01T171244Z-codex-f8a9ce
+  timestamp: '2026-10-01T17:12:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added BrcWGS21 system genomics trait
+  details: Added traitmech:000520 for BrcWGS21 system with DOI:10.1126/science.ads0915 phage-panel,
+    attC, and construct evidence plus the pinned DefenseFinder gcuWGS21 article row; left
+    canonical_examples empty because the supporting BRiC assays are heterologous rather than
+    direct native isolate exemplars; kept the causal graph at a nonmechanistic integron-cassette
+    level because the pinned DefenseFinder HMM inventory and rules table have no exact WGS21
+    model rows; reserved METPO:1047400 in proposals/metpo_traitmech_v397.
