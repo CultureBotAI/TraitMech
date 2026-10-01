@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brc22_system.yaml
+  slug: brc22_system
+session:
+  id: 2026-10-01T192113Z-codex-849e71
+  timestamp: '2026-10-01T19:21:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Brc22 system
+  details: Minted traitmech:000523 for the Brc22 phage-defense system with DOI:10.1126/science.ads0915
+    BRiC and construct evidence, recorded the absence of exact pinned DefenseFinder article/HMM/rules
+    rows as a knowledge gap, and reserved METPO:1047700 in proposals/metpo_traitmech_v400.
