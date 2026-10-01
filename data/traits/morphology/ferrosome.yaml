@@ -1,0 +1,150 @@
+identifier: traitmech:000527
+label: ferrosome
+definition: A morphology trait in which a bacterial cell forms membrane-bound ferrosome
+  organelles that store intracellular iron as non-crystalline iron phosphate biomineral.
+definition_source: DOI:10.1038/s41586-022-04741-x
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+evidence:
+- reference: DOI:10.1038/s41586-022-04741-x
+  snippet: Overall, this work establishes ferrosomes as a new class of iron storage
+    organelles
+  notes: Grant et al. establish ferrosomes as an iron-storage organelle class.
+- reference: DOI:10.1038/s41586-022-04741-x
+  snippet: we identify three ferrosome-associated (Fez) proteins that are responsible
+    for forming ferrosomes
+  notes: Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio
+    magneticus.
+- reference: DOI:10.1038/s41586-022-04741-x
+  snippet: fez operons are sufficient for ferrosome formation in foreign hosts
+  notes: Grant et al. support fez operon sufficiency for ferrosome formation in heterologous
+    bacterial hosts.
+- reference: DOI:10.1038/s41586-023-06719-9
+  snippet: Here we report that C. difficile undergoes an intracellular iron biomineralization
+    process and stores iron in membrane-bound ferrosome organelles containing non-crystalline
+    iron phosphate biominerals.
+  notes: Pi et al. support membrane-bound ferrosome organelles storing non-crystalline
+    iron phosphate in Clostridioides difficile.
+- reference: DOI:10.1038/s41586-023-06719-9
+  snippet: We found that a membrane protein (FezA) and a P1B6-ATPase transporter (FezB),
+    repressed by both iron and the ferric uptake regulator Fur, are required for ferrosome
+    formation
+  notes: Pi et al. support FezA- and FezB-dependent ferrosome formation in C. difficile.
+canonical_examples:
+- taxon_id: NCBITaxon:1496
+  taxon_label: Clostridioides difficile
+  note: Pi et al. showed that C. difficile forms membrane-bound ferrosome organelles
+    containing non-crystalline iron phosphate biominerals.
+  reference: DOI:10.1038/s41586-023-06719-9
+causal_graphs:
+- graph_id: ferrosome_iron_storage
+  title: Fez proteins form iron-storing ferrosomes
+  description: Evidence-backed causal sketch linking Fez-dependent formation to membrane-bound
+    iron-storage organelles.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures broad Fez-dependent formation and ferrosome iron
+    storage at process and organelle level without asserting one taxon-universal Fez
+    component roster, individual Fez-protein activity, accession-level protein examples,
+    iron-remobilization mechanism, membrane-localization path, iron-deficiency trigger,
+    or host-colonization output.
+  nodes:
+  - node_id: ferrosome_trait
+    label: ferrosome
+    node_type: TRAIT
+    grounding: traitmech:000527
+    description: Membrane-bound organelle storing intracellular iron as non-crystalline
+      iron phosphate.
+  - node_id: ferrosome_formation
+    label: ferrosome formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Fez-dependent biogenesis of membrane-bound intracellular ferrosome
+      organelles.
+  - node_id: non_crystalline_iron_phosphate
+    label: non-crystalline iron phosphate biomineral
+    node_type: CHEMICAL
+    description: Non-crystalline iron phosphate mineral stored inside ferrosomes.
+  - node_id: iron_storage
+    label: iron storage
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular storage of iron in a recoverable organelle-associated
+      pool.
+  edges:
+  - subject: ferrosome_formation
+    predicate: has output
+    predicate_id: RO:0002234
+    object: ferrosome_trait
+    description: Fez-dependent ferrosome formation produces the ferrosome intracellular
+      organelle.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-04741-x
+      snippet: Overall, this work establishes ferrosomes as a new class of iron storage
+        organelles
+      notes: Grant et al. establish ferrosomes as an iron-storage organelle class.
+    - reference: DOI:10.1038/s41586-022-04741-x
+      snippet: we identify three ferrosome-associated (Fez) proteins that are responsible
+        for forming ferrosomes
+      notes: Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio
+        magneticus.
+    - reference: DOI:10.1038/s41586-022-04741-x
+      snippet: fez operons are sufficient for ferrosome formation in foreign hosts
+      notes: Grant et al. support fez operon sufficiency for ferrosome formation in
+        heterologous bacterial hosts.
+    - reference: DOI:10.1038/s41586-023-06719-9
+      snippet: We found that a membrane protein (FezA) and a P1B6-ATPase transporter
+        (FezB), repressed by both iron and the ferric uptake regulator Fur, are required
+        for ferrosome formation
+      notes: Pi et al. support FezA- and FezB-dependent ferrosome formation in C.
+        difficile.
+  - subject: non_crystalline_iron_phosphate
+    predicate: located in
+    predicate_id: biolink:located_in
+    object: ferrosome_trait
+    description: Non-crystalline iron phosphate biominerals are stored within ferrosome
+      organelles.
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06719-9
+      snippet: Here we report that C. difficile undergoes an intracellular iron biomineralization
+        process and stores iron in membrane-bound ferrosome organelles containing
+        non-crystalline iron phosphate biominerals.
+      notes: Pi et al. support membrane-bound ferrosome organelles storing non-crystalline
+        iron phosphate in Clostridioides difficile.
+  - subject: ferrosome_trait
+    predicate: enables
+    predicate_id: RO:0002327
+    object: iron_storage
+    description: Ferrosome organelles realize intracellular iron storage.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-04741-x
+      snippet: Overall, this work establishes ferrosomes as a new class of iron storage
+        organelles
+      notes: Grant et al. establish ferrosomes as an iron-storage organelle class.
+    - reference: DOI:10.1038/s41586-023-06719-9
+      snippet: Here we report that C. difficile undergoes an intracellular iron biomineralization
+        process and stores iron in membrane-bound ferrosome organelles containing
+        non-crystalline iron phosphate biominerals.
+      notes: Pi et al. support membrane-bound ferrosome organelles storing non-crystalline
+        iron phosphate in Clostridioides difficile.
+discussions:
+- discussion_id: ferrosome-xref-gap
+  prompt: Resolve exact external ontology xrefs for the bacterial ferrosome morphology
+    trait.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: No exact active METPO, GO, or OBO class was accepted for the organism-level
+    ferrosome morphology trait. GO:0110143 magnetosome, GO:0031411 gas vesicle, GO:0031470
+    carboxysome, and GO:0070088 PHA granule are sibling organelles or inclusions rather
+    than ferrosome equivalents.
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T22:05:50Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted ferrosome as a DOI-backed MORPHOLOGY TraitRecord under the intracellular
+    inclusion parent after an ignored-and-hidden duplicate review found no exact same-scope
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v404.
+  llm_assisted: true

@@ -7726,6 +7726,23 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/akinete.html#akinete-exact-xref-gap"
  },
  {
+  "discussion_id": "ferrosome-xref-gap",
+  "prompt": "Resolve exact external ontology xrefs for the bacterial ferrosome morphology trait.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ferrosome",
+  "source_id": "traitmech:000527",
+  "source_file": "ferrosome.yaml",
+  "attaches_to": [],
+  "rationale": "No exact active METPO, GO, or OBO class was accepted for the organism-level ferrosome morphology trait. GO:0110143 magnetosome, GO:0031411 gas vesicle, GO:0031470 carboxysome, and GO:0070088 PHA granule are sibling organelles or inclusions rather than ferrosome equivalents.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
+ },
+ {
   "discussion_id": "holdfast-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial holdfast morphology trait.",
   "kind": "CURATION_TODO",
@@ -8645,9 +8662,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 398,
+ "total_discussions": 399,
  "total_knowledge_gaps": 312,
- "total_source_entries": 392,
+ "total_source_entries": 393,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
