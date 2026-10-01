@@ -1511,6 +1511,8 @@ mads self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/mads
 dna phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/mads_system.yaml
 mazef locus	GENETIC_ELEMENT	1	data/traits/genomics/mazef_system.yaml
 rna phage replication interference	BIOLOGICAL_PROCESS	1	data/traits/genomics/mazef_system.yaml
+mcrbc locus	GENETIC_ELEMENT	1	data/traits/genomics/mcrbc_system.yaml
+mcrbc methylated-dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/mcrbc_system.yaml
 menshen locus	GENETIC_ELEMENT	1	data/traits/genomics/menshen_system.yaml
 metis locus	GENETIC_ELEMENT	1	data/traits/genomics/metis_system.yaml
 phage-mediated host genome degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/metis_system.yaml

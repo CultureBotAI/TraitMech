@@ -1,0 +1,202 @@
+identifier: traitmech:000505
+label: McrBC system
+definition: A type IV modification-dependent restriction system in which an organism
+  possesses an mcrBC locus encoding McrB DNA-binding and McrC cleavage-associated
+  subunits that assemble into an McrBC restriction endonuclease complex targeting
+  methylated cytosine-containing DNA.
+definition_source: DOI:10.1093/emboj/20.12.3210
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000496
+synonyms:
+- synonym_text: McrBC
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: McrBC restriction endonuclease
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1093/emboj/20.12.3210
+evidence:
+- reference: DOI:10.1093/emboj/20.12.3210
+  snippet: McrBC from Escherichia coli K-12 is a restriction enzyme that belongs to
+    the family of AAA(+) proteins and cuts DNA containing modified cytosines.
+  notes: Panne et al. identify McrBC from Escherichia coli K-12 as a restriction enzyme
+    that attacks modified-cytosine DNA.
+- reference: DOI:10.1093/emboj/20.12.3210
+  snippet: McrB(L) binds specifically to the methylated recognition site and is, therefore,
+    the DNA-binding moiety of the McrBC endonuclease.
+  notes: Panne et al. support methylated-site DNA binding by McrB(L), one of the products
+    of the E. coli K-12 mcrB gene.
+- reference: DOI:10.1093/emboj/20.12.3210
+  snippet: In the presence of McrC, a subunit that is essential for DNA cleavage,
+    the tetradecameric species was the major form of the endonuclease.
+  notes: Panne et al. support McrC as the cleavage-associated subunit of the McrBC
+    endonuclease complex.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The rgl genes were renamed mcrA and mcrBC (modified cytosine restriction).
+  notes: Loenen and Raleigh place mcrBC in the modified-cytosine restriction branch
+    that helped define Type IV restriction.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The new class of modification-dependent restriction enzymes was named Type
+    IV, as distinct from the familiar modification-blocked Types I-III.
+  notes: Loenen and Raleigh define the Type IV class as modification-dependent restriction
+    enzymes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+    assembles into a ring structure in the presence of G nucleotides | '
+  notes: The pinned DefenseFinder article registry maps the McrBC source key to Panne
+    et al.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Panne et al. characterized the McrBC endonuclease from Escherichia coli K-12.
+  reference: DOI:10.1093/emboj/20.12.3210
+causal_graphs:
+- graph_id: mcrbc_restricts_methylated_cytosine_dna
+  title: McrBC restricts methylated-cytosine DNA
+  description: Conservative system-level sketch linking an mcrBC locus to modification-dependent
+    restriction of methylated-cytosine DNA and to the Type IV restriction parent trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures McrBC as a named, E. coli K-12-derived Type IV modification-dependent
+    restriction system while leaving exact McrB/McrC protein activities, complete
+    modified-cytosine target breadth, natural host breadth, and DefenseFinder RM_Type_IV
+    HMM/rules mapping unresolved.
+  nodes:
+  - node_id: mcrbc_locus
+    label: mcrBC locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding the McrB and McrC subunits of the McrBC modification-dependent
+      restriction endonuclease.
+  - node_id: mcrbc_methylated_dna_restriction
+    label: McrBC methylated-DNA restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: McrBC endonuclease restriction of DNA containing modified cytosines.
+  - node_id: mcrbc_system_trait
+    label: McrBC system
+    node_type: TRAIT
+    grounding: traitmech:000505
+    description: Possession of a genome-encoded McrBC modification-dependent restriction
+      system.
+  - node_id: type_iv_modification_dependent_restriction
+    label: type IV modification-dependent restriction system
+    node_type: TRAIT
+    grounding: traitmech:000496
+    description: Possession of a genome-encoded Type IV modification-dependent restriction
+      system.
+  edges:
+  - subject: mcrbc_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mcrbc_methylated_dna_restriction
+    description: The mcrBC locus encodes the McrBC endonuclease subunits that bind
+      and cleave modified-cytosine DNA.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.12.3210
+      snippet: McrBC from Escherichia coli K-12 is a restriction enzyme that belongs
+        to the family of AAA(+) proteins and cuts DNA containing modified cytosines.
+      notes: Panne et al. identify McrBC from Escherichia coli K-12 as a restriction
+        enzyme that attacks modified-cytosine DNA.
+    - reference: DOI:10.1093/emboj/20.12.3210
+      snippet: McrB(L) binds specifically to the methylated recognition site and is,
+        therefore, the DNA-binding moiety of the McrBC endonuclease.
+      notes: Panne et al. support methylated-site DNA binding by McrB(L), one of the
+        products of the E. coli K-12 mcrB gene.
+    - reference: DOI:10.1093/emboj/20.12.3210
+      snippet: In the presence of McrC, a subunit that is essential for DNA cleavage,
+        the tetradecameric species was the major form of the endonuclease.
+      notes: Panne et al. support McrC as the cleavage-associated subunit of the McrBC
+        endonuclease complex.
+  - subject: mcrbc_methylated_dna_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mcrbc_system_trait
+    description: McrBC methylated-DNA restriction realizes the organism-level McrBC
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1093/emboj/20.12.3210
+      snippet: McrBC from Escherichia coli K-12 is a restriction enzyme that belongs
+        to the family of AAA(+) proteins and cuts DNA containing modified cytosines.
+      notes: Panne et al. identify McrBC from Escherichia coli K-12 as a restriction
+        enzyme that attacks modified-cytosine DNA.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+        assembles into a ring structure in the presence of G nucleotides | '
+      notes: The pinned DefenseFinder article registry maps the McrBC source key to
+        Panne et al.
+  - subject: mcrbc_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: type_iv_modification_dependent_restriction
+    description: McrBC system possession is a Type IV modification-dependent restriction
+      system trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The rgl genes were renamed mcrA and mcrBC (modified cytosine restriction).
+      notes: Loenen and Raleigh place mcrBC in the modified-cytosine restriction branch
+        that helped define Type IV restriction.
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The new class of modification-dependent restriction enzymes was named
+        Type IV, as distinct from the familiar modification-blocked Types I-III.
+      notes: Loenen and Raleigh define the Type IV class as modification-dependent
+        restriction enzymes.
+discussions:
+- discussion_id: mcrbc-defensefinder-model-gap
+  prompt: Resolve exact McrB/McrC component activities, complete modified-cytosine
+    target breadth, natural host breadth, and DefenseFinder RM_Type_IV HMM/rules mapping
+    before minting narrower McrBC mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Panne et al. support McrBC from Escherichia coli K-12 as a restriction
+    endonuclease complex that cuts DNA containing modified cytosines, and Loenen and
+    Raleigh place mcrBC in the modified-cytosine restriction branch of Type IV modification-dependent
+    restriction systems. The pinned DefenseFinder article registry maps the McrBC
+    source key to Panne et al., but the pinned HMM inventory and rules table have
+    no exact McrBC rows. This first-pass record therefore does not resolve a reusable
+    DefenseFinder profile model, the exact relationship between individual McrB and
+    McrC molecular functions and organism-level McrBC possession, the complete set
+    of modified-cytosine targets, or the natural host breadth of McrBC systems.
+  evidence:
+  - reference: DOI:10.1093/emboj/20.12.3210
+    snippet: McrBC from Escherichia coli K-12 is a restriction enzyme that belongs
+      to the family of AAA(+) proteins and cuts DNA containing modified cytosines.
+    notes: Panne et al. identify McrBC from Escherichia coli K-12 as a restriction
+      enzyme that attacks modified-cytosine DNA.
+  - reference: DOI:10.1093/emboj/20.12.3210
+    snippet: McrB(L) binds specifically to the methylated recognition site and is,
+      therefore, the DNA-binding moiety of the McrBC endonuclease.
+    notes: Panne et al. support methylated-site DNA binding by McrB(L), one of the
+      products of the E. coli K-12 mcrB gene.
+  - reference: DOI:10.1093/emboj/20.12.3210
+    snippet: In the presence of McrC, a subunit that is essential for DNA cleavage,
+      the tetradecameric species was the major form of the endonuclease.
+    notes: Panne et al. support McrC as the cleavage-associated subunit of the McrBC
+      endonuclease complex.
+  - reference: DOI:10.1093/nar/gkt747
+    snippet: The rgl genes were renamed mcrA and mcrBC (modified cytosine restriction).
+    notes: Loenen and Raleigh place mcrBC in the modified-cytosine restriction branch
+      that helped define Type IV restriction.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+      assembles into a ring structure in the presence of G nucleotides | '
+    notes: The pinned DefenseFinder article registry maps the McrBC source key to
+      Panne et al.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact McrBC row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact McrBC system row.
+  attaches_to:
+  - causal_graphs#mcrbc_restricts_methylated_cytosine_dna
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T03:37:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted McrBC system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the type IV modification-dependent restriction system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v382.
+  llm_assisted: true
