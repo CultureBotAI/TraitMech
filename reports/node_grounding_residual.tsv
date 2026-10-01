@@ -1798,6 +1798,9 @@ modified foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/type_iv_modific
 modification-dependent dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
 ukko locus	GENETIC_ELEMENT	1	data/traits/genomics/ukko_system.yaml
 uzume locus	GENETIC_ELEMENT	1	data/traits/genomics/uzume_system.yaml
+vcam4i-family locus	GENETIC_ELEMENT	1	data/traits/genomics/vcam4i_system.yaml
+vcam4i-targeted modified-cytosine dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/vcam4i_system.yaml
+vcam4i eve-hnh dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/vcam4i_system.yaml
 veles locus	GENETIC_ELEMENT	1	data/traits/genomics/veles_system.yaml
 viperin locus	GENETIC_ELEMENT	1	data/traits/genomics/viperin_system.yaml
 modified ribonucleotide production	BIOLOGICAL_PROCESS	1	data/traits/genomics/viperin_system.yaml

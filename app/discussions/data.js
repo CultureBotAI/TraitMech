@@ -6554,7 +6554,7 @@ window.searchData = [
  },
  {
   "discussion_id": "type-iv-rm-profile-interpretation-gap",
-  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and the characterized McrA family before minting narrower Type IV custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -6564,7 +6564,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#type_iv_modification_dependent_restriction"
   ],
-  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to the characterized McrA family or resolve whether the Other_Type_IV article-registry row corresponds to a reusable organism-level trait below this class.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
@@ -6615,6 +6615,33 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/uzume_system.html#uzume-mechanism-gap"
+ },
+ {
+  "discussion_id": "vcam4i-defensefinder-model-gap",
+  "prompt": "Resolve VcaM4I-family breadth, modified-cytosine sequence-context specificity across natural hosts, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower VcaM4I mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "VcaM4I system",
+  "source_id": "traitmech:000514",
+  "source_file": "vcam4i_system.yaml",
+  "attaches_to": [
+   "causal_graphs#vcam4i_restricts_modified_cytosine_dna"
+  ],
+  "rationale": "Mierzejewska et al. support VcaM4I as an EVE-HNH modification-dependent restriction endonuclease that recognizes 5mC/5hmC DNA and validate EVE-domain modified-base binding plus HNH catalytic residues by digestion and restriction assays. The pinned DefenseFinder article registry maps VcaM4I to that paper, but the pinned HMM inventory and rules table have no exact VcaM4I rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact accession-level protein examples, the breadth of VcaM4I-like systems across natural hosts, or the complete set of natural modified-cytosine sequence contexts.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkaa1218",
+   "DOI:10.1093/nar/gkaa1218",
+   "DOI:10.1093/nar/gkaa1218",
+   "DOI:10.1093/nar/gkaa1218",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/vcam4i_system.html#vcam4i-defensefinder-model-gap"
  },
  {
   "discussion_id": "veles-mechanism-gap",
@@ -8284,9 +8311,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 385,
- "total_knowledge_gaps": 299,
- "total_source_entries": 379,
+ "total_discussions": 386,
+ "total_knowledge_gaps": 300,
+ "total_source_entries": 380,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
