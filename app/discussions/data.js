@@ -2835,6 +2835,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/eleos_system.html#eleos-mechanism-gap"
  },
  {
+  "discussion_id": "endpacf1-host-modification-and-model-gap",
+  "prompt": "Resolve ENDPaCF1 Pseudomonas host breadth, complete phage-DNA hypermodification breadth, direct iEndoIII sensing-to-cleavage coupling, phage inhibitor specificity, and DefenseFinder HMM/rules coverage before minting narrower END nuclease mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ENDPaCF1 system",
+  "source_id": "traitmech:000503",
+  "source_file": "endpacf1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#endpacf1_targets_hypermodified_phage_dna"
+  ],
+  "rationale": "Yee et al. support ENDPaCF1 as a Type IIS restriction endonuclease-like Pseudomonas phage-defense system that can recognize diverse hypermodified phage genomes, and the pinned DefenseFinder article registry maps the ENDPaCF1 source key to the Yee et al. preprint. The pinned HMM inventory and rules table have no exact ENDPaCF1 rows. This first-pass record therefore does not resolve a complete profile model, the direct domain coupling between iEndoIII sensing and cleavage, or the full natural host, phage, and inhibitor breadth.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1101/2025.03.31.646159",
+   "DOI:10.1101/2025.03.31.646159",
+   "DOI:10.1101/2025.03.31.646159",
+   "DOI:10.1101/2025.03.31.646159",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/endpacf1_system.html#endpacf1-host-modification-and-model-gap"
+ },
+ {
   "discussion_id": "epona-mechanism-gap",
   "prompt": "Resolve Epona phage triggers and effector outputs before minting narrower Epona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7995,9 +8022,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 374,
- "total_knowledge_gaps": 288,
- "total_source_entries": 368,
+ "total_discussions": 375,
+ "total_knowledge_gaps": 289,
+ "total_source_entries": 369,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

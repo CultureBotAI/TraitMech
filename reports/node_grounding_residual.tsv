@@ -1359,6 +1359,10 @@ ds-9 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_9_system.yaml
 dsr locus	GENETIC_ELEMENT	1	data/traits/genomics/dsr_system.yaml
 sir2-domain antiphage activity	MOLECULAR_FUNCTION	1	data/traits/genomics/dsr_system.yaml
 eleos locus	GENETIC_ELEMENT	1	data/traits/genomics/eleos_system.yaml
+endpacf1 locus	GENETIC_ELEMENT	1	data/traits/genomics/endpacf1_system.yaml
+hypermodified phage dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/endpacf1_system.yaml
+modification-dependent phage dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/endpacf1_system.yaml
+hypermodified phage infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/endpacf1_system.yaml
 epona locus	GENETIC_ELEMENT	1	data/traits/genomics/epona_system.yaml
 erebus locus	GENETIC_ELEMENT	1	data/traits/genomics/erebus_system.yaml
 esos locus	GENETIC_ELEMENT	1	data/traits/genomics/esos_system.yaml
