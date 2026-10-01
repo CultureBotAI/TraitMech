@@ -1362,6 +1362,9 @@ ds-8 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_8_system.yaml
 ds-9 locus	GENETIC_ELEMENT	1	data/traits/genomics/ds_9_system.yaml
 dsr locus	GENETIC_ELEMENT	1	data/traits/genomics/dsr_system.yaml
 sir2-domain antiphage activity	MOLECULAR_FUNCTION	1	data/traits/genomics/dsr_system.yaml
+ecokmcra mcra locus	GENETIC_ELEMENT	1	data/traits/genomics/ecokmcra_system.yaml
+modified-cytosine dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/ecokmcra_system.yaml
+ecokmcra modified-dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/ecokmcra_system.yaml
 eleos locus	GENETIC_ELEMENT	1	data/traits/genomics/eleos_system.yaml
 endpacf1 locus	GENETIC_ELEMENT	1	data/traits/genomics/endpacf1_system.yaml
 hypermodified phage dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/endpacf1_system.yaml

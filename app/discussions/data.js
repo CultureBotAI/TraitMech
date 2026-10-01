@@ -2864,6 +2864,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dsr_system.html#dsr-sirtuin-mechanism-gap"
  },
  {
+  "discussion_id": "ecokmcra-defensefinder-model-gap",
+  "prompt": "Resolve EcoKMcrA-family breadth, methylcytosine and hydroxymethylcytosine sequence-context specificity across natural hosts, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower EcoKMcrA mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "EcoKMcrA system",
+  "source_id": "traitmech:000509",
+  "source_file": "ecokmcra_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ecokmcra_restricts_modified_cytosine_dna"
+  ],
+  "rationale": "Czapinska et al. support E. coli EcoKMcrA as a methylcytosine- and hydroxymethylcytosine-dependent restriction endonuclease with cellular modified-DNA restriction activity tied to the nuclease active site, and the pinned DefenseFinder article registry maps EcoKMcrA to that paper. The pinned HMM inventory and rules table have no exact EcoKMcrA rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact accession-level protein examples, the breadth of EcoKMcrA-like systems beyond E. coli K strains, or the complete set of natural methylcytosine and hydroxymethylcytosine sequence contexts.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gky731",
+   "DOI:10.1093/nar/gky731",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ecokmcra_system.html#ecokmcra-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "eleos-mechanism-gap",
   "prompt": "Resolve Eleos phage triggers and effector outputs before minting narrower Eleos mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6421,7 +6446,7 @@ window.searchData = [
  },
  {
   "discussion_id": "type-iv-rm-profile-interpretation-gap",
-  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, MspJI, PvuRts1I, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -6431,7 +6456,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#type_iv_modification_dependent_restriction"
   ],
-  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, MspJI, PvuRts1I, EcoKMcrA, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, MspJI, PvuRts1I, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
@@ -8151,9 +8176,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 380,
- "total_knowledge_gaps": 294,
- "total_source_entries": 374,
+ "total_discussions": 381,
+ "total_knowledge_gaps": 295,
+ "total_source_entries": 375,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

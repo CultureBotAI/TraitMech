@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
+  slug: type_iv_modification_dependent_restriction_system
+session:
+  id: 2026-10-01T071101Z-codex-203add
+  timestamp: '2026-10-01T07:11:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Narrow Type IV EcoKMcrA discussion
+  details: Removed EcoKMcrA from the open Type IV RM_Type_IV profile-interpretation gap after
+    minting traitmech:000509 for the same-scope EcoKMcrA system. Kept MspJI, PvuRts1I, ScoMcrA,
+    TagI, VcaM4I, and Other_Type_IV open pending HMM or rules mapping and host-breadth evidence.

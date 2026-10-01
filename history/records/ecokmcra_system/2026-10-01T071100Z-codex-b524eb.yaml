@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ecokmcra_system.yaml
+  slug: ecokmcra_system
+session:
+  id: 2026-10-01T071100Z-codex-b524eb
+  timestamp: '2026-10-01T07:11:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add EcoKMcrA system
+  details: Minted traitmech:000509 for the DOI and DefenseFinder article-registry backed EcoKMcrA
+    system under the Type IV modification-dependent restriction system parent. Added Czapinska
+    et al. DOI evidence, Loenen and Raleigh Type IV class evidence, a conservative nonmechanistic
+    modified-DNA restriction graph, an open EcoKMcrA DefenseFinder model gap for absent exact
+    HMM and rules rows, no canonical examples because accession-level stable strain support
+    remains unresolved, and proposals/metpo_traitmech_v386 reserving METPO:1046300.

@@ -1,0 +1,217 @@
+identifier: traitmech:000509
+label: EcoKMcrA system
+definition: A type IV modification-dependent restriction system in which an organism
+  possesses an EcoKMcrA mcrA locus encoding a methylcytosine- and hydroxymethylcytosine-dependent
+  restriction endonuclease whose nuclease active site is required for efficient restriction
+  of DNA modified in the correct sequence context.
+definition_source: DOI:10.1093/nar/gky731
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000496
+synonyms:
+- synonym_text: EcoKMcrA
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1093/nar/gky731
+evidence:
+- reference: DOI:10.1093/nar/gky731
+  snippet: Escherichia coli McrA (EcoKMcrA) acts as a methylcytosine and hydroxymethylcytosine
+    dependent restriction endonuclease.
+  notes: Czapinska et al. support EcoKMcrA as an E. coli McrA modification-dependent
+    restriction endonuclease that targets methylcytosine- and hydroxymethylcytosine-containing
+    DNA.
+- reference: DOI:10.1093/nar/gky731
+  snippet: We present a biochemical characterization of EcoKMcrA that includes the
+    first demonstration of its endonuclease activity
+  notes: Czapinska et al. experimentally demonstrated EcoKMcrA endonuclease activity
+    in vitro.
+- reference: DOI:10.1093/nar/gky731
+  snippet: In cells, EcoKMcrA specifically restricts DNA that is modified in the correct
+    sequence context. This activity is impaired by mutations of the nuclease active
+    site, unless the enzyme is highly overexpressed.
+  notes: Czapinska et al. support cellular modified-DNA restriction by EcoKMcrA and
+    tie efficient restriction to the nuclease active site.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The new class of modification-dependent restriction enzymes was named Type
+    IV, as distinct from the familiar modification-blocked Types I-III.
+  notes: Loenen and Raleigh define the Type IV class as modification-dependent restriction
+    enzymes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| EcoKMcrA | 10\.1093/nar/gky731 | Activity and structure of EcoKMcrA
+    | '
+  notes: The pinned DefenseFinder article registry maps the EcoKMcrA source key to
+    the Czapinska et al. Activity and structure of EcoKMcrA paper.
+causal_graphs:
+- graph_id: ecokmcra_restricts_modified_cytosine_dna
+  title: EcoKMcrA restricts modified-cytosine DNA
+  description: Conservative system-level sketch linking an EcoKMcrA mcrA locus to
+    modified-cytosine DNA restriction and to the Type IV restriction parent trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures EcoKMcrA as a named E. coli K-strain McrA Type IV
+    modification-dependent restriction system while leaving EcoKMcrA-family breadth,
+    sequence-context specificity across natural hosts, accession-level protein examples,
+    and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.
+  nodes:
+  - node_id: ecokmcra_locus
+    label: EcoKMcrA mcrA locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding an EcoKMcrA methylcytosine- and hydroxymethylcytosine-dependent
+      restriction endonuclease.
+  - node_id: modified_cytosine_dna
+    label: modified-cytosine DNA
+    node_type: ENVIRONMENTAL_FACTOR
+    description: DNA containing methylcytosine or hydroxymethylcytosine in a sequence
+      context recognized by EcoKMcrA.
+  - node_id: ecokmcra_modified_dna_restriction
+    label: EcoKMcrA modified-DNA restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Nuclease-active-site-dependent restriction of modified DNA by EcoKMcrA.
+  - node_id: ecokmcra_system_trait
+    label: EcoKMcrA system
+    node_type: TRAIT
+    grounding: traitmech:000509
+    description: Possession of a genome-encoded EcoKMcrA modification-dependent restriction
+      system.
+  - node_id: type_iv_modification_dependent_restriction
+    label: type IV modification-dependent restriction system
+    node_type: TRAIT
+    grounding: traitmech:000496
+    description: Possession of a genome-encoded Type IV modification-dependent restriction
+      system.
+  edges:
+  - subject: ecokmcra_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: ecokmcra_modified_dna_restriction
+    description: The EcoKMcrA mcrA locus encodes a modified-cytosine-dependent restriction
+      endonuclease.
+    evidence:
+    - reference: DOI:10.1093/nar/gky731
+      snippet: Escherichia coli McrA (EcoKMcrA) acts as a methylcytosine and hydroxymethylcytosine
+        dependent restriction endonuclease.
+      notes: Czapinska et al. support EcoKMcrA as an E. coli McrA modification-dependent
+        restriction endonuclease that targets methylcytosine- and hydroxymethylcytosine-containing
+        DNA.
+    - reference: DOI:10.1093/nar/gky731
+      snippet: We present a biochemical characterization of EcoKMcrA that includes
+        the first demonstration of its endonuclease activity
+      notes: Czapinska et al. experimentally demonstrated EcoKMcrA endonuclease activity
+        in vitro.
+  - subject: ecokmcra_modified_dna_restriction
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: modified_cytosine_dna
+    description: EcoKMcrA-dependent Type IV restriction targets DNA modified in the
+      correct sequence context.
+    evidence:
+    - reference: DOI:10.1093/nar/gky731
+      snippet: Electrophoretic mobility shift assay (EMSA) and footprinting experiments
+        suggest that the N-terminal domains can sense the presence and sequence context
+        of modified cytosines.
+      notes: Czapinska et al. support EcoKMcrA sensing of the presence and sequence
+        context of modified cytosines.
+    - reference: DOI:10.1093/nar/gky731
+      snippet: In cells, EcoKMcrA specifically restricts DNA that is modified in the
+        correct sequence context. This activity is impaired by mutations of the nuclease
+        active site, unless the enzyme is highly overexpressed.
+      notes: Czapinska et al. support cellular modified-DNA restriction by EcoKMcrA
+        and tie efficient restriction to the nuclease active site.
+  - subject: ecokmcra_modified_dna_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ecokmcra_system_trait
+    description: EcoKMcrA-dependent Type IV restriction realizes the organism-level
+      EcoKMcrA system possession trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gky731
+      snippet: In cells, EcoKMcrA specifically restricts DNA that is modified in the
+        correct sequence context. This activity is impaired by mutations of the nuclease
+        active site, unless the enzyme is highly overexpressed.
+      notes: Czapinska et al. support cellular modified-DNA restriction by EcoKMcrA
+        and tie efficient restriction to the nuclease active site.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| EcoKMcrA | 10\.1093/nar/gky731 | Activity and structure of EcoKMcrA
+        | '
+      notes: The pinned DefenseFinder article registry maps the EcoKMcrA source key
+        to the Czapinska et al. Activity and structure of EcoKMcrA paper.
+  - subject: ecokmcra_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: type_iv_modification_dependent_restriction
+    description: EcoKMcrA system possession is a Type IV modification-dependent restriction
+      system trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gky731
+      snippet: Escherichia coli McrA (EcoKMcrA) acts as a methylcytosine and hydroxymethylcytosine
+        dependent restriction endonuclease.
+      notes: Czapinska et al. support EcoKMcrA as an E. coli McrA modification-dependent
+        restriction endonuclease that targets methylcytosine- and hydroxymethylcytosine-containing
+        DNA.
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The new class of modification-dependent restriction enzymes was named
+        Type IV, as distinct from the familiar modification-blocked Types I-III.
+      notes: Loenen and Raleigh define the Type IV class as modification-dependent
+        restriction enzymes.
+discussions:
+- discussion_id: ecokmcra-defensefinder-model-gap
+  prompt: Resolve EcoKMcrA-family breadth, methylcytosine and hydroxymethylcytosine
+    sequence-context specificity across natural hosts, accession-level protein examples,
+    and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower EcoKMcrA
+    mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Czapinska et al. support E. coli EcoKMcrA as a methylcytosine- and hydroxymethylcytosine-dependent
+    restriction endonuclease with cellular modified-DNA restriction activity tied
+    to the nuclease active site, and the pinned DefenseFinder article registry maps
+    EcoKMcrA to that paper. The pinned HMM inventory and rules table have no exact
+    EcoKMcrA rows. This first-pass record therefore does not resolve a reusable DefenseFinder
+    profile model, exact accession-level protein examples, the breadth of EcoKMcrA-like
+    systems beyond E. coli K strains, or the complete set of natural methylcytosine
+    and hydroxymethylcytosine sequence contexts.
+  evidence:
+  - reference: DOI:10.1093/nar/gky731
+    snippet: Escherichia coli McrA (EcoKMcrA) acts as a methylcytosine and hydroxymethylcytosine
+      dependent restriction endonuclease.
+    notes: Czapinska et al. support EcoKMcrA as an E. coli McrA modification-dependent
+      restriction endonuclease that targets methylcytosine- and hydroxymethylcytosine-containing
+      DNA.
+  - reference: DOI:10.1093/nar/gky731
+    snippet: In cells, EcoKMcrA specifically restricts DNA that is modified in the
+      correct sequence context. This activity is impaired by mutations of the nuclease
+      active site, unless the enzyme is highly overexpressed.
+    notes: Czapinska et al. support cellular modified-DNA restriction by EcoKMcrA
+      and tie efficient restriction to the nuclease active site.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| EcoKMcrA | 10\.1093/nar/gky731 | Activity and structure of EcoKMcrA
+      | '
+    notes: The pinned DefenseFinder article registry maps the EcoKMcrA source key
+      to the Czapinska et al. Activity and structure of EcoKMcrA paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact EcoKMcrA row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact EcoKMcrA system row.
+  attaches_to:
+  - causal_graphs#ecokmcra_restricts_modified_cytosine_dna
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T07:10:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted EcoKMcrA system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the type IV modification-dependent restriction system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v386.
+  llm_assisted: true
+- timestamp: '2026-10-01T07:10:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed EcoKMcrA system during initial curation and left canonical_examples
+    empty because Czapinska et al. support the E. coli K-strain EcoKMcrA enzyme and
+    the DefenseFinder EcoKMcrA source key, but not a single stable NCBITaxon strain
+    exemplar or accession-level protein example for the organism-level EcoKMcrA system
+    trait. No paid research was used.
+  llm_assisted: true
