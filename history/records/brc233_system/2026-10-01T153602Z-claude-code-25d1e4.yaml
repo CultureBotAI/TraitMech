@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brc233_system.yaml
+  slug: brc233_system
+session:
+  id: 2026-10-01T153602Z-claude-code-25d1e4
+  timestamp: '2026-10-01T15:36:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  - metpo
+  summary: Add Brc233 system trait
+  details: Minted traitmech:000518 for a DOI- and DefenseFinder-backed Brc233 system genomics
+    TraitRecord under phage defense system. Exact novelty searches used rg --no-ignore --hidden
+    over live traits, history, proposals, research, generated pages, and METPO sources to
+    rule out an existing Brc233 record or proposal. Added a conservative nonmechanistic causal
+    graph at the integron-cassette level, kept gcu233 and brc233 as related synonyms, documented
+    the missing DefenseFinder HMM and rules coverage as a knowledge gap, and reserved METPO:1047200
+    in proposals/metpo_traitmech_v395.

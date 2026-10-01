@@ -912,8 +912,35 @@ window.searchData = [
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
   ],
+ "posed_by": "codex",
+ "page_url": "../../pages/traits/genomics/brc167_system.html#brc167-defensefinder-model-gap"
+ },
+ {
+  "discussion_id": "brc233-defensefinder-model-gap",
+  "prompt": "Resolve Brc233 native host breadth, exact sensitive-phage breadth, molecular output, and DefenseFinder HMM/rules coverage before minting narrower Brc233 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Brc233 system",
+  "source_id": "traitmech:000518",
+  "source_file": "brc233_system.yaml",
+  "attaches_to": [
+   "causal_graphs#brc233_integron_cassette_confers_phage_resistance"
+  ],
+  "rationale": "Kieffer et al. identify brc233 as a bacteriophage-resistance integron cassette, and the pinned DefenseFinder article registry maps the gcu233 source key to the same Science article. The pinned HMM inventory and rules table have no exact gcu233 or Brc233 row, so the first-pass record leaves native-host breadth, profile boundaries, exact phage target breadth, and direct molecular output unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
   "posed_by": "codex",
-  "page_url": "../../pages/traits/genomics/brc167_system.html#brc167-defensefinder-model-gap"
+  "page_url": "../../pages/traits/genomics/brc233_system.html#brc233-defensefinder-model-gap"
  },
  {
   "discussion_id": "brc24-defensefinder-model-gap",
@@ -8393,9 +8420,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 389,
- "total_knowledge_gaps": 303,
- "total_source_entries": 383,
+ "total_discussions": 390,
+ "total_knowledge_gaps": 304,
+ "total_source_entries": 384,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
