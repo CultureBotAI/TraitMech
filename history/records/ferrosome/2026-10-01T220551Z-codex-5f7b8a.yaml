@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/ferrosome.yaml
+  slug: ferrosome
+session:
+  id: 2026-10-01T220551Z-codex-5f7b8a
+  timestamp: '2026-10-01T22:05:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add ferrosome morphology trait
+  details: Minted traitmech:000527 for the ferrosome intracellular iron-storage organelle,
+    parented it to intracellular inclusion, cited Grant et al. and Pi et al. Nature evidence
+    for Fez-dependent ferrosome formation and membrane-bound non-crystalline iron phosphate
+    storage, added Clostridioides difficile as a canonical example, opened an xref TODO, and
+    reserved METPO:1048100 in proposals/metpo_traitmech_v404.
