@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mksbefg_system.yaml
+  slug: mksbefg_system
+session:
+  id: 2026-10-01T211500Z-codex-2ac7d0
+  timestamp: '2026-10-01T21:15:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add MksBEFG system
+  details: Minted traitmech:000526 for the MksBEFG anti-plasmid Wadjet child
+    system with DOI:10.1093/nar/gkad130 MksG nuclease and in vivo activation
+    evidence, narrowed the broad Wadjet subfamily discussion, and reserved
+    METPO:1048000 in proposals/metpo_traitmech_v403.

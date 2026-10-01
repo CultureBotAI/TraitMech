@@ -4449,6 +4449,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/metis_system.html#metis-subtype-and-model-coverage-gap"
  },
  {
+  "discussion_id": "mksbefg-activation-and-substrate-gap",
+  "prompt": "Resolve MksBEFG plasmid substrate breadth, MksBEF ATPase-to-MksG coupling, MksG activation state, and accession-level protein examples before minting narrower MksBEFG mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MksBEFG system",
+  "source_id": "traitmech:000526",
+  "source_file": "mksbefg_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mksbefg_degrades_plasmid_dna"
+  ],
+  "rationale": "Weiss et al. support MksBEFG as a bacterial plasmid-defense system with an MksBEF ATPase core and MksG plasmid-DNA-degradation nuclease, and Liu et al. place MksBEFG in the broader Wadjet derivative-SMC family. This first-pass record leaves exact plasmid substrate breadth, MksBEF-to-MksG coupling, cellular MksG loading, and accession-level component examples unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkad130",
+   "DOI:10.1093/nar/gkad130",
+   "DOI:10.1093/nar/gkad130",
+   "DOI:10.1093/nar/gkad130",
+   "DOI:10.1016/j.molcel.2022.11.015"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mksbefg_system.html#mksbefg-activation-and-substrate-gap"
+ },
+ {
   "discussion_id": "mmb_gp29_gp30-mechanism-gap",
   "prompt": "Resolve the MMB gp29 biochemical activity, MMB gp30 regulatory role, lytic trigger, gp29-gp30 interaction, counter-defense specificity, and homolog breadth before minting narrower MMB gp29-gp30 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -7260,7 +7285,7 @@ window.searchData = [
  },
  {
   "discussion_id": "wadjet-subfamily-and-substrate-gap",
-  "prompt": "Resolve Wadjet subfamily architecture, plasmid substrate specificity, and activation cues before minting narrower Wadjet mechanism children.",
+  "prompt": "Resolve JetABCD, EptABCD, DefenseFinder Wadjet subtype boundaries, plasmid substrate specificity, and activation cues before minting additional narrower Wadjet mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -7268,7 +7293,7 @@ window.searchData = [
   "source_id": "traitmech:000218",
   "source_file": "wadjet_system.yaml",
   "attaches_to": [],
-  "rationale": "Deep et al. and Liu et al. support JetABCD-mediated topology- or shape-biased circular plasmid cleavage, and Weiss et al. support MksG-mediated plasmid degradation in the MksBEFG subfamily, but Wadjet variants need separate review before TraitMech asserts one exact target size threshold, linear-plasmid escape rule, loop-extrusion endpoint, polar localization pattern, or nuclease activation model.",
+  "rationale": "Deep et al. and Liu et al. support JetABCD-mediated topology- or shape-biased circular plasmid cleavage and the broad JetABCD/MksBEFG/EptABCD Wadjet family, while the MksBEFG child now captures the Weiss et al. plasmid-degradation branch. The parent still leaves JetABCD, EptABCD, DefenseFinder Wadjet I-III boundaries, exact target size threshold, linear-plasmid escape rule, loop-extrusion endpoint, polar localization pattern, and nuclease activation models for additional Wadjet variants unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -8620,9 +8645,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 397,
- "total_knowledge_gaps": 311,
- "total_source_entries": 391,
+ "total_discussions": 398,
+ "total_knowledge_gaps": 312,
+ "total_source_entries": 392,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
