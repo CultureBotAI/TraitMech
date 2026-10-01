@@ -5779,6 +5779,34 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sanata_system.html#sanata-host-trigger-profile-gap"
  },
  {
+  "discussion_id": "scomcra-defensefinder-model-gap",
+  "prompt": "Resolve ScoMcrA-family breadth, phosphorothioated-DNA sequence-context specificity across natural hosts, methylated-DNA target breadth, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower ScoMcrA mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ScoMcrA system",
+  "source_id": "traitmech:000512",
+  "source_file": "scomcra_system.yaml",
+  "attaches_to": [
+   "causal_graphs#scomcra_restricts_phosphorothioated_dna"
+  ],
+  "rationale": "Liu et al. support ScoA3McrA as a Type IV McrA homolog that cleaves S-modified DNA in vitro and support ScoMcrA as a PT-dependent endonuclease with a sulfur-binding domain. The pinned DefenseFinder article registry maps ScoMcrA to the sulfur-recognition paper, but the pinned HMM inventory and rules table have no exact ScoMcrA rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact accession-level protein examples, the breadth of ScoMcrA-like systems across natural hosts, the complete set of natural phosphorothioated-DNA contexts, or the breadth of methylated-DNA target contexts.",
+  "num_experiments": 0,
+  "num_evidence": 8,
+  "evidence_refs": [
+   "DOI:10.1371/journal.pgen.1001253",
+   "DOI:10.1371/journal.pgen.1001253",
+   "DOI:10.1371/journal.pgen.1001253",
+   "DOI:10.1038/s41467-018-07093-1",
+   "DOI:10.1038/s41467-018-07093-1",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/scomcra_system.html#scomcra-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "sdic1-defensefinder-model-gap",
   "prompt": "Resolve SDIC1 natural host breadth, SDIC1A/SDIC1B component functions, phage triggers, ubiquitination substrates, population-immunity mechanism, and rule-level detection criteria before minting narrower SDIC1 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -6498,7 +6526,7 @@ window.searchData = [
  },
  {
   "discussion_id": "type-iv-rm-profile-interpretation-gap",
-  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, ScoMcrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
+  "prompt": "Resolve the accession-level relationships between DefenseFinder RM_Type_IV custom Type_IV_REases profiles and characterized McrA, TagI, or VcaM4I families before minting narrower Type IV custom-profile traits.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -6508,7 +6536,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#type_iv_modification_dependent_restriction"
   ],
-  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, ScoMcrA, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
+  "rationale": "Loenen and Raleigh support the broad Type IV modification-dependent restriction class, and the pinned DefenseFinder registries support an RM_Type_IV namespace with a broad Type_IV_REases custom profile group. The evidence does not yet map any of the eight pinned RM_Type_IV HMM rows to exact characterized families or resolve whether the Other_Type_IV, TagI, and VcaM4I article-registry rows correspond to reusable organism-level traits below this class.",
   "num_experiments": 0,
   "num_evidence": 6,
   "evidence_refs": [
@@ -8228,9 +8256,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 383,
- "total_knowledge_gaps": 297,
- "total_source_entries": 377,
+ "total_discussions": 384,
+ "total_knowledge_gaps": 298,
+ "total_source_entries": 378,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

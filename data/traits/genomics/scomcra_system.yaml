@@ -1,0 +1,247 @@
+identifier: traitmech:000512
+label: ScoMcrA system
+definition: A type IV modification-dependent restriction system in which an organism
+  possesses a ScoMcrA-family locus encoding a sulfur-binding-domain phosphorothioated-DNA
+  restriction endonuclease.
+definition_source: DOI:10.1038/s41467-018-07093-1
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000496
+synonyms:
+- synonym_text: ScoMcrA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1371/journal.pgen.1001253
+  snippet: A His-tagged derivative of ScoA3McrA cleaved S-modified DNA and also Dcm-methylated
+    DNA in vitro near the respective modification sites.
+  notes: Liu et al. support ScoA3McrA cleavage of phosphorothioated DNA and Dcm-methylated
+    DNA.
+- reference: DOI:10.1371/journal.pgen.1001253
+  snippet: Double-strand cleavage occurred 16-28 nucleotides away from the phosphorothioate
+    links.
+  notes: Liu et al. support double-strand ScoA3McrA cleavage near DNA phosphorothioate
+    linkages.
+- reference: DOI:10.1371/journal.pgen.1001253
+  snippet: This is the first report of in vitro endonuclease activity of a McrA homologue
+    and also the first demonstration of an enzyme that specifically cleaves S-modified
+    DNA.
+  notes: Liu et al. frame ScoA3McrA as a McrA homolog with phosphorothioated-DNA-specific
+    cleavage activity.
+- reference: DOI:10.1038/s41467-018-07093-1
+  snippet: Here we present the crystal structure of the sulfur-binding domain (SBD)
+    from the DNA phosphorothioation (PT)-dependent restriction endonuclease ScoMcrA.
+  notes: Liu et al. support ScoMcrA as a phosphorothioated-DNA-dependent restriction
+    endonuclease with a sulfur-binding domain.
+- reference: DOI:10.1038/s41467-018-07093-1
+  snippet: We show that three of these homologs bind PT-DNA in vitro and restrict
+    PT-DNA gene transfer in vivo.
+  notes: Liu et al. support SBD homologs as phosphorothioated-DNA readers with in
+    vivo PT-DNA restriction activity.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The new class of modification-dependent restriction enzymes was named Type
+    IV, as distinct from the familiar modification-blocked Types I-III.
+  notes: Loenen and Raleigh define the Type IV class as modification-dependent restriction
+    enzymes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| ScoMcrA | 10\.1038/s41467-018-07093-1 | Structural basis for the recognition
+    of sulfur in phosphorothioated DNA | '
+  notes: The pinned DefenseFinder article registry maps the ScoMcrA source key to
+    the Liu et al. sulfur-recognition paper.
+causal_graphs:
+- graph_id: scomcra_restricts_phosphorothioated_dna
+  title: ScoMcrA restricts phosphorothioated DNA
+  description: Conservative system-level sketch linking a ScoMcrA-family locus to
+    phosphorothioated-DNA restriction and to the Type IV restriction parent trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures ScoMcrA as a named Type IV modification-dependent
+    restriction family while leaving natural host breadth, exact PT-DNA sequence-context
+    specificity across characterized homologs, Dcm-methylated DNA target breadth,
+    accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping
+    unresolved.
+  nodes:
+  - node_id: scomcra_family_locus
+    label: ScoMcrA-family locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding a ScoMcrA-family phosphorothioated-DNA restriction
+      endonuclease.
+  - node_id: scomcra_phosphorothioated_dna
+    label: ScoMcrA-targeted phosphorothioated DNA
+    node_type: ENVIRONMENTAL_FACTOR
+    description: DNA containing phosphorothioate linkages in a ScoMcrA-family recognition
+      context.
+  - node_id: scomcra_phosphorothioated_dna_restriction
+    label: ScoMcrA phosphorothioated-DNA restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Modification-dependent restriction of phosphorothioated DNA by a
+      ScoMcrA-family endonuclease.
+  - node_id: scomcra_system_trait
+    label: ScoMcrA system
+    node_type: TRAIT
+    grounding: traitmech:000512
+    description: Possession of a genome-encoded ScoMcrA-family modification-dependent
+      restriction system.
+  - node_id: type_iv_modification_dependent_restriction
+    label: type IV modification-dependent restriction system
+    node_type: TRAIT
+    grounding: traitmech:000496
+    description: Possession of a genome-encoded Type IV modification-dependent restriction
+      system.
+  edges:
+  - subject: scomcra_family_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: scomcra_phosphorothioated_dna_restriction
+    description: ScoMcrA-family loci encode PT-DNA readers that restrict phosphorothioated
+      DNA.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1001253
+      snippet: A His-tagged derivative of ScoA3McrA cleaved S-modified DNA and also
+        Dcm-methylated DNA in vitro near the respective modification sites.
+      notes: Liu et al. support ScoA3McrA cleavage of phosphorothioated DNA and Dcm-methylated
+        DNA.
+    - reference: DOI:10.1038/s41467-018-07093-1
+      snippet: Here we present the crystal structure of the sulfur-binding domain
+        (SBD) from the DNA phosphorothioation (PT)-dependent restriction endonuclease
+        ScoMcrA.
+      notes: Liu et al. support ScoMcrA as a phosphorothioated-DNA-dependent restriction
+        endonuclease with a sulfur-binding domain.
+    - reference: DOI:10.1038/s41467-018-07093-1
+      snippet: We show that three of these homologs bind PT-DNA in vitro and restrict
+        PT-DNA gene transfer in vivo.
+      notes: Liu et al. support SBD homologs as phosphorothioated-DNA readers with
+        in vivo PT-DNA restriction activity.
+  - subject: scomcra_phosphorothioated_dna_restriction
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: scomcra_phosphorothioated_dna
+    description: ScoMcrA-family restriction targets phosphorothioated DNA.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1001253
+      snippet: A His-tagged derivative of ScoA3McrA cleaved S-modified DNA and also
+        Dcm-methylated DNA in vitro near the respective modification sites.
+      notes: Liu et al. support ScoA3McrA cleavage of phosphorothioated DNA and Dcm-methylated
+        DNA.
+    - reference: DOI:10.1371/journal.pgen.1001253
+      snippet: Double-strand cleavage occurred 16-28 nucleotides away from the phosphorothioate
+        links.
+      notes: Liu et al. support double-strand ScoA3McrA cleavage near DNA phosphorothioate
+        linkages.
+    - reference: DOI:10.1038/s41467-018-07093-1
+      snippet: We show that three of these homologs bind PT-DNA in vitro and restrict
+        PT-DNA gene transfer in vivo.
+      notes: Liu et al. support SBD homologs as phosphorothioated-DNA readers with
+        in vivo PT-DNA restriction activity.
+  - subject: scomcra_phosphorothioated_dna_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: scomcra_system_trait
+    description: ScoMcrA-family phosphorothioated-DNA restriction realizes the organism-level
+      ScoMcrA system possession trait.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1001253
+      snippet: This is the first report of in vitro endonuclease activity of a McrA
+        homologue and also the first demonstration of an enzyme that specifically
+        cleaves S-modified DNA.
+      notes: Liu et al. frame ScoA3McrA as a McrA homolog with phosphorothioated-DNA-specific
+        cleavage activity.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| ScoMcrA | 10\.1038/s41467-018-07093-1 | Structural basis for the
+        recognition of sulfur in phosphorothioated DNA | '
+      notes: The pinned DefenseFinder article registry maps the ScoMcrA source key
+        to the Liu et al. sulfur-recognition paper.
+  - subject: scomcra_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: type_iv_modification_dependent_restriction
+    description: ScoMcrA system possession is a Type IV modification-dependent restriction
+      system trait.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1001253
+      snippet: This is the first report of in vitro endonuclease activity of a McrA
+        homologue and also the first demonstration of an enzyme that specifically
+        cleaves S-modified DNA.
+      notes: Liu et al. frame ScoA3McrA as a McrA homolog with phosphorothioated-DNA-specific
+        cleavage activity.
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The new class of modification-dependent restriction enzymes was named
+        Type IV, as distinct from the familiar modification-blocked Types I-III.
+      notes: Loenen and Raleigh define the Type IV class as modification-dependent
+        restriction enzymes.
+discussions:
+- discussion_id: scomcra-defensefinder-model-gap
+  prompt: Resolve ScoMcrA-family breadth, phosphorothioated-DNA sequence-context specificity
+    across natural hosts, methylated-DNA target breadth, accession-level protein examples,
+    and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower ScoMcrA
+    mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Liu et al. support ScoA3McrA as a Type IV McrA homolog that cleaves S-modified
+    DNA in vitro and support ScoMcrA as a PT-dependent endonuclease with a sulfur-binding
+    domain. The pinned DefenseFinder article registry maps ScoMcrA to the sulfur-recognition
+    paper, but the pinned HMM inventory and rules table have no exact ScoMcrA rows.
+    This first-pass record therefore does not resolve a reusable DefenseFinder profile
+    model, exact accession-level protein examples, the breadth of ScoMcrA-like systems
+    across natural hosts, the complete set of natural phosphorothioated-DNA contexts,
+    or the breadth of methylated-DNA target contexts.
+  evidence:
+  - reference: DOI:10.1371/journal.pgen.1001253
+    snippet: A His-tagged derivative of ScoA3McrA cleaved S-modified DNA and also
+      Dcm-methylated DNA in vitro near the respective modification sites.
+    notes: Liu et al. support ScoA3McrA cleavage of phosphorothioated DNA and Dcm-methylated
+      DNA.
+  - reference: DOI:10.1371/journal.pgen.1001253
+    snippet: Double-strand cleavage occurred 16-28 nucleotides away from the phosphorothioate
+      links.
+    notes: Liu et al. support double-strand ScoA3McrA cleavage near DNA phosphorothioate
+      linkages.
+  - reference: DOI:10.1371/journal.pgen.1001253
+    snippet: This is the first report of in vitro endonuclease activity of a McrA
+      homologue and also the first demonstration of an enzyme that specifically cleaves
+      S-modified DNA.
+    notes: Liu et al. frame ScoA3McrA as a McrA homolog with phosphorothioated-DNA-specific
+      cleavage activity.
+  - reference: DOI:10.1038/s41467-018-07093-1
+    snippet: Here we present the crystal structure of the sulfur-binding domain (SBD)
+      from the DNA phosphorothioation (PT)-dependent restriction endonuclease ScoMcrA.
+    notes: Liu et al. support ScoMcrA as a phosphorothioated-DNA-dependent restriction
+      endonuclease with a sulfur-binding domain.
+  - reference: DOI:10.1038/s41467-018-07093-1
+    snippet: We show that three of these homologs bind PT-DNA in vitro and restrict
+      PT-DNA gene transfer in vivo.
+    notes: Liu et al. support SBD homologs as phosphorothioated-DNA readers with in
+      vivo PT-DNA restriction activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| ScoMcrA | 10\.1038/s41467-018-07093-1 | Structural basis for the recognition
+      of sulfur in phosphorothioated DNA | '
+    notes: The pinned DefenseFinder article registry maps the ScoMcrA source key to
+      the Liu et al. sulfur-recognition paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact ScoMcrA row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact ScoMcrA system row.
+  attaches_to:
+  - causal_graphs#scomcra_restricts_phosphorothioated_dna
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T10:14:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted ScoMcrA system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the type IV modification-dependent restriction system parent after an ignored-and-hidden
+    duplicate review found no exact same-scope live TraitMech, METPO, history, or
+    prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v389.
+  llm_assisted: true
+- timestamp: '2026-10-01T10:14:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed ScoMcrA system during initial curation and left canonical_examples
+    empty because Liu et al. support ScoA3McrA and sulfur-binding-domain homologs,
+    but not a single stable NCBITaxon strain exemplar or accession-level protein example
+    for the organism-level ScoMcrA system trait. No paid research was used.
+  llm_assisted: true

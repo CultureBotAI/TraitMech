@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/scomcra_system.yaml
+  slug: scomcra_system
+session:
+  id: 2026-10-01T101635Z-codex-8dbf93
+  timestamp: '2026-10-01T10:16:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add ScoMcrA system
+  details: Minted traitmech:000512 for the ScoMcrA system under the Type IV modification-dependent
+    restriction system parent, using DOI-backed ScoA3McrA phosphorothioated-DNA cleavage,
+    ScoMcrA sulfur-binding-domain, and Type IV evidence from Liu et al. and Loenen and Raleigh
+    plus the pinned DefenseFinder article-registry row. Kept ScoMcrA as a related source-key
+    synonym, left canonical_examples empty because the available papers do not establish a
+    single stable organism-level exemplar for this system trait, added a conservative nonmechanistic
+    system graph, and recorded a DefenseFinder HMM/rules mapping gap after the pinned HMM
+    inventory and rules table had no exact ScoMcrA rows.
