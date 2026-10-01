@@ -1759,6 +1759,9 @@ tab prophage locus	GENETIC_ELEMENT	1	data/traits/genomics/tab_system.yaml
 tab-mediated virion assembly inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
 phage tail assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
 infectious virion formation	BIOLOGICAL_PROCESS	1	data/traits/genomics/tab_system.yaml
+tagi-family locus	GENETIC_ELEMENT	1	data/traits/genomics/tagi_system.yaml
+tagi-targeted modified-cytosine dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/tagi_system.yaml
+tagi modified-cytosine dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/tagi_system.yaml
 taranis locus	GENETIC_ELEMENT	1	data/traits/genomics/taranis_system.yaml
 tgvab locus	GENETIC_ELEMENT	1	data/traits/genomics/tgvab_system.yaml
 glucosylated hmc phage dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/tgvab_system.yaml

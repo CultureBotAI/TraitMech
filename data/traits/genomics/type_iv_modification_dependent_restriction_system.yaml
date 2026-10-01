@@ -260,15 +260,15 @@ causal_graphs:
 discussions:
 - discussion_id: type-iv-rm-profile-interpretation-gap
   prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_IV
-    custom Type_IV_REases profiles and characterized McrA, TagI, or VcaM4I families
-    before minting narrower Type IV custom-profile traits.
+    custom Type_IV_REases profiles and characterized McrA or VcaM4I families before
+    minting narrower Type IV custom-profile traits.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Loenen and Raleigh support the broad Type IV modification-dependent restriction
     class, and the pinned DefenseFinder registries support an RM_Type_IV namespace
     with a broad Type_IV_REases custom profile group. The evidence does not yet map
     any of the eight pinned RM_Type_IV HMM rows to exact characterized families or
-    resolve whether the Other_Type_IV, TagI, and VcaM4I article-registry rows correspond
+    resolve whether the Other_Type_IV and VcaM4I article-registry rows correspond
     to reusable organism-level traits below this class.
   evidence:
   - reference: DOI:10.1093/nar/gkt747
@@ -400,4 +400,12 @@ curation_history:
     restriction profile-interpretation discussion after minting traitmech:000512 for
     the ScoMcrA system; other RM_Type_IV custom HMM and article-registry families
     remain open.
+  llm_assisted: true
+- timestamp: '2026-10-01T11:10:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Documented TagI as split out in the open Type IV modification-dependent
+    restriction profile-interpretation discussion after minting traitmech:000513 for
+    the TagI system; other RM_Type_IV custom HMM and article-registry families remain
+    open.
   llm_assisted: true

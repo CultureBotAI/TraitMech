@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/tagi_system.yaml
+  slug: tagi_system
+session:
+  id: 2026-10-01T111003Z-codex-4d3ade
+  timestamp: '2026-10-01T11:10:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add TagI system
+  details: Minted traitmech:000513 for the TagI system under the Type IV modification-dependent
+    restriction system parent, using DOI- and PMID-backed TagI SRA-HNH structure, modified-cytosine
+    recognition, plasmid digestion, phage-restriction evidence, Type IV evidence from Loenen
+    and Raleigh, and the pinned DefenseFinder article-registry row. Kept TagI as a related
+    source-key synonym, left canonical_examples empty because Kisiala et al. do not establish
+    a single stable organism-level exemplar or accession-level protein for this system trait,
+    added a conservative nonmechanistic system graph, and recorded a DefenseFinder HMM/rules
+    mapping gap after the pinned HMM inventory and rules table had no exact TagI rows.
