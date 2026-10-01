@@ -392,6 +392,7 @@ data/traits/genomics/prometheus_system.yaml	traitmech:000291	Prometheus system	p
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prrc_system.yaml	traitmech:000364	PrrC system	prrc_locus_restricts_t4_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/psyrta_system.yaml	traitmech:000257	PsyrTA system	psyrta_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/pvurts1i_system.yaml	traitmech:000511	PvuRts1I system	pvurts1i_restricts_modified_hmc_dna	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pycsar_system.yaml	traitmech:000236	Pycsar system	pycsar_cyclic_pyrimidine_phage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/radar_system.yaml	traitmech:000238	RADAR system	radar_rdrab_deamination_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/razr_system.yaml	traitmech:000411	RAZR system	razr_ring_trigger_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

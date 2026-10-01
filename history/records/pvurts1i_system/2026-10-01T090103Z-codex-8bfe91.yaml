@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pvurts1i_system.yaml
+  slug: pvurts1i_system
+session:
+  id: 2026-10-01T090103Z-codex-8bfe91
+  timestamp: '2026-10-01T09:01:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add PvuRts1I system
+  details: Minted traitmech:000511 for the PvuRts1I system under the Type IV
+    modification-dependent restriction system parent, using DOI-backed
+    PvuRts1I-family and Type IV evidence from Wang et al. and Loenen and Raleigh
+    plus the pinned DefenseFinder article-registry row. Kept PvuRts1I as a
+    related source-key synonym, left canonical_examples empty because the
+    available paper does not establish a single stable organism-level exemplar
+    for this system trait, added a conservative nonmechanistic system graph,
+    and recorded a DefenseFinder HMM/rules mapping gap after the pinned HMM
+    inventory and rules table had no exact PvuRts1I rows. Validated the record
+    with the guarded writer, strict LinkML validation, METPO proposal
+    verification, and Europe PMC snippet verification.

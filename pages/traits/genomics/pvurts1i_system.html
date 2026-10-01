@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PvuRts1I system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>PvuRts1I system</h1>
+    <p class="curie"><code>traitmech:000511</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A type IV modification-dependent restriction system in which an organism possesses a PvuRts1I-family locus encoding a restriction endonuclease that recognizes 5-hydroxymethylcytosine or 5-glucosylhydroxymethylcytosine in double-stranded DNA and cleaves both strands on the 3&#39;-side away from the recognized modified cytosine.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>PvuRts1I restricts modified-HMC DNA</h2>
+      <p class="meta">Conservative system-level sketch linking a PvuRts1I-family locus to modified-hydroxymethylcytosine DNA restriction and to the Type IV restriction parent trait.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures PvuRts1I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact target selectivity across characterized homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>PvuRts1I restricts modified-HMC DNA</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for PvuRts1I system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>PvuRts1I-family locus</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>PvuRts1I modified-HMC restriction</strong>
+            <code>RO:0002327</code>
+            <p>PvuRts1I-family loci encode modification-dependent restriction endonucleases.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties.</span>
+                <span class="meta">Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">We show that these enzymes introduce a double-stranded cleavage at the 3&#39;-side away from the recognized modified cytosine.</span>
+                <span class="meta">Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>PvuRts1I modified-HMC restriction</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>PvuRts1I-targeted modified-HMC DNA</strong>
+            <code>METPO:2007407</code>
+            <p>PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA.</span>
+                <span class="meta">Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">We show that these enzymes introduce a double-stranded cleavage at the 3&#39;-side away from the recognized modified cytosine.</span>
+                <span class="meta">Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>PvuRts1I modified-HMC restriction</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>PvuRts1I system</strong>
+            <code>METPO:2007700</code>
+            <p>PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA.</span>
+                <span class="meta">Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | </span>
+                <span class="meta">The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>PvuRts1I system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>type IV modification-dependent restriction system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>PvuRts1I system possession is a Type IV modification-dependent restriction system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1093/nar/gkr607</code>
+                <span class="evidence-snippet">Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties.</span>
+                <span class="meta">Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1093/nar/gkt747</code>
+                <span class="evidence-snippet">The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III.</span>
+                <span class="meta">Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1093/nar/gkr607</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/type_iv_modification_dependent_restriction_system.html" >type IV modification-dependent restriction system <code>traitmech:000496</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>PvuRts1I <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="pvurts1i-defensefinder-model-gap">
+        <p class="discussion-prompt">Resolve PvuRts1I-family breadth, 5hmC and 5ghmC target selectivity across natural hosts, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower PvuRts1I mechanism or component traits.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>pvurts1i-defensefinder-model-gap</code>
+          · raised by codex
+          · 2026-10-01
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#pvurts1i_restricts_modified_hmc_dna</code>
+        </p>
+
+
+        <p>Wang et al. support PvuRts1I as the founding member of a family of 5hmC- and 5ghmC-recognizing modification-dependent restriction endonucleases, and the pinned DefenseFinder article registry maps PvuRts1I to the Wang et al. paper. The pinned HMM inventory and rules table have no exact PvuRts1I rows. This first-pass record therefore does not resolve a reusable DefenseFinder profile model, exact accession-level protein examples, the breadth of PvuRts1I-like systems across natural hosts, or the complete set of natural 5hmC and 5ghmC target contexts.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1093/nar/gkr607</code>
+
+            <blockquote>Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>DOI:10.1093/nar/gkr607</code>
+
+            <blockquote>PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>DOI:10.1093/nar/gkr607</code>
+
+            <blockquote>We show that these enzymes introduce a double-stranded cleavage at the 3&#39;-side away from the recognized modified cytosine.</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+
+            <blockquote>| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | </blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-01T09:01:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted PvuRts1I system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord under the type IV modification-dependent restriction system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v388.</p>
+        </li>
+
+        <li>
+          <time>2026-10-01T09:01:02Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed PvuRts1I system during initial curation and left canonical_examples empty because Wang et al. support PvuRts1I and PvuRts1I-family enzymes, but not a single stable NCBITaxon strain exemplar or accession-level protein example for the organism-level PvuRts1I system trait. No paid research was used.</p>
+        </li>
+
+        <li>
+          <time>2026-10-01T09:28:12Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #1514 adversarial review issue #1515 by tightening the PvuRts1I system definition to match the Wang et al. 3&#39;-side cleavage evidence without claiming a fixed cleavage distance.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/pvurts1i_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/pvurts1i_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/pvurts1i_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/pvurts1i_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000511" target="_blank" rel="noopener"><code>traitmech:000511</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking a PvuRts1I-family locus to modified-hydroxymethylcytosine DNA restriction and to the Type IV restriction parent trait.", "edges": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pvurts1i_family_locus", "target": "pvurts1i_modified_hmc_restriction"}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_modified_hmc_dna"}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_system_trait"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pvurts1i_system_trait", "target": "type_iv_modification_dependent_restriction"}], "evidence_rows": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PvuRts1I-family locus", "target": "PvuRts1I modified-HMC restriction"}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "PvuRts1I modified-HMC restriction", "target": "PvuRts1I-targeted modified-HMC DNA"}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "edge_id": "edge-3", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PvuRts1I modified-HMC restriction", "target": "PvuRts1I system"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "PvuRts1I system", "target": "type IV modification-dependent restriction system"}], "graph_id": "pvurts1i_restricts_modified_hmc_dna", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A locus encoding a PvuRts1I-family modification-dependent restriction endonuclease.", "grounding": null, "id": "pvurts1i_family_locus", "is_orphan": false, "label": "PvuRts1I-family locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Double-stranded DNA containing 5hmC or 5ghmC in a PvuRts1I-family recognition context.", "grounding": null, "id": "pvurts1i_modified_hmc_dna", "is_orphan": false, "label": "PvuRts1I-targeted modified-HMC DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of 5hmC- or 5ghmC-containing DNA by a PvuRts1I-family endonuclease.", "grounding": null, "id": "pvurts1i_modified_hmc_restriction", "is_orphan": false, "label": "PvuRts1I modified-HMC restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded PvuRts1I-family modification-dependent restriction system.", "grounding": "traitmech:000511", "id": "pvurts1i_system_trait", "is_orphan": false, "label": "PvuRts1I system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Type IV modification-dependent restriction system.", "grounding": "traitmech:000496", "id": "type_iv_modification_dependent_restriction", "is_orphan": false, "label": "type IV modification-dependent restriction system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures PvuRts1I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact target selectivity across characterized homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "PvuRts1I restricts modified-HMC DNA"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-01 09:28 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 906 TraitRecords
+      · embedding coverage 52.6%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
