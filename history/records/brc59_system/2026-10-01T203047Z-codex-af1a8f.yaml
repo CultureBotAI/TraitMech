@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brc59_system.yaml
+  slug: brc59_system
+session:
+  id: 2026-10-01T203047Z-codex-af1a8f
+  timestamp: '2026-10-01T20:30:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Brc59 system
+  details: Minted traitmech:000525 for the Brc59 phage-defense system with DOI:10.1126/science.ads0915
+    BRiC heatmap and construct evidence, recorded the absence of exact pinned DefenseFinder
+    article/HMM/rules rows as a knowledge gap, and reserved METPO:1047900 in proposals/metpo_traitmech_v402.
