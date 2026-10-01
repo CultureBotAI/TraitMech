@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/vcam4i_system.yaml
+  slug: vcam4i_system
+session:
+  id: 2026-10-01T114803Z-codex-bd4a1c
+  timestamp: '2026-10-01T11:48:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add VcaM4I system
+  details: Minted traitmech:000514 for the VcaM4I system under the Type IV
+    modification-dependent restriction system parent, using DOI-backed VcaM4I
+    EVE-HNH structure, 5mC/5hmC binding, digestion and restriction assay, Type
+    IV, and pinned DefenseFinder article-registry evidence. Kept VcaM4I as a
+    related source-key synonym, left canonical_examples empty because
+    Mierzejewska et al. do not establish a single stable organism-level
+    exemplar or accession-level protein for this system trait, added a
+    conservative nonmechanistic system graph, and recorded a DefenseFinder
+    HMM/rules mapping gap after the pinned HMM inventory and rules table had
+    no exact VcaM4I rows.
