@@ -1,0 +1,218 @@
+identifier: traitmech:000510
+label: MspJI system
+definition: A type IV modification-dependent restriction system in which an organism
+  possesses an MspJI-family Mrr-like locus encoding a restriction endonuclease that
+  recognizes methylcytosine- or hydroxymethylcytosine-modified DNA and cleaves both
+  strands at a fixed distance from the modified cytosine.
+definition_source: DOI:10.1073/pnas.1018448108
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000496
+synonyms:
+- synonym_text: MspJI
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1073/pnas.1018448108
+  snippet: MspJI is a novel modification-dependent restriction endonuclease that cleaves
+    at a fixed distance away from the modification site.
+  notes: Cohen-Karni et al. support MspJI as a modification-dependent restriction
+    endonuclease with distance-defined cleavage relative to its modified target.
+- reference: DOI:10.1073/pnas.1018448108
+  snippet: All of the enzymes specifically recognize cytosine C5 modification (methylation
+    or hydroxymethylation) in DNA and cleave at a constant distance (N(12)/N(16))
+    away from the modified cytosine.
+  notes: Cohen-Karni et al. biochemically characterized MspJI homologs and support
+    the MspJI family as C5-modified-cytosine-dependent restriction endonucleases.
+- reference: DOI:10.1093/nar/gkq327
+  snippet: Besides 5-methylcytosine, MspJI also recognizes 5-hydroxymethylcytosine
+    but is blocked by 5-glucosylhydroxymethylcytosine.
+  notes: Zheng et al. support MspJI restriction of both methylcytosine- and hydroxymethylcytosine-containing
+    DNA while leaving glucosylated hydroxymethylcytosine DNA uncleaved.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The new class of modification-dependent restriction enzymes was named Type
+    IV, as distinct from the familiar modification-blocked Types I-III.
+  notes: Loenen and Raleigh define the Type IV class as modification-dependent restriction
+    enzymes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| MspJI | 10\.1073/pnas\.1018448108 | The MspJI family of modification-dependent
+    restriction endonucleases for epigenetic studies | '
+  notes: The pinned DefenseFinder article registry maps the MspJI source key to the
+    Cohen-Karni et al. MspJI-family paper.
+causal_graphs:
+- graph_id: mspji_restricts_modified_cytosine_dna
+  title: MspJI restricts modified-cytosine DNA
+  description: Conservative system-level sketch linking an MspJI-family locus to modified-cytosine
+    DNA restriction and to the Type IV restriction parent trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures MspJI as a named Mrr-like Type IV modification-dependent
+    restriction family while leaving natural host breadth, exact sequence-context
+    specificity across characterized homologs, accession-level protein examples, and
+    DefenseFinder RM_Type_IV HMM/rules mapping unresolved.
+  nodes:
+  - node_id: mspji_family_locus
+    label: MspJI-family locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding an MspJI-family modification-dependent restriction
+      endonuclease.
+  - node_id: mspji_modified_cytosine_dna
+    label: MspJI-targeted modified-cytosine DNA
+    node_type: ENVIRONMENTAL_FACTOR
+    description: DNA containing methylcytosine or hydroxymethylcytosine in an MspJI-family
+      sequence context.
+  - node_id: mspji_modified_cytosine_restriction
+    label: MspJI modified-cytosine restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Modification-dependent restriction of C5-modified-cytosine DNA by
+      an MspJI-family endonuclease.
+  - node_id: mspji_system_trait
+    label: MspJI system
+    node_type: TRAIT
+    grounding: traitmech:000510
+    description: Possession of a genome-encoded MspJI-family modification-dependent
+      restriction system.
+  - node_id: type_iv_modification_dependent_restriction
+    label: type IV modification-dependent restriction system
+    node_type: TRAIT
+    grounding: traitmech:000496
+    description: Possession of a genome-encoded Type IV modification-dependent restriction
+      system.
+  edges:
+  - subject: mspji_family_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: mspji_modified_cytosine_restriction
+    description: MspJI-family loci encode Mrr-like modification-dependent restriction
+      endonucleases.
+    evidence:
+    - reference: DOI:10.1073/pnas.1018448108
+      snippet: MspJI is a novel modification-dependent restriction endonuclease that
+        cleaves at a fixed distance away from the modification site.
+      notes: Cohen-Karni et al. support MspJI as a modification-dependent restriction
+        endonuclease with distance-defined cleavage relative to its modified target.
+    - reference: DOI:10.1073/pnas.1018448108
+      snippet: All of the enzymes specifically recognize cytosine C5 modification
+        (methylation or hydroxymethylation) in DNA and cleave at a constant distance
+        (N(12)/N(16)) away from the modified cytosine.
+      notes: Cohen-Karni et al. biochemically characterized MspJI homologs and support
+        the MspJI family as C5-modified-cytosine-dependent restriction endonucleases.
+  - subject: mspji_modified_cytosine_restriction
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: mspji_modified_cytosine_dna
+    description: MspJI-family restriction targets methylcytosine- or hydroxymethylcytosine-containing
+      DNA.
+    evidence:
+    - reference: DOI:10.1073/pnas.1018448108
+      snippet: All of the enzymes specifically recognize cytosine C5 modification
+        (methylation or hydroxymethylation) in DNA and cleave at a constant distance
+        (N(12)/N(16)) away from the modified cytosine.
+      notes: Cohen-Karni et al. biochemically characterized MspJI homologs and support
+        the MspJI family as C5-modified-cytosine-dependent restriction endonucleases.
+    - reference: DOI:10.1093/nar/gkq327
+      snippet: Besides 5-methylcytosine, MspJI also recognizes 5-hydroxymethylcytosine
+        but is blocked by 5-glucosylhydroxymethylcytosine.
+      notes: Zheng et al. support MspJI restriction of both methylcytosine- and hydroxymethylcytosine-containing
+        DNA while leaving glucosylated hydroxymethylcytosine DNA uncleaved.
+  - subject: mspji_modified_cytosine_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: mspji_system_trait
+    description: MspJI-family modified-cytosine restriction realizes the organism-level
+      MspJI system possession trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkq327
+      snippet: Besides 5-methylcytosine, MspJI also recognizes 5-hydroxymethylcytosine
+        but is blocked by 5-glucosylhydroxymethylcytosine.
+      notes: Zheng et al. support MspJI restriction of both methylcytosine- and hydroxymethylcytosine-containing
+        DNA while leaving glucosylated hydroxymethylcytosine DNA uncleaved.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| MspJI | 10\.1073/pnas\.1018448108 | The MspJI family of modification-dependent
+        restriction endonucleases for epigenetic studies | '
+      notes: The pinned DefenseFinder article registry maps the MspJI source key to
+        the Cohen-Karni et al. MspJI-family paper.
+  - subject: mspji_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: type_iv_modification_dependent_restriction
+    description: MspJI system possession is a Type IV modification-dependent restriction
+      system trait.
+    evidence:
+    - reference: DOI:10.1073/pnas.1018448108
+      snippet: MspJI is a novel modification-dependent restriction endonuclease that
+        cleaves at a fixed distance away from the modification site.
+      notes: Cohen-Karni et al. support MspJI as a modification-dependent restriction
+        endonuclease with distance-defined cleavage relative to its modified target.
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The new class of modification-dependent restriction enzymes was named
+        Type IV, as distinct from the familiar modification-blocked Types I-III.
+      notes: Loenen and Raleigh define the Type IV class as modification-dependent
+        restriction enzymes.
+discussions:
+- discussion_id: mspji-defensefinder-model-gap
+  prompt: Resolve MspJI-family breadth, methylcytosine and hydroxymethylcytosine sequence-context
+    specificity across natural hosts, accession-level protein examples, and DefenseFinder
+    RM_Type_IV HMM/rules mapping before minting narrower MspJI mechanism or component
+    traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Zheng et al. support MspJI as a methylcytosine- and hydroxymethylcytosine-dependent
+    restriction endonuclease, Cohen-Karni et al. support MspJI homologs as a family
+    of C5-modified-cytosine-dependent restriction endonucleases, and the pinned DefenseFinder
+    article registry maps MspJI to the Cohen-Karni et al. paper. The pinned HMM inventory
+    and rules table have no exact MspJI rows. This first-pass record therefore does
+    not resolve a reusable DefenseFinder profile model, exact accession-level protein
+    examples, the breadth of MspJI-like systems across natural hosts, or the complete
+    set of natural methylcytosine and hydroxymethylcytosine sequence contexts.
+  evidence:
+  - reference: DOI:10.1073/pnas.1018448108
+    snippet: MspJI is a novel modification-dependent restriction endonuclease that
+      cleaves at a fixed distance away from the modification site.
+    notes: Cohen-Karni et al. support MspJI as a modification-dependent restriction
+      endonuclease with distance-defined cleavage relative to its modified target.
+  - reference: DOI:10.1073/pnas.1018448108
+    snippet: All of the enzymes specifically recognize cytosine C5 modification (methylation
+      or hydroxymethylation) in DNA and cleave at a constant distance (N(12)/N(16))
+      away from the modified cytosine.
+    notes: Cohen-Karni et al. biochemically characterized MspJI homologs and support
+      the MspJI family as C5-modified-cytosine-dependent restriction endonucleases.
+  - reference: DOI:10.1093/nar/gkq327
+    snippet: Besides 5-methylcytosine, MspJI also recognizes 5-hydroxymethylcytosine
+      but is blocked by 5-glucosylhydroxymethylcytosine.
+    notes: Zheng et al. support MspJI restriction of both methylcytosine- and hydroxymethylcytosine-containing
+      DNA while leaving glucosylated hydroxymethylcytosine DNA uncleaved.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| MspJI | 10\.1073/pnas\.1018448108 | The MspJI family of modification-dependent
+      restriction endonucleases for epigenetic studies | '
+    notes: The pinned DefenseFinder article registry maps the MspJI source key to
+      the Cohen-Karni et al. MspJI-family paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact MspJI row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact MspJI system row.
+  attaches_to:
+  - causal_graphs#mspji_restricts_modified_cytosine_dna
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T08:04:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted MspJI system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the type IV modification-dependent restriction system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v387.
+  llm_assisted: true
+- timestamp: '2026-10-01T08:04:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed MspJI system during initial curation and left canonical_examples
+    empty because Zheng et al. and Cohen-Karni et al. support MspJI and MspJI-family
+    enzymes, but not a single stable NCBITaxon strain exemplar or accession-level
+    protein example for the organism-level MspJI system trait. No paid research was
+    used.
+  llm_assisted: true
