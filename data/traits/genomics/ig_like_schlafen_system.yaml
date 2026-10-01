@@ -1,0 +1,224 @@
+identifier: traitmech:000508
+label: Ig-like Schlafen system
+definition: A phage defense system in which an organism possesses a genome-encoded
+  prokaryotic Schlafen nuclease fused to an immunoglobulin-like sensor domain that
+  recognizes T5-like phage tail assembly chaperones and activates Schlafen tRNase
+  defense.
+definition_source: DOI:10.1038/s41564-026-02277-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Shlafen_Ig-like
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: pSlfn5
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41564-026-02277-8
+evidence:
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+    protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+    domains.
+  notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as
+    antiviral effectors fused to phage-sensing domains.
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: Schlafen nuclease is fused to a previously unknown immunoglobulin-like
+    sensor domain and demonstrated that it recognizes tail assembly chaperones of
+    T5-like phages.
+  notes: Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly
+    chaperone recognition by an Ig-like prokaryotic Schlafen system.
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: We expressed seven Enterobacterales Schlafen systems in Escherichia coli,
+    identifying two that confer defence against coliphages.
+  notes: Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into
+    E. coli and observed coliphage defense for two of them.
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded
+    tRNAs and restricts T5 phage by reducing its burst size.
+  notes: Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to
+    bacterial and phage tRNA cleavage and T5 burst-size reduction.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Shlafen_Ig-like | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins
+    mediate phage defence | '
+  notes: The pinned DefenseFinder article registry maps the Shlafen_Ig-like source
+    key to the Perez Taboada et al. Schlafen phage-defense paper.
+causal_graphs:
+- graph_id: ig_like_schlafen_trna_cleavage
+  title: Ig-like Schlafen systems cleave tRNAs after phage sensing
+  description: Conservative system-level sketch linking an Ig-like prokaryotic Schlafen
+    locus to T5-like tail assembly chaperone sensing, Schlafen nuclease-dependent
+    tRNA cleavage, and the Ig-like Schlafen phage-defense trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Ig-like prokaryotic Schlafen DefenseFinder article
+    namespace at system level and deliberately defers a protein-resolved RorSlfn5
+    mechanism. Perez Taboada et al. support an Ig-like Schlafen nuclease system that
+    recognizes T5-like phage tail assembly chaperones and cleaves bacterial and phage
+    tRNAs, but exact profile boundaries, natural host exemplars, phage trigger breadth,
+    and DefenseFinder HMM/rules profiles are unresolved.
+  nodes:
+  - node_id: ig_like_schlafen_locus
+    label: Ig-like Schlafen locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding a prokaryotic Schlafen nuclease fused to an Ig-like
+      sensor domain.
+  - node_id: t5_like_tail_chaperone_sensing
+    label: T5-like tail chaperone sensing
+    node_type: BIOLOGICAL_PROCESS
+    description: Recognition of T5-like phage tail assembly chaperones by an Ig-like
+      prokaryotic Schlafen sensor domain.
+  - node_id: schlafen_trna_cleavage
+    label: Schlafen tRNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Cleavage of bacterial and phage tRNAs by an activated Schlafen nuclease.
+  - node_id: ig_like_schlafen_system_trait
+    label: Ig-like Schlafen system
+    node_type: TRAIT
+    grounding: traitmech:000508
+    description: Possession of a genome-encoded Ig-like prokaryotic Schlafen phage-defense
+      system.
+  - node_id: phage_defense_system_trait
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ig_like_schlafen_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t5_like_tail_chaperone_sensing
+    description: Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like
+      sensor domain that recognizes T5-like phage tail assembly chaperones.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: Schlafen nuclease is fused to a previously unknown immunoglobulin-like
+        sensor domain and demonstrated that it recognizes tail assembly chaperones
+        of T5-like phages.
+      notes: Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly
+        chaperone recognition by an Ig-like prokaryotic Schlafen system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Shlafen_Ig-like | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+        proteins mediate phage defence | '
+      notes: The pinned DefenseFinder article registry maps the Shlafen_Ig-like source
+        key to the Perez Taboada et al. Schlafen phage-defense paper.
+  - subject: t5_like_tail_chaperone_sensing
+    predicate: activates
+    predicate_id: RO:0002213
+    object: schlafen_trna_cleavage
+    description: Phage-triggered activation of the Ig-like Schlafen nuclease leads
+      to bacterial and phage tRNA cleavage.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: Schlafen nuclease is fused to a previously unknown immunoglobulin-like
+        sensor domain and demonstrated that it recognizes tail assembly chaperones
+        of T5-like phages.
+      notes: Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly
+        chaperone recognition by an Ig-like prokaryotic Schlafen system.
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded
+        tRNAs and restricts T5 phage by reducing its burst size.
+      notes: Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease
+        to bacterial and phage tRNA cleavage and T5 burst-size reduction.
+  - subject: schlafen_trna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ig_like_schlafen_system_trait
+    description: Schlafen tRNase activity restricts T5 phage and realizes the organism-level
+      Ig-like Schlafen system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+        protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+        domains.
+      notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases
+        as antiviral effectors fused to phage-sensing domains.
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded
+        tRNAs and restricts T5 phage by reducing its burst size.
+      notes: Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease
+        to bacterial and phage tRNA cleavage and T5 burst-size reduction.
+  - subject: ig_like_schlafen_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system_trait
+    description: Ig-like Schlafen system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+        protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+        domains.
+      notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases
+        as antiviral effectors fused to phage-sensing domains.
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: We expressed seven Enterobacterales Schlafen systems in Escherichia
+        coli, identifying two that confer defence against coliphages.
+      notes: Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems
+        into E. coli and observed coliphage defense for two of them.
+discussions:
+- discussion_id: ig-like-schlafen-defensefinder-profile-gap
+  prompt: Resolve exact pSlfn5 family boundaries, natural host exemplars, T5-like
+    tail chaperone trigger breadth, and DefenseFinder HMM/rules coverage before minting
+    narrower Ig-like Schlafen mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Perez Taboada et al. support prokaryotic Schlafen nucleases as widespread
+    antiviral effectors and experimentally characterize the Ig-like RorSlfn5 nuclease
+    as a T5-like tail chaperone-triggered tRNase, and the pinned DefenseFinder article
+    registry maps the Shlafen_Ig-like key to the same article. The pinned HMM inventory
+    and rules table have no exact Schlafen rows. This first-pass record therefore
+    does not resolve exact pSlfn5 family boundaries, natural host exemplars, accession-level
+    Schlafen proteins, full phage trigger breadth, or a reusable DefenseFinder profile
+    model.
+  evidence:
+  - reference: DOI:10.1038/s41564-026-02277-8
+    snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+      protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+      domains.
+    notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as
+      antiviral effectors fused to phage-sensing domains.
+  - reference: DOI:10.1038/s41564-026-02277-8
+    snippet: Schlafen nuclease is fused to a previously unknown immunoglobulin-like
+      sensor domain and demonstrated that it recognizes tail assembly chaperones of
+      T5-like phages.
+    notes: Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly
+      chaperone recognition by an Ig-like prokaryotic Schlafen system.
+  - reference: DOI:10.1038/s41564-026-02277-8
+    snippet: Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded
+      tRNAs and restricts T5 phage by reducing its burst size.
+    notes: Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease
+      to bacterial and phage tRNA cleavage and T5 burst-size reduction.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| Shlafen_Ig-like | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+      proteins mediate phage defence | '
+    notes: The pinned DefenseFinder article registry maps the Shlafen_Ig-like source
+      key to the Perez Taboada et al. Schlafen phage-defense paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact Shlafen_Ig-like, Schlafen, or pSlfn5 row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact Shlafen_Ig-like, Schlafen, or pSlfn5 system row.
+  attaches_to:
+  - causal_graphs#ig_like_schlafen_trna_cleavage
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T06:21:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Ig-like Schlafen system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the phage defense system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v385.
+  llm_assisted: true
+- timestamp: '2026-10-01T06:21:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Ig-like Schlafen system during initial curation and left canonical_examples
+    empty because Perez Taboada et al. support RorSlfn5 from Raoultella ornithinolytica,
+    but an NCBI Taxonomy lookup for that current name did not resolve during first-pass
+    curation. No paid research was used.
+  llm_assisted: true
