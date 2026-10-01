@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brc76_system.yaml
+  slug: brc76_system
+session:
+  id: 2026-10-01T162059Z-codex-675f6b
+  timestamp: '2026-10-01T16:20:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Brc76 system trait
+  details: Minted traitmech:000519 for the Brc76 phage-defense system with DOI:10.1126/science.ads0915,
+    the pinned DefenseFinder gcu76 article row, sparse Supplementary Fig. S2 heatmap evidence,
+    Supplementary Fig. S4 attC context, and the pMBA brc76 E. coli IJ1862 and Klebsiella pneumoniae
+    KP5 construct rows; left canonical_examples empty because the public evidence supports
+    heterologous assays but not a directly validated endogenous native isolate.
