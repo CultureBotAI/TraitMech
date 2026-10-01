@@ -3794,6 +3794,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hypnos_system.html#hypnos-mechanism-gap"
  },
  {
+  "discussion_id": "ig-like-schlafen-defensefinder-profile-gap",
+  "prompt": "Resolve exact pSlfn5 family boundaries, natural host exemplars, T5-like tail chaperone trigger breadth, and DefenseFinder HMM/rules coverage before minting narrower Ig-like Schlafen mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ig-like Schlafen system",
+  "source_id": "traitmech:000508",
+  "source_file": "ig_like_schlafen_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ig_like_schlafen_trna_cleavage"
+  ],
+  "rationale": "Perez Taboada et al. support prokaryotic Schlafen nucleases as widespread antiviral effectors and experimentally characterize the Ig-like RorSlfn5 nuclease as a T5-like tail chaperone-triggered tRNase, and the pinned DefenseFinder article registry maps the Shlafen_Ig-like key to the same article. The pinned HMM inventory and rules table have no exact Schlafen rows. This first-pass record therefore does not resolve exact pSlfn5 family boundaries, natural host exemplars, accession-level Schlafen proteins, full phage trigger breadth, or a reusable DefenseFinder profile model.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-026-02277-8",
+   "DOI:10.1038/s41564-026-02277-8",
+   "DOI:10.1038/s41564-026-02277-8",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ig_like_schlafen_system.html#ig-like-schlafen-defensefinder-profile-gap"
+ },
+ {
   "discussion_id": "ice-family-resolution-gap",
   "prompt": "Resolve bacterial ICE subfamilies, Actinomycete ICE boundaries, integrase/relaxase/T4SS signatures, and cargo-phenotype scope before minting narrower ICE mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8125,9 +8151,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 379,
- "total_knowledge_gaps": 293,
- "total_source_entries": 373,
+ "total_discussions": 380,
+ "total_knowledge_gaps": 294,
+ "total_source_entries": 374,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

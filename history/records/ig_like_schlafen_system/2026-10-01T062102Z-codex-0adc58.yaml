@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ig_like_schlafen_system.yaml
+  slug: ig_like_schlafen_system
+session:
+  id: 2026-10-01T062102Z-codex-0adc58
+  timestamp: '2026-10-01T06:21:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Ig-like Schlafen system
+  details: Minted traitmech:000508 for the DOI- and DefenseFinder-backed Ig-like Schlafen
+    phage-defense system under phage defense system; added Perez Taboada et al. DOI evidence,
+    a pinned DefenseFinder article registry row, an article-only HMM/rules gap, a nonmechanistic
+    tRNA-cleavage graph, and proposals/metpo_traitmech_v385 reserving METPO:1046200.

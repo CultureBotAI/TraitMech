@@ -322,6 +322,7 @@ data/traits/genomics/hec_08_system.yaml	traitmech:000479	HEC-08 system	hec_08_lo
 data/traits/genomics/hesat_system.yaml	traitmech:000327	Hesat system	hesat_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/hna_system.yaml	traitmech:000241	Hna system	hna_ssb_triggered_abortive_infection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/hypnos_system.yaml	traitmech:000309	Hypnos system	hypnos_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/ig_like_schlafen_system.yaml	traitmech:000508	Ig-like Schlafen system	ig_like_schlafen_trna_cleavage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/integrative_conjugative_element.yaml	traitmech:000410	integrative conjugative element	ice_excision_conjugation_integration	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/jukab_system.yaml	traitmech:000305	JukAB system	jukab_recruits_effector_to_block_jumbo_phage	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/kamadhenu_system.yaml	traitmech:000310	Kamadhenu system	kamadhenu_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
