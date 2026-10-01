@@ -26,10 +26,12 @@ proposed.
 
 An ignored-and-hidden duplicate search checked the exact local identifier,
 proposal placeholder, proposal cohort, slug, label, Brc strings, and
-normalized gcu strings across the current TraitMech curation corpus. It found no exact
-same-scope Brc22 record, METPO term, history record, or prior proposal for
+normalized gcu strings across the current TraitMech curation corpus. It found
+no exact identifier, placeholder, cohort, slug, or label collision for
 `traitmech:000523`, `METPO:1047700`, `metpo_traitmech_v400`,
-`brc22_system`, `Brc22 system`, `Brc22`, `brc22`, or `gcu22`.
+`brc22_system`, or `Brc22 system`; exact `Brc22`/`brc22`/`gcu22` hits were
+then reviewed to rule out a same-scope Brc22 record, METPO term, history
+record, or prior proposal.
 
 ## Proposed Class
 
@@ -57,9 +59,14 @@ shifted relative to the organism-level Brc22 system trait.
 
 ## Verification
 
-- `rg --no-ignore --hidden` found no collision for `traitmech:000523`,
+- `rg --no-ignore --hidden` found no collision for exact stable identifiers,
+  slugs, cohorts, and labels: `traitmech:000523`,
   `METPO:1047700`, `metpo_traitmech_v400`, `brc22_system`,
-  `Brc22 system`, `Brc22`, `brc22`, or `gcu22`.
+  or `Brc22 system`.
+- `rg --no-ignore --hidden` found exact `Brc22`, `brc22`, and `gcu22` hits
+  only in non-colliding sibling BRiC records, generated pages, and writer
+  scripts; manual review found no same-scope Brc22 TraitMech record, METPO
+  term, history record, or prior proposal.
 - `rg --no-ignore --hidden` over `data/raw/metpo.owl` found no exact upstream
   METPO term for `Brc22`, `brc22`, or `gcu22`.
 - The pinned DefenseFinder article registry, HMM inventory, and rules files

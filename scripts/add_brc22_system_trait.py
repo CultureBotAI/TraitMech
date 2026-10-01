@@ -367,11 +367,12 @@ def main() -> int:
         changes=(
             "Minted Brc22 system as a DOI-backed GENOMICS TraitRecord "
             "under phage defense system after an ignored-and-hidden "
-            "duplicate review found no exact live TraitMech, METPO, "
-            "history, or prior proposal record; kept the graph at BRiC "
-            "integron-cassette level because the pinned DefenseFinder "
-            "article registry, HMM inventory, and rules table have no exact "
-            "Brc22 row; the replacement placeholder is reserved in "
+            "duplicate review ruled out same-scope live TraitMech, METPO, "
+            "history, and prior proposal collisions after reviewing exact "
+            "Brc22/brc22/gcu22 hits; kept the graph at BRiC integron-cassette "
+            "level because the pinned DefenseFinder article registry, HMM "
+            "inventory, and rules table have no exact Brc22 row; the "
+            "replacement placeholder is reserved in "
             f"{PROPOSAL}."
         ),
         llm_assisted=True,

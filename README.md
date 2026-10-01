@@ -34,7 +34,7 @@ records, 36 newer metabolism records, forty-eight physiology records, 313
 genomics records, and one other record, and thirty-eight records are still
 `SEEDED` (one environment, one metabolism, four morphology, one physiology, and
 thirty-one other).
-Across the corpus, 673 records currently carry causal graphs. The 50 deprecated
+Across the corpus, 674 records currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
 measurement carriers from the upstream METPO seed that are not intended to carry
