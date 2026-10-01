@@ -1,0 +1,254 @@
+identifier: traitmech:000506
+label: GmrSD system
+definition: A type IV modification-dependent restriction system in which an organism
+  possesses a GmrSD locus encoding either separate GmrS and GmrD proteins or a fused
+  double-domain GmrSD-family protein, that targets glucosylated hydroxymethylcytosine-containing
+  DNA.
+definition_source: DOI:10.1016/j.jmb.2006.11.051
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000496
+synonyms:
+- synonym_text: GmrSD
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.jmb.2006.11.051
+- synonym_text: GmrSD_RM_Type_IV
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1016/j.jmb.2006.11.051
+  snippet: The Escherichia coli CT596 prophage exclusion genes gmrS and gmrD were
+    found to encode a novel type IV modification-dependent restriction nuclease that
+    targets and digests glucosylated (glc)-hydroxymethylcytosine (HMC) DNAs.
+  notes: Bair and Black experimentally support split gmrS and gmrD genes as a GmrSD
+    Type IV modification-dependent restriction nuclease targeting glucosylated hydroxymethylcytosine
+    DNA.
+- reference: DOI:10.1016/j.jmb.2006.11.051
+  snippet: Nuclease activity is dependent upon the presence of both the GmrS and the
+    GmrD proteins.
+  notes: Bair and Black support both split GmrS and GmrD proteins as required for
+    the characterized CT596 GmrSD restriction activity.
+- reference: DOI:10.1186/s12859-015-0773-z
+  snippet: GmrSD is a modification-dependent restriction endonuclease that specifically
+    targets and cleaves glucosylated hydroxymethylcytosine (glc-HMC) modified DNA.
+  notes: Machnicka et al. support GmrSD as a glucosylated-hydroxymethylcytosine-targeting
+    modification-dependent restriction endonuclease.
+- reference: DOI:10.1186/s12859-015-0773-z
+  snippet: It is encoded either as two separate single-domain GmrS and GmrD proteins
+    or as a single protein carrying both domains.
+  notes: Machnicka et al. support treating split GmrS/GmrD loci and fused double-domain
+    GmrSD homologs within the same first-pass system family.
+- reference: DOI:10.1186/s12859-015-0773-z
+  snippet: Moreover, we found that GmrSD systems exist predominantly as a fused, double-domain
+    form rather than as a heterodimer and that their homologs are often encoded in
+    regions enriched in defense and gene mobility-related elements.
+  notes: Machnicka et al. report that fused double-domain GmrSD systems are common
+    and are often found near defense- and mobility-linked features.
+- reference: DOI:10.1093/nar/gkt747
+  snippet: The new class of modification-dependent restriction enzymes was named Type
+    IV, as distinct from the familiar modification-blocked Types I-III.
+  notes: Loenen and Raleigh define the Type IV class as modification-dependent restriction
+    enzymes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
+    dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
+    modified DNAs | '
+  notes: The pinned DefenseFinder article registry maps the GmrSD_RM_Type_IV source
+    key to Bair and Black.
+causal_graphs:
+- graph_id: gmrsd_restricts_glucosylated_hmc_dna
+  title: GmrSD restricts glucosylated HMC DNA
+  description: Conservative system-level sketch linking a GmrSD locus to modification-dependent
+    restriction of glucosylated hydroxymethylcytosine DNA and to the Type IV restriction
+    parent trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GmrSD as a named Type IV modification-dependent
+    restriction system while leaving GmrS/GmrD domain activities, complete sugar-HMC
+    substrate breadth, split-versus-fused host breadth, IPI inhibition, and DefenseFinder
+    RM_Type_IV HMM/rules mapping unresolved.
+  nodes:
+  - node_id: gmrsd_locus
+    label: GmrSD locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding split GmrS and GmrD proteins or a fused double-domain
+      GmrSD-family protein.
+  - node_id: glucosylated_hmc_dna
+    label: glucosylated HMC DNA
+    node_type: ENVIRONMENTAL_FACTOR
+    description: DNA containing glucosylated hydroxymethylcytosine base modifications.
+  - node_id: gmrsd_dependent_type_iv_restriction
+    label: GmrSD-dependent Type IV restriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Modification-dependent restriction of glucosylated-hydroxymethylcytosine
+      DNA by GmrSD.
+  - node_id: gmrsd_system_trait
+    label: GmrSD system
+    node_type: TRAIT
+    grounding: traitmech:000506
+    description: Possession of a genome-encoded GmrSD modification-dependent restriction
+      system.
+  - node_id: type_iv_modification_dependent_restriction
+    label: type IV modification-dependent restriction system
+    node_type: TRAIT
+    grounding: traitmech:000496
+    description: Possession of a genome-encoded Type IV modification-dependent restriction
+      system.
+  edges:
+  - subject: gmrsd_locus
+    predicate: enables
+    predicate_id: RO:0002327
+    object: gmrsd_dependent_type_iv_restriction
+    description: The GmrSD locus encodes the proteins that cleave glucosylated hydroxymethylcytosine
+      DNA.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2006.11.051
+      snippet: Nuclease activity is dependent upon the presence of both the GmrS and
+        the GmrD proteins.
+      notes: Bair and Black support both split GmrS and GmrD proteins as required
+        for the characterized CT596 GmrSD restriction activity.
+    - reference: DOI:10.1186/s12859-015-0773-z
+      snippet: It is encoded either as two separate single-domain GmrS and GmrD proteins
+        or as a single protein carrying both domains.
+      notes: Machnicka et al. support treating split GmrS/GmrD loci and fused double-domain
+        GmrSD homologs within the same first-pass system family.
+  - subject: gmrsd_dependent_type_iv_restriction
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: glucosylated_hmc_dna
+    description: GmrSD-dependent Type IV restriction targets glucosylated hydroxymethylcytosine
+      DNA.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2006.11.051
+      snippet: The Escherichia coli CT596 prophage exclusion genes gmrS and gmrD were
+        found to encode a novel type IV modification-dependent restriction nuclease
+        that targets and digests glucosylated (glc)-hydroxymethylcytosine (HMC) DNAs.
+      notes: Bair and Black experimentally support split gmrS and gmrD genes as a
+        GmrSD Type IV modification-dependent restriction nuclease targeting glucosylated
+        hydroxymethylcytosine DNA.
+    - reference: DOI:10.1186/s12859-015-0773-z
+      snippet: GmrSD is a modification-dependent restriction endonuclease that specifically
+        targets and cleaves glucosylated hydroxymethylcytosine (glc-HMC) modified
+        DNA.
+      notes: Machnicka et al. support GmrSD as a glucosylated-hydroxymethylcytosine-targeting
+        modification-dependent restriction endonuclease.
+  - subject: gmrsd_dependent_type_iv_restriction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gmrsd_system_trait
+    description: GmrSD-dependent Type IV restriction realizes the organism-level GmrSD
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1186/s12859-015-0773-z
+      snippet: GmrSD is a modification-dependent restriction endonuclease that specifically
+        targets and cleaves glucosylated hydroxymethylcytosine (glc-HMC) modified
+        DNA.
+      notes: Machnicka et al. support GmrSD as a glucosylated-hydroxymethylcytosine-targeting
+        modification-dependent restriction endonuclease.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
+        dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
+        modified DNAs | '
+      notes: The pinned DefenseFinder article registry maps the GmrSD_RM_Type_IV source
+        key to Bair and Black.
+  - subject: gmrsd_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: type_iv_modification_dependent_restriction
+    description: GmrSD system possession is a Type IV modification-dependent restriction
+      system trait.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2006.11.051
+      snippet: The Escherichia coli CT596 prophage exclusion genes gmrS and gmrD were
+        found to encode a novel type IV modification-dependent restriction nuclease
+        that targets and digests glucosylated (glc)-hydroxymethylcytosine (HMC) DNAs.
+      notes: Bair and Black experimentally support split gmrS and gmrD genes as a
+        GmrSD Type IV modification-dependent restriction nuclease targeting glucosylated
+        hydroxymethylcytosine DNA.
+    - reference: DOI:10.1093/nar/gkt747
+      snippet: The new class of modification-dependent restriction enzymes was named
+        Type IV, as distinct from the familiar modification-blocked Types I-III.
+      notes: Loenen and Raleigh define the Type IV class as modification-dependent
+        restriction enzymes.
+discussions:
+- discussion_id: gmrsd-defensefinder-model-gap
+  prompt: Resolve exact GmrS/GmrD domain activities, complete sugar-modified HMC substrate
+    breadth, split-versus-fused host breadth, phage IPI inhibition, and DefenseFinder
+    RM_Type_IV HMM/rules mapping before minting narrower GmrSD mechanism or component
+    traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Bair and Black support split GmrS/GmrD as a Type IV modification-dependent
+    restriction nuclease that targets glucosylated hydroxymethylcytosine DNA, Machnicka
+    et al. support GmrSD homologs as either split or fused double-domain systems,
+    and the pinned DefenseFinder article registry maps GmrSD_RM_Type_IV to Bair and
+    Black. The pinned HMM inventory and rules table have no exact GmrSD or GmrSD_RM_Type_IV
+    rows. This first-pass record therefore does not resolve a reusable DefenseFinder
+    profile model, exact split-versus-fused prevalence across natural hosts, the complete
+    set of sugar-modified HMC targets, the exact domain contributions of GmrS and
+    GmrD, or the relationship between phage IPI inhibition and the organism-level
+    GmrSD system trait.
+  evidence:
+  - reference: DOI:10.1016/j.jmb.2006.11.051
+    snippet: The Escherichia coli CT596 prophage exclusion genes gmrS and gmrD were
+      found to encode a novel type IV modification-dependent restriction nuclease
+      that targets and digests glucosylated (glc)-hydroxymethylcytosine (HMC) DNAs.
+    notes: Bair and Black experimentally support split gmrS and gmrD genes as a GmrSD
+      Type IV modification-dependent restriction nuclease targeting glucosylated hydroxymethylcytosine
+      DNA.
+  - reference: DOI:10.1016/j.jmb.2006.11.051
+    snippet: Nuclease activity is dependent upon the presence of both the GmrS and
+      the GmrD proteins.
+    notes: Bair and Black support both split GmrS and GmrD proteins as required for
+      the characterized CT596 GmrSD restriction activity.
+  - reference: DOI:10.1186/s12859-015-0773-z
+    snippet: GmrSD is a modification-dependent restriction endonuclease that specifically
+      targets and cleaves glucosylated hydroxymethylcytosine (glc-HMC) modified DNA.
+    notes: Machnicka et al. support GmrSD as a glucosylated-hydroxymethylcytosine-targeting
+      modification-dependent restriction endonuclease.
+  - reference: DOI:10.1186/s12859-015-0773-z
+    snippet: It is encoded either as two separate single-domain GmrS and GmrD proteins
+      or as a single protein carrying both domains.
+    notes: Machnicka et al. support treating split GmrS/GmrD loci and fused double-domain
+      GmrSD homologs within the same first-pass system family.
+  - reference: DOI:10.1186/s12859-015-0773-z
+    snippet: Moreover, we found that GmrSD systems exist predominantly as a fused,
+      double-domain form rather than as a heterodimer and that their homologs are
+      often encoded in regions enriched in defense and gene mobility-related elements.
+    notes: Machnicka et al. report that fused double-domain GmrSD systems are common
+      and are often found near defense- and mobility-linked features.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
+      dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
+      modified DNAs | '
+    notes: The pinned DefenseFinder article registry maps the GmrSD_RM_Type_IV source
+      key to Bair and Black.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact GmrSD or GmrSD_RM_Type_IV row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact GmrSD or GmrSD_RM_Type_IV system row.
+  attaches_to:
+  - causal_graphs#gmrsd_restricts_glucosylated_hmc_dna
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T04:21:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted GmrSD system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the type IV modification-dependent restriction system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v383.
+  llm_assisted: true
+- timestamp: '2026-10-01T04:21:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed GmrSD system during initial curation and left canonical_examples
+    empty because the Bair and Black and Machnicka et al. sources support the split
+    CT596 GmrSD enzyme and broader split-or-fused GmrSD family, but not a single stable
+    NCBITaxon strain exemplar for the organism-level GmrSD system trait. No paid research
+    was used.
+  llm_assisted: true
