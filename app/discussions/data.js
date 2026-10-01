@@ -1029,6 +1029,35 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brc233_system.html#brc233-defensefinder-model-gap"
  },
  {
+  "discussion_id": "brc23-defensefinder-model-gap",
+  "prompt": "Resolve Brc23 native host breadth, exact sensitive-phage breadth, molecular output, Tragantia-family boundaries, and DefenseFinder article/HMM/rules coverage before minting narrower Brc23 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Brc23 system",
+  "source_id": "traitmech:000524",
+  "source_file": "brc23_system.yaml",
+  "attaches_to": [
+   "causal_graphs#brc23_integron_cassette_confers_phage_resistance"
+  ],
+  "rationale": "Kieffer et al. identify brc23 as a bacteriophage-resistance integron cassette. The pinned DefenseFinder article registry, HMM inventory, and rules table have no exact gcu23 or Brc23 row, so the first-pass record leaves native-host breadth, profile boundaries, exact phage target breadth, direct molecular output, and Brc22/Brc23 Tragantia-family scope unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 9,
+  "evidence_refs": [
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "DOI:10.1126/science.ads0915",
+   "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf",
+   "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brc23_system.html#brc23-defensefinder-model-gap"
+ },
+ {
   "discussion_id": "brc24-defensefinder-model-gap",
   "prompt": "Resolve Brc24 native host breadth, exact sensitive-phage breadth, molecular output, and DefenseFinder HMM/rules coverage before minting narrower Brc24 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8562,9 +8591,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 395,
- "total_knowledge_gaps": 309,
- "total_source_entries": 389,
+ "total_discussions": 396,
+ "total_knowledge_gaps": 310,
+ "total_source_entries": 390,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
