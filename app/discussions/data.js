@@ -8185,6 +8185,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
  },
  {
+  "discussion_id": "cellular-buoyancy-xref-gap",
+  "prompt": "Resolve exact external ontology xrefs for gas-vesicle-mediated cellular buoyancy.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cellular buoyancy",
+  "source_id": "traitmech:000528",
+  "source_file": "cellular_buoyancy.yaml",
+  "attaches_to": [],
+  "rationale": "No exact active local METPO class was accepted for the organism-level cellular-buoyancy physiology trait. The only buoyancy hit in the local METPO snapshot is obsolete buoyancy structure, and GO:0031411 denotes the gas vesicle organelle rather than the gas-vesicle-conferred physiological disposition.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cellular_buoyancy.html#cellular-buoyancy-xref-gap"
+ },
+ {
   "discussion_id": "cold-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -8662,9 +8679,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 399,
+ "total_discussions": 400,
  "total_knowledge_gaps": 312,
- "total_source_entries": 393,
+ "total_source_entries": 394,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

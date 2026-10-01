@@ -1,0 +1,114 @@
+identifier: traitmech:000528
+label: cellular buoyancy
+definition: A physiology trait in which intracellular gas vesicles reduce a microbial
+  cell's effective density enough to provide buoyancy and vertical positioning in
+  the water column.
+definition_source: DOI:10.1186/s13036-024-00426-3
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: buoyancy
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1186/s13036-024-00426-3
+evidence:
+- reference: DOI:10.1186/s13036-024-00426-3
+  snippet: can provide buoyancy for them to move up and down the water to obtain nutrients
+  notes: Feng et al. review gas-vesicle physical properties that provide buoyancy
+    for photosynthetic bacteria and halophilic archaea.
+- reference: DOI:10.1186/s13036-024-00426-3
+  snippet: give them the buoyancy to move upward so that they can get enough light
+    for photosynthesis
+  notes: Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy
+    to move upward toward sufficient light.
+- reference: DOI:10.3390/life12091455
+  snippet: Approximately 3–10% of the cell volume must be occupied by gas vesicles
+    to provide buoyancy
+  notes: Pfeifer reviews gas-vesicle proteins and summarizes the fraction of cell
+    volume that must contain gas vesicles to confer buoyancy.
+canonical_examples:
+- taxon_id: NCBITaxon:1126
+  taxon_label: Microcystis aeruginosa
+  note: Mlouka et al. mapped the M. aeruginosa gas-vesicle gene cluster and DNA rearrangements
+    that lead to loss of cellular buoyancy.
+  reference: DOI:10.1128/JB.186.8.2355-2365.2004
+causal_graphs:
+- graph_id: gas_vesicles_confer_cellular_buoyancy
+  title: Gas vesicles confer cellular buoyancy
+  description: Evidence-backed causal sketch linking a proteinaceous gas-filled organelle
+    to cellular buoyancy.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph records the organelle-scale physical gas-vesicle branch and
+    leaves taxon-specific Gvp protein assembly to the gas-vesicle morphology record.
+    It does not assert that all planktonic depth regulation is gas-vesicle mediated.
+  nodes:
+  - node_id: gas_vesicle_shell
+    label: gas vesicle shell
+    node_type: CELLULAR_LOCALIZATION
+    description: Proteinaceous shell enclosing the gas-vesicle lumen.
+    grounding: GO:0033172
+  - node_id: gas_vesicle
+    label: gas vesicle
+    node_type: ORGANELLE
+    description: Hollow gas-filled protein nanocompartment that displaces cytoplasmic
+      volume.
+    grounding: GO:0031411
+  - node_id: cellular_buoyancy_trait
+    label: cellular buoyancy
+    node_type: TRAIT
+    description: Gas-vesicle-mediated capacity for upward flotation or water-column
+      positioning.
+    grounding: traitmech:000528
+  edges:
+  - subject: gas_vesicle_shell
+    predicate: part of
+    predicate_id: biolink:part_of
+    object: gas_vesicle
+    description: The protein shell encloses the internal gas volume as part of the
+      gas vesicle.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of an
+        internal gas and a protein shell
+      notes: Feng et al. describe the gas vesicle as an internal gas compartment bounded
+        by a protein shell.
+  - subject: gas_vesicle
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: cellular_buoyancy_trait
+    description: Gas-filled vesicles lower effective cellular density and provide
+      buoyancy.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: can provide buoyancy for them to move up and down the water to obtain
+        nutrients
+      notes: Feng et al. review gas-vesicle physical properties that provide buoyancy
+        for photosynthetic bacteria and halophilic archaea.
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: give them the buoyancy to move upward so that they can get enough light
+        for photosynthesis
+      notes: Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy
+        to move upward toward sufficient light.
+discussions:
+- discussion_id: cellular-buoyancy-xref-gap
+  prompt: Resolve exact external ontology xrefs for gas-vesicle-mediated cellular
+    buoyancy.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: No exact active local METPO class was accepted for the organism-level
+    cellular-buoyancy physiology trait. The only buoyancy hit in the local METPO snapshot
+    is obsolete buoyancy structure, and GO:0031411 denotes the gas vesicle organelle
+    rather than the gas-vesicle-conferred physiological disposition.
+  posed_by: codex
+  posed_date: '2026-10-01'
+curation_history:
+- timestamp: '2026-10-01T22:49:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted cellular buoyancy as a DOI-backed PHYSIOLOGY TraitRecord after an
+    ignored-and-hidden duplicate review found no exact same-scope TraitMech, METPO,
+    history, or prior proposal record; the replacement placeholder is reserved in
+    proposals/metpo_traitmech_v405.
+  llm_assisted: true

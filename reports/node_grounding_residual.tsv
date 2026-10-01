@@ -2275,7 +2275,6 @@ mreb polymer localization/assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/f
 elongasome complex	CELLULAR_LOCALIZATION	1	data/traits/morphology/fusiform_shaped.yaml
 ftsw	GENE_OR_PROTEIN	1	data/traits/morphology/fusiform_shaped.yaml
 septal peptidoglycan incorporation	BIOLOGICAL_PROCESS	1	data/traits/morphology/fusiform_shaped.yaml
-cellular buoyancy	TRAIT	1	data/traits/morphology/gas_vesicle.yaml
 water-column positioning	BIOLOGICAL_PROCESS	1	data/traits/morphology/gas_vesicle.yaml
 gvpa	GENE_OR_PROTEIN	1	data/traits/morphology/gas_vesicle.yaml
 gvpc	GENE_OR_PROTEIN	1	data/traits/morphology/gas_vesicle.yaml
@@ -2347,7 +2346,6 @@ phaa/phab/phac pathway	PATHWAY	1	data/traits/morphology/intracellular_inclusion.
 nitrogen depletion	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/intracellular_inclusion.yaml
 polyphosphate granule	CELLULAR_LOCALIZATION	1	data/traits/morphology/intracellular_inclusion.yaml
 gas vesicle structural and assembly proteins	GENE_OR_PROTEIN	1	data/traits/morphology/intracellular_inclusion.yaml
-buoyancy	TRAIT	1	data/traits/morphology/intracellular_inclusion.yaml
 encapsulated metabolic enzymes	GENE_OR_PROTEIN	1	data/traits/morphology/intracellular_inclusion.yaml
 intracellular sulfur globule	CELLULAR_LOCALIZATION	1	data/traits/morphology/intracellular_inclusion.yaml
 reduced cell-wall patterning	BIOLOGICAL_PROCESS	1	data/traits/morphology/irregular_shaped.yaml

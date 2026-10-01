@@ -110,6 +110,7 @@ causal_graphs:
     label: buoyancy
     node_type: TRAIT
     description: Capacity for vertical positioning in the water column.
+    grounding: traitmech:000528
   - node_id: bmc_metabolic_cargo
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Bacterial-microcompartment cargo varies by pathway and combines
@@ -317,4 +318,10 @@ curation_history:
     alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy
     and every DOI resolved through Crossref. No gene or operon was promoted to a primary
     entry.'
+  llm_assisted: true
+- timestamp: '2026-10-01T22:49:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE_TO_NEW_TRAIT
+  changes: Grounded the existing causal-graph buoyancy TRAIT node to newly minted
+    traitmech:000528 cellular buoyancy.
   llm_assisted: true
