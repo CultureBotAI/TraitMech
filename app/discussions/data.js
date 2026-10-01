@@ -1205,6 +1205,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/crouga_system.html#crouga-mechanism-and-modelling-gap"
  },
  {
+  "discussion_id": "dag-defensefinder-profile-gap",
+  "prompt": "Resolve exact Dag1 and Dag2 family boundaries, natural host exemplars, modified-guanine phage target breadth, and DefenseFinder HMM/rules coverage before minting narrower Dag mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dag system",
+  "source_id": "traitmech:000507",
+  "source_file": "dag_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dag_effectors_target_modified_guanine_phages"
+  ],
+  "rationale": "Getz et al. support Dag1 and Dag2 as widespread families of anti-phage DNA glycosylases that selectively target phages carrying modified guanine bases, and the pinned DefenseFinder article registry maps the Dag key to the Getz et al. preprint DOI. The pinned HMM inventory and rules table have no exact Dag rows. This first-pass record therefore does not resolve exact Dag1 versus Dag2 family boundaries, natural host exemplars, accession-level Dag proteins, full modified-guanine phage target breadth, or a reusable DefenseFinder profile model.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-026-02441-0",
+   "DOI:10.1038/s41564-026-02441-0",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dag_system.html#dag-defensefinder-profile-gap"
+ },
+ {
   "discussion_id": "damona-mechanism-gap",
   "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8100,9 +8125,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 378,
- "total_knowledge_gaps": 292,
- "total_source_entries": 372,
+ "total_discussions": 379,
+ "total_knowledge_gaps": 293,
+ "total_source_entries": 373,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

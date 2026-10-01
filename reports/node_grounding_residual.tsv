@@ -1268,6 +1268,8 @@ crrna-cas effector complex	RNA	1	data/traits/genomics/crispr_cas_system.yaml
 invading nucleic acid target	CHEMICAL	1	data/traits/genomics/crispr_cas_system.yaml
 phage and plasmid pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/crispr_cas_system.yaml
 crouga locus	GENETIC_ELEMENT	1	data/traits/genomics/crouga_system.yaml
+dag locus	GENETIC_ELEMENT	1	data/traits/genomics/dag_system.yaml
+modified-guanine phage targeting	BIOLOGICAL_PROCESS	1	data/traits/genomics/dag_system.yaml
 damona locus	GENETIC_ELEMENT	1	data/traits/genomics/damona_system.yaml
 phage ssb-presented single-stranded dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
 darna activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
