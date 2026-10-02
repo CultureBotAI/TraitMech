@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/resolvase_duf5677_system.yaml
+  slug: resolvase_duf5677_system
+session:
+  id: 2026-10-02T015002Z-codex-c6d317
+  timestamp: '2026-10-02T01:50:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Resolvase DUF5677 system trait
+  details: Minted traitmech:000531 as a DOI- and DefenseFinder-backed Resolvase_DUF5677 Schlafen
+    phage-defense-system record, reserved METPO:1048500 in proposals/metpo_traitmech_v408
+    for upstream replacement, captured the Resolvase_DUF5677 article-registry source key,
+    left exact HMM/rules and native-host exemplars as open knowledge gaps, and validated the
+    record through write_validated_trait. The ignored-and-hidden duplicate search found no
+    exact Resolvase_DUF5677 trait, history record, prior proposal, page, script, or reserved
+    CURIE before curation.
