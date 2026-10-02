@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_system.yaml
+  slug: zorya_system
+session:
+  id: 2026-10-02T201402Z-claude-code-87e434
+  timestamp: '2026-10-02T20:14:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track Zorya type I split
+  details: Documented traitmech:000554 Zorya type I system in the open Zorya subtype-effector
+    discussion after minting the DefenseFinder-backed Zorya_TypeI child. Type III and finer
+    Zorya subtype mechanisms remain open.

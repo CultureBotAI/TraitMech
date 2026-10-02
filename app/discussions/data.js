@@ -7892,12 +7892,35 @@ window.searchData = [
   "source_id": "traitmech:000217",
   "source_file": "zorya_system.yaml",
   "attaches_to": [],
-  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, and Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase. The Zorya type II TraitRecord now captures the DefenseFinder Zorya_TypeII subtype, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
+  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, and the pinned DefenseFinder rules table supports distinct Zorya_TypeI and Zorya_TypeII subtype rows. Zorya type I and type II TraitRecords now capture those DefenseFinder subtypes, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/zorya_system.html#zorya-subtype-effector-and-trigger-gap"
+ },
+ {
+  "discussion_id": "zorya-type-i-activity-gap",
+  "prompt": "Resolve Zorya_TypeI phage triggers, native host breadth, ZorC/ZorD nuclease targets, ZorAB-to-ZorC/ZorD activation, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Zorya type I system",
+  "source_id": "traitmech:000554",
+  "source_file": "zorya_type_i_system.yaml",
+  "attaches_to": [
+   "causal_graphs#zorya_type_i_locus_subtype_defense"
+  ],
+  "rationale": "Hu et al. support ZorAB activation and phage-DNA degradation by type I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeI as a subtype whose rule row lists Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB with 3 mandatory matches and 3 genes required. This first-pass record leaves exact phage triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense escape, and ZorC/ZorD nuclease outputs unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.1038/s41586-024-08493-8",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/zorya_type_i_system.html#zorya-type-i-activity-gap"
  },
  {
   "discussion_id": "zorya-type-ii-activity-gap",
@@ -9284,9 +9307,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 425,
- "total_knowledge_gaps": 337,
- "total_source_entries": 419,
+ "total_discussions": 426,
+ "total_knowledge_gaps": 338,
+ "total_source_entries": 420,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
