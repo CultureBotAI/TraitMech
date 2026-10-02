@@ -68,6 +68,7 @@ card-like antiphage defense	BIOLOGICAL_PROCESS	3	data/traits/genomics/card_nlr_e
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
+lamassu subtype antiphage activity	BIOLOGICAL_PROCESS	3	data/traits/genomics/lamassu_amidase_system.yaml|data/traits/genomics/lamassu_cap4_nuclease_system.yaml|data/traits/genomics/lamassu_fmo_system.yaml
 t7 phage resistance	BIOLOGICAL_PROCESS	3	data/traits/genomics/rst_duf4238_system.yaml|data/traits/genomics/rst_helicaseduf2290_system.yaml|data/traits/genomics/rst_hydrolase_3tm_system.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
 rod complex	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width_very_small.yaml|data/traits/morphology/rod_shaped.yaml
@@ -158,7 +159,6 @@ subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
-lamassu subtype antiphage activity	BIOLOGICAL_PROCESS	2	data/traits/genomics/lamassu_amidase_system.yaml|data/traits/genomics/lamassu_cap4_nuclease_system.yaml
 plasmid transformation	BIOLOGICAL_PROCESS	2	data/traits/genomics/mksbefg_system.yaml|data/traits/genomics/wadjet_system.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 translation inhibition	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/razr_system.yaml
@@ -1567,6 +1567,7 @@ komc nadase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/kongming_system
 nad depletion-linked infected-cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/kongming_system.yaml
 lamassu-amidase locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_amidase_system.yaml
 lamassu-cap4 nuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_cap4_nuclease_system.yaml
+lamassu-fmo locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_fmo_system.yaml
 lamassu locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_system.yaml
 lmuabc complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_system.yaml
 lamassu viral dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_system.yaml
