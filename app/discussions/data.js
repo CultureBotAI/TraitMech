@@ -4117,6 +4117,33 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hesat_system.html#hesat-mechanism-gap"
  },
  {
+  "discussion_id": "hma-defensefinder-rule-and-component-gap",
+  "prompt": "Resolve HmaB/HmaC contributions, complete HmaABC system requirements, hma-region accessory systems, sensitive-phage breadth, native host breadth, and DefenseFinder rule-level criteria before minting Hma mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hma system",
+  "source_id": "traitmech:000533",
+  "source_file": "hma_system.yaml",
+  "attaches_to": [
+   "causal_graphs#hma_locus_phage_defense"
+  ],
+  "rationale": "Payne et al. predicted Hma as a three-gene candidate defense system, Liu et al. showed that the HmaA nuclease domain is essential for T4 phage defense, and the pinned DefenseFinder HMM inventory records HmaA, HmaB, and HmaC profiles. However, Liu et al. state that HmaB/HmaC regulation of HmaA was not known, and the pinned DefenseFinder rules table lacks an Hma row. This first-pass record therefore does not resolve exact HmaB or HmaC activities, complete-system genetic requirements, accessory defense systems inserted near hma, full sensitive-phage breadth, endogenous native-host activity, or reusable rule-level detection criteria.",
+  "num_experiments": 0,
+  "num_evidence": 7,
+  "evidence_refs": [
+   "DOI:10.1093/nar/gkab883",
+   "DOI:10.1111/1751-7915.14524",
+   "DOI:10.1111/1751-7915.14524",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hma_system.html#hma-defensefinder-rule-and-component-gap"
+ },
+ {
   "discussion_id": "hna-trigger-and-family-breadth-gap",
   "prompt": "Resolve Hna trigger breadth, phage escape routes, and family architecture before minting narrower Hna mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8779,9 +8806,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 404,
- "total_knowledge_gaps": 316,
- "total_source_entries": 398,
+ "total_discussions": 405,
+ "total_knowledge_gaps": 317,
+ "total_source_entries": 399,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

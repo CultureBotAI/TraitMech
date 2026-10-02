@@ -1,0 +1,225 @@
+identifier: traitmech:000533
+label: Hma system
+definition: A phage defense system in which an organism possesses a genome-encoded
+  Hma locus with predicted HmaA helicase, HmaB m5c methyltransferase, and HmaC ATPase
+  components.
+definition_source: DOI:10.1093/nar/gkab883
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Hma
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkab883
+- synonym_text: Hma__HmaA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Hma__HmaB
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Hma__HmaC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1093/nar/gkab883
+  snippet: We designated this as a new candidate defence system named Hma, as it encodes
+    three proteins with predicted helicase (HmaA), m5c methyltransferase (HmaB) and
+    ATPase (HmaC) domains.
+  notes: Payne et al. define Hma as a predicted three-gene antiviral defense system
+    with HmaA, HmaB, and HmaC components.
+- reference: DOI:10.1093/nar/gkab883
+  snippet: The putative Hma system was very widespread, present in 26 phyla, surpassed
+    only by CBASS type I, Gabija and Septu type I.
+  notes: Payne et al. report that the predicted Hma system occurs across many bacterial
+    and archaeal phyla.
+- reference: DOI:10.1111/1751-7915.14524
+  snippet: we characterized a new defence system, Hma
+  notes: Liu et al. experimentally studied Hma in coral-associated Halomonas meridiana.
+- reference: DOI:10.1111/1751-7915.14524
+  snippet: Mutation analysis revealed the nickase activity of the nuclease domain
+    (belonging to PDD/EXK superfamily) of HmaA is essential in phage defence.
+  notes: Liu et al. connect HmaA nuclease activity to anti-phage defense against Escherichia
+    phage T4.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Hma | 10\.1093/nar/gkac400 | PADLOC: a web server for the identification
+    of antiviral defence systems in microbial genomes | '
+  notes: The pinned DefenseFinder article registry maps the Hma source key to the
+    PADLOC web-server paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Hma__HmaA                                        |                                                  |
+    Hma                    | Custom                  | 400    |'
+  notes: The pinned DefenseFinder HMM inventory records Hma__HmaA under the Hma model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Hma__HmaB                                        |                                                  |
+    Hma                    | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Hma__HmaB under the Hma model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Hma__HmaC                                        |                                                  |
+    Hma                    | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Hma__HmaC under the Hma model
+    namespace.
+causal_graphs:
+- graph_id: hma_locus_phage_defense
+  title: Hma loci support helicase-associated phage defense
+  description: Conservative system-level sketch linking a three-gene Hma locus to
+    HmaA-dependent phage defense and Hma system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Hma at locus and HmaA antiviral-output level without
+    asserting HmaB or HmaC regulation, HmaB/HmaC effector activity, complete HmaABC
+    phage breadth, natural host activity, accessory systems inserted in the hma region,
+    or rule-level DefenseFinder detection criteria.
+  nodes:
+  - node_id: hma_locus
+    label: Hma locus
+    node_type: GENETIC_ELEMENT
+    description: A candidate antiviral Hma locus encoding HmaA, HmaB, and HmaC components.
+  - node_id: hmaA_phage_defense
+    label: HmaA phage defense
+    node_type: BIOLOGICAL_PROCESS
+    description: HmaA helicase/nickase-associated inhibition of bacteriophage infection.
+  - node_id: hma_system_trait
+    label: Hma system
+    node_type: TRAIT
+    grounding: traitmech:000533
+    description: Possession of a genome-encoded Hma phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: hma_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hmaA_phage_defense
+    description: Hma loci encode HmaA, and HmaA nickase activity is required for the
+      characterized anti-phage activity.
+    evidence:
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: We designated this as a new candidate defence system named Hma, as
+        it encodes three proteins with predicted helicase (HmaA), m5c methyltransferase
+        (HmaB) and ATPase (HmaC) domains.
+      notes: Payne et al. define Hma as a predicted three-gene antiviral defense system
+        with HmaA, HmaB, and HmaC components.
+    - reference: DOI:10.1111/1751-7915.14524
+      snippet: Mutation analysis revealed the nickase activity of the nuclease domain
+        (belonging to PDD/EXK superfamily) of HmaA is essential in phage defence.
+      notes: Liu et al. connect HmaA nuclease activity to anti-phage defense against
+        Escherichia phage T4.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Hma__HmaA                                        |                                                  |
+        Hma                    | Custom                  | 400    |'
+      notes: The pinned DefenseFinder HMM inventory records Hma__HmaA under the Hma
+        model namespace.
+  - subject: hmaA_phage_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: hma_system_trait
+    description: HmaA-dependent anti-phage activity realizes the first-pass organism-level
+      Hma system trait.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14524
+      snippet: we characterized a new defence system, Hma
+      notes: Liu et al. experimentally studied Hma in coral-associated Halomonas meridiana.
+    - reference: DOI:10.1111/1751-7915.14524
+      snippet: Mutation analysis revealed the nickase activity of the nuclease domain
+        (belonging to PDD/EXK superfamily) of HmaA is essential in phage defence.
+      notes: Liu et al. connect HmaA nuclease activity to anti-phage defense against
+        Escherichia phage T4.
+  - subject: hma_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Hma system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: We designated this as a new candidate defence system named Hma, as
+        it encodes three proteins with predicted helicase (HmaA), m5c methyltransferase
+        (HmaB) and ATPase (HmaC) domains.
+      notes: Payne et al. define Hma as a predicted three-gene antiviral defense system
+        with HmaA, HmaB, and HmaC components.
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: The putative Hma system was very widespread, present in 26 phyla, surpassed
+        only by CBASS type I, Gabija and Septu type I.
+      notes: Payne et al. report that the predicted Hma system occurs across many
+        bacterial and archaeal phyla.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Hma | 10\.1093/nar/gkac400 | PADLOC: a web server for the identification
+        of antiviral defence systems in microbial genomes | '
+      notes: The pinned DefenseFinder article registry maps the Hma source key to
+        the PADLOC web-server paper.
+discussions:
+- discussion_id: hma-defensefinder-rule-and-component-gap
+  prompt: Resolve HmaB/HmaC contributions, complete HmaABC system requirements, hma-region
+    accessory systems, sensitive-phage breadth, native host breadth, and DefenseFinder
+    rule-level criteria before minting Hma mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Payne et al. predicted Hma as a three-gene candidate defense system,
+    Liu et al. showed that the HmaA nuclease domain is essential for T4 phage defense,
+    and the pinned DefenseFinder HMM inventory records HmaA, HmaB, and HmaC profiles.
+    However, Liu et al. state that HmaB/HmaC regulation of HmaA was not known, and
+    the pinned DefenseFinder rules table lacks an Hma row. This first-pass record
+    therefore does not resolve exact HmaB or HmaC activities, complete-system genetic
+    requirements, accessory defense systems inserted near hma, full sensitive-phage
+    breadth, endogenous native-host activity, or reusable rule-level detection criteria.
+  evidence:
+  - reference: DOI:10.1093/nar/gkab883
+    snippet: We designated this as a new candidate defence system named Hma, as it
+      encodes three proteins with predicted helicase (HmaA), m5c methyltransferase
+      (HmaB) and ATPase (HmaC) domains.
+    notes: Payne et al. define Hma as a predicted three-gene antiviral defense system
+      with HmaA, HmaB, and HmaC components.
+  - reference: DOI:10.1111/1751-7915.14524
+    snippet: we characterized a new defence system, Hma
+    notes: Liu et al. experimentally studied Hma in coral-associated Halomonas meridiana.
+  - reference: DOI:10.1111/1751-7915.14524
+    snippet: Mutation analysis revealed the nickase activity of the nuclease domain
+      (belonging to PDD/EXK superfamily) of HmaA is essential in phage defence.
+    notes: Liu et al. connect HmaA nuclease activity to anti-phage defense against
+      Escherichia phage T4.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Hma__HmaA                                        |                                                  |
+      Hma                    | Custom                  | 400    |'
+    notes: The pinned DefenseFinder HMM inventory records Hma__HmaA under the Hma
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Hma__HmaB                                        |                                                  |
+      Hma                    | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Hma__HmaB under the Hma
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Hma__HmaC                                        |                                                  |
+      Hma                    | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Hma__HmaC under the Hma
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact Hma system row.
+  attaches_to:
+  - causal_graphs#hma_locus_phage_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T03:38:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Hma system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the phage defense system parent after an ignored-and-hidden duplicate review
+    found no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v410.
+  llm_assisted: true
+- timestamp: '2026-10-02T03:38:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Hma system during initial curation and left canonical_examples
+    empty because the sources support the three-gene Hma system namespace, Hma HMM
+    profiles, and HmaA-dependent activity but not an accession-backed native microbial
+    taxon exemplar with experimentally verified endogenous HmaABC activity. No paid
+    research was used.
+  llm_assisted: true
