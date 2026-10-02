@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_gasdermin_system.yaml
+  slug: card_nlr_gasdermin_system
+session:
+  id: 2026-10-02T210503Z-claude-code-4dbff2
+  timestamp: '2026-10-02T21:05:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add CARD-NLR GasderMIN system trait
+  details: Minted traitmech:000555 for the DOI- and pinned DefenseFinder-backed CARD-NLR GasderMIN
+    phage-defense subtype after ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record for the target ID, placeholder, cohort, slug,
+    or label. The record anchors CARD_NLR_GasderMIN to the CARD-NLR parent, records the GasderMIN__bGSDM
+    rule-row evidence, leaves exact phage triggers, bGSDM proteolysis, native host breadth,
+    CARD-to-gasdermin activation, and CARD_NLR_like boundaries as knowledge gaps, leaves canonical
+    examples empty pending accession-backed native-host evidence, and reserves METPO:1050900
+    in proposals/metpo_traitmech_v432 for upstream replacement.

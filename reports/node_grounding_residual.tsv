@@ -1275,6 +1275,8 @@ caprel toxsas activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system
 trna pyrophosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 translation blockade	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 card-nlr endonuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_endonuclease_system.yaml
+card-nlr gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_gasdermin_system.yaml
+card-like gasdermin antiphage defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_gasdermin_system.yaml
 card-nlr phospho locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_phospho_system.yaml
 card-nlr subtilase locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_subtilase_system.yaml
 card-nlr locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_system.yaml

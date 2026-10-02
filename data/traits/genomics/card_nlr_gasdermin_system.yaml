@@ -1,0 +1,206 @@
+identifier: traitmech:000555
+label: CARD-NLR GasderMIN system
+definition: A CARD-NLR system in which an organism possesses a genome-encoded DefenseFinder
+  CARD_NLR_GasderMIN subtype locus represented by the CARD_NLR_GasderMIN rule row
+  requiring the GasderMIN__bGSDM profile.
+definition_source: DOI:10.1101/2023.05.28.542683
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000337
+synonyms:
+- synonym_text: CARD_NLR_GasderMIN
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: GasderMIN__bGSDM
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: CARD_NLR__CARD_Protease
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: CARD_NLR__NLR_new
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: CARD_NLR__Trypsin
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: Here we show that CARD-like domains are present in defense systems that
+    protect bacteria against phage.
+  notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage defense
+    systems.
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: The bacterial CARD is essential for protease-mediated activation of certain
+    bacterial gasdermins, which promote cell death once phage infection is recognized.
+  notes: Wein et al. support bacterial CARD-dependent activation of phage-triggered
+    gasdermin cell-death effectors.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+    anti-phage defense in bacterial gasdermin systems | '
+  notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
+    to the Wein et al. CARD-like-domain anti-phage defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GasderMIN__bGSDM                                 | GasderMIN__bGSDM___bGSDM                         |
+    GasderMIN              | Custom                  | 50     |'
+  notes: The pinned DefenseFinder HMM inventory records the GasderMIN__bGSDM profile
+    reused as mandatory by the CARD_NLR_GasderMIN rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+    \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,\
+    \ CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"
+  notes: The pinned DefenseFinder rules table models CARD_NLR_GasderMIN as a CARD_NLR
+    subsystem requiring GasderMIN__bGSDM with CARD_Protease, NLR_new, and Trypsin
+    accessory profiles.
+causal_graphs:
+- graph_id: card_nlr_gasdermin_locus_subtype_defense
+  title: CARD-NLR GasderMIN loci mark a CARD-NLR antiphage subtype
+  description: Conservative subtype-level sketch linking a DefenseFinder CARD_NLR_GasderMIN
+    locus to CARD-like gasdermin anti-phage defense and CARD-NLR GasderMIN system
+    possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the CARD_NLR_GasderMIN subtype at DefenseFinder
+    rule-row level without asserting the exact phage trigger, native host breadth,
+    CARD-to-gasdermin activation sequence, bGSDM cleavage route, or whether every
+    DefenseFinder CARD_NLR_GasderMIN prediction is a complete experimentally active
+    locus.
+  nodes:
+  - node_id: card_nlr_gasdermin_locus
+    label: CARD-NLR GasderMIN locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder CARD_NLR_GasderMIN subtype locus represented by the
+      GasderMIN__bGSDM mandatory profile and generic CARD_NLR accessory profiles.
+  - node_id: card_like_gasdermin_antiphage_defense
+    label: CARD-like gasdermin antiphage defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Anti-phage defense mediated by bacterial CARD-like activation of
+      a gasdermin cell-death effector.
+  - node_id: card_nlr_gasdermin_system_trait
+    label: CARD-NLR GasderMIN system
+    node_type: TRAIT
+    grounding: traitmech:000555
+    description: Possession of a genome-encoded CARD-NLR GasderMIN phage-defense system.
+  - node_id: card_nlr_system_trait
+    label: CARD-NLR system
+    node_type: TRAIT
+    grounding: traitmech:000337
+    description: Possession of a genome-encoded CARD-NLR phage-defense system.
+  edges:
+  - subject: card_nlr_gasdermin_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: card_like_gasdermin_antiphage_defense
+    description: CARD_NLR_GasderMIN loci are represented in DefenseFinder by a GasderMIN__bGSDM
+      mandatory profile plus CARD_NLR accessory profiles.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GasderMIN__bGSDM                                 | GasderMIN__bGSDM___bGSDM                         |
+        GasderMIN              | Custom                  | 50     |'
+      notes: The pinned DefenseFinder HMM inventory records the GasderMIN__bGSDM profile
+        reused as mandatory by the CARD_NLR_GasderMIN rule row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+        \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,\
+        \ CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"
+      notes: The pinned DefenseFinder rules table models CARD_NLR_GasderMIN as a CARD_NLR
+        subsystem requiring GasderMIN__bGSDM with CARD_Protease, NLR_new, and Trypsin
+        accessory profiles.
+  - subject: card_like_gasdermin_antiphage_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: card_nlr_gasdermin_system_trait
+    description: The first-pass CARD-NLR GasderMIN system trait is realized by a DefenseFinder
+      CARD_NLR_GasderMIN subtype locus.
+    evidence:
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: Here we show that CARD-like domains are present in defense systems
+        that protect bacteria against phage.
+      notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage
+        defense systems.
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: The bacterial CARD is essential for protease-mediated activation of
+        certain bacterial gasdermins, which promote cell death once phage infection
+        is recognized.
+      notes: Wein et al. support bacterial CARD-dependent activation of phage-triggered
+        gasdermin cell-death effectors.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin"
+      notes: The pinned DefenseFinder rules table models CARD_NLR_GasderMIN as a CARD_NLR
+        subsystem requiring GasderMIN__bGSDM with CARD_Protease, NLR_new, and Trypsin
+        accessory profiles.
+  - subject: card_nlr_gasdermin_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: card_nlr_system_trait
+    description: CARD-NLR GasderMIN system possession is a CARD-NLR-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+        anti-phage defense in bacterial gasdermin systems | '
+      notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
+        to the Wein et al. CARD-like-domain anti-phage defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM"
+      notes: The pinned DefenseFinder rules table places the CARD_NLR_GasderMIN subsystem
+        under the CARD_NLR system key and requires GasderMIN__bGSDM.
+discussions:
+- discussion_id: card-nlr-gasdermin-activity-gap
+  prompt: Resolve the CARD_NLR_GasderMIN phage triggers, native hosts, gasdermin proteolysis
+    route, CARD-to-gasdermin activation sequence, and profile-to-activity criteria
+    before minting protease, trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Wein et al. support CARD-like anti-phage gasdermin defense, the pinned
+    DefenseFinder HMM inventory supports GasderMIN__bGSDM as a bGSDM profile, and
+    the pinned DefenseFinder rules table supports CARD_NLR_GasderMIN as a rule-row
+    subtype requiring GasderMIN__bGSDM. This first-pass record leaves exact phage
+    triggers, native hosts, CARD-to-gasdermin activation, bGSDM proteolysis route,
+    and profile-to-activity criteria unresolved.
+  evidence:
+  - reference: https://europepmc.org/article/PPR/PPR668921
+    snippet: The bacterial CARD is essential for protease-mediated activation of certain
+      bacterial gasdermins, which promote cell death once phage infection is recognized.
+    notes: Wein et al. support bacterial CARD-dependent activation of phage-triggered
+      gasdermin cell-death effectors.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| GasderMIN__bGSDM                                 | GasderMIN__bGSDM___bGSDM                         |
+      GasderMIN              | Custom                  | 50     |'
+    notes: The pinned DefenseFinder HMM inventory records the GasderMIN__bGSDM profile
+      reused as mandatory by the CARD_NLR_GasderMIN rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+      \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+      \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,\
+      \ CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"
+    notes: The pinned DefenseFinder rules table models CARD_NLR_GasderMIN as a CARD_NLR
+      subsystem requiring GasderMIN__bGSDM with CARD_Protease, NLR_new, and Trypsin
+      accessory profiles.
+  attaches_to:
+  - causal_graphs#card_nlr_gasdermin_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T21:05:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted CARD-NLR GasderMIN system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the CARD-NLR system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, or
+    human label; existing CARD_NLR_GasderMIN mentions were scoped to CARD-NLR parent
+    or GasderMIN evidence, not an exact child TraitRecord, and the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v432.
+  llm_assisted: true
+- timestamp: '2026-10-02T21:05:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed CARD-NLR GasderMIN system during initial curation and left canonical_examples
+    empty because Wein et al. and the pinned DefenseFinder tables support CARD-like
+    anti-phage gasdermin defense and the CARD_NLR_GasderMIN rule row but not an accession-backed
+    native microbial taxon exemplar tied to CARD_NLR_GasderMIN profiles and experimentally
+    verified endogenous activity. No paid research was used.
+  llm_assisted: true
