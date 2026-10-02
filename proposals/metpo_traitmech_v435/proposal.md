@@ -51,6 +51,11 @@ proteins, individual DefenseFinder HMM or rule profile rows, exact viral DNA
 triggers, exact FMO expansion or substrates, native host breadth, cell-death
 outputs, and other phage-defense systems.
 
+The first-pass local record follows the pinned `Lamassu-FMO` rule row while
+tracking the relationship between its Cap4/Lipase-scoped LmuB/LmuC profiles and
+the FMO-scoped `Lamassu-Fam__LmuB_SMC_FMO` /
+`Lamassu-Fam__LmuC_acc_FMO` HMM rows as an open curation question.
+
 `traitmech:000558` is a direct local child of `traitmech:000232` Lamassu
 system. This proposal uses `METPO:1018600`, the v109 placeholder for
 `traitmech:000232`.
@@ -61,7 +66,9 @@ No exact external mapping is proposed. Individual LmuA, LmuB, and LmuC
 proteins, SMC-family ATPases, putative FMO-like molecular activities, LmuABC
 complexes, dsDNA-end binding, other Lamassu-Fam subtypes, phage triggers, and
 DefenseFinder HMM or rule rows are shifted from this organism-level GENOMICS
-trait.
+trait. The LmuB/LmuC rows listed in the pinned `Lamassu-FMO` rule are not
+carried as related synonyms because the same HMM inventory also carries
+FMO-scoped LmuB/LmuC model rows.
 
 ## Artifacts
 

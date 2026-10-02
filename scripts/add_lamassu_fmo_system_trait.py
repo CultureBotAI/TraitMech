@@ -82,6 +82,16 @@ LMUC_HMM_ROW = (
     " Lamassu-Fam__LmuC_acc_Lipase                     |"
     " Lamassu-Fam            | Custom                  | 20     |"
 )
+LMUB_FMO_HMM_ROW = (
+    "| Lamassu-Fam__LmuB_SMC_FMO                        |"
+    " Lamassu-Fam__LmuB_SMC_FMO                        |"
+    " Lamassu-Fam            | Custom                  | 20     |"
+)
+LMUC_FMO_HMM_ROW = (
+    "| Lamassu-Fam__LmuC_acc_FMO                        |"
+    " Lamassu-Fam__LmuC_acc_FMO                        |"
+    " Lamassu-Fam            | Custom                  | 20     |"
+)
 
 
 def lamassu_diversity_evidence() -> dict[str, str]:
@@ -126,8 +136,9 @@ def lmub_hmm_evidence() -> dict[str, str]:
         "snippet": LMUB_HMM_ROW,
         "notes": (
             "The pinned DefenseFinder HMM inventory records the "
-            "Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II custom profile listed "
-            "as mandatory by the Lamassu-FMO rule row."
+            "Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II custom profile, which "
+            "the Lamassu-FMO rule row lists as mandatory despite the "
+            "HMM inventory also carrying an FMO-scoped LmuB SMC profile."
         ),
     }
 
@@ -138,8 +149,33 @@ def lmuc_hmm_evidence() -> dict[str, str]:
         "snippet": LMUC_HMM_ROW,
         "notes": (
             "The pinned DefenseFinder HMM inventory records the "
-            "Lamassu-Fam__LmuC_acc_Lipase custom profile listed as "
-            "accessory by the Lamassu-FMO rule row."
+            "Lamassu-Fam__LmuC_acc_Lipase custom profile, which the "
+            "Lamassu-FMO rule row lists as accessory despite the HMM "
+            "inventory also carrying an FMO-scoped LmuC accessory profile."
+        ),
+    }
+
+
+def lmub_fmo_hmm_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": LMUB_FMO_HMM_ROW,
+        "notes": (
+            "The pinned DefenseFinder HMM inventory records a "
+            "Lamassu-Fam__LmuB_SMC_FMO custom profile that is not the "
+            "LmuB SMC profile named by the pinned Lamassu-FMO rule row."
+        ),
+    }
+
+
+def lmuc_fmo_hmm_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": LMUC_FMO_HMM_ROW,
+        "notes": (
+            "The pinned DefenseFinder HMM inventory records a "
+            "Lamassu-Fam__LmuC_acc_FMO custom profile that is not the "
+            "LmuC accessory profile named by the pinned Lamassu-FMO rule row."
         ),
     }
 
@@ -207,16 +243,6 @@ RECORD: dict[str, Any] = {
             "synonym_type": "RELATED_SYNONYM",
             "source": DEFENSEFINDER_HMMS,
         },
-        {
-            "synonym_text": "Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II",
-            "synonym_type": "RELATED_SYNONYM",
-            "source": DEFENSEFINDER_HMMS,
-        },
-        {
-            "synonym_text": "Lamassu-Fam__LmuC_acc_Lipase",
-            "synonym_type": "RELATED_SYNONYM",
-            "source": DEFENSEFINDER_HMMS,
-        },
     ],
     "evidence": [
         lamassu_diversity_evidence(),
@@ -224,46 +250,32 @@ RECORD: dict[str, Any] = {
         lmua_hmm_evidence(),
         lmub_hmm_evidence(),
         lmuc_hmm_evidence(),
+        lmub_fmo_hmm_evidence(),
+        lmuc_fmo_hmm_evidence(),
         rules_evidence(),
     ],
     "causal_graphs": [
         {
             "graph_id": "lamassu_fmo_locus_subtype_defense",
-            "title": "Lamassu-FMO loci mark a Lamassu antiphage subtype",
+            "title": "Lamassu-FMO is a DefenseFinder Lamassu subtype",
             "description": (
-                "Conservative subtype-level sketch linking a DefenseFinder "
-                "Lamassu-FMO locus to Lamassu antiphage activity and "
-                "Lamassu-FMO system possession."
+                "Conservative subtype-level classification linking the "
+                "DefenseFinder Lamassu-FMO rule-row definition to Lamassu-FMO "
+                "system possession and its Lamassu parent."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
-                "The graph captures the Lamassu-FMO subtype at DefenseFinder "
-                "rule-row level without expanding the FMO profile name or "
-                "asserting exact phage-triggered substrate chemistry, "
-                "viral-DNA trigger, LmuC requirement, native host breadth, "
-                "cell-death output, or whether every DefenseFinder "
-                "Lamassu-FMO prediction is a complete experimentally active locus."
+                "The graph captures Lamassu-FMO as a DefenseFinder rule-row "
+                "subtype of Lamassu system possession without asserting a "
+                "Lamassu-FMO-specific antiphage process, expanding the FMO "
+                "profile name, selecting between the rule-row LmuB/LmuC "
+                "profiles and the FMO-scoped HMM rows, or resolving exact "
+                "phage-triggered substrate chemistry, viral-DNA trigger, "
+                "LmuC requirement, native host breadth, cell-death output, or "
+                "whether every DefenseFinder Lamassu-FMO prediction is a "
+                "complete experimentally active locus."
             ),
             "nodes": [
-                {
-                    "node_id": "lamassu_fmo_locus",
-                    "label": "Lamassu-FMO locus",
-                    "node_type": "GENETIC_ELEMENT",
-                    "description": (
-                        "A DefenseFinder Lamassu-FMO subtype locus "
-                        "represented by LmuA FMO and LmuB SMC mandatory "
-                        "profiles."
-                    ),
-                },
-                {
-                    "node_id": "lamassu_subtype_antiphage_activity",
-                    "label": "Lamassu subtype antiphage activity",
-                    "node_type": "BIOLOGICAL_PROCESS",
-                    "description": (
-                        "Antiphage activity of a Lamassu-Fam subtype locus "
-                        "with a specific LmuA effector profile."
-                    ),
-                },
                 {
                     "node_id": "lamassu_fmo_system_trait",
                     "label": "Lamassu-FMO system",
@@ -286,37 +298,6 @@ RECORD: dict[str, Any] = {
             ],
             "edges": [
                 {
-                    "subject": "lamassu_fmo_locus",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "lamassu_subtype_antiphage_activity",
-                    "description": (
-                        "Lamassu-FMO loci are modeled in DefenseFinder by "
-                        "LmuA FMO and LmuB SMC mandatory profiles plus an "
-                        "LmuC accessory profile."
-                    ),
-                    "evidence": [
-                        lmua_hmm_evidence(),
-                        lmub_hmm_evidence(),
-                        lmuc_hmm_evidence(),
-                        rules_evidence(),
-                    ],
-                },
-                {
-                    "subject": "lamassu_subtype_antiphage_activity",
-                    "predicate": "confers",
-                    "predicate_id": "METPO:2007700",
-                    "object": "lamassu_fmo_system_trait",
-                    "description": (
-                        "The first-pass Lamassu-FMO system trait is realized "
-                        "by a DefenseFinder Lamassu-FMO subtype locus."
-                    ),
-                    "evidence": [
-                        lamassu_diversity_evidence(),
-                        rules_profile_evidence(),
-                    ],
-                },
-                {
                     "subject": "lamassu_fmo_system_trait",
                     "predicate": "is a",
                     "predicate_id": "rdfs:subClassOf",
@@ -337,9 +318,9 @@ RECORD: dict[str, Any] = {
             "discussion_id": "lamassu-fmo-activity-gap",
             "prompt": (
                 "Resolve Lamassu-FMO phage triggers, native hosts, FMO "
-                "effector meaning, LmuC usage, and profile-to-activity "
-                "criteria before minting enzyme, trigger, or component "
-                "children."
+                "effector meaning, LmuB/LmuC model rows, LmuC usage, and "
+                "profile-to-activity criteria before minting enzyme, trigger, "
+                "or component children."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -350,13 +331,19 @@ RECORD: dict[str, Any] = {
                 "Lamassu-FMO as a Lamassu-Fam subtype whose rule row "
                 "requires Lamassu-Fam__LmuA_effector_FMO and "
                 "Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass "
-                "record leaves exact FMO expansion and substrate chemistry, "
-                "LmuC requirement, native hosts, phage triggers, cell-death "
-                "output, and profile-to-activity criteria unresolved."
+                "record follows the rule row but leaves the relationship "
+                "between its LmuB/LmuC Cap4-nuclease/Lipase profile names and "
+                "the FMO-scoped Lamassu-Fam__LmuB_SMC_FMO and "
+                "Lamassu-Fam__LmuC_acc_FMO HMM rows unresolved, along with "
+                "exact FMO expansion and substrate chemistry, LmuC "
+                "requirement, native hosts, phage triggers, cell-death "
+                "output, and profile-to-activity criteria."
             ),
             "evidence": [
                 lamassu_diversity_evidence(),
                 lmua_hmm_evidence(),
+                lmub_fmo_hmm_evidence(),
+                lmuc_fmo_hmm_evidence(),
                 rules_evidence(),
             ],
             "attaches_to": [
@@ -393,6 +380,39 @@ UPDATED_LAMASSU_DISCUSSION_RATIONALE = (
     "viral-DNA triggers, exact LmuA effector substrates, FMO acronym "
     "expansion, and cell-death outputs across Lamassu loci remain "
     "unresolved."
+)
+
+FINAL_LAMASSU_DISCUSSION_RATIONALE = (
+    "Haudiquet et al. support a structurally characterized Vibrio cholerae "
+    "Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 "
+    "nuclease activation, and the pinned DefenseFinder tables model "
+    "Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, and other "
+    "Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, "
+    "Lamassu-Cap4 nuclease, and Lamassu-FMO now capture three "
+    "DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, "
+    "LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, "
+    "viral-DNA triggers, exact LmuA effector substrates, FMO acronym "
+    "expansion, the Lamassu-FMO rule row's relationship to FMO-scoped "
+    "LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci "
+    "remain unresolved."
+)
+
+OLD_PARENT_EVENT_CHANGES = (
+    "Documented Lamassu-FMO as split out in the open Lamassu "
+    "subtype-effector discussion after minting traitmech:000558 "
+    "for the DefenseFinder-backed Lamassu-FMO child; remaining "
+    "Lamassu-Fam subtypes and finer Lamassu activation mechanisms "
+    "remain open."
+)
+
+PARENT_EVENT_CHANGES = (
+    "Documented Lamassu-FMO as split out in the open Lamassu "
+    "subtype-effector discussion after minting traitmech:000558 "
+    "for the DefenseFinder-backed Lamassu-FMO child; the first-pass "
+    "record follows the pinned rule row while tracking its "
+    "non-FMO-specific LmuB/LmuC profile names as unresolved; remaining "
+    "Lamassu-Fam subtypes and finer Lamassu activation mechanisms "
+    "remain open."
 )
 
 
@@ -447,23 +467,39 @@ def build_lamassu_parent() -> dict[str, Any]:
     )
     assert discussion["kind"] == "KNOWLEDGE_GAP"
     assert discussion["status"] == "OPEN"
-    assert discussion["rationale"] == OLD_LAMASSU_DISCUSSION_RATIONALE
-    discussion["rationale"] = UPDATED_LAMASSU_DISCUSSION_RATIONALE
+    if discussion["rationale"] in {
+        OLD_LAMASSU_DISCUSSION_RATIONALE,
+        UPDATED_LAMASSU_DISCUSSION_RATIONALE,
+    }:
+        discussion["rationale"] = FINAL_LAMASSU_DISCUSSION_RATIONALE
+    elif discussion["rationale"] != FINAL_LAMASSU_DISCUSSION_RATIONALE:
+        raise SystemExit("unexpected Lamassu subtype discussion rationale")
 
-    record_curation_event(
-        record,
-        curator=CURATOR,
-        action="TRACK_NARROWER_RECORD",
-        changes=(
-            "Documented Lamassu-FMO as split out in the open Lamassu "
-            "subtype-effector discussion after minting traitmech:000558 "
-            "for the DefenseFinder-backed Lamassu-FMO child; remaining "
-            "Lamassu-Fam subtypes and finer Lamassu activation mechanisms "
-            "remain open."
+    parent_event = next(
+        (
+            event
+            for event in record.get("curation_history", [])
+            if event.get("action") == "TRACK_NARROWER_RECORD"
+            and event.get("timestamp") == PARENT_TIMESTAMP
         ),
-        llm_assisted=True,
-        timestamp=PARENT_TIMESTAMP,
+        None,
     )
+    if parent_event is not None:
+        if parent_event.get("changes") not in {
+            OLD_PARENT_EVENT_CHANGES,
+            PARENT_EVENT_CHANGES,
+        }:
+            raise SystemExit("unexpected Lamassu-FMO parent curation event")
+        parent_event["changes"] = PARENT_EVENT_CHANGES
+    else:
+        record_curation_event(
+            record,
+            curator=CURATOR,
+            action="TRACK_NARROWER_RECORD",
+            changes=PARENT_EVENT_CHANGES,
+            llm_assisted=True,
+            timestamp=PARENT_TIMESTAMP,
+        )
     return record
 
 

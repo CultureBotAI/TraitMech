@@ -40,16 +40,16 @@
 
 
     <div class="card causal-graph-card">
-      <h2>Lamassu-FMO loci mark a Lamassu antiphage subtype</h2>
-      <p class="meta">Conservative subtype-level sketch linking a DefenseFinder Lamassu-FMO locus to Lamassu antiphage activity and Lamassu-FMO system possession.</p>
+      <h2>Lamassu-FMO is a DefenseFinder Lamassu subtype</h2>
+      <p class="meta">Conservative subtype-level classification linking the DefenseFinder Lamassu-FMO rule-row definition to Lamassu-FMO system possession and its Lamassu parent.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the Lamassu-FMO subtype at DefenseFinder rule-row level without expanding the FMO profile name or asserting exact phage-triggered substrate chemistry, viral-DNA trigger, LmuC requirement, native host breadth, cell-death output, or whether every DefenseFinder Lamassu-FMO prediction is a complete experimentally active locus.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Lamassu-FMO as a DefenseFinder rule-row subtype of Lamassu system possession without asserting a Lamassu-FMO-specific antiphage process, expanding the FMO profile name, selecting between the rule-row LmuB/LmuC profiles and the FMO-scoped HMM rows, or resolving exact phage-triggered substrate chemistry, viral-DNA trigger, LmuC requirement, native host breadth, cell-death output, or whether every DefenseFinder Lamassu-FMO prediction is a complete experimentally active locus.</p>
 
 
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Lamassu-FMO loci mark a Lamassu antiphage subtype</title>
+          <title>Lamassu-FMO is a DefenseFinder Lamassu subtype</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for Lamassu-FMO system.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -60,64 +60,6 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Lamassu-FMO locus</strong>
-            <span class="edge-predicate">contributes to</span>
-            <strong>Lamassu subtype antiphage activity</strong>
-            <code>RO:0002326</code>
-            <p>Lamassu-FMO loci are modeled in DefenseFinder by LmuA FMO and LmuB SMC mandatory profiles plus an LmuC accessory profile.</p>
-            <ul>
-
-              <li>
-                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
-                <span class="evidence-snippet">| Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam            | Custom                  | 20     |</span>
-                <span class="meta">The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_FMO custom profile listed as mandatory by the Lamassu-FMO rule row.</span>
-              </li>
-
-              <li>
-                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
-                <span class="evidence-snippet">| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam            | Custom                  | 20     |</span>
-                <span class="meta">The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II custom profile listed as mandatory by the Lamassu-FMO rule row.</span>
-              </li>
-
-              <li>
-                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
-                <span class="evidence-snippet">| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam            | Custom                  | 20     |</span>
-                <span class="meta">The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase custom profile listed as accessory by the Lamassu-FMO rule row.</span>
-              </li>
-
-              <li>
-                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
-                <span class="evidence-snippet">Lamassu-Fam	Lamassu-FMO	2	2	Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II	Lamassu-Fam__LmuC_acc_Lipase	Lamassu-Fam__LmuA_effector_Amidase, Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical	</span>
-                <span class="meta">The pinned DefenseFinder rules table models Lamassu-FMO as a Lamassu-Fam subsystem requiring Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II, with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-2">
-            <strong>Lamassu subtype antiphage activity</strong>
-            <span class="edge-predicate">confers</span>
-            <strong>Lamassu-FMO system</strong>
-            <code>METPO:2007700</code>
-            <p>The first-pass Lamassu-FMO system trait is realized by a DefenseFinder Lamassu-FMO subtype locus.</p>
-            <ul>
-
-              <li>
-                <code>DOI:10.1073/pnas.2519643122</code>
-                <span class="evidence-snippet">a bacterial immune system family featuring diverse effectors but a core conserved SMC-like sensor</span>
-                <span class="meta">Haudiquet et al. support placing Lamassu subtypes under a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor.</span>
-              </li>
-
-              <li>
-                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
-                <span class="evidence-snippet">Lamassu-FMO	2	2	Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II	Lamassu-Fam__LmuC_acc_Lipase</span>
-                <span class="meta">The pinned DefenseFinder rules table models Lamassu-FMO as requiring LmuA FMO and LmuB SMC profiles with LmuC as an accessory profile.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-3">
             <strong>Lamassu-FMO system</strong>
             <span class="edge-predicate">is a</span>
             <strong>Lamassu system</strong>
@@ -179,16 +121,12 @@
 
 
     <div class="card">
-      <h2>Synonyms (4)</h2>
+      <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
         <li>Lamassu-FMO <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</span></li>
 
         <li>Lamassu-Fam__LmuA_effector_FMO <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
-
-        <li>Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
-
-        <li>Lamassu-Fam__LmuC_acc_Lipase <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
 
       </ul>
     </div>
@@ -222,7 +160,7 @@
 
 
       <div class="discussion" id="lamassu-fmo-activity-gap">
-        <p class="discussion-prompt">Resolve Lamassu-FMO phage triggers, native hosts, FMO effector meaning, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.</p>
+        <p class="discussion-prompt">Resolve Lamassu-FMO phage triggers, native hosts, FMO effector meaning, LmuB/LmuC model rows, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -237,7 +175,7 @@
         </p>
 
 
-        <p>Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-FMO as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record leaves exact FMO expansion and substrate chemistry, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria unresolved.</p>
+        <p>Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-FMO as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record follows the rule row but leaves the relationship between its LmuB/LmuC Cap4-nuclease/Lipase profile names and the FMO-scoped Lamassu-Fam__LmuB_SMC_FMO and Lamassu-Fam__LmuC_acc_FMO HMM rows unresolved, along with exact FMO expansion and substrate chemistry, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria.</p>
 
 
 
@@ -258,6 +196,22 @@
             <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
 
             <blockquote>| Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam            | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__LmuB_SMC_FMO                        | Lamassu-Fam__LmuB_SMC_FMO                        | Lamassu-Fam            | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Lamassu-Fam__LmuC_acc_FMO                        | Lamassu-Fam__LmuC_acc_FMO                        | Lamassu-Fam            | Custom                  | 20     |</blockquote>
 
           </li>
 
@@ -655,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Lamassu-FMO locus to Lamassu antiphage activity and Lamassu-FMO system possession.", "edges": [{"description": "Lamassu-FMO loci are modeled in DefenseFinder by LmuA FMO and LmuB SMC mandatory profiles plus an LmuC accessory profile.", "evidence": [{"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_FMO custom profile listed as mandatory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II custom profile listed as mandatory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase custom profile listed as accessory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Lamassu-FMO as a Lamassu-Fam subsystem requiring Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II, with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2\tLamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase, Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lamassu_fmo_locus", "target": "lamassu_subtype_antiphage_activity"}, {"description": "The first-pass Lamassu-FMO system trait is realized by a DefenseFinder Lamassu-FMO subtype locus.", "evidence": [{"notes": "Haudiquet et al. support placing Lamassu subtypes under a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor.", "reference": "DOI:10.1073/pnas.2519643122", "snippet": "a bacterial immune system family featuring diverse effectors but a core conserved SMC-like sensor"}, {"notes": "The pinned DefenseFinder rules table models Lamassu-FMO as requiring LmuA FMO and LmuB SMC profiles with LmuC as an accessory profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-FMO\t2\t2\tLamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lamassu_subtype_antiphage_activity", "target": "lamassu_fmo_system_trait"}, {"description": "Lamassu-FMO system possession is a Lamassu-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace to a bacterial immune-systems preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lamassu-Fam | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages | "}, {"notes": "The pinned DefenseFinder rules table places the Lamassu-FMO subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lamassu_fmo_system_trait", "target": "lamassu_system_trait"}], "evidence_rows": [{"description": "Lamassu-FMO loci are modeled in DefenseFinder by LmuA FMO and LmuB SMC mandatory profiles plus an LmuC accessory profile.", "edge_id": "edge-1", "evidence": [{"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_FMO custom profile listed as mandatory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam__LmuA_effector_FMO                   | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II custom profile listed as mandatory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase custom profile listed as accessory by the Lamassu-FMO rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Lamassu-FMO as a Lamassu-Fam subsystem requiring Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II, with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2\tLamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase, Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Lamassu-FMO locus", "target": "Lamassu subtype antiphage activity"}, {"description": "The first-pass Lamassu-FMO system trait is realized by a DefenseFinder Lamassu-FMO subtype locus.", "edge_id": "edge-2", "evidence": [{"notes": "Haudiquet et al. support placing Lamassu subtypes under a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor.", "reference": "DOI:10.1073/pnas.2519643122", "snippet": "a bacterial immune system family featuring diverse effectors but a core conserved SMC-like sensor"}, {"notes": "The pinned DefenseFinder rules table models Lamassu-FMO as requiring LmuA FMO and LmuB SMC profiles with LmuC as an accessory profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-FMO\t2\t2\tLamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Lamassu subtype antiphage activity", "target": "Lamassu-FMO system"}, {"description": "Lamassu-FMO system possession is a Lamassu-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace to a bacterial immune-systems preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lamassu-Fam | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages | "}, {"notes": "The pinned DefenseFinder rules table places the Lamassu-FMO subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Lamassu-FMO system", "target": "Lamassu system"}], "graph_id": "lamassu_fmo_locus_subtype_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A DefenseFinder Lamassu-FMO subtype locus represented by LmuA FMO and LmuB SMC mandatory profiles.", "grounding": null, "id": "lamassu_fmo_locus", "is_orphan": false, "label": "Lamassu-FMO locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Lamassu-FMO phage-defense system.", "grounding": "traitmech:000558", "id": "lamassu_fmo_system_trait", "is_orphan": false, "label": "Lamassu-FMO system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Antiphage activity of a Lamassu-Fam subtype locus with a specific LmuA effector profile.", "grounding": null, "id": "lamassu_subtype_antiphage_activity", "is_orphan": false, "label": "Lamassu subtype antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Lamassu phage-defense system.", "grounding": "traitmech:000232", "id": "lamassu_system_trait", "is_orphan": false, "label": "Lamassu system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures the Lamassu-FMO subtype at DefenseFinder rule-row level without expanding the FMO profile name or asserting exact phage-triggered substrate chemistry, viral-DNA trigger, LmuC requirement, native host breadth, cell-death output, or whether every DefenseFinder Lamassu-FMO prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Lamassu-FMO loci mark a Lamassu antiphage subtype"}];
+  var graphs = [{"description": "Conservative subtype-level classification linking the DefenseFinder Lamassu-FMO rule-row definition to Lamassu-FMO system possession and its Lamassu parent.", "edges": [{"description": "Lamassu-FMO system possession is a Lamassu-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace to a bacterial immune-systems preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lamassu-Fam | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages | "}, {"notes": "The pinned DefenseFinder rules table places the Lamassu-FMO subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2"}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lamassu_fmo_system_trait", "target": "lamassu_system_trait"}], "evidence_rows": [{"description": "Lamassu-FMO system possession is a Lamassu-system trait.", "edge_id": "edge-1", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace to a bacterial immune-systems preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lamassu-Fam | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages | "}, {"notes": "The pinned DefenseFinder rules table places the Lamassu-FMO subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Lamassu-Fam\tLamassu-FMO\t2\t2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Lamassu-FMO system", "target": "Lamassu system"}], "graph_id": "lamassu_fmo_locus_subtype_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Lamassu-FMO phage-defense system.", "grounding": "traitmech:000558", "id": "lamassu_fmo_system_trait", "is_orphan": false, "label": "Lamassu-FMO system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Lamassu phage-defense system.", "grounding": "traitmech:000232", "id": "lamassu_system_trait", "is_orphan": false, "label": "Lamassu system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures Lamassu-FMO as a DefenseFinder rule-row subtype of Lamassu system possession without asserting a Lamassu-FMO-specific antiphage process, expanding the FMO profile name, selecting between the rule-row LmuB/LmuC profiles and the FMO-scoped HMM rows, or resolving exact phage-triggered substrate chemistry, viral-DNA trigger, LmuC requirement, native host breadth, cell-death output, or whether every DefenseFinder Lamassu-FMO prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Lamassu-FMO is a DefenseFinder Lamassu subtype"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

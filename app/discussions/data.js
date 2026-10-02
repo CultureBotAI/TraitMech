@@ -4831,7 +4831,7 @@ window.searchData = [
  },
  {
   "discussion_id": "lamassu-fmo-activity-gap",
-  "prompt": "Resolve Lamassu-FMO phage triggers, native hosts, FMO effector meaning, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "prompt": "Resolve Lamassu-FMO phage triggers, native hosts, FMO effector meaning, LmuB/LmuC model rows, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -4841,11 +4841,13 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#lamassu_fmo_locus_subtype_defense"
   ],
-  "rationale": "Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-FMO as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record leaves exact FMO expansion and substrate chemistry, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria unresolved.",
+  "rationale": "Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-FMO as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_FMO and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record follows the rule row but leaves the relationship between its LmuB/LmuC Cap4-nuclease/Lipase profile names and the FMO-scoped Lamassu-Fam__LmuB_SMC_FMO and Lamassu-Fam__LmuC_acc_FMO HMM rows unresolved, along with exact FMO expansion and substrate chemistry, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria.",
   "num_experiments": 0,
-  "num_evidence": 3,
+  "num_evidence": 5,
   "evidence_refs": [
    "DOI:10.1073/pnas.2519643122",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
   ],
@@ -4862,7 +4864,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, and Lamassu-FMO now capture three DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, and cell-death outputs across Lamassu loci remain unresolved.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, and Lamassu-FMO now capture three DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

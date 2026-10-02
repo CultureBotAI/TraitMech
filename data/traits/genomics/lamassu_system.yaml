@@ -184,7 +184,8 @@ discussions:
     Lamassu-Cap4 nuclease, and Lamassu-FMO now capture three DefenseFinder rule-row
     subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining
     Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, FMO
-    acronym expansion, and cell-death outputs across Lamassu loci remain unresolved.
+    acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC
+    HMM rows, and cell-death outputs across Lamassu loci remain unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -217,6 +218,7 @@ curation_history:
   action: TRACK_NARROWER_RECORD
   changes: Documented Lamassu-FMO as split out in the open Lamassu subtype-effector
     discussion after minting traitmech:000558 for the DefenseFinder-backed Lamassu-FMO
-    child; remaining Lamassu-Fam subtypes and finer Lamassu activation mechanisms
-    remain open.
+    child; the first-pass record follows the pinned rule row while tracking its non-FMO-specific
+    LmuB/LmuC profile names as unresolved; remaining Lamassu-Fam subtypes and finer
+    Lamassu activation mechanisms remain open.
   llm_assisted: true
