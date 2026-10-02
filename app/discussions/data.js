@@ -1886,6 +1886,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dpd_system.html#dpd-restriction-mechanism-gap"
  },
  {
+  "discussion_id": "drt1-profile-activity-gap",
+  "prompt": "Resolve the DRT1 reverse-transcriptase products, direct phage trigger, host breadth, partner-feature requirements, and DRT_1__drt1a/DRT_1__drt1b profile-to-activity criteria before minting DRT1 mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DRT1 system",
+  "source_id": "traitmech:000543",
+  "source_file": "drt1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#drt1_locus_reverse_transcriptase_defense"
+  ],
+  "rationale": "Gao et al. support defense-associated reverse transcriptases as a broad antiphage-system family, and the pinned DefenseFinder HMM inventory and rules table support DRT_1 as a DRT subsystem with two mandatory profiles. This first-pass record leaves the exact DRT1 RT products, phage trigger, host breadth, partner-feature requirements, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1126/science.aba0372",
+   "DOI:10.1126/science.aba0372",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/drt1_system.html#drt1-profile-activity-gap"
+ },
+ {
   "discussion_id": "drt6-profile-activity-gap",
   "prompt": "Resolve the DRT6 reverse-transcriptase product, direct phage trigger, host breadth, partner-feature requirements, and DefenseFinder profile-to-activity criteria before minting DRT6 mechanism or component children.",
   "kind": "KNOWLEDGE_GAP",
@@ -9025,9 +9049,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 414,
- "total_knowledge_gaps": 326,
- "total_source_entries": 408,
+ "total_discussions": 415,
+ "total_knowledge_gaps": 327,
+ "total_source_entries": 409,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
