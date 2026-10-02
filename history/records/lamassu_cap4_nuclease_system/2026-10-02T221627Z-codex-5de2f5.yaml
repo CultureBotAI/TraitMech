@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_cap4_nuclease_system.yaml
+  slug: lamassu_cap4_nuclease_system
+session:
+  id: 2026-10-02T221627Z-codex-5de2f5
+  timestamp: '2026-10-02T22:16:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-Cap4 nuclease system trait
+  details: Minted traitmech:000557 for the DefenseFinder-backed Lamassu-Cap4_nuclease subtype
+    under the Lamassu system parent after ignored-and-hidden exact duplicate searches found
+    no live TraitMech, METPO, history, or prior proposal record for the local identifier,
+    METPO placeholder, proposal cohort, record slug, human label, or DefenseFinder subsystem.
+    Curated pinned DefenseFinder rule/HMM evidence, a conservative nonmechanistic subtype
+    graph, an open profile-to-activity discussion, an explicit canonical-example evidence-gap
+    event, and a same-PR METPO v434 proposal.

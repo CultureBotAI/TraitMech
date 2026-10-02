@@ -1,0 +1,221 @@
+identifier: traitmech:000557
+label: Lamassu-Cap4 nuclease system
+definition: A Lamassu system in which an organism possesses a genome-encoded DefenseFinder
+  Lamassu-Cap4_nuclease subtype locus represented by the Lamassu-Cap4_nuclease rule
+  row requiring the Lamassu-Fam__LmuA_effector_Cap4_nuclease_II and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+  profiles.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu-Cap4_nuclease
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Lamassu-Fam__LmuC_acc_Lipase
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: a bacterial immune system family featuring diverse effectors but a core
+    conserved SMC-like sensor
+  notes: Haudiquet et al. support placing Lamassu subtypes under a Lamassu family
+    with diverse LmuA effectors and a conserved SMC-like sensor.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Lamassu-Fam | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of
+    immune systems that protect bacteria from phages | '
+  notes: The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace
+    to a bacterial immune-systems preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      | Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+    custom profile listed as mandatory by the Lamassu-Cap4_nuclease rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+    custom profile listed as mandatory by the Lamassu-Cap4_nuclease rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase
+    custom profile listed as accessory by the Lamassu-Cap4_nuclease rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Lamassu-Fam\tLamassu-Cap4_nuclease\t2\t2\tLamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+    \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase,\
+    \ Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase,\
+    \ Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,\
+    \ Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical\t"
+  notes: The pinned DefenseFinder rules table models Lamassu-Cap4_nuclease as a Lamassu-Fam
+    subsystem requiring Lamassu-Fam__LmuA_effector_Cap4_nuclease_II and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II,
+    with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.
+causal_graphs:
+- graph_id: lamassu_cap4_nuclease_locus_subtype_defense
+  title: Lamassu-Cap4 nuclease loci mark a Lamassu antiphage subtype
+  description: Conservative subtype-level sketch linking a DefenseFinder Lamassu-Cap4_nuclease
+    locus to Lamassu antiphage activity and Lamassu-Cap4 nuclease system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Lamassu-Cap4_nuclease subtype at DefenseFinder
+    rule-row level without asserting exact phage-triggered substrate chemistry, viral-DNA
+    trigger, LmuC requirement, native host breadth, cell-death output, or whether
+    every DefenseFinder Lamassu-Cap4_nuclease prediction is a complete experimentally
+    active locus.
+  nodes:
+  - node_id: lamassu_cap4_nuclease_locus
+    label: Lamassu-Cap4 nuclease locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Lamassu-Cap4_nuclease subtype locus represented by
+      LmuA Cap4 nuclease and LmuB SMC mandatory profiles.
+  - node_id: lamassu_subtype_antiphage_activity
+    label: Lamassu subtype antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Antiphage activity of a Lamassu-Fam subtype locus with a specific
+      LmuA effector profile.
+  - node_id: lamassu_cap4_nuclease_system_trait
+    label: Lamassu-Cap4 nuclease system
+    node_type: TRAIT
+    grounding: traitmech:000557
+    description: Possession of a genome-encoded Lamassu-Cap4 nuclease phage-defense
+      system.
+  - node_id: lamassu_system_trait
+    label: Lamassu system
+    node_type: TRAIT
+    grounding: traitmech:000232
+    description: Possession of a genome-encoded Lamassu phage-defense system.
+  edges:
+  - subject: lamassu_cap4_nuclease_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lamassu_subtype_antiphage_activity
+    description: Lamassu-Cap4 nuclease loci are modeled in DefenseFinder by LmuA Cap4
+      nuclease and LmuB SMC mandatory profiles plus an LmuC accessory profile.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      | Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      |
+        Lamassu-Fam            | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+        custom profile listed as mandatory by the Lamassu-Cap4_nuclease rule row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           |
+        Lamassu-Fam            | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+        custom profile listed as mandatory by the Lamassu-Cap4_nuclease rule row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     |
+        Lamassu-Fam            | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase
+        custom profile listed as accessory by the Lamassu-Cap4_nuclease rule row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lamassu-Fam\tLamassu-Cap4_nuclease\t2\t2\tLamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+        \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase,\
+        \ Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase,\
+        \ Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,\
+        \ Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical\t"
+      notes: The pinned DefenseFinder rules table models Lamassu-Cap4_nuclease as
+        a Lamassu-Fam subsystem requiring Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+        and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II, with Lamassu-Fam__LmuC_acc_Lipase
+        as an accessory profile.
+  - subject: lamassu_subtype_antiphage_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lamassu_cap4_nuclease_system_trait
+    description: The first-pass Lamassu-Cap4 nuclease system trait is realized by
+      a DefenseFinder Lamassu-Cap4_nuclease subtype locus.
+    evidence:
+    - reference: DOI:10.1073/pnas.2519643122
+      snippet: a bacterial immune system family featuring diverse effectors but a
+        core conserved SMC-like sensor
+      notes: Haudiquet et al. support placing Lamassu subtypes under a Lamassu family
+        with diverse LmuA effectors and a conserved SMC-like sensor.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lamassu-Cap4_nuclease\t2\t2\tLamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+        \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase"
+      notes: The pinned DefenseFinder rules table models Lamassu-Cap4_nuclease as
+        requiring LmuA Cap4 nuclease and LmuB SMC profiles with LmuC as an accessory
+        profile.
+  - subject: lamassu_cap4_nuclease_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: lamassu_system_trait
+    description: Lamassu-Cap4 nuclease system possession is a Lamassu-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Lamassu-Fam | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal
+        of immune systems that protect bacteria from phages | '
+      notes: The pinned DefenseFinder article registry maps the Lamassu-Fam model
+        namespace to a bacterial immune-systems preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lamassu-Fam\tLamassu-Cap4_nuclease\t2\t2"
+      notes: The pinned DefenseFinder rules table places the Lamassu-Cap4_nuclease
+        subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2
+        genes required.
+discussions:
+- discussion_id: lamassu-cap4-nuclease-activity-gap
+  prompt: Resolve Lamassu-Cap4 nuclease phage triggers, native hosts, Cap4 nuclease
+    substrates, LmuC usage, and profile-to-activity criteria before minting enzyme,
+    trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Haudiquet et al. support a Lamassu family with diverse LmuA effectors
+    and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and
+    rules table support Lamassu-Cap4_nuclease as a Lamassu-Fam subtype whose rule
+    row requires Lamassu-Fam__LmuA_effector_Cap4_nuclease_II and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II.
+    This first-pass record leaves exact Cap4 nuclease substrates, LmuC requirement,
+    native hosts, phage triggers, cell-death output, profile-to-activity criteria,
+    and the relationship between the DefenseFinder _II row and the structurally characterized
+    Lamassu Vc-Cap4 branch unresolved.
+  evidence:
+  - reference: DOI:10.1073/pnas.2519643122
+    snippet: a bacterial immune system family featuring diverse effectors but a core
+      conserved SMC-like sensor
+    notes: Haudiquet et al. support placing Lamassu subtypes under a Lamassu family
+      with diverse LmuA effectors and a conserved SMC-like sensor.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      | Lamassu-Fam__LmuA_effector_Cap4_nuclease_II      |
+      Lamassu-Fam            | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+      custom profile listed as mandatory by the Lamassu-Cap4_nuclease rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Lamassu-Fam\tLamassu-Cap4_nuclease\t2\t2\tLamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+      \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase,\
+      \ Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Hydrolase, Lamassu-Fam__LmuA_effector_Lipase,\
+      \ Lamassu-Fam__LmuA_effector_Mrr, Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,\
+      \ Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical\t"
+    notes: The pinned DefenseFinder rules table models Lamassu-Cap4_nuclease as a
+      Lamassu-Fam subsystem requiring Lamassu-Fam__LmuA_effector_Cap4_nuclease_II
+      and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II, with Lamassu-Fam__LmuC_acc_Lipase
+      as an accessory profile.
+  attaches_to:
+  - causal_graphs#lamassu_cap4_nuclease_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T22:16:24Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Lamassu-Cap4 nuclease system as a DefenseFinder-backed GENOMICS
+    TraitRecord under the Lamassu system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, human
+    label, or DefenseFinder subsystem; the replacement placeholder is reserved in
+    proposals/metpo_traitmech_v434. Exact Cap4 effector profile hits were limited
+    to evidence and forbidden-profile strings on the neighboring Lamassu-Amidase record.
+  llm_assisted: true
+- timestamp: '2026-10-02T22:16:26Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Lamassu-Cap4 nuclease system during initial curation and left
+    canonical_examples empty because the pinned DefenseFinder tables support a rule-row
+    subtype but not an accession-backed native microbial taxon exemplar tied to the
+    Lamassu-Cap4_nuclease profiles and experimentally verified endogenous activity.
+    No paid research was used.
+  llm_assisted: true
