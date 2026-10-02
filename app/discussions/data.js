@@ -1812,6 +1812,29 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dionysus_system.html#dionysus-jumbo-phage-mechanism-gap"
  },
  {
+  "discussion_id": "disarm1-profile-activity-gap",
+  "prompt": "Resolve DISARM1 effector chemistry, exact native hosts, sensitive-phage breadth, shared-core component roles, and DISARM_1 profile-to-activity criteria before minting DISARM1 mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DISARM1 system",
+  "source_id": "traitmech:000548",
+  "source_file": "disarm1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#disarm1_locus_subtype_defense"
+  ],
+  "rationale": "Ofir et al. support DISARM as a broad antiphage-system family, and the pinned DefenseFinder HMM inventory and rules table support DISARM_1 as a subtype with drmD, drmMI, drmA, drmB, and drmC profiles. This first-pass record leaves exact DISARM1 effector chemistry, native host breadth, sensitive-phage breadth, shared-core component roles, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-017-0051-0",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/disarm1_system.html#disarm1-profile-activity-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -9146,9 +9169,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 419,
- "total_knowledge_gaps": 331,
- "total_source_entries": 413,
+ "total_discussions": 420,
+ "total_knowledge_gaps": 332,
+ "total_source_entries": 414,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

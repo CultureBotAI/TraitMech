@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/disarm1_system.yaml
+  slug: disarm1_system
+session:
+  id: 2026-10-02T152025Z-codex-802709
+  timestamp: '2026-10-02T15:20:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DISARM1 system TraitRecord
+  details: Minted DISARM1 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord under
+    DISARM system, left canonical_examples empty after source review, and reserved METPO:1050200
+    in proposals/metpo_traitmech_v425 for upstream replacement.

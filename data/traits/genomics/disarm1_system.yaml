@@ -1,0 +1,237 @@
+identifier: traitmech:000548
+label: DISARM1 system
+definition: A DISARM system in which an organism possesses a genome-encoded DefenseFinder
+  DISARM_1 subtype locus represented by DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,
+  DISARM__drmB, and DISARM__drmC rule profiles.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000211
+synonyms:
+- synonym_text: DISARM_1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: DISARM_1__drmD
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DISARM_1__drmMI
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DISARM__drmA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DISARM__drmB
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DISARM__drmC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41564-017-0051-0
+  snippet: Our results establish DISARM as a new defence system, providing protection
+    against diverse phages
+  notes: Ofir et al. experimentally established DISARM as a broad-spectrum phage defense
+    system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DISARM | 10\.1038/s41564-017-0051-0 | DISARM is a widespread bacterial
+    defence system with broad anti-phage activities | '
+  notes: The pinned DefenseFinder article registry maps the DISARM source key to Ofir
+    et al.'s DISARM phage-defense paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DISARM__drmA                                     | DISARM__drmA                                     |
+    DISARM                 | Custom                  | 90     |
+
+    | DISARM__drmB                                     | DISARM__drmB                                     |
+    DISARM                 | Custom                  | 90     |
+
+    | DISARM__drmC                                     | DISARM__drmC                                     |
+    DISARM                 | Custom                  | 40     |
+
+    | DISARM_1__drmD                                   | DISARM_1__drmD                                   |
+    DISARM_1               | Custom                  | 500    |
+
+    | DISARM_1__drmMI                                  | DISARM_1__drmMI                                  |
+    DISARM_1               | Custom                  | 90     |'
+  notes: The pinned DefenseFinder HMM inventory records the shared DISARM drmA, drmB,
+    and drmC profiles and the DISARM_1 drmD and drmMI profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "DISARM\tDISARM_1\t4\t4\tDISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,\
+    \ DISARM__drmB, DISARM__drmC\t\t\t"
+  notes: The pinned DefenseFinder rules table models DISARM_1 as a DISARM subsystem
+    requiring four profiles from DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA, DISARM__drmB,
+    and DISARM__drmC.
+causal_graphs:
+- graph_id: disarm1_locus_subtype_defense
+  title: DISARM1 loci support DISARM antiphage defense
+  description: Conservative system-level sketch linking a DISARM_1 locus to DISARM
+    methyltransferase-associated phage defense and DISARM1 system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DISARM1 at DefenseFinder subtype-locus level without
+    asserting the exact DISARM1 effector chemistry, native host breadth, sensitive-phage
+    breadth, whether every DefenseFinder DISARM_1 prediction is a complete experimentally
+    active locus, or how the shared DISARM drmA, drmB, and drmC profiles combine with
+    the DISARM_1 drmD and drmMI profiles.
+  nodes:
+  - node_id: disarm1_locus
+    label: DISARM1 locus
+    node_type: GENETIC_ELEMENT
+    description: A Defense Island System Associated with Restriction-Modification
+      subtype I locus represented in DefenseFinder by DISARM_1 and shared DISARM rule
+      profiles.
+  - node_id: disarm_methyltransferase_antiphage_defense
+    label: DISARM methyltransferase-associated antiphage defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Methyltransferase-associated DISARM phage defense carried by a genome-encoded
+      DISARM locus.
+  - node_id: disarm1_system_trait
+    label: DISARM1 system
+    node_type: TRAIT
+    grounding: traitmech:000548
+    description: Possession of a genome-encoded DISARM1 phage-defense system.
+  - node_id: disarm_system_trait
+    label: DISARM system
+    node_type: TRAIT
+    grounding: traitmech:000211
+    description: Possession of a genome-encoded DISARM phage-defense system.
+  edges:
+  - subject: disarm1_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: disarm_methyltransferase_antiphage_defense
+    description: DISARM1 loci are represented in DefenseFinder by shared DISARM drmA,
+      drmB, and drmC profiles plus DISARM_1-specific drmD and drmMI profiles.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DISARM__drmA                                     | DISARM__drmA                                     |
+        DISARM                 | Custom                  | 90     |
+
+        | DISARM__drmB                                     | DISARM__drmB                                     |
+        DISARM                 | Custom                  | 90     |
+
+        | DISARM__drmC                                     | DISARM__drmC                                     |
+        DISARM                 | Custom                  | 40     |
+
+        | DISARM_1__drmD                                   | DISARM_1__drmD                                   |
+        DISARM_1               | Custom                  | 500    |
+
+        | DISARM_1__drmMI                                  | DISARM_1__drmMI                                  |
+        DISARM_1               | Custom                  | 90     |'
+      notes: The pinned DefenseFinder HMM inventory records the shared DISARM drmA,
+        drmB, and drmC profiles and the DISARM_1 drmD and drmMI profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DISARM\tDISARM_1\t4\t4\tDISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,\
+        \ DISARM__drmB, DISARM__drmC\t\t\t"
+      notes: The pinned DefenseFinder rules table models DISARM_1 as a DISARM subsystem
+        requiring four profiles from DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,
+        DISARM__drmB, and DISARM__drmC.
+  - subject: disarm_methyltransferase_antiphage_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: disarm1_system_trait
+    description: The first-pass DISARM1 system trait is realized by a DefenseFinder
+      DISARM_1 subtype locus within the methyltransferase-associated DISARM family.
+    evidence:
+    - reference: DOI:10.1038/s41564-017-0051-0
+      snippet: Our results establish DISARM as a new defence system, providing protection
+        against diverse phages
+      notes: Ofir et al. experimentally established DISARM as a broad-spectrum phage
+        defense system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DISARM__drmA                                     | DISARM__drmA                                     |
+        DISARM                 | Custom                  | 90     |
+
+        | DISARM__drmB                                     | DISARM__drmB                                     |
+        DISARM                 | Custom                  | 90     |
+
+        | DISARM__drmC                                     | DISARM__drmC                                     |
+        DISARM                 | Custom                  | 40     |
+
+        | DISARM_1__drmD                                   | DISARM_1__drmD                                   |
+        DISARM_1               | Custom                  | 500    |
+
+        | DISARM_1__drmMI                                  | DISARM_1__drmMI                                  |
+        DISARM_1               | Custom                  | 90     |'
+      notes: The pinned DefenseFinder HMM inventory records the shared DISARM drmA,
+        drmB, and drmC profiles and the DISARM_1 drmD and drmMI profiles.
+  - subject: disarm1_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: disarm_system_trait
+    description: DISARM1 system possession is a DISARM-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DISARM | 10\.1038/s41564-017-0051-0 | DISARM is a widespread bacterial
+        defence system with broad anti-phage activities | '
+      notes: The pinned DefenseFinder article registry maps the DISARM source key
+        to Ofir et al.'s DISARM phage-defense paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DISARM\tDISARM_1\t4\t4\tDISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,\
+        \ DISARM__drmB, DISARM__drmC\t\t\t"
+      notes: The pinned DefenseFinder rules table models DISARM_1 as a DISARM subsystem
+        requiring four profiles from DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,
+        DISARM__drmB, and DISARM__drmC.
+discussions:
+- discussion_id: disarm1-profile-activity-gap
+  prompt: Resolve DISARM1 effector chemistry, exact native hosts, sensitive-phage
+    breadth, shared-core component roles, and DISARM_1 profile-to-activity criteria
+    before minting DISARM1 mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Ofir et al. support DISARM as a broad antiphage-system family, and the
+    pinned DefenseFinder HMM inventory and rules table support DISARM_1 as a subtype
+    with drmD, drmMI, drmA, drmB, and drmC profiles. This first-pass record leaves
+    exact DISARM1 effector chemistry, native host breadth, sensitive-phage breadth,
+    shared-core component roles, and profile-to-activity requirements unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41564-017-0051-0
+    snippet: Our results establish DISARM as a new defence system, providing protection
+      against diverse phages
+    notes: Ofir et al. experimentally established DISARM as a broad-spectrum phage
+      defense system.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DISARM__drmA                                     | DISARM__drmA                                     |
+      DISARM                 | Custom                  | 90     |
+
+      | DISARM__drmB                                     | DISARM__drmB                                     |
+      DISARM                 | Custom                  | 90     |
+
+      | DISARM__drmC                                     | DISARM__drmC                                     |
+      DISARM                 | Custom                  | 40     |
+
+      | DISARM_1__drmD                                   | DISARM_1__drmD                                   |
+      DISARM_1               | Custom                  | 500    |
+
+      | DISARM_1__drmMI                                  | DISARM_1__drmMI                                  |
+      DISARM_1               | Custom                  | 90     |'
+    notes: The pinned DefenseFinder HMM inventory records the shared DISARM drmA,
+      drmB, and drmC profiles and the DISARM_1 drmD and drmMI profiles.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "DISARM\tDISARM_1\t4\t4\tDISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,\
+      \ DISARM__drmB, DISARM__drmC\t\t\t"
+    notes: The pinned DefenseFinder rules table models DISARM_1 as a DISARM subsystem
+      requiring four profiles from DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,
+      DISARM__drmB, and DISARM__drmC.
+  attaches_to:
+  - causal_graphs#disarm1_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T15:17:43Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DISARM1 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the DISARM system parent after an ignored-and-hidden duplicate review found
+    no exact live DISARM1 TraitMech, METPO, history, or prior proposal record; the
+    replacement placeholder is reserved in proposals/metpo_traitmech_v425.
+  llm_assisted: true
+- timestamp: '2026-10-02T15:17:44Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DISARM1 system during initial curation and left canonical_examples
+    empty because Ofir et al. and the pinned DefenseFinder tables support the DISARM
+    family and the DISARM_1 model namespace but not an accession-backed native microbial
+    taxon exemplar tied to DISARM_1 profiles and experimentally verified endogenous
+    DISARM1 activity. No paid research was used.
+  llm_assisted: true
