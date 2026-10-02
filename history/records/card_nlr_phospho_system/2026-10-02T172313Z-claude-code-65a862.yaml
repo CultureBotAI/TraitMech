@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_phospho_system.yaml
+  slug: card_nlr_phospho_system
+session:
+  id: 2026-10-02T172313Z-claude-code-65a862
+  timestamp: '2026-10-02T17:23:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add CARD-NLR phospho system trait
+  details: Minted traitmech:000551 for the DOI-, Europe PMC-, and pinned DefenseFinder-backed
+    CARD-NLR phospho system under CARD-NLR system; added system-level evidence for the CARD_NLR_Phospho
+    rules row and CARD_NLR__Trypsin_Phospho HMM row, left CARD_NLR_Phospho phage triggers,
+    native hosts, phosphorylated substrate, and CARD-to-effector activation as an open knowledge
+    gap, left canonical_examples empty because the public evidence did not identify an accession-backed
+    native microbial taxon exemplar, and reserved METPO:1050500 in proposals/metpo_traitmech_v428
+    for upstream replacement.
