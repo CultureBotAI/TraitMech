@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-02T231347Z-codex-d04761
+  timestamp: '2026-10-02T23:13:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track Lamassu-FMO child
+  details: Updated the open Lamassu subtype-effector knowledge gap after splitting out the
+    DefenseFinder-backed Lamassu-FMO child as traitmech:000558. The discussion now records
+    that Lamassu-Amidase, Lamassu-Cap4 nuclease, and Lamassu-FMO are separate first-pass Lamassu
+    subtype children while the remaining Lamassu-Fam subtypes and finer activation mechanisms
+    stay unresolved.

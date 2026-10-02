@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_fmo_system.yaml
+  slug: lamassu_fmo_system
+session:
+  id: 2026-10-02T231346Z-codex-65d1a5
+  timestamp: '2026-10-02T23:13:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-FMO system trait
+  details: Minted traitmech:000558 for the DefenseFinder-backed Lamassu-FMO subtype under
+    the Lamassu system parent after ignored-and-hidden exact duplicate searches found no live
+    TraitMech, METPO, history, or prior proposal record for the local identifier, METPO placeholder,
+    proposal cohort, record slug, human label, DefenseFinder subsystem, or LmuA FMO profile
+    string. Curated pinned DefenseFinder rule/HMM evidence, a conservative nonmechanistic
+    subtype graph, an open profile-to-activity discussion, an explicit canonical-example evidence-gap
+    event, and a same-PR METPO v435 proposal.
