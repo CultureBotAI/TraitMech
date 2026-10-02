@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/avs_iv_system.yaml
+  slug: avs_iv_system
+session:
+  id: 2026-10-02T063657Z-codex-5708a0
+  timestamp: '2026-10-02T06:36:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Avs IV system trait
+  details: Minted traitmech:000537 as a DOI- and DefenseFinder-backed Avs IV phage-defense-system
+    record under AVAST system, cited Gao et al. for AVAST discovery and Avs4 phage-portal
+    recognition, cited pinned DefenseFinder article, HMM, and rules rows for the Avs_IV model
+    namespace, left canonical_examples empty due to lack of accession-backed native microbial
+    taxon evidence, and reserved METPO:1049100 in proposals/metpo_traitmech_v414 for upstream
+    replacement.
