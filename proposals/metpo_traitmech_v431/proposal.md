@@ -3,10 +3,10 @@
 ## Summary
 
 This cohort reserves `METPO:1050800` for `Zorya type I system`, a
-Zorya subtype trait represented in the pinned DefenseFinder rules table as the
-`Zorya_TypeI` subsystem with `Zorya_TypeI__ZorC`, `Zorya_TypeI__ZorD`,
-`Zorya__ZorA`, and `Zorya__ZorB` rule profiles. The local TraitMech fallback
-is `traitmech:000554`.
+Zorya subtype trait whose pinned DefenseFinder `Zorya_TypeI` rule row lists
+`Zorya_TypeI__ZorC`, `Zorya_TypeI__ZorD`, `Zorya__ZorA`, and `Zorya__ZorB`
+in its mandatory profile set with 3 mandatory matches and 3 genes required.
+The local TraitMech fallback is `traitmech:000554`.
 
 This cohort lifts one local class:
 
@@ -39,14 +39,15 @@ Subset tag: `metpo_traitmech_2026_10`.
 |---|---|---|
 | `METPO:1050800` | Zorya type I system | `METPO:1017100` Zorya system |
 
-Zorya type I system captures organism-level possession of the Zorya_TypeI
-subtype locus represented by the pinned DefenseFinder rules table as requiring
-the `Zorya_TypeI__ZorC`, `Zorya_TypeI__ZorD`, `Zorya__ZorA`, and
-`Zorya__ZorB` profiles. It excludes the broader Zorya system, individual ZorA,
-ZorB, ZorC, or ZorD proteins, the individual DefenseFinder HMM profile rows,
-exact phage triggers, native host breadth outside experimentally transferred
-loci, exact ZorC or ZorD substrates, ZorAB-to-ZorC/ZorD activation sequence,
-other Zorya subtypes, and other phage-defense systems.
+Zorya type I system captures organism-level possession of a Zorya_TypeI
+subtype locus whose pinned DefenseFinder rule row lists
+`Zorya_TypeI__ZorC`, `Zorya_TypeI__ZorD`, `Zorya__ZorA`, and `Zorya__ZorB`
+in its mandatory profile set with 3 mandatory matches and 3 genes required.
+It excludes the broader Zorya system, individual ZorA, ZorB, ZorC, or ZorD
+proteins, the individual DefenseFinder HMM profile rows, exact phage triggers,
+native host breadth outside experimentally transferred loci, exact ZorC or
+ZorD substrates, ZorAB-to-ZorC/ZorD activation sequence, other Zorya subtypes,
+and other phage-defense systems.
 
 `traitmech:000554` is a direct local child of `traitmech:000217` Zorya system.
 This proposal uses `METPO:1017100`, the v94 placeholder for

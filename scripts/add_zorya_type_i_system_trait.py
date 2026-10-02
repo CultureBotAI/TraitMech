@@ -49,10 +49,12 @@ RULE_ROW = (
     "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, "
     "Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"
 )
-SHARED_HMM_ROWS = (
+ZORA_HMM_ROW = (
     "| Zorya__ZorA                                      |"
     " Zorya__ZorA                                      |"
-    " Zorya                  | Custom                  | 20     |\n"
+    " Zorya                  | Custom                  | 20     |"
+)
+ZORB_HMM_ROW = (
     "| Zorya__ZorB                                      |"
     " Zorya__ZorB                                      |"
     " Zorya                  | Custom                  | 20     |"
@@ -124,13 +126,24 @@ def article_registry_evidence() -> dict[str, str]:
     }
 
 
-def shared_hmm_evidence() -> dict[str, str]:
+def zora_hmm_evidence() -> dict[str, str]:
     return {
         "reference": DEFENSEFINDER_HMMS,
-        "snippet": SHARED_HMM_ROWS,
+        "snippet": ZORA_HMM_ROW,
         "notes": (
             "The pinned DefenseFinder HMM inventory records the Zorya__ZorA "
-            "and Zorya__ZorB custom profiles used by the Zorya_TypeI rule."
+            "custom profile listed by the Zorya_TypeI rule."
+        ),
+    }
+
+
+def zorb_hmm_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": ZORB_HMM_ROW,
+        "notes": (
+            "The pinned DefenseFinder HMM inventory records the Zorya__ZorB "
+            "custom profile listed by the Zorya_TypeI rule."
         ),
     }
 
@@ -153,8 +166,9 @@ def rules_evidence() -> dict[str, str]:
         "snippet": RULE_ROW,
         "notes": (
             "The pinned DefenseFinder rules table models Zorya_TypeI as a "
-            "Zorya subsystem requiring Zorya_TypeI__ZorC, "
-            "Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles."
+            "Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, "
+            "Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and "
+            "3 mandatory matches / 3 genes required."
         ),
     }
 
@@ -164,9 +178,10 @@ RECORD: dict[str, Any] = {
     "label": "Zorya type I system",
     "definition": (
         "A Zorya system in which an organism possesses a genome-encoded "
-        "DefenseFinder Zorya_TypeI subtype locus represented by "
+        "DefenseFinder Zorya_TypeI subtype locus whose rule row lists "
         "Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and "
-        "Zorya__ZorB rule profiles."
+        "Zorya__ZorB in its mandatory profile set with 3 mandatory matches "
+        "and 3 genes required."
     ),
     "definition_source": HU_2024,
     "trait_category": "GENOMICS",
@@ -205,7 +220,8 @@ RECORD: dict[str, Any] = {
         zorya_type_i_phage_dna_evidence(),
         native_locus_evidence(),
         article_registry_evidence(),
-        shared_hmm_evidence(),
+        zora_hmm_evidence(),
+        zorb_hmm_evidence(),
         zorcd_hmm_evidence(),
         rules_evidence(),
     ],
@@ -246,9 +262,10 @@ RECORD: dict[str, Any] = {
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
                         "A DefenseFinder Zorya_TypeI subtype locus "
-                        "represented by Zorya_TypeI__ZorC, "
+                        "whose rule row lists Zorya_TypeI__ZorC, "
                         "Zorya_TypeI__ZorD, Zorya__ZorA, and "
-                        "Zorya__ZorB profiles."
+                        "Zorya__ZorB in its mandatory profile set with "
+                        "3 mandatory matches and 3 genes required."
                     ),
                 },
                 {
@@ -288,15 +305,18 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "RO:0002326",
                     "object": "zorya_type_i_antiphage_activity",
                     "description": (
-                        "Zorya_TypeI loci are represented in DefenseFinder "
-                        "by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, "
-                        "Zorya__ZorA, and Zorya__ZorB rule profiles, and "
-                        "the characterized Zorya type I branch recruits "
-                        "ZorC and ZorD effectors."
+                        "Zorya_TypeI loci are modeled in DefenseFinder by "
+                        "a rule row listing Zorya_TypeI__ZorC, "
+                        "Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB "
+                        "in its mandatory profile set with 3 mandatory "
+                        "matches and 3 genes required, and the "
+                        "characterized Zorya type I branch recruits ZorC "
+                        "and ZorD effectors."
                     ),
                     "evidence": [
                         zorya_type_i_effector_evidence(),
-                        shared_hmm_evidence(),
+                        zora_hmm_evidence(),
+                        zorb_hmm_evidence(),
                         zorcd_hmm_evidence(),
                         rules_evidence(),
                     ],
@@ -351,8 +371,9 @@ RECORD: dict[str, Any] = {
                 "Mariano et al. support Zorya I phage protection from a "
                 "Serratia marcescens locus, and the pinned DefenseFinder "
                 "HMM inventory and rules table support Zorya_TypeI as a "
-                "subtype with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, "
-                "Zorya__ZorA, and Zorya__ZorB profiles. This first-pass "
+                "subtype whose rule row lists Zorya_TypeI__ZorC, "
+                "Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB with "
+                "3 mandatory matches and 3 genes required. This first-pass "
                 "record leaves exact phage triggers, native hosts, "
                 "profile-to-component correspondence, ion usage, "
                 "anti-defense escape, and ZorC/ZorD nuclease outputs "

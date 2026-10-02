@@ -7911,7 +7911,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#zorya_type_i_locus_subtype_defense"
   ],
-  "rationale": "Hu et al. support ZorAB activation and phage-DNA degradation by type I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeI as a subtype with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles. This first-pass record leaves exact phage triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense escape, and ZorC/ZorD nuclease outputs unresolved.",
+  "rationale": "Hu et al. support ZorAB activation and phage-DNA degradation by type I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeI as a subtype whose rule row lists Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB with 3 mandatory matches and 3 genes required. This first-pass record leaves exact phage triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense escape, and ZorC/ZorD nuclease outputs unresolved.",
   "num_experiments": 0,
   "num_evidence": 3,
   "evidence_refs": [

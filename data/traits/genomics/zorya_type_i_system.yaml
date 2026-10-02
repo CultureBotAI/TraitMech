@@ -1,8 +1,9 @@
 identifier: traitmech:000554
 label: Zorya type I system
 definition: A Zorya system in which an organism possesses a genome-encoded DefenseFinder
-  Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,
-  and Zorya__ZorB rule profiles.
+  Zorya_TypeI subtype locus whose rule row lists Zorya_TypeI__ZorC, Zorya_TypeI__ZorD,
+  Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches
+  and 3 genes required.
 definition_source: DOI:10.1038/s41586-024-08493-8
 trait_category: GENOMICS
 term_kind: CLASS
@@ -48,12 +49,14 @@ evidence:
     Doron et al. microbial-pangenome antiphage-system discovery paper.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
   snippet: '| Zorya__ZorA                                      | Zorya__ZorA                                      |
-    Zorya                  | Custom                  | 20     |
-
-    | Zorya__ZorB                                      | Zorya__ZorB                                      |
     Zorya                  | Custom                  | 20     |'
-  notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB
-    custom profiles used by the Zorya_TypeI rule.
+  notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom profile
+    listed by the Zorya_TypeI rule.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Zorya__ZorB                                      | Zorya__ZorB                                      |
+    Zorya                  | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom profile
+    listed by the Zorya_TypeI rule.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
   snippet: '| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                |
     Zorya_TypeI            | Custom                  | 20     |
@@ -66,7 +69,8 @@ evidence:
   snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
     \ Zorya__ZorB\t\t\t"
   notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
-    requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.
+    with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its
+    mandatory profile set and 3 mandatory matches / 3 genes required.
 canonical_examples:
 - taxon_id: NCBITaxon:615
   taxon_label: Serratia marcescens
@@ -88,8 +92,9 @@ causal_graphs:
   - node_id: zorya_type_i_locus
     label: Zorya type I locus
     node_type: GENETIC_ELEMENT
-    description: A DefenseFinder Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC,
-      Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.
+    description: A DefenseFinder Zorya_TypeI subtype locus whose rule row lists Zorya_TypeI__ZorC,
+      Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set
+      with 3 mandatory matches and 3 genes required.
   - node_id: zorya_type_i_antiphage_activity
     label: Zorya type I antiphage activity
     node_type: BIOLOGICAL_PROCESS
@@ -109,8 +114,9 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: zorya_type_i_antiphage_activity
-    description: Zorya_TypeI loci are represented in DefenseFinder by Zorya_TypeI__ZorC,
-      Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles, and the characterized
+    description: Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing
+      Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory
+      profile set with 3 mandatory matches and 3 genes required, and the characterized
       Zorya type I branch recruits ZorC and ZorD effectors.
     evidence:
     - reference: DOI:10.1038/s41586-024-08493-8
@@ -120,12 +126,14 @@ causal_graphs:
         ZorC and ZorD Type I effectors.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| Zorya__ZorA                                      | Zorya__ZorA                                      |
-        Zorya                  | Custom                  | 20     |
-
-        | Zorya__ZorB                                      | Zorya__ZorB                                      |
         Zorya                  | Custom                  | 20     |'
-      notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB
-        custom profiles used by the Zorya_TypeI rule.
+      notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom
+        profile listed by the Zorya_TypeI rule.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Zorya__ZorB                                      | Zorya__ZorB                                      |
+        Zorya                  | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom
+        profile listed by the Zorya_TypeI rule.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                |
         Zorya_TypeI            | Custom                  | 20     |
@@ -138,8 +146,8 @@ causal_graphs:
       snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
         \ Zorya__ZorB\t\t\t"
       notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
-        requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
-        profiles.
+        with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in
+        its mandatory profile set and 3 mandatory matches / 3 genes required.
   - subject: zorya_type_i_antiphage_activity
     predicate: confers
     predicate_id: METPO:2007700
@@ -178,8 +186,8 @@ causal_graphs:
       snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
         \ Zorya__ZorB\t\t\t"
       notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
-        requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
-        profiles.
+        with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in
+        its mandatory profile set and 3 mandatory matches / 3 genes required.
 discussions:
 - discussion_id: zorya-type-i-activity-gap
   prompt: Resolve Zorya_TypeI phage triggers, native host breadth, ZorC/ZorD nuclease
@@ -190,10 +198,11 @@ discussions:
   rationale: Hu et al. support ZorAB activation and phage-DNA degradation by type
     I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from
     a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules
-    table support Zorya_TypeI as a subtype with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD,
-    Zorya__ZorA, and Zorya__ZorB profiles. This first-pass record leaves exact phage
-    triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense
-    escape, and ZorC/ZorD nuclease outputs unresolved.
+    table support Zorya_TypeI as a subtype whose rule row lists Zorya_TypeI__ZorC,
+    Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB with 3 mandatory matches and 3
+    genes required. This first-pass record leaves exact phage triggers, native hosts,
+    profile-to-component correspondence, ion usage, anti-defense escape, and ZorC/ZorD
+    nuclease outputs unresolved.
   evidence:
   - reference: DOI:10.1038/s41586-024-08493-8
     snippet: ZorAB transfers the phage invasion signal through the ZorA cytoplasmic
@@ -212,8 +221,8 @@ discussions:
     snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
       \ Zorya__ZorB\t\t\t"
     notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
-      requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
-      profiles.
+      with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its
+      mandatory profile set and 3 mandatory matches / 3 genes required.
   attaches_to:
   - causal_graphs#zorya_type_i_locus_subtype_defense
   posed_by: codex
