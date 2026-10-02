@@ -1,0 +1,212 @@
+identifier: traitmech:000541
+label: DRT8 system
+definition: A DRT system in which an organism possesses a genome-encoded DefenseFinder
+  DRT8 subtype locus represented by a mandatory DRT8__DRT8 profile, optionally accompanied
+  by the DRT8__DRT8b accessory profile.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000279
+synonyms:
+- synonym_text: DRT8
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: DRT8__DRT8
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: DRT8__DRT8b
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: We discovered that a family of uncharacterized reverse transcriptases (RTs)
+    are active defense systems
+  notes: Gao et al. experimentally support defense-associated reverse transcriptases
+    as active antiphage systems.
+- reference: DOI:10.1126/science.aba0372
+  snippet: We named these genes defense-associated RTs (DRTs)
+  notes: Gao et al. coined the defense-associated RT naming that underlies the DRT
+    system family.
+- reference: DOI:10.1126/science.aba0372
+  snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA, where
+    x is any amino acid] abolished activity
+  notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+    active-site residues.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the DRT source key to the
+    Gao et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DRT8__DRT8                                       | DRT8__DRT8                                       |
+    DRT8                   | Custom                  | 200    |
+
+    | DRT8__DRT8a                                      |                                                  |
+    DRT8                   | Custom                  | 250    |
+
+    | DRT8__DRT8b                                      | DRT8__DRT8b                                      |
+    DRT8                   | Custom                  | 50     |'
+  notes: The pinned DefenseFinder HMM inventory records DRT8__DRT8, DRT8__DRT8a, and
+    DRT8__DRT8b under the DRT8 model namespace, with DRT8__DRT8a lacking an emitted
+    HMM name.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "DRT\tDRT8\t1\t1\tDRT8__DRT8\tDRT8__DRT8b\t\t"
+  notes: The pinned DefenseFinder rules table models DRT8 as a DRT subsystem requiring
+    DRT8__DRT8 and optionally admitting DRT8__DRT8b as accessory.
+causal_graphs:
+- graph_id: drt8_locus_reverse_transcriptase_defense
+  title: DRT8 loci support DRT antiphage defense
+  description: Conservative system-level sketch linking a DRT8 locus to reverse-transcriptase-dependent
+    DRT phage defense and DRT8 system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DRT8 at DefenseFinder subtype-locus level without
+    asserting the direct DRT8 reverse-transcriptase product, phage trigger, native
+    host breadth, sensitive phage breadth, the DRT8__DRT8b accessory role, why the
+    DRT8__DRT8a HMM inventory row has no emitted HMM name or rule membership, or whether
+    every DefenseFinder DRT8 prediction is a complete experimentally active DRT8 locus.
+  nodes:
+  - node_id: drt8_locus
+    label: DRT8 locus
+    node_type: GENETIC_ELEMENT
+    description: A defense-associated reverse transcriptase subtype VIII locus represented
+      in DefenseFinder by DRT8 rule profiles.
+  - node_id: drt_rt_active_site_activity
+    label: DRT reverse-transcriptase active-site activity
+    node_type: MOLECULAR_FUNCTION
+    description: Reverse-transcriptase active-site-dependent activity of a defense-associated
+      RT antiphage protein.
+  - node_id: drt8_system_trait
+    label: DRT8 system
+    node_type: TRAIT
+    grounding: traitmech:000541
+    description: Possession of a genome-encoded DRT8 phage-defense system.
+  - node_id: drt_system_trait
+    label: DRT system
+    node_type: TRAIT
+    grounding: traitmech:000279
+    description: Possession of a genome-encoded defense-associated reverse transcriptase
+      phage-defense system.
+  edges:
+  - subject: drt8_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: drt_rt_active_site_activity
+    description: DRT8 loci are represented in DefenseFinder by custom defense-associated
+      reverse transcriptase profiles.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We named these genes defense-associated RTs (DRTs)
+      notes: Gao et al. coined the defense-associated RT naming that underlies the
+        DRT system family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DRT8__DRT8                                       | DRT8__DRT8                                       |
+        DRT8                   | Custom                  | 200    |
+
+        | DRT8__DRT8a                                      |                                                  |
+        DRT8                   | Custom                  | 250    |
+
+        | DRT8__DRT8b                                      | DRT8__DRT8b                                      |
+        DRT8                   | Custom                  | 50     |'
+      notes: The pinned DefenseFinder HMM inventory records DRT8__DRT8, DRT8__DRT8a,
+        and DRT8__DRT8b under the DRT8 model namespace, with DRT8__DRT8a lacking an
+        emitted HMM name.
+  - subject: drt_rt_active_site_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: drt8_system_trait
+    description: The first-pass DRT8 system trait is realized by a DefenseFinder DRT8
+      subtype locus within the reverse-transcriptase-dependent DRT family.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We discovered that a family of uncharacterized reverse transcriptases
+        (RTs) are active defense systems
+      notes: Gao et al. experimentally support defense-associated reverse transcriptases
+        as active antiphage systems.
+    - reference: DOI:10.1126/science.aba0372
+      snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+        where x is any amino acid] abolished activity
+      notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+        active-site residues.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT8\t1\t1\tDRT8__DRT8\tDRT8__DRT8b\t\t"
+      notes: The pinned DefenseFinder rules table models DRT8 as a DRT subsystem requiring
+        DRT8__DRT8 and optionally admitting DRT8__DRT8b as accessory.
+  - subject: drt8_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: drt_system_trait
+    description: DRT8 system possession is a DRT-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the DRT source key to
+        the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT8\t1\t1\tDRT8__DRT8\tDRT8__DRT8b\t\t"
+      notes: The pinned DefenseFinder rules table models DRT8 as a DRT subsystem requiring
+        DRT8__DRT8 and optionally admitting DRT8__DRT8b as accessory.
+discussions:
+- discussion_id: drt8-profile-activity-gap
+  prompt: Resolve the DRT8 reverse-transcriptase product, direct phage trigger, host
+    breadth, DRT8__DRT8b accessory role, and DRT8__DRT8a HMM-row status before minting
+    DRT8 mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support defense-associated reverse transcriptases as a broad
+    antiphage-system family, and the pinned DefenseFinder HMM inventory and rules
+    table support DRT8 as a DRT subsystem with a mandatory DRT8__DRT8 profile and
+    an accessory DRT8__DRT8b profile. This first-pass record leaves the exact DRT8
+    RT product, phage trigger, host breadth, DRT8__DRT8b accessory role, and DRT8__DRT8a
+    inventory-row status unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.aba0372
+    snippet: We discovered that a family of uncharacterized reverse transcriptases
+      (RTs) are active defense systems
+    notes: Gao et al. experimentally support defense-associated reverse transcriptases
+      as active antiphage systems.
+  - reference: DOI:10.1126/science.aba0372
+    snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+      where x is any amino acid] abolished activity
+    notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+      active-site residues.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DRT8__DRT8                                       | DRT8__DRT8                                       |
+      DRT8                   | Custom                  | 200    |
+
+      | DRT8__DRT8a                                      |                                                  |
+      DRT8                   | Custom                  | 250    |
+
+      | DRT8__DRT8b                                      | DRT8__DRT8b                                      |
+      DRT8                   | Custom                  | 50     |'
+    notes: The pinned DefenseFinder HMM inventory records DRT8__DRT8, DRT8__DRT8a,
+      and DRT8__DRT8b under the DRT8 model namespace, with DRT8__DRT8a lacking an
+      emitted HMM name.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "DRT\tDRT8\t1\t1\tDRT8__DRT8\tDRT8__DRT8b\t\t"
+    notes: The pinned DefenseFinder rules table models DRT8 as a DRT subsystem requiring
+      DRT8__DRT8 and optionally admitting DRT8__DRT8b as accessory.
+  attaches_to:
+  - causal_graphs#drt8_locus_reverse_transcriptase_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T09:37:24Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DRT8 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the DRT system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v418.
+  llm_assisted: true
+- timestamp: '2026-10-02T09:37:25Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DRT8 system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the DRT family
+    and the DRT8 model namespace but not an accession-backed native microbial taxon
+    exemplar tied to DRT8__DRT8 or DRT8__DRT8b and experimentally verified endogenous
+    DRT8 activity. No paid research was used.
+  llm_assisted: true
