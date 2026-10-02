@@ -863,6 +863,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avs_iv_system.html#avs-iv-component-and-effector-gap"
  },
  {
+  "discussion_id": "avs-v-component-and-host-gap",
+  "prompt": "Resolve the Avs5A component role, exact JADA trigger breadth, native host breadth, sensitive jumbo-phage breadth, and DefenseFinder profile-to-activity requirements before minting Avs V mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Avs V system",
+  "source_id": "traitmech:000538",
+  "source_file": "avs_v_system.yaml",
+  "attaches_to": [
+   "causal_graphs#avs_v_locus_sir2_effector_activation"
+  ],
+  "rationale": "Muralidharan et al. support Avs5 Sir2-like effector activation during jumbo-phage defense, and the pinned DefenseFinder HMM inventory and rules table support Avs_V as a subtype V model with an Avs5A profile. This first-pass record leaves the exact component role, JADA trigger breadth, native host breadth, sensitive jumbo-phage breadth, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1016/j.molcel.2026.01.004",
+   "DOI:10.1016/j.molcel.2026.01.004",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/avs_v_system.html#avs-v-component-and-host-gap"
+ },
+ {
   "discussion_id": "azaca-mechanism-gap",
   "prompt": "Resolve Azaca phage triggers and effector outputs before minting narrower Azaca mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8905,9 +8929,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 409,
- "total_knowledge_gaps": 321,
- "total_source_entries": 403,
+ "total_discussions": 410,
+ "total_knowledge_gaps": 322,
+ "total_source_entries": 404,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
