@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/avs_i_system.yaml
+  slug: avs_i_system
+session:
+  id: 2026-10-02T042322Z-codex-742e29
+  timestamp: '2026-10-02T04:23:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Avs I system trait
+  details: Minted traitmech:000534 as a DOI- and DefenseFinder-backed Avs I phage-defense-system
+    record, reserved METPO:1048800 in proposals/metpo_traitmech_v411 for upstream replacement,
+    kept DefenseFinder profile identifiers as related synonyms, and left canonical_examples
+    empty because the available evidence does not establish an accession-backed native microbial
+    taxon exemplar with experimentally verified endogenous Avs I activity.
