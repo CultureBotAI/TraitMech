@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hma_system.yaml
+  slug: hma_system
+session:
+  id: 2026-10-02T033836Z-codex-3157f3
+  timestamp: '2026-10-02T03:38:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Hma system trait
+  details: Minted traitmech:000533 as a DOI- and DefenseFinder-backed Hma phage-defense-system
+    record, reserved METPO:1048700 in proposals/metpo_traitmech_v410 for upstream replacement,
+    captured the pinned Hma article-registry row and HmaA/HmaB/HmaC HMM rows as related model-provenance
+    labels, left HmaB/HmaC contributions, complete HmaABC system requirements, canonical native-host
+    exemplars, and DefenseFinder rule-level criteria as open knowledge gaps, and validated
+    the record through write_validated_trait. The ignored-and-hidden duplicate search found
+    no exact Hma system trait, history record, prior proposal, script, reserved CURIE, or
+    live METPO term before curation.

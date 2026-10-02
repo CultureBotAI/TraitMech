@@ -1508,6 +1508,8 @@ hec-06 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_06_system.yaml
 hec-07 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_07_system.yaml
 hec-08 locus	GENETIC_ELEMENT	1	data/traits/genomics/hec_08_system.yaml
 hesat locus	GENETIC_ELEMENT	1	data/traits/genomics/hesat_system.yaml
+hma locus	GENETIC_ELEMENT	1	data/traits/genomics/hma_system.yaml
+hmaa phage defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/hma_system.yaml
 hna locus	GENETIC_ELEMENT	1	data/traits/genomics/hna_system.yaml
 phage ssb stimulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
 hna nuclease activation	MOLECULAR_FUNCTION	1	data/traits/genomics/hna_system.yaml
