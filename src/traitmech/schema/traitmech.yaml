@@ -11,7 +11,7 @@ description: |
   mirroring the dismech / CultureMech / MIM workflow: one YAML per trait, optional
   evidence-bearing audit trail, validation via `just validate-all`.
 
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: BSD-3-Clause
 
 prefixes:
   linkml: https://w3id.org/linkml/

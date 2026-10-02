@@ -42,9 +42,9 @@
   trait_categories: [MORPHOLOGY, PHYSIOLOGY, ENVIRONMENT, METABOLISM, GENOMICS,
                      ECOLOGY, DETECTION, QUANTITATIVE_PROPERTY, OBSERVATION, UPPER]
   note: >-
-    ATTRIBUTION OBLIGATION: METPO is CC-BY-4.0 while this repo ships CC0-1.0
-    (pyproject.toml), so attribution must survive into anything published from
-    the corpus. An earlier draft of this entry recorded BSD-3-Clause, which was
+    ATTRIBUTION OBLIGATION: METPO is CC-BY-4.0. This repository licenses
+    project-authored data under CC-BY-4.0 and code under BSD-3-Clause; METPO
+    attribution must survive into anything published from the corpus. An earlier draft of this entry recorded BSD-3-Clause, which was
     wrong and would have erased that obligation.
 
     The origin of the corpus: data/raw/metpo.owl is the vendored release and
