@@ -158,6 +158,7 @@ subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_
 t7, t4, p1-vir, and lambda-vir protection	BIOLOGICAL_PROCESS	2	data/traits/genomics/gaps4_system.yaml|data/traits/genomics/gaps6_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 ice excision and circularization	BIOLOGICAL_PROCESS	2	data/traits/genomics/integrative_conjugative_element.yaml|data/traits/genomics/mobile_genetic_element.yaml
+lamassu subtype antiphage activity	BIOLOGICAL_PROCESS	2	data/traits/genomics/lamassu_amidase_system.yaml|data/traits/genomics/lamassu_cap4_nuclease_system.yaml
 plasmid transformation	BIOLOGICAL_PROCESS	2	data/traits/genomics/mksbefg_system.yaml|data/traits/genomics/wadjet_system.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 translation inhibition	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/razr_system.yaml
@@ -1565,7 +1566,7 @@ ditp immune signaling	BIOLOGICAL_PROCESS	1	data/traits/genomics/kongming_system.
 komc nadase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/kongming_system.yaml
 nad depletion-linked infected-cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/kongming_system.yaml
 lamassu-amidase locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_amidase_system.yaml
-lamassu subtype antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_amidase_system.yaml
+lamassu-cap4 nuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_cap4_nuclease_system.yaml
 lamassu locus	GENETIC_ELEMENT	1	data/traits/genomics/lamassu_system.yaml
 lmuabc complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_system.yaml
 lamassu viral dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/lamassu_system.yaml
