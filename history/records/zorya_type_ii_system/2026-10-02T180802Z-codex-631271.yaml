@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_type_ii_system.yaml
+  slug: zorya_type_ii_system
+session:
+  id: 2026-10-02T180802Z-codex-631271
+  timestamp: '2026-10-02T18:08:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Zorya type II system trait
+  details: Minted traitmech:000552 for the DOI- and pinned DefenseFinder-backed Zorya type
+    II phage-defense subtype after ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record. The record anchors Zorya_TypeII to
+    the Zorya parent, records ZorE/ZorA2/ZorB rule and HMM evidence, adds an Escherichia coli
+    canonical example from the reported ATCC 8739 locus, and reserves METPO:1050600 in proposals/metpo_traitmech_v429
+    for upstream replacement.

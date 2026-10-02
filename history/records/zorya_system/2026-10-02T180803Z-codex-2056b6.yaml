@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_system.yaml
+  slug: zorya_system
+session:
+  id: 2026-10-02T180803Z-codex-2056b6
+  timestamp: '2026-10-02T18:08:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track Zorya type II split
+  details: Documented traitmech:000552 Zorya type II system in the open Zorya subtype-effector
+    discussion after minting the DefenseFinder-backed Zorya_TypeII child. Type I, Type III,
+    and finer Zorya subtype mechanisms remain open.
