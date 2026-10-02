@@ -3,9 +3,9 @@ restricted phage propagation	BIOLOGICAL_PROCESS	88	data/traits/genomics/abi2_sys
 reduced bacteriophage plaquing	BIOLOGICAL_PROCESS	58	data/traits/genomics/ds_10_system.yaml|data/traits/genomics/ds_11_system.yaml|data/traits/genomics/ds_12_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	12	data/traits/genomics/gao_her_duf_system.yaml|data/traits/genomics/gao_her_sir_system.yaml|data/traits/genomics/gao_her_system.yaml
+drt reverse-transcriptase active-site activity	MOLECULAR_FUNCTION	9	data/traits/genomics/drt1_system.yaml|data/traits/genomics/drt2_system.yaml|data/traits/genomics/drt3_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 phage replication	BIOLOGICAL_PROCESS	8	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
-drt reverse-transcriptase active-site activity	MOLECULAR_FUNCTION	8	data/traits/genomics/drt1_system.yaml|data/traits/genomics/drt2_system.yaml|data/traits/genomics/drt3_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	6	data/traits/genomics/fs_giy_yig_system.yaml|data/traits/genomics/fs_hepn_tm_system.yaml|data/traits/genomics/fs_hp_sdh_sah_system.yaml
@@ -1347,6 +1347,7 @@ drt1 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt1_system.yaml
 drt2 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt2_system.yaml
 drt3 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt3_system.yaml
 drt4 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt4_system.yaml
+drt5 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt5_system.yaml
 drt6 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt6_system.yaml
 drt7 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt7_system.yaml
 drt8 locus	GENETIC_ELEMENT	1	data/traits/genomics/drt8_system.yaml

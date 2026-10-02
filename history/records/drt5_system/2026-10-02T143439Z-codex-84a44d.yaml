@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/drt5_system.yaml
+  slug: drt5_system
+session:
+  id: 2026-10-02T143439Z-codex-84a44d
+  timestamp: '2026-10-02T14:34:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DRT5 system trait
+  details: Minted traitmech:000547 as a DOI- and DefenseFinder-backed DRT5 phage-defense-system
+    subtype record under DRT system, cited Gao et al. for DRT discovery and reverse-transcriptase
+    active-site dependence, cited pinned DefenseFinder article, HMM, and rules rows for the
+    DRT_5 model namespace, left canonical_examples empty due to lack of accession-backed native
+    microbial taxon evidence, and reserved METPO:1050100 in proposals/metpo_traitmech_v424
+    for upstream replacement.
