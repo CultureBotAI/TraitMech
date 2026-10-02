@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_amidase_system.yaml
+  slug: lamassu_amidase_system
+session:
+  id: 2026-10-02T214542Z-codex-65e345
+  timestamp: '2026-10-02T21:45:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-Amidase system trait
+  details: Minted traitmech:000556 for the DefenseFinder-backed Lamassu-Amidase subtype under
+    the Lamassu system parent after ignored-and-hidden exact duplicate searches found no live
+    TraitMech, METPO, history, or prior proposal record for the local identifier, METPO placeholder,
+    proposal cohort, record slug, human label, DefenseFinder subsystem, or LmuA amidase profile.
+    Curated pinned DefenseFinder rule/HMM evidence, a conservative nonmechanistic subtype
+    graph, an open profile-to-activity discussion, an explicit canonical-example evidence-gap
+    event, and a same-PR METPO v433 proposal.
