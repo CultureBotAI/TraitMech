@@ -814,6 +814,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avs_ii_system.html#avs-ii-component-and-effector-gap"
  },
  {
+  "discussion_id": "avs-iii-component-and-effector-gap",
+  "prompt": "Resolve the Avs3A and Avs3B component roles, direct effector chemistry, exact phage-trigger mapping, native host breadth, and sensitive-phage breadth before minting Avs III mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Avs III system",
+  "source_id": "traitmech:000536",
+  "source_file": "avs_iii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#avs_iii_locus_phage_protein_recognition"
+  ],
+  "rationale": "Gao et al. support Avs3 phage-protein recognition and Avs activation during antiviral defense, and the pinned DefenseFinder HMM inventory and rules table support Avs_III as a subtype III model with Avs3A and Avs3B profiles. This first-pass record leaves the exact component roles, downstream effector chemistry, native host breadth, sensitive-phage breadth, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1126/science.abm4096",
+   "DOI:10.1126/science.abm4096",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/avs_iii_system.html#avs-iii-component-and-effector-gap"
+ },
+ {
   "discussion_id": "azaca-mechanism-gap",
   "prompt": "Resolve Azaca phage triggers and effector outputs before minting narrower Azaca mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8856,9 +8881,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 407,
- "total_knowledge_gaps": 319,
- "total_source_entries": 401,
+ "total_discussions": 408,
+ "total_knowledge_gaps": 320,
+ "total_source_entries": 402,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
