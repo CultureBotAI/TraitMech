@@ -1444,6 +1444,29 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/caprel_system.html#caprel-trigger-and-family-breadth-gap"
  },
  {
+  "discussion_id": "card-nlr-endonuclease-activity-gap",
+  "prompt": "Resolve the CARD_NLR_Endonuclease phage triggers, native hosts, endonuclease effector substrate, CARD-to-effector activation sequence, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CARD-NLR endonuclease system",
+  "source_id": "traitmech:000550",
+  "source_file": "card_nlr_endonuclease_system.yaml",
+  "attaches_to": [
+   "causal_graphs#card_nlr_endonuclease_locus_subtype_defense"
+  ],
+  "rationale": "Wein et al. support CARD-like anti-phage defense systems, and the pinned DefenseFinder HMM inventory and rules table support CARD_NLR_Endonuclease as a subtype with a CARD_NLR__Endonuclease mandatory profile. This first-pass record leaves exact phage triggers, native hosts, accessory-profile requirements, nuclease substrate, and CARD-to-endonuclease activation unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "https://europepmc.org/article/PPR/PPR668921",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/card_nlr_endonuclease_system.html#card-nlr-endonuclease-activity-gap"
+ },
+ {
   "discussion_id": "card-nlr-subtype-mechanism-gap",
   "prompt": "Resolve CARD-NLR subtype effectors, phage triggers, natural-host examples, and GasderMIN subtype boundaries before minting narrower CARD-NLR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -9192,9 +9215,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 421,
- "total_knowledge_gaps": 333,
- "total_source_entries": 415,
+ "total_discussions": 422,
+ "total_knowledge_gaps": 334,
+ "total_source_entries": 416,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

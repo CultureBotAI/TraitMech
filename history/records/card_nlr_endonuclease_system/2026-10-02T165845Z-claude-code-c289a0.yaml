@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_endonuclease_system.yaml
+  slug: card_nlr_endonuclease_system
+session:
+  id: 2026-10-02T165845Z-claude-code-c289a0
+  timestamp: '2026-10-02T16:58:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add CARD-NLR endonuclease system TraitRecord
+  details: Minted CARD-NLR endonuclease system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under CARD-NLR system, left canonical_examples empty after source review,
+    and reserved METPO:1050400 in proposals/metpo_traitmech_v427 for upstream replacement.
