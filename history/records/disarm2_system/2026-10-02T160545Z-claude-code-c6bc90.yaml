@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/disarm2_system.yaml
+  slug: disarm2_system
+session:
+  id: 2026-10-02T160545Z-claude-code-c6bc90
+  timestamp: '2026-10-02T16:05:45Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DISARM2 system TraitRecord
+  details: Minted DISARM2 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord under
+    DISARM system, left canonical_examples empty after source review, and reserved METPO:1050300
+    in proposals/metpo_traitmech_v426 for upstream replacement.
