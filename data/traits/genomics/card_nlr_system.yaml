@@ -267,11 +267,11 @@ discussions:
   rationale: Wein et al. support CARD-like domains in multiple anti-phage defense
     systems that activate cell-death effectors, and DefenseFinder models CARD_NLR
     subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, CARD_NLR_Subtilase, and
-    CARD_NLR_like rule profiles. CARD-NLR endonuclease, CARD-NLR phospho, and CARD-NLR
-    subtilase TraitRecords now capture three rule-row subtypes, but exact phage triggers,
-    CARD-to-effector activation sequence, accession-level natural-host components,
-    CARD_NLR_Subtilase_long_new HMM inventory coverage, CARD_NLR_like boundaries,
-    and standalone GasderMIN versus CARD_NLR_GasderMIN context remain unresolved.
+    CARD_NLR_like rule profiles. CARD-NLR GasderMIN, endonuclease, phospho, and subtilase
+    TraitRecords now capture four rule-row subtypes, but exact phage triggers, CARD-to-effector
+    activation sequence, accession-level natural-host components, CARD_NLR_Subtilase_long_new
+    HMM inventory coverage, CARD_NLR_like boundaries, and standalone GasderMIN versus
+    CARD_NLR_GasderMIN mechanism boundaries remain unresolved.
   attaches_to:
   - causal_graphs#card_nlr_loci_activate_cell_death_effectors
   posed_by: codex
@@ -292,4 +292,11 @@ curation_history:
     discussion after minting traitmech:000553 for the DefenseFinder-backed CARD_NLR_Subtilase
     child; exact subtilase substrates, CARD_NLR_Subtilase_long_new HMM inventory coverage,
     CARD_NLR_GasderMIN, CARD_NLR_like, and finer activation mechanisms remain open.
+  llm_assisted: true
+- timestamp: '2026-10-02T21:05:01Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented CARD-NLR GasderMIN as split out in the open CARD-NLR subtype
+    discussion after minting traitmech:000555 for the DefenseFinder-backed CARD_NLR_GasderMIN
+    child; CARD_NLR_like and finer CARD-NLR activation mechanisms remain open.
   llm_assisted: true
