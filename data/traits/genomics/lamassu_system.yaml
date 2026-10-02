@@ -179,9 +179,11 @@ discussions:
   status: OPEN
   rationale: Haudiquet et al. support a structurally characterized Vibrio cholerae
     Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation,
-    but the first TraitRecord stays at the system level until separate review resolves
-    long-versus-short LmuB clades, LmuC-independent subfamilies, effector-domain diversity,
-    viral DNA triggers, and cell-death outputs across Lamassu loci.
+    and the pinned DefenseFinder tables model Lamassu-Amidase and other Lamassu-Fam
+    subtypes as rule-row variants. Lamassu-Amidase now captures one DefenseFinder
+    rule-row subtype, but long-versus-short LmuB clades, LmuC-independent subfamilies,
+    remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates,
+    and cell-death outputs across Lamassu loci remain unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -192,4 +194,12 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v109.
+  llm_assisted: true
+- timestamp: '2026-10-02T21:43:25Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented Lamassu-Amidase as split out in the open Lamassu subtype-effector
+    discussion after minting traitmech:000556 for the DefenseFinder-backed Lamassu-Amidase
+    child; remaining Lamassu-Fam subtypes and finer Lamassu activation mechanisms
+    remain open.
   llm_assisted: true

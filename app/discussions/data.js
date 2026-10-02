@@ -4784,6 +4784,29 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/kongming_system.html#kongming-profile-host-and-component-gap"
  },
  {
+  "discussion_id": "lamassu-amidase-activity-gap",
+  "prompt": "Resolve Lamassu-Amidase phage triggers, native hosts, amidase effector substrates, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu-Amidase system",
+  "source_id": "traitmech:000556",
+  "source_file": "lamassu_amidase_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lamassu_amidase_locus_subtype_defense"
+  ],
+  "rationale": "Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-Amidase as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_Amidase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record leaves exact amidase substrate, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.2519643122",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_amidase_system.html#lamassu-amidase-activity-gap"
+ },
+ {
   "discussion_id": "lamassu-subtype-and-effector-gap",
   "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4793,7 +4816,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, but the first TraitRecord stays at the system level until separate review resolves long-versus-short LmuB clades, LmuC-independent subfamilies, effector-domain diversity, viral DNA triggers, and cell-death outputs across Lamassu loci.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase now captures one DefenseFinder rule-row subtype, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, and cell-death outputs across Lamassu loci remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9330,9 +9353,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 427,
- "total_knowledge_gaps": 339,
- "total_source_entries": 421,
+ "total_discussions": 428,
+ "total_knowledge_gaps": 340,
+ "total_source_entries": 422,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

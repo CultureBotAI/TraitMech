@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-02T214543Z-codex-6a8286
+  timestamp: '2026-10-02T21:45:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track Lamassu-Amidase child
+  details: Updated the open Lamassu subtype-effector discussion and appended a TRACK_NARROWER_RECORD
+    event after minting traitmech:000556 for Lamassu-Amidase as one DefenseFinder-backed Lamassu-Fam
+    rule-row subtype. The parent discussion now notes that Lamassu-Amidase has been split
+    out while remaining Lamassu-Fam subtypes and finer LmuB/LmuC/activation questions stay
+    unresolved.
