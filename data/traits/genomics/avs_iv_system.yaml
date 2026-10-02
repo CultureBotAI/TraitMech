@@ -1,0 +1,189 @@
+identifier: traitmech:000537
+label: Avs IV system
+definition: An AVAST system in which an organism possesses a genome-encoded subtype
+  IV locus represented by DefenseFinder with an Avs4A profile.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000239
+synonyms:
+- synonym_text: Avs_IV
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Avs_IV__Avs4A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+  notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+    the portal
+  notes: Gao et al. support Avs4 as a phage-portal-sensing member of the AVAST receptor
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: In all four cases, target recognition led to Avs protein activation and
+    antiviral activity
+  notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+    and antiviral activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the Avs source key to the
+    Gao et al. pangenome-scale antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Avs_IV__Avs4A                                    | Avs_IV__Avs4A                                    |
+    Avs_IV                 | Custom                  | 60     |'
+  notes: The pinned DefenseFinder HMM inventory records Avs_IV__Avs4A under the Avs_IV
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Avs\tAvs_IV\t1\t1\tAvs_IV__Avs4A\t\t\t"
+  notes: The pinned DefenseFinder rules table models Avs_IV as an Avs subsystem with
+    an Avs4A profile.
+causal_graphs:
+- graph_id: avs_iv_locus_phage_portal_recognition
+  title: Avs IV loci support phage portal recognition
+  description: Conservative system-level sketch linking an Avs_IV locus to Avs4-mediated
+    phage portal recognition and Avs IV system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Avs_IV at locus and Avs4 phage-portal recognition
+    level without asserting the exact Avs4A component role, direct effector activity,
+    native host breadth, sensitive-phage breadth, or whether every DefenseFinder Avs_IV
+    prediction is a complete experimentally active Avs IV locus.
+  nodes:
+  - node_id: avs_iv_locus
+    label: Avs IV locus
+    node_type: GENETIC_ELEMENT
+    description: An AVAST subtype IV locus represented in DefenseFinder by an Avs4A
+      profile.
+  - node_id: avs4_phage_portal_recognition
+    label: Avs4 phage portal recognition
+    node_type: BIOLOGICAL_PROCESS
+    description: Recognition of an infecting phage portal protein by an Avs4 antiviral
+      STAND-family receptor.
+  - node_id: avs_iv_system_trait
+    label: Avs IV system
+    node_type: TRAIT
+    grounding: traitmech:000537
+    description: Possession of a genome-encoded Avs IV phage-defense system.
+  - node_id: avast_system_trait
+    label: AVAST system
+    node_type: TRAIT
+    grounding: traitmech:000239
+    description: Possession of a genome-encoded AVAST phage-defense system.
+  edges:
+  - subject: avs_iv_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avs4_phage_portal_recognition
+    description: Avs IV loci encode Avs4 components, and Avs4 belongs to the AVAST
+      receptors that recognize the phage portal protein.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs4 as a phage-portal-sensing member of the AVAST
+        receptor family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Avs_IV__Avs4A                                    | Avs_IV__Avs4A                                    |
+        Avs_IV                 | Custom                  | 60     |'
+      notes: The pinned DefenseFinder HMM inventory records Avs_IV__Avs4A under the
+        Avs_IV model namespace.
+  - subject: avs4_phage_portal_recognition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: avs_iv_system_trait
+    description: The first-pass Avs IV system trait is realized by Avs4 target recognition
+      and downstream antiviral activity.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs4 as a phage-portal-sensing member of the AVAST
+        receptor family.
+    - reference: DOI:10.1126/science.abm4096
+      snippet: In all four cases, target recognition led to Avs protein activation
+        and antiviral activity
+      notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+        and antiviral activity.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_IV\t1\t1\tAvs_IV__Avs4A\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_IV as an Avs subsystem
+        with an Avs4A profile.
+  - subject: avs_iv_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: avast_system_trait
+    description: Avs IV system possession is an AVAST-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+      notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+        family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the Avs source key to
+        the Gao et al. pangenome-scale antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_IV\t1\t1\tAvs_IV__Avs4A\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_IV as an Avs subsystem
+        with an Avs4A profile.
+discussions:
+- discussion_id: avs-iv-component-and-effector-gap
+  prompt: Resolve the Avs4A component role, direct effector chemistry, exact phage-trigger
+    mapping, native host breadth, and sensitive-phage breadth before minting Avs IV
+    mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support Avs4 phage-portal recognition and Avs activation during
+    antiviral defense, and the pinned DefenseFinder HMM inventory and rules table
+    support Avs_IV as a subtype IV model with an Avs4A profile. This first-pass record
+    leaves the exact component role, downstream effector chemistry, native host breadth,
+    sensitive-phage breadth, and profile-to-activity requirements unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.abm4096
+    snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+      the portal
+    notes: Gao et al. support Avs4 as a phage-portal-sensing member of the AVAST receptor
+      family.
+  - reference: DOI:10.1126/science.abm4096
+    snippet: In all four cases, target recognition led to Avs protein activation and
+      antiviral activity
+    notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+      and antiviral activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Avs_IV__Avs4A                                    | Avs_IV__Avs4A                                    |
+      Avs_IV                 | Custom                  | 60     |'
+    notes: The pinned DefenseFinder HMM inventory records Avs_IV__Avs4A under the
+      Avs_IV model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Avs\tAvs_IV\t1\t1\tAvs_IV__Avs4A\t\t\t"
+    notes: The pinned DefenseFinder rules table models Avs_IV as an Avs subsystem
+      with an Avs4A profile.
+  attaches_to:
+  - causal_graphs#avs_iv_locus_phage_portal_recognition
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T06:35:42Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Avs IV system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the AVAST system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v414.
+  llm_assisted: true
+- timestamp: '2026-10-02T06:35:43Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Avs IV system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the Avs_IV
+    model namespace and Avs4 phage-portal-recognition activity but not an accession-backed
+    native microbial taxon exemplar with experimentally verified endogenous Avs IV
+    activity. No paid research was used.
+  llm_assisted: true
