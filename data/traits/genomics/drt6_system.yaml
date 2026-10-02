@@ -1,0 +1,185 @@
+identifier: traitmech:000539
+label: DRT6 system
+definition: A DRT system in which an organism possesses a genome-encoded DefenseFinder
+  DRT6 subtype locus represented by the DRT6__DRT6 profile.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000279
+synonyms:
+- synonym_text: DRT6
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: DRT6__DRT6
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: We discovered that a family of uncharacterized reverse transcriptases (RTs)
+    are active defense systems
+  notes: Gao et al. experimentally support defense-associated reverse transcriptases
+    as active antiphage systems.
+- reference: DOI:10.1126/science.aba0372
+  snippet: We named these genes defense-associated RTs (DRTs)
+  notes: Gao et al. coined the defense-associated RT naming that underlies the DRT
+    system family.
+- reference: DOI:10.1126/science.aba0372
+  snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA, where
+    x is any amino acid] abolished activity
+  notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+    active-site residues.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the DRT source key to the
+    Gao et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DRT6__DRT6                                       | DRT6__DRT6                                       |
+    DRT6                   | Custom                  | 300    |'
+  notes: The pinned DefenseFinder HMM inventory records DRT6__DRT6 under the DRT6
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "DRT\tDRT6\t1\t1\tDRT6__DRT6\t\t\t"
+  notes: The pinned DefenseFinder rules table models DRT6 as a DRT subsystem with
+    a DRT6 profile.
+causal_graphs:
+- graph_id: drt6_locus_reverse_transcriptase_defense
+  title: DRT6 loci support DRT antiphage defense
+  description: Conservative system-level sketch linking a DRT6 locus to reverse-transcriptase-dependent
+    DRT phage defense and DRT6 system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DRT6 at DefenseFinder subtype-locus level without
+    asserting the direct DRT6 reverse-transcriptase product, phage trigger, native
+    host breadth, sensitive phage breadth, partner features, or whether every DefenseFinder
+    DRT6 prediction is a complete experimentally active DRT6 locus.
+  nodes:
+  - node_id: drt6_locus
+    label: DRT6 locus
+    node_type: GENETIC_ELEMENT
+    description: A defense-associated reverse transcriptase subtype VI locus represented
+      in DefenseFinder by a DRT6 profile.
+  - node_id: drt_rt_active_site_activity
+    label: DRT reverse-transcriptase active-site activity
+    node_type: MOLECULAR_FUNCTION
+    description: Reverse-transcriptase active-site-dependent activity of a defense-associated
+      RT antiphage protein.
+  - node_id: drt6_system_trait
+    label: DRT6 system
+    node_type: TRAIT
+    grounding: traitmech:000539
+    description: Possession of a genome-encoded DRT6 phage-defense system.
+  - node_id: drt_system_trait
+    label: DRT system
+    node_type: TRAIT
+    grounding: traitmech:000279
+    description: Possession of a genome-encoded defense-associated reverse transcriptase
+      phage-defense system.
+  edges:
+  - subject: drt6_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: drt_rt_active_site_activity
+    description: DRT6 loci are represented in DefenseFinder by a custom defense-associated
+      reverse transcriptase profile.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We named these genes defense-associated RTs (DRTs)
+      notes: Gao et al. coined the defense-associated RT naming that underlies the
+        DRT system family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DRT6__DRT6                                       | DRT6__DRT6                                       |
+        DRT6                   | Custom                  | 300    |'
+      notes: The pinned DefenseFinder HMM inventory records DRT6__DRT6 under the DRT6
+        model namespace.
+  - subject: drt_rt_active_site_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: drt6_system_trait
+    description: The first-pass DRT6 system trait is realized by a DefenseFinder DRT6
+      subtype locus within the reverse-transcriptase-dependent DRT family.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We discovered that a family of uncharacterized reverse transcriptases
+        (RTs) are active defense systems
+      notes: Gao et al. experimentally support defense-associated reverse transcriptases
+        as active antiphage systems.
+    - reference: DOI:10.1126/science.aba0372
+      snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+        where x is any amino acid] abolished activity
+      notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+        active-site residues.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT6\t1\t1\tDRT6__DRT6\t\t\t"
+      notes: The pinned DefenseFinder rules table models DRT6 as a DRT subsystem with
+        a DRT6 profile.
+  - subject: drt6_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: drt_system_trait
+    description: DRT6 system possession is a DRT-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the DRT source key to
+        the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT6\t1\t1\tDRT6__DRT6\t\t\t"
+      notes: The pinned DefenseFinder rules table models DRT6 as a DRT subsystem with
+        a DRT6 profile.
+discussions:
+- discussion_id: drt6-profile-activity-gap
+  prompt: Resolve the DRT6 reverse-transcriptase product, direct phage trigger, host
+    breadth, partner-feature requirements, and DefenseFinder profile-to-activity criteria
+    before minting DRT6 mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support defense-associated reverse transcriptases as a broad
+    antiphage-system family, and the pinned DefenseFinder HMM inventory and rules
+    table support DRT6 as a single-profile DRT subsystem. This first-pass record leaves
+    the exact DRT6 RT product, phage trigger, host breadth, partner-feature requirements,
+    and profile-to-activity requirements unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.aba0372
+    snippet: We discovered that a family of uncharacterized reverse transcriptases
+      (RTs) are active defense systems
+    notes: Gao et al. experimentally support defense-associated reverse transcriptases
+      as active antiphage systems.
+  - reference: DOI:10.1126/science.aba0372
+    snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+      where x is any amino acid] abolished activity
+    notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+      active-site residues.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DRT6__DRT6                                       | DRT6__DRT6                                       |
+      DRT6                   | Custom                  | 300    |'
+    notes: The pinned DefenseFinder HMM inventory records DRT6__DRT6 under the DRT6
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "DRT\tDRT6\t1\t1\tDRT6__DRT6\t\t\t"
+    notes: The pinned DefenseFinder rules table models DRT6 as a DRT subsystem with
+      a DRT6 profile.
+  attaches_to:
+  - causal_graphs#drt6_locus_reverse_transcriptase_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T08:13:19Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DRT6 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the DRT system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v416.
+  llm_assisted: true
+- timestamp: '2026-10-02T08:13:20Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DRT6 system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the DRT family
+    and the DRT6 model namespace but not an accession-backed native microbial taxon
+    exemplar tied to DRT6__DRT6 and experimentally verified endogenous DRT6 activity.
+    No paid research was used.
+  llm_assisted: true
