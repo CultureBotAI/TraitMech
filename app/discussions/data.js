@@ -7869,12 +7869,35 @@ window.searchData = [
   "source_id": "traitmech:000217",
   "source_file": "zorya_system.yaml",
   "attaches_to": [],
-  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, and Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, but Zorya variants need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
+  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, and Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase. The Zorya type II TraitRecord now captures the DefenseFinder Zorya_TypeII subtype, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/zorya_system.html#zorya-subtype-effector-and-trigger-gap"
+ },
+ {
+  "discussion_id": "zorya-type-ii-activity-gap",
+  "prompt": "Resolve Zorya_TypeII phage triggers, native host breadth, ZorE nuclease targets, ZorAB-to-ZorE activation, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Zorya type II system",
+  "source_id": "traitmech:000552",
+  "source_file": "zorya_type_ii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#zorya_type_ii_locus_subtype_defense"
+  ],
+  "rationale": "Mariano et al. support ZorE dependence for type II Zorya anti-phage activity, and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeII as a subtype with Zorya_TypeII__ZorE, Zorya__ZorA2, and Zorya__ZorB profiles. This first-pass record leaves exact phage triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense escape, and ZorE nuclease outputs unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.1038/s41467-025-57397-2",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/zorya_type_ii_system.html#zorya-type-ii-activity-gap"
  },
  {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
@@ -9238,9 +9261,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 423,
- "total_knowledge_gaps": 335,
- "total_source_entries": 417,
+ "total_discussions": 424,
+ "total_knowledge_gaps": 336,
+ "total_source_entries": 418,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

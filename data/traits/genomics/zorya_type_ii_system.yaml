@@ -1,0 +1,191 @@
+identifier: traitmech:000552
+label: Zorya type II system
+definition: A Zorya system in which an organism possesses a genome-encoded DefenseFinder
+  Zorya_TypeII subtype locus represented by Zorya_TypeII__ZorE, Zorya__ZorA2, and
+  Zorya__ZorB rule profiles.
+definition_source: DOI:10.1038/s41467-025-57397-2
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000217
+synonyms:
+- synonym_text: Zorya_TypeII
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Zorya_TypeII__ZorE
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Zorya__ZorA2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Zorya__ZorB
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41467-025-57397-2
+  snippet: For Zorya II, anti-phage activity requires the presence of the ZorE effector,
+    which we show is recruited by ZorAB
+  notes: Mariano et al. support the dependence of Zorya type II phage defense on a
+    ZorAB-recruited ZorE effector.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Zorya | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+    defense systems in the microbial pangenome |'
+  notes: The pinned DefenseFinder article registry maps the Zorya source key to the
+    Doron et al. microbial-pangenome antiphage-system discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Zorya__ZorA2                                     | Zorya__ZorA2                                     |
+    Zorya                  | Custom                  | 20     |
+
+    | Zorya__ZorB                                      | Zorya__ZorB                                      |
+    Zorya                  | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA2 and Zorya__ZorB
+    custom profiles used by the Zorya_TypeII rule.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Zorya_TypeII__ZorE                               | Zorya_TypeII__ZorE                               |
+    Zorya_TypeII           | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Zorya_TypeII__ZorE under the
+    Zorya_TypeII model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Zorya\tZorya_TypeII\t3\t3\tZorya_TypeII__ZorE, Zorya__ZorA2, Zorya__ZorB\t\
+    \t\t"
+  notes: The pinned DefenseFinder rules table models Zorya_TypeII as a Zorya subsystem
+    requiring Zorya_TypeII__ZorE plus shared Zorya__ZorA2 and Zorya__ZorB profiles.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Mariano et al. report that a Zorya II locus from E. coli ATCC 8739 protected
+    E. coli MT56 against several tested coliphages.
+  reference: DOI:10.1038/s41467-025-57397-2
+causal_graphs:
+- graph_id: zorya_type_ii_locus_subtype_defense
+  title: Zorya type II loci mark a ZorE-dependent Zorya subtype
+  description: Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeII
+    locus to ZorE-dependent type II antiphage activity and Zorya type II system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Zorya_TypeII subtype at DefenseFinder rule-row
+    level without asserting the exact phage trigger, ion substrate, ZorE nuclease
+    target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeII
+    prediction is a complete experimentally active locus.
+  nodes:
+  - node_id: zorya_type_ii_locus
+    label: Zorya type II locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Zorya_TypeII subtype locus represented by Zorya_TypeII__ZorE,
+      Zorya__ZorA2, and Zorya__ZorB profiles.
+  - node_id: zorya_type_ii_antiphage_activity
+    label: Zorya type II antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Antiphage activity of a ZorE-dependent type II Zorya locus.
+  - node_id: zorya_type_ii_system_trait
+    label: Zorya type II system
+    node_type: TRAIT
+    grounding: traitmech:000552
+    description: Possession of a genome-encoded Zorya type II phage-defense system.
+  - node_id: zorya_system_trait
+    label: Zorya system
+    node_type: TRAIT
+    grounding: traitmech:000217
+    description: Possession of a genome-encoded Zorya phage-defense system.
+  edges:
+  - subject: zorya_type_ii_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: zorya_type_ii_antiphage_activity
+    description: Zorya_TypeII loci are represented in DefenseFinder by Zorya_TypeII__ZorE,
+      Zorya__ZorA2, and Zorya__ZorB rule profiles and the characterized Zorya II branch
+      requires ZorE for anti-phage activity.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: For Zorya II, anti-phage activity requires the presence of the ZorE
+        effector, which we show is recruited by ZorAB
+      notes: Mariano et al. support the dependence of Zorya type II phage defense
+        on a ZorAB-recruited ZorE effector.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Zorya__ZorA2                                     | Zorya__ZorA2                                     |
+        Zorya                  | Custom                  | 20     |
+
+        | Zorya__ZorB                                      | Zorya__ZorB                                      |
+        Zorya                  | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA2 and Zorya__ZorB
+        custom profiles used by the Zorya_TypeII rule.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Zorya_TypeII__ZorE                               | Zorya_TypeII__ZorE                               |
+        Zorya_TypeII           | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records Zorya_TypeII__ZorE under
+        the Zorya_TypeII model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Zorya\tZorya_TypeII\t3\t3\tZorya_TypeII__ZorE, Zorya__ZorA2, Zorya__ZorB\t\
+        \t\t"
+      notes: The pinned DefenseFinder rules table models Zorya_TypeII as a Zorya subsystem
+        requiring Zorya_TypeII__ZorE plus shared Zorya__ZorA2 and Zorya__ZorB profiles.
+  - subject: zorya_type_ii_antiphage_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: zorya_type_ii_system_trait
+    description: The first-pass Zorya type II system trait is realized by a DefenseFinder
+      Zorya_TypeII subtype locus.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: For Zorya II, anti-phage activity requires the presence of the ZorE
+        effector, which we show is recruited by ZorAB
+      notes: Mariano et al. support the dependence of Zorya type II phage defense
+        on a ZorAB-recruited ZorE effector.
+  - subject: zorya_type_ii_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: zorya_system_trait
+    description: Zorya type II system possession is a Zorya-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Zorya | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+        defense systems in the microbial pangenome |'
+      notes: The pinned DefenseFinder article registry maps the Zorya source key to
+        the Doron et al. microbial-pangenome antiphage-system discovery paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Zorya\tZorya_TypeII\t3\t3\tZorya_TypeII__ZorE, Zorya__ZorA2, Zorya__ZorB\t\
+        \t\t"
+      notes: The pinned DefenseFinder rules table models Zorya_TypeII as a Zorya subsystem
+        requiring Zorya_TypeII__ZorE plus shared Zorya__ZorA2 and Zorya__ZorB profiles.
+discussions:
+- discussion_id: zorya-type-ii-activity-gap
+  prompt: Resolve Zorya_TypeII phage triggers, native host breadth, ZorE nuclease
+    targets, ZorAB-to-ZorE activation, and profile-to-activity criteria before minting
+    enzyme, trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mariano et al. support ZorE dependence for type II Zorya anti-phage activity,
+    and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeII
+    as a subtype with Zorya_TypeII__ZorE, Zorya__ZorA2, and Zorya__ZorB profiles.
+    This first-pass record leaves exact phage triggers, native hosts, profile-to-component
+    correspondence, ion usage, anti-defense escape, and ZorE nuclease outputs unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41467-025-57397-2
+    snippet: For Zorya II, anti-phage activity requires the presence of the ZorE effector,
+      which we show is recruited by ZorAB
+    notes: Mariano et al. support the dependence of Zorya type II phage defense on
+      a ZorAB-recruited ZorE effector.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Zorya_TypeII__ZorE                               | Zorya_TypeII__ZorE                               |
+      Zorya_TypeII           | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Zorya_TypeII__ZorE under
+      the Zorya_TypeII model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Zorya\tZorya_TypeII\t3\t3\tZorya_TypeII__ZorE, Zorya__ZorA2, Zorya__ZorB\t\
+      \t\t"
+    notes: The pinned DefenseFinder rules table models Zorya_TypeII as a Zorya subsystem
+      requiring Zorya_TypeII__ZorE plus shared Zorya__ZorA2 and Zorya__ZorB profiles.
+  attaches_to:
+  - causal_graphs#zorya_type_ii_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T18:08:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Zorya type II system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the Zorya system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, or
+    human label; the replacement placeholder is reserved in proposals/metpo_traitmech_v429.
+  llm_assisted: true

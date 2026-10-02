@@ -180,7 +180,8 @@ discussions:
   status: OPEN
   rationale: Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA
     degradation, and Mariano et al. support Type I/II ZorAB architecture plus a recruited
-    Type II ZorE nickase, but Zorya variants need separate review before TraitMech
+    Type II ZorE nickase. The Zorya type II TraitRecord now captures the DefenseFinder
+    Zorya_TypeII subtype, but Zorya variants still need separate review before TraitMech
     asserts one universal ion substrate, effector composition, nuclease target, cell-death
     pathway, Type III mechanism, or anti-defense breadth.
   posed_by: codex
@@ -193,4 +194,11 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v94.
+  llm_assisted: true
+- timestamp: '2026-10-02T18:08:01Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented Zorya type II as split out in the open Zorya subtype-effector
+    discussion after minting traitmech:000552 for the DefenseFinder-backed Zorya_TypeII
+    child; Type I, Type III, and finer Zorya subtype mechanisms remain open.
   llm_assisted: true
