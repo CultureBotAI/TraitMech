@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/drt3_system.yaml
+  slug: drt3_system
+session:
+  id: 2026-10-02T124302Z-codex-827539
+  timestamp: '2026-10-02T12:43:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DRT3 system trait
+  details: Minted traitmech:000545 as a DOI- and DefenseFinder-backed DRT3 phage-defense-system
+    subtype record under DRT system, cited Gao et al. for DRT discovery, reverse-transcriptase
+    active-site dependence, and the two reverse-transcriptase components of DRT type 3, cited
+    pinned DefenseFinder article, HMM, and rules rows for the DRT_3 model namespace, left
+    canonical_examples empty due to lack of accession-backed native microbial taxon evidence,
+    and reserved METPO:1049900 in proposals/metpo_traitmech_v422 for upstream replacement.
