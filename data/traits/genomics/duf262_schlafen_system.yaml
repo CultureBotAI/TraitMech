@@ -1,0 +1,172 @@
+identifier: traitmech:000530
+label: DUF262 Schlafen system
+definition: A phage defense system in which an organism possesses a genome-encoded,
+  DUF262-associated prokaryotic Schlafen nuclease locus.
+definition_source: DOI:10.1038/s41564-026-02277-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: DUF262_Shlafen
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+    protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+    domains.
+  notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as
+    antiviral effectors fused to phage-sensing domains.
+- reference: DOI:10.1038/s41564-026-02277-8
+  snippet: We expressed seven Enterobacterales Schlafen systems in Escherichia coli,
+    identifying two that confer defence against coliphages.
+  notes: Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into
+    E. coli and observed coliphage defense for two of them.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DUF262_Shlafen | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins
+    mediate phage defence | '
+  notes: The pinned DefenseFinder article registry maps the DUF262_Shlafen source
+    key to the Perez Taboada et al. Schlafen phage-defense paper.
+causal_graphs:
+- graph_id: duf262_schlafen_phage_defense
+  title: DUF262 Schlafen loci support Schlafen phage defense
+  description: Conservative system-level sketch linking a DUF262_Schlafen locus to
+    prokaryotic Schlafen nuclease antiviral activity and the phage-defense parent.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the DefenseFinder DUF262_Shlafen article namespace
+    at system level and deliberately leaves the exact locus architecture, the DUF262-associated
+    domain boundary, accession-level protein examples, native host exemplars, phage
+    trigger breadth, and DefenseFinder HMM/rules profiles unresolved.
+  nodes:
+  - node_id: duf262_schlafen_locus
+    label: DUF262 Schlafen locus
+    node_type: GENETIC_ELEMENT
+    description: A locus encoding a prokaryotic Schlafen nuclease in a DUF262-associated
+      anti-phage system.
+  - node_id: schlafen_antiviral_activity
+    label: Schlafen antiviral activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Anti-phage activity mediated by a prokaryotic Schlafen nuclease.
+  - node_id: duf262_schlafen_system_trait
+    label: DUF262 Schlafen system
+    node_type: TRAIT
+    grounding: traitmech:000530
+    description: Possession of a genome-encoded DUF262-associated prokaryotic Schlafen
+      phage-defense system.
+  - node_id: phage_defense_system_trait
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: duf262_schlafen_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: schlafen_antiviral_activity
+    description: DUF262_Schlafen loci are part of the bacterial prokaryotic Schlafen
+      nuclease phage-defense family.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+        protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+        domains.
+      notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases
+        as antiviral effectors fused to phage-sensing domains.
+  - subject: schlafen_antiviral_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: duf262_schlafen_system_trait
+    description: Prokaryotic Schlafen antiviral effector activity realizes the organism-level
+      DUF262 Schlafen system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+        protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+        domains.
+      notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases
+        as antiviral effectors fused to phage-sensing domains.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DUF262_Shlafen | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+        proteins mediate phage defence | '
+      notes: The pinned DefenseFinder article registry maps the DUF262_Shlafen source
+        key to the Perez Taboada et al. Schlafen phage-defense paper.
+  - subject: duf262_schlafen_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system_trait
+    description: DUF262 Schlafen system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: We expressed seven Enterobacterales Schlafen systems in Escherichia
+        coli, identifying two that confer defence against coliphages.
+      notes: Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems
+        into E. coli and observed coliphage defense for two of them.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DUF262_Shlafen | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+        proteins mediate phage defence | '
+      notes: The pinned DefenseFinder article registry maps the DUF262_Shlafen source
+        key to the Perez Taboada et al. Schlafen phage-defense paper.
+discussions:
+- discussion_id: duf262-schlafen-defensefinder-profile-gap
+  prompt: Resolve exact DUF262_Schlafen locus architecture, DUF262-associated domain
+    boundaries, natural host exemplars, phage trigger breadth, and DefenseFinder HMM/rules
+    coverage before minting narrower DUF262 Schlafen mechanism or component traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Perez Taboada et al. support prokaryotic Schlafen nucleases as widespread
+    antiviral effectors fused to phage-sensing domains, and the pinned DefenseFinder
+    article registry maps the DUF262_Shlafen key to the same article. The pinned HMM
+    inventory and rules table have no exact DUF262_Schlafen or DUF262 rows for this
+    source key. This first-pass record therefore does not resolve whether the exact
+    DUF262_Schlafen architecture is a single-protein fusion or multi-gene locus, its
+    exact DUF262-associated domain boundaries, natural host exemplars, accession-level
+    Schlafen proteins, full phage trigger breadth, or a reusable DefenseFinder profile
+    model.
+  evidence:
+  - reference: DOI:10.1038/s41564-026-02277-8
+    snippet: prokaryotic Schlafen nucleases are widespread antiviral effectors that
+      protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing
+      domains.
+    notes: Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as
+      antiviral effectors fused to phage-sensing domains.
+  - reference: DOI:10.1038/s41564-026-02277-8
+    snippet: We expressed seven Enterobacterales Schlafen systems in Escherichia coli,
+      identifying two that confer defence against coliphages.
+    notes: Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems
+      into E. coli and observed coliphage defense for two of them.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| DUF262_Shlafen | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+      proteins mediate phage defence | '
+    notes: The pinned DefenseFinder article registry maps the DUF262_Shlafen source
+      key to the Perez Taboada et al. Schlafen phage-defense paper.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    notes: A structured first-pass search of the pinned DefenseFinder HMM inventory
+      found no exact DUF262_Shlafen, Schlafen, or DUF262 row for this system.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    notes: A structured first-pass search of the pinned DefenseFinder rules table
+      found no exact DUF262_Shlafen, Schlafen, or DUF262 system row for this system.
+  attaches_to:
+  - causal_graphs#duf262_schlafen_phage_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T01:00:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DUF262 Schlafen system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the phage defense system parent after an ignored-and-hidden
+    duplicate review found no exact live TraitMech, METPO, history, or prior proposal
+    record; the replacement placeholder is reserved in proposals/metpo_traitmech_v407.
+  llm_assisted: true
+- timestamp: '2026-10-02T01:00:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DUF262 Schlafen system during initial curation and left canonical_examples
+    empty because Perez Taboada et al. and the pinned DefenseFinder article registry
+    support the DUF262_Schlafen system namespace, but not an accession-backed native
+    microbial taxon exemplar for the exact DUF262_Schlafen source key. No paid research
+    was used.
+  llm_assisted: true
