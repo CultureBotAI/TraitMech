@@ -764,6 +764,32 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avast_system.html#avast-subtype-effector-gap"
  },
  {
+  "discussion_id": "avs-i-component-and-effector-gap",
+  "prompt": "Resolve Avs1A, Avs1B, and Avs1C component roles, direct effector chemistry, exact phage-trigger mapping, native host breadth, and sensitive-phage breadth before minting Avs I mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Avs I system",
+  "source_id": "traitmech:000534",
+  "source_file": "avs_i_system.yaml",
+  "attaches_to": [
+   "causal_graphs#avs_i_locus_phage_protein_recognition"
+  ],
+  "rationale": "Gao et al. support Avs1 phage-protein recognition and Avs activation during antiviral defense, and the pinned DefenseFinder HMM inventory and rules table support Avs_I as a subtype I model with Avs1A, Avs1B, and Avs1C profiles. This first-pass record leaves the exact component functions, downstream effector chemistry, native host breadth, sensitive-phage breadth, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 6,
+  "evidence_refs": [
+   "DOI:10.1126/science.abm4096",
+   "DOI:10.1126/science.abm4096",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/avs_i_system.html#avs-i-component-and-effector-gap"
+ },
+ {
   "discussion_id": "azaca-mechanism-gap",
   "prompt": "Resolve Azaca phage triggers and effector outputs before minting narrower Azaca mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8806,9 +8832,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 405,
- "total_knowledge_gaps": 317,
- "total_source_entries": 399,
+ "total_discussions": 406,
+ "total_knowledge_gaps": 318,
+ "total_source_entries": 400,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

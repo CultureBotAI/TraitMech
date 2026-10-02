@@ -1,0 +1,227 @@
+identifier: traitmech:000534
+label: Avs I system
+definition: An AVAST system in which an organism possesses a genome-encoded subtype
+  I locus represented by DefenseFinder with Avs1A, Avs1B, and Avs1C profiles.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000239
+synonyms:
+- synonym_text: Avs_I
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Avs_I__Avs1A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Avs_I__Avs1B
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Avs_I__Avs1C
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+  notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+    the portal
+  notes: Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: In all four cases, target recognition led to Avs protein activation and
+    antiviral activity
+  notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+    and antiviral activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the Avs source key to the
+    Gao et al. pangenome-scale antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     |
+    Avs_I                  | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     |
+    Avs_I                  | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     |
+    Avs_I                  | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"
+  notes: The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with
+    Avs1A, Avs1B, and Avs1C profiles.
+causal_graphs:
+- graph_id: avs_i_locus_phage_protein_recognition
+  title: Avs I loci support phage protein recognition
+  description: Conservative system-level sketch linking an Avs_I locus to Avs1-mediated
+    phage protein recognition and Avs I system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Avs_I at locus and Avs1 phage-protein recognition
+    level without asserting the exact Avs1A, Avs1B, and Avs1C component roles, the
+    direct effector activity, native host breadth, sensitive-phage breadth, or whether
+    every DefenseFinder Avs_I prediction is a complete experimentally active Avs I
+    locus.
+  nodes:
+  - node_id: avs_i_locus
+    label: Avs I locus
+    node_type: GENETIC_ELEMENT
+    description: An AVAST subtype I locus represented in DefenseFinder by Avs1A, Avs1B,
+      and Avs1C profiles.
+  - node_id: avs1_phage_protein_recognition
+    label: Avs1 phage protein recognition
+    node_type: BIOLOGICAL_PROCESS
+    description: Recognition of an infecting phage protein by an Avs1 antiviral STAND-family
+      receptor.
+  - node_id: avs_i_system_trait
+    label: Avs I system
+    node_type: TRAIT
+    grounding: traitmech:000534
+    description: Possession of a genome-encoded Avs I phage-defense system.
+  - node_id: avast_system_trait
+    label: AVAST system
+    node_type: TRAIT
+    grounding: traitmech:000239
+    description: Possession of a genome-encoded AVAST phage-defense system.
+  edges:
+  - subject: avs_i_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avs1_phage_protein_recognition
+    description: Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST
+      receptors that recognize the phage large terminase subunit.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST
+        receptor family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     |
+        Avs_I                  | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the
+        Avs_I model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     |
+        Avs_I                  | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the
+        Avs_I model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     |
+        Avs_I                  | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the
+        Avs_I model namespace.
+  - subject: avs1_phage_protein_recognition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: avs_i_system_trait
+    description: The first-pass Avs I system trait is realized by Avs1 target recognition
+      and downstream antiviral activity.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST
+        receptor family.
+    - reference: DOI:10.1126/science.abm4096
+      snippet: In all four cases, target recognition led to Avs protein activation
+        and antiviral activity
+      notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+        and antiviral activity.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_I as an Avs subsystem
+        with Avs1A, Avs1B, and Avs1C profiles.
+  - subject: avs_i_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: avast_system_trait
+    description: Avs I system possession is an AVAST-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+      notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+        family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the Avs source key to
+        the Gao et al. pangenome-scale antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_I as an Avs subsystem
+        with Avs1A, Avs1B, and Avs1C profiles.
+discussions:
+- discussion_id: avs-i-component-and-effector-gap
+  prompt: Resolve Avs1A, Avs1B, and Avs1C component roles, direct effector chemistry,
+    exact phage-trigger mapping, native host breadth, and sensitive-phage breadth
+    before minting Avs I mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support Avs1 phage-protein recognition and Avs activation
+    during antiviral defense, and the pinned DefenseFinder HMM inventory and rules
+    table support Avs_I as a subtype I model with Avs1A, Avs1B, and Avs1C profiles.
+    This first-pass record leaves the exact component functions, downstream effector
+    chemistry, native host breadth, sensitive-phage breadth, and profile-to-activity
+    requirements unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.abm4096
+    snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+      the portal
+    notes: Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST
+      receptor family.
+  - reference: DOI:10.1126/science.abm4096
+    snippet: In all four cases, target recognition led to Avs protein activation and
+      antiviral activity
+    notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+      and antiviral activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     |
+      Avs_I                  | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     |
+      Avs_I                  | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     |
+      Avs_I                  | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"
+    notes: The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with
+      Avs1A, Avs1B, and Avs1C profiles.
+  attaches_to:
+  - causal_graphs#avs_i_locus_phage_protein_recognition
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T04:42:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Avs I system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the AVAST system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v411.
+  llm_assisted: true
+- timestamp: '2026-10-02T04:42:01Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Avs I system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the Avs_I
+    model namespace and Avs1 phage-protein-recognition activity but not an accession-backed
+    native microbial taxon exemplar with experimentally verified endogenous Avs I
+    activity. No paid research was used.
+  llm_assisted: true
