@@ -1958,6 +1958,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/drt8_system.html#drt8-profile-activity-gap"
  },
  {
+  "discussion_id": "drt9-profile-activity-gap",
+  "prompt": "Resolve the DRT9 reverse-transcriptase product, direct phage trigger, host breadth, and DRT9__SLATT HMM-row status before minting DRT9 mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DRT9 system",
+  "source_id": "traitmech:000542",
+  "source_file": "drt9_system.yaml",
+  "attaches_to": [
+   "causal_graphs#drt9_locus_reverse_transcriptase_defense"
+  ],
+  "rationale": "Gao et al. support defense-associated reverse transcriptases as a broad antiphage-system family, and the pinned DefenseFinder HMM inventory and rules table support DRT9 as a DRT subsystem with a mandatory DRT9__DRT9 profile. This first-pass record leaves the exact DRT9 RT product, phage trigger, host breadth, and DRT9__SLATT inventory-row status unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1126/science.aba0372",
+   "DOI:10.1126/science.aba0372",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/drt9_system.html#drt9-profile-activity-gap"
+ },
+ {
   "discussion_id": "drt-subtype-mechanism-gap",
   "prompt": "Resolve DRT subtype products, partner RNAs or proteins, phage triggers, and antiphage substrates before minting narrower DRT subtype mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -9001,9 +9025,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 413,
- "total_knowledge_gaps": 325,
- "total_source_entries": 407,
+ "total_discussions": 414,
+ "total_knowledge_gaps": 326,
+ "total_source_entries": 408,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

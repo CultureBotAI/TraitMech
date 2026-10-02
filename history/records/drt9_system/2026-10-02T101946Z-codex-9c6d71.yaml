@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/drt9_system.yaml
+  slug: drt9_system
+session:
+  id: 2026-10-02T101946Z-codex-9c6d71
+  timestamp: '2026-10-02T10:19:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DRT9 system trait
+  details: Minted traitmech:000542 as a DOI- and DefenseFinder-backed DRT9 phage-defense-system
+    TraitRecord under the DRT system parent, cited Gao et al. and pinned DefenseFinder registry,
+    HMM, and rules rows for the DRT9 model namespace, left canonical_examples empty due to
+    lack of accession-backed native microbial taxon evidence, and reserved METPO:1049600 in
+    proposals/metpo_traitmech_v419 for upstream replacement.
