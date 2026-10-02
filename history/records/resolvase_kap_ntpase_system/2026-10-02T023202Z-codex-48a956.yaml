@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/resolvase_kap_ntpase_system.yaml
+  slug: resolvase_kap_ntpase_system
+session:
+  id: 2026-10-02T023202Z-codex-48a956
+  timestamp: '2026-10-02T02:32:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Resolvase KAP NTPase system trait
+  details: Minted traitmech:000532 as a DOI- and DefenseFinder-backed Resolvase_KAP_NTPase
+    Schlafen phage-defense-system record, reserved METPO:1048600 in proposals/metpo_traitmech_v409
+    for upstream replacement, captured the Resolvase_KAP_NTPase article-registry source key,
+    left exact HMM/rules and native-host exemplars as open knowledge gaps, and validated the
+    record through write_validated_trait. The ignored-and-hidden duplicate search found no
+    exact Resolvase_KAP_NTPase trait, history record, prior proposal, page, script, or reserved
+    CURIE before curation.

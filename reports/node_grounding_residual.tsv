@@ -33,6 +33,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
+schlafen antiviral activity	BIOLOGICAL_PROCESS	4	data/traits/genomics/duf262_schlafen_system.yaml|data/traits/genomics/resolvase_duf5677_system.yaml|data/traits/genomics/resolvase_kap_ntpase_system.yaml
 phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/razr_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
 foreign unmethylated dna cleavage	BIOLOGICAL_PROCESS	4	data/traits/genomics/type_i_restriction_modification_system.yaml|data/traits/genomics/type_ii_restriction_modification_system.yaml|data/traits/genomics/type_iig_restriction_modification_system.yaml
@@ -63,7 +64,6 @@ temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
-schlafen antiviral activity	BIOLOGICAL_PROCESS	3	data/traits/genomics/duf262_schlafen_system.yaml|data/traits/genomics/resolvase_duf5677_system.yaml|data/traits/genomics/resolvase_schlafen_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 t7 phage resistance	BIOLOGICAL_PROCESS	3	data/traits/genomics/rst_duf4238_system.yaml|data/traits/genomics/rst_helicaseduf2290_system.yaml|data/traits/genomics/rst_hydrolase_3tm_system.yaml
@@ -1700,6 +1700,7 @@ phage ring trigger	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
 razr oligomerization	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
 nonspecific rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/razr_system.yaml
 resolvase duf5677 locus	GENETIC_ELEMENT	1	data/traits/genomics/resolvase_duf5677_system.yaml
+resolvase kap ntpase locus	GENETIC_ELEMENT	1	data/traits/genomics/resolvase_kap_ntpase_system.yaml
 resolvase schlafen locus	GENETIC_ELEMENT	1	data/traits/genomics/resolvase_schlafen_system.yaml
 foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/restriction_modification_system.yaml
 cognate dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
