@@ -790,6 +790,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avs_i_system.html#avs-i-component-and-effector-gap"
  },
  {
+  "discussion_id": "avs-ii-component-and-effector-gap",
+  "prompt": "Resolve the Avs2A component role, direct effector chemistry, exact phage-trigger mapping, native host breadth, and sensitive-phage breadth before minting Avs II mechanism or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Avs II system",
+  "source_id": "traitmech:000535",
+  "source_file": "avs_ii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#avs_ii_locus_phage_protein_recognition"
+  ],
+  "rationale": "Gao et al. support Avs2 phage-protein recognition and Avs activation during antiviral defense, and the pinned DefenseFinder HMM inventory and rules table support Avs_II as a subtype II model with an Avs2A profile. This first-pass record leaves the exact component role, downstream effector chemistry, native host breadth, sensitive-phage breadth, and profile-to-activity requirements unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "DOI:10.1126/science.abm4096",
+   "DOI:10.1126/science.abm4096",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/avs_ii_system.html#avs-ii-component-and-effector-gap"
+ },
+ {
   "discussion_id": "azaca-mechanism-gap",
   "prompt": "Resolve Azaca phage triggers and effector outputs before minting narrower Azaca mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8832,9 +8856,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 406,
- "total_knowledge_gaps": 318,
- "total_source_entries": 400,
+ "total_discussions": 407,
+ "total_knowledge_gaps": 319,
+ "total_source_entries": 401,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

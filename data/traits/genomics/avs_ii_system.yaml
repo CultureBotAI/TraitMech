@@ -1,0 +1,189 @@
+identifier: traitmech:000535
+label: Avs II system
+definition: An AVAST system in which an organism possesses a genome-encoded subtype
+  II locus represented by DefenseFinder with an Avs2A profile.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000239
+synonyms:
+- synonym_text: Avs_II
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Avs_II__Avs2A
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+  notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+    the portal
+  notes: Gao et al. support Avs2 as a phage-protein-sensing member of the AVAST receptor
+    family.
+- reference: DOI:10.1126/science.abm4096
+  snippet: In all four cases, target recognition led to Avs protein activation and
+    antiviral activity
+  notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+    and antiviral activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the Avs source key to the
+    Gao et al. pangenome-scale antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Avs_II__Avs2A                                    | Avs_II__Avs2A                                    |
+    Avs_II                 | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory records Avs_II__Avs2A under the Avs_II
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Avs\tAvs_II\t1\t1\tAvs_II__Avs2A\t\t\t"
+  notes: The pinned DefenseFinder rules table models Avs_II as an Avs subsystem with
+    an Avs2A profile.
+causal_graphs:
+- graph_id: avs_ii_locus_phage_protein_recognition
+  title: Avs II loci support phage protein recognition
+  description: Conservative system-level sketch linking an Avs_II locus to Avs2-mediated
+    phage protein recognition and Avs II system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Avs_II at locus and Avs2 phage-protein recognition
+    level without asserting the exact Avs2A component role, direct effector activity,
+    native host breadth, sensitive-phage breadth, or whether every DefenseFinder Avs_II
+    prediction is a complete experimentally active Avs II locus.
+  nodes:
+  - node_id: avs_ii_locus
+    label: Avs II locus
+    node_type: GENETIC_ELEMENT
+    description: An AVAST subtype II locus represented in DefenseFinder by an Avs2A
+      profile.
+  - node_id: avs2_phage_protein_recognition
+    label: Avs2 phage protein recognition
+    node_type: BIOLOGICAL_PROCESS
+    description: Recognition of an infecting phage protein by an Avs2 antiviral STAND-family
+      receptor.
+  - node_id: avs_ii_system_trait
+    label: Avs II system
+    node_type: TRAIT
+    grounding: traitmech:000535
+    description: Possession of a genome-encoded Avs II phage-defense system.
+  - node_id: avast_system_trait
+    label: AVAST system
+    node_type: TRAIT
+    grounding: traitmech:000239
+    description: Possession of a genome-encoded AVAST phage-defense system.
+  edges:
+  - subject: avs_ii_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avs2_phage_protein_recognition
+    description: Avs II loci encode Avs2 components, and Avs2 belongs to the AVAST
+      receptors that recognize the phage large terminase subunit.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs2 as a phage-protein-sensing member of the AVAST
+        receptor family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Avs_II__Avs2A                                    | Avs_II__Avs2A                                    |
+        Avs_II                 | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory records Avs_II__Avs2A under the
+        Avs_II model namespace.
+  - subject: avs2_phage_protein_recognition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: avs_ii_system_trait
+    description: The first-pass Avs II system trait is realized by Avs2 target recognition
+      and downstream antiviral activity.
+    evidence:
+    - reference: DOI:10.1126/science.abm4096
+      snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+        the portal
+      notes: Gao et al. support Avs2 as a phage-protein-sensing member of the AVAST
+        receptor family.
+    - reference: DOI:10.1126/science.abm4096
+      snippet: In all four cases, target recognition led to Avs protein activation
+        and antiviral activity
+      notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+        and antiviral activity.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_II\t1\t1\tAvs_II__Avs2A\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_II as an Avs subsystem
+        with an Avs2A profile.
+  - subject: avs_ii_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: avast_system_trait
+    description: Avs II system possession is an AVAST-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
+      notes: Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system
+        family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Avs | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the Avs source key to
+        the Gao et al. pangenome-scale antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Avs\tAvs_II\t1\t1\tAvs_II__Avs2A\t\t\t"
+      notes: The pinned DefenseFinder rules table models Avs_II as an Avs subsystem
+        with an Avs2A profile.
+discussions:
+- discussion_id: avs-ii-component-and-effector-gap
+  prompt: Resolve the Avs2A component role, direct effector chemistry, exact phage-trigger
+    mapping, native host breadth, and sensitive-phage breadth before minting Avs II
+    mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support Avs2 phage-protein recognition and Avs activation
+    during antiviral defense, and the pinned DefenseFinder HMM inventory and rules
+    table support Avs_II as a subtype II model with an Avs2A profile. This first-pass
+    record leaves the exact component role, downstream effector chemistry, native
+    host breadth, sensitive-phage breadth, and profile-to-activity requirements unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.abm4096
+    snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
+      the portal
+    notes: Gao et al. support Avs2 as a phage-protein-sensing member of the AVAST
+      receptor family.
+  - reference: DOI:10.1126/science.abm4096
+    snippet: In all four cases, target recognition led to Avs protein activation and
+      antiviral activity
+    notes: Gao et al. connect Avs1 through Avs4 target recognition to Avs activation
+      and antiviral activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Avs_II__Avs2A                                    | Avs_II__Avs2A                                    |
+      Avs_II                 | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records Avs_II__Avs2A under the
+      Avs_II model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Avs\tAvs_II\t1\t1\tAvs_II__Avs2A\t\t\t"
+    notes: The pinned DefenseFinder rules table models Avs_II as an Avs subsystem
+      with an Avs2A profile.
+  attaches_to:
+  - causal_graphs#avs_ii_locus_phage_protein_recognition
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T04:58:40Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Avs II system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the AVAST system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v412.
+  llm_assisted: true
+- timestamp: '2026-10-02T04:58:41Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Avs II system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the Avs_II
+    model namespace and Avs2 phage-protein-recognition activity but not an accession-backed
+    native microbial taxon exemplar with experimentally verified endogenous Avs II
+    activity. No paid research was used.
+  llm_assisted: true
