@@ -1,0 +1,186 @@
+identifier: traitmech:000544
+label: DRT2 system
+definition: A DRT system in which an organism possesses a genome-encoded DefenseFinder
+  DRT_2 subtype locus represented by the DRT_2__drt2 profile.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000279
+synonyms:
+- synonym_text: DRT_2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: DRT_2__drt2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: We discovered that a family of uncharacterized reverse transcriptases (RTs)
+    are active defense systems
+  notes: Gao et al. experimentally support defense-associated reverse transcriptases
+    as active antiphage systems.
+- reference: DOI:10.1126/science.aba0372
+  snippet: We named these genes defense-associated RTs (DRTs)
+  notes: Gao et al. coined the defense-associated RT naming that underlies the DRT
+    system family.
+- reference: DOI:10.1126/science.aba0372
+  snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA, where
+    x is any amino acid] abolished activity
+  notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+    active-site residues.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes | '
+  notes: The pinned DefenseFinder article registry maps the DRT source key to the
+    Gao et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| DRT_2__drt2                                      | DRT_2__drt2                                      |
+    DRT_2                  | Custom                  | 100    |'
+  notes: The pinned DefenseFinder HMM inventory records DRT_2__drt2 under the DRT_2
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "DRT\tDRT_2\t1\t1\tDRT_2__drt2\t\t\t"
+  notes: The pinned DefenseFinder rules table models DRT_2 as a DRT subsystem with
+    a DRT_2__drt2 profile.
+causal_graphs:
+- graph_id: drt2_locus_reverse_transcriptase_defense
+  title: DRT2 loci support DRT antiphage defense
+  description: Conservative system-level sketch linking a DRT2 locus to reverse-transcriptase-dependent
+    DRT phage defense and DRT2 system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DRT2 at DefenseFinder subtype-locus level without
+    asserting the direct DRT2 reverse-transcriptase product, phage trigger, native
+    host breadth, sensitive phage breadth, partner-feature requirements, profile-to-activity
+    criteria, or whether every DefenseFinder DRT_2 prediction is a complete experimentally
+    active DRT2 locus.
+  nodes:
+  - node_id: drt2_locus
+    label: DRT2 locus
+    node_type: GENETIC_ELEMENT
+    description: A defense-associated reverse transcriptase subtype II locus represented
+      in DefenseFinder by a DRT_2 profile.
+  - node_id: drt_rt_active_site_activity
+    label: DRT reverse-transcriptase active-site activity
+    node_type: MOLECULAR_FUNCTION
+    description: Reverse-transcriptase active-site-dependent activity of a defense-associated
+      RT antiphage protein.
+  - node_id: drt2_system_trait
+    label: DRT2 system
+    node_type: TRAIT
+    grounding: traitmech:000544
+    description: Possession of a genome-encoded DRT2 phage-defense system.
+  - node_id: drt_system_trait
+    label: DRT system
+    node_type: TRAIT
+    grounding: traitmech:000279
+    description: Possession of a genome-encoded defense-associated reverse transcriptase
+      phage-defense system.
+  edges:
+  - subject: drt2_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: drt_rt_active_site_activity
+    description: DRT2 loci are represented in DefenseFinder by a custom defense-associated
+      reverse transcriptase profile.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We named these genes defense-associated RTs (DRTs)
+      notes: Gao et al. coined the defense-associated RT naming that underlies the
+        DRT system family.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DRT_2__drt2                                      | DRT_2__drt2                                      |
+        DRT_2                  | Custom                  | 100    |'
+      notes: The pinned DefenseFinder HMM inventory records DRT_2__drt2 under the
+        DRT_2 model namespace.
+  - subject: drt_rt_active_site_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: drt2_system_trait
+    description: The first-pass DRT2 system trait is realized by a DefenseFinder DRT_2
+      subtype locus within the reverse-transcriptase-dependent DRT family.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: We discovered that a family of uncharacterized reverse transcriptases
+        (RTs) are active defense systems
+      notes: Gao et al. experimentally support defense-associated reverse transcriptases
+        as active antiphage systems.
+    - reference: DOI:10.1126/science.aba0372
+      snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+        where x is any amino acid] abolished activity
+      notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+        active-site residues.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT_2\t1\t1\tDRT_2__drt2\t\t\t"
+      notes: The pinned DefenseFinder rules table models DRT_2 as a DRT subsystem
+        with a DRT_2__drt2 profile.
+  - subject: drt2_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: drt_system_trait
+    description: DRT2 system possession is a DRT-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| DRT | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes | '
+      notes: The pinned DefenseFinder article registry maps the DRT source key to
+        the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "DRT\tDRT_2\t1\t1\tDRT_2__drt2\t\t\t"
+      notes: The pinned DefenseFinder rules table models DRT_2 as a DRT subsystem
+        with a DRT_2__drt2 profile.
+discussions:
+- discussion_id: drt2-profile-activity-gap
+  prompt: Resolve the DRT2 reverse-transcriptase product, direct phage trigger, host
+    breadth, partner-feature requirements, and DRT_2 profile-to-activity criteria
+    before minting DRT2 mechanism or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support defense-associated reverse transcriptases as a broad
+    antiphage-system family, and the pinned DefenseFinder HMM inventory and rules
+    table support DRT_2 as a single-profile DRT subsystem. This first-pass record
+    leaves the exact DRT2 RT product, phage trigger, host breadth, partner-feature
+    requirements, and profile-to-activity requirements unresolved.
+  evidence:
+  - reference: DOI:10.1126/science.aba0372
+    snippet: We discovered that a family of uncharacterized reverse transcriptases
+      (RTs) are active defense systems
+    notes: Gao et al. experimentally support defense-associated reverse transcriptases
+      as active antiphage systems.
+  - reference: DOI:10.1126/science.aba0372
+    snippet: In all cases, mutations in the RT active site [(Y/F)xDD to (Y/F)xAA,
+      where x is any amino acid] abolished activity
+    notes: Gao et al. connect DRT antiphage activity to conserved reverse-transcriptase
+      active-site residues.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| DRT_2__drt2                                      | DRT_2__drt2                                      |
+      DRT_2                  | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records DRT_2__drt2 under the DRT_2
+      model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "DRT\tDRT_2\t1\t1\tDRT_2__drt2\t\t\t"
+    notes: The pinned DefenseFinder rules table models DRT_2 as a DRT subsystem with
+      a DRT_2__drt2 profile.
+  attaches_to:
+  - causal_graphs#drt2_locus_reverse_transcriptase_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T11:51:13Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DRT2 system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under the DRT system parent after an ignored-and-hidden duplicate review found
+    no exact live DRT2 TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v421.
+  llm_assisted: true
+- timestamp: '2026-10-02T11:51:14Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed DRT2 system during initial curation and left canonical_examples
+    empty because Gao et al. and the pinned DefenseFinder tables support the DRT family
+    and the DRT_2 model namespace but not an accession-backed native microbial taxon
+    exemplar tied to DRT_2__drt2 and experimentally verified endogenous DRT2 activity.
+    No paid research was used.
+  llm_assisted: true
