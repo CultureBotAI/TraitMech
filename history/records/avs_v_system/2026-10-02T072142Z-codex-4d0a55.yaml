@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/avs_v_system.yaml
+  slug: avs_v_system
+session:
+  id: 2026-10-02T072142Z-codex-4d0a55
+  timestamp: '2026-10-02T07:21:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Avs V system trait
+  details: Minted traitmech:000538 as a DOI- and DefenseFinder-backed Avs V phage-defense-system
+    record under AVAST system, cited Gao et al. for AVAST discovery and Muralidharan
+    et al. for Avs5 type V AVAST immunity and Sir2-like effector activation, cited
+    pinned DefenseFinder article, HMM, and rules rows for the Avs_V model namespace,
+    left canonical_examples empty due to lack of accession-backed native microbial
+    taxon evidence, and reserved METPO:1049200 in proposals/metpo_traitmech_v415
+    for upstream replacement.
