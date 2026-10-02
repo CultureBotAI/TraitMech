@@ -64,6 +64,7 @@ membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_opt
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
+card-like antiphage defense	BIOLOGICAL_PROCESS	3	data/traits/genomics/card_nlr_endonuclease_system.yaml|data/traits/genomics/card_nlr_phospho_system.yaml|data/traits/genomics/card_nlr_subtilase_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
@@ -148,7 +149,6 @@ psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment
 cryoprotection	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_low.yaml
 dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.yaml|data/traits/environment/thermophilic.yaml
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
-card-like antiphage defense	BIOLOGICAL_PROCESS	2	data/traits/genomics/card_nlr_endonuclease_system.yaml|data/traits/genomics/card_nlr_phospho_system.yaml
 sensitive phage infection	BIOLOGICAL_PROCESS	2	data/traits/genomics/dartg_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml
 phage dna-building-block starvation	STATE	2	data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
 disarm methyltransferase-associated antiphage defense	BIOLOGICAL_PROCESS	2	data/traits/genomics/disarm1_system.yaml|data/traits/genomics/disarm2_system.yaml
@@ -1276,6 +1276,7 @@ trna pyrophosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system
 translation blockade	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 card-nlr endonuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_endonuclease_system.yaml
 card-nlr phospho locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_phospho_system.yaml
+card-nlr subtilase locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_subtilase_system.yaml
 card-nlr locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_system.yaml
 card-like detector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_system.yaml
 cell-death effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_system.yaml
