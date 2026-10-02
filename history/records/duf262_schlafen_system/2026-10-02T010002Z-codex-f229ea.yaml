@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/duf262_schlafen_system.yaml
+  slug: duf262_schlafen_system
+session:
+  id: 2026-10-02T010002Z-codex-f229ea
+  timestamp: '2026-10-02T01:00:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint DUF262 Schlafen system trait
+  details: Minted traitmech:000530 as a DOI- and DefenseFinder-backed DUF262 Schlafen phage-defense-system
+    record, reserved METPO:1048400 in proposals/metpo_traitmech_v407 for upstream replacement,
+    captured the DUF262_Shlafen article-registry source key, left exact HMM/rules and native-host
+    exemplars as open knowledge gaps, and validated the record through write_validated_trait.
+    The ignored-and-hidden duplicate search found no exact DUF262_Shlafen trait, history record,
+    prior proposal, page, script, or reserved CURIE before curation.

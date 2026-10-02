@@ -3173,6 +3173,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dsr_system.html#dsr-sirtuin-mechanism-gap"
  },
  {
+  "discussion_id": "duf262-schlafen-defensefinder-profile-gap",
+  "prompt": "Resolve exact DUF262_Schlafen locus architecture, DUF262-associated domain boundaries, natural host exemplars, phage trigger breadth, and DefenseFinder HMM/rules coverage before minting narrower DUF262 Schlafen mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DUF262 Schlafen system",
+  "source_id": "traitmech:000530",
+  "source_file": "duf262_schlafen_system.yaml",
+  "attaches_to": [
+   "causal_graphs#duf262_schlafen_phage_defense"
+  ],
+  "rationale": "Perez Taboada et al. support prokaryotic Schlafen nucleases as widespread antiviral effectors fused to phage-sensing domains, and the pinned DefenseFinder article registry maps the DUF262_Shlafen key to the same article. The pinned HMM inventory and rules table have no exact DUF262_Schlafen or DUF262 rows for this source key. This first-pass record therefore does not resolve whether the exact DUF262_Schlafen architecture is a single-protein fusion or multi-gene locus, its exact DUF262-associated domain boundaries, natural host exemplars, accession-level Schlafen proteins, full phage trigger breadth, or a reusable DefenseFinder profile model.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-026-02277-8",
+   "DOI:10.1038/s41564-026-02277-8",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/duf262_schlafen_system.html#duf262-schlafen-defensefinder-profile-gap"
+ },
+ {
   "discussion_id": "ecokmcra-defensefinder-model-gap",
   "prompt": "Resolve EcoKMcrA-family breadth, methylcytosine and hydroxymethylcytosine sequence-context specificity across natural hosts, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping before minting narrower EcoKMcrA mechanism or component traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -8704,9 +8729,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 401,
- "total_knowledge_gaps": 313,
- "total_source_entries": 395,
+ "total_discussions": 402,
+ "total_knowledge_gaps": 314,
+ "total_source_entries": 396,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
