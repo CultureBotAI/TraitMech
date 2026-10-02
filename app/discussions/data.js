@@ -1490,6 +1490,29 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/card_nlr_phospho_system.html#card-nlr-phospho-activity-gap"
  },
  {
+  "discussion_id": "card-nlr-subtilase-activity-gap",
+  "prompt": "Resolve the CARD_NLR_Subtilase phage triggers, native hosts, CARD_NLR__Subtilase_long_new HMM inventory coverage, subtilase effector substrate, CARD-to-effector activation sequence, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CARD-NLR subtilase system",
+  "source_id": "traitmech:000553",
+  "source_file": "card_nlr_subtilase_system.yaml",
+  "attaches_to": [
+   "causal_graphs#card_nlr_subtilase_locus_subtype_defense"
+  ],
+  "rationale": "Wein et al. support CARD-like anti-phage defense systems, and the pinned DefenseFinder rules table supports CARD_NLR_Subtilase as a rule-row subtype with a CARD_NLR__Subtilase_long_new rule profile. This first-pass record leaves exact phage triggers, native hosts, accessory-profile requirements, subtilase substrates, CARD-to-subtilase activation, and exact HMM profile coverage unresolved because the pinned HMM inventory lists CARD_NLR__Subtilase and CARD_NLR__Subtilase_small_new but not CARD_NLR__Subtilase_long_new.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "https://europepmc.org/article/PPR/PPR668921",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/card_nlr_subtilase_system.html#card-nlr-subtilase-activity-gap"
+ },
+ {
   "discussion_id": "card-nlr-subtype-mechanism-gap",
   "prompt": "Resolve CARD-NLR subtype effectors, phage triggers, natural-host examples, and GasderMIN subtype boundaries before minting narrower CARD-NLR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1501,7 +1524,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#card_nlr_loci_activate_cell_death_effectors"
   ],
-  "rationale": "Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, and Subtilase effector profiles. This first system-level record leaves the exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, and boundaries between standalone GasderMIN and CARD_NLR_GasderMIN contexts unresolved.",
+  "rationale": "Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, CARD_NLR_Subtilase, and CARD_NLR_like rule profiles. CARD-NLR endonuclease, CARD-NLR phospho, and CARD-NLR subtilase TraitRecords now capture three rule-row subtypes, but exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, CARD_NLR_Subtilase_long_new HMM inventory coverage, CARD_NLR_like boundaries, and standalone GasderMIN versus CARD_NLR_GasderMIN context remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9261,9 +9284,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 424,
- "total_knowledge_gaps": 336,
- "total_source_entries": 418,
+ "total_discussions": 425,
+ "total_knowledge_gaps": 337,
+ "total_source_entries": 419,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

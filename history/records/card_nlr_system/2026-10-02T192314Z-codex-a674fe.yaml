@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_system.yaml
+  slug: card_nlr_system
+session:
+  id: 2026-10-02T192314Z-codex-a674fe
+  timestamp: '2026-10-02T19:23:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track CARD-NLR subtilase split
+  details: Documented traitmech:000553 CARD-NLR subtilase system in the open CARD-NLR subtype-mechanism
+    discussion after minting the DefenseFinder-backed CARD_NLR_Subtilase child. CARD_NLR_GasderMIN,
+    CARD_NLR_like, CARD_NLR_Subtilase_long_new HMM inventory coverage, exact subtilase substrates,
+    and finer activation mechanisms remain open.

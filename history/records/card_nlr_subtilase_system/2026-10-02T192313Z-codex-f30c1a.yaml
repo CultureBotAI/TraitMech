@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_subtilase_system.yaml
+  slug: card_nlr_subtilase_system
+session:
+  id: 2026-10-02T192313Z-codex-f30c1a
+  timestamp: '2026-10-02T19:23:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add CARD-NLR subtilase system trait
+  details: Minted traitmech:000553 for the DOI- and pinned DefenseFinder-backed CARD-NLR subtilase
+    phage-defense subtype after ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record for the target ID, placeholder, cohort, slug,
+    or label. The record anchors CARD_NLR_Subtilase to the CARD-NLR parent, records the CARD_NLR_Subtilase
+    rule-row evidence, documents the missing CARD_NLR__Subtilase_long_new HMM inventory row
+    as an open coverage gap, leaves canonical examples empty pending accession-backed native-host
+    evidence, and reserves METPO:1050700 in proposals/metpo_traitmech_v430 for upstream replacement.
