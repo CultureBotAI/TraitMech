@@ -5738,6 +5738,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/razr_system.html#razr-trigger-model-gap"
  },
  {
+  "discussion_id": "resolvase-schlafen-defensefinder-profile-gap",
+  "prompt": "Resolve exact Resolvase_Schlafen locus architecture, resolvase-associated domain boundaries, natural host exemplars, phage trigger breadth, and DefenseFinder HMM/rules coverage before minting narrower Resolvase Schlafen mechanism or component traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Resolvase Schlafen system",
+  "source_id": "traitmech:000529",
+  "source_file": "resolvase_schlafen_system.yaml",
+  "attaches_to": [
+   "causal_graphs#resolvase_schlafen_phage_defense"
+  ],
+  "rationale": "Perez Taboada et al. support prokaryotic Schlafen nucleases as widespread antiviral effectors fused to phage-sensing domains, and the pinned DefenseFinder article registry maps the Resolvase_Schlafen key to the same article. The pinned HMM inventory and rules table have no exact Schlafen rows. This first-pass record therefore does not resolve whether the exact Resolvase_Schlafen architecture is a single-protein fusion or multi-gene locus, its exact resolvase-associated domain boundaries, natural host exemplars, accession-level Schlafen proteins, full phage trigger breadth, or a reusable DefenseFinder profile model.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1038/s41564-026-02277-8",
+   "DOI:10.1038/s41564-026-02277-8",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/resolvase_schlafen_system.html#resolvase-schlafen-defensefinder-profile-gap"
+ },
+ {
   "discussion_id": "retron-effector-trigger-gap",
   "prompt": "Resolve retron effector, phage-trigger, and hybrid-system diversity before minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -8679,9 +8704,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 400,
- "total_knowledge_gaps": 312,
- "total_source_entries": 394,
+ "total_discussions": 401,
+ "total_knowledge_gaps": 313,
+ "total_source_entries": 395,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

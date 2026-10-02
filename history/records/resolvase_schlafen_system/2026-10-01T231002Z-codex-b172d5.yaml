@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/resolvase_schlafen_system.yaml
+  slug: resolvase_schlafen_system
+session:
+  id: 2026-10-01T231002Z-codex-b172d5
+  timestamp: '2026-10-01T23:10:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Resolvase Schlafen system trait
+  details: Minted traitmech:000529 as a DOI- and DefenseFinder-backed Resolvase Schlafen phage-defense-system
+    record, reserved METPO:1048300 in proposals/metpo_traitmech_v406 for upstream replacement,
+    captured the Resolvase_Schlafen article-registry source key, left exact HMM/rules and
+    native-host exemplars as open knowledge gaps, and validated the record through write_validated_trait.
+    The ignored-and-hidden duplicate search found no exact Resolvase_Schlafen trait, history
+    record, prior proposal, page, script, or reserved CURIE before curation.
