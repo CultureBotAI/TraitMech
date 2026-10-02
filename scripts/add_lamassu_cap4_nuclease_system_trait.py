@@ -429,6 +429,7 @@ def build_lamassu_parent() -> dict[str, Any]:
     assert record["identifier"] == LAMASSU_PARENT_ID
     assert record["label"] == "Lamassu system"
     assert record["mapping_status"] == "PROPOSED"
+    assert record["parent_traits"] == ["traitmech:000209"]
 
     discussion = next(
         item
