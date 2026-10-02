@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zorya type I system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Zorya type I system</h1>
+    <p class="curie"><code>traitmech:000554</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A Zorya system in which an organism possesses a genome-encoded DefenseFinder Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype</h2>
+      <p class="meta">Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeI locus to ZorC/ZorD-dependent type I antiphage activity and Zorya type I system possession.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the Zorya_TypeI subtype at DefenseFinder rule-row level without asserting the exact phage trigger, ion substrate, ZorC/ZorD nuclease target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeI prediction is a complete experimentally active locus.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for Zorya type I system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>Zorya type I locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Zorya type I antiphage activity</strong>
+            <code>RO:0002326</code>
+            <p>Zorya_TypeI loci are represented in DefenseFinder by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-024-08493-8</code>
+                <span class="evidence-snippet">ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors</span>
+                <span class="meta">Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |
+| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB custom profiles used by the Zorya_TypeI rule.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |
+| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |</span>
+                <span class="meta">The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">Zorya	Zorya_TypeI	3	3	Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB			</span>
+                <span class="meta">The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>Zorya type I antiphage activity</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>Zorya type I system</strong>
+            <code>METPO:2007700</code>
+            <p>The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-024-08493-8</code>
+                <span class="evidence-snippet">ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors</span>
+                <span class="meta">Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1038/s41586-024-08493-8</code>
+                <span class="evidence-snippet">soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA</span>
+                <span class="meta">Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1038/s41467-025-57397-2</code>
+                <span class="evidence-snippet">We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection</span>
+                <span class="meta">Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>Zorya type I system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>Zorya system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>Zorya type I system possession is a Zorya-system trait.</p>
+            <ul>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">| Zorya | 10\.1126/science\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |</span>
+                <span class="meta">The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">Zorya	Zorya_TypeI	3	3	Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB			</span>
+                <span class="meta">The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1038/s41586-024-08493-8</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/zorya_system.html" >Zorya system <code>traitmech:000217</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (5)</h2>
+      <ul class="synonyms">
+
+        <li>Zorya_TypeI <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</span></li>
+
+        <li>Zorya_TypeI__ZorC <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Zorya_TypeI__ZorD <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Zorya__ZorA <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Zorya__ZorB <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Serratia marcescens</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615"
+             rel="nofollow noreferrer"><code>NCBITaxon:615</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1038/s41467-025-57397-2"
+             rel="nofollow noreferrer"><code>DOI:10.1038/s41467-025-57397-2</code></a>
+
+
+          <span class="meta">Mariano et al. report that a Zorya I homolog set from Serratia marcescens ATCC 274 protected against several tested Durham-collection phages.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="zorya-type-i-activity-gap">
+        <p class="discussion-prompt">Resolve Zorya_TypeI phage triggers, native host breadth, ZorC/ZorD nuclease targets, ZorAB-to-ZorC/ZorD activation, and profile-to-activity criteria before minting enzyme, trigger, or component children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>zorya-type-i-activity-gap</code>
+          · raised by codex
+          · 2026-10-02
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#zorya_type_i_locus_subtype_defense</code>
+        </p>
+
+
+        <p>Hu et al. support ZorAB activation and phage-DNA degradation by type I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules table support Zorya_TypeI as a subtype with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles. This first-pass record leaves exact phage triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense escape, and ZorC/ZorD nuclease outputs unresolved.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>DOI:10.1038/s41586-024-08493-8</code>
+
+            <blockquote>ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |
+| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |</blockquote>
+
+          </li>
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+
+            <blockquote>Zorya	Zorya_TypeI	3	3	Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB			</blockquote>
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-02T20:10:33Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted Zorya type I system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord under the Zorya system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record for the target local ID, placeholder METPO ID, proposal cohort, record slug, or human label; the replacement placeholder is reserved in proposals/metpo_traitmech_v431.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/zorya_type_i_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/zorya_type_i_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/zorya_type_i_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/zorya_type_i_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000554" target="_blank" rel="noopener"><code>traitmech:000554</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeI locus to ZorC/ZorD-dependent type I antiphage activity and Zorya type I system possession.", "edges": [{"description": "Zorya_TypeI loci are represented in DefenseFinder by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB custom profiles used by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |\n| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_type_i_locus", "target": "zorya_type_i_antiphage_activity"}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "zorya_type_i_antiphage_activity", "target": "zorya_type_i_system_trait"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "zorya_type_i_system_trait", "target": "zorya_system_trait"}], "evidence_rows": [{"description": "Zorya_TypeI loci are represented in DefenseFinder by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "edge_id": "edge-1", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB custom profiles used by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |\n| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Zorya type I locus", "target": "Zorya type I antiphage activity"}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "edge_id": "edge-2", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Zorya type I antiphage activity", "target": "Zorya type I system"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Zorya type I system", "target": "Zorya system"}], "graph_id": "zorya_type_i_locus_subtype_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya phage-defense system.", "grounding": "traitmech:000217", "id": "zorya_system_trait", "is_orphan": false, "label": "Zorya system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Antiphage activity of a ZorC/ZorD-dependent type I Zorya locus.", "grounding": null, "id": "zorya_type_i_antiphage_activity", "is_orphan": false, "label": "Zorya type I antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.", "grounding": null, "id": "zorya_type_i_locus", "is_orphan": false, "label": "Zorya type I locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya type I phage-defense system.", "grounding": "traitmech:000554", "id": "zorya_type_i_system_trait", "is_orphan": false, "label": "Zorya type I system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures the Zorya_TypeI subtype at DefenseFinder rule-row level without asserting the exact phage trigger, ion substrate, ZorC/ZorD nuclease target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeI prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-02 20:10 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 949 TraitRecords
+      · embedding coverage 50.3%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

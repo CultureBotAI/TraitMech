@@ -507,6 +507,7 @@ data/traits/genomics/vp1851_system.yaml	traitmech:000491	VP1851 system	vp1851_lo
 data/traits/genomics/vp1853_system.yaml	traitmech:000492	VP1853 system	vp1853_locus_reduces_bacteriophage_plaquing	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/wadjet_system.yaml	traitmech:000218	Wadjet system	wadjet_smc_plasmid_restriction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/zorya_system.yaml	traitmech:000217	Zorya system	zorya_zorab_effector_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/zorya_type_i_system.yaml	traitmech:000554	Zorya type I system	zorya_type_i_locus_subtype_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/zorya_type_ii_system.yaml	traitmech:000552	Zorya type II system	zorya_type_ii_locus_subtype_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/acetogenesis.yaml	METPO:1000845	Acetogenesis	acetogenesis_wood_ljungdahl	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/aerobic_respiration.yaml	METPO:1000801	Aerobic respiration	aerobic_respiration_terminal_oxidase	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-

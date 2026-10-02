@@ -1,0 +1,230 @@
+identifier: traitmech:000554
+label: Zorya type I system
+definition: A Zorya system in which an organism possesses a genome-encoded DefenseFinder
+  Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,
+  and Zorya__ZorB rule profiles.
+definition_source: DOI:10.1038/s41586-024-08493-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000217
+synonyms:
+- synonym_text: Zorya_TypeI
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Zorya_TypeI__ZorC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Zorya_TypeI__ZorD
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Zorya__ZorA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Zorya__ZorB
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1038/s41586-024-08493-8
+  snippet: ZorAB transfers the phage invasion signal through the ZorA cytoplasmic
+    tail to recruit and activate the soluble ZorC and ZorD effectors
+  notes: Hu et al. support ZorAB-mediated recruitment and activation of the soluble
+    ZorC and ZorD Type I effectors.
+- reference: DOI:10.1038/s41586-024-08493-8
+  snippet: soluble ZorC and ZorD effectors, which facilitate the degradation of the
+    phage DNA
+  notes: Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.
+- reference: DOI:10.1038/s41467-025-57397-2
+  snippet: We observed that homologs of Zorya I from Serratia marcescens ATCC 274
+    and Zorya II from E. coli ATCC 8739 provide protection against several phages
+    from the Durham collection
+  notes: Mariano et al. support experimentally validated phage protection by a Zorya
+    I homolog set from Serratia marcescens ATCC 274.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Zorya | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+    defense systems in the microbial pangenome |'
+  notes: The pinned DefenseFinder article registry maps the Zorya source key to the
+    Doron et al. microbial-pangenome antiphage-system discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Zorya__ZorA                                      | Zorya__ZorA                                      |
+    Zorya                  | Custom                  | 20     |
+
+    | Zorya__ZorB                                      | Zorya__ZorB                                      |
+    Zorya                  | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB
+    custom profiles used by the Zorya_TypeI rule.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                |
+    Zorya_TypeI            | Custom                  | 20     |
+
+    | Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                |
+    Zorya_TypeI            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD
+    under the Zorya_TypeI model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
+    \ Zorya__ZorB\t\t\t"
+  notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
+    requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.
+canonical_examples:
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  note: Mariano et al. report that a Zorya I homolog set from Serratia marcescens
+    ATCC 274 protected against several tested Durham-collection phages.
+  reference: DOI:10.1038/s41467-025-57397-2
+causal_graphs:
+- graph_id: zorya_type_i_locus_subtype_defense
+  title: Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype
+  description: Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeI
+    locus to ZorC/ZorD-dependent type I antiphage activity and Zorya type I system
+    possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Zorya_TypeI subtype at DefenseFinder rule-row
+    level without asserting the exact phage trigger, ion substrate, ZorC/ZorD nuclease
+    target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeI
+    prediction is a complete experimentally active locus.
+  nodes:
+  - node_id: zorya_type_i_locus
+    label: Zorya type I locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Zorya_TypeI subtype locus represented by Zorya_TypeI__ZorC,
+      Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB profiles.
+  - node_id: zorya_type_i_antiphage_activity
+    label: Zorya type I antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Antiphage activity of a ZorC/ZorD-dependent type I Zorya locus.
+  - node_id: zorya_type_i_system_trait
+    label: Zorya type I system
+    node_type: TRAIT
+    grounding: traitmech:000554
+    description: Possession of a genome-encoded Zorya type I phage-defense system.
+  - node_id: zorya_system_trait
+    label: Zorya system
+    node_type: TRAIT
+    grounding: traitmech:000217
+    description: Possession of a genome-encoded Zorya phage-defense system.
+  edges:
+  - subject: zorya_type_i_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: zorya_type_i_antiphage_activity
+    description: Zorya_TypeI loci are represented in DefenseFinder by Zorya_TypeI__ZorC,
+      Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB rule profiles, and the characterized
+      Zorya type I branch recruits ZorC and ZorD effectors.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-08493-8
+      snippet: ZorAB transfers the phage invasion signal through the ZorA cytoplasmic
+        tail to recruit and activate the soluble ZorC and ZorD effectors
+      notes: Hu et al. support ZorAB-mediated recruitment and activation of the soluble
+        ZorC and ZorD Type I effectors.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Zorya__ZorA                                      | Zorya__ZorA                                      |
+        Zorya                  | Custom                  | 20     |
+
+        | Zorya__ZorB                                      | Zorya__ZorB                                      |
+        Zorya                  | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Zorya__ZorA and Zorya__ZorB
+        custom profiles used by the Zorya_TypeI rule.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                |
+        Zorya_TypeI            | Custom                  | 20     |
+
+        | Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                |
+        Zorya_TypeI            | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and
+        Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
+        \ Zorya__ZorB\t\t\t"
+      notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
+        requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
+        profiles.
+  - subject: zorya_type_i_antiphage_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: zorya_type_i_system_trait
+    description: The first-pass Zorya type I system trait is realized by a DefenseFinder
+      Zorya_TypeI subtype locus.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-08493-8
+      snippet: ZorAB transfers the phage invasion signal through the ZorA cytoplasmic
+        tail to recruit and activate the soluble ZorC and ZorD effectors
+      notes: Hu et al. support ZorAB-mediated recruitment and activation of the soluble
+        ZorC and ZorD Type I effectors.
+    - reference: DOI:10.1038/s41586-024-08493-8
+      snippet: soluble ZorC and ZorD effectors, which facilitate the degradation of
+        the phage DNA
+      notes: Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation
+        outputs.
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: We observed that homologs of Zorya I from Serratia marcescens ATCC
+        274 and Zorya II from E. coli ATCC 8739 provide protection against several
+        phages from the Durham collection
+      notes: Mariano et al. support experimentally validated phage protection by a
+        Zorya I homolog set from Serratia marcescens ATCC 274.
+  - subject: zorya_type_i_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: zorya_system_trait
+    description: Zorya type I system possession is a Zorya-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Zorya | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+        defense systems in the microbial pangenome |'
+      notes: The pinned DefenseFinder article registry maps the Zorya source key to
+        the Doron et al. microbial-pangenome antiphage-system discovery paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
+        \ Zorya__ZorB\t\t\t"
+      notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
+        requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
+        profiles.
+discussions:
+- discussion_id: zorya-type-i-activity-gap
+  prompt: Resolve Zorya_TypeI phage triggers, native host breadth, ZorC/ZorD nuclease
+    targets, ZorAB-to-ZorC/ZorD activation, and profile-to-activity criteria before
+    minting enzyme, trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Hu et al. support ZorAB activation and phage-DNA degradation by type
+    I Zorya ZorC/ZorD effectors, Mariano et al. support Zorya I phage protection from
+    a Serratia marcescens locus, and the pinned DefenseFinder HMM inventory and rules
+    table support Zorya_TypeI as a subtype with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD,
+    Zorya__ZorA, and Zorya__ZorB profiles. This first-pass record leaves exact phage
+    triggers, native hosts, profile-to-component correspondence, ion usage, anti-defense
+    escape, and ZorC/ZorD nuclease outputs unresolved.
+  evidence:
+  - reference: DOI:10.1038/s41586-024-08493-8
+    snippet: ZorAB transfers the phage invasion signal through the ZorA cytoplasmic
+      tail to recruit and activate the soluble ZorC and ZorD effectors
+    notes: Hu et al. support ZorAB-mediated recruitment and activation of the soluble
+      ZorC and ZorD Type I effectors.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                |
+      Zorya_TypeI            | Custom                  | 20     |
+
+      | Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                |
+      Zorya_TypeI            | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD
+      under the Zorya_TypeI model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA,\
+      \ Zorya__ZorB\t\t\t"
+    notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
+      requiring Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB
+      profiles.
+  attaches_to:
+  - causal_graphs#zorya_type_i_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-02'
+curation_history:
+- timestamp: '2026-10-02T20:10:33Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Zorya type I system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the Zorya system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, or
+    human label; the replacement placeholder is reserved in proposals/metpo_traitmech_v431.
+  llm_assisted: true

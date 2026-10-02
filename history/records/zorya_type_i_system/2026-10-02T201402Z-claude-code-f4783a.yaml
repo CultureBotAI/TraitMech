@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_type_i_system.yaml
+  slug: zorya_type_i_system
+session:
+  id: 2026-10-02T201402Z-claude-code-f4783a
+  timestamp: '2026-10-02T20:14:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Zorya type I system trait
+  details: Minted Zorya type I system as a DOI- and DefenseFinder-backed GENOMICS TraitRecord
+    under Zorya system, added a Serratia marcescens source-locus canonical example, and reserved
+    METPO:1050800 in proposals/metpo_traitmech_v431 for upstream replacement.
