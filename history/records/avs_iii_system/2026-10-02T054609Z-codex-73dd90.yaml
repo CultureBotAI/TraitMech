@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/avs_iii_system.yaml
+  slug: avs_iii_system
+session:
+  id: 2026-10-02T054609Z-codex-73dd90
+  timestamp: '2026-10-02T05:46:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add Avs III system trait
+  details: Created a DOI- and DefenseFinder-backed Avs III system GENOMICS TraitRecord under
+    the AVAST system parent, with pinned DefenseFinder article, HMM, and rules evidence; left
+    canonical_examples empty because no accession-backed native microbial taxon exemplar with
+    experimentally verified endogenous Avs III activity was curated.
