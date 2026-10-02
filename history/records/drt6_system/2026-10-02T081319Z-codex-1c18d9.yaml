@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/drt6_system.yaml
+  slug: drt6_system
+session:
+  id: 2026-10-02T081319Z-codex-1c18d9
+  timestamp: '2026-10-02T08:13:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add DRT6 system trait
+  details: Minted traitmech:000539 as a DOI- and DefenseFinder-backed DRT6 phage-defense-system
+    subtype record under DRT system, cited Gao et al. for DRT discovery and reverse-transcriptase
+    active-site dependence, cited pinned DefenseFinder article, HMM, and rules rows for the
+    DRT6 model namespace, left canonical_examples empty due to lack of accession-backed native
+    microbial taxon evidence, and reserved METPO:1049300 in proposals/metpo_traitmech_v416
+    for upstream replacement.
