@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: tests/test_add_lamassu_hnh_system_trait.py
+  slug: lamassu-writer-fixtures
+session:
+  id: 2026-10-03T111802Z-codex-a1c312
+  timestamp: '2026-10-03T11:18:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1614
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - tests
+  - guidance
+  summary: Decouple writer unit fixtures from later shared-parent curation
+  details: Reproduced three HNH unit-test failures after the valid SMEK parent append. Replaced
+    live-rationale suffix reconstruction with a controlled temporary rationale and matching
+    monkeypatched test-only hash. Production HNH writer and its pinned preimage guard are
+    unchanged. SMEK tests use the same isolated pattern. Added add-trait guidance to preserve
+    runtime guards while isolating historical writer tests from evolving corpus prose. Addresses
+    issue 1614.

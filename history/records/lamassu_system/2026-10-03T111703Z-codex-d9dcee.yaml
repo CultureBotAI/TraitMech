@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T111703Z-codex-d9dcee
+  timestamp: '2026-10-03T11:17:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track Lamassu-SMEK and its unresolved annotation exception
+  details: Appended a guarded parent discussion update linking traitmech:000569. Distinguished
+    the three-component Lamassu-SMEK architecture from single-gene DS-27 and recorded the
+    short-specific prose versus one long-profile dataset call. Preserved prior subtype and
+    mechanism gaps using preimage-hash validation, record_curation_event and write_validated_trait.

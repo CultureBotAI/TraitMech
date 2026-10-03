@@ -5088,6 +5088,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_sir2_system.html#lamassu-sir2-activity-gap"
  },
  {
+  "discussion_id": "lamassu-smek-function-and-annotation-scope",
+  "prompt": "Resolve the long-profile exception and validate SMEK-system function.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu-SMEK system",
+  "source_id": "traitmech:000569",
+  "source_file": "lamassu_smek_system.yaml",
+  "attaches_to": [],
+  "rationale": "The paper describes SMEK as short-Lamassu-specific, while Dataset S1 has 124 short-profile calls and one long-profile call with two distinct LmuB hits. The pinned model accepts both lengths. Reconcile that exceptional call with phylogeny and locus context before claiming a biological long-LmuB subtype or short-only distribution. The definition therefore captures architecture without a length restriction. The pinned legacy summary TSV and HMM inventory lack SMEK entries although the executable model and SMEK profile exist. This whole-system trait is not equivalent to DS-27 (traitmech:000451), whose existing definition denotes a single-gene transcriptional unit with the working label SMEK. No DS-27 assay phenotype or exact synonym is transferred. SMEK-specific Lamassu antiviral validation, substrates, activation order, domain-name expansion and accession-level protein mechanisms remain unresolved. Cap4 and Lipase experiments do not establish SMEK chemistry. No causal graph is asserted from these computational architecture calls alone.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_smek_system.html#lamassu-smek-function-and-annotation-scope"
+ },
+ {
   "discussion_id": "lamassu-subtype-and-effector-gap",
   "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5097,7 +5114,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other's effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary's profile labels as current executable model requirements. Lamassu-HNH system (traitmech:000568) now captures the literature-supported short-LmuB architecture with HNH-domain LmuA and LmuC. The published dataset supplies complete computational genome calls, not HNH-specific functional validation. The pinned executable HNH model accepts either long or short LmuB, whereas all HNH calls in that dataset use short LmuB; its software key is therefore not an exact synonym for this biological scope. HNH-specific activity, substrates, and activation remain unresolved.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other's effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary's profile labels as current executable model requirements. Lamassu-HNH system (traitmech:000568) now captures the literature-supported short-LmuB architecture with HNH-domain LmuA and LmuC. The published dataset supplies complete computational genome calls, not HNH-specific functional validation. The pinned executable HNH model accepts either long or short LmuB, whereas all HNH calls in that dataset use short LmuB; its software key is therefore not an exact synonym for this biological scope. HNH-specific activity, substrates, and activation remain unresolved. Lamassu-SMEK system (traitmech:000569) now captures a locus with SMEK-domain LmuA, LmuB, and LmuC. The paper describes SMEK as short-specific, but its dataset contains 124 short-profile system calls and one long-profile call; the latter requires reconciliation before asserting a biological long-LmuB subtype. The definition therefore does not impose a LmuB-length restriction. The three-component architecture is not equivalent to the single-gene DS-27 system that also uses SMEK as a working label. SMEK-specific functional validation and chemistry remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9634,9 +9651,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 440,
- "total_knowledge_gaps": 352,
- "total_source_entries": 434,
+ "total_discussions": 441,
+ "total_knowledge_gaps": 353,
+ "total_source_entries": 435,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
