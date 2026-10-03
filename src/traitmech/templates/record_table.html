@@ -1,7 +1,7 @@
 <form id="record-filters" class="record-filters" hidden>
   <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
   <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value }}</option>{% endfor %}</select></div>
-  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|unique|sort %}{% if value %}<option value="{{ value }}">{{ value }}</option>{% endif %}{% endfor %}</select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value }}</option>{% endif %}{% endfor %}</select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>

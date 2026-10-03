@@ -38,8 +38,8 @@ def test_catalogue_has_escaped_definitions_and_progressive_controls(template):
     }
     context = dict(
         root="../",
-        records=[record],
-        traits=[record],
+        records=[record, dict(record, kind=None)],
+        traits=[record, dict(record, kind=None)],
         category={"name": "TEST", "blurb": "Example"},
         category_counts={"TEST": 1},
         embedding_per_category={},
@@ -59,6 +59,7 @@ def test_catalogue_has_escaped_definitions_and_progressive_controls(template):
     assert any(a.get("role") == "status" and a.get("aria-live") == "polite" for _, a in parsed.tags)
     assert any(t == "a" and a.get("href") == "../records/needle.html" for t, a in parsed.tags)
     assert not any(t == "tr" and "hidden" in a for t, a in parsed.tags)
+    assert '<th scope="col">Synonyms</th>' in html
     assert "record-browser.js" in html
 
 
