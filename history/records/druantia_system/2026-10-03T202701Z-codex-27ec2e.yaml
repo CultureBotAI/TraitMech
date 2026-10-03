@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_system.yaml
+  slug: druantia_system
+session:
+  id: 2026-10-03T202701Z-codex-27ec2e
+  timestamp: '2026-10-03T20:27:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Resolve Druantia type-I architecture lead
+  details: Replaced the open type-I architecture lead with a link to traitmech:000578 and
+    explained optional DruA versus detector thresholds, citing DOI:10.1126/science.aar4120
+    and DOI:10.3389/fmicb.2020.00961. Type-I partner mechanisms and the type-II lead remain
+    open. Guarded writer preserves the family definition, identity, hierarchy, evidence and
+    canonical example; adds one curation-history event. No protected record or existing III/IV
+    child was edited.

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_type_i_system.yaml
+  slug: druantia_type_i_system
+session:
+  id: 2026-10-03T202658Z-codex-bd566d
+  timestamp: '2026-10-03T20:26:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add literature-defined Druantia type I possession
+  details: Added traitmech:000578 and proposal v455 METPO:1053200 under the corrected v454
+    family parent. Doron DOI:10.1126/science.aar4120 and the Ralstonia comparative-genomics
+    study DOI:10.3389/fmicb.2020.00961 support DruB/C/D/E with optional DruA. Four evidence
+    snippets include two pinned executable models with different thresholds. Natural UMEA
+    4076-1 possession is distinguished from the engineered MG1655 assay; NCBITaxon:562 was
+    resolved at NCBI. No type-III mechanism is transferred. Whole-repository novelty and allocation
+    searches included ignored and hidden files. Guarded writer passes 17 focused tests; full
+    validation follows before PR submission.
