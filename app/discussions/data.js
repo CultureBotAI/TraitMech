@@ -2318,7 +2318,7 @@ window.searchData = [
   "source_id": "traitmech:000234",
   "source_file": "druantia_system.yaml",
   "attaches_to": [],
-  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I/II partner functions, the pinned Type IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I, Type II, and Type IV partner functions, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
