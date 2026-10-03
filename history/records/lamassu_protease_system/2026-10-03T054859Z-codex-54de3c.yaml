@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_protease_system.yaml
+  slug: lamassu_protease_system
+session:
+  id: 2026-10-03T054859Z-codex-54de3c
+  timestamp: '2026-10-03T05:48:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-Protease system
+  details: Minted traitmech:000565 for the DefenseFinder-backed Lamassu-Protease subtype under
+    the Lamassu system parent, added DOI and pinned DefenseFinder rule/HMM evidence snippets,
+    recorded a NONMECHANISTIC subtype graph, left native canonical examples open for lack
+    of accession-backed endogenous activity evidence, and reserved METPO:1051900 in proposals/metpo_traitmech_v442
+    for upstream replacement.
