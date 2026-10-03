@@ -34,6 +34,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
+card-like antiphage defense	BIOLOGICAL_PROCESS	4	data/traits/genomics/card_nlr_endonuclease_system.yaml|data/traits/genomics/card_nlr_like_system.yaml|data/traits/genomics/card_nlr_phospho_system.yaml
 schlafen antiviral activity	BIOLOGICAL_PROCESS	4	data/traits/genomics/duf262_schlafen_system.yaml|data/traits/genomics/resolvase_duf5677_system.yaml|data/traits/genomics/resolvase_kap_ntpase_system.yaml
 phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/razr_system.yaml
 t2, t4, and t6 protection	BIOLOGICAL_PROCESS	4	data/traits/genomics/pd_t4_1_system.yaml|data/traits/genomics/pd_t4_3_system.yaml|data/traits/genomics/pd_t4_6_system.yaml
@@ -64,7 +65,6 @@ membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_opt
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
-card-like antiphage defense	BIOLOGICAL_PROCESS	3	data/traits/genomics/card_nlr_endonuclease_system.yaml|data/traits/genomics/card_nlr_phospho_system.yaml|data/traits/genomics/card_nlr_subtilase_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
@@ -1278,6 +1278,7 @@ translation blockade	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yam
 card-nlr endonuclease locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_endonuclease_system.yaml
 card-nlr gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_gasdermin_system.yaml
 card-like gasdermin antiphage defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_gasdermin_system.yaml
+card-nlr-like locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_like_system.yaml
 card-nlr phospho locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_phospho_system.yaml
 card-nlr subtilase locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_subtilase_system.yaml
 card-nlr locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_system.yaml
