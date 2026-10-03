@@ -9395,6 +9395,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
  },
  {
+  "discussion_id": "galvanotaxis-orientation-and-mapping-boundaries",
+  "prompt": "Resolve electrical orientation mechanisms without equating active motility with passive drift.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "galvanotaxis",
+  "source_id": "traitmech:000581",
+  "source_file": "galvanotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "DOI:10.1128/jb.178.4.1113-1119.1996 proposes differential electrophoretic mobility of the body and flagellar filaments as an orientation model. DOI:10.1038/s41564-024-01778-8 observes flagellar redistribution and a largely non-motile double mutant; it does not establish a universal receptor circuit or separate the individual flagellin contributions. A cheB mutant retains the electrical response. The source's weakly biased B. subtilis assay is not a robust canonical example. Physical orientation can guide powered locomotion, but fixed-cell drift alone is not this phenotype. QuickGO searches for galvanotaxis and electrotaxis found no exact term on 2026-10-03; MeSH Taxis Response is broader and excluded from xrefs. GO:0071973 grounds only the flagellar process.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/galvanotaxis.html#galvanotaxis-orientation-and-mapping-boundaries"
+ },
+ {
+  "discussion_id": "galvanotaxis-source-data-coordinate-convention",
+  "prompt": "Reconcile directedness signs before importing numerical source-data values.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "galvanotaxis",
+  "source_id": "traitmech:000581",
+  "source_file": "galvanotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Sun et al., Figure 5d and Results report negative directedness for E. coli and positive for Salmonella. The source workbook's Fig. 5d,e sheet labels Red to anode and Green to cathode but contains opposite-signed cosine values. Direction labels agree with Figure 5c and the 1996 primary abstract; the coordinate conventions need reconciliation. No numerical directedness values are imported and no correction is inferred. Source: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-024-01778-8/MediaObjects/41564_2024_1778_MOESM10_ESM.xlsx",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/galvanotaxis.html#galvanotaxis-source-data-coordinate-convention"
+ },
+ {
   "discussion_id": "gamma-glutamyltransferase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for gamma-glutamyltransferase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9838,9 +9872,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 452,
- "total_knowledge_gaps": 364,
- "total_source_entries": 446,
+ "total_discussions": 454,
+ "total_knowledge_gaps": 365,
+ "total_source_entries": 447,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
