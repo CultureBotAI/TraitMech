@@ -8,7 +8,7 @@ session:
   timestamp: '2026-10-03T01:24:15Z'
   actors:
   - type: ai_agent
-    name: claude-code
+    name: codex
     model: gpt-5-codex
     agent_tool: codex
 events:
