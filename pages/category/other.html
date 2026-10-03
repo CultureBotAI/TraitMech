@@ -12,6 +12,7 @@
     <a class="brand" href="../index.html">TraitMech</a>
     <nav>
       <a href="../index.html">Home</a>
+      <a href="../browse.html">Browse</a>
       <a href="../umap.html">Embedding space</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
@@ -24,270 +25,89 @@
   <p class="breadcrumb"><a href="../index.html">TraitMech</a> <span>›</span> OTHER</p>
   <h1>OTHER <span class="meta">(32)</span></h1>
 </header>
-<table class="trait-list">
-  <thead>
-    <tr><th>Label</th><th>CURIE</th><th>Term kind</th><th>kg-microbe nodes</th><th>Synonyms</th></tr>
-  </thead>
-  <tbody>
 
-    <tr>
-      <td><a href="../traits/other/voges_proskauer_test.html">Voges-Proskauer test</a></td>
-      <td><code>METPO:1005016</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<form id="record-filters" class="record-filters" hidden>
+  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="OTHER">OTHER</option></select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="CLASS">CLASS</option></select></div>
+  <button type="reset">Clear filters</button>
+</form>
+<p id="record-count" role="status" aria-live="polite">32 records</p>
+<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+<table id="record-table">
+<caption>Records</caption>
+<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">kg-microbe nodes</th><th scope="col">Synonyms</th></tr></thead>
+<tbody>
 
-    <tr>
-      <td><a href="../traits/other/voges_proskauer_test_negative.html">Voges-Proskauer test negative</a></td>
-      <td><code>METPO:1005018</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/voges_proskauer_test.html">Voges-Proskauer test</a><p class="record-definition">An assay that tests the ability of an organism to produce acetoin from glucose via the butanediol fermentation pathway.</p></td><td><code>METPO:1005016</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/voges_proskauer_test_positive.html">Voges-Proskauer test positive</a></td>
-      <td><code>METPO:1005017</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/voges_proskauer_test_negative.html">Voges-Proskauer test negative</a><p class="record-definition">A phenotype in which an organism tests negative in the Voges-Proskauer test.</p></td><td><code>METPO:1005018</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/catalase_negative.html">catalase negative</a></td>
-      <td><code>METPO:1007084</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;voges-proskauer test&#39;, &#39;synonym_type&#39;: &#39;RELATED_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/voges_proskauer_test_positive.html">Voges-Proskauer test positive</a><p class="record-definition">A phenotype in which an organism tests positive in the Voges-Proskauer test, indicating acetoin production.</p></td><td><code>METPO:1005017</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/catalase_test.html">catalase test</a></td>
-      <td><code>METPO:1007080</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;catalase -&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;catalase test negative&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/catalase_negative.html">catalase negative</a><p class="record-definition">Test-outcome phenotype where the catalase test yields a negative result (no bubbling on H2O2). The underlying enzyme-organism relation should additionally be asserted via &lt;organism&gt; METPO:2000303 &#39;does not show activity of&#39; GO:0004096 &#39;catalase activity&#39;.</p></td><td><code>METPO:1007084</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/circular_colony.html">circular colony</a></td>
-      <td><code>METPO:1007064</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;catalase activity test&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;catalase assay&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/catalase_test.html">catalase test</a><p class="record-definition">A biochemical test that detects catalase enzyme activity by exposing cells to hydrogen peroxide and observing for visible bubbling. The test outcome (positive or negative) is captured by its child classes; this class itself does not assert that the organism has catalase activity.</p></td><td><code>METPO:1007080</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/coagulase_negative.html">coagulase negative</a></td>
-      <td><code>METPO:1007091</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;round colony&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/circular_colony.html">circular colony</a><p class="record-definition">A colony shape that has a regular round outline.</p></td><td><code>METPO:1007064</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/coagulase_positive.html">coagulase positive</a></td>
-      <td><code>METPO:1007090</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;coagulase -&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;coagulase test negative&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/coagulase_negative.html">coagulase negative</a><p class="record-definition">Test-outcome phenotype where the coagulase test yields a negative result. The underlying enzyme-organism relation should additionally be asserted via &lt;organism&gt; METPO:2000303 &#39;does not show activity of&#39; &lt;coagulase enzyme term&gt; once a sufficiently specific enzyme term is selected.</p></td><td><code>METPO:1007091</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/colony_morphology.html">colony morphology</a></td>
-      <td><code>METPO:1007062</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;coagulase +&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;coagulase test positive&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/coagulase_positive.html">coagulase positive</a><p class="record-definition">Test-outcome phenotype where the coagulase test yields a positive result (plasma clotting). The underlying enzyme-organism relation should additionally be asserted via &lt;organism&gt; METPO:2000302 &#39;shows activity of&#39; &lt;coagulase enzyme term&gt; once a sufficiently specific enzyme term is selected (no GO/EC term currently exists at the bacteriological coagulase test granularity).</p></td><td><code>METPO:1007090</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/colony_shape.html">colony shape</a></td>
-      <td><code>METPO:1007063</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/colony_morphology.html">colony morphology</a><p class="record-definition">A phenotype characterized by macroscopic colony characteristics such as shape, margin, elevation, surface, colour, and size.</p></td><td><code>METPO:1007062</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/epibiont_phenotype.html">epibiont phenotype</a></td>
-      <td><code>METPO:1007093</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/colony_shape.html">colony shape</a><p class="record-definition">A colony morphology characterized by the overall macroscopic colony outline as observed on solid medium.</p></td><td><code>METPO:1007063</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/filamentous_colony.html">filamentous colony</a></td>
-      <td><code>METPO:1007066</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;ectosymbiont&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;epibiont&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/epibiont_phenotype.html">epibiont phenotype</a><p class="record-definition">A phenotype characterized by a microbe that lives on the external surface of a host organism or substrate, as distinct from endosymbionts (which live inside the host); captures host-association mode, not specific host taxonomy.</p></td><td><code>METPO:1007093</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/fried_egg_shaped_colony.html">fried-egg-shaped colony</a></td>
-      <td><code>METPO:1007069</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/filamentous_colony.html">filamentous colony</a><p class="record-definition">A colony shape that has a thread-like or filamentous outline.</p></td><td><code>METPO:1007066</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/generalist.html">generalist</a></td>
-      <td><code>METPO:1005040</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;fried-egg colony&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/fried_egg_shaped_colony.html">fried-egg-shaped colony</a><p class="record-definition">A colony shape that has a raised opaque centre and a translucent peripheral zone, resembling a fried egg.</p></td><td><code>METPO:1007069</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/hemolysis.html">hemolysis</a></td>
-      <td><code>METPO:1005025</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/generalist.html">generalist</a><p class="record-definition">A phenotype describing an organism with a broad ecological niche, capable of thriving across diverse environments or utilizing varied resources.</p></td><td><code>METPO:1005040</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/hemolytic.html">hemolytic</a></td>
-      <td><code>METPO:1005026</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;presence of hemolysis&#39;, &#39;synonym_type&#39;: &#39;RELATED_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/hemolysis.html">hemolysis</a><p class="record-definition">A phenotype describing the ability of an organism to lyse red blood cells.</p></td><td><code>METPO:1005025</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/indole_test.html">indole test</a></td>
-      <td><code>METPO:1005010</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/hemolytic.html">hemolytic</a><p class="record-definition">A phenotype in which an organism is capable of lysing red blood cells.</p></td><td><code>METPO:1005026</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/indole_test_negative.html">indole test negative</a></td>
-      <td><code>METPO:1005012</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/indole_test.html">indole test</a><p class="record-definition">An assay that tests the ability of an organism to produce indole from tryptophan.</p></td><td><code>METPO:1005010</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/indole_test_positive.html">indole test positive</a></td>
-      <td><code>METPO:1005011</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/indole_test_negative.html">indole test negative</a><p class="record-definition">A phenotype in which an organism tests negative in the indole test, indicating it does not produce indole from tryptophan.</p></td><td><code>METPO:1005012</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/irregular_colony.html">irregular colony</a></td>
-      <td><code>METPO:1007065</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;indole test&#39;, &#39;synonym_type&#39;: &#39;RELATED_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/indole_test_positive.html">indole test positive</a><p class="record-definition">A phenotype in which an organism tests positive in the indole test, indicating it produces indole from tryptophan.</p></td><td><code>METPO:1005011</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/methyl_red_test.html">methyl red test</a></td>
-      <td><code>METPO:1005013</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/irregular_colony.html">irregular colony</a><p class="record-definition">A colony shape that has an irregular (non-round, non-rhizoid) outline.</p></td><td><code>METPO:1007065</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/methyl_red_test_negative.html">methyl red test negative</a></td>
-      <td><code>METPO:1005015</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/methyl_red_test.html">methyl red test</a><p class="record-definition">An assay that tests the ability of an organism to produce and maintain stable acid end products from glucose fermentation.</p></td><td><code>METPO:1005013</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/methyl_red_test_positive.html">methyl red test positive</a></td>
-      <td><code>METPO:1005014</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/methyl_red_test_negative.html">methyl red test negative</a><p class="record-definition">A phenotype in which an organism tests negative in the methyl red test.</p></td><td><code>METPO:1005015</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/non_hemolytic.html">non-hemolytic</a></td>
-      <td><code>METPO:1005027</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;methyl red test&#39;, &#39;synonym_type&#39;: &#39;RELATED_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/methyl_red_test_positive.html">methyl red test positive</a><p class="record-definition">A phenotype in which an organism tests positive in the methyl red test, indicating mixed acid fermentation.</p></td><td><code>METPO:1005014</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/osmotic_tolerance.html">osmotic tolerance</a></td>
-      <td><code>METPO:1007073</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">1</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/non_hemolytic.html">non-hemolytic</a><p class="record-definition">A phenotype in which an organism does not lyse red blood cells.</p></td><td><code>METPO:1005027</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/oxidase_negative.html">oxidase negative</a></td>
-      <td><code>METPO:1007086</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;osmophile&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/osmotic_tolerance.html">osmotic tolerance</a><p class="record-definition">A phenotype characterized by the ability to grow under high osmotic pressure (non-NaCl).</p></td><td><code>METPO:1007073</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/oxidase_test.html">oxidase test</a></td>
-      <td><code>METPO:1007081</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;oxidase -&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;oxidase test negative&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/oxidase_negative.html">oxidase negative</a><p class="record-definition">Test-outcome phenotype where the oxidase test yields a negative result. The underlying enzyme-organism relation should additionally be asserted via &lt;organism&gt; METPO:2000303 &#39;does not show activity of&#39; GO:0004129 &#39;cytochrome-c oxidase activity&#39;.</p></td><td><code>METPO:1007086</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/punctiform_colony.html">punctiform colony</a></td>
-      <td><code>METPO:1007067</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;cytochrome oxidase test&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;oxidase activity test&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/oxidase_test.html">oxidase test</a><p class="record-definition">A biochemical test that detects cytochrome c oxidase activity using a redox indicator. The test outcome (positive or negative) is captured by its child classes; this class itself does not assert oxidase activity.</p></td><td><code>METPO:1007081</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/rhizoid_colony.html">rhizoid colony</a></td>
-      <td><code>METPO:1007068</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/punctiform_colony.html">punctiform colony</a><p class="record-definition">A colony shape that is very small (pinpoint), typically &lt;1 mm in diameter.</p></td><td><code>METPO:1007067</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/specialist.html">specialist</a></td>
-      <td><code>traitmech:000177</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/rhizoid_colony.html">rhizoid colony</a><p class="record-definition">A colony shape that has a branching, root-like outline.</p></td><td><code>METPO:1007068</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/urease_negative.html">urease negative</a></td>
-      <td><code>METPO:1007088</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/other/specialist.html">specialist</a><p class="record-definition">A phenotype describing an organism with a narrow ecological niche, restricted to a limited range of environments or resources.</p></td><td><code>traitmech:000177</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/other/urease_test.html">urease test</a></td>
-      <td><code>METPO:1007082</code></td>
-      <td class="meta">CLASS</td>
-      <td>—</td>
-      <td class="meta">2</td>
-    </tr>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;urease -&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;urease test negative&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/urease_negative.html">urease negative</a><p class="record-definition">Test-outcome phenotype where the urease test yields a negative result. The underlying enzyme-organism relation should additionally be asserted via &lt;organism&gt; METPO:2000303 &#39;does not show activity of&#39; GO:0009039 &#39;urease activity&#39;.</p></td><td><code>METPO:1007088</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
 
-  </tbody>
+<tr data-category="OTHER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;urea hydrolysis test&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;} {&#39;synonym_text&#39;: &#39;urease activity test&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;metpo.owl&#39;}"><td><a href="../traits/other/urease_test.html">urease test</a><p class="record-definition">A biochemical test that detects urease enzyme activity by observing urea hydrolysis (typically via a pH-indicator color change). The test outcome (positive or negative) is captured by its child classes; this class itself does not assert urease activity.</p></td><td><code>METPO:1007082</code></td><td>OTHER</td><td>CLASS</td><td>0</td><td>2</td></tr>
+
+</tbody>
 </table>
+</div>
+<script src="../assets/record-browser.js" defer></script>
 
 </main>
 <footer class="site-footer">
@@ -311,6 +131,7 @@
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 <script src="../theme-toggle.js"></script>
 </body>

@@ -501,10 +501,17 @@ def build_queue(
 
 def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> str:
     head = (
-        "<!doctype html><meta charset=utf-8>"
+        "<!doctype html><html lang=en><meta charset=utf-8>"
+        '<meta name="viewport" content="width=device-width, initial-scale=1">'
         "<title>TraitMech curation priority</title>"
-        "<style>body{font:14px/1.5 system-ui,sans-serif;margin:2rem;max-width:1200px}"
-        "table{border-collapse:collapse;width:100%}th,td{padding:.35rem .5rem;"
+        "<style>body{font:14px/1.5 system-ui,sans-serif;margin:2rem;max-width:1200px;"
+        "overflow-wrap:anywhere}.skip-link{position:absolute;left:-10000px}"
+        ".skip-link:focus{position:static}a:focus-visible,.table-scroll:focus-visible{"
+        "outline:3px solid #315a83;outline-offset:3px}"
+        ".table-scroll{max-width:100%;overflow-x:auto}"
+        "@media(max-width:600px){body{margin:1rem}}"
+        "table{border-collapse:collapse;width:100%;min-width:60rem}"
+        "caption{text-align:left;font-weight:600;padding:.5rem}th,td{padding:.35rem .5rem;"
         "border-bottom:1px solid #ddd;text-align:left;vertical-align:top}"
         "th{background:#f4f4f4}code{font-size:.9em}.a{font-weight:600}"
         "tr:hover{background:#fafafa}.n{text-align:right}"
@@ -537,7 +544,10 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
     )
     body = [
         head,
-        "<h1>TraitMech curation priority</h1>",
+        '<a class="skip-link" href="#main-content">Skip to main content</a>',
+        '<nav><a href="../../pages/browse.html">Browse records</a> · '
+        '<a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>',
+        '<main id="main-content" tabindex="-1"><h1>TraitMech curation priority</h1>',
         f"<figure><figcaption>{meta['records']} records; "
         f"{meta['excluded_non_mechanism']} not mechanism records, "
         f"{meta['excluded_deprecated']} deprecated &mdash; both scored to the floor "
@@ -548,9 +558,13 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
         f"<ul>{counts}</ul>",
         lump,
         f"<h2>Top {min(top, len(rows))}</h2>",
-        "<table><tr><th class=n>score</th><th>action</th><th>trait</th>"
-        "<th class=n>edges</th><th class=n>cmp</th><th class=n>orph</th>"
-        "<th class=n>ex</th><th>series</th><th>why</th></tr>",
+        '<div class="table-scroll" role="region" aria-label="Curation priority table" tabindex="0">'
+        f"<table><caption>Top {min(top, len(rows))} curation priorities</caption>"
+        '<thead><tr><th scope="col" class=n>score</th><th scope="col">action</th>'
+        '<th scope="col">trait</th><th scope="col" class=n>edges</th>'
+        '<th scope="col" class=n>cmp</th><th scope="col" class=n>orph</th>'
+        '<th scope="col" class=n>ex</th><th scope="col">series</th>'
+        '<th scope="col">why</th></tr></thead><tbody>',
     ]
     for r in rows[:top]:
         series = (
@@ -566,7 +580,7 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
             f"<td class=n>{r['orphans']}</td><td class=n>{r['examples']}</td>"
             f"<td>{series}</td><td>{html.escape('; '.join(r['reasons']))}</td></tr>"
         )
-    body.append("</table>")
+    body.append("</tbody></table></div></main></html>")
     return "\n".join(body)
 
 

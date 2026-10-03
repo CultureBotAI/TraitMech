@@ -10,6 +10,7 @@ that fails if someone "fixes" it back, while live values must stay generated.
 from __future__ import annotations
 
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -444,3 +445,29 @@ def test_nothing_reads_the_historical_completeness_snapshot():
         if "graph_completeness_audit" in path.read_text()
     ]
     assert offenders == [], offenders
+
+
+def test_dashboard_priority_table_is_accessible_without_hiding_columns():
+    meta = defaultdict(int, actions={})
+    row = dict(
+        score=7,
+        action="BUILD_CAUSAL_GRAPH",
+        category="test",
+        slug="a<b",
+        edges=3,
+        components=2,
+        orphans=1,
+        examples=4,
+        series=None,
+        reasons=["no definition", "research available"],
+    )
+    page = render_html([row], meta, top=80)
+    assert '<a class="skip-link" href="#main-content">Skip to main content</a>' in page
+    assert '<main id="main-content" tabindex="-1">' in page
+    assert 'role="region" aria-label="Curation priority table" tabindex="0"' in page
+    assert '<caption>Top 1 curation priorities</caption>' in page
+    assert page.count('scope="col"') == 9
+    assert "overflow-x:auto" in page
+    assert "test/a&lt;b" in page
+    assert "no definition; research available" in page
+    assert page.count("<td") == 9

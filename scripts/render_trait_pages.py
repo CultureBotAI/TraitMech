@@ -385,6 +385,7 @@ def render_pages(args: argparse.Namespace) -> int:
     (pages_dir / "category").mkdir(exist_ok=True)
     (pages_dir / "assets").mkdir(exist_ok=True)
     shutil.copyfile(TEMPLATES_DIR / "style.css", pages_dir / "assets" / "style.css")
+    shutil.copyfile(TEMPLATES_DIR / "record-browser.js", pages_dir / "assets" / "record-browser.js")
 
     # Build category, slug, parent indexes.
     by_curie: dict[str, dict] = {curie: doc for path, doc in traits if (curie := doc.get("identifier"))}
@@ -505,6 +506,11 @@ def render_pages(args: argparse.Namespace) -> int:
             "term_kind": doc.get("term_kind", ""),
             "n_kgm_nodes": match.get("n_kgm_nodes", 0),
             "synonyms_count": len(doc.get("synonyms") or []),
+            "identifier": curie,
+            "definition": doc.get("definition", ""),
+            "category": doc.get("trait_category", "OTHER"),
+            "kind": doc.get("term_kind", ""),
+            "synonyms": " ".join(str(value) for value in (doc.get("synonyms") or [])),
         })
 
     # Render category index pages.
@@ -589,10 +595,12 @@ def render_pages(args: argparse.Namespace) -> int:
     )
     write_html(pages_dir / "index.html", landing)
 
-    # Render record-browser page (category tile grid).
+    # Render the searchable catalogue and retain category navigation.
     browse = env.get_template("browse.html").render(
         title="Record browser",
         root="",
+        traits=sorted((item for items in category_lists.values() for item in items),
+                      key=lambda item: item["label"].lower()),
         total_traits=len(traits),
         embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         category_counts=category_counts,
