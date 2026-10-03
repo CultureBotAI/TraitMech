@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Druantia type I system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Druantia type I system</h1>
+    <p class="curie"><code>traitmech:000578</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A Druantia system in which an organism possesses a locus encoding DruE together with DruB, DruC and DruD, with or without DruA.</p>
+
+  </header>
+
+
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(4)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1126/science.aar4120" rel="nofollow noreferrer"><code>DOI:10.1126/science.aar4120</code></a>
+        <blockquote>In some cases Type I systems are preceded by a gene annotated as DUF4338</blockquote>
+        <p class="meta">Doron et al., The Druantia system and Table 1: type I has three partner genes beside DruE, sometimes with an additional DUF4338 gene. The table names DruA/B/C/D/E; the prose does not make DruA universal. The UMEA 4076-1 locus protected engineered E. coli MG1655 against four of six tested phages. Deletion of four tested genes abolished protection; this does not establish universal DruA dependence. Snippet verified in the accepted manuscript, page 7 (PDF page 9), available from the Weizmann institutional repository.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.3389/fmicb.2020.00961" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2020.00961</code></a>
+        <blockquote>druA, encodes a large protein with a domain with unknown function (DUF4338)</blockquote>
+        <p class="meta">The Druantia System section maps DUF4338 to DruA and describes a five-gene DruA/B/C/D/E form as type I in the Ralstonia solanacearum species complex. This independently corroborates component names, not a universal five-gene requirement. UW163 is a genomic prediction here; the authors&#39; suggested functionality is not an infection assay.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_I.yaml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_I.yaml</code></a>
+        <blockquote>core_genes:
+  - DruA1
+  - DruB1
+  - DruC1
+  - DruD1
+  - DruE1</blockquote>
+        <p class="meta">Pinned executable PADLOC rule, retrieved 2026-10-03: minimum_core and minimum_total are both 5, maximum_separation is 3, and force_strand is FALSE. Secondary, neutral and prohibited lists contain only NA. This detector requires the five named profiles, including DruA; that is narrower than the literature&#39;s optional-DruA architecture, not evidence for universal DruA essentiality.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_I.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_I.xml</code></a>
+        <blockquote>&lt;model inter_gene_max_space=&#34;5&#34; min_mandatory_genes_required=&#34;1&#34; min_genes_required=&#34;3&#34; vers=&#34;2.0&#34;&gt;</blockquote>
+        <p class="meta">Pinned executable DefenseFinder model, retrieved 2026-10-03: Druantia_I__DruA/B/C/D are accessory slots. The mandatory Druantia__DruE_1 slot permits Druantia__DruE_2, Druantia__DruE_3 or Druantia_IV__DruE4 as exchangeables. The model requires only one mandatory and three total matches and has no forbidden slots. A call alone does not establish the complete DruB/C/D/E architecture or active defense. The raw model key is not an exact synonym.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1126/science.aar4120" rel="nofollow noreferrer"><code>DOI:10.1126/science.aar4120</code></a></dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/druantia_system.html" >Druantia system <code>traitmech:000234</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>Type I Druantia system <span class="meta">EXACT_SYNONYM · DOI:10.3389/fmicb.2020.00961</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+
+
+
+          <a href="https://doi.org/10.1126/science.aar4120" rel="nofollow noreferrer"><code>DOI:10.1126/science.aar4120</code></a>
+
+          <span class="meta">Natural possession is limited to the named source strain UMEA 4076-1, not species-wide possession or demonstrated native-host resistance. Doron et al. transferred its type-I locus into E. coli MG1655; protection against four of six tested phages was measured in that engineered recipient. NCBI independently resolves taxon 562 to Escherichia coli.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="druantia-type-i-components-and-mechanism">
+        <p class="discussion-prompt">Resolve type-I partner functions and reconcile incomplete detector calls.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>druantia-type-i-components-and-mechanism</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>DruB/C/D/E with optional DruA is a literature-based architecture class. The five-gene Ralstonia description and PADLOC rule do not override Doron&#39;s optional DUF4338 component. Conversely, DefenseFinder&#39;s three-match threshold does not establish a complete locus. Missing profiles, incomplete assemblies and engineered deletions do not by themselves establish natural component absence or a new subtype. Full locus context is required, and a genome may encode several Druantia subtypes. The specific functions of type-I partners, the phage trigger, native-host activity and defense breadth remain open. Do not transfer the DruH/type-III helicase-nuclease mechanism to type I, or infer biochemical activity from a DruE profile. No protein examples or causal graph are added without component-resolved functional evidence and accession anchors.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-03T20:24:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added Druantia I organism-level possession with optional DruA, two DOI sources, four exact snippets and pinned executable detector rules. Kept natural UMEA 4076-1 possession distinct from engineered MG1655 defense, with NCBITaxon:562 resolved at NCBI. Ignored-and-hidden novelty and allocation searches found no exact record or METPO term; reserved METPO:1053200 in v455. No type-III mechanism or raw detector threshold defines this class.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/druantia_type_i_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/druantia_type_i_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/druantia_type_i_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/druantia_type_i_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000578" target="_blank" rel="noopener"><code>traitmech:000578</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-03 20:24 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 973 TraitRecords
+      · embedding coverage 49.0%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

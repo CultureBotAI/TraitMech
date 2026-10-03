@@ -71,7 +71,7 @@ discussions:
     classes.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III
+  rationale: 'Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III
     DruHE architectures and validated one Type I locus, while Wu et al. define a Type
     III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing
     intermediates. Druantia III system now captures the DruE/DruH Type III branch
@@ -83,12 +83,17 @@ discussions:
     now captures the DruE/F/L architecture described by Payne et al. (DOI:10.1093/nar/gkab883),
     without the type-II DruM/G components. This resolves the architectural child,
     not type-IV experimental defense or partner chemistry. The family definition no
-    longer requires universal helicase-nuclease DNA processing. Wu et al.'s family-wide
+    longer requires universal helicase-nuclease DNA processing. Wu et al.''s family-wide
     conservation claim is a hypothesis in a type-III preprint. The overgeneralized
     parent graph is removed; the characterized III branch remains at traitmech:000560.
     New proposal v454 replaces the unminted v111 family row without changing the local
-    family identifier or historical TSV. Type I and II remain separate architecture-class
-    discovery leads.
+    family identifier or historical TSV. Type I architecture is now represented by
+    traitmech:000578 Druantia type I system: DruB/C/D/E with optional DruA. Doron''s
+    optional DUF4338 component and the Ralstonia study''s mapping of that domain to
+    DruA qualify the earlier five-gene shorthand. The five-profile PADLOC rule and
+    three-match DefenseFinder threshold are detection criteria, not identical biological
+    definitions. This resolves the type-I architecture lead, not its partner functions
+    or native-host mechanism. Type II remains an architecture-class discovery lead.'
   posed_by: codex
   posed_date: '2026-09-15'
   evidence:
@@ -128,4 +133,12 @@ curation_history:
     Linked the new type-IV architecture child traitmech:000577. The existing III record
     retains its characterized mechanism; type-IV defense remains unresolved. Proposal
     v454 supersedes the v111 family row.'
+  llm_assisted: true
+- timestamp: '2026-10-03T20:24:00Z'
+  curator: codex
+  action: TRACK_DRUANTIA_TYPE_I_CLASS
+  changes: Linked traitmech:000578 using DOI:10.1126/science.aar4120 and DOI:10.3389/fmicb.2020.00961.
+    Resolved the type-I architecture lead with optional DruA and distinct detector
+    thresholds. Kept family identity, definition, hierarchy, evidence and example
+    unchanged; type-I functions and the type-II lead remain open.
   llm_assisted: true
