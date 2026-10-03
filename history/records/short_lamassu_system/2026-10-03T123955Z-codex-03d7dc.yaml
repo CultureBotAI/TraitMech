@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/short_lamassu_system.yaml
+  slug: short_lamassu_system
+session:
+  id: 2026-10-03T123955Z-codex-03d7dc
+  timestamp: '2026-10-03T12:39:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add the short Lamassu family
+  details: Added traitmech:000570 from DOI:10.1073/pnas.2519643122 with six exact snippets
+    across the primary article, RCSB PDB 9NY5 entity 3 JSON, and NCBI taxon 666. Distinguished
+    the short-LmuB phylogenetic and structural family from a numerical length bin, component-number
+    classes, and effector-specific models. Qualified Vibrio cholerae as source organism of
+    Vc-Cap4 and E. coli as heterologous host; no species-wide phenotype or universal mechanism
+    asserted. Ignored-and-hidden novelty searches and fresh METPO seed comparison preceded
+    minting. Reserved METPO:1052400 in v447, including the existing HNH child refinement.
+    Writer dry run, six source exact matches and 24 focused tests passed.

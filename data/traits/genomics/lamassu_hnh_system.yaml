@@ -7,7 +7,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- traitmech:000232
+- traitmech:000570
 synonyms:
 - synonym_text: Lamassu_HNH
   synonym_type: RELATED_SYNONYM
@@ -93,7 +93,11 @@ discussions:
     validation, exact substrates, activation order, and accession-level protein anchors
     remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry
     or its phage spectrum. No protein-resolved causal graph or functional equivalence
-    to standalone HNH proteins is asserted.
+    to standalone HNH proteins is asserted. The direct parent is now traitmech:000570
+    short Lamassu system, matching the short-form LmuB restriction already present
+    in this record's definition. This hierarchy refinement does not narrow the executable
+    detector, resolve the functional gaps, or reinterpret computational calls as measured
+    antiviral phenotypes.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -105,4 +109,12 @@ curation_history:
     Restricted the AN59 example to computational genomic possession. Ignored-and-hidden
     searches found no exact record or METPO term. Reserved METPO:1052200 in proposals/metpo_traitmech_v445;
     retained the detector-scope and HNH-specific functional-validation gaps.
+  llm_assisted: true
+- timestamp: '2026-10-03T12:33:00Z'
+  curator: codex
+  action: REPARENT_TO_SHORT_LAMASSU
+  changes: Placed the existing short-LmuB HNH architecture below traitmech:000570
+    short Lamassu system without changing its definition, evidence, model-scope qualifications
+    or example. The v445 broader Lamassu proposal axiom remains true; v447 documents
+    the added immediate-parent relation for upstream minting.
   llm_assisted: true

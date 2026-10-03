@@ -177,7 +177,7 @@ discussions:
     trigger specificity before minting narrower Lamassu mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Haudiquet et al. support a structurally characterized Vibrio cholerae
+  rationale: 'Haudiquet et al. support a structurally characterized Vibrio cholerae
     Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation,
     and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease,
     Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease,
@@ -187,19 +187,19 @@ discussions:
     rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies,
     the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule
     rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion,
-    the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the
-    Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the
-    Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK
-    rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2
-    rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs
+    the Lamassu-FMO rule row''s relationship to FMO-scoped LmuB/LmuC HMM rows, the
+    Lamassu-Lipase rule row''s relationship to its Lipase-scoped LmuB HMM row, the
+    Lamassu-Mrr rule row''s relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK
+    rule row''s relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2
+    rule row''s relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs
     across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567)
     now captures the literature-supported paired architecture with LmuB and LmuC.
     Its pinned executable XML requires four components, whereas the summary TSV requires
     three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase
-    and Lamassu-Protease siblings each forbid the other's effector profile and are
+    and Lamassu-Protease siblings each forbid the other''s effector profile and are
     not exact matches to this paired architecture. Reconciling the legacy table-based
     sibling definitions with executable models remains open; do not interpret the
-    summary's profile labels as current executable model requirements. Lamassu-HNH
+    summary''s profile labels as current executable model requirements. Lamassu-HNH
     system (traitmech:000568) now captures the literature-supported short-LmuB architecture
     with HNH-domain LmuA and LmuC. The published dataset supplies complete computational
     genome calls, not HNH-specific functional validation. The pinned executable HNH
@@ -212,7 +212,17 @@ discussions:
     before asserting a biological long-LmuB subtype. The definition therefore does
     not impose a LmuB-length restriction. The three-component architecture is not
     equivalent to the single-gene DS-27 system that also uses SMEK as a working label.
-    SMEK-specific functional validation and chemistry remain unresolved.
+    SMEK-specific functional validation and chemistry remain unresolved. Short Lamassu
+    system (traitmech:000570) now captures the short-LmuB phylogenetic and structural
+    family, not a fixed protein-length bin or an effector-specific detector. Lamassu-HNH
+    is placed below it because its existing definition explicitly requires short-form
+    LmuB. SMEK remains directly under the broader Lamassu parent because of its unresolved
+    long-profile exception. The short family permits the reported LmuC-loss and effector-domain-loss
+    architectures; type I is not an exact synonym for the whole short family. The
+    Lamassu-Hypothetical registry label is not accepted as a separate biological trait
+    here: unknown annotation does not establish effector-domain loss, and its relationship
+    to the paper''s clade O still needs explicit mapping. The long family and component-number
+    subtypes remain separate discovery leads.'
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -320,4 +330,11 @@ curation_history:
   changes: Linked traitmech:000569 Lamassu-SMEK system; documented the long-profile
     dataset exception and distinction from the single-gene DS-27 SMEK working label.
     Retained function gaps.
+  llm_assisted: true
+- timestamp: '2026-10-03T12:33:00Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000570 short Lamassu system and the HNH parent refinement;
+    retained the SMEK length exception and rejected unproven equivalence of a Hypothetical
+    label to effector-domain loss.
   llm_assisted: true

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T124004Z-codex-54df45
+  timestamp: '2026-10-03T12:40:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track the short Lamassu family and remaining classification gaps
+  details: Appended a guarded discussion update for new traitmech:000570 and its HNH child.
+    Kept SMEK directly under Lamassu because its published long-profile exception remains
+    unresolved. Rejected equating the Hypothetical registry label with the article effector-domain-loss
+    clade without explicit mapping; retained long-family and component-number classes as discovery
+    leads. The primary source is DOI:10.1073/pnas.2519643122. Preserved all earlier rationale
+    and evidence. Production preimage hash guards and 24 focused writer tests protect unrelated
+    curation.
