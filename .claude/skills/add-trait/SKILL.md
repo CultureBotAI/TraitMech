@@ -88,6 +88,16 @@ causal node. An article-registry row without pinned HMM or rule rows is still
 only name-to-paper evidence; cite it for the system identity and record the
 missing model rows as an unresolved coverage gap.
 
+For detection-output tables, distinguish the actual matched profile from the
+model slot it fills. For example, `gene_name` may report a short-LmuB hit while
+`hit_gene_ref` names an exchangeable long-LmuB model slot; the latter does not
+establish long-family membership. Inspect the column definitions and locus
+context before making biological assignments. Report distinct system identifiers
+(for example, `sys_id`), not component rows, as the number of systems. Genome-level
+prevalence requires unique genomes and an explicit denominator. Reconcile
+mixed-profile loci with the paper's classification instead of treating a raw
+detector label as a sufficient trait definition.
+
 Before defining a system from registry tables, inspect its executable model
 at the same pinned commit (for DefenseFinder, the XML under `definitions/`).
 Compare mandatory, accessory, forbidden, and exchangeable components plus
