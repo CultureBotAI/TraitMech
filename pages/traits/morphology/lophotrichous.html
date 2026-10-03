@@ -38,7 +38,7 @@
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(2)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(3)</span></h2>
     <ul>
 
       <li>
@@ -51,6 +51,12 @@
         <a href="https://doi.org/10.3390/biom9070279" rel="nofollow noreferrer"><code>DOI:10.3390/biom9070279</code></a>
 
         <p class="meta">Flagellum review supports multiple flagellar filaments acting as locomotory organelles.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1128/jb.150.1.377-380.1982" rel="nofollow noreferrer"><code>DOI:10.1128/jb.150.1.377-380.1982</code></a>
+        <blockquote>unipolar cells, recently divided, have only one bundle of flagella.</blockquote>
+        <p class="meta">Swan 1982, p. 377, methods: S. volutans ATCC 19554 was grown at 30 C in ATCC medium 234. Recently divided cells in an actively growing culture were naturally unipolar; older cells had two flagellar bundles and were excluded from the measurements. This supports a life-stage-qualified one-pole example, not unipolar flagellation of every cell or a deflagellation experiment. The source scan, rather than the abstract alone, establishes the culture and division-stage context.</p>
       </li>
 
     </ul>
@@ -416,7 +422,7 @@ Recent systems-level work found that **more than one-third of sequenced bacteria
 
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(2)</span></h2>
+        <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -434,21 +440,6 @@ Recent systems-level work found that **more than one-third of sequenced bacteria
           <a href="https://pubmed.ncbi.nlm.nih.gov/30258065/" rel="nofollow noreferrer"><code>PMID:30258065</code></a>
 
           <span class="meta">polar tuft of flagella</span>
-        </li>
-
-        <li>
-          <em>Spirillum volutans</em>
-
-
-
-          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=968"
-             rel="nofollow noreferrer"><code>NCBITaxon:968</code></a>
-
-
-
-          <code>PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949)</code>
-
-          <span class="meta">bipolar flagellar tufts</span>
         </li>
 
       </ul>
@@ -514,6 +505,18 @@ Recent systems-level work found that **more than one-third of sequenced bacteria
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope lophotrichous_polar_tuft=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf_protein, flig_protein, fipa_protein).</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T17:07:26Z</time> ·
+          <strong>REPAIR_CANONICAL_CITATION_SCOPE_1626</strong> · codex
+          <p class="changes">Resolved issue 1626 by replacing the mismatched bipolar example note and compound PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949) citation with a life-stage-qualified, one-bundle example from Swan 1982 (DOI:10.1128/jb.150.1.377-380.1982; PMID:7061399; PMC220122). This is an explicit source and scope correction, not a PMID-to-DOI normalization: Pijper&#39;s original PMID and DOI identify the same 1949 paper. Source-native scans distinguish recently divided unipolar ATCC 19554 cells from older bipolar cells. Added the exact methods snippet and bounded interpretation; retained NCBITaxon:968 and the independently checked NCBI label. The definition, hierarchy, graph, other example and existing amphitrichous record are unchanged.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T17:30:07Z</time> ·
+          <strong>REFINE_CANONICAL_ARCHETYPES_1629</strong> · codex
+          <p class="changes">Addressed independent PR 1628 review and issue 1629 by removing the S. volutans canonical-example row while retaining the Swan 1982 evidence and verbatim snippet. Recently divided unipolar cells are directly observed, but a selected division-stage observation is not used here as the schema&#39;s archetypal taxon exemplar. H. pylori remains the canonical example. This does not deny naturally unipolar S. volutans cells, assert disjoint organism-level traits or generalize the division sequence to every amphitrichous taxon. The amphitrichous record, trait identity, definition, hierarchy and graph are unchanged; the initial repair event is preserved.</p>
         </li>
 
       </ol>
@@ -901,7 +904,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-10-03 17:30 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 968 TraitRecords
       · embedding coverage 49.3%

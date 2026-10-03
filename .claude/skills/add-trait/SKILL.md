@@ -274,6 +274,13 @@ Make the first record small but independently reviewable:
 - `discussions`: `CURATION_TODO`, `KNOWLEDGE_GAP`, or controversy notes for
   unresolved but reviewable gaps
 
+Distinguish life-stage evidence from the schema's archetypal canonical taxa.
+A directly observed natural transient state can support evidence without making
+the taxon a canonical exemplar; retain the observation with its phase qualifiers
+when omitting that example row. Shared taxa across arrangement classes alone do
+not establish a contradiction: check whether the claims concern the same cell
+and state rather than asserting organism-level disjointness.
+
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/halophily_preference.yaml
+  slug: halophily_preference
+session:
+  id: 2026-10-03T171054Z-codex-1254fc
+  timestamp: '2026-10-03T17:10:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1626
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Normalize and scope the non-halophilic branch comparator citation
+  details: Resolved legacy reference PMC8415458 to DOI:10.3389/fmicb.2021.705326, the same
+    Li et al. 2021 paper independently identified as PMID:34484145. Qualified the existing
+    E. coli comparator to wild-type BW25113 in LB at 37 C and the reported 24-h viable-count
+    comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained the broad-class comparator
+    role and NCBITaxon:562 with its live NCBI label; no sodium-free or species-wide requirement
+    is asserted. Preserved the Halomonas example, all top-level evidence, definition, hierarchy,
+    graph, mapping status and old history. Guarded prevalidation and 91 focused tests passed;
+    full downstream checks and independent review remain required.

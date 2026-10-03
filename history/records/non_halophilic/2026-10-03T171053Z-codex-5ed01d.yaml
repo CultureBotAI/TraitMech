@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/non_halophilic.yaml
+  slug: non_halophilic
+session:
+  id: 2026-10-03T171053Z-codex-5ed01d
+  timestamp: '2026-10-03T17:10:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1626
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - evidence
+  - curation_history
+  summary: Resolve the E. coli citation and qualify its low-salt growth example
+  details: 'Normalized PMC8415458 to DOI:10.3389/fmicb.2021.705326 (PMID:34484145), with authoritative
+    metadata confirming the same Li et al. 2021 paper. Direct full-text XML Results and Methods
+    support wild-type BW25113 growth in LB at 37 C and higher viable counts at 24 h with 0%
+    NaCl supplementation than the 1%, 3.5% and 5% groups. Added the exact Results span and
+    qualified the example note: no sodium-free growth, complete optimum curve, or universal
+    species-wide requirement is inferred. Retained NCBITaxon:562 and its live NCBI label.
+    Definition, hierarchy, graph, Bacillus example and prior history are preserved. Guarded
+    all-target prevalidation and 91 focused tests passed; full downstream checks and independent
+    review remain required.'

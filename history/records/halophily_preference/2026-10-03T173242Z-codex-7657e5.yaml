@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/halophily_preference.yaml
+  slug: halophily_preference
+session:
+  id: 2026-10-03T173242Z-codex-7657e5
+  timestamp: '2026-10-03T17:32:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1629
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1628
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Keep the parent comparator at branch scope without duplicating the child measurement
+  details: Addressed optional independent PR 1628 review feedback. Retained verified DOI:10.3389/fmicb.2021.705326
+    and BW25113 in LB as the non-halophilic branch comparator contrasting with Halomonas,
+    but removed the repeated 24-hour numerical comparison. The exact snippet and measured
+    comparison remain on non_halophilic. No sodium-free or species-wide claim is introduced.
+    Appended a second event; preserved original repository/per-record history, Halomonas row,
+    evidence, identity, definition, hierarchy and graph. Exact reviewed-successor guards remain;
+    comparing arbitrary live examples would weaken drift detection. All 102 focused repair/rendering
+    tests passed; generated products and full checks must be rerun before independent re-review.
