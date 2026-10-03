@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/thermotaxis.yaml
+  slug: thermotaxis
+session:
+  id: 2026-10-03T222004Z-codex-1fe3c7
+  timestamp: '2026-10-03T22:20:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add temperature-guided active movement as thermotaxis
+  details: Added traitmech:000580 using primary DOI:10.7554/eLife.26607 version 2, DOI:10.1073/pnas.0709903105,
+    DOI:10.1074/jbc.271.30.17932 and DOI:10.1128/jb.179.21.6573-6580.1997. Verified exact
+    snippets, K-12 behavioral assay scope, NCBITaxon:83333, reviewed UniProtKB:P07017 and
+    GO:0043052 as a process-only grounding. The graph describes the Tar-mediated arm, not
+    a universal or complete Tar/Tsr mechanism; an open discussion preserves assay-context
+    uncertainty. Ignored-and-hidden novelty searches found no exact record or METPO term.
+    Reserved METPO:1053400 in proposal v457 and updated README counts. Existing traits and
+    the protected spore-germination record are untouched.

@@ -17,7 +17,7 @@ METPO source class and (optionally) to literature evidence.
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
 | MORPHOLOGY | 88 | 4 | 0 | 89 | 96 |
-| PHYSIOLOGY | 45 | 49 | 0 | 51 | 95 |
+| PHYSIOLOGY | 45 | 50 | 0 | 52 | 96 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 122 |
 | ECOLOGY | 26 | 2 | 0 | 28 | 28 |
 | GENOMICS | 19 | 367 | 0 | 372 | 386 |
@@ -26,15 +26,15 @@ METPO source class and (optionally) to literature evidence.
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
 | OTHER | 0 | 1 | 0 | 0 | 32 |
-| **TOTAL** | **427** | **459** | **50** | **716** | **974** |
+| **TOTAL** | **427** | **460** | **50** | **717** | **975** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; `PROPOSED` records comprise 2 ecology records, 4 morphology
-records, 36 newer metabolism records, 49 physiology records, 367
+records, 36 newer metabolism records, 50 physiology records, 367
 genomics records, and 1 other record, and thirty-eight records are still
 `SEEDED` (one environment, one metabolism, four morphology, one physiology, and
 thirty-one other).
-Across the corpus, 716 records currently carry causal graphs. The 50 deprecated
+Across the corpus, 717 records currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
 measurement carriers from the upstream METPO seed that are not intended to carry
@@ -92,7 +92,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 974 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 975 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
