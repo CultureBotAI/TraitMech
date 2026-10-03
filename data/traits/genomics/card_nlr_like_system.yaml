@@ -1,0 +1,162 @@
+identifier: traitmech:000559
+label: CARD-NLR-like system
+definition: A CARD-NLR system in which an organism possesses a genome-encoded DefenseFinder
+  CARD_NLR_like subtype locus represented by the CARD_NLR_like rule row requiring
+  two matches from the CARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new,
+  and CARD_NLR__Trypsin_Phospho effector-profile set.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000337
+synonyms:
+- synonym_text: CARD_NLR_like
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+evidence:
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: Here we show that CARD-like domains are present in defense systems that
+    protect bacteria against phage.
+  notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage defense
+    systems.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+    anti-phage defense in bacterial gasdermin systems | '
+  notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
+    to the Wein et al. CARD-like-domain anti-phage defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__Endonuclease                           | CARD_NLR__Endonuclease                           |
+    CARD_NLR               | Custom                  | 500    |'
+  notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Endonuclease
+    custom profile listed among the candidate effector profiles by the CARD_NLR_like
+    rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__Phospho_Trypsin                        | CARD_NLR__Phospho_Trypsin                        |
+    CARD_NLR               | Custom                  | 1000   |'
+  notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Phospho_Trypsin
+    custom profile listed among the candidate effector profiles by the CARD_NLR_like
+    rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__Trypsin_Phospho                        | CARD_NLR__Trypsin_Phospho                        |
+    CARD_NLR               | Custom                  | 400    |'
+  notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Trypsin_Phospho
+    custom profile listed among the candidate effector profiles by the CARD_NLR_like
+    rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
+    \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
+  notes: The pinned DefenseFinder rules table models CARD_NLR_like as a CARD_NLR subsystem
+    requiring two matches from a four-profile candidate effector set.
+causal_graphs:
+- graph_id: card_nlr_like_locus_subtype_defense
+  title: CARD-NLR-like is a DefenseFinder CARD-NLR subtype
+  description: Conservative subtype-level classification linking the DefenseFinder
+    CARD_NLR_like rule-row definition to CARD-NLR-like system possession and its CARD-NLR
+    parent.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures CARD_NLR_like as a DefenseFinder rule-row subtype
+    of CARD-NLR system possession without asserting a CARD_NLR_like-specific antiphage
+    process, expanding any profile names, selecting which two of the four candidate
+    effector profiles realize activity, resolving the absent CARD_NLR__Subtilase_long_new
+    HMM inventory row, or resolving exact phage triggers, native host breadth, CARD-to-effector
+    activation sequence, cell-death output, or whether every DefenseFinder CARD_NLR_like
+    prediction is a complete experimentally active locus.
+  nodes:
+  - node_id: card_nlr_like_system_trait
+    label: CARD-NLR-like system
+    node_type: TRAIT
+    grounding: traitmech:000559
+    description: Possession of a genome-encoded CARD-NLR-like phage-defense system.
+  - node_id: card_nlr_system_trait
+    label: CARD-NLR system
+    node_type: TRAIT
+    grounding: traitmech:000337
+    description: Possession of a genome-encoded CARD-NLR phage-defense system.
+  edges:
+  - subject: card_nlr_like_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: card_nlr_system_trait
+    description: CARD-NLR-like system possession is a CARD-NLR-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+        anti-phage defense in bacterial gasdermin systems | '
+      notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
+        to the Wein et al. CARD-like-domain anti-phage defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_like\t2\t4"
+      notes: The pinned DefenseFinder rules table places the CARD_NLR_like subsystem
+        under the CARD_NLR system key with two mandatory matches and four genes required.
+discussions:
+- discussion_id: card-nlr-like-activity-gap
+  prompt: Resolve the CARD_NLR_like phage triggers, native hosts, four-profile effector-combination
+    semantics, CARD_NLR__Subtilase_long_new HMM inventory gap, and profile-to-activity
+    criteria before minting effector or trigger children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Wein et al. support CARD-like anti-phage defense, and the pinned DefenseFinder
+    HMM inventory and rules table support CARD_NLR_like as a CARD_NLR subsystem requiring
+    two matches from a four-profile Endonuclease, Phospho_Trypsin, Subtilase_long_new,
+    and Trypsin_Phospho candidate effector set. This first-pass record follows the
+    rule row but leaves exact phage triggers, native hosts, how the two-of-four effector
+    profile combinations map to activity, how CARD_NLR__Subtilase_long_new maps to
+    the pinned HMM inventory, and whether every DefenseFinder CARD_NLR_like prediction
+    is a complete experimentally active locus.
+  evidence:
+  - reference: https://europepmc.org/article/PPR/PPR668921
+    snippet: Here we show that CARD-like domains are present in defense systems that
+      protect bacteria against phage.
+    notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage
+      defense systems.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| CARD_NLR__Endonuclease                           | CARD_NLR__Endonuclease                           |
+      CARD_NLR               | Custom                  | 500    |'
+    notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Endonuclease
+      custom profile listed among the candidate effector profiles by the CARD_NLR_like
+      rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| CARD_NLR__Phospho_Trypsin                        | CARD_NLR__Phospho_Trypsin                        |
+      CARD_NLR               | Custom                  | 1000   |'
+    notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Phospho_Trypsin
+      custom profile listed among the candidate effector profiles by the CARD_NLR_like
+      rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| CARD_NLR__Trypsin_Phospho                        | CARD_NLR__Trypsin_Phospho                        |
+      CARD_NLR               | Custom                  | 400    |'
+    notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Trypsin_Phospho
+      custom profile listed among the candidate effector profiles by the CARD_NLR_like
+      rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
+      \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+      \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
+    notes: The pinned DefenseFinder rules table models CARD_NLR_like as a CARD_NLR
+      subsystem requiring two matches from a four-profile candidate effector set.
+  attaches_to:
+  - causal_graphs#card_nlr_like_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T00:02:50Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted CARD-NLR-like system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the CARD-NLR system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, or
+    human label; existing CARD_NLR_like mentions were scoped to the CARD-NLR parent,
+    not an exact child TraitRecord, and the replacement placeholder is reserved in
+    proposals/metpo_traitmech_v436.
+  llm_assisted: true
+- timestamp: '2026-10-03T00:02:52Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed CARD-NLR-like system during initial curation and left canonical_examples
+    empty because Wein et al. and the pinned DefenseFinder tables support CARD-like
+    anti-phage systems and the CARD_NLR_like rule row but not an accession-backed
+    native microbial taxon exemplar tied to CARD_NLR_like profiles and experimentally
+    verified endogenous activity. No paid research was used.
+  llm_assisted: true

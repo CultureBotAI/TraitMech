@@ -1490,6 +1490,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/card_nlr_gasdermin_system.html#card-nlr-gasdermin-activity-gap"
  },
  {
+  "discussion_id": "card-nlr-like-activity-gap",
+  "prompt": "Resolve the CARD_NLR_like phage triggers, native hosts, four-profile effector-combination semantics, CARD_NLR__Subtilase_long_new HMM inventory gap, and profile-to-activity criteria before minting effector or trigger children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CARD-NLR-like system",
+  "source_id": "traitmech:000559",
+  "source_file": "card_nlr_like_system.yaml",
+  "attaches_to": [
+   "causal_graphs#card_nlr_like_locus_subtype_defense"
+  ],
+  "rationale": "Wein et al. support CARD-like anti-phage defense, and the pinned DefenseFinder HMM inventory and rules table support CARD_NLR_like as a CARD_NLR subsystem requiring two matches from a four-profile Endonuclease, Phospho_Trypsin, Subtilase_long_new, and Trypsin_Phospho candidate effector set. This first-pass record follows the rule row but leaves exact phage triggers, native hosts, how the two-of-four effector profile combinations map to activity, how CARD_NLR__Subtilase_long_new maps to the pinned HMM inventory, and whether every DefenseFinder CARD_NLR_like prediction is a complete experimentally active locus.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "https://europepmc.org/article/PPR/PPR668921",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/card_nlr_like_system.html#card-nlr-like-activity-gap"
+ },
+ {
   "discussion_id": "card-nlr-phospho-activity-gap",
   "prompt": "Resolve the CARD_NLR_Phospho phage triggers, native hosts, phosphorylated substrate, CARD-to-effector activation sequence, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1547,7 +1572,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#card_nlr_loci_activate_cell_death_effectors"
   ],
-  "rationale": "Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, CARD_NLR_Subtilase, and CARD_NLR_like rule profiles. CARD-NLR GasderMIN, endonuclease, phospho, and subtilase TraitRecords now capture four rule-row subtypes, but exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, CARD_NLR_Subtilase_long_new HMM inventory coverage, CARD_NLR_like boundaries, and standalone GasderMIN versus CARD_NLR_GasderMIN mechanism boundaries remain unresolved.",
+  "rationale": "Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, CARD_NLR_Subtilase, and CARD_NLR_like rule profiles. CARD-NLR GasderMIN, endonuclease, phospho, subtilase, and CARD-NLR-like TraitRecords now capture the five DefenseFinder CARD_NLR rule-row subtypes, but exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, CARD_NLR_Subtilase_long_new HMM inventory coverage, CARD_NLR_like multi-effector semantics, and standalone GasderMIN versus CARD_NLR_GasderMIN mechanism boundaries remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9401,9 +9426,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 430,
- "total_knowledge_gaps": 342,
- "total_source_entries": 424,
+ "total_discussions": 431,
+ "total_knowledge_gaps": 343,
+ "total_source_entries": 425,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

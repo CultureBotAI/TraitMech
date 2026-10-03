@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_like_system.yaml
+  slug: card_nlr_like_system
+session:
+  id: 2026-10-03T000445Z-codex-7fdbf0
+  timestamp: '2026-10-03T00:04:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add CARD-NLR-like system trait
+  details: Minted traitmech:000559 for the DefenseFinder-backed CARD_NLR_like subtype under
+    the CARD-NLR system parent after ignored-and-hidden exact duplicate searches found no
+    live TraitMech, METPO, history, or prior proposal record for the local identifier, METPO
+    placeholder, proposal cohort, record slug, human label, or DefenseFinder subsystem. Curated
+    pinned DefenseFinder rule/HMM evidence, a conservative nonmechanistic subtype graph, an
+    open two-of-four effector-profile discussion, an explicit canonical-example evidence-gap
+    event, and a same-PR METPO v436 proposal.

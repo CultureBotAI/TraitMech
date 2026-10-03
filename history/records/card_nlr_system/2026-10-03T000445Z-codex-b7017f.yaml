@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_system.yaml
+  slug: card_nlr_system
+session:
+  id: 2026-10-03T000445Z-codex-b7017f
+  timestamp: '2026-10-03T00:04:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track CARD-NLR-like split
+  details: Documented traitmech:000559 CARD-NLR-like system in the open CARD-NLR subtype-mechanism
+    discussion after minting the DefenseFinder-backed CARD_NLR_like child. Exact phage triggers,
+    CARD-to-effector activation, natural-host components, CARD_NLR__Subtilase_long_new HMM
+    inventory coverage, two-of-four effector-profile semantics, and finer activation mechanisms
+    remain open.
