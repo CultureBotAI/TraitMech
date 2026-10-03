@@ -1,0 +1,125 @@
+identifier: traitmech:000569
+label: Lamassu-SMEK system
+definition: A Lamassu system in which an organism possesses a locus encoding an LmuA
+  effector with a SMEK domain, an SMC-like LmuB sensor, and LmuC.
+definition_source: DOI:10.1073/pnas.2519643122
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu_SMEK
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_SMEK.xml
+- synonym_text: Lamassu/Lamassu/Lamassu_SMEK
+  synonym_type: RELATED_SYNONYM
+  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: others are type-specific like the flavin-containing monooxygenase (FMO)
+    for long Lamassu, and HNH, SMEK, and Lipase for short Lamassu.
+  notes: 'Results, effector-diversity paragraph: ''others'' refers to LmuA effector
+    types. The paper recognizes SMEK-bearing Lamassu and describes it as short-specific.
+    Dataset S1 nevertheless contains one long-profile SMEK-system call; that annotation
+    discrepancy is not resolved by treating the detector as experimental evidence.'
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_SMEK.xml
+  snippet: <model inter_gene_max_space="1" min_mandatory_genes_required="3" min_genes_required="3"
+    vers="2.0">
+  notes: The executable model requires three mandatory components and permits at most
+    one intervening gene between components.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_SMEK.xml
+  snippet: <gene name="Lamassu__LmuA_SMEK" presence="mandatory"/>
+  notes: SMEK-bearing LmuA is mandatory, without an exchangeable effector. Other named
+    LmuA effector profiles are forbidden by separate blocks. An isolated SMEK-domain
+    or profile hit does not establish this trait.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_SMEK.xml
+  snippet: '<gene name="Lamassu__LmuB_Long" presence="mandatory">
+
+    <exchangeables>
+
+    <gene name="Lamassu__LmuB_Short"/>
+
+    </exchangeables>
+
+    </gene>'
+  notes: The detector accepts either long or short LmuB. This permissiveness does
+    not prove biological function in either clade. The trait definition follows the
+    shared architecture without a length restriction.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_SMEK.xml
+  snippet: <gene name="Lamassu__LmuC_Clade_I" presence="mandatory">
+  notes: LmuC is mandatory, with Clade II-VII and MC1-MC8 exchangeable profiles. There
+    are no accessory components in this executable XML.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+  snippet: "ACJU001.0722.00009.C001\tACJU001.0722.00009.C001_01299\tLamassu__LmuB_Short\n\
+    ACJU001.0722.00009.C001\tACJU001.0722.00009.C001_01300\tLamassu__LmuC_Clade_VI\n\
+    ACJU001.0722.00009.C001\tACJU001.0722.00009.C001_01301\tLamassu__LmuA_SMEK"
+  notes: Dataset S1, S3_Lamassu_Detection!A165:C167, raw cells in column order. Columns
+    E, F, I and M identify one Lamassu/Lamassu/Lamassu_SMEK call, ACJU001.0722.00009.C001_Lamassu_SMEK_36,
+    with sys_wholeness 1.0 and three mandatory hits. This is computational evidence
+    of the complete architecture, not experimental antiviral activity.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+  snippet: "ACJU001.0722.00009.C001\tGCF_021491935.1\tBacteria\tProteobacteria\tAcinetobacter\
+    \ junii\tNZ_CP090890"
+  notes: Dataset S1, S2_Genomes!A1383:F1383, raw cells linking the SMEK-system replicon
+    to assembly GCF_021491935.1 and its species. The historical phylum name is retained
+    only inside this source quote.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+  snippet: 'Lamassu__LmuB_Long
+
+    Lamassu__LmuC_Clade_VII
+
+    Lamassu__LmuA_SMEK
+
+    Lamassu__LmuB_Long'
+  notes: Dataset S1, S3_Lamassu_Detection!C6042:C6045, raw cells for HAAN001.0722.00001.C001_Lamassu_SMEK_499.
+    Column F assigns these four rows to one call, including two distinct long-profile
+    LmuB hits. Across the sheet, 125 unique SMEK system IDs comprise 124 calls with
+    short LmuB and this one call with long LmuB; these sets do not overlap. Component-row
+    counts are not system counts. The long-profile call is an annotation exception
+    needing review, not a validated biological long-Lamassu SMEK subtype.
+- reference: https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_021491935.1/dataset_report
+  snippet: '"tax_id":40215,"organism_name":"Acinetobacter junii","infraspecific_names":{"strain":"WCO-9"}'
+  notes: 'NCBI Datasets assembly report, verified 2026-10-03: resolves GCF_021491935.1
+    to taxon 40215 and strain WCO-9. This source verifies identity only; Dataset S1
+    supports system possession.'
+canonical_examples:
+- taxon_id: NCBITaxon:40215
+  taxon_label: Acinetobacter junii
+  note: 'Computational genomic example: strain WCO-9, assembly GCF_021491935.1, study
+    replicon ACJU001.0722.00009.C001. Dataset S1 S3_Lamassu_Detection rows 165-167
+    record a complete short-LmuB, LmuC and SMEK-LmuA call; S2_Genomes row 1383 links
+    it to the assembly. NCBI resolves the strain and taxon. This does not establish
+    experimentally measured antiviral activity in WCO-9 or species-wide possession.'
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+discussions:
+- discussion_id: lamassu-smek-function-and-annotation-scope
+  prompt: Resolve the long-profile exception and validate SMEK-system function.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The paper describes SMEK as short-Lamassu-specific, while Dataset S1
+    has 124 short-profile calls and one long-profile call with two distinct LmuB hits.
+    The pinned model accepts both lengths. Reconcile that exceptional call with phylogeny
+    and locus context before claiming a biological long-LmuB subtype or short-only
+    distribution. The definition therefore captures architecture without a length
+    restriction. The pinned legacy summary TSV and HMM inventory lack SMEK entries
+    although the executable model and SMEK profile exist. This whole-system trait
+    is not equivalent to DS-27 (traitmech:000451), whose existing definition denotes
+    a single-gene transcriptional unit with the working label SMEK. No DS-27 assay
+    phenotype or exact synonym is transferred. SMEK-specific Lamassu antiviral validation,
+    substrates, activation order, domain-name expansion and accession-level protein
+    mechanisms remain unresolved. Cap4 and Lipase experiments do not establish SMEK
+    chemistry. No causal graph is asserted from these computational architecture calls
+    alone.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T11:15:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-recognized Lamassu-SMEK architecture using DOI, pinned
+    executable-model, Dataset S1 and NCBI identity evidence with exact snippets. Distinguished
+    125 system calls from 377 component rows and recorded the long-profile exception.
+    Kept the WCO-9 example computational and rejected equivalence to DS-27. Ignored-and-hidden
+    searches found no exact record or METPO term. Reserved METPO:1052300 in proposals/metpo_traitmech_v446.
+  llm_assisted: true

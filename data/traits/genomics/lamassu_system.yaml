@@ -205,7 +205,14 @@ discussions:
     genome calls, not HNH-specific functional validation. The pinned executable HNH
     model accepts either long or short LmuB, whereas all HNH calls in that dataset
     use short LmuB; its software key is therefore not an exact synonym for this biological
-    scope. HNH-specific activity, substrates, and activation remain unresolved.
+    scope. HNH-specific activity, substrates, and activation remain unresolved. Lamassu-SMEK
+    system (traitmech:000569) now captures a locus with SMEK-domain LmuA, LmuB, and
+    LmuC. The paper describes SMEK as short-specific, but its dataset contains 124
+    short-profile system calls and one long-profile call; the latter requires reconciliation
+    before asserting a biological long-LmuB subtype. The definition therefore does
+    not impose a LmuB-length restriction. The three-component architecture is not
+    equivalent to the single-gene DS-27 system that also uses SMEK as a working label.
+    SMEK-specific functional validation and chemistry remain unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -306,4 +313,11 @@ curation_history:
   changes: Linked traitmech:000568 Lamassu-HNH system and distinguished its short-LmuB
     genomic architecture from the broader executable detector. Retained HNH-specific
     functional-validation gaps.
+  llm_assisted: true
+- timestamp: '2026-10-03T11:15:00Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000569 Lamassu-SMEK system; documented the long-profile
+    dataset exception and distinction from the single-gene DS-27 SMEK working label.
+    Retained function gaps.
   llm_assisted: true

@@ -408,6 +408,12 @@ preimage: assert the identifier, label, mapping status, old parents, and any
 discussion status before replacing them so a stale branch does not rewrite
 unrelated drift.
 
+Writer unit tests should use controlled temporary preimages rather than depend
+on a shared parent discussion retaining the prose from a historical curation.
+Keep test-only fixture hashes separate from production guards, and still test
+that altered preimages are refused. Later legitimate parent curation must not
+require weakening an older writer's production preimage checks.
+
 Do not hand-serialize YAML or loosen the `write_validated_trait` round-trip
 test if formatting drifts.
 

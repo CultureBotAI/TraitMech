@@ -2,6 +2,7 @@
 
 import copy
 import csv
+import hashlib
 import io
 import sys
 from pathlib import Path
@@ -20,10 +21,12 @@ def isolated_writer(tmp_path, monkeypatch):
     discussion = next(
         d for d in parent["discussions"] if d["discussion_id"] == "lamassu-subtype-and-effector-gap"
     )
-    discussion["rationale"] = discussion["rationale"].removesuffix(writer.PARENT_ADDITION)
-    parent["curation_history"] = [
-        e for e in parent["curation_history"] if e["timestamp"] != writer.TIMESTAMP
-    ]
+    # Exercise guard behavior independently of later curation of the shared parent.
+    discussion["rationale"] = "Original parent subtype discussion."
+    monkeypatch.setattr(
+        writer, "OLD_PARENT_HASH", hashlib.sha256(discussion["rationale"].encode()).hexdigest()
+    )
+    parent["curation_history"] = []
     path = tmp_path / "lamassu_system.yaml"
     writer.write_validated_trait(parent, path)
     monkeypatch.setattr(writer, "PARENT", path)
