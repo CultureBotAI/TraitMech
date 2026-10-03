@@ -121,8 +121,9 @@ table.trait-list tr:hover { background: var(--accent-soft); }
   align-items: start;
 }
 @media (max-width: 850px) {
-  .layout-2col { grid-template-columns: 1fr; }
+  .layout-2col { grid-template-columns: minmax(0, 1fr); }
 }
+.trait { overflow-wrap: anywhere; }
 .rail {
   position: sticky;
   top: 1rem;
@@ -351,7 +352,10 @@ table.trait-list tr:hover { background: var(--accent-soft); }
   font-size: 0.95rem;
   margin: 0 0 0.5rem;
 }
-.protein-example-table-wrap { overflow-x: auto; }
+.protein-example-table-wrap,
+.detail-table-scroll { max-width: 100%; overflow-x: auto; overflow-wrap: normal; }
+.protein-example-table-wrap:focus-visible,
+.detail-table-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .protein-example-table {
   border-collapse: collapse;
   font-size: 0.8rem;
