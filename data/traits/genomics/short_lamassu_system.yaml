@@ -97,3 +97,15 @@ curation_history:
     metadata and verified canonical-example taxon retain the substantive support.
     Earlier curation history is preserved.
   llm_assisted: true
+- timestamp: '2026-10-03T13:57:07Z'
+  curator: codex
+  action: CLARIFY_HISTORICAL_SNIPPET_VERIFICATION
+  changes: 'Correction to the 13:17:37Z event (#1620): withdraw the description of
+    the removed species-name-and-ID quote as contiguous. That check joined text across
+    HTML blocks and did not establish a contiguous source span. The distinct earlier
+    citation-form verification is supported by these exact inline raw HTML bytes from
+    https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info: Taxonomy
+    ID: 666 <small>(for references in articles please use ncbitaxon:666)</small><br>.
+    The lowercase form is quoted source text, not a curated CURIE. Current evidence
+    and taxon grounding are unchanged; earlier events remain preserved.'
+  llm_assisted: true

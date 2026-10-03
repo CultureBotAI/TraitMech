@@ -133,7 +133,7 @@ def test_review_accepts_only_exact_legacy_preimage(isolated_writer, monkeypatch,
             "notes": "Controlled legacy identity evidence.",
         }
     )
-    legacy["curation_history"].pop()
+    legacy["curation_history"] = legacy["curation_history"][:2]
     writer.write_validated_trait(legacy, writer.TARGET)
     monkeypatch.setattr(
         writer, "LEGACY_TARGET_SHA256S", {hashlib.sha256(writer.TARGET.read_bytes()).hexdigest()}
@@ -153,11 +153,40 @@ def test_review_accepts_only_exact_legacy_preimage(isolated_writer, monkeypatch,
         current = yaml.safe_load(writer.TARGET.read_text())
         assert len(current["evidence"]) == 5
         assert current["synonyms"][0]["synonym_text"] == "short Lamassu"
-        assert current["curation_history"][:-1] == legacy["curation_history"]
-        assert current["curation_history"][-1]["action"] == "REFINE_SYNONYM_AND_EVIDENCE_SCOPE"
+        assert current["curation_history"][:2] == legacy["curation_history"]
+        assert current["curation_history"][2]["action"] == "REFINE_SYNONYM_AND_EVIDENCE_SCOPE"
         first = [p.read_bytes() for p in paths]
         assert writer.main() == 0
         assert [p.read_bytes() for p in paths] == first
+
+
+@pytest.mark.parametrize("drift", [False, True])
+def test_provenance_correction_preserves_prior_events(isolated_writer, monkeypatch, drift):
+    legacy = writer.build_record()
+    correction = legacy["curation_history"].pop()
+    writer.write_validated_trait(legacy, writer.TARGET)
+    monkeypatch.setattr(
+        writer, "LEGACY_TARGET_SHA256S", {hashlib.sha256(writer.TARGET.read_bytes()).hexdigest()}
+    )
+    if drift:
+        legacy["curation_history"][0]["changes"] += " Independent provenance update."
+        writer.write_validated_trait(legacy, writer.TARGET)
+    before = writer.TARGET.read_bytes()
+    monkeypatch.setattr(sys, "argv", ["writer", "--apply"])
+    if drift:
+        with pytest.raises(SystemExit, match="Existing target differs"):
+            writer.main()
+        assert writer.TARGET.read_bytes() == before
+    else:
+        assert writer.main() == 0
+        current = yaml.safe_load(writer.TARGET.read_text())
+        assert current["curation_history"][-1] == correction
+        assert "withdraw the description" in correction["changes"]
+        assert "<small>(for references in articles please use ncbitaxon:666)</small>" in correction[
+            "changes"
+        ]
+        current["curation_history"].pop()
+        assert current == legacy
 
 
 def test_hnh_definition_drift_refused(isolated_writer):

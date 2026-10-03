@@ -28,9 +28,11 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v447"
 TIMESTAMP = "2026-10-03T12:33:00Z"
 IDENTITY_REVIEW_TIMESTAMP = "2026-10-03T13:17:37Z"
 LEXICAL_REVIEW_TIMESTAMP = "2026-10-03T13:41:34Z"
+PROVENANCE_REVIEW_TIMESTAMP = "2026-10-03T13:57:07Z"
 LEGACY_TARGET_SHA256S = {
     "870f7e33436c15263b95629e59e14a9fb9fc07817ba44947b9346df0ea68a4f9",
     "6ad3a59ea22b955caccc9643faf1fa41f9daba7ef189adde41893edd9a2e3d4c",
+    "3a8cb2892cfe7bd737292a0dcc41973de88d9ac4470770c60072ef52b26a97bf",
 }
 LEGACY_PROPOSAL_SHA256 = "a9e1521aea7162e86fa4cefd351e794656d6c0bee3d9cc6e0319164a60b1bdc0"
 PAPER = "DOI:10.1073/pnas.2519643122"
@@ -238,6 +240,25 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=LEXICAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator="codex",
+        action="CLARIFY_HISTORICAL_SNIPPET_VERIFICATION",
+        changes=(
+            "Correction to the 13:17:37Z event (#1620): withdraw the description "
+            "of the removed species-name-and-ID quote as contiguous. That check "
+            "joined text across HTML blocks and did not establish a contiguous "
+            "source span. The distinct earlier citation-form verification is "
+            "supported by these exact inline raw HTML bytes from "
+            "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info: "
+            "Taxonomy ID: 666 <small>(for references in articles please use "
+            "ncbitaxon:666)</small><br>. The lowercase form is quoted source "
+            "text, not a curated CURIE. Current evidence and taxon grounding "
+            "are unchanged; earlier events remain preserved."
+        ),
+        llm_assisted=True,
+        timestamp=PROVENANCE_REVIEW_TIMESTAMP,
     )
     return record
 
