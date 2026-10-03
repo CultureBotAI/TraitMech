@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1052900	Hachiman type I system	A Hachiman system in which an organism possesses a HamA/HamB locus without a HamC component.	TraitMech:data/traits/genomics/hachiman_type_i_system.yaml|DOI:10.1038/s41467-025-57851-1|DOI:10.1093/nar/gkab883	METPO:1052800	Hachiman type I		metpo_traitmech_2026_10	HIGH	HamAB architecture without HamC; not a missing-hit label or universal mechanism. Parent uses v451 replacement, not superseded v96.	traitmech:000575

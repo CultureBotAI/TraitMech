@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hachiman_system.yaml
+  slug: hachiman_system
+session:
+  id: 2026-10-03T184110Z-codex-22ffa1
+  timestamp: '2026-10-03T18:41:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link the accepted Hachiman type-I architecture class
+  details: Through the validated add_hachiman_type_i_system_trait.py writer, appended the
+    traitmech:000575 resolution to the existing discovery discussion and retained its OPEN
+    status for subtype mechanism questions. Preserved definition, hierarchy, evidence, canonical
+    examples and source-qualified I-A/I-B graph. Component absence follows the cited classification,
+    not a failed detector hit.

@@ -184,7 +184,7 @@ core_genes:
           mechanism it concerns.</p>
 
 
-        <p>Type II denotes the HamABC locus architecture, not a HamC hit alone, a source database row or a fixed phage-protection phenotype. Type-I DNA-damage sensing and DNA-cleavage mechanisms are not generalized to this class; HamC&#39;s biochemical role and necessity remain unresolved by these sources. No causal mechanism graph or unverified protein accession is asserted. Native-host assays and accession-resolved functional evidence remain desirable. DefenseFinder and PADLOC have different component-count rules; inspect complete locus context before converting calls into trait assertions. Component absence cannot be inferred from a failed hit or incomplete assembly. Type I remains a separate discovery lead, and coexisting loci would not make organism-level type-I and type-II possession traits disjoint.</p>
+        <p>Type II denotes the HamABC locus architecture, not a HamC hit alone, a source database row or a fixed phage-protection phenotype. Type-I DNA-damage sensing and DNA-cleavage mechanisms are not generalized to this class; HamC&#39;s biochemical role and necessity remain unresolved by these sources. No causal mechanism graph or unverified protein accession is asserted. Native-host assays and accession-resolved functional evidence remain desirable. DefenseFinder and PADLOC have different component-count rules; inspect complete locus context before converting calls into trait assertions. Component absence cannot be inferred from a failed hit or incomplete assembly. Type I remains a separate discovery lead, and coexisting loci would not make organism-level type-I and type-II possession traits disjoint. The type-I lead is now represented by traitmech:000575 Hachiman type I system for the literature-defined HamC-lacking HamAB architecture. This does not imply organism-level disjointness, turn missing detector hits into absence evidence, or transfer type-I chemistry to type II. HamC function and type-II mechanisms remain unresolved.</p>
 
 
 
@@ -208,6 +208,12 @@ core_genes:
           <time>2026-10-03T18:08:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added the literature-defined HamABC possession class with two DOI sources, exact snippets, pinned detector rules and the NCBI-resolved DSM 14551 example. Searches included ignored and hidden files and found no exact live record or METPO class. Reserved METPO:1052801 in v451; METPO:1052800 replaces the broad parent&#39;s v96 proposal. Kept natural source, heterologous activity and type-I chemistry distinct.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T18:37:00Z</time> ·
+          <strong>TRACK_HACHIMAN_TYPE_I_CLASS</strong> · codex
+          <p class="changes">Linked traitmech:000575 Hachiman type I system using the component classification in DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57851-1. Kept definitions, hierarchy, examples, evidence and graphs unchanged; mechanism questions remain open. No absence assertion is inferred from detector output.</p>
         </li>
 
       </ol>
@@ -262,9 +268,9 @@ core_genes:
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 18:08 UTC from
+      Record as of 2026-10-03 18:37 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 969 TraitRecords
+      · 970 TraitRecords
       · embedding coverage 49.2%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

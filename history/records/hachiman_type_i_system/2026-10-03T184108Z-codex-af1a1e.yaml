@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hachiman_type_i_system.yaml
+  slug: hachiman_type_i_system
+session:
+  id: 2026-10-03T184108Z-codex-af1a1e
+  timestamp: '2026-10-03T18:41:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add literature-defined HamC-lacking Hachiman type I
+  details: Added traitmech:000575 from DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57851-1
+    with exact full-text snippets, pinned PADLOC and DefenseFinder rules and NCBITaxon:511145
+    MG1655 source locus U00096.3:2761204-2765368. Distinguished biological absence from detector
+    misses and engineered complementation from unmodified native-locus activity. Whole-repository
+    ignored-and-hidden novelty and allocation checks plus a fresh 399-record seed preceded
+    minting. Proposal v452 reserves METPO:1052900 under the corrected v451 parent. Guarded
+    writer defaults to dry run and prevalidates all three records.
