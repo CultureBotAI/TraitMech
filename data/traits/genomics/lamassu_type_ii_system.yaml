@@ -42,7 +42,7 @@ discussions:
     axes.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Type II classifies LmuC-containing Lamassu architecture, not an isolated
+  rationale: 'Type II classifies LmuC-containing Lamassu architecture, not an isolated
     LmuC hit, a fixed three-gene count, a long-LmuB clade, or a universal LmuC-dependence
     phenotype. The effector module can include more than one gene. Existing HNH, SMEK
     and Hydrolase-Protease definitions require LmuC and therefore fall below this
@@ -52,7 +52,12 @@ discussions:
     from model labels or optional LmuC calls. The V. cholerae nuclease mechanism does
     not establish chemistry for every effector module. Native-host activity, protein
     accessions and broader mechanistic generalization remain unresolved; no causal
-    mechanism graph is asserted. Type I remains a separate discovery lead.
+    mechanism graph is asserted. Type I remains a separate discovery lead. That discovery
+    lead is now represented by traitmech:000573 Lamassu type I system for LmuA/LmuB
+    loci without LmuC. The two component architectures do not establish disjoint organism-level
+    possession classes: one genome could encode both. LmuC absence is not inferred
+    from a missing model hit or a type-II knockout. This record''s definition, child
+    classification and unresolved mechanism questions are unchanged.'
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -65,4 +70,12 @@ curation_history:
     mechanism. Ignored-and-hidden searches found no exact record or METPO term. Reserved
     METPO:1052600 in proposals/metpo_traitmech_v449 and refined three existing LmuC-containing
     child definitions' hierarchy.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:57:07Z'
+  curator: codex
+  action: TRACK_TYPE_I_CLASS
+  changes: Linked traitmech:000573 Lamassu type I system to the existing component-architecture
+    discussion using DOI:10.1073/pnas.2519643122 and DOI:10.1038/s41589-025-02102-z.
+    Preserved all definitions, parents, evidence, examples and prior history. Component
+    absence, LmuB-length family and experimental activity remain separate claims.
   llm_assisted: true

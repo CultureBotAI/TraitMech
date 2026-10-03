@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_type_i_system.yaml
+  slug: lamassu_type_i_system
+session:
+  id: 2026-10-03T160119Z-codex-401411
+  timestamp: '2026-10-03T16:01:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add the LmuC-lacking Lamassu type-I possession trait
+  details: Added traitmech:000573 with primary DOI sources 10.1073/pnas.2519643122 and 10.1038/s41589-025-02102-z,
+    four directly verified contiguous snippets, reviewed UniProt P0DW44 and PDB 9UX7 source
+    metadata, and NCBITaxon:1761765 Bacillus sp. nio-1130. Distinguished source possession
+    from heterologous activity, component absence from missing hits, and composition from
+    length families. Ignored-and-hidden searches established novelty and allocation. Reserved
+    METPO:1052700 in v450; validate the guarded writer, proposal, histories and regenerated
+    artifacts.

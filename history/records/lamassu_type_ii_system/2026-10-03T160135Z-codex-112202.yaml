@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_type_ii_system.yaml
+  slug: lamassu_type_ii_system
+session:
+  id: 2026-10-03T160135Z-codex-112202
+  timestamp: '2026-10-03T16:01:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Resolve the type-I discovery link while retaining type-II scope
+  details: Linked traitmech:000573 as the LmuC-lacking component class. Clarified that distinct
+    locus architectures do not imply disjoint organism-level possession classes and that missing
+    hits or engineered deletions do not establish the natural architecture. Preserved the
+    type-II definition, hierarchy, evidence, examples and prior history; mechanism gaps remain
+    OPEN. Applied through the guarded validated writer with a per-record event.

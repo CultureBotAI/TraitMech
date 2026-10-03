@@ -239,7 +239,13 @@ discussions:
     parent too. This does not assert a three-gene count, universal LmuC essentiality,
     or new antiviral validation of those children. Long/short families and legacy
     detector rows are not equivalent to this component class. Type I and family-wide
-    mechanisms remain open discovery and curation questions.'
+    mechanisms remain open discovery and curation questions. Lamassu type I system
+    (traitmech:000573) now resolves the component-class discovery lead: Haudiquet
+    et al. explicitly identify the LmuC-loss architecture as type I, and Li et al.
+    independently study a type-I LmuA/LmuB complex. This is not equivalent to all
+    short Lamassu or proof that every failed LmuC hit is biological absence. No existing
+    effector-defined child is reparented. Family-wide mechanisms, legacy model reconciliation
+    and native-host activity remain open.'
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -370,4 +376,12 @@ curation_history:
     examples and length-family distinctions. Historical proposal parent axioms remain
     true; v449 documents the additional subclass relations for upstream minting. This
     is not new experimental validation.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:57:07Z'
+  curator: codex
+  action: TRACK_TYPE_I_CLASS
+  changes: Linked traitmech:000573 Lamassu type I system to the existing component-architecture
+    discussion using DOI:10.1073/pnas.2519643122 and DOI:10.1038/s41589-025-02102-z.
+    Preserved all definitions, parents, evidence, examples and prior history. Component
+    absence, LmuB-length family and experimental activity remain separate claims.
   llm_assisted: true

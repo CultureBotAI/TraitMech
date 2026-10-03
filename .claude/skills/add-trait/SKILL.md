@@ -108,6 +108,14 @@ discrepancy, and ground the trait definition in the biological architecture
 supported by the literature. Do not create separate biological traits solely
 from stale table variants or treat a model call as experimental validation.
 
+For component-defined system classes, distinguish biological absence from an
+unmatched profile, an incomplete assembly, a purified-complex omission or an
+engineered deletion. A missing detector hit alone does not establish an
+absence-defined architecture. Keep component composition separate from protein
+length, effector chemistry and experimental dependence. Mutually exclusive
+architectures at one locus do not imply disjoint organism-level possession
+traits: a genome may encode more than one architecture.
+
 ## Pick a target
 
 If the user names a trait, curate that trait only. For an open-ended request to

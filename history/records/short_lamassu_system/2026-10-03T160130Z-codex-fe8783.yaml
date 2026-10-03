@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/short_lamassu_system.yaml
+  slug: short_lamassu_system
+session:
+  id: 2026-10-03T160130Z-codex-fe8783
+  timestamp: '2026-10-03T16:01:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Distinguish the type-I component architecture from the short Lamassu family
+  details: Linked traitmech:000573 to the existing clade-S LmuC-loss discussion without equating
+    type I to the entire short family or to clade O effector-domain loss. Preserved the existing
+    hierarchy, definitions, evidence, examples and older history. Broader phylogenetic scope
+    remains OPEN; the guarded writer appends a per-record curation event.
