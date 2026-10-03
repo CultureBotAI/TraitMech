@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Druantia type II system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Druantia type II system</h1>
+    <p class="curie"><code>traitmech:000579</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A Druantia system in which an organism possesses a locus encoding DruE together with DruM, DruF and DruG.</p>
+
+  </header>
+
+
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(4)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab883</code></a>
+        <blockquote>the Druantia-like system lacks the type II requisite DruM and DruG proteins</blockquote>
+        <p class="meta">Payne et al., Discovery of new Doron system types and Figure 2C: type II contains DruE/F/M/G; the proposed type IV shares DruE/F but replaces the type-II M/G architecture with DruL. This supports locus composition, not experimental dependence of each component in every host. The type-II distribution observed in RefSeq v201 is not a universal taxonomic limit.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.65215/LTSpreprints.2026.06.18.000273" rel="nofollow noreferrer"><code>DOI:10.65215/LTSpreprints.2026.06.18.000273</code></a>
+        <blockquote>DruE alone confers limited protection against a subset of coliphages in heterologous expression</blockquote>
+        <p class="meta">Hou et al., version 2 posted 2026-07-08, not peer reviewed; PDF https://langtaosha.org.cn/lts/en/preprint/download/273/1236, pages 5-6 and 18, Figure 1 and supplementary Figure S2. The Pf-5 druMFGE locus is the source. Purified DruE is an ATP-dependent 3-prime-to-5-prime helicase preferring 3-prime overhangs and forks, with an asymmetric homodimer. Standalone DruE in E. coli BL21 gave limited T7/T1 protection; R1241A reduced protection. Insoluble DruF/G prevented full-system reconstitution. Native-host phage defense and the link from unwinding to restriction remain untested or unresolved. Pf-5 deletion assays under mitomycin C suggest accessory control of toxicity, not a demonstrated defense trigger.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_II.yaml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_II.yaml</code></a>
+        <blockquote>core_genes:
+  - DruE2
+  - DruF2
+  - DruG2
+  - DruM2</blockquote>
+        <p class="meta">Pinned executable PADLOC rule, retrieved 2026-10-03: minimum_core and minimum_total are both 4, maximum_separation is 3, and force_strand is FALSE. DruK is secondary, not a required fifth component; neutral and prohibited lists contain only NA. These are detection constraints, not evidence of active defense.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_II.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_II.xml</code></a>
+        <blockquote>&lt;model inter_gene_max_space=&#34;5&#34; min_mandatory_genes_required=&#34;1&#34; min_genes_required=&#34;3&#34; vers=&#34;2.0&#34;&gt;</blockquote>
+        <p class="meta">Pinned executable DefenseFinder model, retrieved 2026-10-03: Druantia_II__DruM/F/G are accessory slots. DruF permits Druantia_IV__DruF4. Mandatory Druantia__DruE_1 permits Druantia__DruE_2, Druantia__DruE_3 or Druantia_IV__DruE4. One mandatory and three total matches are required; no forbidden slots are declared. A call alone need not establish the complete DruM/F/G/E architecture. Exchangeable matches and missing profiles do not establish biological equivalence or component absence.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab883</code></a></dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/druantia_system.html" >Druantia system <code>traitmech:000234</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>Type II Druantia system <span class="meta">EXACT_SYNONYM · DOI:10.65215/LTSpreprints.2026.06.18.000273</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Pseudomonas protegens Pf-5</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=220664"
+             rel="nofollow noreferrer"><code>NCBITaxon:220664</code></a>
+
+
+
+          <a href="https://doi.org/10.65215/LTSpreprints.2026.06.18.000273" rel="nofollow noreferrer"><code>DOI:10.65215/LTSpreprints.2026.06.18.000273</code></a>
+
+          <span class="meta">Natural locus possession in Pf-5, assembly GCF_000012265.1 identified by Hou et al. version 2, Figure 1a and Methods. Not a native-host phage-resistance example: infection assays used standalone DruE in engineered E. coli. NCBI resolves taxon 220664 to Pseudomonas protegens Pf-5.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="druantia-type-ii-full-system-defense-gap">
+        <p class="discussion-prompt">Resolve full-system defense and accessory functions beyond isolated DruE assays.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>druantia-type-ii-full-system-defense-gap</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>DruM/F/G/E possession is an architecture class, not an assay result or a universal helicase mechanism. Hou et al. version 2 provides real DruE biochemistry; the remaining gap is not absence of protein evidence. RCSB entry 9WAE entity 1 maps Pf-5 PFL_3016 to UniProtKB:Q4KCB1, a live unreviewed entry checked 2026-10-03. No full-system causal graph is asserted because native-host phage restriction, accessory regulation and the unwinding-to-restriction transition are unresolved. The measured isolated-protein results remain in the evidence notes. Do not transfer type-III nuclease chemistry to type II or turn mitomycin-C growth effects into an infection trigger. A missing profile or incomplete assembly cannot establish component absence; inspect complete locus context. Organism-level subtype possession classes are not disjoint because a genome may encode several loci.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-03T21:24:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added literature-defined Druantia II possession with two DOI sources, four exact snippets, pinned executable detector rules and NCBI-resolved Pf-5 possession. Kept the version-2 preprint&#39;s isolated DruE assays distinct from full-system and native-host defense. Ignored-and-hidden novelty and allocation searches found no exact record or METPO term; reserved METPO:1053300 in v456. No protein-resolved full-system causal mechanism is asserted.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/druantia_type_ii_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/druantia_type_ii_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/druantia_type_ii_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/druantia_type_ii_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000579" target="_blank" rel="noopener"><code>traitmech:000579</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-03 21:24 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 974 TraitRecords
+      · embedding coverage 49.0%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

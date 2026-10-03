@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_system.yaml
+  slug: druantia_system
+session:
+  id: 2026-10-03T212555Z-codex-582105
+  timestamp: '2026-10-03T21:25:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Link the Druantia II architectural child
+  details: Updated only the existing family knowledge-gap tail and appended TRACK_NARROWER_RECORD
+    through the validated writer. Linked traitmech:000579, resolved the type-II architectural
+    discovery lead and retained full-system and native-host defense uncertainty. The July
+    8 version-2 preprint contributes isolated DruE evidence, not family-wide chemistry. Family
+    identity, definition, hierarchy, evidence, canonical example, prior provenance and sibling
+    records are unchanged.

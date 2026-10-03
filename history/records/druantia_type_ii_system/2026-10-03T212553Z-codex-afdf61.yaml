@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_type_ii_system.yaml
+  slug: druantia_type_ii_system
+session:
+  id: 2026-10-03T212553Z-codex-afdf61
+  timestamp: '2026-10-03T21:25:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add Druantia II possession with bounded DruE evidence
+  details: Created traitmech:000579 under Druantia family traitmech:000234 using DOI:10.1093/nar/gkab883,
+    version 2 of DOI:10.65215/LTSpreprints.2026.06.18.000273 and commit-pinned executable
+    DefenseFinder/PADLOC models. Four snippets were checked against primary text and structured
+    model files. Pf-5 natural locus possession is distinct from isolated DruE assays in engineered
+    E. coli; NCBITaxon:220664 resolved at NCBI. No full-system graph or trait xref was inferred
+    from protein evidence. Whole-repository ignored-and-hidden novelty and allocation searches
+    found no exact record or METPO term. Reserved METPO:1053300 in proposal v456; guarded
+    writer and controlled-fixture tests cover dry-run, replay, preservation and preimage drift.
