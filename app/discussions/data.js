@@ -4907,6 +4907,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_fmo_system.html#lamassu-fmo-activity-gap"
  },
  {
+  "discussion_id": "lamassu-hydrolase-protease-model-and-mechanism",
+  "prompt": "Reconcile model-summary drift and resolve paired effector chemistry.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu Hydrolase-Protease system",
+  "source_id": "traitmech:000567",
+  "source_file": "lamassu_hydrolase_protease_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned XML uses four mandatory components and newer Lamassu__ profile names, but its companion TSV uses three mandatory legacy profiles and accessory LmuC. The inventory's Hydrolase_protease LmuB and hydrolase_protease LmuC rows also differ from both representations. Model-summary reconciliation is required before using that TSV for genotype calls. The definition follows the biological paired architecture and executable model, not the table's thresholds. Exact substrates, activation order, native-host activity, and accession-level protein examples remain unresolved. No causal mechanism graph is asserted without those molecular anchors. The single-effector table-defined siblings are not asserted to be parents or equivalents of this paired system.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_hydrolase_protease_system.html#lamassu-hydrolase-protease-model-and-mechanism"
+ },
+ {
   "discussion_id": "lamassu-hydrolase-activity-gap",
   "prompt": "Resolve Lamassu-Hydrolase phage triggers, native hosts, hydrolase effector substrates, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5063,7 +5080,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other's effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary's profile labels as current executable model requirements.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9600,9 +9617,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 438,
- "total_knowledge_gaps": 350,
- "total_source_entries": 432,
+ "total_discussions": 439,
+ "total_knowledge_gaps": 351,
+ "total_source_entries": 433,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

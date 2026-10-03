@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T093023Z-codex-302d2c
+  timestamp: '2026-10-03T09:30:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track paired Lamassu subtype and source drift
+  details: Linked traitmech:000567 as the paired Hydrolase-Protease architecture. Documented
+    that executable XML and legacy table requirements differ; retained the other unresolved
+    subtype and mechanism questions and called for reconciliation of table-defined siblings.

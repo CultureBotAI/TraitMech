@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hydrolase_protease_system.yaml
+  slug: lamassu_hydrolase_protease_system
+session:
+  id: 2026-10-03T093020Z-codex-1612cf
+  timestamp: '2026-10-03T09:30:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add paired Lamassu Hydrolase-Protease system
+  details: Added traitmech:000567 using DOI:10.1073/pnas.2519643122, DOI:10.1016/j.chom.2022.09.017
+    and the executable DefenseFinder model at afb0e5a8b466be53586b13266f5d38d98c3ac268. Verified
+    XML and full-text snippets, recorded four-component versus three-component summary drift,
+    and tied the canonical example to B. cereus B4077 using NCBITaxon:1396. Reserved METPO:1052100
+    in v444. Duplicate searches included ignored and hidden files. Mechanism and accession-level
+    proteins remain unresolved.

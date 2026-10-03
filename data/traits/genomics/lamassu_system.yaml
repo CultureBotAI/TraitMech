@@ -192,7 +192,14 @@ discussions:
     Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK
     rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2
     rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs
-    across Lamassu loci remain unresolved.
+    across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567)
+    now captures the literature-supported paired architecture with LmuB and LmuC.
+    Its pinned executable XML requires four components, whereas the summary TSV requires
+    three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase
+    and Lamassu-Protease siblings each forbid the other's effector profile and are
+    not exact matches to this paired architecture. Reconciling the legacy table-based
+    sibling definitions with executable models remains open; do not interpret the
+    summary's profile labels as current executable model requirements.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -279,4 +286,11 @@ curation_history:
     discussion after minting traitmech:000566 for the DefenseFinder-backed Lamassu-Sir2
     child; remaining Lamassu-Fam rule rows and finer Lamassu activation mechanisms
     remain open.
+  llm_assisted: true
+- timestamp: '2026-10-03T09:29:00Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000567 Lamassu Hydrolase-Protease system and documented
+    disagreement between executable models and legacy tables; retained remaining subtype
+    and mechanism gaps.
   llm_assisted: true

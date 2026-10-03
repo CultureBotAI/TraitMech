@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-generator-provenance
+session:
+  id: 2026-10-03T093922Z-codex-8d5e90
+  timestamp: '2026-10-03T09:39:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1610
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - instructions
+  - generated_artifacts
+  summary: Preserve reviewed shared generator behavior
+  details: 'Addressed review issue #1610 after a stale local Claw generator removed the accessible
+    QC dashboard shell. Regenerated with isolated source commit 6d0a6fbbaeec47f42c6f999233b460e3f56bae89
+    used by PR #1603 and added a template-provenance check to add-trait. Issue #1609 is addressed
+    by the separate executable-model interpretation update in the same branch.'
