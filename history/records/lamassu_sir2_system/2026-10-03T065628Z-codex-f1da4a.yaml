@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_sir2_system.yaml
+  slug: lamassu_sir2_system
+session:
+  id: 2026-10-03T065628Z-codex-f1da4a
+  timestamp: '2026-10-03T06:56:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1604
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1602
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Add Sir2-scoped Lamassu HMM evidence
+  details: 'Addressed adversarial review issue #1604 by adding exact Lamassu-Fam__LmuB_SMC_Sir2
+    and Lamassu-Fam__LmuC_acc_Sir2 HMM row evidence to the Lamassu-Sir2 record and its attached
+    knowledge-gap discussion, matching the auditability of FMO/PDDEXK sibling records for
+    scoped-but-unreferenced LmuB and LmuC rows.'

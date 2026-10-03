@@ -5029,6 +5029,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_protease_system.html#lamassu-protease-activity-gap"
  },
  {
+  "discussion_id": "lamassu-sir2-activity-gap",
+  "prompt": "Resolve Lamassu-Sir2 phage triggers, native hosts, Sir2 effector activity, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu-Sir2 system",
+  "source_id": "traitmech:000566",
+  "source_file": "lamassu_sir2_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lamassu_sir2_locus_subtype_defense"
+  ],
+  "rationale": "Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-Sir2 as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_Sir2 and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record follows the rule row but leaves exact Sir2 effector activity, the rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.2519643122",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_sir2_system.html#lamassu-sir2-activity-gap"
+ },
+ {
   "discussion_id": "lamassu-subtype-and-effector-gap",
   "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -5038,7 +5063,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, and Lamassu-Protease now capture eight DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, Lamassu-Sir2, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9575,9 +9600,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 437,
- "total_knowledge_gaps": 349,
- "total_source_entries": 431,
+ "total_discussions": 438,
+ "total_knowledge_gaps": 350,
+ "total_source_entries": 432,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
