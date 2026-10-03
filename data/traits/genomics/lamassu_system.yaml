@@ -180,13 +180,14 @@ discussions:
   rationale: Haudiquet et al. support a structurally characterized Vibrio cholerae
     Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation,
     and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease,
-    Lamassu-FMO, Lamassu-Hydrolase, and other Lamassu-Fam subtypes as rule-row variants.
-    Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, and Lamassu-Hydrolase now
-    capture four DefenseFinder rule-row subtypes, but long-versus-short LmuB clades,
-    LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers,
-    exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's
-    relationship to FMO-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu
-    loci remain unresolved.
+    Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, and other Lamassu-Fam subtypes
+    as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase,
+    and Lamassu-Lipase now capture five DefenseFinder rule-row subtypes, but long-versus-short
+    LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA
+    triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO
+    rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule
+    row's relationship to its Lipase-scoped LmuB HMM row, and cell-death outputs across
+    Lamassu loci remain unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -230,4 +231,13 @@ curation_history:
     discussion after minting traitmech:000561 for the DefenseFinder-backed Lamassu-Hydrolase
     child; remaining Lamassu-Fam subtypes and finer Lamassu activation mechanisms
     remain open.
+  llm_assisted: true
+- timestamp: '2026-10-03T03:48:01Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented Lamassu-Lipase as split out in the open Lamassu subtype-effector
+    discussion after minting traitmech:000562 for the DefenseFinder-backed Lamassu-Lipase
+    child; the first-pass record follows the pinned rule row while tracking its non-Lipase-specific
+    LmuB profile name as unresolved; remaining Lamassu-Fam subtypes and finer Lamassu
+    activation mechanisms remain open.
   llm_assisted: true

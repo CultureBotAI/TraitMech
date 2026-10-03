@@ -4931,6 +4931,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_hydrolase_system.html#lamassu-hydrolase-activity-gap"
  },
  {
+  "discussion_id": "lamassu-lipase-activity-gap",
+  "prompt": "Resolve Lamassu-Lipase phage triggers, native hosts, lipase effector substrates, LmuB/LmuC model rows, LmuC usage, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu-Lipase system",
+  "source_id": "traitmech:000562",
+  "source_file": "lamassu_lipase_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lamassu_lipase_locus_subtype_defense"
+  ],
+  "rationale": "Haudiquet et al. support a Lamassu family with diverse LmuA effectors and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and rules table support Lamassu-Lipase as a Lamassu-Fam subtype whose rule row requires Lamassu-Fam__LmuA_effector_Lipase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II. This first-pass record follows the rule row but leaves the relationship between its LmuB Cap4-nuclease profile name and the Lipase-scoped Lamassu-Fam__LmuB_SMC_Lipase HMM row unresolved, along with exact lipase substrates, LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity criteria.",
+  "num_experiments": 0,
+  "num_evidence": 5,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.2519643122",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_lipase_system.html#lamassu-lipase-activity-gap"
+ },
+ {
   "discussion_id": "lamassu-subtype-and-effector-gap",
   "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4940,7 +4965,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, and Lamassu-Hydrolase now capture four DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, and Lamassu-Lipase now capture five DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, remaining Lamassu-Fam subtypes, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, and cell-death outputs across Lamassu loci remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9477,9 +9502,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 433,
- "total_knowledge_gaps": 345,
- "total_source_entries": 427,
+ "total_discussions": 434,
+ "total_knowledge_gaps": 346,
+ "total_source_entries": 428,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
