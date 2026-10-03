@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_type_iii_system.yaml
+  slug: zorya_type_iii_system
+session:
+  id: 2026-10-03T191453Z-codex-1cc7b3
+  timestamp: '2026-10-03T19:14:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add Zorya type III possession class
+  details: Added traitmech:000576 under traitmech:000217 from DOI:10.1093/nar/gkab883 and
+    DOI:10.1038/s41467-025-57397-2, with four directly matched snippets, pinned PADLOC/DefenseFinder
+    executable rules and NCBI-resolved DSM 12575 source evidence at NZ_LDJG01000021.1. Resolved
+    the original Results component discrepancy using its figure and Discussion plus the later
+    paper. Kept three-match detector thresholds, four-component architecture, natural source
+    and BL21-AI assays distinct. Reserved METPO:1053000 in v453; mechanism remains open. Focused
+    writer tests passed.

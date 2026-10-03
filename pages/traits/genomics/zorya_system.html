@@ -250,12 +250,14 @@
 
 
     <div class="card">
-      <h2>Children (2)</h2>
+      <h2>Children (3)</h2>
       <ul>
 
         <li><a href="../../traits/genomics/zorya_type_i_system.html">Zorya type I system <code>traitmech:000554</code></a></li>
 
         <li><a href="../../traits/genomics/zorya_type_ii_system.html">Zorya type II system <code>traitmech:000552</code></a></li>
+
+        <li><a href="../../traits/genomics/zorya_type_iii_system.html">Zorya type III system <code>traitmech:000576</code></a></li>
 
       </ul>
     </div>
@@ -343,7 +345,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, and the pinned DefenseFinder rules table supports distinct Zorya_TypeI and Zorya_TypeII subtype rows. Zorya type I and type II TraitRecords now capture those DefenseFinder subtypes, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.</p>
+        <p>Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, and the pinned DefenseFinder rules table supports distinct Zorya_TypeI and Zorya_TypeII subtype rows. Zorya type I and type II TraitRecords now capture those DefenseFinder subtypes, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth. The type-III architecture is now represented by traitmech:000576 Zorya type III system for ZorA/ZorB/ZorF/ZorG loci. Payne Figure 2C and Discussion plus Mariano&#39;s Introduction support that composition despite the conflicting zorBC wording in Payne&#39;s Results. DefenseFinder&#39;s three-match threshold is not a complete four-component biological definition. Type-III component roles and native-host mechanisms remain open; the family definition, graph and type-I/II records are unchanged.</p>
 
 
 
@@ -379,6 +381,12 @@
           <time>2026-10-02T20:10:34Z</time> ·
           <strong>TRACK_NARROWER_RECORD</strong> · codex
           <p class="changes">Documented Zorya type I as split out in the open Zorya subtype-effector discussion after minting traitmech:000554 for the DefenseFinder-backed Zorya_TypeI child; Type III and finer Zorya subtype mechanisms remain open.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T19:16:00Z</time> ·
+          <strong>TRACK_ZORYA_TYPE_III_CLASS</strong> · codex
+          <p class="changes">Linked traitmech:000576 using DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57397-2. Kept the family definition, hierarchy, graph, evidence and example unchanged; type-III component functions remain open rather than inheriting type-I/II chemistry.</p>
         </li>
 
       </ol>
@@ -761,10 +769,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-02 20:10 UTC from
+      Record as of 2026-10-03 19:16 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 970 TraitRecords
-      · embedding coverage 49.2%
+      · 971 TraitRecords
+      · embedding coverage 49.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
