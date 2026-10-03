@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import sys
+import urllib.error
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -71,6 +72,27 @@ def test_matching_protein_example_is_clean():
     assert row["finding"] == ""
     assert row["taxon_match"] == "YES"
     assert row["entry_version_match"] == "YES"
+
+
+def test_rest_transport_failure_stays_failed_in_report(monkeypatch, tmp_path):
+    def unavailable(url, timeout):
+        assert url == "https://rest.uniprot.org/uniprotkb/P0A6Y8.json"
+        raise urllib.error.HTTPError(url, 503, "Service Unavailable", {}, None)
+
+    monkeypatch.setattr("audit_uniprot_grounding.urllib.request.urlopen", unavailable)
+    uses = iter_uses([(Path("f.yaml"), "g", _node(_example()))])
+    rows = audit_uses(uses, delay=0)
+    report = tmp_path / "report.tsv"
+    write_report(rows, report)
+    with report.open(newline="") as handle:
+        row, = csv.DictReader(handle, delimiter="\t")
+    assert row["status"] == "error"
+    assert row["uniprot_name"] == "HTTP 503"
+    assert "UNIPROT_ERROR" in row["finding"].split("|")
+    assert row["primary_accession"] == ""
+    assert row["primary_accession_match"] != "YES"
+    assert row["taxon_match"] != "YES"
+    assert row["entry_version_match"] != "YES"
 
 
 def test_taxon_and_version_drift_are_findings():
