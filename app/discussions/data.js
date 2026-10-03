@@ -2286,8 +2286,31 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/drt_system.html#drt-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "druantia-iii-activity-gap",
+  "prompt": "Resolve Druantia_III phage triggers, DruH sensory chemistry, RecBCD and Zorya coupling, native host breadth, and profile-to-activity criteria before minting enzyme, trigger, or component children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Druantia III system",
+  "source_id": "traitmech:000560",
+  "source_file": "druantia_iii_system.yaml",
+  "attaches_to": [
+   "causal_graphs#druantia_iii_locus_subtype_defense"
+  ],
+  "rationale": "Wu et al. support Druantia III as a recurring DruE/DruH system in which DruH is the likely infection sensor and DruE is a helicase-nuclease effector, and the pinned DefenseFinder HMM inventory and rules table support Druantia_III as a subtype whose rule row requires the Druantia_III__DruH and Druantia__DruE_1 profiles. This first-pass record leaves exact late phage triggers, DruH sensory intermediates, RecBCD dependence, Zorya II coupling, native host breadth, and profile-to-activity criteria unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 3,
+  "evidence_refs": [
+   "DOI:10.64898/2026.05.12.724681",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/druantia_iii_system.html#druantia-iii-activity-gap"
+ },
+ {
   "discussion_id": "druantia-subtype-mechanism-gap",
-  "prompt": "Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.",
+  "prompt": "Resolve Druantia Type I, Type II, Type IV, and cross-system activation mechanisms before minting additional narrower Druantia-system children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -2295,7 +2318,7 @@ window.searchData = [
   "source_id": "traitmech:000234",
   "source_file": "druantia_system.yaml",
   "attaches_to": [],
-  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. The first TraitRecord therefore stays at the DruE-core family level until separate review resolves Type I/II partner functions, Type III-specific DruH activation, exact phage triggers, and Zorya-coupled versus standalone outputs across Druantia loci.",
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I/II partner functions, the pinned Type IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9427,9 +9450,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 431,
- "total_knowledge_gaps": 343,
- "total_source_entries": 425,
+ "total_discussions": 432,
+ "total_knowledge_gaps": 344,
+ "total_source_entries": 426,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

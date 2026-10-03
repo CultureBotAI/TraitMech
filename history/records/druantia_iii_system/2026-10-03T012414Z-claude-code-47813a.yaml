@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_iii_system.yaml
+  slug: druantia_iii_system
+session:
+  id: 2026-10-03T012414Z-claude-code-47813a
+  timestamp: '2026-10-03T01:24:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Druantia III system trait
+  details: Minted traitmech:000560 for the DOI- and DefenseFinder-backed Druantia_III subtype
+    under the Druantia system parent after ignored-and-hidden exact duplicate searches found
+    no live TraitMech, METPO, history, or prior proposal record for the local identifier,
+    METPO placeholder, proposal cohort, record slug, human label, DefenseFinder subsystem,
+    DruH profile, or shared DruE_1 profile. Curated pinned DefenseFinder rule/HMM evidence,
+    a conservative nonmechanistic DruE/DruH subtype graph, an open activity gap, an explicit
+    canonical-example evidence-gap event, and a same-PR METPO v437 proposal.
