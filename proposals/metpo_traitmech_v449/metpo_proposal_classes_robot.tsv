@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1052600	Lamassu type II system	A Lamassu system in which an organism possesses a locus with an additional LmuC component alongside the LmuA effector module and SMC-like LmuB sensor.	TraitMech:data/traits/genomics/lamassu_type_ii_system.yaml|DOI:10.1093/nar/gkab883|DOI:10.1038/s41589-025-02102-z	METPO:1018600	Lamassu type II		metpo_traitmech_2026_10	HIGH	LmuC-containing component class, not a length clade or fixed gene count. See proposal.md for HNH, SMEK and Hydrolase-Protease subclass refinements.	traitmech:000572

@@ -1,0 +1,68 @@
+identifier: traitmech:000572
+label: Lamassu type II system
+definition: A Lamassu system in which an organism possesses a locus with an additional
+  LmuC component alongside the LmuA effector module and SMC-like LmuB sensor.
+definition_source: DOI:10.1093/nar/gkab883
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu type II
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkab883
+evidence:
+- reference: DOI:10.1093/nar/gkab883
+  snippet: Similarly, an additional hypothetical protein (LmuC) was identified in
+    about 10.2% of the Lamassu systems detected (371 systems) (Lamassu type II).
+  notes: 'Results: Payne et al. name the LmuC-containing subtype. The quoted frequency
+    belongs to their RefSeq v201 analysis, not universal prevalence. Methods and Figure
+    3 identify the DSM 9628 source locus and its heterologous phage-protection assays;
+    these do not establish native-host resistance or universal LmuC essentiality.'
+- reference: DOI:10.1038/s41589-025-02102-z
+  snippet: the type-I Lamassu complex from Bacillus cellulasensis and the type-II
+    Lamassu complex from Vibrio cholerae
+  notes: 'Abstract: Li et al. report cryo-EM structures for these two source-qualified
+    complexes. This independently supports the type-II category, not species-wide
+    possession, equivalence to a long/short family, or transfer of one nuclease mechanism
+    to all LmuC-containing effector architectures.'
+canonical_examples:
+- taxon_id: NCBITaxon:1349767
+  taxon_label: Janthinobacterium agaricidamnosum NBRC 102515 = DSM 9628
+  reference: DOI:10.1093/nar/gkab883
+  note: Payne et al. amplified the type-II locus from DSM 9628 genomic DNA (source
+    accession NZ_HG322949.1) and tested it in Escherichia coli BL21-AI. NCBI independently
+    resolves that accession and this strain taxon. The example denotes source-strain
+    possession, not native-host antiviral activity or possession by every member of
+    the species.
+discussions:
+- discussion_id: lamassu-type-ii-component-and-mechanism-scope
+  prompt: Resolve type-II effector diversity and LmuC function without conflating
+    axes.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Type II classifies LmuC-containing Lamassu architecture, not an isolated
+    LmuC hit, a fixed three-gene count, a long-LmuB clade, or a universal LmuC-dependence
+    phenotype. The effector module can include more than one gene. Existing HNH, SMEK
+    and Hydrolase-Protease definitions require LmuC and therefore fall below this
+    class; HNH also retains its short-family parent. This is a definition-based hierarchy
+    inference, not new experimental validation of those children. Legacy detector-defined
+    effector records and the complete long/short families are not reparented merely
+    from model labels or optional LmuC calls. The V. cholerae nuclease mechanism does
+    not establish chemistry for every effector module. Native-host activity, protein
+    accessions and broader mechanistic generalization remain unresolved; no causal
+    mechanism graph is asserted. Type I remains a separate discovery lead.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T15:14:27Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-defined LmuC-containing Lamassu class with two independent
+    DOI sources, exact snippets and an NCBI-resolved DSM 9628 possession example.
+    Kept type II distinct from a length family, fixed gene count and universal biochemical
+    mechanism. Ignored-and-hidden searches found no exact record or METPO term. Reserved
+    METPO:1052600 in proposals/metpo_traitmech_v449 and refined three existing LmuC-containing
+    child definitions' hierarchy.
+  llm_assisted: true

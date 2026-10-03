@@ -231,7 +231,15 @@ discussions:
     before assigning the entire record to the long family. SMEK''s exception remains
     unresolved. Raw detection gene_name hits must not be confused with exchangeable
     hit_gene_ref model slots, and ambiguous loci need phylogenetic classification.
-    Component-number type I/II traits remain separate discovery leads.'
+    Component-number type I/II traits remain separate discovery leads. Lamassu type
+    II system (traitmech:000572) now captures the LmuC-containing component architecture
+    defined by Payne et al. (DOI:10.1093/nar/gkab883) and independently used by Li
+    et al. (DOI:10.1038/s41589-025-02102-z). HNH, SMEK and Hydrolase-Protease already
+    require LmuC in their definitions and now have this parent; HNH retains its short-family
+    parent too. This does not assert a three-gene count, universal LmuC essentiality,
+    or new antiviral validation of those children. Long/short families and legacy
+    detector rows are not equivalent to this component class. Type I and family-wide
+    mechanisms remain open discovery and curation questions.'
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -353,4 +361,13 @@ curation_history:
   changes: Linked traitmech:000571 long Lamassu system and recorded why Hydrolase-Protease,
     FMO and SMEK are not automatically reparented. Retained component-classification
     and family-mechanism gaps.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:14:27Z'
+  curator: codex
+  action: TRACK_TYPE_II_CLASS
+  changes: Linked traitmech:000572 Lamassu type II system using the LmuC-containing
+    classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence,
+    examples and length-family distinctions. Historical proposal parent axioms remain
+    true; v449 documents the additional subclass relations for upstream minting. This
+    is not new experimental validation.
   llm_assisted: true

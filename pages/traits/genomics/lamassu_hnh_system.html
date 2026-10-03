@@ -55,10 +55,12 @@
 
 
     <div class="card">
-      <h2>Parent traits (1)</h2>
+      <h2>Parent traits (2)</h2>
       <ul>
 
         <li><a href="../../traits/genomics/short_lamassu_system.html" >short Lamassu system <code>traitmech:000570</code></a></li>
+
+        <li><a href="../../traits/genomics/lamassu_type_ii_system.html" >Lamassu type II system <code>traitmech:000572</code></a></li>
 
       </ul>
     </div>
@@ -149,7 +151,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted. The direct parent is now traitmech:000570 short Lamassu system, matching the short-form LmuB restriction already present in this record&#39;s definition. This hierarchy refinement does not narrow the executable detector, resolve the functional gaps, or reinterpret computational calls as measured antiviral phenotypes.</p>
+        <p>The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted. The direct parent is now traitmech:000570 short Lamassu system, matching the short-form LmuB restriction already present in this record&#39;s definition. This hierarchy refinement does not narrow the executable detector, resolve the functional gaps, or reinterpret computational calls as measured antiviral phenotypes. A second direct parent, traitmech:000572 Lamassu type II system, now captures the LmuC component already required by this definition. The short-family parent is retained because component presence and LmuB-length family are separate axes. Neither hierarchy relation experimentally validates HNH antiviral activity or narrows the detector&#39;s broader scope.</p>
 
 
 
@@ -179,6 +181,12 @@
           <time>2026-10-03T12:33:00Z</time> ·
           <strong>REPARENT_TO_SHORT_LAMASSU</strong> · codex
           <p class="changes">Placed the existing short-LmuB HNH architecture below traitmech:000570 short Lamassu system without changing its definition, evidence, model-scope qualifications or example. The v445 broader Lamassu proposal axiom remains true; v447 documents the added immediate-parent relation for upstream minting.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T15:14:27Z</time> ·
+          <strong>ADD_TYPE_II_PARENT</strong> · codex
+          <p class="changes">Linked traitmech:000572 Lamassu type II system using the LmuC-containing classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence, examples and length-family distinctions. Historical proposal parent axioms remain true; v449 documents the additional subclass relations for upstream minting. This is not new experimental validation.</p>
         </li>
 
       </ol>
@@ -233,10 +241,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 12:33 UTC from
+      Record as of 2026-10-03 15:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 966 TraitRecords
-      · embedding coverage 49.4%
+      · 967 TraitRecords
+      · embedding coverage 49.3%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

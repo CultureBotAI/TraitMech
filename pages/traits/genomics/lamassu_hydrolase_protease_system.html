@@ -58,7 +58,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/genomics/lamassu_system.html" >Lamassu system <code>traitmech:000232</code></a></li>
+        <li><a href="../../traits/genomics/lamassu_type_ii_system.html" >Lamassu type II system <code>traitmech:000572</code></a></li>
 
       </ul>
     </div>
@@ -152,7 +152,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The pinned XML uses four mandatory components and newer Lamassu__ profile names, but its companion TSV uses three mandatory legacy profiles and accessory LmuC. The inventory&#39;s Hydrolase_protease LmuB and hydrolase_protease LmuC rows also differ from both representations. Model-summary reconciliation is required before using that TSV for genotype calls. The definition follows the biological paired architecture and executable model, not the table&#39;s thresholds. Exact substrates, activation order, native-host activity, and accession-level protein examples remain unresolved. No causal mechanism graph is asserted without those molecular anchors. The single-effector table-defined siblings are not asserted to be parents or equivalents of this paired system.</p>
+        <p>The pinned XML uses four mandatory components and newer Lamassu__ profile names, but its companion TSV uses three mandatory legacy profiles and accessory LmuC. The inventory&#39;s Hydrolase_protease LmuB and hydrolase_protease LmuC rows also differ from both representations. Model-summary reconciliation is required before using that TSV for genotype calls. The definition follows the biological paired architecture and executable model, not the table&#39;s thresholds. Exact substrates, activation order, native-host activity, and accession-level protein examples remain unresolved. No causal mechanism graph is asserted without those molecular anchors. The single-effector table-defined siblings are not asserted to be parents or equivalents of this paired system. The direct parent is now traitmech:000572 Lamassu type II system because the biological definition already includes LmuC. The paired effector architecture illustrates why type II is not restricted to exactly three genes. This refinement does not resolve the legacy detector-summary drift or assign the whole trait to one LmuB-length family.</p>
 
 
 
@@ -176,6 +176,12 @@
           <time>2026-10-03T09:29:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added the literature-supported paired Lamassu architecture with DOI and pinned executable-model evidence, exact snippets, and a B4077 canonical example. Ignored-and-hidden searches found only pending parent mentions, not an exact existing record or METPO term. Reserved METPO:1052100 in proposals/metpo_traitmech_v444. Recorded summary-table drift rather than adopting its constraints.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T15:14:27Z</time> ·
+          <strong>ADD_TYPE_II_PARENT</strong> · codex
+          <p class="changes">Linked traitmech:000572 Lamassu type II system using the LmuC-containing classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence, examples and length-family distinctions. Historical proposal parent axioms remain true; v449 documents the additional subclass relations for upstream minting. This is not new experimental validation.</p>
         </li>
 
       </ol>
@@ -230,10 +236,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 09:29 UTC from
+      Record as of 2026-10-03 15:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 966 TraitRecords
-      · embedding coverage 49.4%
+      · 967 TraitRecords
+      · embedding coverage 49.3%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

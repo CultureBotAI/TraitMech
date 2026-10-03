@@ -8,7 +8,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- traitmech:000232
+- traitmech:000572
 synonyms:
 - synonym_text: Lamassu-Hydrolase_Protease
   synonym_type: RELATED_SYNONYM
@@ -89,7 +89,11 @@ discussions:
     activation order, native-host activity, and accession-level protein examples remain
     unresolved. No causal mechanism graph is asserted without those molecular anchors.
     The single-effector table-defined siblings are not asserted to be parents or equivalents
-    of this paired system.
+    of this paired system. The direct parent is now traitmech:000572 Lamassu type
+    II system because the biological definition already includes LmuC. The paired
+    effector architecture illustrates why type II is not restricted to exactly three
+    genes. This refinement does not resolve the legacy detector-summary drift or assign
+    the whole trait to one LmuB-length family.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -101,4 +105,13 @@ curation_history:
     Ignored-and-hidden searches found only pending parent mentions, not an exact existing
     record or METPO term. Reserved METPO:1052100 in proposals/metpo_traitmech_v444.
     Recorded summary-table drift rather than adopting its constraints.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:14:27Z'
+  curator: codex
+  action: ADD_TYPE_II_PARENT
+  changes: Linked traitmech:000572 Lamassu type II system using the LmuC-containing
+    classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence,
+    examples and length-family distinctions. Historical proposal parent axioms remain
+    true; v449 documents the additional subclass relations for upstream minting. This
+    is not new experimental validation.
   llm_assisted: true

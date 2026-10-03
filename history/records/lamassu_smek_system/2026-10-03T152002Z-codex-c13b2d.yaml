@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_smek_system.yaml
+  slug: lamassu_smek_system
+session:
+  id: 2026-10-03T152002Z-codex-c13b2d
+  timestamp: '2026-10-03T15:20:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - hierarchy
+  - discussions
+  summary: Classify the existing architecture under Lamassu type II
+  details: Refined the existing LmuC-containing architecture below traitmech:000572 without
+    assigning a short/long family. Preserved the long-profile exception, computational WCO-9
+    example, definition, evidence and unresolved experimental function. This is a definition-based
+    inference using DOI:10.1093/nar/gkab883, not new functional validation. The writer guards
+    identity, definition, old parents and discussion preimage, appends curation history, and
+    preserves unrelated fields. Historical METPO proposal IDs and broader axioms remain intact;
+    v449 documents the new subclass relation for upstream integration.

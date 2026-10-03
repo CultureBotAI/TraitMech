@@ -7,7 +7,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- traitmech:000232
+- traitmech:000572
 synonyms:
 - synonym_text: Lamassu_SMEK
   synonym_type: RELATED_SYNONYM
@@ -110,7 +110,10 @@ discussions:
     substrates, activation order, domain-name expansion and accession-level protein
     mechanisms remain unresolved. Cap4 and Lipase experiments do not establish SMEK
     chemistry. No causal graph is asserted from these computational architecture calls
-    alone.
+    alone. The direct parent is now traitmech:000572 Lamassu type II system because
+    this definition already includes LmuC. This component-based refinement neither
+    resolves the long-profile exception nor restricts the trait to short Lamassu,
+    and does not confer experimental validation on the computational calls.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -122,4 +125,13 @@ curation_history:
     125 system calls from 377 component rows and recorded the long-profile exception.
     Kept the WCO-9 example computational and rejected equivalence to DS-27. Ignored-and-hidden
     searches found no exact record or METPO term. Reserved METPO:1052300 in proposals/metpo_traitmech_v446.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:14:27Z'
+  curator: codex
+  action: ADD_TYPE_II_PARENT
+  changes: Linked traitmech:000572 Lamassu type II system using the LmuC-containing
+    classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence,
+    examples and length-family distinctions. Historical proposal parent axioms remain
+    true; v449 documents the additional subclass relations for upstream minting. This
+    is not new experimental validation.
   llm_assisted: true
