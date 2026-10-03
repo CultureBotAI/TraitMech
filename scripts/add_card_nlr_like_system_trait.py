@@ -73,12 +73,13 @@ RULE_HEADER = (
     "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory"
     "\tForbidden\tNeutral"
 )
+RULE_HEADER_AND_ROW = f"{RULE_HEADER}\n{RULE_ROW}"
 RULE_PROFILE_SPAN = (
     "CARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, "
     "CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, "
     "CARD_NLR__Trypsin_Phospho"
 )
-RULE_PARENT_SPAN = "CARD_NLR\tCARD_NLR_like\t2\t4"
+RULE_PARENT_SPAN = "CARD_NLR\tCARD_NLR_like"
 
 
 def wein_card_evidence() -> dict[str, str]:
@@ -165,6 +166,19 @@ def rules_header_evidence() -> dict[str, str]:
     }
 
 
+def rules_header_and_row_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_RULES,
+        "snippet": RULE_HEADER_AND_ROW,
+        "notes": (
+            "The pinned DefenseFinder rules header and CARD_NLR_like row "
+            "identify CARD_NLR_like as a CARD_NLR subsystem with "
+            "Min_mandatory=2, Minimum_genes=4, four candidate Mandatory "
+            "effector profiles, and three Accessory profiles."
+        ),
+    }
+
+
 def rules_profile_evidence() -> dict[str, str]:
     return {
         "reference": DEFENSEFINDER_RULES,
@@ -184,8 +198,7 @@ def rules_parent_evidence() -> dict[str, str]:
         "snippet": RULE_PARENT_SPAN,
         "notes": (
             "The pinned DefenseFinder rules table places the "
-            "CARD_NLR_like subsystem under the CARD_NLR system key with "
-            "two mandatory matches and four genes required."
+            "CARD_NLR_like subsystem under the CARD_NLR system key."
         ),
     }
 
@@ -300,8 +313,7 @@ RECORD: dict[str, Any] = {
                         "CARD_NLR accessory profiles."
                     ),
                     "evidence": [
-                        rules_header_evidence(),
-                        rules_evidence(),
+                        rules_header_and_row_evidence(),
                     ],
                 },
                 {
@@ -317,8 +329,7 @@ RECORD: dict[str, Any] = {
                     "evidence": [
                         wein_card_evidence(),
                         article_registry_evidence(),
-                        rules_header_evidence(),
-                        rules_evidence(),
+                        rules_profile_evidence(),
                     ],
                 },
                 {

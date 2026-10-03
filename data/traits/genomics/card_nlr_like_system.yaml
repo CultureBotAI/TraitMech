@@ -103,16 +103,12 @@ causal_graphs:
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory\t\
-        Forbidden\tNeutral"
-      notes: The pinned DefenseFinder rules header identifies the second, third, fourth,
-        fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
-        Mandatory, and Accessory, respectively.
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
-      snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
-        \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
-        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
-      notes: The pinned DefenseFinder rules table models CARD_NLR_like as a CARD_NLR
-        subsystem requiring two matches from a four-profile candidate effector set.
+        Forbidden\tNeutral\nCARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease,\
+        \ CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\t\
+        CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
+      notes: The pinned DefenseFinder rules header and CARD_NLR_like row identify
+        CARD_NLR_like as a CARD_NLR subsystem with Min_mandatory=2, Minimum_genes=4,
+        four candidate Mandatory effector profiles, and three Accessory profiles.
   - subject: card_like_antiphage_defense
     predicate: confers
     predicate_id: METPO:2007700
@@ -131,17 +127,11 @@ causal_graphs:
       notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
         to the Wein et al. CARD-like-domain anti-phage defense preprint.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
-      snippet: "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory\t\
-        Forbidden\tNeutral"
-      notes: The pinned DefenseFinder rules header identifies the second, third, fourth,
-        fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
-        Mandatory, and Accessory, respectively.
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
-      snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
-        \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
-        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
-      notes: The pinned DefenseFinder rules table models CARD_NLR_like as a CARD_NLR
-        subsystem requiring two matches from a four-profile candidate effector set.
+      snippet: "CARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
+        \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho"
+      notes: The pinned DefenseFinder rules table models CARD_NLR_like with two required
+        matches from Endonuclease, Phospho_Trypsin, Subtilase_long_new, and Trypsin_Phospho
+        candidate effector profiles.
   - subject: card_nlr_like_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -160,9 +150,9 @@ causal_graphs:
         fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
         Mandatory, and Accessory, respectively.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
-      snippet: "CARD_NLR\tCARD_NLR_like\t2\t4"
+      snippet: "CARD_NLR\tCARD_NLR_like"
       notes: The pinned DefenseFinder rules table places the CARD_NLR_like subsystem
-        under the CARD_NLR system key with two mandatory matches and four genes required.
+        under the CARD_NLR system key.
 discussions:
 - discussion_id: card-nlr-like-activity-gap
   prompt: Resolve the CARD_NLR_like phage triggers, native hosts, four-profile effector-combination
