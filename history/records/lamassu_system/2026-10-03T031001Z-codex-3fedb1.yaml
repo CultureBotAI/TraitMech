@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T031001Z-codex-3fedb1
+  timestamp: '2026-10-03T03:10:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track Lamassu-Hydrolase subtype split
+  details: Updated the open Lamassu subtype-effector knowledge gap after minting traitmech:000561
+    for Lamassu-Hydrolase, recording it alongside Lamassu-Amidase, Lamassu-Cap4 nuclease,
+    and Lamassu-FMO while leaving the remaining Lamassu-Fam subtypes and finer activation
+    mechanisms unresolved.

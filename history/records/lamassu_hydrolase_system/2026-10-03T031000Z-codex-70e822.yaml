@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hydrolase_system.yaml
+  slug: lamassu_hydrolase_system
+session:
+  id: 2026-10-03T031000Z-codex-70e822
+  timestamp: '2026-10-03T03:10:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-Hydrolase system
+  details: Minted traitmech:000561 for the DefenseFinder-backed Lamassu-Hydrolase subtype
+    under the Lamassu system parent, added DOI and pinned DefenseFinder rule/HMM evidence
+    snippets, recorded a NONMECHANISTIC subtype graph, left native canonical examples open
+    for lack of accession-backed endogenous activity evidence, and reserved METPO:1051500
+    in proposals/metpo_traitmech_v438 for upstream replacement.

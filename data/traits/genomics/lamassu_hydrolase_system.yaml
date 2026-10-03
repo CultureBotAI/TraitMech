@@ -1,0 +1,159 @@
+identifier: traitmech:000561
+label: Lamassu-Hydrolase system
+definition: A Lamassu system in which an organism possesses a genome-encoded DefenseFinder
+  Lamassu-Hydrolase subtype locus represented by the Lamassu-Hydrolase rule row requiring
+  the Lamassu-Fam__LmuA_effector_Hydrolase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+  profiles.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu-Hydrolase
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Lamassu-Fam__LmuA_effector_Hydrolase
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: a bacterial immune system family featuring diverse effectors but a core
+    conserved SMC-like sensor
+  notes: Haudiquet et al. support placing Lamassu subtypes under a Lamassu family
+    with diverse LmuA effectors and a conserved SMC-like sensor.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Lamassu-Fam | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of
+    immune systems that protect bacteria from phages | '
+  notes: The pinned DefenseFinder article registry maps the Lamassu-Fam model namespace
+    to a bacterial immune-systems preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuA_effector_Hydrolase             | Lamassu-Fam__LmuA_effector_Hydrolase             |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_Hydrolase
+    custom profile listed as mandatory by the Lamassu-Hydrolase rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           | Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II           |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II
+    custom profile listed as mandatory by the Lamassu-Hydrolase rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     |
+    Lamassu-Fam            | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase
+    custom profile listed as accessory by the Lamassu-Hydrolase rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Lamassu-Fam\tLamassu-Hydrolase\t2\t2\tLamassu-Fam__LmuA_effector_Hydrolase,\
+    \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase,\
+    \ Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+    \ Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,\
+    \ Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,\
+    \ Lamassu-Fam__LmuA_effector_hypothetical\t"
+  notes: The pinned DefenseFinder rules table models Lamassu-Hydrolase as a Lamassu-Fam
+    subsystem requiring Lamassu-Fam__LmuA_effector_Hydrolase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II,
+    with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.
+causal_graphs:
+- graph_id: lamassu_hydrolase_locus_subtype_defense
+  title: Lamassu-Hydrolase is a DefenseFinder Lamassu subtype
+  description: Conservative subtype-level classification linking the DefenseFinder
+    Lamassu-Hydrolase rule-row definition to Lamassu-Hydrolase system possession and
+    its Lamassu parent.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Lamassu-Hydrolase as a DefenseFinder rule-row subtype
+    of Lamassu system possession without asserting a Lamassu-Hydrolase-specific antiphage
+    process, exact phage-triggered substrate chemistry, viral-DNA trigger, LmuC requirement,
+    native host breadth, cell-death output, or whether every DefenseFinder Lamassu-Hydrolase
+    prediction is a complete experimentally active locus.
+  nodes:
+  - node_id: lamassu_hydrolase_system_trait
+    label: Lamassu-Hydrolase system
+    node_type: TRAIT
+    grounding: traitmech:000561
+    description: Possession of a genome-encoded Lamassu-Hydrolase phage-defense system.
+  - node_id: lamassu_system_trait
+    label: Lamassu system
+    node_type: TRAIT
+    grounding: traitmech:000232
+    description: Possession of a genome-encoded Lamassu phage-defense system.
+  edges:
+  - subject: lamassu_hydrolase_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: lamassu_system_trait
+    description: Lamassu-Hydrolase system possession is a Lamassu-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Lamassu-Fam | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal
+        of immune systems that protect bacteria from phages | '
+      notes: The pinned DefenseFinder article registry maps the Lamassu-Fam model
+        namespace to a bacterial immune-systems preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Lamassu-Fam\tLamassu-Hydrolase\t2\t2"
+      notes: The pinned DefenseFinder rules table places the Lamassu-Hydrolase subsystem
+        under the Lamassu-Fam system key with 2 mandatory matches and 2 genes required.
+discussions:
+- discussion_id: lamassu-hydrolase-activity-gap
+  prompt: Resolve Lamassu-Hydrolase phage triggers, native hosts, hydrolase effector
+    substrates, LmuC usage, and profile-to-activity criteria before minting enzyme,
+    trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Haudiquet et al. support a Lamassu family with diverse LmuA effectors
+    and a conserved SMC-like sensor, and the pinned DefenseFinder HMM inventory and
+    rules table support Lamassu-Hydrolase as a Lamassu-Fam subtype whose rule row
+    requires Lamassu-Fam__LmuA_effector_Hydrolase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II.
+    This first-pass record follows the rule row but leaves exact hydrolase substrates,
+    LmuC requirement, native hosts, phage triggers, cell-death output, and profile-to-activity
+    criteria unresolved.
+  evidence:
+  - reference: DOI:10.1073/pnas.2519643122
+    snippet: a bacterial immune system family featuring diverse effectors but a core
+      conserved SMC-like sensor
+    notes: Haudiquet et al. support placing Lamassu subtypes under a Lamassu family
+      with diverse LmuA effectors and a conserved SMC-like sensor.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Lamassu-Fam__LmuA_effector_Hydrolase             | Lamassu-Fam__LmuA_effector_Hydrolase             |
+      Lamassu-Fam            | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuA_effector_Hydrolase
+      custom profile listed as mandatory by the Lamassu-Hydrolase rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Lamassu-Fam__LmuC_acc_Lipase                     | Lamassu-Fam__LmuC_acc_Lipase                     |
+      Lamassu-Fam            | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records the Lamassu-Fam__LmuC_acc_Lipase
+      custom profile listed as accessory by the Lamassu-Hydrolase rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Lamassu-Fam\tLamassu-Hydrolase\t2\t2\tLamassu-Fam__LmuA_effector_Hydrolase,\
+      \ Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II\tLamassu-Fam__LmuC_acc_Lipase\tLamassu-Fam__LmuA_effector_Amidase,\
+      \ Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,\
+      \ Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,\
+      \ Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,\
+      \ Lamassu-Fam__LmuA_effector_hypothetical\t"
+    notes: The pinned DefenseFinder rules table models Lamassu-Hydrolase as a Lamassu-Fam
+      subsystem requiring Lamassu-Fam__LmuA_effector_Hydrolase and Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II,
+      with Lamassu-Fam__LmuC_acc_Lipase as an accessory profile.
+  attaches_to:
+  - causal_graphs#lamassu_hydrolase_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T03:10:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Lamassu-Hydrolase system as a DefenseFinder-backed GENOMICS TraitRecord
+    under the Lamassu system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record for the target
+    local ID, placeholder METPO ID, proposal cohort, record slug, human label, or
+    DefenseFinder subsystem; existing Lamassu-Fam__LmuA_effector_Hydrolase mentions
+    were limited to forbidden-profile evidence on neighboring Lamassu-Fam subtypes,
+    and the replacement placeholder is reserved in proposals/metpo_traitmech_v438.
+  llm_assisted: true
+- timestamp: '2026-10-03T03:10:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed Lamassu-Hydrolase system during initial curation and left canonical_examples
+    empty because the pinned DefenseFinder tables support a rule-row subtype but not
+    an accession-backed native microbial taxon exemplar tied to the Lamassu-Hydrolase
+    profiles and experimentally verified endogenous activity. No paid research was
+    used.
+  llm_assisted: true
