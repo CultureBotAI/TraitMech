@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_pddexk_system.yaml
+  slug: lamassu_pddexk_system
+session:
+  id: 2026-10-03T050640Z-codex-66268a
+  timestamp: '2026-10-03T05:06:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-PDDEXK system
+  details: Minted traitmech:000564 for the DefenseFinder-backed Lamassu-PDDEXK subtype under
+    the Lamassu system parent, added DOI and pinned DefenseFinder rule/HMM evidence snippets,
+    recorded a NONMECHANISTIC subtype graph, left native canonical examples open for lack
+    of accession-backed endogenous activity evidence, and reserved METPO:1051800 in proposals/metpo_traitmech_v441
+    for upstream replacement.
