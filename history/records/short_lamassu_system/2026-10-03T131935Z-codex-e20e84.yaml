@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/short_lamassu_system.yaml
+  slug: short_lamassu_system
+session:
+  id: 2026-10-03T131935Z-codex-e20e84
+  timestamp: '2026-10-03T13:19:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1617
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Strengthen NCBI snippet with species name and taxon ID
+  details: 'Addressed issue #1617 from independent review by using the exact contiguous rendered
+    NCBI span containing both Vibrio cholerae and taxon 666. The earlier citation-form snippet
+    was independently verified verbatim, so the remembered-prefix criticism was not reproduced;
+    the real correction is including the species name claimed by the identity notes. Re-fetched
+    primary PNAS XML, PDB 9NY5 entity 3 JSON, and NCBI HTML and exact-matched all six snippets.
+    Preserved all earlier curation and repository history. The writer authorizes only the
+    exact committed preimage for this correction, and focused tests verify migration, idempotence,
+    history preservation and drift refusal. All 26 focused tests passed.'

@@ -58,7 +58,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/genomics/lamassu_system.html" >Lamassu system <code>traitmech:000232</code></a></li>
+        <li><a href="../../traits/genomics/short_lamassu_system.html" >short Lamassu system <code>traitmech:000570</code></a></li>
 
       </ul>
     </div>
@@ -149,7 +149,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted.</p>
+        <p>The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted. The direct parent is now traitmech:000570 short Lamassu system, matching the short-form LmuB restriction already present in this record&#39;s definition. This hierarchy refinement does not narrow the executable detector, resolve the functional gaps, or reinterpret computational calls as measured antiviral phenotypes.</p>
 
 
 
@@ -173,6 +173,12 @@
           <time>2026-10-03T10:35:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added the literature-supported short-Lamassu HNH architecture with DOI, executable-model, published dataset and NCBI identity evidence and exact snippets. Restricted the AN59 example to computational genomic possession. Ignored-and-hidden searches found no exact record or METPO term. Reserved METPO:1052200 in proposals/metpo_traitmech_v445; retained the detector-scope and HNH-specific functional-validation gaps.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T12:33:00Z</time> ·
+          <strong>REPARENT_TO_SHORT_LAMASSU</strong> · codex
+          <p class="changes">Placed the existing short-LmuB HNH architecture below traitmech:000570 short Lamassu system without changing its definition, evidence, model-scope qualifications or example. The v445 broader Lamassu proposal axiom remains true; v447 documents the added immediate-parent relation for upstream minting.</p>
         </li>
 
       </ol>
@@ -227,10 +233,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 10:35 UTC from
+      Record as of 2026-10-03 12:33 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 964 TraitRecords
-      · embedding coverage 49.5%
+      · 965 TraitRecords
+      · embedding coverage 49.4%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

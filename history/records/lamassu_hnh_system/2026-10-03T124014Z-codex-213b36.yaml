@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hnh_system.yaml
+  slug: lamassu_hnh_system
+session:
+  id: 2026-10-03T124014Z-codex-213b36
+  timestamp: '2026-10-03T12:40:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_traits
+  - discussions
+  summary: Refine Lamassu-HNH under the short Lamassu family
+  details: Changed the direct parent of traitmech:000568 from Lamassu to traitmech:000570,
+    matching the existing definition explicit short-form LmuB scope. Preserved definition,
+    evidence, synonyms, and canonical example. Appended a discussion clarification without
+    closing detector-scope or functional-validation gaps. The historical v445 broader Lamassu
+    axiom remains true; v447 requests METPO:1052200 SubClassOf METPO:1052400 on upstream minting.
+    Guarded writer tests verify preservation, idempotence and rejection of altered preimages;
+    24 focused tests passed.

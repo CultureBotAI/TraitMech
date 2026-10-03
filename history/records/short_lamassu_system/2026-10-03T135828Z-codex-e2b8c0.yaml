@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/short_lamassu_system.yaml
+  slug: short_lamassu_system
+session:
+  id: 2026-10-03T135828Z-codex-e2b8c0
+  timestamp: '2026-10-03T13:58:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1620
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1616
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Clarify the historical cross-block quotation check
+  details: 'Addresses #1620 and corrects the verification wording in history/records/short_lamassu_system/2026-10-03T131935Z-codex-e20e84.yaml
+    without editing it. Appended an event withdrawing the contiguous characterization for
+    the removed species-name-and-ID quote: its check joined rendered text across HTML blocks.
+    The distinct earlier citation-form verification remains supported by the exact inline
+    raw HTML included in the new curation event: Taxonomy ID: 666 <small>(for references in
+    articles please use ncbitaxon:666)</small><br>. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info,
+    HTTP 200 fetch rechecked on 2026-10-03. That lowercase text is a source quotation, not
+    an asserted CURIE. All prior events and substantive trait/proposal fields are unchanged.
+    The writer authorizes only the exact committed preimage for this migration and tests acceptance,
+    drift refusal and full prior-field preservation.'
