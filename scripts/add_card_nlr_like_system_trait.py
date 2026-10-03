@@ -229,25 +229,43 @@ RECORD: dict[str, Any] = {
             "graph_id": "card_nlr_like_locus_subtype_defense",
             "title": "CARD-NLR-like is a DefenseFinder CARD-NLR subtype",
             "description": (
-                "Conservative subtype-level classification linking the "
-                "DefenseFinder CARD_NLR_like rule-row definition to "
-                "CARD-NLR-like system possession and its CARD-NLR parent."
+                "Conservative subtype-level sketch linking a DefenseFinder "
+                "CARD_NLR_like locus to CARD-like anti-phage defense, "
+                "CARD-NLR-like system possession, and its CARD-NLR parent."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
-                "The graph captures CARD_NLR_like as a DefenseFinder "
-                "rule-row subtype of CARD-NLR system possession without "
-                "asserting a CARD_NLR_like-specific antiphage process, "
-                "expanding any profile names, selecting which two of the "
-                "four candidate effector profiles realize activity, "
-                "resolving the absent CARD_NLR__Subtilase_long_new HMM "
-                "inventory row, or resolving exact phage triggers, native "
-                "host breadth, CARD-to-effector activation sequence, "
-                "cell-death output, or whether every DefenseFinder "
-                "CARD_NLR_like prediction is a complete experimentally "
-                "active locus."
+                "The graph captures the CARD_NLR_like subtype at "
+                "DefenseFinder rule-row level without expanding candidate "
+                "effector-profile names, selecting which two of the four "
+                "candidate effector profiles realize activity, resolving the "
+                "absent CARD_NLR__Subtilase_long_new HMM inventory row, or "
+                "resolving exact phage triggers, native host breadth, "
+                "CARD-to-effector activation sequence, cell-death output, "
+                "or whether every DefenseFinder CARD_NLR_like prediction is "
+                "a complete experimentally active locus."
             ),
             "nodes": [
+                {
+                    "node_id": "card_nlr_like_locus",
+                    "label": "CARD-NLR-like locus",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A DefenseFinder CARD_NLR_like subtype locus "
+                        "represented by at least two of four candidate "
+                        "CARD_NLR effector profiles and generic CARD_NLR "
+                        "accessory profiles."
+                    ),
+                },
+                {
+                    "node_id": "card_like_antiphage_defense",
+                    "label": "CARD-like antiphage defense",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Anti-phage defense mediated by a bacterial "
+                        "CARD-like defense system."
+                    ),
+                },
                 {
                     "node_id": "card_nlr_like_system_trait",
                     "label": "CARD-NLR-like system",
@@ -270,6 +288,39 @@ RECORD: dict[str, Any] = {
                 },
             ],
             "edges": [
+                {
+                    "subject": "card_nlr_like_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "card_like_antiphage_defense",
+                    "description": (
+                        "CARD_NLR_like loci are represented in "
+                        "DefenseFinder by at least two matches from four "
+                        "candidate CARD_NLR effector profiles plus "
+                        "CARD_NLR accessory profiles."
+                    ),
+                    "evidence": [
+                        rules_header_evidence(),
+                        rules_evidence(),
+                    ],
+                },
+                {
+                    "subject": "card_like_antiphage_defense",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": "card_nlr_like_system_trait",
+                    "description": (
+                        "The first-pass CARD-NLR-like system trait is "
+                        "realized by a DefenseFinder CARD_NLR_like subtype "
+                        "locus."
+                    ),
+                    "evidence": [
+                        wein_card_evidence(),
+                        article_registry_evidence(),
+                        rules_header_evidence(),
+                        rules_evidence(),
+                    ],
+                },
                 {
                     "subject": "card_nlr_like_system_trait",
                     "predicate": "is a",

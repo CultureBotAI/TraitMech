@@ -6702,8 +6702,8 @@
       "slug": "card_nlr_like_system",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 1,
-      "nodes": 2,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
       "examples": 0,
@@ -6714,7 +6714,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (1 edges) +12",
+        "thin graph (3 edges) +12",
         "canonical_examples reviewed empty +0"
       ]
     },
