@@ -1,0 +1,87 @@
+identifier: traitmech:000575
+label: Hachiman type I system
+definition: A Hachiman system in which an organism possesses a HamA/HamB locus without
+  a HamC component.
+definition_source: DOI:10.1038/s41467-025-57851-1
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000219
+synonyms:
+- synonym_text: Hachiman type I
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkab883
+evidence:
+- reference: DOI:10.1093/nar/gkab883
+  snippet: We refer to the new Hachiman systems as type II, and the original Hachiman
+    systems as type I.
+  notes: 'Results, new-subtype classification: Payne et al. distinguish the original
+    HamAB architecture from the newly identified HamC-associated systems. Figure 2C
+    depicts the component contrast. These names classify system architecture, not
+    individual proteins or organism-level disjoint classes.'
+- reference: DOI:10.1038/s41467-025-57851-1
+  snippet: Payne et al. classified the Hachiman systems that contain only HamA and
+    HamB as type I
+  notes: 'Introduction: Cui et al. explicitly retain the HamAB-only classification,
+    citing Payne rather than independently originating the name. Their own experiments
+    characterize type I-A and I-B. Methods identify the type-I-B source as K-12, U00096.3
+    positions 2761204-2765368. Defense assays used plasmid-borne HamAB in a hamAB-deleted
+    MG1655 host; these are not measurements of unmodified native-locus activity. The
+    subtype results do not establish a universal type-I effector domain, activation
+    trigger or phage spectrum.'
+- reference: https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/hachiman_type_I.yaml
+  snippet: "prohibited_genes:\n  - HamC2"
+  notes: 'Pinned PADLOC rule, retrieved 2026-10-03: the core is HamA1 plus HamB1,
+    minimum_core and minimum_total are 2, maximum_separation is 0, and force_strand
+    is FALSE. HamC2 is prohibited in the detected system. This is a profile constraint,
+    not proof that a biological locus lacks every divergent HamC homolog or that the
+    whole genome lacks HamC.'
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Hachiman/Hachiman.xml
+  snippet: <gene name="Hachiman__HamB" presence="mandatory"/>
+  notes: 'Pinned DefenseFinder XML, retrieved 2026-10-03: HamA_1 (exchangeable with
+    HamA_2) and HamB are mandatory, both minimum counts are 2, and inter_gene_max_space
+    is 5. The model has no forbidden HamC component. A raw Hachiman call therefore
+    does not establish the type-I absence condition; complete biological locus context
+    must be reviewed. The model name is not added as a type-I exact synonym.'
+canonical_examples:
+- taxon_id: NCBITaxon:511145
+  taxon_label: Escherichia coli str. K-12 substr. MG1655
+  reference: DOI:10.1038/s41467-025-57851-1
+  note: Cui et al. identify the type-I-B source locus at U00096.3 positions 2761204-2765368.
+    NCBI independently resolves that accession to K-12 MG1655, taxon 511145; the source
+    region contains abpA (HamA) and abpB (HamB). This example denotes natural source-strain
+    possession, not all E. coli strains or native-locus protection measured without
+    manipulation. Their defense assays complemented a hamAB-deleted MG1655 host with
+    plasmid-borne HamAB, and protein expression used BL21(DE3). The type-I assignment
+    comes from the paper, not an inference of HamC absence from the retrieved sequence
+    interval alone.
+discussions:
+- discussion_id: hachiman-type-i-absence-and-subtype-scope
+  prompt: Resolve type-I subtype mechanisms without equating missing hits with component
+    absence.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Type I denotes the literature-defined HamAB architecture without HamC,
+    not an isolated HamA/HamB hit, an incomplete assembly, a purified-complex omission
+    or automatic reclassification of a type-II HamC knockout. A genome may possess
+    both type-I and type-II loci, so these possession traits are not disjoint. Cui
+    et al. separate four HamA-domain subtypes within type I; experimental support
+    for I-A/I-B does not validate every predicted subtype or establish one universal
+    nuclease domain, DNA substrate, trigger or antiviral spectrum. Subtype classes
+    remain discovery leads requiring separate source review. The broader Hachiman
+    record already retains source-qualified I-A/I-B mechanism evidence; no duplicate
+    or universal causal graph is added here. Native-locus activity and broader accession-resolved
+    functional generalization remain open.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T18:37:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-defined HamC-lacking HamAB possession class with two
+    DOI sources, exact snippets, pinned detector constraints and an NCBI-resolved
+    MG1655 source-locus example. Novelty and allocation searches included ignored
+    and hidden files; the fresh METPO seed has no exact class. Reserved METPO:1052900
+    in v452. Kept natural source, engineered assays and subtype chemistry distinct.
+  llm_assisted: true

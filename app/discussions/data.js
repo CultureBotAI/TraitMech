@@ -4429,12 +4429,29 @@ window.searchData = [
   "source_id": "traitmech:000219",
   "source_file": "hachiman_system.yaml",
   "attaches_to": [],
-  "rationale": "Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output. Hachiman type II system (traitmech:000574) now resolves the HamABC architecture defined by Payne et al. (DOI:10.1093/nar/gkab883) and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence, but HamC function and type-II mechanism remain open. The family definition no longer requires universal DNA cleavage; this graph and its evidence remain restricted to characterized type-I systems. Proposal v451 replaces v96's overgeneralized family definition while preserving the stable local family identifier. Type I remains a separate architecture-class discovery lead.",
+  "rationale": "Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output. Hachiman type II system (traitmech:000574) now resolves the HamABC architecture defined by Payne et al. (DOI:10.1093/nar/gkab883) and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence, but HamC function and type-II mechanism remain open. The family definition no longer requires universal DNA cleavage; this graph and its evidence remain restricted to characterized type-I systems. Proposal v451 replaces v96's overgeneralized family definition while preserving the stable local family identifier. Type I remains a separate architecture-class discovery lead. That architecture-class lead is now represented by traitmech:000575 Hachiman type I system for HamAB loci without HamC. The component definition follows Payne and Cui, not a failed detector hit or a type-II knockout. The existing graph still describes characterized I-A/I-B mechanisms, not all type-I subtypes. Subtype-specific mechanisms and native-locus activity remain open; no graph, example or hierarchy is changed.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
+ },
+ {
+  "discussion_id": "hachiman-type-i-absence-and-subtype-scope",
+  "prompt": "Resolve type-I subtype mechanisms without equating missing hits with component absence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hachiman type I system",
+  "source_id": "traitmech:000575",
+  "source_file": "hachiman_type_i_system.yaml",
+  "attaches_to": [],
+  "rationale": "Type I denotes the literature-defined HamAB architecture without HamC, not an isolated HamA/HamB hit, an incomplete assembly, a purified-complex omission or automatic reclassification of a type-II HamC knockout. A genome may possess both type-I and type-II loci, so these possession traits are not disjoint. Cui et al. separate four HamA-domain subtypes within type I; experimental support for I-A/I-B does not validate every predicted subtype or establish one universal nuclease domain, DNA substrate, trigger or antiviral spectrum. Subtype classes remain discovery leads requiring separate source review. The broader Hachiman record already retains source-qualified I-A/I-B mechanism evidence; no duplicate or universal causal graph is added here. Native-locus activity and broader accession-resolved functional generalization remain open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hachiman_type_i_system.html#hachiman-type-i-absence-and-subtype-scope"
  },
  {
   "discussion_id": "hachiman-type-ii-component-and-mechanism-scope",
@@ -4446,7 +4463,7 @@ window.searchData = [
   "source_id": "traitmech:000574",
   "source_file": "hachiman_type_ii_system.yaml",
   "attaches_to": [],
-  "rationale": "Type II denotes the HamABC locus architecture, not a HamC hit alone, a source database row or a fixed phage-protection phenotype. Type-I DNA-damage sensing and DNA-cleavage mechanisms are not generalized to this class; HamC's biochemical role and necessity remain unresolved by these sources. No causal mechanism graph or unverified protein accession is asserted. Native-host assays and accession-resolved functional evidence remain desirable. DefenseFinder and PADLOC have different component-count rules; inspect complete locus context before converting calls into trait assertions. Component absence cannot be inferred from a failed hit or incomplete assembly. Type I remains a separate discovery lead, and coexisting loci would not make organism-level type-I and type-II possession traits disjoint.",
+  "rationale": "Type II denotes the HamABC locus architecture, not a HamC hit alone, a source database row or a fixed phage-protection phenotype. Type-I DNA-damage sensing and DNA-cleavage mechanisms are not generalized to this class; HamC's biochemical role and necessity remain unresolved by these sources. No causal mechanism graph or unverified protein accession is asserted. Native-host assays and accession-resolved functional evidence remain desirable. DefenseFinder and PADLOC have different component-count rules; inspect complete locus context before converting calls into trait assertions. Component absence cannot be inferred from a failed hit or incomplete assembly. Type I remains a separate discovery lead, and coexisting loci would not make organism-level type-I and type-II possession traits disjoint. The type-I lead is now represented by traitmech:000575 Hachiman type I system for the literature-defined HamC-lacking HamAB architecture. This does not imply organism-level disjointness, turn missing detector hits into absence evidence, or transfer type-I chemistry to type II. HamC function and type-II mechanisms remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9736,9 +9753,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 446,
- "total_knowledge_gaps": 358,
- "total_source_entries": 440,
+ "total_discussions": 447,
+ "total_knowledge_gaps": 359,
+ "total_source_entries": 441,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

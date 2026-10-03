@@ -68,6 +68,11 @@ discussions:
     into trait assertions. Component absence cannot be inferred from a failed hit
     or incomplete assembly. Type I remains a separate discovery lead, and coexisting
     loci would not make organism-level type-I and type-II possession traits disjoint.
+    The type-I lead is now represented by traitmech:000575 Hachiman type I system
+    for the literature-defined HamC-lacking HamAB architecture. This does not imply
+    organism-level disjointness, turn missing detector hits into absence evidence,
+    or transfer type-I chemistry to type II. HamC function and type-II mechanisms
+    remain unresolved.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -80,4 +85,12 @@ curation_history:
     class. Reserved METPO:1052801 in v451; METPO:1052800 replaces the broad parent's
     v96 proposal. Kept natural source, heterologous activity and type-I chemistry
     distinct.
+  llm_assisted: true
+- timestamp: '2026-10-03T18:37:00Z'
+  curator: codex
+  action: TRACK_HACHIMAN_TYPE_I_CLASS
+  changes: Linked traitmech:000575 Hachiman type I system using the component classification
+    in DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57851-1. Kept definitions,
+    hierarchy, examples, evidence and graphs unchanged; mechanism questions remain
+    open. No absence assertion is inferred from detector output.
   llm_assisted: true

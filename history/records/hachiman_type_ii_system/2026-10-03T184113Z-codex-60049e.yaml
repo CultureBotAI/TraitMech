@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hachiman_type_ii_system.yaml
+  slug: hachiman_type_ii_system
+session:
+  id: 2026-10-03T184113Z-codex-60049e
+  timestamp: '2026-10-03T18:41:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link Hachiman type I without transferring its mechanism
+  details: Through the validated writer, appended the new traitmech:000575 class to the type-II
+    discussion. Preserved the HamABC definition, evidence, DSM 14551 example and hierarchy;
+    HamC function and type-II mechanisms remain open. No organism-level disjointness or detector-derived
+    biological absence is asserted.
