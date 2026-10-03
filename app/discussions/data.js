@@ -9769,6 +9769,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/sos_response.html#sos-response-xref-gap"
  },
  {
+  "discussion_id": "thermotaxis-context-and-mapping-boundaries",
+  "prompt": "Resolve assay-dependent response inversion without imposing a universal temperature threshold.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "thermotaxis",
+  "source_id": "traitmech:000580",
+  "source_file": "thermotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "DOI:10.1073/pnas.0709903105 reports thermal-response inversion under its tethered-cell conditions. DOI:10.7554/eLife.26607 instead finds continued warm-seeking in buffer under flow; its Discussion suggests residual chemical stimulation as one explanation of earlier results, not a proven correction. Retain medium, adaptation, strain and assay context. Growth optima, passive thermophoresis and temperature-dependent speed alone do not establish thermotaxis. GO:0043052 is a biological process (QuickGO checked 2026-10-03), so it grounds the process node rather than an equivalent xref on the disposition. The Tar arm does not describe every thermotactic microbe.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/thermotaxis.html#thermotaxis-context-and-mapping-boundaries"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9821,9 +9838,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 451,
- "total_knowledge_gaps": 363,
- "total_source_entries": 445,
+ "total_discussions": 452,
+ "total_knowledge_gaps": 364,
+ "total_source_entries": 446,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

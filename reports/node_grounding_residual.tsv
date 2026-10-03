@@ -2873,6 +2873,10 @@ rela/spot homologue enzymes	GENE_OR_PROTEIN	1	data/traits/physiology/stress_resp
 ribosome biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/physiology/stress_response.yaml
 stress tolerance	QUALITY	1	data/traits/physiology/stress_response.yaml
 general stress resistance	BIOLOGICAL_PROCESS	1	data/traits/physiology/stress_response.yaml
+temperature change during movement	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/thermotaxis.yaml
+tar covalent modification state	STATE	1	data/traits/physiology/thermotaxis.yaml
+tar aspartate chemoreceptor	GENE_OR_PROTEIN	1	data/traits/physiology/thermotaxis.yaml
+thermal control of run-and-tumble bias	BIOLOGICAL_PROCESS	1	data/traits/physiology/thermotaxis.yaml
 carbon source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 energy source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 electron donor utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml

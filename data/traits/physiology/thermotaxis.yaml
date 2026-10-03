@@ -1,0 +1,177 @@
+identifier: traitmech:000580
+label: thermotaxis
+definition: A motile phenotype in which an organism biases its active movement in
+  response to a temperature gradient.
+definition_source: DOI:10.7554/eLife.26607
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.7554/eLife.26607
+  snippet: detect and follow environmental temperature gradients
+  notes: Paulick et al., Introduction; version 2, Version of Record dated 2017-08-31,
+    https://cdn.elifesciences.org/articles/26607/elife-26607-v2.pdf. Figures 1-3 and
+    their figure supplements distinguish behavioral gradients from FRET reporters
+    and chemical adaptation. Temperature preference for movement is not a growth-temperature
+    class.
+- reference: DOI:10.1073/pnas.0709903105
+  snippet: responds to changes in temperature by modifying its motor behavior
+  notes: 'Paster and Ryu, Abstract and Results: thermal pulses changed tethered-cell
+    motor bias. Their inversion temperatures are assay-specific, not universal trait
+    thresholds. This assay measures motor output rather than spatial accumulation.'
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  reference: DOI:10.7554/eLife.26607
+  note: 'AW405, a K-12 derivative carrying a GFP marker, showed thermal migration
+    in microfluidic gradients (Figures 1C and 2D-E; Methods: Strains and plasmids).
+    It is not the engineered VS223 FRET reporter or the MG1655 growth assay.'
+causal_graphs:
+- graph_id: thermotaxis_tar_response
+  title: Tar-mediated control of thermal migration
+  description: A receptor-modification-dependent thermal response changes swimming
+    bias and realizes thermotaxis.
+  scope_status: MECHANISTIC
+  scope_notes: The E. coli Tar-mediated arm, not a universal microbial mechanism or
+    a complete Tar/Tsr accumulation model. Engineered receptor experiments establish
+    the Tar transitions. Interplay with Tsr and chemical adaptation changes the intact-cell
+    response.
+  nodes:
+  - node_id: thermotaxis_temperature_change
+    label: temperature change during movement
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Temporal thermal stimulus encountered in a spatial gradient.
+  - node_id: thermotaxis_tar_modification
+    label: Tar covalent modification state
+    node_type: STATE
+    description: Deamidation and methylation of Tar adaptation sites; unprocessed,
+      unmethylated and heavily methylated forms differ.
+  - node_id: thermotaxis_tar_receptor
+    label: Tar aspartate chemoreceptor
+    node_type: GENE_OR_PROTEIN
+    gene_symbols:
+    - tar
+    description: The full-length Tar receptor, including its thermal signaling role.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: InterPro IPR003122 resolves to a Tar-related ligand-binding domain,
+      not the full receptor; IPR004090 covers the broader MCP family. Neither is an
+      exact whole-Tar grounding. The reviewed K-12 protein remains an instance example.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07017
+      protein_label: Methyl-accepting chemotaxis protein II
+      gene_symbol: tar
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-03'
+      entry_version: 208
+      sequence_version: 2
+      role: Tar component of the K-12 thermal response; not the entire receptor array.
+      evidence:
+      - reference: DOI:10.7554/eLife.26607
+        snippet: both Tar- and Tsr-only cells exhibited thermophilic responses
+        notes: Results, Figure 3A and Methods identify K-12 Tar-only receptor experiments;
+          UniProt verifies protein identity.
+  - node_id: thermotaxis_swimming_control
+    label: thermal control of run-and-tumble bias
+    node_type: BIOLOGICAL_PROCESS
+    description: Receptor signaling changes smooth-swimming versus tumbling; this
+      is not merely a change in swimming speed.
+  - node_id: thermotaxis_migration_process
+    label: thermotaxis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043052
+    description: Directed migration in response to a temperature gradient.
+  - node_id: thermotaxis_trait
+    label: thermotaxis
+    node_type: TRAIT
+    grounding: traitmech:000580
+    description: Organism-level disposition for temperature-guided active movement.
+  edges:
+  - subject: thermotaxis_temperature_change
+    predicate: modulates
+    predicate_id: RO:0002211
+    object: thermotaxis_tar_receptor
+    description: Temperature changes elicit a Tar response when its modification state
+      permits thermosensing.
+    evidence:
+    - reference: DOI:10.1074/jbc.271.30.17932
+      snippet: Tar comes to function as a thermoreceptor
+      notes: 'Abstract: deamidation enables the thermal response; the primary translational
+        product is not a thermoreceptor.'
+  - subject: thermotaxis_tar_modification
+    predicate: modulates
+    predicate_id: RO:0002211
+    object: thermotaxis_tar_receptor
+    description: Covalent modification changes the receptor's warm, cold or null response
+      state.
+    evidence:
+    - reference: DOI:10.1128/jb.179.21.6573-6580.1997
+      snippet: thermosensing function that is modulated by covalent modification of
+        its four methylation sites
+      notes: 'Abstract: the mutational study distinguishes deamidation from methylation
+        and tests receptor thermosensing, not a universal preferred temperature.'
+  - subject: thermotaxis_tar_receptor
+    predicate: regulates
+    predicate_id: RO:0002211
+    object: thermotaxis_swimming_control
+    description: Tar-mediated signaling changes swimming bias, with the response sign
+      depending on receptor modification.
+    evidence:
+    - reference: DOI:10.1074/jbc.271.30.17932
+      snippet: eliciting a smooth-swimming signal upon increase of temperature
+      notes: 'Abstract: this warm response applies to deamidated, unmethylated Tar;
+        the heavily methylated form instead signals smooth swimming on cooling. Intermediate
+        phosphorelay steps are compressed, not bypassed.'
+  - subject: thermotaxis_swimming_control
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: thermotaxis_migration_process
+    description: Temperature-dependent run-and-tumble statistics bias migration along
+      a thermal gradient.
+    evidence:
+    - reference: DOI:10.1073/pnas.0709903105
+      snippet: This stochastic strategy biases the cell's random walk
+      notes: 'Introduction: temporal temperature sensing biases runs and tumbles,
+        giving net movement along spatial gradients. The separate motor assay is not
+        itself a migration measurement.'
+  - subject: thermotaxis_migration_process
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: thermotaxis_trait
+    description: Temperature-guided migration realizes the organismal thermotaxis
+      phenotype.
+    evidence:
+    - reference: DOI:10.7554/eLife.26607
+      snippet: cells accumulated towards the warmer side of the gradient
+      notes: 'Results, Figure 1C: buffer-adapted swimming cells; chemical adaptation
+        can alter the direction (Figure 2).'
+discussions:
+- discussion_id: thermotaxis-context-and-mapping-boundaries
+  prompt: Resolve assay-dependent response inversion without imposing a universal
+    temperature threshold.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: DOI:10.1073/pnas.0709903105 reports thermal-response inversion under
+    its tethered-cell conditions. DOI:10.7554/eLife.26607 instead finds continued
+    warm-seeking in buffer under flow; its Discussion suggests residual chemical stimulation
+    as one explanation of earlier results, not a proven correction. Retain medium,
+    adaptation, strain and assay context. Growth optima, passive thermophoresis and
+    temperature-dependent speed alone do not establish thermotaxis. GO:0043052 is
+    a biological process (QuickGO checked 2026-10-03), so it grounds the process node
+    rather than an equivalent xref on the disposition. The Tar arm does not describe
+    every thermotactic microbe.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T22:20:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added thermotaxis with four primary DOI sources, exact snippets, a K-12
+    behavioral example and a Tar-mediated causal graph. Verified P07017, NCBITaxon:83333
+    and GO:0043052 at authorities. Ignored-and-hidden searches found no exact record
+    or METPO term; reserved METPO:1053400 in proposal v457. Kept assay-dependent inversion
+    separate from growth-temperature preference.
+  llm_assisted: true
