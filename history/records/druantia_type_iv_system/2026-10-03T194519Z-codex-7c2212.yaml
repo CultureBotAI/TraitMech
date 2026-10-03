@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_type_iv_system.yaml
+  slug: druantia_type_iv_system
+session:
+  id: 2026-10-03T194519Z-codex-7c2212
+  timestamp: '2026-10-03T19:45:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1635
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add literature-defined Druantia type IV possession
+  details: Added traitmech:000577 as a PROPOSED GENOMICS class for the DruE/F/L locus architecture
+    without type-II DruM/G. DOI:10.1093/nar/gkab883 and immutable DefenseFinder/PADLOC models
+    support the class, with three exact source snippets. Neither detector forbids DruM/G and
+    the original paper did not assay Druantia IV; no resistance claim, causal graph, unverified
+    xref or canonical taxon is added. Whole-repository searches included ignored and hidden
+    files. METPO v454 reserves 1053101 below the corrected family placeholder 1053100. Used
+    a fail-closed validated writer and controlled-fixture tests.

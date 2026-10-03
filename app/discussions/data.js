@@ -2311,7 +2311,7 @@ window.searchData = [
  },
  {
   "discussion_id": "druantia-subtype-mechanism-gap",
-  "prompt": "Resolve Druantia Type I, Type II, Type IV, and cross-system activation mechanisms before minting additional narrower Druantia-system children.",
+  "prompt": "Resolve Druantia subtype mechanisms separately from architecture-based possession classes.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -2319,7 +2319,7 @@ window.searchData = [
   "source_id": "traitmech:000234",
   "source_file": "druantia_system.yaml",
   "attaches_to": [],
-  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci. Druantia type IV system (traitmech:000577) now captures the DruE/F/L architecture described by Payne et al. (DOI:10.1093/nar/gkab883), without the type-II DruM/G components. This resolves the architectural child, not type-IV experimental defense or partner chemistry. The family definition no longer requires universal helicase-nuclease DNA processing. Wu et al.'s family-wide conservation claim is a hypothesis in a type-III preprint. The overgeneralized parent graph is removed; the characterized III branch remains at traitmech:000560. New proposal v454 replaces the unminted v111 family row without changing the local family identifier or historical TSV. Type I and II remain separate architecture-class discovery leads.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -2327,6 +2327,23 @@ window.searchData = [
   ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
+ },
+ {
+  "discussion_id": "druantia-type-iv-functional-and-architecture-gap",
+  "prompt": "Resolve type-IV defense activity, DruL function and complete locus boundaries.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Druantia type IV system",
+  "source_id": "traitmech:000577",
+  "source_file": "druantia_type_iv_system.yaml",
+  "attaches_to": [],
+  "rationale": "The sources support a recurring organism-level DruE/F/L locus architecture distinct from type-II DruM/F/G/E, not a measured resistance phenotype. A complete accession-resolved natural locus, independently resolved taxon and type-IV-specific functional assays remain to be curated before adding a canonical example or causal mechanism graph. DruE helicase/nuclease activity established for type III is not generalized to type IV. DruL and optional DruK roles remain unresolved by this evidence bundle. Neither executable detector forbids DruM/G; mixed or incomplete calls require biological locus review, not automatic conversion to this absence-qualified class. No individual protein, HMM hit, source key, unverified xref or mutually disjoint organism-level possession is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/druantia_type_iv_system.html#druantia-type-iv-functional-and-architecture-gap"
  },
  {
   "discussion_id": "ds-10-defensefinder-model-gap",
@@ -9770,9 +9787,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 448,
- "total_knowledge_gaps": 360,
- "total_source_entries": 442,
+ "total_discussions": 449,
+ "total_knowledge_gaps": 361,
+ "total_source_entries": 443,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Druantia type IV system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Druantia type IV system</h1>
+    <p class="curie"><code>traitmech:000577</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A Druantia system in which an organism possesses a locus encoding DruE and DruF together with DruL, without the type-II DruM and DruG components.</p>
+
+  </header>
+
+
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(3)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab883</code></a>
+        <blockquote>the Druantia-like system lacks the type II requisite DruM and DruG proteins, instead encoding a hypothetical protein</blockquote>
+        <p class="meta">Payne et al., Results and Figure 2C: the recurring type-IV architecture contains DruE and DruF together with the newly named DruL, instead of the type-II DruM/G components. This is a literature-defined system-possession class, not an individual profile. The study tests Zorya III, Hachiman II and Lamassu II, not Druantia IV. Its computational classification does not demonstrate type-IV phage resistance or DruL chemistry.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_IV.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Druantia/Druantia_IV.xml</code></a>
+        <blockquote>&lt;gene name=&#34;Druantia_IV__DruL&#34; presence=&#34;mandatory&#34;/&gt;</blockquote>
+        <p class="meta">Pinned DefenseFinder XML, retrieved 2026-10-03: three mandatory slots, both minimum counts 3, inter_gene_max_space 1. DruL is mandatory; DruE_1 accepts DruE_2, DruE_3 or DruE4 exchangeables, and the Druantia-II DruF slot accepts DruF4. There are no forbidden genes: a call does not establish absence of DruM/G. Check full locus context before assigning the literature-defined architecture. Detection does not establish functional defense.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_IV.yaml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/druantia_type_IV.yaml</code></a>
+        <blockquote>minimum_core: 3
+minimum_total: 3
+core_genes:
+  - DruE4
+  - DruF4
+  - DruL4</blockquote>
+        <p class="meta">Pinned PADLOC rule, retrieved 2026-10-03: three required core genes, maximum_separation 3, force_strand FALSE. DruK is secondary, not a required defining component. The prohibited list is NA, so the detector does not test the biological absence of DruM/G. A missing hit or incomplete assembly cannot establish that absence. These are computational constraints, not experimental component essentiality or type-IV mechanism evidence.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab883</code></a></dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/druantia_system.html" >Druantia system <code>traitmech:000234</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>Druantia type IV <span class="meta">EXACT_SYNONYM · DOI:10.1093/nar/gkab883</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="druantia-type-iv-functional-and-architecture-gap">
+        <p class="discussion-prompt">Resolve type-IV defense activity, DruL function and complete locus boundaries.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>druantia-type-iv-functional-and-architecture-gap</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>The sources support a recurring organism-level DruE/F/L locus architecture distinct from type-II DruM/F/G/E, not a measured resistance phenotype. A complete accession-resolved natural locus, independently resolved taxon and type-IV-specific functional assays remain to be curated before adding a canonical example or causal mechanism graph. DruE helicase/nuclease activity established for type III is not generalized to type IV. DruL and optional DruK roles remain unresolved by this evidence bundle. Neither executable detector forbids DruM/G; mixed or incomplete calls require biological locus review, not automatic conversion to this absence-qualified class. No individual protein, HMM hit, source key, unverified xref or mutually disjoint organism-level possession is asserted.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-03T19:44:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added the literature-defined DruE/F/L possession class with a DOI and two pinned executable models, each with an exact snippet. Ignored-and-hidden novelty searches found no exact METPO or live record. Reserved METPO:1053101 in v454, below corrected family placeholder METPO:1053100. Kept computational architecture and component absence distinct from detector calls and measured defense.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/druantia_type_iv_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/druantia_type_iv_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/druantia_type_iv_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/druantia_type_iv_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000577" target="_blank" rel="noopener"><code>traitmech:000577</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-03 19:44 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 972 TraitRecords
+      · embedding coverage 49.1%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

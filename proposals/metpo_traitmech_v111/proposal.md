@@ -1,5 +1,12 @@
 # METPO ROBOT Template Proposal - Druantia System (v111, 2026-09)
 
+> Superseded by `proposals/metpo_traitmech_v454/proposal.md` (2026-10-03).
+> v111 is retained for traceability. Its unminted family placeholder
+> METPO:1018800 is replaced by METPO:1053100 for the same local trait,
+> removing the unsupported universal DNA-processing requirement. Redirect
+> v437's family parent on upstream consolidation; do not submit duplicate
+> family classes. The historical TSV is unchanged.
+
 > **Upstream submission:** to be consolidated into
 > [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535)
 > alongside the v1-v110 cohorts, requesting a real METPO ID for this Scope-A
@@ -71,6 +78,8 @@ organism-level GENOMICS possession trait.
 3. Preserve `traitmech:000234` as traceability during the migration.
 
 ## Change Log
+
+- 2026-10-03: v454 supersedes the family definition; historical TSV preserved.
 
 - v111, 2026-09: lifts `traitmech:000234 Druantia system` into the
   `METPO:1018800` block.

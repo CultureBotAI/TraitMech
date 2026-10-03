@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 971,
+    "records": 972,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 494,
+    "unresearched_mechanism_records": 495,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 9,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 129,
-      "DEEPEN_CAUSAL_GRAPH": 384,
+      "BUILD_CAUSAL_GRAPH": 131,
+      "DEEPEN_CAUSAL_GRAPH": 383,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -363,6 +363,29 @@
         "no causal graph +25",
         "no canonical_examples +30",
         "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000577",
+      "label": "Druantia type IV system",
+      "category": "genomics",
+      "slug": "druantia_type_iv_system",
+      "score": 55.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no canonical_examples +30"
       ]
     },
     {
@@ -4042,6 +4065,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000234",
+      "label": "Druantia system",
+      "category": "genomics",
+      "slug": "druantia_system",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 2,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
       "identifier": "traitmech:000575",
       "label": "Hachiman type I system",
       "category": "genomics",
@@ -7503,28 +7548,6 @@
       "researched": false,
       "reasons": [
         "thin graph (3 edges) +12"
-      ]
-    },
-    {
-      "identifier": "traitmech:000234",
-      "label": "Druantia system",
-      "category": "genomics",
-      "slug": "druantia_system",
-      "score": 12.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 6,
-      "nodes": 7,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 1,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (6 edges) +12"
       ]
     },
     {

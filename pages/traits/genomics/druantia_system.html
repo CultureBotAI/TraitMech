@@ -32,13 +32,13 @@
     <h1>Druantia system</h1>
     <p class="curie"><code>traitmech:000234</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A phage defense system in which an organism possesses a Druantia locus built around a conserved DruE-like helicase-nuclease core and subtype-specific partner proteins that activate or enable DNA processing to inhibit bacteriophage propagation.</p>
+    <p class="definition">A phage defense system in which an organism possesses a Druantia locus encoding a conserved DruE-family core and subtype-specific partner proteins.</p>
 
   </header>
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(6)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(7)</span></h2>
     <ul>
 
       <li>
@@ -56,164 +56,37 @@
       <li>
         <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
         <blockquote>There are several subtypes of Druantia that all share the DruE protein but differ in their associated genes</blockquote>
-        <p class="meta">Wu et al. support defining a broad Druantia family record around a common DruE component while keeping subtype partners separate.</p>
+        <p class="meta">Preprint v1, not peer-reviewed. Wu et al. support defining a broad Druantia family record around a common DruE component while keeping subtype partners separate.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
         <blockquote>Druantia III is a late-acting defence where DruH is the likely infection sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing replication intermediates</blockquote>
-        <p class="meta">Wu et al. support the characterized Type III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.</p>
+        <p class="meta">Preprint v1, not peer-reviewed. Wu et al. support the characterized Type III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
         <blockquote>we identified 6,885 bacterial genomes encoding complete Druantia III systems, defined by the presence of both DruE and DruH</blockquote>
-        <p class="meta">Wu et al. support Druantia III as a recurring bacterial DruE/DruH module rather than a single engineered construct.</p>
+        <p class="meta">Preprint v1, not peer-reviewed. Wu et al. support Druantia III as a recurring bacterial DruE/DruH module rather than a single engineered construct.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
         <blockquote>DruE is the only component shared across Druantia subtypes, suggesting that DNA processing by a DruE-like helicase-nuclease is the conserved core function of Druantia</blockquote>
-        <p class="meta">Wu et al. support placing the broad Druantia trait at the DruE-core family level rather than making DruH universal across Type I, Type II, and Type III systems.</p>
+        <p class="meta">Preprint v1, not peer-reviewed. Wu et al. infer a possible conserved DruE-family function from their type-III results and shared DruE. This is a hypothesis, not a demonstrated mechanism for every Druantia subtype.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab883</code></a>
+        <blockquote>the Druantia-like system lacks the type II requisite DruM and DruG proteins, instead encoding a hypothetical protein</blockquote>
+        <p class="meta">Payne et al., Results and Figure 2C: the recurring type-IV architecture contains DruE and DruF together with the newly named DruL, instead of the type-II DruM/G components. This is a literature-defined system-possession class, not an individual profile. The study tests Zorya III, Hachiman II and Lamassu II, not Druantia IV. Its computational classification does not demonstrate type-IV phage resistance or DruL chemistry.</p>
       </li>
 
     </ul>
   </section>
 
 
-
-  <section class="causal-graphs">
-
-
-    <div class="card causal-graph-card">
-      <h2>Druantia cores direct infection-associated DNA processing</h2>
-      <p class="meta">Evidence-backed process sketch linking a Druantia locus to subtype-specific partner activation, DruE-family helicase-nuclease DNA processing, downstream phage DNA cleavage, and inhibition of phage growth.</p>
-
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph uses the conserved DruE-like core and the Druantia III DruH mechanism as a characterized example without asserting that DruH, RecBCD dependence, Zorya II synergy, late-phage-protein triggers, exact DNA substrates, or a single accessory-gene architecture are universal across Type I, Type II, and Type III Druantia loci.</p>
-
-
-      <div class="pathograph-container" id="pathograph-1">
-        <div class="pathograph-legend" id="pathograph-1-legend"></div>
-        <svg id="pathograph-1-svg" role="img">
-          <title>Druantia cores direct infection-associated DNA processing</title>
-          <desc>Interactive directed graph showing evidence-backed causal relationships for Druantia system.</desc>
-        </svg>
-        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
-      </div>
-
-      <div class="edge-evidence">
-        <h3>Edge evidence</h3>
-        <ul>
-
-          <li id="pathograph-1-edge-1">
-            <strong>Druantia locus</strong>
-            <span class="edge-predicate">contributes to</span>
-            <strong>Druantia subtype-specific partner activation</strong>
-            <code>RO:0002326</code>
-            <p>Druantia loci encode subtype-specific partner proteins that activate or enable the DruE core.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
-                <span class="evidence-snippet">the subtype-specific partner proteins determine how that core is activated</span>
-                <span class="meta">Wu et al. support subtype-specific partners as the activation layer over the conserved DruE core.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-2">
-            <strong>Druantia subtype-specific partner activation</strong>
-            <span class="edge-predicate">activates</span>
-            <strong>DruE helicase-nuclease DNA processing</strong>
-            <code>RO:0002213</code>
-            <p>Subtype-specific partner activity activates or enables DruE-family DNA processing.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
-                <span class="evidence-snippet">DNA processing by a DruE-like helicase-nuclease is the conserved core function of Druantia</span>
-                <span class="meta">Wu et al. support DruE-family DNA processing as the conserved Druantia core activated through subtype-specific partners.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-3">
-            <strong>DruE helicase-nuclease DNA processing</strong>
-            <span class="edge-predicate">enables</span>
-            <strong>downstream phage DNA cleavage</strong>
-            <code>RO:0002327</code>
-            <p>The DruE core engages ssDNA-containing intermediates and promotes downstream DNA cleavage.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
-                <span class="evidence-snippet">DruE loads onto this intermediate through its helicase core, assembles into a higher-order state on extended ssDNA, and promotes downstream DNA cleavage</span>
-                <span class="meta">Wu et al. connect DruE helicase-core DNA loading and assembly to downstream DNA cleavage in their Druantia III model.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-4">
-            <strong>downstream phage DNA cleavage</strong>
-            <span class="edge-predicate">mitigates</span>
-            <strong>phage growth</strong>
-            <code>METPO:2007407</code>
-            <p>Druantia-family DNA cleavage inhibits phage growth.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
-                <span class="evidence-snippet">DNA cleavage by DruE is required for Druantia-mediated defence</span>
-                <span class="meta">Wu et al. support DruE nuclease activity as a required output for Druantia-mediated defense.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-5">
-            <strong>downstream phage DNA cleavage</strong>
-            <span class="edge-predicate">confers</span>
-            <strong>Druantia system</strong>
-            <code>METPO:2007700</code>
-            <p>Subtype-activated DruE-family DNA cleavage realizes the Druantia system defense phenotype.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.64898/2026.05.12.724681" rel="nofollow noreferrer"><code>DOI:10.64898/2026.05.12.724681</code></a>
-                <span class="evidence-snippet">DruE functions as the effector, providing the helicase and nuclease activities required for defence</span>
-                <span class="meta">Wu et al. support DruE helicase and nuclease activities as the Druantia III defense output.</span>
-              </li>
-
-            </ul>
-          </li>
-
-          <li id="pathograph-1-edge-6">
-            <strong>Druantia system</strong>
-            <span class="edge-predicate">is a</span>
-            <strong>phage defense system</strong>
-            <code>rdfs:subClassOf</code>
-            <p>Druantia system possession is a phage-defense-system trait.</p>
-            <ul>
-
-              <li>
-                <a href="https://doi.org/10.1126/science.aar4120" rel="nofollow noreferrer"><code>DOI:10.1126/science.aar4120</code></a>
-                <span class="evidence-snippet">A Type I system cloned from E. coli UMEA 4076-1 into E. coli MG1655 rendered the engineered strain resistant against 4 of the 6 phages tested</span>
-                <span class="meta">Doron et al. support experimentally validated antiphage activity for a Druantia Type I locus.</span>
-              </li>
-
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-
-
-    </div>
-
-  </section>
 
 
 
@@ -244,10 +117,12 @@
 
 
     <div class="card">
-      <h2>Children (1)</h2>
+      <h2>Children (2)</h2>
       <ul>
 
         <li><a href="../../traits/genomics/druantia_iii_system.html">Druantia III system <code>traitmech:000560</code></a></li>
+
+        <li><a href="../../traits/genomics/druantia_type_iv_system.html">Druantia type IV system <code>traitmech:000577</code></a></li>
 
       </ul>
     </div>
@@ -317,7 +192,7 @@
 
 
       <div class="discussion" id="druantia-subtype-mechanism-gap">
-        <p class="discussion-prompt">Resolve Druantia Type I, Type II, Type IV, and cross-system activation mechanisms before minting additional narrower Druantia-system children.</p>
+        <p class="discussion-prompt">Resolve Druantia subtype mechanisms separately from architecture-based possession classes.</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -333,7 +208,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.</p>
+        <p>Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci. Druantia type IV system (traitmech:000577) now captures the DruE/F/L architecture described by Payne et al. (DOI:10.1093/nar/gkab883), without the type-II DruM/G components. This resolves the architectural child, not type-IV experimental defense or partner chemistry. The family definition no longer requires universal helicase-nuclease DNA processing. Wu et al.&#39;s family-wide conservation claim is a hypothesis in a type-III preprint. The overgeneralized parent graph is removed; the characterized III branch remains at traitmech:000560. New proposal v454 replaces the unminted v111 family row without changing the local family identifier or historical TSV. Type I and II remain separate architecture-class discovery leads.</p>
 
 
 
@@ -379,6 +254,12 @@
           <p class="changes">Documented Druantia III as split out in the open Druantia subtype discussion after minting traitmech:000560 for the DefenseFinder-backed Druantia_III child; Type I, Type II, the pinned Druantia_IV HMM context, Zorya-coupled versus standalone activity, and finer Druantia activation mechanisms remain open.</p>
         </li>
 
+        <li>
+          <time>2026-10-03T19:44:00Z</time> ·
+          <strong>SCOPE_DRUANTIA_FAMILY_AND_TYPE_IV</strong> · codex
+          <p class="changes">Addressed #1635: removed a universal DNA-processing requirement and the overgeneralized family graph, retaining evidence with preprint/hypothesis qualifiers. Linked the new type-IV architecture child traitmech:000577. The existing III record retains its characterized mechanism; type-IV defense remains unresolved. Proposal v454 supersedes the v111 family row.</p>
+        </li>
+
       </ol>
     </div>
 
@@ -415,334 +296,6 @@
 </div>
 
 
-<script src="../../d3.v7.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
-<script>
-var NODE_SHAPES = {
-  TRAIT: "roundrect",
-  PATHWAY: "roundrect",
-  ENVIRONMENTAL_FACTOR: "diamond",
-  EXPERIMENTAL_FACTOR: "rect",
-  GENE_OR_PROTEIN: "hexagon",
-  CHEMICAL: "circle",
-  ORGANELLE: "ellipse",
-  CELLULAR_LOCALIZATION: "ellipse",
-  MOLECULAR_FUNCTION: "roundrect",
-  BIOLOGICAL_PROCESS: "roundrect",
-  ORPHAN: "roundrect",
-  UNKNOWN: "roundrect"
-};
-var NODE_TYPE_LABELS = {
-  TRAIT: "Trait",
-  PATHWAY: "Pathway",
-  ENVIRONMENTAL_FACTOR: "Environmental factor",
-  EXPERIMENTAL_FACTOR: "Experimental factor",
-  GENE_OR_PROTEIN: "Gene or protein",
-  CHEMICAL: "Chemical",
-  ORGANELLE: "Organelle",
-  CELLULAR_LOCALIZATION: "Cellular localization",
-  MOLECULAR_FUNCTION: "Molecular function",
-  BIOLOGICAL_PROCESS: "Biological process",
-  ORPHAN: "Unresolved node",
-  UNKNOWN: "Unknown"
-};
-var NODE_STROKE = {
-  TRAIT: "#93c5fd",
-  PATHWAY: "#a5b4fc",
-  ENVIRONMENTAL_FACTOR: "#86efac",
-  EXPERIMENTAL_FACTOR: "#14b8a6",
-  GENE_OR_PROTEIN: "#c4b5fd",
-  CHEMICAL: "#fcd34d",
-  ORGANELLE: "#f9a8d4",
-  CELLULAR_LOCALIZATION: "#c4b5fd",
-  MOLECULAR_FUNCTION: "#67e8f9",
-  BIOLOGICAL_PROCESS: "#bef264",
-  ORPHAN: "#dc2626",
-  UNKNOWN: "#d1d5db"
-};
-
-function renderPathograph(containerId, data) {
-  var container = document.getElementById(containerId);
-  var svgEl = document.getElementById(containerId + "-svg");
-  var tooltipEl = document.getElementById(containerId + "-tooltip");
-  var legendEl = document.getElementById(containerId + "-legend");
-  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
-
-  var graph = new dagre.graphlib.Graph();
-  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
-  graph.setDefaultEdgeLabel(function() { return {}; });
-
-  var nodeMap = {};
-  data.nodes.forEach(function(node) {
-    nodeMap[node.id] = node;
-    var label = node.label || node.id;
-    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
-    graph.setNode(node.id, { width: width, height: 48, label: label });
-  });
-  data.edges.forEach(function(edge) {
-    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
-  });
-  dagre.layout(graph);
-
-  var info = graph.graph();
-  var totalWidth = Math.max(320, info.width + 68);
-  var totalHeight = Math.max(220, info.height + 68);
-  var svg = d3.select(svgEl)
-    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
-    .attr("preserveAspectRatio", "xMidYMid meet")
-    .style("min-height", Math.min(totalHeight, 620) + "px");
-
-  var root = svg.append("g").attr("class", "pathograph-root");
-  var markerId = containerId + "-arrow";
-  var orphanMarkerId = containerId + "-arrow-orphan";
-  var defs = svg.append("defs");
-  addArrow(defs, markerId, "#9ca3af");
-  addArrow(defs, orphanMarkerId, "#dc2626");
-
-  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
-    root.attr("transform", event.transform);
-  });
-  svg.call(zoom);
-
-  var edgesGroup = root.append("g").attr("class", "pg-edges");
-  data.edges.forEach(function(edge) {
-    var dagreEdge = graph.edge(edge.source, edge.target);
-    if (!dagreEdge || !dagreEdge.points) return;
-    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
-    var path = edgesGroup.append("path")
-      .attr("d", line(dagreEdge.points))
-      .attr("fill", "none")
-      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
-      .attr("stroke-width", 1.9)
-      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
-      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
-      .attr("data-source", edge.source)
-      .attr("data-target", edge.target)
-      .attr("data-edge-id", edge.id)
-      .style("cursor", "pointer");
-    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
-      .on("mouseleave", hideTooltip)
-      .on("click", function(event) {
-        event.stopPropagation();
-        var evidence = document.getElementById(containerId + "-" + edge.id);
-        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-  });
-
-  var nodesGroup = root.append("g").attr("class", "pg-nodes");
-  data.nodes.forEach(function(node) {
-    var dagreNode = graph.node(node.id);
-    if (!dagreNode) return;
-    var group = nodesGroup.append("g")
-      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
-      .attr("data-node-type", node.node_type)
-      .attr("data-node-id", node.id)
-      .style("cursor", "pointer");
-    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
-    var label = node.label || node.id;
-    var maxChars = Math.floor(dagreNode.width / 7);
-    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
-    group.append("text")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "central")
-      .attr("font-size", "11px")
-      .attr("font-family", "system-ui, -apple-system, sans-serif")
-      .attr("fill", "#1f2937")
-      .text(label);
-    group.on("mouseenter", function(event) {
-      highlightNode(node.id, true);
-      showNodeTooltip(event, node);
-    }).on("mouseleave", function() {
-      clearHighlight();
-      hideTooltip();
-    }).on("click", function(event) {
-      event.stopPropagation();
-      highlightNode(node.id, true);
-      showNodeTooltip(event, node);
-    });
-  });
-
-  svg.on("click", function() {
-    clearHighlight();
-    hideTooltip();
-  });
-
-  buildLegend();
-
-  function addArrow(defsNode, id, color) {
-    defsNode.append("marker")
-      .attr("id", id)
-      .attr("viewBox", "0 0 10 6")
-      .attr("refX", 10)
-      .attr("refY", 3)
-      .attr("markerWidth", 8)
-      .attr("markerHeight", 6)
-      .attr("orient", "auto")
-      .append("path")
-      .attr("d", "M0,0 L10,3 L0,6 Z")
-      .attr("fill", color);
-  }
-
-  function drawNodeShape(selection, node, width, height) {
-    var shape = NODE_SHAPES[node.node_type] || "roundrect";
-    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
-    var dash = node.is_orphan ? "6 4" : "none";
-    if (shape === "ellipse") {
-      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
-        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
-        .attr("stroke-dasharray", dash);
-    } else if (shape === "diamond") {
-      selection.append("polygon")
-        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
-        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
-        .attr("stroke-dasharray", dash);
-    } else if (shape === "hexagon") {
-      var x = width / 2, y = height / 2, inset = width * 0.18;
-      selection.append("polygon")
-        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
-        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
-        .attr("stroke-dasharray", dash);
-    } else if (shape === "circle") {
-      selection.append("circle").attr("r", Math.min(width, height) / 2)
-        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
-        .attr("stroke-dasharray", dash);
-    } else {
-      selection.append("rect")
-        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
-        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
-        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
-        .attr("stroke-dasharray", dash);
-    }
-  }
-
-  function highlightNode(nodeId, on) {
-    if (!on) { clearHighlight(); return; }
-    var connected = new Set([nodeId]);
-    data.edges.forEach(function(edge) {
-      if (edge.source === nodeId) connected.add(edge.target);
-      if (edge.target === nodeId) connected.add(edge.source);
-    });
-    nodesGroup.selectAll("g").each(function() {
-      var item = d3.select(this);
-      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
-    });
-    edgesGroup.selectAll("path").each(function() {
-      var item = d3.select(this);
-      var source = item.attr("data-source");
-      var target = item.attr("data-target");
-      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
-    });
-  }
-
-  function clearHighlight() {
-    nodesGroup.selectAll("g").style("opacity", 1);
-    edgesGroup.selectAll("path").style("opacity", 1);
-  }
-
-  function showNodeTooltip(event, node) {
-    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
-    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
-    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
-    if (node.protein_examples && node.protein_examples.length) {
-      var example = node.protein_examples[0];
-      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
-      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
-    }
-    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
-    showTooltip(event, html);
-  }
-
-  function showEdgeTooltip(event, edge) {
-    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
-    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
-    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
-    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
-    showTooltip(event, html);
-  }
-
-  function showTooltip(event, html) {
-    tooltipEl.innerHTML = html;
-    tooltipEl.style.opacity = "1";
-    var rect = container.getBoundingClientRect();
-    var x = event.clientX - rect.left + 14;
-    var y = event.clientY - rect.top + 14;
-    if (x + 330 > rect.width) x = x - 340;
-    if (y + 200 > rect.height) y = Math.max(4, y - 200);
-    tooltipEl.style.left = x + "px";
-    tooltipEl.style.top = y + "px";
-  }
-
-  function hideTooltip() {
-    tooltipEl.style.opacity = "0";
-  }
-
-  function buildLegend() {
-    var types = {};
-    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
-    var activeTypes = new Set(Object.keys(types));
-    Object.keys(types).forEach(function(type) {
-      var item = document.createElement("label");
-      item.className = "pathograph-legend-item";
-      var checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.checked = true;
-      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
-      var swatch = document.createElement("span");
-      swatch.className = "pathograph-legend-swatch";
-      swatch.style.background = types[type];
-      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
-      var text = document.createElement("span");
-      text.textContent = NODE_TYPE_LABELS[type] || type;
-      item.appendChild(checkbox);
-      item.appendChild(swatch);
-      item.appendChild(text);
-      checkbox.addEventListener("change", function() {
-        if (checkbox.checked) {
-          activeTypes.add(type);
-          item.classList.remove("dimmed");
-        } else {
-          activeTypes.delete(type);
-          item.classList.add("dimmed");
-        }
-        filterByType(activeTypes);
-      });
-      legendEl.appendChild(item);
-    });
-  }
-
-  function filterByType(activeTypes) {
-    nodesGroup.selectAll("g").each(function() {
-      var item = d3.select(this);
-      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
-    });
-    edgesGroup.selectAll("path").each(function() {
-      var item = d3.select(this);
-      var source = nodeMap[item.attr("data-source")];
-      var target = nodeMap[item.attr("data-target")];
-      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
-      item.style("display", visible ? null : "none");
-    });
-  }
-
-  function truncate(value, maxLength) {
-    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
-  }
-
-  function escapeHtml(value) {
-    var div = document.createElement("div");
-    div.appendChild(document.createTextNode(value || ""));
-    return div.innerHTML;
-  }
-}
-
-(function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a Druantia locus to subtype-specific partner activation, DruE-family helicase-nuclease DNA processing, downstream phage DNA cleavage, and inhibition of phage growth.", "edges": [{"description": "Druantia loci encode subtype-specific partner proteins that activate or enable the DruE core.", "evidence": [{"notes": "Wu et al. support subtype-specific partners as the activation layer over the conserved DruE core.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "the subtype-specific partner proteins determine how that core is activated"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "druantia_locus", "target": "druantia_partner_activation"}, {"description": "Subtype-specific partner activity activates or enables DruE-family DNA processing.", "evidence": [{"notes": "Wu et al. support DruE-family DNA processing as the conserved Druantia core activated through subtype-specific partners.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DNA processing by a DruE-like helicase-nuclease is the conserved core function of Druantia"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "druantia_partner_activation", "target": "drue_dna_processing"}, {"description": "The DruE core engages ssDNA-containing intermediates and promotes downstream DNA cleavage.", "evidence": [{"notes": "Wu et al. connect DruE helicase-core DNA loading and assembly to downstream DNA cleavage in their Druantia III model.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DruE loads onto this intermediate through its helicase core, assembles into a higher-order state on extended ssDNA, and promotes downstream DNA cleavage"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "drue_dna_processing", "target": "downstream_phage_dna_cleavage"}, {"description": "Druantia-family DNA cleavage inhibits phage growth.", "evidence": [{"notes": "Wu et al. support DruE nuclease activity as a required output for Druantia-mediated defense.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DNA cleavage by DruE is required for Druantia-mediated defence"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "downstream_phage_dna_cleavage", "target": "phage_growth"}, {"description": "Subtype-activated DruE-family DNA cleavage realizes the Druantia system defense phenotype.", "evidence": [{"notes": "Wu et al. support DruE helicase and nuclease activities as the Druantia III defense output.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DruE functions as the effector, providing the helicase and nuclease activities required for defence"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "downstream_phage_dna_cleavage", "target": "druantia_system_trait"}, {"description": "Druantia system possession is a phage-defense-system trait.", "evidence": [{"notes": "Doron et al. support experimentally validated antiphage activity for a Druantia Type I locus.", "reference": "DOI:10.1126/science.aar4120", "snippet": "A Type I system cloned from E. coli UMEA 4076-1 into E. coli MG1655 rendered the engineered strain resistant against 4 of the 6 phages tested"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "druantia_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Druantia loci encode subtype-specific partner proteins that activate or enable the DruE core.", "edge_id": "edge-1", "evidence": [{"notes": "Wu et al. support subtype-specific partners as the activation layer over the conserved DruE core.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "the subtype-specific partner proteins determine how that core is activated"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Druantia locus", "target": "Druantia subtype-specific partner activation"}, {"description": "Subtype-specific partner activity activates or enables DruE-family DNA processing.", "edge_id": "edge-2", "evidence": [{"notes": "Wu et al. support DruE-family DNA processing as the conserved Druantia core activated through subtype-specific partners.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DNA processing by a DruE-like helicase-nuclease is the conserved core function of Druantia"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Druantia subtype-specific partner activation", "target": "DruE helicase-nuclease DNA processing"}, {"description": "The DruE core engages ssDNA-containing intermediates and promotes downstream DNA cleavage.", "edge_id": "edge-3", "evidence": [{"notes": "Wu et al. connect DruE helicase-core DNA loading and assembly to downstream DNA cleavage in their Druantia III model.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DruE loads onto this intermediate through its helicase core, assembles into a higher-order state on extended ssDNA, and promotes downstream DNA cleavage"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "DruE helicase-nuclease DNA processing", "target": "downstream phage DNA cleavage"}, {"description": "Druantia-family DNA cleavage inhibits phage growth.", "edge_id": "edge-4", "evidence": [{"notes": "Wu et al. support DruE nuclease activity as a required output for Druantia-mediated defense.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DNA cleavage by DruE is required for Druantia-mediated defence"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "downstream phage DNA cleavage", "target": "phage growth"}, {"description": "Subtype-activated DruE-family DNA cleavage realizes the Druantia system defense phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Wu et al. support DruE helicase and nuclease activities as the Druantia III defense output.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "DruE functions as the effector, providing the helicase and nuclease activities required for defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "downstream phage DNA cleavage", "target": "Druantia system"}, {"description": "Druantia system possession is a phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Doron et al. support experimentally validated antiphage activity for a Druantia Type I locus.", "reference": "DOI:10.1126/science.aar4120", "snippet": "A Type I system cloned from E. coli UMEA 4076-1 into E. coli MG1655 rendered the engineered strain resistant against 4 of the 6 phages tested"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Druantia system", "target": "phage defense system"}], "graph_id": "druantia_drue_dna_processing_phage_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cleavage of phage DNA downstream of DruE-family DNA engagement and assembly.", "grounding": null, "id": "downstream_phage_dna_cleavage", "is_orphan": false, "label": "downstream phage DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Druantia antiphage locus encoding a conserved DruE-like helicase-nuclease and subtype-specific partner proteins.", "grounding": null, "id": "druantia_locus", "is_orphan": false, "label": "Druantia locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation or enabling of the DruE core by subtype-specific Druantia partners, such as DruH in Type III loci.", "grounding": null, "id": "druantia_partner_activation", "is_orphan": false, "label": "Druantia subtype-specific partner activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Druantia phage-defense system.", "grounding": "traitmech:000234", "id": "druantia_system_trait", "is_orphan": false, "label": "Druantia system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "DNA processing by a DruE-like helicase-nuclease that engages infection-associated DNA structures.", "grounding": null, "id": "drue_dna_processing", "is_orphan": false, "label": "DruE helicase-nuclease DNA processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage growth and amplification inside a bacterial host population.", "grounding": null, "id": "phage_growth", "is_orphan": false, "label": "phage growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph uses the conserved DruE-like core and the Druantia III DruH mechanism as a characterized example without asserting that DruH, RecBCD dependence, Zorya II synergy, late-phage-protein triggers, exact DNA substrates, or a single accessory-gene architecture are universal across Type I, Type II, and Type III Druantia loci.", "scope_status": "NONMECHANISTIC", "title": "Druantia cores direct infection-associated DNA processing"}];
-  graphs.forEach(function(graph, index) {
-    renderPathograph("pathograph-" + (index + 1), graph);
-  });
-})();
-</script>
-
 
 </main>
 <footer class="site-footer">
@@ -759,9 +312,9 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 00:37 UTC from
+      Record as of 2026-10-03 19:44 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 971 TraitRecords
+      · 972 TraitRecords
       · embedding coverage 49.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
