@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lamassu-HNH system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Lamassu-HNH system</h1>
+    <p class="curie"><code>traitmech:000568</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A Lamassu system in which an organism possesses a locus encoding an HNH-domain LmuA effector, a short-form SMC-like LmuB sensor, and LmuC.</p>
+
+  </header>
+
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1073/pnas.2519643122</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/lamassu_system.html" >Lamassu system <code>traitmech:000232</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (2)</h2>
+      <ul class="synonyms">
+
+        <li>Lamassu_HNH <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml</span></li>
+
+        <li>Lamassu/Lamassu/Lamassu_HNH <span class="meta">RELATED_SYNONYM · https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Acinetobacter haemolyticus</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29430"
+             rel="nofollow noreferrer"><code>NCBITaxon:29430</code></a>
+
+
+
+
+          <code>https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx</code>
+
+          <span class="meta">Computational genomic example: strain AN59, assembly GCF_009892245.1, study replicon ACHA001.0722.00006.C001, has a complete three-component HNH-system call in Dataset S1 (S3_Lamassu_Detection rows 121-123; S2_Genomes row 1159). NCBI Datasets resolves the assembly to this species and strain. This does not establish experimentally measured antiviral activity in AN59 or species-wide possession.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="lamassu-hnh-function-and-model-scope">
+        <p class="discussion-prompt">Validate HNH-system function and reconcile detector scope.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>lamassu-hnh-function-and-model-scope</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-03T10:35:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added the literature-supported short-Lamassu HNH architecture with DOI, executable-model, published dataset and NCBI identity evidence and exact snippets. Restricted the AN59 example to computational genomic possession. Ignored-and-hidden searches found no exact record or METPO term. Reserved METPO:1052200 in proposals/metpo_traitmech_v445; retained the detector-scope and HNH-specific functional-validation gaps.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/lamassu_hnh_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/lamassu_hnh_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/lamassu_hnh_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/lamassu_hnh_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000568" target="_blank" rel="noopener"><code>traitmech:000568</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-03 10:35 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 963 TraitRecords
+      · embedding coverage 49.5%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

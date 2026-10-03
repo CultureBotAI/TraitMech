@@ -1,0 +1,108 @@
+identifier: traitmech:000568
+label: Lamassu-HNH system
+definition: A Lamassu system in which an organism possesses a locus encoding an HNH-domain
+  LmuA effector, a short-form SMC-like LmuB sensor, and LmuC.
+definition_source: DOI:10.1073/pnas.2519643122
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu_HNH
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml
+- synonym_text: Lamassu/Lamassu/Lamassu_HNH
+  synonym_type: RELATED_SYNONYM
+  source: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: others are type-specific like the flavin-containing monooxygenase (FMO)
+    for long Lamassu, and HNH, SMEK, and Lipase for short Lamassu.
+  notes: 'Results, effector-diversity paragraph: ''others'' refers to LmuA effector
+    types. Figure 1A depicts HNH-domain LmuA with short LmuB and LmuC. This establishes
+    a recognized architecture, not HNH-specific biochemical or infection-assay validation.'
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml
+  snippet: <model inter_gene_max_space="1" min_mandatory_genes_required="3" min_genes_required="3"
+    vers="2.0">
+  notes: The executable model requires three mandatory components and permits at most
+    one intervening gene between components.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml
+  snippet: <gene name="Lamassu__LmuA_HNH" presence="mandatory"/>
+  notes: HNH-bearing LmuA is mandatory. Other named LmuA effector profiles are forbidden
+    by separate blocks; an isolated HNH-profile hit does not establish possession
+    of the complete system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml
+  snippet: '<gene name="Lamassu__LmuB_Long" presence="mandatory">
+
+    <exchangeables>
+
+    <gene name="Lamassu__LmuB_Short"/>
+
+    </exchangeables>
+
+    </gene>'
+  notes: The detector accepts either long or short LmuB. Its software scope is broader
+    than this record's literature-supported short-LmuB architecture, so the model
+    key is only a related synonym.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_HNH.xml
+  snippet: <gene name="Lamassu__LmuC_Clade_I" presence="mandatory">
+  notes: LmuC is mandatory, with Clade II-VII and MC1-MC8 profiles in the exchangeables
+    block. There are no accessory components in this XML.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+  snippet: "ACHA001.0722.00006.C001\tACHA001.0722.00006.C001_03320\tLamassu__LmuB_Short\n\
+    ACHA001.0722.00006.C001\tACHA001.0722.00006.C001_03321\tLamassu__LmuC_MC7\nACHA001.0722.00006.C001\t\
+    ACHA001.0722.00006.C001_03322\tLamassu__LmuA_HNH"
+  notes: Dataset S1, S3_Lamassu_Detection!A121:C123, raw cells in column order. Columns
+    E, F, I and M identify one Lamassu/Lamassu/Lamassu_HNH call, ACHA001.0722.00006.C001_Lamassu_HNH_807,
+    with sys_wholeness 1.0 and three mandatory hits. The full sheet has 281 unique
+    HNH system IDs, each with short LmuB. These are computational genome annotations,
+    not experimental antiviral phenotypes.
+- reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+  snippet: "ACHA001.0722.00006.C001\tGCF_009892245.1\tBacteria\tProteobacteria\tAcinetobacter\
+    \ haemolyticus\tNZ_CP031972"
+  notes: Dataset S1, S2_Genomes!A1159:F1159, raw cells linking the HNH-bearing replicon
+    to assembly GCF_009892245.1 and its species. The historical phylum label is quoted
+    as source data, not adopted as a taxonomic assertion. This supports a genome-qualified
+    possession example.
+- reference: https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_009892245.1/dataset_report
+  snippet: '"tax_id":29430,"organism_name":"Acinetobacter haemolyticus","infraspecific_names":{"strain":"AN59"}'
+  notes: 'NCBI Datasets assembly report, verified 2026-10-03: resolves the study''s
+    assembly to species taxon 29430 and strain AN59. This source verifies identity
+    only; the published dataset supports the computational system-possession annotation.'
+canonical_examples:
+- taxon_id: NCBITaxon:29430
+  taxon_label: Acinetobacter haemolyticus
+  note: 'Computational genomic example: strain AN59, assembly GCF_009892245.1, study
+    replicon ACHA001.0722.00006.C001, has a complete three-component HNH-system call
+    in Dataset S1 (S3_Lamassu_Detection rows 121-123; S2_Genomes row 1159). NCBI Datasets
+    resolves the assembly to this species and strain. This does not establish experimentally
+    measured antiviral activity in AN59 or species-wide possession.'
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
+discussions:
+- discussion_id: lamassu-hnh-function-and-model-scope
+  prompt: Validate HNH-system function and reconcile detector scope.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The paper identifies HNH as a short-Lamassu effector type, and all 281
+    HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless
+    permits long LmuB, so the detector name is not an exact biological equivalence.
+    At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md
+    lack an HNH-system entry even though the executable XML and HNH profile exist.
+    Summary-table absence is not model absence. HNH-specific experimental antiviral
+    validation, exact substrates, activation order, and accession-level protein anchors
+    remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry
+    or its phage spectrum. No protein-resolved causal graph or functional equivalence
+    to standalone HNH proteins is asserted.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T10:35:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-supported short-Lamassu HNH architecture with DOI,
+    executable-model, published dataset and NCBI identity evidence and exact snippets.
+    Restricted the AN59 example to computational genomic possession. Ignored-and-hidden
+    searches found no exact record or METPO term. Reserved METPO:1052200 in proposals/metpo_traitmech_v445;
+    retained the detector-scope and HNH-specific functional-validation gaps.
+  llm_assisted: true

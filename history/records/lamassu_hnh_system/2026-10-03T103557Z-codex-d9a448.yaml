@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hnh_system.yaml
+  slug: lamassu_hnh_system
+session:
+  id: 2026-10-03T103557Z-codex-d9a448
+  timestamp: '2026-10-03T10:35:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add literature-supported short-Lamassu HNH architecture
+  details: Added traitmech:000568 and proposal v445 METPO:1052200 using Haudiquet et al. DOI:10.1073/pnas.2519643122,
+    pinned executable DefenseFinder XML, Dataset S1 and NCBI assembly identity. Exact-matched
+    all eight snippets to source XML, raw spreadsheet cells or JSON. All 281 dataset HNH calls
+    use short LmuB; the model also accepts long LmuB and is only a related synonym. AN59 GCF_009892245.1
+    is explicitly a computational genomic example, not experimental antiviral validation.
+    Ignored-and-hidden searches found no exact record or METPO class. No molecular causal
+    graph or exact protein xref asserted. Writer tests cover dry run, idempotency, preimage
+    drift and proposal round trip.
