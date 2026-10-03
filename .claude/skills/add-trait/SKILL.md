@@ -88,6 +88,16 @@ causal node. An article-registry row without pinned HMM or rule rows is still
 only name-to-paper evidence; cite it for the system identity and record the
 missing model rows as an unresolved coverage gap.
 
+Before defining a system from registry tables, inspect its executable model
+at the same pinned commit (for DefenseFinder, the XML under `definitions/`).
+Compare mandatory, accessory, forbidden, and exchangeable components plus
+minimum-gene and spacing constraints using a structured parser. Summary tables
+can retain older names or requirements even within the same commit. When they
+disagree, cite the executable model for detection constraints, record the
+discrepancy, and ground the trait definition in the biological architecture
+supported by the literature. Do not create separate biological traits solely
+from stale table variants or treat a model call as experimental validation.
+
 ## Pick a target
 
 If the user names a trait, curate that trait only. For an open-ended request to
@@ -499,6 +509,12 @@ shared claw module:
 PYTHONPATH=<culturebotai-claw>/src .venv/bin/python -m kg_microbe_discussions \
   --config conf/discussions_config.yaml --output app/discussions
 ```
+
+Inspect shared dashboard/browser template diffs after regeneration. A local
+claw checkout can predate the generator version used by the last consumer
+rollout and silently remove navigation or accessibility improvements. Use an
+isolated copy of that reviewed source when needed; do not update an unrelated
+dirty shared checkout or repair generated HTML by hand.
 
 Regenerated priority artifacts can legitimately change existing parent rows
 when the new record changes child counts, series families, or overlap scores.

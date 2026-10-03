@@ -1,0 +1,104 @@
+identifier: traitmech:000567
+label: Lamassu Hydrolase-Protease system
+definition: A Lamassu system in which an organism possesses a defense locus encoding
+  a protease-domain LmuA effector together with a hydrolase-like protein, an SMC-like
+  LmuB sensor, and LmuC.
+definition_source: DOI:10.1073/pnas.2519643122
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: Lamassu-Hydrolase_Protease
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Lamassu_Hydrolase-Protease
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: Protease (accompanied by a hydrolase-like protein)
+  notes: 'Results, effector-diversity paragraph: the protease branch is paired with
+    a hydrolase-like protein in both long and short Lamassu. Figure 1A shows the paired
+    architecture with LmuB and LmuC. These annotations do not establish exact effector
+    substrates.'
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: one system from Bacillus cereus B4077, encoding Hydrolase-Protease effectors
+  notes: 'Results, LmuB phylogeny paragraph: identifies B4077 as the source of a previously
+    validated long-Lamassu system, citing Millman et al. (2022). This supports a strain-qualified
+    possession example, not species-wide prevalence or a native-host infection assay.'
+- reference: DOI:10.1016/j.chom.2022.09.017
+  snippet: Mutation in the effector domains of these systems also abolished defense,
+    as well as the deletion of lmuC
+  notes: Figure 2C and its Results paragraph report loss of defense after effector
+    mutations or lmuC deletion in tested Lamassu systems, including the hydrolase/protease
+    construct. The functional tests used heterologous hosts. This does not establish
+    a substrate or the biochemical order of activation for the paired proteins.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml
+  snippet: <model inter_gene_max_space="1" min_mandatory_genes_required="4" min_genes_required="4"
+    vers="2.0">
+  notes: The executable model requires four mandatory components, with at most one
+    intervening gene between components.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml
+  snippet: '<gene name="Lamassu__LmuA_Protease" presence="mandatory">
+
+    <exchangeables>
+
+    <gene name="Lamassu__LmuA_Protease_II"/>
+
+    </exchangeables>
+
+    </gene>
+
+
+    <gene name="Lamassu__LmuA_Hydrolase" presence="mandatory"/>'
+  notes: The model requires both protease and hydrolase components; Protease_II can
+    substitute for the primary protease profile. Separate mandatory blocks also require
+    LmuB_Long (exchangeable with LmuB_Short) and LmuC_Clade_I (with listed alternatives).
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml
+  snippet: <gene name="Lamassu__LmuC_Clade_I" presence="mandatory">
+  notes: LmuC is mandatory in this executable model, with alternative LmuC profiles
+    listed in its exchangeables block.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Lamassu-Fam\tLamassu-Hydrolase_Protease\t3\t3"
+  notes: The summary TSV places the paired subtype within Lamassu-Fam but gives three
+    mandatory matches and three genes. Its mandatory column lists the legacy Hydrolase,
+    Protease and Cap4_nuclease_II SMC profiles, and its accessory column lists the
+    Lipase LmuC profile. This summary disagrees with the executable XML at the same
+    commit and is retained only as provenance for the older label.
+canonical_examples:
+- taxon_id: NCBITaxon:1396
+  taxon_label: Bacillus cereus
+  note: Strain B4077 is the source of the experimentally validated long-Lamassu Hydrolase-Protease
+    system identified by Haudiquet et al. with reference to Millman et al. (2022).
+    The species identifier anchors this strain-qualified example; it does not imply
+    that all B. cereus strains possess it.
+  reference: DOI:10.1073/pnas.2519643122
+discussions:
+- discussion_id: lamassu-hydrolase-protease-model-and-mechanism
+  prompt: Reconcile model-summary drift and resolve paired effector chemistry.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The pinned XML uses four mandatory components and newer Lamassu__ profile
+    names, but its companion TSV uses three mandatory legacy profiles and accessory
+    LmuC. The inventory's Hydrolase_protease LmuB and hydrolase_protease LmuC rows
+    also differ from both representations. Model-summary reconciliation is required
+    before using that TSV for genotype calls. The definition follows the biological
+    paired architecture and executable model, not the table's thresholds. Exact substrates,
+    activation order, native-host activity, and accession-level protein examples remain
+    unresolved. No causal mechanism graph is asserted without those molecular anchors.
+    The single-effector table-defined siblings are not asserted to be parents or equivalents
+    of this paired system.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T09:29:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-supported paired Lamassu architecture with DOI and
+    pinned executable-model evidence, exact snippets, and a B4077 canonical example.
+    Ignored-and-hidden searches found only pending parent mentions, not an exact existing
+    record or METPO term. Reserved METPO:1052100 in proposals/metpo_traitmech_v444.
+    Recorded summary-table drift rather than adopting its constraints.
+  llm_assisted: true

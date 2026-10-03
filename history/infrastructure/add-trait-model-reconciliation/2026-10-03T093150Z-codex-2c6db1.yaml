@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-model-reconciliation
+session:
+  id: 2026-10-03T093150Z-codex-2c6db1
+  timestamp: '2026-10-03T09:31:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - instructions
+  summary: Require model-table reconciliation before adding system traits
+  details: Inspection of Lamassu Hydrolase-Protease found four mandatory components in the
+    pinned executable XML versus three and accessory LmuC in its summary table. Added a focused
+    instruction to parse executable models, compare constraints and define biological traits
+    using literature rather than stale table variants.
