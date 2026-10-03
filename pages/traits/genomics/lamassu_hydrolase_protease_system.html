@@ -37,6 +37,63 @@
   </header>
 
 
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(7)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a>
+        <blockquote>Protease (accompanied by a hydrolase-like protein)</blockquote>
+        <p class="meta">Results, effector-diversity paragraph: the protease branch is paired with a hydrolase-like protein in both long and short Lamassu. Figure 1A shows the paired architecture with LmuB and LmuC. These annotations do not establish exact effector substrates.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a>
+        <blockquote>one system from Bacillus cereus B4077, encoding Hydrolase-Protease effectors</blockquote>
+        <p class="meta">Results, LmuB phylogeny paragraph: identifies B4077 as the source of a previously validated long-Lamassu system, citing Millman et al. (2022). This supports a strain-qualified possession example, not species-wide prevalence or a native-host infection assay.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1016/j.chom.2022.09.017" rel="nofollow noreferrer"><code>DOI:10.1016/j.chom.2022.09.017</code></a>
+        <blockquote>Mutation in the effector domains of these systems also abolished defense, as well as the deletion of lmuC</blockquote>
+        <p class="meta">Figure 2C and its Results paragraph report loss of defense after effector mutations or lmuC deletion in tested Lamassu systems, including the hydrolase/protease construct. The functional tests used heterologous hosts. This does not establish a substrate or the biochemical order of activation for the paired proteins.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml</code></a>
+        <blockquote>&lt;model inter_gene_max_space=&#34;1&#34; min_mandatory_genes_required=&#34;4&#34; min_genes_required=&#34;4&#34; vers=&#34;2.0&#34;&gt;</blockquote>
+        <p class="meta">The executable model requires four mandatory components, with at most one intervening gene between components.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml</code></a>
+        <blockquote>&lt;gene name=&#34;Lamassu__LmuA_Protease&#34; presence=&#34;mandatory&#34;&gt;
+&lt;exchangeables&gt;
+&lt;gene name=&#34;Lamassu__LmuA_Protease_II&#34;/&gt;
+&lt;/exchangeables&gt;
+&lt;/gene&gt;
+
+&lt;gene name=&#34;Lamassu__LmuA_Hydrolase&#34; presence=&#34;mandatory&#34;/&gt;</blockquote>
+        <p class="meta">The model requires both protease and hydrolase components; Protease_II can substitute for the primary protease profile. Separate mandatory blocks also require LmuB_Long (exchangeable with LmuB_Short) and LmuC_Clade_I (with listed alternatives).</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Lamassu-Fam/Lamassu_Hydrolase-Protease.xml</code></a>
+        <blockquote>&lt;gene name=&#34;Lamassu__LmuC_Clade_I&#34; presence=&#34;mandatory&#34;&gt;</blockquote>
+        <p class="meta">LmuC is mandatory in this executable model, with alternative LmuC profiles listed in its exchangeables block.</p>
+      </li>
+
+      <li>
+        <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code></a>
+        <blockquote>Lamassu-Fam	Lamassu-Hydrolase_Protease	3	3</blockquote>
+        <p class="meta">The summary TSV places the paired subtype within Lamassu-Fam but gives three mandatory matches and three genes. Its mandatory column lists the legacy Hydrolase, Protease and Cap4_nuclease_II SMC profiles, and its accessory column lists the Lipase LmuC profile. This summary disagrees with the executable XML at the same commit and is retained only as provenance for the older label.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
 
 
 
@@ -47,7 +104,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
 
-        <dt>Definition source</dt><dd>DOI:10.1073/pnas.2519643122</dd>
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a></dd>
 
 
       </dl>
@@ -114,11 +171,7 @@
 
 
 
-
-
-          <a href="https://doi.org/10.1073/pnas.2519643122"
-             rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a>
-
+          <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a>
 
           <span class="meta">Strain B4077 is the source of the experimentally validated long-Lamassu Hydrolase-Protease system identified by Haudiquet et al. with reference to Millman et al. (2022). The species identifier anchors this strain-qualified example; it does not imply that all B. cereus strains possess it.</span>
         </li>

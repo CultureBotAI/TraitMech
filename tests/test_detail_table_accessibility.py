@@ -5,12 +5,11 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import yaml
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from render_trait_pages import causal_graphs_for_template  # noqa: E402
+from render_trait_pages import causal_graphs_for_template, template_environment  # noqa: E402
 
 
 class TableParents(HTMLParser):
@@ -40,10 +39,7 @@ def test_detail_tables_keep_names_keyboard_access_and_scientific_links():
         "title": "Study", "dataset_type": "GENOME", "repository": "Example archive",
         "accession": "DATASET:123", "url": "https://example.org/study",
     }]
-    env = Environment(
-        loader=FileSystemLoader(str(ROOT / "src/traitmech/templates")),
-        autoescape=select_autoescape(["html"]),
-    )
+    env = template_environment()
     html = env.get_template("trait.html").render(
         trait=trait, causal_graphs=graphs, kgm_match={"n_kgm_nodes": 0},
         parent_pages={}, parent_labels={},
