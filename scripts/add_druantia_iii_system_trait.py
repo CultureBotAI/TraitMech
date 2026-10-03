@@ -21,6 +21,7 @@ TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "druantia_iii_system.yaml"
 DRUANTIA_PARENT = REPO_ROOT / "data" / "traits" / "genomics" / "druantia_system.yaml"
 
 WU_2026 = "DOI:10.64898/2026.05.12.724681"
+BELL_2026 = "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -47,6 +48,14 @@ DRUANTIA_COMPLETE_SNIPPET = (
     "we identified 6,885 bacterial genomes encoding complete Druantia III "
     "systems, defined by the presence of both DruE and DruH"
 )
+DRUANTIA_ATCC_8739_SNIPPET = (
+    "Screening 66 phages that could form plaques on the double-deletion "
+    "strain showed that the strain carrying only Druantia III exhibited at "
+    "least modest protection (<0.01 EOP or <0.5 SFC) against 3 phages, "
+    "whereas the strain carrying ARMADA Type II exhibited a much broader "
+    "range of immunity, with at least modest protection observed against "
+    "30 phages."
+)
 ARTICLE_ROW = (
     "| Druantia | 10\\.1126/science\\.aar4120 | Systematic discovery of "
     "antiphage defense systems in the microbial pangenome | "
@@ -60,6 +69,17 @@ DRUH_HMM_ROW = (
     "| Druantia_III__DruH                               |"
     " Druantia_III__DruH                               |"
     " Druantia_III           | Custom                  | 20     |"
+)
+DRUANTIA_IV_HMM_ROWS = (
+    "| Druantia_IV__DruE4                               |"
+    "                                                  |"
+    " Druantia_IV            | Custom                  | 750    |\n"
+    "| Druantia_IV__DruF4                               |"
+    "                                                  |"
+    " Druantia_IV            | Custom                  | 20     |\n"
+    "| Druantia_IV__DruL                                |"
+    "                                                  |"
+    " Druantia_IV            | Custom                  | 100    |"
 )
 RULE_ROW = "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\t"
 RULE_PARENT_SPAN = "Druantia\tDruantia_III\t2\t2"
@@ -84,6 +104,19 @@ def druantia_complete_evidence() -> dict[str, str]:
         "notes": (
             "Wu et al. support Druantia III as a recurring bacterial "
             "DruE/DruH system rather than a single engineered locus."
+        ),
+    }
+
+
+def druantia_atcc_8739_evidence() -> dict[str, str]:
+    return {
+        "reference": BELL_2026,
+        "snippet": DRUANTIA_ATCC_8739_SNIPPET,
+        "notes": (
+            "Bell et al. support native E. coli ATCC 8739 Druantia III "
+            "protection in a deletion-resolved strain retaining Druantia "
+            "III but lacking the co-located ARMADA Type II and Zorya II "
+            "systems."
         ),
     }
 
@@ -120,6 +153,18 @@ def druh_hmm_evidence() -> dict[str, str]:
             "The pinned DefenseFinder HMM inventory records the "
             "Druantia_III__DruH custom profile under the Druantia_III "
             "model namespace."
+        ),
+    }
+
+
+def druantia_iv_hmm_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": DRUANTIA_IV_HMM_ROWS,
+        "notes": (
+            "The pinned DefenseFinder HMM inventory records "
+            "Druantia_IV__DruE4, Druantia_IV__DruF4, and "
+            "Druantia_IV__DruL under the Druantia_IV model namespace."
         ),
     }
 
@@ -187,10 +232,24 @@ RECORD: dict[str, Any] = {
     "evidence": [
         druantia_late_evidence(),
         druantia_complete_evidence(),
+        druantia_atcc_8739_evidence(),
         article_registry_evidence(),
         drue_hmm_evidence(),
         druh_hmm_evidence(),
         rules_evidence(),
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:562",
+            "taxon_label": "Escherichia coli",
+            "note": (
+                "Bell et al. screened E. coli ATCC 8739 system-deletion "
+                "derivatives and observed at least modest phage protection "
+                "in the derivative retaining only the native Druantia III "
+                "system."
+            ),
+            "reference": BELL_2026,
+        }
     ],
     "causal_graphs": [
         {
@@ -207,8 +266,9 @@ RECORD: dict[str, Any] = {
                 "The graph captures the Druantia_III subtype at "
                 "DefenseFinder rule-row level without resolving the exact "
                 "late phage trigger, DruH sensory intermediate, RecBCD "
-                "dependence, Zorya II synergy, native host breadth, Type I, "
-                "Type II, or Type IV partner functions, or whether every "
+                "dependence, Zorya II synergy, native host breadth beyond "
+                "the E. coli ATCC 8739 observation, Type I, Type II, or "
+                "Type IV partner functions, or whether every "
                 "DefenseFinder Druantia_III prediction is a complete "
                 "experimentally active locus."
             ),
@@ -315,14 +375,17 @@ RECORD: dict[str, Any] = {
                 "DruE is a helicase-nuclease effector, and the pinned "
                 "DefenseFinder HMM inventory and rules table support "
                 "Druantia_III as a subtype whose rule row requires the "
-                "Druantia_III__DruH and Druantia__DruE_1 profiles. This "
-                "first-pass record leaves exact late phage triggers, DruH "
-                "sensory intermediates, RecBCD dependence, Zorya II "
-                "coupling, native host breadth, and profile-to-activity "
-                "criteria unresolved."
+                "Druantia_III__DruH and Druantia__DruE_1 profiles. Bell "
+                "et al. support one deletion-resolved native E. coli ATCC "
+                "8739 Druantia III protection observation. This first-pass "
+                "record leaves exact late phage triggers, DruH sensory "
+                "intermediates, RecBCD dependence, Zorya II coupling, "
+                "native host breadth beyond ATCC 8739, and "
+                "profile-to-activity criteria unresolved."
             ),
             "evidence": [
                 druantia_late_evidence(),
+                druantia_atcc_8739_evidence(),
                 druh_hmm_evidence(),
                 rules_evidence(),
             ],
@@ -363,18 +426,31 @@ UPDATED_DRUANTIA_DISCUSSION_RATIONALE = (
     "DruE engages ssDNA-containing intermediates. Druantia III system now "
     "captures the DruE/DruH Type III branch from the pinned Druantia_III "
     "DefenseFinder row, but the parent record remains at the DruE-core "
-    "family level until separate review resolves Type I/II partner "
-    "functions, the pinned Type IV HMM rows, exact phage triggers, native "
-    "host breadth, and Zorya-coupled versus standalone outputs across "
-    "Druantia loci."
+    "family level until separate review resolves Type I, Type II, and Type "
+    "IV partner functions, exact phage triggers, native host breadth, and "
+    "Zorya-coupled versus standalone outputs across Druantia loci."
+)
+
+TYPE_IV_GROUNDED_DRUANTIA_DISCUSSION_RATIONALE = (
+    "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III "
+    "DruHE architectures and validated one Type I locus, while Wu et al. "
+    "define a Type III mechanism in which DruH likely senses infection and "
+    "DruE engages ssDNA-containing intermediates. Druantia III system now "
+    "captures the DruE/DruH Type III branch from the pinned Druantia_III "
+    "DefenseFinder row, but the parent record remains at the DruE-core "
+    "family level until separate review resolves Type I and Type II "
+    "partner functions, Type IV partner functions represented by the "
+    "pinned Druantia_IV HMM rows, exact phage triggers, native host "
+    "breadth, and Zorya-coupled versus standalone outputs across Druantia "
+    "loci."
 )
 
 PARENT_EVENT_CHANGES = (
     "Documented Druantia III as split out in the open Druantia subtype "
     "discussion after minting traitmech:000560 for the DefenseFinder-backed "
-    "Druantia_III child; Type I, Type II, Type IV, Zorya-coupled versus "
-    "standalone activity, and finer Druantia activation mechanisms remain "
-    "open."
+    "Druantia_III child; Type I, Type II, the pinned Druantia_IV HMM "
+    "context, Zorya-coupled versus standalone activity, and finer Druantia "
+    "activation mechanisms remain open."
 )
 
 
@@ -402,15 +478,14 @@ def build_record() -> dict[str, Any]:
     record_curation_event(
         record,
         curator=CURATOR,
-        action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
+        action="REVIEW_CANONICAL_EXAMPLE",
         changes=(
-            "Reviewed Druantia III system during initial curation and left "
-            "canonical_examples empty because Wu et al. and the pinned "
-            "DefenseFinder tables support recurring complete DruE/DruH "
-            "Druantia III systems and the Druantia_III rule row but not an "
-            "accession-backed native microbial taxon exemplar tied to the "
-            "Druantia_III profiles and experimentally verified endogenous "
-            "activity. No paid research was used."
+            "Reviewed Druantia III system during initial curation and "
+            "added Escherichia coli because Bell et al. reported a "
+            "deletion-resolved E. coli ATCC 8739 derivative retaining only "
+            "native Druantia III activity with modest protection against "
+            "3 of 66 screened phages. Broader native host breadth remains "
+            "unresolved, and no paid research was used."
         ),
         llm_assisted=True,
         timestamp=CANONICAL_TIMESTAMP,
@@ -435,15 +510,29 @@ def build_parent() -> dict[str, Any]:
         discussion["prompt"] = UPDATED_DRUANTIA_DISCUSSION_PROMPT
     elif discussion["prompt"] != UPDATED_DRUANTIA_DISCUSSION_PROMPT:
         raise SystemExit("unexpected Druantia subtype discussion prompt")
-    if discussion["rationale"] == OLD_DRUANTIA_DISCUSSION_RATIONALE:
-        discussion["rationale"] = UPDATED_DRUANTIA_DISCUSSION_RATIONALE
-    elif discussion["rationale"] != UPDATED_DRUANTIA_DISCUSSION_RATIONALE:
+    if discussion["rationale"] in {
+        OLD_DRUANTIA_DISCUSSION_RATIONALE,
+        UPDATED_DRUANTIA_DISCUSSION_RATIONALE,
+    }:
+        discussion["rationale"] = TYPE_IV_GROUNDED_DRUANTIA_DISCUSSION_RATIONALE
+    elif discussion["rationale"] != TYPE_IV_GROUNDED_DRUANTIA_DISCUSSION_RATIONALE:
         raise SystemExit("unexpected Druantia subtype discussion rationale")
+    discussion["evidence"] = [
+        item
+        for item in discussion.get("evidence", [])
+        if item.get("snippet") != DRUANTIA_IV_HMM_ROWS
+    ]
+    discussion["evidence"].append(druantia_iv_hmm_evidence())
 
-    if not any(
-        event["timestamp"] == PARENT_TIMESTAMP and event["action"] == "TRACK_NARROWER_RECORD"
-        for event in record.get("curation_history", [])
-    ):
+    parent_event = next(
+        (
+            event
+            for event in record.get("curation_history", [])
+            if event["timestamp"] == PARENT_TIMESTAMP and event["action"] == "TRACK_NARROWER_RECORD"
+        ),
+        None,
+    )
+    if parent_event is None:
         record_curation_event(
             record,
             curator=CURATOR,
@@ -452,6 +541,8 @@ def build_parent() -> dict[str, Any]:
             llm_assisted=True,
             timestamp=PARENT_TIMESTAMP,
         )
+    else:
+        parent_event["changes"] = PARENT_EVENT_CHANGES
     return record
 
 

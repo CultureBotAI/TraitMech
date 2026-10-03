@@ -17,6 +17,7 @@ events:
   sections:
   - identity
   - evidence
+  - canonical_examples
   - causal_graphs
   - discussions
   summary: Add Druantia III system trait
@@ -25,5 +26,6 @@ events:
     no live TraitMech, METPO, history, or prior proposal record for the local identifier,
     METPO placeholder, proposal cohort, record slug, human label, DefenseFinder subsystem,
     DruH profile, or shared DruE_1 profile. Curated pinned DefenseFinder rule/HMM evidence,
-    a conservative nonmechanistic DruE/DruH subtype graph, an open activity gap, an explicit
-    canonical-example evidence-gap event, and a same-PR METPO v437 proposal.
+    an Escherichia coli canonical example from deletion-resolved ATCC 8739 activity evidence,
+    a conservative nonmechanistic DruE/DruH subtype graph, an open activity gap, and a same-PR
+    METPO v437 proposal.

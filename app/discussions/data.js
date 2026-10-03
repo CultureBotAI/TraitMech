@@ -2297,11 +2297,12 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#druantia_iii_locus_subtype_defense"
   ],
-  "rationale": "Wu et al. support Druantia III as a recurring DruE/DruH system in which DruH is the likely infection sensor and DruE is a helicase-nuclease effector, and the pinned DefenseFinder HMM inventory and rules table support Druantia_III as a subtype whose rule row requires the Druantia_III__DruH and Druantia__DruE_1 profiles. This first-pass record leaves exact late phage triggers, DruH sensory intermediates, RecBCD dependence, Zorya II coupling, native host breadth, and profile-to-activity criteria unresolved.",
+  "rationale": "Wu et al. support Druantia III as a recurring DruE/DruH system in which DruH is the likely infection sensor and DruE is a helicase-nuclease effector, and the pinned DefenseFinder HMM inventory and rules table support Druantia_III as a subtype whose rule row requires the Druantia_III__DruH and Druantia__DruE_1 profiles. Bell et al. support one deletion-resolved native E. coli ATCC 8739 Druantia III protection observation. This first-pass record leaves exact late phage triggers, DruH sensory intermediates, RecBCD dependence, Zorya II coupling, native host breadth beyond ATCC 8739, and profile-to-activity criteria unresolved.",
   "num_experiments": 0,
-  "num_evidence": 3,
+  "num_evidence": 4,
   "evidence_refs": [
    "DOI:10.64898/2026.05.12.724681",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
   ],
@@ -2318,10 +2319,12 @@ window.searchData = [
   "source_id": "traitmech:000234",
   "source_file": "druantia_system.yaml",
   "attaches_to": [],
-  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I, Type II, and Type IV partner functions, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.",
   "num_experiments": 0,
-  "num_evidence": 0,
-  "evidence_refs": [],
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
  },

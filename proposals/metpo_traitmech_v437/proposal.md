@@ -45,10 +45,11 @@ Druantia III system captures organism-level possession of the Type III branch
 of the Druantia antiphage-system family, represented by DruE and DruH in the
 primary literature and by the pinned DefenseFinder `Druantia_III` rule row
 requiring `Druantia_III__DruH` and `Druantia__DruE_1`. It excludes the broader
-Druantia system, Type I, Type II, and Type IV Druantia contexts, individual
-`druE` or `druH` genes, DruE or DruH proteins, individual DefenseFinder HMM
-rows, exact late phage triggers, RecBCD-dependent DNA processing, Zorya II
-synergy, native host breadth, and other phage-defense systems.
+Druantia system, Type I and Type II rule contexts, the pinned Type IV HMM
+context, individual `druE` or `druH` genes, DruE or DruH proteins, individual
+DefenseFinder HMM rows, exact late phage triggers, RecBCD-dependent DNA
+processing, Zorya II synergy, native host breadth, and other phage-defense
+systems.
 
 `traitmech:000560` is a direct local child of `traitmech:000234` Druantia
 system. This proposal uses `METPO:1018800`, the v111 placeholder for
