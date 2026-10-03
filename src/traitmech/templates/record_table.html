@@ -1,0 +1,20 @@
+<form id="record-filters" class="record-filters" hidden>
+  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value }}</option>{% endfor %}</select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|unique|sort %}{% if value %}<option value="{{ value }}">{{ value }}</option>{% endif %}{% endfor %}</select></div>
+  <button type="reset">Clear filters</button>
+</form>
+<p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>
+<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+<table id="record-table">
+<caption>{{ table_caption | default('Records') }}</caption>
+<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">kg-microbe nodes</th><th scope="col">Synonyms</th></tr></thead>
+<tbody>
+{% for r in records %}
+<tr data-category="{{ r.category }}" data-kind="{{ r.kind or '' }}" data-synonyms="{{ r.synonyms | default('') }}"><td><a href="{{ root }}{{ r.page }}">{{ r.label }}</a><p class="record-definition">{{ r.definition }}</p></td><td><code>{{ r.identifier }}</code></td><td>{{ r.category }}</td><td>{{ r.kind or '' }}</td><td>{{ r.n_kgm_nodes or 0 }}</td><td>{{ r.synonyms_count }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<script src="{{ root }}assets/record-browser.js" defer></script>

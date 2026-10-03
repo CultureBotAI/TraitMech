@@ -8,6 +8,12 @@
 </header>
 
 <section>
+  <h2>All records</h2>
+  {% set records = traits %}
+  {% include "record_table.html" %}
+</section>
+
+<section>
   <h2>Categories</h2>
   <div class="grid">
     {% for cat, n in category_counts.items() %}

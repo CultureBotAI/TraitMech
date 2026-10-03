@@ -501,7 +501,8 @@ def build_queue(
 
 def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> str:
     head = (
-        "<!doctype html><meta charset=utf-8>"
+        "<!doctype html><html lang=en><meta charset=utf-8>"
+        '<meta name="viewport" content="width=device-width, initial-scale=1">'
         "<title>TraitMech curation priority</title>"
         "<style>body{font:14px/1.5 system-ui,sans-serif;margin:2rem;max-width:1200px}"
         "table{border-collapse:collapse;width:100%}th,td{padding:.35rem .5rem;"
@@ -537,7 +538,9 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
     )
     body = [
         head,
-        "<h1>TraitMech curation priority</h1>",
+        '<nav><a href="../../pages/browse.html">Browse records</a> · '
+        '<a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>',
+        "<main><h1>TraitMech curation priority</h1>",
         f"<figure><figcaption>{meta['records']} records; "
         f"{meta['excluded_non_mechanism']} not mechanism records, "
         f"{meta['excluded_deprecated']} deprecated &mdash; both scored to the floor "
@@ -566,7 +569,7 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
             f"<td class=n>{r['orphans']}</td><td class=n>{r['examples']}</td>"
             f"<td>{series}</td><td>{html.escape('; '.join(r['reasons']))}</td></tr>"
         )
-    body.append("</table>")
+    body.append("</table></main></html>")
     return "\n".join(body)
 
 

@@ -12,6 +12,7 @@
     <a class="brand" href="../index.html">TraitMech</a>
     <nav>
       <a href="../index.html">Home</a>
+      <a href="../browse.html">Browse</a>
       <a href="../umap.html">Embedding space</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
@@ -24,78 +25,41 @@
   <p class="breadcrumb"><a href="../index.html">TraitMech</a> <span>›</span> UPPER</p>
   <h1>UPPER <span class="meta">(8)</span></h1>
 </header>
-<table class="trait-list">
-  <thead>
-    <tr><th>Label</th><th>CURIE</th><th>Term kind</th><th>kg-microbe nodes</th><th>Synonyms</th></tr>
-  </thead>
-  <tbody>
 
-    <tr>
-      <td><a href="../traits/upper/biological_process.html">biological process</a></td>
-      <td><code>METPO:1000630</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">1</td>
-    </tr>
+<form id="record-filters" class="record-filters" hidden>
+  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="UPPER">UPPER</option></select></div>
+  <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="CLASS">CLASS</option></select></div>
+  <button type="reset">Clear filters</button>
+</form>
+<p id="record-count" role="status" aria-live="polite">8 records</p>
+<p id="record-empty" hidden>No records match. Clear the search or filters to show more records.</p>
+<div class="record-table-scroll" role="region" aria-label="Record catalogue" tabindex="0">
+<table id="record-table">
+<caption>Records</caption>
+<thead><tr><th scope="col">Label and definition</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">Kind</th><th scope="col">kg-microbe nodes</th><th scope="col">Synonyms</th></tr></thead>
+<tbody>
 
-    <tr>
-      <td><a href="../traits/upper/chemical_entity.html">chemical entity</a></td>
-      <td><code>METPO:1000526</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms="{&#39;synonym_text&#39;: &#39;physiological process&#39;, &#39;synonym_type&#39;: &#39;EXACT_SYNONYM&#39;, &#39;source&#39;: &#39;http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo&#39;}"><td><a href="../traits/upper/biological_process.html">biological process</a><p class="record-definition">A execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</p></td><td><code>METPO:1000630</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/enzyme.html">enzyme</a></td>
-      <td><code>METPO:1000527</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/chemical_entity.html">chemical entity</a><p class="record-definition">A material entity that is a physical entity of interest in chemistry, including molecular entities, parts thereof, and chemical substances. Used as the range class for the majority of METPO chemical-use OBJECT_PROPERTYs (uses_as_carbon_source, uses_as_electron_donor, ferments, oxidizes, etc.) so that organism-to-chemical assertions resolve to a curated chemical class.</p></td><td><code>METPO:1000526</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/material_entity.html">material entity</a></td>
-      <td><code>METPO:1000186</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/enzyme.html">enzyme</a><p class="record-definition">A biological macromolecule (typically a protein, occasionally a catalytic RNA) that catalyses a specific biochemical reaction. This class is the material-entity sense of &#34;enzyme&#34; (the molecule itself), matching METPO:1000527&#39;s placement as a subclass of METPO:1000186 (material entity). Used as the range class for METPO enzyme-related OBJECT_PROPERTYs (shows_activity_of, enzyme_activity_analyzed, does_not_show_activity_of).</p></td><td><code>METPO:1000527</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/microbe.html">microbe</a></td>
-      <td><code>METPO:1000525</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/material_entity.html">material entity</a><p class="record-definition">An object or portion of a substance or mixture of substances that consists of matter</p></td><td><code>METPO:1000186</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/observation.html">observation</a></td>
-      <td><code>METPO:1001000</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/microbe.html">microbe</a><p class="record-definition">A material entity that is too small to be viewed by the unaided eye, typically requiring microscopy for observation. Used as the domain class for METPO organism-to-X object properties so that organism-level assertions can be expressed as `&lt;microbe-instance&gt; &lt;METPO predicate&gt; &lt;object-class&gt;`.</p></td><td><code>METPO:1000525</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/phenotype.html">phenotype</a></td>
-      <td><code>METPO:1000059</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/observation.html">observation</a><p class="record-definition">A data-collection or measurement context in which trait-relevant qualities of organisms, samples, or conditions are recorded.</p></td><td><code>METPO:1001000</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-    <tr>
-      <td><a href="../traits/upper/quality.html">quality</a></td>
-      <td><code>METPO:1000188</code></td>
-      <td class="meta">CLASS</td>
-      <td>1</td>
-      <td class="meta">0</td>
-    </tr>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/phenotype.html">phenotype</a><p class="record-definition">A quality that differentiates specific instances of a species from other instances of the same species.</p></td><td><code>METPO:1000059</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-  </tbody>
+<tr data-category="UPPER" data-kind="CLASS" data-synonyms=""><td><a href="../traits/upper/quality.html">quality</a><p class="record-definition">A characteristic of an entity that depends on the entity&#39;s existence, size, color, and physiological traits.</p></td><td><code>METPO:1000188</code></td><td>UPPER</td><td>CLASS</td><td>1</td><td>0</td></tr>
+
+</tbody>
 </table>
+</div>
+<script src="../assets/record-browser.js" defer></script>
 
 </main>
 <footer class="site-footer">
@@ -119,6 +83,7 @@
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 <script src="../theme-toggle.js"></script>
 </body>
