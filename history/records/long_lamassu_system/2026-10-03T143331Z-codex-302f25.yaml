@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/long_lamassu_system.yaml
+  slug: long_lamassu_system
+session:
+  id: 2026-10-03T143331Z-codex-302f25
+  timestamp: '2026-10-03T14:33:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add the literature-defined long Lamassu family
+  details: Minted traitmech:000571 from DOI:10.1073/pnas.2519643122 after ignored-and-hidden
+    whole-repository searches and a fresh METPO seed comparison found no exact primary term.
+    Reserved METPO:1052500 in v448. Two paper spans and the exact Dataset S1 A58:C60 cells
+    support the structural family, B4077 source-organism example and a separate computational
+    long-profile locus. Actual gene_name hits are distinguished from exchangeable hit_gene_ref
+    model slots. The two cited artifacts belong to the same study, not independent experiments.
+    NCBITaxon:1396 was independently resolved; no species-wide possession, genome assembly,
+    numerical cutoff, universal effector mechanism or automatic sibling reparenting is asserted.
+    The original Millman PDF could not be retrieved and is not newly quoted. A dry-run-first
+    validated writer and controlled-fixture drift/idempotence tests cover this addition.

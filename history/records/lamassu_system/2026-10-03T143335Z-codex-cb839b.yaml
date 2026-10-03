@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T143335Z-codex-cb839b
+  timestamp: '2026-10-03T14:33:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link the long Lamassu family and retain scope gaps
+  details: Appended the new traitmech:000571 long-family link to the existing open Lamassu
+    discussion through an exact-preimage-guarded validated writer. Preserved prior history
+    and all biological fields. Explained why the Hydrolase-Protease architecture spanning
+    both families, legacy FMO detector scope and SMEK exception do not justify whole-record
+    reparenting. Distinguished actual detected gene_name profiles from model-slot hit_gene_ref
+    labels. Component-number type I/II classes and family-wide activation remain open discovery
+    and curation leads.

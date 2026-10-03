@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: other
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait
+session:
+  id: 2026-10-03T143856Z-codex-1b4cb9
+  timestamp: '2026-10-03T14:38:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - evidence
+  summary: Distinguish detection hits from exchangeable model slots
+  details: 'The long-Lamassu source review exposed a concrete interpretation trap in Dataset
+    S1: gene_name records the actual hit, while hit_gene_ref can retain a long-profile model-slot
+    name for an exchangeable short hit. Added explicit column-semantics, distinct-system counting
+    and mixed-profile reconciliation guidance to the add-trait skill. An ignored-and-hidden
+    search of the skill found no existing treatment of these fields or the counting distinction.
+    This supplements, rather than replaces, the existing literature-first and executable-model
+    requirements; it does not change any detector or trait scope.'

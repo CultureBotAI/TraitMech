@@ -222,7 +222,16 @@ discussions:
     Lamassu-Hypothetical registry label is not accepted as a separate biological trait
     here: unknown annotation does not establish effector-domain loss, and its relationship
     to the paper''s clade O still needs explicit mapping. The long family and component-number
-    subtypes remain separate discovery leads.'
+    subtypes remain separate discovery leads. Long Lamassu system (traitmech:000571)
+    now captures the complementary long-LmuB phylogenetic and structural family, not
+    an 800-residue cutoff or a particular effector model. The paper assigns the B.
+    cereus B4077 Hydrolase-Protease system to this family, but that effector architecture
+    also occurs in short Lamassu, so the whole Hydrolase-Protease trait is not reparented.
+    The legacy table-defined FMO trait still needs model and biological-scope reconciliation
+    before assigning the entire record to the long family. SMEK''s exception remains
+    unresolved. Raw detection gene_name hits must not be confused with exchangeable
+    hit_gene_ref model slots, and ambiguous loci need phylogenetic classification.
+    Component-number type I/II traits remain separate discovery leads.'
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -337,4 +346,11 @@ curation_history:
   changes: Linked traitmech:000570 short Lamassu system and the HNH parent refinement;
     retained the SMEK length exception and rejected unproven equivalence of a Hypothetical
     label to effector-domain loss.
+  llm_assisted: true
+- timestamp: '2026-10-03T14:29:24Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000571 long Lamassu system and recorded why Hydrolase-Protease,
+    FMO and SMEK are not automatically reparented. Retained component-classification
+    and family-mechanism gaps.
   llm_assisted: true
