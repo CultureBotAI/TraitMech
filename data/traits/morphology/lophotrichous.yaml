@@ -15,6 +15,14 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Flagellum review supports multiple flagellar filaments acting as locomotory
     organelles.
+- reference: DOI:10.1128/jb.150.1.377-380.1982
+  snippet: unipolar cells, recently divided, have only one bundle of flagella.
+  notes: 'Swan 1982, p. 377, methods: S. volutans ATCC 19554 was grown at 30 C in
+    ATCC medium 234. Recently divided cells in an actively growing culture were naturally
+    unipolar; older cells had two flagellar bundles and were excluded from the measurements.
+    This supports a life-stage-qualified one-pole example, not unipolar flagellation
+    of every cell or a deflagellation experiment. The source scan, rather than the
+    abstract alone, establishes the culture and division-stage context.'
 canonical_examples:
 - taxon_id: NCBITaxon:210
   taxon_label: Helicobacter pylori
@@ -22,8 +30,11 @@ canonical_examples:
   reference: PMID:30258065
 - taxon_id: NCBITaxon:968
   taxon_label: Spirillum volutans
-  note: bipolar flagellar tufts
-  reference: PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949)
+  reference: DOI:10.1128/jb.150.1.377-380.1982
+  note: Recently divided, naturally unipolar cells of S. volutans ATCC 19554 have
+    one bundle of flagella. Swan studied an actively growing culture at 30 C in ATCC
+    medium 234; older bipolar cells had two bundles and were excluded. This example
+    is restricted to the unipolar division stage, not all cells of the species.
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
   title: Lophotrichous flagellation — polar tuft of flagella
@@ -220,4 +231,17 @@ curation_history:
     the tranche: set graph scope lophotrichous_polar_tuft=NONMECHANISTIC with scope_notes;
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf_protein,
     flig_protein, fipa_protein).'
+  llm_assisted: true
+- timestamp: '2026-10-03T17:07:26Z'
+  curator: codex
+  action: REPAIR_CANONICAL_CITATION_SCOPE_1626
+  changes: 'Resolved issue 1626 by replacing the mismatched bipolar example note and
+    compound PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949) citation with a life-stage-qualified,
+    one-bundle example from Swan 1982 (DOI:10.1128/jb.150.1.377-380.1982; PMID:7061399;
+    PMC220122). This is an explicit source and scope correction, not a PMID-to-DOI
+    normalization: Pijper''s original PMID and DOI identify the same 1949 paper. Source-native
+    scans distinguish recently divided unipolar ATCC 19554 cells from older bipolar
+    cells. Added the exact methods snippet and bounded interpretation; retained NCBITaxon:968
+    and the independently checked NCBI label. The definition, hierarchy, graph, other
+    example and existing amphitrichous record are unchanged.'
   llm_assisted: true

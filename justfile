@@ -418,6 +418,10 @@ backfill-protein-taxon-events *args:
 restore-substituted-citations *args:
     uv run python scripts/restore_substituted_citations.py {{args}}
 
+# Normalize legacy example references and retain source-qualified biology (#1626).
+repair-legacy-canonical-citations *args:
+    uv run python scripts/repair_legacy_canonical_citations_1626.py {{args}}
+
 # Install the manifest-locked METPO source. The former sibling-copy recipe could
 # silently roll the source back because ../assays remains on 2025-11-25 (#515).
 refresh-metpo *args:

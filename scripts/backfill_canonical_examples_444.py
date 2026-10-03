@@ -37,6 +37,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from trait_priority import build_queue  # noqa: E402
+import repair_legacy_canonical_citations_1626 as citation_repair  # noqa: E402
 from traitmech.curate.curation_event import record_curation_event  # noqa: E402
 from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
 
@@ -1018,6 +1019,13 @@ def apply(write: bool = False) -> int:
             if existing == examples:
                 unchanged += 1
                 continue
+            # A reviewed successor is a no-op, not permission to accept arbitrary drift.
+            if slug == "environment/halophily_preference":
+                spec = citation_repair.SPECS[slug]
+                successor = [spec["after"] if row == spec["before"] else row for row in examples]
+                if existing == successor and citation_repair.build_update(doc, spec) == doc:
+                    unchanged += 1
+                    continue
             if existing:
                 raise ValueError(f"{slug}: gained examples since the 89-record baseline")
             _insert_examples(doc, examples)

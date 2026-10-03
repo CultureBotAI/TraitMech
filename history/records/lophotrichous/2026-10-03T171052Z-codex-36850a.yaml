@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/lophotrichous.yaml
+  slug: lophotrichous
+session:
+  id: 2026-10-03T171052Z-codex-36850a
+  timestamp: '2026-10-03T17:10:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1626
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - evidence
+  - curation_history
+  summary: Correct the Spirillum canonical example to naturally unipolar division-stage cells
+  details: Replaced the compound Pijper 1949 reference and mismatched bipolar-tufts note with
+    Swan 1982 DOI:10.1128/jb.150.1.377-380.1982 (PMID:7061399, PMC220122). PubMed/Europe PMC
+    confirm the original PMID:16561638 and DOI:10.1128/jb.57.1.111-118.1949 identify the same
+    paper; this change is an explicit source/scope replacement, not normalization. Source-native
+    scans of Swan p.377 establish recently divided, naturally unipolar ATCC 19554 cells grown
+    at 30 C in ATCC medium 234, distinct from older bipolar cells. Retained NCBITaxon:968
+    with its live NCBI label. Added a verbatim methods snippet and notes; no definition, hierarchy,
+    graph, other example, mapping status or amphitrichous record changed. Guarded mutator
+    prevalidates all three issue targets before live writes and preserves unrelated fields.
+    All 47 new writer tests plus 44 citation-rendering tests pass; full downstream checks
+    and independent review remain required.
