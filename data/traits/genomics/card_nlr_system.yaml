@@ -267,11 +267,12 @@ discussions:
   rationale: Wein et al. support CARD-like domains in multiple anti-phage defense
     systems that activate cell-death effectors, and DefenseFinder models CARD_NLR
     subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, CARD_NLR_Subtilase, and
-    CARD_NLR_like rule profiles. CARD-NLR GasderMIN, endonuclease, phospho, and subtilase
-    TraitRecords now capture four rule-row subtypes, but exact phage triggers, CARD-to-effector
-    activation sequence, accession-level natural-host components, CARD_NLR_Subtilase_long_new
-    HMM inventory coverage, CARD_NLR_like boundaries, and standalone GasderMIN versus
-    CARD_NLR_GasderMIN mechanism boundaries remain unresolved.
+    CARD_NLR_like rule profiles. CARD-NLR GasderMIN, endonuclease, phospho, subtilase,
+    and CARD-NLR-like TraitRecords now capture the five DefenseFinder CARD_NLR rule-row
+    subtypes, but exact phage triggers, CARD-to-effector activation sequence, accession-level
+    natural-host components, CARD_NLR_Subtilase_long_new HMM inventory coverage, CARD_NLR_like
+    multi-effector semantics, and standalone GasderMIN versus CARD_NLR_GasderMIN mechanism
+    boundaries remain unresolved.
   attaches_to:
   - causal_graphs#card_nlr_loci_activate_cell_death_effectors
   posed_by: codex
@@ -299,4 +300,12 @@ curation_history:
   changes: Documented CARD-NLR GasderMIN as split out in the open CARD-NLR subtype
     discussion after minting traitmech:000555 for the DefenseFinder-backed CARD_NLR_GasderMIN
     child; CARD_NLR_like and finer CARD-NLR activation mechanisms remain open.
+  llm_assisted: true
+- timestamp: '2026-10-03T00:02:51Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented CARD-NLR-like as split out in the open CARD-NLR subtype discussion
+    after minting traitmech:000559 for the DefenseFinder-backed CARD_NLR_like child;
+    exact two-of-four effector-profile semantics, CARD_NLR__Subtilase_long_new HMM
+    inventory coverage, and finer CARD-NLR activation mechanisms remain open.
   llm_assisted: true
