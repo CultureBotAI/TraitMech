@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hydrolase_protease_system.yaml
+  slug: lamassu_hydrolase_protease_system
+session:
+  id: 2026-10-03T151957Z-codex-b26307
+  timestamp: '2026-10-03T15:19:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - hierarchy
+  - discussions
+  summary: Classify the existing architecture under Lamassu type II
+  details: Refined the existing LmuC-containing paired effector architecture below traitmech:000572.
+    The definition is unchanged and illustrates why type II is not an exact three-gene bin.
+    Preserved the long/short-family breadth, model-summary discrepancy, evidence and example.
+    This is a definition-based inference using DOI:10.1093/nar/gkab883, not new functional
+    validation. The writer guards identity, definition, old parents and discussion preimage,
+    appends curation history, and preserves unrelated fields. Historical METPO proposal IDs
+    and broader axioms remain intact; v449 documents the new subclass relation for upstream
+    integration.

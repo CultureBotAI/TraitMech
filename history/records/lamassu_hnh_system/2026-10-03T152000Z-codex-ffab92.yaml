@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_hnh_system.yaml
+  slug: lamassu_hnh_system
+session:
+  id: 2026-10-03T152000Z-codex-ffab92
+  timestamp: '2026-10-03T15:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - hierarchy
+  - discussions
+  summary: Classify the existing architecture under Lamassu type II
+  details: Added traitmech:000572 as a second direct parent while retaining traitmech:000570
+    short Lamassu. The existing definition independently requires LmuC and short LmuB. Preserved
+    the broader detector-scope caveat, computational AN59 example and unresolved experimental
+    function. This is a definition-based inference using DOI:10.1093/nar/gkab883, not new
+    functional validation. The writer guards identity, definition, old parents and discussion
+    preimage, appends curation history, and preserves unrelated fields. Historical METPO proposal
+    IDs and broader axioms remain intact; v449 documents the new subclass relation for upstream
+    integration.

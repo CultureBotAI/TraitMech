@@ -58,7 +58,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/genomics/lamassu_system.html" >Lamassu system <code>traitmech:000232</code></a></li>
+        <li><a href="../../traits/genomics/lamassu_type_ii_system.html" >Lamassu type II system <code>traitmech:000572</code></a></li>
 
       </ul>
     </div>
@@ -149,7 +149,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The paper describes SMEK as short-Lamassu-specific, while Dataset S1 has 124 short-profile calls and one long-profile call with two distinct LmuB hits. The pinned model accepts both lengths. Reconcile that exceptional call with phylogeny and locus context before claiming a biological long-LmuB subtype or short-only distribution. The definition therefore captures architecture without a length restriction. The pinned legacy summary TSV and HMM inventory lack SMEK entries although the executable model and SMEK profile exist. This whole-system trait is not equivalent to DS-27 (traitmech:000451), whose existing definition denotes a single-gene transcriptional unit with the working label SMEK. No DS-27 assay phenotype or exact synonym is transferred. SMEK-specific Lamassu antiviral validation, substrates, activation order, domain-name expansion and accession-level protein mechanisms remain unresolved. Cap4 and Lipase experiments do not establish SMEK chemistry. No causal graph is asserted from these computational architecture calls alone.</p>
+        <p>The paper describes SMEK as short-Lamassu-specific, while Dataset S1 has 124 short-profile calls and one long-profile call with two distinct LmuB hits. The pinned model accepts both lengths. Reconcile that exceptional call with phylogeny and locus context before claiming a biological long-LmuB subtype or short-only distribution. The definition therefore captures architecture without a length restriction. The pinned legacy summary TSV and HMM inventory lack SMEK entries although the executable model and SMEK profile exist. This whole-system trait is not equivalent to DS-27 (traitmech:000451), whose existing definition denotes a single-gene transcriptional unit with the working label SMEK. No DS-27 assay phenotype or exact synonym is transferred. SMEK-specific Lamassu antiviral validation, substrates, activation order, domain-name expansion and accession-level protein mechanisms remain unresolved. Cap4 and Lipase experiments do not establish SMEK chemistry. No causal graph is asserted from these computational architecture calls alone. The direct parent is now traitmech:000572 Lamassu type II system because this definition already includes LmuC. This component-based refinement neither resolves the long-profile exception nor restricts the trait to short Lamassu, and does not confer experimental validation on the computational calls.</p>
 
 
 
@@ -173,6 +173,12 @@
           <time>2026-10-03T11:15:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added the literature-recognized Lamassu-SMEK architecture using DOI, pinned executable-model, Dataset S1 and NCBI identity evidence with exact snippets. Distinguished 125 system calls from 377 component rows and recorded the long-profile exception. Kept the WCO-9 example computational and rejected equivalence to DS-27. Ignored-and-hidden searches found no exact record or METPO term. Reserved METPO:1052300 in proposals/metpo_traitmech_v446.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T15:14:27Z</time> ·
+          <strong>ADD_TYPE_II_PARENT</strong> · codex
+          <p class="changes">Linked traitmech:000572 Lamassu type II system using the LmuC-containing classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence, examples and length-family distinctions. Historical proposal parent axioms remain true; v449 documents the additional subclass relations for upstream minting. This is not new experimental validation.</p>
         </li>
 
       </ol>
@@ -227,10 +233,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 11:15 UTC from
+      Record as of 2026-10-03 15:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 966 TraitRecords
-      · embedding coverage 49.4%
+      · 967 TraitRecords
+      · embedding coverage 49.3%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

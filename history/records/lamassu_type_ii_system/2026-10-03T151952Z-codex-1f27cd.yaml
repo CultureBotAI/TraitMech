@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_type_ii_system.yaml
+  slug: lamassu_type_ii_system
+session:
+  id: 2026-10-03T151952Z-codex-1f27cd
+  timestamp: '2026-10-03T15:19:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1093/nar/gkab883
+  - https://doi.org/10.1038/s41589-025-02102-z
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add the LmuC-containing Lamassu type II class
+  details: Added traitmech:000572 using independent primary studies DOI:10.1093/nar/gkab883
+    and DOI:10.1038/s41589-025-02102-z. Exact full-text and abstract snippets were checked
+    directly. NCBI Nuccore resolved the source-reported NZ_HG322949.1 locus accession to DSM
+    9628 and NCBITaxon:1349767; Taxonomy independently confirmed the strain label. Distinguished
+    source-strain possession from heterologous E. coli BL21-AI activity, component classification
+    from long/short families, and LmuC presence from universal essentiality or a fixed three-gene
+    count. No causal mechanism graph or protein accession was invented. Whole-repository ignored-and-hidden
+    searches found no exact trait or METPO term; fresh seed comparison confirmed 55 previously
+    classified duplicate/supporting-field leads. Reserved METPO:1052600 in v449 and refined
+    three existing LmuC-containing child hierarchies. Broader trait discovery remains open.

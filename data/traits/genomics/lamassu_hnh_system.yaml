@@ -8,6 +8,7 @@ term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
 - traitmech:000570
+- traitmech:000572
 synonyms:
 - synonym_text: Lamassu_HNH
   synonym_type: RELATED_SYNONYM
@@ -97,7 +98,11 @@ discussions:
     short Lamassu system, matching the short-form LmuB restriction already present
     in this record's definition. This hierarchy refinement does not narrow the executable
     detector, resolve the functional gaps, or reinterpret computational calls as measured
-    antiviral phenotypes.
+    antiviral phenotypes. A second direct parent, traitmech:000572 Lamassu type II
+    system, now captures the LmuC component already required by this definition. The
+    short-family parent is retained because component presence and LmuB-length family
+    are separate axes. Neither hierarchy relation experimentally validates HNH antiviral
+    activity or narrows the detector's broader scope.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -117,4 +122,13 @@ curation_history:
     short Lamassu system without changing its definition, evidence, model-scope qualifications
     or example. The v445 broader Lamassu proposal axiom remains true; v447 documents
     the added immediate-parent relation for upstream minting.
+  llm_assisted: true
+- timestamp: '2026-10-03T15:14:27Z'
+  curator: codex
+  action: ADD_TYPE_II_PARENT
+  changes: Linked traitmech:000572 Lamassu type II system using the LmuC-containing
+    classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence,
+    examples and length-family distinctions. Historical proposal parent axioms remain
+    true; v449 documents the additional subclass relations for upstream minting. This
+    is not new experimental validation.
   llm_assisted: true

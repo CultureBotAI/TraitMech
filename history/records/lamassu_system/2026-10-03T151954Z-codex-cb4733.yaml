@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T151954Z-codex-cb4733
+  timestamp: '2026-10-03T15:19:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track the new Lamassu type II component class
+  details: The guarded validated writer appended traitmech:000572 and the definition-based
+    child hierarchy decisions to the existing subtype discussion. Preserved every earlier
+    rationale, history event, definition, graph and example. Type I and broader mechanism
+    questions remain open; the new class is not equivalent to a long/short LmuB family or
+    an exact three-gene bin.
