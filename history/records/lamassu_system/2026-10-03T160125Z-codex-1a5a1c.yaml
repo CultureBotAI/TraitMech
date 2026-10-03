@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T160125Z-codex-1a5a1c
+  timestamp: '2026-10-03T16:01:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link the Lamassu type-I component class from the parent discussion
+  details: Appended the source-backed resolution of the type-I discovery lead using traitmech:000573
+    and the Haudiquet and Li studies. Preserved all definitions, hierarchy, evidence, canonical
+    examples, causal graphs and older history. Mechanism and detector reconciliation gaps
+    remain OPEN. Applied through a preimage-guarded, closed-schema writer with a per-record
+    event.

@@ -1,0 +1,88 @@
+identifier: traitmech:000573
+label: Lamassu type I system
+definition: A Lamassu system in which an organism possesses a locus encoding the LmuA
+  effector and SMC-like LmuB sensor but no LmuC component.
+definition_source: DOI:10.1073/pnas.2519643122
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000232
+synonyms:
+- synonym_text: type I Lamassu
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.2519643122
+evidence:
+- reference: DOI:10.1073/pnas.2519643122
+  snippet: We observed loss of LmuC in a specific clade (Clade S, Fig. 1B), an architecture
+    previously called type I Lamassu shown to be antiphage
+  notes: 'Results, effector-diversity paragraph: Haudiquet et al. explicitly identify
+    the LmuC-loss architecture as type I. Clade S occurs in their short-Lamassu phylogeny,
+    but this does not make type I equivalent to the whole short family or establish
+    a universal protein-length cutoff. Clade O''s LmuA effector-domain loss is a different
+    observation.'
+- reference: DOI:10.1038/s41589-025-02102-z
+  snippet: the type-I Lamassu complex from Bacillus cellulasensis and the type-II
+    Lamassu complex from Vibrio cholerae
+  notes: 'Abstract: Li et al. independently distinguish the two source-qualified complexes.
+    The associated 9UX7 deposition identifies the type-I source as Bacillus sp. nio-1130,
+    NCBITaxon:1761765. Retain the issuing authority''s current label rather than asserting
+    species-name equivalence from the abstract. One studied nuclease mechanism is
+    not a universal mechanism for every type-I effector.'
+- reference: https://rest.uniprot.org/uniprotkb/P0DW44.json
+  snippet: Component of antiviral defense system Lamassu type I, composed of LmuA
+    and LmuB.
+  notes: 'Reviewed P0DW44, entry version 8, retrieved 2026-10-03: the FUNCTION annotation
+    identifies the LmuA/LmuB system in the NIO-1130 source strain (taxon 1761765),
+    citing PMID:29371424. Its protection assays were heterologous expression in B.
+    subtilis BEST7003, not native-host assays. The source organism and expression
+    host are not interchangeable.'
+- reference: https://data.rcsb.org/rest/v1/core/polymer_entity/9UX7/1
+  snippet: '"pdbx_gene_src_ncbi_taxonomy_id":"1761765","pdbx_gene_src_scientific_name":"Bacillus
+    sp. nio-1130"'
+  notes: PDB 9UX7 entity 1 independently records the LmuB source taxon and maps the
+    sequence to P0DW44. The separate expression host is E. coli. The deposited 562-residue
+    length is not a type-I membership threshold; absence of a component from a purified
+    structure alone would not establish genomic absence.
+canonical_examples:
+- taxon_id: NCBITaxon:1761765
+  taxon_label: Bacillus sp. nio-1130
+  reference: https://rest.uniprot.org/uniprotkb/P0DW44.json
+  note: NIO-1130 is the source strain of the reviewed LmuB entry P0DW44 explicitly
+    annotated as part of Lamassu type I. PDB 9UX7 entity 1 independently identifies
+    the same source taxon; NCBI confirms this exact current label. The example denotes
+    source-strain possession, not native-host resistance. The cited defense assays
+    used B. subtilis BEST7003 and structural expression used E. coli. The paper's
+    B. cellulasensis name is not asserted as a taxonomic synonym or species-wide trait.
+discussions:
+- discussion_id: lamassu-type-i-absence-and-mechanism-scope
+  prompt: Resolve type-I architecture and mechanism without inferring absence from
+    missing hits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Type I denotes the literature-supported LmuA/LmuB architecture without
+    LmuC, not an isolated LmuB hit, a failed LmuC detector call, an incomplete assembly
+    or a knockout of a type-II locus. Component absence must be established in the
+    biological locus; absence from a purified complex alone is insufficient. The reported
+    clade S is in the short family, but the component definition is not equated with
+    that whole family or a protein length bin. Keep the broad Lamassu parent until
+    wider phylogenetic scope is established; no existing detector-defined effector
+    subtype is reparented from an optional LmuC rule. Type-II loci can coexist in
+    the same genome, so these organism-level possession traits are not asserted disjoint.
+    Source-specific nuclease activity is not generalized to all type-I effectors.
+    A family-wide mechanism, native-host activity and the paper's B. cellulasensis
+    nomenclature relative to current NCBI naming remain unresolved. No causal mechanism
+    graph is asserted.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T15:57:07Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the LmuC-lacking Lamassu type-I possession class with two independent
+    primary DOI sources, exact snippets, reviewed UniProt and PDB source metadata,
+    and the NCBI-resolved NIO-1130 example. Ignored-and-hidden searches found no exact
+    record or METPO class. Reserved METPO:1052700 in proposals/metpo_traitmech_v450.
+    Linked existing parent, short-family and type-II discussions without changing
+    their biological definitions or hierarchy.
+  llm_assisted: true

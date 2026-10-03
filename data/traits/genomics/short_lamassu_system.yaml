@@ -67,7 +67,12 @@ discussions:
     already described on the Lamassu parent is not assumed universal across short-family
     effectors, so no duplicate or universal mechanism graph is asserted here. A registry
     Hypothetical label must not be equated with clade O's effector-domain loss without
-    explicit evidence.
+    explicit evidence. The LmuC-loss architecture is now represented separately by
+    traitmech:000573 Lamassu type I system. The paper identifies clade S as type I;
+    clade O's effector-domain loss remains a distinct question. The new component
+    class is not treated as a synonym for this whole length family, and its broader
+    phylogenetic distribution is left open rather than inferred from one clade. Existing
+    hierarchy and mechanism scope are unchanged.
   posed_by: codex
   posed_date: '2026-10-03'
 curation_history:
@@ -108,4 +113,12 @@ curation_history:
     ID: 666 <small>(for references in articles please use ncbitaxon:666)</small><br>.
     The lowercase form is quoted source text, not a curated CURIE. Current evidence
     and taxon grounding are unchanged; earlier events remain preserved.'
+  llm_assisted: true
+- timestamp: '2026-10-03T15:57:07Z'
+  curator: codex
+  action: TRACK_TYPE_I_CLASS
+  changes: Linked traitmech:000573 Lamassu type I system to the existing component-architecture
+    discussion using DOI:10.1073/pnas.2519643122 and DOI:10.1038/s41589-025-02102-z.
+    Preserved all definitions, parents, evidence, examples and prior history. Component
+    absence, LmuB-length family and experimental activity remain separate claims.
   llm_assisted: true
