@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T042809Z-codex-3527f3
+  timestamp: '2026-10-03T04:28:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  - curation_history
+  summary: Track Lamassu-Mrr subtype split
+  details: Updated the open Lamassu subtype-effector knowledge gap after minting traitmech:000563
+    for Lamassu-Mrr, recording it alongside Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO,
+    Lamassu-Hydrolase, and Lamassu-Lipase while leaving the remaining Lamassu-Fam subtypes
+    and finer activation mechanisms unresolved.

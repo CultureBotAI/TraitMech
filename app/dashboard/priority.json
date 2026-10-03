@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 957,
+    "records": 958,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 480,
+    "unresearched_mechanism_records": 481,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 9,
       "ADD_CANONICAL_EXAMPLES": 102,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 380,
+      "DEEPEN_CAUSAL_GRAPH": 381,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -9003,6 +9003,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000563",
+      "label": "Lamassu-Mrr system",
+      "category": "genomics",
+      "slug": "lamassu_mrr_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 1,
+      "nodes": 2,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (1 edges) +12",
+        "canonical_examples reviewed empty +0"
+      ]
+    },
+    {
       "identifier": "traitmech:000232",
       "label": "Lamassu system",
       "category": "genomics",
@@ -9015,7 +9038,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 6,
+      "children": 7,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
