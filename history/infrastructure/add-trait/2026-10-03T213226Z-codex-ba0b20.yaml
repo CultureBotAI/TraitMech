@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait
+session:
+  id: 2026-10-03T213226Z-codex-ba0b20
+  timestamp: '2026-10-03T21:32:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1639
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Require version-pinned literature and verified source locators
+  details: 'Reviewed add-trait guidance at the users request while curating Druantia II. Added
+    explicit version/date/full-text and matching-supplement checks, exact section/figure/table
+    locator verification, and separation of component/heterologous assays from full-system/native-host
+    validation. This addresses the provenance lesson from #1639 without changing the existing
+    biological acceptance rules.'

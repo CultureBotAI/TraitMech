@@ -93,7 +93,12 @@ discussions:
     DruA qualify the earlier five-gene shorthand. The five-profile PADLOC rule and
     three-match DefenseFinder threshold are detection criteria, not identical biological
     definitions. This resolves the type-I architecture lead, not its partner functions
-    or native-host mechanism. Type II remains an architecture-class discovery lead.'
+    or native-host mechanism. Type II architecture is now represented by traitmech:000579
+    Druantia type II system, defined by DruM/F/G/E possession using DOI:10.1093/nar/gkab883.
+    Hou et al. version 2 (DOI:10.65215/LTSpreprints.2026.06.18.000273, 2026-07-08
+    preprint) adds Pf-5 DruE biochemistry and a limited heterologous assay, not full-system
+    or native-host phage-defense validation. The architectural lead is resolved; accessory
+    roles and the transition from DNA unwinding to phage restriction remain open.'
   posed_by: codex
   posed_date: '2026-09-15'
   evidence:
@@ -141,4 +146,12 @@ curation_history:
     Resolved the type-I architecture lead with optional DruA and distinct detector
     thresholds. Kept family identity, definition, hierarchy, evidence and example
     unchanged; type-I functions and the type-II lead remain open.
+  llm_assisted: true
+- timestamp: '2026-10-03T21:24:00Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000579 Druantia II possession using DOI:10.1093/nar/gkab883
+    and the July 8 version of DOI:10.65215/LTSpreprints.2026.06.18.000273. Resolved
+    the architecture lead while preserving full-system mechanism uncertainty. Family
+    identity, evidence and example are unchanged.
   llm_assisted: true

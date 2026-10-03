@@ -2319,7 +2319,7 @@ window.searchData = [
   "source_id": "traitmech:000234",
   "source_file": "druantia_system.yaml",
   "attaches_to": [],
-  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci. Druantia type IV system (traitmech:000577) now captures the DruE/F/L architecture described by Payne et al. (DOI:10.1093/nar/gkab883), without the type-II DruM/G components. This resolves the architectural child, not type-IV experimental defense or partner chemistry. The family definition no longer requires universal helicase-nuclease DNA processing. Wu et al.'s family-wide conservation claim is a hypothesis in a type-III preprint. The overgeneralized parent graph is removed; the characterized III branch remains at traitmech:000560. New proposal v454 replaces the unminted v111 family row without changing the local family identifier or historical TSV. Type I architecture is now represented by traitmech:000578 Druantia type I system: DruB/C/D/E with optional DruA. Doron's optional DUF4338 component and the Ralstonia study's mapping of that domain to DruA qualify the earlier five-gene shorthand. The five-profile PADLOC rule and three-match DefenseFinder threshold are detection criteria, not identical biological definitions. This resolves the type-I architecture lead, not its partner functions or native-host mechanism. Type II remains an architecture-class discovery lead.",
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci. Druantia type IV system (traitmech:000577) now captures the DruE/F/L architecture described by Payne et al. (DOI:10.1093/nar/gkab883), without the type-II DruM/G components. This resolves the architectural child, not type-IV experimental defense or partner chemistry. The family definition no longer requires universal helicase-nuclease DNA processing. Wu et al.'s family-wide conservation claim is a hypothesis in a type-III preprint. The overgeneralized parent graph is removed; the characterized III branch remains at traitmech:000560. New proposal v454 replaces the unminted v111 family row without changing the local family identifier or historical TSV. Type I architecture is now represented by traitmech:000578 Druantia type I system: DruB/C/D/E with optional DruA. Doron's optional DUF4338 component and the Ralstonia study's mapping of that domain to DruA qualify the earlier five-gene shorthand. The five-profile PADLOC rule and three-match DefenseFinder threshold are detection criteria, not identical biological definitions. This resolves the type-I architecture lead, not its partner functions or native-host mechanism. Type II architecture is now represented by traitmech:000579 Druantia type II system, defined by DruM/F/G/E possession using DOI:10.1093/nar/gkab883. Hou et al. version 2 (DOI:10.65215/LTSpreprints.2026.06.18.000273, 2026-07-08 preprint) adds Pf-5 DruE biochemistry and a limited heterologous assay, not full-system or native-host phage-defense validation. The architectural lead is resolved; accessory roles and the transition from DNA unwinding to phage restriction remain open.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -2344,6 +2344,23 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/druantia_type_i_system.html#druantia-type-i-components-and-mechanism"
+ },
+ {
+  "discussion_id": "druantia-type-ii-full-system-defense-gap",
+  "prompt": "Resolve full-system defense and accessory functions beyond isolated DruE assays.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Druantia type II system",
+  "source_id": "traitmech:000579",
+  "source_file": "druantia_type_ii_system.yaml",
+  "attaches_to": [],
+  "rationale": "DruM/F/G/E possession is an architecture class, not an assay result or a universal helicase mechanism. Hou et al. version 2 provides real DruE biochemistry; the remaining gap is not absence of protein evidence. RCSB entry 9WAE entity 1 maps Pf-5 PFL_3016 to UniProtKB:Q4KCB1, a live unreviewed entry checked 2026-10-03. No full-system causal graph is asserted because native-host phage restriction, accessory regulation and the unwinding-to-restriction transition are unresolved. The measured isolated-protein results remain in the evidence notes. Do not transfer type-III nuclease chemistry to type II or turn mitomycin-C growth effects into an infection trigger. A missing profile or incomplete assembly cannot establish component absence; inspect complete locus context. Organism-level subtype possession classes are not disjoint because a genome may encode several loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/druantia_type_ii_system.html#druantia-type-ii-full-system-defense-gap"
  },
  {
   "discussion_id": "druantia-type-iv-functional-and-architecture-gap",
@@ -9804,9 +9821,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 450,
- "total_knowledge_gaps": 362,
- "total_source_entries": 444,
+ "total_discussions": 451,
+ "total_knowledge_gaps": 363,
+ "total_source_entries": 445,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
