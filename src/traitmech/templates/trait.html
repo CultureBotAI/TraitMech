@@ -71,7 +71,7 @@
 {% if graph.protein_example_rows %}
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
-        <div class="protein-example-table-wrap">
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="{{ graph.title }}: protein and taxon examples">
           <table class="protein-example-table">
             <thead>
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
@@ -127,6 +127,7 @@
   <section class="datasets">
     <div class="card">
       <h2>Datasets <span class="meta">({{ trait.datasets|length }})</span></h2>
+      <div class="detail-table-scroll" role="region" tabindex="0" aria-label="Datasets">
       <table>
         <thead><tr><th>Dataset</th><th>Type</th><th>Repository</th><th>Accession</th></tr></thead>
         <tbody>
@@ -140,6 +141,7 @@
         {% endfor %}
         </tbody>
       </table>
+      </div>
     </div>
   </section>
   {% endif %}
