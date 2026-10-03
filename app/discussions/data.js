@@ -1503,12 +1503,13 @@ window.searchData = [
   ],
   "rationale": "Wein et al. support CARD-like anti-phage defense, and the pinned DefenseFinder HMM inventory and rules table support CARD_NLR_like as a CARD_NLR subsystem requiring two matches from a four-profile Endonuclease, Phospho_Trypsin, Subtilase_long_new, and Trypsin_Phospho candidate effector set. This first-pass record follows the rule row but leaves exact phage triggers, native hosts, how the two-of-four effector profile combinations map to activity, how CARD_NLR__Subtilase_long_new maps to the pinned HMM inventory, and whether every DefenseFinder CARD_NLR_like prediction is a complete experimentally active locus.",
   "num_experiments": 0,
-  "num_evidence": 5,
+  "num_evidence": 6,
   "evidence_refs": [
    "https://europepmc.org/article/PPR/PPR668921",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv",
    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv"
   ],
   "posed_by": "codex",

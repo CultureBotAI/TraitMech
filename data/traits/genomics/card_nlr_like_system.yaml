@@ -3,7 +3,9 @@ label: CARD-NLR-like system
 definition: A CARD-NLR system in which an organism possesses a genome-encoded DefenseFinder
   CARD_NLR_like subtype locus represented by the CARD_NLR_like rule row requiring
   two matches from the CARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new,
-  and CARD_NLR__Trypsin_Phospho effector-profile set.
+  and CARD_NLR__Trypsin_Phospho effector-profile set and four genes overall after
+  considering CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, and CARD_NLR__Trypsin accessory
+  profiles.
 definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
 trait_category: GENOMICS
 term_kind: CLASS
@@ -43,6 +45,12 @@ evidence:
   notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Trypsin_Phospho
     custom profile listed among the candidate effector profiles by the CARD_NLR_like
     rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory\t\
+    Forbidden\tNeutral"
+  notes: The pinned DefenseFinder rules header identifies the second, third, fourth,
+    fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
+    Mandatory, and Accessory, respectively.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
   snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
     \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
@@ -87,6 +95,12 @@ causal_graphs:
       notes: The pinned DefenseFinder article registry maps the CARD_NLR model namespace
         to the Wein et al. CARD-like-domain anti-phage defense preprint.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory\t\
+        Forbidden\tNeutral"
+      notes: The pinned DefenseFinder rules header identifies the second, third, fourth,
+        fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
+        Mandatory, and Accessory, respectively.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "CARD_NLR\tCARD_NLR_like\t2\t4"
       notes: The pinned DefenseFinder rules table places the CARD_NLR_like subsystem
         under the CARD_NLR system key with two mandatory matches and four genes required.
@@ -129,6 +143,12 @@ discussions:
     notes: The pinned DefenseFinder HMM inventory records the CARD_NLR__Trypsin_Phospho
       custom profile listed among the candidate effector profiles by the CARD_NLR_like
       rule row.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory\t\
+      Forbidden\tNeutral"
+    notes: The pinned DefenseFinder rules header identifies the second, third, fourth,
+      fifth, and sixth CARD_NLR_like row fields as Subsystem, Min_mandatory, Minimum_genes,
+      Mandatory, and Accessory, respectively.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
     snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
       \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\

@@ -69,6 +69,10 @@ RULE_ROW = (
     "CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease, "
     "CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
 )
+RULE_HEADER = (
+    "System\tSubsystem\tMin_mandatory\tMinimum_genes\tMandatory\tAccessory"
+    "\tForbidden\tNeutral"
+)
 RULE_PROFILE_SPAN = (
     "CARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, "
     "CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, "
@@ -148,6 +152,19 @@ def rules_evidence() -> dict[str, str]:
     }
 
 
+def rules_header_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_RULES,
+        "snippet": RULE_HEADER,
+        "notes": (
+            "The pinned DefenseFinder rules header identifies the second, "
+            "third, fourth, fifth, and sixth CARD_NLR_like row fields as "
+            "Subsystem, Min_mandatory, Minimum_genes, Mandatory, and "
+            "Accessory, respectively."
+        ),
+    }
+
+
 def rules_profile_evidence() -> dict[str, str]:
     return {
         "reference": DEFENSEFINDER_RULES,
@@ -182,7 +199,9 @@ RECORD: dict[str, Any] = {
         "CARD_NLR_like rule row requiring two matches from the "
         "CARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, "
         "CARD_NLR__Subtilase_long_new, and CARD_NLR__Trypsin_Phospho "
-        "effector-profile set."
+        "effector-profile set and four genes overall after considering "
+        "CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, and CARD_NLR__Trypsin "
+        "accessory profiles."
     ),
     "definition_source": DEFENSEFINDER_RULES,
     "trait_category": "GENOMICS",
@@ -202,6 +221,7 @@ RECORD: dict[str, Any] = {
         endonuclease_hmm_evidence(),
         phospho_trypsin_hmm_evidence(),
         trypsin_phospho_hmm_evidence(),
+        rules_header_evidence(),
         rules_evidence(),
     ],
     "causal_graphs": [
@@ -261,6 +281,7 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         article_registry_evidence(),
+                        rules_header_evidence(),
                         rules_parent_evidence(),
                     ],
                 },
@@ -298,6 +319,7 @@ RECORD: dict[str, Any] = {
                 endonuclease_hmm_evidence(),
                 phospho_trypsin_hmm_evidence(),
                 trypsin_phospho_hmm_evidence(),
+                rules_header_evidence(),
                 rules_evidence(),
             ],
             "attaches_to": [

@@ -4,10 +4,12 @@
 
 This cohort reserves `METPO:1051300` for `CARD-NLR-like system`, a CARD-NLR
 subtype trait represented in the pinned DefenseFinder rules table as the
-`CARD_NLR_like` subsystem requiring two matches from the
+`CARD_NLR_like` subsystem requiring a minimum of two matches from the
 `CARD_NLR__Endonuclease`, `CARD_NLR__Phospho_Trypsin`,
 `CARD_NLR__Subtilase_long_new`, and `CARD_NLR__Trypsin_Phospho` candidate
-effector profiles. The local TraitMech fallback is `traitmech:000559`.
+effector profiles and four genes overall after considering the
+`CARD_NLR__CARD_Protease`, `CARD_NLR__NLR_new`, and `CARD_NLR__Trypsin`
+accessory profiles. The local TraitMech fallback is `traitmech:000559`.
 
 This cohort lifts one local class:
 
@@ -43,11 +45,14 @@ Subset tag: `metpo_traitmech_2026_10`.
 
 CARD-NLR-like system captures organism-level possession of the `CARD_NLR_like`
 subtype locus represented by the pinned DefenseFinder rules table as requiring
-two matches from four candidate effector profiles. It excludes the broader
-CARD-NLR system, other CARD-NLR rule subtypes, standalone GasderMIN contexts,
-individual CARD-like, NLR-like, Trypsin, endonuclease, phospho-trypsin, or
-subtilase-family proteins, the individual DefenseFinder HMM or rule profile
-rows, exact phage triggers, native host breadth, the unresolved
+at least two matches from four candidate effector profiles and four genes
+overall after considering three accessory profiles. The label preserves
+DefenseFinder's `CARD_NLR_like` subsystem string; `like` is part of that source
+row label and is not intended to mean outside or merely similar to CARD-NLR. It
+excludes the broader CARD-NLR system, other CARD-NLR rule subtypes, standalone
+GasderMIN contexts, individual CARD-like, NLR-like, Trypsin, endonuclease,
+phospho-trypsin, or subtilase-family proteins, the individual DefenseFinder HMM
+or rule profile rows, exact phage triggers, native host breadth, the unresolved
 `CARD_NLR__Subtilase_long_new` HMM inventory row, effector-combination
 semantics, CARD-to-effector activation sequence, and other phage-defense
 systems.
