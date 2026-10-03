@@ -29,9 +29,9 @@ METPO source class and (optionally) to literature evidence.
 | **TOTAL** | **427** | **458** | **50** | **716** | **973** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
-`DEPRECATED`; `PROPOSED` records comprise two ecology records, four morphology
-records, 36 newer metabolism records, forty-nine physiology records, 365
-genomics records, and one other record, and thirty-eight records are still
+`DEPRECATED`; `PROPOSED` records comprise 2 ecology records, 4 morphology
+records, 36 newer metabolism records, 49 physiology records, 366
+genomics records, and 1 other record, and thirty-eight records are still
 `SEEDED` (one environment, one metabolism, four morphology, one physiology, and
 thirty-one other).
 Across the corpus, 716 records currently carry causal graphs. The 50 deprecated

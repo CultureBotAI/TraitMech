@@ -7,6 +7,8 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+import yaml
+
 
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
@@ -114,3 +116,21 @@ def test_readme_corpus_table_matches_the_trait_artifacts() -> None:
         sum(value for (category, key), value in actual.items() if key == "causal_graphs"),
         sum(value for (category, key), value in actual.items() if key == "total"),
     )
+
+
+def test_readme_proposed_prose_matches_the_trait_artifacts() -> None:
+    actual: Counter[str] = Counter()
+    for path in (ROOT / "data" / "traits").glob("*/*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if record["mapping_status"] == "PROPOSED":
+            actual[record["trait_category"].lower()] += 1
+
+    text = " ".join(README.read_text(encoding="utf-8").split())
+    match = re.search(
+        r"`PROPOSED` records comprise (.*?), and [^,]*records are still `SEEDED`", text,
+    )
+    assert match, "README has no PROPOSED prose breakdown"
+    counts = re.findall(r"(\d+) (?:newer )?([a-z_]+) records?", match.group(1))
+    assert len(counts) == len(actual), "Use one numeric prose count per proposed category"
+    documented = {category: int(count) for count, category in counts}
+    assert documented == dict(actual), "README PROPOSED prose differs from the live corpus"

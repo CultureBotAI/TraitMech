@@ -42,6 +42,13 @@ DruA and describes a five-gene type-I form. Together these support optional
 DruA, rather than a universal five-gene requirement. The second paper's
 UW163 functionality claim is a prediction, not a measured infection outcome.
 
+Adversarial recheck: Doron Figure 2C (manuscript page 19, PDF page 21)
+labels the DUF-bearing partner DruA within a five-gene DruA/B/C/D/E
+arrangement. The main text counts three variable partners beside DruE,
+then adds DUF4338 in some cases. Thus the optional component is the fifth
+member, consistent with DruA naming, not a sixth gene preceding five
+otherwise required genes.
+
 The canonical example is natural possession by E. coli UMEA 4076-1,
 grounded to the independently resolved species NCBITaxon:562. Doron's
 functional assay transferred that locus into E. coli MG1655. Neither
