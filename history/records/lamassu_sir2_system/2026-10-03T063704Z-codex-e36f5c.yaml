@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_sir2_system.yaml
+  slug: lamassu_sir2_system
+session:
+  id: 2026-10-03T063704Z-codex-e36f5c
+  timestamp: '2026-10-03T06:37:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Lamassu-Sir2 system
+  details: Minted traitmech:000566 for the DefenseFinder-backed Lamassu-Sir2 subtype under
+    the Lamassu system parent, added DOI and pinned DefenseFinder rule/HMM evidence snippets,
+    recorded a NONMECHANISTIC subtype graph, left native canonical examples open for lack
+    of accession-backed endogenous activity evidence, and reserved METPO:1052000 in proposals/metpo_traitmech_v443
+    for upstream replacement.
