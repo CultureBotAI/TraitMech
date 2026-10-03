@@ -199,7 +199,7 @@ TraitMech is METPO-first:
    ```bash
    set -euo pipefail
    tmp="$(mktemp -d /tmp/traitmech-seed.XXXXXX)"
-   .venv/bin/python scripts/seed_from_metpo.py --out "$tmp" --apply
+   PYTHONPATH=src .venv/bin/python scripts/seed_from_metpo.py --out "$tmp" --apply
    target="$(rg --no-ignore --hidden --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp" || :)"
    test -n "$target"
    relative="${target#"$tmp"/}"

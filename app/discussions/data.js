@@ -4429,12 +4429,29 @@ window.searchData = [
   "source_id": "traitmech:000219",
   "source_file": "hachiman_system.yaml",
   "attaches_to": [],
-  "rationale": "Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output.",
+  "rationale": "Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output. Hachiman type II system (traitmech:000574) now resolves the HamABC architecture defined by Payne et al. (DOI:10.1093/nar/gkab883) and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence, but HamC function and type-II mechanism remain open. The family definition no longer requires universal DNA cleavage; this graph and its evidence remain restricted to characterized type-I systems. Proposal v451 replaces v96's overgeneralized family definition while preserving the stable local family identifier. Type I remains a separate architecture-class discovery lead.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
+ },
+ {
+  "discussion_id": "hachiman-type-ii-component-and-mechanism-scope",
+  "prompt": "Resolve HamC function and type-II mechanisms beyond heterologous defense assays.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hachiman type II system",
+  "source_id": "traitmech:000574",
+  "source_file": "hachiman_type_ii_system.yaml",
+  "attaches_to": [],
+  "rationale": "Type II denotes the HamABC locus architecture, not a HamC hit alone, a source database row or a fixed phage-protection phenotype. Type-I DNA-damage sensing and DNA-cleavage mechanisms are not generalized to this class; HamC's biochemical role and necessity remain unresolved by these sources. No causal mechanism graph or unverified protein accession is asserted. Native-host assays and accession-resolved functional evidence remain desirable. DefenseFinder and PADLOC have different component-count rules; inspect complete locus context before converting calls into trait assertions. Component absence cannot be inferred from a failed hit or incomplete assembly. Type I remains a separate discovery lead, and coexisting loci would not make organism-level type-I and type-II possession traits disjoint.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hachiman_type_ii_system.html#hachiman-type-ii-component-and-mechanism-scope"
  },
  {
   "discussion_id": "hailong-mechanism-and-family-breadth-gap",
@@ -9719,9 +9736,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 445,
- "total_knowledge_gaps": 357,
- "total_source_entries": 439,
+ "total_discussions": 446,
+ "total_knowledge_gaps": 358,
+ "total_source_entries": 440,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hachiman_system.yaml
+  slug: hachiman_system
+session:
+  id: 2026-10-03T181206Z-codex-6a024b
+  timestamp: '2026-10-03T18:12:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1630
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - causal_graphs
+  - discussions
+  summary: Separate Hachiman family identity from type-I mechanism
+  details: 'Addressed #1630 through the validated add_hachiman_type_ii_system_trait.py writer:
+    removed the unsupported universal DNA-cleavage requirement, restricted the existing locus
+    node description to the graph type-I scope, and linked HamABC child traitmech:000574 while
+    keeping mechanism questions open. Preserved evidence, examples, graph edges and stable
+    local identifier. Proposal v451 replaces v96 family semantics with a fresh placeholder;
+    the v96 TSV remains historical.'
