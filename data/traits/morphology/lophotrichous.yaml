@@ -28,13 +28,6 @@ canonical_examples:
   taxon_label: Helicobacter pylori
   note: polar tuft of flagella
   reference: PMID:30258065
-- taxon_id: NCBITaxon:968
-  taxon_label: Spirillum volutans
-  reference: DOI:10.1128/jb.150.1.377-380.1982
-  note: Recently divided, naturally unipolar cells of S. volutans ATCC 19554 have
-    one bundle of flagella. Swan studied an actively growing culture at 30 C in ATCC
-    medium 234; older bipolar cells had two bundles and were excluded. This example
-    is restricted to the unipolar division stage, not all cells of the species.
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
   title: Lophotrichous flagellation — polar tuft of flagella
@@ -244,4 +237,16 @@ curation_history:
     cells. Added the exact methods snippet and bounded interpretation; retained NCBITaxon:968
     and the independently checked NCBI label. The definition, hierarchy, graph, other
     example and existing amphitrichous record are unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-03T17:30:07Z'
+  curator: codex
+  action: REFINE_CANONICAL_ARCHETYPES_1629
+  changes: Addressed independent PR 1628 review and issue 1629 by removing the S.
+    volutans canonical-example row while retaining the Swan 1982 evidence and verbatim
+    snippet. Recently divided unipolar cells are directly observed, but a selected
+    division-stage observation is not used here as the schema's archetypal taxon exemplar.
+    H. pylori remains the canonical example. This does not deny naturally unipolar
+    S. volutans cells, assert disjoint organism-level traits or generalize the division
+    sequence to every amphitrichous taxon. The amphitrichous record, trait identity,
+    definition, hierarchy and graph are unchanged; the initial repair event is preserved.
   llm_assisted: true

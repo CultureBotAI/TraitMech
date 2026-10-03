@@ -1022,7 +1022,7 @@ def apply(write: bool = False) -> int:
             # A reviewed successor is a no-op, not permission to accept arbitrary drift.
             if slug == "environment/halophily_preference":
                 spec = citation_repair.SPECS[slug]
-                successor = [spec["after"] if row == spec["before"] else row for row in examples]
+                successor = citation_repair.REVIEW_SPECS[spec["identity"]["identifier"]]["after_examples"]
                 if existing == successor and citation_repair.build_update(doc, spec) == doc:
                     unchanged += 1
                     continue

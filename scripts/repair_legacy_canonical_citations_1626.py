@@ -19,6 +19,8 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 TRAITS_DIR = ROOT / "data/traits"
 TIMESTAMP = "2026-10-03T17:07:26Z"
 ACTION = "REPAIR_CANONICAL_CITATION_SCOPE_1626"
+REVIEW_ACTION = "REFINE_CANONICAL_ARCHETYPES_1629"
+REVIEW_TIMESTAMP = "2026-10-03T17:30:07Z"
 SWAN = "DOI:10.1128/jb.150.1.377-380.1982"
 LI = "DOI:10.3389/fmicb.2021.705326"
 SWAN_EVIDENCE = {
@@ -163,15 +165,70 @@ SPECS = {
 }
 
 
-def event(changes: str) -> dict:
+REVIEW_SPECS = {
+    "traitmech:000058": {
+        "before_examples": [
+            {"taxon_id": "NCBITaxon:210", "taxon_label": "Helicobacter pylori",
+             "note": "polar tuft of flagella", "reference": "PMID:30258065"},
+            copy.deepcopy(SPECS["morphology/lophotrichous"]["after"]),
+        ],
+        "changes": (
+            "Addressed independent PR 1628 review and issue 1629 by removing the "
+            "S. volutans canonical-example row while retaining the Swan 1982 "
+            "evidence and verbatim snippet. Recently divided unipolar cells are "
+            "directly observed, but a selected division-stage observation is not "
+            "used here as the schema's archetypal taxon exemplar. H. pylori remains "
+            "the canonical example. This does not deny naturally unipolar "
+            "S. volutans cells, assert disjoint organism-level traits or generalize "
+            "the division sequence to every amphitrichous taxon. The amphitrichous "
+            "record, trait identity, definition, hierarchy and graph are unchanged; "
+            "the initial repair event is preserved."
+        ),
+    },
+    "METPO:1000629": {
+        "before_examples": [
+            {"taxon_id": "NCBITaxon:2746", "taxon_label": "Halomonas elongata",
+             "reference": "PMID:20849449",
+             "note": "Halomonas elongata DSM 2581T is a source-backed moderate-halophile model; "
+                     "this exemplifies the halophilic branch of the broad salt-preference class."},
+            copy.deepcopy(SPECS["environment/halophily_preference"]["after"]),
+        ],
+        "changes": (
+            "Addressed independent PR 1628 review and issue 1629 by retaining the "
+            "verified Li 2021 DOI and BW25113/LB strain-medium context as a "
+            "non-halophilic branch comparator, without repeating the child's "
+            "24-hour numerical growth comparison. The quantitative comparison "
+            "and exact snippet remain on non_halophilic. No sodium-free or "
+            "universal species-wide growth claim is introduced. Other examples, "
+            "identity, definition, hierarchy, graph, evidence and prior history "
+            "are unchanged."
+        ),
+    },
+}
+REVIEW_SPECS["traitmech:000058"]["after_examples"] = copy.deepcopy(
+    REVIEW_SPECS["traitmech:000058"]["before_examples"][:1]
+)
+REVIEW_SPECS["METPO:1000629"]["after_examples"] = copy.deepcopy(
+    REVIEW_SPECS["METPO:1000629"]["before_examples"]
+)
+REVIEW_SPECS["METPO:1000629"]["after_examples"][1]["note"] = (
+    "Wild-type E. coli BW25113 in LB broth serves as the non-halophilic branch "
+    "comparator, contrasting with the Halomonas halophile example. This is a "
+    "strain- and medium-qualified illustration, not sodium-free growth or a "
+    "universal species-wide requirement; the measured comparison is retained "
+    "on the non_halophilic child."
+)
+
+
+def event(changes: str, *, action: str = ACTION, timestamp: str = TIMESTAMP) -> dict:
     holder: dict = {}
     return record_curation_event(
-        holder, curator="codex", action=ACTION, changes=changes,
-        llm_assisted=True, timestamp=TIMESTAMP,
+        holder, curator="codex", action=action, changes=changes,
+        llm_assisted=True, timestamp=timestamp,
     )
 
 
-def build_update(doc: dict, spec: dict) -> dict:
+def build_initial_update(doc: dict, spec: dict) -> dict:
     expected = {**spec["identity"], "term_kind": "CLASS", "mapping_status": "REVIEWED"}
     for key, value in expected.items():
         if doc.get(key) != value:
@@ -201,6 +258,33 @@ def build_update(doc: dict, spec: dict) -> dict:
     record_curation_event(
         updated, curator="codex", action=ACTION, changes=spec["changes"],
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return updated
+
+
+def build_update(doc: dict, spec: dict) -> dict:
+    review = REVIEW_SPECS.get(spec["identity"]["identifier"])
+    if not review:
+        return build_initial_update(doc, spec)
+    expected_event = event(review["changes"], action=REVIEW_ACTION, timestamp=REVIEW_TIMESTAMP)
+    prior = [row for row in doc.get("curation_history", []) if row.get("action") == REVIEW_ACTION]
+    if prior:
+        if prior != [expected_event] or doc.get("canonical_examples") != review["after_examples"]:
+            raise ValueError("review postimage or history drifted")
+        # Reconstruct the initial postimage to validate both stages without rewriting history.
+        restored = copy.deepcopy(doc)
+        restored["canonical_examples"] = copy.deepcopy(review["before_examples"])
+        restored["curation_history"].remove(expected_event)
+        if build_initial_update(restored, spec) != restored:
+            raise ValueError("review postimage lacks completed initial repair")
+        return copy.deepcopy(doc)
+    updated = build_initial_update(doc, spec)
+    if updated["canonical_examples"] != review["before_examples"]:
+        raise ValueError("review preimage canonical examples drifted")
+    updated["canonical_examples"] = copy.deepcopy(review["after_examples"])
+    record_curation_event(
+        updated, curator="codex", action=REVIEW_ACTION, changes=review["changes"],
+        llm_assisted=True, timestamp=REVIEW_TIMESTAMP,
     )
     return updated
 

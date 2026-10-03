@@ -563,7 +563,7 @@ The older binary salt-in/salt-out model is increasingly being replaced by a **dy
 
           <a href="https://doi.org/10.3389/fmicb.2021.705326" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2021.705326</code></a>
 
-          <span class="meta">The non-halophilic branch is exemplified by wild-type E. coli BW25113: in LB at 37 C, the 0%-NaCl-supplement group had a higher viable count at 24 h than the 1%, 3.5% and 5% groups (Figure 2B). This is a strain- and medium-qualified comparator, not sodium-free growth or a universal species-wide requirement.</span>
+          <span class="meta">Wild-type E. coli BW25113 in LB broth serves as the non-halophilic branch comparator, contrasting with the Halomonas halophile example. This is a strain- and medium-qualified illustration, not sodium-free growth or a universal species-wide requirement; the measured comparison is retained on the non_halophilic child.</span>
         </li>
 
       </ul>
@@ -701,6 +701,12 @@ The older binary salt-in/salt-out model is increasingly being replaced by a **dy
           <time>2026-10-03T17:07:26Z</time> ·
           <strong>REPAIR_CANONICAL_CITATION_SCOPE_1626</strong> · codex
           <p class="changes">Resolved issue 1626 by normalizing PMC8415458 to its verified DOI 10.3389/fmicb.2021.705326 (PMID:34484145), preserving the same paper. Qualified the non-halophilic comparator to BW25113 in LB at 37 C and the reported 24-h viable-count comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained NCBITaxon:562 and its independently checked NCBI label. The broad-class role, Halomonas example, definition, hierarchy and graph are unchanged; no species-wide salt requirement or sodium-free growth is asserted.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T17:30:07Z</time> ·
+          <strong>REFINE_CANONICAL_ARCHETYPES_1629</strong> · codex
+          <p class="changes">Addressed independent PR 1628 review and issue 1629 by retaining the verified Li 2021 DOI and BW25113/LB strain-medium context as a non-halophilic branch comparator, without repeating the child&#39;s 24-hour numerical growth comparison. The quantitative comparison and exact snippet remain on non_halophilic. No sodium-free or universal species-wide growth claim is introduced. Other examples, identity, definition, hierarchy, graph, evidence and prior history are unchanged.</p>
         </li>
 
       </ol>
@@ -1088,7 +1094,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 17:07 UTC from
+      Record as of 2026-10-03 17:30 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 968 TraitRecords
       · embedding coverage 49.3%

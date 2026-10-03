@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/lophotrichous.yaml
+  slug: lophotrichous
+session:
+  id: 2026-10-03T173240Z-codex-b39371
+  timestamp: '2026-10-03T17:32:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1629
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1628
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Retain division-stage evidence without treating it as the canonical archetype
+  details: Addressed independent PR 1628 review. Removed only the Spirillum volutans canonical
+    row, retaining H. pylori and the directly checked Swan 1982 DOI, methods snippet and bounded
+    life-stage evidence. This is an archetype curation decision, not denial of naturally unipolar
+    cells or an assertion of disjoint organism-level traits; no universal amphitrichous division
+    sequence is inferred. Appended a second per-record event and preserved the initial issue
+    1626 history byte-for-byte. Identity, definition, hierarchy, graph, other evidence and
+    amphitrichous record are unchanged. Guarded replay handles original, initial-repair and
+    final states; 102 focused repair/rendering tests passed. Regeneration, full downstream
+    validation and independent re-review are required before merge.

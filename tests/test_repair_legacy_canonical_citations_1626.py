@@ -15,12 +15,16 @@ from render_trait_pages import reference_url  # noqa: E402
 
 
 def original(spec):
+    review = repair.REVIEW_SPECS.get(spec["identity"]["identifier"])
+    other = copy.deepcopy(review["before_examples"][0]) if review else {
+        "taxon_id": "NCBITaxon:1", "taxon_label": "root", "note": "Keep this example",
+        "reference": "https://example.org/unchanged",
+    }
     return {
         **copy.deepcopy(spec["identity"]),
         "term_kind": "CLASS", "mapping_status": "REVIEWED",
         "canonical_examples": [
-            {"taxon_id": "NCBITaxon:1", "taxon_label": "root", "note": "Keep this example",
-             "reference": "https://example.org/unchanged"},
+            other,
             copy.deepcopy(spec["before"]),
         ],
         "evidence": [{"reference": "DOI:10.1000/unchanged", "notes": "Preserved evidence"}],
@@ -47,7 +51,7 @@ def corpus(tmp_path, monkeypatch):
 def test_updates_only_target_example_optional_evidence_and_appended_event(spec):
     before = original(spec)
     frozen = copy.deepcopy(before)
-    after = repair.build_update(before, spec)
+    after = repair.build_initial_update(before, spec)
     assert before == frozen
     assert after["canonical_examples"][1] == spec["after"]
     assert reference_url(after["canonical_examples"][1]["reference"])
@@ -58,7 +62,7 @@ def test_updates_only_target_example_optional_evidence_and_appended_event(spec):
     if spec.get("evidence"):
         assert restored["evidence"].pop() == spec["evidence"]
     assert restored == before
-    assert repair.build_update(after, spec) == after
+    assert repair.build_initial_update(after, spec) == after
 
 
 @pytest.mark.parametrize("spec", repair.SPECS.values(), ids=repair.SPECS.keys())
@@ -99,12 +103,12 @@ def test_rejects_partial_updates_and_postimage_provenance_drift():
     partial = original(spec)
     partial["evidence"].append(copy.deepcopy(spec["evidence"]))
     with pytest.raises(ValueError, match="partial update"):
-        repair.build_update(partial, spec)
+        repair.build_initial_update(partial, spec)
     for key in ["evidence", "curation_history"]:
-        after = repair.build_update(original(spec), spec)
+        after = repair.build_initial_update(original(spec), spec)
         after[key].pop()
         with pytest.raises(ValueError, match="postimage"):
-            repair.build_update(after, spec)
+            repair.build_initial_update(after, spec)
 
 
 def test_dry_run_and_apply_are_idempotent(corpus):
@@ -168,3 +172,48 @@ def test_salt_examples_retain_same_source_with_strain_and_medium_bounds():
         for scope in ["BW25113", "LB", "37 C", "24 h", "3.5%", "not sodium-free"]:
             assert scope in spec["after"]["note"]
     assert repair.LI_EVIDENCE["snippet"].endswith("other tested groups")
+
+
+@pytest.mark.parametrize("slug", ["morphology/lophotrichous", "environment/halophily_preference"])
+def test_review_replays_original_initial_and_final_states_without_losing_history(slug):
+    spec = repair.SPECS[slug]
+    before = original(spec)
+    initial = repair.build_initial_update(before, spec)
+    final = repair.build_update(initial, spec)
+    assert repair.build_update(before, spec) == final
+    assert repair.build_update(final, spec) == final
+    assert final["curation_history"][:-1] == initial["curation_history"]
+    restored = copy.deepcopy(final)
+    restored["canonical_examples"] = initial["canonical_examples"]
+    restored["curation_history"].pop()
+    assert restored == initial
+
+
+@pytest.mark.parametrize("slug", ["morphology/lophotrichous", "environment/halophily_preference"])
+@pytest.mark.parametrize("drift", ["example", "review_event", "initial_event", "partial"])
+def test_review_refuses_drift_and_incomplete_provenance(slug, drift):
+    spec = repair.SPECS[slug]
+    final = repair.build_update(original(spec), spec)
+    if drift == "example":
+        final["canonical_examples"][0]["note"] = "Drift"
+    elif drift == "review_event":
+        final["curation_history"][-1]["changes"] = "Drift"
+    elif drift == "initial_event":
+        final["curation_history"] = [r for r in final["curation_history"] if r["action"] != repair.ACTION]
+    else:
+        final["curation_history"].pop()
+    with pytest.raises(ValueError):
+        repair.build_update(final, spec)
+
+
+def test_archetype_refinement_retains_direct_evidence_but_not_transient_canonical_taxon():
+    spec = repair.SPECS["morphology/lophotrichous"]
+    final = repair.build_update(original(spec), spec)
+    assert [r["taxon_id"] for r in final["canonical_examples"]] == ["NCBITaxon:210"]
+    assert repair.SWAN_EVIDENCE in final["evidence"]
+    parent = repair.build_update(original(repair.SPECS["environment/halophily_preference"]),
+                                 repair.SPECS["environment/halophily_preference"])
+    assert parent["canonical_examples"][1]["reference"] == repair.LI
+    assert "BW25113 in LB" in parent["canonical_examples"][1]["note"]
+    assert "24 h" not in parent["canonical_examples"][1]["note"]
+    assert "3.5%" not in parent["canonical_examples"][1]["note"]

@@ -37,8 +37,13 @@ def test_all_populated_records_match_the_source_ledger() -> None:
         if slug == "environment/halophily_preference":
             spec = citation_repair.SPECS[slug]
             assert expected.count(spec["before"]) == 1
-            expected[expected.index(spec["before"])] = spec["after"]
+            review = citation_repair.REVIEW_SPECS[spec["identity"]["identifier"]]
+            expected[expected.index(spec["before"])] = review["after_examples"][1]
             assert citation_repair.event(spec["changes"]) in doc["curation_history"]
+            assert citation_repair.event(
+                review["changes"], action=citation_repair.REVIEW_ACTION,
+                timestamp=citation_repair.REVIEW_TIMESTAMP,
+            ) in doc["curation_history"]
         assert doc["canonical_examples"] == expected, slug
         assert any(
             event["action"] == migration.ADD_ACTION and "issue #444" in event["changes"]
@@ -74,7 +79,7 @@ def test_reviewed_citation_successor_replay_is_exact(tmp_path, monkeypatch, drif
         doc["definition"] = "Different scope"
     elif drift == "history":
         doc["curation_history"] = [
-            row for row in doc["curation_history"] if row["action"] != citation_repair.ACTION
+            row for row in doc["curation_history"] if row["action"] != citation_repair.REVIEW_ACTION
         ]
     path = tmp_path / "data/traits" / f"{slug}.yaml"
     path.parent.mkdir(parents=True)
