@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TraitMech — QC Dashboard</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
          margin: 2em; color: #222; max-width: 1100px; }
   h1 { border-bottom: 2px solid #ddd; padding-bottom: 0.3em; }
   .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; }
-  .stat-grid { display: flex; gap: 1.5em; margin: 1em 0 2em 0; }
-  .stat { flex: 1; padding: 1em; border-radius: 6px; background: #f6f8fa;
+  * { box-sizing: border-box; }
+  body { overflow-wrap: anywhere; }
+  .stat-grid { display: flex; flex-wrap: wrap; gap: 1.5em; margin: 1em 0 2em 0; }
+  .stat { flex: 1 1 12em; min-width: 0; padding: 1em; border-radius: 6px; background: #f6f8fa;
           border: 1px solid #d0d7de; }
   .stat .label { color: #666; font-size: 0.85em; text-transform: uppercase;
                  letter-spacing: 0.05em; }
@@ -30,19 +33,27 @@
   .badge.fail { background: #ffebe9; color: #cf222e; }
   img { max-width: 100%; margin-top: 1em; border: 1px solid #e5e7eb;
         border-radius: 4px; }
+  .table-scroll { max-width: 100%; overflow-x: auto; }
+  .table-scroll table { min-width: 36em; }
+  a:focus-visible, .table-scroll:focus-visible { outline: 3px solid #0969da; outline-offset: 3px; }
+  .skip-link { position: absolute; top: -5em; left: 1em; background: white; padding: .6em; }
+  .skip-link:focus { top: .5em; }
+  @media (max-width: 40em) { body { margin: 1em; } }
 </style>
 </head>
 <body>
-
+<a class="skip-link" href="#main-content">Skip to dashboard</a>
+<nav aria-label="Project navigation"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>
+<main id="main-content" tabindex="-1">
 <h1>TraitMech — QC Dashboard</h1>
-<div class="meta">Latest curation 2026-09-08T03:30:00+00:00
-  (from 491 of
-  491 records)</div>
+<div class="meta">Latest curation 2026-10-03T05:46:02+00:00
+  (from 959 of
+  960 records)</div>
 
 <div class="stat-grid">
   <div class="stat">
     <div class="label">Records</div>
-    <div class="value">491</div>
+    <div class="value">960</div>
   </div>
   <div class="stat">
     <div class="label">Slots tracked</div>
@@ -50,7 +61,7 @@
   </div>
   <div class="stat">
     <div class="label">Overall coverage</div>
-    <div class="value">78.4%</div>
+    <div class="value">83.5%</div>
   </div>
   <div class="stat">
     <div class="label">FAIL slots</div>
@@ -63,20 +74,22 @@
 <img src="coverage.png" alt="Slot coverage chart">
 
 <h2>Per-slot detail</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Per-slot coverage">
 <table>
+  <caption>Slot population, coverage and quality thresholds</caption>
   <thead>
     <tr>
-      <th>Slot</th>
-      <th class="right">Populated</th>
-      <th class="right">Coverage</th>
-      <th class="right">Threshold</th>
-      <th>Status</th>
+      <th scope="col">Slot</th>
+      <th scope="col" class="right">Populated</th>
+      <th scope="col" class="right">Coverage</th>
+      <th scope="col" class="right">Threshold</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>identifier</code></td>
-      <td class="right">491 / 491</td>
+      <td class="right">960 / 960</td>
       <td class="right">100.0%</td>
       <td class="right">100%</td>
       <td>
@@ -85,7 +98,7 @@
     </tr>
     <tr>
       <td><code>label</code></td>
-      <td class="right">491 / 491</td>
+      <td class="right">960 / 960</td>
       <td class="right">100.0%</td>
       <td class="right">100%</td>
       <td>
@@ -94,7 +107,7 @@
     </tr>
     <tr>
       <td><code>term_kind</code></td>
-      <td class="right">491 / 491</td>
+      <td class="right">960 / 960</td>
       <td class="right">100.0%</td>
       <td class="right">100%</td>
       <td>
@@ -103,7 +116,7 @@
     </tr>
     <tr>
       <td><code>mapping_status</code></td>
-      <td class="right">491 / 491</td>
+      <td class="right">960 / 960</td>
       <td class="right">100.0%</td>
       <td class="right">100%</td>
       <td>
@@ -112,8 +125,8 @@
     </tr>
     <tr>
       <td><code>definition</code></td>
-      <td class="right">468 / 491</td>
-      <td class="right">95.3%</td>
+      <td class="right">937 / 960</td>
+      <td class="right">97.6%</td>
       <td class="right">90%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -121,8 +134,8 @@
     </tr>
     <tr>
       <td><code>definition_source</code></td>
-      <td class="right">441 / 491</td>
-      <td class="right">89.8%</td>
+      <td class="right">910 / 960</td>
+      <td class="right">94.8%</td>
       <td class="right">80%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -130,8 +143,8 @@
     </tr>
     <tr>
       <td><code>curation_history</code></td>
-      <td class="right">491 / 491</td>
-      <td class="right">100.0%</td>
+      <td class="right">959 / 960</td>
+      <td class="right">99.9%</td>
       <td class="right">85%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -139,8 +152,8 @@
     </tr>
     <tr>
       <td><code>causal_graphs</code></td>
-      <td class="right">353 / 491</td>
-      <td class="right">71.9%</td>
+      <td class="right">716 / 960</td>
+      <td class="right">74.6%</td>
       <td class="right">40%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -148,8 +161,8 @@
     </tr>
     <tr>
       <td><code>evidence</code></td>
-      <td class="right">441 / 491</td>
-      <td class="right">89.8%</td>
+      <td class="right">910 / 960</td>
+      <td class="right">94.8%</td>
       <td class="right">40%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -157,8 +170,8 @@
     </tr>
     <tr>
       <td><code>parent_traits</code></td>
-      <td class="right">480 / 491</td>
-      <td class="right">97.8%</td>
+      <td class="right">949 / 960</td>
+      <td class="right">98.9%</td>
       <td class="right">60%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -166,8 +179,8 @@
     </tr>
     <tr>
       <td><code>synonyms</code></td>
-      <td class="right">355 / 491</td>
-      <td class="right">72.3%</td>
+      <td class="right">771 / 960</td>
+      <td class="right">80.3%</td>
       <td class="right">40%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -175,7 +188,7 @@
     </tr>
     <tr>
       <td><code>datasets</code></td>
-      <td class="right">0 / 491</td>
+      <td class="right">0 / 960</td>
       <td class="right">0.0%</td>
       <td class="right">0%</td>
       <td>
@@ -184,8 +197,8 @@
     </tr>
     <tr>
       <td><code>discussions</code></td>
-      <td class="right">10 / 491</td>
-      <td class="right">2.0%</td>
+      <td class="right">431 / 960</td>
+      <td class="right">44.9%</td>
       <td class="right">0%</td>
       <td>
         <span class="badge pass">PASS</span>
@@ -193,6 +206,7 @@
     </tr>
   </tbody>
 </table>
-
+</div>
+</main>
 </body>
 </html>
