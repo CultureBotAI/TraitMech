@@ -4907,6 +4907,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_fmo_system.html#lamassu-fmo-activity-gap"
  },
  {
+  "discussion_id": "lamassu-hnh-function-and-model-scope",
+  "prompt": "Validate HNH-system function and reconcile detector scope.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu-HNH system",
+  "source_id": "traitmech:000568",
+  "source_file": "lamassu_hnh_system.yaml",
+  "attaches_to": [],
+  "rationale": "The paper identifies HNH as a short-Lamassu effector type, and all 281 HNH calls in Dataset S1 contain short LmuB. The pinned executable XML nevertheless permits long LmuB, so the detector name is not an exact biological equivalence. At the same commit, the legacy DefenseFinder_rules.tsv and Liste_hmm_system.md lack an HNH-system entry even though the executable XML and HNH profile exist. Summary-table absence is not model absence. HNH-specific experimental antiviral validation, exact substrates, activation order, and accession-level protein anchors remain unresolved. Cap4 and Lipase experiments do not establish HNH chemistry or its phage spectrum. No protein-resolved causal graph or functional equivalence to standalone HNH proteins is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_hnh_system.html#lamassu-hnh-function-and-model-scope"
+ },
+ {
   "discussion_id": "lamassu-hydrolase-protease-model-and-mechanism",
   "prompt": "Reconcile model-summary drift and resolve paired effector chemistry.",
   "kind": "KNOWLEDGE_GAP",
@@ -5080,7 +5097,7 @@ window.searchData = [
   "source_id": "traitmech:000232",
   "source_file": "lamassu_system.yaml",
   "attaches_to": [],
-  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other's effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary's profile labels as current executable model requirements.",
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row's relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row's relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row's relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row's relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row's relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other's effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary's profile labels as current executable model requirements. Lamassu-HNH system (traitmech:000568) now captures the literature-supported short-LmuB architecture with HNH-domain LmuA and LmuC. The published dataset supplies complete computational genome calls, not HNH-specific functional validation. The pinned executable HNH model accepts either long or short LmuB, whereas all HNH calls in that dataset use short LmuB; its software key is therefore not an exact synonym for this biological scope. HNH-specific activity, substrates, and activation remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9617,9 +9634,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 439,
- "total_knowledge_gaps": 351,
- "total_source_entries": 433,
+ "total_discussions": 440,
+ "total_knowledge_gaps": 352,
+ "total_source_entries": 434,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

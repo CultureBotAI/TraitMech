@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-model-coverage
+session:
+  id: 2026-10-03T103936Z-codex-f97507
+  timestamp: '2026-10-03T10:39:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1612
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - guidance
+  summary: Distinguish summary-table gaps from missing executable profiles
+  details: Resolved the older causal-graph instruction that inferred missing profile support
+    from absent DefenseFinder summary entries. Require inspecting pinned executable definitions
+    and referenced profile files before declaring coverage absent; retain biological mechanism
+    and protein/taxon grounding requirements. The Lamassu-HNH model and profile exist at the
+    pinned commit despite missing summary rows. Addresses issue 1612.

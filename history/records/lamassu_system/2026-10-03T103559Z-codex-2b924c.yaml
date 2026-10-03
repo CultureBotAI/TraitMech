@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/lamassu_system.yaml
+  slug: lamassu_system
+session:
+  id: 2026-10-03T103559Z-codex-2b924c
+  timestamp: '2026-10-03T10:35:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track the narrower Lamassu-HNH record
+  details: Appended a guarded parent discussion update linking traitmech:000568. Distinguished
+    the literature-supported short-LmuB architecture and complete computational genome calls
+    from the broader executable HNH detector and unestablished HNH-specific antiviral activity.
+    Preserved all prior Lamassu subtype and mechanism gaps using preimage-hash checks and
+    the validated writer.

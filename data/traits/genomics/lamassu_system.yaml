@@ -199,7 +199,13 @@ discussions:
     and Lamassu-Protease siblings each forbid the other's effector profile and are
     not exact matches to this paired architecture. Reconciling the legacy table-based
     sibling definitions with executable models remains open; do not interpret the
-    summary's profile labels as current executable model requirements.
+    summary's profile labels as current executable model requirements. Lamassu-HNH
+    system (traitmech:000568) now captures the literature-supported short-LmuB architecture
+    with HNH-domain LmuA and LmuC. The published dataset supplies complete computational
+    genome calls, not HNH-specific functional validation. The pinned executable HNH
+    model accepts either long or short LmuB, whereas all HNH calls in that dataset
+    use short LmuB; its software key is therefore not an exact synonym for this biological
+    scope. HNH-specific activity, substrates, and activation remain unresolved.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -293,4 +299,11 @@ curation_history:
   changes: Linked traitmech:000567 Lamassu Hydrolase-Protease system and documented
     disagreement between executable models and legacy tables; retained remaining subtype
     and mechanism gaps.
+  llm_assisted: true
+- timestamp: '2026-10-03T10:35:00Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Linked traitmech:000568 Lamassu-HNH system and distinguished its short-LmuB
+    genomic architecture from the broader executable detector. Retained HNH-specific
+    functional-validation gaps.
   llm_assisted: true

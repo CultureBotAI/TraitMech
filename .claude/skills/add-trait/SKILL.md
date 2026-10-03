@@ -367,10 +367,14 @@ a real `GENE_OR_PROTEIN` node with protein examples and a cited canonical
 taxon. Do not encode protein-resolved chemistry through a `GENETIC_ELEMENT`
 node while using `NONMECHANISTIC`; if the natural host, accession-level protein,
 or profile-to-activity mapping is unresolved, say the mechanism is deferred in
-`scope_notes` and open a discussion. If the pinned registries name the system in
-`List_system_article.md` but do not include it in `Liste_hmm_system.md` or
-`DefenseFinder_rules.tsv`, omit profile-grounded nodes and make that absence
-explicit in `scope_notes`.
+`scope_notes` and open a discussion. Missing entries in `Liste_hmm_system.md`
+or `DefenseFinder_rules.tsv` establish only summary-table coverage gaps. Check
+the executable definitions and referenced profile files at the same pinned
+commit before declaring model or profile coverage absent. If those files exist,
+cite them and document any summary drift; they still do not replace biological
+mechanism evidence or protein/taxon anchors. Omit profile-grounded nodes when
+the actual profile/model support is unverified, and describe that specific gap
+in `scope_notes` when a graph is present, or in a discussion otherwise.
 
 ## Write the record
 
