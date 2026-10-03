@@ -44,7 +44,7 @@ evidence:
   notes: PDB entity_src_gen explicitly identifies the separate expression host. This
     does not establish natural E. coli possession of the Vc-Cap4 locus.
 - reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info
-  snippet: 'Taxonomy ID: 666 (for references in articles please use ncbitaxon:666)'
+  snippet: 'Vibrio cholerae Taxonomy ID: 666'
   notes: 'NCBI Taxonomy, verified 2026-10-03: taxon 666 resolves to Vibrio cholerae.
     This verifies identity only; the paper supports the exemplar''s short-family classification.'
 canonical_examples:
@@ -83,4 +83,12 @@ curation_history:
     protein-length cutoff. Ignored-and-hidden searches found no exact record or METPO
     term. Reserved METPO:1052400 in proposals/metpo_traitmech_v447 and refined the
     HNH child's parent.
+  llm_assisted: true
+- timestamp: '2026-10-03T13:17:37Z'
+  curator: codex
+  action: STRENGTHEN_TAXON_IDENTITY_SNIPPET
+  changes: Replaced the verbatim ID-only NCBI snippet with a contiguous species-name-and-ID
+    span supporting the identity notes (#1617). Fresh source checks confirmed the
+    earlier citation form was also verbatim; this change improves claim support, not
+    taxon grounding.
   llm_assisted: true

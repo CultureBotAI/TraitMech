@@ -26,6 +26,8 @@ PARENT = ROOT / "data/traits/genomics/lamassu_system.yaml"
 HNH = ROOT / "data/traits/genomics/lamassu_hnh_system.yaml"
 PROPOSAL = ROOT / "proposals/metpo_traitmech_v447"
 TIMESTAMP = "2026-10-03T12:33:00Z"
+IDENTITY_REVIEW_TIMESTAMP = "2026-10-03T13:17:37Z"
+LEGACY_TARGET_SHA256 = "870f7e33436c15263b95629e59e14a9fb9fc07817ba44947b9346df0ea68a4f9"
 PAPER = "DOI:10.1073/pnas.2519643122"
 STRUCTURE = "https://data.rcsb.org/rest/v1/core/polymer_entity/9NY5/3"
 TAXON = "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info"
@@ -139,7 +141,7 @@ RECORD = {
         },
         {
             "reference": TAXON,
-            "snippet": ("Taxonomy ID: 666 (for references in articles please use ncbitaxon:666)"),
+            "snippet": "Vibrio cholerae Taxonomy ID: 666",
             "notes": (
                 "NCBI Taxonomy, verified 2026-10-03: taxon 666 resolves to "
                 "Vibrio cholerae. This verifies identity only; the paper "
@@ -213,6 +215,19 @@ def build_record() -> dict:
         "and no artificial protein-length cutoff. Ignored-and-hidden searches "
         "found no exact record or METPO term. Reserved METPO:1052400 in "
         "proposals/metpo_traitmech_v447 and refined the HNH child's parent.",
+    )
+    record_curation_event(
+        record,
+        curator="codex",
+        action="STRENGTHEN_TAXON_IDENTITY_SNIPPET",
+        changes=(
+            "Replaced the verbatim ID-only NCBI snippet with a contiguous "
+            "species-name-and-ID span supporting the identity notes (#1617). "
+            "Fresh source checks confirmed the earlier citation form was also "
+            "verbatim; this change improves claim support, not taxon grounding."
+        ),
+        llm_assisted=True,
+        timestamp=IDENTITY_REVIEW_TIMESTAMP,
     )
     return record
 
@@ -340,8 +355,13 @@ def main() -> int:
     record, parent, hnh = build_record(), build_parent(), build_hnh()
     proposal = proposal_tsv(record)
     proposal_path = PROPOSAL / "metpo_proposal_classes_robot.tsv"
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
-        raise SystemExit("Existing target differs from this writer; review before applying")
+    if TARGET.exists():
+        target_bytes = TARGET.read_bytes()
+        if (
+            yaml.safe_load(target_bytes) != record
+            and hashlib.sha256(target_bytes).hexdigest() != LEGACY_TARGET_SHA256
+        ):
+            raise SystemExit("Existing target differs from this writer; review before applying")
     if proposal_path.exists() and proposal_path.read_text() != proposal:
         raise SystemExit("Existing proposal differs from this writer; review before applying")
     updates = [(TARGET, record), (PARENT, parent), (HNH, hnh)]

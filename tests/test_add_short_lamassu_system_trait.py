@@ -55,6 +55,7 @@ def test_family_scope_and_qualified_source_organism():
     assert len(record["evidence"]) == 6
     assert len({e["reference"] for e in record["evidence"]}) == 3
     assert all(e["snippet"] and e["notes"] for e in record["evidence"])
+    assert record["evidence"][5]["snippet"] == "Vibrio cholerae Taxonomy ID: 666"
     example = record["canonical_examples"][0]
     assert example["taxon_id"] == "NCBITaxon:666"
     assert example["reference"] == writer.PAPER
@@ -120,6 +121,36 @@ def test_existing_record_drift_refused(isolated_writer, attr, drift):
         writer.main()
     assert [p.read_bytes() for p in (writer.PARENT, writer.HNH)] == before
     assert not writer.TARGET.exists()
+
+
+@pytest.mark.parametrize("drift", [False, True])
+def test_identity_review_accepts_only_exact_legacy_preimage(isolated_writer, monkeypatch, drift):
+    legacy = writer.build_record()
+    legacy["evidence"][5]["snippet"] = "Controlled legacy identity snippet."
+    legacy["curation_history"].pop()
+    writer.write_validated_trait(legacy, writer.TARGET)
+    monkeypatch.setattr(
+        writer, "LEGACY_TARGET_SHA256", hashlib.sha256(writer.TARGET.read_bytes()).hexdigest()
+    )
+    if drift:
+        legacy["evidence"][5]["notes"] += " Later independent curation."
+        writer.write_validated_trait(legacy, writer.TARGET)
+    paths = [writer.TARGET, writer.PARENT, writer.HNH]
+    before = [p.read_bytes() for p in paths]
+    monkeypatch.setattr(sys, "argv", ["writer", "--apply"])
+    if drift:
+        with pytest.raises(SystemExit, match="Existing target differs"):
+            writer.main()
+        assert [p.read_bytes() for p in paths] == before
+    else:
+        assert writer.main() == 0
+        current = yaml.safe_load(writer.TARGET.read_text())
+        assert current["evidence"][5]["snippet"] == "Vibrio cholerae Taxonomy ID: 666"
+        assert current["curation_history"][:-1] == legacy["curation_history"]
+        assert current["curation_history"][-1]["action"] == "STRENGTHEN_TAXON_IDENTITY_SNIPPET"
+        first = [p.read_bytes() for p in paths]
+        assert writer.main() == 0
+        assert [p.read_bytes() for p in paths] == first
 
 
 def test_hnh_definition_drift_refused(isolated_writer):
