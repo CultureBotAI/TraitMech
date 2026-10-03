@@ -30,6 +30,7 @@ import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote, urlsplit
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -99,6 +100,40 @@ RESEARCH_PROMPT_TAIL = "Warnings for claims that should not yet be curated into 
 GH_BLOB_BASE = "https://github.com/CultureBotAI/TraitMech/blob/main"
 GH_RAW_BASE = "https://raw.githubusercontent.com/CultureBotAI/TraitMech/main"
 GH_EDIT_BASE = "https://github.com/CultureBotAI/TraitMech/edit/main"
+
+
+def reference_url(reference: object) -> str | None:
+    """Resolve citation identifiers without turning arbitrary text into links."""
+    if not isinstance(reference, str):
+        return None
+    if any(ord(char) < 32 or ord(char) == 127 for char in reference):
+        return None
+    value = reference.strip()
+    if re.fullmatch(r"DOI:10\.[0-9]{4,9}/\S+", value, re.IGNORECASE):
+        return "https://doi.org/" + quote(value[4:], safe="/():;")
+    if re.fullmatch(r"PMID:[0-9]+", value, re.IGNORECASE):
+        return f"https://pubmed.ncbi.nlm.nih.gov/{value[5:]}/"
+    if any(char.isspace() or char in '\\<>"' for char in value):
+        return None
+    try:
+        parsed = urlsplit(value)
+        if (parsed.scheme.lower() in {"http", "https"} and parsed.hostname
+                and parsed.username is None and parsed.password is None):
+            # Accessing port also rejects malformed/non-numeric authority ports.
+            _ = parsed.port
+            return value
+    except ValueError:
+        pass
+    return None
+
+
+def template_environment() -> Environment:
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATES_DIR)),
+        autoescape=select_autoescape(["html"]),
+    )
+    env.filters["reference_url"] = reference_url
+    return env
 
 
 def slugify(label: str | None, fallback: str) -> str:
@@ -363,10 +398,7 @@ def render_pages(args: argparse.Namespace) -> int:
     if not TEMPLATES_DIR.exists():
         print(f"templates missing: {TEMPLATES_DIR}", file=sys.stderr)
         return 2
-    env = Environment(
-        loader=FileSystemLoader(str(TEMPLATES_DIR)),
-        autoescape=select_autoescape(["html"]),
-    )
+    env = template_environment()
     metpo_version = load_metpo_version(RAW_OWL)
     traits = load_traits()
     match_table = load_match_table()

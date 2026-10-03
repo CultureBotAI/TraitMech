@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "citations.html" import citation %}
 {% block content %}
 <div class="layout-2col">
 <article class="trait">
@@ -14,6 +15,21 @@
     <p class="definition">{{ trait.definition }}</p>
     {% endif %}
   </header>
+
+  {% if trait.evidence %}
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">({{ trait.evidence|length }})</span></h2>
+    <ul>
+      {% for ev in trait.evidence %}
+      <li>
+        {{ citation(ev.reference) }}
+        {% if ev.snippet %}<blockquote>{{ ev.snippet }}</blockquote>{% endif %}
+        {% if ev.notes %}<p class="meta">{{ ev.notes }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 
   {% if causal_graphs %}
   <section class="causal-graphs">
@@ -57,7 +73,7 @@
             <ul>
               {% for ev in edge.evidence %}
               <li>
-                <code>{{ ev.reference }}</code>
+                {{ citation(ev.reference) }}
                 {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
                 {% if ev.notes %}<span class="meta">{{ ev.notes }}</span>{% endif %}
               </li>
@@ -99,12 +115,7 @@
                   <ul>
                     {% for ev in ex.evidence %}
                     <li>
-                      {% set ref = ev.reference %}
-                      {% if ref.startswith('DOI:') %}
-                      <a href="https://doi.org/{{ ref|replace('DOI:','') }}" rel="nofollow noreferrer"><code>{{ ref }}</code></a>
-                      {% elif ref.startswith('PMID:') %}
-                      <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/" rel="nofollow noreferrer"><code>{{ ref }}</code></a>
-                      {% else %}<code>{{ ref }}</code>{% endif %}
+                      {{ citation(ev.reference) }}
                       {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
                       {% if ev.notes %}<span class="meta">{{ ev.notes }}</span>{% endif %}
                     </li>
@@ -153,7 +164,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> ({{ metpo_version }})</dd>
         {% if trait.created_by %}<dt>Author</dt><dd>{{ trait.created_by }}</dd>{% endif %}
-        {% if trait.definition_source %}<dt>Definition source</dt><dd>{{ trait.definition_source }}</dd>{% endif %}
+        {% if trait.definition_source %}<dt>Definition source</dt><dd>{{ citation(trait.definition_source) }}</dd>{% endif %}
         {% if trait.subset %}<dt>Subset</dt><dd>{{ trait.subset }}</dd>{% endif %}
         {% if trait.priority %}<dt>Priority</dt><dd>{{ trait.priority }}</dd>{% endif %}
       </dl>
@@ -282,14 +293,7 @@
           {% else %}<code>{{ tid }}</code>{% endif %}
           {% endif %}
           {% if ex.reference %}
-          {% set ref = ex.reference %}
-          {% if ref.startswith('PMID:') %}
-          <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/"
-             rel="nofollow noreferrer"><code>{{ ref }}</code></a>
-          {% elif ref.startswith('DOI:') %}
-          <a href="https://doi.org/{{ ref|replace('DOI:','') }}"
-             rel="nofollow noreferrer"><code>{{ ref }}</code></a>
-          {% else %}<code>{{ ref }}</code>{% endif %}
+          {{ citation(ex.reference) }}
           {% endif %}
           {% if ex.note %}<span class="meta">{{ ex.note }}</span>{% endif %}
         </li>
@@ -363,11 +367,7 @@
         <ul class="discussion-evidence">
           {% for e in d.evidence %}
           <li>
-            {% set ref = e.reference %}
-            {% if ref and ref.startswith('PMID:') %}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/"
-               rel="nofollow noreferrer"><code>{{ ref }}</code></a>
-            {% else %}<code>{{ ref }}</code>{% endif %}
+            {{ citation(e.reference) }}
             {% if e.supports %}<span class="badge">{{ e.supports|replace('_', ' ') }}</span>{% endif %}
             {% if e.snippet %}<blockquote>{{ e.snippet }}</blockquote>{% endif %}
             {% if e.explanation %}<span class="meta">{{ e.explanation }}</span>{% endif %}

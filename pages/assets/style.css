@@ -342,6 +342,12 @@ table.trait-list tr:hover { background: var(--accent-soft); }
   color: var(--muted);
   font-style: italic;
 }
+.trait-evidence { margin: 1.5rem 0; border-top: 1px solid var(--border); }
+.trait-evidence h2 { font-size: 1.05rem; margin: 1rem 0 0.5rem; }
+.trait-evidence ul { list-style: none; padding: 0; margin: 0; }
+.trait-evidence li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.trait-evidence blockquote { margin: 0.5rem 0; padding-left: 0.75rem; border-left: 2px solid var(--border); }
+.trait-evidence .meta { margin: 0.5rem 0 0; }
 .protein-examples {
   border-top: 1px solid var(--border);
   margin-top: 1rem;

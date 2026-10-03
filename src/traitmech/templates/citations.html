@@ -1,0 +1,10 @@
+{% macro citation(reference) -%}
+  {%- if reference -%}
+    {%- set url = reference|reference_url -%}
+    {%- if url -%}
+      <a href="{{ url }}" rel="nofollow noreferrer"><code>{{ reference }}</code></a>
+    {%- else -%}
+      <code>{{ reference }}</code>
+    {%- endif -%}
+  {%- endif -%}
+{%- endmacro %}
