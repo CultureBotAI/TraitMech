@@ -41,8 +41,8 @@ evidence:
     II exhibited a much broader range of immunity, with at least modest protection
     observed against 30 phages.
   notes: Bell et al. support native E. coli ATCC 8739 Druantia III protection in a
-    deletion-resolved strain retaining Druantia III but lacking the co-located ARMADA
-    Type II and Zorya II systems.
+    deletion-resolved panel separating Druantia III from co-located ARMADA Type II
+    activity.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: '| Druantia | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
     defense systems in the microbial pangenome | '
@@ -192,8 +192,8 @@ discussions:
       ARMADA Type II exhibited a much broader range of immunity, with at least modest
       protection observed against 30 phages.
     notes: Bell et al. support native E. coli ATCC 8739 Druantia III protection in
-      a deletion-resolved strain retaining Druantia III but lacking the co-located
-      ARMADA Type II and Zorya II systems.
+      a deletion-resolved panel separating Druantia III from co-located ARMADA Type
+      II activity.
   - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
     snippet: '| Druantia_III__DruH                               | Druantia_III__DruH                               |
       Druantia_III           | Custom                  | 20     |'

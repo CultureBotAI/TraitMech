@@ -114,9 +114,8 @@ def druantia_atcc_8739_evidence() -> dict[str, str]:
         "snippet": DRUANTIA_ATCC_8739_SNIPPET,
         "notes": (
             "Bell et al. support native E. coli ATCC 8739 Druantia III "
-            "protection in a deletion-resolved strain retaining Druantia "
-            "III but lacking the co-located ARMADA Type II and Zorya II "
-            "systems."
+            "protection in a deletion-resolved panel separating Druantia "
+            "III from co-located ARMADA Type II activity."
         ),
     }
 
