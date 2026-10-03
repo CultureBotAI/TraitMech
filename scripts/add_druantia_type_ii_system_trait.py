@@ -62,7 +62,8 @@ RECORD = {
                 "the Druantia-like system lacks the type II requisite DruM and DruG proteins"
             ),
             "notes": (
-                "Payne et al., Discovery of new Doron system types and Figure 2C: "
+                "Payne et al., Results: Identification of new defence system variants, "
+                "and Figure 2C: "
                 "type II contains DruE/F/M/G; the proposed type IV shares "
                 "DruE/F but replaces the type-II M/G architecture with DruL. "
                 "This supports locus composition, not experimental dependence "
@@ -200,6 +201,16 @@ def build_record() -> dict:
         "defense. Ignored-and-hidden novelty and allocation searches found "
         "no exact record or METPO term; reserved METPO:1053300 in v456. "
         "No protein-resolved full-system causal mechanism is asserted.",
+    )
+    record_curation_event(
+        record, curator="codex", action="CORRECT_EVIDENCE_LOCATOR",
+        changes=(
+            "Corrected the Payne evidence subsection locator to Results: "
+            "Identification of new defence system variants after checking "
+            "primary PMC8565338 XML; the snippet, architecture claim and "
+            "Figure 2C locator are unchanged. Addresses issue #1639."
+        ),
+        llm_assisted=True, timestamp="2026-10-03T21:32:00Z",
     )
     return record
 

@@ -287,6 +287,14 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+For versioned literature, record the version, posting date and stable
+version-specific full-text URL in `notes`, and inspect the corresponding
+supplements. Do not mix an earlier abstract with a later revision's figures or
+claims. Verify section, figure and table locators against that version rather
+than reconstructing a plausible heading. Distinguish isolated-component and
+heterologous assays from full-system or native-host validation; a biochemical
+result alone does not establish the complete organismal mechanism.
+
 Shortened snippets must be self-contained and source-faithful. Do not stop
 before the head noun of a phrase, after a dangling article, preposition, or
 conjunction, or before a coordinated complement that would change the statement's

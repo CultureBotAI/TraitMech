@@ -15,11 +15,11 @@ synonyms:
 evidence:
 - reference: DOI:10.1093/nar/gkab883
   snippet: the Druantia-like system lacks the type II requisite DruM and DruG proteins
-  notes: 'Payne et al., Discovery of new Doron system types and Figure 2C: type II
-    contains DruE/F/M/G; the proposed type IV shares DruE/F but replaces the type-II
-    M/G architecture with DruL. This supports locus composition, not experimental
-    dependence of each component in every host. The type-II distribution observed
-    in RefSeq v201 is not a universal taxonomic limit.'
+  notes: 'Payne et al., Results: Identification of new defence system variants, and
+    Figure 2C: type II contains DruE/F/M/G; the proposed type IV shares DruE/F but
+    replaces the type-II M/G architecture with DruL. This supports locus composition,
+    not experimental dependence of each component in every host. The type-II distribution
+    observed in RefSeq v201 is not a universal taxonomic limit.'
 - reference: DOI:10.65215/LTSpreprints.2026.06.18.000273
   snippet: DruE alone confers limited protection against a subset of coliphages in
     heterologous expression
@@ -84,4 +84,11 @@ curation_history:
     native-host defense. Ignored-and-hidden novelty and allocation searches found
     no exact record or METPO term; reserved METPO:1053300 in v456. No protein-resolved
     full-system causal mechanism is asserted.
+  llm_assisted: true
+- timestamp: '2026-10-03T21:32:00Z'
+  curator: codex
+  action: CORRECT_EVIDENCE_LOCATOR
+  changes: 'Corrected the Payne evidence subsection locator to Results: Identification
+    of new defence system variants after checking primary PMC8565338 XML; the snippet,
+    architecture claim and Figure 2C locator are unchanged. Addresses issue #1639.'
   llm_assisted: true

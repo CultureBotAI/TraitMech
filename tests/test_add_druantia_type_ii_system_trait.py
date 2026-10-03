@@ -72,6 +72,10 @@ def test_biological_definition_and_evidence_boundaries():
     }
     assert all(e.get("snippet") and len(e["snippet"].split()) <= 25 for e in evidence.values())
     assert "requisite DruM and DruG" in evidence[writer.ARCHITECTURE]["snippet"]
+    assert (
+        "Results: Identification of new defence system variants"
+        in evidence[writer.ARCHITECTURE]["notes"]
+    )
     mechanism = evidence[writer.MECHANISM]
     assert "DruE alone" in mechanism["snippet"]
     assert "2026-07-08, not peer reviewed" in mechanism["notes"]
