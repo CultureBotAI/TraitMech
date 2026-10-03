@@ -197,6 +197,15 @@
 
 
 
+    <div class="card">
+      <h2>Children (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/druantia_iii_system.html">Druantia III system <code>traitmech:000560</code></a></li>
+
+      </ul>
+    </div>
+
 
 
     <div class="card">
@@ -266,7 +275,7 @@
 
 
       <div class="discussion" id="druantia-subtype-mechanism-gap">
-        <p class="discussion-prompt">Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.</p>
+        <p class="discussion-prompt">Resolve Druantia Type I, Type II, Type IV, and cross-system activation mechanisms before minting additional narrower Druantia-system children.</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -282,10 +291,25 @@
           mechanism it concerns.</p>
 
 
-        <p>Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. The first TraitRecord therefore stays at the DruE-core family level until separate review resolves Type I/II partner functions, Type III-specific DruH activation, exact phage triggers, and Zorya-coupled versus standalone outputs across Druantia loci.</p>
+        <p>Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. Druantia III system now captures the DruE/DruH Type III branch from the pinned Druantia_III DefenseFinder row, but the parent record remains at the DruE-core family level until separate review resolves Type I and Type II partner functions, Type IV partner functions represented by the pinned Druantia_IV HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus standalone outputs across Druantia loci.</p>
 
 
 
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+
+            <blockquote>| Druantia_IV__DruE4                               |                                                  | Druantia_IV            | Custom                  | 750    |
+| Druantia_IV__DruF4                               |                                                  | Druantia_IV            | Custom                  | 20     |
+| Druantia_IV__DruL                                |                                                  | Druantia_IV            | Custom                  | 100    |</blockquote>
+
+          </li>
+
+        </ul>
 
 
 
@@ -306,6 +330,12 @@
           <time>2026-09-16T00:36:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted Druantia system as a DOI-backed GENOMICS TraitRecord under the phage defense system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v111.</p>
+        </li>
+
+        <li>
+          <time>2026-10-03T00:37:01Z</time> ·
+          <strong>TRACK_NARROWER_RECORD</strong> · codex
+          <p class="changes">Documented Druantia III as split out in the open Druantia subtype discussion after minting traitmech:000560 for the DefenseFinder-backed Druantia_III child; Type I, Type II, the pinned Druantia_IV HMM context, Zorya-coupled versus standalone activity, and finer Druantia activation mechanisms remain open.</p>
         </li>
 
       </ol>
@@ -688,10 +718,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-16 00:36 UTC from
+      Record as of 2026-10-03 00:37 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 954 TraitRecords
-      · embedding coverage 50.0%
+      · 955 TraitRecords
+      · embedding coverage 49.9%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

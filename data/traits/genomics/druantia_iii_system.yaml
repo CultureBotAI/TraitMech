@@ -1,0 +1,233 @@
+identifier: traitmech:000560
+label: Druantia III system
+definition: A Druantia system in which an organism possesses a genome-encoded DefenseFinder
+  Druantia_III subtype locus represented by the Druantia_III rule row requiring both
+  the Druantia_III__DruH and Druantia__DruE_1 profiles.
+definition_source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000234
+synonyms:
+- synonym_text: Druantia III
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.64898/2026.05.12.724681
+- synonym_text: Druantia_III
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+- synonym_text: Druantia_III__DruH
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Druantia__DruE_1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.64898/2026.05.12.724681
+  snippet: Druantia III is a late-acting defence where DruH is the likely infection
+    sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
+    replication intermediates
+  notes: Wu et al. support the characterized Druantia III arrangement in which DruH
+    likely senses infection and DruE acts as the helicase-nuclease effector.
+- reference: DOI:10.64898/2026.05.12.724681
+  snippet: we identified 6,885 bacterial genomes encoding complete Druantia III systems,
+    defined by the presence of both DruE and DruH
+  notes: Wu et al. support Druantia III as a recurring bacterial DruE/DruH system
+    rather than a single engineered locus.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
+  snippet: Screening 66 phages that could form plaques on the double-deletion strain
+    showed that the strain carrying only Druantia III exhibited at least modest protection
+    (<0.01 EOP or <0.5 SFC) against 3 phages, whereas the strain carrying ARMADA Type
+    II exhibited a much broader range of immunity, with at least modest protection
+    observed against 30 phages.
+  notes: Bell et al. support native E. coli ATCC 8739 Druantia III protection in a
+    deletion-resolved panel separating Druantia III from co-located ARMADA Type II
+    activity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: '| Druantia | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+    defense systems in the microbial pangenome | '
+  notes: The pinned DefenseFinder article registry maps the broad Druantia model namespace
+    to the Doron et al. microbial pangenome antiphage-system discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Druantia__DruE_1                                 | Druantia__DruE_1                                 |
+    Druantia               | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1
+    custom profile listed by the Druantia_III rule row.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Druantia_III__DruH                               | Druantia_III__DruH                               |
+    Druantia_III           | Custom                  | 20     |'
+  notes: The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom
+    profile under the Druantia_III model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\
+    \t"
+  notes: The pinned DefenseFinder rules table models Druantia_III as a Druantia subsystem
+    requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1 and
+    two genes overall.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Bell et al. screened E. coli ATCC 8739 system-deletion derivatives and observed
+    at least modest phage protection in the derivative retaining only the native Druantia
+    III system.
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
+causal_graphs:
+- graph_id: druantia_iii_locus_subtype_defense
+  title: Druantia III loci mark a DruH-dependent Druantia subtype
+  description: Conservative subtype-level sketch linking a DefenseFinder Druantia_III
+    locus to DruE/DruH-dependent Type III Druantia DNA processing, Druantia III system
+    possession, and its Druantia parent.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the Druantia_III subtype at DefenseFinder rule-row
+    level without resolving the exact late phage trigger, DruH sensory intermediate,
+    RecBCD dependence, Zorya II synergy, native host breadth beyond the E. coli ATCC
+    8739 observation, Type I, Type II, or Type IV partner functions, or whether every
+    DefenseFinder Druantia_III prediction is a complete experimentally active locus.
+  nodes:
+  - node_id: druantia_iii_locus
+    label: Druantia III locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Druantia_III subtype locus represented by Druantia_III__DruH
+      and Druantia__DruE_1 profiles.
+  - node_id: druantia_iii_dna_processing
+    label: Druantia III DruE/DruH DNA processing
+    node_type: BIOLOGICAL_PROCESS
+    description: DruE helicase-nuclease DNA processing in a DruH-containing Type III
+      Druantia context.
+  - node_id: druantia_iii_system_trait
+    label: Druantia III system
+    node_type: TRAIT
+    grounding: traitmech:000560
+    description: Possession of a genome-encoded Druantia III phage-defense system.
+  - node_id: druantia_system_trait
+    label: Druantia system
+    node_type: TRAIT
+    grounding: traitmech:000234
+    description: Possession of a genome-encoded Druantia phage-defense system.
+  edges:
+  - subject: druantia_iii_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: druantia_iii_dna_processing
+    description: Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH
+      and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by
+      the presence of both DruE and DruH.
+    evidence:
+    - reference: DOI:10.64898/2026.05.12.724681
+      snippet: we identified 6,885 bacterial genomes encoding complete Druantia III
+        systems, defined by the presence of both DruE and DruH
+      notes: Wu et al. support Druantia III as a recurring bacterial DruE/DruH system
+        rather than a single engineered locus.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Druantia__DruE_1                                 | Druantia__DruE_1                                 |
+        Druantia               | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1
+        custom profile listed by the Druantia_III rule row.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Druantia_III__DruH                               | Druantia_III__DruH                               |
+        Druantia_III           | Custom                  | 20     |'
+      notes: The pinned DefenseFinder HMM inventory records the Druantia_III__DruH
+        custom profile under the Druantia_III model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\
+        \t\t"
+      notes: The pinned DefenseFinder rules table models Druantia_III as a Druantia
+        subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1
+        and two genes overall.
+  - subject: druantia_iii_dna_processing
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: druantia_iii_system_trait
+    description: The first-pass Druantia III system trait is realized by a DruE/DruH
+      locus whose late defense uses DruE helicase-nuclease effector activity.
+    evidence:
+    - reference: DOI:10.64898/2026.05.12.724681
+      snippet: Druantia III is a late-acting defence where DruH is the likely infection
+        sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
+        replication intermediates
+      notes: Wu et al. support the characterized Druantia III arrangement in which
+        DruH likely senses infection and DruE acts as the helicase-nuclease effector.
+  - subject: druantia_iii_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: druantia_system_trait
+    description: Druantia III system possession is a Druantia-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Druantia | 10\.1126/science\.aar4120 | Systematic discovery of antiphage
+        defense systems in the microbial pangenome | '
+      notes: The pinned DefenseFinder article registry maps the broad Druantia model
+        namespace to the Doron et al. microbial pangenome antiphage-system discovery
+        paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Druantia\tDruantia_III\t2\t2"
+      notes: The pinned DefenseFinder rules table places the Druantia_III subsystem
+        under the Druantia system key with two mandatory matches and two genes required.
+discussions:
+- discussion_id: druantia-iii-activity-gap
+  prompt: Resolve Druantia_III phage triggers, DruH sensory chemistry, RecBCD and
+    Zorya coupling, native host breadth, and profile-to-activity criteria before minting
+    enzyme, trigger, or component children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Wu et al. support Druantia III as a recurring DruE/DruH system in which
+    DruH is the likely infection sensor and DruE is a helicase-nuclease effector,
+    and the pinned DefenseFinder HMM inventory and rules table support Druantia_III
+    as a subtype whose rule row requires the Druantia_III__DruH and Druantia__DruE_1
+    profiles. Bell et al. support one deletion-resolved native E. coli ATCC 8739 Druantia
+    III protection observation. This first-pass record leaves exact late phage triggers,
+    DruH sensory intermediates, RecBCD dependence, Zorya II coupling, native host
+    breadth beyond ATCC 8739, and profile-to-activity criteria unresolved.
+  evidence:
+  - reference: DOI:10.64898/2026.05.12.724681
+    snippet: Druantia III is a late-acting defence where DruH is the likely infection
+      sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
+      replication intermediates
+    notes: Wu et al. support the characterized Druantia III arrangement in which DruH
+      likely senses infection and DruE acts as the helicase-nuclease effector.
+  - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
+    snippet: Screening 66 phages that could form plaques on the double-deletion strain
+      showed that the strain carrying only Druantia III exhibited at least modest
+      protection (<0.01 EOP or <0.5 SFC) against 3 phages, whereas the strain carrying
+      ARMADA Type II exhibited a much broader range of immunity, with at least modest
+      protection observed against 30 phages.
+    notes: Bell et al. support native E. coli ATCC 8739 Druantia III protection in
+      a deletion-resolved panel separating Druantia III from co-located ARMADA Type
+      II activity.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Druantia_III__DruH                               | Druantia_III__DruH                               |
+      Druantia_III           | Custom                  | 20     |'
+    notes: The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom
+      profile under the Druantia_III model namespace.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\
+      \t\t"
+    notes: The pinned DefenseFinder rules table models Druantia_III as a Druantia
+      subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1
+      and two genes overall.
+  attaches_to:
+  - causal_graphs#druantia_iii_locus_subtype_defense
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T00:37:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Druantia III system as a DOI- and DefenseFinder-backed GENOMICS
+    TraitRecord under the Druantia system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, history, or prior proposal record
+    for the target local ID, placeholder METPO ID, proposal cohort, record slug, human
+    label, DefenseFinder subsystem, DruH profile, or shared DruE_1 profile; existing
+    Druantia III mentions were supporting evidence on broad Druantia or ARMADA records,
+    not an exact child TraitRecord, and the replacement placeholder is reserved in
+    proposals/metpo_traitmech_v437.
+  llm_assisted: true
+- timestamp: '2026-10-03T00:37:02Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE
+  changes: Reviewed Druantia III system during initial curation and added Escherichia
+    coli because Bell et al. reported a deletion-resolved E. coli ATCC 8739 derivative
+    retaining only native Druantia III activity with modest protection against 3 of
+    66 screened phages. Broader native host breadth remains unresolved, and no paid
+    research was used.
+  llm_assisted: true

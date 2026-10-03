@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/druantia_system.yaml
+  slug: druantia_system
+session:
+  id: 2026-10-03T012415Z-claude-code-31aa76
+  timestamp: '2026-10-03T01:24:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  - curation_history
+  summary: Track Druantia III split
+  details: Documented traitmech:000560 Druantia III system in the open Druantia subtype-mechanism
+    discussion after minting the DefenseFinder-backed Druantia_III child, and cited the pinned
+    Druantia_IV HMM rows for Type IV scope. Type I, Type II, exact phage triggers, native host
+    breadth, Zorya-coupled versus standalone activity, and finer Druantia activation mechanisms
+    remain open.

@@ -174,19 +174,33 @@ causal_graphs:
         a Druantia Type I locus.
 discussions:
 - discussion_id: druantia-subtype-mechanism-gap
-  prompt: Resolve Druantia subtype composition and activation mechanisms before minting
-    narrower Type I, Type II, or Type III Druantia-system children.
+  prompt: Resolve Druantia Type I, Type II, Type IV, and cross-system activation mechanisms
+    before minting additional narrower Druantia-system children.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III
     DruHE architectures and validated one Type I locus, while Wu et al. define a Type
     III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing
-    intermediates. The first TraitRecord therefore stays at the DruE-core family level
-    until separate review resolves Type I/II partner functions, Type III-specific
-    DruH activation, exact phage triggers, and Zorya-coupled versus standalone outputs
-    across Druantia loci.
+    intermediates. Druantia III system now captures the DruE/DruH Type III branch
+    from the pinned Druantia_III DefenseFinder row, but the parent record remains
+    at the DruE-core family level until separate review resolves Type I and Type II
+    partner functions, Type IV partner functions represented by the pinned Druantia_IV
+    HMM rows, exact phage triggers, native host breadth, and Zorya-coupled versus
+    standalone outputs across Druantia loci.
   posed_by: codex
   posed_date: '2026-09-15'
+  evidence:
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| Druantia_IV__DruE4                               |                                                  |
+      Druantia_IV            | Custom                  | 750    |
+
+      | Druantia_IV__DruF4                               |                                                  |
+      Druantia_IV            | Custom                  | 20     |
+
+      | Druantia_IV__DruL                                |                                                  |
+      Druantia_IV            | Custom                  | 100    |'
+    notes: The pinned DefenseFinder HMM inventory records Druantia_IV__DruE4, Druantia_IV__DruF4,
+      and Druantia_IV__DruL under the Druantia_IV model namespace.
 curation_history:
 - timestamp: '2026-09-16T00:36:00Z'
   curator: codex
@@ -195,4 +209,12 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v111.
+  llm_assisted: true
+- timestamp: '2026-10-03T00:37:01Z'
+  curator: codex
+  action: TRACK_NARROWER_RECORD
+  changes: Documented Druantia III as split out in the open Druantia subtype discussion
+    after minting traitmech:000560 for the DefenseFinder-backed Druantia_III child;
+    Type I, Type II, the pinned Druantia_IV HMM context, Zorya-coupled versus standalone
+    activity, and finer Druantia activation mechanisms remain open.
   llm_assisted: true
