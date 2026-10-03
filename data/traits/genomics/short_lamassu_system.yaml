@@ -10,7 +10,7 @@ mapping_status: PROPOSED
 parent_traits:
 - traitmech:000232
 synonyms:
-- synonym_text: short-form Lamassu system
+- synonym_text: short Lamassu
   synonym_type: EXACT_SYNONYM
   source: DOI:10.1073/pnas.2519643122
 evidence:
@@ -43,10 +43,6 @@ evidence:
     coli"'
   notes: PDB entity_src_gen explicitly identifies the separate expression host. This
     does not establish natural E. coli possession of the Vc-Cap4 locus.
-- reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info
-  snippet: 'Vibrio cholerae Taxonomy ID: 666'
-  notes: 'NCBI Taxonomy, verified 2026-10-03: taxon 666 resolves to Vibrio cholerae.
-    This verifies identity only; the paper supports the exemplar''s short-family classification.'
 canonical_examples:
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
@@ -91,4 +87,13 @@ curation_history:
     span supporting the identity notes (#1617). Fresh source checks confirmed the
     earlier citation form was also verbatim; this change improves claim support, not
     taxon grounding.
+  llm_assisted: true
+- timestamp: '2026-10-03T13:41:34Z'
+  curator: codex
+  action: REFINE_SYNONYM_AND_EVIDENCE_SCOPE
+  changes: Used the source-attested family name as the exact synonym and aligned the
+    v447 template (#1618). Removed the redundant NCBI evidence row to avoid a quote
+    spanning HTML blocks (#1619). The paper, five exact paper/PDB snippets, PDB source
+    metadata and verified canonical-example taxon retain the substantive support.
+    Earlier curation history is preserved.
   llm_assisted: true

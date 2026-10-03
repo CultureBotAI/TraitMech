@@ -52,10 +52,10 @@ def test_family_scope_and_qualified_source_organism():
     assert "600" not in record["definition"]
     assert "causal_graphs" not in record
     assert "xrefs" not in record
-    assert len(record["evidence"]) == 6
-    assert len({e["reference"] for e in record["evidence"]}) == 3
+    assert len(record["evidence"]) == 5
+    assert len({e["reference"] for e in record["evidence"]}) == 2
     assert all(e["snippet"] and e["notes"] for e in record["evidence"])
-    assert record["evidence"][5]["snippet"] == "Vibrio cholerae Taxonomy ID: 666"
+    assert all(e["reference"] in (writer.PAPER, writer.STRUCTURE) for e in record["evidence"])
     example = record["canonical_examples"][0]
     assert example["taxon_id"] == "NCBITaxon:666"
     assert example["reference"] == writer.PAPER
@@ -63,7 +63,7 @@ def test_family_scope_and_qualified_source_organism():
     assert "species-wide possession" in example["note"]
     assert "cutoff" in record["discussions"][0]["rationale"]
     record["synonyms"][0]["synonym_text"] = "mutated"
-    assert writer.build_record()["synonyms"][0]["synonym_text"] == "short-form Lamassu system"
+    assert writer.build_record()["synonyms"][0]["synonym_text"] == "short Lamassu"
 
 
 def test_proposal_round_trip_and_existing_child_request():
@@ -124,13 +124,19 @@ def test_existing_record_drift_refused(isolated_writer, attr, drift):
 
 
 @pytest.mark.parametrize("drift", [False, True])
-def test_identity_review_accepts_only_exact_legacy_preimage(isolated_writer, monkeypatch, drift):
+def test_review_accepts_only_exact_legacy_preimage(isolated_writer, monkeypatch, drift):
     legacy = writer.build_record()
-    legacy["evidence"][5]["snippet"] = "Controlled legacy identity snippet."
+    legacy["evidence"].append(
+        {
+            "reference": "https://example.org/legacy-taxonomy",
+            "snippet": "Controlled legacy identity snippet.",
+            "notes": "Controlled legacy identity evidence.",
+        }
+    )
     legacy["curation_history"].pop()
     writer.write_validated_trait(legacy, writer.TARGET)
     monkeypatch.setattr(
-        writer, "LEGACY_TARGET_SHA256", hashlib.sha256(writer.TARGET.read_bytes()).hexdigest()
+        writer, "LEGACY_TARGET_SHA256S", {hashlib.sha256(writer.TARGET.read_bytes()).hexdigest()}
     )
     if drift:
         legacy["evidence"][5]["notes"] += " Later independent curation."
@@ -145,9 +151,10 @@ def test_identity_review_accepts_only_exact_legacy_preimage(isolated_writer, mon
     else:
         assert writer.main() == 0
         current = yaml.safe_load(writer.TARGET.read_text())
-        assert current["evidence"][5]["snippet"] == "Vibrio cholerae Taxonomy ID: 666"
+        assert len(current["evidence"]) == 5
+        assert current["synonyms"][0]["synonym_text"] == "short Lamassu"
         assert current["curation_history"][:-1] == legacy["curation_history"]
-        assert current["curation_history"][-1]["action"] == "STRENGTHEN_TAXON_IDENTITY_SNIPPET"
+        assert current["curation_history"][-1]["action"] == "REFINE_SYNONYM_AND_EVIDENCE_SCOPE"
         first = [p.read_bytes() for p in paths]
         assert writer.main() == 0
         assert [p.read_bytes() for p in paths] == first
@@ -176,3 +183,33 @@ def test_output_drift_refused(isolated_writer, monkeypatch, changed):
     with pytest.raises(SystemExit, match=f"Existing {changed} differs"):
         writer.main()
     assert [p.read_bytes() for p in (writer.PARENT, writer.HNH)] == before
+
+
+@pytest.mark.parametrize("drift", [False, True])
+def test_proposal_review_accepts_only_exact_preimage(isolated_writer, monkeypatch, drift):
+    rows = list(csv.reader(io.StringIO(writer.proposal_tsv(writer.build_record())), delimiter="\t"))
+    rows[2][5] = "Controlled legacy synonym"
+    stream = io.StringIO(newline="")
+    csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    writer.PROPOSAL.mkdir()
+    path = writer.PROPOSAL / "metpo_proposal_classes_robot.tsv"
+    path.write_text(stream.getvalue())
+    monkeypatch.setattr(
+        writer, "LEGACY_PROPOSAL_SHA256", hashlib.sha256(path.read_bytes()).hexdigest()
+    )
+    if drift:
+        path.write_text(stream.getvalue() + "Later independent proposal edit.\n")
+    paths = [writer.PARENT, writer.HNH, path]
+    before = [p.read_bytes() for p in paths]
+    monkeypatch.setattr(sys, "argv", ["writer", "--apply"])
+    if drift:
+        with pytest.raises(SystemExit, match="Existing proposal differs"):
+            writer.main()
+        assert [p.read_bytes() for p in paths] == before
+        assert not writer.TARGET.exists()
+    else:
+        assert writer.main() == 0
+        assert path.read_text() == writer.proposal_tsv(writer.build_record())
+        first = [p.read_bytes() for p in paths]
+        assert writer.main() == 0
+        assert [p.read_bytes() for p in paths] == first

@@ -27,10 +27,14 @@ HNH = ROOT / "data/traits/genomics/lamassu_hnh_system.yaml"
 PROPOSAL = ROOT / "proposals/metpo_traitmech_v447"
 TIMESTAMP = "2026-10-03T12:33:00Z"
 IDENTITY_REVIEW_TIMESTAMP = "2026-10-03T13:17:37Z"
-LEGACY_TARGET_SHA256 = "870f7e33436c15263b95629e59e14a9fb9fc07817ba44947b9346df0ea68a4f9"
+LEXICAL_REVIEW_TIMESTAMP = "2026-10-03T13:41:34Z"
+LEGACY_TARGET_SHA256S = {
+    "870f7e33436c15263b95629e59e14a9fb9fc07817ba44947b9346df0ea68a4f9",
+    "6ad3a59ea22b955caccc9643faf1fa41f9daba7ef189adde41893edd9a2e3d4c",
+}
+LEGACY_PROPOSAL_SHA256 = "a9e1521aea7162e86fa4cefd351e794656d6c0bee3d9cc6e0319164a60b1bdc0"
 PAPER = "DOI:10.1073/pnas.2519643122"
 STRUCTURE = "https://data.rcsb.org/rest/v1/core/polymer_entity/9NY5/3"
-TAXON = "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666&mode=Info"
 PARENT_HASH = "29a239179478b4ea3adad5a834b59df15ab2877abc3fb68f6c0cfd575e1d217e"
 HNH_HASH = "1a4ceacad9681901a3ccde8952dbeb75660209fc2dac9c3c88986e540d02f0df"
 HNH_DEFINITION = (
@@ -74,7 +78,7 @@ RECORD = {
     "parent_traits": ["traitmech:000232"],
     "synonyms": [
         {
-            "synonym_text": "short-form Lamassu system",
+            "synonym_text": "short Lamassu",
             "synonym_type": "EXACT_SYNONYM",
             "source": PAPER,
         }
@@ -137,15 +141,6 @@ RECORD = {
                 "PDB entity_src_gen explicitly identifies the separate "
                 "expression host. This does not establish natural E. coli "
                 "possession of the Vc-Cap4 locus."
-            ),
-        },
-        {
-            "reference": TAXON,
-            "snippet": "Vibrio cholerae Taxonomy ID: 666",
-            "notes": (
-                "NCBI Taxonomy, verified 2026-10-03: taxon 666 resolves to "
-                "Vibrio cholerae. This verifies identity only; the paper "
-                "supports the exemplar's short-family classification."
             ),
         },
     ],
@@ -228,6 +223,21 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=IDENTITY_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator="codex",
+        action="REFINE_SYNONYM_AND_EVIDENCE_SCOPE",
+        changes=(
+            "Used the source-attested family name as the exact synonym and "
+            "aligned the v447 template (#1618). Removed the redundant NCBI "
+            "evidence row to avoid a quote spanning HTML blocks (#1619). "
+            "The paper, five exact paper/PDB snippets, PDB source metadata "
+            "and verified canonical-example taxon retain the substantive "
+            "support. Earlier curation history is preserved."
+        ),
+        llm_assisted=True,
+        timestamp=LEXICAL_REVIEW_TIMESTAMP,
     )
     return record
 
@@ -335,7 +345,7 @@ def proposal_tsv(record: dict) -> str:
             record["definition"],
             "|".join([f"TraitMech:data/traits/genomics/{SLUG}.yaml", PAPER, STRUCTURE]),
             "METPO:1018600",
-            "short-form Lamassu system",
+            record["synonyms"][0]["synonym_text"],
             "",
             "metpo_traitmech_2026_10",
             "HIGH",
@@ -359,11 +369,16 @@ def main() -> int:
         target_bytes = TARGET.read_bytes()
         if (
             yaml.safe_load(target_bytes) != record
-            and hashlib.sha256(target_bytes).hexdigest() != LEGACY_TARGET_SHA256
+            and hashlib.sha256(target_bytes).hexdigest() not in LEGACY_TARGET_SHA256S
         ):
             raise SystemExit("Existing target differs from this writer; review before applying")
-    if proposal_path.exists() and proposal_path.read_text() != proposal:
-        raise SystemExit("Existing proposal differs from this writer; review before applying")
+    if proposal_path.exists():
+        proposal_bytes = proposal_path.read_bytes()
+        if (
+            proposal_bytes.decode() != proposal
+            and hashlib.sha256(proposal_bytes).hexdigest() != LEGACY_PROPOSAL_SHA256
+        ):
+            raise SystemExit("Existing proposal differs from this writer; review before applying")
     updates = [(TARGET, record), (PARENT, parent), (HNH, hnh)]
     with tempfile.TemporaryDirectory() as tmp:
         for path, updated in updates:
