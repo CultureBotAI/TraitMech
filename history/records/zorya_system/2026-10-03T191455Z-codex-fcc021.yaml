@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_system.yaml
+  slug: zorya_system
+session:
+  id: 2026-10-03T191455Z-codex-fcc021
+  timestamp: '2026-10-03T19:14:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link accepted Zorya type III architecture
+  details: Appended the accepted traitmech:000576 ZorA/B/F/G class to the existing open subtype
+    discussion using DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57397-2. Recorded
+    the source component discrepancy and incomplete detector-call caveat. Preserved family
+    identity, definition, hierarchy, evidence, canonical example and graph; type-III biochemical
+    questions remain open. The guarded writer uses preimage hashes, validated writes and provenance
+    events; controlled-fixture tests passed.

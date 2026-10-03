@@ -8338,7 +8338,7 @@ window.searchData = [
   "source_id": "traitmech:000217",
   "source_file": "zorya_system.yaml",
   "attaches_to": [],
-  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, and the pinned DefenseFinder rules table supports distinct Zorya_TypeI and Zorya_TypeII subtype rows. Zorya type I and type II TraitRecords now capture those DefenseFinder subtypes, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
+  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, and the pinned DefenseFinder rules table supports distinct Zorya_TypeI and Zorya_TypeII subtype rows. Zorya type I and type II TraitRecords now capture those DefenseFinder subtypes, but Zorya variants still need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth. The type-III architecture is now represented by traitmech:000576 Zorya type III system for ZorA/ZorB/ZorF/ZorG loci. Payne Figure 2C and Discussion plus Mariano's Introduction support that composition despite the conflicting zorBC wording in Payne's Results. DefenseFinder's three-match threshold is not a complete four-component biological definition. Type-III component roles and native-host mechanisms remain open; the family definition, graph and type-I/II records are unchanged.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -8390,6 +8390,23 @@ window.searchData = [
   ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/zorya_type_ii_system.html#zorya-type-ii-activity-gap"
+ },
+ {
+  "discussion_id": "zorya-type-iii-component-and-mechanism-scope",
+  "prompt": "Resolve type-III component roles without transferring type-I/II mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Zorya type III system",
+  "source_id": "traitmech:000576",
+  "source_file": "zorya_type_iii_system.yaml",
+  "attaches_to": [],
+  "rationale": "The accepted architecture follows Payne Figure 2C and Discussion plus Mariano Figure 1 and Introduction, not Payne's conflicting Results wording or a detector key alone. ZorF/ZorG regulation of ZorAB is a proposal; no direct component-resolved mechanism is asserted here. Neither type-I phage-DNA degradation nor type-II ZorE nickase activity is assigned to type III. The ion substrate, activation trigger, native-host activity, individual component dependence and antiviral breadth remain open. The four-component definition is not weakened to match DefenseFinder's three-match threshold, and a missing hit or incomplete assembly is not proof of biological component absence. Multiple subtype loci may coexist in a genome; no organism-level disjointness is asserted. No mechanistic graph or protein examples are added without accession-resolved functional evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/zorya_type_iii_system.html#zorya-type-iii-component-and-mechanism-scope"
  },
  {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
@@ -9753,9 +9770,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 447,
- "total_knowledge_gaps": 359,
- "total_source_entries": 441,
+ "total_discussions": 448,
+ "total_knowledge_gaps": 360,
+ "total_source_entries": 442,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

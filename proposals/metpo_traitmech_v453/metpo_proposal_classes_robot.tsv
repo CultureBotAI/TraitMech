@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1053000	Zorya type III system	A Zorya system in which an organism possesses a locus encoding ZorA and ZorB together with ZorF and ZorG.	TraitMech:data/traits/genomics/zorya_type_iii_system.yaml|DOI:10.1093/nar/gkab883|DOI:10.1038/s41467-025-57397-2	METPO:1017100	Zorya type III		metpo_traitmech_2026_10	HIGH	Literature-defined ZorA/B/F/G architecture, not an incomplete detector call or a universal nuclease mechanism.	traitmech:000576

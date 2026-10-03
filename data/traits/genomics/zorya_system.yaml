@@ -185,6 +185,12 @@ discussions:
     now capture those DefenseFinder subtypes, but Zorya variants still need separate
     review before TraitMech asserts one universal ion substrate, effector composition,
     nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.
+    The type-III architecture is now represented by traitmech:000576 Zorya type III
+    system for ZorA/ZorB/ZorF/ZorG loci. Payne Figure 2C and Discussion plus Mariano's
+    Introduction support that composition despite the conflicting zorBC wording in
+    Payne's Results. DefenseFinder's three-match threshold is not a complete four-component
+    biological definition. Type-III component roles and native-host mechanisms remain
+    open; the family definition, graph and type-I/II records are unchanged.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -209,4 +215,11 @@ curation_history:
   changes: Documented Zorya type I as split out in the open Zorya subtype-effector
     discussion after minting traitmech:000554 for the DefenseFinder-backed Zorya_TypeI
     child; Type III and finer Zorya subtype mechanisms remain open.
+  llm_assisted: true
+- timestamp: '2026-10-03T19:16:00Z'
+  curator: codex
+  action: TRACK_ZORYA_TYPE_III_CLASS
+  changes: Linked traitmech:000576 using DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57397-2.
+    Kept the family definition, hierarchy, graph, evidence and example unchanged;
+    type-III component functions remain open rather than inheriting type-I/II chemistry.
   llm_assisted: true
