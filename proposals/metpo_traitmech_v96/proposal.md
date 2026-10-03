@@ -1,5 +1,9 @@
 # METPO ROBOT Template Proposal - Hachiman System (v96, 2026-09)
 
+> Superseded by [v451](../metpo_traitmech_v451/proposal.md) (2026-10-03).
+> v96 is retained for traceability; do not submit its family row alongside
+> the replacement. The original definition overgeneralized type-I DNA cleavage.
+
 > **Upstream submission:** to be consolidated into
 > [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535)
 > alongside the v1-v95 cohorts, requesting a real METPO ID for this Scope-A

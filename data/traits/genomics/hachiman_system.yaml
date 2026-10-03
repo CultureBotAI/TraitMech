@@ -1,8 +1,7 @@
 identifier: traitmech:000219
 label: Hachiman system
-definition: A genomics trait describing possession of a Hachiman antiphage defense
-  locus encoding a HamA/HamB nuclease-helicase core that restricts bacteriophage propagation
-  through DNA cleavage.
+definition: A phage defense system in which an organism possesses a Hachiman antiphage
+  locus encoding a HamA/HamB core.
 definition_source: DOI:10.1016/j.cell.2024.09.020
 trait_category: GENOMICS
 term_kind: CLASS
@@ -63,8 +62,9 @@ causal_graphs:
   - node_id: hachiman_locus
     label: Hachiman locus
     node_type: GENETIC_ELEMENT
-    description: A Hachiman antiphage defense locus encoding a HamA/HamB nuclease-helicase
-      core and, in some type II systems, an accessory HamC component.
+    description: A Hachiman antiphage locus encoding a HamA/HamB core. This graph
+      describes characterized type-I systems, not the HamC-containing type-II architecture
+      represented by traitmech:000574.
   - node_id: hamab_complex_assembly
     label: HamAB complex assembly
     node_type: BIOLOGICAL_PROCESS
@@ -165,7 +165,14 @@ discussions:
     Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman
     variants need separate review before TraitMech asserts one universal triggering
     DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture,
-    phage range, or abortive-infection output.
+    phage range, or abortive-infection output. Hachiman type II system (traitmech:000574)
+    now resolves the HamABC architecture defined by Payne et al. (DOI:10.1093/nar/gkab883)
+    and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence,
+    but HamC function and type-II mechanism remain open. The family definition no
+    longer requires universal DNA cleavage; this graph and its evidence remain restricted
+    to characterized type-I systems. Proposal v451 replaces v96's overgeneralized
+    family definition while preserving the stable local family identifier. Type I
+    remains a separate architecture-class discovery lead.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -176,4 +183,12 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v96.
+  llm_assisted: true
+- timestamp: '2026-10-03T18:08:00Z'
+  curator: codex
+  action: SCOPE_HACHIMAN_FAMILY_AND_TYPE_II
+  changes: 'Addressed #1630: removed the unsupported universal DNA-cleavage condition
+    from the family definition while retaining the type-I mechanism evidence and graph
+    scope. Linked the new HamABC child traitmech:000574; HamC chemistry remains an
+    open question. Proposal v451 supersedes v96 without editing the old TSV.'
   llm_assisted: true

@@ -1,0 +1,83 @@
+identifier: traitmech:000574
+label: Hachiman type II system
+definition: A Hachiman system in which an organism possesses a locus encoding HamA
+  and HamB together with an additional HamC (DUF3223) component.
+definition_source: DOI:10.1093/nar/gkab883
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000219
+synonyms:
+- synonym_text: Hachiman type II
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkab883
+evidence:
+- reference: DOI:10.1093/nar/gkab883
+  snippet: a gene encoding a DUF3223 protein (HamC) either upstream or downstream
+    of hamAB
+  notes: 'Results, new-subtype classification: Payne et al. name this HamC-associated
+    Hachiman architecture type II. Methods and Figure 3 identify the DSM 14551 source
+    locus and show antiphage activity after expression in E. coli BL21-AI. The natural
+    source and engineered assay host are distinct. The paper does not establish native-host
+    resistance, a universal phage spectrum, HamC essentiality or HamC chemistry.'
+- reference: DOI:10.1038/s41467-025-57851-1
+  snippet: Hachiman systems that include HamA, HamB, and HamC (DUF3223) were referred
+    to as type II
+  notes: 'Introduction: Cui et al. retain the HamABC classification and attribute
+    it to Payne et al.; this is corroborating terminology, not an independent type-II
+    experiment. Their biochemical experiments on type I-A/I-B do not establish DNA-damage
+    sensing, DNA cleavage or HamC function in type II.'
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/definitions/DefenseFinder/Hachiman/Hachiman_II.xml
+  snippet: <gene name="Hachiman_II__HamC" presence="mandatory"/>
+  notes: 'Pinned DefenseFinder XML, retrieved 2026-10-03: HamA (HamA_1 with HamA_2
+    exchangeable), HamB and HamC are marked mandatory, but both minimum gene counts
+    are 2 and the inter-gene maximum space is 5. Thus the model does not require all
+    three marked components in every accepted call; a raw Hachiman_II call alone is
+    insufficient to establish the complete biological architecture. This is a detector
+    constraint, not an experiment or a trait synonym.'
+- reference: https://raw.githubusercontent.com/padlocbio/padloc-db/9e380165633a8d6aef93b5a164cea0f3359bd33f/sys/hachiman_type_II.yaml
+  snippet: "minimum_core: 3\nminimum_total: 3\ncore_genes:\n  - HamA2\n  - HamB2\n\
+    \  - HamC2"
+  notes: 'Pinned PADLOC rule, retrieved 2026-10-03: all three core components are
+    required, maximum_separation is 0 and force_strand is FALSE. This differs from
+    DefenseFinder''s two-gene minimum; neither detector proves functional defense
+    or experimental necessity of each component.'
+canonical_examples:
+- taxon_id: NCBITaxon:173675
+  taxon_label: Sphingopyxis witflariensis
+  reference: DOI:10.1093/nar/gkab883
+  note: DSM 14551 is the natural source of the type-II locus amplified from genomic
+    DNA by Payne et al. (NZ_NISJ01000011.1). The NCBI GenBank source feature independently
+    identifies DSM 14551 and taxon 173675. This example denotes possession in this
+    source strain, not all members of the species or native-host resistance. The reported
+    defense assays used engineered E. coli BL21-AI.
+discussions:
+- discussion_id: hachiman-type-ii-component-and-mechanism-scope
+  prompt: Resolve HamC function and type-II mechanisms beyond heterologous defense
+    assays.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Type II denotes the HamABC locus architecture, not a HamC hit alone,
+    a source database row or a fixed phage-protection phenotype. Type-I DNA-damage
+    sensing and DNA-cleavage mechanisms are not generalized to this class; HamC's
+    biochemical role and necessity remain unresolved by these sources. No causal mechanism
+    graph or unverified protein accession is asserted. Native-host assays and accession-resolved
+    functional evidence remain desirable. DefenseFinder and PADLOC have different
+    component-count rules; inspect complete locus context before converting calls
+    into trait assertions. Component absence cannot be inferred from a failed hit
+    or incomplete assembly. Type I remains a separate discovery lead, and coexisting
+    loci would not make organism-level type-I and type-II possession traits disjoint.
+  posed_by: codex
+  posed_date: '2026-10-03'
+curation_history:
+- timestamp: '2026-10-03T18:08:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added the literature-defined HamABC possession class with two DOI sources,
+    exact snippets, pinned detector rules and the NCBI-resolved DSM 14551 example.
+    Searches included ignored and hidden files and found no exact live record or METPO
+    class. Reserved METPO:1052801 in v451; METPO:1052800 replaces the broad parent's
+    v96 proposal. Kept natural source, heterologous activity and type-I chemistry
+    distinct.
+  llm_assisted: true

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-10-03T181209Z-codex-bb94db
+  timestamp: '2026-10-03T18:12:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - instructions
+  summary: Make direct add-trait seeder command import the local package
+  details: The documented direct .venv Python command failed with ModuleNotFoundError for
+    traitmech; added PYTHONPATH=src consistently with justfile. Verified the corrected invocation
+    emitted 399 temporary seed files without touching the corpus.
