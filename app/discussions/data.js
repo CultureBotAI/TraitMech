@@ -10109,6 +10109,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ph_taxis.html#ph-taxis-mechanism-and-canonical-strains"
  },
  {
+  "discussion_id": "ph-tropism-growth-direction-and-assay-boundaries",
+  "prompt": "Keep pH-directed growth distinct from taxis, tolerance and growth rate.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pH tropism",
+  "source_id": "traitmech:000602",
+  "source_file": "ph_tropism.yaml",
+  "attaches_to": [],
+  "rationale": "This is a pH-specific child of chemotropism, not another name for all chemical-gradient growth. It includes growth toward lower or higher pH without requiring both in one organism; mutant direction reversal does not establish a natural higher-pH-seeking strain. pH taxis denotes active locomotion. pH optimum, acid tolerance, intracellular pH homeostasis, biomass and extension rate alone are insufficient. Retain the source-specific replication and growth-inhibition limitations; resolve external equivalents and alternative labels before adding synonyms or xrefs. The local chemotropism parent (traitmech:000597) has a pending v474 proposal, METPO:1055100, not a released term. The v479 proposal uses released METPO:1000059 phenotype; reconcile the narrower hierarchy when v474 is accepted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ph_tropism.html#ph-tropism-growth-direction-and-assay-boundaries"
+ },
+ {
+  "discussion_id": "ph-tropism-strain-provenance-and-spatial-mechanism",
+  "prompt": "Resolve strain identity and the spatial-sensing mechanism before enrichment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pH tropism",
+  "source_id": "traitmech:000602",
+  "source_file": "ph_tropism.yaml",
+  "attaches_to": [],
+  "rationale": "Fernandes Methods identify Fol4287 (FGSC 9935), whereas Table S1 labels its wild type FGSC 4287. Reconcile the collection label and verify natural provenance and NCBI identity before canonical examples. Yamamoto Table S1 lists engineered backgrounds including TH122. Keep spatial-gradient orientation separate from uniform pH shifts, cytosolic-pH regulation and invasion assays. Kinase perturbations support context-specific contributions, not a universal receptor or a complete spatial-sensing chain. Resolve native, taxon-paired protein accessions and direct causal links before adding a mechanism graph; NONMECHANISTIC is not a grounding bypass.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ph_tropism.html#ph-tropism-strain-provenance-and-spatial-mechanism"
+ },
+ {
   "discussion_id": "phenylalanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for phenylalanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10518,9 +10552,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 492,
+ "total_discussions": 494,
  "total_knowledge_gaps": 365,
- "total_source_entries": 467,
+ "total_source_entries": 468,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

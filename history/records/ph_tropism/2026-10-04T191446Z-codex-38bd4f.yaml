@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/ph_tropism.yaml
+  slug: ph_tropism
+session:
+  id: 2026-10-04T191446Z-codex-38bd4f
+  timestamp: '2026-10-04T19:14:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add pH-directed polarized growth with primary evidence
+  details: Added traitmech:000602 pH tropism under local chemotropism after whole-repository
+    ignored/hidden novelty and ID searches and structured OWL inspection. Two snippets exactly
+    match directly retrieved Europe PMC JATS (PMC10128062, PMC11288418); inspected Fernandes
+    Figure 1B and Table S1 and Yamamoto Figure 3 and Table S1 as images. Distinguished gradient-directed
+    growth from locomotion, pH tolerance, uniform shifts and invasion; retained mutant direction
+    limits, single-experiment counts, growth inhibition, conflicting summary wording and collection-label
+    discrepancy. Deferred canonical strains and accession-level causal graphs. Reserved METPO:1055600
+    in v479 with the released phenotype parent and pending chemotropism reconciliation. Guarded
+    writer dry run and seven focused tests pass; broader checks and rendered artifacts follow
+    before submission. No older source YAML or QC baseline changed.
