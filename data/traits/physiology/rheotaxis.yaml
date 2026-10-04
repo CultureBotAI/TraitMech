@@ -1,0 +1,63 @@
+identifier: traitmech:000582
+label: rheotaxis
+definition: A motile phenotype in which fluid velocity gradients bias an organism's
+  self-propelled movement.
+definition_source: DOI:10.1073/pnas.1120955109
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.1073/pnas.1120955109
+  snippet: Rheotaxis is the directed movement resulting from fluid velocity gradients
+  notes: Abstract and Results, https://pmc.ncbi.nlm.nih.gov/articles/PMC3324032/ (PMID:22411815).
+    Smooth-swimming Bacillus subtilis OI4139 exhibits transverse swimming in bulk
+    shear flow. Physical reorientation couples to active propulsion; passive advection
+    alone is insufficient. This is not restricted to upstream migration or receptor-mediated
+    sensing. OI4139 is a mutant that almost never tumbles, not a wild-type canonical
+    exemplar; no strain accession is inferred.
+- reference: DOI:10.1016/j.bpj.2012.03.001
+  snippet: positive rheotaxis (rapid and continuous upstream motility) in wild-type
+    Escherichia coli freely swimming over a surface
+  notes: Abstract, with strain and preparation in Materials and Methods, Bacteria
+    preparation; behavioral regimes in Results and Figures 3-6. The publisher-formatted
+    article was read at https://sacredheart.elsevierpure.com/ws/portalfiles/portal/39998836/Kaya_BJ12_Bacteria.pdf
+    (PMID:22500751). K12 cells underwent 3-5 rounds of motility selection. Moderate
+    shear supported upstream swimming near the channel ceiling; higher shear produced
+    sideways swimming and downstream drag. The study does not establish universal
+    upstream motion, a universal shear threshold, or in-vivo infection. Supplementary
+    movies were not viewed.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  reference: DOI:10.1016/j.bpj.2012.03.001
+  note: Kaya and Koser's wild-type K12 population after 3-5 motility-selection rounds,
+    swimming near a PDMS channel ceiling under moderate shear. This condition-qualified
+    example does not cover every K-12 cell or flow regime. No more specific K-12 substrain
+    is inferred.
+discussions:
+- discussion_id: rheotaxis-context-specific-mechanism-grounding
+  prompt: Ground separate surface and bulk-flow mechanisms without inventing a shear-sensing
+    protein.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The cited studies support hydrodynamic reorientation coupled to powered
+    swimming, but surface-associated upstream motion and bulk transverse motion must
+    not be collapsed into one universal mechanism. A protein-resolved causal graph
+    is deferred pending a verified link between a primary mechanistic experiment,
+    its precise strain and an accession-level protein example. OI4139 must not be
+    silently identified as strain 168. No graph or protein accession is asserted in
+    this first-pass identity record. QuickGO search for rheotaxis returned no term
+    on 2026-10-04; no exact external xref is asserted.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T00:17:45Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added rheotaxis with two primary DOI citations, contiguous snippets and
+    a condition-qualified K-12 example resolved at NCBI. Ignored-and-hidden searches
+    found no exact trait or METPO class. Reserved METPO:1053600 in proposal v459;
+    deferred a protein-resolved graph rather than infer strain/protein identity.
+  llm_assisted: true
