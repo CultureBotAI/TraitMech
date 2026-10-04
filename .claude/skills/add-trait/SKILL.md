@@ -286,6 +286,10 @@ presenting them as natural canonical exemplars. A study's reference strain can
 itself be a mutant. Retain relevant measurements as qualified evidence when a
 canonical example would conceal that distinction.
 
+Keep strain-provenance URLs in the qualified canonical example's `note`.
+Do not count provenance-only collection fields as independent trait evidence,
+or flatten separate field labels and values into a prose `snippet` (#1660).
+
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 
@@ -574,6 +578,12 @@ before `scripts/render_trait_pages.py` only when
 artifacts were not regenerated. Check those configured sibling paths directly
 rather than crawling the whole KG-Microbe checkout looking for the embedding
 file names.
+
+For a METPO proposal, inspect the emitted OWL as well as the ROBOT exit
+status. METPO CURIEs in proposal IDs and parents must expand to `https://w3id.org/metpo/`,
+matching the pinned ontology; confirm that the merged parent has its expected
+label and hierarchy. A legacy `purl.obolibrary.org/obo/METPO_` stub is not the
+same parent, even when ELK exits successfully (#1658).
 
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before

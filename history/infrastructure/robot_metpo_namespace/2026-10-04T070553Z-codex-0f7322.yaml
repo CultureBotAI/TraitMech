@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/robot_validate_proposal.py
+  slug: robot_metpo_namespace
+session:
+  id: 2026-10-04T070553Z-codex-0f7322
+  timestamp: '2026-10-04T07:05:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1658
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - validation
+  - documentation
+  - tests
+  summary: Attach ROBOT proposals to the canonical METPO namespace
+  details: 'Adversarial energy-taxis review reproduced issue #1658: legacy purl METPO expansion
+    creates a detached parent stub while the pinned ontology and schema use https://w3id.org/metpo/.
+    Five new regression cases failed on the old implementation. Corrected class/property ROBOT
+    prefixes and manual skill commands, and added emitted-parent inspection guidance to add-trait.
+    Historical generated OWL using the legacy prefix must be regenerated before relying on
+    its hierarchy validation. No curated trait values were changed by this infrastructure
+    fix.'

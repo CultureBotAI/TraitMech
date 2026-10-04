@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """ROBOT + ELK validation for a TraitMech METPO proposal cohort.
 
-Mirrors `kg-microbe/scripts/extract_metpo_proposals.py::validate_with_robot`
-(line 1643): compiles each ROBOT-template TSV into OWL, merges them (optionally
-with the local METPO snapshot), and runs ELK to detect unsatisfiable classes.
+Compiles each ROBOT-template TSV into OWL, merges them (optionally with the
+local METPO snapshot), and runs ELK to detect unsatisfiable classes. METPO
+CURIEs must expand to the same namespace as the pinned ontology (#1658).
 
 Robot binary discovery (first match wins):
 
@@ -36,7 +36,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 DEFAULT_METPO = REPO_ROOT / "data/raw/metpo.owl"
 
 PREFIXES = [
-    "--prefix", "METPO: http://purl.obolibrary.org/obo/METPO_",
+    "--prefix", "METPO: https://w3id.org/metpo/",
     "--prefix", "biolink: https://w3id.org/biolink/vocab/",
     "--prefix", "RO: http://purl.obolibrary.org/obo/RO_",
     "--prefix", "rdfs: http://www.w3.org/2000/01/rdf-schema#",

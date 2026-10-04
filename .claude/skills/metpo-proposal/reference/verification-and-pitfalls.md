@@ -62,9 +62,7 @@ print('Parents missing locally:', missing or 'none')
 "
 ```
 
-For full ROBOT + ELK validation use the wrapper, which mirrors the
-canonical kg-microbe `validate_with_robot()` invocation
-(`kg-microbe/scripts/extract_metpo_proposals.py:1643`):
+For full ROBOT + ELK validation use the maintained wrapper:
 
 ```bash
 just robot-validate-proposal <cohort>
@@ -75,6 +73,12 @@ The wrapper auto-discovers the `robot` binary in this order:
 It compiles the classes TSV (and the properties TSV if present), merges
 with `data/raw/metpo.owl`, and runs ELK with axiom-generators `SubClass
 EquivalentClass`. OWL artifacts land in `reports/robot/<cohort>/`.
+The METPO prefix must be `https://w3id.org/metpo/`, matching the pinned
+ontology and TraitRecord schema. Inspect the emitted subclass IRIs and the
+merged parent's label and hierarchy: a legacy `purl.obolibrary.org/obo/METPO_`
+parent is a separate stub, so ELK success alone cannot validate attachment
+to the real parent (#1658). Previously generated artifacts using that legacy
+prefix need regeneration before their hierarchy validation can be relied on.
 
 Pass criteria: all `robot` commands exit zero with no `UNSAT` warnings.
 A reasoned output line count much larger than the merged input signals
@@ -86,12 +90,12 @@ not yet in the wrapper):
 
 ```bash
 robot template --template proposals/<cohort>/metpo_proposal_classes_robot.tsv \
-    --prefix "METPO: http://purl.obolibrary.org/obo/METPO_" \
+    --prefix "METPO: https://w3id.org/metpo/" \
     --prefix "biolink: https://w3id.org/biolink/vocab/" \
     --prefix "RO: http://purl.obolibrary.org/obo/RO_" \
     --output /tmp/classes.owl
 robot template --template proposals/<cohort>/metpo_proposal_properties_robot.tsv \
-    --prefix "METPO: http://purl.obolibrary.org/obo/METPO_" \
+    --prefix "METPO: https://w3id.org/metpo/" \
     --prefix "biolink: https://w3id.org/biolink/vocab/" \
     --output /tmp/properties.owl
 robot merge --input data/raw/metpo.owl --input /tmp/classes.owl --input /tmp/properties.owl \
@@ -110,6 +114,7 @@ robot reason --reasoner ELK --input /tmp/merged.owl \
 | `awk` reports row 2 has 8/9 columns | Trailing tabs missing on ROBOT header | Append `\t\t\t` to row 2 (see step 4) |
 | ROBOT error "subject of axiom is not a class" | Property row referencing a class IRI in the `RANGE` column when ROBOT expects a class declaration | Declare the range class as its own row in the classes TSV first |
 | ELK reports unsatisfiable class | Intermediate parent created with conflicting `SC %` axioms | Inspect the parent chain — usually a copy-paste error in the `parent` column |
+| ELK passes but the proposed class has no real METPO ancestors | Wrong METPO prefix created a detached parent stub | Regenerate with `https://w3id.org/metpo/` and inspect the actual emitted subclass and parent IRIs (#1658). |
 | Copilot flags "schema lifted incorrectly" | The leaf's definition doesn't match the schema enum's description verbatim | Copy the schema description into the `definition` column, *then* edit only for Aristotelian form. Reword more freely in the proposal narrative. |
 | Reviewer asks for an existing METPO ID | The lifted concept already exists in METPO under a different label | Use the existing IRI; remove the row from the proposal; record the alias in the next seeder run so the `traitmech:` ID gets retired. |
 | `traitmech:` ID in `data/traits/` is in NO cohort's TSV | Coverage gap — the id has no METPO home, so it cannot be cross-referenced from kg-microbe | `just audit-proposal-coverage` names it; if the trait PR is still open, add a Scope-A row there; otherwise create the next `metpo_traitmech_v<N>` Scope-A cohort. Not a per-cohort failure (#319). |
