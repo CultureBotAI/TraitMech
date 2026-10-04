@@ -9531,6 +9531,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/galvanotaxis.html#galvanotaxis-source-data-coordinate-convention"
  },
  {
+  "discussion_id": "galvanotropism-growth-and-field-boundaries",
+  "prompt": "Keep directional growth separate from movement and passive field effects.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "galvanotropism",
+  "source_id": "traitmech:000595",
+  "source_file": "galvanotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Growth orientation is not whole-cell locomotion; the parent is phenotype, not motile. The existing galvanotaxis record (traitmech:000581) denotes active migration, and thigmotropism (traitmech:000594) denotes contact-directed polarized growth. Passive displacement, bending, alignment or changes in growth rate alone are insufficient. Do not conflate galvanotropism with electron uptake or current production. The bacterial anodal and fungal cathodal observations do not support an invariant electrode preference. A QuickGO galvanotropism search returned no hits on 2026-10-04; broader electric-field responses are not exact xrefs. Other external equivalences and electrotropism as a lexical variant require separate authority and scope checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/galvanotropism.html#galvanotropism-growth-and-field-boundaries"
+ },
+ {
+  "discussion_id": "galvanotropism-stage-and-mechanism-grounding",
+  "prompt": "Resolve natural-strain evidence and distinguish emergence from maintenance.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "galvanotropism",
+  "source_id": "traitmech:000595",
+  "source_file": "galvanotropism.yaml",
+  "attaches_to": [],
+  "rationale": "The full fungal study distinguishes establishment of cathodal growth from maintenance of tip orientation. Do not turn its aggregate abstract claim into a requirement for calcium influx at every stage. Its supplemental Table S1 and methods identify an engineered CAI4/CIp10 control and mutant or complemented derivatives; a wild-type label alone does not establish natural provenance. Inspect the older studies' full methods and resolve natural strains with NCBI identities before adding canonical examples. Resolve taxon-paired protein accessions and stage-specific causal claims before adding a mechanism graph. Do not transfer fungal channel dependence to bacteria or adopt the 1994 paper's historical actin-absence premise. A NONMECHANISTIC graph must not bypass missing protein grounding.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/galvanotropism.html#galvanotropism-stage-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "gamma-glutamyltransferase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for gamma-glutamyltransferase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10280,9 +10314,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 478,
+ "total_discussions": 480,
  "total_knowledge_gaps": 365,
- "total_source_entries": 460,
+ "total_source_entries": 461,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

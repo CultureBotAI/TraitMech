@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/galvanotropism.yaml
+  slug: galvanotropism
+session:
+  id: 2026-10-04T111258Z-codex-95b9dd
+  timestamp: '2026-10-04T11:12:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add electric-field-directed growth with stage-specific evidence limits
+  details: 'Minted traitmech:000595 under phenotype with three primary DOI sources: 10.1128/jb.176.3.702-713.1994,
+    10.1099/00221287-136-2-311 and 10.1016/j.cub.2006.12.043. The first two snippets are abstract
+    spans; the third was inspected directly in PMC1885950 full text. Brand Figs. 1 and 2 and
+    supplemental Table S1 distinguish emergence from later tip orientation and identify engineered
+    CAI4/CIp10 control NGY152. No natural canonical example, protein accession or mechanism
+    graph is inferred. Ignored-and-hidden novelty searches and structured OWL review distinguish
+    galvanotaxis and thigmotropism. Reserved METPO:1054900 in proposal v472. The guarded writer
+    passed seven focused tests; skill guidance now separates establishment and maintenance
+    readouts. README counts and maintained derived artifacts are updated in this change; full
+    validation outcomes belong in the PR receipt.'
