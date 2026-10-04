@@ -10262,6 +10262,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/rheotaxis.html#rheotaxis-context-specific-mechanism-grounding"
  },
  {
+  "discussion_id": "rheotropism-growth-flow-and-direction-boundaries",
+  "prompt": "Keep flow-directed growth distinct from swimming and passive transport.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "rheotropism",
+  "source_id": "traitmech:000600",
+  "source_file": "rheotropism.yaml",
+  "attaches_to": [],
+  "rationale": "The class includes upstream or downstream growth in liquid or gas without requiring both directions or media in one organism. Rheotaxis concerns self-propelled movement, not growth orientation. Passive bending, advection, alignment and growth-rate changes alone are insufficient. Initiation of polarized growth and subsequent tip reorientation are different readouts. Resolve external phenotype equivalences and the scope of wind-response labels before adding xrefs or synonyms; do not split a lexical variant into another trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/rheotropism.html#rheotropism-growth-flow-and-direction-boundaries"
+ },
+ {
+  "discussion_id": "rheotropism-native-mechanism-and-exemplars",
+  "prompt": "Resolve strain provenance and discriminate mechanical from chemical cues.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "rheotropism",
+  "source_id": "traitmech:000600",
+  "source_file": "rheotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Flow can redistribute chemical signals as well as impose mechanical forces. Do not require a direct mechanoreceptor or transfer a mechanism across species, growth stages or fluid media. Inspect the remaining full texts and establish natural strain provenance and NCBI identity before adding canonical examples. Resolve native causal evidence and taxon-paired protein accessions before a mechanistic graph; do not use NONMECHANISTIC to bypass grounding requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/rheotropism.html#rheotropism-native-mechanism-and-exemplars"
+ },
+ {
   "discussion_id": "serine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for serine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10450,9 +10484,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 488,
+ "total_discussions": 490,
  "total_knowledge_gaps": 365,
- "total_source_entries": 465,
+ "total_source_entries": 466,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

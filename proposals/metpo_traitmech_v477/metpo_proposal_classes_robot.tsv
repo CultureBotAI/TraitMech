@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055400	rheotropism	A phenotype in which growth is directionally oriented or reoriented in response to fluid flow.	TraitMech:data/traits/physiology/rheotropism.yaml|DOI:10.1016/S0006-3495(65)86719-4|DOI:10.1016/S0168-1656(97)00147-8|DOI:10.1007/BF00397538	METPO:1000059			metpo_traitmech_2026_10	HIGH	Flow-directed growth; either polarity in liquid or gas, not swimming or passive motion.	traitmech:000600
