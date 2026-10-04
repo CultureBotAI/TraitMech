@@ -1,0 +1,94 @@
+identifier: traitmech:000606
+label: heterokaryon incompatibility
+definition: A fungal phenotype in which postfusion nonself recognition restricts the
+  establishment or growth of viable vegetative heterokaryons.
+definition_source: DOI:10.1099/mic.0.032284-0
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1099/mic.0.032284-0
+  snippet: Incompatible heterokaryons show a macroscopic phenotype of slow growth
+    and diminished conidiation, and a microscopic phenotype of hyphal compartmentation
+    and cell death.
+  notes: Hutchison et al. (2009), PMID:19696111. The directly retrieved Europe PMC
+    abstract and publisher abstract identify nonself recognition during fusion between
+    strains differing at het loci, with restricted growth and localized cell death.
+    This supports postfusion heterokaryon incompatibility, not failure to approach
+    or fuse. The study combines transcriptional profiling with functional analysis
+    of het-c pin-c incompatibility in Neurospora crassa. Transcript associations do
+    not establish causal edges; the abstract reports that tested caspase and AIF homologues
+    were not required. Full text, figures and supplements were not retrieved, so no
+    detailed assay or protein-dependency claim beyond the abstract is asserted.
+- reference: DOI:10.1016/s1087-1845(03)00086-0
+  snippet: Hyphal fusion cells in compatible self-pairings and hyphal cells in het-c
+    compatible transformants were not compartmentalized and rarely showed TUNEL-positive
+    nuclei.
+  notes: Marek et al. (2003), PMID:14516765; snippet exact-matched to the directly
+    retrieved Europe PMC abstract. Incompatible Neurospora crassa pairings differing
+    at mat, het-c and het-6 were compared with compatible self-pairings; separate
+    transformant experiments tested incompatible het-c alleles. The abstract reports
+    septal compartmentation and nuclear DNA degradation in incompatible cells, contrasted
+    with the quoted controls. TUNEL and apoptosis-like morphology do not identify
+    a conserved metazoan apoptosis pathway. Death also occurred in older hyphae, so
+    death alone is not specific for this trait. Full text, figures, supplements and
+    original strain provenance were not inspected; no natural canonical exemplar is
+    inferred from the transformed assay.
+- reference: DOI:10.3852/mycologia.98.1.43
+  snippet: While clearly forming barrages in mycelial interactions, paired strains
+    with different alleles at vic4 formed stable heterokaryons.
+  notes: 2006 primary study, PMID:16800303; snippet exact-matched to the directly
+    retrieved Europe PMC abstract. Hygromycin B- and benomyl-resistance forcing markers
+    were used in Cryphonectria parasitica pairings. Differences at vic1, vic2, vic3,
+    vic6 or vic7, but not vic4, produced heterokaryon incompatibility readouts of
+    slow growth or abnormal morphology. The vic4 counterexample separates barrage
+    formation from this trait; the abstract treats heterokaryon incompatibility as
+    a component of a broader vegetative incompatibility system. Vegetative incompatibility
+    is therefore not asserted as an exact synonym. Full text, figures, supplements
+    and marker-strain provenance were not inspected. The DOI and any publisher alias
+    identify one study, not independent replications.
+discussions:
+- discussion_id: heterokaryon-incompatibility-scope
+  prompt: Keep postfusion incompatibility distinct from broader vegetative barriers.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This organismal phenotype is not a het/vic locus, protein domain, sequence
+    feature or individual pairing result. It requires nonself recognition, not merely
+    slow growth or cell death. Barrage formation, prefusion avoidance, negative autotropism,
+    sexual incompatibility and inability to fuse are not exact equivalents. Hyphal
+    anastomosis can precede this response and is not an is-a parent. The definition
+    does not require death of the whole colony, failure of every nonself pairing or
+    a single conserved death pathway. The 2006 vic4 result prevents treating vegetative
+    incompatibility as an unqualified exact synonym. Resolve organismal ontology equivalences
+    at their issuing authorities before adding xrefs.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: heterokaryon-incompatibility-mechanism-provenance
+  prompt: Read experimental details and resolve strain and protein anchors before
+    enrichment.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Three primary abstracts support the phenotype and its boundary; full
+    texts, figures and supplements remain unread. Separate natural pairing observations
+    from transformants, forced heterokaryons and partial-diploid models when assessing
+    canonical examples. Verify original strain provenance and current NCBI identities
+    before adding taxon rows. Protein accessions, taxon pairing and native perturbation/rescue
+    details must be checked before a causal graph is added. Transcript changes and
+    TUNEL-positive nuclei are readouts, not proof of ROS necessity or canonical apoptosis.
+    Do not use NONMECHANISTIC to hide unresolved protein mechanisms.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T23:02:57Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added heterokaryon incompatibility as a postfusion nonself recognition
+    phenotype with three directly retrieved primary DOI-backed abstracts and exact
+    snippets. Distinguished barrage formation and broader vegetative incompatibility;
+    no exact synonyms, canonical examples or causal graph are asserted. Ignored-and-hidden
+    repository searches and structured METPO review found no exact trait. Reserved
+    METPO:1056000 in proposal v483 under released phenotype. Deferred unread full
+    texts, strain provenance, protein grounding and external equivalences.
+  llm_assisted: true

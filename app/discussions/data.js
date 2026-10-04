@@ -9871,6 +9871,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/heat_shock_response.html#heat-shock-response-xref-gap"
  },
  {
+  "discussion_id": "heterokaryon-incompatibility-scope",
+  "prompt": "Keep postfusion incompatibility distinct from broader vegetative barriers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterokaryon incompatibility",
+  "source_id": "traitmech:000606",
+  "source_file": "heterokaryon_incompatibility.yaml",
+  "attaches_to": [],
+  "rationale": "This organismal phenotype is not a het/vic locus, protein domain, sequence feature or individual pairing result. It requires nonself recognition, not merely slow growth or cell death. Barrage formation, prefusion avoidance, negative autotropism, sexual incompatibility and inability to fuse are not exact equivalents. Hyphal anastomosis can precede this response and is not an is-a parent. The definition does not require death of the whole colony, failure of every nonself pairing or a single conserved death pathway. The 2006 vic4 result prevents treating vegetative incompatibility as an unqualified exact synonym. Resolve organismal ontology equivalences at their issuing authorities before adding xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heterokaryon_incompatibility.html#heterokaryon-incompatibility-scope"
+ },
+ {
+  "discussion_id": "heterokaryon-incompatibility-mechanism-provenance",
+  "prompt": "Read experimental details and resolve strain and protein anchors before enrichment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterokaryon incompatibility",
+  "source_id": "traitmech:000606",
+  "source_file": "heterokaryon_incompatibility.yaml",
+  "attaches_to": [],
+  "rationale": "Three primary abstracts support the phenotype and its boundary; full texts, figures and supplements remain unread. Separate natural pairing observations from transformants, forced heterokaryons and partial-diploid models when assessing canonical examples. Verify original strain provenance and current NCBI identities before adding taxon rows. Protein accessions, taxon pairing and native perturbation/rescue details must be checked before a causal graph is added. Transcript changes and TUNEL-positive nuclei are readouts, not proof of ROS necessity or canonical apoptosis. Do not use NONMECHANISTIC to hide unresolved protein mechanisms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heterokaryon_incompatibility.html#heterokaryon-incompatibility-mechanism-provenance"
+ },
+ {
   "discussion_id": "histidine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for histidine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10654,9 +10688,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 500,
+ "total_discussions": 502,
  "total_knowledge_gaps": 365,
- "total_source_entries": 471,
+ "total_source_entries": 472,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
