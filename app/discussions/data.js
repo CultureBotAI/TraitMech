@@ -9871,6 +9871,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "osmotaxis-spatial-and-chemical-boundaries",
+  "prompt": "Separate osmotic migration from tolerance, kinesis and chemical specificity.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "osmotaxis",
+  "source_id": "traitmech:000592",
+  "source_file": "osmotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Osmotic stress survival, growth salinity preference, water balance, and speed or tumbling changes after a uniform shock do not alone establish net migration through a spatial gradient. Exclude passive transport, osmotic water movement and differential growth as sole evidence. Osmokinesis is not an exact synonym, even when it contributes to spatial redistribution. Solute-specific chemotaxis can coexist with osmotaxis, as the Barros study reports; the Leslie result does not negate it universally. The local chemotaxis record imposes flagellar motor switching, so motile is used as the verified broader parent. External equivalents remain unasserted pending authority and organismal-scope checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/osmotaxis.html#osmotaxis-spatial-and-chemical-boundaries"
+ },
+ {
+  "discussion_id": "osmotaxis-mechanism-and-canonical-strains",
+  "prompt": "Verify strain and life-stage provenance before adding examples or mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "osmotaxis",
+  "source_id": "traitmech:000592",
+  "source_file": "osmotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The studies support a microbial osmotic-gradient response without identifying one universal receptor or movement apparatus. Inspect full studies and relevant supplements, distinguish spatial observations from temporal-shock measurements and model interpretations, and resolve taxon-paired protein accessions before adding molecular causal graphs. Verify unperturbed natural strain provenance and NCBI identity before adding canonical examples; promastigote observations must retain their life-stage restriction. A NONMECHANISTIC graph must not bypass those requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/osmotaxis.html#osmotaxis-mechanism-and-canonical-strains"
+ },
+ {
   "discussion_id": "ph-taxis-scope-and-mapping-boundaries",
   "prompt": "Preserve directional scope and verify external equivalents.",
   "kind": "CURATION_TODO",
@@ -10178,9 +10212,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 472,
+ "total_discussions": 474,
  "total_knowledge_gaps": 365,
- "total_source_entries": 457,
+ "total_source_entries": 458,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -296,6 +296,15 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+For gradient-directed taxis candidates, distinguish net migration in a spatial
+gradient from speed, motor-bias or tumbling changes after a spatially uniform stimulus.
+The latter can support a proposed mechanism but do not alone demonstrate
+spatial migration. Likewise, distinguish observed accumulation from a model's
+prediction, and exclude passive transport or differential growth as its sole
+cause. Do not require a receptor-based sensing mechanism when physical
+coupling or kinesis could contribute; keep that mechanism unresolved until
+the evidence discriminates it.
+
 For versioned literature, record the version, posting date and stable
 version-specific full-text URL in `notes`, and inspect the corresponding
 supplements. Do not mix an earlier abstract with a later revision's figures or
@@ -565,7 +574,11 @@ Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<cate
 after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
 for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
 directly and confirm the recorded text is still a contiguous, verbatim source
-span. When adding or editing `canonical_examples`, run
+span. An `UNRESOLVED` result can also reflect DOI query syntax rather than
+missing indexing: cross-check the exact DOI against the issuing record or
+PMID before calling a source unindexed, and repair the resolver rather than
+claiming a successful check or changing the citation to hide the failure (#1663).
+When adding or editing `canonical_examples`, run
 `.venv/bin/python scripts/audit_canonical_examples.py --ncbi-api` so local
 validation resolves `NCBITaxon:` identifiers like the `canonical-example-taxonomy`
 PR workflow. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`

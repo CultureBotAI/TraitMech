@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add_trait_spatial_evidence
+session:
+  id: 2026-10-04T084901Z-codex-812620
+  timestamp: '2026-10-04T08:49:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Distinguish spatial migration from uniform-stimulus motility evidence
+  details: 'The osmotaxis evidence pass found that DOI:10.1073/pnas.1620945114 measures temporal-shock
+    motor and swimming changes and discusses their possible connection to accumulation. Added
+    a general rule for gradient-directed taxis candidates: uniform-stimulus speed or motor
+    responses do not alone demonstrate spatial migration; distinguish observed redistribution
+    from model predictions and exclude passive transport or differential growth as sole explanations.
+    Physical coupling or kinesis may contribute without requiring a universal receptor mechanism.
+    This does not impose a scalar-gradient requirement on direction-cued phototaxis or galvanotaxis.'

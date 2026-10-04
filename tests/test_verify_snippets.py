@@ -7,6 +7,8 @@ decisive, a near-miss is a prompt, and a non-match proves nothing.
 
 from __future__ import annotations
 
+import io
+import json
 import sys
 from pathlib import Path
 
@@ -110,6 +112,31 @@ def test_transport_failure_raises_rather_than_reporting_no_record():
         mp.setattr(vs.time, "sleep", lambda _s: None)
         with pytest.raises(vs.LookupFailed):
             vs.europepmc_abstract("PMID:29610310", retries=2)
+
+
+@pytest.mark.parametrize(("doi", "query"), [
+    ("10.1016/s0014-4894(03)00031-6", r"DOI:10.1016/s0014-4894\(03\)00031-6"),
+    ("10.1234/test(a)(b)", r"DOI:10.1234/test\(a\)\(b\)"),
+])
+def test_parenthesized_doi_is_literal_query_text(monkeypatch, doi, query):
+    """#1663: URL encoding alone does not escape Europe PMC query syntax."""
+    captured = []
+    abstract = "Cells migrated through the tested gradient."
+
+    def fake_urlopen(url, timeout=None):  # noqa: ARG001
+        sent = vs.urllib.parse.parse_qs(vs.urllib.parse.urlsplit(url).query)["query"][0]
+        captured.append(sent)
+        results = [{"doi": doi, "abstractText": abstract}] if sent == query else []
+        return io.StringIO(json.dumps({"resultList": {"result": results}}))
+
+    monkeypatch.setattr(vs.urllib.request, "urlopen", fake_urlopen)
+    resolved = vs.europepmc_abstract(f"DOI:{doi}")
+    assert captured == [query]
+    assert resolved == abstract
+    verdict, _, _ = vs.classify(
+        "migrated through the tested gradient", resolved, vs.DEFAULT_THRESHOLD,
+    )
+    assert verdict == "VERIFIED"
 
 
 def test_an_unindexed_reference_is_not_a_transport_failure():
