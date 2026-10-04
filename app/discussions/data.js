@@ -9055,6 +9055,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/aerobic_anoxygenic_phototrophy.html#aerobic-anoxygenic-phototrophy-xref-gap"
  },
  {
+  "discussion_id": "aerotaxis-direction-and-mapping-boundaries",
+  "prompt": "Preserve oxygen-directed scope and verify external equivalents.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "aerotaxis",
+  "source_id": "traitmech:000589",
+  "source_file": "aerotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Preferred oxygen need not be the highest available oxygen. Oxygen-dependent growth, respiration, tolerance and speed changes alone do not establish directional locomotion. Aerotaxis is narrower than general chemotaxis, while magnetic alignment and magnetoaerotaxis are not exact synonyms. The existing chemotaxis record is flagellar-specific; motile is the verified broader METPO parent without imposing that apparatus. No external xref or synonym is asserted before authority resolution and an organismal-disposition scope check.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aerotaxis.html#aerotaxis-direction-and-mapping-boundaries"
+ },
+ {
+  "discussion_id": "aerotaxis-mechanism-and-isolate-grounding",
+  "prompt": "Ground molecular branches and the exact environmental isolate.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "aerotaxis",
+  "source_id": "traitmech:000589",
+  "source_file": "aerotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "A proton-motive-force correlation or a fitted response law does not establish a universal oxygen receptor or molecular pathway. Add causal graphs only after direct primary evidence and taxon-paired protein accessions have been verified; no NONMECHANISTIC graph bypasses this requirement. The canonical example lacks a published strain designation or accession; retain its species-level and motile-subpopulation qualifiers until isolate-specific identity can be resolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aerotaxis.html#aerotaxis-mechanism-and-isolate-grounding"
+ },
+ {
   "discussion_id": "alanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10076,9 +10110,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 466,
+ "total_discussions": 468,
  "total_knowledge_gaps": 365,
- "total_source_entries": 454,
+ "total_source_entries": 455,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
