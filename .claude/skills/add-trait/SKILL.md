@@ -309,6 +309,9 @@ For growth tropisms, distinguish reorientation of polarized growth from
 whole-cell locomotion; do not automatically inherit a `motile` parent from
 neighboring taxis records. Contact-guided growth must also be distinguished
 from passive bending, incidental alignment and contact-induced differentiation.
+Keep establishment and maintenance readouts separate when perturbations affect
+them differently; an abstract's aggregate dependence claim does not establish
+the same mechanism at every stage.
 
 For versioned literature, record the version, posting date and stable
 version-specific full-text URL in `notes`, and inspect the corresponding
