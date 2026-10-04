@@ -1,0 +1,89 @@
+identifier: traitmech:000584
+label: gravitaxis
+definition: A motile phenotype in which the direction of active swimming is biased
+  relative to gravity.
+definition_source: DOI:10.1038/s41598-018-26046-8
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.1038/s41598-018-26046-8
+  snippet: Predominantly, E. gracilis shows a negative gravitaxis behavior.
+  notes: Introduction, page 1, visually verified at https://d-nb.info/1186379677/34
+    (PMID:29765103; PMC5954063). Direction varies with culture age. Results, Figure
+    4 and Supplementary Figure 6e-g distinguish upward-biased controls from EgPCDUF4201/CaM2
+    knockdowns. Full main text and supplement 41598_2018_26046_MOESM1_ESM.pdf inspected
+    via Europe PMC. Supplementary Figure 5e, not the main text's 5c, measures flagellar
+    length; Supplementary Table 1 reports comparable, not identical, speeds. These
+    controls do not exclude every flagellar defect. PKA phosphorylation and a direct
+    dynein link remain hypotheses.
+- reference: DOI:10.1242/jeb.050666
+  snippet: the ability to swim preferentially upwards (negative gravitaxis) is primarily
+    the result of upwardly curving trajectories
+  notes: Summary (PMID:21112996); publisher main-text Methods, Results and Discussion
+    inspected. Curved trajectories agree with a physical shape-orientation model,
+    but shape and orientation rate were not measured simultaneously in the same individual.
+    This is not proof that all protists lack gravity receptors. Gravikinesis concerns
+    orientation-dependent swimming speed, not the directional phenotype. Equation
+    images and supplementary material were not inspected; no equation-derived or supplement-only
+    claim is asserted.
+canonical_examples:
+- taxon_id: NCBITaxon:3039
+  taxon_label: Euglena gracilis
+  reference: DOI:10.1038/s41598-018-26046-8
+  note: Strain Z, axenic organic-medium cultures at 20 C under continuous light. Figure
+    4a and Supplementary Figure 6e show upward-biased wild-type controls; Methods
+    specify buffer-only electroporation. These are not the RNAi knockdowns. NCBI identifier
+    is species-level, not a strain accession; no universal age-independent direction
+    is implied.
+- taxon_id: NCBITaxon:5885
+  taxon_label: Paramecium caudatum
+  reference: DOI:10.1242/jeb.050666
+  note: Wild-type cells from one-week-old boiled-hay-infusion cultures. After several
+    hours in the observation chamber, rotation of the chamber revealed upward-curving
+    swimming tracks (Results, Figure 2). NCBI identifier is species-level; the paper
+    does not supply a resolved strain accession.
+discussions:
+- discussion_id: gravitaxis-direction-and-process-boundaries
+  prompt: Keep gravity-relative swimming distinct from settling and neighboring traits.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'Positive and negative gravitaxis are directional cases, not a requirement
+    that all cells always swim upward. Passive settling alone and speed changes alone
+    do not establish this trait. The definition does not require an active gravity
+    receptor: powered swimming and physical orientation can coexist. Gyrotaxis (traitmech:000583)
+    specifies a gravity-viscous torque mechanism, not an exact synonym or a disjoint
+    phenotype. No new subsumption axiom between them is asserted without reviewing
+    both scopes. QuickGO resolved active GO:0042332 gravitaxis on 2026-10-04, including
+    geotaxis as an exact lexical synonym. It denotes a biological process rather than
+    this organismal disposition; keep it out of equivalent xrefs and resolve any mapping
+    separately.'
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: gravitaxis-mechanism-grounding
+  prompt: Resolve exact protein anchors and a faithful physical-mechanism graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The sources provide mechanism evidence, but this first record does not
+    yet include a graph. Nasir's CaM2 accession EU935858 resolves to UniProtKB:B5THA2,
+    an unreviewed entry without a Proteomes cross-reference in the 2026-10-04 REST
+    response. An exact EgPCDUF4201 name query returned no hit; this does not establish
+    sequence absence. Resolve eligible exact examples before adding the molecular
+    branch; a DUF4201 match alone does not demonstrate gravitaxis. For the physical
+    branch, the current MECHANISTIC coverage audit requires a protein node and example.
+    Do not invent a receptor or misclassify physical causation as NONMECHANISTIC to
+    satisfy that audit.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T02:18:15Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added gravitaxis with two primary DOI sources, contiguous snippets and
+    source-qualified examples at verified species taxa 3039 and 5885. Ignored-and-hidden
+    searches found only gyrotaxis boundary mentions, not an exact record or METPO
+    term. Reserved METPO:1053800 in proposal v461; documented process-grain and mechanism-grounding
+    gaps without substituting a protein or asserting a universal receptor.
+  llm_assisted: true

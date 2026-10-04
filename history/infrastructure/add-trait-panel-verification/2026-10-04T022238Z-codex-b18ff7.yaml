@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-panel-verification
+session:
+  id: 2026-10-04T022238Z-codex-b18ff7
+  timestamp: '2026-10-04T02:22:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Verify supplementary panels before citing controls
+  details: The gravitaxis source DOI:10.1038/s41598-018-26046-8 points to Supplementary Figure
+    5c for flagellar length, while visual inspection of the supplement identifies panel 5e.
+    Added reusable guidance to inspect actual panels and captions, record pointer discrepancies,
+    and avoid treating a nonsignificant control as proof that every structural or functional
+    property is unchanged.

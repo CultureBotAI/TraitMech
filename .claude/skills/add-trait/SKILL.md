@@ -295,6 +295,12 @@ than reconstructing a plausible heading. Distinguish isolated-component and
 heterologous assays from full-system or native-host validation; a biochemical
 result alone does not establish the complete organismal mechanism.
 
+Verify cited figure panels against the actual supplement and its captions,
+not just pointers in the main text. When the pointer is wrong, cite the
+observed panel and record the discrepancy in evidence notes. A nonsignificant
+control measurement does not establish that all aspects of a structure or
+function are unchanged.
+
 Shortened snippets must be self-contained and source-faithful. Do not stop
 before the head noun of a phrase, after a dangling article, preposition, or
 conjunction, or before a coordinated complement that would change the statement's
@@ -575,6 +581,14 @@ claw checkout can predate the generator version used by the last consumer
 rollout and silently remove navigation or accessibility improvements. Use an
 isolated copy of that reviewed source when needed; do not update an unrelated
 dirty shared checkout or repair generated HTML by hand.
+
+Regenerate the published QC dashboard for every added record, separately from
+the priority dashboard: `CLAW_SRC=<reviewed-claw>/src just gen-qc-dashboard`.
+Commit both `dashboard/index.html` and `dashboard/coverage.png`, and run
+`python -m pytest tests/test_qc_dashboard_artifacts.py` to compare its headline
+and per-slot counts with the live corpus. If the shared generator is unavailable,
+report the blocked regeneration explicitly; passing other QC gates does not
+establish that the published dashboard is current.
 
 Regenerated priority artifacts can legitimately change existing parent rows
 when the new record changes child counts, series families, or overlap scores.

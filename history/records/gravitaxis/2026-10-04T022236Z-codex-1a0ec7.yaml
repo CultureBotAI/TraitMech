@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gravitaxis.yaml
+  slug: gravitaxis
+session:
+  id: 2026-10-04T022236Z-codex-1a0ec7
+  timestamp: '2026-10-04T02:22:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add gravity-relative swimming trait
+  details: Added traitmech:000584 gravitaxis under motile with DOI:10.1038/s41598-018-26046-8
+    and DOI:10.1242/jeb.050666, contiguous snippets, species-qualified Euglena gracilis and
+    Paramecium caudatum examples, and companion METPO proposal v461 reserving METPO:1053800.
+    Ignored-and-hidden searches found no exact existing record. Read primary text and Nasir
+    supplement; verified the flagellar-length panel is Supplementary Figure 5e despite the
+    main-text 5c pointer. Kept GO process equivalence and exact protein/physical-graph representation
+    gaps explicit. Wrote through write_validated_trait and record_curation_event.

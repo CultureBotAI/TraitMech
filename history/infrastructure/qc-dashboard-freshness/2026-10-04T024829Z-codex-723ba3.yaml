@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: tests/test_qc_dashboard_artifacts.py
+  slug: qc-dashboard-freshness
+session:
+  id: 2026-10-04T024829Z-codex-723ba3
+  timestamp: '2026-10-04T02:48:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1650
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1649
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - generated_artifacts
+  - validation
+  - guidance
+  summary: Repair stale gravitaxis QC dashboard and gate corpus counts
+  details: Independent review of PR 1649 found dashboard artifacts still described 978 records
+    instead of 979. Regenerated dashboard/index.html and dashboard/coverage.png through just
+    gen-qc-dashboard with the isolated reviewed claw source at 6d0a6fbbaeec47f42c6f999233b460e3f56bae89.
+    Added a corpus-derived HTML regression test, first observed failing 978 versus 979 before
+    regeneration, and explicit add-trait instructions for both dashboard outputs. No trait
+    YAML or existing history was changed.
