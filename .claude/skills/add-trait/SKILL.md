@@ -575,6 +575,12 @@ artifacts were not regenerated. Check those configured sibling paths directly
 rather than crawling the whole KG-Microbe checkout looking for the embedding
 file names.
 
+For a METPO proposal, inspect the emitted OWL as well as the ROBOT exit
+status. METPO CURIEs in proposal IDs and parents must expand to `https://w3id.org/metpo/`,
+matching the pinned ontology; confirm that the merged parent has its expected
+label and hierarchy. A legacy `purl.obolibrary.org/obo/METPO_` stub is not the
+same parent, even when ELK exits successfully (#1658).
+
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before
 repeating downstream audits.

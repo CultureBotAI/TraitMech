@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/energy_taxis.yaml
+  slug: energy_taxis
+session:
+  id: 2026-10-04T065543Z-codex-ffee09
+  timestamp: '2026-10-04T06:55:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-bounded energy taxis phenotype
+  details: Created traitmech:000590 as PROPOSED under METPO:1000702 using DOI:10.1128/jb.182.21.6042-6048.2000
+    and DOI:10.1128/jb.186.19.6595-6604.2004; exact abstract snippets and ATCC 29145 provenance
+    fields independently checked. NCBITaxon:192 is species-ranked and the exemplar is qualified
+    to Sp7, not cytN mutant FAJ851. Whole-repository novelty and identifier searches included
+    ignored and hidden files. Reserved METPO:1054400 in proposal v467; kept stimulus-defined
+    taxis classes and metabolic power supply distinct from energy sensing. Deferred unresolved
+    molecular grounding and external mappings in two discussions. Writer dry run and nine
+    regression tests passed before application; broad gates and reviewed PR workflow follow.

@@ -9463,6 +9463,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
  },
  {
+  "discussion_id": "energy-taxis-stimulus-and-mapping-boundaries",
+  "prompt": "Keep energy sensing distinct from stimulus-defined taxis classes.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "energy taxis",
+  "source_id": "traitmech:000590",
+  "source_file": "energy_taxis.yaml",
+  "attaches_to": [],
+  "rationale": "This entry follows the electron-transport-based usage in the cited primary studies. Energy generation powering motility alone is insufficient: changes must inform locomotor control. Aerotaxis, phototaxis and chemotaxis can involve other sensing mechanisms and are not automatically children or exact synonyms. Metabolism-dependent chemotaxis can instead sense intracellular intermediates, so that broader phrase is not an exact synonym. The existing flagellar-specific chemotaxis record is not used as a universal parent. Resolve external mappings at their authorities and compare process versus organismal-disposition scope before adding xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/energy_taxis.html#energy-taxis-stimulus-and-mapping-boundaries"
+ },
+ {
+  "discussion_id": "energy-taxis-signal-and-protein-grounding",
+  "prompt": "Verify the sensed signal and taxon-paired molecular branches.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "energy taxis",
+  "source_id": "traitmech:000590",
+  "source_file": "energy_taxis.yaml",
+  "attaches_to": [],
+  "rationale": "Electron-transport perturbations support energy-dependent locomotor control without identifying one universal receptor or deciding redox-state versus ion-motive-force sensing. Inspect full mutant, complementation and domain-function evidence and resolve taxon-paired protein accessions before adding causal edges. Do not substitute a protein/domain sequence feature for this organismal phenotype or use a NONMECHANISTIC graph to bypass molecular grounding.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/energy_taxis.html#energy-taxis-signal-and-protein-grounding"
+ },
+ {
   "discussion_id": "galvanotaxis-orientation-and-mapping-boundaries",
   "prompt": "Resolve electrical orientation mechanisms without equating active motility with passive drift.",
   "kind": "KNOWLEDGE_GAP",
@@ -10110,9 +10144,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 468,
+ "total_discussions": 470,
  "total_knowledge_gaps": 365,
- "total_source_entries": 455,
+ "total_source_entries": 456,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
