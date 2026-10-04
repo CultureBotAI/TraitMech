@@ -1,0 +1,82 @@
+identifier: traitmech:000596
+label: durotaxis
+definition: A motile phenotype in which migration is biased toward regions of greater
+  substrate stiffness.
+definition_source: DOI:10.7554/eLife.96821
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.7554/eLife.96821
+  snippet: Dictyostelium also displayed stiff-side directed motility when seeded on
+    the gradient gel
+  notes: 'Kang et al., Version of Record (v4), 2024-12-13, https://doi.org/10.7554/eLife.96821.4;
+    full text https://pmc.ncbi.nlm.nih.gov/articles/PMC11643633/ (PMID:39671466).
+    Exact Results paragraph span in Amoeboid durotaxis is evolutionarily conserved,
+    not an abstract quote. Figure 4 was visually inspected: confined Dictyostelium
+    cells on polyacrylamide stiffness gradients had greater directional migration
+    than uniform-gel controls, without a significant velocity difference. Blebbistatin
+    reduced directionality and speed; Rho activator II increased them. These pharmacological
+    results do not isolate a dedicated stiffness sensor. Supplementary file 1 contains
+    simulation parameters; the MDAR checklist refers to cell-culture methods but does
+    not resolve the assayed Dictyostelium strain. Mammalian NMIIA localization and
+    knockdown results are not direct microbial protein evidence.'
+- reference: DOI:10.1088/1361-6463/adb6b8
+  snippet: Our findings reveal directional persistence and strong polarization of
+    the plasmodia towards regions of stiffer substrates, indicating a guided migration
+    response.
+  notes: Filipinas and Confesor, published online 2025-02-27. Exact abstract span
+    in the publisher-deposited Crossref record, https://api.crossref.org/works/10.1088/1361-6463/adb6b8.
+    The authors report tracking Physarum polycephalum plasmodial nodes on agar stiffness
+    gradients. This is independent microbial support for stiffness-directed migration,
+    not merely a simulation prediction. Full methods, figures and supplements were
+    not inspected; strain provenance, gradient controls and the distinction between
+    node migration and growth remain to be assessed before adding a canonical example
+    or mechanistic graph. The abstract's simulation-supported gradient-independence
+    claim is not generalized to all microbes.
+discussions:
+- discussion_id: durotaxis-stiffness-and-migration-boundaries
+  prompt: Keep stiffness-directed migration distinct from other mechanical responses.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This definition follows the positive, stiff-side migration usage in both
+    microbial studies; it does not claim all microbes prefer stiff substrates. Speed
+    changes on uniform substrates, passive displacement and differential growth alone
+    are insufficient. Contact-guided polarized growth in thigmotropism (traitmech:000594)
+    is a different response. Do not infer durotaxis from a friction gradient, surface
+    topography or remote substrate deformation without direct evidence for stiffness-directed
+    migration. Mechanotaxis is broader, not an exact synonym. QuickGO returned zero
+    durotaxis hits on 2026-10-04; other external equivalences remain unverified. No
+    xref or synonym is inferred.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: durotaxis-strain-and-mechanism-grounding
+  prompt: Resolve experimental strains and microbial protein evidence before graphing.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Kang's methods cite Li et al. (DOI:10.3389/fcell.2022.835185), whose
+    cell-culture methods describe Ax2-derived cells and expression constructs. That
+    citation does not uniquely identify the cells used for Kang's Figure 4 or establish
+    natural-strain provenance. Resolve that identity and inspect the Physarum full
+    methods before adding NCBI-grounded canonical examples. Dictyostelium inhibitor/activator
+    responses support a contractility-related interpretation, not a resolved protein-level
+    sensing pathway. Do not transfer mammalian NMIIA polarization or knockdown effects
+    to an unverified microbial accession, or treat the active gel model as a biological
+    perturbation. Mechanistic graphs are deferred pending taxon-paired proteins and
+    bounded causal evidence; NONMECHANISTIC is not a workaround.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T12:00:52Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added durotaxis with two independent microbial DOI citations and exact
+    full-text/abstract snippets. Ignored-and-hidden novelty searches and structured
+    OWL review found no exact record or METPO term. Reserved METPO:1055000 in v473
+    under motile. Inspected Kang v4 Figure 4, methods and relevant supplement documents;
+    kept stiffness-directed migration distinct from speed changes and contact-guided
+    growth. Deferred canonical strains and protein-level mechanisms rather than inferring
+    them from mammalian experiments.
+  llm_assisted: true
