@@ -62,6 +62,23 @@ def test_sources_example_context_and_explicit_graph_gap():
     assert "audit requires a protein node" in question["rationale"]
 
 
+def test_snippets_pin_orientation_and_notes_attribute_still_water_scope():
+    record = writer.build_record()
+    zeng, durham = record["evidence"]
+    assert durham["snippet"] == (
+        "The swimming direction, \u03b8, is then set by the balance of viscous "
+        "and gravitactic torques"
+    )
+    assert "Page 1068, left column beneath Figure 2" in durham["notes"]
+    assert "This passage concerns imposed shear" in durham["notes"]
+    assert "The second is response to an external field" in zeng["notes"]
+    assert "Zeng's broader usage" in zeng["notes"]
+    assert "not an imposed-shear experiment" in record["canonical_examples"][0]["note"]
+    assert [event["action"] for event in record["curation_history"]] == [
+        "MINTED_TRAITMECH_ID", "ADDRESS_REVIEW_FINDINGS",
+    ]
+
+
 def test_proposal_matches_record_without_shifted_equivalences():
     record = writer.build_record()
     rows = list(csv.reader(io.StringIO(writer.proposal_tsv(record)), delimiter="\t"))

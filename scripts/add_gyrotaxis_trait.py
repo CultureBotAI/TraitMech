@@ -48,10 +48,14 @@ RECORD = {
                 "article deposited by the authors at "
                 "https://api.repository.cam.ac.uk/server/api/core/bitstreams/"
                 "ac9ccafe-f229-477c-9d59-b7a56cd506a0/content "
-                "(PMID:36219692; PMC9586295). Results, Figures 5-7, and Materials "
+                "(PMID:36219692; PMC9586295). The second of the introduction's "
+                "three accumulation mechanisms starts 'The second is response to an "
+                "external field': it describes swimming in still water and gravitational "
+                "restoration resisted hydrodynamically, then names this response "
+                "gyrotaxis. This record follows Zeng's broader usage, not a universal "
+                "requirement or exclusion of imposed shear. Results, Figures 5-7, and Materials "
                 "and Methods distinguish gravitational reorientation from wall-contact "
-                "effects in Heterosigma akashiwo GY-H24. Viscous resistance to rotation "
-                "does not require an imposed fluid velocity gradient. Shape asymmetry "
+                "effects in Heterosigma akashiwo GY-H24. Shape asymmetry "
                 "and density asymmetry are alternatives; bottom-heaviness is not "
                 "universal. The full main article was read; supplementary material "
                 "and movies were not inspected. No gravity-sensing receptor is asserted."
@@ -60,12 +64,14 @@ RECORD = {
         {
             "reference": DURHAM,
             "snippet": (
-                "We demonstrated that layers formed when the vertical migration of "
-                "phytoplankton was disrupted by hydrodynamic shear."
+                "The swimming direction, \u03b8, is then set by the balance of viscous "
+                "and gravitactic torques"
             ),
             "notes": (
-                "Abstract, with torque balance and live-cell experiments on pages "
-                "1067-1069 of the full main article at "
+                "Page 1068, left column beneath Figure 2; the typeset theta in the "
+                "torque-balance sentence was visually checked because PDF extraction "
+                "substitutes q. This passage concerns imposed shear. Live-cell "
+                "experiments are on pages 1067-1069 of the full main article at "
                 "https://stockerlab.ethz.ch/wp-content/uploads/2013/01/"
                 "17.-DurhamKesslerStocker_Science2009.pdf (PMID:19229037). "
                 "Chlamydomonas nivalis and Heterosigma akashiwo formed layers in "
@@ -86,7 +92,9 @@ RECORD = {
             "GY-H24 culture, examined 3-9 hours into the light phase of a 12-hour "
             "light/12-hour dark cycle. Figures 5-7 show gravitational reorientation "
             "and wall-modified swimming in a sealed, still-fluid microchannel; "
-            "upward bias is not asserted for every cell or diurnal phase. The "
+            "upward bias is not asserted for every cell or diurnal phase. This example "
+            "follows Zeng's explicit still-water usage of gyrotaxis; it is not an "
+            "imposed-shear experiment. The "
             "NCBI identifier is species-level, not a resolved GY-H24 strain accession."
         ),
     }],
@@ -127,6 +135,16 @@ def build_record() -> dict:
             "without asserting an unsupported protein or receptor."
         ),
         llm_assisted=True, timestamp="2026-10-04T01:16:29Z",
+    )
+    record_curation_event(
+        record, curator="codex", action="ADDRESS_REVIEW_FINDINGS",
+        changes=(
+            "Addressed PR 1646 issues 1647 and 1648: replaced the Durham population "
+            "outcome snippet with its typeset torque-balance statement; anchored "
+            "Zeng's broader still-water usage to the specific introduction passage "
+            "and qualified the canonical example. Definition and hierarchy unchanged."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T01:41:15Z",
     )
     return record
 

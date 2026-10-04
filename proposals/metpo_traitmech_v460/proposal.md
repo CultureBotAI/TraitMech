@@ -35,8 +35,13 @@ The parent denotes independent energy-dependent movement. Orientation can
 arise physically while locomotion remains actively powered. Passive
 sedimentation alone does not establish the trait. PHYSIOLOGY follows the
 behavioral scope of neighboring taxis records. Rheotaxis is not the parent:
-Zeng et al. explicitly include viscous resistance to gravitational
-reorientation in still fluid, without an imposed fluid velocity gradient.
+Zeng et al.'s page-1 introduction, second of three accumulation mechanisms
+(beginning "The second is response to an external field"), describes swimming
+in still water, gravitational restoration resisted hydrodynamically, then
+names that response gyrotaxis. This record follows that paper's broader
+usage; it does not assert a universal terminological convention. Durham's
+page-1068 torque-balance passage concerns imposed shear. The GY-H24 example
+follows Zeng's still-water usage and is not an imposed-shear demonstration.
 Gravitaxis, gyrotactic trapping and bioconvection are not exact synonyms.
 No older trait YAML is edited.
 
@@ -50,6 +55,9 @@ No older trait YAML is edited.
   high-shear trapping, observed layers and model predictions for ocean-scale
   layers. Dead-cell controls support the motility requirement. The unverified
   historical C. nivalis culture is not assigned a modern taxon identifier.
+  The snippet now quotes the torque-balance sentence beneath Figure 2 on
+  page 1068; its theta glyph was checked visually, not copied from the
+  extractor's erroneous q. Layer formation remains in notes.
 - Neither study establishes universal bottom-heaviness, obligatory wall
   contact, one direction across all phases, or a common gravity receptor.
   Supplements and movies were not inspected; no supplement-only claim is used.
@@ -103,3 +111,6 @@ Regenerate affected artifacts; do not publish the placeholder as released.
 ## Change Log
 
 - v460, 2026-10-04: add gyrotaxis with bounded primary evidence.
+- PR #1646 review, issues #1647/#1648: anchor the still-water interpretation
+  to Zeng's specific passage and replace the population-outcome snippet
+  with Durham's torque-balance statement. Definition and parent unchanged.
