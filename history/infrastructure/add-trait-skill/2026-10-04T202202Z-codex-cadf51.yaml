@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-10-04T202202Z-codex-cadf51
+  timestamp: '2026-10-04T20:22:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1684
+events:
+- type: EDIT
+  outcome: changed
+  summary: Require source evidence for mutant strain origin
+  details: 'Issue #1684 exposed an unsupported engineered qualifier on a strain described
+    only as a mutant. Added an explicit add-trait rule against inferring either engineering
+    or natural provenance from that label, and a guidance regression test. Existing instructions
+    already require primary strain-provenance verification; this clarifies the distinction
+    without changing the evidence threshold or canonical-example requirements.'

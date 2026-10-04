@@ -285,6 +285,9 @@ Check named laboratory strains against primary strain-provenance sources before
 presenting them as natural canonical exemplars. A study's reference strain can
 itself be a mutant. Retain relevant measurements as qualified evidence when a
 canonical example would conceal that distinction.
+Do not infer genetic engineering or natural provenance from a `mutant` label
+alone. Verify the strain's origin before applying either qualifier; otherwise
+retain the source's mutant designation and leave provenance unresolved (#1684).
 
 Keep strain-provenance URLs in the qualified canonical example's `note`.
 Do not count provenance-only collection fields as independent trait evidence,

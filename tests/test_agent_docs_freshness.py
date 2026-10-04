@@ -30,6 +30,13 @@ def test_root_claude_guidance_routes_to_canonical_workflows():
     assert "live implementation" in guidance
 
 
+def test_add_trait_skill_does_not_infer_mutant_origin():
+    guidance = " ".join(read(".claude/skills/add-trait/SKILL.md").split())
+    assert "Do not infer genetic engineering or natural provenance from a `mutant` label alone" in guidance
+    assert "Verify the strain's origin before applying either qualifier" in guidance
+    assert "leave provenance unresolved (#1684)" in guidance
+
+
 def test_priority_guidance_uses_only_the_live_queue():
     guidance = read(".claude/skills/trait-priority/SKILL.md")
     justfile = read("justfile")

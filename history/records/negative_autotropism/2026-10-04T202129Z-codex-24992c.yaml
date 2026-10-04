@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/negative_autotropism.yaml
+  slug: negative_autotropism
+session:
+  id: 2026-10-04T202129Z-codex-24992c
+  timestamp: '2026-10-04T20:21:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1684
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Qualify ro-1 mutant provenance after adversarial review
+  details: 'Issue #1684: replaced the unsupported engineered qualifier with source-faithful
+    mutant wording and explicitly left strain origin unresolved. Mutation alone does not establish
+    genetic engineering or natural provenance. Applied through the validated writer after
+    an exact SHA-256 preimage check and dry run; seven focused tests pass. The original mint
+    event and history/records/negative_autotropism/2026-10-04T201611Z-codex-fad6cb.yaml remain
+    unchanged.'
