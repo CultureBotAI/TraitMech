@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055300	gravitropism	A phenotype in which growth is directionally oriented or reoriented in response to gravity.	TraitMech:data/traits/physiology/gravitropism.yaml|DOI:10.4161/cib.22291|DOI:10.1078/0176-1617-01082|DOI:10.1007/s004250050744	METPO:1000059			metpo_traitmech_2026_10	HIGH	Gravity-directed growth; polarity-neutral, not swimming or passive displacement.	traitmech:000599

@@ -533,13 +533,25 @@ For every added record, create repository-level history:
   --target-root data/traits/<category> \
   --event CREATE \
   --outcome changed \
-  --sections identity,evidence,canonical_examples,causal_graphs \
+  --sections identity,evidence \
   --summary "<short summary>" \
   --details "<what was added and which sources justify it>" \
   --actor-name <actor> \
   --model <model> \
   --agent-tool <agent-tool>
 ```
+
+Set `--sections` from the actual change, not from this example or planned work.
+Add `canonical_examples`, `discussions`, or `causal_graphs` only when those
+sections were written. A graph deliberately deferred in a discussion does not
+make `causal_graphs` a touched section. For example, a new record with evidence,
+an example and discussions but no graph uses
+`identity,evidence,canonical_examples,discussions` (#1674).
+
+History remains append-only after it is written, including before PR merge.
+Correct a mistaken history claim with a new record naming the original file
+and the corrected claim. Use an `AUDIT` with `outcome: no_change` when only
+provenance is corrected and the TraitRecord itself remains unchanged.
 
 Update every record-count mention in the root `README.md` whenever the new
 `data/traits` record changes a category or total count. This includes the corpus

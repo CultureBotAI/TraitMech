@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gravitropism.yaml
+  slug: gravitropism
+session:
+  id: 2026-10-04T153928Z-codex-c87cd2
+  timestamp: '2026-10-04T15:39:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add evidence-backed gravitropism phenotype
+  details: Minted traitmech:000599 and reserved METPO:1055300 in v476 after ignored-and-hidden
+    novelty searches and structured METPO checks. Two fungal primary studies support gravity-directed
+    growth; a Chara primary abstract establishes positive and negative terminology without
+    transferring mechanisms. Exact snippets verified against Europe PMC XML/abstracts. Inspected
+    the 2013 full text and all three figures; retained touch and developmental confounds.
+    Canonical NCBITaxon:763407 is restricted to the 2004 clinostat-centrifuge experiment and
+    independently checked as a natural isolate. Mechanism grounding remains open. Used validated
+    writer and per-record curation event; regenerating derived artifacts and completing validation
+    before PR review.
