@@ -1,0 +1,91 @@
+identifier: traitmech:000603
+label: negative autotropism
+definition: A phenotype in which germ-tube emergence or hyphal extension is directionally
+  biased away from neighboring cells or hyphae of the same species.
+definition_source: DOI:10.3390/biomimetics10050287
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.3390/biomimetics10050287
+  snippet: the hyphae often diverted their growth from their initial direction away
+    from each other.
+  notes: Montiel-Rubies et al. (2025), Section 3.4.1; exact span in directly retrieved
+    Europe PMC JATS, PMC12109565 (PMID:40422117). Methods and Sections 3.2/3.4.1 were
+    read; Figure 5 and Table 2 were visually inspected in the authors' PDF. This is
+    a retrospective analysis of earlier microfluidic experiments, not a new independent
+    replication of those datasets. Side-by-side Pycnoporus cinnabarinus hyphae redirected
+    laterally where space allowed. Figure 5B instead shows head-on arrest and cytoplasm
+    retreat, not growth away. Armillaria mellea divergence could reflect directional
+    memory. For Neurospora crassa, Table 2 rates side-by-side avoidance strong and
+    head-on avoidance not observed; prose calls the latter extremely rare. These qualitative
+    descriptions are not counts or replication estimates. Supplementary movies were
+    not inspected. The definition uses the directional-growth component of this paper's
+    broader usage.
+- reference: DOI:10.1093/jxb/19.1.125
+  snippet: When germinated on agar surfaces the first three species exhibited negative
+    autotropism, B. cinerea being neutral in its autotropic behaviour.
+  notes: Robinson, Park and Graham (1968), original publisher abstract directly retrieved
+    from https://oup.silverchair-cdn.com/article-minimal/447341. The first three species
+    are Rhizopus stolonifer, Mucor plumbeus and Trichoderma viride. Spore-pair assays
+    concern orientation of germ-tube emergence, not demonstrated subsequent tip bending.
+    Cellophane increased their negative response; Botrytis cinerea was neutral on
+    agar and positive on Cellophane, so is not a negative exemplar here. Germination
+    timing and cis-ness are separate readouts, not substitutes for orientation. The
+    full paper, figures, strain provenance and sample sizes were not retrieved; proposed
+    mechanisms in the abstract are not established causal pathways.
+discussions:
+- discussion_id: negative-autotropism-direction-and-self-scope
+  prompt: Retain directional growth and stage-specific self-avoidance boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The directional phenotype includes initial germ-tube orientation and
+    later hyphal redirection without requiring both in one organism. Same-species
+    neighbors can include branches of one mycelium or separate spores; this does not
+    assert genetic identity, vegetative incompatibility or a self-recognition receptor.
+    Positive autotropism and hyphal fusion are not exact synonyms. Whole-cell taxis,
+    growth inhibition, branching, passive bending and cytoplasm retreat alone are
+    insufficient. The 2025 head-on category is broader than this record's directional
+    scope. Do not infer chemotropism or aerotropism parentage from proposed inhibitory
+    cues or oxygen depletion. Resolve external equivalents before adding xrefs or
+    synonyms.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: negative-autotropism-provenance-and-mechanism
+  prompt: Resolve natural strain provenance and causal signals before enrichment.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Canonical examples are deferred until the original strain sources and
+    NCBI identities are verified. The 1968 full paper remains unread; the 2025 Methods
+    refer strain culture details to earlier studies and include a ro-1 mutant whose
+    origin has not been verified here. Mutation alone does not establish genetic engineering
+    or natural provenance. Inspect the original imaging datasets and movies before
+    quantitative prevalence claims. Spatial constraints, directional memory and local
+    resource gradients remain competing contributors. Neither paper establishes a
+    universal signal/receptor chain. Resolve direct native perturbation evidence and
+    taxon-paired protein accessions before a causal graph; NONMECHANISTIC is not a
+    grounding bypass.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T20:13:46Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added negative autotropism with two directly retrieved DOI-backed sources
+    and exact snippets. Distinguished germ-tube emergence from hyphal redirection
+    and excluded head-on arrest/retreat alone. Ignored-and-hidden searches and structured
+    OWL review found no exact term. Reserved METPO:1055700 in v480 under released
+    phenotype. Inspected Figure 5 and Table 2; retained retrospective-data, qualitative-assay
+    and abstract-only limitations. Deferred canonical strains, external equivalents
+    and molecular mechanisms.
+  llm_assisted: true
+- timestamp: '2026-10-04T20:20:10Z'
+  curator: codex
+  action: QUALIFY_STRAIN_PROVENANCE
+  changes: 'Issue #1684: removed the unsupported engineered qualifier for ro-1. The
+    directly read source identifies a mutant but does not establish its origin; neither
+    engineering nor natural provenance is inferred from mutation alone. Original mint
+    history is preserved.'
+  llm_assisted: true

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/negative_autotropism.yaml
+  slug: negative_autotropism
+session:
+  id: 2026-10-04T201611Z-codex-fad6cb
+  timestamp: '2026-10-04T20:16:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed negative autotropism
+  details: Added traitmech:000603 and v480 METPO:1055700 under phenotype after ignored-and-hidden
+    novelty searches. Two directly retrieved DOI sources support germ-tube emergence and hyphal
+    redirection away from neighbors; exact snippets are 14 and 20 words. Inspected the 2025
+    Figure 5 and Table 2 and retained retrospective-analysis, head-on-retreat, qualitative-reporting
+    and 1968 abstract-only limitations. Deferred canonical strains, external equivalents and
+    causal mechanisms. Writer dry run, seven focused tests and lint passed before application.

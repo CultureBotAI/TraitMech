@@ -10024,6 +10024,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.html#naphthol-as-bi-phosphohydrolase-activity-xref-gap"
  },
  {
+  "discussion_id": "negative-autotropism-direction-and-self-scope",
+  "prompt": "Retain directional growth and stage-specific self-avoidance boundaries.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "negative autotropism",
+  "source_id": "traitmech:000603",
+  "source_file": "negative_autotropism.yaml",
+  "attaches_to": [],
+  "rationale": "The directional phenotype includes initial germ-tube orientation and later hyphal redirection without requiring both in one organism. Same-species neighbors can include branches of one mycelium or separate spores; this does not assert genetic identity, vegetative incompatibility or a self-recognition receptor. Positive autotropism and hyphal fusion are not exact synonyms. Whole-cell taxis, growth inhibition, branching, passive bending and cytoplasm retreat alone are insufficient. The 2025 head-on category is broader than this record's directional scope. Do not infer chemotropism or aerotropism parentage from proposed inhibitory cues or oxygen depletion. Resolve external equivalents before adding xrefs or synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/negative_autotropism.html#negative-autotropism-direction-and-self-scope"
+ },
+ {
+  "discussion_id": "negative-autotropism-provenance-and-mechanism",
+  "prompt": "Resolve natural strain provenance and causal signals before enrichment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "negative autotropism",
+  "source_id": "traitmech:000603",
+  "source_file": "negative_autotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples are deferred until the original strain sources and NCBI identities are verified. The 1968 full paper remains unread; the 2025 Methods refer strain culture details to earlier studies and include a ro-1 mutant whose origin has not been verified here. Mutation alone does not establish genetic engineering or natural provenance. Inspect the original imaging datasets and movies before quantitative prevalence claims. Spatial constraints, directional memory and local resource gradients remain competing contributors. Neither paper establishes a universal signal/receptor chain. Resolve direct native perturbation evidence and taxon-paired protein accessions before a causal graph; NONMECHANISTIC is not a grounding bypass.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/negative_autotropism.html#negative-autotropism-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "ornithine-decarboxylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for ornithine decarboxylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10552,9 +10586,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 494,
+ "total_discussions": 496,
  "total_knowledge_gaps": 365,
- "total_source_entries": 468,
+ "total_source_entries": 469,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
