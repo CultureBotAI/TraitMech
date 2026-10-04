@@ -307,6 +307,10 @@ exists; otherwise quote the exact raw HTML and explain in `notes` what the image
 renders as. Never delete an inline image tag while presenting the adjacent text
 as a verbatim snippet.
 
+For PDF snippets with mathematical notation, inspect the typeset passage
+visually. Text extractors can substitute a different letter for a symbol;
+preserve the source-rendered glyph and record the visual check in `notes`.
+
 Fixed-width registry tables, markdown tables, and TSV rows count as verbatim
 sources. When a snippet records a pinned profile or rules table row, quote the
 complete row or a contiguous column span with exact cell text, trimming only
@@ -354,6 +358,11 @@ A `SEEDED` METPO record still needs DOI, PMID, or stable-URL evidence when prior
 review artifacts marked the term as lacking corpus demand or primary support.
 Use METPO or its source axiom for `definition_source`, and add literature
 evidence that justifies the TraitMech record.
+
+When a primary paper uses a trait name more broadly than a familiar formulation,
+anchor that interpretation to a specific passage and explicitly attribute the
+usage. Qualify canonical examples to match it; do not turn a source-specific
+usage into a universal convention or infer equivalence with neighboring traits.
 
 Keeping first-pass local records at `PROPOSED` leaves them in the
 `scripts/audit_proposals.py` two-citation gate until a human curator promotes them to

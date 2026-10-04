@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gyrotaxis.yaml
+  slug: gyrotaxis
+session:
+  id: 2026-10-04T014312Z-codex-e3aeb6
+  timestamp: '2026-10-04T01:43:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1647
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1646
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - canonical_examples
+  - proposal
+  summary: Anchor gyrotaxis snippets and still-water scope after review
+  details: 'Addressed PR 1646 review findings: replaced the Durham abstract population-outcome
+    snippet with a torque-balance span from page 1068, visually preserving the typeset theta
+    rather than the extractor q. Anchored Zeng''s broader still-water usage to the specific
+    page-1 introduction passage and qualified the GY-H24 example. Definition and parent unchanged.
+    Updated guarded writer, tests, proposal, add-trait PDF and source-usage guidance, and
+    generated artifacts. Issue 1648: https://github.com/CultureBotAI/TraitMech/issues/1648'

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gyrotaxis.yaml
+  slug: gyrotaxis
+session:
+  id: 2026-10-04T011922Z-codex-f70d7f
+  timestamp: '2026-10-04T01:19:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  - proposal
+  summary: Add gyrotaxis with gravity-viscous orientation evidence
+  details: Created traitmech:000583 beneath METPO:1000702 from two primary DOI studies, with
+    contiguous snippets checked against full primary text and a light-phase-qualified Heterosigma
+    akashiwo GY-H24 example at NCBI species taxon 2829. Fresh whole-repository ignored-and-hidden
+    novelty and allocation searches found no exact trait or collision. Read both frozen release-review
+    tables and compared a fresh seed projection against the live corpus. Reserved METPO:1053700
+    in proposal v460. Recorded the physical causal-graph representation constraint explicitly
+    rather than inventing a protein sensor or labeling physical causation NONMECHANISTIC.
+    No older trait YAML is changed.

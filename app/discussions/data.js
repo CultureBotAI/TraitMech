@@ -9497,6 +9497,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "gyrotaxis-physical-mechanism-representation",
+  "prompt": "Represent physical torque-mediated orientation without inventing a protein sensor.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gyrotaxis",
+  "source_id": "traitmech:000583",
+  "source_file": "gyrotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The primary papers describe a physical mechanism, so the absence of a protein accession is not absence of mechanistic evidence. This identity/evidence pass omits a graph: the current MECHANISTIC coverage audit requires a protein node and protein example, whereas NONMECHANISTIC is reserved for measurement or classification contexts. Resolve a faithful representation separately instead of relabeling the physical mechanism or inventing a sensor. Keep gravity-viscous orientation distinct from wall-contact responses and high-shear trapping. Gyrotaxis is not an exact synonym of gravitaxis, rheotaxis, bioconvection or thin-layer formation. QuickGO returned no gyrotaxis term on 2026-10-04; no exact external xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gyrotaxis.html#gyrotaxis-physical-mechanism-representation"
+ },
+ {
   "discussion_id": "heat-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial heat shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -9889,9 +9906,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 455,
+ "total_discussions": 456,
  "total_knowledge_gaps": 365,
- "total_source_entries": 448,
+ "total_source_entries": 449,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
