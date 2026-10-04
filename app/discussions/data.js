@@ -9412,6 +9412,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/chemokinesis.html#chemokinesis-mechanism-grounding"
  },
  {
+  "discussion_id": "chemotropism-growth-and-source-boundaries",
+  "prompt": "Preserve direction, growth-rate and source-summary distinctions.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "chemotropism",
+  "source_id": "traitmech:000597",
+  "source_file": "chemotropism.yaml",
+  "attaches_to": [],
+  "rationale": "This class covers positive and negative chemical-gradient responses of polarized growth, not whole-cell locomotion. Use phenotype rather than motile as the parent. Neither increased biomass, faster extension nor asymmetric branching alone establishes directed growth. Keep chemotaxis, contact guidance and electric-field growth distinct. The Yamamoto summary abstract conflicts with the main Results on the pH-response direction; retain the inspected Results and Figure 3 context rather than silently harmonizing them. External equivalences and lexical variants require separate authority and scope checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/chemotropism.html#chemotropism-growth-and-source-boundaries"
+ },
+ {
+  "discussion_id": "chemotropism-strain-and-mechanism-grounding",
+  "prompt": "Resolve natural strain provenance and accession-level mechanism evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "chemotropism",
+  "source_id": "traitmech:000597",
+  "source_file": "chemotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Keep laboratory-strain observations as qualified evidence. Verify natural provenance and NCBI identities before adding canonical examples; wild-type labels and no-auxotrophy controls do not establish an unengineered strain. The Aspergillus PmaA perturbation also affects growth and acid tolerance, so it does not isolate a dedicated chemical sensor. Inspect remaining figures and supplements and resolve taxon-paired protein accessions before adding a causal graph. Do not generalize stimulus-specific perturbations into a universal pathway or use a NONMECHANISTIC graph to bypass missing molecular evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/chemotropism.html#chemotropism-strain-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "cold-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -10348,9 +10382,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 482,
+ "total_discussions": 484,
  "total_knowledge_gaps": 365,
- "total_source_entries": 462,
+ "total_source_entries": 463,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

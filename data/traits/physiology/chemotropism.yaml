@@ -1,0 +1,83 @@
+identifier: traitmech:000597
+label: chemotropism
+definition: A phenotype in which polarized growth is directionally biased in response
+  to a spatial chemical gradient.
+definition_source: DOI:10.1371/journal.pbio.3002726
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.pbio.3002726
+  snippet: Notably, many hyphae changed direction near the boundary, opting to remain
+    in the pH 6.5 layer (Fig 3B).
+  notes: 'Results, Chemotropism to low pH; exact span in Europe PMC full text PMC11288418
+    (PMID:39078817), published 2024-07-30. The compared layers are pH 6.5 and 8. Figure
+    3 was visually inspected: tip trajectories support directional growth, not only
+    greater biomass. Main Results and the primary abstract describe lower-pH preference
+    in these comparisons; the separate summary abstract''s acidic-pH avoidance wording
+    conflicts with them. Growth inhibition at pH 3 and carbon-source growth differences
+    confound those comparisons. The nitrogen Results separately report negative chemotropism.
+    S1 Table (10.1371/journal.pbio.3002726.s002), inspected as PDF text and image,
+    lists engineered backgrounds including TH122; no natural canonical strain is inferred.
+    Other supplements and movies were not inspected.'
+- reference: DOI:10.1038/s41598-020-67597-z
+  snippet: They respond to changes in their environment by directing hyphal growth
+    towards or away from a range of chemical stimuli.
+  notes: Introduction, first paragraph; They refers to filamentous fungi. Exact span
+    in Europe PMC full text PMC7329813 (PMID:32612109). This supports the polarity-neutral
+    growth definition. The first Results subsection reports directional growth of
+    Fusarium graminearum towards methionine, while rapid growth with other tested
+    nitrogen compounds was not significantly directional. Table 1 identifies GZ-3639
+    as wild type, but natural provenance and an exact NCBI identity were not independently
+    verified. Figures and supplements were not visually inspected. The paper's receptor
+    and infection findings are not transferred into a universal chemotropism mechanism
+    or canonical example.
+discussions:
+- discussion_id: chemotropism-growth-and-source-boundaries
+  prompt: Preserve direction, growth-rate and source-summary distinctions.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This class covers positive and negative chemical-gradient responses of
+    polarized growth, not whole-cell locomotion. Use phenotype rather than motile
+    as the parent. Neither increased biomass, faster extension nor asymmetric branching
+    alone establishes directed growth. Keep chemotaxis, contact guidance and electric-field
+    growth distinct. The Yamamoto summary abstract conflicts with the main Results
+    on the pH-response direction; retain the inspected Results and Figure 3 context
+    rather than silently harmonizing them. External equivalences and lexical variants
+    require separate authority and scope checks.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: chemotropism-strain-and-mechanism-grounding
+  prompt: Resolve natural strain provenance and accession-level mechanism evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Keep laboratory-strain observations as qualified evidence. Verify natural
+    provenance and NCBI identities before adding canonical examples; wild-type labels
+    and no-auxotrophy controls do not establish an unengineered strain. The Aspergillus
+    PmaA perturbation also affects growth and acid tolerance, so it does not isolate
+    a dedicated chemical sensor. Inspect remaining figures and supplements and resolve
+    taxon-paired protein accessions before adding a causal graph. Do not generalize
+    stimulus-specific perturbations into a universal pathway or use a NONMECHANISTIC
+    graph to bypass missing molecular evidence.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T13:41:09Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added chemotropism with two primary DOI citations and exact full-text snippets.
+    Ignored-and-hidden novelty searches and structured OWL review found no exact record
+    or METPO term. Reserved METPO:1055100 in v474. Distinguished polarized growth
+    from locomotion and growth-rate changes; retained both gradient directions and
+    documented conflicting summary wording. Inspected Aspergillus Figure 3 and S1
+    strain table. Deferred natural canonical examples and accession-level causal mechanisms.
+  llm_assisted: true
+- timestamp: '2026-10-04T13:44:00Z'
+  curator: codex
+  action: CORRECT_EVIDENCE_SNIPPET
+  changes: Raw JATS matching caught a dropped figure pointer in the uncommitted Yamamoto
+    draft quote. Restored (Fig 3B) before the sentence-ending period to preserve the
+    contiguous source span.
+  llm_assisted: true

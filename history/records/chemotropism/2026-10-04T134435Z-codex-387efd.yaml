@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/chemotropism.yaml
+  slug: chemotropism
+session:
+  id: 2026-10-04T134435Z-codex-387efd
+  timestamp: '2026-10-04T13:44:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed chemotropism trait
+  details: Added traitmech:000597 as PROPOSED PHYSIOLOGY with DOI:10.1371/journal.pbio.3002726
+    and DOI:10.1038/s41598-020-67597-z, full-text snippets, and METPO v474 reservation METPO:1055100.
+    Ignored-and-hidden searches and structured OWL review distinguish chemical-directed polarized
+    growth from chemotaxis and other tropisms. Inspected Aspergillus Figure 3 and S1 strain
+    table; retained contradictory summary wording and growth-rate confounds, deferring natural
+    canonical taxa and protein-resolved mechanisms. Raw source matching caught a missing figure
+    pointer in the uncommitted draft quote; the guarded writer restores it and preserves both
+    curation events. Updated add-trait guidance on directional-growth evidence and conflicting
+    summaries.

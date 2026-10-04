@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055100	chemotropism	A phenotype in which polarized growth is directionally biased in response to a spatial chemical gradient.	TraitMech:data/traits/physiology/chemotropism.yaml|DOI:10.1371/journal.pbio.3002726|DOI:10.1038/s41598-020-67597-z	METPO:1000059			metpo_traitmech_2026_10	HIGH	Chemical-gradient-directed polarized growth; polarity-neutral, not locomotion.	traitmech:000597

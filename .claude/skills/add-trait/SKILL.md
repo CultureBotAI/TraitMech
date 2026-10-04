@@ -320,6 +320,13 @@ Keep establishment and maintenance readouts separate when perturbations affect
 them differently; an abstract's aggregate dependence claim does not establish
 the same mechanism at every stage.
 
+For chemical growth tropisms, increased biomass, faster extension or asymmetric
+branching alone does not establish a directional response. Inspect growth-tip
+trajectories or other direct orientation readouts and retain growth-rate
+confounds. If a summary contradicts the main Results on response direction,
+check the actual figure and document the discrepancy instead of silently
+harmonizing the passages.
+
 For versioned literature, record the version, posting date and stable
 version-specific full-text URL in `notes`, and inspect the corresponding
 supplements. Do not mix an earlier abstract with a later revision's figures or
