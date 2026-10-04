@@ -9905,6 +9905,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/homeoviscous_adaptation.html#homeoviscous-adaptation-xref-gap"
  },
  {
+  "discussion_id": "hyphal-anastomosis-endpoint-and-scope",
+  "prompt": "Keep completed vegetative fusion distinct from approach and its consequences.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "hyphal anastomosis",
+  "source_id": "traitmech:000605",
+  "source_file": "hyphal_anastomosis.yaml",
+  "attaches_to": [],
+  "rationale": "Directional approach/positive autotropism, contact, adhesion and branching alone do not establish cytoplasmic continuity. The definition does not require genetic identity, nuclear migration, recombination, mating or persistent network viability. Postfusion incompatibility can follow an actual fusion event. Unqualified anastomosis also names nonfungal structures and self-fusion is narrower; neither is an exact synonym here. The organismal phenotype is not automatically equivalent to a molecular or cellular process class. Resolve external equivalents at their authorities before adding xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/hyphal_anastomosis.html#hyphal-anastomosis-endpoint-and-scope"
+ },
+ {
+  "discussion_id": "hyphal-anastomosis-strains-and-mechanism",
+  "prompt": "Resolve modern strain identities and native protein anchors before enrichment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "hyphal anastomosis",
+  "source_id": "traitmech:000605",
+  "source_file": "hyphal_anastomosis.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples await modern NCBI identity and original strain-provenance checks, especially for historical Glomus names and E2368. Transformed carrot roots in the 2009 culture method do not establish engineering of the fungi. The 2012 soft perturbation/rescue supports a native candidate mechanism but is not a universal dependency. Read its supplements and resolve taxon-paired protein accessions before adding causal nodes. Do not infer a ligand/receptor chain from approach or use NONMECHANISTIC to bypass missing protein grounding.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/hyphal_anastomosis.html#hyphal-anastomosis-strains-and-mechanism"
+ },
+ {
   "discussion_id": "lecithinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lecithinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10620,9 +10654,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 498,
+ "total_discussions": 500,
  "total_knowledge_gaps": 365,
- "total_source_entries": 470,
+ "total_source_entries": 471,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

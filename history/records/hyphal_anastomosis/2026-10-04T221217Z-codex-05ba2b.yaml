@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/hyphal_anastomosis.yaml
+  slug: hyphal_anastomosis
+session:
+  id: 2026-10-04T221217Z-codex-05ba2b
+  timestamp: '2026-10-04T22:12:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - evidence
+  - discussions
+  summary: Add hyphal anastomosis as a proposed physiology trait
+  details: Created traitmech:000605 with three primary DOI references, exact abstract snippets,
+    source-named vegetative hyphal fusion synonym, and completed cytoplasmic-continuity scope.
+    Inspected 1999 Figures 1 and 3 and 2012 Figure 3; recorded unread supplements, nonself
+    scope, mutant caveats and deferred canonical taxa/protein grounding. Fresh seed/live and
+    frozen-review joins plus ignored-and-hidden whole-repository searches established novelty.
+    Reserved METPO:1055900 in proposal v482 under released phenotype. No existing record was
+    edited.

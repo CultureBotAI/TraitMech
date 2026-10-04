@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: tests/test_qc_dashboard_artifacts.py
+  slug: qc-dashboard-count-format
+session:
+  id: 2026-10-04T222014Z-codex-10f9aa
+  timestamp: '2026-10-04T22:20:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1688
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - tests
+  summary: Match QC dashboard thousands separators at 1,000 records
+  details: 'Issue 1688: the reviewed shared dashboard generator renders grouped integers,
+    but the live-corpus test called int on the grouped headline and expected ungrouped per-slot
+    totals. Compare exact comma-formatted expected strings for both headline and per-slot
+    counts. All live-corpus count and slot assertions remain strict; no generated HTML or
+    baseline is modified to bypass checks.'

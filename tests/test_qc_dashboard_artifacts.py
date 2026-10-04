@@ -53,7 +53,7 @@ def test_published_dashboard_counts_match_corpus():
     ]
     page = Dashboard()
     page.feed((ROOT / "dashboard" / "index.html").read_text(encoding="utf-8"))
-    assert int(page.values[0]) == len(records), "Run just gen-qc-dashboard"
+    assert page.values[0] == f"{len(records):,}", "Run just gen-qc-dashboard"
     assert [row[0] for row in page.rows] == [slot["path"] for slot in config["slots"]]
     for row in page.rows:
         populated = 0
@@ -64,4 +64,4 @@ def test_published_dashboard_counts_match_corpus():
             populated += value is not None and not (
                 isinstance(value, (str, list, dict, tuple, set)) and not value
             )
-        assert row[1] == f"{populated} / {len(records)}", row[0]
+        assert row[1] == f"{populated:,} / {len(records):,}", row[0]

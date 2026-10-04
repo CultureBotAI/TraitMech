@@ -1,0 +1,95 @@
+identifier: traitmech:000605
+label: hyphal anastomosis
+definition: A phenotype in which vegetative fungal hyphae fuse to establish cytoplasmic
+  continuity.
+definition_source: DOI:10.1128/aem.65.12.5571-5575.1999
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: vegetative hyphal fusion
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/ec.00191-12
+evidence:
+- reference: DOI:10.1128/aem.65.12.5571-5575.1999
+  snippet: We observed complete fusion of hyphal walls and the migration of a mass
+    of particles in both directions within the hyphal bridges.
+  notes: Giovannetti et al. (1999); snippet exact-matched to the directly retrieved
+    Europe PMC abstract, PMID:10584019. Publisher Methods, Results and Discussion
+    were read; actual Figures 1 and 3 were inspected. Cellophane over water agar supported
+    live observations. SDH staining visualized active bridges; time-lapse microscopy
+    showed bidirectional particle passage in Glomus caledonium. The 0-to-2-second
+    image pairs are representative observations, not replication counts or identification
+    of each particle as a nucleus. Same-germling and different-germling/same-isolate
+    fusion were observed. Tested interspecific failures do not establish a universal
+    compatibility rule. Nuclear migration was reported separately; Figure 2 was not
+    visually inspected. This study did not demonstrate genetic recombination.
+- reference: DOI:10.1128/ec.00191-12
+  snippet: Hyphal anastomosis, or vegetative hyphal fusion, establishes the interconnection
+    of individual hyphal strands into an integrated network of a fungal mycelium.
+  notes: 'Charlton et al. (2012); snippet exact-matched to the directly retrieved
+    Europe PMC abstract, PMID:23042130. Publisher Methods and fusion Results were
+    read; actual Figure 3 was inspected. This naming sentence supports the exact synonym.
+    Calcofluor and DIC images compare Epichloe festucae E2368, delta-so268 and complemented
+    268C53: connections in wild type and complement, but separate apposed walls in
+    delta-so268. Static images indicate apparent cytoplasmic connectivity, not measured
+    flow. Delta-so238 retained a gene signal and was interpreted as a heterokaryon/knockdown,
+    not a clean knockout; complementation of delta-so75 did not restore fusion. Host
+    effects do not prove that fusion universally causes mutualism. Supplements were
+    not inspected; no protein-resolved causal chain is asserted.'
+- reference: DOI:10.1111/j.1469-8137.2008.02726.x
+  snippet: We show that genetically distinct AMF, from the same field, anastomose,
+    resulting in viable cytoplasmic connections through which genetic exchange could
+    potentially occur.
+  notes: Croll et al. (2009); snippet exact-matched to the directly retrieved Europe
+    PMC abstract, PMID:19140939. Publisher Experiment 1 methods/results and relevant
+    Discussion were read. Five Glomus intraradices isolates from one field population
+    were paired; nine of ten nonself combinations fused, with subsequent streaming
+    and SDH-positive bridges used to assess viable continuity. Genetic identity is
+    therefore not required. The paper separately reports marker transmission to progeny;
+    its genotyping does not establish nuclear recombination. Figures and supplementary
+    movies were not visually inspected. Table 1's PFI/PrFI column-footnote assignments
+    appear transposed in publisher HTML, so those column-specific rates are not used.
+discussions:
+- discussion_id: hyphal-anastomosis-endpoint-and-scope
+  prompt: Keep completed vegetative fusion distinct from approach and its consequences.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Directional approach/positive autotropism, contact, adhesion and branching
+    alone do not establish cytoplasmic continuity. The definition does not require
+    genetic identity, nuclear migration, recombination, mating or persistent network
+    viability. Postfusion incompatibility can follow an actual fusion event. Unqualified
+    anastomosis also names nonfungal structures and self-fusion is narrower; neither
+    is an exact synonym here. The organismal phenotype is not automatically equivalent
+    to a molecular or cellular process class. Resolve external equivalents at their
+    authorities before adding xrefs.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: hyphal-anastomosis-strains-and-mechanism
+  prompt: Resolve modern strain identities and native protein anchors before enrichment.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Canonical examples await modern NCBI identity and original strain-provenance
+    checks, especially for historical Glomus names and E2368. Transformed carrot roots
+    in the 2009 culture method do not establish engineering of the fungi. The 2012
+    soft perturbation/rescue supports a native candidate mechanism but is not a universal
+    dependency. Read its supplements and resolve taxon-paired protein accessions before
+    adding causal nodes. Do not infer a ligand/receptor chain from approach or use
+    NONMECHANISTIC to bypass missing protein grounding.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T22:09:46Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added hyphal anastomosis with three directly retrieved DOI-backed sources
+    and exact abstract snippets. Distinguished completed cytoplasmic continuity from
+    approach and downstream genetic effects. Added source-named vegetative hyphal
+    fusion as an exact synonym. Ignored-and-hidden repository searches and structured
+    OWL review found no exact trait. Reserved METPO:1055900 in v482 under released
+    phenotype. Inspected 1999 Figures 1 and 3 and 2012 Figure 3; kept unread figures/supplements
+    and mutant limitations explicit. Deferred canonical strains, external equivalences
+    and protein-resolved graphs.
+  llm_assisted: true
