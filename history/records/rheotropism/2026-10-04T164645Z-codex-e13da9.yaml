@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/rheotropism.yaml
+  slug: rheotropism
+session:
+  id: 2026-10-04T164645Z-codex-e13da9
+  timestamp: '2026-10-04T16:46:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed rheotropism trait
+  details: Added traitmech:000600 under phenotype with three primary DOI-backed exact abstract
+    snippets and a same-branch METPO v477 proposal reserving METPO:1055400. Whole-repository
+    ignored-and-hidden searches and structured pinned-OWL review found no exact term. Read
+    the 1965 author-hosted full text and visually inspected growth-orientation figures and
+    viscosity/rotation controls. Kept upstream/downstream and liquid/air scope, and separated
+    initial outgrowth from later reorientation. Retained abstract-only limits for the 1997
+    and 1983 studies. Added two discussions for scope, mechanism and natural-strain provenance;
+    no canonical example, external mapping or causal graph is asserted. The protected spore_germination
+    record and all older TraitRecords are unchanged.
