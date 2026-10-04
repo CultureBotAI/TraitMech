@@ -29,14 +29,6 @@ evidence:
     function remains unknown in this source. Root-colonization impairment supports
     an ecological hypothesis, not universal host specificity or an identified direct
     ligand. No complete protein-resolved pathway is inferred from the abstract.
-- reference: https://www.atcc.org/products/29145
-  snippet: Isolation source Digitaria decumbens roots, plant Geographical isolation
-    Brazil
-  notes: ATCC 29145 culture-collection entry, accessed 2026-10-04. Two adjacent provenance
-    fields, exact-matched after HTML whitespace normalization. The entry identifies
-    a type strain and traces custody through J Dobereiner to Sp. 7. This supports
-    environmental strain provenance, not an independent measurement of energy taxis
-    or identity of every laboratory descendant's genome.
 canonical_examples:
 - taxon_id: NCBITaxon:192
   taxon_label: Azospirillum brasilense
@@ -82,4 +74,11 @@ curation_history:
     term. Reserved METPO:1054400 in v467. Verified Sp7 collection provenance and NCBITaxon:192
     species identity. Kept stimulus-defined taxis classes separate and deferred unverified
     molecular branches and external mappings.
+  llm_assisted: true
+- timestamp: '2026-10-04T07:25:57Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE
+  changes: 'Addressed review issue #1660: removed ATCC provenance fields from trait
+    evidence and retained the stable strain-provenance URL in the canonical example
+    note. Both primary DOI studies and their verified abstract snippets remain.'
   llm_assisted: true

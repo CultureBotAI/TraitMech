@@ -25,6 +25,24 @@ ALEXANDRE = "DOI:10.1128/jb.182.21.6042-6048.2000"
 GREER = "DOI:10.1128/jb.186.19.6595-6604.2004"
 ATCC = "https://www.atcc.org/products/29145"
 
+# Exact original evidence preimage, accepted only for the reviewed #1660 migration.
+LEGACY_ATCC_EVIDENCE = {
+    "reference": ATCC,
+    "snippet": (
+        "Isolation source Digitaria decumbens roots, plant "
+        "Geographical isolation Brazil"
+    ),
+    "notes": (
+        "ATCC 29145 culture-collection entry, accessed 2026-10-04. "
+        "Two adjacent provenance fields, exact-matched after HTML "
+        "whitespace normalization. The entry identifies a type strain "
+        "and traces custody through J Dobereiner to Sp. 7. This "
+        "supports environmental strain provenance, not an independent "
+        "measurement of energy taxis or identity of every laboratory "
+        "descendant's genome."
+    ),
+}
+
 RECORD = {
     "identifier": IDENTIFIER,
     "label": "energy taxis",
@@ -73,22 +91,6 @@ RECORD = {
                 "supports an ecological hypothesis, not universal host "
                 "specificity or an identified direct ligand. No complete "
                 "protein-resolved pathway is inferred from the abstract."
-            ),
-        },
-        {
-            "reference": ATCC,
-            "snippet": (
-                "Isolation source Digitaria decumbens roots, plant "
-                "Geographical isolation Brazil"
-            ),
-            "notes": (
-                "ATCC 29145 culture-collection entry, accessed 2026-10-04. "
-                "Two adjacent provenance fields, exact-matched after HTML "
-                "whitespace normalization. The entry identifies a type strain "
-                "and traces custody through J Dobereiner to Sp. 7. This "
-                "supports environmental strain provenance, not an independent "
-                "measurement of energy taxis or identity of every laboratory "
-                "descendant's genome."
             ),
         },
     ],
@@ -166,6 +168,23 @@ def build_record() -> dict:
         ),
         llm_assisted=True, timestamp="2026-10-04T06:51:06Z",
     )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_EVIDENCE",
+        changes=(
+            "Addressed review issue #1660: removed ATCC provenance fields "
+            "from trait evidence and retained the stable strain-provenance "
+            "URL in the canonical example note. Both primary DOI studies "
+            "and their verified abstract snippets remain."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T07:25:57Z",
+    )
+    return record
+
+
+def build_pre_review_record() -> dict:
+    record = build_record()
+    record["evidence"].append(copy.deepcopy(LEGACY_ATCC_EVIDENCE))
+    record["curation_history"].pop()
     return record
 
 
@@ -198,8 +217,10 @@ def main() -> int:
     record = build_record()
     proposal = proposal_tsv(record)
     proposal_path = PROPOSAL / "metpo_proposal_classes_robot.tsv"
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
-        raise SystemExit("Existing target differs from this writer")
+    if TARGET.exists():
+        existing = yaml.safe_load(TARGET.read_text())
+        if existing not in (record, build_pre_review_record()):
+            raise SystemExit("Existing target differs from this writer")
     if proposal_path.exists() and proposal_path.read_text() != proposal:
         raise SystemExit("Existing proposal differs from this writer")
     with tempfile.TemporaryDirectory() as tmp:

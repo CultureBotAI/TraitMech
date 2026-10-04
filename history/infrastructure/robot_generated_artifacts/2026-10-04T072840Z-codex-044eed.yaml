@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .gitignore
+  slug: robot_generated_artifacts
+session:
+  id: 2026-10-04T072840Z-codex-044eed
+  timestamp: '2026-10-04T07:28:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1661
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1659
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - generated_artifacts
+  - validation
+  - tests
+  summary: Enforce ignore policy for generated ROBOT validation outputs
+  details: 'Addressed independent review issue #1661 on PR #1659. Verified all 45 tracked
+    OWL outputs under reports/robot contain the legacy METPO namespace, then removed them
+    from version control with git rm --cached while retaining local copies. Added an untracked-and-ignored
+    regression guard and documented the existing ignore policy. This cleanup does not revalidate
+    historical proposal semantics or change append-only historical records; regenerate outputs
+    with the canonical-prefix helper before relying on their hierarchy.'

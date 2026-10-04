@@ -1,5 +1,6 @@
 """Keep ROBOT proposals attached to the real METPO hierarchy (#1658)."""
 
+import subprocess
 import sys
 from pathlib import Path
 
@@ -60,3 +61,14 @@ def test_manual_skill_commands_use_same_namespace():
     assert len(commands) == 2
     assert all(f'METPO: {metpo_prefix()}"' in line for line in commands)
     assert metpo_prefix() == "https://w3id.org/metpo/"
+
+
+def test_generated_robot_artifacts_are_ignored_and_untracked():
+    tracked = subprocess.check_output(
+        ["git", "ls-files", "--", "reports/robot"], cwd=ROOT, text=True,
+    )
+    assert not tracked.strip(), "Regenerate ROBOT outputs locally; do not commit them (#1661)"
+    subprocess.run(
+        ["git", "check-ignore", "reports/robot/contract-probe.owl"],
+        cwd=ROOT, check=True, capture_output=True,
+    )

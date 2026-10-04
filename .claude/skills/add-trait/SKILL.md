@@ -286,6 +286,10 @@ presenting them as natural canonical exemplars. A study's reference strain can
 itself be a mutant. Retain relevant measurements as qualified evidence when a
 canonical example would conceal that distinction.
 
+Keep strain-provenance URLs in the qualified canonical example's `note`.
+Do not count provenance-only collection fields as independent trait evidence,
+or flatten separate field labels and values into a prose `snippet` (#1660).
+
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 

@@ -55,8 +55,9 @@ resolution and organismal-disposition scope comparison.
   transducer-mutant evidence. Full text was not fully inspected; no complete
   molecular pathway or universal host-specificity claim is inferred.
 - https://www.atcc.org/products/29145: ATCC identifies the type strain,
-  environmental origin and Sp. 7 custody. The adjacent provenance-field
-  snippet is exact after HTML whitespace normalization, not invented prose.
+  environmental origin and Sp. 7 custody. This provenance-only URL is kept
+  in the qualified canonical example note, not counted as trait evidence.
+  Review issue #1660 removed the flattened collection-field snippet.
   NCBI resolves `NCBITaxon:192` to `Azospirillum brasilense` at species rank;
   the exemplar is explicitly Sp7-qualified, not an exact strain accession.
 
@@ -86,10 +87,9 @@ the record continues to use `traitmech:000590`.
 
 LinkML, strict record validation, the cohort verifier and cross-cohort
 coverage pass. Full `just qc`, history and product validation pass, as do
-nine writer tests, five ROBOT namespace regressions and 45 artifact/priority
-tests. The full run passed 1,920 tests; the five namespace regressions added
-after its collection also pass separately. Europe PMC verifies both abstract snippets; the ATCC fields were
-independently exact-matched. Live NCBI resolution reports no errors and
+the initial writer, namespace and artifact/priority tests. Initial head CI
+passed all 1,925 tests; review-fix validation is recorded separately in the PR.
+Europe PMC verifies both retained abstract snippets. Live NCBI resolution reports no errors and
 24 pre-existing label-drift warnings elsewhere in the corpus.
 
 Adversarial review found shared validator defect #1658: the legacy METPO
@@ -99,14 +99,22 @@ ROBOT/ELK; structured RDF inspection confirms the proposed class points to
 the labeled `motile` parent and its real hierarchy, without a legacy stub.
 An existing properties-only v2 cohort also passes with the corrected helper.
 This does not revalidate every historical proposal's generated OWL.
+Review issue #1661 removes 45 tracked legacy-prefix OWL outputs while
+retaining local copies under the existing ignore rule, with a regression
+guard against tracking new generated outputs.
 
 The canonical 11-column class template retains its three trailing empty
 ROBOT directive cells. Desktop (1440px) and mobile (390px) browser checks
-confirm three evidence items, one qualified example, correct local-identifier
+initially confirmed the qualified example, correct local-identifier
 provenance, 985-record QC counts and no overflow or page errors. All 984
 existing trait-page deltas are footer counts/coverage, plus the expected
 new child link on `motile`. Both configured embedding source paths are
 absent; embedding artifacts were not regenerated.
+
+Post-review desktop and mobile checks verify two primary evidence items and
+the ATCC URL only in the example note. Both snippets reverify at Europe PMC,
+and all 17 focused writer/namespace/artifact-policy tests pass. Complete
+review-fix validation results are attached to the updated PR.
 
 ## Upstream Path
 

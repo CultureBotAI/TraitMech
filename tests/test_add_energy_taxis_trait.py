@@ -44,20 +44,19 @@ def test_sensing_trait_not_energy_supply_or_receptor_possession():
 def test_primary_evidence_and_provenance_are_not_conflated():
     record = writer.build_record()
     assert {e["reference"] for e in record["evidence"]} == {
-        writer.ALEXANDRE, writer.GREER, writer.ATCC,
+        writer.ALEXANDRE, writer.GREER,
     }
     for item in record["evidence"]:
         assert len(item["snippet"]) >= 24
         assert len(item["snippet"].split()) <= 25
-    behavioral, transducer, provenance = record["evidence"]
+    behavioral, transducer = record["evidence"]
     for qualifier in ["Sp7", "FAJ851", "anaerobic", "does not decide", "confound"]:
         assert qualifier in behavioral["notes"]
     assert "not fully inspected" in transducer["notes"]
     assert "function remains unknown" in transducer["notes"]
     assert "not universal" in transducer["notes"]
-    assert "Isolation source" in provenance["snippet"]
-    assert "Geographical isolation Brazil" in provenance["snippet"]
-    assert "not an independent measurement" in provenance["notes"]
+    assert writer.ATCC in record["canonical_examples"][0]["note"]
+    assert "#1660" in record["curation_history"][-1]["changes"]
 
 
 def test_species_example_is_qualified_to_collection_strain():
@@ -124,3 +123,30 @@ def test_invalid_record_cannot_write_either_output(isolated, monkeypatch):
     with pytest.raises(Exception, match="unknown_slot"):
         run(monkeypatch, True)
     assert not snapshots(isolated)
+
+
+def test_reviewed_original_migrates_without_rewriting_history(isolated, monkeypatch):
+    original = writer.build_pre_review_record()
+    writer.write_validated_trait(original, writer.TARGET)
+    before = snapshots(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshots(isolated) == before
+    assert run(monkeypatch, True) == 0
+    updated = yaml.safe_load(writer.TARGET.read_text())
+    assert updated == writer.build_record()
+    assert updated["curation_history"][:-1] == original["curation_history"]
+    assert updated["canonical_examples"] == original["canonical_examples"]
+    assert updated["evidence"] == original["evidence"][:2]
+    applied = snapshots(isolated)
+    assert run(monkeypatch, True) == 0
+    assert snapshots(isolated) == applied
+
+
+def test_review_migration_refuses_altered_original(isolated, monkeypatch):
+    original = writer.build_pre_review_record()
+    original["evidence"][2]["notes"] += " unreviewed drift"
+    writer.write_validated_trait(original, writer.TARGET)
+    before = snapshots(isolated)
+    with pytest.raises(SystemExit, match="differs"):
+        run(monkeypatch, True)
+    assert snapshots(isolated) == before
