@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gravitropism.yaml
+  slug: gravitropism
+session:
+  id: 2026-10-04T160925Z-codex-57a28c
+  timestamp: '2026-10-04T16:09:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1674
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1673
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Correct gravitropism creation-history section attribution
+  details: 'Addresses issue #1674. This record supersedes only the events[0].sections claim
+    in history/records/gravitropism/2026-10-04T153928Z-codex-c87cd2.yaml, which is preserved
+    byte-for-byte under the append-only policy. The correct CREATE sections are identity,
+    evidence, canonical_examples, and discussions: two discussions were added and no causal_graphs
+    slot was written. The TraitRecord and its per-record curation_history remain unchanged.
+    Audited the cited source questions: official PMC3642927 XML identifies a brief-report/Short
+    Communication with original microscopy and places the quoted negative-bending sentence
+    in the first paragraph under Intracellular Reorganization upon Gravistimulation, not a
+    separate Introduction section. Updated add-trait scaffold guidance to require actual touched
+    sections and append-only provenance corrections. No new biological claims, artifacts,
+    or record-count changes are introduced.'

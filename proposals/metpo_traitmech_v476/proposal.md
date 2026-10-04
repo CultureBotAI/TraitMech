@@ -105,7 +105,8 @@ maintained resolver reports two VERIFIED abstracts and one NOT_IN_ABSTRACT
 body quote, which was separately verified against full-text XML.
 
 Strict validation covers 994 records without errors; history validation
-covers 1,031 records. Products, per-cohort proposal, Biolink and research
+covers 1,032 records, including the append-only correction below. Products,
+per-cohort proposal, Biolink and research
 artifact checks pass. ROBOT/ELK adds four lines without unsatisfiable
 classes; structured RDF checks confirm the real phenotype/quality chain
 and absence of legacy OBO-prefix METPO stubs. The canonical audit resolves
@@ -127,6 +128,9 @@ license warnings. All 1,995 tests pass with two dependency deprecation
 warnings; all 45 focused artifact tests also pass. Ordinary whitespace
 checks pass except for the exact upstream-required three trailing ROBOT
 header cells; all non-header TSV lines are clean.
+After the provenance-only review correction, all 106 focused writer,
+history and skill-frontmatter tests pass. The original history file,
+TraitRecord, implementation/tests and generated artifacts are unchanged.
 
 ## Upstream And Round Trip
 
@@ -140,6 +144,12 @@ upstream issue was opened for this branch.
 
 - v476, 2026-10-04: add gravity-directed growth with source-qualified
   fungal observations, a natural strain exemplar and explicit causal limits.
-  The add-trait skill already covers growth versus locomotion, both
-  directions, strain provenance and mechanistic confounds; no new rule
-  was needed for this record.
+  Independent review identified incorrect section attribution in the first
+  repository history record (#1674): it listed a deferred causal graph and
+  omitted discussions. An append-only AUDIT corrects that attribution without
+  changing the TraitRecord or rewriting the original history. The add-trait
+  scaffold now requires the actual touched sections and explains this
+  provenance-only correction workflow. The review's article-type and quote
+  location questions were resolved against authoritative full-text XML:
+  a brief-report/Short Communication with original microscopy, and the
+  quoted sentence under the section already cited in the record.
