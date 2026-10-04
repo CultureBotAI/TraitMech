@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerotropism.yaml
+  slug: aerotropism
+session:
+  id: 2026-10-04T174444Z-codex-d4063c
+  timestamp: '2026-10-04T17:44:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1676
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Anchor the aerotropism definition snippet to the oxygen gradient
+  details: 'Addressed adversarial finding #1676 with a contiguous stimulus-bearing passage
+    from the same indexed publisher abstract. Preserved the initial curation event and repository
+    history, retained reorientation and source-access qualifications in notes, and added regression
+    assertions for the oxygen-specific snippet.'

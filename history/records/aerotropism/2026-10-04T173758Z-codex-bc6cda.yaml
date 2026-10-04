@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerotropism.yaml
+  slug: aerotropism
+session:
+  id: 2026-10-04T173758Z-codex-bc6cda
+  timestamp: '2026-10-04T17:37:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add oxygen-gradient-directed growth with qualified primary evidence
+  details: Created traitmech:000601 aerotropism under local chemotropism with three DOI citations
+    and contiguous source snippets; reserved METPO:1055500 in v478. Retained polarity-neutral
+    scope, indexed-abstract access limits, oxygen-dependent growth confounds and unresolved
+    strain/mechanism questions. No canonical examples or causal graph were added.
