@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055500	aerotropism	A phenotype in which polarized growth is directionally biased in response to a spatial oxygen concentration gradient.	TraitMech:data/traits/physiology/aerotropism.yaml|DOI:10.1016/S0168-6496(03)00161-2|DOI:10.1155/2012/517529	METPO:1000059			metpo_traitmech_2026_10	HIGH	Oxygen-gradient-directed growth; local chemotropism parent awaits v474 acceptance.	traitmech:000601

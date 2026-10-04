@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: other
+  path: conf/evidence_snippet_baseline.tsv
+  slug: evidence-snippet-baseline
+session:
+  id: 2026-10-04T183007Z-codex-c317e5
+  timestamp: '2026-10-04T18:30:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1680
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - workflow
+  summary: Withdraw aerotropism snippet baseline exceptions
+  details: 'Addresses #1680 from the second review of PR #1677. Removes only the two aerotropism
+    MISSING_SNIPPET rows added in commit 009ba58. Baseline is byte-identical to origin/main
+    at cffa322; no audit logic changes. Withdraws the proposal recorded in history/other/evidence-snippet-baseline/2026-10-04T180737Z-codex-750275.yaml,
+    leaving that append-only history intact. Both unread papers are research leads rather
+    than counted evidence; two directly read sources each have a checked snippet. No whole-corpus
+    refresh or QC suppression.'

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: other
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait
+session:
+  id: 2026-10-04T180341Z-codex-c2a8a1
+  timestamp: '2026-10-04T18:03:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1678
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - evidence
+  summary: Require directly retrieved text before storing evidence snippets
+  details: 'Clarified the playbook rule in the add-trait skill after #1678: indexed publisher
+    abstracts and search-result text are research leads, not directly retrieved quote sources.
+    A 403 or metadata-only response requires retaining qualified citation notes and omitting
+    an unverified snippet; access-limit notes and manual search-text checks do not make it
+    VERIFIED.'

@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerotropism.yaml
+  slug: aerotropism
+session:
+  id: 2026-10-04T183005Z-codex-a94090
+  timestamp: '2026-10-04T18:30:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1680
+  - https://github.com/CultureBotAI/TraitMech/issues/1681
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Use directly read aerotropism evidence and definition authority
+  details: 'Addresses second review of PR #1677 (#1680, #1681). Damm replaces unread Aoki
+    as definition_source. Unread Aoki/Carlile move from counted evidence to qualified discussion
+    leads; negative response remains unverified. Brand 2012 review is added for terminology,
+    explicitly not independent experimental replication. Its complete sentence exact-matches
+    directly retrieved Europe PMC JATS (PMC3216317) under the stated Creative Commons Attribution
+    license; cathode/figure clauses are explicitly galvanotropism. Guarded validated migration
+    preserves all three prior per-record events. Corrects evidence-authority claims in 2026-10-04T173758Z-codex-bc6cda.yaml
+    and 2026-10-04T180339Z-codex-a40156.yaml without editing either. No older trait YAML changed.'
