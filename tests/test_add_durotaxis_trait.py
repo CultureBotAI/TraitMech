@@ -2,6 +2,7 @@
 
 import copy
 import csv
+import hashlib
 import io
 import sys
 from pathlib import Path
@@ -35,12 +36,18 @@ def test_identity_and_boundaries_preserve_active_migration():
     assert record["mapping_status"] == "PROPOSED"
     assert record["trait_category"] == "PHYSIOLOGY"
     assert record["parent_traits"] == ["METPO:1000702"]
-    assert "migration is biased toward regions of greater substrate stiffness" in record["definition"]
+    assert record["definition"] == (
+        "A motile phenotype in which active migration is directionally biased "
+        "in response to a spatial gradient in substrate stiffness."
+    )
     assert not any(k in record for k in ["canonical_examples", "causal_graphs", "xrefs", "synonyms"])
     assert record["curation_history"][-1]["llm_assisted"] is True
+    assert [event["action"] for event in record["curation_history"]] == [
+        "MINTED_TRAITMECH_ID", "CORRECTED_DEFINITION_SCOPE",
+    ]
     boundary, mechanism = record["discussions"]
     assert boundary["status"] == mechanism["status"] == "OPEN"
-    for qualifier in ["positive, stiff-side", "differential growth", "traitmech:000594",
+    for qualifier in ["polarity-neutral", "no opposite microbial response", "differential growth", "traitmech:000594",
                       "friction gradient", "Mechanotaxis", "not an exact synonym"]:
         assert qualifier in boundary["rationale"]
     for qualifier in ["does not uniquely", "Ax2-derived", "natural-strain", "mammalian",
@@ -49,9 +56,9 @@ def test_identity_and_boundaries_preserve_active_migration():
 
 
 def test_evidence_preserves_version_locators_and_source_limits():
-    kang, filipinas = writer.build_record()["evidence"]
+    kang, filipinas, isomursu = writer.build_record()["evidence"]
     assert {kang["reference"], filipinas["reference"]} == {writer.KANG, writer.FILIPINAS}
-    for item in [kang, filipinas]:
+    for item in [kang, filipinas, isomursu]:
         assert len(item["snippet"]) >= 24
         assert len(item["snippet"].split()) <= 25
     assert "Dictyostelium" in kang["snippet"]
@@ -62,6 +69,11 @@ def test_evidence_preserves_version_locators_and_source_limits():
     assert "stiffer substrates" in filipinas["snippet"]
     for qualifier in ["Crossref", "2025-02-27", "not inspected", "node migration and growth"]:
         assert qualifier in filipinas["notes"]
+    assert isomursu["reference"] == writer.ISOMURSU
+    assert "positive or negative durotaxis" in isomursu["snippet"]
+    for qualifier in ["terminology only", "not an additional microbial observation",
+                      "not transferred to microbes", "not inspected", "not established"]:
+        assert qualifier in isomursu["notes"]
 
 
 def test_proposal_record_parity_and_header_padding():
@@ -84,6 +96,29 @@ def test_dry_run_apply_and_idempotent_replay(isolated, monkeypatch):
     applied = snapshots(isolated)
     assert run(monkeypatch, True) == 0
     assert snapshots(isolated) == applied
+
+
+def test_reviewed_preimage_upgrade_is_guarded(isolated, monkeypatch):
+    previous = writer.build_record()
+    previous["definition"] = "A prior direction-specific definition."
+    previous["curation_history"].pop()
+    writer.write_validated_trait(previous, writer.TARGET)
+    writer.PROPOSAL.mkdir()
+    proposal_path = writer.PROPOSAL / "metpo_proposal_classes_robot.tsv"
+    proposal_path.write_text("Controlled prior proposal fixture")
+    # Fixture hashes do not replace the production commit's preimage guards.
+    monkeypatch.setattr(writer, "PREVIOUS_RECORD_SHA256",
+                        hashlib.sha256(writer.TARGET.read_bytes()).hexdigest())
+    monkeypatch.setattr(writer, "PREVIOUS_PROPOSAL_SHA256",
+                        hashlib.sha256(proposal_path.read_bytes()).hexdigest())
+    before = snapshots(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshots(isolated) == before
+    assert run(monkeypatch, True) == 0
+    updated = yaml.safe_load(writer.TARGET.read_text())
+    assert updated == writer.build_record()
+    assert updated["curation_history"][:-1] == previous["curation_history"]
+    assert proposal_path.read_text() == writer.proposal_tsv(updated)
 
 
 @pytest.mark.parametrize("target", ["record", "proposal"])

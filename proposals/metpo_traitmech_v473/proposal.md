@@ -3,7 +3,7 @@
 ## Context
 
 TraitMech mints `traitmech:000596 durotaxis` as a PROPOSED PHYSIOLOGY
-class for migration biased toward stiffer substrate. Independent studies
+class for directional active migration in a substrate stiffness gradient. Independent studies
 in Dictyostelium and Physarum support microbial applicability.
 
 A fresh seed emitted 399 identifiers: 344 present and 55 absent from the
@@ -34,9 +34,11 @@ One record uses the new identity. No predicate or schema enum is lifted.
 The pinned OWL resolves `METPO:1000702` to motile, below motility
 (`METPO:1000701`). Directional active migration entails motility;
 contact-guided polarized growth in `traitmech:000594 thigmotropism` does not
-define this trait. The definition follows the positive, stiff-side usage
-of durotaxis in both cited studies. It does not assert that every microbe
-prefers stiffer substrate or that every response to mechanics is durotaxis.
+define this trait. Following review issue #1669, the definition is
+polarity-neutral, consistent with primary terminology distinguishing positive
+and negative durotaxis. Both microbial studies report stiff-side migration;
+no opposite microbial response is inferred. Neither every microbe nor every
+response to mechanics is asserted to exhibit durotaxis.
 
 Speed changes, passive displacement and differential growth alone are
 insufficient. Friction gradients, topography and remote substrate deformation
@@ -66,8 +68,15 @@ ontologies. No synonym, xref or SSSOM alignment is asserted.
   gradients. Its snippet was exact-matched to that deposited abstract.
   Full methods, figures and supplements were not inspected. The gradient
   controls, strain identity and migration/growth distinction remain open.
+- Isomursu et al., DOI:10.1038/s41563-022-01294-2, PMID:35817964,
+  published 2022-07-11: the final abstract sentence explicitly distinguishes
+  positive and negative durotaxis. Its exact snippet was checked against
+  the Europe PMC MED abstract; publisher wording corroborates the polarity
+  usage. This is mammalian terminology evidence only, not an additional
+  microbial observation or a transferable microbial mechanism. Full methods,
+  figures and supplements were not inspected for this scope check.
 
-Each trait-evidence citation has one contiguous snippet under 25 words.
+Each of the three evidence citations has a contiguous snippet under 25 words.
 Kang's culture-method citation, DOI:10.3389/fcell.2022.835185, was also
 inspected: it describes Ax2-derived cells and expression constructs but
 does not uniquely identify Kang's assayed cells. It is provenance context,
@@ -89,9 +98,10 @@ files are omitted because no property or verified alignment is proposed.
 
 ## Verification
 
-Seven focused writer tests pass, covering identity and source boundaries,
-TSV parity, dry run, idempotent replay, schema rejection and preimage-drift
-refusal. Full pytest passed 1,972 tests with two dependency warnings in
+Eight focused writer tests pass after the polarity correction, covering
+identity and source boundaries, TSV parity, dry run, idempotent replay,
+schema rejection, exact reviewed-preimage upgrade and preimage-drift refusal.
+Before that correction, full pytest passed 1,972 tests with two dependency warnings in
 1100.67s; all 45 artifact/priority tests passed in 656.14s. Direct LinkML,
 strict validation, full QC, history (1,027 records), products, proposal
 coverage, Biolink coverage and graph-artifact verification passed. QC
@@ -103,7 +113,7 @@ lines and 12,628/12,632 RDF triples. Both use the real labeled w3id motile
 parent and its motility ancestor, without legacy METPO stubs. The TSV header
 matches the canonical upstream 11-column header, including empty cells.
 
-Both snippets were exact-matched to raw source text: Kang's full JATS
+The microbial snippets were exact-matched to raw source text: Kang's full JATS
 paragraph and the publisher-deposited Crossref abstract. The maintained
 abstract resolver reports NOT_IN_ABSTRACT and UNRESOLVED, respectively;
 these are not relabeled VERIFIED. An exact quoted-DOI Europe PMC query
@@ -111,7 +121,7 @@ returned zero Physarum results, while Crossref resolves the citation.
 Offline canonical auditing skipped NCBI identity resolution; no canonical
 example was added.
 
-Desktop/mobile rendering passed at 1440px and 390px with correct local-ID
+Before the correction, desktop/mobile rendering passed at 1440px and 390px with correct local-ID
 provenance, two evidence items, no page errors or document overflow, and a
 loaded dashboard coverage image. Screenshots were visually inspected.
 All 990 existing pages were compared: 989 footer-only changes, plus the
@@ -130,3 +140,17 @@ and reconcile references and proposal status in a reviewed change.
 ## Change Log
 
 - v473, 2026-10-04: one evidence-backed durotaxis class, curated by codex.
+- Review correction #1669: polarity-neutral definition and bounded terminology
+  citation; the original two microbial observations remain stiff-side only.
+  The writer retains the initial curation event and appends the correction,
+  accepting only the exact reviewed record/proposal preimages or current output.
+  Post-correction full pytest passed 1,973 tests with two dependency warnings
+  in 888.89s; full QC exited 0 with no new blocking findings. LinkML, strict
+  validation, history (1,028 valid), proposal verification and ROBOT/ELK pass.
+  All three snippets match raw source text; the new abstract quote is VERIFIED
+  by the maintained resolver, without relabeling the two earlier verdicts.
+  The reasoned ontology retains the real w3id motile hierarchy and matches the
+  polarity-neutral definition. Desktop/mobile browser checks and visual
+  screenshot review passed again with three evidence items. Regeneration
+  leaves the coverage image and priority outputs unchanged; the published
+  dashboard and listing-page timestamps reflect the correction event.

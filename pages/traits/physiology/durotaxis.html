@@ -32,13 +32,13 @@
     <h1>durotaxis</h1>
     <p class="curie"><code>traitmech:000596</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A motile phenotype in which migration is biased toward regions of greater substrate stiffness.</p>
+    <p class="definition">A motile phenotype in which active migration is directionally biased in response to a spatial gradient in substrate stiffness.</p>
 
   </header>
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(2)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(3)</span></h2>
     <ul>
 
       <li>
@@ -51,6 +51,12 @@
         <a href="https://doi.org/10.1088/1361-6463/adb6b8" rel="nofollow noreferrer"><code>DOI:10.1088/1361-6463/adb6b8</code></a>
         <blockquote>Our findings reveal directional persistence and strong polarization of the plasmodia towards regions of stiffer substrates, indicating a guided migration response.</blockquote>
         <p class="meta">Filipinas and Confesor, published online 2025-02-27. Exact abstract span in the publisher-deposited Crossref record, https://api.crossref.org/works/10.1088/1361-6463/adb6b8. The authors report tracking Physarum polycephalum plasmodial nodes on agar stiffness gradients. This is independent microbial support for stiffness-directed migration, not merely a simulation prediction. Full methods, figures and supplements were not inspected; strain provenance, gradient controls and the distinction between node migration and growth remain to be assessed before adding a canonical example or mechanistic graph. The abstract&#39;s simulation-supported gradient-independence claim is not generalized to all microbes.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1038/s41563-022-01294-2" rel="nofollow noreferrer"><code>DOI:10.1038/s41563-022-01294-2</code></a>
+        <blockquote>Our results identify the molecular mechanism driving context-dependent positive or negative durotaxis, determined by a cell&#39;s contractile and adhesive machinery.</blockquote>
+        <p class="meta">Isomursu et al., published 2022-07-11, PMID:35817964. Exact final abstract sentence in the Europe PMC MED record, https://europepmc.org/article/MED/35817964; the publisher&#39;s abstract corroborates positive and negative durotaxis usage. This mammalian cell study supports polarity-neutral terminology only, not an additional microbial observation. Its mechanism claim is not transferred to microbes. Full methods, figures and supplements were not inspected for this terminology check. The two microbial studies above report stiff-side migration; negative microbial durotaxis is not established by these sources.</p>
       </li>
 
     </ul>
@@ -134,7 +140,7 @@
           mechanism it concerns.</p>
 
 
-        <p>This definition follows the positive, stiff-side migration usage in both microbial studies; it does not claim all microbes prefer stiff substrates. Speed changes on uniform substrates, passive displacement and differential growth alone are insufficient. Contact-guided polarized growth in thigmotropism (traitmech:000594) is a different response. Do not infer durotaxis from a friction gradient, surface topography or remote substrate deformation without direct evidence for stiffness-directed migration. Mechanotaxis is broader, not an exact synonym. QuickGO returned zero durotaxis hits on 2026-10-04; other external equivalences remain unverified. No xref or synonym is inferred.</p>
+        <p>The class is polarity-neutral: positive and negative responses are directions along the stiffness gradient, not different stimuli. Isomursu et al. (DOI:10.1038/s41563-022-01294-2) support this terminology in mammalian cells, not negative microbial durotaxis. Both microbial studies here report stiff-side migration; no opposite microbial response is inferred. Speed changes on uniform substrates, passive displacement and differential growth alone are insufficient. Contact-guided polarized growth in thigmotropism (traitmech:000594) is a different response. Do not infer durotaxis from a friction gradient, surface topography or remote substrate deformation without direct evidence for stiffness-directed migration. Mechanotaxis is broader, not an exact synonym. QuickGO returned zero durotaxis hits on 2026-10-04; other external equivalences remain unverified. No xref or synonym is inferred.</p>
 
 
 
@@ -188,6 +194,12 @@
           <time>2026-10-04T12:00:52Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added durotaxis with two independent microbial DOI citations and exact full-text/abstract snippets. Ignored-and-hidden novelty searches and structured OWL review found no exact record or METPO term. Reserved METPO:1055000 in v473 under motile. Inspected Kang v4 Figure 4, methods and relevant supplement documents; kept stiffness-directed migration distinct from speed changes and contact-guided growth. Deferred canonical strains and protein-level mechanisms rather than inferring them from mammalian experiments.</p>
+        </li>
+
+        <li>
+          <time>2026-10-04T12:38:00Z</time> ·
+          <strong>CORRECTED_DEFINITION_SCOPE</strong> · codex
+          <p class="changes">Addressed review issue #1669: made the unqualified durotaxis class and METPO proposal polarity-neutral. Kept the observed stiff-side microbial responses in evidence notes and added Isomursu et al. only for positive/negative terminology, without transferring mammalian mechanisms or claiming negative microbial observations.</p>
         </li>
 
       </ol>
@@ -244,7 +256,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-04 12:00 UTC
+      Record as of 2026-10-04 12:38 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 991 TraitRecords
       · embedding coverage 48.1%

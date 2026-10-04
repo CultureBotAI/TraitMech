@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import copy
 import csv
+import hashlib
 import io
 import sys
 import tempfile
@@ -23,13 +24,16 @@ TARGET = ROOT / "data/traits/physiology/durotaxis.yaml"
 PROPOSAL = ROOT / "proposals/metpo_traitmech_v473"
 KANG = "DOI:10.7554/eLife.96821"
 FILIPINAS = "DOI:10.1088/1361-6463/adb6b8"
+ISOMURSU = "DOI:10.1038/s41563-022-01294-2"
+PREVIOUS_RECORD_SHA256 = "7d71d1837325d7ff8e696c586cc17eb0274e189dfd687b5e7ea2eff8b8b4fa7c"
+PREVIOUS_PROPOSAL_SHA256 = "5f364dae2af7f6df0b9c5d591a0cca3635739be5684d815e494a388943d35ae4"
 
 RECORD = {
     "identifier": IDENTIFIER,
     "label": "durotaxis",
     "definition": (
-        "A motile phenotype in which migration is biased toward regions of "
-        "greater substrate stiffness."
+        "A motile phenotype in which active migration is directionally biased "
+        "in response to a spatial gradient in substrate stiffness."
     ),
     "definition_source": KANG,
     "trait_category": "PHYSIOLOGY",
@@ -85,6 +89,26 @@ RECORD = {
                 "claim is not generalized to all microbes."
             ),
         },
+        {
+            "reference": ISOMURSU,
+            "snippet": (
+                "Our results identify the molecular mechanism driving "
+                "context-dependent positive or negative durotaxis, determined "
+                "by a cell's contractile and adhesive machinery."
+            ),
+            "notes": (
+                "Isomursu et al., published 2022-07-11, PMID:35817964. "
+                "Exact final abstract sentence in the Europe PMC MED record, "
+                "https://europepmc.org/article/MED/35817964; the publisher's "
+                "abstract corroborates positive and negative durotaxis usage. "
+                "This mammalian cell study supports polarity-neutral terminology "
+                "only, not an additional microbial observation. Its mechanism "
+                "claim is not transferred to microbes. Full methods, figures "
+                "and supplements were not inspected for this terminology check. "
+                "The two microbial studies above report stiff-side migration; "
+                "negative microbial durotaxis is not established by these sources."
+            ),
+        },
     ],
     "discussions": [
         {
@@ -93,9 +117,13 @@ RECORD = {
             "kind": "CURATION_TODO",
             "status": "OPEN",
             "rationale": (
-                "This definition follows the positive, stiff-side migration "
-                "usage in both microbial studies; it does not claim all "
-                "microbes prefer stiff substrates. Speed changes on uniform "
+                "The class is polarity-neutral: positive and negative responses "
+                "are directions along the stiffness gradient, not different "
+                "stimuli. Isomursu et al. (DOI:10.1038/s41563-022-01294-2) "
+                "support this terminology in mammalian cells, not negative "
+                "microbial durotaxis. Both microbial studies here report "
+                "stiff-side migration; no opposite microbial response is inferred. "
+                "Speed changes on uniform "
                 "substrates, passive displacement and differential growth "
                 "alone are insufficient. Contact-guided polarized growth "
                 "in thigmotropism (traitmech:000594) is a different response. "
@@ -154,6 +182,17 @@ def build_record() -> dict:
         ),
         llm_assisted=True, timestamp="2026-10-04T12:00:52Z",
     )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_DEFINITION_SCOPE",
+        changes=(
+            "Addressed review issue #1669: made the unqualified durotaxis class "
+            "and METPO proposal polarity-neutral. Kept the observed stiff-side "
+            "microbial responses in evidence notes and added Isomursu et al. "
+            "only for positive/negative terminology, without transferring "
+            "mammalian mechanisms or claiming negative microbial observations."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T12:38:00Z",
+    )
     return record
 
 
@@ -171,9 +210,9 @@ def proposal_tsv(record: dict) -> str:
     ])
     writer.writerow([
         "METPO:1055000", record["label"], record["definition"],
-        f"TraitMech:data/traits/physiology/durotaxis.yaml|{KANG}|{FILIPINAS}",
+        f"TraitMech:data/traits/physiology/durotaxis.yaml|{KANG}|{FILIPINAS}|{ISOMURSU}",
         "METPO:1000702", "", "", "metpo_traitmech_2026_10", "HIGH",
-        "Stiffness-directed migration; not speed alone, contact-guided growth or passive displacement.",
+        "Polarity-neutral stiffness-directed migration; microbial evidence is stiff-side only.",
         IDENTIFIER,
     ])
     return stream.getvalue()
@@ -186,9 +225,11 @@ def main() -> int:
     record = build_record()
     proposal = proposal_tsv(record)
     proposal_path = PROPOSAL / "metpo_proposal_classes_robot.tsv"
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    if (TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record
+            and hashlib.sha256(TARGET.read_bytes()).hexdigest() != PREVIOUS_RECORD_SHA256):
         raise SystemExit("Existing target differs from this writer")
-    if proposal_path.exists() and proposal_path.read_text() != proposal:
+    if (proposal_path.exists() and proposal_path.read_text() != proposal
+            and hashlib.sha256(proposal_path.read_bytes()).hexdigest() != PREVIOUS_PROPOSAL_SHA256):
         raise SystemExit("Existing proposal differs from this writer")
     with tempfile.TemporaryDirectory() as tmp:
         write_validated_trait(record, Path(tmp) / TARGET.name)

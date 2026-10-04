@@ -1,7 +1,7 @@
 identifier: traitmech:000596
 label: durotaxis
-definition: A motile phenotype in which migration is biased toward regions of greater
-  substrate stiffness.
+definition: A motile phenotype in which active migration is directionally biased in
+  response to a spatial gradient in substrate stiffness.
 definition_source: DOI:10.7554/eLife.96821
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -36,20 +36,34 @@ evidence:
     node migration and growth remain to be assessed before adding a canonical example
     or mechanistic graph. The abstract's simulation-supported gradient-independence
     claim is not generalized to all microbes.
+- reference: DOI:10.1038/s41563-022-01294-2
+  snippet: Our results identify the molecular mechanism driving context-dependent
+    positive or negative durotaxis, determined by a cell's contractile and adhesive
+    machinery.
+  notes: Isomursu et al., published 2022-07-11, PMID:35817964. Exact final abstract
+    sentence in the Europe PMC MED record, https://europepmc.org/article/MED/35817964;
+    the publisher's abstract corroborates positive and negative durotaxis usage. This
+    mammalian cell study supports polarity-neutral terminology only, not an additional
+    microbial observation. Its mechanism claim is not transferred to microbes. Full
+    methods, figures and supplements were not inspected for this terminology check.
+    The two microbial studies above report stiff-side migration; negative microbial
+    durotaxis is not established by these sources.
 discussions:
 - discussion_id: durotaxis-stiffness-and-migration-boundaries
   prompt: Keep stiffness-directed migration distinct from other mechanical responses.
   kind: CURATION_TODO
   status: OPEN
-  rationale: This definition follows the positive, stiff-side migration usage in both
-    microbial studies; it does not claim all microbes prefer stiff substrates. Speed
-    changes on uniform substrates, passive displacement and differential growth alone
-    are insufficient. Contact-guided polarized growth in thigmotropism (traitmech:000594)
-    is a different response. Do not infer durotaxis from a friction gradient, surface
-    topography or remote substrate deformation without direct evidence for stiffness-directed
-    migration. Mechanotaxis is broader, not an exact synonym. QuickGO returned zero
-    durotaxis hits on 2026-10-04; other external equivalences remain unverified. No
-    xref or synonym is inferred.
+  rationale: 'The class is polarity-neutral: positive and negative responses are directions
+    along the stiffness gradient, not different stimuli. Isomursu et al. (DOI:10.1038/s41563-022-01294-2)
+    support this terminology in mammalian cells, not negative microbial durotaxis.
+    Both microbial studies here report stiff-side migration; no opposite microbial
+    response is inferred. Speed changes on uniform substrates, passive displacement
+    and differential growth alone are insufficient. Contact-guided polarized growth
+    in thigmotropism (traitmech:000594) is a different response. Do not infer durotaxis
+    from a friction gradient, surface topography or remote substrate deformation without
+    direct evidence for stiffness-directed migration. Mechanotaxis is broader, not
+    an exact synonym. QuickGO returned zero durotaxis hits on 2026-10-04; other external
+    equivalences remain unverified. No xref or synonym is inferred.'
   posed_by: codex
   posed_date: '2026-10-04'
 - discussion_id: durotaxis-strain-and-mechanism-grounding
@@ -79,4 +93,12 @@ curation_history:
     kept stiffness-directed migration distinct from speed changes and contact-guided
     growth. Deferred canonical strains and protein-level mechanisms rather than inferring
     them from mammalian experiments.
+  llm_assisted: true
+- timestamp: '2026-10-04T12:38:00Z'
+  curator: codex
+  action: CORRECTED_DEFINITION_SCOPE
+  changes: 'Addressed review issue #1669: made the unqualified durotaxis class and
+    METPO proposal polarity-neutral. Kept the observed stiff-side microbial responses
+    in evidence notes and added Isomursu et al. only for positive/negative terminology,
+    without transferring mammalian mechanisms or claiming negative microbial observations.'
   llm_assisted: true
