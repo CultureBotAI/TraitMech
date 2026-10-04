@@ -9497,6 +9497,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "gravitaxis-direction-and-process-boundaries",
+  "prompt": "Keep gravity-relative swimming distinct from settling and neighboring traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravitaxis",
+  "source_id": "traitmech:000584",
+  "source_file": "gravitaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Positive and negative gravitaxis are directional cases, not a requirement that all cells always swim upward. Passive settling alone and speed changes alone do not establish this trait. The definition does not require an active gravity receptor: powered swimming and physical orientation can coexist. Gyrotaxis (traitmech:000583) specifies a gravity-viscous torque mechanism, not an exact synonym or a disjoint phenotype. No new subsumption axiom between them is asserted without reviewing both scopes. QuickGO resolved active GO:0042332 gravitaxis on 2026-10-04, including geotaxis as an exact lexical synonym. It denotes a biological process rather than this organismal disposition; keep it out of equivalent xrefs and resolve any mapping separately.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravitaxis.html#gravitaxis-direction-and-process-boundaries"
+ },
+ {
+  "discussion_id": "gravitaxis-mechanism-grounding",
+  "prompt": "Resolve exact protein anchors and a faithful physical-mechanism graph.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravitaxis",
+  "source_id": "traitmech:000584",
+  "source_file": "gravitaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The sources provide mechanism evidence, but this first record does not yet include a graph. Nasir's CaM2 accession EU935858 resolves to UniProtKB:B5THA2, an unreviewed entry without a Proteomes cross-reference in the 2026-10-04 REST response. An exact EgPCDUF4201 name query returned no hit; this does not establish sequence absence. Resolve eligible exact examples before adding the molecular branch; a DUF4201 match alone does not demonstrate gravitaxis. For the physical branch, the current MECHANISTIC coverage audit requires a protein node and example. Do not invent a receptor or misclassify physical causation as NONMECHANISTIC to satisfy that audit.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravitaxis.html#gravitaxis-mechanism-grounding"
+ },
+ {
   "discussion_id": "gyrotaxis-physical-mechanism-representation",
   "prompt": "Represent physical torque-mediated orientation without inventing a protein sensor.",
   "kind": "CURATION_TODO",
@@ -9906,9 +9940,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 456,
+ "total_discussions": 458,
  "total_knowledge_gaps": 365,
- "total_source_entries": 449,
+ "total_source_entries": 450,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

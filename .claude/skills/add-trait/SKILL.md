@@ -295,6 +295,12 @@ than reconstructing a plausible heading. Distinguish isolated-component and
 heterologous assays from full-system or native-host validation; a biochemical
 result alone does not establish the complete organismal mechanism.
 
+Verify cited figure panels against the actual supplement and its captions,
+not just pointers in the main text. When the pointer is wrong, cite the
+observed panel and record the discrepancy in evidence notes. A nonsignificant
+control measurement does not establish that all aspects of a structure or
+function are unchanged.
+
 Shortened snippets must be self-contained and source-faithful. Do not stop
 before the head noun of a phrase, after a dangling article, preposition, or
 conjunction, or before a coordinated complement that would change the statement's

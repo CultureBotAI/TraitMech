@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 978,
+    "records": 979,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 501,
+    "unresearched_mechanism_records": 502,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 10,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 134,
+      "BUILD_CAUSAL_GRAPH": 135,
       "DEEPEN_CAUSAL_GRAPH": 385,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
@@ -3915,6 +3915,29 @@
       "components": 0,
       "orphans": 0,
       "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000584",
+      "label": "gravitaxis",
+      "category": "physiology",
+      "slug": "gravitaxis",
+      "score": 28.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 2,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
       "series": null,
@@ -18314,7 +18337,7 @@
       "orphans": 0,
       "examples": 3,
       "canonical_examples_reviewed_empty": false,
-      "children": 9,
+      "children": 10,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
