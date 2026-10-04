@@ -578,6 +578,13 @@ footer, so a single new record can legitimately rewrite every existing
 verify it is limited to footer count/coverage churn before committing the
 regenerated pages.
 
+Inspect rendered identity and provenance as well as the YAML. A local
+`traitmech:` identifier must not be labeled as a METPO CURIE, linked through
+the METPO resolver, or presented as originating in a released METPO version.
+Keep the ontology baseline distinct from identifier provenance, and check
+that the rendered identifier link reaches the appropriate authority or source
+record. Include regression coverage when correcting a shared renderer.
+
 ## Review and merge
 
 After local validation passes, finish the record through the same reviewed PR

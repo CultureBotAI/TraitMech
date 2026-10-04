@@ -87,7 +87,7 @@ def test_is_a_pure_function_of_the_data():
 
 def test_real_corpus_yields_a_stamp():
     """Guards the live tree: if every timestamp stopped parsing, the footer
-    would silently fall back to 'Built from' and nobody would notice."""
+    would silently omit its curation date and nobody would notice."""
     import yaml
     traits = []
     for p in sorted((REPO_ROOT / "data" / "traits").rglob("*.yaml")):

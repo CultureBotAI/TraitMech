@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1053600	rheotaxis	A motile phenotype in which fluid velocity gradients bias an organism's self-propelled movement.	TraitMech:data/traits/physiology/rheotaxis.yaml|DOI:10.1073/pnas.1120955109|DOI:10.1016/j.bpj.2012.03.001	METPO:1000702			metpo_traitmech_2026_10	HIGH	Self-propelled movement biased by fluid velocity gradients; not passive advection.	traitmech:000582

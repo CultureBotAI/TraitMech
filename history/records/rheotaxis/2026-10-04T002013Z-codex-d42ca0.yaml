@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/rheotaxis.yaml
+  slug: rheotaxis
+session:
+  id: 2026-10-04T002013Z-codex-d42ca0
+  timestamp: '2026-10-04T00:20:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add rheotaxis with context-qualified primary evidence
+  details: Added traitmech:000582 under motile, with DOI:10.1073/pnas.1120955109 and DOI:10.1016/j.bpj.2012.03.001,
+    contiguous snippets and an NCBI-resolved K-12 example qualified by motility selection
+    and near-surface shear. Bulk transverse motion is not conflated with upstream motion or
+    passive advection. Deferred a protein-resolved graph pending a verified experimental strain/accession
+    link. Whole-repository searches included ignored and hidden files. Reserved METPO:1053600
+    in proposal v459; writer is dry-run by default and refuses output drift. No older trait
+    was edited.

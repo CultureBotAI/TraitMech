@@ -9752,6 +9752,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "rheotaxis-context-specific-mechanism-grounding",
+  "prompt": "Ground separate surface and bulk-flow mechanisms without inventing a shear-sensing protein.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "rheotaxis",
+  "source_id": "traitmech:000582",
+  "source_file": "rheotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The cited studies support hydrodynamic reorientation coupled to powered swimming, but surface-associated upstream motion and bulk transverse motion must not be collapsed into one universal mechanism. A protein-resolved causal graph is deferred pending a verified link between a primary mechanistic experiment, its precise strain and an accession-level protein example. OI4139 must not be silently identified as strain 168. No graph or protein accession is asserted in this first-pass identity record. QuickGO search for rheotaxis returned no term on 2026-10-04; no exact external xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/rheotaxis.html#rheotaxis-context-specific-mechanism-grounding"
+ },
+ {
   "discussion_id": "serine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for serine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9872,9 +9889,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 454,
+ "total_discussions": 455,
  "total_knowledge_gaps": 365,
- "total_source_entries": 447,
+ "total_source_entries": 448,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

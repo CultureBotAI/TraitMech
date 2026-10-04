@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% from "citations.html" import citation %}
+{% set identifier = trait.identifier | default('', true) %}
+{% set is_metpo = identifier.startswith('METPO:') %}
+{% set is_traitmech = identifier.startswith('traitmech:') %}
 {% block content %}
 <div class="layout-2col">
 <article class="trait">
@@ -162,7 +165,14 @@
     <div class="card">
       <h2>Provenance</h2>
       <dl>
-        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> ({{ metpo_version }})</dd>
+        <dt>Identifier source</dt>
+        {% if is_metpo %}
+        <dd><a href="https://w3id.org/metpo">METPO</a> ({{ metpo_version }})</dd>
+        {% elif is_traitmech %}
+        <dd>TraitMech local identifier</dd>
+        {% else %}
+        <dd>Record YAML</dd>
+        {% endif %}
         {% if trait.created_by %}<dt>Author</dt><dd>{{ trait.created_by }}</dd>{% endif %}
         {% if trait.definition_source %}<dt>Definition source</dt><dd>{{ citation(trait.definition_source) }}</dd>{% endif %}
         {% if trait.subset %}<dt>Subset</dt><dd>{{ trait.subset }}</dd>{% endif %}
@@ -225,10 +235,8 @@
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe ({{ embedding_release }}).</p>
       {% else %}
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the {{ embedding_release }} deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="no-match">No kg-microbe node embedding matched this record
+        in the {{ embedding_release }} deepwalk.</p>
       {% endif %}
     </div>
 
@@ -426,8 +434,15 @@
   <div class="card">
     <h2>Identifier</h2>
     <dl class="rail-meta">
+      {% if is_metpo %}
       <dt>METPO CURIE</dt>
-      <dd><a href="https://w3id.org/metpo/{{ trait.identifier|replace('METPO:', '') }}" target="_blank" rel="noopener"><code>{{ trait.identifier }}</code></a></dd>
+      <dd><a href="https://w3id.org/metpo/{{ identifier|replace('METPO:', '') }}" target="_blank" rel="noopener"><code>{{ identifier }}</code></a></dd>
+      {% elif is_traitmech %}
+      <dt>TraitMech CURIE</dt>
+      <dd><a href="{{ yaml_blob_url }}" target="_blank" rel="noopener"><code>{{ identifier }}</code></a></dd>
+      {% else %}
+      <dt>CURIE</dt><dd><code>{{ identifier }}</code></dd>
+      {% endif %}
       <dt>Category</dt>
       <dd>{{ trait.trait_category }}</dd>
       <dt>Term kind</dt>
