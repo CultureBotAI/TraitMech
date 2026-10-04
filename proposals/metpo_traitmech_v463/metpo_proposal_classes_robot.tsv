@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1054000	chemokinesis	A motile phenotype in which swimming speed changes in response to chemical concentration, without requiring directional bias along a chemical gradient.	TraitMech:data/traits/physiology/chemokinesis.yaml|DOI:10.1038/ismej.2013.210|DOI:10.1073/pnas.1602307113|DOI:10.1038/s41396-021-01024-7	METPO:1000702			metpo_traitmech_2026_10	HIGH	Chemical-dependent swimming-speed response; directional bias is not required.	traitmech:000586

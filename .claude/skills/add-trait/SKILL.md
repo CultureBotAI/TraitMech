@@ -281,6 +281,11 @@ when omitting that example row. Shared taxa across arrangement classes alone do
 not establish a contradiction: check whether the claims concern the same cell
 and state rather than asserting organism-level disjointness.
 
+Check named laboratory strains against primary strain-provenance sources before
+presenting them as natural canonical exemplars. A study's reference strain can
+itself be a mutant. Retain relevant measurements as qualified evidence when a
+canonical example would conceal that distinction.
+
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 
@@ -403,6 +408,12 @@ A first graph should be readable and source-bounded:
 
 Generic states, capacities, and intermediates may stay ungrounded. Do not add a
 node or edge just to make the graph look complete.
+
+Distinguish computational ablations from biological perturbations. A simulated
+"knockout" of a functional block is evidence about that model, not a gene-deletion
+experiment. Likewise, transcript changes accompanying a phenotype do not by
+themselves establish the proposed protein-level causal pathway. Preserve the
+source's hypothesis language and defer unsupported edges explicitly.
 
 Keep authority cross-checks separate from endpoint-specific audit results. If
 UniProt REST fails, an EBI Proteins API cross-check may support metadata in

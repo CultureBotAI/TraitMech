@@ -9344,6 +9344,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/cellular_buoyancy.html#cellular-buoyancy-xref-gap"
  },
  {
+  "discussion_id": "chemokinesis-speed-and-taxis-boundaries",
+  "prompt": "Preserve the source-defined speed response and its distinction from taxis.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "chemokinesis",
+  "source_id": "traitmech:000586",
+  "source_file": "chemokinesis.yaml",
+  "attaches_to": [],
+  "rationale": "This record follows the swimming-speed usage in Garren, Son and Gao. Chemotaxis (traitmech:000086) concerns directional bias. No equivalence, disjointness or parent-child relation between them is asserted. A speed response can occur with or without chemotaxis and need not always be an increase. Existing research also uses chemokinesis more broadly for changes in turning frequency. Reconcile that broader usage, orthokinesis and klinokinesis before adding synonyms, narrower terms or xrefs; do not equate a turning-only response with this speed definition.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/chemokinesis.html#chemokinesis-speed-and-taxis-boundaries"
+ },
+ {
+  "discussion_id": "chemokinesis-mechanism-grounding",
+  "prompt": "Distinguish observed behavior from model ablations and molecular hypotheses.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "chemokinesis",
+  "source_id": "traitmech:000586",
+  "source_file": "chemokinesis.yaml",
+  "attaches_to": [],
+  "rationale": "Son's computational removal of functional blocks is not a gene-knockout experiment. Gao's Na+-NQR explanation is explicitly hypothetical, with further experimental work requested. A mechanistic graph is deferred pending source-backed causal edges and eligible taxon-paired protein examples. Do not borrow the enterobacterial Che pathway from chemotaxis, infer causality from transcript changes, or use NONMECHANISTIC to bypass the protein-coverage requirement. No universal receptor is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/chemokinesis.html#chemokinesis-mechanism-grounding"
+ },
+ {
   "discussion_id": "cold-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -9974,9 +10008,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 460,
+ "total_discussions": 462,
  "total_knowledge_gaps": 365,
- "total_source_entries": 451,
+ "total_source_entries": 452,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

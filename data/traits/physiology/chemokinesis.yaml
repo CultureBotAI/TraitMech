@@ -1,0 +1,88 @@
+identifier: traitmech:000586
+label: chemokinesis
+definition: A motile phenotype in which swimming speed changes in response to chemical
+  concentration, without requiring directional bias along a chemical gradient.
+definition_source: DOI:10.1038/ismej.2013.210
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.1038/ismej.2013.210
+  snippet: chemokinesis is the ability to change swimming speed in response to a change
+    in chemical concentration.
+  notes: Discussion, page 1005, visually checked in the author-hosted published PDF
+    at https://stockerlab.ethz.ch/wp-content/uploads/2015/03/49.-Garren_etal_ISME_2014.pdf.
+    This bacterial usage defines chemokinesis by speed, in contrast to chemotactic
+    directional bias. The two responses can coexist. This citation supports identity;
+    no independent reanalysis of its supplementary assays is claimed.
+- reference: DOI:10.1073/pnas.1602307113
+  snippet: Chemokinesis was also observed in the absence of a chemical gradient
+  notes: SI Text, Chemokinesis, page 3 of 9; full article and SI inspected at https://pmc.ncbi.nlm.nih.gov/articles/PMC4978249/.
+    Figure S5 and its caption were visually checked in the author PDF at https://stockerlab.ethz.ch/wp-content/uploads/2017/05/89._Son_atall.pdf
+    (SI page 7 of 9). The uniform-serine assay supports a speed response without a
+    gradient. Model block removals are in silico mutants, not biological gene deletions.
+    YM4 cells were harvested in late exponential phase and resuspended in TMN motility
+    medium, pH 7.5; Figure S5 uses uniform 5 micromolar serine at 600 mM sodium. YM4
+    is a laboratory mutant deficient in lateral flagella, as documented separately
+    by DOI:10.7717/peerj.17126; it is retained as qualified experimental evidence,
+    not a natural canonical example.
+- reference: DOI:10.1038/s41396-021-01024-7
+  snippet: Thus, we hypothesize that the metabolism of mucus substrate stimulates
+    Na+-NQR activity, which in turn enables sustained chemokinesis.
+  notes: Discussion, page 3677, visually checked at https://stockerlab.ethz.ch/wp-content/uploads/2022/03/141.-Cherry-Gao_Coral-Muscus.pdf.
+    The plus is superscript in the typeset sodium notation and plain text in extraction.
+    The following sentence requires experimental testing of this hypothesis. Transcript
+    associations do not establish a causal protein pathway; no supplementary gene-level
+    result is curated here.
+- reference: DOI:10.7717/peerj.17126
+  snippet: two strains showing defects in the lateral flagellum (VIO5 and YM4)
+  notes: 'Abstract, PMID:38515459. This primary genomic study identifies YM4 as a
+    laboratory strain with defective lateral flagellation. It supplies strain provenance,
+    not a chemokinesis measurement. The Son observation must not be generalized to
+    unperturbed Vibrio alginolyticus. Canonical examples are deferred pending separate
+    verification of a natural exemplar (issue #1653).'
+discussions:
+- discussion_id: chemokinesis-speed-and-taxis-boundaries
+  prompt: Preserve the source-defined speed response and its distinction from taxis.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This record follows the swimming-speed usage in Garren, Son and Gao.
+    Chemotaxis (traitmech:000086) concerns directional bias. No equivalence, disjointness
+    or parent-child relation between them is asserted. A speed response can occur
+    with or without chemotaxis and need not always be an increase. Existing research
+    also uses chemokinesis more broadly for changes in turning frequency. Reconcile
+    that broader usage, orthokinesis and klinokinesis before adding synonyms, narrower
+    terms or xrefs; do not equate a turning-only response with this speed definition.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: chemokinesis-mechanism-grounding
+  prompt: Distinguish observed behavior from model ablations and molecular hypotheses.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Son's computational removal of functional blocks is not a gene-knockout
+    experiment. Gao's Na+-NQR explanation is explicitly hypothetical, with further
+    experimental work requested. A mechanistic graph is deferred pending source-backed
+    causal edges and eligible taxon-paired protein examples. Do not borrow the enterobacterial
+    Che pathway from chemotaxis, infer causality from transcript changes, or use NONMECHANISTIC
+    to bypass the protein-coverage requirement. No universal receptor is asserted.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T04:08:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added chemokinesis with three primary DOI citations, contiguous snippets
+    and a uniform-serine YM4 example at verified species taxon 663. Ignored-and-hidden
+    searches found only a chemotaxis boundary mention, not an exact record or METPO
+    class. Reserved METPO:1054000 in proposal v463. Kept speed, directional bias,
+    computational ablations and molecular hypotheses separate.
+  llm_assisted: true
+- timestamp: '2026-10-04T04:09:00Z'
+  curator: codex
+  action: QUALIFY_EXPERIMENTAL_STRAIN
+  changes: 'Addressed adversarial review #1653: added primary YM4 strain provenance,
+    removed the laboratory-mutant canonical example, and retained its uniform-serine
+    speed response in qualified evidence. Natural canonical exemplars remain deferred.'
+  llm_assisted: true
