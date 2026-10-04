@@ -17,7 +17,7 @@ METPO source class and (optionally) to literature evidence.
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
 | MORPHOLOGY | 88 | 4 | 0 | 89 | 96 |
-| PHYSIOLOGY | 45 | 56 | 0 | 53 | 102 |
+| PHYSIOLOGY | 45 | 57 | 0 | 53 | 103 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 122 |
 | ECOLOGY | 26 | 2 | 0 | 28 | 28 |
 | GENOMICS | 19 | 367 | 0 | 372 | 386 |
@@ -26,11 +26,11 @@ METPO source class and (optionally) to literature evidence.
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
 | OTHER | 0 | 1 | 0 | 0 | 32 |
-| **TOTAL** | **427** | **466** | **50** | **718** | **981** |
+| **TOTAL** | **427** | **467** | **50** | **718** | **982** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; `PROPOSED` records comprise 2 ecology records, 4 morphology
-records, 36 newer metabolism records, 56 physiology records, 367
+records, 36 newer metabolism records, 57 physiology records, 367
 genomics records, and 1 other record, and thirty-eight records are still
 `SEEDED` (one environment, one metabolism, four morphology, one physiology, and
 thirty-one other).
@@ -92,7 +92,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 981 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 982 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
