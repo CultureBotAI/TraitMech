@@ -9769,6 +9769,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/gravitaxis.html#gravitaxis-mechanism-grounding"
  },
  {
+  "discussion_id": "gravitropism-growth-and-direction-boundaries",
+  "prompt": "Keep gravity-guided growth separate from swimming and passive motion.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravitropism",
+  "source_id": "traitmech:000599",
+  "source_file": "gravitropism.yaml",
+  "attaches_to": [],
+  "rationale": "The class includes positive or negative directional growth without requiring both in one organism or condition. It is not gravitaxis (swimming orientation), gravikinesis (propulsion-speed change), passive settling, flotation or sagging, or gravity-dependent growth rate alone. The Phycomyces evidence here is negative. Resolve phenotype-level external equivalences before adding xrefs or synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravitropism.html#gravitropism-growth-and-direction-boundaries"
+ },
+ {
+  "discussion_id": "gravitropism-native-mechanism-grounding",
+  "prompt": "Discriminate gravity signaling from touch and coincident development.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravitropism",
+  "source_id": "traitmech:000599",
+  "source_file": "gravitropism.yaml",
+  "attaches_to": [],
+  "rationale": "Bending observations do not resolve a complete molecular mechanism. Vacuolization can coincide with development; touch-induced ion fluxes do not establish gravity-triggered channel activity. The 2004 abstract compares strains with and without crystals but does not identify a universal sole gravity sensor. Inspect its full text and resolve eligible taxon-paired protein accessions before adding a mechanistic graph. Do not use NONMECHANISTIC to bypass grounding requirements or transfer Chara signaling to fungi.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravitropism.html#gravitropism-native-mechanism-grounding"
+ },
+ {
   "discussion_id": "gyrotaxis-physical-mechanism-representation",
   "prompt": "Represent physical torque-mediated orientation without inventing a protein sensor.",
   "kind": "CURATION_TODO",
@@ -10416,9 +10450,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 486,
+ "total_discussions": 488,
  "total_knowledge_gaps": 365,
- "total_source_entries": 464,
+ "total_source_entries": 465,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
