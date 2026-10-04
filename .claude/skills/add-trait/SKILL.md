@@ -582,6 +582,14 @@ rollout and silently remove navigation or accessibility improvements. Use an
 isolated copy of that reviewed source when needed; do not update an unrelated
 dirty shared checkout or repair generated HTML by hand.
 
+Regenerate the published QC dashboard for every added record, separately from
+the priority dashboard: `CLAW_SRC=<reviewed-claw>/src just gen-qc-dashboard`.
+Commit both `dashboard/index.html` and `dashboard/coverage.png`, and run
+`python -m pytest tests/test_qc_dashboard_artifacts.py` to compare its headline
+and per-slot counts with the live corpus. If the shared generator is unavailable,
+report the blocked regeneration explicitly; passing other QC gates does not
+establish that the published dashboard is current.
+
 Regenerated priority artifacts can legitimately change existing parent rows
 when the new record changes child counts, series families, or overlap scores.
 Inspect those deltas before changing tests; do not preserve a stale assertion
