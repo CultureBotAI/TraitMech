@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/ph_taxis.yaml
+  slug: ph_taxis
+session:
+  id: 2026-10-04T080546Z-codex-ca7d91
+  timestamp: '2026-10-04T08:05:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed pH taxis
+  details: 'Created traitmech:000591 with DOI:10.1128/jb.00491-19 (PMID:31685537) and DOI:10.1128/jb.188.7.2656-2665.2006
+    (PMID:16547053), each with an exact Europe PMC abstract snippet. Fresh seed comparison:
+    399 identifiers, 344 present and 55 absent; pre-change corpus 985 records. Ignored-and-hidden
+    repository searches and structured OWL review found no exact record or METPO term. Reserved
+    METPO:1054500 in proposal v468 under motile METPO:1000702. Deferred natural-strain examples,
+    protein-resolved mechanisms and equivalent mappings; did not impose universal neutral
+    preference or bidirectionality. Authored via dry-run validated writer and record_curation_event;
+    focused writer tests passed.'

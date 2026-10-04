@@ -9871,6 +9871,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "ph-taxis-scope-and-mapping-boundaries",
+  "prompt": "Preserve directional scope and verify external equivalents.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pH taxis",
+  "source_id": "traitmech:000591",
+  "source_file": "ph_taxis.yaml",
+  "attaches_to": [],
+  "rationale": "Growth pH preference, acid or alkali tolerance, intracellular pH homeostasis and changes in speed alone do not establish pH-directed locomotion. Neither neutral-pH attraction nor bidirectional response is required universally. The local chemotaxis definition specifies flagellar motor switching; motile is the verified broader METPO parent without imposing that apparatus. No external xref or exact synonym is asserted before authority resolution and organismal-scope comparison.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ph_taxis.html#ph-taxis-scope-and-mapping-boundaries"
+ },
+ {
+  "discussion_id": "ph-taxis-mechanism-and-canonical-strains",
+  "prompt": "Verify natural strain provenance and protein-resolved mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pH taxis",
+  "source_id": "traitmech:000591",
+  "source_file": "ph_taxis.yaml",
+  "attaches_to": [],
+  "rationale": "The primary abstracts establish pH-tactic behavior, not a single universal receptor mechanism. Before adding canonical examples, verify the unperturbed reference strains against primary strain-provenance sources and resolve their NCBI taxon identities. Before adding a causal graph, inspect the full studies and relevant supplements, distinguish observed perturbation effects from proposed sensing models, and resolve taxon-paired protein accessions. A NONMECHANISTIC graph must not bypass those requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ph_taxis.html#ph-taxis-mechanism-and-canonical-strains"
+ },
+ {
   "discussion_id": "phenylalanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for phenylalanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10144,9 +10178,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 470,
+ "total_discussions": 472,
  "total_knowledge_gaps": 365,
- "total_source_entries": 456,
+ "total_source_entries": 457,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
