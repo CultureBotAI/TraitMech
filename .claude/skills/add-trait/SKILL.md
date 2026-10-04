@@ -299,12 +299,20 @@ from the cited source; put interpretation in `notes`.
 Search-result text, including an indexed publisher abstract, is a research
 lead, not directly retrieved source text. When publisher access fails and an
 API supplies metadata only, do not copy the indexed text into `snippet` or
-claim that the original abstract's existence or wording was verified. Retain
-the citation and explicitly qualified interpretation in `notes`, omit the
-unverified snippet, and seek an authoritative raw abstract or full text.
+claim that the original abstract's existence or wording was verified. Keep
+unread citations as explicitly qualified research leads in `discussions`,
+not `definition_source` or counted trait evidence, and seek an authoritative
+raw abstract or full text. Definition authority must directly support the
+differentia, not merely name the broader parent. A directly read review may
+support terminology but must not be presented as experimental replication.
 Access-limit notes do not convert a search result into a verified quote
 (#1678). Keep the actual resolver outcome rather than relabeling a manual
 search-text check as `VERIFIED`.
+
+Do not add new-record exceptions to the frozen snippet baseline to pass QC.
+If a new evidence item creates a finding, resolve it with source-faithful
+evidence or leave the candidate in research until support is adequate; keep
+the two-citation gate and the baseline ratchet intact (#1680, #1681).
 
 For gradient-directed taxis candidates, distinguish net migration in a spatial
 gradient from speed, motor-bias or tumbling changes after a spatially uniform stimulus.

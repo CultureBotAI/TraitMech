@@ -44,10 +44,12 @@ phenotype genus, while the oxygen-gradient differentia preserves the
 chemotropism narrowing (#1679).
 
 Positive and negative responses belong in this polarity-neutral class;
-both are not required in one organism. Aerotaxis is locomotion, whereas
+both are not required in one organism. This is a scope decision, not a
+verified negative-response observation: the Carlile avoidance lead is unread.
+Aerotaxis is locomotion, whereas
 this record concerns growth orientation. Oxygen demand, tolerance,
 germination, biomass and extension rate alone are insufficient. The
-oxygen-gradient usage is bounded to the cited primary sources; air-flow
+oxygen-gradient usage is bounded to this proposal; air-flow
 responses belong to rheotropism unless oxygen-gradient evidence also exists.
 No unverified oxytropism/anemotropism synonym or external xref is asserted.
 
@@ -59,20 +61,6 @@ is changed.
 
 ## Evidence And Access
 
-- DOI:10.1007/BF02464003, Aoki et al. (1998): indexed text from the
-  [publisher page](https://www.sciencedirect.com/science/article/abs/pii/S1340354098709003)
-  reports Candida hyphal reorientation and oxygen-directed growth. Direct
-  retrieval returned 403; Elsevier and Crossref confirm bibliographic
-  metadata only. Source wording was not directly verified. The snippet was
-  therefore removed after review (#1678); search-index-limited interpretation
-  remains in notes. No figures or strain provenance were verified.
-- DOI:10.1016/S0007-1536(88)80071-8, Carlile and Tew (1988): indexed text from
-  the [publisher page](https://www.sciencedirect.com/science/article/abs/pii/S0007153688800718)
-  reports negative aerotropism in Phytophthora germ tubes. Neither the
-  existence nor wording of an original abstract was directly verified.
-  Direct retrieval returned 403; Elsevier and Crossref confirm metadata only.
-  Its snippet was removed (#1678); qualified interpretation remains in notes.
-  The PDF-route search result was not a downloaded or inspected paper.
 - DOI:10.1016/S0168-6496(03)00161-2, Damm et al. (2003), PMID:19719598:
   [publisher HTML](https://academic.oup.com/femsec/article/45/3/293/549782)
   methods, results and discussion were read. Section 3.2 separates orientation
@@ -81,12 +69,30 @@ is changed.
   random orientation. Root signals and oxygen-dependent germination remain
   confounds. Figure captions were read, but images were not visually verified;
   no figure-based mechanism is asserted. The abstract snippet exact-matches
-  the raw Europe PMC record.
+  the raw Europe PMC record. This directly read experimental paper replaces
+  the unread Aoki citation as `definition_source` (#1681).
+- DOI:10.1155/2012/517529, Brand (2012), PMID:22121367, PMC3216317:
+  the [raw Europe PMC JATS full text](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3216317/fullTextXML)
+  was directly retrieved. Section 3.2 names aerotropism in Candida under
+  hypoxia. This is a review supporting terminology, not independent
+  experimental replication or a quantified oxygen-gradient assay. The full
+  sentence exact-matches the raw XML, quoted under the source's Creative
+  Commons Attribution license. Its cathode and figure clauses describe
+  galvanotropism, not aerotropism; the evidence notes make that explicit.
+  The publication was online in 2011 and assigned to volume 2012.
 
-The sole remaining snippet is a contiguous, directly verified abstract span
-of fewer than 25 words. The original two indexed-text quotes were withdrawn,
-not relabeled as verified. Earlier creation/correction histories are retained
-with a new history explicitly correcting those source-provenance claims.
+Aoki et al. (1998), DOI:10.1007/BF02464003, and Carlile and Tew (1988),
+DOI:10.1016/S0007-1536(88)80071-8, are qualified research leads in a
+discussion, not counted evidence or definition authority (#1680, #1681).
+Publisher retrieval returned 403 and Elsevier/Crossref supplied metadata
+only. Indexed summaries suggested positive Candida reorientation and
+negative Phytophthora aerotropism; original wording, figures and controls
+remain unverified. Brand citing Aoki does not verify Aoki's original text.
+
+Both counted evidence items now have directly checked contiguous snippets.
+The original two indexed-text quotes were withdrawn, not relabeled as
+verified. Earlier histories are retained with explicit corrections of the
+source-provenance and evidence-authority claims.
 No missing PMID is inferred from a DOI search failure. The 1973 Robinson
 papers and 2023 MEMS oxygen-gradient device are leads, not additional
 independently verified evidence or canonical exemplars in this record.
@@ -114,33 +120,25 @@ local/pending parent handling, header parity, dry run, idempotent replay,
 independent target/proposal drift refusal and closed-schema rejection before
 writing either output. The first local finding (#1676) corrected stimulus
 specificity. External review then identified the deeper quote-provenance
-problem (#1678) and proposal-genus mismatch (#1679). The two unverified
-quotes are now absent, notes explain their limits, the released genus is
-used consistently, and tests protect these decisions.
+problem (#1678) and proposal-genus mismatch (#1679). A second review rejected
+new-record baseline exceptions (#1680) and an unread definition authority
+(#1681). The writer and tests now preserve directly read evidence, qualified
+discussion leads, the released genus and append-only correction history.
 
-The initial PR head passed 2,009 local tests with two dependency warnings and
-45 artifact tests. After review fixes, all 52 writer/README/priority/QC
-artifact tests and all 34 snippet-audit tests pass. All 1,038 history records
-validate, including the new record, skill and narrow-baseline histories.
-The complete post-review `just qc` rerun passes, including strict validation
-and artifact freshness, with the two explicit missing-quote baseline additions
-below and two pre-existing ENIGMA license warnings.
-
-The snippet resolver now checks only the remaining Damm quote: 1 VERIFIED.
-Before removal it reported 1 VERIFIED and 2 UNRESOLVED. The two omissions
-remain visible as MISSING_SNIPPET warnings in the maintained audit report.
-Exactly two rows are added to the curated baseline for this record and these
-references, explicitly for independent review under #1678. This accepts
-missing quotations, not verified source wording. The audit code and its
-count-based ratchet are unchanged; a third omission or another finding still
-fails. No whole-corpus baseline refresh or suppression was performed.
+The initial PR head passed 2,009 local tests and 45 artifact tests. The
+first correction passed all 52 writer/README/priority/QC artifact tests,
+34 snippet-audit tests and CI, but review rejected its baseline exceptions.
+Those two baseline rows are removed: the baseline is byte-identical to the
+base branch and audit logic is unchanged. A new append-only history
+withdraws the prior baseline proposal instead of editing its old history.
+Final-head checks and resolver outcomes are reported in the PR review log.
 
 ROBOT/ELK adds four lines without unsatisfiable classes. Structured RDF
 inspection confirms the w3id phenotype/quality parent chain, no legacy OBO
 METPO IRIs and no stub for the pending chemotropism parent. Desktop/mobile
 browser checks at 1440px and 390px pass for the new trait and QC dashboard:
-three evidence entries, correct local identifier link, loaded chart, no page
-errors or document overflow. Screenshots were inspected.
+correct local identifier link, loaded chart, no page errors or document
+overflow. The final evidence presentation is rechecked after regeneration.
 
 All 995 older trait pages were checked: 994 change only the corpus-count
 footer; chemotropism also gains its first child. Shared generators match all
@@ -169,3 +167,6 @@ in a reviewed change. No upstream issue substitutes for the proposal artifact.
 - PR #1677 review: withdraw two indexed-text snippets (#1678), align the
   definition genus (#1679), clarify the add-trait skill, and explicitly expose
   the two missing-quote baseline additions for fresh review.
+- PR #1677 second review: reject those baseline additions (#1680), move the
+  unread papers to research leads, use Damm as definition authority (#1681),
+  and add directly read Brand review evidence with its distinct source role.

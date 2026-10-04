@@ -1,4 +1,4 @@
-"""Add oxygen-gradient-directed growth with qualified primary evidence."""
+"""Add oxygen-gradient-directed growth with qualified experimental and review evidence."""
 
 from __future__ import annotations
 
@@ -24,6 +24,7 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v478"
 AOKI = "DOI:10.1007/BF02464003"
 CARLILE = "DOI:10.1016/S0007-1536(88)80071-8"
 DAMM = "DOI:10.1016/S0168-6496(03)00161-2"
+BRAND = "DOI:10.1155/2012/517529"
 
 RECORD = {
     "identifier": IDENTIFIER,
@@ -32,48 +33,12 @@ RECORD = {
         "A phenotype in which polarized growth is directionally "
         "biased in response to a spatial oxygen concentration gradient."
     ),
-    "definition_source": AOKI,
+    "definition_source": DAMM,
     "trait_category": "PHYSIOLOGY",
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
     "parent_traits": ["traitmech:000597"],
     "evidence": [
-        {
-            "reference": AOKI,
-            "notes": (
-                "Aoki et al. (1998), publisher page at "
-                "https://www.sciencedirect.com/science/article/abs/pii/S1340354098709003. "
-                "Crossref and the Elsevier API confirmed bibliographic metadata "
-                "only; direct publisher retrieval returned 403. Interpretation "
-                "is search-index-limited: indexed publisher text reports Candida "
-                "albicans hyphal reorientation in thin-layer corn-meal agar and "
-                "growth toward an oxygen-rich capillary meniscus, interpreted "
-                "as positive aerotropism. The source wording, full text and "
-                "figures were not directly verified, so no snippet is asserted "
-                "(#1678). This citation supports the oxygen-directed growth "
-                "interpretation provisionally, not a resolved oxygen receptor. "
-                "Reorientation is distinct from growth rate; oxygen-dependent "
-                "growth and other local gradients remain confounds."
-            ),
-        },
-        {
-            "reference": CARLILE,
-            "notes": (
-                "Carlile and Tew (1988), publisher page at "
-                "https://www.sciencedirect.com/science/article/abs/pii/S0007153688800718. "
-                "Crossref and the Elsevier API confirmed bibliographic metadata "
-                "only; direct publisher retrieval returned 403. Interpretation "
-                "is search-index-limited: indexed publisher text reports "
-                "negative aerotropism in Phytophthora citricola germ tubes "
-                "and no response to casein hydrolysate. The existence and "
-                "wording of an original abstract were not directly verified, "
-                "so no snippet is asserted (#1678). Full text, figures, strain "
-                "identity and gradient controls remain unverified. This "
-                "citation supports retaining avoidance within the proposed "
-                "class, not a universal oxygen-attraction rule or an absence "
-                "of responses to all other chemical gradients."
-            ),
-        },
         {
             "reference": DAMM,
             "snippet": (
@@ -95,6 +60,31 @@ RECORD = {
                 "mechanism is asserted."
             ),
         },
+        {
+            "reference": BRAND,
+            "snippet": (
+                "C. albicans responds to other external stimuli in vitro, "
+                "displaying aerotropism under hypoxic conditions and "
+                "galvanotropism, where hyphae germinate and orient towards "
+                "the cathode in an applied electric field (Figure 2(c)(iii)) "
+                "[94, 97, 98]."
+            ),
+            "notes": (
+                "Brand (2012), Hyphal Growth in Human Fungal Pathogens and Its "
+                "Role in Virulence; published online in 2011, volume 2012. "
+                "Review, not independent experimental replication. Full text "
+                "directly retrieved as Europe PMC JATS XML (PMC3216317), "
+                "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3216317/fullTextXML. "
+                "The complete sentence exact-matches the XML text and is "
+                "quoted under its Creative Commons Attribution license. "
+                "It supports use of aerotropism for hyphal responses under "
+                "hypoxia, not a quantified oxygen-gradient experiment or "
+                "a mechanism. The cathode and Figure 2(c)(iii) clauses "
+                "describe galvanotropism, not aerotropism; no figure-based "
+                "oxygen claim is made. Its cited Aoki paper remains an "
+                "unverified primary-source lead in the discussion."
+            ),
+        },
     ],
     "discussions": [
         {
@@ -104,11 +94,14 @@ RECORD = {
             "status": "OPEN",
             "rationale": (
                 "The class includes positive or negative directional growth, "
-                "without requiring both in one organism. Aerotaxis denotes "
+                "without requiring both in one organism. This is a "
+                "polarity-neutral scope decision, not verification of a "
+                "negative response: the avoidance lead below is unread. "
+                "Aerotaxis denotes "
                 "locomotion, not growth orientation. Oxygen tolerance, oxygen "
                 "requirement, biomass, germination and extension rate alone "
                 "are insufficient. This record uses the oxygen-gradient sense "
-                "of aerotropism in its primary sources; air-flow-directed "
+                "of aerotropism; air-flow-directed "
                 "growth belongs to rheotropism, not this class solely because "
                 "air supplies oxygen. Resolve external phenotype mappings "
                 "and variant-label scopes before adding xrefs or synonyms. "
@@ -126,6 +119,16 @@ RECORD = {
             "kind": "CURATION_TODO",
             "status": "OPEN",
             "rationale": (
+                f"Unverified research leads: Aoki et al. (1998), {AOKI}, "
+                "and Carlile and Tew (1988), "
+                f"{CARLILE}. Crossref and Elsevier API retrievals confirmed "
+                "metadata only; publisher retrieval returned 403. "
+                "Search-index-limited summaries suggest positive Candida "
+                "hyphal reorientation and negative aerotropism in "
+                "Phytophthora germ tubes, respectively. Original wording, "
+                "full text, figures and controls remain unverified. These "
+                "are research leads, not definition authority or counted "
+                "trait evidence (#1680, #1681). "
                 "Inspect the older full texts and orientation readouts, and "
                 "discriminate tip reorientation from preferential growth or "
                 "survival in oxygen-rich regions. Resolve natural strain "
@@ -182,6 +185,21 @@ def build_record() -> dict:
         ),
         llm_assisted=True, timestamp="2026-10-04T18:01:14Z",
     )
+    record_curation_event(
+        record, curator="codex", action="REVIEW_CORRECTION",
+        changes=(
+            "Addressed #1680 and #1681: moved unread Aoki and Carlile papers "
+            "from counted evidence to qualified discussion leads. Replaced "
+            "Aoki as definition authority with directly read Damm. Added "
+            "directly retrieved Brand review with an exact full-sentence "
+            "quote under its Attribution license; labeled its terminology "
+            "role, not independent experimental replication. Negative "
+            "direction remains unverified. Withdraws the prior histories' "
+            "evidence-authority claims for the two unread papers; earlier "
+            "events remain unchanged. No new snippet-baseline exceptions."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T18:27:57Z",
+    )
     return record
 
 
@@ -199,7 +217,7 @@ def proposal_tsv(record: dict) -> str:
     ])
     writer.writerow([
         "METPO:1055500", record["label"], record["definition"],
-        f"TraitMech:data/traits/physiology/aerotropism.yaml|{AOKI}|{CARLILE}|{DAMM}",
+        f"TraitMech:data/traits/physiology/aerotropism.yaml|{DAMM}|{BRAND}",
         "METPO:1000059", "", "", "metpo_traitmech_2026_10", "HIGH",
         "Oxygen-gradient-directed growth; local chemotropism parent awaits v474 acceptance.",
         IDENTIFIER,

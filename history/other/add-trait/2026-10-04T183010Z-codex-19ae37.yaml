@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: other
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait
+session:
+  id: 2026-10-04T183010Z-codex-19ae37
+  timestamp: '2026-10-04T18:30:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1680
+  - https://github.com/CultureBotAI/TraitMech/issues/1681
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - evidence
+  summary: Require read definition authority and preserve the snippet ratchet
+  details: 'Addresses #1680 and #1681. Revises the search-index guidance added in history/other/add-trait/2026-10-04T180341Z-codex-c2a8a1.yaml:
+    unread sources belong in qualified discussion leads, not definition_source or counted
+    evidence. Requires definition support for the differentia, distinguishes reviews from
+    experimental replication, and explicitly prohibits new-record frozen-baseline exceptions.
+    Keeps prior history intact and does not loosen the two-citation gate or audit implementation.'
