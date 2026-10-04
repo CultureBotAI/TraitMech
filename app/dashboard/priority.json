@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 975,
+    "records": 976,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 498,
+    "unresearched_mechanism_records": 499,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 10,
       "ADD_CANONICAL_EXAMPLES": 102,
       "BUILD_CAUSAL_GRAPH": 132,
-      "DEEPEN_CAUSAL_GRAPH": 384,
+      "DEEPEN_CAUSAL_GRAPH": 385,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -5787,6 +5787,29 @@
       "researched": true,
       "reasons": [
         "6 components +15"
+      ]
+    },
+    {
+      "identifier": "traitmech:000581",
+      "label": "galvanotaxis",
+      "category": "physiology",
+      "slug": "galvanotaxis",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 4,
+      "nodes": 5,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (4 edges) +12",
+        "no synonyms +3"
       ]
     },
     {
@@ -18245,7 +18268,7 @@
       "orphans": 0,
       "examples": 3,
       "canonical_examples_reviewed_empty": false,
-      "children": 6,
+      "children": 7,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

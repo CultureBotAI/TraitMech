@@ -2768,6 +2768,8 @@ nutrient limitation or heat stress	ENVIRONMENTAL_FACTOR	1	data/traits/physiology
 toxin-antitoxin modules	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
 ribosome hibernation factors (rmf/hpf/raia)	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
 resuscitation-promoting factors (rpf)	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
+electric field	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/galvanotaxis.yaml
+electric-field-biased active migration	BIOLOGICAL_PROCESS	1	data/traits/physiology/galvanotaxis.yaml
 acute heat shock	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/heat_shock_response.yaml
 heat-induced protein unfolding	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml
 heat-shock response	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml

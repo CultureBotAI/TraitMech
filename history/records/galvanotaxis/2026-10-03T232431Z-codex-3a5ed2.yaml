@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/galvanotaxis.yaml
+  slug: galvanotaxis
+session:
+  id: 2026-10-03T232431Z-codex-3a5ed2
+  timestamp: '2026-10-03T23:24:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add galvanotaxis with strain-qualified examples and flagellar motility evidence
+  details: Mint traitmech:000581 and reserve METPO:1053500 in proposal v458. Three primary
+    DOI sources and the InterPro Flagellin family provide seven snippets. Distinguish active
+    migration from passive drift, paired flagellin deletion from single-protein necessity,
+    and observed directions from unreconciled source-data cosine signs. NCBI taxa, GO:0071973,
+    InterPro:IPR001492, EBI Proteins A0A0F6B2U2 and UniProt reference proteome UP000002695
+    were checked. Novelty searches included ignored and hidden files.

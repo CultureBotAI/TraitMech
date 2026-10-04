@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>galvanotaxis — PHYSIOLOGY — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/physiology.html">PHYSIOLOGY</a>
+    </p>
+    <h1>galvanotaxis</h1>
+    <p class="curie"><code>traitmech:000581</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A motile phenotype in which an organism biases its active movement in response to an electric field.</p>
+
+  </header>
+
+
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(2)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1101/sqb.1988.053.01.006" rel="nofollow noreferrer"><code>DOI:10.1101/sqb.1988.053.01.006</code></a>
+        <blockquote>movement of a motile organism or cell in direct response to an electric current</blockquote>
+        <p class="meta">Adler and Shi, publisher&#39;s freely accessible Excerpt, https://symposium.cshlp.org/content/53/23.short. The full paywalled paper was not accessed. The disposition requires active motility; passive electrophoretic displacement alone is insufficient.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1128/jb.178.4.1113-1119.1996" rel="nofollow noreferrer"><code>DOI:10.1128/jb.178.4.1113-1119.1996</code></a>
+        <blockquote>motile Escherichia coli K-12 placed in an electric field swims toward the anode</blockquote>
+        <p class="meta">Shi, Stocker and Adler, primary abstract (PMID:8576046), verified through Europe PMC. Rough K-12 and smooth Salmonella differ in direction; surface composition and capsules qualify the response. Only the abstract was accessed, not the full paper.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Flagellar motility in electric-field-biased migration</h2>
+      <p class="meta">Flagellin supports the motility apparatus used for active galvanotaxis.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · The flagellar-motility branch supported in Salmonella 14028S-background cells, not a complete electrical sensing or orientation mechanism. The fliC/fljB double mutant establishes dependence on the flagellar apparatus, not individual FliC necessity or flagellin sufficiency. Host CFTR is outside this microbial graph.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Flagellar motility in electric-field-biased migration</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for galvanotaxis.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>electric field</strong>
+            <span class="edge-predicate">modulates</span>
+            <strong>electric-field-biased active migration</strong>
+            <code>RO:0002211</code>
+            <p>An applied electric field biases active migration direction.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1038/s41564-024-01778-8" rel="nofollow noreferrer"><code>DOI:10.1038/s41564-024-01778-8</code></a>
+                <span class="evidence-snippet">robustly biased migration of all cells</span>
+                <span class="meta">Results and Figure 5c-e compare no-field and 2 V/cm conditions. DH5alpha K-12-background cells migrated toward the anode and IR715-background cells toward the cathode. This edge does not prescribe one direction for every microbe.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>flagellin</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>flagellar motility</strong>
+            <code>RO:0002326</code>
+            <p>Flagellin supplies the filament component of the motility apparatus.</p>
+            <ul>
+
+              <li>
+                <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492/" rel="nofollow noreferrer"><code>https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492/</code></a>
+                <span class="evidence-snippet">Flagellin is the subunit protein that polymerises to form the flagella</span>
+                <span class="meta">InterPro IPR001492 family description, verified through https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001492/ on 2026-10-03. This is a family, not merely an N- or C-terminal domain. Filament assembly and the motor are also required; flagellin alone is not sufficient for movement.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>flagellar motility</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>electric-field-biased active migration</strong>
+            <code>RO:0002326</code>
+            <p>Flagellar motility enables active electrical-field-guided migration.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1038/s41564-024-01778-8" rel="nofollow noreferrer"><code>DOI:10.1038/s41564-024-01778-8</code></a>
+                <span class="evidence-snippet">flagella are indeed essential for electrical field-guided galvanotaxis</span>
+                <span class="meta">Results, flagellar-mutant experiment: SW473 cells were mostly non-motile and unresponsive. This establishes a motility requirement, not a specific electrical sensor. Fixed-cell controls distinguish passive drift from live-cell swimming.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>electric-field-biased active migration</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>galvanotaxis</strong>
+            <code>METPO:2007700</code>
+            <p>Electric-field-guided active movement realizes the galvanotaxis phenotype.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1101/sqb.1988.053.01.006" rel="nofollow noreferrer"><code>DOI:10.1101/sqb.1988.053.01.006</code></a>
+                <span class="evidence-snippet">migration is toward the cathode or the anode</span>
+                <span class="meta">Publisher&#39;s free Excerpt defines galvanotaxis and allows either pole. Direction depends on organism and context, rather than being a universal part of this trait definition.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Flagellar motility in electric-field-biased migration: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>flagellin</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/A0A0F6B2U2/entry" rel="nofollow noreferrer"><code>UniProtKB:A0A0F6B2U2</code></a>
+                  <br>Flagellin <span class="meta">(fliC)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=588858" rel="nofollow noreferrer">Salmonella enterica subsp. enterica serovar Typhimurium str. 14028S</a>
+                  <br><code>NCBITaxon:588858</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-03 · entry v42 · sequence v1</span>
+                </td>
+                <td>
+                  <p>FliC is one of the two alternative flagellins removed together in SW473; individual FliC necessity was not established.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1038/s41564-024-01778-8" rel="nofollow noreferrer"><code>DOI:10.1038/s41564-024-01778-8</code></a>
+                      <span class="evidence-snippet">Most of these mutants were non-motile</span>
+                      <span class="meta">Results, flagellar-mutant paragraph and Supplementary Table 1: SW473 is an IR715 fliC/fljB double mutant. The exact 14028S FliC identity, taxon and versions were resolved at https://www.ebi.ac.uk/proteins/api/proteins/A0A0F6B2U2; https://rest.uniprot.org/proteomes/UP000002695.json confirms reference-proteome membership. UniProtKB REST protein requests failed during retrieval; the EBI Proteins API supplied the metadata. This accession anchors the strain background, not an experimentally sequenced SW473 protein.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1101/sqb.1988.053.01.006" rel="nofollow noreferrer"><code>DOI:10.1101/sqb.1988.053.01.006</code></a></dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/morphology/motile.html" >motile <code>METPO:1000702</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli K-12</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
+             rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
+
+
+
+          <a href="https://doi.org/10.1128/jb.178.4.1113-1119.1996" rel="nofollow noreferrer"><code>DOI:10.1128/jb.178.4.1113-1119.1996</code></a>
+
+          <span class="meta">The primary abstract reports anode-directed swimming of motile rough K-12 cells. This is not a claim about every E. coli strain or an invariant direction across surface compositions.</span>
+        </li>
+
+        <li>
+          <em>Salmonella enterica subsp. enterica serovar Typhimurium str. 14028S</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=588858"
+             rel="nofollow noreferrer"><code>NCBITaxon:588858</code></a>
+
+
+
+          <a href="https://doi.org/10.1038/s41564-024-01778-8" rel="nofollow noreferrer"><code>DOI:10.1038/s41564-024-01778-8</code></a>
+
+          <span class="meta">Figure 5 and Supplementary Table 1: Green ST is IR715, a nalidixic-acid-resistant 14028S derivative, carrying pGFT/RalFc. These fluorescent cells migrated toward the cathode at 2 V/cm in vitro. Do not substitute the SW473 flagellar mutant or the separate cheB mutant for this behavioral example.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="galvanotaxis-orientation-and-mapping-boundaries">
+        <p class="discussion-prompt">Resolve electrical orientation mechanisms without equating active motility with passive drift.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>galvanotaxis-orientation-and-mapping-boundaries</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>DOI:10.1128/jb.178.4.1113-1119.1996 proposes differential electrophoretic mobility of the body and flagellar filaments as an orientation model. DOI:10.1038/s41564-024-01778-8 observes flagellar redistribution and a largely non-motile double mutant; it does not establish a universal receptor circuit or separate the individual flagellin contributions. A cheB mutant retains the electrical response. The source&#39;s weakly biased B. subtilis assay is not a robust canonical example. Physical orientation can guide powered locomotion, but fixed-cell drift alone is not this phenotype. QuickGO searches for galvanotaxis and electrotaxis found no exact term on 2026-10-03; MeSH Taxis Response is broader and excluded from xrefs. GO:0071973 grounds only the flagellar process.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+      <div class="discussion" id="galvanotaxis-source-data-coordinate-convention">
+        <p class="discussion-prompt">Reconcile directedness signs before importing numerical source-data values.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>galvanotaxis-source-data-coordinate-convention</code>
+          · raised by codex
+          · 2026-10-03
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Sun et al., Figure 5d and Results report negative directedness for E. coli and positive for Salmonella. The source workbook&#39;s Fig. 5d,e sheet labels Red to anode and Green to cathode but contains opposite-signed cosine values. Direction labels agree with Figure 5c and the 1996 primary abstract; the coordinate conventions need reconciliation. No numerical directedness values are imported and no correction is inferred. Source: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-024-01778-8/MediaObjects/41564_2024_1778_MOESM10_ESM.xlsx</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-03T23:20:08Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added galvanotaxis with three primary DOI sources, an InterPro family source, exact snippets, two strain-qualified examples and a flagellar-motility graph. Verified NCBI taxa, IPR001492, GO:0071973, the 14028S FliC accession and its reference proteome. Ignored-and-hidden searches found no exact trait or METPO class; reserved METPO:1053500 in proposal v458. Kept electrical orientation and source-data sign conventions as open questions.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/physiology/galvanotaxis.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/galvanotaxis.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/physiology/galvanotaxis.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/physiology/galvanotaxis.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000581" target="_blank" rel="noopener"><code>traitmech:000581</code></a></dd>
+      <dt>Category</dt>
+      <dd>PHYSIOLOGY</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Flagellin supports the motility apparatus used for active galvanotaxis.", "edges": [{"description": "An applied electric field biases active migration direction.", "evidence": [{"notes": "Results and Figure 5c-e compare no-field and 2 V/cm conditions. DH5alpha K-12-background cells migrated toward the anode and IR715-background cells toward the cathode. This edge does not prescribe one direction for every microbe.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "robustly biased migration of all cells"}], "id": "edge-1", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "galvanotaxis_electric_field", "target": "galvanotaxis_process"}, {"description": "Flagellin supplies the filament component of the motility apparatus.", "evidence": [{"notes": "InterPro IPR001492 family description, verified through https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001492/ on 2026-10-03. This is a family, not merely an N- or C-terminal domain. Filament assembly and the motor are also required; flagellin alone is not sufficient for movement.", "reference": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492/", "snippet": "Flagellin is the subunit protein that polymerises to form the flagella"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "galvanotaxis_flagellin", "target": "galvanotaxis_flagellar_motility"}, {"description": "Flagellar motility enables active electrical-field-guided migration.", "evidence": [{"notes": "Results, flagellar-mutant experiment: SW473 cells were mostly non-motile and unresponsive. This establishes a motility requirement, not a specific electrical sensor. Fixed-cell controls distinguish passive drift from live-cell swimming.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "flagella are indeed essential for electrical field-guided galvanotaxis"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "galvanotaxis_flagellar_motility", "target": "galvanotaxis_process"}, {"description": "Electric-field-guided active movement realizes the galvanotaxis phenotype.", "evidence": [{"notes": "Publisher\u0027s free Excerpt defines galvanotaxis and allows either pole. Direction depends on organism and context, rather than being a universal part of this trait definition.", "reference": "DOI:10.1101/sqb.1988.053.01.006", "snippet": "migration is toward the cathode or the anode"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "galvanotaxis_process", "target": "galvanotaxis_trait"}], "evidence_rows": [{"description": "An applied electric field biases active migration direction.", "edge_id": "edge-1", "evidence": [{"notes": "Results and Figure 5c-e compare no-field and 2 V/cm conditions. DH5alpha K-12-background cells migrated toward the anode and IR715-background cells toward the cathode. This edge does not prescribe one direction for every microbe.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "robustly biased migration of all cells"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "electric field", "target": "electric-field-biased active migration"}, {"description": "Flagellin supplies the filament component of the motility apparatus.", "edge_id": "edge-2", "evidence": [{"notes": "InterPro IPR001492 family description, verified through https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001492/ on 2026-10-03. This is a family, not merely an N- or C-terminal domain. Filament assembly and the motor are also required; flagellin alone is not sufficient for movement.", "reference": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001492/", "snippet": "Flagellin is the subunit protein that polymerises to form the flagella"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellin", "target": "flagellar motility"}, {"description": "Flagellar motility enables active electrical-field-guided migration.", "edge_id": "edge-3", "evidence": [{"notes": "Results, flagellar-mutant experiment: SW473 cells were mostly non-motile and unresponsive. This establishes a motility requirement, not a specific electrical sensor. Fixed-cell controls distinguish passive drift from live-cell swimming.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "flagella are indeed essential for electrical field-guided galvanotaxis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellar motility", "target": "electric-field-biased active migration"}, {"description": "Electric-field-guided active movement realizes the galvanotaxis phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Publisher\u0027s free Excerpt defines galvanotaxis and allows either pole. Direction depends on organism and context, rather than being a universal part of this trait definition.", "reference": "DOI:10.1101/sqb.1988.053.01.006", "snippet": "migration is toward the cathode or the anode"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "electric-field-biased active migration", "target": "galvanotaxis"}], "graph_id": "galvanotaxis_flagellar_motility", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Applied electrical stimulus, 2 V/cm in the Sun et al. in vitro assay.", "grounding": null, "id": "galvanotaxis_electric_field", "is_orphan": false, "label": "electric field", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Active movement powered by the bacterial flagellar apparatus.", "grounding": "GO:0071973", "id": "galvanotaxis_flagellar_motility", "is_orphan": false, "label": "flagellar motility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Flagellin family forming the flagellar filament; not the entire flagellum, its rotary motor or an established electrical sensor.", "grounding": "InterPro:IPR001492", "id": "galvanotaxis_flagellin", "is_orphan": false, "label": "flagellin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 42, "evidence": [{"notes": "Results, flagellar-mutant paragraph and Supplementary Table 1: SW473 is an IR715 fliC/fljB double mutant. The exact 14028S FliC identity, taxon and versions were resolved at https://www.ebi.ac.uk/proteins/api/proteins/A0A0F6B2U2; https://rest.uniprot.org/proteomes/UP000002695.json confirms reference-proteome membership. UniProtKB REST protein requests failed during retrieval; the EBI Proteins API supplied the metadata. This accession anchors the strain background, not an experimentally sequenced SW473 protein.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "Most of these mutants were non-motile"}], "gene_symbol": "fliC", "protein_label": "Flagellin", "proteome_id": "UP000002695", "retrieved_on": "2026-10-03", "role": "FliC is one of the two alternative flagellins removed together in SW473; individual FliC necessity was not established.", "sequence_version": 1, "taxon_id": "NCBITaxon:588858", "taxon_label": "Salmonella enterica subsp. enterica serovar Typhimurium str. 14028S", "uniprot_id": "UniProtKB:A0A0F6B2U2"}], "xrefs": []}, {"color": "#ecfccb", "description": "Biased active movement, not passive drift of fixed cells.", "grounding": null, "id": "galvanotaxis_process", "is_orphan": false, "label": "electric-field-biased active migration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Organismal disposition for electric-field-guided active movement.", "grounding": "traitmech:000581", "id": "galvanotaxis_trait", "is_orphan": false, "label": "galvanotaxis", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 42, "evidence": [{"notes": "Results, flagellar-mutant paragraph and Supplementary Table 1: SW473 is an IR715 fliC/fljB double mutant. The exact 14028S FliC identity, taxon and versions were resolved at https://www.ebi.ac.uk/proteins/api/proteins/A0A0F6B2U2; https://rest.uniprot.org/proteomes/UP000002695.json confirms reference-proteome membership. UniProtKB REST protein requests failed during retrieval; the EBI Proteins API supplied the metadata. This accession anchors the strain background, not an experimentally sequenced SW473 protein.", "reference": "DOI:10.1038/s41564-024-01778-8", "snippet": "Most of these mutants were non-motile"}], "gene_symbol": "fliC", "node_id": "galvanotaxis_flagellin", "node_label": "flagellin", "protein_label": "Flagellin", "proteome_id": "UP000002695", "retrieved_on": "2026-10-03", "role": "FliC is one of the two alternative flagellins removed together in SW473; individual FliC necessity was not established.", "sequence_version": 1, "taxon_id": "NCBITaxon:588858", "taxon_label": "Salmonella enterica subsp. enterica serovar Typhimurium str. 14028S", "uniprot_id": "UniProtKB:A0A0F6B2U2"}], "scope_notes": "The flagellar-motility branch supported in Salmonella 14028S-background cells, not a complete electrical sensing or orientation mechanism. The fliC/fljB double mutant establishes dependence on the flagellar apparatus, not individual FliC necessity or flagellin sufficiency. Host CFTR is outside this microbial graph.", "scope_status": "MECHANISTIC", "title": "Flagellar motility in electric-field-biased migration"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-03 23:20 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 976 TraitRecords
+      · embedding coverage 48.9%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

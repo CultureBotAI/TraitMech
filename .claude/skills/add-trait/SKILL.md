@@ -389,6 +389,14 @@ A first graph should be readable and source-bounded:
 Generic states, capacities, and intermediates may stay ungrounded. Do not add a
 node or edge just to make the graph look complete.
 
+Keep authority cross-checks separate from endpoint-specific audit results. If
+UniProt REST fails, an EBI Proteins API cross-check may support metadata in
+evidence notes, but must not be substituted for a passing row in the REST audit
+report. Preserve the actual failed row produced by the maintained resolver, or
+explicitly leave that accession unaudited. Do not normalize an alternate
+authority into a success verdict unless the maintained audit supports and
+records that resolver. Transport failures are not biological identity findings.
+
 Positive or negative assay-result children of a reviewed activity parent often
 need only their definition, evidence, and a direct canonical example. Do not add
 a child graph when the reviewed parent already captures the molecular mechanism
