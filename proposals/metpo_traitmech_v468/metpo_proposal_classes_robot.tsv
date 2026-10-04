@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1054500	pH taxis	A motile phenotype in which active locomotion is directionally biased in response to an external pH gradient.	TraitMech:data/traits/physiology/ph_taxis.yaml|DOI:10.1128/jb.00491-19|DOI:10.1128/jb.188.7.2656-2665.2006	METPO:1000702			metpo_traitmech_2026_10	HIGH	Directional response to external pH; not pH tolerance or speed alone.	traitmech:000591
