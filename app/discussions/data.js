@@ -9854,6 +9854,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/photokinesis.html#photokinesis-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "phototaxis-direction-and-mapping-boundaries",
+  "prompt": "Preserve directional scope and resolve phenotype-level mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phototaxis",
+  "source_id": "traitmech:000588",
+  "source_file": "phototaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Positive and negative responses are directional cases, not a requirement to exhibit both or a permanent sign. Speed changes alone (photokinesis), light sensing alone and phototrophic energy conservation do not establish this trait. A photophobic response can participate in phototaxis but is not an exact synonym. METPO:1000241 is obsolete with no replacement or definition; do not revive it or assert a replaces relation without upstream review. External biological-process terms are not automatically equivalent to this organismal disposition; verify scope before adding xrefs or lexical synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phototaxis.html#phototaxis-direction-and-mapping-boundaries"
+ },
+ {
+  "discussion_id": "phototaxis-mechanism-and-optical-provenance",
+  "prompt": "Ground causal branches without promoting optical models to facts.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phototaxis",
+  "source_id": "traitmech:000588",
+  "source_file": "phototaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The cyanobacterial PixJ1/response-regulator/pilus branch is a proposed model in Schuergers Figure 5; causal edges and eligible taxon-paired protein accessions require additional primary checks. Native algal signaling must be separated from heterologous conductance and cell-wall-deficient strains. Version 2 optical supplement graphics also differ from their captions: Figure 3 supplement 1 labels a 60x objective versus 100x in text, and Figure 4 supplement 1 labels 633 nm versus 625 nm in text. Do not silently reconcile these parameters or use them to quantify a mechanistic graph. Figure 1 phenotype evidence is retained independently. No NONMECHANISTIC graph is used to bypass protein-grounding requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phototaxis.html#phototaxis-mechanism-and-optical-provenance"
+ },
+ {
   "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10042,9 +10076,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 464,
+ "total_discussions": 466,
  "total_knowledge_gaps": 365,
- "total_source_entries": 453,
+ "total_source_entries": 454,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
