@@ -59,6 +59,8 @@ organismal equivalence.
   nonself fusion. Relevant methods/results/discussion were read; figures and
   supplementary movies were not visually inspected. An apparent Table 1
   column-footnote mismatch is recorded without reusing those column rates.
+  The nine-of-ten pairing count is restricted to the study's perfect-fusion
+  category, not all events preceding postfusion incompatibility (#1690).
 
 Every snippet was exact-matched to its directly retrieved Europe PMC abstract.
 Genetic marker transfer is not evidence of nuclear recombination. Native

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-endpoint-counts
+session:
+  id: 2026-10-04T223030Z-codex-e51cd1
+  timestamp: '2026-10-04T22:30:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1690
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1689
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - guidance
+  summary: Preserve scored endpoint qualifiers on numerical evidence
+  details: Issue 1690 exposed a distinction between a broader trait endpoint and a narrower
+    study scoring category. Updated add-trait evidence guidance to retain operational qualifiers
+    on counts, using perfect fusion versus later incompatibility as the concrete example.
+    Existing sequence-feature interpretation and citation/snippet gates remain unchanged.

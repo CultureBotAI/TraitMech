@@ -42,9 +42,11 @@ def test_definition_and_stage_boundaries():
     assert record["synonyms"] == [{"synonym_text": "vegetative hyphal fusion",
                                    "synonym_type": "EXACT_SYNONYM", "source": writer.CHARLTON}]
     assert not any(k in record for k in ["xrefs", "causal_graphs", "canonical_examples"])
-    assert len(record["curation_history"]) == 1
+    assert len(record["curation_history"]) == 2
     assert record["curation_history"][0]["llm_assisted"] is True
     assert record["curation_history"][0]["timestamp"] == "2026-10-04T22:09:46Z"
+    assert record["curation_history"][1]["action"] == "QUALIFIED_EVIDENCE_ENDPOINT"
+    assert "#1690" in record["curation_history"][1]["changes"]
     boundary, mechanism = record["discussions"]
     assert boundary["status"] == mechanism["status"] == "OPEN"
     for text in ["positive autotropism", "does not require genetic identity",
@@ -73,9 +75,12 @@ def test_sources_support_identity_and_preserve_limitations():
                  "delta-so75 did not restore fusion", "Supplements were not inspected"]:
         assert text in perturbation["notes"]
     assert "genetically distinct" in nonself["snippet"]
-    for text in ["nine of ten", "does not establish nuclear recombination",
+    for text in ["nine of ten", "scored as perfect fusion",
+                 "not a count of all fusion events", "Postfusion withdrawal",
+                 "does not establish nuclear recombination",
                  "not visually inspected", "appear transposed"]:
         assert text in nonself["notes"]
+    assert "nonself combinations fused" not in nonself["notes"]
 
 
 def test_proposal_parity_and_released_parent():
@@ -99,6 +104,31 @@ def test_dry_run_apply_and_replay(isolated, monkeypatch):
     applied = snapshots(isolated)
     assert run(monkeypatch, True) == 0
     assert snapshots(isolated) == applied
+
+
+def test_initial_record_upgrade_preserves_history_and_identity(isolated, monkeypatch):
+    initial = writer.initial_record()
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshots(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshots(isolated) == before
+    assert run(monkeypatch, True) == 0
+    result = yaml.safe_load(writer.TARGET.read_text())
+    assert result == writer.build_record()
+    assert result["curation_history"][:-1] == initial["curation_history"]
+    assert result["definition"] == initial["definition"]
+    assert [e["snippet"] for e in result["evidence"]] == [
+        e["snippet"] for e in initial["evidence"]]
+
+
+def test_initial_record_drift_is_not_an_upgrade_preimage(isolated, monkeypatch):
+    initial = writer.initial_record()
+    initial["evidence"][2]["notes"] += " Unreviewed evidence."
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshots(isolated)
+    with pytest.raises(SystemExit, match="differs"):
+        run(monkeypatch, True)
+    assert snapshots(isolated) == before
 
 
 @pytest.mark.parametrize("target", ["record", "proposal"])

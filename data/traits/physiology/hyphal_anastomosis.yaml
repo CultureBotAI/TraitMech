@@ -46,12 +46,14 @@ evidence:
   notes: Croll et al. (2009); snippet exact-matched to the directly retrieved Europe
     PMC abstract, PMID:19140939. Publisher Experiment 1 methods/results and relevant
     Discussion were read. Five Glomus intraradices isolates from one field population
-    were paired; nine of ten nonself combinations fused, with subsequent streaming
-    and SDH-positive bridges used to assess viable continuity. Genetic identity is
-    therefore not required. The paper separately reports marker transmission to progeny;
-    its genotyping does not establish nuclear recombination. Figures and supplementary
-    movies were not visually inspected. Table 1's PFI/PrFI column-footnote assignments
-    appear transposed in publisher HTML, so those column-specific rates are not used.
+    were paired; nine of ten nonself combinations had contacts scored as perfect fusion.
+    That category required subsequent streaming and SDH-positive bridges; it is not
+    a count of all fusion events. Postfusion withdrawal and septation were separate
+    outcomes following anastomosis. Genetic identity is therefore not required. The
+    paper separately reports marker transmission to progeny; its genotyping does not
+    establish nuclear recombination. Figures and supplementary movies were not visually
+    inspected. Table 1's PFI/PrFI column-footnote assignments appear transposed in
+    publisher HTML, so those column-specific rates are not used.
 discussions:
 - discussion_id: hyphal-anastomosis-endpoint-and-scope
   prompt: Keep completed vegetative fusion distinct from approach and its consequences.
@@ -92,4 +94,12 @@ curation_history:
     phenotype. Inspected 1999 Figures 1 and 3 and 2012 Figure 3; kept unread figures/supplements
     and mutant limitations explicit. Deferred canonical strains, external equivalences
     and protein-resolved graphs.
+  llm_assisted: true
+- timestamp: '2026-10-04T22:29:16Z'
+  curator: codex
+  action: QUALIFIED_EVIDENCE_ENDPOINT
+  changes: 'Addressed #1690 by qualifying the 2009 nine-of-ten pairing count as the
+    source''s perfect-fusion category, which required streaming and SDH-positive bridges.
+    Distinguished that scored category from all fusion events and subsequent postfusion
+    incompatibility. Definition and exact abstract snippet are unchanged.'
   llm_assisted: true

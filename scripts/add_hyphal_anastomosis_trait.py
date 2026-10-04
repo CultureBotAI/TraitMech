@@ -155,7 +155,7 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def initial_record() -> dict:
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -171,6 +171,38 @@ def build_record() -> dict:
             "canonical strains, external equivalences and protein-resolved graphs."
         ),
         llm_assisted=True, timestamp="2026-10-04T22:09:46Z",
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = initial_record()
+    record["evidence"][2]["notes"] = (
+        "Croll et al. (2009); snippet exact-matched to the directly retrieved "
+        "Europe PMC abstract, PMID:19140939. Publisher Experiment 1 "
+        "methods/results and relevant Discussion were read. Five Glomus "
+        "intraradices isolates from one field population were paired; nine of "
+        "ten nonself combinations had contacts scored as perfect fusion. That "
+        "category required subsequent streaming and SDH-positive bridges; "
+        "it is not a count of all fusion events. Postfusion withdrawal and "
+        "septation were separate outcomes following anastomosis. Genetic "
+        "identity is therefore not required. The paper separately reports "
+        "marker transmission to progeny; its genotyping does not establish "
+        "nuclear recombination. Figures and supplementary movies were not "
+        "visually inspected. Table 1's PFI/PrFI column-footnote assignments "
+        "appear transposed in publisher HTML, so those column-specific rates "
+        "are not used."
+    )
+    record_curation_event(
+        record, curator="codex", action="QUALIFIED_EVIDENCE_ENDPOINT",
+        changes=(
+            "Addressed #1690 by qualifying the 2009 nine-of-ten pairing count "
+            "as the source's perfect-fusion category, which required streaming "
+            "and SDH-positive bridges. Distinguished that scored category from "
+            "all fusion events and subsequent postfusion incompatibility. "
+            "Definition and exact abstract snippet are unchanged."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T22:29:16Z",
     )
     return record
 
@@ -203,8 +235,10 @@ def main() -> int:
     record = build_record()
     proposal = proposal_tsv(record)
     proposal_path = PROPOSAL / "metpo_proposal_classes_robot.tsv"
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
-        raise SystemExit("Existing target differs from this writer")
+    if TARGET.exists():
+        existing = yaml.safe_load(TARGET.read_text())
+        if existing != record and existing != initial_record():
+            raise SystemExit("Existing target differs from this writer")
     if proposal_path.exists() and proposal_path.read_text() != proposal:
         raise SystemExit("Existing proposal differs from this writer")
     with tempfile.TemporaryDirectory() as tmp:
