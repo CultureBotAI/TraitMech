@@ -39,14 +39,22 @@ RECORD = {
     "evidence": [
         {
             "reference": ROBINSON,
-            "snippet": "Under these conditions B. cinerea displayed positive autotropism.",
+            "snippet": (
+                "the positive germ-tube, i.e. one beginning more nearly towards its neighbour"
+            ),
             "notes": (
                 "Robinson, Park and Graham (1968), original publisher abstract "
                 "directly retrieved from "
                 "https://oup.silverchair-cdn.com/article-minimal/447341. The "
-                "conditions are Cellophane over agar; Botrytis cinerea was "
-                "neutral on agar alone. The abstract defines positive germ-tube "
-                "orientation relative to the neighboring spore. This supports "
+                "abstract reports positive autotropism in Botrytis cinerea on "
+                "Cellophane over agar and neutrality on agar alone. The quoted "
+                "orientation definition occurs in the mixed-orientation spore-pair "
+                "timing comparison for Rhizopus stolonifer and Mucor plumbeus, "
+                "both described as exhibiting marked negative autotropism. "
+                "Earlier emergence of the positive germ-tube in those pairs "
+                "does not establish a net positive response in either species. "
+                "The abstract defines positive germ-tube orientation relative "
+                "to the neighboring spore. This supports "
                 "the terminology and emergence component, not later tip bending "
                 "or completed fusion. Germination timing and cis-ness are "
                 "separate readouts. The full paper, strain provenance and "
@@ -135,6 +143,17 @@ def build_record() -> dict:
             "canonical strains, synonyms, external equivalents and causal graphs."
         ),
         llm_assisted=True, timestamp="2026-10-04T21:04:32Z",
+    )
+    record_curation_event(
+        record, curator="codex", action="REFINE_EVIDENCE_SNIPPET",
+        changes=(
+            "Addressed #1687 by replacing the anaphoric label-only 1968 quote "
+            "with its exact germ-tube orientation definition. Qualified the "
+            "mixed-orientation timing comparison without inferring net positive "
+            "autotropism in its two negative-response species. Retained the "
+            "separate Botrytis cinerea substrate-dependent observation."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T21:35:35Z",
     )
     return record
 

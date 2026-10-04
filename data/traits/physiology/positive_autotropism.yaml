@@ -10,15 +10,20 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: DOI:10.1093/jxb/19.1.125
-  snippet: Under these conditions B. cinerea displayed positive autotropism.
+  snippet: the positive germ-tube, i.e. one beginning more nearly towards its neighbour
   notes: Robinson, Park and Graham (1968), original publisher abstract directly retrieved
-    from https://oup.silverchair-cdn.com/article-minimal/447341. The conditions are
-    Cellophane over agar; Botrytis cinerea was neutral on agar alone. The abstract
-    defines positive germ-tube orientation relative to the neighboring spore. This
-    supports the terminology and emergence component, not later tip bending or completed
-    fusion. Germination timing and cis-ness are separate readouts. The full paper,
-    strain provenance and sample sizes were not retrieved. No universal chemical mechanism
-    is inferred from the abstract's proposed explanations.
+    from https://oup.silverchair-cdn.com/article-minimal/447341. The abstract reports
+    positive autotropism in Botrytis cinerea on Cellophane over agar and neutrality
+    on agar alone. The quoted orientation definition occurs in the mixed-orientation
+    spore-pair timing comparison for Rhizopus stolonifer and Mucor plumbeus, both
+    described as exhibiting marked negative autotropism. Earlier emergence of the
+    positive germ-tube in those pairs does not establish a net positive response in
+    either species. The abstract defines positive germ-tube orientation relative to
+    the neighboring spore. This supports the terminology and emergence component,
+    not later tip bending or completed fusion. Germination timing and cis-ness are
+    separate readouts. The full paper, strain provenance and sample sizes were not
+    retrieved. No universal chemical mechanism is inferred from the abstract's proposed
+    explanations.
 - reference: DOI:10.1039/d3lc00859b
   snippet: The hyphae approach each other from opposing directions with occasional
     arrestation of growth and readjustment of the growth direction.
@@ -70,4 +75,12 @@ curation_history:
     in v481 under released phenotype. Inspected Figure 5 and retained abstract-only,
     representative-pair and unread-supplement limitations. Deferred canonical strains,
     synonyms, external equivalents and causal graphs.
+  llm_assisted: true
+- timestamp: '2026-10-04T21:35:35Z'
+  curator: codex
+  action: REFINE_EVIDENCE_SNIPPET
+  changes: 'Addressed #1687 by replacing the anaphoric label-only 1968 quote with
+    its exact germ-tube orientation definition. Qualified the mixed-orientation timing
+    comparison without inferring net positive autotropism in its two negative-response
+    species. Retained the separate Botrytis cinerea substrate-dependent observation.'
   llm_assisted: true

@@ -42,8 +42,11 @@ def test_definition_and_stage_boundaries():
     )
     assert not any(k in record for k in ["xrefs", "synonyms", "causal_graphs",
                                        "canonical_examples"])
-    assert len(record["curation_history"]) == 1
+    assert len(record["curation_history"]) == 2
     assert record["curation_history"][0]["llm_assisted"] is True
+    assert record["curation_history"][0]["timestamp"] == "2026-10-04T21:04:32Z"
+    assert record["curation_history"][1]["action"] == "REFINE_EVIDENCE_SNIPPET"
+    assert "#1687" in record["curation_history"][1]["changes"]
     boundary, mechanism = record["discussions"]
     assert boundary["status"] == mechanism["status"] == "OPEN"
     for text in ["not require both", "not an exact synonym or a prerequisite",
@@ -62,9 +65,11 @@ def test_direct_sources_and_limitations():
     for evidence in record["evidence"]:
         assert 8 <= len(evidence["snippet"].split()) <= 25
         assert "directly retrieved" in evidence["notes"]
-    assert "positive autotropism" in emergence["snippet"]
-    for text in ["Cellophane over agar", "neutral on agar alone", "not later tip bending",
-                 "sample sizes were not retrieved"]:
+    assert "beginning more nearly towards its neighbour" in emergence["snippet"]
+    for text in ["Cellophane over agar", "neutrality on agar alone", "not later tip bending",
+                 "sample sizes were not retrieved", "mixed-orientation spore-pair",
+                 "Rhizopus stolonifer and Mucor plumbeus", "marked negative autotropism",
+                 "does not establish a net positive response"]:
         assert text in emergence["notes"]
     assert "approach each other" in extension["snippet"]
     for text in ["MUCL 43194", "representative pair", "not a replication count",
