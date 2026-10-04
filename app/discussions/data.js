@@ -10160,6 +10160,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/thermotaxis.html#thermotaxis-context-and-mapping-boundaries"
  },
  {
+  "discussion_id": "thigmotropism-growth-and-contact-boundaries",
+  "prompt": "Keep contact-directed growth distinct from locomotion and passive bending.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "thigmotropism",
+  "source_id": "traitmech:000594",
+  "source_file": "thigmotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Polarized growth reorientation is not whole-cell locomotion, so the parent is phenotype, not motile. Filament shape alone does not imply contact sensitivity, and the existing mycelial-growth record is explicitly bacterial. Do not equate this trait with thigmotaxis, stiffness-gradient migration, electric-field growth, generic adhesion or contact-induced differentiation. Passive bending, growth rate changes and incidental alignment alone are insufficient. The fungal observations do not demonstrate a universal mechanosensor or establish tissue invasion in vivo. External equivalences and lexical variants need separate authority and scope checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/thigmotropism.html#thigmotropism-growth-and-contact-boundaries"
+ },
+ {
+  "discussion_id": "thigmotropism-strain-and-mechanism-grounding",
+  "prompt": "Resolve natural strain provenance and protein-level mechanism evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "thigmotropism",
+  "source_id": "traitmech:000594",
+  "source_file": "thigmotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Retain the reported Candida albicans observations as qualified evidence. The inspected strain table includes engineered backgrounds and fluorescent reporters; verify direct measurements in naturally occurring strains and NCBI identities before adding canonical examples. Resolve taxon-paired protein accessions and distinguish channel deletion evidence from inhibitor specificity and proposed localized calcium signals before adding a causal graph. Keep calcineurin's galvanotropic role separate from the reported thigmotropic response. Rsr1-dependent polarity positioning does not make Spitzenkorper position an absolute predictor of growth direction. Inspect remaining full texts and supplements before strengthening these claims; no NONMECHANISTIC graph should bypass missing protein or taxon grounding.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/thigmotropism.html#thigmotropism-strain-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10246,9 +10280,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 476,
+ "total_discussions": 478,
  "total_knowledge_gaps": 365,
- "total_source_entries": 459,
+ "total_source_entries": 460,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
