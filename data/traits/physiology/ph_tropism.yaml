@@ -1,0 +1,78 @@
+identifier: traitmech:000602
+label: pH tropism
+definition: A phenotype in which polarized growth is directionally biased in response
+  to a spatial gradient of external pH.
+definition_source: DOI:10.1128/mbio.00285-23
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000597
+evidence:
+- reference: DOI:10.1128/mbio.00285-23
+  snippet: F. oxysporum hyphae exposed to a pH gradient displayed robust tropism toward
+    acid.
+  notes: Fernandes et al. (2023), Discussion; exact span in directly retrieved Europe
+    PMC JATS, PMC10128062 (PMID:36861989). Results and Methods were read; Figure 1B
+    and Table S1 (10.1128/mbio.00285-23.7) were visually inspected. Opposing 25 mM
+    HCl/NaOH wells tested germ-tube direction after 8 h, with at least three experiments
+    and 500 germ tubes per experiment. Mpk1 deletion reversed direction; complementation
+    restored acidward growth, not necessarily wild-type magnitude. Panel A measures
+    invasion, not tropism. The assay does not by itself resolve the local pH profile
+    or exclude every co-varying ionic effect. The higher-pH response is an engineered-mutant
+    observation, not a natural exemplar.
+- reference: DOI:10.1371/journal.pbio.3002726
+  snippet: These outcomes indicate that the hyphae exhibit chemotropism towards pH
+    4 within the pH range of 3 to 8.
+  notes: Yamamoto et al. (2024), Results, Chemotropism to low pH; exact span in directly
+    retrieved Europe PMC JATS, PMC11288418 (PMID:39078817). Figure 3 and Table S1
+    (10.1371/journal.pbio.3002726.s002) were visually inspected. Aspergillus nidulans
+    tip trajectories near the pH 6.5/8 interface support reorientation. Figure 3D
+    reports n=1 experiment with 40-50 hyphae; hypha counts are not independent experimental
+    replication. Growth inhibition at pH 3 confounds the 3/4 comparison. The separate
+    summary abstract's acidic-pH avoidance wording conflicts with the main Results.
+    This is not a universal pH-4 setpoint. Strains are engineered; movies and remaining
+    supplements were not inspected.
+discussions:
+- discussion_id: ph-tropism-growth-direction-and-assay-boundaries
+  prompt: Keep pH-directed growth distinct from taxis, tolerance and growth rate.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This is a pH-specific child of chemotropism, not another name for all
+    chemical-gradient growth. It includes growth toward lower or higher pH without
+    requiring both in one organism; mutant direction reversal does not establish a
+    natural higher-pH-seeking strain. pH taxis denotes active locomotion. pH optimum,
+    acid tolerance, intracellular pH homeostasis, biomass and extension rate alone
+    are insufficient. Retain the source-specific replication and growth-inhibition
+    limitations; resolve external equivalents and alternative labels before adding
+    synonyms or xrefs. The local chemotropism parent (traitmech:000597) has a pending
+    v474 proposal, METPO:1055100, not a released term. The v479 proposal uses released
+    METPO:1000059 phenotype; reconcile the narrower hierarchy when v474 is accepted.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: ph-tropism-strain-provenance-and-spatial-mechanism
+  prompt: Resolve strain identity and the spatial-sensing mechanism before enrichment.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Fernandes Methods identify Fol4287 (FGSC 9935), whereas Table S1 labels
+    its wild type FGSC 4287. Reconcile the collection label and verify natural provenance
+    and NCBI identity before canonical examples. Yamamoto Table S1 lists engineered
+    backgrounds including TH122. Keep spatial-gradient orientation separate from uniform
+    pH shifts, cytosolic-pH regulation and invasion assays. Kinase perturbations support
+    context-specific contributions, not a universal receptor or a complete spatial-sensing
+    chain. Resolve native, taxon-paired protein accessions and direct causal links
+    before adding a mechanism graph; NONMECHANISTIC is not a grounding bypass.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T19:11:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added pH tropism under local chemotropism with two primary DOI citations
+    and exact raw-JATS snippets. Ignored-and-hidden novelty searches and structured
+    OWL review found no exact term; the parent's pH example has broader class scope.
+    Reserved METPO:1055600 in v479 under released phenotype. Visually inspected both
+    key figures and strain tables. Recorded assay replication, growth confounds, mutant
+    direction scope, source discrepancies and pending hierarchy; deferred canonical
+    strains and accession-level causal mechanisms.
+  llm_assisted: true

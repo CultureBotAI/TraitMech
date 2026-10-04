@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055600	pH tropism	A phenotype in which polarized growth is directionally biased in response to a spatial gradient of external pH.	TraitMech:data/traits/physiology/ph_tropism.yaml|DOI:10.1128/mbio.00285-23|DOI:10.1371/journal.pbio.3002726	METPO:1000059			metpo_traitmech_2026_10	HIGH	External-pH-directed growth; local chemotropism parent awaits v474 acceptance.	traitmech:000602
