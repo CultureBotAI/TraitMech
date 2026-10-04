@@ -305,6 +305,11 @@ cause. Do not require a receptor-based sensing mechanism when physical
 coupling or kinesis could contribute; keep that mechanism unresolved until
 the evidence discriminates it.
 
+For growth tropisms, distinguish reorientation of polarized growth from
+whole-cell locomotion; do not automatically inherit a `motile` parent from
+neighboring taxis records. Contact-guided growth must also be distinguished
+from passive bending, incidental alignment and contact-induced differentiation.
+
 For versioned literature, record the version, posting date and stable
 version-specific full-text URL in `notes`, and inspect the corresponding
 supplements. Do not mix an earlier abstract with a later revision's figures or
