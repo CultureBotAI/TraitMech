@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/hyphal_anastomosis.yaml
+  slug: hyphal_anastomosis
+session:
+  id: 2026-10-04T223026Z-codex-dc00c5
+  timestamp: '2026-10-04T22:30:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1690
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1689
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Qualify perfect-fusion pairing count
+  details: 'Addressed issue 1690 in PR 1689: the 2009 nine-of-ten result counts pairings with
+    contacts scored as perfect fusion, not all fusion events. Re-read Experiment 1 methods
+    and Results; retained streaming/SDH criteria and separate postfusion incompatibility.
+    Definition, sources and verbatim snippets are unchanged. The writer accepts only the exact
+    initial record or reviewed final record; regression tests cover valid upgrade and drift
+    refusal.'

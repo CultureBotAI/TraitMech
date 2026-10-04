@@ -426,6 +426,11 @@ or generic noun phrases that name the topic but do not support the asserted
 substrate, endpoint, energy-conservation role, taxon scope, direction, or
 causal transition.
 
+Preserve operational endpoint qualifiers on numerical claims. A count for a
+stricter scored category is not a count of every event covered by the broader
+trait definition. For example, fusion followed by incompatibility must not be
+silently excluded by reusing a study's perfect-fusion count (#1690).
+
 A `SEEDED` METPO record still needs DOI, PMID, or stable-URL evidence when prior
 review artifacts marked the term as lacking corpus demand or primary support.
 Use METPO or its source axiom for `definition_source`, and add literature
