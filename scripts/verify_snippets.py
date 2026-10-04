@@ -131,7 +131,9 @@ def europepmc_abstract(ref: str, *, timeout: float = 30.0, retries: int = 3,
         # value -- `DOI:"10.1073/pnas.1718635115"` returns a non-JSON error page
         # while the bare form returns the record. Caught by this script's own
         # canary against the #619 reference, which came back UNRESOLVED.
-        query = f"DOI:{ref[4:]}"
+        # Parentheses are query operators even after URL encoding (#1663).
+        doi = ref[4:].replace("(", r"\(").replace(")", r"\)")
+        query = f"DOI:{doi}"
     else:
         return None
     params = {"query": query, "resultType": "core", "format": "json"}

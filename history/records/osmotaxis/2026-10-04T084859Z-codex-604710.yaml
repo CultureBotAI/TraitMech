@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/osmotaxis.yaml
+  slug: osmotaxis
+session:
+  id: 2026-10-04T084859Z-codex-604710
+  timestamp: '2026-10-04T08:48:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed osmotaxis
+  details: 'Created traitmech:000592 under motile METPO:1000702 with three primary DOI sources:
+    10.1016/s0014-4894(03)00031-6 (PMID:12706748), 10.1016/j.exppara.2005.10.005 (PMID:16313904),
+    and 10.1073/pnas.1620945114 (PMID:28874571). Exact Europe PMC abstract snippets distinguish
+    spatial migration, chemical/osmotic response coexistence and a proposed speed-to-accumulation
+    link. Fresh seed: 399 IDs, 344 present and 55 absent in the pre-change 986-record corpus.
+    Whole-repository ignored-and-hidden searches and structured OWL review found no exact
+    record or term. Reserved METPO:1054600 in v469. No natural-strain exemplar, molecular
+    graph or external equivalent was inferred; two discussions retain those gaps. Dry-run
+    validated writer and seven focused tests passed.'

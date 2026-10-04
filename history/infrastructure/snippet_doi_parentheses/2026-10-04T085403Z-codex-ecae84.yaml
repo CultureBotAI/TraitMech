@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/verify_snippets.py
+  slug: snippet_doi_parentheses
+session:
+  id: 2026-10-04T085403Z-codex-ecae84
+  timestamp: '2026-10-04T08:54:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1663
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - validation
+  summary: Escape DOI parentheses in Europe PMC snippet queries
+  details: 'Fixes #1663. The bare DOI:10.1016/s0014-4894(03)00031-6 search returned hitCount=0
+    although PMID:12706748 had the exact indexed DOI and matching abstract. Escaping parentheses
+    returned the correct record. Added two offline query-construction/resolution regression
+    cases, demonstrated both fail before the fix, then retained unquoted DOI handling and
+    escaped only parentheses before URL encoding. Updated add-trait guidance to cross-check
+    apparent unindexed results and preserve honest verifier reporting. No trait citation,
+    snippet or canonical assertion was changed by this resolver repair.'
