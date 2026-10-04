@@ -10209,12 +10209,46 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "viscotaxis-direction-and-physical-boundaries",
+  "prompt": "Retain directional and environmental scope of viscosity-driven migration.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "viscotaxis",
+  "source_id": "traitmech:000593",
+  "source_file": "viscotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The class permits migration toward higher or lower fluid viscosity; neither direction nor a preferred viscosity is universal. Uniform-viscosity speed changes, passive advection and differential growth alone do not establish this trait. Keep fluid-viscosity gradients distinct from flow-directed rheotaxis, osmotic gradients, chemical cues and substrate stiffness or loss-modulus gradients. Coupled cues require controls rather than assumed equivalence. Hydrodynamic turning can bias an actively swimming organism without requiring a receptor. External equivalents and lexical variants remain unasserted pending authority and scope checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/viscotaxis.html#viscotaxis-direction-and-physical-boundaries"
+ },
+ {
+  "discussion_id": "viscotaxis-canonical-provenance-and-mechanisms",
+  "prompt": "Resolve natural strain identities and distinguish models from mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "viscotaxis",
+  "source_id": "traitmech:000593",
+  "source_file": "viscotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Reconcile the historical Leptospira B16 designation with current taxonomy before adding a canonical example; do not infer modern L. interrogans membership from the article title. The algae study distinguishes wild-type and short-flagella cells, but strain accessions and natural provenance have not been established in this curation. Keep their observations separate and resolve NCBI identity before adding examples. Inspect remaining full texts and separate proposed shape-dependent hydrodynamics from measured reorientation or redistribution. No universal receptor or protein-resolved causal pathway follows from these sources; taxon-paired accessions and direct evidence are needed before adding molecular edges. A NONMECHANISTIC graph must not bypass those requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/viscotaxis.html#viscotaxis-canonical-provenance-and-mechanisms"
  }
 ];
 window.searchMetrics = {
- "total_discussions": 474,
+ "total_discussions": 476,
  "total_knowledge_gaps": 365,
- "total_source_entries": 458,
+ "total_source_entries": 459,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
