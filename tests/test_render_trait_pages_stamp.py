@@ -38,6 +38,6 @@ def test_record_timestamp_is_not_the_corpus_maximum():
 
 def test_record_timestamp_is_empty_without_history():
     """Falls back to '' rather than the clock, as corpus_timestamp does --
-    the template then renders 'Built from' instead of inventing currency."""
+    the template then omits the date instead of inventing currency."""
     assert record_timestamp({}) == ""
     assert record_timestamp({"curation_history": []}) == ""

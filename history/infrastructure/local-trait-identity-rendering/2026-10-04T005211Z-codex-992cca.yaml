@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/traitmech/templates/trait.html
+  slug: local-trait-identity-rendering
+session:
+  id: 2026-10-04T005211Z-codex-992cca
+  timestamp: '2026-10-04T00:52:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1645
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1644
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - rendering
+  - provenance
+  - tests
+  - skill
+  summary: Fix local trait identifier links and provenance labels
+  details: Adversarial review of PR1644 found 582 local-ID pages labeled and linked as METPO
+    identities. Issue1645 is addressed by namespace-sensitive identifier labels and links,
+    explicit identifier provenance, a separate ontology-baseline footer and neutral missing-embedding
+    wording. Added 12 regression cases covering local, METPO and unknown identifiers independently
+    of curation status; all 12 failed on the old templates. Biological YAML is unchanged by
+    this fix. Updated add-trait guidance to verify rendered identity/provenance and regenerated
+    pages through the maintained renderer.

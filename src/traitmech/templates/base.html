@@ -36,8 +36,8 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      {% if generated_at %}{{ stamp_scope | default('Corpus') }} as of {{ generated_at }} from{% else %}Built from{% endif %}
-      <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
+      {% if generated_at %}{{ stamp_scope | default('Corpus') }} as of {{ generated_at }}{% else %}TraitMech{% endif %}
+      · Ontology baseline: <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
       · {{ total_traits }} TraitRecords
       · embedding coverage {{ embedding_coverage_pct }}%
       (kg-microbe deepwalk 512-D, 2026-04-25)
