@@ -9463,6 +9463,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
  },
  {
+  "discussion_id": "durotaxis-stiffness-and-migration-boundaries",
+  "prompt": "Keep stiffness-directed migration distinct from other mechanical responses.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "durotaxis",
+  "source_id": "traitmech:000596",
+  "source_file": "durotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "The class is polarity-neutral: positive and negative responses are directions along the stiffness gradient, not different stimuli. Isomursu et al. (DOI:10.1038/s41563-022-01294-2) support this terminology in mammalian cells, not negative microbial durotaxis. Both microbial studies here report stiff-side migration; no opposite microbial response is inferred. Speed changes on uniform substrates, passive displacement and differential growth alone are insufficient. Contact-guided polarized growth in thigmotropism (traitmech:000594) is a different response. Do not infer durotaxis from a friction gradient, surface topography or remote substrate deformation without direct evidence for stiffness-directed migration. Mechanotaxis is broader, not an exact synonym. QuickGO returned zero durotaxis hits on 2026-10-04; other external equivalences remain unverified. No xref or synonym is inferred.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/durotaxis.html#durotaxis-stiffness-and-migration-boundaries"
+ },
+ {
+  "discussion_id": "durotaxis-strain-and-mechanism-grounding",
+  "prompt": "Resolve experimental strains and microbial protein evidence before graphing.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "durotaxis",
+  "source_id": "traitmech:000596",
+  "source_file": "durotaxis.yaml",
+  "attaches_to": [],
+  "rationale": "Kang's methods cite Li et al. (DOI:10.3389/fcell.2022.835185), whose cell-culture methods describe Ax2-derived cells and expression constructs. That citation does not uniquely identify the cells used for Kang's Figure 4 or establish natural-strain provenance. Resolve that identity and inspect the Physarum full methods before adding NCBI-grounded canonical examples. Dictyostelium inhibitor/activator responses support a contractility-related interpretation, not a resolved protein-level sensing pathway. Do not transfer mammalian NMIIA polarization or knockdown effects to an unverified microbial accession, or treat the active gel model as a biological perturbation. Mechanistic graphs are deferred pending taxon-paired proteins and bounded causal evidence; NONMECHANISTIC is not a workaround.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/durotaxis.html#durotaxis-strain-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "energy-taxis-stimulus-and-mapping-boundaries",
   "prompt": "Keep energy sensing distinct from stimulus-defined taxis classes.",
   "kind": "CURATION_TODO",
@@ -10314,9 +10348,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 480,
+ "total_discussions": 482,
  "total_knowledge_gaps": 365,
- "total_source_entries": 461,
+ "total_source_entries": 462,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

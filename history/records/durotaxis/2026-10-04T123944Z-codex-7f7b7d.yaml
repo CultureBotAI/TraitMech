@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/durotaxis.yaml
+  slug: durotaxis
+session:
+  id: 2026-10-04T123944Z-codex-7f7b7d
+  timestamp: '2026-10-04T12:39:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1669
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Correct durotaxis polarity scope after independent review
+  details: 'Addresses issue #1669 and corrects history/records/durotaxis/2026-10-04T120347Z-codex-3de17e.yaml
+    without editing it. Changed the unqualified class and proposal to directional active migration
+    in a spatial substrate stiffness gradient. Retained both stiff-side microbial observations
+    and added DOI:10.1038/s41563-022-01294-2 only for positive/negative terminology, with
+    exact Europe PMC MED abstract wording and explicit nonmicrobial scope. Did not infer negative
+    microbial durotaxis or transfer mammalian mechanisms. Preserved the original per-record
+    event and appended CORRECTED_DEFINITION_SCOPE through record_curation_event. The validated
+    writer accepts exact reviewed SHA-256 preimages, rejects drift and defaults to dry run;
+    eight focused tests and Ruff pass. Added polarity-scope guidance to add-trait. Derived-artifact
+    regeneration, broader validation and independent re-review follow this history entry.'

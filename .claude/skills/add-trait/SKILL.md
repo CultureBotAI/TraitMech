@@ -305,6 +305,13 @@ cause. Do not require a receptor-based sensing mechanism when physical
 coupling or kinesis could contribute; keep that mechanism unresolved until
 the evidence discriminates it.
 
+For an unqualified taxis label, check whether primary sources use the term
+for both gradient directions. When they do, keep the class and METPO proposal
+polarity-neutral and put observed directions in evidence notes; a
+direction-specific class needs an explicitly qualified label. Do not infer an
+opposite microbial response or transfer a mechanism from nonmicrobial studies
+used only to establish terminology scope (#1669).
+
 For growth tropisms, distinguish reorientation of polarized growth from
 whole-cell locomotion; do not automatically inherit a `motile` parent from
 neighboring taxis records. Contact-guided growth must also be distinguished

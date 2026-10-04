@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/durotaxis.yaml
+  slug: durotaxis
+session:
+  id: 2026-10-04T120347Z-codex-3de17e
+  timestamp: '2026-10-04T12:03:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed microbial durotaxis
+  details: Minted traitmech:000596 with two independent primary DOI citations, an exact Kang
+    v4 full-text snippet and an exact Filipinas publisher-deposited abstract snippet. Ignored-and-hidden
+    searches and structured OWL review found no exact duplicate; reserved METPO:1055000 in
+    proposal v473 below motile. Inspected Kang Figure 4, relevant methods and supplement documents,
+    and the cited Ax2 culture provenance. Distinguished directional migration from speed,
+    growth and other mechanical responses; deferred canonical strains and protein-resolved
+    mechanisms. No existing curated YAML edited. Focused writer tests and raw-source substring
+    checks passed before creation; corpus validation and generated artifacts follow.
