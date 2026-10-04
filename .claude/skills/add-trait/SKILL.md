@@ -320,6 +320,11 @@ Keep establishment and maintenance readouts separate when perturbations affect
 them differently; an abstract's aggregate dependence claim does not establish
 the same mechanism at every stage.
 
+For an unqualified growth-tropism label, inspect both response directions.
+A paper that describes only growth toward a stimulus does not restrict the
+whole class to attraction when another source explicitly includes avoidance.
+Keep wavelength- or stimulus-specific direction claims in evidence notes.
+
 For chemical growth tropisms, increased biomass, faster extension or asymmetric
 branching alone does not establish a directional response. Inspect growth-tip
 trajectories or other direct orientation readouts and retain growth-rate

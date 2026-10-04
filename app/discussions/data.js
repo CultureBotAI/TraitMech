@@ -10126,6 +10126,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phototaxis.html#phototaxis-mechanism-and-optical-provenance"
  },
  {
+  "discussion_id": "phototropism-growth-and-direction-boundaries",
+  "prompt": "Preserve growth, locomotion and response-direction distinctions.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phototropism",
+  "source_id": "traitmech:000598",
+  "source_file": "phototropism.yaml",
+  "attaches_to": [],
+  "rationale": "The class includes growth toward or away from light without requiring both responses in one organism or condition. It is not phototaxis (active locomotion), photokinesis (locomotion-speed change), phototrophy (energy acquisition), or light-dependent growth rate or development alone. Use phenotype rather than motile as the parent. A blue-light receptor homolog alone does not establish this phenotype. Resolve phenotype-level external equivalences separately before adding synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phototropism.html#phototropism-growth-and-direction-boundaries"
+ },
+ {
+  "discussion_id": "phototropism-native-mechanism-grounding",
+  "prompt": "Separate heterologous interaction assays from native growth control.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phototropism",
+  "source_id": "traitmech:000598",
+  "source_file": "phototropism.yaml",
+  "attaches_to": [],
+  "rationale": "Retain genetic and heterologous evidence at its measured scope. Neither a yeast interaction assay nor copurification in E. coli proves the native light-dependent interaction or the full route from photoreception to asymmetric growth. Inspect the unavailable Sanz supplement and newer primary work, and resolve eligible taxon-paired protein accessions before adding a mechanistic graph. Do not transfer plant phototropin signaling to fungi or use NONMECHANISTIC to bypass protein-grounding requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phototropism.html#phototropism-native-mechanism-grounding"
+ },
+ {
   "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10382,9 +10416,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 484,
+ "total_discussions": 486,
  "total_knowledge_gaps": 365,
- "total_source_entries": 463,
+ "total_source_entries": 464,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
