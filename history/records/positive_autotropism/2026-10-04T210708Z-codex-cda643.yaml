@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/positive_autotropism.yaml
+  slug: positive_autotropism
+session:
+  id: 2026-10-04T210708Z-codex-cda643
+  timestamp: '2026-10-04T21:07:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed positive autotropism
+  details: Added traitmech:000604 under phenotype with DOI:10.1093/jxb/19.1.125 and DOI:10.1039/d3lc00859b
+    and exact snippets checked against directly retrieved publisher abstract and Europe PMC
+    full text. Inspected Figure 5; retained emergence versus extension, approach versus fusion,
+    representative-pair and unread-supplement limitations. Ignored-and-hidden novelty searches
+    and structured pinned-METPO review found no exact existing record. Added guarded writer
+    and tests, v481 proposal reserving METPO:1055800, and explicit strain-provenance and mechanism
+    TODOs; no canonical taxa or graph asserted.
