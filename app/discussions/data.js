@@ -10296,6 +10296,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phototropism.html#phototropism-native-mechanism-grounding"
  },
  {
+  "discussion_id": "positive-autotropism-direction-and-fusion-scope",
+  "prompt": "Retain the distinction between directional approach and fusion.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "positive autotropism",
+  "source_id": "traitmech:000604",
+  "source_file": "positive_autotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Initial germ-tube orientation and later hyphal redirection are distinct readouts; the definition does not require both in one organism. Hyphal fusion/anastomosis is a separate endpoint, not an exact synonym or a prerequisite. Same-species neighbors can include branches of one mycelium or separate spores; genetic identity is not required by this definition. Do not infer whole-cell taxis, chemotropism, mating or a particular self-recognition mechanism. Passive alignment, faster growth and contact alone are insufficient. Negative autotropism has the opposite direction, not the same phenotype. Resolve external equivalences before adding xrefs or synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/positive_autotropism.html#positive-autotropism-direction-and-fusion-scope"
+ },
+ {
+  "discussion_id": "positive-autotropism-provenance-and-mechanism",
+  "prompt": "Verify strain origins, supplements and native signaling mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "positive autotropism",
+  "source_id": "traitmech:000604",
+  "source_file": "positive_autotropism.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples await original strain-provenance and NCBI identity checks. The 2024 culture method uses transformed chicory roots; this does not establish engineering of the fungi. Inspect the original supplements and the 1968 full paper before quantitative or strain-level enrichment. No universal ligand/receptor chain is established by these observations. A causal graph requires directly supported native perturbations and taxon-paired protein accessions; NONMECHANISTIC is not a grounding bypass.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/positive_autotropism.html#positive-autotropism-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10586,9 +10620,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 496,
+ "total_discussions": 498,
  "total_knowledge_gaps": 365,
- "total_source_entries": 469,
+ "total_source_entries": 470,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

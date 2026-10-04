@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1055800	positive autotropism	A phenotype in which germ-tube emergence or hyphal extension is directionally biased toward neighboring cells or hyphae of the same species.	TraitMech:data/traits/physiology/positive_autotropism.yaml|DOI:10.1093/jxb/19.1.125|DOI:10.1039/d3lc00859b	METPO:1000059			metpo_traitmech_2026_10	HIGH	Directional approach; emergence and extension are distinct from fusion.	traitmech:000604

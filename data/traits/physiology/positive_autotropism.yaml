@@ -1,0 +1,86 @@
+identifier: traitmech:000604
+label: positive autotropism
+definition: A phenotype in which germ-tube emergence or hyphal extension is directionally
+  biased toward neighboring cells or hyphae of the same species.
+definition_source: DOI:10.1093/jxb/19.1.125
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1093/jxb/19.1.125
+  snippet: the positive germ-tube, i.e. one beginning more nearly towards its neighbour
+  notes: Robinson, Park and Graham (1968), original publisher abstract directly retrieved
+    from https://oup.silverchair-cdn.com/article-minimal/447341. The abstract reports
+    positive autotropism in Botrytis cinerea on Cellophane over agar and neutrality
+    on agar alone. The quoted orientation definition occurs in the mixed-orientation
+    spore-pair timing comparison for Rhizopus stolonifer and Mucor plumbeus, both
+    described as exhibiting marked negative autotropism. Earlier emergence of the
+    positive germ-tube in those pairs does not establish a net positive response in
+    either species. The abstract defines positive germ-tube orientation relative to
+    the neighboring spore. This supports the terminology and emergence component,
+    not later tip bending or completed fusion. Germination timing and cis-ness are
+    separate readouts. The full paper, strain provenance and sample sizes were not
+    retrieved. No universal chemical mechanism is inferred from the abstract's proposed
+    explanations.
+- reference: DOI:10.1039/d3lc00859b
+  snippet: The hyphae approach each other from opposing directions with occasional
+    arrestation of growth and readjustment of the growth direction.
+  notes: Richter et al. (2024), Results section on stop-and-go growth before anastomosis;
+    directly retrieved Europe PMC full-text JATS, PMC10964749 (PMID:38416560). Culture
+    and image-analysis methods, corresponding Discussion and actual Figure 5 were
+    inspected. Figure 5a-c shows Rhizophagus irregularis MUCL 43194 approaching before
+    fusion; the 21-hour trace is a representative pair, not a replication count. This
+    is independent extension evidence interpreted within the directional definition,
+    not an assertion that this paper uses the autotropism label. Supplementary methods
+    and movies were not retrieved; attachment requests returned access-check HTML
+    or HTTP errors.
+discussions:
+- discussion_id: positive-autotropism-direction-and-fusion-scope
+  prompt: Retain the distinction between directional approach and fusion.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Initial germ-tube orientation and later hyphal redirection are distinct
+    readouts; the definition does not require both in one organism. Hyphal fusion/anastomosis
+    is a separate endpoint, not an exact synonym or a prerequisite. Same-species neighbors
+    can include branches of one mycelium or separate spores; genetic identity is not
+    required by this definition. Do not infer whole-cell taxis, chemotropism, mating
+    or a particular self-recognition mechanism. Passive alignment, faster growth and
+    contact alone are insufficient. Negative autotropism has the opposite direction,
+    not the same phenotype. Resolve external equivalences before adding xrefs or synonyms.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: positive-autotropism-provenance-and-mechanism
+  prompt: Verify strain origins, supplements and native signaling mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Canonical examples await original strain-provenance and NCBI identity
+    checks. The 2024 culture method uses transformed chicory roots; this does not
+    establish engineering of the fungi. Inspect the original supplements and the 1968
+    full paper before quantitative or strain-level enrichment. No universal ligand/receptor
+    chain is established by these observations. A causal graph requires directly supported
+    native perturbations and taxon-paired protein accessions; NONMECHANISTIC is not
+    a grounding bypass.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T21:04:32Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added positive autotropism with two directly retrieved DOI-backed sources
+    and exact snippets. Distinguished orientation and extension from completed fusion.
+    Ignored-and-hidden searches and structured OWL review found no exact term; the
+    negative sibling's boundary mention is not a duplicate. Reserved METPO:1055800
+    in v481 under released phenotype. Inspected Figure 5 and retained abstract-only,
+    representative-pair and unread-supplement limitations. Deferred canonical strains,
+    synonyms, external equivalents and causal graphs.
+  llm_assisted: true
+- timestamp: '2026-10-04T21:35:35Z'
+  curator: codex
+  action: REFINE_EVIDENCE_SNIPPET
+  changes: 'Addressed #1687 by replacing the anaphoric label-only 1968 quote with
+    its exact germ-tube orientation definition. Qualified the mixed-orientation timing
+    comparison without inferring net positive autotropism in its two negative-response
+    species. Retained the separate Botrytis cinerea substrate-dependent observation.'
+  llm_assisted: true

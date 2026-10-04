@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/positive_autotropism.yaml
+  slug: positive_autotropism
+session:
+  id: 2026-10-04T213641Z-codex-9001af
+  timestamp: '2026-10-04T21:36:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1687
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1686
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Quote the germ-tube orientation readout directly
+  details: Corrects the evidence quotation added in history/records/positive_autotropism/2026-10-04T210708Z-codex-cda643.yaml.
+    Replaced the 1968 label-only snippet with an exact 11-word contiguous orientation definition
+    from the directly retrieved original publisher abstract at https://oup.silverchair-cdn.com/article-minimal/447341
+    (DOI:10.1093/jxb/19.1.125). Notes distinguish its mixed-orientation Rhizopus stolonifer
+    and Mucor plumbeus pair-timing context from their net negative response and the separate
+    substrate-dependent positive Botrytis cinerea result. Preserved the mint event and appended
+    a new curation event through the validated writer after a SHA256 preimage guard. Regression
+    assertions now require the directional quote and species/response qualification. The existing
+    add-trait skill already requires specific, self-contained source claims, so no skill change
+    is needed.
