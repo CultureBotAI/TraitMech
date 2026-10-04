@@ -36,7 +36,7 @@ def test_growth_definition_and_boundaries():
     assert record["trait_category"] == "PHYSIOLOGY"
     assert record["parent_traits"] == ["traitmech:000597"]
     assert record["definition"] == (
-        "A chemotropic phenotype in which polarized growth is directionally "
+        "A phenotype in which polarized growth is directionally "
         "biased in response to a spatial oxygen concentration gradient."
     )
     assert not any(k in record for k in ["xrefs", "synonyms", "causal_graphs",
@@ -57,19 +57,17 @@ def test_evidence_access_and_mechanism_are_qualified():
     assert {e["reference"] for e in record["evidence"]} == {
         writer.AOKI, writer.CARLILE, writer.DAMM,
     }
-    for item in record["evidence"]:
-        assert 24 <= len(item["snippet"])
-        assert len(item["snippet"].split()) <= 25
     positive, negative, tubes = record["evidence"]
-    assert "gradients of oxygen concentration" in positive["snippet"]
-    assert "oxygen-rich direction" in positive["snippet"]
-    assert len(record["curation_history"]) == 2
-    assert "#1676" in record["curation_history"][-1]["changes"]
-    assert all("abstract-limited" in e["notes"] for e in (positive, negative))
-    assert all("indexed publisher abstract" in e["notes"] for e in (positive, negative))
-    assert all("metadata only" in e["notes"] for e in (positive, negative))
-    assert "no oxygen receptor" in positive["notes"]
-    assert "negative aerotropism" in negative["snippet"]
+    assert all("snippet" not in e for e in (positive, negative))
+    assert all("search-index-limited" in e["notes"] for e in (positive, negative))
+    assert all("no snippet is asserted (#1678)" in e["notes"] for e in (positive, negative))
+    assert "not a resolved oxygen receptor" in positive["notes"]
+    assert "negative aerotropism" in negative["notes"]
+    assert 24 <= len(tubes["snippet"]) and len(tubes["snippet"].split()) <= 25
+    assert len(record["curation_history"]) == 3
+    assert "#1676" in record["curation_history"][1]["changes"]
+    assert "#1678 and #1679" in record["curation_history"][-1]["changes"]
+    assert "now-withdrawn quotes" in record["curation_history"][-1]["changes"]
     assert "does not establish significance" in tubes["notes"]
     assert "germination, not orientation" in tubes["notes"]
     assert "not visually verified" in tubes["notes"]
@@ -83,6 +81,7 @@ def test_proposal_record_parity_and_pending_parent():
     assert rows[2][0] == "METPO:1055500"
     assert rows[2][1:3] == [record["label"], record["definition"]]
     assert rows[2][4] == "METPO:1000059"
+    assert rows[2][2].startswith("A phenotype in which")
     assert "v474 acceptance" in rows[2][9]
     assert rows[2][5:7] == ["", ""]
     assert rows[2][10] == writer.IDENTIFIER

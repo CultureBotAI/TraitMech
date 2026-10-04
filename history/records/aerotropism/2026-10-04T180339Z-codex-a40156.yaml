@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerotropism.yaml
+  slug: aerotropism
+session:
+  id: 2026-10-04T180339Z-codex-a40156
+  timestamp: '2026-10-04T18:03:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1678
+  - https://github.com/CultureBotAI/TraitMech/issues/1679
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Remove unverified quotes and align the released proposal genus
+  details: 'Addressed #1678/#1679: removed Aoki and Carlile snippets obtained only from indexed
+    search text, retained qualified DOI-backed notes, and kept the directly verified Damm
+    snippet. The source wording was not directly verified: this corrects quote-provenance
+    claims in history/records/aerotropism/2026-10-04T173758Z-codex-bc6cda.yaml and history/records/aerotropism/2026-10-04T174444Z-codex-d4063c.yaml
+    without rewriting them. The definition now starts with phenotype to match the released
+    proposal parent; local chemotropism parent and pending hierarchy remain unchanged.'

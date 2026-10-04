@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: other
+  path: conf/evidence_snippet_baseline.tsv
+  slug: evidence-snippet-baseline
+session:
+  id: 2026-10-04T180737Z-codex-750275
+  timestamp: '2026-10-04T18:07:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1678
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1677
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - workflow
+  summary: Expose two deliberate missing-quote exceptions for review
+  details: 'After #1678 removed two source-unverified snippets, add only the two aerotropism
+    MISSING_SNIPPET rows for DOI:10.1007/BF02464003 and DOI:10.1016/S0007-1536(88)80071-8
+    to the curated baseline. Their access limits remain explicit and the warnings remain in
+    the generated report. The audit and count-based ratchet are unchanged; no blanket baseline
+    refresh or other suppression is included. These additions require fresh independent review
+    on PR #1677.'

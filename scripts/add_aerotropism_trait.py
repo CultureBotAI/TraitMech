@@ -29,7 +29,7 @@ RECORD = {
     "identifier": IDENTIFIER,
     "label": "aerotropism",
     "definition": (
-        "A chemotropic phenotype in which polarized growth is directionally "
+        "A phenotype in which polarized growth is directionally "
         "biased in response to a spatial oxygen concentration gradient."
     ),
     "definition_source": AOKI,
@@ -40,41 +40,38 @@ RECORD = {
     "evidence": [
         {
             "reference": AOKI,
-            "snippet": (
-                "Hyphae of Candida albicans elongated towards the oxygen-rich "
-                "direction when exposed to gradients of oxygen concentration"
-            ),
             "notes": (
-                "Aoki et al. (1998), publisher abstract at "
+                "Aoki et al. (1998), publisher page at "
                 "https://www.sciencedirect.com/science/article/abs/pii/S1340354098709003. "
-                "The indexed publisher abstract was read and the snippet checked "
-                "there; direct retrieval returned 403 and the Elsevier API exposed "
-                "metadata only. Claims are abstract-limited; full text and figures "
-                "were not verified. Candida albicans hyphae reoriented in thin-layer "
-                "corn-meal agar and grew toward the oxygen-rich meniscus in "
-                "capillary cultures. Reorientation supports a directional "
-                "phenotype beyond growth rate alone, but oxygen-dependent growth "
-                "and other local gradients remain confounds. The authors infer "
-                "positive aerotropism; no oxygen receptor is established."
+                "Crossref and the Elsevier API confirmed bibliographic metadata "
+                "only; direct publisher retrieval returned 403. Interpretation "
+                "is search-index-limited: indexed publisher text reports Candida "
+                "albicans hyphal reorientation in thin-layer corn-meal agar and "
+                "growth toward an oxygen-rich capillary meniscus, interpreted "
+                "as positive aerotropism. The source wording, full text and "
+                "figures were not directly verified, so no snippet is asserted "
+                "(#1678). This citation supports the oxygen-directed growth "
+                "interpretation provisionally, not a resolved oxygen receptor. "
+                "Reorientation is distinct from growth rate; oxygen-dependent "
+                "growth and other local gradients remain confounds."
             ),
         },
         {
             "reference": CARLILE,
-            "snippet": (
-                "Germ-tubes of Phytophthora citricola lack chemotropism to "
-                "casein hydrolysate but show negative aerotropism."
-            ),
             "notes": (
-                "Carlile and Tew (1988), publisher abstract at "
+                "Carlile and Tew (1988), publisher page at "
                 "https://www.sciencedirect.com/science/article/abs/pii/S0007153688800718. "
-                "The indexed publisher abstract was read and the snippet checked "
-                "there; direct retrieval returned 403 and the Elsevier API exposed "
-                "metadata only. Claims are abstract-limited; full text, figures, "
-                "strain identity and gradient controls were not verified. This "
-                "oomycete observation supports including avoidance within the "
-                "unqualified class, not restricting it to oxygen attraction. "
-                "The result for casein hydrolysate does not exclude responses "
-                "to all other chemical gradients."
+                "Crossref and the Elsevier API confirmed bibliographic metadata "
+                "only; direct publisher retrieval returned 403. Interpretation "
+                "is search-index-limited: indexed publisher text reports "
+                "negative aerotropism in Phytophthora citricola germ tubes "
+                "and no response to casein hydrolysate. The existence and "
+                "wording of an original abstract were not directly verified, "
+                "so no snippet is asserted (#1678). Full text, figures, strain "
+                "identity and gradient controls remain unverified. This "
+                "citation supports retaining avoidance within the proposed "
+                "class, not a universal oxygen-attraction rule or an absence "
+                "of responses to all other chemical gradients."
             ),
         },
         {
@@ -171,6 +168,19 @@ def build_record() -> dict:
             "source-access limits and growth confounds in notes."
         ),
         llm_assisted=True, timestamp="2026-10-04T17:43:50Z",
+    )
+    record_curation_event(
+        record, curator="codex", action="REVIEW_CORRECTION",
+        changes=(
+            "Addressed #1678 and #1679: removed the two snippets obtained "
+            "only from indexed publisher text. Prior history describes "
+            "those now-withdrawn quotes, not directly verified source wording. "
+            "Retained qualified DOI-backed interpretations in notes and the "
+            "directly verified Damm snippet. Changed the definition genus "
+            "to phenotype to match the released proposal parent, preserving "
+            "the local chemotropism parent and pending hierarchy explanation."
+        ),
+        llm_assisted=True, timestamp="2026-10-04T18:01:14Z",
     )
     return record
 

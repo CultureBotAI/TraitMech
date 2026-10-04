@@ -296,6 +296,16 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+Search-result text, including an indexed publisher abstract, is a research
+lead, not directly retrieved source text. When publisher access fails and an
+API supplies metadata only, do not copy the indexed text into `snippet` or
+claim that the original abstract's existence or wording was verified. Retain
+the citation and explicitly qualified interpretation in `notes`, omit the
+unverified snippet, and seek an authoritative raw abstract or full text.
+Access-limit notes do not convert a search result into a verified quote
+(#1678). Keep the actual resolver outcome rather than relabeling a manual
+search-text check as `VERIFIED`.
+
 For gradient-directed taxis candidates, distinguish net migration in a spatial
 gradient from speed, motor-bias or tumbling changes after a spatially uniform stimulus.
 The latter can support a proposed mechanism but do not alone demonstrate
