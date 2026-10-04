@@ -9820,6 +9820,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phenylalanine_arylamidase_activity.html#phenylalanine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "photokinesis-speed-and-direction-boundaries",
+  "prompt": "Preserve the speed-response scope when mapping light responses.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "photokinesis",
+  "source_id": "traitmech:000587",
+  "source_file": "photokinesis.yaml",
+  "attaches_to": [],
+  "rationale": "This definition follows the speed usage in the cited experiments. It does not require increasing speed, a photosynthetic energy mechanism, or an isolated response without concurrent taxis. Phototaxis concerns orientation; photophobic responses concern avoidance or reversals. They may coexist with photokinesis, but no equivalence, disjointness or parent-child relation is asserted. The obsolete METPO:1000241 phototaxis class is not an exact match or a replacement target. Reconcile broader kinesis terminology before adding turning-frequency synonyms or external xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/photokinesis.html#photokinesis-speed-and-direction-boundaries"
+ },
+ {
+  "discussion_id": "photokinesis-strain-and-mechanism-grounding",
+  "prompt": "Verify natural exemplars and protein-resolved causal branches.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "photokinesis",
+  "source_id": "traitmech:000587",
+  "source_file": "photokinesis.yaml",
+  "attaches_to": [],
+  "rationale": "Qualified experimental observations are retained without canonical taxa pending independent CE2205 lineage verification or a fully inspected algal strain source. Collection provenance alone does not establish unperturbed natural ancestry. Mechanism discussion in the sources does not establish one universal receptor, and the algal abstract only suggests rhodopsin participation. A mechanistic graph is deferred pending source-backed causal edges and eligible taxon-paired protein examples. Do not borrow the generic motile graph or use NONMECHANISTIC to bypass this gap.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/photokinesis.html#photokinesis-strain-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10008,9 +10042,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 462,
+ "total_discussions": 464,
  "total_knowledge_gaps": 365,
- "total_source_entries": 452,
+ "total_source_entries": 453,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

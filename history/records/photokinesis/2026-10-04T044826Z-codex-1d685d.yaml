@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photokinesis.yaml
+  slug: photokinesis
+session:
+  id: 2026-10-04T044826Z-codex-1d685d
+  timestamp: '2026-10-04T04:48:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed photokinesis trait
+  details: Added traitmech:000587 as PROPOSED with two primary DOI citations and contiguous
+    snippets. Inspected the Thar publisher methods, results and Figure 2A-B; preserved oxic
+    controls and visible/near-infrared convention. Verified the Sineshchekov Chlamydomonas
+    abstract with Europe PMC. Whole-repository ignored-and-hidden searches and live seeder
+    comparison found no exact record. Reserved METPO:1054100 in v464; deferred natural canonical
+    taxa and protein-resolved mechanisms explicitly. Added a dry-run-default validated writer
+    and focused regressions; regenerate derived artifacts and complete review gates before
+    merge.
