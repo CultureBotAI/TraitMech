@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/viscotaxis.yaml
+  slug: viscotaxis
+session:
+  id: 2026-10-04T093658Z-codex-392fd5
+  timestamp: '2026-10-04T09:36:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed viscotaxis
+  details: 'Created traitmech:000593 under motile METPO:1000702 with three primary DOI sources:
+    10.1099/00221287-109-1-113 (PMID:731206), 10.1038/s41598-020-79887-7 (PMID:33432106; PMCID:PMC7801662),
+    and 10.1103/physrevlett.120.208002 (PMID:29864289). Three abstract snippets exactly matched
+    authoritative Europe PMC metadata. Inspected the algae full text, Fig. 5 and supplementary
+    Figs. S1-S3 to retain conditional redistribution and distinguish wild-type from short-flagella
+    results, uniform-speed responses, and hydrodynamic models. Fresh seed: 399 IDs, 344 present
+    and 55 absent in the pre-change 987-record corpus. Whole-repository ignored-and-hidden
+    searches and structured OWL review found no exact record or term; broader research mentions
+    concern viscosity-dependent swimming speed. Reserved METPO:1054700 in v470. Deferred historical
+    strain taxonomy, natural strain accessions, canonical examples, external equivalents and
+    molecular graphs in two discussions. Validated dry run and seven focused tests passed.
+    Existing add-trait guidance covers the evidence boundaries without further edits.'
