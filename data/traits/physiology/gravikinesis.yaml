@@ -1,0 +1,78 @@
+identifier: traitmech:000585
+label: gravikinesis
+definition: A motile phenotype in which the speed of active propulsion is modulated
+  according to orientation relative to gravity.
+definition_source: DOI:10.2187/bss.20.44
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+evidence:
+- reference: DOI:10.2187/bss.20.44
+  snippet: We confirmed the gravikinesis from the analysis on the swimming of single
+    cells.
+  notes: Abstract; full publisher PDF inspected at https://www.jstage.jst.go.jp/article/bss/20/2/20_2_44/_pdf.
+    Methods and Results (pages 45-46, Table 1) distinguish active propulsion from
+    passive drift using subsequent 10-18 mM NiCl2 immobilization of the same cell.
+    The drift controls retained contractile-vacuole activity and lacked visible deformation.
+    Curved-swimmer responses reverse in 72% Percoll; straight-swimmer responses were
+    not significant. Results N=55 and Table 1 straight-swimmer N=57 are unreconciled;
+    no aggregate sample count is asserted. Table and method pages were visually checked.
+- reference: DOI:10.1007/s001140050634
+  snippet: The resulting potential-induced modulation of the speed of propulsion is
+    called gravikinesis because it acts to neutralize, fully or in part, sedimentation.
+  notes: Publisher abstract and Europe PMC PMID:11536922 checked. Orientation-dependent
+    membrane-potential changes support a physiological component of propulsion control
+    in Paramecium. The sedimentation-opposing response described here is not a universal
+    sign convention or proof of one receptor in all taxa. The subscription full text
+    was not inspected; no strain, channel accession or full-text-only measurement
+    is inferred.
+canonical_examples:
+- taxon_id: NCBITaxon:5885
+  taxon_label: Paramecium caudatum
+  reference: DOI:10.2187/bss.20.44
+  note: Curved-swimming cells from 14-20-day early-stationary hay-infusion cultures
+    at 24 C, adapted to KCM (pH 7.2) and selected beneath the water surface. Table
+    1 supports gravity-dependent active propulsion in the control hypo-density medium.
+    Swimming was recorded before nickel immobilization, which supplied only the passive-drift
+    correction. This is not a universal cell-state claim. NCBI identifier is species-level;
+    no strain accession is supplied.
+discussions:
+- discussion_id: gravikinesis-speed-and-direction-boundaries
+  prompt: Keep propulsion modulation distinct from orientation and passive drift.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Observed upward/downward speed differences alone can arise from sedimentation
+    or flotation; the trait concerns the active propulsion component. Gravitaxis (traitmech:000584)
+    denotes directional bias, and gyrotaxis (traitmech:000583) denotes torque-mediated
+    orientation. These can coexist with gravikinesis; no equivalence, disjointness
+    or parent-child relation among them is asserted. The definition does not require
+    faster upward swimming in every medium. Reconcile sign conventions and source-qualified
+    response classes before adding narrower terms or equivalent external mappings.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: gravikinesis-mechanism-grounding
+  prompt: Resolve exact protein and taxon anchors for a mechanistic graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'Mechanism evidence exists: Gebauer''s abstract links orientation to
+    membrane potential and propulsion, while Takeda discusses mechanosensitive conductances
+    and ciliary control. The inspected sources do not identify a sequence-resolved
+    gravity receptor. Takeda treats hydraulic pressure as a candidate stimulus needing
+    amplification, not a demonstrated complete molecular pathway. A graph is deferred
+    pending eligible taxon-paired protein examples and source-bounded causal edges.
+    Do not substitute an unrelated channel or classify this physiological mechanism
+    as NONMECHANISTIC to avoid the protein-coverage gate.'
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-04T03:19:30Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added gravikinesis with two primary DOI sources, contiguous snippets and
+    a drift-corrected Paramecium caudatum example at verified species taxon 5885.
+    Ignored-and-hidden searches found only gravitaxis boundary mentions, not an exact
+    trait or METPO term. Reserved METPO:1053900 in proposal v462; kept direction,
+    passive drift, source sample counts and unresolved protein-level mechanism separate.
+  llm_assisted: true

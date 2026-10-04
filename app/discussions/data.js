@@ -9497,6 +9497,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "gravikinesis-speed-and-direction-boundaries",
+  "prompt": "Keep propulsion modulation distinct from orientation and passive drift.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravikinesis",
+  "source_id": "traitmech:000585",
+  "source_file": "gravikinesis.yaml",
+  "attaches_to": [],
+  "rationale": "Observed upward/downward speed differences alone can arise from sedimentation or flotation; the trait concerns the active propulsion component. Gravitaxis (traitmech:000584) denotes directional bias, and gyrotaxis (traitmech:000583) denotes torque-mediated orientation. These can coexist with gravikinesis; no equivalence, disjointness or parent-child relation among them is asserted. The definition does not require faster upward swimming in every medium. Reconcile sign conventions and source-qualified response classes before adding narrower terms or equivalent external mappings.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravikinesis.html#gravikinesis-speed-and-direction-boundaries"
+ },
+ {
+  "discussion_id": "gravikinesis-mechanism-grounding",
+  "prompt": "Resolve exact protein and taxon anchors for a mechanistic graph.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gravikinesis",
+  "source_id": "traitmech:000585",
+  "source_file": "gravikinesis.yaml",
+  "attaches_to": [],
+  "rationale": "Mechanism evidence exists: Gebauer's abstract links orientation to membrane potential and propulsion, while Takeda discusses mechanosensitive conductances and ciliary control. The inspected sources do not identify a sequence-resolved gravity receptor. Takeda treats hydraulic pressure as a candidate stimulus needing amplification, not a demonstrated complete molecular pathway. A graph is deferred pending eligible taxon-paired protein examples and source-bounded causal edges. Do not substitute an unrelated channel or classify this physiological mechanism as NONMECHANISTIC to avoid the protein-coverage gate.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gravikinesis.html#gravikinesis-mechanism-grounding"
+ },
+ {
   "discussion_id": "gravitaxis-direction-and-process-boundaries",
   "prompt": "Keep gravity-relative swimming distinct from settling and neighboring traits.",
   "kind": "CURATION_TODO",
@@ -9940,9 +9974,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 458,
+ "total_discussions": 460,
  "total_knowledge_gaps": 365,
- "total_source_entries": 450,
+ "total_source_entries": 451,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
