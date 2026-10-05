@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/bacterial_cannibalism.yaml
+  slug: bacterial_cannibalism
+session:
+  id: 2026-10-05T192424Z-codex-9eb8cc
+  timestamp: '2026-10-05T19:24:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-qualified bacterial cannibalism in the nutritional sense
+  details: Added traitmech:000626 as PROPOSED ECOLOGY with three DOI-backed snippets, the
+    existing predatory bacterium parent, v502 METPO:1057900 proposal, and OPEN scope and feeding-evidence
+    discussions. Preserved the inferential status of nutrient use in the classical papers
+    and the 2026 contrary evidence from IMPORTANCE. No canonical taxa, protein claims, graph,
+    xrefs or synonyms were inferred. Whole-repository novelty searches included ignored and
+    hidden files. The guarded writer defaults to dry run; focused writer tests passed.
