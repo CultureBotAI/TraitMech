@@ -10160,6 +10160,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "mating-type-switching-scope",
+  "prompt": "Preserve reversible and irreversible switching without equating it with self-fertility.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "mating-type switching",
+  "source_id": "traitmech:000611",
+  "source_file": "mating_type_switching.yaml",
+  "attaches_to": [],
+  "rationale": "This is a fungal switching capability, not a literal MAT locus, HO gene, donor cassette, direct repeat or static sequence feature. A mating-type change within a cell or developing lineage is distinct from ordinary segregation of mating types among sexual progeny. Resolve cellular, nuclear and colony-level assay scope before assigning the trait to an organism. Switching can contribute to homothallism but is not identical to it; a switched nucleus need not make the whole colony uniformly another mating type. Homothallism, heterothallism, ploidy, heterokaryosis and parasexuality are not is-a parents. PHYSIOLOGY is a filesystem category. Do not require reversibility, one cassette architecture or a universal cell-cycle stage. Resolve external phenotype/process mappings and the scope of mating-type alteration or interconversion before adding exact synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mating_type_switching.html#mating-type-switching-scope"
+ },
+ {
+  "discussion_id": "mating-type-switching-examples-and-mechanism",
+  "prompt": "Ground native switching mechanisms and natural strain examples before expanding the record.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "mating-type switching",
+  "source_id": "traitmech:000611",
+  "source_file": "mating_type_switching.yaml",
+  "attaches_to": [],
+  "rationale": "Complete uninspected primary experiments and supplements, verify natural strain provenance and resolve active taxonomy before adding canonical examples. Distinguish sequence rearrangement, expressed mating identity, compatibility and completed sexual reproduction; no one readout establishes all the others. An engineered perturbation supports its specific experimental dependency, not a universal native mechanism. Resolve native protein accessions and source-bounded causal claims before adding a graph; do not use NONMECHANISTIC to bypass unresolved grounding. Keep actual abstract-verifier outcomes distinct from manual full-text checks. Source figure/Results evidence takes precedence over the conflicting repeat label noted in the evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mating_type_switching.html#mating-type-switching-examples-and-mechanism"
+ },
+ {
   "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for NAD-dependent alcohol dehydrogenase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10824,9 +10858,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 510,
+ "total_discussions": 512,
  "total_knowledge_gaps": 365,
- "total_source_entries": 476,
+ "total_source_entries": 477,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

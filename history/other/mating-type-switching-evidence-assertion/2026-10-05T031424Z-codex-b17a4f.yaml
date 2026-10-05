@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: other
+  path: tests/test_add_mating_type_switching_trait.py
+  slug: mating-type-switching-evidence-assertion
+session:
+  id: 2026-10-05T031424Z-codex-b17a4f
+  timestamp: '2026-10-05T03:14:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1700
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1699
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - tests
+  summary: Pin the full-text quote-section qualifier
+  details: Addressed nonblocking review finding 1700 from PR 1699 by replacing the redundant
+    bare not assertion with the complete source-note phrase not experimental replication or
+    an abstract quote. Seven focused tests passed. An in-memory mutation check first passed
+    on the original notes, then failed when only the abstract-quote qualifier was removed
+    while not experimental remained. No TraitRecord, evidence or generated artifact changed.
