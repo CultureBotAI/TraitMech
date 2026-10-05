@@ -10177,6 +10177,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/osmotaxis.html#osmotaxis-mechanism-and-canonical-strains"
  },
  {
+  "discussion_id": "parasexuality-trait-scope",
+  "prompt": "Preserve the complete reproductive capability rather than an isolated readout.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "parasexuality",
+  "source_id": "traitmech:000607",
+  "source_file": "parasexuality.yaml",
+  "attaches_to": [],
+  "rationale": "The record denotes an organismal phenotype, not a locus, protein, ploidy measurement or individual mating experiment. Nuclear fusion followed by nonmeiotic chromosome loss permits genetic reassortment; mating can be part of this cycle. Do not define parasexuality as absence of all mating, sexual programs or meiosis-associated genes. It does not require haploid progeny, obligate asexuality, identical ploidy in every product or successful cycling in every isolate. Hyphal fusion, heterokaryosis, marker loss, aneuploidy, ploidy change and horizontal gene transfer alone are insufficient. The existing ploidy trait describes genome-copy number, not this capability. Ploidy and hyphal anastomosis are not is-a parents. The fungal scope reflects the cited evidence; broader uses of parasexual terminology require separate interpretation. Resolve external phenotype/process mappings and exact synonyms at their authorities before adding them.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/parasexuality.html#parasexuality-trait-scope"
+ },
+ {
+  "discussion_id": "parasexuality-mechanism-and-strain-provenance",
+  "prompt": "Resolve native strain provenance and stage-specific mechanisms before enrichment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "parasexuality",
+  "source_id": "traitmech:000607",
+  "source_file": "parasexuality.yaml",
+  "attaches_to": [],
+  "rationale": "The cited laboratory cycles use marked or engineered strains; retain those qualifiers rather than promoting a tester or deletion strain to a natural canonical example. Complete the unread supplementary methods and figures, current NCBI identities, original strain provenance and native protein anchors before adding examples or a mechanistic graph. Distinguish chromosome loss, DNA-content reduction, inter-homolog recombination and renewed mating as separate readouts. A flow-cytometry peak near a diploid control does not resolve every chromosome's copy number. The 2019 parameiosis evidence prevents treating nonmeiotic as independent of all meiotic proteins or simply equating it with ordinary mitosis. Do not transfer medium responses or protein dependencies across species, and do not use a NONMECHANISTIC graph to bypass unresolved molecular grounding.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/parasexuality.html#parasexuality-mechanism-and-strain-provenance"
+ },
+ {
   "discussion_id": "ph-taxis-scope-and-mapping-boundaries",
   "prompt": "Preserve directional scope and verify external equivalents.",
   "kind": "CURATION_TODO",
@@ -10688,9 +10722,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 502,
+ "total_discussions": 504,
  "total_knowledge_gaps": 365,
- "total_source_entries": 472,
+ "total_source_entries": 473,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
