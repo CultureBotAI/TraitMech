@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/isogamy.yaml
+  slug: isogamy
+session:
+  id: 2026-10-05T115429Z-codex-1e0bc7
+  timestamp: '2026-10-05T11:54:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed isogamy
+  details: Added PROPOSED PHYSIOLOGY traitmech:000619 and v496 reservation METPO:1057300 under
+    released phenotype. DOI:10.1038/s42003-022-04275-y supplies the definition; DOI:10.1111/evo.13427
+    independently documents experimental use of an isogamous microalga, not a second direct
+    size-symmetry test. Both snippets exactly matched authoritative raw source text. The maintained
+    resolver returned NOT_IN_ABSTRACT for the Introduction quote and VERIFIED for the scientific-abstract
+    clause. Actual 2022 Figure 4 and Supplementary Table 2 were visually inspected. Gamete-size
+    similarity, mating-type identity, structural asymmetry and vegetative-versus-gamete comparisons
+    remain distinct. Reference-strain mutations and unread source material are explicit; natural
+    canonical taxa and mechanisms are deferred. Ignored-and-hidden novelty and allocation
+    searches, fresh seed dispositions, upstream issues and open-PR files were checked. Writer
+    dry run, seven writer tests, LinkML and single-record strict validation passed; broader
+    gates and generated artifacts follow before review.

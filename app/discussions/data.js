@@ -10109,6 +10109,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/hyphal_anastomosis.html#hyphal-anastomosis-strains-and-mechanism"
  },
  {
+  "discussion_id": "isogamy-scope-and-hierarchy",
+  "prompt": "Keep gamete-size similarity distinct from mating-type identity.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "isogamy",
+  "source_id": "traitmech:000619",
+  "source_file": "isogamy.yaml",
+  "attaches_to": [],
+  "rationale": "This reproductive phenotype compares gametes participating in sexual fusion, not arbitrary equal-sized cells or vegetative-versus-gamete measurements. Similar size is not exact equality and does not imply identical structure, behaviour, recognition machinery or organelle inheritance. No numerical boundary with slight anisogamy is imposed. The fungal compatibility-locus systems traitmech:000615 through traitmech:000618 and same-mating-type reproduction traitmech:000613 describe different axes; isogamy does not mean one mating type. Use released phenotype METPO:1000059 in record and proposal pending a narrower reproductive-phenotype hierarchy. PHYSIOLOGY is a filesystem category. Resolve exact lexical and external equivalences before adding synonyms or xrefs; no disjointness is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/isogamy.html#isogamy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "isogamy-examples-and-mechanism",
+  "prompt": "Resolve natural strain provenance and mechanisms before extension.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "isogamy",
+  "source_id": "traitmech:000619",
+  "source_file": "isogamy.yaml",
+  "attaches_to": [],
+  "rationale": "The cited microalgal studies justify the trait, but collection provenance and unperturbed gamete measurements should be checked before adding a natural canonical example. A wild-type label alone does not establish that a reference strain lacks mutations. Do not turn MID-dependent mating-structure positioning into a demonstrated cause of gamete-size similarity. Resolve native protein accessions and experimentally tested size-control dependencies before a causal graph; no NONMECHANISTIC graph bypasses grounding. Read the remaining source material before quantitative or evolutionary extensions. Keep full-text quote checks distinct from abstract-resolver verdicts.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/isogamy.html#isogamy-examples-and-mechanism"
+ },
+ {
   "discussion_id": "lecithinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lecithinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11096,9 +11130,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 526,
+ "total_discussions": 528,
  "total_knowledge_gaps": 365,
- "total_source_entries": 484,
+ "total_source_entries": 485,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
