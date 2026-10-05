@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/heterothallism.yaml
+  slug: heterothallism
+session:
+  id: 2026-10-05T021135Z-codex-15cdd6
+  timestamp: '2026-10-05T02:11:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed heterothallism phenotype
+  details: Added PROPOSED traitmech:000610 with three DOI-backed scientific-abstract snippets
+    independently matched to raw source sections. Kept organism-level partner dependence distinct
+    from general infertility, MAT content, nuclear recognition and incomplete sexual-development
+    readouts. Reserved METPO:1056400 in proposal v487 under released phenotype; deferred canonical
+    examples, lexical mappings and native-protein graphs with explicit discussions. Writer
+    dry-run, guarded replay tests and exact snippet checks passed.
