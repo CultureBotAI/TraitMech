@@ -1,0 +1,95 @@
+identifier: traitmech:000627
+label: phagocytosis
+definition: A physiological phenotype in which a microbial cell engulfs extracellular
+  particles by enclosing them within its membrane and internalizes them into membrane-bound
+  compartments.
+definition_source: DOI:10.1371/journal.pone.0095577
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.pone.0095577
+  snippet: remodeling of the collar membrane to engulf the prey, and transport of
+    engulfed bacteria into the cell.
+  notes: Dayel and King (2014), PMID:24806026, PMC4012994, scientific Abstract directly
+    checked in Europe PMC XML and the PLOS article. Results, Discussion and Methods
+    were read; actual Figures 1 and 4 were inspected. Live-cell images and SEM/TEM
+    support collar-associated engulfment and internalization in Salpingoeca rosetta.
+    Mere contact or retention on the collar is not ingestion. Nutrient assimilation
+    and the molecular identity of collar links are not established by these images.
+    Actual supplements and movies were not inspected. The culture-provenance papers
+    cited by the Methods were not followed, so this study is retained as trait evidence
+    without a canonical strain assignment.
+- reference: DOI:10.1111/nph.20388
+  snippet: We found cells ingested proxy (up to 2 μm diameter) and natural (bacteria
+    and cyanobacteria) prey particles
+  notes: 'Scientific Summary directly checked in Europe PMC full-text XML and PMC11982794;
+    PMID:40035416. Results, Discussion and Methods were read, and actual Figures 5,
+    6, 9 and 10 were inspected. Scyphosphaera apsteinii RCC1456 cultures internalized
+    particles and labeled bacteria into a prominent vacuole. Distinguish pHrodo Escherichia
+    coli BioParticles from Acridine Orange-labeled marine bacteria and from inert
+    beads. Acidic-organelle staining alone is not prey uptake; some imaging used EGTA
+    decalcification. The paper uses phagotrophy for the nutritional interpretation;
+    this record asserts particle engulfment, not a measured carbon assimilation rate.
+    Figure 10 is a conceptual sequence-based model, not native protein validation:
+    its S. apsteinii transcripts come from RCC1455, not the assayed RCC1456, and some
+    candidates are from Gephyrocapsa huxleyi. Actual supplements and movies were not
+    inspected. No negative comparator-species claim, bead-degrading enzyme assignment
+    or inferred nutrient quota is imported.'
+canonical_examples:
+- taxon_id: NCBITaxon:418940
+  taxon_label: Scyphosphaera apsteinii
+  reference: DOI:10.1111/nph.20388
+  note: 'Strain-qualified example: diploid RCC1456, also AC504, TW15 and NIES-3344.
+    Mid- to late-exponential nonaxenic cultures ingested labeled marine bacteria and
+    particles under the reported incubation conditions; Figures 5 and 6 were inspected.
+    The species taxon ID and scientific name were independently verified at NCBI on
+    2026-10-05; this is not a strain-level taxon ID or a claim about every isolate.
+    Natural isolation from the Spanish coast of the Balearic Sea by single-cell micropipetting
+    on 2001-02-01 was checked directly in the collection record https://www.roscoff-culture-collection.org/rcc-strain-details/1456.
+    The transcript-source strain RCC1455 (AC505/TW16) is distinct and is not substituted
+    for this exemplar.'
+discussions:
+- discussion_id: phagocytosis-trait-and-process-scope
+  prompt: Keep particle uptake distinct from nutrition and process-level mappings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This class denotes the microbial organism's particle-engulfment phenotype,
+    not a host immune cell's response to the microbe. Existing capsule and pathogenic-to-host
+    descriptions concern host immune evasion and are not same-scope unresolved trait
+    nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses
+    that interpretation, but ingestion of inert particles does not by itself establish
+    carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644
+    require nutritional source use, while predatory bacterium traitmech:000054 is
+    bacteria-specific. Phenotype METPO:1000059 is the supported broader trait. Do
+    not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation
+    or phagotrophy. Review external process terms separately before asserting any
+    trait-level xref; no synonym or ontology equivalence is proposed here.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: phagocytosis-native-mechanism-evidence
+  prompt: Require native functional evidence before assigning molecular mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The observed cellular uptake phenotypes do not identify a universal microbial
+    protein mechanism. Collar-link composition in S. rosetta remains unresolved. The
+    coccolithophore study's KEGG and Swiss-Prot sequence annotations concern RCC1455
+    transcripts and G. huxleyi gene models, not direct validation of the RCC1456 uptake
+    mechanism. Keep strain provenance, homology, localization, experimental dependence
+    and nutrient assimilation as separate evidence requirements. Inspect supplements
+    and obtain taxon-paired native protein evidence before adding a causal graph or
+    protein accessions.
+  posed_by: codex
+  posed_date: '2026-10-05'
+curation_history:
+- timestamp: '2026-10-05T20:40:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added phagocytosis as an organism-level particle-engulfment phenotype with
+    two DOI-backed snippets, inspected primary figures and a strain-qualified natural
+    RCC1456 example. Ignored-and-hidden novelty searches and pinned METPO review found
+    no exact record. Reserved METPO:1058000 in v503. Kept nutritional, mapping and
+    sequence-based mechanism interpretations separate; no protein graph was inferred.
+  llm_assisted: true

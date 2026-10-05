@@ -10721,6 +10721,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ph_tropism.html#ph-tropism-strain-provenance-and-spatial-mechanism"
  },
  {
+  "discussion_id": "phagocytosis-trait-and-process-scope",
+  "prompt": "Keep particle uptake distinct from nutrition and process-level mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phagocytosis",
+  "source_id": "traitmech:000627",
+  "source_file": "phagocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "This class denotes the microbial organism's particle-engulfment phenotype, not a host immune cell's response to the microbe. Existing capsule and pathogenic-to-host descriptions concern host immune evasion and are not same-scope unresolved trait nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses that interpretation, but ingestion of inert particles does not by itself establish carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644 require nutritional source use, while predatory bacterium traitmech:000054 is bacteria-specific. Phenotype METPO:1000059 is the supported broader trait. Do not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external process terms separately before asserting any trait-level xref; no synonym or ontology equivalence is proposed here.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phagocytosis.html#phagocytosis-trait-and-process-scope"
+ },
+ {
+  "discussion_id": "phagocytosis-native-mechanism-evidence",
+  "prompt": "Require native functional evidence before assigning molecular mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "phagocytosis",
+  "source_id": "traitmech:000627",
+  "source_file": "phagocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The observed cellular uptake phenotypes do not identify a universal microbial protein mechanism. Collar-link composition in S. rosetta remains unresolved. The coccolithophore study's KEGG and Swiss-Prot sequence annotations concern RCC1455 transcripts and G. huxleyi gene models, not direct validation of the RCC1456 uptake mechanism. Keep strain provenance, homology, localization, experimental dependence and nutrient assimilation as separate evidence requirements. Inspect supplements and obtain taxon-paired native protein evidence before adding a causal graph or protein accessions.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phagocytosis.html#phagocytosis-native-mechanism-evidence"
+ },
+ {
   "discussion_id": "phenylalanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for phenylalanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11368,9 +11402,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 542,
- "total_knowledge_gaps": 368,
- "total_source_entries": 492,
+ "total_discussions": 544,
+ "total_knowledge_gaps": 369,
+ "total_source_entries": 493,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
