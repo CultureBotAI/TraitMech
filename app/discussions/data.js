@@ -10653,6 +10653,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-xref-gap"
  },
  {
+  "discussion_id": "pseudobipolar-mating-scope-and-hierarchy",
+  "prompt": "Keep physical linkage, genetic linkage and observed compatibility distinct.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pseudobipolar mating system",
+  "source_id": "traitmech:000617",
+  "source_file": "pseudobipolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "The 2010 pseudo-bipolar usage emphasizes normally bipolar behavior with occasional recombination; the 2025 usage also covers widely separated, potentially genetically unlinked loci on one chromosome. The definition retains their shared recombination-permitting organization without requiring a fixed rate, partial linkage strength, or exactly two species-wide mating types. A genomic prediction must remain distinct from an observed mating phenotype. This is not a literal MAT locus or an individual gene record. It is not identical to traitmech:000616 bipolar mating, which requires a single segregating factor, or traitmech:000615 tetrapolar mating, which requires independent segregation without specifying chromosome colocation. The 2025 paper explicitly allows functional resemblance to tetrapolarity, so do not assert disjointness. Its heterothallic framing also does not prove universal separate-partner dependence under traitmech:000610. Use released phenotype METPO:1000059 in record and proposal pending narrower hierarchy and lexical review; PHYSIOLOGY is a filesystem category.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pseudobipolar_mating_system.html#pseudobipolar-mating-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "pseudobipolar-mating-evidence-and-mechanism",
+  "prompt": "Resolve strain provenance and native dependencies before adding examples or graphs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pseudobipolar mating system",
+  "source_id": "traitmech:000617",
+  "source_file": "pseudobipolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "Resolve the CBS 6832 allele-designation discrepancy and ML 2241's original isolation context before canonical examples, and verify current taxon authority. Laboratory recombinant T7.1 is not an independently sampled natural isolate. Distinguish crossovers from gene conversion and retain the eight-teliospore sampling limitation. Finish unread source sections, actual figures and supplements before more detailed claims. Never transfer the confirmed sexual cycle of one species to another species with a predicted MAT configuration. Resolve native protein accessions and experimentally tested dependencies before causal edges; no NONMECHANISTIC graph bypasses grounding. Manual source checks remain distinct from actual resolver verdicts.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pseudobipolar_mating_system.html#pseudobipolar-mating-evidence-and-mechanism"
+ },
+ {
   "discussion_id": "pseudohomothallism-scope-and-hierarchy",
   "prompt": "Keep single-spore self-fertility distinct from nuclear coexistence and MAT content.",
   "kind": "CURATION_TODO",
@@ -11028,9 +11062,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 522,
+ "total_discussions": 524,
  "total_knowledge_gaps": 365,
- "total_source_entries": 482,
+ "total_source_entries": 483,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
