@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-count-units
+session:
+  id: 2026-10-05T182929Z-codex-32d59b
+  timestamp: '2026-10-05T18:29:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1722
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - validation
+  summary: Distinguish ROBOT output lines from RDF triples
+  details: 'Addressed issue 1722: document the actual line-count units emitted by robot_validate_proposal.py
+    and require an RDF parser before reporting graph cardinality. Corrected the v500 proposal
+    narrative using directly parsed counts while preserving old history; posted an explicit
+    correction on merged PR 1721. No validator or scientific data behavior changed for this
+    reporting correction.'

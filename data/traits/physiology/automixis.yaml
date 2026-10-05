@@ -1,0 +1,84 @@
+identifier: traitmech:000625
+label: automixis
+definition: A reproductive phenotype in which the reduction of reproductive nuclear
+  ploidy is prevented or compensated and progeny derive their reproductive nuclei
+  solely from products of one meiotically dividing cell or their descendants.
+definition_source: DOI:10.1111/j.1095-8312.1986.tb01761.x
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1111/j.1095-8312.1986.tb01761.x
+  snippet: Automixis describes several reproductive processes whereby a new individual
+    derives from a product or products of a single meiotically dividing cell.
+  notes: Mogie (1986), scientific abstract directly read on Wiley. Terminology authority,
+    not a new microbial experiment. Its scope includes fusion and non-fusion routes,
+    restitutional meiosis and endomitosis before or after reductional meiosis. The
+    ploidy clause distinguishes ordinary reduced meiotic progeny; reproductive nuclei
+    excludes a universal somatic-ploidy requirement. Do not classify every route as
+    sexual. The abstract contrasts botanical/mycological autogamous selfing involving
+    different meioses, not our operational same-cell autogamy. Full text and actual
+    figures remain unread.
+- reference: DOI:10.1186/s13059-021-02521-w
+  snippet: Mating of gametes from the same meiotic event represents a particular type
+    of inbreeding referred to as intratetrad mating or automixis
+  notes: Papaioannou et al. (2021), PMID:34732243, PMC8567612, Background clause checked
+    in publisher HTML and Europe PMC full-text XML. Scientific abstract, Results,
+    Discussion and main Methods read; actual Figure 1 and all Table S1 pages visually
+    inspected. Figure 1C depicts the automictic life cycle with NBRC 1722 and its
+    diploid progenitor NBRC 1721. It is not a measured automixis rate. This fusion-based
+    usage is narrower than Mogie's scope. Recombination experiments do not establish
+    universal homozygosity or zero recombination. Other figures and detailed supplementary
+    methods remain unread.
+canonical_examples:
+- taxon_id: NCBITaxon:36035
+  taxon_label: Saccharomycodes ludwigii
+  reference: DOI:10.1186/s13059-021-02521-w
+  note: 'Qualified NBRC 1721 strain-family example in Figure 1C; not a strain-specific
+    automixis-frequency measurement. Table S1 p.1 and p.3 footnote 2 identify NBRC
+    1721 as a wild diploid isolate from grape must, Japan, 1964. NBRC 1722 is a single-spore
+    descendant, not that wild parent or an engineered deletion strain. Provenance:
+    https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13059-021-02521-w/MediaObjects/13059_2021_2521_MOESM1_ESM.pdf.
+    NCBI taxonomy EFetch on 2026-10-05 confirmed the species name at https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36035;
+    no genome accession is authenticated.'
+discussions:
+- discussion_id: automixis-scope-and-hierarchy
+  prompt: Preserve source-specific meanings of self-fertilization terms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Mogie's broad reproductive class is not exclusively nuclear fusion or
+    exclusively sexual reproduction. The operational autogamy traitmech:000622, cytogamy
+    traitmech:000623 and paedogamy traitmech:000624 fit as narrower same-cell-origin
+    routes; postmeiotic mitosis is allowed. Kaczmarska et al. DOI:10.1080/0269249X.2013.791344
+    section 5.2 directly names autogamy and paedogamy as automixis in diatoms. This
+    does not make all botanical autogamy equivalent. Cytogamy's existing 1979 evidence
+    supports same-parent meiotic origin despite cell pairing; cytoplasmic exchange
+    is not nuclear outcrossing. Same-clone mating after different meioses is insufficient.
+    Fungal homothallism, heterothallism and intratetrad mating are not exact synonyms
+    of this broad class. External equivalences and narrower non-fusion microbial exemplars
+    remain unresolved.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: automixis-mechanism-and-coverage
+  prompt: Resolve route-specific mechanisms without universal genetic claims.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: A reproductive phenotype, not a literal mating locus or sequence feature.
+    No single protein pathway is established for all fusion and non-fusion routes,
+    so no causal graph or protein accessions are asserted. Do not infer universal
+    homozygosity, central fusion, absence of outcrossing, or disjoint taxa from event-level
+    distinctions. Retain actual snippet-resolver outcomes separately from direct source
+    checks.
+  posed_by: codex
+  posed_date: '2026-10-05'
+curation_history:
+- timestamp: '2026-10-05T18:20:28Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added automixis with two DOI-backed snippets and a qualified natural yeast
+    strain-family example. Ignored-and-hidden novelty and allocation searches found
+    no exact record or collision. Reserved METPO:1057800 in v501; broadened beyond
+    fusion-only terminology and deferred universal molecular mechanisms.
+  llm_assisted: true

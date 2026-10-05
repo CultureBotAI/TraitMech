@@ -8,7 +8,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000625
 evidence:
 - reference: DOI:10.1017/S0016672300010740
   snippet: the synkaryon, or fertilization nucleus, is formed by the union of two
@@ -82,13 +82,14 @@ discussions:
     paired-cell observation. That broader source terminology does not make cytogamy
     a child or exact synonym of this operationally unpaired-cell class. No universal
     genetic identity, complete homozygosity, starvation trigger, nuclear count, inability
-    to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending
-    a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category.
-    Verify external equivalences and broader automixis terminology before adding synonyms
-    or mappings. Paedogamy traitmech:000624 instead involves separate gametes formed
-    within one gametangium. The clarified definition excludes their fusion, without
-    forbidding later cell division or postmeiotic nuclear mitosis. These are event-level
-    distinctions, not disjoint species.
+    to outcross or gamete-size asymmetry is imposed. The parent gap is resolved by
+    automixis traitmech:000625, whose single-meiotic-cell nuclear origin includes
+    this operational scope. The broader terminology and mapping questions keep this
+    discussion OPEN. Verify external equivalences and source-specific synonym scope
+    before adding mappings. Paedogamy traitmech:000624 instead involves separate gametes
+    formed within one gametangium. The clarified definition excludes their fusion,
+    without forbidding later cell division or postmeiotic nuclear mitosis. These are
+    event-level distinctions, not disjoint species.
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: autogamy-mechanism-and-coverage
@@ -139,4 +140,12 @@ curation_history:
     nuclei alongside the #1719 undivided-cell and no-separate-gamete-fusion boundary.
     Fusion location alone does not establish self-fertilization. Preserved evidence,
     example, discussions, parent and all prior history.'
+  llm_assisted: true
+- timestamp: '2026-10-05T18:20:28Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented below automixis traitmech:000625 and documented the resolved
+    parent gap while retaining other open terminology and mapping questions. Preserved
+    definition, evidence, examples and prior history. v501 carries the existing proposed
+    METPO ID with this hierarchy; earlier standalone templates remain historical.
   llm_assisted: true

@@ -120,5 +120,9 @@ primary record.
 
 ## Change Log
 
+- v501 follow-up, 2026-10-05: the coupled v501 template supersedes this
+  standalone phenotype-parent assertion with the new automixis parent;
+  cytogamy's definition and ID are unchanged.
+
 - v499, 2026-10-05: propose cytogamy with three cited snippets and explicit
   pairing, tentative-observation, induced-system and source-access limits.

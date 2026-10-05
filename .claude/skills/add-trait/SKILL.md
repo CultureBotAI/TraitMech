@@ -695,6 +695,8 @@ status. METPO CURIEs in proposal IDs and parents must expand to `https://w3id.or
 matching the pinned ontology; confirm that the merged parent has its expected
 label and hierarchy. A legacy `purl.obolibrary.org/obo/METPO_` stub is not the
 same parent, even when ELK exits successfully (#1658).
+The ROBOT wrapper reports physical OWL line counts, not RDF triple counts.
+Use an RDF parser to measure graph cardinality before reporting triples (#1722).
 
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before

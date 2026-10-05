@@ -7,7 +7,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000625
 synonyms:
 - synonym_text: pedogamy
   synonym_type: EXACT_SYNONYM
@@ -62,11 +62,13 @@ discussions:
     concerns paired cells without nuclear exchange. Automixis is broader in Kaczmarska
     et al. section 5.2 and is not an exact synonym. Bagmet et al. calls automixis
     homothallic, whereas our existing homothallism traitmech:000609 is fungal-scoped;
-    this usage does not make that record a parent. Use phenotype METPO:1000059 pending
-    a suitable reproductive-phenotype parent. Do not infer species-level disjointness
-    or universal homozygosity, recombination rate, seasonal trigger or inability to
-    outcross. Broader non-diatom usage and external equivalences need primary source
-    review before expanding this operational scope.
+    this usage does not make that record a parent. The parent gap is resolved by automixis
+    traitmech:000625, whose single-meiotic-cell nuclear origin includes this operational
+    scope. The broader terminology and mapping questions keep this discussion OPEN.
+    Do not infer species-level disjointness or universal homozygosity, recombination
+    rate, seasonal trigger or inability to outcross. Broader non-diatom usage and
+    external equivalences need primary source review before expanding this operational
+    scope.
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: paedogamy-mechanism-and-coverage
@@ -91,4 +93,12 @@ curation_history:
     found no exact record or collision. Reserved METPO:1057700 in v500. Distinguished
     gamete fusion from autogamy and broader automixis; deferred molecular graphs and
     mappings.
+  llm_assisted: true
+- timestamp: '2026-10-05T18:20:28Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented below automixis traitmech:000625 and documented the resolved
+    parent gap while retaining other open terminology and mapping questions. Preserved
+    definition, evidence, examples and prior history. v501 carries the existing proposed
+    METPO ID with this hierarchy; earlier standalone templates remain historical.
   llm_assisted: true

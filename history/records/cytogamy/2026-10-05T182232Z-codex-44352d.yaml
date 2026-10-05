@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cytogamy.yaml
+  slug: cytogamy
+session:
+  id: 2026-10-05T182232Z-codex-44352d
+  timestamp: '2026-10-05T18:22:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve automixis parent gap
+  details: Reparented this operational same-cell-origin reproductive phenotype below traitmech:000625
+    automixis. Preserved definitions, evidence, examples and prior history. Updated the multipurpose
+    discussion to distinguish the resolved parent gap from still-open terminology and mapping
+    questions. The coupled v501 template preserves the existing child METPO ID while supplying
+    the actual new parent.
