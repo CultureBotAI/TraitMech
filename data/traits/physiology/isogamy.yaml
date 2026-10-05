@@ -1,0 +1,81 @@
+identifier: traitmech:000619
+label: isogamy
+definition: A sexual-reproduction phenotype in which the fusing gametes are similar
+  in size.
+definition_source: DOI:10.1038/s42003-022-04275-y
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1038/s42003-022-04275-y
+  snippet: The gametes of isogamous species are of similar size and appearance.
+  notes: Innami et al. (2022), PMID:36473948, PMC9726906. Exact Introduction Sec1
+    sentence checked against raw Europe PMC XML and publisher HTML; not an abstract
+    or web-summary quote. The paper identifies Chlamydomonas reinhardtii as isogamous
+    while testing mating-structure positioning, not the maintenance of equal gamete
+    size. Similar appearance does not exclude mating-type-specific structural or functional
+    differences. Main text and captions were read; actual Figure 4 and Supplementary
+    Table 2 were visually inspected. The latter lists nit1 nit2 in CC-125 and nit1
+    nit2 agg1 in CC-124 despite their wild-type names. CC-3712 has a deletion including
+    MID and lacks FUS1; CC-3947 carries a MID transgene. These are qualified laboratory
+    observations, not unqualified natural exemplars. Other actual figures, supplementary
+    figures and the source-data workbook remain uninspected. Phototactic fitness explanations
+    in Discussion remain hypotheses, not measured consequences of isogamy.
+- reference: DOI:10.1111/evo.13427
+  snippet: we explored size-speed distributions in vegetative and gamete cells of
+    10 cell lines, and clonal data from within two cell lines.
+  notes: Seed and Tomkins (2018), PMID:29345308. Exact scientific-abstract clause
+    from raw Europe PMC metadata; the author's institutional repository abstract corroborates
+    the content. Its preceding clause identifies C. reinhardtii as isogamous. This
+    independently supports experimental use of an isogamous microalga, not a second
+    direct test of the definition's size-symmetry criterion. The two cell types are
+    vegetative cells and gametes, not plus and minus gametes. Positive size-speed
+    relationships and artificial speed selection do not establish a universal size
+    threshold, identical gamete behaviour, or an evolutionary cause of isogamy. Full
+    text, figures, supplements and strain provenance remain uninspected; the linked
+    author manuscript returned HTTP 403.
+discussions:
+- discussion_id: isogamy-scope-and-hierarchy
+  prompt: Keep gamete-size similarity distinct from mating-type identity.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This reproductive phenotype compares gametes participating in sexual
+    fusion, not arbitrary equal-sized cells or vegetative-versus-gamete measurements.
+    Similar size is not exact equality and does not imply identical structure, behaviour,
+    recognition machinery or organelle inheritance. No numerical boundary with slight
+    anisogamy is imposed. The fungal compatibility-locus systems traitmech:000615
+    through traitmech:000618 and same-mating-type reproduction traitmech:000613 describe
+    different axes; isogamy does not mean one mating type. Use released phenotype
+    METPO:1000059 in record and proposal pending a narrower reproductive-phenotype
+    hierarchy. PHYSIOLOGY is a filesystem category. Resolve exact lexical and external
+    equivalences before adding synonyms or xrefs; no disjointness is asserted.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: isogamy-examples-and-mechanism
+  prompt: Resolve natural strain provenance and mechanisms before extension.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The cited microalgal studies justify the trait, but collection provenance
+    and unperturbed gamete measurements should be checked before adding a natural
+    canonical example. A wild-type label alone does not establish that a reference
+    strain lacks mutations. Do not turn MID-dependent mating-structure positioning
+    into a demonstrated cause of gamete-size similarity. Resolve native protein accessions
+    and experimentally tested size-control dependencies before a causal graph; no
+    NONMECHANISTIC graph bypasses grounding. Read the remaining source material before
+    quantitative or evolutionary extensions. Keep full-text quote checks distinct
+    from abstract-resolver verdicts.
+  posed_by: codex
+  posed_date: '2026-10-05'
+curation_history:
+- timestamp: '2026-10-05T11:50:56Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added isogamy with two primary DOI-backed sources and exact full-text and
+    scientific-abstract snippets. Kept gamete-size similarity distinct from structural
+    symmetry, mating-type identity and sequence features. Ignored-and-hidden novelty
+    and allocation searches found no exact record or collision. Reserved METPO:1057300
+    in v496 under phenotype. Deferred natural canonical taxa, lexical mappings and
+    causal graphs, with strain mutations and source-access limits explicit.
+  llm_assisted: true
