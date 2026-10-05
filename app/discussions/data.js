@@ -9395,6 +9395,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-xref-gap"
  },
  {
+  "discussion_id": "bipolar-mating-scope-and-hierarchy",
+  "prompt": "Keep genetic compatibility distinct from locus inventory and partner dependence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bipolar mating system",
+  "source_id": "traitmech:000616",
+  "source_file": "bipolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "A single segregating compatibility factor need not be one gene, exactly two specificities across a species, or fused pheromone/receptor and homeodomain loci. Bakkeren describes recognition in heterothallic basidiomycetes, but its examples do not establish universal separate-partner dependence under the organism-level definition of traitmech:000610. The functional compatibility axis differs from self-fertility and from tetrapolar mating (traitmech:000615), which requires differences at two independently segregating factors. Use released phenotype METPO:1000059 in record and proposal; do not assert disjointness with homothallism, universal self-sterility or a sufficient guarantee of fertility. Resolve unifactorial terminology and external equivalences before adding synonyms or xrefs. PHYSIOLOGY is a filesystem category, not a narrower ontology parent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bipolar_mating_system.html#bipolar-mating-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "bipolar-mating-mechanism-and-examples",
+  "prompt": "Resolve native mechanisms and taxon authority before adding graphs or examples.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bipolar mating system",
+  "source_id": "traitmech:000616",
+  "source_file": "bipolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread source sections and inspect actual figures and supplements before extending mechanistic claims. Loss of mating-type specificity is not absence of receptor genes or loss of every cellular function. Keep native compatibility assays, genetic segregation, heterologous responses and completed fertile reproduction distinct. Resolve NCBI taxon authority and strain scope before canonical examples, and native protein accessions plus tested dependencies before causal edges. No NONMECHANISTIC graph bypasses grounding. Manual full-text checks do not replace the abstract resolver's actual verdict.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bipolar_mating_system.html#bipolar-mating-mechanism-and-examples"
+ },
+ {
   "discussion_id": "carboxylesterase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for carboxylesterase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10994,9 +11028,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 520,
+ "total_discussions": 522,
  "total_knowledge_gaps": 365,
- "total_source_entries": 481,
+ "total_source_entries": 482,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

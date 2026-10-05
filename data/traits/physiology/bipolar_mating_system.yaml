@@ -1,0 +1,90 @@
+identifier: traitmech:000616
+label: bipolar mating system
+definition: A fungal mating phenotype in which compatibility between partners is governed
+  by a single segregating mating-type factor.
+definition_source: DOI:10.1073/pnas.91.15.7085
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1073/pnas.91.15.7085
+  snippet: A bipolar system is defined by a single genetic locus (MAT) that can have
+    two or multiple alleles.
+  notes: Bakkeren and Kronstad (1994), PMID:7913746, PMC44343. Exact scientific-abstract
+    sentence directly retrieved from Europe PMC core metadata. The abstract reports
+    cloning of Ustilago hordei a1 and physical linkage of a and b into a complex MAT
+    region, contrasted with genetically unlinked loci in U. maydis. The compatibility
+    factor is not necessarily one gene. This supports definition and a reported linkage
+    architecture, not a fresh verification of native crossing assays. Full text, figures,
+    methods, supplements and natural strain provenance remain uninspected; no canonical
+    strain is inferred.
+- reference: DOI:10.1534/genetics.105.051128
+  snippet: All of the 24 collections displayed a bipolar mating system with only two
+    mating types among all progeny of a collection.
+  notes: 'James et al. (2006), PMID:16461425, PMC1456265. Exact sentence in the first
+    Results subsection on p. 1881, visually checked in the published PDF at https://public.websites.umich.edu/~mycology/resources/Publications/james2006.genetics.pdf;
+    not an abstract quote. Native Coprinellus disseminatus single-spore crosses support
+    the compatibility phenotype. Two types per collection does not mean only two across
+    the species. Methods score clamps and dikaryotization, not automatically completed
+    fertile sex; poor-mating progeny were excluded when choosing population testers.
+    Table 3 shows segregation in 13 TJ00/38 progeny: MIP tracks mating type, whereas
+    CDSTE3.1-.3 do not. Its plus/minus states are PCR-RFLP genotypes, not gene presence
+    or absence; CDSTE3.4 lacks segregation data. The abstract reports heterologous
+    sexual responses, not loss of all pheromone-receptor function. PDF pp. 1877-1882
+    and actual Tables 1-3 were read; pp. 1883-1884 were text-extracted only. Actual
+    figures, later Results/Discussion and supplements remain uninspected. Natural
+    North Carolina fruit-body provenance is described in Methods, but active taxon
+    authority and the intersterile Japanese group remain unresolved; no canonical
+    taxon assertion is made.'
+discussions:
+- discussion_id: bipolar-mating-scope-and-hierarchy
+  prompt: Keep genetic compatibility distinct from locus inventory and partner dependence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A single segregating compatibility factor need not be one gene, exactly
+    two specificities across a species, or fused pheromone/receptor and homeodomain
+    loci. Bakkeren describes recognition in heterothallic basidiomycetes, but its
+    examples do not establish universal separate-partner dependence under the organism-level
+    definition of traitmech:000610. The functional compatibility axis differs from
+    self-fertility and from tetrapolar mating (traitmech:000615), which requires differences
+    at two independently segregating factors. Use released phenotype METPO:1000059
+    in record and proposal; do not assert disjointness with homothallism, universal
+    self-sterility or a sufficient guarantee of fertility. Resolve unifactorial terminology
+    and external equivalences before adding synonyms or xrefs. PHYSIOLOGY is a filesystem
+    category, not a narrower ontology parent.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: bipolar-mating-mechanism-and-examples
+  prompt: Resolve native mechanisms and taxon authority before adding graphs or examples.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Complete unread source sections and inspect actual figures and supplements
+    before extending mechanistic claims. Loss of mating-type specificity is not absence
+    of receptor genes or loss of every cellular function. Keep native compatibility
+    assays, genetic segregation, heterologous responses and completed fertile reproduction
+    distinct. Resolve NCBI taxon authority and strain scope before canonical examples,
+    and native protein accessions plus tested dependencies before causal edges. No
+    NONMECHANISTIC graph bypasses grounding. Manual full-text checks do not replace
+    the abstract resolver's actual verdict.
+  posed_by: codex
+  posed_date: '2026-10-05'
+curation_history:
+- timestamp: '2026-10-05T08:34:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added bipolar mating system with two primary DOI-backed sources and verbatim
+    snippets. Kept single-factor compatibility distinct from gene inventory, globally
+    two mating types, one molecular architecture and partner dependence. Ignored-and-hidden
+    novelty and allocation searches found no exact record or ID collision. Reserved
+    METPO:1057000 in v493 under released phenotype. Deferred canonical taxon assertions,
+    lexical mappings, native protein graphs and explicitly unread source material.
+  llm_assisted: true
+- timestamp: '2026-10-05T08:39:00Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_LOCATOR
+  changes: 'Corrected the James p. 1881 locator: the verbatim quote is in the first
+    Results subsection, not its first sentence (#1706). The quotation and biological
+    interpretation are unchanged.'
+  llm_assisted: true
