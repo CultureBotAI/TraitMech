@@ -130,5 +130,9 @@ second primary record.
 
 ## Change Log
 
+- v501 follow-up, 2026-10-05: the coupled v501 template supersedes this
+  standalone phenotype-parent assertion with the new automixis parent;
+  autogamy's definition and ID are unchanged.
+
 - v498, 2026-10-05: propose autogamy with three cited snippets, a qualified
   natural example and explicit assay, taxonomy and genetic-outcome limits.

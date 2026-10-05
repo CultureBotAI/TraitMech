@@ -103,7 +103,9 @@ just qc
 ```
 
 Both proposal verifiers and ROBOT/ELK checks passed. v500 emitted 23,323
-merged and 23,327 reasoned triples; v498 emitted 23,322 and 23,326. Structured
+merged and 23,327 reasoned OWL lines; v498 emitted 23,322 and 23,326 lines.
+Direct RDF parsing gives 12,629/12,633 triples for v500 and 12,628/12,632
+for v498, respectively. This corrects the line/triple unit error in #1722. Structured
 inspection confirmed matching definitions, the exact pedogamy synonym, and
 labeled w3id phenotype-to-quality ancestry, without legacy METPO parent stubs.
 The live taxonomy audit resolved 717 examples across 532 records with zero
@@ -139,6 +141,10 @@ artifacts and append-only history, and regenerate products without introducing
 a second primary record.
 
 ## Change Log
+
+- v501 follow-up, 2026-10-05: the coupled v501 template supersedes this
+  standalone phenotype-parent assertion with the new automixis parent;
+  paedogamy's definition and ID are unchanged. Correct ROBOT count units (#1722).
 
 - v500, 2026-10-05: propose paedogamy with cited terminology, qualified primary
   observations and a natural-isolate example; repair autogamy boundary #1719

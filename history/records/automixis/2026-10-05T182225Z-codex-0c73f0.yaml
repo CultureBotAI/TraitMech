@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/automixis.yaml
+  slug: automixis
+session:
+  id: 2026-10-05T182225Z-codex-0c73f0
+  timestamp: '2026-10-05T18:22:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add broad automixis reproductive phenotype
+  details: Added traitmech:000625 with Mogie 1986 terminology and Papaioannou et al. 2021
+    yeast evidence, two directly checked snippets, qualified NBRC 1721 strain-family provenance
+    and METPO:1057800 in v501. Ignored-and-hidden novelty and allocation searches found no
+    exact record or collision. Fusion and non-fusion routes are included without universal
+    homozygosity or a molecular graph.

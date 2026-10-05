@@ -7,7 +7,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000625
 evidence:
 - reference: DOI:10.1017/S0016672300010740
   snippet: Cytogamy is a process of internal self-fertilization in animals which appear
@@ -59,9 +59,10 @@ discussions:
     a child or exact synonym of the unpaired class. This is not all selfing or a literal
     mating locus. No universal hyperosmotic trigger, whole-genome homozygosity, nuclear
     count or inability to outcross is imposed. Do not infer species-level disjointness
-    between reproductive modes. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype
-    parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and
-    synonym scope before adding mappings.
+    between reproductive modes. The parent gap is resolved by automixis traitmech:000625,
+    whose single-meiotic-cell nuclear origin includes this operational scope. The
+    broader terminology and mapping questions keep this discussion OPEN. Verify external
+    equivalences and synonym scope before adding mappings.
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: cytogamy-mechanism-and-provenance
@@ -96,4 +97,12 @@ curation_history:
     exchange with the partner, excluding one-way transfer as well. Used an individual
     paired-cell formulation without requiring the same outcome in both partners. Preserved
     all evidence, source qualifiers and the phenotype parent.'
+  llm_assisted: true
+- timestamp: '2026-10-05T18:20:28Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented below automixis traitmech:000625 and documented the resolved
+    parent gap while retaining other open terminology and mapping questions. Preserved
+    definition, evidence, examples and prior history. v501 carries the existing proposed
+    METPO ID with this hierarchy; earlier standalone templates remain historical.
   llm_assisted: true
