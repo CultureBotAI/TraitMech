@@ -10789,6 +10789,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/sos_response.html#sos-response-xref-gap"
  },
  {
+  "discussion_id": "tetrapolar-mating-scope-and-hierarchy",
+  "prompt": "Keep mating compatibility separate from partner dependence and MAT inventory.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tetrapolar mating system",
+  "source_id": "traitmech:000615",
+  "source_file": "tetrapolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "This is a functional compatibility phenotype, not possession of two loci or exactly four mating types throughout a species. Factors can be multiallelic; different specificities are necessary, not a guarantee of fertile progeny in every cross. Findley describes the observed C. amylolentus cycle as heterothallic, but that example does not make the broader compatibility axis equivalent to obligatory separate-partner dependence in traitmech:000610. The latter already separates nuclear recognition from organism-level self-fertility. Use released phenotype METPO:1000059 in both record and proposal rather than infer universal self-sterility. Do not assert disjointness with homothallism, fixed segregation ratios, universal A/B naming or identical recognition architectures. Resolve bifactorial terminology and external mappings before adding synonyms or xrefs. PHYSIOLOGY is a filesystem category, not a narrower ontology parent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/tetrapolar_mating_system.html#tetrapolar-mating-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "tetrapolar-mating-mechanism-and-readouts",
+  "prompt": "Resolve native mechanisms and unread experiments before extending the graph.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tetrapolar mating system",
+  "source_id": "traitmech:000615",
+  "source_file": "tetrapolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "Complete the unread Maia full text and Findley tables and supplements before finer mechanistic or strain claims. Distinguish MAT-locus separation, genetic segregation, compatibility, filamentation and fertile sexual progeny. An unsuccessful cross alone does not establish trait absence; source-specific sterility can be relative to particular partners. Resolve native protein accessions and experimentally tested dependencies before causal edges. No NONMECHANISTIC graph is used to bypass protein grounding. Manual full-text matches do not replace the abstract resolver's actual verdict.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/tetrapolar_mating_system.html#tetrapolar-mating-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "thermotaxis-context-and-mapping-boundaries",
   "prompt": "Resolve assay-dependent response inversion without imposing a universal temperature threshold.",
   "kind": "KNOWLEDGE_GAP",
@@ -10960,9 +10994,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 518,
+ "total_discussions": 520,
  "total_knowledge_gaps": 365,
- "total_source_entries": 480,
+ "total_source_entries": 481,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
