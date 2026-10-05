@@ -60,7 +60,8 @@ def test_evidence_sections_and_experimental_limits():
     review, yamada, yun = record["evidence"]
     for e in record["evidence"]:
         assert 8 <= len(e["snippet"].split()) <= 25
-    for text in ["MATING TYPE SWITCHING (s3)", "not experimental", "not", "irreversible"]:
+    for text in ["MATING TYPE SWITCHING (s3)",
+                 "not experimental replication or an abstract quote", "irreversible"]:
         assert text in review["notes"]
     for text in ["scientific abstract", "engineered mutant", "not natural-isolate",
                  "exactly two mating types", "HTTP 500", "HTTP 403"]:
