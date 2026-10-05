@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/tetrapolar_mating_system.yaml
+  slug: tetrapolar_mating_system
+session:
+  id: 2026-10-05T071759Z-codex-17cd82
+  timestamp: '2026-10-05T07:17:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add tetrapolar mating system with functional evidence
+  details: Added traitmech:000615 with two primary DOI-backed snippets, a qualified natural
+    Cryptococcus amylolentus CBS6039 x CBS6273 example, current NCBI taxonomy, scope and mechanism
+    TODOs, and METPO proposal v492 reserving METPO:1056900. Distinguished mating compatibility
+    from sequence inventory, universal fertility and separate-partner dependence. Ignored-and-hidden
+    searches found no exact duplicate; source access and read limits are explicit.
