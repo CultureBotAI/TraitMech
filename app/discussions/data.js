@@ -9939,6 +9939,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/heterokaryon_incompatibility.html#heterokaryon-incompatibility-mechanism-provenance"
  },
  {
+  "discussion_id": "heterothallism-trait-scope",
+  "prompt": "Keep partner dependence distinct from sterility and nuclear recognition.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterothallism",
+  "source_id": "traitmech:000610",
+  "source_file": "heterothallism.yaml",
+  "attaches_to": [],
+  "rationale": "This is an organism-level reproductive phenotype, not a sequence feature or MAT-gene inventory. It requires a compatible partner, not exactly two mating types throughout fungi or compatibility with every other isolate. Self-sterility alone can also denote general infertility; resolve lexical scope before adding exact synonyms or external xrefs. Homothallism, heterokaryosis, ploidy, hyphal fusion and parasexuality are not is-a parents. Nuclear recognition within a self-fertile individual does not establish partner dependence at the organism level. PHYSIOLOGY is a filesystem category, not an ontology parent. Do not infer absence from an unsuccessful cross under one set of culture conditions.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heterothallism.html#heterothallism-trait-scope"
+ },
+ {
+  "discussion_id": "heterothallism-examples-and-mechanism",
+  "prompt": "Verify natural isolates and complete-cycle evidence before expanding the record.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterothallism",
+  "source_id": "traitmech:000610",
+  "source_file": "heterothallism.yaml",
+  "attaches_to": [],
+  "rationale": "Read the uninspected methods, figures and supplements and resolve natural strain provenance and active taxonomy before adding canonical examples. Separate completed meiosis and sexual progeny from attraction, hyphal fusion, fruiting-body initiation and MAT sequence content. Resolve native protein accessions and experimental dependencies before adding mechanistic edges; do not use a NONMECHANISTIC graph to bypass unresolved grounding. Preserve actual abstract-resolver verdicts separately from manual source-section checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heterothallism.html#heterothallism-examples-and-mechanism"
+ },
+ {
   "discussion_id": "histidine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for histidine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10790,9 +10824,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 508,
+ "total_discussions": 510,
  "total_knowledge_gaps": 365,
- "total_source_entries": 475,
+ "total_source_entries": 476,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

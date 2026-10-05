@@ -1,0 +1,90 @@
+identifier: traitmech:000610
+label: heterothallism
+definition: A fungal phenotype in which sexual reproduction requires a separate, compatible
+  mating partner.
+definition_source: DOI:10.1038/nature07528
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1038/nature07528
+  snippet: The species has a heterothallic breeding system; isolates of complementary
+    mating types are required for sex to occur.
+  notes: O'Gorman et al. (2009), PMID:19043401. Exact scientific-abstract sentence
+    retrieved from Europe PMC core metadata; the publisher abstract was also read.
+    Aspergillus fumigatus produced cleistothecia and ascospores, with recombination
+    between mating type and DNA fingerprint markers in progeny from an Irish environmental
+    subpopulation. This is observed sexual-cycle evidence, not an inference from MAT
+    genes alone. Full methods, figures, supplements and individual isolate provenance
+    remain uninspected; no canonical strain or universal compatibility is asserted.
+    The historical teleomorph name in this abstract is not used as a current taxonomy
+    mapping.
+- reference: DOI:10.1534/genetics.111.136358
+  snippet: Coexpression of pre-2 and ccg-4 in the mat A background leads to self-attraction
+    and development of barren perithecia without ascospores.
+  notes: Kim et al. (2012), PMID:22298702. Exact scientific-abstract sentence directly
+    retrieved from Europe PMC core metadata. Neurospora crassa experiments distinguish
+    receptor/pheromone identity from completion of sexual reproduction. The quoted
+    engineered coexpression phenotype is not self-fertility; attraction and fruiting-body
+    initiation alone are insufficient readouts. Forced heterokaryon experiments require
+    mating-type genes in different nuclei for meiosis and sexual sporulation in this
+    study, not a universal fungal architecture. Full text, figures, strain provenance
+    and supplements remain uninspected after PMC access challenges and a full-text
+    API error. This citation supports readout limits, not an independent natural canonical
+    example or a protein-resolved causal graph.
+- reference: DOI:10.1371/journal.pgen.1006981
+  snippet: Heterothallic progeny can mate only with homothallic strains, and progeny
+    also segregate 50% homothallic, 50% heterothallic.
+  notes: 'Yun et al. (2017), PMID:28892488. Exact sentence of scientific abstract
+    abstract1 in PMC5608430 full-text XML, distinct from the author summary. Chromocrea
+    spinulosa includes self-fertile and partner-dependent strains: self-sterile here
+    does not mean unable to reproduce sexually with a compatible partner. The stated
+    compatibility and segregation are source-specific, not requirements for all heterothallic
+    fungi. Strain/culture Methods and Conclusions were also read. Cs23 and Cs27 natural
+    provenance, most experiments, actual figures and supplements remain unverified.
+    Nuclear-level heterothallic recognition within a self-fertile organism is not
+    organism-level partner dependence. No canonical example is inferred from unstable
+    Cs27-derived MAT transformants or from reference-strain labels.'
+discussions:
+- discussion_id: heterothallism-trait-scope
+  prompt: Keep partner dependence distinct from sterility and nuclear recognition.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This is an organism-level reproductive phenotype, not a sequence feature
+    or MAT-gene inventory. It requires a compatible partner, not exactly two mating
+    types throughout fungi or compatibility with every other isolate. Self-sterility
+    alone can also denote general infertility; resolve lexical scope before adding
+    exact synonyms or external xrefs. Homothallism, heterokaryosis, ploidy, hyphal
+    fusion and parasexuality are not is-a parents. Nuclear recognition within a self-fertile
+    individual does not establish partner dependence at the organism level. PHYSIOLOGY
+    is a filesystem category, not an ontology parent. Do not infer absence from an
+    unsuccessful cross under one set of culture conditions.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: heterothallism-examples-and-mechanism
+  prompt: Verify natural isolates and complete-cycle evidence before expanding the
+    record.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Read the uninspected methods, figures and supplements and resolve natural
+    strain provenance and active taxonomy before adding canonical examples. Separate
+    completed meiosis and sexual progeny from attraction, hyphal fusion, fruiting-body
+    initiation and MAT sequence content. Resolve native protein accessions and experimental
+    dependencies before adding mechanistic edges; do not use a NONMECHANISTIC graph
+    to bypass unresolved grounding. Preserve actual abstract-resolver verdicts separately
+    from manual source-section checks.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-05T02:09:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added heterothallism with three primary DOI-backed sources and exact scientific-abstract
+    snippets. Separated partner dependence from general infertility, MAT content and
+    incomplete sexual readouts. Ignored-and-hidden novelty searches and structured
+    METPO review found no exact record. Reserved METPO:1056400 in v487 under released
+    phenotype. Deferred natural canonical examples, lexical mappings and protein-resolved
+    graphs.
+  llm_assisted: true

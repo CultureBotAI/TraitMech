@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: other
+  path: README.md
+  slug: heterothallism-readme-count
+session:
+  id: 2026-10-05T021625Z-codex-1c70fd
+  timestamp: '2026-10-05T02:16:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1697
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - documentation
+  summary: Reconcile README physiology prose count
+  details: Local focused validation caught the PROPOSED prose at 78 physiology records while
+    the post-addition corpus and statistics table have 79. Updated the prose to 79 without
+    changing trait data; retained the existing test_readme_proposed_prose_matches_the_trait_artifacts
+    regression test. This addresses review finding issue 1697.
