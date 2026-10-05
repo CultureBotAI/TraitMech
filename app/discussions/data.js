@@ -10568,6 +10568,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/positive_autotropism.html#positive-autotropism-provenance-and-mechanism"
  },
  {
+  "discussion_id": "primary-homothallism-scope-and-hierarchy",
+  "prompt": "Distinguish functional self-fertility from co-occurring MAT sequences.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "primary homothallism",
+  "source_id": "traitmech:000614",
+  "source_file": "primary_homothallism.yaml",
+  "attaches_to": [],
+  "rationale": "This narrows operational homothallism (traitmech:000609) and agrees with the older evidence note's primary-homothallism umbrella placement. Like pseudohomothallism (traitmech:000612), it includes single-founder self-fertility, but combines determinants within one genome rather than packaging compatible nuclei in a spore. Mating-type switching (traitmech:000611) and same-type outcrossing within unisexual reproduction (traitmech:000613) do not alone imply that operational phenotype; their broader phenotype parents are not inconsistent with this narrower placement. MAT inventory alone is insufficient, as the parent's Chromocrea evidence illustrates. Do not require linked loci, one domain architecture, every MAT gene's indispensability, fixed spore counts or absence of outcrossing. These capabilities are not asserted disjoint. Resolve true-homothallism terminology and external mappings before adding synonyms or xrefs. PHYSIOLOGY is a filesystem category; the standalone METPO proposal uses released phenotype METPO:1000059 pending acceptance of homothallism METPO:1056300, not an unlabeled placeholder parent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/primary_homothallism.html#primary-homothallism-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "primary-homothallism-mechanism-and-readouts",
+  "prompt": "Resolve taxon-specific interactions and native proteins before graphing.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "primary homothallism",
+  "source_id": "traitmech:000614",
+  "source_file": "primary_homothallism.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread experiments and supplements before extending mechanistic claims. Phaffia receptor compatibility follows deletion/complementation, not direct ligand-binding assays; HD heterodimerization remains tentative. Different draft scaffolds do not prove genetic unlinkage. Sordaria mutant noncomplementation does not distinguish failed fusion from a same-nucleus requirement. Separate MAT expression, sexual structures, viable spores and meiotic evidence. Preserve source strain/domain/panel discrepancies instead of silently harmonizing them. Resolve native protein accessions and dependencies before causal edges; do not use NONMECHANISTIC to bypass grounding. Manual full-text matches are not abstract-resolver VERIFIED verdicts.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/primary_homothallism.html#primary-homothallism-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10926,9 +10960,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 516,
+ "total_discussions": 518,
  "total_knowledge_gaps": 365,
- "total_source_entries": 479,
+ "total_source_entries": 480,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
