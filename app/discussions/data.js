@@ -9293,6 +9293,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-xref-gap"
  },
  {
+  "discussion_id": "anisogamy-scope-and-hierarchy",
+  "prompt": "Preserve broad size-dimorphism scope and distinguish motility conventions.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "anisogamy",
+  "source_id": "traitmech:000620",
+  "source_file": "anisogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Use anisogamy in the broad size-dimorphism sense, including oogamy, as explicitly stated by Lindsey et al. (2024). Nozaki et al. (2014) instead distinguish anisogamy with flagellated female gametes from oogamy in their four-type classification. This is a terminology difference, not evidence that the phenotypes are disjoint. Motility of both gametes and external fertilization describe the canonical example, not universal requirements. The definition compares gamete types, not incidental size variation within a type, vegetative-versus-gamete size, or mating compatibility. Isogamy traitmech:000619, unisexual reproduction traitmech:000613 and fungal mating systems traitmech:000615 through traitmech:000618 describe distinct scopes. No numerical threshold or organism-level disjointness is asserted. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype hierarchy; PHYSIOLOGY is a filesystem category. Verify any future oogamy child and lexical/external mappings before adding them. Kaczmarska et al. (2017), DOI:10.1371/journal.pone.0181413, also use physiological/behavioural anisogamy for approximately equal-sized gametes in diatoms. That usage is not equivalent to the size-based sense selected here: behavioural or physiological differences alone do not establish gamete-type size dimorphism. Do not map that usage as an exact synonym or infer organism-level disjointness; its relationship needs separate scope review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/anisogamy.html#anisogamy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "anisogamy-mechanism-and-provenance",
+  "prompt": "Resolve size-control mechanisms and strain discrepancies before extension.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "anisogamy",
+  "source_id": "traitmech:000620",
+  "source_file": "anisogamy.yaml",
+  "attaches_to": [],
+  "rationale": "The observed gamete phenotype is not a literal MID locus, a sequence profile, an expanded mating-type region, or an expression signature. Comparative genomic associations and the proposed evolutionary role of MID do not justify causal edges for size dimorphism. Resolve native protein accessions and perturbation evidence before a causal graph; no NONMECHANISTIC graph bypasses this gap. Keep the 2018 Results/Methods strain mismatch unresolved until primary metadata reconciles it. Collection date conflicts do not invalidate the directly observed 2014 phenotype, but constrain strain-history claims. A collection's blank mutation field is not proof of an unmutated genome. Read remaining source material before quantitative or evolutionary extensions; preserve actual abstract-resolver verdicts separately from manual full-text checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/anisogamy.html#anisogamy-mechanism-and-provenance"
+ },
+ {
   "discussion_id": "arginine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for arginine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11130,9 +11164,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 528,
+ "total_discussions": 530,
  "total_knowledge_gaps": 365,
- "total_source_entries": 485,
+ "total_source_entries": 486,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
