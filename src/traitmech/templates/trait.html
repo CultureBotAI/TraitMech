@@ -87,6 +87,22 @@
         </ul>
       </div>
       {% endif %}
+{% if graph.pathway_context_rows %}
+      <div class="pathway-context">
+        <h3>Pathway context</h3>
+        <p class="meta">Organism-scoped pathway examples for individual graph nodes.</p>
+        <ul>
+          {% for link in graph.pathway_context_rows %}
+          <li><strong>{{ link.node_label }}</strong>:
+            <a href="{{ link.url }}" rel="nofollow noreferrer"><code>{{ link.identifier }}</code></a>
+            <span class="meta">{{ link.relation }}</span>
+            <p>{{ link.basis }}</p>
+            <small>PathwayMech source version <code>{{ link.source_version }}</code></small>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+{% endif %}
 {% if graph.protein_example_rows %}
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>

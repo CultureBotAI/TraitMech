@@ -36,6 +36,8 @@ policy](docs/GROUNDING_POLICY.md) before changing curated data. Records listed
 in [DO_NOT_WORK.md](DO_NOT_WORK.md) are excluded from agentic curation; do not
 edit them unless a user removes the entry.
 
+For node-level PathwayMech context, follow [the pathway link contract](docs/PATHWAY_LINKS.md).
+
 ## Safe mutation contract
 
 - Inspect first. Mutation commands must default to a dry run or require an

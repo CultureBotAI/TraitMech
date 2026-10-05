@@ -95,18 +95,61 @@ causal_graphs:
     node_type: PATHWAY
     description: Embden-Meyerhof glycolysis and pentose phosphate pathway catabolizing
       sugars in central carbon metabolism.
+    related_records:
+    - corpus: PathwayMech
+      identifier: gomodel:YeastPathways_GLYCOLYSIS
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: glycolysis I (from glucose 6-phosphate) in Saccharomyces
+        cerevisiae S288C (NCBITaxon:559292). This record covers only the glycolysis
+        part of the composite node, beginning at glucose 6-phosphate. No exact equivalence
+        or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
+    - corpus: PathwayMech
+      identifier: MetaCyc:OXIDATIVEPENT-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: pentose phosphate pathway (oxidative branch) I
+        in Escherichia coli (NCBITaxon:562). This record covers the oxidative pentose
+        phosphate branch of the composite node. No exact equivalence or transfer of
+        organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
+    - corpus: PathwayMech
+      identifier: MetaCyc:NONOXIPENT-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: pentose phosphate pathway (non-oxidative branch)
+        I in Escherichia coli (NCBITaxon:562). This record covers the non-oxidative
+        pentose phosphate branch of the composite node. No exact equivalence or transfer
+        of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: tca_cycle
     label: TCA cycle
     node_type: PATHWAY
     description: Tricarboxylic acid cycle oxidizing imported organic carbon and generating
       biosynthetic precursors.
     grounding: GO:0006099
+    related_records:
+    - corpus: PathwayMech
+      identifier: WikiPathways:WP296
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: TCA cycle - detailed in Saccharomyces cerevisiae
+        (NCBITaxon:4932). The shared route is the oxidative tricarboxylic acid cycle;
+        the linked yeast model is an example, not a universal microbial enzyme assignment.
+        No exact equivalence or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: glyoxylate_cycle
     label: glyoxylate cycle
     node_type: PATHWAY
     description: Anaplerotic cycle routing acetyl-CoA, bypassing CO2-releasing TCA
       steps to enhance carbon-to-biomass conversion.
     grounding: GO:0006097
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:GLYOXYLATE-BYPASS
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: glyoxylate cycle in Mycobacterium tuberculosis
+        (NCBITaxon:1773). The shared route bypasses the decarboxylating TCA steps
+        through isocitrate lyase and malate synthase. No exact equivalence or transfer
+        of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: aerobic_respiration
     label: aerobic respiration
     node_type: BIOLOGICAL_PROCESS
@@ -370,4 +413,10 @@ curation_history:
     with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase
     (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical
     example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true
