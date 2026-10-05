@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/heterokaryosis.yaml
+  slug: heterokaryosis
+session:
+  id: 2026-10-05T003647Z-codex-c9cbd7
+  timestamp: '2026-10-05T00:36:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1693
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct heterokaryosis history actor attribution
+  details: 'Correction to history/records/heterokaryosis/2026-10-05T003239Z-claude-code-d98b97.yaml:
+    the actor name should be codex, not claude-code. The creation command omitted --actor-name
+    and inherited the scaffolder default. Its recorded model gpt-5 and agent_tool codex remain
+    correct. This append-only correction changes no TraitRecord, evidence or proposal content
+    and leaves the original history record untouched. The add-trait skill already documents
+    explicit actor selection; no skill change is needed.'
