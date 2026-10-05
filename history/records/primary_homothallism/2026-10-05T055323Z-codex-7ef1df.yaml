@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/primary_homothallism.yaml
+  slug: primary_homothallism
+session:
+  id: 2026-10-05T055323Z-codex-7ef1df
+  timestamp: '2026-10-05T05:53:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed primary homothallism
+  details: Created traitmech:000614 with four exact DOI-backed snippets and qualified natural
+    CBS 6938. Checked primary source sections, actual Phaffia Figures 1/3/4 and Table 1/S3,
+    Sordaria Figures 1/2, strain provenance and NCBI taxonomy. Distinguished self-fertility
+    from MAT inventory, retained source strain/domain/panel inconsistencies, and reserved
+    METPO:1056800 in v491. Local homothallism parent and released proposal phenotype parent
+    are intentionally distinguished. Added guarded writer/tests; deferred lexical mappings
+    and protein graphs. Novelty and identifier searches included ignored and hidden files.
