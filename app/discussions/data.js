@@ -4732,6 +4732,40 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hesat_system.html#hesat-mechanism-gap"
  },
  {
+  "discussion_id": "heterokaryosis-trait-scope",
+  "prompt": "Keep nuclear coexistence distinct from copy number and reproductive processes.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterokaryosis",
+  "source_id": "traitmech:000608",
+  "source_file": "heterokaryosis.yaml",
+  "attaches_to": [],
+  "rationale": "This is a reusable genomic phenotype, not a locus or sequence feature. GENOMICS is a filesystem category, not an ontology parent. Genetically distinct nuclei sharing cytoplasm differ from genome-copy number, multinucleation alone, hyphal fusion, postfusion incompatibility and a complete parasexual cycle. Those traits are not is-a parents. Do not require exactly two nuclei, diploidy, a fixed nuclear ratio, universal self-fertility or fungicide resistance. Heterokaryon names a structure, not an automatically exact phenotype synonym. The fungal scope reflects the cited studies; broader terminology and external mappings require authority-level interpretation before adding synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/heterokaryosis.html#heterokaryosis-trait-scope"
+ },
+ {
+  "discussion_id": "heterokaryosis-mechanism-and-readouts",
+  "prompt": "Resolve molecular mechanisms and nuclear identity with independent readouts.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heterokaryosis",
+  "source_id": "traitmech:000608",
+  "source_file": "heterokaryosis.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread figures and supplements before extending quantitative or causal claims. Fluorescent protein localization, DNA genotype and RNA expression are different readouts; label exchange must not be interpreted as nuclear fusion. Negative allele detection does not by itself prove biological absence. Resolve native protein identities and experimentally supported edges before adding a mechanistic graph; do not use NONMECHANISTIC to bypass missing grounding. Keep the 2014 natural P581 example separate from reconstituted 2022 cultures and engineered 2018 imaging strains. Verify current taxonomic placement and strain provenance before adding further taxa.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/heterokaryosis.html#heterokaryosis-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "hma-defensefinder-rule-and-component-gap",
   "prompt": "Resolve HmaB/HmaC contributions, complete HmaABC system requirements, hma-region accessory systems, sensitive-phage breadth, native host breadth, and DefenseFinder rule-level criteria before minting Hma mechanism or component children.",
   "kind": "KNOWLEDGE_GAP",
@@ -10722,9 +10756,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 504,
+ "total_discussions": 506,
  "total_knowledge_gaps": 365,
- "total_source_entries": 473,
+ "total_source_entries": 474,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
