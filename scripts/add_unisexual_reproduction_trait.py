@@ -176,7 +176,7 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def build_record(*, include_clarification: bool = True) -> dict:
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -193,6 +193,31 @@ def build_record() -> dict:
         ),
         llm_assisted=True, timestamp="2026-10-05T04:48:00Z",
     )
+    if include_clarification:
+        record["discussions"][0]["rationale"] += (
+            " The existing homothallism evidence note, citing "
+            "DOI:10.5598/imafungus.2015.06.01.13, groups unisexual "
+            "reproduction within a homothallism umbrella. That wording "
+            "conflicts with interpreting the current single-isolate "
+            "self-fertility definition as a universal superclass here. "
+            "Our scope decision interprets the umbrella as including "
+            "unisexual selfing, not as evidence that every same-type "
+            "outcrossing partner is independently self-fertile. Preserve "
+            "the older source attribution and retain phenotype while "
+            "the operational and umbrella scopes await curator "
+            "reconciliation; issue #1703 records this explicit distinction."
+        )
+        record_curation_event(
+            record, curator="codex", action="CLARIFIED_HIERARCHY_SCOPE",
+            changes=(
+                "Addressed adversarial review issue #1703 by explicitly "
+                "naming the existing homothallism umbrella wording and "
+                "distinguishing it from the operational single-isolate "
+                "self-fertility definition. Retained phenotype parent, "
+                "source attribution and open curator reconciliation."
+            ),
+            llm_assisted=True, timestamp="2026-10-05T05:04:04Z",
+        )
     return record
 
 
@@ -226,8 +251,11 @@ def main() -> int:
     record = build_record()
     proposal = proposal_tsv(record)
     proposal_path = PROPOSAL / "metpo_proposal_classes_robot.tsv"
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
-        raise SystemExit("Existing target differs from this writer")
+    if TARGET.exists():
+        current = yaml.safe_load(TARGET.read_text())
+        # Accept only the exact reviewed initial version or the clarified replay.
+        if current not in (record, build_record(include_clarification=False)):
+            raise SystemExit("Existing target differs from this writer")
     if proposal_path.exists() and proposal_path.read_text() != proposal:
         raise SystemExit("Existing proposal differs from this writer")
     with tempfile.TemporaryDirectory() as tmp:

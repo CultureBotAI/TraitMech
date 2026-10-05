@@ -71,7 +71,14 @@ discussions:
     reproductive completion. Do not require universal meiosis, spores, cell fusion,
     clonality or absence of outcrossing. Resolve context-dependent same-sex mating
     terminology and external phenotype/process mappings before adding synonyms or
-    xrefs.'
+    xrefs. The existing homothallism evidence note, citing DOI:10.5598/imafungus.2015.06.01.13,
+    groups unisexual reproduction within a homothallism umbrella. That wording conflicts
+    with interpreting the current single-isolate self-fertility definition as a universal
+    superclass here. Our scope decision interprets the umbrella as including unisexual
+    selfing, not as evidence that every same-type outcrossing partner is independently
+    self-fertile. Preserve the older source attribution and retain phenotype while
+    the operational and umbrella scopes await curator reconciliation; issue #1703
+    records this explicit distinction.'
   posed_by: codex
   posed_date: '2026-10-04'
 - discussion_id: unisexual-reproduction-mechanism-and-examples
@@ -101,4 +108,12 @@ curation_history:
     METPO review found no exact record. Reserved METPO:1056700 in v490 under released
     phenotype. Deferred natural canonical examples, lexical mappings and protein-resolved
     causal graphs.
+  llm_assisted: true
+- timestamp: '2026-10-05T05:04:04Z'
+  curator: codex
+  action: CLARIFIED_HIERARCHY_SCOPE
+  changes: 'Addressed adversarial review issue #1703 by explicitly naming the existing
+    homothallism umbrella wording and distinguishing it from the operational single-isolate
+    self-fertility definition. Retained phenotype parent, source attribution and open
+    curator reconciliation.'
   llm_assisted: true

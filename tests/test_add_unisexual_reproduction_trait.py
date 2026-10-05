@@ -41,12 +41,16 @@ def test_scope_and_identity():
         "genetic contribution from only one mating type."
     )
     assert not any(k in record for k in ["synonyms", "xrefs", "causal_graphs", "canonical_examples"])
-    event, = record["curation_history"]
+    event, clarification = record["curation_history"]
     assert event["llm_assisted"] is True and event["curator"] == "codex"
+    assert clarification["action"] == "CLARIFIED_HIERARCHY_SCOPE"
+    assert "#1703" in clarification["changes"]
     scope, mechanism = record["discussions"]
     assert scope["status"] == mechanism["status"] == "OPEN"
     for text in ["not mean one strain", "not a subclass of parasexuality",
-                 "helper cells", "MAT sequence content", "absence of outcrossing"]:
+                 "helper cells", "MAT sequence content", "absence of outcrossing",
+                 "existing homothallism evidence note", "DOI:10.5598/imafungus.2015.06.01.13",
+                 "conflicts with interpreting", "await curator reconciliation"]:
         assert text in scope["rationale"]
     for text in ["laboratory-cross derivative", "different readouts", "natural strains",
                  "Manual full-text matching"]:
@@ -93,6 +97,20 @@ def test_dry_run_apply_and_replay(isolated, monkeypatch):
     applied = snapshots(isolated)
     assert run(monkeypatch, True) == 0
     assert snapshots(isolated) == applied
+
+
+def test_reviewed_initial_record_upgrades_with_append_only_history(isolated, monkeypatch):
+    initial = writer.build_record(include_clarification=False)
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshots(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshots(isolated) == before
+    assert run(monkeypatch, True) == 0
+    revised = yaml.safe_load(writer.TARGET.read_text())
+    assert revised == writer.build_record()
+    assert revised["curation_history"][:-1] == initial["curation_history"]
+    assert revised["discussions"][0]["rationale"].startswith(initial["discussions"][0]["rationale"])
+    assert revised["parent_traits"] == initial["parent_traits"]
 
 
 @pytest.mark.parametrize("target", ["record", "proposal"])

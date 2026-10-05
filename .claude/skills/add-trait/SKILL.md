@@ -229,6 +229,12 @@ RO, MICRO, PATO, NCBITaxon, InterPro, Pfam, NCBIfam, ComplexPortal, or UniProtKB
 accession has not been resolved at its issuing authority, leave it out and add
 a `CURATION_TODO` discussion describing what must be checked.
 
+When a parent decision conflicts with an existing source-attributed umbrella
+classification, name that statement and the scope mismatch in the new record's
+discussion and proposal. Distinguish operational definitions from broader
+terminology; preserve the source attribution and make unresolved hierarchy
+interpretations explicit rather than silently contradicting them (#1703).
+
 `xrefs` are emitted as `oboInOwl:hasDbXref`, so they cannot carry
 `skos:*Match` strength. Leave close, narrow, broad, medium-confidence, or
 otherwise scope-qualified mappings out of the TraitRecord xrefs; put them in

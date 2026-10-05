@@ -39,6 +39,16 @@ contributing genomes. MAT inventory or hyphal growth alone is insufficient.
 Do not require a single diploidization mechanism, universal meiosis or
 spores, obligate clonality, or absence of outcrossing.
 
+Review issue #1703 identified conflicting umbrella wording in the existing
+homothallism evidence note, attributed to `DOI:10.5598/imafungus.2015.06.01.13`.
+That source grouping is preserved, not silently rewritten. Our scope decision
+interprets the umbrella as including unisexual selfing; it does not establish
+that every same-type outcrossing partner is independently self-fertile. The
+current single-isolate operational definition and the broader umbrella use
+therefore need explicit curator reconciliation. The record names this
+disagreement and retains phenotype pending that review, rather than treating
+an umbrella statement as an unqualified superclass assertion.
+
 Context-dependent same-sex mating terminology needs lexical review before
 synonym assignment. No xrefs, property rows or SSSOM mappings are asserted.
 
@@ -120,3 +130,6 @@ a duplicate primary record.
 
 - v490, 2026-10-04: propose unisexual reproduction with four DOI-backed
   snippets, meiotic/parasexual scope and explicit example/mechanism limits.
+- 2026-10-04, #1703: explicitly reconcile existing umbrella terminology with
+  the operational parent decision; append clarification provenance without
+  rewriting the creation event or changing the parent.
