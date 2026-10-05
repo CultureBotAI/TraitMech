@@ -312,6 +312,16 @@ Access-limit notes do not convert a search result into a verified quote
 (#1678). Keep the actual resolver outcome rather than relabeling a manual
 search-text check as `VERIFIED`.
 
+Abstract APIs can return an editorial digest or author summary instead of the
+scientific abstract. Inspect section labels and content as well as XML
+`abstract-type` attributes; the attribute alone is not a reliable classifier.
+For example, Europe PMC's `abstractText` for PMID:35713948 returns the eLife
+digest while the full-text XML also contains a separate scientific abstract.
+A `VERIFIED` result proves a match to the resolver's returned text, not its
+section identity or independent experimental support. For a scientific-abstract
+or full-text quote, retrieve that section directly, identify it in `notes`, and
+retain the resolver's actual verdict separately from the manual source check.
+
 Do not add new-record exceptions to the frozen snippet baseline to pass QC.
 If a new evidence item creates a finding, resolve it with source-faithful
 evidence or leave the candidate in research until support is adequate; keep
@@ -636,8 +646,9 @@ git diff --cached --check
 ```
 
 Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<category>/<slug>.yaml`
-after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
-for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
+after adding a `snippet`. A `VERIFIED` row establishes a match to returned text;
+confirm its source section before describing it as a scientific-abstract quote.
+For `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
 directly and confirm the recorded text is still a contiguous, verbatim source
 span. An `UNRESOLVED` result can also reflect DOI query syntax rather than
 missing indexing: cross-check the exact DOI against the issuing record or

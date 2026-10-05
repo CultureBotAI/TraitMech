@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-abstract-sections
+session:
+  id: 2026-10-05T012556Z-codex-ed32e2
+  timestamp: '2026-10-05T01:25:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - guidance
+  summary: Distinguish scientific abstracts from resolver-served summaries
+  details: PMID:35713948 exposes an eLife digest through Europe PMC abstractText and a separate
+    scientific abstract in full-text XML. Updated add-trait to inspect section labels, content
+    and abstract-type jointly, retain actual verifier outcomes, and distinguish text matching
+    from scientific support. The 2015 homothallism review also shows why abstract-type alone
+    cannot classify editorial content.
