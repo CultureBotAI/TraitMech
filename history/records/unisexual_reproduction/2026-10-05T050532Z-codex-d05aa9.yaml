@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/unisexual_reproduction.yaml
+  slug: unisexual_reproduction
+session:
+  id: 2026-10-05T050532Z-codex-d05aa9
+  timestamp: '2026-10-05T05:05:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1703
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1702
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Clarify the homothallism umbrella conflict
+  details: 'Address review issue #1703 by explicitly naming the source-attributed umbrella
+    wording in the existing homothallism note and distinguishing it from the operational single-isolate
+    self-fertility definition. Preserve the original source attribution, phenotype parent,
+    initial curation event and creation history; the broader hierarchy interpretation remains
+    an explicit curator TODO rather than a silent superclass assertion.'

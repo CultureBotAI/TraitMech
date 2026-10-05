@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/unisexual_reproduction.yaml
+  slug: unisexual_reproduction
+session:
+  id: 2026-10-05T044954Z-codex-86f6d0
+  timestamp: '2026-10-05T04:49:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed unisexual reproduction
+  details: Added traitmech:000613 with four DOI-backed verbatim snippets, sexual or parasexual
+    scope restricted by genetic-contributor mating type, released phenotype parent, two explicit
+    curation TODOs and METPO v490 placeholder1056700. Direct scientific abstracts and selected
+    full-text experiments support the trait; natural canonical examples, synonyms, xrefs and
+    protein-resolved graphs remain deferred. Novelty and allocation searches included ignored
+    and hidden files.
