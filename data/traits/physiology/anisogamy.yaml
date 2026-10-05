@@ -82,13 +82,16 @@ discussions:
     systems traitmech:000615 through traitmech:000618 describe distinct scopes. No
     numerical threshold or organism-level disjointness is asserted. Use phenotype
     METPO:1000059 pending a narrower reproductive-phenotype hierarchy; PHYSIOLOGY
-    is a filesystem category. Verify any future oogamy child and lexical/external
-    mappings before adding them. Kaczmarska et al. (2017), DOI:10.1371/journal.pone.0181413,
-    also use physiological/behavioural anisogamy for approximately equal-sized gametes
-    in diatoms. That usage is not equivalent to the size-based sense selected here:
-    behavioural or physiological differences alone do not establish gamete-type size
-    dimorphism. Do not map that usage as an exact synonym or infer organism-level
-    disjointness; its relationship needs separate scope review.'
+    is a filesystem category. Oogamy traitmech:000621 now supplies the size-dimorphic
+    child with large nonmotile female gametes. Its evidence explicitly preserves nonmotile
+    male exceptions rather than imposing a universal motility convention. Verify lexical/external
+    mappings and a narrower reproductive parent before adding them. Kaczmarska et
+    al. (2017), DOI:10.1371/journal.pone.0181413, also use physiological/behavioural
+    anisogamy for approximately equal-sized gametes in diatoms. That usage is not
+    equivalent to the size-based sense selected here: behavioural or physiological
+    differences alone do not establish gamete-type size dimorphism. Do not map that
+    usage as an exact synonym or infer organism-level disjointness; its relationship
+    needs separate scope review.'
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: anisogamy-mechanism-and-provenance
@@ -126,4 +129,11 @@ curation_history:
     behavioural/physiological anisogamy from the selected size-based sense. Added
     a verbatim scope snippet and inspection limits; preserved definition, canonical
     example and unresolved mechanism/hierarchy questions.'
+  llm_assisted: true
+- timestamp: '2026-10-05T14:12:03Z'
+  curator: codex
+  action: LINKED_NARROWER_TRAIT
+  changes: Replaced the future oogamy-child TODO with traitmech:000621 and its qualified
+    motility scope. Preserved the broad size-based definition, evidence, canonical
+    example, parent and remaining open mapping questions.
   llm_assisted: true

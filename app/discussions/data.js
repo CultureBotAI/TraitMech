@@ -9302,7 +9302,7 @@ window.searchData = [
   "source_id": "traitmech:000620",
   "source_file": "anisogamy.yaml",
   "attaches_to": [],
-  "rationale": "Use anisogamy in the broad size-dimorphism sense, including oogamy, as explicitly stated by Lindsey et al. (2024). Nozaki et al. (2014) instead distinguish anisogamy with flagellated female gametes from oogamy in their four-type classification. This is a terminology difference, not evidence that the phenotypes are disjoint. Motility of both gametes and external fertilization describe the canonical example, not universal requirements. The definition compares gamete types, not incidental size variation within a type, vegetative-versus-gamete size, or mating compatibility. Isogamy traitmech:000619, unisexual reproduction traitmech:000613 and fungal mating systems traitmech:000615 through traitmech:000618 describe distinct scopes. No numerical threshold or organism-level disjointness is asserted. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype hierarchy; PHYSIOLOGY is a filesystem category. Verify any future oogamy child and lexical/external mappings before adding them. Kaczmarska et al. (2017), DOI:10.1371/journal.pone.0181413, also use physiological/behavioural anisogamy for approximately equal-sized gametes in diatoms. That usage is not equivalent to the size-based sense selected here: behavioural or physiological differences alone do not establish gamete-type size dimorphism. Do not map that usage as an exact synonym or infer organism-level disjointness; its relationship needs separate scope review.",
+  "rationale": "Use anisogamy in the broad size-dimorphism sense, including oogamy, as explicitly stated by Lindsey et al. (2024). Nozaki et al. (2014) instead distinguish anisogamy with flagellated female gametes from oogamy in their four-type classification. This is a terminology difference, not evidence that the phenotypes are disjoint. Motility of both gametes and external fertilization describe the canonical example, not universal requirements. The definition compares gamete types, not incidental size variation within a type, vegetative-versus-gamete size, or mating compatibility. Isogamy traitmech:000619, unisexual reproduction traitmech:000613 and fungal mating systems traitmech:000615 through traitmech:000618 describe distinct scopes. No numerical threshold or organism-level disjointness is asserted. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype hierarchy; PHYSIOLOGY is a filesystem category. Oogamy traitmech:000621 now supplies the size-dimorphic child with large nonmotile female gametes. Its evidence explicitly preserves nonmotile male exceptions rather than imposing a universal motility convention. Verify lexical/external mappings and a narrower reproductive parent before adding them. Kaczmarska et al. (2017), DOI:10.1371/journal.pone.0181413, also use physiological/behavioural anisogamy for approximately equal-sized gametes in diatoms. That usage is not equivalent to the size-based sense selected here: behavioural or physiological differences alone do not establish gamete-type size dimorphism. Do not map that usage as an exact synonym or infer organism-level disjointness; its relationship needs separate scope review.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -10364,6 +10364,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/negative_autotropism.html#negative-autotropism-provenance-and-mechanism"
  },
  {
+  "discussion_id": "oogamy-scope-and-motility",
+  "prompt": "Keep gamete-size asymmetry distinct from universal male motility.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "oogamy",
+  "source_id": "traitmech:000621",
+  "source_file": "oogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Use anisogamy traitmech:000620 in its explicit broad size-based sense, as in Lindsey et al. (2024), even though some sources separate motile-both anisogamy from oogamy. Vranken et al. (2023) explicitly include nonmotile male red-algal gametes. Large and small compare gamete types, not vegetative cells or sperm packets; no numerical size cutoff, fixed gamete count, fertilization location, monoecy/dioecy or mating-system requirement is imposed. Physiological anisogamy without size dimorphism is not equivalent. No organism-level disjointness is asserted. Verify external equivalences and lexical synonyms before adding mappings.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/oogamy.html#oogamy-scope-and-motility"
+ },
+ {
+  "discussion_id": "oogamy-mechanism-and-provenance",
+  "prompt": "Resolve protein groundings and strain metadata before mechanism expansion.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "oogamy",
+  "source_id": "traitmech:000621",
+  "source_file": "oogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Oogamy is a gamete phenotype, not a MID/MAT sequence feature. The 2014 MID perturbations support sex-development causality in particular engineered backgrounds; they do not by themselves supply a universal mechanism for size asymmetry and female immotility. Resolve accessions and remaining source material before graph construction; no NONMECHANISTIC graph bypasses this gap. Do not turn 2018 PCR absence into demonstrated deletion or transfer the separate strain's failed crosses to all reference crosses. Preserve the collection-date discrepancy and later axenic status explicitly. Retain actual abstract-resolver verdicts separately from manual full-text source checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/oogamy.html#oogamy-mechanism-and-provenance"
+ },
+ {
   "discussion_id": "ornithine-decarboxylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for ornithine decarboxylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11164,9 +11198,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 530,
+ "total_discussions": 532,
  "total_knowledge_gaps": 365,
- "total_source_entries": 486,
+ "total_source_entries": 487,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

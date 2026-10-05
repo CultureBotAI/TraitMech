@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/oogamy.yaml
+  slug: oogamy
+session:
+  id: 2026-10-05T142619Z-codex-559b6d
+  timestamp: '2026-10-05T14:26:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1713
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct Figure 2E zygote attribution after adversarial review
+  details: 'Addressed #1713 using the directly inspected Geng 2014 Figure 2 image and caption:
+    D/G/I show the engineered pseudo-male spheroid, sperm packet and aberrant sperm cell;
+    E is a mature zygote from an Eve::VcMID-BH x Eve cross. The prior CREATE history remains
+    append-only. Corrected only the evidence note and appended CORRECTED_EVIDENCE_PANEL; definition,
+    source snippet, canonical example and hierarchy are unchanged. Three focused correction
+    tests passed; full final validation follows.'

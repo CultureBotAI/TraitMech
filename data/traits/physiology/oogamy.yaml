@@ -1,0 +1,127 @@
+identifier: traitmech:000621
+label: oogamy
+definition: A sexual-reproduction phenotype in which large nonmotile female gametes
+  fuse with smaller male gametes.
+definition_source: DOI:10.5194/essd-15-2711-2023
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000620
+evidence:
+- reference: DOI:10.5194/essd-15-2711-2023
+  snippet: smaller motile male gametes with flagella (oogamous), except for red algae
+    in which the male gamete is also non-motile.
+  notes: 'Vranken et al. (2023), Figure 2 caption, directly checked in publisher HTML
+    and the actual figure. The full caption defines oogamy with a larger nonmotile
+    female gamete and explicitly allows nonmotile red-algal male gametes. Thus male
+    motility is not a universal requirement. This seaweed trait compilation supports
+    terminology, not an independent microbial experiment or a canonical macroalgal
+    example. The gamete-type paragraph and inheritance policy were also read: some
+    species fields inherit genus data. Other actual figures, the data release and
+    survey sheets remain uninspected. The figure is a life-cycle diagram, not measured
+    gamete sizes; no numerical ratio is inferred.'
+- reference: DOI:10.1186/s12915-024-01878-1
+  snippet: Oogamy constitutes a specialized form of anisogamy wherein small male gametes
+    are motile and large female gametes are not
+  notes: Lindsey et al. (2024), PMID:38600528, PMC11007952, Background Sec1 clause
+    before the parenthetical, verified in raw XML and publisher HTML. Supports the
+    anisogamy parent and usual motile-male formulation, not a universal rule in view
+    of Vranken et al. The scientific abstract and scope paragraph were read; remaining
+    analyses, actual figures and supplements were not audited. This terminology passage
+    is not independent experimental replication.
+- reference: DOI:10.1186/s40529-018-0227-9
+  snippet: Volvox carteri f. nagariensis is an oogamous species that has heterothallic
+    sexuality
+  notes: 'Nozaki et al. (2018), PMID:29616358, PMC5882469, exact Background clause
+    checked in raw XML. Scientific abstract, Background, Methods, Results, Discussion,
+    Table 1 with row spans, captions and actual Figure 2 were inspected. Panels a-d
+    show male spheroids/sperm packets, e female eggs, f-g mature zygotes. The Results
+    qualify zygote formation as after possible fertilization; individual gamete fusion
+    was not directly tracked. Do not compare packet size with egg size as a gamete-size
+    ratio. Reference strains were induced in VTAC at 25 C with a 14:10 light-dark
+    cycle; sexual spheroids formed after 2-4 days. Table 1''s sex column is PCR-based,
+    not 33 independent phenotype experiments. Failure to amplify HMG1f in another
+    strain does not demonstrate deletion: primer polymorphism remains an explicit
+    alternative. Other actual figures, Table 2 and supplements remain uninspected.
+    Heterothallism describes this example, not all oogamy.'
+- reference: DOI:10.1371/journal.pbio.1001904
+  snippet: Transgenic female V. carteri expressing male MID produced functional sperm
+    packets during sexual development.
+  notes: Geng et al. (2014), PMID:25003332, PMC4086717, scientific-abstract sentence
+    checked in raw XML. The scientific abstract, selected Introduction/Results/Methods
+    passages, actual Figure 2 with its caption and all extracted Table S3 text were
+    inspected. Figure 2B/C/F/H show wild-type egg/sperm controls; D/G/I show the engineered
+    pseudo-male spheroid, its sperm packet and an aberrant sperm cell, respectively.
+    Panel E shows a mature zygote from an Eve::VcMID-BH x Eve cross, not the engineered
+    parent. Table S3 distinguishes Eve (UTEX 1885) and AichiM (NIES-398) from nitA-
+    derivatives E15 and A18 used to generate transgenics. Table S3 was text-extracted,
+    not visually rendered; remaining source material was not fully audited. MID gain/loss
+    supports gamete-development causality in the tested backgrounds, not a universal
+    oogamy mechanism or a natural canonical exemplar for the engineered strains. Resolve
+    native protein accessions before a protein-grounded causal graph.
+canonical_examples:
+- taxon_id: NCBITaxon:3068
+  taxon_label: Volvox carteri f. nagariensis
+  reference: DOI:10.1186/s40529-018-0227-9
+  note: Source-observed reference example, not every strain. Natural Taiwan isolates
+    female 2016-0609-v-1 (NIES-4206) and male 2016-tw-nuk-6-1 (NIES-4208) were examined
+    after sex-inducer treatment; see Figure 2, Table 1 and Methods. The Results describe
+    zygotes after possible fertilization, not directly tracked fusion of each pair.
+    Primary collection records at https://mcc.nbrp.jp/strainList.do?strainNumber=NIES-4206
+    and https://mcc.nbrp.jp/strainList.do?strainNumber=NIES-4208 confirm strain aliases,
+    sex and ITS2 accessions LC376032/LC376034. Both list collection on 2016-05-25,
+    whereas Table 1 lists 2016-06-09 and 2016-06-10 respectively (the collection records'
+    isolation dates). This collection-date conflict remains unresolved; no date is
+    silently corrected. Their March 2022 axenic status is not projected onto 2018.
+    Collection fields establish provenance, not independent phenotype replication
+    or an unmutated genome. The forma-level name and NCBITaxon:3068 were checked at
+    https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3068 on 2026-10-05;
+    no reference genome is assigned to these isolates.
+discussions:
+- discussion_id: oogamy-scope-and-motility
+  prompt: Keep gamete-size asymmetry distinct from universal male motility.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use anisogamy traitmech:000620 in its explicit broad size-based sense,
+    as in Lindsey et al. (2024), even though some sources separate motile-both anisogamy
+    from oogamy. Vranken et al. (2023) explicitly include nonmotile male red-algal
+    gametes. Large and small compare gamete types, not vegetative cells or sperm packets;
+    no numerical size cutoff, fixed gamete count, fertilization location, monoecy/dioecy
+    or mating-system requirement is imposed. Physiological anisogamy without size
+    dimorphism is not equivalent. No organism-level disjointness is asserted. Verify
+    external equivalences and lexical synonyms before adding mappings.
+  posed_by: codex
+  posed_date: '2026-10-05'
+- discussion_id: oogamy-mechanism-and-provenance
+  prompt: Resolve protein groundings and strain metadata before mechanism expansion.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Oogamy is a gamete phenotype, not a MID/MAT sequence feature. The 2014
+    MID perturbations support sex-development causality in particular engineered backgrounds;
+    they do not by themselves supply a universal mechanism for size asymmetry and
+    female immotility. Resolve accessions and remaining source material before graph
+    construction; no NONMECHANISTIC graph bypasses this gap. Do not turn 2018 PCR
+    absence into demonstrated deletion or transfer the separate strain's failed crosses
+    to all reference crosses. Preserve the collection-date discrepancy and later axenic
+    status explicitly. Retain actual abstract-resolver verdicts separately from manual
+    full-text source checks.
+  posed_by: codex
+  posed_date: '2026-10-05'
+curation_history:
+- timestamp: '2026-10-05T14:12:03Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added oogamy with four DOI-backed verbatim snippets, a qualified natural
+    Volvox example and explicit male-motility exceptions. Ignored-and-hidden novelty/allocation
+    searches found no exact record or collision. Extended v497 with METPO:1057410
+    under anisogamy METPO:1057400; deferred unverified mappings and causal mechanisms.
+  llm_assisted: true
+- timestamp: '2026-10-05T14:24:04Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_PANEL
+  changes: 'Addressed #1713: Figure 2E in Geng et al. (2014) is a cross-derived mature
+    zygote, not an engineered pseudo-male. Distinguished its role from D/G/I using
+    the directly inspected caption and actual figure. Definition, verbatim snippet,
+    natural canonical example and proposal hierarchy remain unchanged.'
+  llm_assisted: true
