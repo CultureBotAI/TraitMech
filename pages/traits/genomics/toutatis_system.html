@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Toutatis as a named SCI-derived anti-phage system with TutA_VCA0446 and TutB_VCA0447 DefenseFinder profiles while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -273,7 +275,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -285,8 +286,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T06:06:32Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Toutatis system
+            <p>Minted the Toutatis system GENOMICS record as traitmech:000267 under phage defense system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory snippets for TutA_VCA0446 and TutB_VCA0447, a conservative nonmechanistic phage-restriction graph, and a companion metpo_traitmech_v144 proposal reserving METPO:1022100.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/toutatis_system/2026-09-19T060632Z-codex-e9e630.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -375,6 +386,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -666,7 +684,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-19 06:05 UTC
+      Record as of 2026-09-19 06:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

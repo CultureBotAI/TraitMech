@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures SNIPE at membrane-localized phage-genome-injection targeting level without asserting the exact direct viral sensor, the full host or phage range, or any DefenseFinder HMM-to-component mapping.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -330,7 +332,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -348,8 +349,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T18:24:57Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Added SNIPE system
+            <p>Minted traitmech:000414 as the DOI-backed SNIPE system GENOMICS trait under phage defense system; added Saxton direct phage-DNA-cleavage evidence plus the pinned DefenseFinder article row; reserved METPO:1036800 in proposals/metpo_traitmech_v291 and kept narrower SNIPE children blocked by host-breadth, sensitive-phage, tape-measure-interaction, and DefenseFinder HMM/rules coverage gaps.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/snipe_system/2026-09-27T182457Z-claude-code-ff00da.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -438,6 +449,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -729,7 +747,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-27 18:23 UTC
+      Record as of 2026-09-27 18:24 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

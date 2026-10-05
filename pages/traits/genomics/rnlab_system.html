@@ -116,6 +116,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures RnlAB as a named DefenseFinder two-profile phage-defense system while leaving natural phage breadth, wild-type T4 evasion through Dmd, induction or activation routes in non-T4 contexts, and RnlAB profile-to-activity mapping unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -370,7 +372,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -382,8 +383,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-22T13:55:13Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add RnlAB phage-defense system trait
+            <p>Minted traitmech:000367 for RnlAB system as a DOI-backed GENOMICS TraitRecord under phage defense system, using Koga et al. evidence for rnlA-rnlB toxin-antitoxin identity and RNase LS antagonism of bacteriophage T4 dmd mutants, Otsuka and Yonesaki evidence for the E. coli K-12 chromosomal RnlA/RnlB system and T4 Dmd evasion, and pinned DefenseFinder article, rule, and HMM rows for the RnlAB namespace; reserved METPO:1032100 in proposals/metpo_traitmech_v244 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/rnlab_system/2026-09-22T135513Z-claude-code-24dab3.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -472,6 +483,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -763,7 +781,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-22 13:54 UTC
+      Record as of 2026-09-22 13:55 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

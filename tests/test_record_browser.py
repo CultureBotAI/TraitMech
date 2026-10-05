@@ -81,7 +81,11 @@ const rows = [
 const map = {'record-filters':form,'record-query':query,'record-category':category,
   'record-kind':kind,'record-count':count,'record-empty':empty};
 const document = {getElementById:id=>map[id],querySelectorAll:()=>rows};
-vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), {document, setTimeout:fn=>fn()});
+const window = {location:{href:'https://trait.test/browse.html',search:''},
+ addEventListener:(name,fn)=>events[name]=fn};
+const history = {replaceState:(_state,_title,url)=>{window.location.href=url.href;window.location.search=url.search;}};
+vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'),
+ {document, window, history, URL, URLSearchParams, setTimeout:fn=>fn()});
 assert.equal(form.hidden,false); assert.match(count.textContent,/2 of 2/);
 query.value='BIOLOGY'; events.input(); assert.equal(rows[0].hidden,false); assert.equal(rows[1].hidden,true);
 query.value='alternate'; events.input(); assert.equal(rows[0].hidden,false);
@@ -89,5 +93,8 @@ query.value='';category.value='OTHER';events.change();assert.equal(rows[0].hidde
 kind.value='CLASS';events.change();assert.equal(empty.hidden,false);assert.match(count.textContent,/0 of 2/);
 query.value='';category.value='';kind.value='';events.reset();assert.ok(rows.every(r=>!r.hidden));assert.equal(empty.hidden,true);
 query.value='no-result';events.input();assert.equal(empty.hidden,false);
+window.location.search='?q=alternate&category=TEST'; query.value='wrong';category.value='';
+events.pageshow();assert.equal(query.value,'alternate');assert.equal(category.value,'TEST');
+assert.equal(rows[0].hidden,false);assert.equal(rows[1].hidden,true);
 """
     subprocess.run([node, "-e", script, str(TEMPLATES / "record-browser.js")], check=True)

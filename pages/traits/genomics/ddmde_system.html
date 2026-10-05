@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the DdmDE activation pathway resolved by Bravo et al. without asserting every guide-maturation route, native plasmid substrate, DdmABC cooperation mode, or Vibrio-specific locus boundary as universal for all DdmDE systems.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -317,7 +319,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -341,8 +342,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T10:18:38Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DdmDE system
+            <p>Minted the DdmDE system GENOMICS record as traitmech:000275 under the quality root with Jaskolska et al. and Bravo et al. DOI evidence, pinned DefenseFinder article-registry and HMM snippets, a plasmid-destruction graph for DdmE guide-target binding and DdmD target loading, a Vibrio cholerae canonical example, and a companion metpo_traitmech_v152 proposal reserving METPO:1022900.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ddmde_system/2026-09-19T101838Z-codex-099959.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T10:29:13Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Tighten DdmDE graph edge evidence
+            <p>Resolved issue #1055 from the PR #1054 adversarial review by collapsing the guide-target handover subgraph into a source-supported target-DNA-recognition node, keeping DdmE and DdmD as direct evidence on that recognition edge, and preserving only DdmDE process edges whose snippets support the retained predicate.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ddmde_system/2026-09-19T102913Z-codex-e23e6f.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-27T22:12:02Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reparent DdmDE under pAgo
+            <p>Reparented traitmech:000275 DdmDE system from METPO:1000188 quality to traitmech:000419 prokaryotic Argonaute defense system after minting the exact local pAgo-family parent; DdmDE evidence, graph edges, and open substrate discussion were not otherwise changed.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ddmde_system/2026-09-27T221202Z-codex-388136.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -431,6 +454,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -722,7 +752,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-27 22:11 UTC
+      Record as of 2026-09-27 22:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

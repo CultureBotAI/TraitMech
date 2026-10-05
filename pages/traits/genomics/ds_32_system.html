@@ -122,6 +122,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-32 as the validated NADR transcriptional unit with two product accessions, lower-probability RecR and high-probability PRTase HHpred rows for WP_000097610.1, a high-probability NADAR HHpred row for WP_032260665.1, and two DefenseFinder DS-32 profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, DS-32 molecular activity, trigger, substrate, complete phage breadth, RecR, PRTase, or NADAR HHpred-domain interpretation, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -447,7 +449,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -465,8 +466,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-29T07:26:46Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-32 system trait
+            <p>Added data/traits/genomics/ds_32_system.yaml as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record. The record quotes the final Science Table S6 NADR row, Table S7 Bas26 EOP row, Table S8 DS-32 display plus RecR, PRTase, and NADAR HHpred rows, and the pinned DefenseFinder DS-32 article and HMM rows; keeps the graph at NADR transcriptional-unit level; leaves native-host, endogenous-activity, component-activity, and rule-level interpretation as an open knowledge gap; and reserves METPO:1040900 in proposals/metpo_traitmech_v332.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_32_system/2026-09-29T072646Z-codex-c755de.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -555,6 +566,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -846,7 +864,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-29 07:25 UTC
+      Record as of 2026-09-29 07:26 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

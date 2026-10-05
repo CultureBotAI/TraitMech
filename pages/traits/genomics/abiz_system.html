@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiZ at the system level without asserting a direct physical AbiZ-holin interaction, an exact phage activator, or one known phage-escape mutation.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -282,7 +284,6 @@
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -300,8 +301,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T20:37:37Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiZ system trait
+            <p>Minted traitmech:000228 for the AbiZ premature-lysis abortive-infection system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior proposal record for AbiZ, the expected slug, the source DOIs, or the reserved IDs. Curated DOI-backed Durmaz and Philippe evidence, a Lactococcus lactis canonical example, a nonmechanistic causal graph for AbiZ-enhanced holin/lysin activity and restricted P335 phage propagation, and a same-PR METPO v105 proposal.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abiz_system/2026-09-15T203737Z-codex-e66f49.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-15T21:04:27Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Correct AbiZ premature-lysis graph predicate
+            <p>Corrected the AbiZ edge from premature infected-cell lysis to restricted phage propagation to use contributes to / RO:0002326 instead of mitigates / METPO:2007407 after local adversarial review issue 962 found that the old predicate inverted the intended restriction of phage propagation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abiz_system/2026-09-15T210427Z-codex-a7c9e2.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -390,6 +407,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

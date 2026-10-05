@@ -116,6 +116,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-38 as the validated HEP2 transcriptional unit with one product accession, high-probability zinc-finger and HEPN HHpred rows for WP_001313577.1, and one DefenseFinder DS-38 profile row. It does not assert exact profile-to-protein correspondence, HEPN ribonuclease activity, zinc-finger DNA-binding activity, native host breadth, DS-38 molecular output, complete phage breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -432,7 +434,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -450,8 +451,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-29T11:00:08Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-38 system
+            <p>Added the DOI-backed DS-38 system genomics TraitRecord under phage defense system, with Science supplementary Table S6/S7/S8 rows for the HEP2 transcriptional unit, Bas25 and Bas19 plaquing readouts, replicated DS-38 display mapping, high-probability HEPN and zinc-finger HHpred domain rows, pinned DefenseFinder article and HMM inventory rows, an open DS-38 DefenseFinder model knowledge gap, and proposals/metpo_traitmech_v337 reserving METPO:1041400.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_38_system/2026-09-29T110008Z-codex-5bba95.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -540,6 +551,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -831,7 +849,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-29 10:59 UTC
+      Record as of 2026-09-29 11:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

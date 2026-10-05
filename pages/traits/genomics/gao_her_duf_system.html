@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Gao-Her-DUF as a named DefenseFinder two-profile Gao-family system while leaving natural hosts, DUF4297/HerA_DUF protein functions, phage triggers, and direct effector activity unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -285,7 +287,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -309,8 +310,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-22T09:34:43Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Gao-Her-DUF phage-defense system trait
+            <p>Added traitmech:000361 for the DefenseFinder Gao_Her_DUF two-profile phage-defense subsystem, reserved METPO:1031500 in proposals/metpo_traitmech_v238, recorded Gao et al. and pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap discussion for unresolved Her-DUF host, trigger, and effector details.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gao_her_duf_system/2026-09-22T093443Z-codex-da0d31.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-27T13:53:17Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reparent Gao-Her-DUF below Gao-Her
+            <p>Replaced the direct phage-defense-system parent on traitmech:000361 with the new traitmech:000409 Gao-Her system parent and inserted the same Gao-Her parent into the nonmechanistic subclass graph.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gao_her_duf_system/2026-09-27T135317Z-codex-e385d1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -399,6 +416,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

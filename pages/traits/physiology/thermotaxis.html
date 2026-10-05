@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The E. coli Tar-mediated arm, not a universal microbial mechanism or a complete Tar/Tsr accumulation model. Engineered receptor experiments establish the Tar transitions. Interplay with Tsr and chemical adaptation changes the intact-cell response.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -334,7 +336,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -346,8 +347,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-03T22:20:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add temperature-guided active movement as thermotaxis
+            <p>Added traitmech:000580 using primary DOI:10.7554/eLife.26607 version 2, DOI:10.1073/pnas.0709903105, DOI:10.1074/jbc.271.30.17932 and DOI:10.1128/jb.179.21.6573-6580.1997. Verified exact snippets, K-12 behavioral assay scope, NCBITaxon:83333, reviewed UniProtKB:P07017 and GO:0043052 as a process-only grounding. The graph describes the Tar-mediated arm, not a universal or complete Tar/Tsr mechanism; an open discussion preserves assay-context uncertainty. Ignored-and-hidden novelty searches found no exact record or METPO term. Reserved METPO:1053400 in proposal v457 and updated README counts. Existing traits and the protected spore-germination record are untouched.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/thermotaxis/2026-10-03T222004Z-codex-1fe3c7.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -436,6 +447,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

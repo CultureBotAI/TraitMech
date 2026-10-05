@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the DefenseFinder Resolvase_DUF5677 article namespace at system level and deliberately leaves the exact locus architecture, the DUF5677-associated domain boundary, accession-level protein examples, native host exemplars, phage trigger breadth, and DefenseFinder HMM/rules profiles unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -297,7 +299,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -315,8 +316,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-02T01:50:02Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Mint Resolvase DUF5677 system trait
+            <p>Minted traitmech:000531 as a DOI- and DefenseFinder-backed Resolvase_DUF5677 Schlafen phage-defense-system record, reserved METPO:1048500 in proposals/metpo_traitmech_v408 for upstream replacement, captured the Resolvase_DUF5677 article-registry source key, left exact HMM/rules and native-host exemplars as open knowledge gaps, and validated the record through write_validated_trait. The ignored-and-hidden duplicate search found no exact Resolvase_DUF5677 trait, history record, prior proposal, page, script, or reserved CURIE before curation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/resolvase_duf5677_system/2026-10-02T015002Z-codex-c6d317.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -405,6 +416,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

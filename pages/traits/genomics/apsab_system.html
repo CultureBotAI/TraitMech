@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures ApsAB as a named anti-plasmid defense system while leaving the direct ApsB guide source, the target-recognition rule, the exact plasmid-degradation chemistry, the natural plasmid substrate range, family breadth, and the absence of pinned DefenseFinder HMM or rule rows unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -285,7 +287,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -297,8 +298,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T05:47:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add ApsAB system trait
+            <p>Added traitmech:000328 ApsAB system as a DOI-backed GENOMICS TraitRecord under the quality root. DOI:10.1038/s41467-024-48219-y names ApsAB as an anti-plasmid system, shows that the F3141-F3140 locus was renamed apsAB, reports that ApsAB targets high- and low-copy-number plasmids, and supports a nuclease/helicase plus Argonaute-like two-component architecture. The pinned DefenseFinder article registry maps ApsAB to the Zongo et al. Escherichia coli anti-plasmid-system paper. Reserved METPO:1028200 in proposals/metpo_traitmech_v205 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/apsab_system/2026-09-21T054700Z-codex-1c6f0f.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -387,6 +398,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -678,7 +696,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 05:45 UTC
+      Record as of 2026-09-21 05:47 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

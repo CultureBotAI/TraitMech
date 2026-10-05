@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures SDIC3 as a named anti-phage system with DefenseFinder SDIC3B, SDIC3C, SDIC3D, SDIC3E, and SDIC3F profile rows. It does not assert native host breadth, SDIC3A status, exact profile-to-protein correspondence, whether SDIC3 is a distinct ECOR61-system subtype, sensitive-phage breadth, the direct trigger, the molecular output, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -401,7 +403,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -419,8 +420,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T01:44:00Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add SDIC3 system trait
+            <p>Minted traitmech:000423 for the DOI-backed SDIC3 system under phage defense system. DOI:10.1016/j.celrep.2024.115055 supports SDIC3 as a Serratia defense-island candidate anti-phage system that can strongly protect plasmid-expressing E. coli against several bacteriophages; the pinned DefenseFinder article and HMM inventories map SDIC3 to the SDIC3B, SDIC3C, SDIC3D, SDIC3E, and SDIC3F custom profiles while the pinned rules table has no SDIC3 row, so the graph stays nonmechanistic at candidate-locus level and the record keeps SDIC3A scope, ECOR61-system boundaries, native host breadth, phage range, and direct molecular output unresolved. Reserved METPO:1037700 in proposals/metpo_traitmech_v300.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sdic3_system/2026-09-28T014400Z-claude-code-0c47e5.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -509,6 +520,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -800,7 +818,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 01:42 UTC
+      Record as of 2026-09-28 01:44 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

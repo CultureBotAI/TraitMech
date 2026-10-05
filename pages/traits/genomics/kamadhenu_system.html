@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Kamadhenu as a named lactococcal anti-phage system while leaving its direct phage trigger, molecular substrate, antiviral effector output, natural locus breadth, and the absence of pinned DefenseFinder HMM or rule rows unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -257,7 +259,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -275,8 +276,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T13:47:53Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Kamadhenu system trait
+            <p>Added traitmech:000310 Kamadhenu system as a DOI-backed GENOMICS TraitRecord under phage defense system. DOI:10.1093/nar/gkae671 names Kamadhenu among newly described lactococcal antiphage systems, DOI:10.1073/pnas.2426508122 treats Kamadhenu as a plasmid-encoded lactococcal phage-resistance system in an escape-mutant screen, and the pinned DefenseFinder article registry maps Kamadhenu to the Grafakou et al. lactococcal plasmidome discovery paper. Reserved METPO:1026400 in proposals/metpo_traitmech_v187 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/kamadhenu_system/2026-09-20T134753Z-codex-220d06.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-20T14:22:57Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Add Kamadhenu locus-edge evidence
+            <p>Addressed PR #1140 review issue #1141 by adding Mosterd et al. DOI evidence directly to the Kamadhenu locus contributes-to edge so the restricted-phage-propagation edge carries phage-resistance evidence locally.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/kamadhenu_system/2026-09-20T142257Z-codex-c623f0.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -365,6 +382,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

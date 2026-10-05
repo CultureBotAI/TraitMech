@@ -148,6 +148,8 @@ Bas1	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	3000000	HIPA	D139A	24-07-18	24-07
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-6 as the validated HIPA transcriptional unit with two product accessions and with DefenseFinder DS-6A and DS-6B profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, DUF3037 or DUF1829 activity, exact HipA-like kinase substrates, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -496,7 +498,6 @@ Bas1	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	3000000	HIPA	D139A	24-07-18	24-07
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -514,8 +515,18 @@ Bas1	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	3000000	HIPA	D139A	24-07-18	24-07
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T09:22:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-6 system trait
+            <p>Minted traitmech:000430 for the DOI-backed DS-6 phage-defense system under phage defense system; added final Science Table S6/S7/S8 evidence for the HIPA/HipAD locus, Bas1 plaquing assays, DS-6 domains, and the DS-6A D139A catalytic mutant, pinned DefenseFinder article and HMM inventory evidence for DS-6A and DS-6B, a nonmechanistic DS-6 locus-to-phage-plaquing graph, an open DefenseFinder rules knowledge gap, an empty canonical-example review, and the metpo_traitmech_v307 proposal reserving METPO:1038400.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_6_system/2026-09-28T092200Z-codex-046957.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -604,6 +615,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -895,7 +913,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 09:20 UTC
+      Record as of 2026-09-28 09:22 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

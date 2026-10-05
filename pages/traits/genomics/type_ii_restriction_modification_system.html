@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures a reusable Type II R-M locus architecture and the DefenseFinder RM_Type_II custom-profile namespace without asserting an accession-level mapping between any custom HMM row and characterized Type II restriction endonucleases or methyltransferases.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -352,7 +354,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -370,8 +371,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-30T13:45:13Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add type II restriction-modification system trait
+            <p>Added a DOI-backed type II restriction-modification system GENOMICS TraitRecord under restriction-modification system with Kirillov and Pingoud Type II R-M evidence snippets, pinned DefenseFinder RM_Type_II article, rule, MTase-HMM, and REase-HMM evidence, an open custom-profile interpretation knowledge gap, and a one-row METPO proposal reserving METPO:1044700 for the local traitmech:000493 fallback.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/type_ii_restriction_modification_system/2026-09-30T134513Z-codex-804af9.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -460,6 +471,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -751,7 +769,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-30 13:40 UTC
+      Record as of 2026-09-30 13:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

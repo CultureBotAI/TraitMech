@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures NixI as a named DefenseFinder single-mandatory-profile system without asserting the exact satellite self-protection mechanism, the complete set of PLE-encoded anti-ICP1 mechanisms, the accession-level natural-host protein, the full functional breadth of divergent NixI homologs, or the experimental scope of the optional NixI__Stix profile.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -364,7 +366,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -382,8 +383,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T10:04:46Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added NixI system phage defense trait
+            <p>Minted traitmech:000333 for the DefenseFinder-backed NixI system under phage defense system with DOI-backed evidence from LeGault et al., pinned DefenseFinder article, rules, and HMM rows, a Vibrio cholerae canonical example, a conservative nonmechanistic causal graph, and a reserved METPO:1028700 placeholder in proposals/metpo_traitmech_v210.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nixi_system/2026-09-21T100446Z-codex-e939d1.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-21T10:31:50Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected NixI genome cleavage to replication inhibition
+            <p>Addressed CultureBotAI/TraitMech#1189 from PR #1188 review by adding the LeGault-backed ICP1 genome cleavage to ICP1 replication inhibition edge to data/traits/genomics/nixi_system.yaml, keeping the cleavage node on the path from the NixI locus to the NixI system trait.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nixi_system/2026-09-21T103150Z-codex-647326.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -472,6 +489,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -763,7 +787,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 10:30 UTC
+      Record as of 2026-09-21 10:31 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

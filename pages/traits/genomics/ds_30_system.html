@@ -134,6 +134,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-30 as the validated ABC3 transcriptional unit with four product accessions, ABC-3C, SMC-family, and FtsL HHpred-domain rows, and four Lamassu-Fam custom HMM-profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, DS-30/Lamassu-Fam component activity, Lamassu subtype chemistry, LmuC requirement, complete phage breadth, or DS-30-specific DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -465,7 +467,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -483,8 +484,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-29T18:01:43Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-30 system trait
+            <p>Minted traitmech:000470 for the DS-30 four-gene DefensePredictor-discovered Lamassu-family phage-defense system; added DOI-backed DeWeirdt et al. evidence, stable PMC spreadsheet evidence for the ABC3 transcriptional unit, the SECphi27 plaquing readout, and ABC-3C, SMC-family, and FtsL HHpred-domain rows, pinned DefenseFinder HMM evidence at commit afb0e5a8b466be53586b13266f5d38d98c3ac268, a nonmechanistic locus-to-plaquing graph with Lamassu parentage, an open rule-level detection gap because the pinned DefenseFinder rules table has no DS-30-specific row, an empty canonical-example decision for the lack of a native experimentally verified endogenous DS-30 exemplar, and the v347 METPO Scope-A lift reserving METPO:1042400.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_30_system/2026-09-29T180143Z-codex-1c57c1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -573,6 +584,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -864,7 +882,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-29 17:57 UTC
+      Record as of 2026-09-29 18:01 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

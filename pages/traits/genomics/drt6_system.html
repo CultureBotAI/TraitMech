@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DRT6 at DefenseFinder subtype-locus level without asserting the direct DRT6 reverse-transcriptase product, phage trigger, native host breadth, sensitive phage breadth, partner features, or whether every DefenseFinder DRT6 prediction is a complete experimentally active DRT6 locus.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -322,7 +324,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -340,8 +341,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-02T08:13:19Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DRT6 system trait
+            <p>Minted traitmech:000539 as a DOI- and DefenseFinder-backed DRT6 phage-defense-system subtype record under DRT system, cited Gao et al. for DRT discovery and reverse-transcriptase active-site dependence, cited pinned DefenseFinder article, HMM, and rules rows for the DRT6 model namespace, left canonical_examples empty due to lack of accession-backed native microbial taxon evidence, and reserved METPO:1049300 in proposals/metpo_traitmech_v416 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/drt6_system/2026-10-02T081319Z-codex-1c18d9.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -430,6 +441,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

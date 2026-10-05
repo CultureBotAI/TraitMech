@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -575,7 +577,6 @@ Bao et al. (July 2023) identified 124 candidate cold-adaptation genes in psychro
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -683,8 +684,30 @@ Bao et al. (July 2023) identified 124 candidate cold-adaptation genes in psychro
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T03:40:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reviewed temperature_optimum_very_low causal evidence
+            <p>Reviewed data/traits/environment/temperature_optimum_very_low.yaml for issue #183. Added exact snippets to eight edge-level evidence entries from Hamdan 2018, Yang et al. 2023, and Ramón et al. 2023, and replaced the ungrounded/free-text desaturase, membrane-fluidity, cold-shock, glycine-betaine, and trehalose predicates with RO-grounded increases and contributes-to edges. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_optimum_very_low/2026-09-04T034000Z-codex-1f380e.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T21:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect temperature-optimum-very-low causal graph components
+            <p>Resolved issue 183 graph fragmentation for data/traits/environment/temperature_optimum_very_low.yaml by adding 5 source- and verbatim-snippet-backed association connectors among cold-shock RNA support, compatible-solute cryoprotection, antifreeze protein ice-binding, and low-temperature flexible-enzyme branches, connecting the temperature-optimum-very-low nonmechanistic graph from 6 components to 1. Validated via the write-time LinkML gate in scripts/connect_temperature_optimum_very_low_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_optimum_very_low/2026-09-04T210000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-08T03:25:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Restore temperature_optimum_very_low membrane branch
+            <p>Restored the membrane-fluidity branch as a DOI-backed association to psychrophile cold-adapted machinery after PR #664 adversarial review issue #704 found that the final connector prune over-deleted a pre-existing edge. The record now has 15 edges in 1 component and keeps only the unsupported glycine-betaine edge as pruned stale material. Validated with scripts/repair_pr664_adversarial_review.py and LinkML write-time validation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_optimum_very_low/2026-09-08T032500Z-codex-77dafe.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -778,6 +801,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

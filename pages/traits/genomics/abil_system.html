@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiL as a named lactococcal abortive-infection system with DefenseFinder AbiL__AbiLi and AbiL__AbiLii HMM profiles while leaving its direct phage trigger, the exact AbiLi and AbiLii activities, the relationship between the mandatory and suffixed HMM rows, and the similarity of its route to PARIS unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -336,7 +338,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -348,8 +349,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T17:20:14Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiL system TraitRecord
+            <p>Minted traitmech:000340 for the DOI-backed AbiL system under abortive infection system after ignored-and-hidden duplicate review found no exact same-scope TraitMech, METPO, history, or prior proposal record. Recorded Deng et al., FEMS review, and pinned DefenseFinder evidence. Added a conservative NONMECHANISTIC graph and kept the AbiL trigger, AbiLi and AbiLii activities, accessory HMM rows, ATPase/TOPRIM interpretation, and phage escape routes open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abil_system/2026-09-21T172014Z-codex-2c0589.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -438,6 +449,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -729,7 +747,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 17:17 UTC
+      Record as of 2026-09-21 17:20 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

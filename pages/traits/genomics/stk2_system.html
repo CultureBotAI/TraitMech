@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Stk2 as a named DefenseFinder single-profile abortive-infection system with a phage-activated serine/threonine kinase output while leaving the activating phage protein, the direct lethal phosphorylation event, target conservation, and phage-specific escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -344,7 +346,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -356,8 +357,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T07:43:27Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Mint Stk2 system trait
+            <p>Added traitmech:000303 for the Stk2 abortive-infection system with Depardieu et al. DOI evidence, pinned DefenseFinder article/rules/HMM evidence, a conservative phage-triggered kinase activation graph, and a same-PR METPO v180 proposal reserving METPO:1025700.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/stk2_system/2026-09-20T074327Z-codex-b48d86.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -446,6 +457,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -737,7 +755,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-20 07:41 UTC
+      Record as of 2026-09-20 07:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures characterized pVip-mediated modified ribonucleotide production and T7 transcription inhibition without asserting one universal nucleotide product, viral polymerase target, accessory-gene architecture, or phage range across all Viperin loci.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -282,7 +284,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -306,8 +307,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T03:44:51Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Viperin phage defense system
+            <p>Minted traitmech:000263 for the Viperin bacterial and archaeal phage defense system under phage defense system after an ignored-and-hidden duplicate search found no live TraitMech, METPO, or prior proposal record; added Bernheim et al. DOI evidence plus commit-pinned DefenseFinder article, rule, and HMM evidence, a conservative nonmechanistic causal graph, an open subtype/product knowledge gap, and a v140 METPO placeholder proposal for METPO:1021700.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/viperin_system/2026-09-19T034451Z-codex-408976.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T03:58:28Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Tighten Viperin subclass edge evidence
+            <p>Addressed local adversarial review issue #1037 by replacing the Viperin phage-defense-system subclass edge snippet with a Bernheim et al. abstract span that directly supports prokaryotic viperins as phage-protective bacterial and archaeal proteins.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/viperin_system/2026-09-19T035828Z-codex-c3f25a.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T04:06:03Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Align Viperin definition with prokaryotic scope
+            <p>Addressed Claude review issue #1038 by replacing a bacteria-only phage-protection phrase with source-aligned phage-infection wording in the Viperin definition and METPO proposal.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/viperin_system/2026-09-19T040603Z-codex-1ba362.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -396,6 +419,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

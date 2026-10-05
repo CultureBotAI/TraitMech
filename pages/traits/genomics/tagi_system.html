@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures TagI as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact modified-DNA sequence-context specificity across SRA-HNH homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -377,7 +379,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -395,8 +396,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-01T11:10:03Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add TagI system
+            <p>Minted traitmech:000513 for the TagI system under the Type IV modification-dependent restriction system parent, using DOI- and PMID-backed TagI SRA-HNH structure, modified-cytosine recognition, plasmid digestion, phage-restriction evidence, Type IV evidence from Loenen and Raleigh, and the pinned DefenseFinder article-registry row. Kept TagI as a related source-key synonym, left canonical_examples empty because Kisiala et al. do not establish a single stable organism-level exemplar or accession-level protein for this system trait, added a conservative nonmechanistic system graph, and recorded a DefenseFinder HMM/rules mapping gap after the pinned HMM inventory and rules table had no exact TagI rows.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/tagi_system/2026-10-01T111003Z-codex-4d3ade.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -485,6 +496,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

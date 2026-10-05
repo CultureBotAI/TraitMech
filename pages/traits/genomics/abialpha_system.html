@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiAlpha as a named DefenseFinder single-profile abortive-infection system whose V583 prophage 6 prototype restricts Idefix by perturbing lysis timing. It leaves the direct phage trigger, DUF4393-family molecular function, direct Idefix target, natural host range, and phage escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -375,7 +377,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -399,8 +400,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T23:47:19Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiAlpha system trait
+            <p>Added traitmech:000322 AbiAlpha system as a DOI-backed GENOMICS TraitRecord under abortive infection system. DOI:10.3390/v11010048 and PMID:30634666 identify the Enterococcus faecalis V583 prophage 6 AbiAlpha determinant, connect ef2833 with the abortive mechanism, map the system to DUF4393/PF14337, and link AbiAlpha to perturbed Idefix lytic-cycle timing plus premature infected-cell lysis. Pinned DefenseFinder article and HMM registries map AbiAlpha to the AbiAlpha__AbiAlpha model namespace. Reserved METPO:1027600 in proposals/metpo_traitmech_v199 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abialpha_system/2026-09-20T234719Z-codex-b9c9fc.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-21T00:12:59Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Broaden AbiAlpha class boundary after PR review
+            <p>Addressed PR #1163 review issue #1165 by removing the discovery prophage context from the AbiAlpha trait and METPO proposal class boundary. Kept Enterococcus faecalis V583 prophage 6 as the characterized exemplar and evidence context, left the direct AbiAlpha target and natural host range knowledge gap open, and broadened the generic AbiAlpha locus node to follow sibling Abi system records.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abialpha_system/2026-09-21T001259Z-codex-463fe2.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-21T00:55:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Recopy AbiAlpha DefenseFinder HMM registry row
+            <p>Addressed PR 1163 review issue 1168 by re-copying the AbiAlpha__AbiAlpha row from the pinned Liste_hmm_system.md source into top-level and graph evidence snippets. Confirmed List_system_article.md already uses the sentence-case AbiAlpha article title stored in the record.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abialpha_system/2026-09-21T005500Z-codex-5d0af1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -489,6 +512,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

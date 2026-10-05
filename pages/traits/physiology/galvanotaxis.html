@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The flagellar-motility branch supported in Salmonella 14028S-background cells, not a complete electrical sensing or orientation mechanism. The fliC/fljB double mutant establishes dependence on the flagellar apparatus, not individual FliC necessity or flagellin sufficiency. Host CFTR is outside this microbial graph.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -362,7 +364,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -374,8 +375,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-03T23:24:31Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add galvanotaxis with strain-qualified examples and flagellar motility evidence
+            <p>Mint traitmech:000581 and reserve METPO:1053500 in proposal v458. Three primary DOI sources and the InterPro Flagellin family provide seven snippets. Distinguish active migration from passive drift, paired flagellin deletion from single-protein necessity, and observed directions from unreconciled source-data cosine signs. NCBI taxa, GO:0071973, InterPro:IPR001492, EBI Proteins A0A0F6B2U2 and UniProt reference proteome UP000002695 were checked. Novelty searches included ignored and hidden files.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/galvanotaxis/2026-10-03T232431Z-codex-3a5ed2.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -464,6 +475,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -755,7 +773,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 23:20 UTC
+      Record as of 2026-10-03 23:24 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

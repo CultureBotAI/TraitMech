@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -552,7 +554,6 @@ Very-low-temperature growth is a systems phenotype rather than a single pathway.
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -630,8 +631,24 @@ Very-low-temperature growth is a systems phenotype rather than a single pathway.
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T04:40:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reviewed temperature_range_very_low causal evidence
+            <p>Reviewed data/traits/environment/temperature_range_very_low.yaml for issue #183. Added exact snippets to six edge-level evidence entries from Ramón et al. 2023, Ramasamy et al. 2023, and Phadtare and Severinov 2010, grounded three residual predicates, and narrowed the RNA secondary-structure node identifier and type. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_very_low/2026-09-04T044000Z-codex-3e9ace.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T23:20:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect temperature-range-very-low causal graph components
+            <p>Resolved issue 183 graph fragmentation for data/traits/environment/temperature_range_very_low.yaml by adding 6 source- and verbatim-snippet-backed association connectors among membrane desaturation, two-component cold signaling, CspA-family RNA chaperone, cold proteostasis, compatible-solute, and ice-binding protein branches, connecting the temperature-range-very-low nonmechanistic graph from 7 components to 1. Validated via the write-time LinkML gate in scripts/connect_temperature_range_very_low_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_very_low/2026-09-04T232000Z-codex-183.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -725,6 +742,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

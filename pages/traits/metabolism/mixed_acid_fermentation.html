@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the enterobacterial branch centered on E. coli. The taxon-paired protein example establishes PflB, while Pta/AckA and FHL remain combined module labels pending component-level curation.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -606,7 +608,6 @@ The proposed core graph should be explicitly labeled **enterobacterial/*E. coli*
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -684,8 +685,18 @@ The proposed core graph should be explicitly labeled **enterobacterial/*E. coli*
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T08:25:03Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the mixed-acid fermentation causal graph
+            <p>Added a public-source, exact-snippet-backed edge linking acetyl-CoA to its metabolism by the Pta/AckA acetate branch. The graph moved from two components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mixed_acid_fermentation/2026-08-31T082503Z-codex-534254.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -779,6 +790,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1070,7 +1088,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 08:20 UTC
+      Record as of 2026-08-31 08:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This is a composite AOM graph spanning sulfate-coupled ANME-SRB consortia and nitrate-dependent Ca. Methanoperedens. The mcrA example supports methane activation in the nitrate-dependent branch; MCR occurrence alone does not establish reaction direction or the AOM phenotype.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -506,7 +508,6 @@ High-confidence chemical nodes include methane, CO₂/HCO₃⁻, sulfate, sulfid
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -554,8 +555,9 @@ High-confidence chemical nodes include methane, CO₂/HCO₃⁻, sulfate, sulfid
         </li>
 
       </ol>
-    </div>
 
+
+    </div>
   </section>
 </article>
 
@@ -649,6 +651,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

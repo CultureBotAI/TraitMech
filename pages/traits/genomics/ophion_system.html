@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Ophion as a named three-gene anti-jumbo-phage system while leaving its direct phage trigger, the OpnA/OpnB/OpnC interaction sequence, the nucleotide-modification product, the natural locus breadth, and the absence of pinned DefenseFinder HMM or rule rows unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -281,7 +283,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -299,8 +300,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T08:21:45Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Mint Ophion system trait
+            <p>Minted traitmech:000331 for Ophion system as a DOI-backed GENOMICS phage-defense-system record after an ignored-and-hidden duplicate search found no existing Ophion system record, slug, local ID, proposal cohort, or placeholder METPO ID. Added a conservative locus-level causal graph, a knowledge-gap discussion for unresolved jumbo-phage mechanism and DefenseFinder model coverage, and proposal metpo_traitmech_v208 reserving METPO:1028500 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ophion_system/2026-09-21T082145Z-codex-ccd170.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-21T08:48:46Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Tighten Ophion PHP mutation note
+            <p>Addressed PR #1183 adversarial review issue #1184 by narrowing the Ophion conserved-residue evidence note to essential OpnA Radical SAM and OpnC phosphoribosyl-transferase domains with partial dependence on OpnB PHP, instead of implying conserved-residue mutations had been shown in all three OpnA, OpnB, and OpnC proteins.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ophion_system/2026-09-21T084846Z-codex-34545d.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -389,6 +406,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -680,7 +704,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 08:47 UTC
+      Record as of 2026-09-21 08:48 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

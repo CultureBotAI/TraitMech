@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -560,7 +562,6 @@ External pH alters both components of the PMF: the chemical gradient, ΔpH, and 
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -674,8 +675,24 @@ External pH alters both components of the PMF: the chemical gradient, ΔpH, and 
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T02:20:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Review pH numerical-limits causal evidence
+            <p>Reviewed data/traits/environment/ph_phenotype_with_numerical_limits.yaml for issue 183. Added a source-checked record-level pH-axis snippet and seven source-checked edge-level snippets, replaced two unmapped pH-axis predicates with grounded RO:0002211 or RO:0002326 predicates, and kept the graph NONMECHANISTIC because the record is a pH numerical-limit superclass rather than a taxon-specific molecular mechanism. Validated via the write-time LinkML gate in scripts/review_ph_phenotype_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_phenotype_with_numerical_limits/2026-09-04T022000Z-codex-73fbda.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T18:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect pH numerical-limits causal graph components
+            <p>Resolved issue 183 graph fragmentation for data/traits/environment/ph_phenotype_with_numerical_limits.yaml by adding 4 source- and verbatim-snippet-backed association connectors among PMF, F0F1-ATPase/ATP-synthesis, antiporter, amino-acid-decarboxylase, and phosphate-buffering branches, connecting the pH numerical-limits nonmechanistic graph from 5 components to 1. Validated via the write-time LinkML gate in scripts/connect_ph_phenotype_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_phenotype_with_numerical_limits/2026-09-04T180000Z-codex-183.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -769,6 +786,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures MqsRAC as a named DefenseFinder two-profile phage-defense system while leaving natural phage breadth, upstream MqsRAC activation logic, the exact relationship between the two DefenseFinder profiles and the tripartite MqsR/MqsA/MqsC locus, and cooperating restriction/modification contexts unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -363,7 +365,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -393,8 +394,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-22T15:04:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add MqsRAC system genomics trait
+            <p>Minted traitmech:000368 for MqsRAC system as a DOI-backed GENOMICS TraitRecord under phage defense system. The record captures MqsR/MqsA/MqsC as an Escherichia coli C496_10 toxin-antitoxin-chaperone phage-defense system, uses Fernandez-Garcia et al. for T2 inhibition and persister-cell evidence, pins the DefenseFinder article, rule, and HMM rows for the MqsRAC namespace, leaves phage breadth and profile-to-activity details open as a knowledge gap, and reserves METPO:1032200 in proposals/metpo_traitmech_v245.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mqsrac_system/2026-09-22T150400Z-codex-c9d53a.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-22T15:15:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Remove unsupported MqsRAC process-to-process edge
+            <p>Addressed issue #1258 by replacing the MqsRAC persister-cell formation to restriction/modification-assisted T2 inhibition edge with independent MqsRAC locus to restriction/modification-assisted T2 inhibition and MqsRAC-dependent persister formation to MqsRAC system trait edges. The revised graph stays connected while avoiding an unsupported claim that persister-cell formation is upstream of restriction/modification-assisted T2 inhibition.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mqsrac_system/2026-09-22T151500Z-codex-issue1258.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-22T15:18:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Generalize MqsRAC restriction-modification wording
+            <p>Addressed issue #1259 by replacing McrBC-specific MqsRAC graph and discussion wording with restriction/modification-assisted T2 inhibition phrasing. The cited snippets support cooperation with restriction/modification systems, not a specific McrBC effector.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mqsrac_system/2026-09-22T151800Z-codex-issue1259.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -483,6 +506,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

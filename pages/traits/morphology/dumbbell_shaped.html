@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is retained as a transient morphology classification. The sources support snapping division and discuss RipA/RpfB hydrolases broadly, but do not establish a taxon-matched protein as the determinant of the asserted dumbbell trait; no token protein example is assigned.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -467,7 +469,6 @@ For TraitMech, the phenotype should be asserted only when microscopy or an autho
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -539,8 +540,18 @@ For TraitMech, the phenotype should be asserted only when microscopy or an autho
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-03T23:09:03Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Retype v_shaped_daughters from TRAIT to QUALITY
+            <p>The causal graph dumbbell_shaped_snapping_division splits into two components, and both contained a node typed TRAIT, so UNREACHABLE_FROM_TRAIT reported it clean while 7 of its 11 nodes had no path to dumbbell_shaped_trait (issue 220). v_shaped_daughters is the morphological outcome of snapping division, not a trait this record asserts: no v_shaped trait record exists and the node carries no grounding, unlike genuine cross-trait links such as nacl_delta on nacl_delta_high. Morphology graphs use QUALITY for shape outcomes (rod shape, non-spherical morphology, cell curvature); STATE is reserved for conditions. After the retype the existing check correctly reports those 7 nodes, and the new FRAGMENTED_GRAPH check reports the split independently of node typing.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/dumbbell_shaped/2026-08-03T230903Z-claude-code-90a277.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -634,6 +645,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

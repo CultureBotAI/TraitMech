@@ -122,6 +122,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-15 as the validated AAA1 transcriptional unit with three product accessions, final Table S8 MinD ATPase and DUF6988 HHpred-domain rows, and three DefenseFinder DS-15 profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact AAA family ATPase or DUF6988 chemistry, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -438,7 +440,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -456,8 +457,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T16:51:46Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-15 system trait
+            <p>Minted traitmech:000438 as a DS-15 system GENOMICS record under phage defense system, citing the DeWeirdt et al. DefensePredictor Science article, final Tables S6/S7/S8, and the pinned DefenseFinder DS-15 article/HMM registries. The record keeps AAA1 and DS-15__DS-15A/DS-15B/DS-15C as related source/profile synonyms, adds a nonmechanistic AAA1 transcriptional-unit graph, leaves canonical examples empty, records the missing native-host, phage-breadth, profile-to-protein, molecular-output, and DefenseFinder rules gaps, and reserves METPO:1039200 in proposals/metpo_traitmech_v315.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_15_system/2026-09-28T165146Z-codex-87ec99.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -546,6 +557,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -837,7 +855,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 16:50 UTC
+      Record as of 2026-09-28 16:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%

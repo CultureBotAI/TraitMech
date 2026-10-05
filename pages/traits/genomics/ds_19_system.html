@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-19 as the validated PDP4 transcriptional unit with one product accession, a lower-probability PDDEXK HHpred-domain row, and one DefenseFinder DS-19 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, DS-19 molecular activity, trigger, substrate, complete phage breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -382,7 +384,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -400,8 +401,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T21:10:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-19 system trait
+            <p>Minted traitmech:000444 as a DS-19 system GENOMICS record under phage defense system, backed by DeWeirdt et al. DOI evidence, final Science Tables S6/S7/S8 OpenData rows for PDP4, and the pinned DefenseFinder DS-19 article/HMM registries. The record keeps PDP4 and DS-19__DS-19 as related source/profile labels, uses a nonmechanistic graph for reduced bacteriophage plaquing, leaves native-host, molecular-output, low-confidence HHpred-domain, and DefenseFinder rules gaps open, and reserves METPO:1039800 in proposals/metpo_traitmech_v321.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_19_system/2026-09-28T211000Z-codex-19ds19.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -490,6 +501,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

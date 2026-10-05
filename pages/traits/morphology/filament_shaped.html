@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -520,7 +522,6 @@ The most defensible core is:
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -628,8 +629,18 @@ The most defensible core is:
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T06:23:01Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Ground the filament-shaped SOS causal node
+            <p>Grounded the ungrounded RecA/LexA SOS-response biological-process node in the filament-shaped causal graph to GO:0009432 while adding traitmech:000207 SOS response as the organism-level physiology trait.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/filament_shaped/2026-09-15T062301Z-codex-0958c4.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -723,6 +734,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1014,7 +1032,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-15 06:22 UTC
+      Record as of 2026-09-15 06:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1020 TraitRecords
       · embedding coverage 46.8%
