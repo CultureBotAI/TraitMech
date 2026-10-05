@@ -10755,6 +10755,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phagocytosis.html#phagocytosis-native-mechanism-evidence"
  },
  {
+  "discussion_id": "phagotrophy-nutrition-and-hierarchy-scope",
+  "prompt": "Keep particulate nutrition distinct from uptake and carbon-source axes.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phagotrophy",
+  "source_id": "traitmech:000628",
+  "source_file": "phagotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "The class requires nutritional assimilation after ingestion; particle contact, retention or engulfment alone is insufficient. Phagocytosis traitmech:000627 describes membrane-mediated uptake and explicitly leaves nutrition separate. Its existing discussion is not an unresolved exact phagotrophy node. The 2001 Introduction describes carbon, macronutrient and growth-factor benefits of phagotrophy as variable, partly speculative roles across mixotrophs; the 2017 Introduction attributes growth-factor cases to earlier papers not independently audited here. Those statements frame terminology, not new canonical examples. Trophic type METPO:1000631 is locally defined by carbon, energy and electron-donor sources, heterotrophic METPO:1000644 by organic carbon, and mixotrophic METPO:1000652 by dual carbon use. This broader nutrient-acquisition mode does not prescribe a carbon source or require photosynthesis, so retain phenotype METPO:1000059 pending review of a closer nutritional-mode hierarchy. Nutrient adaptation METPO:1000731 concerns nutrient regimes, not specifically particle feeding. Do not equate phagotrophy with phagocytosis, mixotrophy, bacterivory or the bacteria-only predatory-bacterium class. Extracellular digestion without particle ingestion is outside this definition. No unverified synonym or process-level ontology xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phagotrophy.html#phagotrophy-nutrition-and-hierarchy-scope"
+ },
+ {
+  "discussion_id": "phagotrophy-assimilation-mechanism-evidence",
+  "prompt": "Resolve nutrient processing with native functional evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "phagotrophy",
+  "source_id": "traitmech:000628",
+  "source_file": "phagotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "Growth and isotope incorporation establish nutritional use without identifying a universal phagosomal digestion or assimilation mechanism. Distinguish prey origin, release of dissolved metabolites, direct organic assimilation and respiration followed by carbon refixation. Isotope mass balance does not by itself separate all these routes. Sequence annotation or differential expression alone would not establish native protein function. Obtain taxon-paired functional evidence and inspect relevant supplements before adding protein accessions or a causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/phagotrophy.html#phagotrophy-assimilation-mechanism-evidence"
+ },
+ {
   "discussion_id": "phenylalanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for phenylalanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11402,9 +11436,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 544,
- "total_knowledge_gaps": 369,
- "total_source_entries": 493,
+ "total_discussions": 546,
+ "total_knowledge_gaps": 370,
+ "total_source_entries": 494,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
