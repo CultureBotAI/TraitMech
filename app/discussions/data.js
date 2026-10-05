@@ -9973,6 +9973,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/homeoviscous_adaptation.html#homeoviscous-adaptation-xref-gap"
  },
  {
+  "discussion_id": "homothallism-trait-scope",
+  "prompt": "Preserve organism-level self-fertility across distinct mating mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "homothallism",
+  "source_id": "traitmech:000609",
+  "source_file": "homothallism.yaml",
+  "attaches_to": [],
+  "rationale": "This is a reproductive phenotype, not a sequence feature or MAT-gene inventory. The operational single-spore definition does not require a uninucleate spore, both MAT idiomorphs in one nucleus, or one molecular mechanism. It does not exclude outcrossing or require universal compatibility, obligate sexuality, or self-fertility of every progeny. Distinguish self-fertility from asexual cloning, ploidy, heterokaryosis, hyphal fusion and parasexual reproduction; these are not is-a parents. PHYSIOLOGY is a filesystem category, not an ontology parent. Self-fertility and self-compatibility also have uses outside fungi; resolve their lexical scope and external phenotype/process mappings before adding synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/homothallism.html#homothallism-trait-scope"
+ },
+ {
+  "discussion_id": "homothallism-mechanism-and-readouts",
+  "prompt": "Resolve native proteins and sexual-cycle readouts before adding causal edges.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "homothallism",
+  "source_id": "traitmech:000609",
+  "source_file": "homothallism.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread experiments and supplements before expanding mechanistic claims. Separate wild-type sporulation, deletion phenotypes, marker segregation and inter-marker recombination. MAT homology or expression alone cannot establish a sexual cycle, and neither independent chromosome assortment nor drug resistance alone excludes parasexual processes. Resolve native protein accessions, experimental dependencies and taxonomic provenance before adding a mechanistic graph; do not use NONMECHANISTIC to bypass unresolved grounding. Retain the actual abstract-verifier outcome when an API returns an editorial digest, and identify manual full-text checks separately.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/homothallism.html#homothallism-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "hyphal-anastomosis-endpoint-and-scope",
   "prompt": "Keep completed vegetative fusion distinct from approach and its consequences.",
   "kind": "CURATION_TODO",
@@ -10756,9 +10790,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 506,
+ "total_discussions": 508,
  "total_knowledge_gaps": 365,
- "total_source_entries": 474,
+ "total_source_entries": 475,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

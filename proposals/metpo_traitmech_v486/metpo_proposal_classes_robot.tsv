@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1056300	homothallism	A fungal phenotype enabling a culture founded from a single spore to reproduce sexually in isolation from a mating partner.	TraitMech:data/traits/physiology/homothallism.yaml|DOI:10.5598/imafungus.2015.06.01.13|DOI:10.1371/journal.pgen.1006981|DOI:10.7554/elife.79114	METPO:1000059			metpo_traitmech_2026_10	HIGH	Fungal self-fertility; not a universal MAT architecture.	traitmech:000609
