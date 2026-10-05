@@ -9361,6 +9361,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/arginine_dihydrolase_activity.html#arginine-dihydrolase-activity-xref-gap"
  },
  {
+  "discussion_id": "autogamy-scope-and-hierarchy",
+  "prompt": "Keep intracellular nuclear fusion distinct from broad self-fertility.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "autogamy",
+  "source_id": "traitmech:000622",
+  "source_file": "autogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Use the unpaired-cell nuclear-fusion sense supported by the cited ciliate studies, not plant self-pollination or all selfing. The existing homothallism traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents or synonyms. Cytogamy involves paired cells without nuclear exchange in Nobili and Luporini p.39, unlike this unpaired-cell definition. No universal genetic identity, complete homozygosity, starvation trigger, nuclear count, inability to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and broader automixis terminology before adding synonyms or mappings.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autogamy.html#autogamy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "autogamy-mechanism-and-coverage",
+  "prompt": "Resolve molecular mechanisms and broader taxon coverage before extension.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "autogamy",
+  "source_id": "traitmech:000622",
+  "source_file": "autogamy.yaml",
+  "attaches_to": [],
+  "rationale": "This is an organismal reproductive phenotype, not the literal mt marker locus or a heat-shock expression signature. Nuclear-selection inference, nutritional commitment and survival associations do not supply a universal protein-resolved mechanism. No causal graph bypasses missing accession-level and perturbation evidence. Keep macronuclear-fragmentation scoring separate from directly observed fusion. The diatom terminology paper DOI:10.1080/0269249X.2013.791344 is only a research lead: the author repository at https://hdl.handle.net/20.500.12594/2237 supplied metadata, not the full terminology passage. It is not counted as evidence. Read that passage before asserting equivalence with paedogamy or automixis. Preserve actual abstract-resolver verdicts separately from direct full-text checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autogamy.html#autogamy-mechanism-and-coverage"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11198,9 +11232,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 532,
+ "total_discussions": 534,
  "total_knowledge_gaps": 365,
- "total_source_entries": 487,
+ "total_source_entries": 488,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

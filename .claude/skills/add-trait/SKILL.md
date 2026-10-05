@@ -651,6 +651,22 @@ git diff --cached --check
 .venv/bin/python -m pytest -q
 ```
 
+ROBOT directive headers deliberately end in tabs for empty cells; normal
+`git diff --check` can flag them (#1715). Do not trim required cells or invent
+synonyms/annotations to silence whitespace checks. Run the maintained proposal
+verifier, then inspect every flagged line to confirm that only required trailing
+tabs are involved and that both header widths match the template. For that exact
+inspected TSV path in `template`, use scoped checks:
+
+```bash
+git diff --cached --check -- . ":(exclude)$template"
+git -c core.whitespace=-blank-at-eol diff --cached --check -- "$template"
+```
+
+Omit `--cached` for unstaged edits. Report the ordinary check's finding and this
+narrow exception; do not claim an unqualified whitespace pass, weaken global
+Git settings, or exempt other whitespace defects or files.
+
 Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<category>/<slug>.yaml`
 after adding a `snippet`. A `VERIFIED` row establishes a match to returned text;
 confirm its source section before describing it as a scientific-abstract quote.
