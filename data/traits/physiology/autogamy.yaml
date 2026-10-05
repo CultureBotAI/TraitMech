@@ -1,7 +1,8 @@
 identifier: traitmech:000622
 label: autogamy
 definition: A sexual-reproduction phenotype in which two meiotically derived gametic
-  nuclei formed within one unpaired cell fuse with each other.
+  nuclei formed within one unpaired, undivided cell fuse with each other, without
+  fusion of separate gametes.
 definition_source: DOI:10.1017/S0016672300010740
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -44,6 +45,16 @@ evidence:
     not a validated causal pathway. Natural provenance of d12 remains unresolved;
     it is not a canonical example here. Actual figures, remaining sections and supplements
     were not audited.
+- reference: DOI:10.1080/0269249X.2013.791344
+  snippet: Autogamy is a fusion of two gametic (haploid) nuclei within an undivided
+    cell
+  notes: Kaczmarska et al. (2013), p.271, section 5.2.2, opening clause directly read
+    in the author-posted full text at https://www.researchgate.net/publication/259079699_Proposals_for_a_terminology_for_diatom_sexual_reproduction_auxospores_and_resting_stages.
+    Sections 5.2.1-5.2.2 distinguish separate gamete fusion from undivided-cell nuclear
+    fusion. This resolves the prior unread terminology lead; it is synthesis, not
+    new ciliate replication. The following diatom-specific meiotic timing is not imposed
+    on the ciliate definition, which allows postmeiotic mitosis as in Nobili and Luporini
+    pp.35-37. Actual 2013 diagrams were not inspected.
 canonical_examples:
 - taxon_id: NCBITaxon:74792
   taxon_label: Moneuplotes minuta
@@ -74,7 +85,10 @@ discussions:
     to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending
     a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category.
     Verify external equivalences and broader automixis terminology before adding synonyms
-    or mappings.
+    or mappings. Paedogamy traitmech:000624 instead involves separate gametes formed
+    within one gametangium. The clarified definition excludes their fusion, without
+    forbidding later cell division or postmeiotic nuclear mitosis. These are event-level
+    distinctions, not disjoint species.
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: autogamy-mechanism-and-coverage
@@ -86,11 +100,11 @@ discussions:
     commitment and survival associations do not supply a universal protein-resolved
     mechanism. No causal graph bypasses missing accession-level and perturbation evidence.
     Keep macronuclear-fragmentation scoring separate from directly observed fusion.
-    The diatom terminology paper DOI:10.1080/0269249X.2013.791344 is only a research
-    lead: the author repository at https://hdl.handle.net/20.500.12594/2237 supplied
-    metadata, not the full terminology passage. It is not counted as evidence. Read
-    that passage before asserting equivalence with paedogamy or automixis. Preserve
-    actual abstract-resolver verdicts separately from direct full-text checks.'
+    The earlier metadata-only lead DOI:10.1080/0269249X.2013.791344 is now resolved
+    by direct reading of sections 5.2.1-5.2.2: paedogamy traitmech:000624 is distinct
+    and automixis broader. Molecular mechanisms, wider taxon coverage and external
+    equivalences remain open; the terminology source alone does not establish them.
+    Preserve actual abstract-resolver verdicts separately from direct full-text checks.'
   posed_by: codex
   posed_date: '2026-10-05'
 curation_history:
@@ -109,4 +123,20 @@ curation_history:
   changes: Linked paired-cell cytogamy traitmech:000623 and attributed Diller's broader
     double-autogamy usage. Preserved the unpaired definition, evidence, example and
     parent; did not assert subsumption or equivalence.
+  llm_assisted: true
+- timestamp: '2026-10-05T17:13:00Z'
+  curator: codex
+  action: QUALIFIED_TRAIT_SCOPE
+  changes: 'Addressed #1719: made the undivided-cell/no-separate-gamete-fusion boundary
+    explicit, added directly read 2013 terminology evidence and linked paedogamy traitmech:000624.
+    Resolved the unread-source lead while retaining other open gaps. Preserved ciliate
+    evidence, canonical example, parent and compatibility with postmeiotic mitosis.'
+  llm_assisted: true
+- timestamp: '2026-10-05T17:18:00Z'
+  curator: codex
+  action: QUALIFIED_NUCLEAR_ORIGIN
+  changes: 'Addressed #1720: retained the original same-cell origin of both gametic
+    nuclei alongside the #1719 undivided-cell and no-separate-gamete-fusion boundary.
+    Fusion location alone does not establish self-fertilization. Preserved evidence,
+    example, discussions, parent and all prior history.'
   llm_assisted: true

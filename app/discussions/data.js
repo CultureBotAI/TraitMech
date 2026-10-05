@@ -9370,7 +9370,7 @@ window.searchData = [
   "source_id": "traitmech:000622",
   "source_file": "autogamy.yaml",
   "attaches_to": [],
-  "rationale": "Use the unpaired-cell nuclear-fusion sense supported by the cited ciliate studies, not plant self-pollination or all selfing. The existing homothallism traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents or synonyms. Cytogamy traitmech:000623 involves paired cells without nuclear exchange in Nobili and Luporini p.39, unlike this unpaired-cell definition. Diller (1958), DOI:10.1111/j.1550-7408.1958.tb02567.x, uses double autogamy for the tentative paired-cell observation. That broader source terminology does not make cytogamy a child or exact synonym of this operationally unpaired-cell class. No universal genetic identity, complete homozygosity, starvation trigger, nuclear count, inability to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and broader automixis terminology before adding synonyms or mappings.",
+  "rationale": "Use the unpaired-cell nuclear-fusion sense supported by the cited ciliate studies, not plant self-pollination or all selfing. The existing homothallism traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents or synonyms. Cytogamy traitmech:000623 involves paired cells without nuclear exchange in Nobili and Luporini p.39, unlike this unpaired-cell definition. Diller (1958), DOI:10.1111/j.1550-7408.1958.tb02567.x, uses double autogamy for the tentative paired-cell observation. That broader source terminology does not make cytogamy a child or exact synonym of this operationally unpaired-cell class. No universal genetic identity, complete homozygosity, starvation trigger, nuclear count, inability to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and broader automixis terminology before adding synonyms or mappings. Paedogamy traitmech:000624 instead involves separate gametes formed within one gametangium. The clarified definition excludes their fusion, without forbidding later cell division or postmeiotic nuclear mitosis. These are event-level distinctions, not disjoint species.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9387,7 +9387,7 @@ window.searchData = [
   "source_id": "traitmech:000622",
   "source_file": "autogamy.yaml",
   "attaches_to": [],
-  "rationale": "This is an organismal reproductive phenotype, not the literal mt marker locus or a heat-shock expression signature. Nuclear-selection inference, nutritional commitment and survival associations do not supply a universal protein-resolved mechanism. No causal graph bypasses missing accession-level and perturbation evidence. Keep macronuclear-fragmentation scoring separate from directly observed fusion. The diatom terminology paper DOI:10.1080/0269249X.2013.791344 is only a research lead: the author repository at https://hdl.handle.net/20.500.12594/2237 supplied metadata, not the full terminology passage. It is not counted as evidence. Read that passage before asserting equivalence with paedogamy or automixis. Preserve actual abstract-resolver verdicts separately from direct full-text checks.",
+  "rationale": "This is an organismal reproductive phenotype, not the literal mt marker locus or a heat-shock expression signature. Nuclear-selection inference, nutritional commitment and survival associations do not supply a universal protein-resolved mechanism. No causal graph bypasses missing accession-level and perturbation evidence. Keep macronuclear-fragmentation scoring separate from directly observed fusion. The earlier metadata-only lead DOI:10.1080/0269249X.2013.791344 is now resolved by direct reading of sections 5.2.1-5.2.2: paedogamy traitmech:000624 is distinct and automixis broader. Molecular mechanisms, wider taxon coverage and external equivalences remain open; the terminology source alone does not establish them. Preserve actual abstract-resolver verdicts separately from direct full-text checks.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -10517,6 +10517,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/osmotaxis.html#osmotaxis-mechanism-and-canonical-strains"
  },
  {
+  "discussion_id": "paedogamy-scope-and-hierarchy",
+  "prompt": "Separate gamete-cell fusion from autogamy and broader selfing.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "paedogamy",
+  "source_id": "traitmech:000624",
+  "source_file": "paedogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Use the single-gametangium gamete-fusion sense established in the cited diatom literature. Autogamy traitmech:000622 denotes gametic-nuclear fusion in an unpaired undivided cell, without fusion of separate gametes; cytogamy traitmech:000623 concerns paired cells without nuclear exchange. Automixis is broader in Kaczmarska et al. section 5.2 and is not an exact synonym. Bagmet et al. calls automixis homothallic, whereas our existing homothallism traitmech:000609 is fungal-scoped; this usage does not make that record a parent. Use phenotype METPO:1000059 pending a suitable reproductive-phenotype parent. Do not infer species-level disjointness or universal homozygosity, recombination rate, seasonal trigger or inability to outcross. Broader non-diatom usage and external equivalences need primary source review before expanding this operational scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/paedogamy.html#paedogamy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "paedogamy-mechanism-and-coverage",
+  "prompt": "Resolve nuclear cytology and molecular mechanisms beyond morphology.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "paedogamy",
+  "source_id": "traitmech:000624",
+  "source_file": "paedogamy.yaml",
+  "attaches_to": [],
+  "rationale": "This is a reproductive phenotype, not a literal locus or a plastid-marker sequence feature. The directly inspected microscopy supports a gamete-fusion interpretation but does not identify a protein-resolved causal pathway. No causal graph or accession-level protein claim is inferred from chloroplast shape, sequence similarity or terminology. Full Neidium methods and provenance, and stronger nuclear observations in the Nitzschia system, remain coverage gaps. Retain actual snippet-resolver outcomes separately from direct PDF, XML and abstract checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/paedogamy.html#paedogamy-mechanism-and-coverage"
+ },
+ {
   "discussion_id": "parasexuality-trait-scope",
   "prompt": "Preserve the complete reproductive capability rather than an isolated readout.",
   "kind": "CURATION_TODO",
@@ -11266,9 +11300,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 536,
- "total_knowledge_gaps": 365,
- "total_source_entries": 489,
+ "total_discussions": 538,
+ "total_knowledge_gaps": 366,
+ "total_source_entries": 490,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

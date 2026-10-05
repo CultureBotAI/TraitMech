@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/autogamy.yaml
+  slug: autogamy
+session:
+  id: 2026-10-05T171931Z-codex-6fd05f
+  timestamp: '2026-10-05T17:19:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1720
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Retain same-cell nuclear provenance in the autogamy boundary
+  details: Corrected the draft definition following local adversarial issue 1720. Both gametic
+    nuclei must originate within the same unpaired undivided cell as well as fuse without
+    fusion of separate gametes. The earlier repair recorded in history/records/autogamy/2026-10-05T171617Z-codex-f0e552.yaml
+    had inadvertently omitted explicit same-cell origin; this new record documents the correction
+    without altering that history. Preserved evidence, example, discussions, parent and all
+    previous curation events. Updated v498 definition in parity. Guarded correction dry run
+    and 58 focused tests passed before application.

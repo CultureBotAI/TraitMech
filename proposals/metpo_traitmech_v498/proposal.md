@@ -63,12 +63,17 @@ resolution does not identify a modern accession or genome for historical A-25.
 Source provenance supports a naturally collected, subsequently maintained
 strain, not every member of the species or the paper's nonautogamic controls.
 
-Three directly checked contiguous snippets accompany the counted citations.
-The diatom terminology source `DOI:10.1080/0269249X.2013.791344` remains only
-a discussion research lead: the author repository supplied metadata, not the
-required full-text passage. It does not count toward the evidence gate or
-establish paedogamy/automixis equivalence. Retain actual resolver verdicts;
-manual PDF/XML checks are not renamed resolver successes.
+The original three directly checked snippets remain unchanged. During v500,
+`DOI:10.1080/0269249X.2013.791344` was directly read in author-posted full
+text, resolving the formerly metadata-only lead. Its p.271 section 5.2.2
+supplies a fourth snippet for the undivided-cell boundary. Issue #1719 clarifies
+this record and template to exclude fusion of separate gametes, the defining
+contrast with paedogamy `traitmech:000624`; automixis remains broader. This is
+terminology evidence, not independent ciliate replication, and no universal
+immediate post-meiosis-II timing is imposed. Retain actual resolver verdicts;
+manual PDF/XML checks are not renamed resolver successes. A follow-up local
+finding (#1720) retained the original same-cell origin requirement alongside
+the new gamete-fusion exclusion; location at fusion alone is insufficient.
 
 The maintained resolver returns VERIFIED for Berger, NOT_IN_ABSTRACT for
 Thind and UNRESOLVED for Nobili and Luporini. An exact DOI query independently
