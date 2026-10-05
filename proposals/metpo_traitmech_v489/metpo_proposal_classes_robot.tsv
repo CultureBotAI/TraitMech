@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1056600	pseudohomothallism	A fungal phenotype enabling a sexual spore carrying separate nuclei of compatible mating types to establish a self-fertile heterokaryotic culture.	TraitMech:data/traits/physiology/pseudohomothallism.yaml|DOI:10.5598/imafungus.2015.06.01.13|DOI:10.1093/genetics/143.2.789|DOI:10.1002/dvg.1020150111|DOI:10.1371/journal.pgen.1000030	METPO:1000059			metpo_traitmech_2026_10	HIGH	Single-spore self-fertility through compatible nuclei; local homothallism parent pending upstream.	traitmech:000612

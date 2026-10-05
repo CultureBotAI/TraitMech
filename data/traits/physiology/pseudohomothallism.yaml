@@ -1,0 +1,122 @@
+identifier: traitmech:000612
+label: pseudohomothallism
+definition: A fungal phenotype enabling a sexual spore carrying separate nuclei of
+  compatible mating types to establish a self-fertile heterokaryotic culture.
+definition_source: DOI:10.5598/imafungus.2015.06.01.13
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000609
+evidence:
+- reference: DOI:10.5598/imafungus.2015.06.01.13
+  snippet: self-fertility is the result of the packaging of two independent and opposite
+    mating type nuclei within a single spore
+  notes: 2015 terminology review, PMID:26203424, PMC4500084. Exact contiguous clause
+    from section s2b Pseudohomothallism, read end-to-end in directly retrieved full-text
+    XML. This supplies definition and homothallism-parent authority, not experimental
+    replication or an abstract quote. The review describes single-spore self-fertility
+    arising from compatible partners packaged as separate nuclei. Its two-nucleus
+    description is not a fixed count for every subsequent spore or mycelial stage;
+    the comparative primary study below documents developmental variation. Occasional
+    self-sterile propagules allow outcrossing. Figure 1 remains uninspected.
+- reference: DOI:10.1093/genetics/143.2.789
+  snippet: Ascospores of Neurospora tetrasperma normally contain nuclei of both mating-type
+    idiomorphs (a and A), resulting in self-fertile heterokaryons
+  notes: Merino et al. (1996), PMID:8725227. Exact opening clause of the scientific
+    abstract directly retrieved from Europe PMC core metadata. The following parenthesis
+    names this sexual system pseudohomothallism. The study compares mating-type chromosome
+    and autosomal sequences from wild-collected self-fertile strains, while distinguishing
+    occasional homokaryotic self-sterile strains capable of outcrossing. Recombination
+    suppression is an evolutionary association in this system, not the definition
+    of every pseudohomothallic fungus. Full text, figures, supplements and strain-level
+    provenance in this paper remain uninspected.
+- reference: DOI:10.1002/dvg.1020150111
+  snippet: Two basically different modes underlie the delivery of opposite mating
+    type nuclei into each of the four ascospores in the different genera.
+  notes: Raju and Perkins (1994), PMID:8187347. Exact sentence of the directly retrieved
+    Europe PMC scientific abstract, which is explicitly truncated at 400 words. Comparative
+    cytology covers N. tetrasperma, G. tetrasperma, P. anserina and P. tetraspora.
+    First-division segregation in Neurospora differs from the second-division program
+    in Podospora and Gelasinospora. The mat-centromere crossover is established for
+    P. anserina but inferred for the other two latter species. Following postmeiotic
+    development, germinating P. anserina ascospores retain three functional nuclei,
+    two of one mating type and one of the other. Do not require exactly two nuclei,
+    four spores, a fixed nuclear ratio, suppressed crossing over or one spindle geometry
+    for the whole trait. Full text, original methods, actual figures and strain provenance
+    remain unread.
+- reference: DOI:10.1371/journal.pgen.1000030
+  snippet: recombination was assessed in individual sexual progeny originating from
+    a selfed cross of the heterokaryotic mycelia.
+  notes: Menkis et al. (2008), PMID:18369449, PMC2268244. Exact contiguous clause
+    of Methods s4d, not an abstract quote. Scientific abstract, Introduction, Results
+    s2b/s2c, Methods s4a/s4c/s4d/s4e and Table 1 including footnotes were read in
+    the full-text XML. Results s2b and Methods s4d assay 152 heterokaryotic sexual
+    progeny of a selfed P581 cross; that selected assay denominator is not the frequency
+    of all heterokaryotic offspring. Table 1 identifies P581 as a wild-type heterokaryon
+    from Lihue, Hawaii, and its P-prefix footnote identifies the Perkins collection
+    from nature. FGSC 2508/2509 are homokaryotic components, not alternative identifiers
+    for the natural heterokaryon. The separate 83-progeny N. crassa introgression
+    experiment is not the native P581 selfing assay. Figures, supplements, Discussion
+    and unread experimental sections remain uninspected; inferred evolutionary history
+    is not a demonstrated universal developmental mechanism.
+canonical_examples:
+- taxon_id: NCBITaxon:40127
+  taxon_label: Neurospora tetrasperma
+  reference: DOI:10.1371/journal.pgen.1000030
+  note: 'Qualified natural example: heterokaryon P581 from Lihue, Hawaii. Provenance
+    is Table 1 and its Perkins-collection footnote at https://pmc.ncbi.nlm.nih.gov/articles/PMC2268244/.
+    Results s2b and Methods s4d analyze 152 heterokaryotic sexual progeny from selfed
+    P581; this is a selected assay set, not a claim that every spore is heterokaryotic
+    or self-fertile. Methods s4a specifies synthetic cross medium at 25 C for crosses.
+    FGSC 2508 and 2509 are its isolated homokaryotic components and are not the example.
+    Do not extend this observation to every strain or life stage. NCBI taxonomy 40127
+    resolves to the active species name on 2026-10-04.'
+discussions:
+- discussion_id: pseudohomothallism-scope-and-hierarchy
+  prompt: Keep single-spore self-fertility distinct from nuclear coexistence and MAT
+    content.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This reproductive phenotype narrows homothallism (traitmech:000609),
+    not heterothallism or mating-type switching. Heterokaryosis is relevant cellular
+    context but does not alone establish self-fertility. A single sexual spore can
+    carry compatible partners as separate nuclei; MAT sequences in one assembly or
+    multinucleation alone do not establish the trait. Do not require exactly two nuclei
+    throughout development, four spores, one nuclear ratio, universal self-fertility
+    or absence of outcrossing. Resolve secondary homothallism and functional heterothallism
+    usage before assigning exact synonyms, and verify external phenotype/process mappings
+    before adding xrefs. PHYSIOLOGY is a filesystem category. The standalone METPO
+    proposal uses released phenotype, not an unlabeled stub for pending homothallism
+    METPO:1056300; reconcile the narrower hierarchy when that v486 parent is accepted
+    upstream.
+  posed_by: codex
+  posed_date: '2026-10-04'
+- discussion_id: pseudohomothallism-mechanism-and-readouts
+  prompt: Resolve taxon-specific nuclear packaging before adding protein-level causal
+    edges.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Complete unread primary experiments, figures and supplements before expanding
+    mechanistic claims. Spindle arrangement, mating-type segregation and nuclear elimination
+    vary across genera and developmental stages; no one meiotic program is universal.
+    Separate observed cytology from inferred crossover events, and sequence divergence
+    from a direct reproductive readout. Keep natural P581 separate from its homokaryotic
+    components and interspecific introgression derivatives. Resolve native protein
+    accessions and source-bounded dependencies before adding a graph; do not use NONMECHANISTIC
+    to bypass missing grounding. Manual full-text matching is not an abstract-resolver
+    VERIFIED verdict.
+  posed_by: codex
+  posed_date: '2026-10-04'
+curation_history:
+- timestamp: '2026-10-05T03:50:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added pseudohomothallism with four DOI-backed exact source snippets and
+    qualified natural P581 after primary selfed-progeny, strain-table and NCBI checks.
+    Kept local homothallism parent and reproductive scope separate from MAT content
+    or nuclear count. Ignored-and-hidden novelty searches and structured METPO review
+    found no exact record. Reserved METPO:1056600 in v489 under released phenotype
+    pending acceptance of the narrower parent. Deferred lexical mappings and protein-resolved
+    causal graphs.
+  llm_assisted: true
