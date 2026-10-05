@@ -10840,6 +10840,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/tyrosine_arylamidase_activity.html#tyrosine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "unisexual-reproduction-scope-and-hierarchy",
+  "prompt": "Keep mating-type contribution distinct from selfing, helper cells and MAT inventory.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "unisexual reproduction",
+  "source_id": "traitmech:000613",
+  "source_file": "unisexual_reproduction.yaml",
+  "attaches_to": [],
+  "rationale": "One mating type does not mean one strain: non-isogenic same-type partners can exchange genetic material. Solo selfing overlaps homothallism (traitmech:000609), but the whole class is not restricted to single-isolate self-fertility. It is not a subclass of parasexuality (traitmech:000607), because meiotic cycles are also included. Pheromone-producing opposite-type helper cells are not necessarily genetic contributors, so do not require their physical absence. Use released phenotype METPO:1000059 in both record and proposal; PHYSIOLOGY is only a filesystem category. MAT sequence content, population mating-type bias or hyphae alone do not establish reproductive completion. Do not require universal meiosis, spores, cell fusion, clonality or absence of outcrossing. Resolve context-dependent same-sex mating terminology and external phenotype/process mappings before adding synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unisexual_reproduction.html#unisexual-reproduction-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "unisexual-reproduction-mechanism-and-examples",
+  "prompt": "Resolve native examples and taxon-specific reproductive mechanisms before graphing.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "unisexual reproduction",
+  "source_id": "traitmech:000613",
+  "source_file": "unisexual_reproduction.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread primary experiments and supplements before expanding mechanistic claims. Keep solo meiosis, non-isogenic same-type fusion and parasexual chromosome loss separate. Hyphal growth, cell fusion, ploidy change and viable progeny are different readouts, not interchangeable proof of a completed cycle. XL280 is a laboratory-cross derivative; Candida deletion and marked strains also do not establish natural canonical provenance. Verify natural strains and current taxonomic authority before adding examples, and native protein accessions before causal edges. No graph or unverified taxon/protein CURIE is asserted. Manual full-text matching is not an abstract-resolver VERIFIED verdict.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unisexual_reproduction.html#unisexual-reproduction-mechanism-and-examples"
+ },
+ {
   "discussion_id": "valine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for valine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10892,9 +10926,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 514,
+ "total_discussions": 516,
  "total_knowledge_gaps": 365,
- "total_source_entries": 478,
+ "total_source_entries": 479,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
