@@ -10942,6 +10942,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/thigmotropism.html#thigmotropism-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "tripolar-mating-scope-and-hierarchy",
+  "prompt": "Keep the cross-level mating phenotype distinct from sequence inventory.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tripolar mating system",
+  "source_id": "traitmech:000618",
+  "source_file": "tripolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "The unit is a mating system or cross with differently organized partners, not a standalone locus or a species-wide assertion about either parental strain. Three poles across the pair do not mean three mating types or three independent factors in each genome. This differs from the uniform single-factor and two-factor systems in traitmech:000616 and traitmech:000615, and from recombination-permitting chromosomal colocation in traitmech:000617. Heterothallic source framing does not make this a universal separate-partner dependence subclass of traitmech:000610; progeny can differ in self-fertility. Use released phenotype METPO:1000059 in record and proposal pending narrower relational-phenotype hierarchy review. PHYSIOLOGY is a filesystem category. No disjointness, fixed fertility ratio, natural prevalence or mandatory evolutionary trajectory is asserted. Resolve lexical and external equivalences before synonyms or xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/tripolar_mating_system.html#tripolar-mating-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "tripolar-mating-evidence-and-mechanism",
+  "prompt": "Resolve natural examples and source-bounded mechanisms before extension.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tripolar mating system",
+  "source_id": "traitmech:000618",
+  "source_file": "tripolar_mating_system.yaml",
+  "attaches_to": [],
+  "rationale": "Both primary studies use engineered partners, so no natural canonical taxon is inferred. Keep genotype, filamentation, spore germination, meiotic segregation and subsequent mating ability separate. The two studies report different self-fertility outcomes for progeny carrying compatible homeodomain determinants; retain strain background and copy-number context rather than generalize sterility. Inspect unread figures, supplements and source sections before more detailed claims or quantitative rates. Resolve native protein accessions and experimentally tested dependencies before causal edges; no NONMECHANISTIC graph bypasses grounding. Manual full-text snippet matches remain distinct from the abstract resolver's actual verdicts.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/tripolar_mating_system.html#tripolar-mating-evidence-and-mechanism"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11062,9 +11096,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 524,
+ "total_discussions": 526,
  "total_knowledge_gaps": 365,
- "total_source_entries": 483,
+ "total_source_entries": 484,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
