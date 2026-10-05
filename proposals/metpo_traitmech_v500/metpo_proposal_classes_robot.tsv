@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1057700	paedogamy	A sexual-reproduction phenotype in which two gametes produced by division within a single gametangium fuse with each other.	TraitMech:data/traits/physiology/paedogamy.yaml|DOI:10.1080/0269249X.2013.791344|DOI:10.3390/d14121133|DOI:10.1007/s12223-008-0018-x	METPO:1000059	pedogamy		metpo_traitmech_2026_10	HIGH	Fusion of separate gametes from one gametangium; not undivided-cell autogamy.	traitmech:000624

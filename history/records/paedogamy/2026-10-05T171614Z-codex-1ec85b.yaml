@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/paedogamy.yaml
+  slug: paedogamy
+session:
+  id: 2026-10-05T171614Z-codex-1ec85b
+  timestamp: '2026-10-05T17:16:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1719
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add paedogamy with source-backed gamete-fusion scope
+  details: Added traitmech:000624 with DOI:10.1080/0269249X.2013.791344 terminology, DOI:10.3390/d14121133
+    publisher XML/PDF and DOI:10.1007/s12223-008-0018-x scientific abstract; each has a directly
+    checked snippet. Inspected actual Figure 3 and supplementary Table S1 of the 2022 study,
+    and NCBI taxonomy for the qualified natural VCA-7 example. Ignored-and-hidden repository
+    and proposal searches preceded fresh METPO:1057700 allocation in v500. Distinguished terminology
+    synthesis from primary observations, retained negative clones and delayed nuclear-fusion
+    timing, and deferred unsupported mappings and molecular graphs. Writer dry run and 50
+    focused tests passed before application; broader gates follow.

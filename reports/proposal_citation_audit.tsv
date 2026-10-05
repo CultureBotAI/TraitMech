@@ -425,7 +425,7 @@ data/traits/physiology/amylase_activity.yaml	traitmech:000162	2	DOI:10.3389/fbio
 data/traits/physiology/anisogamy.yaml	traitmech:000620	4	DOI:10.1038/s42003-018-0019-5; DOI:10.1186/1471-2148-14-37; DOI:10.1186/s12915-024-01878-1; DOI:10.1371/journal.pone.0181413		yes
 data/traits/physiology/arginine_arylamidase_activity.yaml	traitmech:000167	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html; DOI:10.3389/fgene.2023.1240581; DOI:10.1099/ijsem.0.006017		yes
 data/traits/physiology/arginine_dihydrolase_activity.yaml	traitmech:000164	4	DOI:10.1128/aem.07724-11; https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html; DOI:10.1016/j.fm.2010.11.016; DOI:10.1016/j.resmic.2012.11.004		yes
-data/traits/physiology/autogamy.yaml	traitmech:000622	3	DOI:10.1017/S0016672300010740; DOI:10.1016/0014-4827(86)90492-1; DOI:10.1093/gbe/evaa052		yes
+data/traits/physiology/autogamy.yaml	traitmech:000622	4	DOI:10.1017/S0016672300010740; DOI:10.1016/0014-4827(86)90492-1; DOI:10.1093/gbe/evaa052; DOI:10.1080/0269249X.2013.791344		yes
 data/traits/physiology/bacteriocin_production.yaml	traitmech:000183	3	DOI:10.3389/fmicb.2016.00461; DOI:10.1146/annurev.micro.56.012302.161024; DOI:10.1038/srep27973		yes
 data/traits/physiology/beta_galactosidase_activity.yaml	traitmech:000148	2	DOI:10.3389/fmicb.2021.742300; DOI:10.1128/jcm.22.3.333-335.1985		yes
 data/traits/physiology/beta_glucosidase_activity.yaml	traitmech:000146	3	DOI:10.1007/s13205-015-0328-z; DOI:10.2323/jgam.60.59; DOI:10.3390/microorganisms12040776		yes
@@ -474,6 +474,7 @@ data/traits/physiology/negative_autotropism.yaml	traitmech:000603	2	DOI:10.3390/
 data/traits/physiology/oogamy.yaml	traitmech:000621	4	DOI:10.5194/essd-15-2711-2023; DOI:10.1186/s12915-024-01878-1; DOI:10.1186/s40529-018-0227-9; DOI:10.1371/journal.pbio.1001904		yes
 data/traits/physiology/ornithine_decarboxylase_activity.yaml	traitmech:000154	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html; DOI:10.1128/jb.124.2.791-799.1975		yes
 data/traits/physiology/osmotaxis.yaml	traitmech:000592	3	DOI:10.1016/s0014-4894(03)00031-6; DOI:10.1016/j.exppara.2005.10.005; DOI:10.1073/pnas.1620945114		yes
+data/traits/physiology/paedogamy.yaml	traitmech:000624	3	DOI:10.1080/0269249X.2013.791344; DOI:10.3390/d14121133; DOI:10.1007/s12223-008-0018-x		yes
 data/traits/physiology/parasexuality.yaml	traitmech:000607	3	DOI:10.1093/emboj/cdg235; DOI:10.1128/ec.00128-13; DOI:10.1038/s41467-019-12376-2		yes
 data/traits/physiology/ph_taxis.yaml	traitmech:000591	2	DOI:10.1128/jb.00491-19; DOI:10.1128/jb.188.7.2656-2665.2006		yes
 data/traits/physiology/ph_tropism.yaml	traitmech:000602	2	DOI:10.1128/mbio.00285-23; DOI:10.1371/journal.pbio.3002726		yes
