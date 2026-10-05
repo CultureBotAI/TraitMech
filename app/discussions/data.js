@@ -19,6 +19,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/animal_pathogen.html#kgscan-30bcdf4a32b0"
  },
  {
+  "discussion_id": "bacterial-cannibalism-operational-scope",
+  "prompt": "Distinguish nutritional cannibalism from broader developmental usage.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bacterial cannibalism",
+  "source_id": "traitmech:000626",
+  "source_file": "bacterial_cannibalism.yaml",
+  "attaches_to": [],
+  "rationale": "This class retains the classical killing-and-feeding sense. Friebel et al. 2026 also calls the wider toxin-dependent biofilm differentiation program cannibalism; that usage need not satisfy this narrower nutritional definition. The predatory bacterium parent traitmech:000054 fits this operational scope, not every phenotype assigned that name in the literature. Bacteriocin production traitmech:000183 requires neither conspecific killing nor feeding. Saprotrophy traitmech:000055 does not require killing the food source; natural competence traitmech:000087 concerns DNA uptake. Fratricide, programmed cell death, biofilm formation and sporulation delay are not exact synonyms. Resolve broader terminology and external mappings before adding xrefs; do not assume species-level disjointness.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/bacterial_cannibalism.html#bacterial-cannibalism-operational-scope"
+ },
+ {
+  "discussion_id": "bacterial-cannibalism-feeding-evidence",
+  "prompt": "Resolve direct feeding evidence and strain provenance before exemplar curation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "bacterial cannibalism",
+  "source_id": "traitmech:000626",
+  "source_file": "bacterial_cannibalism.yaml",
+  "attaches_to": [],
+  "rationale": "The cited studies support the term and sibling-killing biology but do not justify treating every toxin-positive population as a demonstrated nutritional cannibal. Obtain direct conspecific nutrient-use evidence, inspect the supplements and verify natural strain provenance before adding canonical examples. Gene presence, expression, inhibition zones, membrane damage and delayed sporulation alone are insufficient. Do not infer a protein-resolved causal graph from toxin names or sequence profiles. Mechanistic edges, protein accessions and canonical taxa are deliberately deferred.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/bacterial_cannibalism.html#bacterial-cannibalism-feeding-evidence"
+ },
+ {
   "discussion_id": "kgscan-aa46cc9b34ab",
   "prompt": "This record draws nitric oxide straight to biofilm dispersal with nothing in between, while c-di-GMP sits in the same graph wired only to the sessile state. Is the NO effect on dispersal mediated by lowering c-di-GMP, and should that intermediate be on the edge?",
   "kind": "KNOWLEDGE_GAP",
@@ -11334,9 +11368,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 540,
- "total_knowledge_gaps": 367,
- "total_source_entries": 491,
+ "total_discussions": 542,
+ "total_knowledge_gaps": 368,
+ "total_source_entries": 492,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
