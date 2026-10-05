@@ -9370,7 +9370,7 @@ window.searchData = [
   "source_id": "traitmech:000622",
   "source_file": "autogamy.yaml",
   "attaches_to": [],
-  "rationale": "Use the unpaired-cell nuclear-fusion sense supported by the cited ciliate studies, not plant self-pollination or all selfing. The existing homothallism traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents or synonyms. Cytogamy involves paired cells without nuclear exchange in Nobili and Luporini p.39, unlike this unpaired-cell definition. No universal genetic identity, complete homozygosity, starvation trigger, nuclear count, inability to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and broader automixis terminology before adding synonyms or mappings.",
+  "rationale": "Use the unpaired-cell nuclear-fusion sense supported by the cited ciliate studies, not plant self-pollination or all selfing. The existing homothallism traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents or synonyms. Cytogamy traitmech:000623 involves paired cells without nuclear exchange in Nobili and Luporini p.39, unlike this unpaired-cell definition. Diller (1958), DOI:10.1111/j.1550-7408.1958.tb02567.x, uses double autogamy for the tentative paired-cell observation. That broader source terminology does not make cytogamy a child or exact synonym of this operationally unpaired-cell class. No universal genetic identity, complete homozygosity, starvation trigger, nuclear count, inability to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and broader automixis terminology before adding synonyms or mappings.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9648,6 +9648,40 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/cystine_arylamidase_activity.html#cystine-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "cytogamy-scope-and-hierarchy",
+  "prompt": "Distinguish paired-cell self-fertilization from unpaired autogamy.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cytogamy",
+  "source_id": "traitmech:000623",
+  "source_file": "cytogamy.yaml",
+  "attaches_to": [],
+  "rationale": "Pairing with internal gametic-nuclear fusion and no gametic-nuclear exchange distinguishes this class from ordinary conjugation with exchange and from operationally unpaired autogamy traitmech:000622. Diller (1958) calls the tentative observation double autogamy; preserve that broader source usage without silently making cytogamy a child or exact synonym of the unpaired class. This is not all selfing or a literal mating locus. No universal hyperosmotic trigger, whole-genome homozygosity, nuclear count or inability to outcross is imposed. Do not infer species-level disjointness between reproductive modes. Use phenotype METPO:1000059 pending a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category. Verify external equivalences and synonym scope before adding mappings.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cytogamy.html#cytogamy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "cytogamy-mechanism-and-provenance",
+  "prompt": "Resolve original cytology, strain provenance and molecular mechanisms.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cytogamy",
+  "source_id": "traitmech:000623",
+  "source_file": "cytogamy.yaml",
+  "attaches_to": [],
+  "rationale": "The 1967 definitional passage is not a direct cytogamy experiment, the 1958 observation is tentative, and the 1979 evidence here is limited to its scientific abstract. Retrieve the original primary study DOI:10.1002/jmor.1050660303 (Wichterman, 1940) and the remaining experimental material before stronger cytological or natural-strain claims. That 1940 DOI is a metadata-verified research lead, not counted trait evidence. No canonical example is assigned from unresolved provenance or tentative marker explanations. Induced transmission outcomes do not identify a molecular causal pathway; graphs and protein accessions remain deferred. Retain actual snippet-resolver outcomes separately from direct source checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cytogamy.html#cytogamy-mechanism-and-provenance"
  },
  {
   "discussion_id": "dnase-activity-xref-gap",
@@ -11232,9 +11266,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 534,
+ "total_discussions": 536,
  "total_knowledge_gaps": 365,
- "total_source_entries": 488,
+ "total_source_entries": 489,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

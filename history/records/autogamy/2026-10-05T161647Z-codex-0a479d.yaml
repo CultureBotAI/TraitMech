@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/autogamy.yaml
+  slug: autogamy
+session:
+  id: 2026-10-05T161647Z-codex-0a479d
+  timestamp: '2026-10-05T16:16:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link cytogamy without changing unpaired autogamy scope
+  details: Guarded preimage update through add_cytogamy_trait.py links traitmech:000623 and
+    attributes Diller 1958 double-autogamy terminology. Preserved autogamy definition, evidence,
+    canonical example, phenotype parent and existing history. No child relation or exact equivalence
+    asserted. Writer dry run and focused scope/idempotency/drift tests passed; downstream
+    generation and corpus validation follow.
