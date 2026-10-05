@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/kleptoplasty.yaml
+  slug: kleptoplasty
+session:
+  id: 2026-10-05T225046Z-codex-937be5
+  timestamp: '2026-10-05T22:50:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1073/pnas.2220100120
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - canonical_examples
+  - discussions
+  - identifiers
+  summary: Add evidence-backed microbial kleptoplasty trait
+  details: Added PROPOSED traitmech:000629 and reserved METPO:1058200 in v505 after ignored-and-hidden
+    novelty searches, pinned ontology inspection, seed/release reconciliation and competing-PR
+    checks. Four directly read DOI-backed passages support plastid retention without universal
+    photosynthetic function, with a strain-qualified natural Rapaza viridis example and explicit
+    collection alias discrepancy. No synonym, xref or protein graph inferred. Guarded writer
+    dry run and 11 focused tests passed; full corpus, proposal, taxonomy, snippet, history,
+    product and browser checks follow before PR.

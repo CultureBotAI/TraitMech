@@ -10313,6 +10313,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/isogamy.html#isogamy-examples-and-mechanism"
  },
  {
+  "discussion_id": "kleptoplasty-retention-and-hierarchy-scope",
+  "prompt": "Keep plastid retention distinct from uptake and acquired photosynthesis.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "kleptoplasty",
+  "source_id": "traitmech:000629",
+  "source_file": "kleptoplasty.yaml",
+  "attaches_to": [],
+  "rationale": "This is an organism-level physiological trait, not an organelle or sequence feature. Whole living algal endosymbionts are not equivalent to extracted plastids. Phagocytosis traitmech:000627 describes uptake; phagotrophy traitmech:000628 requires nutrient assimilation. Neither is exact. Phototrophic METPO:1000660 and mixotrophic METPO:1000652 prescribe energy/carbon use that the generic retention definition does not require. The trophic_type Falcon report attributes an acquired-photosynthesis framing to Schenone 2024; that narrower usage is preserved as research provenance, not generalized to all kleptoplasty. Retain phenotype METPO:1000059 pending a closer organelle-acquisition hierarchy. No fixed retention duration, plastid replication, complete nutritional dependence or loss of every other prey organelle is asserted. No unverified synonym or ontology xref is added.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/kleptoplasty.html#kleptoplasty-retention-and-hierarchy-scope"
+ },
+ {
+  "discussion_id": "kleptoplasty-rapaza-strain-alias-conflict",
+  "prompt": "Resolve the discordant ATCC alias with the collection.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "kleptoplasty",
+  "source_id": "traitmech:000629",
+  "source_file": "kleptoplasty.yaml",
+  "attaches_to": [],
+  "rationale": "The NIES-4477 collection entry lists ATCC PRA-361, whereas the 2012 and 2023 primary Methods assign PRA-360 to Rapaza and PRA-361 to its Tetraselmis prey. The 2023 Methods document redeposition as NIES-4477 and NIES-4478. Use the NIES host identifier and primary provenance; do not silently reconcile the conflict or treat collection metadata as independent trait evidence. Collection URL is preserved in the canonical note.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/kleptoplasty.html#kleptoplasty-rapaza-strain-alias-conflict"
+ },
+ {
+  "discussion_id": "kleptoplasty-protein-import-mechanism",
+  "prompt": "Ground native protein contributions without inventing an import apparatus.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "kleptoplasty",
+  "source_id": "traitmech:000629",
+  "source_file": "kleptoplasty.yaml",
+  "attaches_to": [],
+  "rationale": "The 2026 study supplies native functional perturbations beyond the 2023 sequence predictions, but this curation has not resolved taxon-paired protein accessions or a complete import mechanism. Predicted complexes, phase separation and pyrenoid remodeling must remain distinct from demonstrated localization and physiology. A targeting reporter does not identify a universal translocon. No protein-resolved causal graph is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/kleptoplasty.html#kleptoplasty-protein-import-mechanism"
+ },
+ {
   "discussion_id": "lecithinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lecithinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11436,9 +11487,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 546,
- "total_knowledge_gaps": 370,
- "total_source_entries": 494,
+ "total_discussions": 549,
+ "total_knowledge_gaps": 371,
+ "total_source_entries": 495,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
