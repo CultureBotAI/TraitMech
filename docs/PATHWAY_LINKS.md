@@ -31,8 +31,8 @@ proposed record, preserves existing examples by appending, and makes no change
 on an exact replay. Repository-level history and regenerated derived artifacts
 are still required.
 
-The initial manifest links 16 nodes in 11 traits to 14 pathway records
-(18 node-record links). It excludes peptidoglycan morphology leads: cytoplasmic
+The initial manifest links 17 nodes in 11 traits to 15 pathway records
+(19 node-record links). It excludes peptidoglycan morphology leads: cytoplasmic
 precursor synthesis does not by itself describe septal, polar, or lateral wall
 remodeling. It also excludes the urease/urea-amidolyase, assimilatory/
 dissimilatory sulfate, and formaldehyde assimilation/oxidation look-alikes.
@@ -45,3 +45,7 @@ experimental backgrounds from the S288c reference accession and retain the
 nutrient-rich-medium limitation. It does not extend the bacterial PerR/OxyR
 regulatory branches to yeast. Retrieval metadata and the exact checked excerpt
 are in `research/pathway_context_sources.json`.
+
+The catalase node also links the peroxide-removal component of the yeast
+`gomodel:YeastPathways_DETOX1-PWY` model, which explicitly names CTT1. Its basis
+distinguishes that component from the preceding superoxide dismutase reactions.

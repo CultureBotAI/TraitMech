@@ -78,6 +78,17 @@ causal_graphs:
           lost during challenge in buffer. UniProtKB P06115 supplies the reviewed
           S288c reference protein, taxon and InterPro:IPR018028 family match; the
           experiment was not performed in the unmodified S288c reference isolate.
+    related_records:
+    - corpus: PathwayMech
+      identifier: gomodel:YeastPathways_DETOX1-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: superoxide radicals degradation in Saccharomyces
+        cerevisiae S288C (NCBITaxon:559292). The linked model explicitly includes
+        CTT1 (SGD:S000003320) catalase activity consuming hydrogen peroxide and producing
+        water and dioxygen, downstream of superoxide dismutation. This link concerns
+        that peroxide-removal component; it does not equate catalase with superoxide
+        dismutase or extend the bacterial PerR/OxyR regulatory branches to yeast.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: catalase_function
     label: catalase activity
     node_type: MOLECULAR_FUNCTION
@@ -396,4 +407,12 @@ curation_history:
     route and organism limitations; retained existing groundings and exact xrefs.
     Appended a source-verified Ctt1 protein example with the UniProt strain taxon
     and explicit experimental-strain and medium limits.
+  llm_assisted: true
+- timestamp: '2026-10-05T17:55:45Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned pathway context for the Ctt1 peroxide-removal component of
+    the yeast detoxification model, retaining the upstream heme context and primary-source-backed
+    Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
+    dismutase and bacterial regulatory branches.
   llm_assisted: true

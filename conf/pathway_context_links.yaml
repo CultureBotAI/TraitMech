@@ -132,10 +132,20 @@ targets:
       supplying catalase cofactor context; alternative bacterial heme routes and PerR/OxyR
       regulation are outside the linked record. No exact equivalence or transfer of
       organism scope is asserted.'
-  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
-    route and organism limitations; retained existing groundings and exact xrefs.
-    Appended a source-verified Ctt1 protein example with the UniProt strain taxon
-    and explicit experimental-strain and medium limits.
+  - graph_id: catalase_activity_h2o2_detoxification
+    node_id: catalase
+    node_label: monofunctional heme catalase
+    pathway: gomodel:YeastPathways_DETOX1-PWY
+    basis: 'PathwayMech context: superoxide radicals degradation in Saccharomyces
+      cerevisiae S288C (NCBITaxon:559292). The linked model explicitly includes CTT1
+      (SGD:S000003320) catalase activity consuming hydrogen peroxide and producing
+      water and dioxygen, downstream of superoxide dismutation. This link concerns
+      that peroxide-removal component; it does not equate catalase with superoxide
+      dismutase or extend the bacterial PerR/OxyR regulatory branches to yeast.'
+  changes: Added pinned pathway context for the Ctt1 peroxide-removal component of
+    the yeast detoxification model, retaining the upstream heme context and primary-source-backed
+    Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
+    dismutase and bacterial regulatory branches.
   protein_example:
     graph_id: catalase_activity_h2o2_detoxification
     node_id: catalase

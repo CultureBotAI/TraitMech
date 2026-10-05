@@ -11,9 +11,10 @@ import yaml
 ROOT = Path(__file__).resolve().parents[3]
 
 
-def load_index(root: Path = ROOT) -> tuple[str, dict[str, dict]]:
-    pin = yaml.safe_load((root / "conf" / "pathwaymech_pin.yaml").read_text())
-    content = (root / "conf" / "pathwaymech_index.json").read_bytes()
+def load_index(root: Path = ROOT, *, pin_path: Path | None = None,
+               index_path: Path | None = None) -> tuple[str, dict[str, dict]]:
+    pin = yaml.safe_load((pin_path or root / "conf" / "pathwaymech_pin.yaml").read_text())
+    content = (index_path or root / "conf" / "pathwaymech_index.json").read_bytes()
     if hashlib.sha256(content).hexdigest() != pin["sha256"]:
         raise ValueError("PathwayMech index differs from its pinned SHA-256")
     data = json.loads(content)
