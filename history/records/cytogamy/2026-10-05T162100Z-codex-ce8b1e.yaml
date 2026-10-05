@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cytogamy.yaml
+  slug: cytogamy
+session:
+  id: 2026-10-05T162100Z-codex-ce8b1e
+  timestamp: '2026-10-05T16:21:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1717
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Exclude any gametic-nuclear exchange from cytogamy definition
+  details: 'Addresses local adversarial issue #1717 after history/records/cytogamy/2026-10-05T161646Z-codex-52aa0c.yaml.
+    Guarded qualify_cytogamy_scope.py replaces reciprocal-only exclusion with no gametic-nuclear
+    exchange with the partner, and uses an individual paired-cell formulation. The definition
+    on Nobili and Luporini 1967 p.39 supports the stronger no-exchange boundary. All evidence
+    and source wording are preserved. Updated the corresponding proposal definition and observation
+    and tested narrow mutation, parity, dry run, idempotency, schema failure and preimage
+    drift; 30 focused writer/neighbor tests passed before application. Full corpus validation
+    and regeneration are rerun after this correction.'

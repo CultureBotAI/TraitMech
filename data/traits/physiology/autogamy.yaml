@@ -65,9 +65,12 @@ discussions:
     studies, not plant self-pollination or all selfing. The existing homothallism
     traitmech:000609, unisexual reproduction traitmech:000613 and primary homothallism
     traitmech:000614 definitions are explicitly fungal-scoped and are not exact parents
-    or synonyms. Cytogamy involves paired cells without nuclear exchange in Nobili
-    and Luporini p.39, unlike this unpaired-cell definition. No universal genetic
-    identity, complete homozygosity, starvation trigger, nuclear count, inability
+    or synonyms. Cytogamy traitmech:000623 involves paired cells without nuclear exchange
+    in Nobili and Luporini p.39, unlike this unpaired-cell definition. Diller (1958),
+    DOI:10.1111/j.1550-7408.1958.tb02567.x, uses double autogamy for the tentative
+    paired-cell observation. That broader source terminology does not make cytogamy
+    a child or exact synonym of this operationally unpaired-cell class. No universal
+    genetic identity, complete homozygosity, starvation trigger, nuclear count, inability
     to outcross or gamete-size asymmetry is imposed. Use phenotype METPO:1000059 pending
     a narrower reproductive-phenotype parent; PHYSIOLOGY is a filesystem category.
     Verify external equivalences and broader automixis terminology before adding synonyms
@@ -99,4 +102,11 @@ curation_history:
     novelty/allocation searches found no exact record or collision. Reserved METPO:1057500
     in v498 under phenotype. Deferred unverified mappings, a narrower parent and protein-level
     mechanisms; did not impose universal homozygosity.
+  llm_assisted: true
+- timestamp: '2026-10-05T16:16:00Z'
+  curator: codex
+  action: LINKED_RELATED_TRAIT
+  changes: Linked paired-cell cytogamy traitmech:000623 and attributed Diller's broader
+    double-autogamy usage. Preserved the unpaired definition, evidence, example and
+    parent; did not assert subsumption or equivalence.
   llm_assisted: true
