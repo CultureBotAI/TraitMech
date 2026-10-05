@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/bipolar_mating_system.yaml
+  slug: bipolar_mating_system
+session:
+  id: 2026-10-05T083627Z-codex-e4b16d
+  timestamp: '2026-10-05T08:36:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed bipolar mating system
+  details: Added traitmech:000616 as a PROPOSED PHYSIOLOGY class under released phenotype,
+    with primary DOI:10.1073/pnas.91.15.7085 scientific-abstract definition and DOI:10.1534/genetics.105.051128
+    visually verified Results snippet. Distinguished single-factor compatibility from gene
+    inventory, exactly two species-wide types, partner dependence and one molecular architecture.
+    Reserved METPO:1057000 in v493 after ignored-and-hidden novelty and collision checks.
+    Deferred canonical taxon assertions, native protein graphs and explicitly unread source
+    sections in two discussions. Created via guarded write_validated_trait and record_curation_event;
+    the seven writer tests and dry run passed before application.

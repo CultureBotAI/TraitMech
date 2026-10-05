@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/bipolar_mating_system.yaml
+  slug: bipolar_mating_system
+session:
+  id: 2026-10-05T083955Z-codex-75e3ad
+  timestamp: '2026-10-05T08:39:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1706
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct James Results locator
+  details: 'Issue #1706: corrected the James (2006) DOI:10.1534/genetics.105.051128 source
+    locator from first Results sentence to a sentence in the first Results subsection, p.
+    1881. The exact quote, biology and references are unchanged. Applied through write_validated_trait
+    against SHA256 9720398ee05729134dd310756258cf6cbcc40f4be815e301511bbb46044baa1a, preserving
+    the original per-record event and adding a CORRECTED_EVIDENCE_LOCATOR event with record_curation_event.
+    This follows history/records/bipolar_mating_system/2026-10-05T083627Z-codex-e4b16d.yaml
+    without editing it. Updated writer, regression assertion and proposal to use the corrected
+    locator.'
