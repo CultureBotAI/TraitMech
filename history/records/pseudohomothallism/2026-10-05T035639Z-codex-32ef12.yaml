@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pseudohomothallism.yaml
+  slug: pseudohomothallism
+session:
+  id: 2026-10-05T035639Z-codex-32ef12
+  timestamp: '2026-10-05T03:56:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed pseudohomothallism trait
+  details: Added traitmech:000612 under local homothallism with four DOI-backed exact snippets,
+    qualified natural Neurospora tetrasperma P581 supported by primary selfed-progeny experiments
+    and Table 1 provenance, and two open scope/mechanism discussions. Direct XML matching
+    verified the review and Methods clauses; directly retrieved scientific abstracts verified
+    the other two clauses. Reviewed source-specific meiotic programs and selected progeny
+    denominators without universal nuclear-count claims. Ignored-and-hidden novelty checks
+    and structured METPO review found no exact term. Reserved METPO:1056600 in proposal v489
+    with released phenotype pending upstream homothallism acceptance. Added guarded dry-run
+    writer and seven focused tests; no causal graph or unverified exact mappings were added.

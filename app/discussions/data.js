@@ -10585,6 +10585,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-xref-gap"
  },
  {
+  "discussion_id": "pseudohomothallism-scope-and-hierarchy",
+  "prompt": "Keep single-spore self-fertility distinct from nuclear coexistence and MAT content.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pseudohomothallism",
+  "source_id": "traitmech:000612",
+  "source_file": "pseudohomothallism.yaml",
+  "attaches_to": [],
+  "rationale": "This reproductive phenotype narrows homothallism (traitmech:000609), not heterothallism or mating-type switching. Heterokaryosis is relevant cellular context but does not alone establish self-fertility. A single sexual spore can carry compatible partners as separate nuclei; MAT sequences in one assembly or multinucleation alone do not establish the trait. Do not require exactly two nuclei throughout development, four spores, one nuclear ratio, universal self-fertility or absence of outcrossing. Resolve secondary homothallism and functional heterothallism usage before assigning exact synonyms, and verify external phenotype/process mappings before adding xrefs. PHYSIOLOGY is a filesystem category. The standalone METPO proposal uses released phenotype, not an unlabeled stub for pending homothallism METPO:1056300; reconcile the narrower hierarchy when that v486 parent is accepted upstream.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pseudohomothallism.html#pseudohomothallism-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "pseudohomothallism-mechanism-and-readouts",
+  "prompt": "Resolve taxon-specific nuclear packaging before adding protein-level causal edges.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pseudohomothallism",
+  "source_id": "traitmech:000612",
+  "source_file": "pseudohomothallism.yaml",
+  "attaches_to": [],
+  "rationale": "Complete unread primary experiments, figures and supplements before expanding mechanistic claims. Spindle arrangement, mating-type segregation and nuclear elimination vary across genera and developmental stages; no one meiotic program is universal. Separate observed cytology from inferred crossover events, and sequence divergence from a direct reproductive readout. Keep natural P581 separate from its homokaryotic components and interspecific introgression derivatives. Resolve native protein accessions and source-bounded dependencies before adding a graph; do not use NONMECHANISTIC to bypass missing grounding. Manual full-text matching is not an abstract-resolver VERIFIED verdict.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pseudohomothallism.html#pseudohomothallism-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "pyrazinamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for pyrazinamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -10858,9 +10892,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 512,
+ "total_discussions": 514,
  "total_knowledge_gaps": 365,
- "total_source_entries": 477,
+ "total_source_entries": 478,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
