@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/phagocytosis.yaml
+  slug: phagocytosis
+session:
+  id: 2026-10-05T204236Z-codex-dd00de
+  timestamp: '2026-10-05T20:42:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add microbial phagocytosis with strain-qualified uptake evidence
+  details: Added traitmech:000627 as PROPOSED PHYSIOLOGY with two directly checked DOI-backed
+    snippets, inspected primary uptake figures, phenotype parent METPO:1000059, and v503 METPO:1058000
+    proposal. Added Scyphosphaera apsteinii NCBITaxon:418940 qualified to naturally isolated
+    RCC1456, with directly checked culture provenance and independent NCBI taxonomy. Kept
+    RCC1455 transcript annotations separate from RCC1456 uptake assays; no assimilation rate,
+    protein mechanism, graph, xref or synonym was inferred. Ignored-and-hidden novelty searches
+    and refreshed seed/release inventories found no exact record. Guarded writer dry run and
+    11 focused tests passed.
