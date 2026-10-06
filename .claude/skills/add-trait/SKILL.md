@@ -552,6 +552,12 @@ under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
 or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
 and omit SSSOM mappings when there is no exact external equivalence to assert.
 
+Check the pinned upstream template headers, not just column counts quoted in
+older proposals. Canonical properties include a related-synonym column (13
+columns); legacy 12-column property cohorts remain valid. Use the proposal
+skill's layout-specific directives and subset position; never drop aliases
+to satisfy an obsolete width assumption (#1749).
+
 When the new trait resolves exact mentions in older records, update those
 records through the same validated writer path and give each touched record a
 focused curation-history event and repository history record. Regenerate the

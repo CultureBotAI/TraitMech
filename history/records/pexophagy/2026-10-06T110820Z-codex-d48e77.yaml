@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pexophagy.yaml
+  slug: pexophagy
+session:
+  id: 2026-10-06T110820Z-codex-d48e77
+  timestamp: '2026-10-06T11:08:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed microbial pexophagy phenotype
+  details: Added traitmech:000640 under autophagy traitmech:000638 with four DOI-backed scientific-abstract
+    snippets, directly exact-matched in refreshed Europe PMC metadata. The maintained resolver
+    reports four VERIFIED rows. Read Atg36 Results sec3/sec4 and Methods sec16/sec20/sec23;
+    figure captions only, not actual figures. Distinguished selective organelle degradation
+    from cytosolic peroxisomal-protein turnover and retained the source-attributed route scope
+    against narrower GO terminology. Fresh ignored-and-hidden searches, full pinned METPO
+    RDF, seed/release reconciliation and all-state GitHub checks found no exact record or
+    identifier reservation. Reserved METPO:1059300 in v516 with unchanged v514 autophagy dependency
+    context. Two OPEN discussions retain unverified strain provenance, taxonomy and native
+    protein-grounding limits; no canonical examples or causal graph added. Writer dry run
+    and 22 focused tests passed. Broad QC, artifact generation, full tests and PR review are
+    subsequent work and are not claimed complete here.
