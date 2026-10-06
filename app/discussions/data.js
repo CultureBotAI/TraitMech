@@ -9191,6 +9191,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/aerotropism.html#aerotropism-controls-and-native-mechanism"
  },
  {
+  "discussion_id": "aggrephagy-scope-and-ibophagy",
+  "prompt": "Review cargo boundaries and qualified process alignment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "aggrephagy",
+  "source_id": "traitmech:000646",
+  "source_file": "aggrephagy.yaml",
+  "attaches_to": [],
+  "rationale": "Autophagy traitmech:000638 is the broader phenotype. Protein aggregation, disaggregation, proteasomal proteolysis, puncta, toxicity reduction or vacuolar localization alone is not selective macroautophagic degradation. GO:0035973, directly resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0035973, is a nonobsolete biological process for selective protein-aggregate degradation by macroautophagy, not an exact organismal phenotype. Retain that route qualifier and omit exact xrefs and synonyms. The 2023 study explicitly separates IBophagy from aggrephagy; do not infer an exact synonym, disjointness or a separate TraitRecord solely from its receptor differences. Their potential broader/narrower relationship needs human review. Proteaphagy traitmech:000645 concerns proteasomes as cargo, not ordinary aggregate proteolysis.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aggrephagy.html#aggrephagy-scope-and-ibophagy"
+ },
+ {
+  "discussion_id": "aggrephagy-context-exemplars-and-mechanisms",
+  "prompt": "Resolve conditional mechanisms and natural exemplars.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "aggrephagy",
+  "source_id": "traitmech:000646",
+  "source_file": "aggrephagy.yaml",
+  "attaches_to": [],
+  "rationale": "Do not make Cue5, Cct2, Atg11, ubiquitination, heat shock or one aggregate reporter universal requirements. The 2026 autophagy-independent turnover result does not negate the 2024 nutrient-rich solid-aggrephagy assay. Keep experimental cargo, conditions and readouts distinct. Resolve the 2024 Synopsis/Results residue discrepancy and inspect actual panels before accession-level mechanism curation. Canonical examples remain unset pending independent natural-strain provenance; engineered cargo and reporter/deletion assays are not natural exemplars. A protein graph requires native taxon-paired accessions and functional evidence. Recombinant E. coli protein production is not an aggrephagy observation, and human disease outcomes are not microbial trait evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aggrephagy.html#aggrephagy-context-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "alanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -12050,9 +12084,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 582,
- "total_knowledge_gaps": 387,
- "total_source_entries": 511,
+ "total_discussions": 584,
+ "total_knowledge_gaps": 388,
+ "total_source_entries": 512,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
