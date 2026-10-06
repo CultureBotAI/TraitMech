@@ -10653,6 +10653,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/mating_type_switching.html#mating-type-switching-examples-and-mechanism"
  },
  {
+  "discussion_id": "mitophagy-selectivity-and-route-scope",
+  "prompt": "Review selective-turnover scope against route-specific terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "mitophagy",
+  "source_id": "traitmech:000639",
+  "source_file": "mitophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Use autophagy traitmech:000638 as the direct broader phenotype. This draft uses selective mitochondrial degradation, as named in the fission-yeast Results, without making membrane route universal. The 2007 yeast abstract reports selective and nonselective turnover with preferential microautophagy under its conditions. In contrast, issuing GO:0000423 names mitophagy specifically for selective macroautophagy and lists macromitophagy as exact; GO:0000424 micromitophagy is not its child. GO:0000422 autophagy of mitochondrion is broader and lists mitophagy as narrow. These nonobsolete biological-process records were directly resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0000422,GO%3A0000423,GO%3A0000424. Do not silently impose GO's route-specific usage on every microbial source, or assert an exact phenotype xref. Retain this interpretation for human review; omit exact synonyms including broad mitochondrial autophagy and route-specific macromitophagy. Protein/gene presence, puncta, organelle fragmentation, membrane depolarization, delivery without degradation, and nonspecific bulk capture alone are insufficient. The trait belongs to the microbial cell doing the turnover, not to a bacterium inducing mitophagy in an animal host.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mitophagy.html#mitophagy-selectivity-and-route-scope"
+ },
+ {
+  "discussion_id": "mitophagy-exemplars-and-native-mechanisms",
+  "prompt": "Resolve strain provenance and taxon-paired mechanisms before expansion.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "mitophagy",
+  "source_id": "traitmech:000639",
+  "source_file": "mitophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The evidence uses reporter and perturbation strains; natural strain provenance is not independently established. Keep canonical examples unset rather than presenting deficient mutants as positive exemplars. Atg43 in fission yeast and Atg32 in budding yeast do not define a universal receptor inventory. Atg43 also has mitophagy-independent functions, so growth effects alone do not measure mitophagy. Require native taxon-paired protein accession checks and direct functional evidence before a causal graph. Do not encode mitochondrial genes or a detector profile as the phenotype, or require every degraded mitochondrion to be damaged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mitophagy.html#mitophagy-exemplars-and-native-mechanisms"
+ },
+ {
   "discussion_id": "myzocytosis-feeding-scope-and-parent",
   "prompt": "Reconcile feeding-mode terminology with operational trait boundaries.",
   "kind": "CURATION_TODO",
@@ -11812,9 +11846,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 568,
- "total_knowledge_gaps": 380,
- "total_source_entries": 504,
+ "total_discussions": 570,
+ "total_knowledge_gaps": 381,
+ "total_source_entries": 505,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

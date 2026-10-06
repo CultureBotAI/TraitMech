@@ -1,0 +1,268 @@
+"""Add selective microbial mitochondrial turnover as an autophagy phenotype."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import csv
+import io
+import tempfile
+from pathlib import Path
+
+import yaml
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import write_validated_trait
+
+ROOT = Path(__file__).resolve().parent.parent
+TARGET = ROOT / "data/traits/physiology/mitophagy.yaml"
+PARENT_PATH = ROOT / "data/traits/physiology/autophagy.yaml"
+PARENT_PROPOSAL = ROOT / "proposals/metpo_traitmech_v514/metpo_proposal_classes_robot.tsv"
+PROPOSAL = ROOT / "proposals/metpo_traitmech_v515/metpo_proposal_classes_robot.tsv"
+IDENTIFIER = "traitmech:000639"
+METPO_ID = "METPO:1059200"
+PARENT_METPO_ID = "METPO:1059100"
+FISSION = "DOI:10.7554/eLife.61245"
+SELECTIVITY = "DOI:10.1016/j.devcel.2009.06.014"
+RECEPTOR = "DOI:10.1016/j.devcel.2009.06.013"
+ROUTES = "DOI:10.4161/auto.4034"
+TIMESTAMP = "2026-10-06T10:04:49Z"
+PARENT = {
+    "identifier": "traitmech:000638",
+    "label": "autophagy",
+    "definition": (
+        "A physiological phenotype in which a microbial cell degrades cytoplasmic "
+        "material, including its own constituents or intracellular non-self cargo, "
+        "by delivering that material to lysosomal or vacuolar compartments."
+    ),
+    "definition_source": "DOI:10.1083/jcb.119.2.301",
+    "trait_category": "PHYSIOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["METPO:1000059"],
+}
+HEADERS = [
+    ["proposed_id", "label", "definition", "definition_source", "parent",
+     "synonyms", "xrefs", "subset", "priority", "observations", "traits_addressed"],
+    ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "SC %",
+     "A oboInOwl:hasExactSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+     "A oboInOwl:inSubset", "", "", ""],
+]
+PARENT_ROW = [
+    PARENT_METPO_ID, PARENT["label"], PARENT["definition"],
+    "|".join([
+        "TraitMech:data/traits/physiology/autophagy.yaml",
+        "DOI:10.1083/jcb.119.2.301", "DOI:10.1242/jcs.108.1.25",
+        "DOI:10.1073/pnas.0813319106", "DOI:10.1371/journal.ppat.1006344",
+    ]),
+    "METPO:1000059", "", "", "metpo_traitmech_2026_10", "",
+    "Catabolic phenotype; formation markers alone do not establish degradative flux.",
+    PARENT["identifier"],
+]
+RECORD = {
+    "identifier": IDENTIFIER,
+    "label": "mitophagy",
+    "definition": (
+        "An autophagy phenotype in which a microbial cell selectively degrades "
+        "its mitochondria by delivering them to lysosomal or vacuolar compartments."
+    ),
+    "definition_source": FISSION,
+    "trait_category": "PHYSIOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": [PARENT["identifier"]],
+    "evidence": [
+        {
+            "reference": FISSION,
+            "snippet": (
+                "Thus, we hereafter refer to the selective autophagic degradation "
+                "of mitochondria in fission yeast as mitophagy."
+            ),
+            "notes": (
+                "PMID:33138913, PMC7609059. Full-text Results section s2-2, "
+                "not the scientific Abstract, directly read in Europe PMC XML "
+                "at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7609059/fullTextXML. "
+                "Results s2-1/s2-2, Methods s4-1/s4-5/s4-8 and actual Figure 1 "
+                "plus its figure supplement 1 were inspected. In "
+                "Schizosaccharomyces pombe, mitochondrial reporter processing "
+                "has Atg1 and vacuolar-protease Isp6 controls; Atg43 perturbation "
+                "and complementation distinguish mitochondrial turnover from "
+                "bulk, cytoplasmic and ER turnover. atg43-1 is a partial allele, "
+                "not the complete deletion, which also impairs vegetative growth. "
+                "Tom70 deletion retains weak processing on long exposure. "
+                "Other actual figures, complete Methods, Key Resources Table "
+                "and natural strain provenance were not inspected."
+            ),
+        },
+        {
+            "reference": SELECTIVITY,
+            "snippet": (
+                "This gene is not required for other types of selective "
+                "autophagy or for nonspecific macroautophagy."
+            ),
+            "notes": (
+                "PMID:19619495, PMC2746076. Scientific Abstract directly read "
+                "in Europe PMC core metadata with matching DOI. The quoted "
+                "gene is YIL146C/ECM37, named ATG32 by the authors after a "
+                "mitophagy-deficient mutant screen. This supports selectivity "
+                "relative to other autophagy phenotypes in the studied yeast, "
+                "not a universal ATG32 requirement or a gene-presence trait. "
+                "Mitochondrial recruitment or vacuolar import alone does not "
+                "establish completed degradation. Full-text retrieval failed; "
+                "methods, actual figures and strain provenance were not "
+                "inspected. Human-disease background is not microbial evidence."
+            ),
+        },
+        {
+            "reference": RECEPTOR,
+            "snippet": (
+                "We propose that Atg32 acts as a mitophagy-specific receptor "
+                "and regulates selective degradation of mitochondria."
+            ),
+            "notes": (
+                "PMID:19619494. Scientific Abstract directly read in Europe PMC "
+                "core metadata and PubMed HTML. In post-log respiratory yeast "
+                "cells, the authors report selective mitochondrial transport "
+                "to the vacuole and propose an Atg32 receptor mechanism. The "
+                "quote retains that proposal language. It does not establish "
+                "that every microbial route uses Atg32, that all cargo must be "
+                "damaged, or that starvation is always required. Full text, "
+                "actual figures and natural strain provenance were not inspected."
+            ),
+        },
+        {
+            "reference": ROUTES,
+            "snippet": (
+                "The observation of mitochondria degradation showed that both "
+                "a selective process and a nonselective process of mitochondria "
+                "autophagy occurred successively."
+            ),
+            "notes": (
+                "PMID:17377488. Scientific Abstract directly read in Europe PMC "
+                "core metadata with matching DOI. The yeast study reports "
+                "preferential microautophagy under its nonfermentable growth "
+                "and nitrogen-starvation conditions, and sequential selective "
+                "and nonselective turnover. Only selective degradation belongs "
+                "to this proposed trait; incidental capture during bulk "
+                "autophagy is insufficient. This supports route-sensitive "
+                "interpretation, not universal microautophagy or a universal "
+                "UTH1 requirement. Full text, actual electron micrographs and "
+                "strain provenance were not inspected."
+            ),
+        },
+    ],
+    "discussions": [
+        {
+            "discussion_id": "mitophagy-selectivity-and-route-scope",
+            "prompt": "Review selective-turnover scope against route-specific terminology.",
+            "kind": "CURATION_TODO", "status": "OPEN",
+            "rationale": (
+                "Use autophagy traitmech:000638 as the direct broader phenotype. "
+                "This draft uses selective mitochondrial degradation, as named "
+                "in the fission-yeast Results, without making membrane route "
+                "universal. The 2007 yeast abstract reports selective and "
+                "nonselective turnover with preferential microautophagy under "
+                "its conditions. In contrast, issuing GO:0000423 names "
+                "mitophagy specifically for selective macroautophagy and lists "
+                "macromitophagy as exact; GO:0000424 micromitophagy is not its "
+                "child. GO:0000422 autophagy of mitochondrion is broader and "
+                "lists mitophagy as narrow. These nonobsolete biological-process "
+                "records were directly resolved at "
+                "https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0000422,GO%3A0000423,GO%3A0000424. "
+                "Do not silently impose GO's route-specific usage on every "
+                "microbial source, or assert an exact phenotype xref. Retain "
+                "this interpretation for human review; omit exact synonyms "
+                "including broad mitochondrial autophagy and route-specific "
+                "macromitophagy. Protein/gene presence, puncta, organelle "
+                "fragmentation, membrane depolarization, delivery without "
+                "degradation, and nonspecific bulk capture alone are insufficient. "
+                "The trait belongs to the microbial cell doing the turnover, "
+                "not to a bacterium inducing mitophagy in an animal host."
+            ),
+            "posed_by": "codex", "posed_date": "2026-10-06",
+        },
+        {
+            "discussion_id": "mitophagy-exemplars-and-native-mechanisms",
+            "prompt": "Resolve strain provenance and taxon-paired mechanisms before expansion.",
+            "kind": "KNOWLEDGE_GAP", "status": "OPEN",
+            "rationale": (
+                "The evidence uses reporter and perturbation strains; natural "
+                "strain provenance is not independently established. Keep "
+                "canonical examples unset rather than presenting deficient "
+                "mutants as positive exemplars. Atg43 in fission yeast and "
+                "Atg32 in budding yeast do not define a universal receptor "
+                "inventory. Atg43 also has mitophagy-independent functions, "
+                "so growth effects alone do not measure mitophagy. Require "
+                "native taxon-paired protein accession checks and direct "
+                "functional evidence before a causal graph. Do not encode "
+                "mitochondrial genes or a detector profile as the phenotype, "
+                "or require every degraded mitochondrion to be damaged."
+            ),
+            "posed_by": "codex", "posed_date": "2026-10-06",
+        },
+    ],
+}
+
+
+def tsv(rows: list[list[str]]) -> str:
+    stream = io.StringIO(newline="")
+    csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    return stream.getvalue()
+
+
+def build_record() -> dict:
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record, curator="codex", action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Added mitophagy as selective mitochondrial degradation under "
+            "autophagy, with four DOI-backed snippets and explicit source, "
+            "route and flux limits. Ignored-and-hidden searches and pinned "
+            "METPO review found no exact record. Reserved METPO:1059200 in "
+            "v515, carrying v514's unchanged parent row as context. Deferred "
+            "unverified examples, exact mappings and protein graphs."
+        ),
+        llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def proposal_tsv(record: dict) -> str:
+    child = [
+        METPO_ID, record["label"], record["definition"],
+        "|".join(["TraitMech:data/traits/physiology/mitophagy.yaml",
+                  FISSION, SELECTIVITY, RECEPTOR, ROUTES]),
+        PARENT_METPO_ID, "", "", "metpo_traitmech_2026_10", "",
+        "Selective mitochondrial turnover; route scope remains under human review.",
+        IDENTIFIER,
+    ]
+    return tsv([*HEADERS, PARENT_ROW, child])
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    parent = yaml.safe_load(PARENT_PATH.read_text())
+    if not isinstance(parent, dict) or any(parent.get(k) != v for k, v in PARENT.items()):
+        raise SystemExit("Parent identity or scope differs from reviewed projection")
+    if PARENT_PROPOSAL.read_text() != tsv([*HEADERS, PARENT_ROW]):
+        raise SystemExit("Parent proposal differs from reviewed context")
+    record = build_record()
+    proposal = proposal_tsv(record)
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+        raise SystemExit("Existing target differs from reviewed result")
+    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+        raise SystemExit("Existing proposal differs from reviewed result")
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        PROPOSAL.parent.mkdir(parents=True, exist_ok=True)
+        PROPOSAL.write_text(proposal)
+    print("Applied" if args.apply else "Validated dry run; pass --apply to write")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
