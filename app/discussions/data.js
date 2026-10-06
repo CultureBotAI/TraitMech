@@ -9905,6 +9905,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/energy_taxis.html#energy-taxis-signal-and-protein-grounding"
  },
  {
+  "discussion_id": "er-phagy-route-scope-and-flux",
+  "prompt": "Review route-inclusive scope and cargo-selective degradative flux.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ER-phagy",
+  "source_id": "traitmech:000642",
+  "source_file": "er_phagy.yaml",
+  "attaches_to": [],
+  "rationale": "Use autophagy traitmech:000638 as parent. The 2014 microautophagy study and the 2019 online/2020 issue ESCRT paper support a route-inclusive phenotype, whereas Mochida et al. 2015 use autophagy specifically for macroautophagy. GO:0061709 reticulophagy, resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061709, is a nonobsolete biological process whose definition specifies autophagosomes and whose exact synonyms include ER-phagy. That route restriction and the process-to-phenotype shift prevent an exact xref here; retain the source-attributed difference for human review without silently narrowing the microbial phenotype. No synonyms or SSSOM mapping are asserted. ER stress, unfolded-protein responses, ER-associated protein degradation outside the lysosome/vacuole, bulk cytoplasmic turnover, gene presence, puncta or accumulated whorls alone are insufficient. Nuclear-envelope cargo can overlap nucleophagy without making the two traits equivalent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/er_phagy.html#er-phagy-route-scope-and-flux"
+ },
+ {
+  "discussion_id": "er-phagy-exemplars-and-route-mechanisms",
+  "prompt": "Resolve natural exemplars and route-specific protein mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ER-phagy",
+  "source_id": "traitmech:000642",
+  "source_file": "er_phagy.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples remain unset because natural strain provenance has not been independently verified for the laboratory reporter and perturbation strains. Do not infer natural or engineered origin from a mutant label. The yeast doing the degradation carries this phenotype; a bacterium eliciting an animal-host response does not. Resolve native taxon-paired protein accessions and direct functional evidence before adding a causal graph. Neither Atg39/Atg40 nor Nem1-Spo7/ESCRT dependence is an unconditional definition of ER-phagy across all routes and microbial taxa. Keep reduced rates, residual turnover and complete absence distinct, and do not equate impaired vacuolar function with selective loss of this phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/er_phagy.html#er-phagy-exemplars-and-route-mechanisms"
+ },
+ {
   "discussion_id": "exocytosis-scope-and-mapping",
   "prompt": "Separate the secretion phenotype from its component steps.",
   "kind": "CURATION_TODO",
@@ -11914,9 +11948,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 574,
- "total_knowledge_gaps": 383,
- "total_source_entries": 507,
+ "total_discussions": 576,
+ "total_knowledge_gaps": 384,
+ "total_source_entries": 508,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
