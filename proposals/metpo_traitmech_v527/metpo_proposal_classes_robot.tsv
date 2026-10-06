@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1060400	hormogonium formation	A morphological phenotype in which a filamentous cyanobacterium differentiates short, initially heterocyst-free filaments called hormogonia that are distinct from mature vegetative trichomes.	TraitMech:data/traits/morphology/hormogonium_formation.yaml|DOI:10.1099/00221287-111-1-1|DOI:10.1128/aem.55.1.125-131.1989|DOI:10.1128/mSphere.00231-19	METPO:1000059			metpo_traitmech_2026_10		Differentiated filament stage; neither motility nor sequence possession alone defines it.	traitmech:000651
