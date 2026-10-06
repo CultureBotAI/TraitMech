@@ -10976,6 +10976,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/parasexuality.html#parasexuality-mechanism-and-strain-provenance"
  },
  {
+  "discussion_id": "pexophagy-selectivity-and-route-scope",
+  "prompt": "Review route-inclusive phenotype against narrower GO terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pexophagy",
+  "source_id": "traitmech:000640",
+  "source_file": "pexophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Use autophagy traitmech:000638 as the direct broader phenotype. The 2008 PpAtg30 scientific abstract uses pexophagy for both micropexophagy and macropexophagy. In contrast, issuing GO:0000425 names pexophagy specifically for selective macroautophagy and lists macropexophagy as exact; GO:0000426 micropexophagy is its sibling under GO:0030242 autophagy of peroxisome, which lists pexophagy as related. These nonobsolete biological-process records were resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0000425,GO%3A0000426,GO%3A0030242. Retain the source-attributed route-inclusive interpretation for human review and omit exact phenotype xrefs and synonyms. Bulk incidental capture, peroxisome presence, import defects, puncta, protein abundance and delivery without degradation alone are insufficient. Cytosolic peroxisomal-protein autophagy is a separate endpoint. The microbial cell doing the degradation carries the trait, not an organism merely inducing an animal host response.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pexophagy.html#pexophagy-selectivity-and-route-scope"
+ },
+ {
+  "discussion_id": "pexophagy-exemplars-and-native-mechanisms",
+  "prompt": "Resolve strain provenance and taxon-paired mechanisms before expansion.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pexophagy",
+  "source_id": "traitmech:000640",
+  "source_file": "pexophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The evidence uses reporter and perturbation strains; natural strain provenance is not independently established. Keep canonical examples unset rather than presenting deficient mutants as positive exemplars. Historical Pichia names also need strain-specific taxonomic review. Atg36 in budding yeast and PpAtg30 do not define a universal receptor inventory; putative BLAST orthologues are not functional protein examples. Require native taxon-paired protein accession checks and direct functional evidence before a causal graph. Neither an ATG locus nor a detector profile is the phenotype, and neither starvation nor damaged cargo is universally required.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pexophagy.html#pexophagy-exemplars-and-native-mechanisms"
+ },
+ {
   "discussion_id": "ph-taxis-scope-and-mapping-boundaries",
   "prompt": "Preserve directional scope and verify external equivalents.",
   "kind": "CURATION_TODO",
@@ -11846,9 +11880,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 570,
- "total_knowledge_gaps": 381,
- "total_source_entries": 505,
+ "total_discussions": 572,
+ "total_knowledge_gaps": 382,
+ "total_source_entries": 506,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
