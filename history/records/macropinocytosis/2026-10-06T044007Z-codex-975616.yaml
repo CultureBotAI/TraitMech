@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/macropinocytosis.yaml
+  slug: macropinocytosis
+session:
+  id: 2026-10-06T044007Z-codex-975616
+  timestamp: '2026-10-06T04:40:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add DOI-backed macropinocytosis phenotype
+  details: Added traitmech:000634 with a scientific-abstract snippet and a directly read Introduction
+    snippet, two DOI references, a parental DdB example qualified by strain genealogy, and
+    open hierarchy/mechanism discussions. Reserved METPO:1058700 in v510. Ignored-and-hidden
+    searches, structured fresh-seed/release reconciliation and pinned METPO RDF review found
+    no exact record or ID collision. The guarded dry run and 12 focused tests passed before
+    application. Full corpus, snippet resolver, proposal, rendered-artifact and CI checks
+    follow this creation event; no unrun check is claimed passed.
