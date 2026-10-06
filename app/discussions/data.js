@@ -9463,6 +9463,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/automixis.html#automixis-mechanism-and-coverage"
  },
  {
+  "discussion_id": "autophagy-scope-and-flux",
+  "prompt": "Retain catabolic scope without equating markers with completed flux.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "autophagy",
+  "source_id": "traitmech:000638",
+  "source_file": "autophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The phenotype belongs to the microbial cell doing the degradation, not to a bacterium merely eliciting an animal host response. Selective and bulk turnover, macro- and microautophagic routes, and intracellular non-self cargo are within scope; no universal starvation trigger, double-membrane intermediate or ATG gene inventory is asserted. ATG genes, puncta, autophagic-body accumulation, cell death or reduced pathogen replication alone do not establish completed degradative flux. Nondegradative membrane repair or ejection using autophagy machinery is not sufficient. Extracellular uptake and ordinary phagolysosomal digestion alone do not distinguish autophagy. Existing endocytosis, phagocytosis, phagotrophy and extracellular proteolysis records are not equivalent or broader parents; their co-occurrence is not prohibited. GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914 and includes self and non-self material, but denotes a biological process rather than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit exact xrefs and synonyms pending human scope review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autophagy.html#autophagy-scope-and-flux"
+ },
+ {
+  "discussion_id": "autophagy-exemplar-and-mechanism",
+  "prompt": "Resolve strain provenance and cargo-specific mechanism evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "autophagy",
+  "source_id": "traitmech:000638",
+  "source_file": "autophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples remain unset because reference-strain provenance and historical yeast taxonomy have not been independently verified. Do not infer natural or engineered origin from a mutant label. Retain the qualified experimental evidence without treating inhibited or knockout cells as positive completed-flux exemplars. Route-specific proteins, their accessions and taxon-paired functional evidence need review before adding a causal graph. The amoeba infection studies do not establish one universal microbial host-defense mechanism or prove that autophagy always eliminates an intracellular pathogen.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autophagy.html#autophagy-exemplar-and-mechanism"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11778,9 +11812,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 566,
- "total_knowledge_gaps": 379,
- "total_source_entries": 503,
+ "total_discussions": 568,
+ "total_knowledge_gaps": 380,
+ "total_source_entries": 504,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

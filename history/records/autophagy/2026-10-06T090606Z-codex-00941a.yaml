@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/autophagy.yaml
+  slug: autophagy
+session:
+  id: 2026-10-06T090606Z-codex-00941a
+  timestamp: '2026-10-06T09:06:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed microbial autophagy phenotype
+  details: Minted traitmech:000638 under METPO:1000059 with four directly checked DOI-backed
+    scientific-abstract snippets covering yeast catabolism, route diversity, qualified amoeba
+    infection perturbation and the distinction between formation markers and degradative flux.
+    The writer dry run, 19 focused tests and four maintained snippet checks passed. Reserved
+    METPO:1059100 in proposal v514 after ignored-and-hidden novelty and identifier searches.
+    Retained source-access, strain, scope and mechanism limits in two OPEN discussions; no
+    canonical taxa or causal graph were added. Full repository validation and PR review are
+    separate subsequent gates.
