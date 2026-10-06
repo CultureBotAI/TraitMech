@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/nucleophagy.yaml
+  slug: nucleophagy
+session:
+  id: 2026-10-06T133810Z-codex-b77de5
+  timestamp: '2026-10-06T13:38:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1754
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add microbial nuclear-cargo autophagy phenotype
+  details: Added traitmech:000643 with five directly read DOI-backed scientific-abstract snippets,
+    nuclear-parts and whole-nucleus scope, and attributed route/selectivity and flux limits.
+    Reserved METPO:1059600 in v519 with corrected autophagy parent context. Ignored-and-hidden
+    searches, fresh seed comparison and pinned METPO review found no exact record. Natural
+    examples, exact mappings and protein graphs remain deferred.

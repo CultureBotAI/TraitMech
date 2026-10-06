@@ -1,5 +1,9 @@
 # ER-phagy: METPO Proposal v518
 
+> Parent scope correction (2026-10-06, #1754): use v519's corrected
+> `METPO:1059100` autophagy context when combining proposals. This cohort's
+> TSV remains unchanged; its ER-phagy row and allocation are unaffected.
+
 ## Context
 
 Add `traitmech:000642 ER-phagy`, a PROPOSED PHYSIOLOGY class, on base

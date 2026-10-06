@@ -9472,7 +9472,7 @@ window.searchData = [
   "source_id": "traitmech:000638",
   "source_file": "autophagy.yaml",
   "attaches_to": [],
-  "rationale": "The phenotype belongs to the microbial cell doing the degradation, not to a bacterium merely eliciting an animal host response. Selective and bulk turnover, macro- and microautophagic routes, and intracellular non-self cargo are within scope; no universal starvation trigger, double-membrane intermediate or ATG gene inventory is asserted. ATG genes, puncta, autophagic-body accumulation, cell death or reduced pathogen replication alone do not establish completed degradative flux. Nondegradative membrane repair or ejection using autophagy machinery is not sufficient. Extracellular uptake and ordinary phagolysosomal digestion alone do not distinguish autophagy. Existing endocytosis, phagocytosis, phagotrophy and extracellular proteolysis records are not equivalent or broader parents; their co-occurrence is not prohibited. GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914 and includes self and non-self material, but denotes a biological process rather than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit exact xrefs and synonyms pending human scope review.",
+  "rationale": "The phenotype belongs to the microbial cell doing the degradation, not to a bacterium merely eliciting an animal host response. Selective and bulk turnover, macro- and microautophagic routes, and intracellular non-self cargo are within scope; no universal starvation trigger, double-membrane intermediate or ATG gene inventory is asserted. ATG genes, puncta, autophagic-body accumulation, cell death or reduced pathogen replication alone do not establish completed degradative flux. Nondegradative membrane repair or ejection using autophagy machinery is not sufficient. Extracellular uptake and ordinary phagolysosomal digestion alone do not distinguish autophagy. Existing endocytosis, phagocytosis, phagotrophy and extracellular proteolysis records are not equivalent or broader parents; their co-occurrence is not prohibited. GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914 and includes self and non-self material, but denotes a biological process rather than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit exact xrefs and synonyms pending human scope review. Nuclear cargo is included: DOI:10.1007/s00284-024-03838-y supports whole-nucleus autophagy in Aspergillus oryzae. The former cytoplasmic-only wording was too narrow (#1754); intracellular corrects that wording, not the identity of autophagy. Nucleophagy traitmech:000643 is a cargo-defined child. The original definition source supports the retained vacuolar catabolic genus; the added evidence supports nuclear cargo.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -10823,6 +10823,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/negative_autotropism.html#negative-autotropism-provenance-and-mechanism"
  },
  {
+  "discussion_id": "nucleophagy-cargo-route-and-selectivity",
+  "prompt": "Review nuclear-cargo scope and source-specific selectivity.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nucleophagy",
+  "source_id": "traitmech:000643",
+  "source_file": "nucleophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Include nuclear portions and entire nuclei, micro and macro routes. The 2013 review defines nucleophagy as selective, whereas the 2024 Discussion includes the 2012 nonselective Magnaporthe route. The present cargo-defined phenotype does not require universal selectivity; preserve this attributed difference for human review. GO:0044804, resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0044804, is nonobsolete and includes nuclear parts or entire nuclei without an explicit selectivity restriction. Its biological process scope is not an exact organismal-phenotype xref. The autophagy parent traitmech:000638 is corrected to intracellular cargo in this change (#1754). Nuclear-envelope overlap with ER-phagy traitmech:000642 does not make the records equivalent. No exact synonyms or SSSOM mapping are asserted. Nuclear damage, loss of fluorescence or DNA degradation alone does not prove autophagic delivery and flux.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nucleophagy.html#nucleophagy-cargo-route-and-selectivity"
+ },
+ {
+  "discussion_id": "nucleophagy-flux-exemplars-and-mechanism",
+  "prompt": "Resolve native exemplars and route-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nucleophagy",
+  "source_id": "traitmech:000643",
+  "source_file": "nucleophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The microbial cell carrying out degradation has the phenotype, not a bacterium eliciting an animal-host response. Whole-nucleus turnover in multinucleate cells need not cause cell death. Do not equate blebs, puncta, inhibited autophagic bodies, gene presence or partial rate reductions with completed flux or total absence. The 2003/2008 PMN dependence conflict needs full-text assay reconciliation before protein-resolved causal claims. Canonical examples remain unset pending independent natural-strain provenance; do not infer origin from a mutant label. Native taxon-paired protein accessions and functional evidence are required before adding a causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nucleophagy.html#nucleophagy-flux-exemplars-and-mechanism"
+ },
+ {
   "discussion_id": "oogamy-scope-and-motility",
   "prompt": "Keep gamete-size asymmetry distinct from universal male motility.",
   "kind": "CURATION_TODO",
@@ -11948,9 +11982,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 576,
- "total_knowledge_gaps": 384,
- "total_source_entries": 508,
+ "total_discussions": 578,
+ "total_knowledge_gaps": 385,
+ "total_source_entries": 509,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

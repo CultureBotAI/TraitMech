@@ -1,5 +1,9 @@
 # Pexophagy: METPO Proposal v516
 
+> Parent scope correction (2026-10-06, #1754): use v519's corrected
+> `METPO:1059100` autophagy context when combining proposals. This cohort's
+> TSV remains unchanged; its pexophagy row and allocation are unaffected.
+
 ## Context
 
 Add `traitmech:000640 pexophagy`, a PROPOSED PHYSIOLOGY class, on base

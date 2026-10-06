@@ -1,5 +1,10 @@
 # Autophagy: METPO Proposal v514
 
+> Parent scope correction (2026-10-06, #1754): v519 supersedes this cohort's
+> cytoplasmic-only autophagy wording with intracellular cargo. Use v519's
+> `METPO:1059100` context row when combining proposals; this TSV is retained
+> unchanged as historical provenance. The identifier is not reallocated.
+
 ## Context
 
 Add `traitmech:000638 autophagy`, a PROPOSED PHYSIOLOGY class, on base
