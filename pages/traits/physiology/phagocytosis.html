@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/physiology/endocytosis.html" >endocytosis <code>traitmech:000636</code></a></li>
 
       </ul>
     </div>
@@ -159,7 +159,7 @@
           mechanism it concerns.</p>
 
 
-        <p>This class denotes the microbial organism&#39;s particle-engulfment phenotype, not a host immune cell&#39;s response to the microbe. Existing capsule and pathogenic-to-host descriptions concern host immune evasion and are not same-scope unresolved trait nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses that interpretation, but ingestion of inert particles does not by itself establish carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644 require nutritional source use, while predatory bacterium traitmech:000054 is bacteria-specific. Phenotype METPO:1000059 is the supported broader trait. Do not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external process terms separately before asserting any trait-level xref; no synonym or ontology equivalence is proposed here.</p>
+        <p>This class denotes the microbial organism&#39;s particle-engulfment phenotype, not a host immune cell&#39;s response to the microbe. Existing capsule and pathogenic-to-host descriptions concern host immune evasion and are not same-scope unresolved trait nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses that interpretation, but ingestion of inert particles does not by itself establish carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644 require nutritional source use, while predatory bacterium traitmech:000054 is bacteria-specific. Endocytosis traitmech:000636 is the direct broader trait because the existing particle-enclosure definition entails membrane-bound internalization; phenotype METPO:1000059 remains an ancestor. Do not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external process terms separately before asserting any trait-level xref; no synonym or ontology equivalence is proposed here.</p>
 
 
 
@@ -213,6 +213,12 @@
           <time>2026-10-05T20:40:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added phagocytosis as an organism-level particle-engulfment phenotype with two DOI-backed snippets, inspected primary figures and a strain-qualified natural RCC1456 example. Ignored-and-hidden novelty searches and pinned METPO review found no exact record. Reserved METPO:1058000 in v503. Kept nutritional, mapping and sequence-based mechanism interpretations separate; no protein graph was inferred.</p>
+        </li>
+
+        <li>
+          <time>2026-10-06T06:47:04Z</time> ·
+          <strong>REFINE_ENDOCYTOSIS_PARENT</strong> · codex
+          <p class="changes">Refined the direct parent to endocytosis traitmech:000636 by definition-based inference. Updated only the parent statement in the scope discussion, which remains OPEN for process-mapping review. Preserved definition, evidence, example and prior history.</p>
         </li>
 
       </ol>
@@ -269,9 +275,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-05 20:40 UTC
+      Record as of 2026-10-06 06:47 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1030 TraitRecords
+      · 1031 TraitRecords
       · embedding coverage 46.3%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

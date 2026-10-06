@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pinocytosis.yaml
+  slug: pinocytosis
+session:
+  id: 2026-10-06T065047Z-codex-9f871e
+  timestamp: '2026-10-06T06:50:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_traits
+  - discussions
+  summary: Refine pinocytosis parent to endocytosis
+  details: The existing vesicular fluid-uptake definition entails new endocytosis traitmech:000636.
+    Refined the direct parent and resolved the temporary hierarchy gap, preserving its historical
+    rationale and separate taxonomy/mechanism discussions. Definition, evidence, canonical
+    example and prior curation history are unchanged. The v512 narrative requests the additional
+    upstream child axiom without editing historical v511. Guarded writer and 40 focused tests
+    passed.

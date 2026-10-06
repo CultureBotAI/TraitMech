@@ -9803,6 +9803,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/durotaxis.html#durotaxis-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "endocytosis-scope-and-hierarchy",
+  "prompt": "Distinguish membrane-bound uptake from neighboring capabilities.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "endocytosis",
+  "source_id": "traitmech:000636",
+  "source_file": "endocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "This is the microbial cell's uptake phenotype, not a host response, a sequence feature or intracellular trafficking alone. Surface adsorption, passive diffusion, transporter entry, open membrane invaginations and autophagy alone are insufficient. Pinocytosis traitmech:000635 and phagocytosis traitmech:000627 entail this scope; macropinocytosis traitmech:000634 remains below pinocytosis. No fixed size, clathrin/actin dependence, nutritional assimilation or degradation is required. Trogocytosis traitmech:000633 describes removal and uptake of living-cell portions without universally specifying membrane-bound enclosure. Myzocytosis traitmech:000631 describes prey-content aspiration. Its cited 2023 Discussion (DOI:10.3390/microorganisms11081945) calls myzocytosis a form of endocytosis in the studied Colpodella system; that source-attributed umbrella usage is retained, not treated as proof that every aspiration phenotype meets this operational membrane-bound scope. Their broader parent decisions remain unresolved, not exclusions or disjointness claims. Nutritional phagotrophy is not an equivalent. Review process-level ontology mappings separately; no unverified synonyms or xrefs are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/endocytosis.html#endocytosis-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "endocytosis-exemplar-and-mechanism",
+  "prompt": "Resolve strain provenance and route-specific molecular evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "endocytosis",
+  "source_id": "traitmech:000636",
+  "source_file": "endocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The two independent studies both concern laboratory Saccharomyces cerevisiae, not independent taxon replication. BHY10.5's reporter background is not a natural isolate; the 1994 full methods and strain provenance remain unread. Canonical examples are left unset rather than generalize these assays to every strain or claim a wild-type provenance. Membrane-tracer transport, receptor uptake and fluid uptake need not report identical routes. The 1995 authors discuss nonvesicular alternatives and qualify endosome identity. No complete molecular mechanism, protein accessions or causal graph are inferred from tracer behavior or abstracts. Obtain taxon-paired functional and strain-provenance evidence before adding those fields.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/endocytosis.html#endocytosis-exemplar-and-mechanism"
+ },
+ {
   "discussion_id": "energy-taxis-stimulus-and-mapping-boundaries",
   "prompt": "Keep energy sensing distinct from stimulus-defined taxis classes.",
   "kind": "CURATION_TODO",
@@ -10917,7 +10951,7 @@ window.searchData = [
   "source_id": "traitmech:000627",
   "source_file": "phagocytosis.yaml",
   "attaches_to": [],
-  "rationale": "This class denotes the microbial organism's particle-engulfment phenotype, not a host immune cell's response to the microbe. Existing capsule and pathogenic-to-host descriptions concern host immune evasion and are not same-scope unresolved trait nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses that interpretation, but ingestion of inert particles does not by itself establish carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644 require nutritional source use, while predatory bacterium traitmech:000054 is bacteria-specific. Phenotype METPO:1000059 is the supported broader trait. Do not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external process terms separately before asserting any trait-level xref; no synonym or ontology equivalence is proposed here.",
+  "rationale": "This class denotes the microbial organism's particle-engulfment phenotype, not a host immune cell's response to the microbe. Existing capsule and pathogenic-to-host descriptions concern host immune evasion and are not same-scope unresolved trait nodes. Phagotrophy denotes a nutritional strategy; the coccolithophore paper uses that interpretation, but ingestion of inert particles does not by itself establish carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644 require nutritional source use, while predatory bacterium traitmech:000054 is bacteria-specific. Endocytosis traitmech:000636 is the direct broader trait because the existing particle-enclosure definition entails membrane-bound internalization; phenotype METPO:1000059 remains an ancestor. Do not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external process terms separately before asserting any trait-level xref; no synonym or ontology equivalence is proposed here.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -11098,7 +11132,7 @@ window.searchData = [
   "discussion_id": "pinocytosis-scope-and-hierarchy",
   "prompt": "Keep vesicular fluid uptake distinct from neighboring traits.",
   "kind": "CURATION_TODO",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Other discussion",
   "source_name": "pinocytosis",
   "source_id": "traitmech:000635",
@@ -11710,9 +11744,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 562,
- "total_knowledge_gaps": 377,
- "total_source_entries": 501,
+ "total_discussions": 564,
+ "total_knowledge_gaps": 378,
+ "total_source_entries": 502,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

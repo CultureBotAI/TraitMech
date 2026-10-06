@@ -8,7 +8,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000636
 evidence:
 - reference: DOI:10.1371/journal.pone.0095577
   snippet: remodeling of the collar membrane to engulf the prey, and transport of
@@ -63,10 +63,12 @@ discussions:
     that interpretation, but ingestion of inert particles does not by itself establish
     carbon assimilation. Trophic type METPO:1000631 and heterotrophic METPO:1000644
     require nutritional source use, while predatory bacterium traitmech:000054 is
-    bacteria-specific. Phenotype METPO:1000059 is the supported broader trait. Do
-    not equate phagocytosis with all endocytosis, pinocytosis, bacterial predation
-    or phagotrophy. Review external process terms separately before asserting any
-    trait-level xref; no synonym or ontology equivalence is proposed here.
+    bacteria-specific. Endocytosis traitmech:000636 is the direct broader trait because
+    the existing particle-enclosure definition entails membrane-bound internalization;
+    phenotype METPO:1000059 remains an ancestor. Do not equate phagocytosis with all
+    endocytosis, pinocytosis, bacterial predation or phagotrophy. Review external
+    process terms separately before asserting any trait-level xref; no synonym or
+    ontology equivalence is proposed here.
   posed_by: codex
   posed_date: '2026-10-05'
 - discussion_id: phagocytosis-native-mechanism-evidence
@@ -92,4 +94,12 @@ curation_history:
     RCC1456 example. Ignored-and-hidden novelty searches and pinned METPO review found
     no exact record. Reserved METPO:1058000 in v503. Kept nutritional, mapping and
     sequence-based mechanism interpretations separate; no protein graph was inferred.
+  llm_assisted: true
+- timestamp: '2026-10-06T06:47:04Z'
+  curator: codex
+  action: REFINE_ENDOCYTOSIS_PARENT
+  changes: Refined the direct parent to endocytosis traitmech:000636 by definition-based
+    inference. Updated only the parent statement in the scope discussion, which remains
+    OPEN for process-mapping review. Preserved definition, evidence, example and prior
+    history.
   llm_assisted: true

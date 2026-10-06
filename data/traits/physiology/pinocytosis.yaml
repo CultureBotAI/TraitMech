@@ -8,7 +8,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000636
 evidence:
 - reference: DOI:10.1083/jcb.53.3.681
   snippet: HRP activity was found exclusively within membrane profiles within the
@@ -46,7 +46,7 @@ discussions:
 - discussion_id: pinocytosis-scope-and-hierarchy
   prompt: Keep vesicular fluid uptake distinct from neighboring traits.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Retain phenotype METPO:1000059 pending a broader endocytic capability
     hierarchy. This is uptake by a microbe, not induction of host-cell uptake. Macropinocytosis
     traitmech:000634 is a narrower ruffle-mediated mode; its existing definition supports
@@ -59,6 +59,13 @@ discussions:
     Process-level ontology mappings and synonyms remain unasserted.
   posed_by: codex
   posed_date: '2026-10-06'
+  resolved_date: '2026-10-06'
+  resolution_note: Added endocytosis traitmech:000636 as the direct broader phenotype.
+    The existing fluid-internalization definition entails this membrane-bound uptake
+    scope. This resolves the temporary parent gap, not the separate Neff taxonomy
+    or native-mechanism discussions; the historical scope contrasts and unasserted
+    mappings remain applicable. Preserve the v511 phenotype axiom and add METPO:1058800
+    SubClassOf METPO:1058900 upstream.
 - discussion_id: pinocytosis-neff-taxonomy
   prompt: Reconcile the legacy Neff taxon name with its reassignment.
   kind: CURATION_TODO
@@ -99,4 +106,12 @@ curation_history:
     a strain-qualified Neff example and explicit taxonomy and source-access limits.
     Ignored-and-hidden searches and full pinned METPO review found no exact record.
     Reserved METPO:1058800 in v511 and refined macropinocytosis to this broader phenotype.
+  llm_assisted: true
+- timestamp: '2026-10-06T06:47:04Z'
+  curator: codex
+  action: REFINE_ENDOCYTOSIS_PARENT
+  changes: Refined the direct parent to endocytosis traitmech:000636 and resolved
+    the temporary parent gap by definition-based inference. Preserved the historical
+    rationale, definition, evidence, Neff example, independent taxonomy/mechanism
+    discussions and prior history.
   llm_assisted: true
