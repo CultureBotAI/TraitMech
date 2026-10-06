@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/hormogonium_formation.yaml
+  slug: hormogonium_formation
+session:
+  id: 2026-10-06T221001Z-codex-2aff0f
+  timestamp: '2026-10-06T22:10:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed hormogonium formation
+  details: Created traitmech:000651 with three DOI-backed source snippets, developmental-stage
+    and motility limits, phenotype parent, two OPEN grounding discussions and METPO v527 reservation
+    METPO:1060400. Ignored-and-hidden whole-repository novelty search and structured METPO/seed/release
+    review found no exact duplicate; existing records unchanged. Writer dry run passed; full
+    validation and generated-artifact checks are pending at this event.

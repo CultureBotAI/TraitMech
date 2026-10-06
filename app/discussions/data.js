@@ -8970,6 +8970,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-exact-xref-gap"
  },
  {
+  "discussion_id": "hormogonium-formation-scope-and-hierarchy",
+  "prompt": "Review the developmental scope independently of motility and mature cell shape.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "hormogonium formation",
+  "source_id": "traitmech:000651",
+  "source_file": "hormogonium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Motile METPO:1000702 is not a necessary parent: Rippka et al. explicitly include immotile hormogonia, and the 2019 sigF deletion retains differentiation without movement. The 1989 abstract's motile description is specific to the studied Nostoc cultures. Filament shaped METPO:1000674 denotes elongated cells or hypha-like structures, not specifically this differentiated multicellular stage. Filamentous colony METPO:1007066 denotes colony outline. Heterocyst traitmech:000073 and akinete traitmech:000185 describe other differentiated cell types, not this filament stage; their presence in a life cycle is not organism-level disjointness. Random fragmentation alone is insufficient. Do not universally require reduced cell size, gas vacuoles, permanent heterocyst absence, plant symbiosis or nitrogen fixation. Exact external equivalence and narrower hierarchy remain for human review; no xref or unqualified synonym is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "hormogonium-formation-stage-and-mechanism-grounding",
+  "prompt": "Resolve strain and protein anchors before adding a causal graph or canonical example.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "hormogonium formation",
+  "source_id": "traitmech:000651",
+  "source_file": "hormogonium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The cited studies support an observed developmental phenotype and genetic dependence, not merely sequence-feature possession. Before adding a mechanistic graph, inspect actual panels and supplements, resolve accession-level sigma-factor examples, and distinguish induction, morphological differentiation and motility readouts. Transcript changes or homologous sig genes alone do not establish the phenotype or the complete cascade. Canonical examples are deferred pending strain-table and taxon verification with natural provenance and explicit life-stage qualifiers; engineered deletion strains must not be presented as unqualified natural exemplars. The known mechanism is not claimed to be absent, and natural transient stages remain valid trait evidence without a canonical row.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-stage-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "catalase-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -12220,9 +12254,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 592,
- "total_knowledge_gaps": 392,
- "total_source_entries": 516,
+ "total_discussions": 594,
+ "total_knowledge_gaps": 393,
+ "total_source_entries": 517,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
