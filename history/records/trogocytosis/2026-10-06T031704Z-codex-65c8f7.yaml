@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/trogocytosis.yaml
+  slug: trogocytosis
+session:
+  id: 2026-10-06T031704Z-codex-65c8f7
+  timestamp: '2026-10-06T03:17:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add microbial trogocytosis with bounded primary evidence
+  details: Added traitmech:000633 and v509 reservation METPO:1058600 using DOI:10.1038/nature13242
+    and DOI:10.1128/mBio.00068-19. Both scientific-abstract snippets were checked directly;
+    inspected 2014 Figures 1-2 and 2019 Figures 1,6,8, distinguishing percentage internalizing
+    from material mass and proposed models from observations. NCBITaxon:5759 was resolved
+    at NCBI; the canonical example is qualified to parental HM1:IMSS and ATCC natural clinical
+    provenance, not an engineered derivative or exact study lot. Ignored-and-hidden searches
+    plus structured pinned ontology and full release-review parsing found no exact record
+    or collision. Dry run and 12 focused writer tests passed before application. Full-corpus
+    checks and artifact regeneration follow; no broader pass is claimed here. No existing
+    trait, baseline or prior history was edited.
