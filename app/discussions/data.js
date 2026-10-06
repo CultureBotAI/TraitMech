@@ -10313,6 +10313,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/isogamy.html#isogamy-examples-and-mechanism"
  },
  {
+  "discussion_id": "karyoklepty-organismal-scope-and-parent",
+  "prompt": "Keep prey-nucleus use distinct from plastid retention and sequence transfer.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "karyoklepty",
+  "source_id": "traitmech:000630",
+  "source_file": "karyoklepty.yaml",
+  "attaches_to": [],
+  "rationale": "This physiological trait is not a literal nucleus, nucleomorph or sequence feature. Whole living prey/endosymbionts, DNA detection and horizontal transfer alone are insufficient. Kleptoplasty traitmech:000629 concerns plastids; phagocytosis traitmech:000627 concerns uptake; phagotrophy traitmech:000628 concerns nutrient assimilation. Endosymbiosis traitmech:000045 describes a microorganism living inside its host, not selective nuclear retention. These overlapping concepts are not exact equivalents or established universal parents. Retain phenotype METPO:1000059 pending a closer acquisition hierarchy. No fixed retention time, nuclear division, fusion, host-genome integration or universal photosynthetic role is required. No unverified synonym or ontology xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/karyoklepty.html#karyoklepty-organismal-scope-and-parent"
+ },
+ {
+  "discussion_id": "karyoklepty-control-and-inheritance-mechanism",
+  "prompt": "Resolve functional control and inheritance without promoting models to mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "karyoklepty",
+  "source_id": "traitmech:000630",
+  "source_file": "karyoklepty.yaml",
+  "attaches_to": [],
+  "rationale": "The 2017 study discusses strain-dependent alternatives to nuclear division and fusion. Its snapshots do not establish a universal inheritance mechanism. The 2007 abstract supports transcriptional function, but source-specific retention intervals and plastid dependencies are not class restrictions. Protein identities and host-control machinery remain unresolved here; no causal graph is asserted from transcript abundance, inferred targeting or nuclear enlargement alone.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/karyoklepty.html#karyoklepty-control-and-inheritance-mechanism"
+ },
+ {
   "discussion_id": "kleptoplasty-retention-and-hierarchy-scope",
   "prompt": "Keep plastid retention distinct from uptake and acquired photosynthesis.",
   "kind": "CURATION_TODO",
@@ -11487,9 +11521,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 549,
- "total_knowledge_gaps": 371,
- "total_source_entries": 495,
+ "total_discussions": 551,
+ "total_knowledge_gaps": 372,
+ "total_source_entries": 496,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
