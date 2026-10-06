@@ -10517,6 +10517,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/mating_type_switching.html#mating-type-switching-examples-and-mechanism"
  },
  {
+  "discussion_id": "myzocytosis-feeding-scope-and-parent",
+  "prompt": "Reconcile feeding-mode terminology with operational trait boundaries.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "myzocytosis",
+  "source_id": "traitmech:000631",
+  "source_file": "myzocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "This is an organismal feeding phenotype, not a peduncle, pseudoconoid or sequence feature. The 2023 Discussion calls myzocytosis a form of apical phagotrophy and endocytosis while arguing against phagocytosis and trogocytosis in its studied system. The 2012 Introduction uses phagocytise for feeding-tube uptake; the 2024 study contrasts myzocytosis with conventional whole-prey phagocytosis. Those usages are not silently treated as identical. Local phagocytosis traitmech:000627 requires particle enclosure and internalization; phagotrophy traitmech:000628 requires particulate ingestion and nutrient assimilation. Retain phenotype METPO:1000059 pending a closer feeding-mode hierarchy rather than assert unsupported universal subtyping. Mere attachment, free-particle uptake, extracellular digestion or an apparatus-like sequence does not establish prey-content aspiration. A microbe may use several feeding modes; these possession traits are not declared disjoint. No unverified synonym or xref is asserted. Prey death, mechanical piercing and a particular vacuole position are not definition requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/myzocytosis.html#myzocytosis-feeding-scope-and-parent"
+ },
+ {
+  "discussion_id": "myzocytosis-native-feeding-mechanism",
+  "prompt": "Separate observed aspiration from inferred apparatus and protein functions.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "myzocytosis",
+  "source_id": "traitmech:000631",
+  "source_file": "myzocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "Fixed-cell contact ultrastructure does not establish every step by continuous observation. The 2023 paper cites earlier cytochalasin experiments; those experiments were not independently audited here. Its CellMask staining description alone is not accepted as proof of a specific actin mechanism. The 2024 molecular data are from a different isolate than the feeding micrographs, and trichocyst-mediated capture remains uncertain. The 2012 study did not measure the proposed toxin. Obtain taxon-paired functional evidence before adding protein accessions or a causal graph. Ancestral feeding and apicomplexan invasion similarities are hypotheses, not proof of one universal apparatus or molecular mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/myzocytosis.html#myzocytosis-native-feeding-mechanism"
+ },
+ {
   "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for NAD-dependent alcohol dehydrogenase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11521,9 +11555,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 551,
- "total_knowledge_gaps": 372,
- "total_source_entries": 496,
+ "total_discussions": 553,
+ "total_knowledge_gaps": 373,
+ "total_source_entries": 497,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
