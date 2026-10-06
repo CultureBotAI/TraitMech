@@ -10483,6 +10483,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "macropinocytosis-scope-and-hierarchy",
+  "prompt": "Keep bulk-fluid uptake distinct from neighboring uptake traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "macropinocytosis",
+  "source_id": "traitmech:000634",
+  "source_file": "macropinocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059 pending a closer endocytic capability hierarchy. This is uptake by a microbe, not microbial induction of uptake by a host cell. Phagocytosis traitmech:000627 is particle engulfment, phagotrophy traitmech:000628 requires nutritional assimilation, and trogocytosis traitmech:000633 removes portions of living cells. These are neither equivalents nor disjoint organismal capabilities. Generic pinocytosis is broader; its existing phagocytosis discussion mention is not an exact unresolved macropinocytosis node. Membrane ruffling without closure, solute transport alone and uptake into small endocytic vesicles are insufficient. No fixed diameter cutoff, enhanced uptake rate, axenic growth or nutrition is required. No unverified synonym or process-level ontology xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/macropinocytosis.html#macropinocytosis-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "macropinocytosis-native-mechanism",
+  "prompt": "Separate native capability from mutant and reporter mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "macropinocytosis",
+  "source_id": "traitmech:000634",
+  "source_file": "macropinocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The papers share a research group and organism; they are not independent taxon replication. NF1 loss enhances uptake but is not required for the phenotype. Do not equate a drug response, localization or sequence similarity with a universal causal dependency. Protein accessions, native functional scope and remaining figures require review before adding protein examples or a causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/macropinocytosis.html#macropinocytosis-native-mechanism"
+ },
+ {
   "discussion_id": "mating-type-switching-scope",
   "prompt": "Preserve reversible and irreversible switching without equating it with self-fertility.",
   "kind": "CURATION_TODO",
@@ -11623,9 +11657,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 557,
- "total_knowledge_gaps": 375,
- "total_source_entries": 499,
+ "total_discussions": 559,
+ "total_knowledge_gaps": 376,
+ "total_source_entries": 500,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
