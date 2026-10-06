@@ -8,7 +8,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000635
 evidence:
 - reference: DOI:10.1242/jcs.213736
   snippet: Macropinocytosis is a conserved endocytic process used by Dictyostelium
@@ -41,7 +41,7 @@ discussions:
 - discussion_id: macropinocytosis-scope-and-hierarchy
   prompt: Keep bulk-fluid uptake distinct from neighboring uptake traits.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Retain phenotype METPO:1000059 pending a closer endocytic capability
     hierarchy. This is uptake by a microbe, not microbial induction of uptake by a
     host cell. Phagocytosis traitmech:000627 is particle engulfment, phagotrophy traitmech:000628
@@ -54,6 +54,13 @@ discussions:
     required. No unverified synonym or process-level ontology xref is asserted.
   posed_by: codex
   posed_date: '2026-10-06'
+  resolved_date: '2026-10-06'
+  resolution_note: Added pinocytosis traitmech:000635 as the direct broader phenotype.
+    The existing ruffle-mediated bulk-fluid definition entails vesicular fluid uptake;
+    its definition, evidence and DdB example are unchanged. This resolves the temporary
+    phenotype-parent gap, not the separate native-mechanism discussion or any ontology
+    equivalence. Preserve the historical v510 phenotype axiom and add METPO:1058700
+    SubClassOf METPO:1058800 on upstream adoption.
 - discussion_id: macropinocytosis-native-mechanism
   prompt: Separate native capability from mutant and reporter mechanisms.
   kind: KNOWLEDGE_GAP
@@ -73,4 +80,12 @@ curation_history:
     DdB-qualified example. Ignored-and-hidden searches and pinned METPO review found
     no exact record. Reserved METPO:1058700 in v510. Distinguished native uptake from
     axenic mutants, reporter measurements and universal mechanisms.
+  llm_assisted: true
+- timestamp: '2026-10-06T05:29:34Z'
+  curator: codex
+  action: REFINE_PINOCYTOSIS_PARENT
+  changes: Refined the direct parent to pinocytosis traitmech:000635 and resolved
+    the temporary hierarchy discussion by definition-based inference. Preserved identity,
+    definition, evidence, canonical example, mechanism gap, earlier history and the
+    true broader historical proposal axiom.
   llm_assisted: true

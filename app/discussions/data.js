@@ -10486,7 +10486,7 @@ window.searchData = [
   "discussion_id": "macropinocytosis-scope-and-hierarchy",
   "prompt": "Keep bulk-fluid uptake distinct from neighboring uptake traits.",
   "kind": "CURATION_TODO",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Other discussion",
   "source_name": "macropinocytosis",
   "source_id": "traitmech:000634",
@@ -11095,6 +11095,59 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phototropism.html#phototropism-native-mechanism-grounding"
  },
  {
+  "discussion_id": "pinocytosis-scope-and-hierarchy",
+  "prompt": "Keep vesicular fluid uptake distinct from neighboring traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pinocytosis",
+  "source_id": "traitmech:000635",
+  "source_file": "pinocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059 pending a broader endocytic capability hierarchy. This is uptake by a microbe, not induction of host-cell uptake. Macropinocytosis traitmech:000634 is a narrower ruffle-mediated mode; its existing definition supports the direct parent refinement. Do not equate pinocytosis with particle engulfment traitmech:000627, nutritional phagotrophy traitmech:000628 or prey-content aspiration traitmech:000631. These traits are not declared organismally disjoint. Solute transport across a membrane, surface adsorption, open invaginations and membrane recycling alone do not establish fluid internalization. No fixed vesicle size, ruffle, nutritional requirement or universal nonconcentrative uptake is imposed. Process-level ontology mappings and synonyms remain unasserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pinocytosis.html#pinocytosis-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "pinocytosis-neff-taxonomy",
+  "prompt": "Reconcile the legacy Neff taxon name with its reassignment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pinocytosis",
+  "source_id": "traitmech:000635",
+  "source_file": "pinocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The 2024 primary taxonomy paper transfers Neff to A. terricola, whereas NCBI still labels strain 1257118 Acanthamoeba castellanii str. Neff and ATCC 30010 retains A. castellanii. Keep the issuing-authority label with explicit strain scope rather than silently generalizing to either species. The taxonomy paper's scientific abstract was directly read; its full phylogenetic data were not audited. Revisit the authority mapping when the strain identity is reconciled.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1016/j.ejop.2024.126091"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pinocytosis.html#pinocytosis-neff-taxonomy"
+ },
+ {
+  "discussion_id": "pinocytosis-native-mechanism",
+  "prompt": "Resolve uptake routes before asserting molecular dependencies.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pinocytosis",
+  "source_id": "traitmech:000635",
+  "source_file": "pinocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The two experimental papers concern Acanthamoeba and do not establish independent taxon replication. The 1972 nonconcentrative uptake interpretation is study-specific. Tracer loss, metabolism and static membrane profiles limit rate and route inference; the actual figures remain unaudited. Respiratory-inhibitor sensitivity does not identify a particular uptake protein. HRP is an external tracer, not a native microbial protein exemplar. No protein accessions or causal graph are inferred.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pinocytosis.html#pinocytosis-native-mechanism"
+ },
+ {
   "discussion_id": "positive-autotropism-direction-and-fusion-scope",
   "prompt": "Retain the distinction between directional approach and fusion.",
   "kind": "CURATION_TODO",
@@ -11657,9 +11710,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 559,
- "total_knowledge_gaps": 376,
- "total_source_entries": 500,
+ "total_discussions": 562,
+ "total_knowledge_gaps": 377,
+ "total_source_entries": 501,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
