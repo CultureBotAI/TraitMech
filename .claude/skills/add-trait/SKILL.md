@@ -33,6 +33,19 @@ paid literature research before its causal graph can be curated. Use
 - The closest existing `data/traits/<category>/*.yaml` record, to copy local
   shape but not facts.
 
+Run commands from the repository root. Direct `.venv/bin/python` calls assume
+the project package is importable; check with
+`.venv/bin/python -c 'import traitmech'`. If an uninstalled source checkout
+fails that import, set the local source path before writer dry runs, validation
+or pytest, preserving any existing import paths:
+
+```bash
+export PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}"
+.venv/bin/python -c 'import traitmech'
+```
+
+An import or test-collection failure is not a successful validation run.
+
 ## Accept or reject
 
 Add the record only if the target is a reusable microbial

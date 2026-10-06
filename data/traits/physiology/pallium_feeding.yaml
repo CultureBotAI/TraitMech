@@ -1,0 +1,95 @@
+identifier: traitmech:000632
+label: pallium feeding
+definition: A physiological phenotype in which a microbial organism feeds by enveloping
+  all or part of particulate food in an extruded membranous pallium, digesting it
+  outside the main cell body, and taking up released nutrients.
+definition_source: DOI:10.1111/j.1529-8817.1986.tb00021.x
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1111/j.1529-8817.1986.tb00021.x
+  snippet: The contents of the phytoplankton prey are liquified and transported through
+    the pallium
+  notes: 'Direct scientific Abstract quote, printed p. 249; original spelling retained.
+    Institutional scan: https://www.whoi.edu/cms/files/Jacobson_%26_Anderson_1986_JP_feeding_30828.pdf.
+    All seven available pages (249-252, 256-258), Table 1 and actual Figures 1, 2
+    and 23 were inspected. Pages 253-255 and Figures 3-22 are missing from this copy
+    and were not audited. Figure 2B shows Oblea rotunda feeding on Pyramimonas sp.
+    Discussion p. 256 distinguishes complete from partial enclosure; Table 1 also
+    lists detrital food. Neither living prey nor a particular prey size, taxon, capture
+    filament or digestion time is a universal requirement.'
+- reference: DOI:10.1111/j.0022-3646.1992.00069.x
+  snippet: the prey cytoplasm is liquified within the pallium
+  notes: Direct Introduction quote, printed p. 69, not an abstract quote. Complete
+    14-page institutional scan and actual Figures 1-46 inspected at https://www.whoi.edu/cms/files/Jacobson%26Anderson_1992_Proto-ultrastructrure_31161.pdf.
+    Results describe five feeding cells named Protoperidinium spinulosum by the authors.
+    Figures 9-12 show the pallium and degraded diatom contents outside the main cell
+    body; Figures 1 and 46 are reconstructions. Discussion p. 81 leaves inner-membrane
+    loss during fixation versus in vivo reorganization unresolved. Morphology does
+    not demonstrate specific digestive proteins or a complete transport mechanism.
+    No canonical taxon assignment is made from this culture.
+- reference: DOI:10.4319/lo.1993.38.5.0965
+  snippet: Laboratory experiments were performed to determine the growth and grazing
+    capabilities of Oblea rotunda, a pallium-feeding dinoflagellate.
+  notes: Direct scientific Abstract from the publisher page at https://aslopubs.onlinelibrary.wiley.com/doi/10.4319/lo.1993.38.5.0965.
+    Supports the feeding-mode name and growth on several phytoplankton foods. Only
+    the abstract was inspected; Methods, figures and culture provenance were not audited.
+    The laboratory culture is not equated with the field specimens in the 1986 canonical
+    example. Behavioral responses do not identify a molecular receptor.
+canonical_examples:
+- taxon_id: NCBITaxon:402581
+  taxon_label: Oblea rotunda
+  reference: DOI:10.1111/j.1529-8817.1986.tb00021.x
+  note: 'Qualified example: naturally collected specimens in the 1986 study, Table
+    1 and Figure 2B, not all isolates. Methods p. 249 at https://www.whoi.edu/cms/files/Jacobson_%26_Anderson_1986_JP_feeding_30828.pdf
+    report net tows from Perch Pond or Vineyard Sound, Massachusetts, followed by
+    short laboratory incubation and microscopy. No strain identifier or single collection
+    site is assigned to this example. Figure 2B depicts pallium deployment around
+    Pyramimonas sp. NCBI ESearch and EFetch verified the species name, rank and Peridiniopsis
+    rotunda synonym on 2026-10-06.'
+discussions:
+- discussion_id: pallium-feeding-topology-and-parent
+  prompt: Reconcile feeding-mode terminology and membrane topology.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This is an organismal feeding phenotype, not the pallium structure or
+    a sequence feature. The 1986 Discussion p. 256 calls complete enclosure intracellular
+    digestion in a vacuole outside the theca, but partial enclosure extracellular
+    digestion, and questions that terminological division. Its engulfment wording
+    need not mean whole particles enter the main cell body. Local phagocytosis traitmech:000627
+    requires enclosure and internalization; phagotrophy traitmech:000628 requires
+    particulate ingestion and nutrient assimilation. Myzocytosis traitmech:000631
+    denotes prey-content aspiration through a localized connection, not an enveloping
+    feeding veil. Retain phenotype METPO:1000059 pending a closer feeding hierarchy.
+    Do not assert universal extracellular membrane topology or disjoint organismal
+    feeding capabilities. Ordinary extracellular digestion or attachment alone is
+    insufficient. No unverified synonym or ontology equivalence is asserted.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: pallium-feeding-native-mechanism
+  prompt: Resolve membrane dynamics and native protein functions.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The 1992 Discussion proposes digestive-granule functions, membrane storage
+    and transport routes from ultrastructure. It explicitly leaves fixation artifacts
+    versus biological inner-membrane reorganization unresolved and requests time-course
+    evidence. Apparatus similarity to peduncles does not prove identical feeding mechanics
+    or protein function. Obtain taxon-paired functional and accession evidence before
+    adding protein examples or a causal graph. No actin, centrin or enzyme accession
+    is inferred from micrographs, and no gene or profile is treated as proof of this
+    feeding phenotype.
+  posed_by: codex
+  posed_date: '2026-10-06'
+curation_history:
+- timestamp: '2026-10-06T01:50:09Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added pallium feeding with three DOI-backed snippets and a natural-specimen-qualified
+    Oblea example. Ignored-and-hidden searches and pinned METPO review found no exact
+    record. Reserved METPO:1058500 in v508. Preserved partial-enclosure scope, source
+    access limits and unresolved membrane topology; deferred unsupported protein mechanisms
+    and sequence inference.
+  llm_assisted: true

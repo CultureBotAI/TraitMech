@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pallium_feeding.yaml
+  slug: pallium_feeding
+session:
+  id: 2026-10-06T015504Z-codex-50f5d8
+  timestamp: '2026-10-06T01:55:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Correct focused-test timing in pallium feeding provenance
+  details: 'Corrects history/records/pallium_feeding/2026-10-06T015404Z-codex-ed2904.yaml:
+    its statement that focused tests passed before history creation was premature. The initial
+    invocation failed collection with ModuleNotFoundError for traitmech because PYTHONPATH
+    was absent. After setting PYTHONPATH=src, all 12 focused tests passed in 3.38 seconds.
+    The guarded dry run and application had succeeded before the original entry. This audit
+    changes provenance only; the TraitRecord is unchanged.'
