@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 1038,
+    "records": 1039,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 561,
+    "unresearched_mechanism_records": 562,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 11,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 193,
+      "BUILD_CAUSAL_GRAPH": 194,
       "DEEPEN_CAUSAL_GRAPH": 385,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
@@ -426,7 +426,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 5,
+      "children": 6,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -706,6 +706,30 @@
       "label": "isogamy",
       "category": "physiology",
       "slug": "isogamy",
+      "score": 58.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no canonical_examples +30",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000644",
+      "label": "lipophagy",
+      "category": "physiology",
+      "slug": "lipophagy",
       "score": 58.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
