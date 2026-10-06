@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/exocytosis.yaml
+  slug: exocytosis
+session:
+  id: 2026-10-06T081005Z-codex-2ec512
+  timestamp: '2026-10-06T08:10:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded microbial exocytosis
+  details: Minted traitmech:000637 under METPO:1000059 with three DOI-backed scientific-abstract
+    snippets. Separates material release through a fusion pore from fusion-only mutant readouts;
+    includes constitutive secretion without a universal calcium requirement. Source-access
+    and strain-provenance limits remain explicit. Canonical examples, process-level xrefs
+    and protein mechanisms are unset pending evidence. Ignored-and-hidden novelty searches,
+    full pinned RDF and fresh seed/release reconciliation found no exact record. Reserved
+    METPO:1059000 in proposal v513. Guarded writer dry run and 19 focused tests passed before
+    application; full corpus validation follows. No existing trait was modified.
