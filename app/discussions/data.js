@@ -9871,6 +9871,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/energy_taxis.html#energy-taxis-signal-and-protein-grounding"
  },
  {
+  "discussion_id": "exocytosis-scope-and-mapping",
+  "prompt": "Separate the secretion phenotype from its component steps.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "exocytosis",
+  "source_id": "traitmech:000637",
+  "source_file": "exocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "This concerns secretion by the microbe, not a host-cell response. Docking, intracellular trafficking or fusion alone does not demonstrate cargo release. Transporter-mediated export, membrane budding, lysis, cell-cell fusion and endocytosis are not equivalents. Constitutive and stimulus-regulated secretion are included; total emptying, permanent vesicle collapse and a shared calcium response are not required. GO:0006887 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006887 and includes partial secretion through transient pores, but denotes a biological process rather than an equivalent organismal phenotype. No xref or synonym is inferred. The obsolete METPO secretion classes are broader, not exact replacements or usable parents. Retain phenotype METPO:1000059 pending human mapping review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/exocytosis.html#exocytosis-scope-and-mapping"
+ },
+ {
+  "discussion_id": "exocytosis-exemplar-and-mechanism",
+  "prompt": "Resolve natural strain provenance and route-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "exocytosis",
+  "source_id": "traitmech:000637",
+  "source_file": "exocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples remain unset: the historical Tetrahymena strain needs modern taxonomy and provenance review, the yeast experiment uses conditional sec mutants, and the origin of the Paramecium tnd1 mutant has not been independently checked. Do not infer natural or engineered provenance from a mutant label. The fusion-only mutant is boundary evidence, not a positive secretion exemplar. These studies support phenotype scope across experimental systems, not one conserved protein mechanism. Obtain taxon-paired functional evidence and verified accessions before adding protein examples or a causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/exocytosis.html#exocytosis-exemplar-and-mechanism"
+ },
+ {
   "discussion_id": "galvanotaxis-orientation-and-mapping-boundaries",
   "prompt": "Resolve electrical orientation mechanisms without equating active motility with passive drift.",
   "kind": "KNOWLEDGE_GAP",
@@ -11744,9 +11778,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 564,
- "total_knowledge_gaps": 378,
- "total_source_entries": 502,
+ "total_discussions": 566,
+ "total_knowledge_gaps": 379,
+ "total_source_entries": 503,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
