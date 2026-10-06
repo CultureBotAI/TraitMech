@@ -9004,6 +9004,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-stage-and-mechanism-grounding"
  },
  {
+  "discussion_id": "rosette-cell-arrangement-scope-and-hierarchy",
+  "prompt": "Review a multicellular arrangement parent and exact external mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "rosette cell arrangement",
+  "source_id": "traitmech:000652",
+  "source_file": "rosette_cell_arrangement.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Cell shape METPO:1000666 describes an individual cell, while colony morphology METPO:1007062 and colony shape METPO:1007063 describe macroscopic colonies on solid medium. Neither is the genus of this microscopic multicellular arrangement. Obsolete cell arrangement METPO:1000046 is not a usable active parent. Star shaped METPO:1000685 is one cell with radiating projections; staphylococcus arrangement traitmech:000118 is an irregular coccal cluster. Holdfast traitmech:000184 is a polar adhesin phenotype, not a rosette, and biofilm formation traitmech:000053 does not define this arrangement. Co-occurrence is not organism-level disjointness. No unqualified synonym, external equivalence, perfect spherical symmetry, fixed cell count or single central attachment point is asserted. Irregular clumping alone is insufficient.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/rosette_cell_arrangement.html#rosette-cell-arrangement-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "rosette-cell-arrangement-mechanism-scope",
+  "prompt": "Keep organism-specific developmental and adhesion mechanisms separate.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "rosette cell arrangement",
+  "source_id": "traitmech:000652",
+  "source_file": "rosette_cell_arrangement.yaml",
+  "attaches_to": [],
+  "rationale": "The two primary studies support a shared morphological description, not one homologous developmental program. Wetzel et al.'s exclusion of aggregation concerns S. rosetta rosettes, whereas Fiebig describes polar adhesion in Caulobacter. Do not require clonal division or a bacterial holdfast for all rosettes. A causal graph is deferred pending separate organism-scoped perturbation and accession reviews, not because mechanisms are unknown. Holdfast-associated genes or predicted glycosyltransferases alone do not establish the observed arrangement. Quantitative shear, growth and cell-number thresholds are assay-specific. Additional bacterial canonical examples require strain-provenance and taxon verification; the CB15 evidence is retained without an unverified taxon row.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/rosette_cell_arrangement.html#rosette-cell-arrangement-mechanism-scope"
+ },
+ {
   "discussion_id": "catalase-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -12254,9 +12288,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 594,
- "total_knowledge_gaps": 393,
- "total_source_entries": 517,
+ "total_discussions": 596,
+ "total_knowledge_gaps": 394,
+ "total_source_entries": 518,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

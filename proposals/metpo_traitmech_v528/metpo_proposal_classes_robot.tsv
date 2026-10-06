@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1060500	rosette cell arrangement	A morphological phenotype in which cells form multicellular clusters organized around a shared central region, with corresponding cell poles directed inward.	TraitMech:data/traits/morphology/rosette_cell_arrangement.yaml|DOI:10.7554/eLife.41482|DOI:10.1128/jb.00064-19	METPO:1000059			metpo_traitmech_2026_10		Multicellular polar arrangement; formation routes differ across organisms.	traitmech:000652
