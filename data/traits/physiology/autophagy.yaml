@@ -1,6 +1,6 @@
 identifier: traitmech:000638
 label: autophagy
-definition: A physiological phenotype in which a microbial cell degrades cytoplasmic
+definition: A physiological phenotype in which a microbial cell degrades intracellular
   material, including its own constituents or intracellular non-self cargo, by delivering
   that material to lysosomal or vacuolar compartments.
 definition_source: DOI:10.1083/jcb.119.2.301
@@ -56,12 +56,20 @@ evidence:
     assay. The paper frames intracellular-pathogen digestion as xenophagy, but its
     blockade result is boundary evidence, not a positive completed-clearance observation.
     Other actual figures and supplements were not visually audited.
+- reference: DOI:10.1007/s00284-024-03838-y
+  snippet: These results indicate that nuclei are engulfed in the autophagosomes as
+    a whole and transported/released into the vacuolar lumen where they are degraded.
+  notes: PMID:39162852, PMC11335778. Scientific Abstract directly read in Europe PMC
+    with matching DOI. Selected XML Methods, Results and Discussion support including
+    nuclear cargo within autophagy. The nucleophagy child retains the assay and access
+    limits. This repairs cytoplasmic to intracellular in the parent definition (#1754),
+    without imposing this macro route on all autophagy or changing its stable identity.
 discussions:
 - discussion_id: autophagy-scope-and-flux
   prompt: Retain catabolic scope without equating markers with completed flux.
   kind: CURATION_TODO
   status: OPEN
-  rationale: The phenotype belongs to the microbial cell doing the degradation, not
+  rationale: 'The phenotype belongs to the microbial cell doing the degradation, not
     to a bacterium merely eliciting an animal host response. Selective and bulk turnover,
     macro- and microautophagic routes, and intracellular non-self cargo are within
     scope; no universal starvation trigger, double-membrane intermediate or ATG gene
@@ -74,7 +82,12 @@ discussions:
     GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914
     and includes self and non-self material, but denotes a biological process rather
     than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit
-    exact xrefs and synonyms pending human scope review.
+    exact xrefs and synonyms pending human scope review. Nuclear cargo is included:
+    DOI:10.1007/s00284-024-03838-y supports whole-nucleus autophagy in Aspergillus
+    oryzae. The former cytoplasmic-only wording was too narrow (#1754); intracellular
+    corrects that wording, not the identity of autophagy. Nucleophagy traitmech:000643
+    is a cargo-defined child. The original definition source supports the retained
+    vacuolar catabolic genus; the added evidence supports nuclear cargo.'
   posed_by: codex
   posed_date: '2026-10-06'
 - discussion_id: autophagy-exemplar-and-mechanism
@@ -99,4 +112,11 @@ curation_history:
     route, cargo, flux and source-access limits. Ignored-and-hidden searches and pinned
     METPO review found no exact record. Reserved METPO:1059100 in v514. Deferred unverified
     examples, mappings and protein mechanisms; existing traits unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-06T13:33:28Z'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Corrected cytoplasmic to intracellular cargo using whole-nucleus autophagy
+    evidence (#1754). Retained autophagy identity, prior evidence and route/flux limits;
+    added the nucleophagy child and corrected parent context in proposal v519.
   llm_assisted: true

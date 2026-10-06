@@ -32,13 +32,13 @@
     <h1>autophagy</h1>
     <p class="curie"><code>traitmech:000638</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A physiological phenotype in which a microbial cell degrades cytoplasmic material, including its own constituents or intracellular non-self cargo, by delivering that material to lysosomal or vacuolar compartments.</p>
+    <p class="definition">A physiological phenotype in which a microbial cell degrades intracellular material, including its own constituents or intracellular non-self cargo, by delivering that material to lysosomal or vacuolar compartments.</p>
 
   </header>
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(4)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(5)</span></h2>
     <ul>
 
       <li>
@@ -63,6 +63,12 @@
         <a href="https://doi.org/10.1371/journal.ppat.1006344" rel="nofollow noreferrer"><code>DOI:10.1371/journal.ppat.1006344</code></a>
         <blockquote>Antagonistically, ESX-1 is also essential to block the autophagic flux and deplete the MCV of proteolytic activity.</blockquote>
         <p class="meta">PMID:28414774, PMC5407849. Scientific Abstract, distinct from the Author summary, directly read in Europe PMC XML and PLOS. The flux Results, flux-assay Methods and Discussion were read; Figure 6 and supplemental S6 Figure were visually inspected. Dictyostelium discoideum is the autophagic cell, not the infecting Mycobacterium marinum. Protease-inhibitor comparisons and GFP-Atg8 processing distinguish formation from degradation; the infection-associated block is partial, not a complete absence of flux. Free GFP reduction alone is ambiguous in this assay. The paper frames intracellular-pathogen digestion as xenophagy, but its blockade result is boundary evidence, not a positive completed-clearance observation. Other actual figures and supplements were not visually audited.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1007/s00284-024-03838-y" rel="nofollow noreferrer"><code>DOI:10.1007/s00284-024-03838-y</code></a>
+        <blockquote>These results indicate that nuclei are engulfed in the autophagosomes as a whole and transported/released into the vacuolar lumen where they are degraded.</blockquote>
+        <p class="meta">PMID:39162852, PMC11335778. Scientific Abstract directly read in Europe PMC with matching DOI. Selected XML Methods, Results and Discussion support including nuclear cargo within autophagy. The nucleophagy child retains the assay and access limits. This repairs cytoplasmic to intracellular in the parent definition (#1754), without imposing this macro route on all autophagy or changing its stable identity.</p>
       </li>
 
     </ul>
@@ -102,12 +108,14 @@
 
 
     <div class="card">
-      <h2>Children (4)</h2>
+      <h2>Children (5)</h2>
       <ul>
 
         <li><a href="../../traits/physiology/er_phagy.html">ER-phagy <code>traitmech:000642</code></a></li>
 
         <li><a href="../../traits/physiology/mitophagy.html">mitophagy <code>traitmech:000639</code></a></li>
+
+        <li><a href="../../traits/physiology/nucleophagy.html">nucleophagy <code>traitmech:000643</code></a></li>
 
         <li><a href="../../traits/physiology/pexophagy.html">pexophagy <code>traitmech:000640</code></a></li>
 
@@ -161,7 +169,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The phenotype belongs to the microbial cell doing the degradation, not to a bacterium merely eliciting an animal host response. Selective and bulk turnover, macro- and microautophagic routes, and intracellular non-self cargo are within scope; no universal starvation trigger, double-membrane intermediate or ATG gene inventory is asserted. ATG genes, puncta, autophagic-body accumulation, cell death or reduced pathogen replication alone do not establish completed degradative flux. Nondegradative membrane repair or ejection using autophagy machinery is not sufficient. Extracellular uptake and ordinary phagolysosomal digestion alone do not distinguish autophagy. Existing endocytosis, phagocytosis, phagotrophy and extracellular proteolysis records are not equivalent or broader parents; their co-occurrence is not prohibited. GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914 and includes self and non-self material, but denotes a biological process rather than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit exact xrefs and synonyms pending human scope review.</p>
+        <p>The phenotype belongs to the microbial cell doing the degradation, not to a bacterium merely eliciting an animal host response. Selective and bulk turnover, macro- and microautophagic routes, and intracellular non-self cargo are within scope; no universal starvation trigger, double-membrane intermediate or ATG gene inventory is asserted. ATG genes, puncta, autophagic-body accumulation, cell death or reduced pathogen replication alone do not establish completed degradative flux. Nondegradative membrane repair or ejection using autophagy machinery is not sufficient. Extracellular uptake and ordinary phagolysosomal digestion alone do not distinguish autophagy. Existing endocytosis, phagocytosis, phagotrophy and extracellular proteolysis records are not equivalent or broader parents; their co-occurrence is not prohibited. GO:0006914 was resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006914 and includes self and non-self material, but denotes a biological process rather than an equivalent organismal phenotype. Keep METPO:1000059 as parent and omit exact xrefs and synonyms pending human scope review. Nuclear cargo is included: DOI:10.1007/s00284-024-03838-y supports whole-nucleus autophagy in Aspergillus oryzae. The former cytoplasmic-only wording was too narrow (#1754); intracellular corrects that wording, not the identity of autophagy. Nucleophagy traitmech:000643 is a cargo-defined child. The original definition source supports the retained vacuolar catabolic genus; the added evidence supports nuclear cargo.</p>
 
 
 
@@ -215,6 +223,12 @@
           <time>2026-10-06T09:02:37Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added autophagy with four DOI-backed scientific-abstract snippets and explicit route, cargo, flux and source-access limits. Ignored-and-hidden searches and pinned METPO review found no exact record. Reserved METPO:1059100 in v514. Deferred unverified examples, mappings and protein mechanisms; existing traits unchanged.</p>
+        </li>
+
+        <li>
+          <time>2026-10-06T13:33:28Z</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Corrected cytoplasmic to intracellular cargo using whole-nucleus autophagy evidence (#1754). Retained autophagy identity, prior evidence and route/flux limits; added the nucleophagy child and corrected parent context in proposal v519.</p>
         </li>
 
       </ol>
@@ -271,9 +285,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-06 09:02 UTC
+      Record as of 2026-10-06 13:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1037 TraitRecords
+      · 1038 TraitRecords
       · embedding coverage 46.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
