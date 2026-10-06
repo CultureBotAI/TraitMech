@@ -11556,6 +11556,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/rheotropism.html#rheotropism-native-mechanism-and-exemplars"
  },
  {
+  "discussion_id": "ribophagy-selectivity-and-terminology",
+  "prompt": "Review cargo selectivity and mechanism-dependent terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ribophagy",
+  "source_id": "traitmech:000641",
+  "source_file": "ribophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Use autophagy traitmech:000638 as the broader phenotype. The 2008 paper names selective mature-ribosome turnover ribophagy; the 2014 paper explicitly includes 60S subunits. Neither ribosome protection in dormancy nor bulk RNA decay, free ribosomal-protein degradation, ribosome biogenesis, gene presence or puncta alone establishes this phenotype. The 2025 Rsa1 paper distinguishes its pathway from known ribophagy and notes differing mammalian usage. Retain that source-attributed distinction for human review; do not silently equate Rsa1-dependent turnover with the historically named pathway or make Ubp3 universal. GO:0034517, resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0034517, is a nonobsolete biological process for selective mature ribosome degradation by macroautophagy, not an exact organismal phenotype. Preserve that route qualifier and omit exact xrefs and synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ribophagy.html#ribophagy-selectivity-and-terminology"
+ },
+ {
+  "discussion_id": "ribophagy-exemplars-and-native-mechanisms",
+  "prompt": "Resolve natural exemplars and subunit-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ribophagy",
+  "source_id": "traitmech:000641",
+  "source_file": "ribophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples remain unset: the experiments use laboratory reporter and perturbation strains, and natural strain provenance has not been independently verified. The microbial cell doing the degradation carries the phenotype, not bacteria expressing purified yeast proteins or organisms eliciting an animal host response. Require native taxon-paired protein accessions and functional evidence before a causal graph; do not impose the 60S Ubp3/Bre5 mechanism on 40S turnover or all microbial taxa. Preserve the difference between normal rates, residual activity and complete absence of degradation. A predicted binding motif is not a separate trait or a proven causal contact.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ribophagy.html#ribophagy-exemplars-and-native-mechanisms"
+ },
+ {
   "discussion_id": "serine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for serine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11880,9 +11914,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 572,
- "total_knowledge_gaps": 382,
- "total_source_entries": 506,
+ "total_discussions": 574,
+ "total_knowledge_gaps": 383,
+ "total_source_entries": 507,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
