@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/proteaphagy.yaml
+  slug: proteaphagy
+session:
+  id: 2026-10-06T153355Z-codex-93d2b2
+  timestamp: '2026-10-06T15:33:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add microbial proteaphagy with source-bounded evidence
+  details: Added traitmech:000645 proteaphagy below unchanged autophagy, with three directly
+    read DOI-backed scientific-abstract snippets verified by the maintained resolver. Preserved
+    separate core/regulatory-particle cargo, conditional ATG11 dependence, the Cell Reports
+    correction and uninspected-figure limits. Ignored-and-hidden novelty checks, fresh METPO
+    seed/release/RDF audit and identifier allocation found no exact existing term. Reserved
+    METPO:1059800 in v521 with unchanged corrected parent context; deferred unverified exemplars,
+    mappings and protein graphs. Guarded writer dry run and 43 focused tests passed.

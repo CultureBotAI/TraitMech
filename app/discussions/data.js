@@ -11505,6 +11505,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-xref-gap"
  },
  {
+  "discussion_id": "proteaphagy-cargo-scope-and-go",
+  "prompt": "Review proteasome-cargo scope and qualified GO alignment.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "proteaphagy",
+  "source_id": "traitmech:000645",
+  "source_file": "proteaphagy.yaml",
+  "attaches_to": [],
+  "rationale": "Proteasomes are the autophagic cargo, not the machinery degrading unrelated substrates. Ordinary proteasome-mediated proteolysis, proteasome biogenesis, storage granules, free-subunit loss or gene presence alone does not establish this phenotype. The 2016 starvation study includes separately targeted core and regulatory particles, so do not require intact holoenzyme uptake. GO:0061816, directly resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061816, is a nonobsolete biological process restricted to selective macroautophagy, not an exact organismal phenotype. The cargo-defined local term does not impose a universal route, trigger or selectivity mechanism; retain this scope difference for human review and omit exact xrefs and synonyms. Ribophagy traitmech:000641 and nuclear-cargo degradation traitmech:000643 are distinct: shared machinery or prior nuclear localization does not equate these cargo phenotypes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/proteaphagy.html#proteaphagy-cargo-scope-and-go"
+ },
+ {
+  "discussion_id": "proteaphagy-context-exemplars-and-mechanisms",
+  "prompt": "Resolve route-specific mechanisms, figures and natural exemplars.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "proteaphagy",
+  "source_id": "traitmech:000645",
+  "source_file": "proteaphagy.yaml",
+  "attaches_to": [],
+  "rationale": "Keep starvation and inactive-particle quality-control routes distinct. The later ATG11 result concerns residual turnover in an ATG17 deletion background; neither an abstract's general wording nor a single deletion establishes universal necessity. Do not turn reduced efficiency, a detection limit or partial turnover into complete absence. Resolve the 2016 Figure 6D Rpn10 caption/body discrepancy and inspect the corrected Figure S3 associated with DOI:10.1016/j.celrep.2022.110552 before relying on those panels. Canonical examples remain unset pending independent natural-strain provenance. The microbial cell performing degradation carries the phenotype, not a bacterium eliciting an animal host response. Native taxon-paired protein accessions and functional evidence are required before a causal graph is added; ATG presence, puncta or loss of total proteasome abundance alone is not proof of autophagic flux.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/proteaphagy.html#proteaphagy-context-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "pseudobipolar-mating-scope-and-hierarchy",
   "prompt": "Keep physical linkage, genetic linkage and observed compatibility distinct.",
   "kind": "CURATION_TODO",
@@ -12016,9 +12050,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 580,
- "total_knowledge_gaps": 386,
- "total_source_entries": 510,
+ "total_discussions": 582,
+ "total_knowledge_gaps": 387,
+ "total_source_entries": 511,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
