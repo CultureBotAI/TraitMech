@@ -1,4 +1,5 @@
 path	identifier	n_citations	citations	malformed	passes
+data/traits/ecology/bacterial_cannibalism.yaml	traitmech:000626	3	DOI:10.1126/science.1086462; DOI:10.1111/j.1365-2958.2009.06882.x; DOI:10.1128/mbio.00525-26		yes
 data/traits/ecology/endophytic.yaml	traitmech:000442	2	DOI:10.3390/microorganisms5040077; DOI:10.1128/MMBR.00050-14		yes
 data/traits/ecology/epiphytic.yaml	traitmech:000443	2	DOI:10.1186/s12915-024-01967-1; DOI:10.1128/AEM.69.4.1875-1883.2003		yes
 data/traits/genomics/abi2_system.yaml	traitmech:000338	8	DOI:10.1016/j.mib.2005.06.006; DOI:10.1128/jb.177.13.3818-3823.1995; DOI:10.1128/jb.177.13.3824-3829.1995; https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/; https://rest.uniprot.org/uniprotkb/Q48717.tsv?fields=accession,id,gene_names,protein_name,xref_pfam,organism_name; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md		yes
@@ -462,6 +463,7 @@ data/traits/physiology/homeoviscous_adaptation.yaml	traitmech:000208	4	DOI:10.10
 data/traits/physiology/homothallism.yaml	traitmech:000609	3	DOI:10.5598/imafungus.2015.06.01.13; DOI:10.1371/journal.pgen.1006981; DOI:10.7554/elife.79114		yes
 data/traits/physiology/hyphal_anastomosis.yaml	traitmech:000605	3	DOI:10.1128/aem.65.12.5571-5575.1999; DOI:10.1128/ec.00191-12; DOI:10.1111/j.1469-8137.2008.02726.x		yes
 data/traits/physiology/isogamy.yaml	traitmech:000619	2	DOI:10.1038/s42003-022-04275-y; DOI:10.1111/evo.13427		yes
+data/traits/physiology/kleptoplasty.yaml	traitmech:000629	4	DOI:10.1038/s41598-018-28455-1; DOI:10.1073/pnas.2220100120; DOI:10.1038/s41467-026-70516-x; DOI:10.1111/1462-2920.14433		yes
 data/traits/physiology/lecithinase_activity.yaml	traitmech:000140	2	DOI:10.2147/IDR.S365254; DOI:10.1128/jb.81.6.939-945.1961		yes
 data/traits/physiology/leucine_arylamidase_activity.yaml	traitmech:000143	2	DOI:10.1099/ijsem.0.002327; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/leucyl_glycine_arylamidase_activity.yaml	traitmech:000178	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
@@ -479,6 +481,8 @@ data/traits/physiology/paedogamy.yaml	traitmech:000624	3	DOI:10.1080/0269249X.20
 data/traits/physiology/parasexuality.yaml	traitmech:000607	3	DOI:10.1093/emboj/cdg235; DOI:10.1128/ec.00128-13; DOI:10.1038/s41467-019-12376-2		yes
 data/traits/physiology/ph_taxis.yaml	traitmech:000591	2	DOI:10.1128/jb.00491-19; DOI:10.1128/jb.188.7.2656-2665.2006		yes
 data/traits/physiology/ph_tropism.yaml	traitmech:000602	2	DOI:10.1128/mbio.00285-23; DOI:10.1371/journal.pbio.3002726		yes
+data/traits/physiology/phagocytosis.yaml	traitmech:000627	2	DOI:10.1371/journal.pone.0095577; DOI:10.1111/nph.20388		yes
+data/traits/physiology/phagotrophy.yaml	traitmech:000628	2	DOI:10.1038/ismej.2017.68; DOI:10.1007/s00248-001-1024-6		yes
 data/traits/physiology/phenylalanine_arylamidase_activity.yaml	traitmech:000168	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/photokinesis.yaml	traitmech:000587	2	DOI:10.1128/AEM.67.12.5410-5419.2001; DOI:10.1016/S0176-1617(00)80045-0		yes
 data/traits/physiology/phototaxis.yaml	traitmech:000588	3	DOI:10.1105/tpc.108.057919; DOI:10.7554/eLife.12620; DOI:10.1093/dnares/dss024		yes
