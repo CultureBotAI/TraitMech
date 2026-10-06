@@ -11469,6 +11469,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/tripolar_mating_system.html#tripolar-mating-evidence-and-mechanism"
  },
  {
+  "discussion_id": "trogocytosis-scope-and-hierarchy",
+  "prompt": "Keep cell nibbling distinct from nutrition and whole-cell uptake.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trogocytosis",
+  "source_id": "traitmech:000633",
+  "source_file": "trogocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "This record concerns the microbe as the nibbling organism, not host immune-cell attack on a microbe. Retain phenotype METPO:1000059 pending a closer uptake hierarchy. Local phagocytosis traitmech:000627 covers particle enclosure and internalization; phagotrophy traitmech:000628 requires nutrient assimilation. Myzocytosis traitmech:000631 denotes prey-content aspiration through a localized connection, and pallium feeding traitmech:000632 involves an enveloping feeding veil. None is asserted equivalent or disjoint at organism level. The existing myzocytosis contrast is not an unresolved exact trogocytosis node. Neither nutrition, killing, serum protection, a human target nor a fixed fragment size is a class requirement. Free-particle uptake or attachment alone is insufficient. No unverified synonym or process-level xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/trogocytosis.html#trogocytosis-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "trogocytosis-native-mechanism",
+  "prompt": "Resolve native molecular mechanisms without universalizing dependencies.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "trogocytosis",
+  "source_id": "traitmech:000633",
+  "source_file": "trogocytosis.yaml",
+  "attaches_to": [],
+  "rationale": "The two papers are distinct experiments from an overlapping research group, not independent taxon replication. Perturbation, localization and sequence similarity are different evidence types. Neither a conceptual model nor a homologous sequence establishes a universal pathway. Inspect the remaining figures and obtain taxon-paired functional and accession evidence before adding protein examples or a causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/trogocytosis.html#trogocytosis-native-mechanism"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11589,9 +11623,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 555,
- "total_knowledge_gaps": 374,
- "total_source_entries": 498,
+ "total_discussions": 557,
+ "total_knowledge_gaps": 375,
+ "total_source_entries": 499,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

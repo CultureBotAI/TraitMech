@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1058600	trogocytosis	A physiological phenotype in which a microbial organism removes and takes up discrete portions of another living cell during direct contact instead of engulfing that cell whole.	TraitMech:data/traits/physiology/trogocytosis.yaml|DOI:10.1038/nature13242|DOI:10.1128/mBio.00068-19	METPO:1000059			metpo_traitmech_2026_10		Portions of living cells, not whole-cell engulfment or a nutritional requirement.	traitmech:000633
