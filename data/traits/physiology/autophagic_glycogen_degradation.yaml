@@ -1,0 +1,94 @@
+identifier: traitmech:000647
+label: autophagic glycogen degradation
+definition: An autophagy phenotype in which a microbial cell degrades intracellular
+  glycogen by delivering it to lysosomal or vacuolar compartments.
+definition_source: DOI:10.4161/auto.6.4.11736
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000638
+evidence:
+- reference: DOI:10.4161/auto.6.4.11736
+  snippet: Our results indicate that autophagy and Sga1 act cooperatively in vacuolar
+    glycogen breakdown
+  notes: PMID:20383057. DOI-matched scientific abstract directly read in Europe PMC
+    metadata. Supports autophagy-associated vacuolar glycogen hydrolysis in Magnaporthe
+    oryzae during asexual development. The reported breakdown supports conidia formation
+    but is dispensable for pathogenicity. Cytoplasmic retargeting of GFP-Sga1 is an
+    engineered rescue, not a natural vacuolar-flux exemplar. Full Methods, actual
+    figures and independent strain provenance were not inspected.
+- reference: DOI:10.3390/cells13060467
+  snippet: vacuolar delivery of Glg1-GFP and its processing to free GFP were strictly
+    dependent on autophagic machinery and vacuolar proteolysis.
+  notes: PMID:38534311, PMC10969688. Scientific abstract, XML Methods 2.1, Results
+    3.2-3.4 and Discussion were read. The authors conclude nonselective glycogen autophagy
+    in nitrogen-starved Komagataella phaffii using glycogen-bound, nonbinding and
+    cytosolic reporters. Atg11 independence alone is not the selectivity argument.
+    TCA extraction under-recovers the bound reporter; raw free-GFP/total-fusion ratios
+    are unreliable. Reporter proteolysis is not a direct polymer-hydrolysis assay.
+    Actual panels and independent strain provenance remain uninspected.
+- reference: DOI:10.3390/ijms252111772
+  snippet: The K. phaffii Gsy1-GFP marked the GGs and reported on their autophagic
+    degradation during nitrogen starvation, as expected.
+  notes: PMID:39519320, PMC11546884. DOI-matched scientific abstract and XML Results
+    2.2-2.3 and Discussion were read. GGs means glycogen granules. This follow-up
+    uses Gsy1 and CBM20 reporters to support neutral cargo behavior in nitrogen-starved
+    K. phaffii; it is not independent-laboratory replication. Early Gsy1-GFP dot disappearance
+    is autophagy-independent and is not positive flux evidence. A human STBD1 domain
+    used as a reporter does not establish a native human mechanism in yeast. Complete
+    Methods, actual panels and strain provenance were not inspected.
+- reference: DOI:10.1016/j.isci.2024.109810
+  snippet: glycophagy may play a role in the suppression of glycogen consumption,
+    rather than enhancing degradation.
+  notes: 'PMID:38832010, PMC11145338. Exact XML Results sec2.7 span, not an abstract
+    quote. Scientific Summary, Results, Discussion, Limitations and selected yeast,
+    GFP-cleavage and glycogen-assay Methods were read. Boundary evidence: Atg45-dependent
+    vacuolar delivery during Saccharomyces cerevisiae sporulation can preserve glycogen.
+    Do not score that delivery alone as degradation. Receptor recruitment and prolonged-starvation
+    reporter turnover do not make storage and hydrolysis interchangeable. Actual panels,
+    supplements and independent strain provenance remain unread.'
+discussions:
+- discussion_id: autophagic-glycogen-degradation-scope
+  prompt: Distinguish degradation from broader glycophagy usage.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The explicit degradative endpoint narrows autophagy traitmech:000638
+    without changing that parent's identity. This is intracellular cargo recycling,
+    not growth on glycogen, extracellular amylolysis, granule possession or a gene
+    inventory. The Cells paper introduces glycophagy as selective but reports nonselective
+    K. phaffii turnover; the iScience paper also uses glycophagy for vacuolar preservation
+    during sporulation. Those source-attributed usages are not exact synonyms of this
+    endpoint-defined record. GO:0061723 was directly resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061723
+    as a nonobsolete biological process for selective glycogen degradation by macroautophagy.
+    It is narrower on selectivity and route, and is not an exact organismal phenotype.
+    Omit exact xrefs and synonyms. Broader delivery/storage and selective subtype
+    relationships require human review, not silent normalization of conflicting terminology.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: autophagic-glycogen-degradation-assays-and-exemplars
+  prompt: Resolve polymer turnover, natural exemplars and mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Keep glycogen-bound reporter cleavage, vacuolar localization, glycogen
+    content and polymer hydrolysis as distinct readouts. Do not impose universal Sga1,
+    Atg45, Atg11, starvation, sporulation, selectivity or a macroautophagic route.
+    Yeast species and nutrient conditions can differ. The Atg45 storage result is
+    a boundary, not positive evidence of this endpoint. Canonical examples remain
+    unset pending independent natural-strain provenance and direct endpoint support;
+    reporter and deletion strains are qualified evidence, not natural exemplars. Protein
+    graphs require native taxon-paired accessions and functional evidence. Human disease
+    models and an Aspergillus enzyme used as an assay reagent are not microbial observations
+    of this trait. Inspect actual panels before protein-level curation.
+  posed_by: codex
+  posed_date: '2026-10-06'
+curation_history:
+- timestamp: '2026-10-06T17:24:49Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added autophagic glycogen degradation with four DOI-backed source-matched
+    snippets and explicit storage, selectivity and reporter limits. Fresh ignored-and-hidden
+    searches, seed and METPO inventories found no exact record. Reserved METPO:1060000
+    in v523 with unchanged corrected autophagy parent context. Deferred broad glycophagy
+    equivalence, natural exemplars and protein mechanisms.
+  llm_assisted: true

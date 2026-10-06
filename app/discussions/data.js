@@ -9497,6 +9497,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/automixis.html#automixis-mechanism-and-coverage"
  },
  {
+  "discussion_id": "autophagic-glycogen-degradation-scope",
+  "prompt": "Distinguish degradation from broader glycophagy usage.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "autophagic glycogen degradation",
+  "source_id": "traitmech:000647",
+  "source_file": "autophagic_glycogen_degradation.yaml",
+  "attaches_to": [],
+  "rationale": "The explicit degradative endpoint narrows autophagy traitmech:000638 without changing that parent's identity. This is intracellular cargo recycling, not growth on glycogen, extracellular amylolysis, granule possession or a gene inventory. The Cells paper introduces glycophagy as selective but reports nonselective K. phaffii turnover; the iScience paper also uses glycophagy for vacuolar preservation during sporulation. Those source-attributed usages are not exact synonyms of this endpoint-defined record. GO:0061723 was directly resolved at https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061723 as a nonobsolete biological process for selective glycogen degradation by macroautophagy. It is narrower on selectivity and route, and is not an exact organismal phenotype. Omit exact xrefs and synonyms. Broader delivery/storage and selective subtype relationships require human review, not silent normalization of conflicting terminology.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autophagic_glycogen_degradation.html#autophagic-glycogen-degradation-scope"
+ },
+ {
+  "discussion_id": "autophagic-glycogen-degradation-assays-and-exemplars",
+  "prompt": "Resolve polymer turnover, natural exemplars and mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "autophagic glycogen degradation",
+  "source_id": "traitmech:000647",
+  "source_file": "autophagic_glycogen_degradation.yaml",
+  "attaches_to": [],
+  "rationale": "Keep glycogen-bound reporter cleavage, vacuolar localization, glycogen content and polymer hydrolysis as distinct readouts. Do not impose universal Sga1, Atg45, Atg11, starvation, sporulation, selectivity or a macroautophagic route. Yeast species and nutrient conditions can differ. The Atg45 storage result is a boundary, not positive evidence of this endpoint. Canonical examples remain unset pending independent natural-strain provenance and direct endpoint support; reporter and deletion strains are qualified evidence, not natural exemplars. Protein graphs require native taxon-paired accessions and functional evidence. Human disease models and an Aspergillus enzyme used as an assay reagent are not microbial observations of this trait. Inspect actual panels before protein-level curation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/autophagic_glycogen_degradation.html#autophagic-glycogen-degradation-assays-and-exemplars"
+ },
+ {
   "discussion_id": "autophagy-scope-and-flux",
   "prompt": "Retain catabolic scope without equating markers with completed flux.",
   "kind": "CURATION_TODO",
@@ -12084,9 +12118,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 584,
- "total_knowledge_gaps": 388,
- "total_source_entries": 512,
+ "total_discussions": 586,
+ "total_knowledge_gaps": 389,
+ "total_source_entries": 513,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
