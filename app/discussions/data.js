@@ -10738,6 +10738,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/paedogamy.html#paedogamy-mechanism-and-coverage"
  },
  {
+  "discussion_id": "pallium-feeding-topology-and-parent",
+  "prompt": "Reconcile feeding-mode terminology and membrane topology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pallium feeding",
+  "source_id": "traitmech:000632",
+  "source_file": "pallium_feeding.yaml",
+  "attaches_to": [],
+  "rationale": "This is an organismal feeding phenotype, not the pallium structure or a sequence feature. The 1986 Discussion p. 256 calls complete enclosure intracellular digestion in a vacuole outside the theca, but partial enclosure extracellular digestion, and questions that terminological division. Its engulfment wording need not mean whole particles enter the main cell body. Local phagocytosis traitmech:000627 requires enclosure and internalization; phagotrophy traitmech:000628 requires particulate ingestion and nutrient assimilation. Myzocytosis traitmech:000631 denotes prey-content aspiration through a localized connection, not an enveloping feeding veil. Retain phenotype METPO:1000059 pending a closer feeding hierarchy. Do not assert universal extracellular membrane topology or disjoint organismal feeding capabilities. Ordinary extracellular digestion or attachment alone is insufficient. No unverified synonym or ontology equivalence is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pallium_feeding.html#pallium-feeding-topology-and-parent"
+ },
+ {
+  "discussion_id": "pallium-feeding-native-mechanism",
+  "prompt": "Resolve membrane dynamics and native protein functions.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pallium feeding",
+  "source_id": "traitmech:000632",
+  "source_file": "pallium_feeding.yaml",
+  "attaches_to": [],
+  "rationale": "The 1992 Discussion proposes digestive-granule functions, membrane storage and transport routes from ultrastructure. It explicitly leaves fixation artifacts versus biological inner-membrane reorganization unresolved and requests time-course evidence. Apparatus similarity to peduncles does not prove identical feeding mechanics or protein function. Obtain taxon-paired functional and accession evidence before adding protein examples or a causal graph. No actin, centrin or enzyme accession is inferred from micrographs, and no gene or profile is treated as proof of this feeding phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pallium_feeding.html#pallium-feeding-native-mechanism"
+ },
+ {
   "discussion_id": "parasexuality-trait-scope",
   "prompt": "Preserve the complete reproductive capability rather than an isolated readout.",
   "kind": "CURATION_TODO",
@@ -11555,9 +11589,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 553,
- "total_knowledge_gaps": 373,
- "total_source_entries": 497,
+ "total_discussions": 555,
+ "total_knowledge_gaps": 374,
+ "total_source_entries": 498,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
