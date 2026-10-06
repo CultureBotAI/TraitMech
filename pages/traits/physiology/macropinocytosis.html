@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/physiology/pinocytosis.html" >pinocytosis <code>traitmech:000635</code></a></li>
 
       </ul>
     </div>
@@ -146,7 +146,7 @@
         <p class="discussion-prompt">Keep bulk-fluid uptake distinct from neighboring uptake traits.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>macropinocytosis-scope-and-hierarchy</code>
           · raised by codex
           · 2026-10-06
@@ -165,6 +165,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added pinocytosis traitmech:000635 as the direct broader phenotype. The existing ruffle-mediated bulk-fluid definition entails vesicular fluid uptake; its definition, evidence and DdB example are unchanged. This resolves the temporary phenotype-parent gap, not the separate native-mechanism discussion or any ontology equivalence. Preserve the historical v510 phenotype axiom and add METPO:1058700 SubClassOf METPO:1058800 on upstream adoption.</p>
 
 
 
@@ -213,6 +215,12 @@
           <time>2026-10-06T04:39:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added macropinocytosis with two DOI-backed source snippets and a parental DdB-qualified example. Ignored-and-hidden searches and pinned METPO review found no exact record. Reserved METPO:1058700 in v510. Distinguished native uptake from axenic mutants, reporter measurements and universal mechanisms.</p>
+        </li>
+
+        <li>
+          <time>2026-10-06T05:29:34Z</time> ·
+          <strong>REFINE_PINOCYTOSIS_PARENT</strong> · codex
+          <p class="changes">Refined the direct parent to pinocytosis traitmech:000635 and resolved the temporary hierarchy discussion by definition-based inference. Preserved identity, definition, evidence, canonical example, mechanism gap, earlier history and the true broader historical proposal axiom.</p>
         </li>
 
       </ol>
@@ -269,10 +277,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-06 04:39 UTC
+      Record as of 2026-10-06 05:29 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1029 TraitRecords
-      · embedding coverage 46.4%
+      · 1030 TraitRecords
+      · embedding coverage 46.3%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
