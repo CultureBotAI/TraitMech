@@ -102,7 +102,8 @@ record, not ontology mappings. Both header rows retain 11 cells.
   drift refusal and parent preservation. LinkML and strict record validation
   passed. The initial test invocation omitted `PYTHONPATH=src` and failed
   collection; an append-only AUDIT corrects the CREATE history entry's
-  premature test-timing statement. All 1,098 history records have valid links.
+  premature test-timing statement. The refreshed history audit validates all
+  1,099 history records, including the skill-guidance correction below.
 - The maintained snippet resolver returned three `UNRESOLVED` verdicts.
   The three spans were directly checked against the stated PDF or publisher
   sections; those manual checks do not replace the resolver outcomes or
@@ -138,6 +139,12 @@ record, not ontology mappings. Both header rows retain 11 cells.
 
 The record remains PROPOSED pending human signoff. Local checks do not
 substitute for exact-head review, CI or the native merge queue.
+
+PR #1740's local review identified the direct-command environment guidance
+gap filed as #1741. The add-trait skill now documents a conditional source
+path fallback that preserves existing import paths. Skill validation, path
+preservation, the guarded dry run and all 12 focused tests passed after
+that documentation-only fix; separate infrastructure history records it.
 
 ## Upstream and Round Trip
 
