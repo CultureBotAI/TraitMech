@@ -9803,6 +9803,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/cold_shock_response.html#cold-shock-response-xref-gap"
  },
  {
+  "discussion_id": "outer-membrane-exchange-scope-and-mapping",
+  "prompt": "Keep membrane-component exchange distinct from its possible consequences.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "contact-dependent outer membrane exchange",
+  "source_id": "traitmech:000650",
+  "source_file": "contact_dependent_outer_membrane_exchange.yaml",
+  "attaches_to": [],
+  "rationale": "The endpoint is contact-dependent exchange of outer-membrane material between cells. It is not cytoplasmic fusion, conjugative DNA transfer, all contact-dependent toxin delivery, or a generic secretion phenotype. Exocytosis traitmech:000637 concerns intracellular-compartment fusion-pore discharge; extracellular membrane vesicle production traitmech:000649 concerns extracellular particles. Neither is an exact parent. Cell-free vesicle transfer and slime-trail deposition do not alone demonstrate this contact-qualified class. The traits may coexist; no organism-level disjointness is asserted. Do not require equal bidirectional flux, transfer of every cargo at every contact, cooperation, killing, kin discrimination or fruiting-body development. Retain phenotype METPO:1000059 pending human hierarchy and external-mapping review; no unqualified exact synonym or external equivalence is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/contact_dependent_outer_membrane_exchange.html#outer-membrane-exchange-scope-and-mapping"
+ },
+ {
+  "discussion_id": "outer-membrane-exchange-strain-and-mechanism-grounding",
+  "prompt": "Ground strain-specific transfer machinery beyond sequence predictions.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "contact-dependent outer membrane exchange",
+  "source_id": "traitmech:000650",
+  "source_file": "contact_dependent_outer_membrane_exchange.yaml",
+  "attaches_to": [],
+  "rationale": "TraA/TraB dependence and live material transfer are supported, but no accession-resolved universal fusogen pathway is asserted. Before adding causal graphs, resolve protein accessions, inspect remaining supplements and distinguish measured transfer, binding and fusion-model steps. PA14/MYXO-CTERM/OmpA-like sequence features or a traAB annotation alone do not establish the phenotype. Reporter-bearing and deletion strains remain qualified evidence, not unqualified natural exemplars. Natural provenance and direct positive transfer evidence must be paired before adding canonical examples; the 2019 negative kin-discrimination result cannot supply that positive anchor. These are outstanding grounding tasks, not a claim that no mechanism is known.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/contact_dependent_outer_membrane_exchange.html#outer-membrane-exchange-strain-and-mechanism-grounding"
+ },
+ {
   "discussion_id": "cystine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for cystine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -12186,9 +12220,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 590,
- "total_knowledge_gaps": 391,
- "total_source_entries": 515,
+ "total_discussions": 592,
+ "total_knowledge_gaps": 392,
+ "total_source_entries": 516,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
