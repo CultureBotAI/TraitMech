@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/contact_dependent_outer_membrane_exchange.yaml
+  slug: contact_dependent_outer_membrane_exchange
+session:
+  id: 2026-10-06T210214Z-codex-d0bff7
+  timestamp: '2026-10-06T21:02:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add contact-dependent outer membrane exchange
+  details: Created traitmech:000650 as a PROPOSED PHYSIOLOGY class under phenotype METPO:1000059
+    and reserved METPO:1060300 in proposal v526. Four DOI-backed snippets were matched directly
+    to retrieved scientific abstracts; selected positive-study Results/Methods and actual
+    2013 Figures 2 and 4 support contact-qualified transfer. The 2014 source is abstract-only;
+    the 2019 negative ecological result and its Table 3 correction bound interpretation. Ignored-and-hidden
+    duplicate searches, fresh seed reconciliation and upstream proposal-contract checks support
+    novelty, not discovery exhaustion. Two OPEN discussions retain mapping and strain/protein
+    grounding; no canonical examples or causal graphs are asserted. The dry-run writer and
+    20 focused tests passed before application. Broader validation and generated-artifact
+    checks remain pending at creation of this history record.
