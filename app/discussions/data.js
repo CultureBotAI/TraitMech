@@ -10602,6 +10602,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-xref-gap"
  },
  {
+  "discussion_id": "lipophagy-scope-and-go-alignment",
+  "prompt": "Review cargo-defined scope against source and GO conventions.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lipophagy",
+  "source_id": "traitmech:000644",
+  "source_file": "lipophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The 2014 study supports vacuolar lipid-droplet catabolism via a microautophagy-like route. The two 2024 abstracts also use lipophagy operationally for uptake; the present phenotype retains the autophagy parent's degradative endpoint, not uptake alone. Current GO:0061724 (https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061724) restricts lipophagy to selective macroautophagy. GO:0140504 (https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0140504) separately denotes microlipophagy. Both are nonobsolete biological processes, not exact organismal-phenotype xrefs. Preserve this source-attributed scope difference for human review; no universal macro/micro route, selectivity mechanism, starvation trigger or ATG inventory is asserted. Lipolysis traitmech:000190 concerns triacylglycerol hydrolysis: it can overlap lipophagy but is neither an exact synonym nor a necessary broader parent for all droplet cargo. Lipid storage, PHA granules and pigment sequestration are not equivalent degradation phenotypes. No exact synonyms or mappings are added.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lipophagy.html#lipophagy-scope-and-go-alignment"
+ },
+ {
+  "discussion_id": "lipophagy-flux-exemplars-and-mechanism",
+  "prompt": "Resolve route-specific flux assays and native exemplars.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lipophagy",
+  "source_id": "traitmech:000644",
+  "source_file": "lipophagy.yaml",
+  "attaches_to": [],
+  "rationale": "The phenotype belongs to the microbial cell performing autophagic degradation. Droplet docking, uptake, abundance changes and surface-protein processing are distinct readouts; none alone establishes completed lipid breakdown. Cytosolic lipases can also consume stored lipids. The condition-specific ATG dependence in these studies is not a universal sequence signature. Canonical examples remain unset pending independent natural-strain provenance; do not infer natural or engineered origin merely from a mutant label. Native taxon-paired protein accessions and direct functional support are needed before a causal graph is added. Shared contact machinery with nucleophagy traitmech:000643 does not make their cargo phenotypes equivalent. The third quote is directly source-matched despite the abstract API's abbreviation-only field; retain the resolver's actual inconclusive verdict rather than calling it VERIFIED.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lipophagy.html#lipophagy-flux-exemplars-and-mechanism"
+ },
+ {
   "discussion_id": "lysine-decarboxylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lysine decarboxylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11982,9 +12016,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 578,
- "total_knowledge_gaps": 385,
- "total_source_entries": 509,
+ "total_discussions": 580,
+ "total_knowledge_gaps": 386,
+ "total_source_entries": 510,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

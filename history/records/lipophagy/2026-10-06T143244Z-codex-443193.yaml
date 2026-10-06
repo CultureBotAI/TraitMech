@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lipophagy.yaml
+  slug: lipophagy
+session:
+  id: 2026-10-06T143244Z-codex-443193
+  timestamp: '2026-10-06T14:32:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1091/mbc.e13-08-0448
+  - https://doi.org/10.1016/j.devcel.2024.01.014
+  - https://doi.org/10.1080/15548627.2024.2325297
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add microbial lipid-droplet autophagy phenotype
+  details: Added traitmech:000644 with three directly read DOI-backed scientific-abstract
+    snippets and explicit uptake, lipid-catabolism and protein-reporter distinctions. Reserved
+    METPO:1059700 in v520 using unchanged corrected v519 autophagy context. Ignored-and-hidden
+    novelty searches and fresh seed/release/RDF review found no exact record. The third paper
+    has abbreviation-only abstract metadata; its quote was directly matched to the scientific
+    abstract in DOI-matched PMC XML. Preserved GO route-scope differences and deferred unverified
+    natural exemplars, exact mappings and protein graphs.
