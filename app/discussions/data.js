@@ -12032,6 +12032,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/tyrosine_arylamidase_activity.html#tyrosine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "unconventional-secretion-scope-and-mapping",
+  "prompt": "Keep cargo destinations and route-specific meanings distinct.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "unconventional protein secretion",
+  "source_id": "traitmech:000648",
+  "source_file": "unconventional_protein_secretion.yaml",
+  "attaches_to": [],
+  "rationale": "The broad usage in DOI:10.3389/fcell.2022.852028 includes plasma-membrane delivery after ER entry; DOI:10.7554/eLife.16299 describes an ER-bypassing soluble-cargo route. Preserve both, rather than treating leaderless secretion, Golgi bypass or secretory autophagy as exact synonyms. This concerns traffic performed by a eukaryotic microbe, not its animal or plant host. An absent predicted signal peptide, ATG dependence, CUPS formation or protein detected after lysis alone is insufficient. Membrane localization does not establish soluble release. The degradative autophagy record traitmech:000638 is not a broader parent; exocytosis traitmech:000637 specifies fusion-pore release rather than an unconventional itinerary. Overlap is not disjointness. Obsolete METPO secretion classes do not supply an active exact term. Keep METPO:1000059 as parent and leave ontology equivalences and finer route hierarchy for human review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unconventional_protein_secretion.html#unconventional-secretion-scope-and-mapping"
+ },
+ {
+  "discussion_id": "unconventional-secretion-exemplars-and-mechanisms",
+  "prompt": "Resolve natural exemplars and mechanisms separately for each route.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "unconventional protein secretion",
+  "source_id": "traitmech:000648",
+  "source_file": "unconventional_protein_secretion.yaml",
+  "attaches_to": [],
+  "rationale": "Retain qualified laboratory observations without labeling engineered fluorescent cargo or conditional trafficking mutants as natural canonical exemplars. Natural strain provenance, source figures and accession-level functional evidence need further review before adding examples or a protein-resolved graph. The three CUPS papers share investigators and are not independent-laboratory replications; the Aspergillus study supports a different route, not replication of CUPS. No universal starvation trigger, signal-peptide absence, COPII independence, autophagosome or conserved export apparatus is asserted. ATG-dependent export remains a possible narrower research target, not an allocated additional trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unconventional_protein_secretion.html#unconventional-secretion-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "unisexual-reproduction-scope-and-hierarchy",
   "prompt": "Keep mating-type contribution distinct from selfing, helper cells and MAT inventory.",
   "kind": "CURATION_TODO",
@@ -12118,9 +12152,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 586,
- "total_knowledge_gaps": 389,
- "total_source_entries": 513,
+ "total_discussions": 588,
+ "total_knowledge_gaps": 390,
+ "total_source_entries": 514,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
