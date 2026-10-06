@@ -10041,6 +10041,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/exocytosis.html#exocytosis-exemplar-and-mechanism"
  },
  {
+  "discussion_id": "extracellular-vesicle-production-scope-and-mapping",
+  "prompt": "Separate vesicle production from particle identity and cargo effects.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "extracellular membrane vesicle production",
+  "source_id": "traitmech:000649",
+  "source_file": "extracellular_membrane_vesicle_production.yaml",
+  "attaches_to": [],
+  "rationale": "Include vesicles produced by non-lytic release or membrane reassembly after cell lysis; the producer need not survive. Require evidence for intact extracellular vesicles, not bulk membrane-dye signal, unclosed debris, intracellular organelles, whole daughter cells or virions. Vesicle-associated viral DNA alone does not make a particle a virion. Gas vesicles are proteinaceous intracellular inclusions. Exocytosis traitmech:000637 describes fusion-pore discharge, which need not release an intact vesicle. The yeast source attributes roles to both conventional and unconventional trafficking, so unconventional protein secretion traitmech:000648 is not a universal parent; possible overlap is not disjointness. Outer-membrane vesicles and exosomes are narrower or route-specific usages, not exact synonyms. No universal size, cargo, lipid-bilayer architecture or ecological function is imposed. Retain phenotype METPO:1000059 pending human hierarchy and external mapping review; no exact xref is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/extracellular_membrane_vesicle_production.html#extracellular-vesicle-production-scope-and-mapping"
+ },
+ {
+  "discussion_id": "extracellular-vesicle-production-route-mechanisms",
+  "prompt": "Ground separate biogenesis mechanisms without universalizing them.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "extracellular membrane vesicle production",
+  "source_id": "traitmech:000649",
+  "source_file": "extracellular_membrane_vesicle_production.yaml",
+  "attaches_to": [],
+  "rationale": "The bacterial sources support distinct endolysin-associated routes; the yeast work supports trafficking contributions; the methanogen's budding and large-vesicle lysis models remain qualified. No common protein apparatus follows from these observations. Before adding route-specific causal graphs, inspect the remaining panels, supplements and strain provenance and resolve the relevant protein accessions with taxon-paired functional evidence. The verified PS exemplar does not ground bacterial Lys or yeast SEC proteins. Do not infer vesicle production from a sequence feature, cargo annotation, membrane blebbing alone or an isolation protocol that mechanically manufactures particles from cells.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/extracellular_membrane_vesicle_production.html#extracellular-vesicle-production-route-mechanisms"
+ },
+ {
   "discussion_id": "galvanotaxis-orientation-and-mapping-boundaries",
   "prompt": "Resolve electrical orientation mechanisms without equating active motility with passive drift.",
   "kind": "KNOWLEDGE_GAP",
@@ -12152,9 +12186,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 588,
- "total_knowledge_gaps": 390,
- "total_source_entries": 514,
+ "total_discussions": 590,
+ "total_knowledge_gaps": 391,
+ "total_source_entries": 515,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
