@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1062200	fungal mycelial cord formation	A morphological phenotype in which a fungus forms linear multihyphal cords by aggregation behind an extending margin of diffuse hyphae.	TraitMech:data/traits/morphology/fungal_mycelial_cord_formation.yaml|DOI:10.1007/s10267-008-0450-4|DOI:10.1099/00221287-132-1-203|DOI:10.1016/j.mycres.2006.05.013	METPO:1000059			metpo_traitmech_2026_10		Diffuse-front cord aggregation; no exact rhizomorph synonym or protein mechanism asserted.	traitmech:000669

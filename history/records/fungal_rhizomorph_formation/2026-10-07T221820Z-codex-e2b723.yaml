@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_rhizomorph_formation.yaml
+  slug: fungal_rhizomorph_formation
+session:
+  id: 2026-10-07T221820Z-codex-e2b723
+  timestamp: '2026-10-07T22:18:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link the cord-formation record without resolving historical terminology
+  details: Appended a link to traitmech:000669 in the existing fungal-rhizomorph-scope-and-hierarchy
+    discussion. Its status remains OPEN. All existing identity, definition, evidence, examples,
+    parents and old history remain unchanged. No equivalence, subclass or organism-level disjointness
+    axiom was introduced. The writer guards the complete semantic preimage, supports exact
+    replay and prevalidates both outputs before writing.

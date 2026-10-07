@@ -171,7 +171,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605 denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures, whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense and distinguish mycelial cords. The broad formation definition does not settle that anatomical boundary: retain the source attribution and do not assert exact cord/strand synonyms, a universal pigment requirement or an underground-only habitat. A closer fungal growth-form parent and external equivalences require upstream review; no xrefs or SSSOM mappings are asserted.</p>
+        <p>Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605 denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures, whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense and distinguish mycelial cords. The broad formation definition does not settle that anatomical boundary: retain the source attribution and do not assert exact cord/strand synonyms, a universal pigment requirement or an underground-only habitat. A closer fungal growth-form parent and external equivalences require upstream review; no xrefs or SSSOM mappings are asserted. Fungal mycelial cord formation traitmech:000669 now represents the diffuse-front aggregation sense defined by Boddy et al. (2009), DOI:10.1007/s10267-008-0450-4, rather than silently equating the two names. Its experimental examples do not resolve all historical usage. Keep this terminology/hierarchy question OPEN: neither equivalence, a parent-child relationship nor organism-level disjointness is asserted.</p>
 
 
 
@@ -226,6 +226,12 @@
           <p class="changes">Added fungal rhizomorph formation with four directly checked source snippets, a provenance-qualified 930199KGS example and explicit terminology, hierarchy and experimental limits. Ignored-and-hidden searches found no exact existing trait. Reserved METPO:1061500 in v538; existing records unchanged and protein-level formation mechanism deferred.</p>
         </li>
 
+        <li>
+          <time>2026-10-07T22:14:44Z</time> ·
+          <strong>LINKED_SCOPE_DISCUSSION</strong> · codex
+          <p class="changes">Linked the rhizomorph/cord scope discussion to new traitmech:000669. Preserved the attributed conflicting usages, OPEN status and all existing identity, evidence and example fields; no synonym, hierarchy or disjointness axiom was introduced.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -235,6 +241,12 @@
           <ul><li><strong>CREATE</strong> — Add source-qualified fungal rhizomorph formation
             <p>Added traitmech:000662 as a PROPOSED morphology phenotype with four directly checked DOI-backed snippets of 16, 21, 25 and 22 words. The canonical Armillaria luteobubalina example is qualified to isolate 930199KGS and primary fruit-body provenance; NCBI confirms species 153913. Retained the culture/field distinction, conflicting pigment terminology and Results/Table 1 onset discrepancy. Reserved METPO:1061500 in proposal v538. Ignored-and-hidden searches found no exact existing trait. Writer dry-run, exact source comparisons and 20 focused tests passed; broader validation and PR review remain pending.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_rhizomorph_formation/2026-10-07T100223Z-codex-52ca02.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-07T22:18:20Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Link the cord-formation record without resolving historical terminology
+            <p>Appended a link to traitmech:000669 in the existing fungal-rhizomorph-scope-and-hierarchy discussion. Its status remains OPEN. All existing identity, definition, evidence, examples, parents and old history remain unchanged. No equivalence, subclass or organism-level disjointness axiom was introduced. The writer guards the complete semantic preimage, supports exact replay and prevalidates both outputs before writing.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_rhizomorph_formation/2026-10-07T221820Z-codex-e2b723.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -290,10 +302,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-07 10:02 UTC
+      Record as of 2026-10-07 22:18 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1061 TraitRecords
-      · embedding coverage 45.0%
+      · 1062 TraitRecords
+      · embedding coverage 44.9%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
