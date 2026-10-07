@@ -8987,6 +8987,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "fungal-chlamydospore-scope-and-hierarchy",
+  "prompt": "Resolve conidiation, dormancy and process-ontology mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal chlamydospore formation",
+  "source_id": "traitmech:000658",
+  "source_file": "fungal_chlamydospore_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Sporulation METPO:1000870 and spore forming METPO:1000871 explicitly concern endospores. Citiulo et al. (2009) call Candida chlamydospore budding blastic conidiogenesis; that source-attributed usage does not settle whether this broader fungal class should be below fungal conidiation traitmech:000657. Do not equate it with ordinary pseudohyphal growth or any hyphal swelling. Closed upstream issue https://github.com/berkeleybop/metpo/issues/67 suggested chlamydospores under resting spores; the Candida viability evidence does not support that as a universal function. GO:0001410 was resolved through QuickGO: it is a biological process and its survival/endogenous-formation wording also needs scope review. Leave exact synonyms and xrefs unset rather than asserting equivalence. The four obsolete METPO chlamydospore terms are material classes, not active organismal phenotypes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_chlamydospore_formation.html#fungal-chlamydospore-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-chlamydospore-function-and-mechanism",
+  "prompt": "Separate morphological identification from survival and regulation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal chlamydospore formation",
+  "source_id": "traitmech:000658",
+  "source_file": "fungal_chlamydospore_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Wall thickening alone does not establish long-term survival, dormancy, infectivity or a dispersal function. Preserve species-, strain-, age- and medium-specific endpoints. Do not require one arrangement, nucleus count, nutrient trigger or illumination regime. The USDA Phytophthora report documents a nonfungal terminology boundary, not additional fungal replication. Formation and later germination are different observations. A causal graph is deferred pending reconciliation of primary perturbations and supplementary strain identities with natural-host provenance and taxon-paired protein accessions. Gene possession alone is not a chlamydospore phenotype. Li et al. (2012), PMID:22932866, report formation inside conidia as well as from hyphae and germ tubes under the tested treatment. Issue #1772 corrected the initial hypha-only restriction; retain formation-site neutrality and do not promote the separately reported chlamydospore-like structures to confirmed chlamydospores.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_chlamydospore_formation.html#fungal-chlamydospore-function-and-mechanism"
+ },
+ {
   "discussion_id": "fungal-conidiation-scope-and-hierarchy",
   "prompt": "Review a reproductive phenotype parent and qualified mappings.",
   "kind": "CURATION_TODO",
@@ -12475,9 +12509,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 607,
- "total_knowledge_gaps": 399,
- "total_source_entries": 523,
+ "total_discussions": 609,
+ "total_knowledge_gaps": 400,
+ "total_source_entries": 524,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
