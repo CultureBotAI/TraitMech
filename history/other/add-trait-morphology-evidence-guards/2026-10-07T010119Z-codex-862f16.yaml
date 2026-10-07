@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: other
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-morphology-evidence-guards
+session:
+  id: 2026-10-07T010119Z-codex-862f16
+  timestamp: '2026-10-07T01:01:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1767
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence_bundle
+  summary: Clarify morphology scope and percentage evidence checks
+  details: 'Following the pre-commit palmelloid scope defect in issue #1767, added a focused
+    instruction to check distinct established senses before choosing an unqualified morphology
+    label and to preserve source-attributed differences without transferring mechanisms. Added
+    a separate instruction to check numerator, denominator and measurement unit before treating
+    an image-area fraction as a cell-count percentage. Existing skill metadata, workflow and
+    unrelated guidance are unchanged. The skill-creator quick validator passed; the corrected
+    palmelloid record exercises both decisions. No new skill or external installation was
+    created.'
