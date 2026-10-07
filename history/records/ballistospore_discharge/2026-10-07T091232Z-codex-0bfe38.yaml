@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/ballistospore_discharge.yaml
+  slug: ballistospore_discharge
+session:
+  id: 2026-10-07T091232Z-codex-0bfe38
+  timestamp: '2026-10-07T09:12:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1781
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1780
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Replace subjectless discharge snippet with a complete source sentence
+  details: 'Corrected issue #1781 from PR #1780. Replaced the first DOI:10.1371/journal.pone.0004163
+    snippet with a 21-word complete Introduction sentence, exact-matched to the directly retrieved
+    XML. Updated its section locator and appended CORRECTED_EVIDENCE_SNIPPET without altering
+    the initial minting event. All other evidence, definition, hierarchy, example and discussion
+    content remains unchanged. The guarded writer now accepts only the exact initial or corrected
+    record; 23 focused tests and dry run passed before application. Initial full regression
+    suite passed 3062 tests before this correction; post-correction validation follows.'

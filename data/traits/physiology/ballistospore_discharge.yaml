@@ -1,0 +1,109 @@
+identifier: traitmech:000661
+label: ballistospore discharge
+definition: A physiological phenotype in which a fungus forcibly discharges spores
+  through coalescence of Buller's drop with liquid on the spore surface.
+definition_source: DOI:10.1371/journal.pone.0004163
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.pone.0004163
+  snippet: At the moment of fusion, Buller's drop snaps from the hilar appendix onto
+    the adjacent spore surface.
+  notes: Stolze-Rybczynski et al. (2009), PMID:19129912, PMC2612744; Introduction,
+    first paragraph, directly retrieved as publisher HTML and Europe PMC full-text
+    XML. Abstract, Introduction, Results and Discussion, Table 1 and Methods were
+    read. Seven basidiomycete species were analyzed by high-speed video; the yeast
+    Sporobolomyces salmonicolor NPM01 had a measured mean launch speed of 1.42 +/-
+    0.12 m/s (s.e.m., six launches). Its 0.54 +/- 0.04 mm flight range is calculated,
+    not a directly measured range. Drop geometry and flight range vary; a prominent
+    lens-shaped adaxial drop is not universal. Figure captions were read, but image
+    retrieval failed; actual figures, videos and supplements were not inspected.
+- reference: DOI:10.1371/journal.pone.0105147
+  snippet: Ballistospores can be produced either asexually (ballistoconidia) or sexually
+    (basidiospores).
+  notes: Ianiri et al. (2014), PMID:25148260, PMC4141788; Introduction directly retrieved
+    as full-text XML. This quotation supports terminology, not a new comparison of
+    sexual and asexual development. Scientific abstract, strain table, mirror-assay
+    Methods, initial mutant-screen Results and Discussion were also read. Of 18 mirror
+    mutants, 17 had absent or reduced spore production; GI277 still formed abundant
+    ballistospores but failed to release them. A failed mirror assay alone thus does
+    not distinguish formation from discharge. PHS1 results concern delayed formation
+    and broader cellular defects, not a demonstrated universal release motor. Actual
+    figures, supplements and independent IAM 13481 provenance were not inspected;
+    no canonical example is inferred from these mutants.
+- reference: DOI:10.1242/jeb.029975
+  snippet: The fusion of the droplet onto the spore creates a momentum that propels
+    the spore forward.
+  notes: Noblin, Yang and Dumais (2009), PMID:19684219; scientific abstract retrieved
+    directly through Europe PMC. The study reports high-speed observations in Auricularia
+    auricula and Sporobolomyces yeasts, mechanical analysis and calibrated microcantilever
+    measurements of detachment work. The artificial validation system is not a fungal
+    exemplar. Predicted and observed velocities are distinct quantities. Full text,
+    figures, supplements and strain provenance were not inspected; the abstract is
+    not a complete mechanistic audit.
+canonical_examples:
+- taxon_id: NCBITaxon:5005
+  taxon_label: Sporobolomyces salmonicolor
+  reference: DOI:10.1371/journal.pone.0004163
+  note: Strain NPM01. Table 1 reports high-speed-video launch measurements from six
+    spores, with mean initial speed 1.42 +/- 0.12 m/s (s.e.m.); the listed flight
+    distance is modeled, not directly measured. Organisms and culture methods at https://doi.org/10.1371/journal.pone.0004163
+    identify NPM01 as isolated from a contaminated manufacturing facility and report
+    spore formation on potato dextrose agar within 24 h. That primary provenance passage
+    was read directly; no engineered-strain origin is inferred. NCBI Taxonomy resolves
+    the species ID and label. This example concerns NPM01 under the reported conditions,
+    not every strain or life stage.
+discussions:
+- discussion_id: ballistospore-discharge-scope-and-hierarchy
+  prompt: Review dispersal hierarchy without equating formation and discharge.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use phenotype METPO:1000059. The sporulation and spore-forming records
+    METPO:1000870 and METPO:1000871 concern endospores. Fungal conidiation traitmech:000657
+    concerns production of asexual propagules, whereas ballistospores include sexual
+    and asexual forms and formation can persist without release. Discharge is also
+    distinct from passive shedding, later wind transport and pressure-driven ascospore
+    or sporangium ejection. Motility METPO:1000701 emphasizes independent locomotion;
+    a closer dispersal parent and process-versus-phenotype mappings need review. Ballistospore
+    and ballistoconidium name cells, not exact synonyms of this disposition; no exact
+    synonyms or xrefs are asserted. Do not require a particular speed, distance, fruiting
+    body or asexual developmental mode.
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: ballistospore-discharge-mechanism-and-readouts
+  prompt: Keep measured discharge, formation defects and physical models distinct.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'The cited studies support a surface-tension mechanism, not an unknown-mechanism
+    claim. A causal graph is deferred until the full mechanical study and supplementary
+    observations are inspected and the repository''s protein-required MECHANISTIC
+    graph convention is reconciled with a physical coalescence mechanism. Do not invent
+    a protein motor or label a physical causal model NONMECHANISTIC merely to pass
+    the audit. PHS1 possession or expression does not establish discharge; the 2014
+    formation-defect experiments do not isolate a universal ejection pathway. Negative
+    mirror transfer can reflect impaired production, release or subsequent growth.
+    The 2017 study at https://pmc.ncbi.nlm.nih.gov/articles/PMC5550963/ remains an
+    unread research lead: PMC returned a challenge and two XML requests failed. It
+    is not counted as verified evidence.'
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T08:42:05Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added ballistospore discharge with three directly checked DOI-backed snippets,
+    a provenance-qualified NPM01 example and explicit formation/discharge and measured/modeled
+    distinctions. Ignored-and-hidden searches and structured METPO review found no
+    exact record. Reserved METPO:1061400 in v537; existing records unchanged. Physical
+    mechanism evidence is retained; graph formalization is deferred.
+  llm_assisted: true
+- timestamp: '2026-10-07T09:12:00Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SNIPPET
+  changes: Replaced the subjectless Results fragment with a complete, exact Introduction
+    sentence describing Buller's-drop fusion (#1781). Updated the section locator;
+    retained the original minting event and all experimental and source-access qualifications.
+  llm_assisted: true
