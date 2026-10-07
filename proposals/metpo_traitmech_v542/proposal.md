@@ -199,6 +199,36 @@ guard, and requires landed-tree reconstruction before branch deletion.
 After BAS actually lands, incorporate its published main commit and verify
 the final tree and all affected products before marking this PR ready.
 
+### Current Main Integration
+
+BAS subsequently merged as `64b0ec7fa9a0da69da695428533f89134ff62249`.
+Its landed tree was reconstructed successfully before its branch was deleted.
+This branch also incorporates concurrent pathway-context main
+`f7112cf664c9a54e05ab5e771b2d0366dae9f0b1`. All affected products were
+regenerated. Main's schema, renderer, pathway index/pin, source manifest,
+11 updated records and histories remain intact; no source or evidence change
+was made to the peloton record.
+
+Current integration validation passed: full pytest 3,192 tests in 1,211.09
+seconds and focused 65 tests in 531.58 seconds, plus LinkML/strict, all
+four product generators, grounding, Biolink, proposal verification,
+ROBOT/ELK, parsed RDF, history/products, QC, taxonomy shape checks and Ruff.
+The first QC run correctly found the pre-merge HEAD coverage report stale;
+the local integration commit preserved the exact main report, and full QC
+then passed. No baseline or gate was changed. The related add-trait guidance
+fix for #1795 now distinguishes working-tree and committed comparison bases,
+following the existing #560 guidance without a drifting static report list.
+
+The preservation audit against actual main again confirms all 1,060 prior
+YAMLs, histories, proposal narratives and 546 TSVs unchanged. Of old trait
+pages, 1,059 differ only in the footer; phenotype gains the child, and its
+child count is the only old priority-row change. Protected YAML and all
+main pathway-context source files are byte-identical. Desktop/mobile checks
+were repeated at 1,440/390 pixels, with the live 1,061-record dashboard,
+evidence, example, discussions, history and navigation present and no
+overflow or browser errors. The committed history gate now reports one
+changed trait and one added history against main.
+
 ## Upstream Round Trip
 
 After TraitMech review, submit the one-class template and hierarchy question
