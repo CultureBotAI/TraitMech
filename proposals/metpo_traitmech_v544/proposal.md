@@ -160,8 +160,22 @@ The guarded writer checks the parent projection, target and template replay,
 and prevalidates before writing. Its 20 tests and dry run passed before
 application. It uses `record_curation_event` and `write_validated_trait`.
 Repository history records the actual Codex actor and is append-only.
-Corpus counts are derived from live records; validation results will be
-recorded after the maintained gates finish.
+Corpus counts are derived from live records. Current-main validation completed
+on 2026-10-07: LinkML and strict validation, all four maintained generators,
+predicate/node grounding, Biolink coverage, proposal verification, ROBOT,
+history/products, local taxonomy and Ruff passed. After checkpointing the
+reviewed main integration as `5e33827225bb2cc6a679c64adfc8dacc1d4b74d8`,
+committed QC passed, followed by 65 focused tests (531.91 seconds) and
+3,232 full-suite tests (1,202.61 seconds). The initial pre-commit QC failure
+was the protein-taxon report's stale HEAD comparison, not stale generated
+content; no gate or baseline was weakened. The earlier pre-integration
+focused run was interrupted when main changed and is not claimed as a pass.
+
+Peloton #1791 and Hartig #1794 remain pending dependencies. The main-based
+history gate reports three traits/three history records for this temporary
+stack. Publish as draft, incorporate each predecessor's actual landed main,
+regenerate affected products and recheck the final scope before queueing.
+Author adversarial review is not independent approval.
 
 The current-main preservation audit overlays `f7112cf` on the tested
 Hartig/peloton stack. All 1,062 expected prior YAMLs are preserved exactly,
