@@ -112,7 +112,46 @@ preimage, parent projection and target/template replay, and prevalidates
 both records before writing. Thirty-five tests and a production dry run
 passed before application. Each changed record receives its own curation
 event and scaffolded repository history. Corpus validation, generated
-artifacts, exact-head CI and adversarial review remain to be completed.
+artifacts and committed-tree QC now pass. Exact-head CI and published-PR
+review remain pending.
+
+Local verification receipts:
+
+- LinkML and strict validation passed for both touched records; all 3,227
+  full-suite tests (693.37 seconds), all 100 focused tests, Ruff,
+  proposal verification, ROBOT, history, products,
+  committed-history audit, `just qc` and PR sanity passed.
+- Online taxonomy resolved all 744 examples with zero errors and 24 existing
+  label warnings. The three snippet resolver outcomes above are retained.
+- Parsed OWL contains 15 class-template, 12,628 merged and 12,632 reasoned
+  triples. The proposed class and both parent levels use the correct w3id
+  IRIs; its definition and citation annotation match the TSV and YAML.
+- Preservation checks compare against actual main `4e7e8cd`: 1,060 prior
+  trait YAMLs are byte-identical, with the rhizomorph discussion/history
+  append checked separately. All old proposal templates, narratives,
+  histories, embedding products and shared discussion templates are intact.
+  Of the prior trait pages, 1,059 differ only in their corpus footer; the
+  phenotype child list and rhizomorph scope note are the expected exceptions.
+- Desktop/mobile browser checks at 1,440/390 pixels passed for evidence,
+  canonical example, discussions, history, navigation and the regenerated
+  dashboard image, without horizontal overflow or JavaScript errors. The
+  corresponding screenshots were inspected.
+- Neither configured embedding source path exists; existing embedding
+  artifacts were preserved, not regenerated. The only ordinary whitespace
+  finding is the TSV directive's three required trailing empty cells;
+  exact-path-scoped whitespace checks pass without changing Git settings.
+- The prepublication reservation snapshot rechecked all six pending heads
+  above and their complete paginated files at immutable blob hashes. Fresh
+  ignored-and-hidden allocation searches covered the original main checkout,
+  all nine other worktrees and CommunityMech, with no competing reservation.
+  Main remains `4e7e8cd1ceaf7e74f9cfce18f8174c3edfe9b4dd`.
+
+The author adversarial pass tested the operational definition against broader
+rhizomorph usage, the distinction between review terminology and primary
+experiments, isolate provenance, snippet fidelity, ontology scope and writer
+drift safeguards. No actionable curation defect was found in that pass.
+This is an author review, not independent approval; existing OPEN scientific
+questions remain explicit rather than being represented as solved.
 
 ## Upstream Round Trip
 
