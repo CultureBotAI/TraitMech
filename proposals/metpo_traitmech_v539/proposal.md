@@ -170,6 +170,18 @@ embedding source exists in the main checkout or isolated worktree, so embeddings
 were not regenerated; the existing tracked embedding products were retained.
 GitHub review, required CI, actual merge and post-merge cleanup remain pending.
 
+## Adversarial Review Follow-Up
+
+Local review identified workflow issue #1785: the identifier skill's
+checkout-only next-number recipe could reuse a pending PR's reservation. This
+branch already avoided #1783's IDs. The add-trait, identifier and proposal
+skills now require fresh main, local-worktree and paginated open-PR checks,
+including drafts and exact-head proposal narratives for whole reserved blocks.
+Unavailable remote state is not treated as availability, and publication needs
+a fresh recheck. The documented API inventory command was exercised; nine
+guidance regression tests and Ruff passed. No TraitRecord or allocation changed
+in this follow-up. Local review is not an independent review.
+
 ## Upstream Path and Round Trip
 
 After TraitMech review, submit the class template and the explicit boundary
@@ -187,3 +199,5 @@ placeholder as the live record identifier.
 
 - 2026-10-07: Propose microbial haustorium formation with source-qualified
   fungal and oomycete interfaces and a field-observed canonical example.
+- 2026-10-07: Address #1785 with pending-reservation checks in the curation
+  skills and focused guidance regression coverage.

@@ -162,7 +162,12 @@ rg --no-ignore --hidden -n "METPO:10114[0-9]{2}" proposals data/raw/metpo.owl
 
 Replace `10114[0-9]{2}` with a regex for the exact placeholder IDs or whole
 block you intend to reserve. Empty output means the block is free in this
-checkout.
+checkout only. Complete the
+[identifier skill's reservation check](../manage-identifiers/SKILL.md#1-find-a-candidate-then-check-reservations)
+against current main, local worktrees and every relevant open PR head, including
+drafts, before allocating the cohort or block. Read proposal narratives as well
+as TSV rows: a one-row proposal can reserve an entire hundred block. Record
+pending reservations in the proposal and recheck before publishing (#1785).
 
 ---
 
