@@ -92,7 +92,10 @@ discussions:
     here. The GO membrane-invagination definition does not describe every tremelloid
     micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant
     haustorial organs are outside this microbial hyphal scope; fungi and oomycetes
-    are both included.'
+    are both included. Fungal arbuscule formation now has its own source-bounded phenotype
+    record, traitmech:000664. This resolves the missing record reference, not the
+    umbrella hierarchy question; no subclass or disjointness relationship between
+    these two phenotypes is asserted.'
   posed_by: codex
   posed_date: '2026-10-07'
 - discussion_id: microbial-haustorium-formation-and-function
@@ -119,4 +122,11 @@ curation_history:
     limits. Ignored-and-hidden novelty checks found no exact record. Reserved METPO:1061600
     in v539, avoiding pending v538. Existing traits unchanged; protein-level formation
     graph deferred.
+  llm_assisted: true
+- timestamp: '2026-10-07T13:21:20Z'
+  curator: codex
+  action: LINK_ARBUSCULE_DISCUSSION
+  changes: Linked the existing arbuscule boundary discussion to traitmech:000664;
+    retained OPEN status and deferred subclass, equivalence and disjointness. No haustorium
+    identity, evidence, examples or parent changed.
   llm_assisted: true
