@@ -9157,6 +9157,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "fungal-internal-mycorrhizal-vesicle-scope",
+  "prompt": "Resolve the closer parent and vesicle-versus-spore terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal internal mycorrhizal vesicle formation",
+  "source_id": "traitmech:000670",
+  "source_file": "fungal_internal_mycorrhizal_vesicle_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 below quality METPO:1000188; mycorrhization METPO:1000198 is obsolete. Internal means within plant tissue, not necessarily within host cells and not free in host cytoplasm. Root-only scope excludes the direct thallus observations. Gas vesicles traitmech:000070, extracellular membrane vesicles and intracellular trafficking vesicles are not these hyphal swellings. Arbuscule formation traitmech:000664 is a different architecture. Brundrett's auxiliary-body usage motivates the internal qualifier; fine-endophyte vesicle-like swellings are not automatically equivalent. Fungal chlamydospore formation traitmech:000658 does not cover every storage swelling. Variable historical spore terminology remains unresolved; no universal disjointness, subclass relation, exact synonyms, xrefs or SSSOM equivalences are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.html#fungal-internal-mycorrhizal-vesicle-scope"
+ },
+ {
+  "discussion_id": "fungal-internal-mycorrhizal-vesicle-readouts",
+  "prompt": "Separate vesicle formation, storage and causal mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal internal mycorrhizal vesicle formation",
+  "source_id": "traitmech:000670",
+  "source_file": "fungal_internal_mycorrhizal_vesicle_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Require a vesicle-specific morphological observation; pooled spores-and-vesicles or colonized-root-length percentages must not become vesicle counts or fungal-cell fractions. Neither these images nor the lipid-storage terminology establish universal lifespan, wall layers, infectivity, nutrient transfer, reciprocal benefit or developmental timing. Host signaling mutants and lipid-transfer assays are not fungal gene perturbations. A protein-resolved formation graph is deferred pending direct causal evidence and authority-verified fungal protein examples; it is not claimed biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.html#fungal-internal-mycorrhizal-vesicle-readouts"
+ },
+ {
   "discussion_id": "fungal-peloton-scope-and-hierarchy",
   "prompt": "Resolve a closer parent without collapsing intracellular architectures.",
   "kind": "CURATION_TODO",
@@ -12781,9 +12815,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 625,
- "total_knowledge_gaps": 408,
- "total_source_entries": 532,
+ "total_discussions": 627,
+ "total_knowledge_gaps": 409,
+ "total_source_entries": 533,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
