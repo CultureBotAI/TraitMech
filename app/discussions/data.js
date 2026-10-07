@@ -9089,6 +9089,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "fungal-rhizomorph-scope-and-hierarchy",
+  "prompt": "Resolve rhizomorph/cord terminology and a closer fungal parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal rhizomorph formation",
+  "source_id": "traitmech:000662",
+  "source_file": "fungal_rhizomorph_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605 denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures, whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense and distinguish mycelial cords. The broad formation definition does not settle that anatomical boundary: retain the source attribution and do not assert exact cord/strand synonyms, a universal pigment requirement or an underground-only habitat. A closer fungal growth-form parent and external equivalences require upstream review; no xrefs or SSSOM mappings are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_rhizomorph_formation.html#fungal-rhizomorph-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-rhizomorph-formation-and-function",
+  "prompt": "Separate formation from transport, invasion and gene mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal rhizomorph formation",
+  "source_id": "traitmech:000662",
+  "source_file": "fungal_rhizomorph_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Formation does not by itself prove pathogenicity, low-oxygen adaptation, a fixed invasion force or a universal hollow canal. Pareek et al. distinguish air pores from rhizomorphs; oxygen measurements on cut structures do not show intact-rind permeability. Their Results/Table 1 onset discrepancy remains unresolved. Culture versus field observations and hyphal/tip counts require explicit conditions and denominators. Physical growth and aeration have experimental support, but a formation-regulatory graph requires further primary perturbation evidence and authority-verified protein examples. No complete protein pathway is inferred from expression, gene possession, osmolyte composition or structure alone. The graph is deferred, not claimed to be biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_rhizomorph_formation.html#fungal-rhizomorph-formation-and-function"
+ },
+ {
   "discussion_id": "fungal-sclerotium-identity-and-mapping",
   "prompt": "Reconcile legacy labels and the scope of sclerotial structures.",
   "kind": "CURATION_TODO",
@@ -12645,9 +12679,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 617,
- "total_knowledge_gaps": 404,
- "total_source_entries": 528,
+ "total_discussions": 619,
+ "total_knowledge_gaps": 405,
+ "total_source_entries": 529,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

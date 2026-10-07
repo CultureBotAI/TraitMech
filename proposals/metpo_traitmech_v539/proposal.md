@@ -3,11 +3,13 @@
 ## Context and Novelty
 
 Propose `traitmech:000663 microbial haustorium formation`, a PROPOSED
-MORPHOLOGY class. This branch starts from main
-`6c9911a8ab8b0ba61a5b1b4b65d7300594a5d066`, independently of the pending
-rhizomorph PR #1783. Its `traitmech:000662`, v538 and `1061500-1061599`
-reservation are deliberately not reused. Each branch adds only its own trait;
-generated artifacts must be regenerated after either branch merges first.
+MORPHOLOGY class. This branch started from main
+`6c9911a8ab8b0ba61a5b1b4b65d7300594a5d066`, independently of rhizomorph
+PR #1783. Its `traitmech:000662`, v538 and `1061500-1061599` reservation
+was deliberately not reused. After #1783 merged as
+`2fe2e9a5ebdfaa691c94a11f96b3c7b406f53bd7`, fresh main was merged here
+and all shared derived artifacts were regenerated. This PR still adds only
+the haustorium trait relative to current main; existing records are unchanged.
 
 Whole-repository searches included ignored and hidden files, haustorium and
 arbuscule variants, source DOIs, GO candidates, proposed IDs and cohort names.
@@ -24,8 +26,8 @@ emitted 399 records with 344 exact IDs shared with the live corpus. The 55
 absent IDs are 38 supporting fields and 17 previously reviewed duplicates.
 The 153-row active-review table and 1,546-row release delta were read
 structurally; every formerly unselected class is now live. The new branch has
-1,057 records after this addition. These checks do not establish global
-exhaustion; credible microbial traits remain.
+1,058 records after integrating main and this addition. These checks do not
+establish global exhaustion; credible microbial traits remain.
 
 ## Scope and Hierarchy
 
@@ -136,15 +138,15 @@ Twenty writer tests and dry-run passed. LinkML and strict record validation,
 `just qc` (including strict corpus validation), `just validate-history`,
 `just validate-products`, proposal verification and ROBOT/ELK validation passed.
 All 65 focused writer, README, priority and QC-dashboard regression tests passed.
-The full pytest run passed all 3,085 collected tests with two dependency
-deprecation warnings. That run collected before the #1785 regression was added;
-all nine guidance tests, including the new regression, passed separately.
-Final writer dry-run, full-tree Ruff and PR sanity also passed. Ordinary staged whitespace checking flags
+After main integration, the full pytest run passed all 3,106 tests, including
+both trait writers and the #1785 regression, with two dependency deprecation
+warnings (691.90 seconds). The 65 focused tests passed again (400.18 seconds).
+Final writer dry-run, full-tree Ruff and PR sanity also passed. Ordinary PR-diff whitespace checking flags
 only the class directive header's three required trailing blank cells. Both
 scoped checks passed: ordinary checking excluding that exact TSV, and checking
 that TSV with `core.whitespace=-blank-at-eol`. No global setting was changed.
 
-The online NCBI audit resolved all 739 examples across 554 records with zero
+The online NCBI audit resolved all 740 examples across 555 records with zero
 errors and 24 pre-existing label warnings. The maintained snippet resolver
 reported one VERIFIED scientific-abstract quote, one NOT_IN_ABSTRACT Figure 3
 quote and two UNRESOLVED quotes. All four were checked in directly retrieved
@@ -154,11 +156,11 @@ primary PDF and Crossref DOI were independently checked. Manual full-text
 confirmation does not change either UNRESOLVED verdict.
 
 Maintained recipes regenerated discussions, both dashboards, pages and
-grounding/coverage reports. A parsed artifact audit confirmed all 1,056 old
-TraitRecord YAML files, 542 historical TSVs, historical proposal narratives and
-discussion templates are byte-identical. Of the old trait pages, 1,055 differ
+grounding/coverage reports. A parsed artifact audit against merged main confirmed
+all 1,057 old TraitRecord YAML files, 543 historical TSVs, historical proposal narratives and
+discussion templates are byte-identical. Of the old trait pages, 1,056 differ
 only in their footer; the phenotype page additionally lists the new child.
-The only existing priority-row change is that parent's child count, 157 to 158.
+The only existing priority-row change is that parent's child count, 158 to 159.
 RDF parsing counted 15 class, 12,628 merged and 12,632 reasoned triples and
 verified the new label, definition, citations and active phenotype-to-quality
 hierarchy under `https://w3id.org/metpo/`, without legacy METPO stubs.
@@ -203,3 +205,5 @@ placeholder as the live record identifier.
   fungal and oomycete interfaces and a field-observed canonical example.
 - 2026-10-07: Address #1785 with pending-reservation checks in the curation
   skills and focused guidance regression coverage.
+- 2026-10-07: Integrate verified #1783 main, regenerate the combined 1,058-record
+  corpus, and pass all local validation including 3,106 tests.
