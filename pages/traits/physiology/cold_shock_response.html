@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved CspA-family RNA-support branch of the bacterial cold-shock response without making one cold-sensing regulator, one RNA helicase, or one post-transcriptional circuit universal across bacteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -361,7 +363,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -373,8 +374,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T05:33:01Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add the cold shock response physiology trait
+            <p>Added traitmech:000206 cold shock response with DOI-backed Weber and Marahiel cold-shock review evidence, CspA-family RNA-chaperone mechanism evidence from Phadtare and Inouye, a primary E. coli CspA canonical example from Goldstein et al., and a v83 METPO proposal reserving METPO:1016000.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cold_shock_response/2026-09-15T053301Z-codex-3c5c55.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -463,6 +474,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -754,7 +772,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-15 05:32 UTC
+      Record as of 2026-09-15 05:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

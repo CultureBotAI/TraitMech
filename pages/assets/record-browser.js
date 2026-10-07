@@ -25,10 +25,27 @@
     empty.hidden = visible !== 0;
   }
   form.addEventListener('submit', function (event) { event.preventDefault(); });
-  form.addEventListener('input', apply);
-  form.addEventListener('change', apply);
+  function remember() {
+    var url = new URL(window.location.href);
+    [["q", query], ["category", category], ["kind", kind]].forEach(function (pair) {
+      if (pair[1].value) url.searchParams.set(pair[0], pair[1].value);
+      else url.searchParams.delete(pair[0]);
+    });
+    history.replaceState(null, '', url);
+    apply();
+  }
+  function restore() {
+    var params = new URLSearchParams(window.location.search);
+    [["q", query], ["category", category], ["kind", kind]].forEach(function (pair) {
+      pair[1].value = params.get(pair[0]) || '';
+    });
+    apply();
+  }
+  form.addEventListener('input', remember);
+  form.addEventListener('change', remember);
+  window.addEventListener('pageshow', restore);
   // Native reset restores controls after the event has been dispatched.
-  form.addEventListener('reset', function () { setTimeout(apply, 0); });
+  form.addEventListener('reset', function () { setTimeout(remember, 0); });
   form.hidden = false;
-  apply();
+  restore();
 })();

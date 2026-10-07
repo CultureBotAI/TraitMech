@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved membrane-fluidity output of homeoviscous adaptation without making the Bacillus DesK/DesR two-component branch, E. coli FabI/FabB metabolic valve, or any single lipid species universal across microbes.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -431,7 +433,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -455,8 +456,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T07:07:56Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add homeoviscous adaptation trait
+            <p>Added traitmech:000208 for homeoviscous adaptation with DOI-backed Maiti, de Mendoza, Sidarta, and Hoogerland evidence, E. coli and B. subtilis canonical examples, a membrane-fluidity causal graph, an xref-gap discussion, and a v85 METPO proposal reserving METPO:1016200.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/homeoviscous_adaptation/2026-09-15T070756Z-codex-24f768.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-15T07:16:38Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Add FabI/FabB protein examples to homeoviscous adaptation
+            <p>Removed the no-snippet top-level Maiti evidence item and added a reviewed label-only FabI/FabB GENE_OR_PROTEIN node with E. coli K-12 UniProt P0AEK4 and P0A953 examples backed by live UniProt REST metadata and Hoogerland DOI evidence.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/homeoviscous_adaptation/2026-09-15T071638Z-codex-eab563.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-15T07:27:04Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Normalize homeoviscous membrane rigidity node
+            <p>Renamed the new homeoviscous adaptation graph node from the retired membrane_rigidification alias to the canonical membrane_rigidity QUALITY id after PR review issue #936 exposed the process/quality consistency regression.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/homeoviscous_adaptation/2026-09-15T072704Z-codex-6cb554.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -545,6 +568,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -836,7 +866,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-15 07:26 UTC
+      Record as of 2026-09-15 07:27 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

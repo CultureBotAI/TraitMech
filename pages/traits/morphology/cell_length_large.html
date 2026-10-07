@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a numerical cell-length bin. Its graph illustrates possible regulators of measured length but is not a single inheritable causal mechanism requiring a protein/taxon exemplar.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -471,7 +473,6 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -561,8 +562,18 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T00:31:08Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Connect cell_length_large FtsZ graph
+            <p>Repaired data/traits/morphology/cell_length_large.yaml after ranking it as the highest-score DEEPEN_CAUSAL_GRAPH target in scripts/trait_priority.py. The edit re-cited the SOS/SulA branch to DOI:10.1002/advs.202203260, replaced the residual ungrounded FtsZ/SulA predicates with RO:0002212/RO:0002213 groundings, and added three DOI-backed connector edges so the nonmechanistic FtsZ/SOS division-delay graph moves from four disconnected components to one. Existing paid Falcon research at research/traits/morphology/cell_length_large-deep-research-falcon.md was used as a lead. No paid research service was called. Validation used write_validated_trait, linkml-validate for the edited YAML, validate_strict.py, audit_causal_graphs.py, audit_predicate_domains.py, audit_evidence_snippets.py, audit_graph_protein_taxa.py, the record-repair regression tests, and the trait-priority regression tests.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cell_length_large/2026-09-04T003108Z-claude-code-a012b9.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -656,6 +667,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

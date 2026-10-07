@@ -100,6 +100,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DRT3 at DefenseFinder subtype-locus level without asserting the direct DRT3 reverse-transcriptase products, phage trigger, native host breadth, sensitive phage breadth, non-coding RNA or DRT_3__SLATT partner-feature role, profile-to-activity criteria, or whether every DefenseFinder DRT_3 prediction is a complete experimentally active DRT3 locus.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -348,7 +350,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -366,8 +367,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-02T12:43:02Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DRT3 system trait
+            <p>Minted traitmech:000545 as a DOI- and DefenseFinder-backed DRT3 phage-defense-system subtype record under DRT system, cited Gao et al. for DRT discovery, reverse-transcriptase active-site dependence, and the two reverse-transcriptase components of DRT type 3, cited pinned DefenseFinder article, HMM, and rules rows for the DRT_3 model namespace, left canonical_examples empty due to lack of accession-backed native microbial taxon evidence, and reserved METPO:1049900 in proposals/metpo_traitmech_v422 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/drt3_system/2026-10-02T124302Z-codex-827539.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -456,6 +467,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -747,7 +765,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-02 12:40 UTC
+      Record as of 2026-10-02 12:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

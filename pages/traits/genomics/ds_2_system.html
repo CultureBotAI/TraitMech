@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-2 as the validated DISA transcriptional unit with three product accessions and with a DefenseFinder DS-2C profile row. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact molecular output, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -370,7 +372,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -388,8 +389,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T04:14:52Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-2 system trait
+            <p>Minted traitmech:000425 for the DOI-backed DS-2 system under phage defense system. DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-2 as the DefensePredictor-discovered system corresponding to the three-gene DISA transcriptional unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder article and HMM inventories map DS-2 to the DS-2C custom profile while the pinned rules table has no DS-2 row, so the graph stays nonmechanistic at cloned-transcriptional-unit level and the record keeps profile-to-component mapping, native host breadth, phage range, and direct molecular output unresolved. Reserved METPO:1037900 in proposals/metpo_traitmech_v302.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_2_system/2026-09-28T041452Z-codex-78f45e.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -478,6 +489,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -769,7 +787,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 04:13 UTC
+      Record as of 2026-09-28 04:14 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

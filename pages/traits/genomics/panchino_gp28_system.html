@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Panchino gp28 as a named anti-phage system with a DefenseFinder gp28 profile while leaving its restriction target, methylation requirements, and target-phage breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -263,7 +265,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -293,8 +294,36 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T21:39:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Panchino gp28 system genomics trait
+            <p>Minted traitmech:000294 for Panchino gp28 system as a DOI-backed GENOMICS phage-defense-system possession trait, reserved METPO:1024800 in proposals/metpo_traitmech_v171 for upstream migration, and carried the pinned DefenseFinder gp28 HMM profile row as a related profile synonym rather than an individual gene, protein, prophage, or HMM trait.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panchino_gp28_system/2026-09-19T213900Z-codex-7f0b89.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T22:03:39Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Demote Panchino_gp28 to related synonym scope
+            <p>Resolved PR #1085 review issue #1086 by demoting the DefenseFinder source key Panchino_gp28 from exact synonym to related synonym scope in the TraitRecord and paired METPO proposal.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panchino_gp28_system/2026-09-19T220339Z-codex-cd4ab2.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T22:08:11Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Fix Panchino gp28 HMM snippet padding
+            <p>Resolved PR #1085 review issue #1087 by correcting the fixed-width DefenseFinder Panchino_gp28__gp28 HMM evidence snippets to match the pinned table spacing exactly.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panchino_gp28_system/2026-09-19T220811Z-codex-3de445.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T22:13:58Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Drop ambiguous Panchino gp28 alias
+            <p>Resolved PR #1085 review issue #1088 by removing the ambiguous bare gp28 related synonym from the Panchino gp28 system TraitRecord and paired METPO proposal while retaining the pinned Panchino_gp28__gp28 HMM row as evidence.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panchino_gp28_system/2026-09-19T221358Z-codex-7279ee.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -383,6 +412,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

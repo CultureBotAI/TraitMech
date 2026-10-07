@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiB as a named DefenseFinder single-profile abortive-infection system whose IL1403 prototype restricts bIL170 phage by promoting rapid sensitive-phage transcript degradation. It leaves the direct phage trigger, AbiB molecular function, RNase effector identity, natural locus breadth, and phage escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -352,7 +354,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -364,8 +365,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T21:21:14Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiB system trait
+            <p>Added traitmech:000319 AbiB system as a DOI-backed GENOMICS TraitRecord under abortive infection system. PMID:8825768 identifies AbiB as an abortive-infection determinant in Lactococcus lactis strain IL1403, reports that it prevents growth of sensitive bIL170 phage, and links AbiB activity to rapid degradation of sensitive phage transcripts and likely arrest of sensitive phage development. Pinned DefenseFinder article, rules, and HMM registries map AbiB to the AbiB__AbiB one-profile model namespace. Reserved METPO:1027300 in proposals/metpo_traitmech_v196 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abib_system/2026-09-20T212114Z-codex-56eae2.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -454,6 +465,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

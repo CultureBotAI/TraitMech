@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures broad Fez-dependent formation and ferrosome iron storage at process and organelle level without asserting one taxon-universal Fez component roster, individual Fez-protein activity, accession-level protein examples, iron-remobilization mechanism, membrane-localization path, iron-deficiency trigger, or host-colonization output.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -298,7 +300,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -310,8 +311,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-01T22:05:51Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add ferrosome morphology trait
+            <p>Minted traitmech:000527 for the ferrosome intracellular iron-storage organelle, parented it to intracellular inclusion, cited Grant et al. and Pi et al. Nature evidence for Fez-dependent ferrosome formation and membrane-bound non-crystalline iron phosphate storage, added Clostridioides difficile as a canonical example, opened an xref TODO, and reserved METPO:1048100 in proposals/metpo_traitmech_v404.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ferrosome/2026-10-01T220551Z-codex-5f7b8a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -400,6 +411,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph combines Geobacter and Shewanella routes. The taxon-paired MtrC example supports the extracellular Fe(III)-reduction branch in S. oneidensis MR-1 and is not asserted as a universal component of all iron reducers.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -532,7 +534,6 @@ Ontology mappings below are deliberately conservative. Protein names should be g
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -586,8 +587,18 @@ Ontology mappings below are deliberately conservative. Protein names should be g
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-05T00:00:00Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Connect the stranded Fe(III)-pool component to the trait
+            <p>The pair dissolved_fe3_om_complex -&gt; solid_fe3_mineral had no undirected path to dir_trait, so the graph carried a free-standing geochemical rate comparison beside a respiration mechanism. Both nodes are pools of the acceptor the organism reduces, so dir_trait now uses each as an electron acceptor (METPO:2000008), matching the TRAIT -&gt; CHEMICAL shape of the 13 existing uses-electron-donor edges (METPO:2000009). Both snippets are verbatim from PMID:15518832, pulled via PubMed efetch and compared character-for-character in the same run rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings. Scope caveat recorded in issue 297: the dissolved-pool quote concerns chelators the organism secretes, while the node is ambient Fe(III)-organic-matter complex.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/dissimilatory_iron_reduction/2026-08-05T000000Z-claude-code-183a01.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -681,6 +692,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

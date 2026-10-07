@@ -54,6 +54,8 @@
         </ul>
       </div>
       {% endif %}
+      <p id="{{ graph_dom_id }}-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="{{ graph_dom_id }}">
         <div class="pathograph-legend" id="{{ graph_dom_id }}-legend"></div>
         <svg id="{{ graph_dom_id }}-svg" role="img">
@@ -403,10 +405,9 @@
     </div>
     {% endif %}
 
-    {% if trait.curation_history %}
     <div class="card">
       <h2>Curation history</h2>
-      <ol>
+      {% if trait.curation_history %}<ol>
         {% for ev in trait.curation_history %}
         <li>
           <time>{{ ev.timestamp }}</time> ·
@@ -414,9 +415,21 @@
           {% if ev.changes %}<p class="changes">{{ ev.changes }}</p>{% endif %}
         </li>
         {% endfor %}
-      </ol>
+      </ol>{% endif %}
+      {% if curation_sessions %}
+      <h3>Recorded curation sessions</h3>
+      <ul>{% for item in curation_sessions %}
+        <li><time>{{ item.session.timestamp }}</time>
+          {% for actor in item.session.actors %} · {{ actor.name }}{% endfor %}
+          <ul>{% for ev in item.events %}<li><strong>{{ ev.type }}</strong> — {{ ev.summary }}
+            {% if ev.details %}<p>{{ ev.details }}</p>{% endif %}</li>{% endfor %}</ul>
+          <a href="{{ item.source_url }}">Read this curation session</a>
+        </li>{% endfor %}</ul>
+      {% endif %}
+      {% if not trait.curation_history and not curation_sessions %}
+      <p>No curation history recorded for this trait. A record date is unavailable.</p>
+      {% endif %}
     </div>
-    {% endif %}
   </section>
 </article>
 
@@ -515,6 +528,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

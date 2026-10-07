@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Lamassu-Sir2 as a DefenseFinder rule-row subtype of Lamassu system possession without asserting a Lamassu-Sir2-specific antiphage process, exact phage-triggered Sir2 effector activity, viral-DNA trigger, LmuC requirement, native host breadth, cell-death output, or whether every DefenseFinder Lamassu-Sir2 prediction is a complete experimentally active locus.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -289,7 +291,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -313,8 +314,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-03T06:37:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Lamassu-Sir2 system
+            <p>Minted traitmech:000566 for the DefenseFinder-backed Lamassu-Sir2 subtype under the Lamassu system parent, added DOI and pinned DefenseFinder rule/HMM evidence snippets, recorded a NONMECHANISTIC subtype graph, left native canonical examples open for lack of accession-backed endogenous activity evidence, and reserved METPO:1052000 in proposals/metpo_traitmech_v443 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lamassu_sir2_system/2026-10-03T063704Z-codex-e36f5c.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T06:56:28Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Add Sir2-scoped Lamassu HMM evidence
+            <p>Addressed adversarial review issue #1604 by adding exact Lamassu-Fam__LmuB_SMC_Sir2 and Lamassu-Fam__LmuC_acc_Sir2 HMM row evidence to the Lamassu-Sir2 record and its attached knowledge-gap discussion, matching the auditability of FMO/PDDEXK sibling records for scoped-but-unreferenced LmuB and LmuC rows.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lamassu_sir2_system/2026-10-03T065628Z-codex-f1da4a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -403,6 +420,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

@@ -210,7 +210,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -222,8 +221,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-06T01:54:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add evidence-backed pallium feeding phenotype
+            <p>Added PROPOSED traitmech:000632 with three DOI-backed source snippets, natural-specimen-qualified NCBITaxon:402581 Oblea rotunda, and METPO v508 placeholder 1058500. Whole-repository ignored-and-hidden searches and parsed pinned METPO found no exact trait or ID collision. Direct source inspection preserves complete/partial enclosure, missing 1986 scan pages and unresolved 1992 membrane topology; no unsupported protein graph or sequence inference. Guarded writer dry run and focused tests passed before history creation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/pallium_feeding/2026-10-06T015404Z-codex-ed2904.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-06T01:55:04Z</time>
+           · codex
+          <ul><li><strong>AUDIT</strong> — Correct focused-test timing in pallium feeding provenance
+            <p>Corrects history/records/pallium_feeding/2026-10-06T015404Z-codex-ed2904.yaml: its statement that focused tests passed before history creation was premature. The initial invocation failed collection with ModuleNotFoundError for traitmech because PYTHONPATH was absent. After setting PYTHONPATH=src, all 12 focused tests passed in 3.38 seconds. The guarded dry run and application had succeeded before the original entry. This audit changes provenance only; the TraitRecord is unchanged.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/pallium_feeding/2026-10-06T015504Z-codex-50f5d8.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -275,7 +290,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-06 01:50 UTC
+      Record as of 2026-10-06 01:55 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

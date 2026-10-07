@@ -116,6 +116,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures GasderMIN as a named DefenseFinder single-mandatory-profile system supported by Johnson et al. bacterial gasdermin experiments while leaving the natural phage trigger, the universality of adjacent protease activation, the full family breadth, and CARD-NLR-associated gasdermin variants unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -418,7 +420,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -430,8 +431,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T13:10:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add GasderMIN phage-defense trait
+            <p>Minted traitmech:000336 for the DOI-backed GasderMIN bacterial gasdermin phage-defense system under the phage defense system parent, added Johnson et al. evidence from DOI:10.1126/science.abj8432 and stable PMC full text, added pinned DefenseFinder registry/profile/rules evidence for GasderMIN__bGSDM, added a Lysobacter enzymogenes canonical example, and recorded a knowledge gap for CARD-NLR-associated gasdermins and family breadth.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gasdermin_system/2026-09-21T131000Z-codex-4d329e.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -520,6 +531,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

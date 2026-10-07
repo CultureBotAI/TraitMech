@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -473,7 +475,6 @@ K⁺ is a major bacterial cytoplasmic cation, but concentration is highly taxon-
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -563,8 +564,18 @@ K⁺ is a major bacterial cytoplasmic cation, but concentration is highly taxon-
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T02:40:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Review pH range mid2 causal evidence
+            <p>Reviewed data/traits/environment/ph_range_mid2.yaml for issue 183. Added seven source-checked edge-level snippets, replaced ungrounded pH-homeostasis predicates with grounded biolink:associated_with, RO:0002326, RO:0002211, RO:0002327, or biolink:produces predicates, retyped the membrane_potential node to STATE, removed the no-longer-used cytoplasm node, and kept the graph NONMECHANISTIC because the record is a pH numerical-limit bin rather than a taxon-specific molecular mechanism. Validated via the write-time LinkML gate in scripts/review_ph_range_mid2_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_range_mid2/2026-09-04T024000Z-codex-3036b8.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -658,6 +669,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

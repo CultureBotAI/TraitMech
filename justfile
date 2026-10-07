@@ -198,6 +198,7 @@ audit-discussion-anchors *args:
 # tracked artifact it judges.
 audit-discussions-data *args:
     uv run python scripts/audit_discussions_data.py {{args}}
+    uv run python scripts/render_discussions_shell.py --check
 
 # Flag open PRs that received NO CI at all (#345). PR #344 produced zero
 # pull_request workflow runs -- not failures, not skips -- while `gh pr checks`
@@ -1201,3 +1202,4 @@ report-label-drift:
 gen-discussions-data: (_require-claw "kg_microbe_discussions")
     PYTHONPATH={{claw_src}} uv run python \
       -m kg_microbe_discussions --config conf/discussions_config.yaml --output app/discussions
+    uv run python scripts/render_discussions_shell.py

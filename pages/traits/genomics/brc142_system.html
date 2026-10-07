@@ -110,6 +110,8 @@ pBTZ PcW brc142</blockquote>
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Brc142 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth outside the reported panels, direct molecular substrate, or a DefenseFinder HMM/rules profile absent from the pinned snapshot.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -360,7 +362,6 @@ pBTZ PcW brc142</blockquote>
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -378,8 +379,18 @@ pBTZ PcW brc142</blockquote>
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-01T12:41:45Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add Brc142 system trait
+            <p>Minted traitmech:000515 for the DOI- and DefenseFinder-backed Brc142 bacteriophage-resistance integron cassette, added conservative nonmechanistic phage-resistance evidence from Kieffer et al. and the pinned gcu142 article-registry row, left exact HMM/rules coverage plus native host and molecular-output questions as a knowledge gap, and reserved the METPO replacement placeholder in proposals/metpo_traitmech_v392. Exact novelty searches used rg --no-ignore --hidden across the repository, including ignored and hidden files.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/brc142_system/2026-10-01T124145Z-claude-code-6c0134.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -468,6 +479,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -759,7 +777,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-01 12:39 UTC
+      Record as of 2026-10-01 12:41 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

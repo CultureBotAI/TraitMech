@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures native MazEF protection against RNA phages without asserting a phage-triggered MazF activation route, a resolved direct phage-RNA cleavage event, MazEF-mediated DNA-phage defense breadth, or a generic abortive-infection output.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -324,7 +326,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -336,8 +337,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T21:05:12Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add MazEF system trait
+            <p>Added traitmech:000345 MazEF system as a DOI-backed GENOMICS TraitRecord under phage defense system; cited Nikolic et al. 2025 native mazEF RNA-phage defense evidence plus pinned DefenseFinder article, rules, and HMM registries; reserved METPO:1029900 in proposals/metpo_traitmech_v222.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mazef_system/2026-09-21T210512Z-codex-d63c87.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -426,6 +437,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -717,7 +735,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 21:03 UTC
+      Record as of 2026-09-21 21:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

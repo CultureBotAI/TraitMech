@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -547,7 +549,6 @@ Only identifiers that can be stated confidently are included. Labels should be r
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -673,8 +674,30 @@ Only identifiers that can be stated confidently are included. Labels should be r
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T00:40:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Review mesophilic causal graph evidence
+            <p>Reviewed data/traits/environment/mesophilic.yaml for issue #183. Added snippets to six edge-level evidence items in mesophilic_homoviscous_adaptation and regrounded the cold_shock to CspA, heat_shock to RpoH, and RpoH to heat-shock protein edges to RO:0002213 positive regulation. Existing deep-research findings were reused alongside primary open full-text CspA and RpoH/DnaK sources; no paid research provider was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mesophilic/2026-09-04T004000Z-codex-14a39b.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T13:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected mesophilic causal-graph components
+            <p>Resolved issue #183 graph fragmentation in data/traits/environment/mesophilic.yaml. Added 4 source- and verbatim-snippet-backed association connectors to collapse the reviewed nonmechanistic temperature-preference graph from 5 components to 1 while keeping cold-shock and heat-shock edges as boundary-support branches. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mesophilic/2026-09-04T130000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-06T13:30:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Repair PR 664 mesophilic snippets
+            <p>Addressed adversarial review issue #665 by replacing two sigma-32 snippets in the mesophilic graph with exact RpoH wording from DOI:10.1128/jb.183.18.5302-5310.2001; the focused replay tests verify the patched script and curated YAML stay in sync.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mesophilic/2026-09-06T133000Z-codex-133a5b.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -768,6 +791,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

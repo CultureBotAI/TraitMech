@@ -116,6 +116,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiC as a named DefenseFinder single-profile abortive-infection system whose ME2 pTN20 prototype restricts small isometric-headed phage p2. It leaves the direct phage trigger, AbiC molecular function, cell-death route, natural locus breadth, and phage escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -376,7 +378,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -388,8 +389,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T22:01:26Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiC system trait
+            <p>Added traitmech:000320 AbiC system as a DOI-backed GENOMICS TraitRecord under abortive infection system. PMID:1429469 subclones the pTN20 Prf determinant from Lactococcus lactis subsp. lactis ME2, names the abiC structural gene, shows abiC expression confers Prf-positive activity, and links Prf to reduced p2 plaquing, plaque size, burst size, and infected-cell death. Pinned DefenseFinder article, rules, and HMM registries map AbiC to the AbiC__AbiC one-profile model namespace. Reserved METPO:1027400 in proposals/metpo_traitmech_v197 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abic_system/2026-09-20T220126Z-codex-c1515f.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -478,6 +489,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

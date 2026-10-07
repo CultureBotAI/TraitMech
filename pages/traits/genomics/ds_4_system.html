@@ -122,6 +122,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-4 as the validated NTTI transcriptional unit with five product accessions and with DefenseFinder DS-4A, DS-4B, DS-4C, DS-4D, and DS-4E profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact molecular output, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -454,7 +456,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -472,8 +473,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T06:13:30Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-4 system trait
+            <p>Minted traitmech:000427 for the DOI-backed DS-4 system under phage defense system. DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-4 as the DefensePredictor-discovered system corresponding to the five-gene NTTI transcriptional unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder article and HMM inventories map DS-4 to five custom profile rows while the pinned rules table has no DS-4 row, so the graph stays nonmechanistic at cloned-transcriptional-unit level and leaves native host breadth, component activities, profile-to-protein mapping, phage target breadth, and direct molecular output unresolved. Reserved METPO:1038100 in proposals/metpo_traitmech_v304.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_4_system/2026-09-28T061330Z-codex-d7a663.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -562,6 +573,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -853,7 +871,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 06:12 UTC
+      Record as of 2026-09-28 06:13 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

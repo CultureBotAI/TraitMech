@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents the enterobacterial stringent-response/RpoS/Hfq branch and is not universal across microbial taxa. The E. coli RpoS example anchors the sigma-S module; RSH is a heterogeneous enzyme superfamily and Hfq is a separate RNA-chaperone family.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -579,7 +581,6 @@ A 2023 primary study added a recovery mechanism: Lon directly degrades σT under
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -645,8 +646,9 @@ A 2023 primary study added a recovery mechanism: Lon directly degrades σT under
         </li>
 
       </ol>
-    </div>
 
+
+    </div>
   </section>
 </article>
 
@@ -740,6 +742,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

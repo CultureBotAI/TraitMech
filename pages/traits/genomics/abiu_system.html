@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiU as a named DefenseFinder single-profile abortive-infection system whose LL51-1 prototype restricts c2, 936, and P335 lactococcal phages. It leaves the direct phage trigger, AbiU1 molecular function, AbiU2 downregulation route, natural locus breadth, and phage escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -393,7 +395,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -405,8 +406,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T22:50:24Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiU system trait
+            <p>Added traitmech:000321 AbiU system as a DOI-backed GENOMICS TraitRecord under abortive infection system. DOI:10.1128/AEM.67.11.5225-5232.2001 and PMID:11679349 identify AbiU from Lactococcus lactis LL51-1, report that AbiU confers resistance to c2, 936, and P335 lactococcal phages, name the abiU1 and abiU2 open reading frames, and link AbiU to delayed phage 712 and c2 transcription. Pinned DefenseFinder article, rules, and HMM registries map AbiU to the AbiU__AbiU one-profile model namespace. Reserved METPO:1027500 in proposals/metpo_traitmech_v198 for the upstream replacement ID.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abiu_system/2026-09-20T225024Z-codex-de18ee.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -495,6 +506,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -786,7 +804,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-20 22:48 UTC
+      Record as of 2026-09-20 22:50 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

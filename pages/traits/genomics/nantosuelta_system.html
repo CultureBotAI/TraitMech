@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Nantosuelta as a named SCI-derived anti-phage system with a VCA0322 DefenseFinder profile while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -259,7 +261,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -277,8 +278,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T15:31:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Minted Nantosuelta system phage defense trait
+            <p>Added traitmech:000284 Nantosuelta system as a DOI-backed GENOMICS child of phage defense system, with DefenseFinder article and HMM-inventory evidence for the Nantosuelta/VCA0322 model, a conservative nonmechanistic phage-restriction graph, an open mechanism knowledge gap, and a companion METPO proposal in proposals/metpo_traitmech_v161.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nantosuelta_system/2026-09-19T153104Z-codex-09792e.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T15:47:45Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Expanded Nantosuelta confers-edge evidence snippet
+            <p>Addressed CultureBotAI/TraitMech#1070 by expanding the Darracq snippet on the Nantosuelta confers edge so the verbatim evidence includes the phage-defense clause referenced by the edge note.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nantosuelta_system/2026-09-19T154745Z-codex-bea190.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -367,6 +384,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph represents the experimentally completed C. aurantiacus 3HP bicycle. The reviewed mcl/MMC-lyase example supports the terminal trifunctional cleavage node; the other diagnostic multifunctional enzymes remain separately scoped.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -583,7 +585,6 @@ Conservatively ground common metabolites to verified ChEBI records during YAML i
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -649,8 +650,18 @@ Conservatively ground common metabolites to verified ChEBI records during YAML i
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T09:05:04Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the 3-hydroxypropionate bicycle graph
+            <p>Connected four enzyme-product islands to the 3HP bicycle with exact public figure-caption evidence. The graph moved from five components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/three_hydroxypropionate_bicycle/2026-08-31T090504Z-codex-6dc1c0.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -744,6 +755,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1035,7 +1053,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 09:00 UTC
+      Record as of 2026-08-31 09:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

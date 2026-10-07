@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph combines generic donor oxidation, reverse electron flow, and inorganic-carbon acquisition. The N. europaea RuBisCO example anchors the Calvin-Benson-Bassham fixation branch only; Q82TG6 is its large subunit and not the complete L8S8 enzyme or any donor-oxidation complex.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -647,7 +649,6 @@ Use identifiers only after checking the target ontology release. Safe or high-co
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -779,8 +780,18 @@ Use identifiers only after checking the target ontology release. Safe or high-co
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T11:46:03Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the lithoautotrophic causal graph for issue #183
+            <p>Resolved graph fragmentation using two public-source connectors. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lithoautotrophic/2026-08-31T114603Z-codex-6b0c0d.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -874,6 +885,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1165,7 +1183,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 11:45 UTC
+      Record as of 2026-08-31 11:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

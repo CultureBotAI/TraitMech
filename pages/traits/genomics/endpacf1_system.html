@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures ENDPaCF1 as a named single-protein phage-defense system with Type IIS restriction endonuclease-like and iEndoIII domains while leaving Pseudomonas natural host breadth, complete DNA-modification breadth, direct domain coupling, phage-inhibitor specificity, and DefenseFinder HMM/rules detection criteria unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -406,7 +408,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -430,8 +431,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-30T23:43:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add ENDPaCF1 system trait
+            <p>Minted traitmech:000503 for ENDPaCF1 system under phage defense system with the Yee et al. bioRxiv DOI, the pinned DefenseFinder article-registry row, an explicit HMM/rules coverage gap, no canonical examples, a conservative system-level causal graph, and a same-branch v380 METPO placeholder proposal.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/endpacf1_system/2026-09-30T234304Z-codex-2415dd.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -520,6 +531,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

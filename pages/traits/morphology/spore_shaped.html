@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents Bacillus endospore morphogenesis and coat assembly. The SpoIVA accession anchors one protein in the multiprotein coat program and does not stand in for SpoVM, SpoVID, CotE, or SafA.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -645,7 +647,6 @@ The cortex and coat then establish the mature boundary. The cortex is specialize
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -723,8 +724,18 @@ The cortex and coat then establish the mature boundary. The cortex is specialize
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T06:52:03Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the spore-shaped causal graph
+            <p>Added four exact source-verified bridges linking encasement and the inner, outer, and complete coat structures to the mature spore body. The graph moved from five components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/spore_shaped/2026-08-31T065203Z-codex-05249f.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -818,6 +829,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1109,7 +1127,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 06:48 UTC
+      Record as of 2026-08-31 06:52 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

@@ -1,0 +1,17 @@
+/* TraitMech shell for the shared discussions browser. */
+:root { color-scheme: light; --fg:#1a1a1a; --muted:#5b6470; --line:#d0d7de;
+  --accent:#9d292d; --bg:#fafafa; --card:#fff; --badge:#eef; --badge-fg:#225;
+  --gap:#fee; --gap-fg:#922; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme:dark; --fg:#e6edf3; --muted:#b1bac4;
+    --line:#465362; --accent:#ffb3b5; --bg:#101820; --card:#192530;
+    --badge:#303c65; --badge-fg:#e2e7ff; --gap:#543337; --gap-fg:#ffd6d6; }
+}
+:root[data-theme="dark"] { color-scheme:dark; --fg:#e6edf3; --muted:#b1bac4;
+  --line:#465362; --accent:#ffb3b5; --bg:#101820; --card:#192530;
+  --badge:#303c65; --badge-fg:#e2e7ff; --gap:#543337; --gap-fg:#ffd6d6; }
+.card, input, button { background:var(--card); color:var(--fg); }
+.rationale { color:var(--fg); }
+.badge { background:var(--badge); color:var(--badge-fg); }
+.badge.gap { background:var(--gap); color:var(--gap-fg); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline-color:var(--accent); }

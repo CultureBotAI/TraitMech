@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures VcaM4I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact modified-DNA sequence-context specificity across EVE-HNH homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -358,7 +360,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -376,8 +377,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-01T11:48:03Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add VcaM4I system
+            <p>Minted traitmech:000514 for the VcaM4I system under the Type IV modification-dependent restriction system parent, using DOI-backed VcaM4I EVE-HNH structure, 5mC/5hmC binding, digestion and restriction assay, Type IV, and pinned DefenseFinder article-registry evidence. Kept VcaM4I as a related source-key synonym, left canonical_examples empty because Mierzejewska et al. do not establish a single stable organism-level exemplar or accession-level protein for this system trait, added a conservative nonmechanistic system graph, and recorded a DefenseFinder HMM/rules mapping gap after the pinned HMM inventory and rules table had no exact VcaM4I rows.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/vcam4i_system/2026-10-01T114803Z-codex-bd4a1c.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -466,6 +477,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures BstA as a named abortive-infection system with a DefenseFinder BstA profile while leaving the direct trigger of BstA localization, the direct DNA replication target, the physical form of the BstA-aba interaction, and the molecular basis for cognate aba specificity unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -381,7 +383,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -411,8 +412,36 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T04:39:39Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add BstA system genomics trait
+            <p>Minted traitmech:000301 for BstA system as a DOI-backed GENOMICS abortive-infection-system possession trait after an ignored-and-hidden duplicate review found no live BstA TraitMech record, METPO class, or prior proposal. The record uses Owen et al. DOI:10.1016/j.chom.2021.09.002 for BstA phage-defense, DNA-replication-suppression, and aba self-immunity evidence, carries pinned DefenseFinder registry, HMM inventory, and rule snippets for BstA, updates the abortive-infection parent split-gap discussion, and reserves METPO:1025500 in proposals/metpo_traitmech_v178 for upstream migration.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/bsta_system/2026-09-20T043939Z-claude-code-53cd5f.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-20T05:13:30Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Address BstA PR review follow-ups
+            <p>Addressed adversarial review follow-ups from PR #1111 by adding Salmonella enterica subsp. enterica serovar Typhimurium str. D23580 as a DOI-backed canonical example for the BstA system and by modelling the phage-side aba self-immunity element as an explicit GENETIC_ELEMENT node that prevents BstA-mediated suppression of lytic phage DNA replication. The graph remains NONMECHANISTIC and leaves direct BstA trigger, target, BstA-aba interaction, and specificity details in the existing open knowledge gap.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/bsta_system/2026-09-20T051330Z-codex-595e55.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-20T05:25:45Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Disambiguate BstA aba self-immunity
+            <p>Addressed the second adversarial review of PR #1111 by separating the cognate aba element self-immunity path from BstA-mediated suppression of incoming lytic phage DNA replication. The graph now models BstA loci as including aba and has aba prevent a distinct encoding-prophage DNA replication suppression node, preserving the open BstA-aba mechanism and specificity gap.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/bsta_system/2026-09-20T052545Z-codex-218808.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-20T05:42:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Assert BstA source of aba-sensitive suppression
+            <p>Addressed the third adversarial review of PR #1111 by adding a supported BstA locus contribution edge to the aba-sensitive encoding-prophage DNA replication suppression process that the cognate aba element prevents.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/bsta_system/2026-09-20T054200Z-codex-1116.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -501,6 +530,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

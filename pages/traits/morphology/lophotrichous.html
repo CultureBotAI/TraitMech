@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -451,7 +453,6 @@ Recent systems-level work found that **more than one-third of sequenced bacteria
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -523,8 +524,24 @@ Recent systems-level work found that **more than one-third of sequenced bacteria
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-03T17:10:52Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Correct the Spirillum canonical example to naturally unipolar division-stage cells
+            <p>Replaced the compound Pijper 1949 reference and mismatched bipolar-tufts note with Swan 1982 DOI:10.1128/jb.150.1.377-380.1982 (PMID:7061399, PMC220122). PubMed/Europe PMC confirm the original PMID:16561638 and DOI:10.1128/jb.57.1.111-118.1949 identify the same paper; this change is an explicit source/scope replacement, not normalization. Source-native scans of Swan p.377 establish recently divided, naturally unipolar ATCC 19554 cells grown at 30 C in ATCC medium 234, distinct from older bipolar cells. Retained NCBITaxon:968 with its live NCBI label. Added a verbatim methods snippet and notes; no definition, hierarchy, graph, other example, mapping status or amphitrichous record changed. Guarded mutator prevalidates all three issue targets before live writes and preserves unrelated fields. All 47 new writer tests plus 44 citation-rendering tests pass; full downstream checks and independent review remain required.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lophotrichous/2026-10-03T171052Z-codex-36850a.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T17:32:40Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Retain division-stage evidence without treating it as the canonical archetype
+            <p>Addressed independent PR 1628 review. Removed only the Spirillum volutans canonical row, retaining H. pylori and the directly checked Swan 1982 DOI, methods snippet and bounded life-stage evidence. This is an archetype curation decision, not denial of naturally unipolar cells or an assertion of disjoint organism-level traits; no universal amphitrichous division sequence is inferred. Appended a second per-record event and preserved the initial issue 1626 history byte-for-byte. Identity, definition, hierarchy, graph, other evidence and amphitrichous record are unchanged. Guarded replay handles original, initial-repair and final states; 102 focused repair/rendering tests passed. Regeneration, full downstream validation and independent re-review are required before merge.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lophotrichous/2026-10-03T173240Z-codex-b39371.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -618,6 +635,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -909,7 +933,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 17:30 UTC
+      Record as of 2026-10-03 17:32 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

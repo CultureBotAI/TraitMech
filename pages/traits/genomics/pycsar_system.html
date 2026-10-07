@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph stays at the Pycsar-family level and uses characterized cytidylate-cyclase and uridylate-cyclase examples without asserting one universal cyclase clade, cCMP-versus-cUMP product, PycTIR-versus-PycTM effector fold, AGS-C role, zinc-finger role, activating phage trigger, membrane impairment, or NAD-depletion output across all Pycsar antiphage loci.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -382,7 +384,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -394,8 +395,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-18T07:36:28Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Pycsar system trait
+            <p>Minted traitmech:000236 for the Pycsar cyclic-pyrimidine phage-defense system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior proposal record for Pycsar, the expected slug, the source DOIs, or the reserved IDs. Tal et al. and Hou et al. support the PycC-centered system identity, cCMP/cUMP signaling, cyclic-pyrimidine receptor effectors, an Escherichia coli canonical example, and a nonmechanistic causal graph for Pycsar-mediated phage defense.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/pycsar_system/2026-09-18T073628Z-codex-04b73a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -484,6 +495,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -775,7 +793,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-18 07:33 UTC
+      Record as of 2026-09-18 07:36 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%

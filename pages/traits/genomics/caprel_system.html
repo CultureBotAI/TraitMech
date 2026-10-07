@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures CapRelSJ46 major-capsid-protein and Gp54 trigger evidence without claiming one universal CapRel phage trigger, allosteric route, escape route, or phage specificity across all fused CapRel homologs.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -340,7 +342,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -358,8 +359,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-18T15:19:24Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add CapRel system trait
+            <p>Minted traitmech:000244 as a DOI-backed GENOMICS TraitRecord for fused CapRel toxin-antitoxin phage-defense loci, added evidence snippets from the 2022 and 2024 Nature CapRel studies, captured a family-level phage-triggered tRNA-pyrophosphorylation graph, and reserved METPO:1019800 in proposals/metpo_traitmech_v121.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/caprel_system/2026-09-18T151924Z-codex-accc86.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-18T15:43:45Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Tighten CapRel scope wording
+            <p>Narrowed the CapRel system definition to fused locus possession, kept the CapRelSJ46 trigger-to-translation-blockade mechanism in evidence and graph scope, and expanded a dangling activation snippet into a self-contained Zhang et al. quote fragment.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/caprel_system/2026-09-18T154345Z-codex-issue1001.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -448,6 +465,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

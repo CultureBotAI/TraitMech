@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Veles as a named anti-phage system with VlsA1, VlsA2, VlsB1, VlsB2, VlsC1, and VlsC2 DefenseFinder HMM profile entries while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -341,7 +343,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -353,8 +354,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T18:45:09Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Veles system genomics trait
+            <p>Minted traitmech:000289 for Veles system as a DOI-backed GENOMICS phage-defense-system possession trait, reserved METPO:1024300 in proposals/metpo_traitmech_v166 for upstream migration, and carried the pinned DefenseFinder VlsA1/VlsA2/VlsB1/VlsB2/VlsC1/VlsC2 HMM profile rows as related profile synonyms rather than individual gene or protein traits.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/veles_system/2026-09-19T184509Z-codex-2a7d0d.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -443,6 +454,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -734,7 +752,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-19 18:44 UTC
+      Record as of 2026-09-19 18:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1054 TraitRecords
       · embedding coverage 45.3%
