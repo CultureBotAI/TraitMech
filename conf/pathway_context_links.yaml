@@ -1,0 +1,241 @@
+version: 1
+targets:
+- path: data/traits/physiology/heterotrophic.yaml
+  identifier: METPO:1000644
+  links:
+  - graph_id: heterotrophic_organic_carbon_assimilation
+    node_id: glyoxylate_cycle
+    node_label: glyoxylate cycle
+    pathway: MetaCyc:GLYOXYLATE-BYPASS
+    basis: 'PathwayMech context: glyoxylate cycle in Mycobacterium tuberculosis (NCBITaxon:1773).
+      The shared route bypasses the decarboxylating TCA steps through isocitrate lyase
+      and malate synthase. No exact equivalence or transfer of organism scope is asserted.'
+  - graph_id: heterotrophic_organic_carbon_assimilation
+    node_id: tca_cycle
+    node_label: TCA cycle
+    pathway: WikiPathways:WP296
+    basis: 'PathwayMech context: TCA cycle - detailed in Saccharomyces cerevisiae
+      (NCBITaxon:4932). The shared route is the oxidative tricarboxylic acid cycle;
+      the linked yeast model is an example, not a universal microbial enzyme assignment.
+      No exact equivalence or transfer of organism scope is asserted.'
+  - graph_id: heterotrophic_organic_carbon_assimilation
+    node_id: glycolysis_ppp
+    node_label: glycolysis and pentose phosphate pathway
+    pathway: gomodel:YeastPathways_GLYCOLYSIS
+    basis: 'PathwayMech context: glycolysis I (from glucose 6-phosphate) in Saccharomyces
+      cerevisiae S288C (NCBITaxon:559292). This record covers only the glycolysis
+      part of the composite node, beginning at glucose 6-phosphate. No exact equivalence
+      or transfer of organism scope is asserted.'
+  - graph_id: heterotrophic_organic_carbon_assimilation
+    node_id: glycolysis_ppp
+    node_label: glycolysis and pentose phosphate pathway
+    pathway: MetaCyc:OXIDATIVEPENT-PWY
+    basis: 'PathwayMech context: pentose phosphate pathway (oxidative branch) I in
+      Escherichia coli (NCBITaxon:562). This record covers the oxidative pentose phosphate
+      branch of the composite node. No exact equivalence or transfer of organism scope
+      is asserted.'
+  - graph_id: heterotrophic_organic_carbon_assimilation
+    node_id: glycolysis_ppp
+    node_label: glycolysis and pentose phosphate pathway
+    pathway: MetaCyc:NONOXIPENT-PWY
+    basis: 'PathwayMech context: pentose phosphate pathway (non-oxidative branch)
+      I in Escherichia coli (NCBITaxon:562). This record covers the non-oxidative
+      pentose phosphate branch of the composite node. No exact equivalence or transfer
+      of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/metabolism/substrate_level_phosphorylation.yaml
+  identifier: METPO:1000804
+  links:
+  - graph_id: substrate_level_phosphorylation_direct_atp
+    node_id: acka_pta_pathway
+    node_label: AckA-Pta pathway
+    pathway: MetaCyc:PWY0-1312
+    basis: 'PathwayMech context: acetate and ATP formation from acetyl-CoA I in Thermotoga
+      maritima (NCBITaxon:2336). The linked route explicitly contains phosphate acetyltransferase
+      and acetate kinase and produces ATP through acetyl phosphate. No exact equivalence
+      or transfer of organism scope is asserted.'
+  - graph_id: substrate_level_phosphorylation_direct_atp
+    node_id: carbamate_kinase_arginine_deiminase
+    node_label: carbamate kinase (arginine deiminase pathway)
+    pathway: MetaCyc:ARGDEGRAD-PWY
+    basis: 'PathwayMech context: L-arginine degradation V (arginine deiminase pathway)
+      in Halobacterium salinarum (NCBITaxon:2242). The linked arginine deiminase route
+      contains the ATP-forming carbamate kinase step; it does not assert that the
+      full pathway is equivalent to this enzyme node. No exact equivalence or transfer
+      of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/ecology/free_living.yaml
+  identifier: traitmech:000048
+  links:
+  - graph_id: free_living_environmental_habitat
+    node_id: ectoine_biosynthesis
+    node_label: ectoine biosynthetic pathway
+    pathway: MetaCyc:P101-PWY
+    basis: 'PathwayMech context: ectoine biosynthesis in Halomonas elongata (NCBITaxon:2746).
+      The shared route synthesizes ectoine through EctB, EctA and EctC. No exact equivalence
+      or transfer of organism scope is asserted.'
+  - graph_id: free_living_environmental_habitat
+    node_id: trehalose_biosynthesis
+    node_label: trehalose biosynthesis/transport
+    pathway: MetaCyc:TRESYN-PWY
+    basis: 'PathwayMech context: trehalose biosynthesis I in Escherichia coli (NCBITaxon:562).
+      The linked OtsA/OtsB route illustrates trehalose synthesis only; it does not
+      cover the transport component of this node. No exact equivalence or transfer
+      of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+  identifier: METPO:1000532
+  links:
+  - graph_id: salinity_phenotype_numerical_axis
+    node_id: proline_biosynthesis_pathway
+    node_label: proB/proA/proC proline biosynthesis pathway
+    pathway: MetaCyc:PROSYN-PWY
+    basis: 'PathwayMech context: L-proline biosynthesis I (from L-glutamate) in Escherichia
+      coli (NCBITaxon:562). The linked route synthesizes L-proline from L-glutamate
+      through the ProB/ProA/ProC enzyme sequence. No exact equivalence or transfer
+      of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/morphology/pigmentation.yaml
+  identifier: METPO:1003021
+  links:
+  - graph_id: pigmentation_biosynthetic_colorants
+    node_id: shikimate_pathway
+    node_label: shikimate pathway
+    pathway: MetaCyc:ARO-PWY
+    basis: 'PathwayMech context: chorismate biosynthesis I in Escherichia coli (NCBITaxon:562).
+      The linked shikimate route terminates at chorismate; it provides precursor context,
+      not a complete phenazine or pigment pathway. No exact equivalence or transfer
+      of organism scope is asserted.'
+  - graph_id: pigmentation_biosynthetic_colorants
+    node_id: mva_pathway
+    node_label: mevalonate pathway
+    pathway: gomodel:YeastPathways_IPPSYN-PWY
+    basis: 'PathwayMech context: mevalonate pathway in Saccharomyces cerevisiae S288C
+      (NCBITaxon:559292). The shared mevalonate route supplies isoprenoid precursors;
+      the yeast pathway is context for the route, not evidence for bacterial pigmentation.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/physiology/catalase_activity.yaml
+  identifier: traitmech:000075
+  links:
+  - graph_id: catalase_activity_h2o2_detoxification
+    node_id: heme_biosynthesis
+    node_label: heme biosynthesis
+    pathway: gomodel:YeastPathways_HEME-BIOSYNTHESIS-II
+    basis: 'PathwayMech context: heme b biosynthesis I (aerobic) in Saccharomyces
+      cerevisiae S288C (NCBITaxon:559292). This is one aerobic heme b synthesis route
+      supplying catalase cofactor context; alternative bacterial heme routes and PerR/OxyR
+      regulation are outside the linked record. No exact equivalence or transfer of
+      organism scope is asserted.'
+  - graph_id: catalase_activity_h2o2_detoxification
+    node_id: catalase
+    node_label: monofunctional heme catalase
+    pathway: gomodel:YeastPathways_DETOX1-PWY
+    basis: 'PathwayMech context: superoxide radicals degradation in Saccharomyces
+      cerevisiae S288C (NCBITaxon:559292). The linked model explicitly includes CTT1
+      (SGD:S000003320) catalase activity consuming hydrogen peroxide and producing
+      water and dioxygen, downstream of superoxide dismutation. This link concerns
+      that peroxide-removal component; it does not equate catalase with superoxide
+      dismutase or extend the bacterial PerR/OxyR regulatory branches to yeast.'
+  changes: Added pinned pathway context for the Ctt1 peroxide-removal component of
+    the yeast detoxification model, retaining the upstream heme context and primary-source-backed
+    Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
+    dismutase and bacterial regulatory branches.
+  protein_example:
+    graph_id: catalase_activity_h2o2_detoxification
+    node_id: catalase
+    expected_grounding: InterPro:IPR018028
+    value:
+      uniprot_id: UniProtKB:P06115
+      protein_label: Catalase T
+      gene_symbol: CTT1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-05'
+      entry_version: 215
+      sequence_version: 3
+      role: Cytosolic monofunctional heme catalase that removes hydrogen peroxide.
+        Its protective activity was tested in S. cerevisiae YPH250 and BY4741 laboratory
+        backgrounds in nutrient-rich YPD; this example supports the catalytic node
+        only, not the bacterial PerR/OxyR branches.
+      evidence:
+      - reference: PMID:24563848
+        snippet: Ctt1 but not Cta1 activity is strongly induced by H2O2 when cells
+          are challenged in YPD
+        notes: Martins and English tested CTT1 deletion and catalase activity in YPH250
+          and BY4741 (Table 1). Protection depends on nutrient-rich medium and was
+          lost during challenge in buffer. UniProtKB P06115 supplies the reviewed
+          S288c reference protein, taxon and InterPro:IPR018028 family match; the
+          experiment was not performed in the unmodified S288c reference isolate.
+- path: data/traits/metabolism/acetogenesis.yaml
+  identifier: METPO:1000845
+  links:
+  - graph_id: acetogenesis_wood_ljungdahl
+    node_id: wood_ljungdahl_pathway
+    node_label: Wood-Ljungdahl pathway
+    pathway: WikiPathways:WP5019
+    basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+      The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+      for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/metabolism/carbon_fixation.yaml
+  identifier: traitmech:000019
+  links:
+  - graph_id: carbon_fixation_co2_assimilation
+    node_id: wood_ljungdahl_pathway
+    node_label: Wood-Ljungdahl pathway
+    pathway: WikiPathways:WP5019
+    basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+      The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+      for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/metabolism/homoacetogenesis.yaml
+  identifier: METPO:1000846
+  links:
+  - graph_id: homoacetogenesis_wood_ljungdahl_acetate
+    node_id: wood_ljungdahl_pathway
+    node_label: Wood-Ljungdahl pathway
+    pathway: WikiPathways:WP5019
+    basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+      The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+      for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+  identifier: traitmech:000022
+  links:
+  - graph_id: wood_ljungdahl_reductive_acetyl_coa
+    node_id: wood_ljungdahl_pathway
+    node_label: Wood-Ljungdahl pathway
+    pathway: WikiPathways:WP5019
+    basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+      The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+      for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+- path: data/traits/physiology/autotrophic.yaml
+  identifier: METPO:1000632
+  links:
+  - graph_id: autotrophic_inorganic_carbon_fixation
+    node_id: wood_ljungdahl_pathway
+    node_label: Wood-Ljungdahl pathway
+    pathway: WikiPathways:WP5019
+    basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+      The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+      for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+      No exact equivalence or transfer of organism scope is asserted.'
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.

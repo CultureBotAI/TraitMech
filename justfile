@@ -55,6 +55,14 @@ validate-all *args:
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 
+# Resolve node-level cross-corpus links against the pinned offline index.
+check-pathway-links:
+    uv run python scripts/check_pathway_links.py
+
+# Apply the reviewed context manifest; dry-run unless --apply is supplied.
+apply-pathway-context-links *args:
+    uv run python scripts/add_pathway_context_links.py {{args}}
+
 # Cheap repo-wide checks that run on EVERY PR, including ones that touch only
 # docs/ or a new workflow file and so match no other workflow's paths: filter
 # (#200). Workflow YAML validity, the "at least one unfiltered workflow"
@@ -1130,7 +1138,7 @@ sources-check:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-discussions-data audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts sources-check
+qc: lint pr-sanity validate-strict check-pathway-links audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-discussions-data audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts sources-check
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

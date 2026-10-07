@@ -54,6 +54,41 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Monofunctional heme enzyme that dismutates hydrogen peroxide.
     grounding: InterPro:IPR018028
+    protein_examples:
+    - uniprot_id: UniProtKB:P06115
+      protein_label: Catalase T
+      gene_symbol: CTT1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-05'
+      entry_version: 215
+      sequence_version: 3
+      role: Cytosolic monofunctional heme catalase that removes hydrogen peroxide.
+        Its protective activity was tested in S. cerevisiae YPH250 and BY4741 laboratory
+        backgrounds in nutrient-rich YPD; this example supports the catalytic node
+        only, not the bacterial PerR/OxyR branches.
+      evidence:
+      - reference: PMID:24563848
+        snippet: Ctt1 but not Cta1 activity is strongly induced by H2O2 when cells
+          are challenged in YPD
+        notes: Martins and English tested CTT1 deletion and catalase activity in YPH250
+          and BY4741 (Table 1). Protection depends on nutrient-rich medium and was
+          lost during challenge in buffer. UniProtKB P06115 supplies the reviewed
+          S288c reference protein, taxon and InterPro:IPR018028 family match; the
+          experiment was not performed in the unmodified S288c reference isolate.
+    related_records:
+    - corpus: PathwayMech
+      identifier: gomodel:YeastPathways_DETOX1-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: superoxide radicals degradation in Saccharomyces
+        cerevisiae S288C (NCBITaxon:559292). The linked model explicitly includes
+        CTT1 (SGD:S000003320) catalase activity consuming hydrogen peroxide and producing
+        water and dioxygen, downstream of superoxide dismutation. This link concerns
+        that peroxide-removal component; it does not equate catalase with superoxide
+        dismutase or extend the bacterial PerR/OxyR regulatory branches to yeast.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: catalase_function
     label: catalase activity
     node_type: MOLECULAR_FUNCTION
@@ -121,6 +156,16 @@ causal_graphs:
     description: Synthesis of the heme cofactor required for catalase maturation and
       activity.
     grounding: GO:0006783
+    related_records:
+    - corpus: PathwayMech
+      identifier: gomodel:YeastPathways_HEME-BIOSYNTHESIS-II
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: heme b biosynthesis I (aerobic) in Saccharomyces
+        cerevisiae S288C (NCBITaxon:559292). This is one aerobic heme b synthesis
+        route supplying catalase cofactor context; alternative bacterial heme routes
+        and PerR/OxyR regulation are outside the linked record. No exact equivalence
+        or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   edges:
   - subject: catalase
     predicate: enables
@@ -354,4 +399,20 @@ curation_history:
     DOI:10.1038/nrmicro3032 -> DOI:10.1021/ja9018572 (1 edge); DOI:10.1038/nrmicro3032
     -> DOI:10.1073/pnas.96.11.6161 (1 edge); DOI:10.3390/biom14060697 -> DOI:10.1021/ja9018572
     (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
+    Appended a source-verified Ctt1 protein example with the UniProt strain taxon
+    and explicit experimental-strain and medium limits.
+  llm_assisted: true
+- timestamp: '2026-10-05T17:55:45Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned pathway context for the Ctt1 peroxide-removal component of
+    the yeast detoxification model, retaining the upstream heme context and primary-source-backed
+    Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
+    dismutase and bacterial regulatory branches.
   llm_assisted: true

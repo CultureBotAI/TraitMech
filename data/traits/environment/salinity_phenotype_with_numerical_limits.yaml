@@ -87,6 +87,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Sequential biosynthesis of L-proline by gamma-glutamyl kinase, GSA
       dehydrogenase, and P5C reductase.
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:PROSYN-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: L-proline biosynthesis I (from L-glutamate) in
+        Escherichia coli (NCBITaxon:562). The linked route synthesizes L-proline from
+        L-glutamate through the ProB/ProA/ProC enzyme sequence. No exact equivalence
+        or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: chaotropic_ions
     label: chaotropic ions (Mg/Ca/Li/Fe salts)
     node_type: CHEMICAL
@@ -291,4 +300,10 @@ curation_history:
     canonical example(s): Natranaerobius thermophilus (NCBITaxon:375929; DOI:10.1128/aem.00145-24).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true

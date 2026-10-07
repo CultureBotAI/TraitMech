@@ -98,6 +98,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Phosphotransacetylase/acetate kinase reaction set that produces ATP
       via SLP.
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:PWY0-1312
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: acetate and ATP formation from acetyl-CoA I in
+        Thermotoga maritima (NCBITaxon:2336). The linked route explicitly contains
+        phosphate acetyltransferase and acetate kinase and produces ATP through acetyl
+        phosphate. No exact equivalence or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: carbamate_kinase_arginine_deiminase
     label: carbamate kinase (arginine deiminase pathway)
     node_type: GENE_OR_PROTEIN
@@ -123,6 +132,16 @@ causal_graphs:
         notes: The primary study constructed the exact SF370 arcC deletion; UniProtKB
           Q99YT9 is the corresponding current unreviewed entry in reference proteome
           UP000000750.
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:ARGDEGRAD-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: L-arginine degradation V (arginine deiminase pathway)
+        in Halobacterium salinarum (NCBITaxon:2242). The linked arginine deiminase
+        route contains the ATP-forming carbamate kinase step; it does not assert that
+        the full pathway is equivalent to this enzyme node. No exact equivalence or
+        transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   edges:
   - subject: substrate_level_phosphorylation_trait
     predicate: occurs in
@@ -364,4 +383,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true

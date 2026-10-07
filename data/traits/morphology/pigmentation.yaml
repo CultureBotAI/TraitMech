@@ -57,6 +57,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Pathway producing C5 isoprenoid precursors (IPP and DMAPP) for terpenoid
       biosynthesis.
+    related_records:
+    - corpus: PathwayMech
+      identifier: gomodel:YeastPathways_IPPSYN-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: mevalonate pathway in Saccharomyces cerevisiae
+        S288C (NCBITaxon:559292). The shared mevalonate route supplies isoprenoid
+        precursors; the yeast pathway is context for the route, not evidence for bacterial
+        pigmentation. No exact equivalence or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: mep_pathway
     label: MEP pathway
     node_type: PATHWAY
@@ -73,6 +82,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Pathway providing aromatic precursors used in phenazine biosynthesis.
     grounding: GO:0009423
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:ARO-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: chorismate biosynthesis I in Escherichia coli (NCBITaxon:562).
+        The linked shikimate route terminates at chorismate; it provides precursor
+        context, not a complete phenazine or pigment pathway. No exact equivalence
+        or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: phenazine_biosynthesis
     label: phenazine biosynthesis
     node_type: PATHWAY
@@ -346,4 +364,10 @@ curation_history:
   changes: Added Serratia marcescens as a directly observed pigmentation example using
     wild-type SCQ1 red-colony prodigiosin evidence from DOI:10.3389/fmicb.2021.793202;
     verified the current species taxon and label through NCBI Taxonomy.
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true

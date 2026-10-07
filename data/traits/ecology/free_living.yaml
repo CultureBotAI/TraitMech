@@ -61,6 +61,14 @@ causal_graphs:
     label: ectoine biosynthetic pathway
     node_type: PATHWAY
     description: Biosynthesis of the compatible solute ectoine for osmoadaptation.
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:P101-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: ectoine biosynthesis in Halomonas elongata (NCBITaxon:2746).
+        The shared route synthesizes ectoine through EctB, EctA and EctC. No exact
+        equivalence or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: glycine_betaine_system
     label: glycine betaine transport/biosynthesis
     node_type: PATHWAY
@@ -71,6 +79,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Synthesis and transport of the compatible solute trehalose for stress
       protection.
+    related_records:
+    - corpus: PathwayMech
+      identifier: MetaCyc:TRESYN-PWY
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: trehalose biosynthesis I in Escherichia coli (NCBITaxon:562).
+        The linked OtsA/OtsB route illustrates trehalose synthesis only; it does not
+        cover the transport component of this node. No exact equivalence or transfer
+        of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: environmental_stress_tolerance
     label: stress tolerance in fluctuating environments
     node_type: BIOLOGICAL_PROCESS
@@ -264,6 +281,12 @@ curation_history:
   changes: Set the x-compatible-solute-partitioning knowledge gap to RESOLVED after
     its would_refute criterion was met and the resulting edge landed with two verified
     primary references. See issue 614.
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:21Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-d5aefedf82bb
