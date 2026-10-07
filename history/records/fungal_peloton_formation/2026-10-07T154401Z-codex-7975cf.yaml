@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_peloton_formation.yaml
+  slug: fungal_peloton_formation
+session:
+  id: 2026-10-07T154401Z-codex-7975cf
+  timestamp: '2026-10-07T15:44:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal peloton formation
+  details: Added PROPOSED traitmech:000666 with two primary DOI sources and a separately identified
+    review, three directly checked snippets, a natural-origin culture-qualified Tulasnella
+    calospora example, and open scope/mechanism discussions. Reserved METPO proposal v542
+    block 1061900-1061999 after ignored-and-hidden novelty and current main/local-worktree/open-PR
+    checks, keeping BAS PR 1788 reservations occupied. The dry-run-first guarded writer and
+    all 20 focused tests passed before application. Full proposal, corpus, online taxonomy,
+    snippet, artifact and browser gates remain required before merge. No causal graph or exact
+    external equivalence was asserted; no existing trait was edited.

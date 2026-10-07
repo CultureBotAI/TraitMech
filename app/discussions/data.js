@@ -9123,6 +9123,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "fungal-peloton-scope-and-hierarchy",
+  "prompt": "Resolve a closer parent without collapsing intracellular architectures.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal peloton formation",
+  "source_id": "traitmech:000666",
+  "source_file": "fungal_peloton_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. Spiral shaped METPO:1000684, branched shaped METPO:1000687 and filament shaped METPO:1000674 concern cell shape. Mycelial growth traitmech:000074 is explicitly bacterial. Fungal arbuscule formation traitmech:000664 concerns branched intracellular structures; hyphal anastomosis traitmech:000605 is fusion, pseudohyphal growth traitmech:000653 budding-cell chains, and haustorium formation traitmech:000663 a specialized host interface. None is an exact duplicate or settled closer parent. Fochi's orchid usage and Meyers' ericoid usage both inform the unqualified label. The review's Paris-type AM comparison does not make every intracellular coil a peloton or establish disjoint organisms. No exact synonyms, structure xrefs or SSSOM equivalences are asserted. Liverwort terminology in DOI:10.1098/rstb.2000.0617 remains an abstract-only analogy lead; its full text and figures were not inspected.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_peloton_formation.html#fungal-peloton-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-peloton-formation-versus-function",
+  "prompt": "Separate formation from nutrient transfer and proposed regulation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal peloton formation",
+  "source_id": "traitmech:000666",
+  "source_file": "fungal_peloton_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The phenotype does not require a measured nutrient flux, exclusive mutualism, a universal lifespan, or a specific plant-driven mechanism. Transcript associations and isolated transporter complementation do not establish the native formation pathway. Nutrient transfer before or during coil degeneration is a separate question from morphogenesis. A protein-resolved causal graph is deferred pending direct formation perturbations and authority-verified protein anchors; a mechanism is not claimed biologically absent. Keep the example's MUT4182 separate from Tulasnella sp. SV6 (MUT4178) studied in DOI:10.1186/s43008-024-00165-6: that paper uses AL13/4D as a reference genome, not as its culture.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_peloton_formation.html#fungal-peloton-formation-versus-function"
+ },
+ {
   "discussion_id": "fungal-rhizomorph-scope-and-hierarchy",
   "prompt": "Resolve rhizomorph/cord terminology and a closer fungal parent.",
   "kind": "CURATION_TODO",
@@ -12713,9 +12747,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 621,
- "total_knowledge_gaps": 406,
- "total_source_entries": 530,
+ "total_discussions": 623,
+ "total_knowledge_gaps": 407,
+ "total_source_entries": 531,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
