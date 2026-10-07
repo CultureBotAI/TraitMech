@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/microbial_haustorium_formation.yaml
+  slug: microbial_haustorium_formation
+session:
+  id: 2026-10-07T105906Z-codex-95ae40
+  timestamp: '2026-10-07T10:59:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified microbial haustorium formation
+  details: Added traitmech:000663 with four directly inspected DOI-backed source spans, a
+    field-observed Tremella mesenterica example, and explicit fungal/oomycete, membrane, engineering,
+    ontology and functional limits. Reserved METPO:1061600 in v539 while pending PR 1783 holds
+    traitmech:000662 and v538. Existing traits are unchanged. The guarded writer dry run and
+    20 focused tests passed before application; full corpus, proposal, taxonomy, snippet,
+    rendered artifact and PR checks remain pending at this event. No independent review or
+    merge is claimed.

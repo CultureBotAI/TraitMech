@@ -3,7 +3,7 @@ name: manage-identifiers
 description: TraitMech identifier policy and workflow — METPO-first by default, with a reserved `traitmech:NNNNNN` prefix for synthetic traits that aren't in METPO. Covers looking up the right ID, minting a fallback when needed, and validating ID hygiene across the corpus.
 category: workflow
 requires_database: false
-requires_internet: false
+requires_internet: true
 version: 1.0.0
 tags: [identifiers, metpo, ontology, curation]
 author: TraitMech Team
@@ -69,14 +69,14 @@ trait now rather than wait on an upstream METPO release. Every new fallback ID
 must be paired with a `proposals/metpo_traitmech_v<N>/` cohort in the same PR
 that reserves the proposed `METPO:` placeholder.
 
-### 1. Find the next available number
+### 1. Find a candidate, then check reservations
 
 ```bash
-# Highest existing traitmech: number across all trait YAMLs
+# Highest live traitmech: number in this checkout, not a global reservation
 rg --no-ignore --hidden -o "^identifier: traitmech:[0-9]{6}" data/traits/ \
   | awk -F: '{print $NF}' \
   | sort -n | tail -1
-# (no output = 000000 is free; mint 000001)
+# No output only means this checkout has no live fallback IDs.
 ```
 
 Or in Python:
@@ -90,8 +90,33 @@ for yaml_file in Path("data/traits").rglob("*.yaml"):
     text = yaml_file.read_text()
     for m in re.finditer(r"^identifier:\s*traitmech:(\d+)", text, re.MULTILINE):
         max_id = max(max_id, int(m.group(1)))
-print(f"Next traitmech ID: traitmech:{max_id + 1:06d}")
+print(f"Candidate requiring reservation checks: traitmech:{max_id + 1:06d}")
 ```
+
+Before assigning that candidate, check current main, local worktrees, and every
+relevant open PR, including drafts. A clean checkout can omit in-flight IDs,
+cohort names and whole reserved METPO blocks (#1785).
+
+```bash
+git fetch origin main
+git worktree list --porcelain
+gh api --paginate 'repos/CultureBotAI/TraitMech/pulls?state=open&per_page=100' \
+  --jq '.[] | [.number, .head.sha, .head.ref] | @tsv'
+```
+
+Inspect each PR's paginated changed-file list to identify trait/proposal
+changes; do not filter only by its title. Read the affected YAML, proposal TSVs
+and narratives at the reported head SHA, without switching another worktree.
+Check local worktrees' records, history and proposals with ignored-and-hidden
+searches as well. Treat published in-flight reservations as occupied even when
+the record is not on main, and account for the entire declared block, not just
+populated rows. Historical IDs are not freed by an absent live YAML file.
+
+Record the allocation evidence and relevant PR numbers in the new proposal.
+Recheck main and open PR heads immediately before publishing; this narrows but
+does not eliminate concurrent-allocation races. If remote reservation state is
+unavailable, continue research but do not claim a candidate is free or publish
+a new allocation until checked. Resolve any detected collision before merge.
 
 ### 2. Write the YAML
 

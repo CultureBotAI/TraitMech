@@ -228,7 +228,11 @@ TraitMech is METPO-first:
    suffix, and do not infer novelty from a target file merely existing under a
    temporary seed root.
 4. If METPO has no exact term and the trait is in scope, mint the next
-   zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
+   zero-padded `traitmech:NNNNNN` through `manage-identifiers`. Its reservation
+   check must include current main, local worktrees and pending PR heads,
+   including drafts, for the local ID, cohort and full METPO block. A local
+   maximum alone does not establish availability. Recheck before publishing
+   and record the relevant pending reservations in the proposal (#1785).
 5. Add or extend a METPO ROBOT-template proposal for every minted
    `traitmech:` ID. The same PR that adds the local record must reserve the
    upstream `METPO:` placeholder, document the round-trip path, and verify the
