@@ -136,8 +136,10 @@ Twenty writer tests and dry-run passed. LinkML and strict record validation,
 `just qc` (including strict corpus validation), `just validate-history`,
 `just validate-products`, proposal verification and ROBOT/ELK validation passed.
 All 65 focused writer, README, priority and QC-dashboard regression tests passed.
-Full pytest remains pending at this draft stage; its final result must be
-recorded before requesting merge. Ordinary staged whitespace checking flags
+The full pytest run passed all 3,085 collected tests with two dependency
+deprecation warnings. That run collected before the #1785 regression was added;
+all nine guidance tests, including the new regression, passed separately.
+Final writer dry-run, full-tree Ruff and PR sanity also passed. Ordinary staged whitespace checking flags
 only the class directive header's three required trailing blank cells. Both
 scoped checks passed: ordinary checking excluding that exact TSV, and checking
 that TSV with `core.whitespace=-blank-at-eol`. No global setting was changed.
