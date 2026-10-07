@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_hartig_net_formation.yaml
+  slug: fungal_hartig_net_formation
+session:
+  id: 2026-10-07T182323Z-codex-fbf6b0
+  timestamp: '2026-10-07T18:23:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-bounded fungal Hartig net formation
+  details: 'Added PROPOSED traitmech:000667 with three DOI-backed full-text snippets, an S238N-qualified
+    Laccaria bicolor example, and open hierarchy, mechanism and strain-identity limits. Ignored-and-hidden
+    novelty checks covered main, six worktrees, all seven pending PR heads and CommunityMech
+    proposals. Reserved v543 and the complete METPO 1062000-1062099 block after accounting
+    for BAS #1788 and peloton #1791. Writer dry run and 20 tests passed before applying through
+    write_validated_trait; record_curation_event marks LLM assistance. Full-text snippets
+    were checked directly; the maintained abstract resolver returned NOT_IN_ABSTRACT for all
+    three. No graph or external equivalence was asserted.'
