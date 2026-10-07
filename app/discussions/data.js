@@ -9004,6 +9004,57 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-stage-and-mechanism-grounding"
  },
  {
+  "discussion_id": "palmelloid-formation-scope-and-hierarchy",
+  "prompt": "Review a multicellular morphology parent and exact mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "palmelloid formation",
+  "source_id": "traitmech:000654",
+  "source_file": "palmelloid_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Herron et al. (2019) explicitly includes mother-wall retention and extracellular-gelatinous-material adhesion in palmelloid usage, whereas the 2022/2023 sources emphasize enclosed cells. Preserve both documented senses in the unqualified class; review whether separate children are warranted. Retain phenotype METPO:1000059: cell shape METPO:1000666 describes an individual cell and colony morphology METPO:1007062 is macroscopic. Obsolete cell arrangement METPO:1000046 and aggregate METPO:1000011 are not active parents. Biofilm formation traitmech:000053 requires surface attachment; rosette cell arrangement traitmech:000652 requires inward cell-pole orientation. Neither is required here. Palmelloid is not an exact synonym for any microbial aggregate, capsule, resting spore or normal transient pre-release sporangium. No xref or organism-level disjointness is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/palmelloid_formation.html#palmelloid-formation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "palmelloid-formation-mechanism-scope",
+  "prompt": "Resolve organism-specific cell-release mechanisms before graphing.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "palmelloid formation",
+  "source_id": "traitmech:000654",
+  "source_file": "palmelloid_formation.yaml",
+  "attaches_to": [],
+  "rationale": "A causal graph is deferred pending organism-specific perturbation and protein accession review. The 2023 proteome associations and proposed photoprotection do not establish that particular proteins cause palmelloid formation or that palmelloids are necessary for all high-light tolerance. Gene possession alone does not establish the phenotype. Do not transfer a cell-release mechanism to the extracellular-adhesion form. Four-to-sixteen cells, stress induction, loss of flagella, photoprotection and a particular cytokinesis or wall-remodelling defect are not universal requirements. For the wall-retained form, distinguish sustained enclosure from an ordinary division stage using organism-specific time courses; no universal persistence cutoff is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/palmelloid_formation.html#palmelloid-formation-mechanism-scope"
+ },
+ {
+  "discussion_id": "palmelloid-formation-cc4414-provenance",
+  "prompt": "Reconcile CC-4414 provenance before canonical-example promotion.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "palmelloid formation",
+  "source_id": "traitmech:000654",
+  "source_file": "palmelloid_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The 2023 paper and Chlamydomonas Resource Center describe CC-4414/DN2 as a field isolate: https://www.chlamycollection.org/product/cc-4414-wild-type-mt-dn2/ . However, Flowers et al. (2015), Results accompanying Figure 2, reports extensive identity-by-descent with laboratory strains and raises possible cross-contamination while retaining a distinct chromosome-16 segment: https://academic.oup.com/plcell/article/27/9/2353/6206349 . Both primary passages were directly read. This is a provenance uncertainty, not proof of engineering or contamination in the 2023 experimental stock. Preserve the observed high-light phenotype as qualified evidence, but omit CC-4414 from canonical examples pending reconciliation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/palmelloid_formation.html#palmelloid-formation-cc4414-provenance"
+ },
+ {
   "discussion_id": "pseudohyphal-growth-scope-and-hierarchy",
   "prompt": "Review a yeast growth-form parent and exact external mappings.",
   "kind": "CURATION_TODO",
@@ -12322,9 +12373,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 598,
- "total_knowledge_gaps": 395,
- "total_source_entries": 519,
+ "total_discussions": 601,
+ "total_knowledge_gaps": 396,
+ "total_source_entries": 520,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

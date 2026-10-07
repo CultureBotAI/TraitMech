@@ -315,6 +315,17 @@ or flatten separate field labels and values into a prose `snippet` (#1660).
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 
+For morphology labels, check for distinct established senses before adopting
+an unqualified name. Either support the documented scope or qualify the label;
+do not silently promote one paper's operational definition to a universal
+meaning. Attribute conflicting usages and keep their mechanisms separate
+(#1767).
+
+For numerical proportions, inspect the Methods' numerator, denominator and
+measurement unit. Image-area fractions, cluster fractions and individual-cell
+counts are not interchangeable, even when a figure caption calls them a
+percentage of cells. Preserve the measured quantity in evidence notes.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
