@@ -8987,6 +8987,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "fungal-conidiation-scope-and-hierarchy",
+  "prompt": "Review a reproductive phenotype parent and qualified mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal conidiation",
+  "source_id": "traitmech:000657",
+  "source_file": "fungal_conidiation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Sporulation METPO:1000870 and spore forming METPO:1000871 concern endospores, whereas mycelial growth traitmech:000074 concerns bacterial hyphae. The four obsolete METPO conidium/conidia classes denote material entities, not an active organismal phenotype. PMID:9199700 documents bacterial conidium usage, so the fungal qualifier is intentional. Synnema formation traitmech:000656 is stalk aggregation and includes sporeless forms; neither trait is imposed as the other's is-a parent. Pseudohyphal growth traitmech:000653 is a cell arrangement, not equivalent to conidial production. Leave exact synonyms and xrefs unset pending authority and scope review; process ontology classes need not be exact organismal phenotypes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-conidiation-development-and-mechanism",
+  "prompt": "Separate developmental routes and organism-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal conidiation",
+  "source_id": "traitmech:000657",
+  "source_file": "fungal_conidiation.yaml",
+  "attaches_to": [],
+  "rationale": "The class covers outgrowth and conversion of existing hyphal cells, rather than only one Aspergillus-like conidiophore architecture. Do not require an aerial stalk, a synnema, one cell or nucleus per conidium, a particular pigment, immediate detachment, dormancy or a universal nutritional trigger. Early proconidial chains alone need not establish committed development. Distinguish production from conidial germination, sexual spore formation and spores formed by cleavage within a sporangium. Do not infer the trait from a gene inventory or ordinary yeast budding without source identification of conidial production. A causal graph is deferred pending direct perturbation details, natural-strain provenance and taxon-paired protein accessions; no universal BrlA, WetA or autophagy dependence is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
+ },
+ {
   "discussion_id": "holdfast-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial holdfast morphology trait.",
   "kind": "CURATION_TODO",
@@ -12441,9 +12475,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 605,
- "total_knowledge_gaps": 398,
- "total_source_entries": 522,
+ "total_discussions": 607,
+ "total_knowledge_gaps": 399,
+ "total_source_entries": 523,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
