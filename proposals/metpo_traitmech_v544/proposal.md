@@ -198,6 +198,20 @@ absent in the worktree and original workspace; no embedding rebuild is
 claimed. Online NCBI resolved 745 canonical examples with zero errors and
 24 existing warnings. All 20 governed artifacts match the immutable pin.
 
+## Actual Predecessor Landings
+
+The dependency and scope statements above are historical validation receipts.
+Peloton landed as `4e7e8cd1ceaf7e74f9cfce18f8174c3edfe9b4dd`, and Hartig
+landed at 2026-10-07T23:48:11Z as
+`f9bd6b23517bc85f27af8dfdaae7d1d14a0e0454`. Both landed trees passed the
+maintained reconstruction check before their feature branches were deleted.
+This reconciliation incorporates that actual main; the final data/history
+scope is one mantle trait and one history record. The separate citation
+audit and all four discussion/dashboard/page generators are rerun, without
+choosing a side for generated conflicts. README counts are derived from
+the combined corpus. Final exact-head validation, preservation and review
+receipts belong to PR #1796; earlier checks are not renamed as new runs.
+
 ## Upstream Round Trip
 
 After review, submit the template and hierarchy question to METPO or the
