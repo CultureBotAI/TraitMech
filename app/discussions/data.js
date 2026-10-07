@@ -9259,6 +9259,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_rhizomorph_formation.html#fungal-rhizomorph-formation-and-function"
  },
  {
+  "discussion_id": "fungal-root-mantle-scope-and-hierarchy",
+  "prompt": "Resolve a closer morphology parent without conflating root interfaces.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal root mantle formation",
+  "source_id": "traitmech:000668",
+  "source_file": "fungal_root_mantle_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 under quality METPO:1000188; METPO:1000198 mycorrhization is obsolete. The root qualifier excludes other senses of mantle or sheath. Hartig net formation traitmech:000667 is intercellular within roots; arbuscules 000664 and pelotons 000666 are intracellular, while BAS 000665 are branching groups on extraradical runner hyphae. Mycelial growth 000074 is explicitly bacterial and capsule 000063 is a polymer layer around a cell, not hyphae around a plant root. Colony outline, cell shape, rhizosphere association and ecological symbiosis outcomes are not this architecture. The existing Hartig-net mantle mention is an evidence boundary, not an ungrounded node, synonym or parent-gap TODO requiring repair. Bare mantle and fungal sheath name structures, not formation phenotypes; no exact synonyms, xrefs or SSSOM equivalences are asserted. No organism-level disjointness or fixed thickness, color, host range or nutrient-transfer outcome is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_root_mantle_formation.html#fungal-root-mantle-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-root-mantle-mechanism-and-readout",
+  "prompt": "Separate mantle morphogenesis from bulk expression and perturbation effects.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal root mantle formation",
+  "source_id": "traitmech:000668",
+  "source_file": "fungal_root_mantle_formation.yaml",
+  "attaches_to": [],
+  "rationale": "A protein-resolved causal graph is deferred pending authority-verified proteins, sequence-to-culture links and inspection of the relevant perturbation images, not because mechanisms are absent. DOI:10.1128/AEM.01991-15 reports a thicker mantle in native ald1 overexpression; it does not establish an obligatory universal pathway. Its mte1 evidence is heterologous yeast growth rescue, not a native mantle-formation knockout. Keep increased thickness, first sheath formation, branching and plant responses separate. DOI:10.3390/microorganisms9122612 uses an EcM transcriptomic sample containing all fungal and mixed plant-fungal material within 0.5 cm of a root. Coexpression in that bulk sample is not mantle-specific localization or functional validation. The paper explicitly presents working models for future experimental tests.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_root_mantle_formation.html#fungal-root-mantle-mechanism-and-readout"
+ },
+ {
   "discussion_id": "fungal-sclerotium-identity-and-mapping",
   "prompt": "Reconcile legacy labels and the scope of sclerotial structures.",
   "kind": "CURATION_TODO",
@@ -12815,9 +12849,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 627,
- "total_knowledge_gaps": 409,
- "total_source_entries": 533,
+ "total_discussions": 629,
+ "total_knowledge_gaps": 410,
+ "total_source_entries": 534,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

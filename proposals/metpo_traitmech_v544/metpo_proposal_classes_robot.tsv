@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1062100	fungal root mantle formation	A morphological phenotype in which a fungus forms an external sheath of aggregated hyphae, called a mantle, around a plant root.	TraitMech:data/traits/morphology/fungal_root_mantle_formation.yaml|DOI:10.1128/AEM.01991-15|DOI:10.3389/fpls.2014.00229|DOI:10.3390/microorganisms9122612	METPO:1000059			metpo_traitmech_2026_10		Root-external hyphal sheath; distinct from Hartig net and nutrient-transfer outcome.	traitmech:000668
