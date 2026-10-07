@@ -159,6 +159,52 @@ or browser errors were observed; five screenshots were visually inspected.
 Scoped whitespace checks passed, preserving the class template's required
 three empty trailing directive cells as the sole exception.
 
+### Current Main Integration
+
+After BAS #1788 and pathway-context #1734 actually merged, the branch
+incorporated main `f7112cf664c9a54e05ab5e771b2d0366dae9f0b1` and regenerated
+all four maintained products. On integration head
+`7495b092be3c96285b64e39fc87588ffc26a9186`, all 18 local validation steps
+passed, including committed QC, 65 focused tests (529.45 seconds) and
+3,212 full-suite tests (1,203.93 seconds). This supersedes the earlier
+integration result above, not its historical provenance.
+
+The preservation audit overlays actual main on the tested peloton stack:
+1,061 prior YAMLs and 547 TSVs (536 class, six property, five SSSOM) remain
+exact, including main's 11 updated records. Its schema, renderer, pathway
+context index/pin, tests and protein-taxon report are preserved. Old history,
+proposal narratives, embedding products, discussion templates and the
+protected spore-germination record are unchanged. Existing-page differences
+are limited to the count footer and phenotype's expected children; no other
+priority row changes. Desktop/mobile checks passed again at 1,440/390 with
+the complete qualified example, snippets, discussions and loaded dashboard.
+
+Peloton #1791 remains a pending dependency. The main-based committed-history
+gate therefore reports two traits/two history records, not a standalone
+Hartig addition. Keep this PR draft until peloton actually lands, incorporate
+its actual main commit, regenerate affected products and recheck the final
+scope. Author adversarial review is not independent approval. Actual merge
+and reconstructed landed-tree verification precede branch deletion.
+
+### Verified Peloton Landing
+
+Peloton subsequently merged as `4e7e8cd1ceaf7e74f9cfce18f8174c3edfe9b4dd`;
+its reconstructed landed tree matched the reviewed head before branch cleanup.
+This branch incorporates that actual commit. The citation audit and all four
+product generators were rerun. Integration review caught residual conflict
+markers in the separate citation report (#1797); the maintained
+`audit-proposals` recipe regenerated it, without editing the report by hand.
+The failed whitespace checkpoint was not published as a passing result.
+
+After regeneration, the complete code, data, tests and generated-product tree
+matches full-suite-tested `290c89775855eae74564b2ab8bbfe4c9828d9751` exactly.
+Only landed add-trait guidance and the predecessor's validation note differ,
+plus this narrative. The current-main preservation audit again confirms 1,061
+prior YAMLs and 547 TSVs unchanged. The only old priority delta is phenotype's
+child count, 162 to 163. Rerun committed QC/history/products/PR sanity before
+publication, then require fresh final-head and merge-candidate CI. This is
+now a standalone Hartig addition, not a pending two-trait dependency stack.
+
 ## Upstream Round Trip
 
 After TraitMech review, submit the template and hierarchy question to METPO

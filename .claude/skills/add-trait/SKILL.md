@@ -656,6 +656,17 @@ broader gates:
 
 Then run the checks whose scope LinkML does not cover:
 
+Freshness gates use different comparison bases. Inspect the current
+`audit-derived-reports` recipe in `justfile` and its targeted remediation;
+do not generalize one report's working-tree or `HEAD` comparison base to all
+reports (#560). When a gate explicitly compares the committed copy, regeneration
+alone cannot clear a stale `HEAD`, including during an uncommitted main merge.
+After focused validation, regenerate and review the affected products, make a
+local checkpoint commit containing the intended changes, then rerun that gate
+and full QC on the committed tree before pushing. Working-tree freshness
+checks still clear through regeneration. Do not change baselines, weaken gates,
+or treat the pre-commit failure as a final validation pass (#1795).
+
 ```bash
 .venv/bin/python scripts/validate_strict.py data/traits/<category>/<slug>.yaml
 .venv/bin/python scripts/validate_history_links.py history/records/<slug>
