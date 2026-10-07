@@ -9174,6 +9174,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-stage-and-mechanism-grounding"
  },
  {
+  "discussion_id": "microbial-haustorium-scope-and-hierarchy",
+  "prompt": "Resolve a closer parent and the haustorium/arbuscule boundary.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "microbial haustorium formation",
+  "source_id": "traitmech:000663",
+  "source_file": "microbial_haustorium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. Fungal appressorium formation traitmech:000659 concerns surface-associated penetration structures, not this intimate host-cell interface. Plant pathogen METPO:1004003 is not a required parent because fungal hosts are supported. Mycorrhization METPO:1000198 is obsolete. Direct QuickGO authority checks resolve GO:0085035 haustorium as a cellular component and GO:0052094 formation of haustorium for nutrient acquisition as a biological process, not exact organism-level phenotypes. GO:0085041 arbuscule is an is_a child of GO:0085035, whereas literature often distinguishes arbuscules from parasitic haustoria. Preserve that attributed umbrella usage: the definition is not restricted to pathogenicity, but arbuscule formation is not asserted as an exact synonym or given a new hierarchy here. The GO membrane-invagination definition does not describe every tremelloid micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant haustorial organs are outside this microbial hyphal scope; fungi and oomycetes are both included.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/microbial_haustorium_formation.html#microbial-haustorium-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "microbial-haustorium-formation-and-function",
+  "prompt": "Separate observed formation from feeding and formation mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "microbial haustorium formation",
+  "source_id": "traitmech:000663",
+  "source_file": "microbial_haustorium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Haustorium formation alone does not demonstrate nutrient flux, effector delivery, pathogenicity, a universal shape or a shared membrane topology. Keep tremelloid cytoplasmic connections distinct from plant-pathogen extrahaustorial compartments. Attached filaments without an observed micropore are not proven successful feeding sites. Oomycete transformed imaging and source-specific likely/appeared language must remain visible; natural host means the host species, not an unmodified pathogen. Formation regulation requires direct perturbation evidence and authority-verified protein examples. The protein-resolved causal graph is deferred, not claimed to be biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/microbial_haustorium_formation.html#microbial-haustorium-formation-and-function"
+ },
+ {
   "discussion_id": "palmelloid-formation-scope-and-hierarchy",
   "prompt": "Review a multicellular morphology parent and exact mappings.",
   "kind": "CURATION_TODO",
@@ -12611,9 +12645,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 615,
- "total_knowledge_gaps": 403,
- "total_source_entries": 527,
+ "total_discussions": 617,
+ "total_knowledge_gaps": 404,
+ "total_source_entries": 528,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
