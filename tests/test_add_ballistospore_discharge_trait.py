@@ -59,6 +59,11 @@ def test_evidence_examples_and_limits():
     assert "calculated, not a directly measured range" in ballistics["notes"]
     assert "six launches" in ballistics["notes"]
     assert "image retrieval failed" in ballistics["notes"]
+    assert ballistics["snippet"] == (
+        "At the moment of fusion, Buller's drop snaps from the hilar appendix "
+        "onto the adjacent spore surface."
+    )
+    assert "Introduction, first paragraph" in ballistics["notes"]
     assert "asexually (ballistoconidia) or sexually (basidiospores)" in development["snippet"]
     assert "GI277" in development["notes"]
     assert "does not distinguish formation from discharge" in development["notes"]
@@ -153,5 +158,36 @@ def test_prevalidation_failure_writes_nothing(isolated, monkeypatch):
     monkeypatch.setattr(writer, "build_record", lambda: bad)
     before = snapshot(isolated)
     with pytest.raises(ValidationFailedError):
+        run(monkeypatch, True)
+    assert snapshot(isolated) == before
+
+
+def test_correction_preserves_initial_event_and_other_evidence():
+    initial, corrected = writer.build_initial_record(), writer.build_record()
+    assert corrected["curation_history"][:-1] == initial["curation_history"]
+    assert corrected["curation_history"][-1]["action"] == "CORRECTED_EVIDENCE_SNIPPET"
+    assert corrected["evidence"][1:] == initial["evidence"][1:]
+    assert all(corrected[k] == v for k, v in initial.items()
+               if k not in {"evidence", "curation_history"})
+
+
+def test_reviewed_initial_preimage_migrates_and_replays(isolated, monkeypatch):
+    writer.write_validated_trait(writer.build_initial_record(), writer.TARGET)
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    assert yaml.safe_load(writer.TARGET.read_text()) == writer.build_record()
+    after = snapshot(isolated)
+    assert run(monkeypatch, True) == 0
+    assert snapshot(isolated) == after
+
+
+def test_unreviewed_initial_preimage_is_refused(isolated, monkeypatch):
+    initial = writer.build_initial_record()
+    initial["evidence"][0]["notes"] += " Unreviewed drift."
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshot(isolated)
+    with pytest.raises(SystemExit, match="differs"):
         run(monkeypatch, True)
     assert snapshot(isolated) == before

@@ -10,10 +10,10 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: DOI:10.1371/journal.pone.0004163
-  snippet: is achieved by the formation and collapse of the Buller's drop on the wet
-    spore surface
-  notes: Stolze-Rybczynski et al. (2009), PMID:19129912, PMC2612744; Results and Discussion,
-    opening sentence, directly retrieved as publisher HTML and Europe PMC full-text
+  snippet: At the moment of fusion, Buller's drop snaps from the hilar appendix onto
+    the adjacent spore surface.
+  notes: Stolze-Rybczynski et al. (2009), PMID:19129912, PMC2612744; Introduction,
+    first paragraph, directly retrieved as publisher HTML and Europe PMC full-text
     XML. Abstract, Introduction, Results and Discussion, Table 1 and Methods were
     read. Seven basidiomycete species were analyzed by high-speed video; the yeast
     Sporobolomyces salmonicolor NPM01 had a measured mean launch speed of 1.42 +/-
@@ -99,4 +99,11 @@ curation_history:
     distinctions. Ignored-and-hidden searches and structured METPO review found no
     exact record. Reserved METPO:1061400 in v537; existing records unchanged. Physical
     mechanism evidence is retained; graph formalization is deferred.
+  llm_assisted: true
+- timestamp: '2026-10-07T09:12:00Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SNIPPET
+  changes: Replaced the subjectless Results fragment with a complete, exact Introduction
+    sentence describing Buller's-drop fusion (#1781). Updated the section locator;
+    retained the original minting event and all experimental and source-access qualifications.
   llm_assisted: true

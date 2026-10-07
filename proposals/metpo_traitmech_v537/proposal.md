@@ -65,9 +65,9 @@ preserve the hierarchy/mapping and mechanism/readout questions.
 The first paper is the strongest directly inspected identity source. The
 independent mechanical study is the strongest mechanism lead, but its full
 text was not audited. The three snippets are contiguous verbatim spans of
-16, 10 and 16 words. Manual exact comparisons to the retrieved text passed.
+17, 10 and 16 words. Manual exact comparisons to the retrieved text passed.
 The maintained snippet resolver returned **1 VERIFIED, 2 NOT_IN_ABSTRACT**:
-the first quotation is Results and Discussion and the second is Introduction,
+the first and second quotations are from their papers' Introductions,
 not abstracts. Manual full-text matches do not replace those resolver verdicts.
 
 The 2014 quotation is terminology, not new experimental proof comparing sexual
@@ -129,8 +129,9 @@ empty directive cells. It adds no property rows. METPO IRIs must use
 
 The guarded writer, `scripts/add_ballistospore_discharge_trait.py`, defaults
 to dry-run and prevalidates through `write_validated_trait`. It checks the
-eight-field phenotype parent projection, refuses altered target/template
-preimages, deep-copies its record and supports idempotent replay. It does not
+eight-field phenotype parent projection, accepts only the exact initial or
+corrected target preimage, refuses template drift, deep-copies its record and
+supports idempotent replay. It does not
 edit any existing TraitRecord. The per-record event is LLM-assisted. The
 append-only CREATE history record is
 `history/records/ballistospore_discharge/2026-10-07T084444Z-codex-95a938.yaml`;
@@ -143,14 +144,15 @@ manual snippet matches and the maintained resolver run completed with the
 qualified verdicts above. LinkML and closed-schema corpus validation,
 `just qc`, `just validate-history`, `just validate-products`, proposal
 verification, ROBOT/ELK and repository-wide Ruff passed. The 45 focused
-README, priority and QC-dashboard tests passed. Full pytest remains pending
-until the active process exits; PR and merge-queue results will be recorded
-on the pull request.
+README, priority and QC-dashboard tests passed. Before the review correction,
+full pytest passed 3,062 tests with two warnings. The corrected writer passes
+23 focused tests; post-correction QC, full PR CI and merge-queue results will
+be recorded on the pull request.
 
 The online canonical-example audit resolved all 738 examples across 553
 records, with zero errors and 24 existing label warnings. The new species ID
 and label also matched a direct NCBI taxonomy response. History validation
-found 1,140 valid records and zero invalid records. The snippet baseline was
+found 1,142 valid records after the correction and zero invalid records. The snippet baseline was
 not expanded; the audit found zero new findings. Existing audit warnings
 were retained rather than presented as newly resolved.
 
@@ -178,6 +180,25 @@ the required three trailing tabs in the ROBOT directive row. Both header
 widths were checked, and the documented exception was scoped to that exact
 TSV; all other staged files pass the ordinary check.
 
+## Adversarial Review Correction
+
+PR #1780 review filed #1781 because the initial Results snippet began with
+"is achieved" and lacked its subject. It was exact but not self-contained.
+The replacement is a complete 17-word Introduction sentence describing
+Buller's drop snapping onto the adjacent spore surface at fusion, matched
+directly to the primary XML. Its section locator and a new per-record
+`CORRECTED_EVIDENCE_SNIPPET` event preserve the change without rewriting the
+original minting event. Three added tests cover history preservation, exact
+initial-preimage migration/replay and refusal of unreviewed initial drift.
+The existing add-trait skill already prohibits this kind of shortened quote;
+no additional skill wording was needed.
+
+Repository history `2026-10-07T091232Z-codex-0bfe38.yaml` records the edit.
+Its accidental 21-word count is corrected to 17 by append-only AUDIT record
+`2026-10-07T091248Z-codex-168a56.yaml`; the actual quote was unchanged.
+Both records identify Codex explicitly and link #1781 and #1780. No definition,
+taxon, measurement, parent, proposal-template or other evidence claim changed.
+
 ## Upstream Path
 
 After TraitMech review, submit the TSV to berkeleybop/metpo or the kg-microbe
@@ -200,3 +221,5 @@ unreleased placeholder must not replace the live local ID prematurely.
 
 - 2026-10-07: v537 proposes ballistospore discharge with three cited snippets,
   an NPM01-qualified yeast example and explicit experimental/readout limits.
+- 2026-10-07: #1781 replaces the subjectless snippet with a complete source
+  sentence and retains append-only correction provenance.

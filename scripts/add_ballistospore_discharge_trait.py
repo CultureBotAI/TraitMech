@@ -187,7 +187,7 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def build_initial_record() -> dict:
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -200,6 +200,29 @@ def build_record() -> dict:
             "Physical mechanism evidence is retained; graph formalization is deferred."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_initial_record()
+    evidence = record["evidence"][0]
+    evidence["snippet"] = (
+        "At the moment of fusion, Buller's drop snaps from the hilar appendix "
+        "onto the adjacent spore surface."
+    )
+    evidence["notes"] = evidence["notes"].replace(
+        "Results and Discussion, opening sentence,", "Introduction, first paragraph,",
+    )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_EVIDENCE_SNIPPET",
+        changes=(
+            "Replaced the subjectless Results fragment with a complete, exact "
+            "Introduction sentence describing Buller's-drop fusion (#1781). "
+            "Updated the section locator; retained the original minting event "
+            "and all experimental and source-access qualifications."
+        ),
+        llm_assisted=True, timestamp="2026-10-07T09:12:00Z",
     )
     return record
 
@@ -231,7 +254,9 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (
+        build_initial_record(), record,
+    ):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")
