@@ -326,6 +326,11 @@ measurement unit. Image-area fractions, cluster fractions and individual-cell
 counts are not interchangeable, even when a figure caption calls them a
 percentage of cells. Preserve the measured quantity in evidence notes.
 
+When Results, Methods or captions disagree on an assay condition, attribute
+each description to its section and retain the discrepancy unless direct
+evidence resolves it. Do not silently choose one description for the record
+or proposal; distinguish the disputed condition from the supported phenotype.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
