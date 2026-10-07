@@ -186,6 +186,25 @@ its actual main commit, regenerate affected products and recheck the final
 scope. Author adversarial review is not independent approval. Actual merge
 and reconstructed landed-tree verification precede branch deletion.
 
+### Verified Peloton Landing
+
+Peloton subsequently merged as `4e7e8cd1ceaf7e74f9cfce18f8174c3edfe9b4dd`;
+its reconstructed landed tree matched the reviewed head before branch cleanup.
+This branch incorporates that actual commit. The citation audit and all four
+product generators were rerun. Integration review caught residual conflict
+markers in the separate citation report (#1797); the maintained
+`audit-proposals` recipe regenerated it, without editing the report by hand.
+The failed whitespace checkpoint was not published as a passing result.
+
+After regeneration, the complete code, data, tests and generated-product tree
+matches full-suite-tested `290c89775855eae74564b2ab8bbfe4c9828d9751` exactly.
+Only landed add-trait guidance and the predecessor's validation note differ,
+plus this narrative. The current-main preservation audit again confirms 1,061
+prior YAMLs and 547 TSVs unchanged. The only old priority delta is phenotype's
+child count, 162 to 163. Rerun committed QC/history/products/PR sanity before
+publication, then require fresh final-head and merge-candidate CI. This is
+now a standalone Hartig addition, not a pending two-trait dependency stack.
+
 ## Upstream Round Trip
 
 After TraitMech review, submit the template and hierarchy question to METPO
