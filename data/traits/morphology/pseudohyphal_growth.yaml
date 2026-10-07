@@ -1,0 +1,79 @@
+identifier: traitmech:000653
+label: pseudohyphal growth
+definition: A morphological phenotype in which elongated budding yeast cells remain
+  attached in chains with constrictions at the junctions between cells.
+definition_source: DOI:10.1590/S1517-83822013005000056
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1590/S1517-83822013005000056
+  snippet: pseudohyphae formed branched chains of elongated blastoconidial cells retaining
+    constrictions at the septal junctions
+  notes: Staniszewska et al. (2013), PMID:24516422, PMC3910194, Results subsection
+    Pseudohyphae. Full-text XML, strain/culture Methods, Table 1 and actual Figure
+    4 were inspected. Clinical isolate 82 forms pseudohyphae mixed with true hyphae
+    after six hours in serum; later hyphal predominance is not a contradictory same-time
+    observation. The quote is from Results, not the abstract. Numerical morphology
+    indices and serum induction conditions are study-specific, not universal trait
+    thresholds.
+- reference: DOI:10.1016/0092-8674(92)90079-r
+  snippet: Cells become long and thin and form pseudohyphae that grow away from the
+    colony and invade the agar medium.
+  notes: Gimeno et al. (1992), PMID:1547504, scientific abstract directly retrieved
+    through Europe PMC. Diploid Saccharomyces cerevisiae under nitrogen starvation
+    changes morphology and budding pattern. The abstract also reports RAS2, SHR3 and
+    RSR1/BUD1 perturbations. Full text and figures were not verified. Diploidy, nitrogen
+    starvation and agar invasion describe this study, not necessary conditions for
+    every pseudohyphal yeast.
+canonical_examples:
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  reference: DOI:10.1590/S1517-83822013005000056
+  note: Wild-type clinical bloodstream isolate 82, cultured in undiluted human serum
+    for six hours at 37 C. Results and Figure 4A,C show pseudohyphae in a mixed population,
+    not every cell or culture stage. Table 1 and Methods identify its clinical origin
+    separately from the engineered comparison strains. This is an in-vitro morphology
+    observation, not proof of pseudohyphae in the patient's bloodstream. NCBI Taxonomy
+    resolves the species identifier and label.
+discussions:
+- discussion_id: pseudohyphal-growth-scope-and-hierarchy
+  prompt: Review a yeast growth-form parent and exact external mappings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Retain phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly
+    bacterial. Filament shaped METPO:1000674 has a broad hypha-like description but
+    is classified under individual cell shape METPO:1000666; this record denotes attached
+    budding-cell chains, not merely an elongated cell. Colony morphology METPO:1007062
+    concerns macroscopic colonies, not this microscopic growth form. Obsolete cell
+    arrangement METPO:1000046 is not an active parent. Do not equate pseudohyphae
+    with uninterrupted true hyphae, disordered aggregation, or every filamentous form.
+    No exact synonym or xref is asserted. Different forms may coexist in one culture;
+    this is not organism-level disjointness.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: pseudohyphal-growth-mechanism-scope
+  prompt: Resolve organism-specific morphogenesis mechanisms before graphing.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: A causal graph is deferred pending full perturbation and protein-accession
+    review, not because mechanisms are unknown. Do not transfer the 1992 budding-pattern
+    or ploidy constraints to all yeasts, or treat the Candida comparison mutants as
+    natural canonical examples. Gene possession alone does not establish pseudohyphal
+    growth. Serum exposure, branching, agar invasion, numerical aspect-ratio cutoffs
+    and virulence are not universal requirements. The 2013 study's bloodstream pathogenesis
+    discussion does not directly demonstrate a pseudohypha-specific virulence mechanism.
+    Additional Saccharomyces examples need direct strain-provenance review.
+  posed_by: codex
+  posed_date: '2026-10-06'
+curation_history:
+- timestamp: '2026-10-06T23:54:28Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added pseudohyphal growth with two DOI-backed snippets, a condition-qualified
+    clinical-isolate example, and explicit growth-form and mechanism limits. Ignored-and-hidden
+    novelty searches and structured METPO review found no exact record. Reserved METPO:1060600
+    in v529; existing records unchanged.
+  llm_assisted: true
