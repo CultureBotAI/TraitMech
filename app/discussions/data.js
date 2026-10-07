@@ -9157,6 +9157,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/rosette_cell_arrangement.html#rosette-cell-arrangement-mechanism-scope"
  },
  {
+  "discussion_id": "synnema-formation-scope-and-hierarchy",
+  "prompt": "Review a fungal reproductive morphology parent and terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "synnema formation",
+  "source_id": "traitmech:000656",
+  "source_file": "synnema_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Sporulation METPO:1000870 and spore forming METPO:1000871 explicitly concern bacterial endospores; mycelial growth traitmech:000074 explicitly concerns bacterial hyphae. Hyphal anastomosis traitmech:000605 requires cytoplasmic continuity, not mere bundling. Pseudohyphal growth traitmech:000653 concerns chains of budding yeast cells. None is an exact duplicate or appropriate parent. Zetina-Serrano uses coremia for conidiophore clusters and synnemata for sporeless hyphal stalks; Watkinson uses coremia across developmental stages. Do not force these usages into an exact synonym. No exact external mapping or organism-level disjointness is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/synnema_formation.html#synnema-formation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "synnema-formation-development-and-mechanism",
+  "prompt": "Resolve stage-specific mechanisms before adding a causal graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "synnema formation",
+  "source_id": "traitmech:000656",
+  "source_file": "synnema_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The fertile-form qualifier preserves the documented sporeless synnemata of the brlA-null P. expansum strain. Formation does not require already mature conidiophores or conidia, a universal shape, size, color, spore wetness, growth medium or nutritional trigger. BrlA perturbation separates developmental stages in that experiment; it does not establish a universal stalk-formation gene or a mechanism in Cephalotrichum. Defer a causal graph pending organism-specific perturbations and accession-level review. Gene possession alone does not establish this phenotype. Use the 2017 paper's directly examined CBS 209.63 material, not older sequences attributed to CBS 159.66 that the authors identify as erroneous.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/synnema_formation.html#synnema-formation-development-and-mechanism"
+ },
+ {
   "discussion_id": "catalase-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -12407,9 +12441,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 603,
- "total_knowledge_gaps": 397,
- "total_source_entries": 521,
+ "total_discussions": 605,
+ "total_knowledge_gaps": 398,
+ "total_source_entries": 522,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
