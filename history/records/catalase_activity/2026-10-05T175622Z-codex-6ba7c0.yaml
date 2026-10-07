@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/catalase_activity.yaml
+  slug: catalase_activity
+session:
+  id: 2026-10-05T175622Z-codex-6ba7c0
+  timestamp: '2026-10-05T17:56:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - related_records
+  summary: Connect the Ctt1 example to its peroxide-removal pathway component
+  details: 'Follow-up to the pathway context bulk change: the new P06115 Ctt1 example overlaps
+    PathwayMech gomodel:YeastPathways_DETOX1-PWY. Verified that the pinned source explicitly
+    names SGD:S000003320 and its catalase reaction consuming hydrogen peroxide and producing
+    water and dioxygen. Added a PATHWAY_CONTEXT link on the catalase node, expressly excluding
+    superoxide-dismutase equivalence and bacterial regulatory scope. Final manifest contains
+    19 links on 17 nodes in 11 traits to 15 PathwayMech records. All changes use the guarded
+    writer and preserve the existing example evidence.'

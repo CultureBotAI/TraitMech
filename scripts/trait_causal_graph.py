@@ -3,7 +3,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 NODE_COLORS = {
     "TRAIT": "#dbeafe",
     "PATHWAY": "#e0e7ff",
@@ -67,6 +66,7 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
                 "xrefs": raw.get("xrefs") or [],
                 "description": raw.get("description"),
                 "protein_examples": raw.get("protein_examples") or [],
+                "related_records": raw.get("related_records") or [],
                 "is_orphan": False,
             })
         else:
@@ -120,6 +120,21 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
                 **example,
             })
 
+    pathway_context_rows = []
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        for link in node.get("related_records") or []:
+            if not isinstance(link, dict) or link.get("corpus") != "PathwayMech":
+                continue
+            slug = str(link.get("identifier", "")).replace(":", "_").replace("/", "_")
+            pathway_context_rows.append({
+                "node_label": node.get("label") or node.get("node_id"),
+                **link,
+                "url": "https://culturebotai.github.io/PathwayMech/pages/records/"
+                       + slug + ".html",
+            })
+
     return {
         "graph_id": graph.get("graph_id") or "causal-graph",
         "title": graph.get("title") or "Causal graph",
@@ -131,6 +146,7 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
         "issues": issues,
         "evidence_rows": evidence_rows,
         "protein_example_rows": protein_example_rows,
+        "pathway_context_rows": pathway_context_rows,
     }
 
 
