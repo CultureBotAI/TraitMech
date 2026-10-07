@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/microbial_haustorium_formation.yaml
+  slug: microbial_haustorium_formation
+session:
+  id: 2026-10-07T132517Z-codex-b76f8d
+  timestamp: '2026-10-07T13:25:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link arbuscule phenotype in the haustorium boundary discussion
+  details: Appended traitmech:000664 as the explicit arbuscule formation reference without
+    closing the hierarchy question or asserting subclass, equivalence or disjointness. Identity,
+    parents, evidence and examples are unchanged. Full semantic preimage guarded; mutation
+    uses write_validated_trait and record_curation_event. Writer dry run and 27 focused tests
+    passed; broad validation remains pending.

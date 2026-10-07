@@ -9021,6 +9021,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_appressorium_formation.html#fungal-appressorium-function-and-mechanism"
  },
  {
+  "discussion_id": "fungal-arbuscule-scope-and-hierarchy",
+  "prompt": "Resolve the phenotype parent and attributed haustorium umbrella.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal arbuscule formation",
+  "source_id": "traitmech:000664",
+  "source_file": "fungal_arbuscule_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059; METPO:1000198 mycorrhization is obsolete. Mutualism traitmech:000041 requires reciprocal benefit, which formation alone does not establish. Direct QuickGO checks identify GO:0085041 arbuscule as a cellular component below GO:0085035 haustorium. This attributed umbrella classification is not silently rejected: microbial haustorium formation traitmech:000663 and this formation phenotype are not asserted equivalent, disjoint or in a subclass relation. GO's root-cortex wording is narrower than the liverwort observations, and a structure is not an organism-level phenotype. No exact xrefs, synonyms or SSSOM mappings are asserted. Plant cells includes thallus cells; within-cell location does not mean free in host cytoplasm.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_arbuscule_formation.html#fungal-arbuscule-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-arbuscule-formation-and-function",
+  "prompt": "Separate formation, timing and nutrient-exchange mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal arbuscule formation",
+  "source_id": "traitmech:000664",
+  "source_file": "fungal_arbuscule_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Do not infer nutrient flux, obligatory benefit, universal onset or lifespan from these morphology observations. Keep the 2019 main-text/supplement timing discrepancy open. The 2009 host membrane markers do not identify a fungal formation pathway. A protein-resolved causal graph needs direct perturbation evidence and authority-verified protein examples; it is deferred, not claimed absent. Extraradical branching alone does not satisfy this intracellular morphology definition.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_arbuscule_formation.html#fungal-arbuscule-formation-and-function"
+ },
+ {
   "discussion_id": "fungal-chlamydospore-scope-and-hierarchy",
   "prompt": "Resolve conidiation, dormancy and process-ontology mappings.",
   "kind": "CURATION_TODO",
@@ -9217,7 +9251,7 @@ window.searchData = [
   "source_id": "traitmech:000663",
   "source_file": "microbial_haustorium_formation.yaml",
   "attaches_to": [],
-  "rationale": "Use phenotype METPO:1000059. Fungal appressorium formation traitmech:000659 concerns surface-associated penetration structures, not this intimate host-cell interface. Plant pathogen METPO:1004003 is not a required parent because fungal hosts are supported. Mycorrhization METPO:1000198 is obsolete. Direct QuickGO authority checks resolve GO:0085035 haustorium as a cellular component and GO:0052094 formation of haustorium for nutrient acquisition as a biological process, not exact organism-level phenotypes. GO:0085041 arbuscule is an is_a child of GO:0085035, whereas literature often distinguishes arbuscules from parasitic haustoria. Preserve that attributed umbrella usage: the definition is not restricted to pathogenicity, but arbuscule formation is not asserted as an exact synonym or given a new hierarchy here. The GO membrane-invagination definition does not describe every tremelloid micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant haustorial organs are outside this microbial hyphal scope; fungi and oomycetes are both included.",
+  "rationale": "Use phenotype METPO:1000059. Fungal appressorium formation traitmech:000659 concerns surface-associated penetration structures, not this intimate host-cell interface. Plant pathogen METPO:1004003 is not a required parent because fungal hosts are supported. Mycorrhization METPO:1000198 is obsolete. Direct QuickGO authority checks resolve GO:0085035 haustorium as a cellular component and GO:0052094 formation of haustorium for nutrient acquisition as a biological process, not exact organism-level phenotypes. GO:0085041 arbuscule is an is_a child of GO:0085035, whereas literature often distinguishes arbuscules from parasitic haustoria. Preserve that attributed umbrella usage: the definition is not restricted to pathogenicity, but arbuscule formation is not asserted as an exact synonym or given a new hierarchy here. The GO membrane-invagination definition does not describe every tremelloid micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant haustorial organs are outside this microbial hyphal scope; fungi and oomycetes are both included. Fungal arbuscule formation now has its own source-bounded phenotype record, traitmech:000664. This resolves the missing record reference, not the umbrella hierarchy question; no subclass or disjointness relationship between these two phenotypes is asserted.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -12679,9 +12713,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 619,
- "total_knowledge_gaps": 405,
- "total_source_entries": 529,
+ "total_discussions": 621,
+ "total_knowledge_gaps": 406,
+ "total_source_entries": 530,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

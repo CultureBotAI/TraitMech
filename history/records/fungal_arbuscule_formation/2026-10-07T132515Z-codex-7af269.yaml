@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_arbuscule_formation.yaml
+  slug: fungal_arbuscule_formation
+session:
+  id: 2026-10-07T132515Z-codex-7af269
+  timestamp: '2026-10-07T13:25:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add fungal arbuscule formation with root and thallus evidence
+  details: Added traitmech:000664 as PROPOSED with DOI:10.1104/pp.109.141879 and DOI:10.3390/plants8060142,
+    two directly checked verbatim snippets, a provenance-qualified MAFF520053 example and
+    explicit ontology, host-marker and timing limits. Reserved v540 and METPO:1061700 within
+    1061700-1061799 after ignored-and-hidden main/worktree/open-PR checks. Writer dry run
+    and 27 focused tests passed; broad validation and review remain pending. No causal graph
+    is asserted.

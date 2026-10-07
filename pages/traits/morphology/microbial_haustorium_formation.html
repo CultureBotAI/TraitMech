@@ -171,7 +171,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Use phenotype METPO:1000059. Fungal appressorium formation traitmech:000659 concerns surface-associated penetration structures, not this intimate host-cell interface. Plant pathogen METPO:1004003 is not a required parent because fungal hosts are supported. Mycorrhization METPO:1000198 is obsolete. Direct QuickGO authority checks resolve GO:0085035 haustorium as a cellular component and GO:0052094 formation of haustorium for nutrient acquisition as a biological process, not exact organism-level phenotypes. GO:0085041 arbuscule is an is_a child of GO:0085035, whereas literature often distinguishes arbuscules from parasitic haustoria. Preserve that attributed umbrella usage: the definition is not restricted to pathogenicity, but arbuscule formation is not asserted as an exact synonym or given a new hierarchy here. The GO membrane-invagination definition does not describe every tremelloid micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant haustorial organs are outside this microbial hyphal scope; fungi and oomycetes are both included.</p>
+        <p>Use phenotype METPO:1000059. Fungal appressorium formation traitmech:000659 concerns surface-associated penetration structures, not this intimate host-cell interface. Plant pathogen METPO:1004003 is not a required parent because fungal hosts are supported. Mycorrhization METPO:1000198 is obsolete. Direct QuickGO authority checks resolve GO:0085035 haustorium as a cellular component and GO:0052094 formation of haustorium for nutrient acquisition as a biological process, not exact organism-level phenotypes. GO:0085041 arbuscule is an is_a child of GO:0085035, whereas literature often distinguishes arbuscules from parasitic haustoria. Preserve that attributed umbrella usage: the definition is not restricted to pathogenicity, but arbuscule formation is not asserted as an exact synonym or given a new hierarchy here. The GO membrane-invagination definition does not describe every tremelloid micropore interface. No xrefs or SSSOM equivalences are asserted. Parasitic-plant haustorial organs are outside this microbial hyphal scope; fungi and oomycetes are both included. Fungal arbuscule formation now has its own source-bounded phenotype record, traitmech:000664. This resolves the missing record reference, not the umbrella hierarchy question; no subclass or disjointness relationship between these two phenotypes is asserted.</p>
 
 
 
@@ -226,6 +226,12 @@
           <p class="changes">Added microbial haustorium formation with four source-backed snippets, a field-qualified Tremella example and explicit interface, engineering and ontology limits. Ignored-and-hidden novelty checks found no exact record. Reserved METPO:1061600 in v539, avoiding pending v538. Existing traits unchanged; protein-level formation graph deferred.</p>
         </li>
 
+        <li>
+          <time>2026-10-07T13:21:20Z</time> ·
+          <strong>LINK_ARBUSCULE_DISCUSSION</strong> · codex
+          <p class="changes">Linked the existing arbuscule boundary discussion to traitmech:000664; retained OPEN status and deferred subclass, equivalence and disjointness. No haustorium identity, evidence, examples or parent changed.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -235,6 +241,12 @@
           <ul><li><strong>CREATE</strong> — Add source-qualified microbial haustorium formation
             <p>Added traitmech:000663 with four directly inspected DOI-backed source spans, a field-observed Tremella mesenterica example, and explicit fungal/oomycete, membrane, engineering, ontology and functional limits. Reserved METPO:1061600 in v539 while pending PR 1783 holds traitmech:000662 and v538. Existing traits are unchanged. The guarded writer dry run and 20 focused tests passed before application; full corpus, proposal, taxonomy, snippet, rendered artifact and PR checks remain pending at this event. No independent review or merge is claimed.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/microbial_haustorium_formation/2026-10-07T105906Z-codex-95ae40.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-07T13:25:17Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Link arbuscule phenotype in the haustorium boundary discussion
+            <p>Appended traitmech:000664 as the explicit arbuscule formation reference without closing the hierarchy question or asserting subclass, equivalence or disjointness. Identity, parents, evidence and examples are unchanged. Full semantic preimage guarded; mutation uses write_validated_trait and record_curation_event. Writer dry run and 27 focused tests passed; broad validation remains pending.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/microbial_haustorium_formation/2026-10-07T132517Z-codex-b76f8d.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -290,10 +302,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-07 10:59 UTC
+      Record as of 2026-10-07 13:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1058 TraitRecords
-      · embedding coverage 45.1%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
