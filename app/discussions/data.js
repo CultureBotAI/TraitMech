@@ -9157,6 +9157,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "fungal-hartig-net-scope-and-hierarchy",
+  "prompt": "Resolve a closer morphology parent without collapsing root interfaces.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal Hartig net formation",
+  "source_id": "traitmech:000667",
+  "source_file": "fungal_hartig_net_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 under quality METPO:1000188. METPO:1000198 mycorrhization is obsolete. Branched shaped METPO:1000687 concerns cell shape; mycelial growth traitmech:000074 is explicitly bacterial. Arbuscule formation 000664 and peloton formation 000666 concern intracellular architectures; BAS formation 000665 is extraradical. Haustorium formation 000663 is not asserted exact, broader or disjoint. Ecological symbiosis, mutualism and endosymbiosis are not this network morphology. Arbutoid usage is directly supported above. The directly retrieved PubMed abstract for DOI:10.1007/s00572-004-0305-6 (PMID:15490255) also describes paraepidermal Hartig nets in field-collected Monotropa uniflora and Pterospora andromedea roots; its full text and figures remain unread, and no fungal taxon is inferred. The label is not restricted to one mycorrhizal category, root cell layer or host species. No exact synonyms, structure xrefs or SSSOM equivalences are asserted; a bare Hartig net names a structure, not its formation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_hartig_net_formation.html#fungal-hartig-net-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-hartig-net-mechanism-and-culture-identity",
+  "prompt": "Keep morphogenesis, symbiotic function and sequence identity separate.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal Hartig net formation",
+  "source_id": "traitmech:000667",
+  "source_file": "fungal_hartig_net_formation.yaml",
+  "attaches_to": [],
+  "rationale": "No universal nutrient-transfer rate, mutualistic outcome or cell-wall mechanism is part of the definition. Native RNAi perturbations are evidence leads, not proof that the entire network is absent; heterologous and purified-protein assays are separate. DOI:10.1111/nph.18358, directly read main text and actual Figures 3 and 8, reports shallower RNAi networks and deeper overexpression networks despite lower overall ectomycorrhizal frequency. Its T89 host is not INRA 717-1-B4, and Figure 8a/c are schematics. A causal graph is deferred pending authority-verified proteins and sequence-to-culture links, not because mechanisms are biologically absent. Keep S238N distinct from H82 reference/progeny material. The laboratory history calls an Oregon-derived antecedent S238-O, whereas DOI:10.7150/jgen.130158 assigns S238O to Quebec; those source-specific aliases are not silently equated.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_hartig_net_formation.html#fungal-hartig-net-mechanism-and-culture-identity"
+ },
+ {
   "discussion_id": "fungal-peloton-scope-and-hierarchy",
   "prompt": "Resolve a closer parent without collapsing intracellular architectures.",
   "kind": "CURATION_TODO",
@@ -12781,9 +12815,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 625,
- "total_knowledge_gaps": 408,
- "total_source_entries": 532,
+ "total_discussions": 627,
+ "total_knowledge_gaps": 409,
+ "total_source_entries": 533,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
