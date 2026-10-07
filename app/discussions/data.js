@@ -9055,6 +9055,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_arbuscule_formation.html#fungal-arbuscule-formation-and-function"
  },
  {
+  "discussion_id": "fungal-bas-scope-and-hierarchy",
+  "prompt": "Resolve a closer parent while preserving BAS morphology scope.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal branched absorbing structure formation",
+  "source_id": "traitmech:000665",
+  "source_file": "fungal_branched_absorbing_structure_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. Branched shaped METPO:1000687 and filament shaped METPO:1000674 classify cell shape, not this differentiated extraradical architecture. Mycelial growth traitmech:000074 is explicitly bacterial. Fungal arbuscule formation traitmech:000664 concerns structures within living plant cells; the historical arbuscule-like structures name does not make BAS intracellular arbuscules. Appressorium formation traitmech:000659 concerns penetration structures, hyphal anastomosis traitmech:000605 fusion, and pseudohyphal growth traitmech:000653 budding-cell chains. Bago et al. also distinguish pre-infection fan-like structures and aborted short branches. No exact synonyms, structure xrefs, SSSOM equivalences or disjoint-organism claims are asserted. A closer morphology parent needs upstream review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_branched_absorbing_structure_formation.html#fungal-bas-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-bas-formation-and-function",
+  "prompt": "Separate formation from absorption, host dependence and mechanism.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal branched absorbing structure formation",
+  "source_id": "traitmech:000665",
+  "source_file": "fungal_branched_absorbing_structure_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Absorbing is the established structure name, not a required flux measurement. Do not infer mineral uptake, obligatory host contact, universal timing, inevitable degeneration or sporulation from morphology. Bago et al.'s host-dependence interpretation describes their tested media; later asymbiotic growth work DOI:10.1073/pnas.2006948117 remains a BAS-specific full-text/figure follow-up, not counted BAS evidence here. Transcriptional associations in Kameoka et al. do not identify a causal formation pathway. Their in vitro host system also does not establish expression patterns in soil-grown intact plants. A protein-resolved graph is deferred pending direct perturbation evidence and authority-verified protein anchors; it is not claimed biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_branched_absorbing_structure_formation.html#fungal-bas-formation-and-function"
+ },
+ {
   "discussion_id": "fungal-chlamydospore-scope-and-hierarchy",
   "prompt": "Resolve conidiation, dormancy and process-ontology mappings.",
   "kind": "CURATION_TODO",
@@ -12747,9 +12781,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 623,
- "total_knowledge_gaps": 407,
- "total_source_entries": 531,
+ "total_discussions": 625,
+ "total_knowledge_gaps": 408,
+ "total_source_entries": 532,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

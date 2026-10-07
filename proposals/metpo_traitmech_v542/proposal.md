@@ -3,7 +3,8 @@
 ## Context and Scope
 
 Propose `traitmech:000666 fungal peloton formation`, a PROPOSED MORPHOLOGY
-class, from main `8e9a7b7c121e41e595c6161e6c0e925b6b42ec17`. It denotes a
+class, initially developed from main
+`8e9a7b7c121e41e595c6161e6c0e925b6b42ec17`. It denotes a
 fungal morphological phenotype, not a plant observation, a bare structure,
 a sequence feature, or a nutrient-transfer assertion.
 
@@ -87,8 +88,9 @@ authority-verified protein evidence.
 ## ID Space and Templates
 
 Reserve `traitmech:000666`, cohort v542, and `METPO:1061900` within the
-whole block `1061900-1061999`, subset `metpo_traitmech_2026_10`. The current
-main maximum is 664; pending BAS #1788 reserves 665, v541 and the entire
+whole block `1061900-1061999`, subset `metpo_traitmech_2026_10`. The
+main maximum at that allocation checkpoint was 664; pending BAS #1788
+reserved 665, v541 and the entire
 1061800-1061899 block. These pending reservations are occupied even before
 merge. Local main, all local worktrees, complete paginated open PR files
 (including drafts), historical records and CommunityMech proposals were
@@ -132,7 +134,8 @@ target/template replay, uses `record_curation_event` and
 `write_validated_trait`, and does not edit existing traits. Repository
 history is scaffolded with the actual Codex actor and remains append-only.
 
-Local verification passed: all 20 writer tests and the pre-application dry
+Initial standalone-draft verification at `0893c2ca5cf8aa19bb291be4de5e2ef2d36c26f3`
+passed: all 20 writer tests and the pre-application dry
 run; direct LinkML/strict, proposal/ROBOT/ELK and RDF checks; full-tree Ruff;
 history/products; corpus QC; and all 20 pinned vendored artifacts. The
 focused suite passed 65 tests in 279.98 seconds and full pytest passed
@@ -156,9 +159,45 @@ Required before merge: writer/full tests, LinkML and strict validation,
 proposal/ROBOT verification and RDF inspection, snippet verification,
 online taxonomy, history/products, QC, derived-product preservation and
 browser checks. Record actual outcomes on the PR; do not infer a pass from
-the existence of this checklist. This isolated branch does not include BAS;
-after BAS lands, merge main and regenerate affected products through their
-maintained recipes before publishing a final reviewed head.
+the existence of this checklist.
+
+### Combined Draft Refresh
+
+While #1788 remained in the native queue with all required candidate checks
+passing, its exact reviewed head
+`7117fa563b54d61be07e3f1b6ead785794926506` was incorporated into this draft.
+All 14 conflicts were generated HTML; no trait or history record conflicted.
+The combined corpus contains 1,061 records, including 111 morphology records
+with 19 PROPOSED entries. Shared products are regenerated through maintained
+recipes, not resolved by choosing one side.
+
+The combined 18-step validation run passed, including full QC, history,
+products, LinkML/strict, proposal/ROBOT, RDF and Ruff. The focused suite passed
+65 tests in 329.71 seconds; full pytest passed 3,173 tests in 653.56 seconds.
+Online taxonomy resolved 743 examples with zero errors and 24 existing
+warnings. All 20 governed artifacts match the pinned canonical source.
+
+Against BAS's exact reviewed head, all 1,060 prior YAMLs, histories, proposal
+narratives and 546 historical TSVs remain byte-identical (535 class, six
+property, five SSSOM). Of the prior trait pages, 1,059 differ only in their
+footer; the phenotype page also gains the peloton child (161 to 162).
+Desktop/mobile browser checks at 1,440/390 pixels passed with live count
+1,061, and the screenshots were inspected. The ordinary staged whitespace
+check flags only the imported BAS template's three required empty header
+cells; byte identity, 11-column widths and exact-path scoped checks passed.
+
+A renewed complete seven-PR snapshot includes this draft at its previously
+published head and all six other immutable heads listed above, unchanged.
+An ignored-and-hidden search of other worktrees, non-self pending artifacts
+and CommunityMech proposals found no competing ID, cohort or full-block use
+across 51,396 searched files. This is a reservation check, not global trait
+exhaustion.
+
+The directly related skill/queue documentation fix for #1792 distinguishes
+auto-merge from actual native queue membership, preserves the exact-head
+guard, and requires landed-tree reconstruction before branch deletion.
+After BAS actually lands, incorporate its published main commit and verify
+the final tree and all affected products before marking this PR ready.
 
 ## Upstream Round Trip
 
