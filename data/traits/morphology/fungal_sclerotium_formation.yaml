@@ -1,0 +1,124 @@
+identifier: traitmech:000660
+label: fungal sclerotium formation
+definition: A morphological phenotype in which a fungus forms compact mycelial resting
+  bodies called sclerotia.
+definition_source: DOI:10.1128/AEM.00565-08
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1128/AEM.00565-08
+  snippet: Aspergillus flavus differentiates to produce asexual dispersing spores
+    (conidia) or overwintering survival structures called sclerotia.
+  notes: Horowitz Brown et al. (2008), PMID:18658287, PMC2547031; scientific abstract
+    retrieved through Europe PMC and checked against publisher/PMC HTML. The XML endpoint
+    failed; full text was read as HTML. Introduction, growth/density Methods, first
+    Results subsection, Table 1 and actual Figure 1 were inspected. NRRL 3357 was
+    tested at 29 C for seven days in darkness on glucose minimal medium with sorbitol.
+    Figure 1A reports log10 sclerotial dry mass per plate, not raw body counts despite
+    the abstract's number wording. Density association does not identify the proposed
+    quorum factor. Other figures, supplements and natural strain provenance were not
+    inspected; no additional canonical example or universal LOX mechanism is inferred.
+- reference: DOI:10.3390/jof9070737
+  snippet: WT and ΔSSA-178C formed black mature sclerotia on the colonies and at the
+    rim of the Petri dishes
+  notes: Wang et al. (2023), PMID:37504726, PMC10381867; full-text XML, Results 3.3.
+    Methods 2.1/2.6, Discussion and actual Figures 3-4 were inspected. WT 1980 was
+    observed on PDA at 20 C after 10/15 days and on autoclaved carrot slices after
+    20 days. Colony photographs are Figure 3A; the Results' Figure 3B pointers for
+    maturation are misplaced because 3B plots growth. Figure 4C/D report bodies and
+    total air-dried mass per flask, not mass per body. Delayed maturation is not complete
+    loss of formation; do not infer rescue of every cortex measurement or survival
+    duration. Other figures and supplements were not inspected.
+- reference: DOI:10.1016/j.micres.2019.126326
+  snippet: there are no structural differences in the three stages of formation of
+    melanized and non-melanized sclerotium.
+  notes: 2019 microscopy study, PMID:31493702; directly retrieved Europe PMC scientific
+    abstract only. The authors report development on PDA and compare melanized/non-melanized
+    Sclerotinia sclerotiorum structures by microscopy and histochemistry. This supports
+    not requiring melanization in the definition; the quoted observation is not a
+    claim of identical composition or preserved function in every respect. Full text,
+    figures, supplements, the treatment producing non-melanized structures and strain
+    provenance were not inspected. No canonical example or transcript-inferred biochemical
+    pathway is asserted.
+- reference: DOI:10.1128/spectrum.02084-21
+  snippet: There are different types of sclerotia-like fungal structures, such as
+    the true sclerotia, the pseudosclerotia, the small sclerotia, and the microsclerotia.
+  notes: 2022 primary study, PMID:35080446, PMC8791194; Introduction read directly
+    as full-text XML. This passage is a terminology classification, not a new experimental
+    observation. The authors distinguish tissue organization, host-material incorporation
+    and developmental origins across these forms. Preserve that attributed distinction
+    rather than imposing one size, three-layer anatomy or pure-fungal composition
+    on every usage. Detailed equivalence/subclass mapping remains unresolved. Experimental
+    Results, figures, supplements and strain provenance were not inspected; no universal
+    ROS mechanism or additional canonical example is claimed.
+- reference: DOI:10.2478/s11658-007-0047-5
+  snippet: Sclerotization only took place when the plasmodia were starved and very
+    slowly dried.
+  notes: Krzywda et al. (2008; online 2007), PMID:17965965, PMC6275577; scientific
+    abstract read directly in full-text XML. Fuligo septica forms a dormant plasmodial
+    state also called a sclerotium. This nonfungal usage motivates the explicit fungal
+    scope; it is not a mycelial exemplar or an exact synonym of this trait. The reported
+    dehydration conditions and pigment/viability observations are not transferred
+    to fungi. Methods, figures and natural-isolate provenance were not inspected.
+canonical_examples:
+- taxon_id: NCBITaxon:5180
+  taxon_label: Sclerotinia sclerotiorum
+  reference: DOI:10.3390/jof9070737
+  note: Wild-type strain 1980 in Wang et al. (2023), Methods 2.1/2.6, Results 3.3
+    and actual Figures 3A/4, forms sclerotia under the tested PDA/carrot conditions.
+    NCBI Taxonomy confirms the species label and rank. Independent primary Methods
+    at https://doi.org/10.1128/AEM.67.1.75-81.2001 (PMID:11133430, PMC92519) explicitly
+    identify isolate 1980 as originating from dry bean culls in western Nebraska,
+    supplied by J. R. Steadman. That passage was read directly in PMC HTML; its cited
+    original 1990 study was not retrieved. This URL supports provenance, not an extra
+    formation observation. The example is not an SSA disruption/complementary mutant
+    and does not assert the phenotype for every strain or condition.
+discussions:
+- discussion_id: fungal-sclerotium-identity-and-mapping
+  prompt: Reconcile legacy labels and the scope of sclerotial structures.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The explicit fungal label excludes the dormant plasmodial usage in Fuligo.
+    Retain phenotype METPO:1000059 rather than plant pathogen, black pigmented, fungal
+    conidiation traitmech:000657 or chlamydospore formation traitmech:000658. The
+    pinned ontology contains only deprecated bare-label sclerotia classes METPO:0000117,
+    METPO:000118 and METPO:1000398, without definitions or replacement links. Their
+    original scope is unresolved; do not silently reactivate them or assert equivalence
+    to this organismal formation phenotype. Upstream review must reconcile that legacy.
+    QuickGO resolves GO:1990045 as sclerotium development, a biological process rather
+    than an exact organismal phenotype; no xref or SSSOM mapping is asserted. The
+    2022 source distinguishes true, small, pseudo- and microsclerotial structures.
+    Whether these need separate subclasses or mappings requires further primary morphology
+    review; no exact synonyms, universal size threshold, three-layer requirement or
+    host-material exclusion is imposed.
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: fungal-sclerotium-formation-and-function
+  prompt: Separate formation from maturation, survival and mechanism.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Initiation, maturation, persistence and germination are distinct readouts.
+    Formation of a named resting body does not establish a particular dormancy duration,
+    survival after stress or later germinability. Size, pigmentation, nutrient regime
+    and density responses are not universal defining requirements. Do not infer plant
+    pathogenicity, aflatoxin production or a sexual/asexual reproductive mode from
+    formation alone. The SSA study separates delayed maturation from a complete block,
+    and total mass per flask from body number. A causal graph awaits taxon-specific
+    perturbation/complementation assessment, remaining figures/supplements and authority-verified
+    protein accessions. Candidate gene possession or expression of ROS, pigmentation
+    or signaling genes is not itself the formation phenotype.
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T06:42:13Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal sclerotium formation with five directly checked source snippets,
+    a provenance-qualified strain 1980 example and explicit legacy-identity, morphology
+    and functional limits. Ignored-and-hidden searches found deprecated bare labels
+    but no live exact formation trait. Reserved METPO:1061300 in v536; existing records
+    unchanged and protein-level mechanism deferred.
+  llm_assisted: true

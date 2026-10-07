@@ -9089,6 +9089,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "fungal-sclerotium-identity-and-mapping",
+  "prompt": "Reconcile legacy labels and the scope of sclerotial structures.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal sclerotium formation",
+  "source_id": "traitmech:000660",
+  "source_file": "fungal_sclerotium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The explicit fungal label excludes the dormant plasmodial usage in Fuligo. Retain phenotype METPO:1000059 rather than plant pathogen, black pigmented, fungal conidiation traitmech:000657 or chlamydospore formation traitmech:000658. The pinned ontology contains only deprecated bare-label sclerotia classes METPO:0000117, METPO:000118 and METPO:1000398, without definitions or replacement links. Their original scope is unresolved; do not silently reactivate them or assert equivalence to this organismal formation phenotype. Upstream review must reconcile that legacy. QuickGO resolves GO:1990045 as sclerotium development, a biological process rather than an exact organismal phenotype; no xref or SSSOM mapping is asserted. The 2022 source distinguishes true, small, pseudo- and microsclerotial structures. Whether these need separate subclasses or mappings requires further primary morphology review; no exact synonyms, universal size threshold, three-layer requirement or host-material exclusion is imposed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_sclerotium_formation.html#fungal-sclerotium-identity-and-mapping"
+ },
+ {
+  "discussion_id": "fungal-sclerotium-formation-and-function",
+  "prompt": "Separate formation from maturation, survival and mechanism.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal sclerotium formation",
+  "source_id": "traitmech:000660",
+  "source_file": "fungal_sclerotium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Initiation, maturation, persistence and germination are distinct readouts. Formation of a named resting body does not establish a particular dormancy duration, survival after stress or later germinability. Size, pigmentation, nutrient regime and density responses are not universal defining requirements. Do not infer plant pathogenicity, aflatoxin production or a sexual/asexual reproductive mode from formation alone. The SSA study separates delayed maturation from a complete block, and total mass per flask from body number. A causal graph awaits taxon-specific perturbation/complementation assessment, remaining figures/supplements and authority-verified protein accessions. Candidate gene possession or expression of ROS, pigmentation or signaling genes is not itself the formation phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_sclerotium_formation.html#fungal-sclerotium-formation-and-function"
+ },
+ {
   "discussion_id": "holdfast-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial holdfast morphology trait.",
   "kind": "CURATION_TODO",
@@ -12543,9 +12577,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 611,
- "total_knowledge_gaps": 401,
- "total_source_entries": 525,
+ "total_discussions": 613,
+ "total_knowledge_gaps": 402,
+ "total_source_entries": 526,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
