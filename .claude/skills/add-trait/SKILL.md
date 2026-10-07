@@ -315,6 +315,22 @@ or flatten separate field labels and values into a prose `snippet` (#1660).
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
 
+For morphology labels, check for distinct established senses before adopting
+an unqualified name. Either support the documented scope or qualify the label;
+do not silently promote one paper's operational definition to a universal
+meaning. Attribute conflicting usages and keep their mechanisms separate
+(#1767).
+
+For numerical proportions, inspect the Methods' numerator, denominator and
+measurement unit. Image-area fractions, cluster fractions and individual-cell
+counts are not interchangeable, even when a figure caption calls them a
+percentage of cells. Preserve the measured quantity in evidence notes.
+
+When Results, Methods or captions disagree on an assay condition, attribute
+each description to its section and retain the discrepancy unless direct
+evidence resolves it. Do not silently choose one description for the record
+or proposal; distinguish the disputed condition from the supported phenotype.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
@@ -551,6 +567,12 @@ under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
 `metpo-proposal` skill, reserve the proposed `METPO:` identifier, keep shifted
 or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
 and omit SSSOM mappings when there is no exact external equivalence to assert.
+
+Check the pinned upstream template headers, not just column counts quoted in
+older proposals. Canonical properties include a related-synonym column (13
+columns); legacy 12-column property cohorts remain valid. Use the proposal
+skill's layout-specific directives and subset position; never drop aliases
+to satisfy an obsolete width assumption (#1749).
 
 When the new trait resolves exact mentions in older records, update those
 records through the same validated writer path and give each touched record a

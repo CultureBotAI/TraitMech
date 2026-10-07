@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/er_phagy.yaml
+  slug: er_phagy
+session:
+  id: 2026-10-06T125027Z-codex-199866
+  timestamp: '2026-10-06T12:50:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add route-inclusive microbial ER-phagy
+  details: Added traitmech:000642 under autophagy with three directly retrieved DOI-backed
+    scientific-abstract snippets, explicit selectivity and degradative-flux limits, and two
+    open discussions for GO route scope, natural exemplars and protein mechanisms. Reserved
+    METPO:1059500 in v518 with unchanged v514 parent context. Ignored-and-hidden novelty checks,
+    complete pinned METPO and fresh seed/release comparisons found no exact record. Existing
+    trait records and protected data unchanged.

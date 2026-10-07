@@ -25,7 +25,8 @@ the justfile.
    exact-synonym-only cohorts; add a 12th `hasRelatedSynonym` column only when
    a class cohort needs related OBO synonyms.
 3. **`kg-microbe`: `mappings/metpo_proposal_properties_robot.tsv`** —
-   the canonical 12-column property template.
+   the canonical 13-column property template with related synonyms. Preserve
+   legacy 12-column cohorts; their lack of a synonym column is not a defect.
 4. **`CommunityMech`: `proposals/metpo_communitymech_v1/`** —
    the most recent worked example. Read all three files end-to-end before
    writing a new cohort; the TraitMech v1 cohort follows the same conventions
@@ -56,12 +57,18 @@ proposed_id<TAB>label<TAB>definition<TAB>definition_source<TAB>parent<TAB>exact_
 ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>SC %<TAB>A oboInOwl:hasExactSynonym SPLIT=|<TAB>A oboInOwl:hasDbXref SPLIT=|<TAB>A oboInOwl:inSubset<TAB><TAB><TAB><TAB>A oboInOwl:hasRelatedSynonym SPLIT=|
 ```
 
-**Properties** (12 columns):
+**Properties** (canonical 13 columns, including related synonyms):
 
 ```
-proposed_id<TAB>label<TAB>definition<TAB>definition_source<TAB>type<TAB>domain<TAB>range<TAB>xrefs<TAB>subset<TAB>priority<TAB>traits_addressed<TAB>observations
-ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>TYPE<TAB>DOMAIN<TAB>RANGE<TAB>A oboInOwl:hasDbXref SPLIT=|<TAB>A oboInOwl:inSubset<TAB><TAB><TAB>
+proposed_id<TAB>label<TAB>definition<TAB>definition_source<TAB>type<TAB>domain<TAB>range<TAB>synonyms<TAB>xrefs<TAB>subset<TAB>priority<TAB>traits_addressed<TAB>observations
+ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>TYPE<TAB>DOMAIN<TAB>RANGE<TAB>A oboInOwl:hasRelatedSynonym SPLIT=|<TAB>A oboInOwl:hasDbXref SPLIT=|<TAB>A oboInOwl:inSubset<TAB><TAB><TAB>
 ```
+
+This matches kg-microbe at `1408e7099d039026d7611c240938d8e177753406`.
+Recheck the pinned upstream headers before a new cohort. The supported legacy
+12-column property layout omits column 8 (`synonyms`) and its directive, placing
+xrefs and subset in columns 8 and 9 instead of 9 and 10. Keep one layout per file;
+do not remove aliases or relabel them exact merely to fit a legacy template.
 
 The **second row (ROBOT header) must have trailing tabs to reach the full
 column count** when the trailing columns are blank. Validate with:
@@ -72,9 +79,9 @@ just verify-proposal <cohort>
 .venv/bin/python scripts/verify_metpo_proposal.py proposals/<cohort>
 ```
 
-The verifier accepts either class-template width and checks the corresponding
-ROBOT header directives, parent integrity, subset consistency, and Scope-A/C
-coverage.
+The verifier accepts either class-template width and both property layouts,
+checking their corresponding ROBOT directives and subset positions, parent
+integrity, subset consistency, and Scope-A/C coverage (#1749).
 
 ---
 

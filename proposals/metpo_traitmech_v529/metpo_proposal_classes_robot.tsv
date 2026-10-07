@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1060600	pseudohyphal growth	A morphological phenotype in which elongated budding yeast cells remain attached in chains with constrictions at the junctions between cells.	TraitMech:data/traits/morphology/pseudohyphal_growth.yaml|DOI:10.1590/S1517-83822013005000056|DOI:10.1016/0092-8674(92)90079-r	METPO:1000059			metpo_traitmech_2026_10		Attached elongated budding cells with constricted junctions; induction varies.	traitmech:000653

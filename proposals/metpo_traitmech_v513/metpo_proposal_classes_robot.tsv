@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1059000	exocytosis	A physiological phenotype in which a microbial cell releases material from an intracellular membrane-bounded compartment to the cell exterior through a fusion pore between the compartment membrane and the plasma membrane.	TraitMech:data/traits/physiology/exocytosis.yaml|DOI:10.1083/jcb.56.1.153|DOI:10.1007/BF01870409|DOI:10.1016/s0143-4160(98)90030-6	METPO:1000059			metpo_traitmech_2026_10		Secretion through a fusion pore; fusion without discharge is a distinct readout.	traitmech:000637

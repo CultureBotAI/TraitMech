@@ -1,0 +1,103 @@
+identifier: traitmech:000657
+label: fungal conidiation
+definition: A reproductive phenotype in which a fungus produces nonmotile asexual
+  propagules called conidia through outgrowth from conidiogenous cells or conversion
+  of pre-existing hyphal cells.
+definition_source: DOI:10.2336/nishinihonhifu.40.1083
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.2336/nishinihonhifu.40.1083
+  snippet: produce asexual, nonmotile and usually deciduous propagules (conidia) by
+    de novo growth from, or conversion of a fertile hypha (conidiogenous cell).
+  notes: Cole (1978), publisher abstract directly retrieved at https://www.jstage.jst.go.jp/article/nishinihonhifu/40/6/40_6_1083/_article/-char/en.
+    The article is labeled Mini Review and supports terminology, not independent experimental
+    replication. Its historical Deuteromycetes classification is not imposed on the
+    trait. Both new outgrowth and conversion of existing cells are retained; detached
+    spores, an aerial stalk and one spore shape are not universal requirements. The
+    exact DOI query returned no Europe PMC records. Full text and figures were not
+    inspected.
+- reference: DOI:10.1101/gad.3.4.559
+  snippet: The filamentous fungus Neurospora crassa responds to nutrient deprivation
+    and dessication by producing asexual spores, or conidia.
+  notes: 'Springer and Yanofsky (1989), PMID:2524423, scientific abstract retrieved
+    directly from Europe PMC. The source spelling dessication is preserved. Primary
+    scanning-electron microscopy and fluorescent-probe study of wild-type and morphological
+    mutants: the abstract describes apical proconidial budding, septation and disarticulation.
+    Early chains can return to hyphal growth; later chains are committed. These are
+    source-reported observations, not personally inspected figures. Full Methods,
+    figures and independent strain provenance were not read, so no canonical Neurospora
+    strain or universal nutrient/stress requirement is asserted.'
+- reference: DOI:10.1016/j.simyco.2017.09.001
+  snippet: H–I. Conidiophores, conidiogenous cells and conidia.
+  notes: Woudenberg et al. (2017), PMID:29158610, PMC5679026, Figure 7 caption, Cephalotrichum
+    lignatile CBS 209.63. The actual panels were inspected together with Taxonomy
+    and Methods. H-I show the named structures; J shows conidia. The description reports
+    conidia in basipetal chains. Microscopic descriptions use SNA cultures after 14
+    days at 25 C in darkness; A-C instead show OA, MEA and DG18 colonies. These are
+    descriptive morphology observations, not time-lapse proof of each developmental
+    transition.
+- reference: PMID:9199700
+  snippet: The developmental cycle of S. griseus starts and ends as a conidium.
+  notes: 'Szabo et al. (1997), Phenotypic heterogeneity of the progeny of Streptomyces
+    griseus conidia; scientific abstract retrieved directly from Europe PMC by PMID.
+    This is terminology boundary evidence, not a fungal observation: the paper uses
+    conidium for a bacterial reproductive cell. It motivates the fungal label qualifier
+    without equating bacterial and fungal developmental mechanisms. No taxon mapping,
+    full-text inspection or bacterial canonical example is asserted.'
+canonical_examples:
+- taxon_id: NCBITaxon:2041050
+  taxon_label: Cephalotrichum lignatile
+  reference: DOI:10.1016/j.simyco.2017.09.001
+  note: Ex-type culture CBS 209.63. Figure 7H-J and the primary taxonomic description
+    document conidiogenous structures and conidia in basipetal chains. Microscopic
+    descriptions use SNA after 14 days at 25 C in darkness. Specimen examined and
+    Table 1 at https://pmc.ncbi.nlm.nih.gov/articles/PMC5679026/ identify Hennebert's
+    1959 isolate from timber in a cave at Han-sur-Lesse, Belgium. This is primary
+    isolate provenance, not an inferred wild-type or GMO status. The observation does
+    not imply production at every life stage or condition.
+discussions:
+- discussion_id: fungal-conidiation-scope-and-hierarchy
+  prompt: Review a reproductive phenotype parent and qualified mappings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Retain phenotype METPO:1000059. Sporulation METPO:1000870 and spore forming
+    METPO:1000871 concern endospores, whereas mycelial growth traitmech:000074 concerns
+    bacterial hyphae. The four obsolete METPO conidium/conidia classes denote material
+    entities, not an active organismal phenotype. PMID:9199700 documents bacterial
+    conidium usage, so the fungal qualifier is intentional. Synnema formation traitmech:000656
+    is stalk aggregation and includes sporeless forms; neither trait is imposed as
+    the other's is-a parent. Pseudohyphal growth traitmech:000653 is a cell arrangement,
+    not equivalent to conidial production. Leave exact synonyms and xrefs unset pending
+    authority and scope review; process ontology classes need not be exact organismal
+    phenotypes.
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: fungal-conidiation-development-and-mechanism
+  prompt: Separate developmental routes and organism-specific mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The class covers outgrowth and conversion of existing hyphal cells, rather
+    than only one Aspergillus-like conidiophore architecture. Do not require an aerial
+    stalk, a synnema, one cell or nucleus per conidium, a particular pigment, immediate
+    detachment, dormancy or a universal nutritional trigger. Early proconidial chains
+    alone need not establish committed development. Distinguish production from conidial
+    germination, sexual spore formation and spores formed by cleavage within a sporangium.
+    Do not infer the trait from a gene inventory or ordinary yeast budding without
+    source identification of conidial production. A causal graph is deferred pending
+    direct perturbation details, natural-strain provenance and taxon-paired protein
+    accessions; no universal BrlA, WetA or autophagy dependence is asserted.
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T03:28:58Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal conidiation with four source-backed snippets, a qualified
+    Cephalotrichum lignatile example and explicit bacterial terminology and developmental
+    boundaries. Ignored-and-hidden searches and structured METPO review found no exact
+    live record. Reserved METPO:1061000 in v533; existing records unchanged.
+  llm_assisted: true

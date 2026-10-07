@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1060200	extracellular membrane vesicle production	A physiological phenotype in which microbial cells give rise to closed, cell-derived lipid-membrane vesicles in the extracellular space.	TraitMech:data/traits/physiology/extracellular_membrane_vesicle_production.yaml|DOI:10.1038/ncomms11220|DOI:10.1038/s41467-017-00492-w|DOI:10.1371/journal.pone.0011113|DOI:10.1038/s41467-025-60272-9	METPO:1000059			metpo_traitmech_2026_10		Includes lytic and non-lytic routes; no universal cargo or protein apparatus.	traitmech:000649

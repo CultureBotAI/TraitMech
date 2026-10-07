@@ -1,0 +1,95 @@
+identifier: traitmech:000651
+label: hormogonium formation
+definition: A morphological phenotype in which a filamentous cyanobacterium differentiates
+  short, initially heterocyst-free filaments called hormogonia that are distinct from
+  mature vegetative trichomes.
+definition_source: DOI:10.1128/mSphere.00231-19
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1099/00221287-111-1-1
+  snippet: In all three genera, the hormogonia are initially devoid of heterocysts.
+  notes: Rippka et al. (1979), Genera of Section IV, printed pages 34-36; publisher
+    PDF extracted text directly read, not a search-result snippet. The three genera
+    are Nostoc, Scytonema and Calothrix. The study distinguishes differentiated hormogonia
+    from random trichome breakage and reports immotile hormogonia in PCC 6314, 7524
+    and 6719. Smaller cells or gas vacuoles help identify these immotile forms; neither
+    feature is required in every strain. Developing hormogonia can subsequently acquire
+    terminal heterocysts, so initial absence is not permanent absence. This is a culture-based
+    systematic study, not a universal modern taxonomic rule. PDF screenshots were
+    unavailable; no visual panel verification or numerical table claim is made.
+- reference: DOI:10.1128/aem.55.1.125-131.1989
+  snippet: motile (gliding) filaments lacking heterocysts and with distinctly smaller
+    cells than those of vegetative filaments
+  notes: PMID:16347816, PMC184065. Scientific Abstract directly read on PubMed and
+    through the Europe PMC core API. Campbell and Meeks (1989) observed induced hormogonia
+    in symbiotically competent Nostoc cultures. The quoted morphology describes those
+    cultures, not every hormogonium. Strain 7801 underwent conversion in Anthoceros
+    punctatus-conditioned medium under the tested conditions and later reverted to
+    vegetative growth. The reported loss and recovery of acetylene reduction are stage-dependent
+    readouts, not a definition requiring nitrogen fixation or plant symbiosis. Full
+    text and panels were not read.
+- reference: DOI:10.1128/mSphere.00231-19
+  snippet: both sigC and sigJ may be required for an early stage in hormogonium development,
+    while sigF is late acting.
+  notes: 'PMID:31043519, PMC6495340. Direct Europe PMC full-text XML: scientific ABSTRACT,
+    first RESULTS subsection, and MATERIALS AND METHODS subsections Strains and culture
+    conditions and Plasmid and strain construction were read. The snippet is from
+    Results, not the separate precis/IMPORTANCE text. Wild-type Nostoc punctiforme
+    formed shorter, morphologically distinct filaments after induction. In-frame sigF
+    deletion abolished motility but retained morphological differentiation and heterocyst
+    loss; sigC and sigJ deletions lacked those morphological markers. This separates
+    development from locomotion experimentally. Complementation restored motility
+    in the assay, not necessarily wild-type levels. These are strain- and assay-qualified
+    results, not a universal sigma-factor rule inferred from sequence. Actual panels,
+    movies and the strain-table supplement were not inspected; no panel-level or numerical
+    claim is made.'
+discussions:
+- discussion_id: hormogonium-formation-scope-and-hierarchy
+  prompt: Review the developmental scope independently of motility and mature cell
+    shape.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'Retain phenotype METPO:1000059. Motile METPO:1000702 is not a necessary
+    parent: Rippka et al. explicitly include immotile hormogonia, and the 2019 sigF
+    deletion retains differentiation without movement. The 1989 abstract''s motile
+    description is specific to the studied Nostoc cultures. Filament shaped METPO:1000674
+    denotes elongated cells or hypha-like structures, not specifically this differentiated
+    multicellular stage. Filamentous colony METPO:1007066 denotes colony outline.
+    Heterocyst traitmech:000073 and akinete traitmech:000185 describe other differentiated
+    cell types, not this filament stage; their presence in a life cycle is not organism-level
+    disjointness. Random fragmentation alone is insufficient. Do not universally require
+    reduced cell size, gas vacuoles, permanent heterocyst absence, plant symbiosis
+    or nitrogen fixation. Exact external equivalence and narrower hierarchy remain
+    for human review; no xref or unqualified synonym is asserted.'
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: hormogonium-formation-stage-and-mechanism-grounding
+  prompt: Resolve strain and protein anchors before adding a causal graph or canonical
+    example.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The cited studies support an observed developmental phenotype and genetic
+    dependence, not merely sequence-feature possession. Before adding a mechanistic
+    graph, inspect actual panels and supplements, resolve accession-level sigma-factor
+    examples, and distinguish induction, morphological differentiation and motility
+    readouts. Transcript changes or homologous sig genes alone do not establish the
+    phenotype or the complete cascade. Canonical examples are deferred pending strain-table
+    and taxon verification with natural provenance and explicit life-stage qualifiers;
+    engineered deletion strains must not be presented as unqualified natural exemplars.
+    The known mechanism is not claimed to be absent, and natural transient stages
+    remain valid trait evidence without a canonical row.
+  posed_by: codex
+  posed_date: '2026-10-06'
+curation_history:
+- timestamp: '2026-10-06T22:07:10Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added hormogonium formation with three DOI-backed snippets and explicit
+    developmental-stage, motility and sequence-inference limits. Ignored-and-hidden
+    novelty searches and the pinned METPO audit found no exact record. Reserved METPO:1060400
+    in v527. Deferred unresolved strain/protein anchors; existing records unchanged.
+  llm_assisted: true

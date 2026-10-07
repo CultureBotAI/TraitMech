@@ -1,0 +1,83 @@
+identifier: traitmech:000636
+label: endocytosis
+definition: A physiological phenotype in which a microbial cell takes up extracellular
+  material or plasma-membrane components into intracellular membrane-bound compartments
+  by remodeling and internalizing its plasma membrane.
+definition_source: DOI:10.1083/jcb.128.5.779
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1083/jcb.128.5.779
+  snippet: After an additional 20-40 min, the PM and cytoplasmic punctate staining
+    disappeared concomitant with staining of the vacuolar membrane.
+  notes: PMID:7533169, PMC2120394. Scientific Abstract quote verified in Europe PMC
+    XML; full-text OCR, including Introduction, Methods, Results and Discussion, was
+    read at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2120394/fullTextXML.
+    FM 4-64 tracks plasma-membrane-to-vacuole transport in Saccharomyces cerevisiae.
+    Early experiments used BHY10.5, a CPY-invertase reporter background, not the SEY6210
+    control in later mutant comparisons. Endosome identity is qualified as likely.
+    Mutant effects on vacuolar delivery are not necessarily initial-internalization
+    defects; in vitro ATP/cytosol dependence concerns later transport. Marker-specific
+    results do not establish a universal route. PDF/figures were unavailable and were
+    not visually audited.
+- reference: DOI:10.1128/mcb.14.11.7245-7255.1994
+  snippet: This report presents direct evidence for alpha-factor-induced internalization
+    of cell surface receptors.
+  notes: 'PMID:7935439, PMC359259. Scientific Abstract directly read in NCBI PubMed
+    XML and Europe PMC metadata, which agree on this DOI. Density fractionation and
+    extracellular-protease protection support receptor internalization in Saccharomyces
+    cerevisiae. The abstract distinguishes receptor signaling, internalization and
+    subsequent vacuolar degradation. No fixed transit time or universal receptor requirement
+    is imposed. Full text and figures were unavailable: the Europe PMC full-text endpoint
+    returned HTTP 500 and the indexed PDF mirror returned 404. Strain provenance and
+    unread assay details are not inferred.'
+discussions:
+- discussion_id: endocytosis-scope-and-hierarchy
+  prompt: Distinguish membrane-bound uptake from neighboring capabilities.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This is the microbial cell's uptake phenotype, not a host response, a
+    sequence feature or intracellular trafficking alone. Surface adsorption, passive
+    diffusion, transporter entry, open membrane invaginations and autophagy alone
+    are insufficient. Pinocytosis traitmech:000635 and phagocytosis traitmech:000627
+    entail this scope; macropinocytosis traitmech:000634 remains below pinocytosis.
+    No fixed size, clathrin/actin dependence, nutritional assimilation or degradation
+    is required. Trogocytosis traitmech:000633 describes removal and uptake of living-cell
+    portions without universally specifying membrane-bound enclosure. Myzocytosis
+    traitmech:000631 describes prey-content aspiration. Its cited 2023 Discussion
+    (DOI:10.3390/microorganisms11081945) calls myzocytosis a form of endocytosis in
+    the studied Colpodella system; that source-attributed umbrella usage is retained,
+    not treated as proof that every aspiration phenotype meets this operational membrane-bound
+    scope. Their broader parent decisions remain unresolved, not exclusions or disjointness
+    claims. Nutritional phagotrophy is not an equivalent. Review process-level ontology
+    mappings separately; no unverified synonyms or xrefs are asserted.
+  posed_by: codex
+  posed_date: '2026-10-06'
+- discussion_id: endocytosis-exemplar-and-mechanism
+  prompt: Resolve strain provenance and route-specific molecular evidence.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The two independent studies both concern laboratory Saccharomyces cerevisiae,
+    not independent taxon replication. BHY10.5's reporter background is not a natural
+    isolate; the 1994 full methods and strain provenance remain unread. Canonical
+    examples are left unset rather than generalize these assays to every strain or
+    claim a wild-type provenance. Membrane-tracer transport, receptor uptake and fluid
+    uptake need not report identical routes. The 1995 authors discuss nonvesicular
+    alternatives and qualify endosome identity. No complete molecular mechanism, protein
+    accessions or causal graph are inferred from tracer behavior or abstracts. Obtain
+    taxon-paired functional and strain-provenance evidence before adding those fields.
+  posed_by: codex
+  posed_date: '2026-10-06'
+curation_history:
+- timestamp: '2026-10-06T06:47:04Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added endocytosis with two DOI-backed scientific-abstract snippets and
+    explicit strain, assay and access limits. Ignored-and-hidden searches and pinned
+    METPO review found no exact record. Reserved METPO:1058900 in v512; refined pinocytosis
+    and phagocytosis parents without asserting unverified mappings or a molecular
+    mechanism.
+  llm_assisted: true
