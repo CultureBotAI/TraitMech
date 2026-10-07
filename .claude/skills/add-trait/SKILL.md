@@ -656,6 +656,17 @@ broader gates:
 
 Then run the checks whose scope LinkML does not cover:
 
+Freshness gates use different comparison bases. Inspect the current
+`audit-derived-reports` recipe in `justfile` and its targeted remediation;
+do not generalize one report's working-tree or `HEAD` comparison base to all
+reports (#560). When a gate explicitly compares the committed copy, regeneration
+alone cannot clear a stale `HEAD`, including during an uncommitted main merge.
+After focused validation, regenerate and review the affected products, make a
+local checkpoint commit containing the intended changes, then rerun that gate
+and full QC on the committed tree before pushing. Working-tree freshness
+checks still clear through regeneration. Do not change baselines, weaken gates,
+or treat the pre-commit failure as a final validation pass (#1795).
+
 ```bash
 .venv/bin/python scripts/validate_strict.py data/traits/<category>/<slug>.yaml
 .venv/bin/python scripts/validate_history_links.py history/records/<slug>
@@ -837,10 +848,16 @@ loop used for other hand-curated trait changes:
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
 6. Merge the PR only after CI and reviews are clean. Use the native merge-queue
-   path in `docs/MERGE_QUEUE.md`: enqueue without `--delete-branch`, wait until
+   path in `docs/MERGE_QUEUE.md`: enqueue without `--delete-branch` and verify
+   actual queue membership. Enabled auto-merge is not membership. If the CLI
+   leaves an approved, fully green exact head outside the queue, follow that
+   guide's guarded queue-only API fallback; do not bypass gates or repeatedly
+   submit an uncertain mutation (#1792). Inspect the combined candidate's
+   required checks once its SHA exists. Wait until
    `gh pr view <n> --json state,mergedAt,mergeCommit` reports `MERGED`, then
-   delete the remote feature branch, fetch with pruning, and verify no local or
-   remote branch for that trait remains.
+   verify the actual landed tree with `scripts/verify_merge_integrity.py` before
+   deleting the remote feature branch. Fetch with pruning and verify no local
+   or remote branch for that trait remains.
 
 ## Report
 

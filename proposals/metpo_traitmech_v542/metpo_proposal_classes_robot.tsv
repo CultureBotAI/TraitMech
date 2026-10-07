@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1061900	fungal peloton formation	A morphological phenotype in which a fungus forms intracellular coiled hyphal masses, called pelotons, in association with a plant host.	TraitMech:data/traits/morphology/fungal_peloton_formation.yaml|DOI:10.1111/nph.14279|DOI:10.1111/1365-2745.70188|DOI:10.1111/nph.19338	METPO:1000059			metpo_traitmech_2026_10		Intracellular coil morphology; not orchid-only or a nutrient-flux assertion.	traitmech:000666
