@@ -8936,6 +8936,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/akinete.html#akinete-exact-xref-gap"
  },
  {
+  "discussion_id": "coenobium-formation-scope-and-hierarchy",
+  "prompt": "Review a multicellular morphology parent and exact mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "coenobium formation",
+  "source_id": "traitmech:000655",
+  "source_file": "coenobium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Cell shape METPO:1000666 is individual-cell morphology; colony morphology METPO:1007062 concerns macroscopic colony characteristics. Obsolete cell arrangement METPO:1000046 and aggregate METPO:1000011 are not active parents. Palmelloid formation traitmech:000654 covers mother-wall retention or extracellular adhesion, not this developmental cell-complement criterion. Rosette cell arrangement traitmech:000652 requires inward cell poles, and biofilm formation traitmech:000053 requires surface attachment; neither is required here. A coenocyte is a multinucleate cell, not a multicellular coenobium. No exact synonym, xref or organism-level disjointness is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/coenobium_formation.html#coenobium-formation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "coenobium-formation-development-and-mechanism",
+  "prompt": "Resolve organism-specific colony development before graphing.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "coenobium formation",
+  "source_id": "traitmech:000655",
+  "source_file": "coenobium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Fixed cell complement describes an individual colony, not one invariant count across taxa or conditions. Reproduction can form new daughter colonies. Harvey's extant comparisons include motile forms and Volvox germ-soma differentiation; Chung's introductory little-or-no-specialization formulation is not imposed universally. Neither a sheet shape, common wall, power-of-two count, lack of flagella nor grazer induction defines the class. Defer a causal graph pending perturbation and accession-level evidence: Cardon's observed Golgi localization and cell rotation do not demonstrate causal necessity for coenobium formation. Gene possession alone does not establish this phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/coenobium_formation.html#coenobium-formation-development-and-mechanism"
+ },
+ {
   "discussion_id": "ferrosome-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial ferrosome morphology trait.",
   "kind": "CURATION_TODO",
@@ -12373,9 +12407,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 601,
- "total_knowledge_gaps": 396,
- "total_source_entries": 520,
+ "total_discussions": 603,
+ "total_knowledge_gaps": 397,
+ "total_source_entries": 521,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
