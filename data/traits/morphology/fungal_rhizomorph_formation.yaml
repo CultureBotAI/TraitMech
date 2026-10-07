@@ -1,0 +1,113 @@
+identifier: traitmech:000662
+label: fungal rhizomorph formation
+definition: A morphological phenotype in which a fungus forms root-like, multihyphal
+  structures through coordinated hyphal growth.
+definition_source: DOI:10.1016/j.fgb.2009.04.005
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1016/j.fgb.2009.04.005
+  snippet: Rhizomorphs of wood-decay basidiomycetes are root-like structures produced
+    by the coordinated growth of thousands of hyphae.
+  notes: Yafetto, Davis and Money (2009), PMID:19427390; scientific abstract retrieved
+    directly through Europe PMC. The naming sentence supports the formation phenotype,
+    not a universal hyphal-count threshold. Armillaria gallica cultures were tested
+    in media of different gel strengths. The reported 760 kPa is an osmolality-derived
+    turgor estimate, whereas 40-300 kPa describes pressure corresponding to measured
+    tip forces. These are distinct readouts, not trait thresholds. Full text, figures,
+    supplements and isolate provenance were not inspected; no canonical example is
+    inferred from this abstract.
+- reference: DOI:10.1016/j.mycres.2005.09.006
+  snippet: Air pores develop near the inoculum plug shortly after inoculation, arising
+    directly from the mycelium, and rhizomorphs are initiated from them.
+  notes: Pareek, Allaway and Ashford (2006), PMID:16376531; scientific abstract checked
+    against the directly retrieved PDF and Europe PMC abstract. Methods, Results,
+    Discussion, Table 1 and actual Figures 9-17 were inspected. Results place first
+    tips on day 6, but Table 1 reports tips on day 5; no exact onset is asserted.
+    Table 1 counts tips and air pores on five plates, not organisms. The main oxygen-conductance
+    assay used cut rhizomorph ends; it does not establish intact-rind permeability
+    or universal oxygen adaptation. Air pores and rhizomorphs are distinct structures.
+    Remaining figure images and supplements were not inspected.
+- reference: DOI:10.1186/s12862-017-0877-3
+  snippet: All armillarioid species have the capacity to form rhizomorphs in culture,
+    but only the later diverging lineages have been observed to form them in nature
+  notes: Koch et al. (2017), PMID:28122504, PMC5264464; directly retrieved full-text
+    XML, Discussion subsection The rise of rhizomorphs and Table 2. The quoted clause
+    precedes a parenthetical figure/table citation. This is the authors' comparative
+    summary, partly based on earlier literature, not a new formation experiment on
+    every species. They explicitly describe unmelanized rhizomorphs in culture. Field
+    non-observation is not biological absence; the summary does not establish expression
+    in every strain or condition. Full Methods, actual figures, supplements and additional
+    isolate provenance were not inspected.
+- reference: DOI:10.3114/fuse.2024.14.03
+  snippet: Many rhizomorph-forming fungi occur in the litter on the forest floor (ground
+    species), while other species make aerial rhizomorph networks (epiphytic species).
+  notes: Oliveira et al. (2024), PMID:39830290, PMC11739697; Introduction read directly
+    in PMC HTML after the Europe PMC XML endpoint failed. This terminology passage
+    supports not restricting formation to underground growth. These authors adopt
+    a narrow melanized, differentiated, organized-tip concept and contrast Singer's
+    white rhizomorph usage with mycelial cords. That is their attributed account;
+    the original Singer/Rayner sources were not retrieved. Abstract, Introduction
+    and selected taxonomic text/captions were read, but actual figures, supplements
+    and the full Methods were not inspected. No additional canonical taxon or exact
+    cord synonym is asserted.
+canonical_examples:
+- taxon_id: NCBITaxon:153913
+  taxon_label: Armillaria luteobubalina
+  reference: DOI:10.1016/j.mycres.2005.09.006
+  note: Isolate 930199KGS in Pareek et al. (2006), Fungal material and culture conditions,
+    Results and Figures 9-17. Primary Methods at https://doi.org/10.1016/j.mycres.2005.09.006
+    identify the University of Western Sydney collection culture as originating from
+    fruit bodies collected at Gore Hill Park, North Sydney, in June 1993. Rhizomorph
+    development was observed on malt-marmite agar in darkness at 23 C. The Methods
+    provenance and actual images were inspected; natural origin is not inferred from
+    a wild-type label. NCBI Taxonomy confirms the species ID, label and rank. This
+    is a qualified culture observation, not evidence for every strain or condition.
+discussions:
+- discussion_id: fungal-rhizomorph-scope-and-hierarchy
+  prompt: Resolve rhizomorph/cord terminology and a closer fungal parent.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly
+    bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony
+    METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None
+    is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605
+    denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact
+    resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures,
+    whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense
+    and distinguish mycelial cords. The broad formation definition does not settle
+    that anatomical boundary: retain the source attribution and do not assert exact
+    cord/strand synonyms, a universal pigment requirement or an underground-only habitat.
+    A closer fungal growth-form parent and external equivalences require upstream
+    review; no xrefs or SSSOM mappings are asserted.'
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: fungal-rhizomorph-formation-and-function
+  prompt: Separate formation from transport, invasion and gene mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Formation does not by itself prove pathogenicity, low-oxygen adaptation,
+    a fixed invasion force or a universal hollow canal. Pareek et al. distinguish
+    air pores from rhizomorphs; oxygen measurements on cut structures do not show
+    intact-rind permeability. Their Results/Table 1 onset discrepancy remains unresolved.
+    Culture versus field observations and hyphal/tip counts require explicit conditions
+    and denominators. Physical growth and aeration have experimental support, but
+    a formation-regulatory graph requires further primary perturbation evidence and
+    authority-verified protein examples. No complete protein pathway is inferred from
+    expression, gene possession, osmolyte composition or structure alone. The graph
+    is deferred, not claimed to be biologically absent.
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T09:59:27Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal rhizomorph formation with four directly checked source snippets,
+    a provenance-qualified 930199KGS example and explicit terminology, hierarchy and
+    experimental limits. Ignored-and-hidden searches found no exact existing trait.
+    Reserved METPO:1061500 in v538; existing records unchanged and protein-level formation
+    mechanism deferred.
+  llm_assisted: true

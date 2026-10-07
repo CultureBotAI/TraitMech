@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_rhizomorph_formation.yaml
+  slug: fungal_rhizomorph_formation
+session:
+  id: 2026-10-07T100223Z-codex-52ca02
+  timestamp: '2026-10-07T10:02:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal rhizomorph formation
+  details: Added traitmech:000662 as a PROPOSED morphology phenotype with four directly checked
+    DOI-backed snippets of 16, 21, 25 and 22 words. The canonical Armillaria luteobubalina
+    example is qualified to isolate 930199KGS and primary fruit-body provenance; NCBI confirms
+    species 153913. Retained the culture/field distinction, conflicting pigment terminology
+    and Results/Table 1 onset discrepancy. Reserved METPO:1061500 in proposal v538. Ignored-and-hidden
+    searches found no exact existing trait. Writer dry-run, exact source comparisons and 20
+    focused tests passed; broader validation and PR review remain pending.
