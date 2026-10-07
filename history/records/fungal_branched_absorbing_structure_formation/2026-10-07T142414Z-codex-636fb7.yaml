@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_branched_absorbing_structure_formation.yaml
+  slug: fungal_branched_absorbing_structure_formation
+session:
+  id: 2026-10-07T142414Z-codex-636fb7
+  timestamp: '2026-10-07T14:24:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal BAS formation
+  details: Added traitmech:000665 as PROPOSED MORPHOLOGY with primary DOI:10.1046/j.1469-8137.1998.00199.x
+    and DOI:10.1093/pcp/pcz122 snippets, and a DAOM197198 culture-qualified Rhizophagus irregularis
+    example supported by inspected microscopy, collection provenance and NCBI taxonomy. Reserved
+    v541/METPO:1061800 in 1061800-1061899 after ignored-and-hidden current-main/worktree and
+    paginated immutable-head PR checks. Kept uptake, universal host dependence and protein
+    mechanisms out of the definition; two discussions remain OPEN. Writer dry run and all
+    20 focused writer tests passed before application. No existing trait was edited.
