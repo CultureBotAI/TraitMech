@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_conidiation.yaml
+  slug: fungal_conidiation
+session:
+  id: 2026-10-07T033347Z-codex-fefb40
+  timestamp: '2026-10-07T03:33:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed fungal conidiation phenotype
+  details: Minted traitmech:000657 with three DOI-backed sources and a PMID-backed bacterial
+    terminology boundary, four directly checked snippets, a strain-qualified Cephalotrichum
+    lignatile CBS 209.63 example, and two open scope/mechanism discussions. Reserved METPO:1061000
+    in v533. Distinguish conidial production from endospores and stalk aggregation; preserve
+    source-access and developmental limits. Existing records unchanged; causal graph deferred.
