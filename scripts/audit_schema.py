@@ -192,6 +192,12 @@ def main() -> int:
         r = adef.get("range")
         if isinstance(r, str):
             used_ranges.add(r)
+    # A subclass can narrow an inherited slot to a local enum without
+    # redeclaring the shared attribute (e.g. CrossCorpusLink.relation).
+    for cdef in classes.values():
+        for usage in (cdef.get("slot_usage") or {}).values():
+            if isinstance(usage.get("range"), str):
+                used_ranges.add(usage["range"])
     orphan = sorted(set(enums) - used_ranges)
     if orphan:
         for e in orphan:

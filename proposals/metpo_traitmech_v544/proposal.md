@@ -11,6 +11,14 @@ BAS #1788. BAS subsequently merged as
 `64b0ec7fa9a0da69da695428533f89134ff62249`, with reconstructed-tree integrity
 verified. Dependent PRs must incorporate actual main before becoming ready.
 
+Concurrent pathway-context PR #1734 then landed as
+`f7112cf664c9a54e05ab5e771b2d0366dae9f0b1`. This branch incorporates that
+actual main, preserving its schema, renderer, contextual links, source pin
+and append-only histories. Initial mantle validation passed through QC,
+taxonomy and Ruff; its focused run was deliberately interrupted before
+completion to restart all gates on the combined code. No full-suite pass
+is claimed for that superseded checkpoint.
+
 | Scope | Count | Parent |
 | --- | ---: | --- |
 | A: synthetic trait class | 1 | METPO:1000059 phenotype |
@@ -124,6 +132,17 @@ one Swagger numeric array and two SciPy fixtures. Their contexts were read;
 none reserves an identifier. CommunityMech v1 and extensions were read and
 do not overlap this block. Recheck concurrent reservations before publishing.
 
+The prepublication refresh after BAS and #1734 landed covered all six
+remaining open PRs. Hartig #1794 remains at `2526a905a19d02667a928e40f18e5f93b2f3d5ad`
+and peloton #1791 was at `55b5523f7f6f48584a40bb4cfc53cc8cebd27121`;
+the other four heads above were unchanged. Complete paginated file lists
+and immutable curation blobs were checked again. The refreshed
+ignored-and-hidden search of all other worktrees, actual main, pending
+artifacts and CommunityMech searched 104,059 files / 2,262,739,703 bytes.
+Its 12 matches were eight embedding values, the same workflow ID, the
+Swagger array and two SciPy fixtures; none is a competing reservation.
+The current branch was excluded from this non-self reservation search.
+
 The upstream skill and both template headers were read at kg-microbe
 `1408e7099d039026d7611c240938d8e177753406`: 11-column classes and
 13-column properties. Retain the class directive row's three trailing empty
@@ -143,6 +162,27 @@ application. It uses `record_curation_event` and `write_validated_trait`.
 Repository history records the actual Codex actor and is append-only.
 Corpus counts are derived from live records; validation results will be
 recorded after the maintained gates finish.
+
+The current-main preservation audit overlays `f7112cf` on the tested
+Hartig/peloton stack. All 1,062 expected prior YAMLs are preserved exactly,
+including main's 11 updated records; older histories, proposal narratives,
+548 TSVs (537 class, six property, five SSSOM), embedding products and
+discussion templates are unchanged. Existing trait pages differ only in
+their global-count footer except phenotype's expected added children.
+Relative to main, phenotype has three extra children from peloton, Hartig
+and mantle; no other priority row changes. The protected YAML is unchanged.
+
+ROBOT output was parsed rather than counted by physical lines: classes,
+merged and reasoned graphs contain 15, 12,628 and 12,632 triples. Assertions
+verify label, definition, source annotation, phenotype parent, quality
+ancestry and w3id.org IRIs. Desktop/mobile browser checks at 1,440/390
+passed with three snippets, one qualified example, two discussions, history,
+hierarchy and search navigation, a loaded coverage image and the live
+1,063-record count. Screenshots were inspected. No overflow or browser
+errors were observed. Both exact configured embedding input paths are
+absent in the worktree and original workspace; no embedding rebuild is
+claimed. Online NCBI resolved 745 canonical examples with zero errors and
+24 existing warnings. All 20 governed artifacts match the immutable pin.
 
 ## Upstream Round Trip
 

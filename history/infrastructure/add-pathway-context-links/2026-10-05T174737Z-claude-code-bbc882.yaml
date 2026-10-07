@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_pathway_context_links.py
+  slug: add-pathway-context-links
+session:
+  id: 2026-10-05T174737Z-claude-code-bbc882
+  timestamp: '2026-10-05T17:47:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - schema
+  - causal_graphs
+  - related_records
+  - protein_examples
+  summary: Add pinned PathwayMech context to reviewed trait nodes and a source-verified Ctt1
+    example
+  details: Adopts the canonical CrossCorpusLink through a local PathwayContextLink; adds offline
+    pin and membership validation and renders node context. A guarded manifest adds 18 links
+    on 16 nodes in 11 traits, naming target taxa and route limits. UniProt P06115 and primary
+    PMID:24563848 support a Ctt1 example whose notes distinguish experimental laboratory backgrounds
+    from the S288c reference entry and retain nutrient dependence. Existing groundings, exact
+    xrefs, and protected spore_germination remain unchanged.

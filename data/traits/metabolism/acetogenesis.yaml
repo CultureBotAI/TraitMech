@@ -53,6 +53,15 @@ causal_graphs:
     node_type: PATHWAY
     description: Reductive acetyl-CoA pathway used by acetogens.
     grounding: GO:0030634
+    related_records:
+    - corpus: PathwayMech
+      identifier: WikiPathways:WP5019
+      relation: PATHWAY_CONTEXT
+      basis: 'PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952).
+        The shared reductive acetyl-CoA route combines methyl and carbonyl branches
+        for acetogenesis; the bacterial exemplar does not establish archaeal variants.
+        No exact equivalence or transfer of organism scope is asserted.'
+      source_version: aa305727458c44ab05614901334540e2c87a9f3a
   - node_id: acetyl_coa_synthase
     label: acetyl-CoA synthase (ACS)
     node_type: GENE_OR_PROTEIN
@@ -408,4 +417,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-10-05T17:46:22Z'
+  curator: codex
+  action: ADD_PATHWAY_CONTEXT
+  changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
+    route and organism limitations; retained existing groundings and exact xrefs.
   llm_assisted: true

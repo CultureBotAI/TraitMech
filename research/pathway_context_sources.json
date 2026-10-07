@@ -1,0 +1,42 @@
+{
+  "checked": "2026-10-05",
+  "uniprot": {
+    "url": "https://rest.uniprot.org/uniprotkb/P06115.json",
+    "sha256": "e329827253ca0b5192b1828b9bcff49751057e86e70aeae09a23b716bc80b2aa",
+    "primary_accession": "P06115",
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "organism": {
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "commonName": "Baker's yeast",
+      "taxonId": 559292,
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Saccharomycotina",
+        "Saccharomycetes",
+        "Saccharomycetales",
+        "Saccharomycetaceae",
+        "Saccharomyces"
+      ]
+    },
+    "entry_audit": {
+      "firstPublicDate": "1988-01-01",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2008-04-29",
+      "entryVersion": 215,
+      "sequenceVersion": 3
+    },
+    "interpro": "IPR018028"
+  },
+  "primary_paper": {
+    "reference": "PMID:24563848",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:24563848&resultType=core&format=json",
+    "sha256": "f4fddb7059860e3a92fd8093b56e332d352fc7b6f4b5c3be1709b2bad6b19b7c",
+    "verified_excerpt": "Ctt1 but not Cta1 activity is strongly induced by H2O2 when cells are challenged in YPD",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3926110/fullTextXML",
+    "fulltext_sha256": "b824b92e23a9cd8b9df1600530bfc24ebe57a5aed62eec9641fd5d67750155ab",
+    "strain_context": "Table 1 lists YPH250 and BY4741 backgrounds; role note distinguishes experimental isolates from UniProt reference taxon."
+  }
+}

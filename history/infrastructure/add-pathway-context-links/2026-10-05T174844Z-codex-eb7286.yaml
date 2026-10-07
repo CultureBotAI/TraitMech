@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_pathway_context_links.py
+  slug: add-pathway-context-links
+session:
+  id: 2026-10-05T174844Z-codex-eb7286
+  timestamp: '2026-10-05T17:48:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: GENERAL
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct the actor identity in the pathway context implementation history
+  details: 'Correction to history/infrastructure/add-pathway-context-links/2026-10-05T174737Z-claude-code-bbc882.yaml:
+    the scaffolder defaulted session.actors.name to claude-code even though the actor was
+    Codex. The correct actor name is codex; the recorded gpt-6 model and codex agent_tool
+    were correct. The original append-only record is retained unchanged. That event describes
+    the 18 context links, 16 nodes, 11 traits and Ctt1 example implemented by Codex.'
