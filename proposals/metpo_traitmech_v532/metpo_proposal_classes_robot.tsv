@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1060900	synnema formation	A morphological phenotype in which fungal hyphae aggregate into an erect, stalk-like asexual reproductive structure, with conidiogenous elements borne from the stalk in its fertile form.	TraitMech:data/traits/morphology/synnema_formation.yaml|DOI:10.1016/j.simyco.2017.09.001|DOI:10.3390/ijms21186660|DOI:10.1099/00221287-87-2-292	METPO:1000059			metpo_traitmech_2026_10		Fungal stalk aggregation; includes documented sporeless developmental forms.	traitmech:000656

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/endocytosis.yaml
+  slug: endocytosis
+session:
+  id: 2026-10-06T065044Z-codex-9f1db4
+  timestamp: '2026-10-06T06:50:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add membrane-bound endocytosis phenotype
+  details: Added traitmech:000636 with two DOI-backed scientific-abstract snippets from Vida
+    and Emr 1995 and Schandel and Jenness 1994. Recorded marker, strain and full-text access
+    limits; deferred canonical examples and molecular mechanism. Fresh seed/release reconciliation,
+    full pinned RDF and ignored-and-hidden searches found no exact term. Reserved METPO:1058900
+    in v512. Guarded dry run and 40 focused tests passed; broader gates are recorded in the
+    PR receipt.

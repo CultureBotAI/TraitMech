@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures SDIC4 as a named anti-phage system with SDIC4A and SDIC4B DefenseFinder profiles while leaving natural host breadth, sensitive-phage breadth, the SDIC4 type I versus type II boundary, the exact SDIC4A/SDIC4B profile-to-protein correspondence, the receptor or phage target, and rule-level detection criteria unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -339,7 +341,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -357,8 +358,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T23:49:45Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add SDIC4 system trait
+            <p>Minted traitmech:000421 for the DOI-backed SDIC4 system under phage defense system. DOI:10.1016/j.celrep.2024.115055 supports SDIC4 as a VasI-like anti-phage system that decreases the bacteriophage adsorption rate; the pinned DefenseFinder article and HMM inventories map SDIC4 to the SDIC4A and SDIC4B custom profiles while the pinned rules table has no SDIC4 row, so the graph stays nonmechanistic at candidate-locus level and the record keeps SDIC4 subtype boundaries unresolved. Reserved METPO:1037500 in proposals/metpo_traitmech_v298.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sdic4_system/2026-09-27T234945Z-claude-code-560738.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -447,6 +458,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -738,10 +756,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-27 23:47 UTC
+      Record as of 2026-09-27 23:49 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

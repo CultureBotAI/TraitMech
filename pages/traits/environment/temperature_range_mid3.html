@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -487,7 +489,6 @@ A recent adaptive-evolution study explicitly uses TMIN, TMAX, and TOPT to charac
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -607,8 +608,36 @@ A recent adaptive-evolution study explicitly uses TMIN, TMAX, and TOPT to charac
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T04:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reviewed temperature_range_mid3 causal evidence
+            <p>Reviewed data/traits/environment/temperature_range_mid3.yaml for issue #183. Added exact snippets to six edge-level evidence entries from Sidarta et al. 2024 and Ramón et al. 2023, and replaced the ungrounded/free-text DesK, DesR, desaturase, and homeoviscous-adaptation predicates with RO-grounded positive-regulation, regulation, and contributes-to edges. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_mid3/2026-09-04T040000Z-codex-b4cccd.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T22:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect temperature-range-mid3 causal graph components
+            <p>Resolved issue 183 graph fragmentation for data/traits/environment/temperature_range_mid3.yaml by adding 5 source- and verbatim-snippet-backed association connectors among DesK/DesR membrane-order sensing, des expression, cooling-induced membrane rigidification, and homeoviscous liquid-crystalline membrane branches, connecting the temperature-range-mid3 nonmechanistic graph from 6 components to 1. Validated via the write-time LinkML gate in scripts/connect_temperature_range_mid3_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_mid3/2026-09-04T220000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-08T03:30:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Correct temperature_range_mid3 component provenance
+            <p>Appended corrective issue-183 provenance after PR #664 adversarial review issue #702 identified a stale 5 components to 1 claim. The weak DesK and temperature-range hub connectors have been pruned or rerouted, so this NONMECHANISTIC graph intentionally ships with 3 disconnected components pending independently supported temperature-range connectors. Validated with scripts/repair_pr664_adversarial_review.py and LinkML write-time validation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_mid3/2026-09-08T033000Z-codex-92877e.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-15T07:08:01Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Ground homeoviscous adaptation node
+            <p>Grounded the temperature range mid3 graph&#39;s homeoviscous adaptation biological-process node to the v85 METPO placeholder METPO:1016200.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/temperature_range_mid3/2026-09-15T070801Z-codex-03a328.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -702,6 +731,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -993,10 +1029,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-15 07:05 UTC
+      Record as of 2026-09-15 07:08 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

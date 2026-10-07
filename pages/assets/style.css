@@ -575,3 +575,7 @@ label.facet-opt .cnt {
 .record-table-scroll { max-width: 100%; overflow-x: auto; }
 .record-table-scroll table { min-width: 42rem; }
 .record-definition { margin: .35rem 0 0; font-size: .9rem; max-width: 48rem; overflow-wrap: anywhere; }
+
+/* Category names and provenance remain readable on narrow screens. */
+h1 { overflow-wrap: anywhere; }
+.pathograph-status { padding: .75rem; color: var(--muted); }

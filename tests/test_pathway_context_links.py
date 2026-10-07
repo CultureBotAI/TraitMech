@@ -61,6 +61,14 @@ def test_checker_rejects_unknown_target_stale_pin_and_duplicate():
     assert any("duplicate" in error for error in pathway_link_errors(doc, version, records))
 
 
+@pytest.mark.parametrize("basis", [None, False, 42, [], {}, "", "   "])
+def test_standalone_checker_rejects_nontext_or_blank_basis(basis):
+    doc, link, version, records = sample()
+    link["basis"] = basis
+    assert any("missing correspondence basis" in error
+               for error in pathway_link_errors(doc, version, records))
+
+
 def test_rendering_preserves_node_basis_source_pin_and_escapes_text():
     doc, link, _, _ = sample()
     graphs = causal_graphs_for_template(doc)

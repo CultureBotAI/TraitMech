@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cytogamy.yaml
+  slug: cytogamy
+session:
+  id: 2026-10-05T161646Z-codex-52aa0c
+  timestamp: '2026-10-05T16:16:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add paired-cell cytogamy with qualified primary-source evidence
+  details: Added traitmech:000623 with definition authority DOI:10.1017/S0016672300010740
+    and scientific-abstract evidence DOI:10.1111/j.1550-7408.1958.tb02567.x and DOI:10.1093/genetics/91.4.657.
+    Three contiguous snippets distinguish terminology, tentative cytology and hyperosmotic-induced
+    outcomes. Whole-repository ignored-and-hidden and concurrent proposal checks preceded
+    reservation of METPO:1057600 in v499. Kept phenotype parent, explicit broader double-autogamy
+    usage, source access limits, and deferred canonical examples, mappings and molecular graphs.
+    Writer dry run and 21 focused new/neighbor tests passed before application; broader validation
+    follows.

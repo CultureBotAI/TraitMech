@@ -86,6 +86,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Geb as a named anti-phage system with GebA1 and GebA2 DefenseFinder HMM profile entries while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -286,7 +288,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -310,8 +311,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T17:01:50Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Minted Geb system phage defense trait
+            <p>Added traitmech:000287 Geb system as a DOI-backed GENOMICS child of phage defense system, with DefenseFinder article and HMM-inventory evidence for the Geb/GebA model, a conservative nonmechanistic antiphage causal graph, and a METPO v164 class proposal reserving METPO:1024100 for the upstream round trip.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/geb_system/2026-09-19T170150Z-codex-94cf55.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T17:39:40Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Scoped Geb profile evidence after PR review
+            <p>Resolved PR #1073 review issue #1075 by replacing unsupported GebA1-or-GebA2 and profile-choice wording with wording limited to the DefenseFinder Geb HMM inventory, and recorded the review-time subclass evidence tightening from issue #1074 in the live curation history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/geb_system/2026-09-19T173940Z-codex-bd70c4.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T18:00:25Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Added direct Geb validation evidence after PR review
+            <p>Resolved PR #1073 review issue #1076 by replacing abstract-only validation support with Mordret full-text snippets that directly name Geb among the six phage-restricting systems.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/geb_system/2026-09-19T180025Z-codex-6c8150.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -400,6 +423,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -693,8 +723,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-19 18:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

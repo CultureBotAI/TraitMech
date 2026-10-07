@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Butters gp30-gp31 as a named anti-phage system with DefenseFinder Butters gp30 and gp31 profiles while leaving the direct phage trigger, the biochemical action of gp30, the modulatory role of gp31, and the Island3-targeting gp30-independent mechanism unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -294,7 +296,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -306,8 +307,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T01:36:17Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Butters gp30-gp31 system genomics trait
+            <p>Minted traitmech:000298 for Butters gp30-gp31 system as a DOI-backed GENOMICS phage-defense-system possession trait after an ignored-and-hidden duplicate review found no live Butters gp30-gp31 TraitMech record, METPO class, or prior proposal. The record uses Mageeney et al. DOI:10.1128/mSystems.00534-20 for central-gene and genes 30/31 defense evidence, carries pinned DefenseFinder registry, HMM inventory, and rule snippets for Butters_gp30_gp31, and reserves METPO:1025200 in proposals/metpo_traitmech_v175 for upstream migration.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/butters_gp30_gp31_system/2026-09-20T013617Z-codex-06048a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -396,6 +407,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -687,10 +705,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-20 01:32 UTC
+      Record as of 2026-09-20 01:36 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

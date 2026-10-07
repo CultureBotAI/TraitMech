@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-robot-whitespace
+session:
+  id: 2026-10-05T153914Z-codex-276c4a
+  timestamp: '2026-10-05T15:39:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1715
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Clarify scoped whitespace checks for required ROBOT header cells
+  details: 'Address #1715: normal staged diff checking flagged mandatory empty directive cells
+    in the valid v498 11-column ROBOT template. Document structured verification, inspection
+    of every flagged line, and a file-scoped blank-at-eol exception while preserving normal
+    checks elsewhere. Prohibit trimming required cells, artificial annotations and global
+    whitespace changes. The skill validator, proposal verifier, ROBOT/ELK and eight writer
+    tests passed; the tests explicitly preserve the three empty trailing directive cells.'

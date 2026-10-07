@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-1 as the validated D390 transcriptional unit with two product accessions and with DefenseFinder DS-1A and DS-1B profile rows. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, exact molecular output, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -392,7 +394,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -416,8 +417,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T02:20:00Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add DS-1 system trait
+            <p>Minted traitmech:000424 for the DOI-backed DS-1 system under phage defense system. DOI:10.1126/science.adv7924 and the final Science supplementary tables support DS-1 as the DefensePredictor-discovered system corresponding to the two-gene D390 transcriptional unit that reduces bacteriophage plaquing when cloned in E. coli MG1655; the pinned DefenseFinder article and HMM inventories map DS-1 to the DS-1A and DS-1B custom profiles while the pinned rules table has no DS-1 row, so the graph stays nonmechanistic at cloned-transcriptional-unit level and the record keeps profile-to-component mapping, native host breadth, phage range, and direct molecular output unresolved. Reserved METPO:1037800 in proposals/metpo_traitmech_v301.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_1_system/2026-09-28T022000Z-claude-code-947bfe.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-28T03:20:08Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Fix DS-1 definition host wording
+            <p>Addressed issue #1380 by replacing definition wording that could imply D390 is an E. coli transcriptional unit with wording that treats D390 as the DeWeirdt et al. working transcriptional-unit identifier, explicitly keeping E. coli MG1655 to the plasmid-expression assay. Expanded the shared Science evidence snippet so the record itself supports the E. coli MG1655 assay host and synchronized the METPO proposal definition.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_1_system/2026-09-28T032008Z-codex-issue1380.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -506,6 +523,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -799,8 +823,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-28 03:20 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

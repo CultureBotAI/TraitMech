@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/anisogamy.yaml
+  slug: anisogamy
+session:
+  id: 2026-10-05T125635Z-codex-9fccb1
+  timestamp: '2026-10-05T12:56:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed anisogamy with explicit size-based scope
+  details: Created traitmech:000620 as a PROPOSED PHYSIOLOGY class under METPO:1000059 with
+    three DOI-backed sources (10.1038/s42003-018-0019-5, 10.1186/1471-2148-14-37, 10.1186/s12915-024-01878-1),
+    exact raw-XML snippets and qualified Colemanosphaera charkowiensis NCBITaxon:51706 example.
+    Retained broader versus motility-qualified terminology, strain/date discrepancies and
+    unread-source limits; deferred mechanisms and mappings. Reserved METPO:1057400 in proposal
+    v497. Whole-tree novelty/allocation searches included ignored and hidden files; fresh
+    seed/release and open-PR checks found no exact conflict. Writer dry run/apply and eight
+    regression tests passed. Maintained snippet resolver returned LIKELY_PARAPHRASE for the
+    article-versus-abstract dash difference in 2018, VERIFIED for 2014 and NOT_IN_ABSTRACT
+    for the 2024 Background quotation; all three independently match raw XML. Broader corpus,
+    proposal, browser and CI validation remain pending at this history event.

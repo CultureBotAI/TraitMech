@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1057200	tripolar mating system	A fungal mating-system phenotype in which sexual reproduction occurs between a partner with pheromone/receptor and homeodomain determinants linked in one mating-type region and a partner with those determinants in two unlinked regions.	TraitMech:data/traits/physiology/tripolar_mating_system.yaml|DOI:10.1128/ec.00271-08|DOI:10.1128/mbio.00059-26	METPO:1000059			metpo_traitmech_2026_10	HIGH	Cross-level phenotype; engineered demonstrations do not establish natural prevalence.	traitmech:000618

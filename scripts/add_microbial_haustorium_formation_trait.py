@@ -1,0 +1,281 @@
+"""Add microbial haustorium formation without universalizing one host interface."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import csv
+import io
+import tempfile
+from pathlib import Path
+
+import yaml
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import write_validated_trait
+
+ROOT = Path(__file__).resolve().parent.parent
+SLUG = "microbial_haustorium_formation"
+TARGET = ROOT / f"data/traits/morphology/{SLUG}.yaml"
+PARENT_PATH = ROOT / "data/traits/upper/phenotype.yaml"
+PROPOSAL = ROOT / "proposals/metpo_traitmech_v539/metpo_proposal_classes_robot.tsv"
+IDENTIFIER = "traitmech:000663"
+METPO_ID = "METPO:1061600"
+MORPHOLOGY = "DOI:10.1016/j.fgb.2014.08.006"
+MYCOPARASITE = "DOI:10.1080/00275514.1994.12026373"
+OOMYCETE = "DOI:10.1111/mpp.13072"
+INTERFACE = "DOI:10.1104/pp.18.00979"
+TIMESTAMP = "2026-10-07T10:54:41Z"
+PARENT = {
+    "identifier": "METPO:1000059",
+    "label": "phenotype",
+    "definition": (
+        "A quality that differentiates specific instances of a species from other "
+        "instances of the same species."
+    ),
+    "definition_source": "DOI:10.1186/gb-2010-11-1-r2",
+    "trait_category": "UPPER",
+    "term_kind": "CLASS",
+    "mapping_status": "REVIEWED",
+    "parent_traits": ["METPO:1000188"],
+}
+RECORD = {
+    "identifier": IDENTIFIER,
+    "label": "microbial haustorium formation",
+    "definition": (
+        "A morphological phenotype in which a fungus or oomycete forms specialized "
+        "hyphal outgrowths, called haustoria, that establish intimate interfaces "
+        "with living host cells."
+    ),
+    "definition_source": MORPHOLOGY,
+    "trait_category": "MORPHOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": [PARENT["identifier"]],
+    "evidence": [
+        {
+            "reference": MORPHOLOGY,
+            "snippet": (
+                "The haustorium is separated from the extrahaustorial membrane "
+                "(em) by the extrahaustorial matrix (emx)."
+            ),
+            "notes": (
+                "Martinez-Cruz et al. (2014), PMID:25151531; primary PDF at "
+                "https://powderymildew.ucr.edu/wp-content/uploads/2017/04/MPM14.pdf. "
+                "Abstract, Introduction, Methods and main text were read; actual "
+                "Figures 2-4 and complete pages 24-26 were visually inspected. "
+                "The quote is from Figure 3's caption. Podosphaera xanthii isolate "
+                "2086 forms haustoria within melon epidermal cells. This supports "
+                "the fungal formation phenotype and this interface anatomy, not "
+                "a universal membrane arrangement. Callose correlates with maturity; "
+                "functional partitioning of lobes and putative exosomes remains "
+                "an interpretation. Remaining actual figures and supplements were "
+                "not inspected. Initial natural-isolation provenance for 2086 was "
+                "not established, so it is not used as a canonical example."
+            ),
+        },
+        {
+            "reference": MYCOPARASITE,
+            "snippet": (
+                "A single micropore connected the cytoplasm of the haustorial "
+                "filament with that of the host cell."
+            ),
+            "notes": (
+                "Zugmaier, Bauer and Oberwinkler (1994), Mycologia 86:49-56; "
+                "all eight pages and actual Figures 1-16 directly inspected at "
+                "https://dr-franz.oberwinkler.de/wp-content/uploads/Tremella_mycoparasitism.pdf. "
+                "The snippet is from the scientific abstract on page 49, visually "
+                "checked because OCR is poor. Crossref confirms this DOI, title, "
+                "authors and 1994 print date; its 2018 online date is not the "
+                "study year. Field and culture observations distinguish tremelloid "
+                "haustorial cells, filaments and host-dependent micropores. "
+                "Membrane continuity was visible only under optimal sectioning; "
+                "some captions say probably or presumed. Some tested hosts had "
+                "attached filaments without an observed continuous micropore. "
+                "Static microscopy is not a nutrient-flux assay, and formation "
+                "does not guarantee a successful feeding connection."
+            ),
+        },
+        {
+            "reference": OOMYCETE,
+            "snippet": (
+                "We transformed P. kernoviae to express green fluorescent protein "
+                "(GFP) and demonstrated that it forms haustoria within infected "
+                "N. benthamiana cells."
+            ),
+            "notes": (
+                "Wang et al. (2021), PMID:34018655, PMC8295517; scientific "
+                "abstract, Results 2.1, Figure 1 caption and Methods 4.1, 4.6 "
+                "and 4.7 read in directly retrieved full-text XML. The quoted "
+                "abstract sentence explicitly identifies transformation. Imaging "
+                "used engineered GFP line PkGFP8 derived from SCRP1055 and "
+                "transgenic Nicotiana benthamiana membrane markers. Results "
+                "call the projections likely biotrophic haustoria; the caption "
+                "says they appeared in natural hosts without membrane markers. "
+                "Those hosts are not unmodified-pathogen controls. Actual "
+                "figures, supplements and complete remaining Methods were not "
+                "inspected. This supports oomycete scope with engineering "
+                "qualifiers, not a natural canonical example or a requirement "
+                "for lifelong obligate biotrophy."
+            ),
+        },
+        {
+            "reference": INTERFACE,
+            "snippet": (
+                "Biotrophic and hemibiotrophic oomycetes form intimate "
+                "associations with their hosts using haustoria"
+            ),
+            "notes": (
+                "Judelson and Ah-Fong (2019), PMID:30538168, PMC6446794; "
+                "publisher HTML at https://academic.oup.com/plphys/article/179/4/1198/6116504 "
+                "read directly after PMC and Europe PMC access failed. The "
+                "clause precedes a figure citation in HAUSTORIA REPRESENT A "
+                "SPECIALIZED INTERFACE. This is a review, not another formation "
+                "experiment. Its interface and nutrient-acquisition passages "
+                "distinguish demonstrated effector secretion from then-unproven "
+                "nutritional importance in oomycetes. Neither a universal "
+                "transport mechanism nor a present-day absence of such evidence "
+                "is inferred. Actual figures and cited underlying experiments "
+                "were not inspected."
+            ),
+        },
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:5217",
+            "taxon_label": "Tremella mesenterica",
+            "reference": MYCOPARASITE,
+            "note": (
+                "Field-collected material in Zugmaier et al. (1994), Methods "
+                "page 51, field Results page 53 and Figures 1-9. Collections "
+                "from Haldenwald near Sonnenberg, Stuttgart, Germany, on "
+                "Carpinus betulus adjacent to Peniophora laeta include "
+                "8 June 1987 and 20 November 1989, W. Zugmaier 97 and 158. "
+                "The authors observed tremelloid haustorial cells and filaments "
+                "in contact with P. laeta and micropore connections. Figures "
+                "are not assigned individually to one voucher; no such match "
+                "is invented. Their separate laboratory culture was obtained "
+                "by crossing monospore cultures from different basidiomata "
+                "and is not equated to an unmodified field isolate. NCBI "
+                "Taxonomy confirms ID 5217, label and species rank; the field "
+                "material is not identified as NCBI type strain CBS 6973. "
+                "The directly inspected primary PDF is "
+                "https://dr-franz.oberwinkler.de/wp-content/uploads/Tremella_mycoparasitism.pdf."
+            ),
+        },
+    ],
+    "discussions": [
+        {
+            "discussion_id": "microbial-haustorium-scope-and-hierarchy",
+            "prompt": "Resolve a closer parent and the haustorium/arbuscule boundary.",
+            "kind": "CURATION_TODO",
+            "status": "OPEN",
+            "rationale": (
+                "Use phenotype METPO:1000059. Fungal appressorium formation "
+                "traitmech:000659 concerns surface-associated penetration "
+                "structures, not this intimate host-cell interface. Plant "
+                "pathogen METPO:1004003 is not a required parent because fungal "
+                "hosts are supported. Mycorrhization METPO:1000198 is obsolete. "
+                "Direct QuickGO authority checks resolve GO:0085035 haustorium "
+                "as a cellular component and GO:0052094 formation of haustorium "
+                "for nutrient acquisition as a biological process, not exact "
+                "organism-level phenotypes. GO:0085041 arbuscule is an is_a "
+                "child of GO:0085035, whereas literature often distinguishes "
+                "arbuscules from parasitic haustoria. Preserve that attributed "
+                "umbrella usage: the definition is not restricted to "
+                "pathogenicity, but arbuscule formation is not asserted as an "
+                "exact synonym or given a new hierarchy here. The GO membrane-"
+                "invagination definition does not describe every tremelloid "
+                "micropore interface. No xrefs or SSSOM equivalences are "
+                "asserted. Parasitic-plant haustorial organs are outside this "
+                "microbial hyphal scope; fungi and oomycetes are both included."
+            ),
+            "posed_by": "codex",
+            "posed_date": "2026-10-07",
+        },
+        {
+            "discussion_id": "microbial-haustorium-formation-and-function",
+            "prompt": "Separate observed formation from feeding and formation mechanisms.",
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "Haustorium formation alone does not demonstrate nutrient flux, "
+                "effector delivery, pathogenicity, a universal shape or a shared "
+                "membrane topology. Keep tremelloid cytoplasmic connections "
+                "distinct from plant-pathogen extrahaustorial compartments. "
+                "Attached filaments without an observed micropore are not "
+                "proven successful feeding sites. Oomycete transformed imaging "
+                "and source-specific likely/appeared language must remain "
+                "visible; natural host means the host species, not an "
+                "unmodified pathogen. Formation regulation requires direct "
+                "perturbation evidence and authority-verified protein examples. "
+                "The protein-resolved causal graph is deferred, not claimed "
+                "to be biologically absent."
+            ),
+            "posed_by": "codex",
+            "posed_date": "2026-10-07",
+        },
+    ],
+}
+
+
+def build_record() -> dict:
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record, curator="codex", action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Added microbial haustorium formation with four source-backed snippets, "
+            "a field-qualified Tremella example and explicit interface, engineering "
+            "and ontology limits. Ignored-and-hidden novelty checks found no exact "
+            "record. Reserved METPO:1061600 in v539, avoiding pending v538. "
+            "Existing traits unchanged; protein-level formation graph deferred."
+        ),
+        llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def proposal_tsv(record: dict) -> str:
+    rows = [
+        ["proposed_id", "label", "definition", "definition_source", "parent",
+         "synonyms", "xrefs", "subset", "priority", "observations", "traits_addressed"],
+        ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "SC %",
+         "A oboInOwl:hasExactSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+         "A oboInOwl:inSubset", "", "", ""],
+        [METPO_ID, record["label"], record["definition"],
+         "|".join([f"TraitMech:data/traits/morphology/{SLUG}.yaml",
+                   *(e["reference"] for e in record["evidence"])]),
+         PARENT["identifier"], "", "", "metpo_traitmech_2026_10", "",
+         "Formation phenotype; source-qualified fungal and oomycete host interfaces.",
+         IDENTIFIER],
+    ]
+    stream = io.StringIO(newline="")
+    csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    return stream.getvalue()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    parent = yaml.safe_load(PARENT_PATH.read_text())
+    if not isinstance(parent, dict) or any(parent.get(k) != v for k, v in PARENT.items()):
+        raise SystemExit("Parent identity or scope differs from reviewed projection")
+    record = build_record()
+    proposal = proposal_tsv(record)
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+        raise SystemExit("Existing target differs from reviewed result")
+    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+        raise SystemExit("Existing proposal differs from reviewed result")
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        PROPOSAL.parent.mkdir(parents=True, exist_ok=True)
+        PROPOSAL.write_text(proposal)
+    print("Applied" if args.apply else "Validated dry run; pass --apply to write")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

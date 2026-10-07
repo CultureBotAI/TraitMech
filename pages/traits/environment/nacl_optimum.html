@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -582,7 +584,6 @@ Recent evidence shows that this dichotomy is not absolute. *Natranaerobius therm
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -720,8 +721,24 @@ Recent evidence shows that this dichotomy is not absolute. *Natranaerobius therm
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T01:00:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Review NaCl-optimum causal graph evidence
+            <p>Reviewed data/traits/environment/nacl_optimum.yaml for issue #183. Added snippets to six edge-level evidence items in nacl_optimum_balanced_osmoadaptation, regrounded the ambient-NaCl to osmotic-stress edge to biolink:causes, and broadened one 2024 transporter edge from Na+ homeostasis to Na+/K+/H+ transporter control of cellular ion homeostasis. Existing deep-research findings were reused alongside the open Oren and Halomonas elongata reviews and the 2024 long-term salinity-stress source; no paid research provider was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nacl_optimum/2026-09-04T010000Z-codex-5941be.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T14:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected NaCl-optimum causal-graph components
+            <p>Resolved issue #183 graph fragmentation in data/traits/environment/nacl_optimum.yaml. Added 4 source- and verbatim-snippet-backed connectors to collapse the reviewed nonmechanistic graph from 5 components to 1 while keeping salt-in KCl, acidic proteome, compatible-solute uptake, and Na+/K+/H+ transporter branches scoped as NaCl-optimum osmoadaptation support. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nacl_optimum/2026-09-04T140000Z-codex-183.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -815,6 +832,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1108,8 +1132,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-06 17:10 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

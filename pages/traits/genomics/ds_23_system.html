@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-23 as the validated E2DP transcriptional unit with one product accession, ZF and PDDEXK HHpred-domain rows, and one DefenseFinder DS-23 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, DS-23 molecular activity, trigger, substrate, complete phage breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -396,7 +398,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -414,8 +415,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-29T00:59:43Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-23 system trait
+            <p>Added data/traits/genomics/ds_23_system.yaml as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record. The record quotes the final Science Table S6 E2DP row, Table S7 Bas19 EOP row, Table S8 DS-23 display plus ZF and PDDEXK HHpred rows, and the pinned DefenseFinder DS-23 article and HMM rows; keeps the graph at E2DP transcriptional-unit level; leaves the ZF, PDDEXK, and rule-level interpretation as an open knowledge gap; and reserves METPO:1040200 in proposals/metpo_traitmech_v325.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_23_system/2026-09-29T005943Z-codex-ds23.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -504,6 +515,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -797,8 +815,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-29 00:59 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

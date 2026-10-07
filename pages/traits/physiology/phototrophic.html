@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This cross-mechanism graph includes chlorophyll/bacteriochlorophyll reaction centers and retinal ion pumps as alternatives. The R. rubrum PufL example anchors a Type II reaction center and does not represent oxygenic or rhodopsin-based phototrophy.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -601,7 +603,6 @@ The following table presents candidate nodes grouped by entity type, with sugges
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -739,8 +740,24 @@ The following table presents candidate nodes grouped by entity type, with sugges
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T10:16:04Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the phototrophic graph
+            <p>Linked rhodopsin-driven ion transport to proton motive force with exact public-source evidence. The graph moved from two components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/phototrophic/2026-08-31T101604Z-codex-25485d.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-14T23:14:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Moved a narrowed AAP source key
+            <p>Removed the aerobic_anoxygenic_phototrophy metpo.owl source key from the broad Phototrophic record after minting the same-scope aerobic anoxygenic phototrophy TraitRecord with that key as a related synonym.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/phototrophic/2026-09-14T231400Z-codex-60c746.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -834,6 +851,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1127,8 +1151,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-14 23:14 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

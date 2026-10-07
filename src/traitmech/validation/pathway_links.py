@@ -46,6 +46,7 @@ def pathway_link_errors(doc: dict, version: str, records: dict[str, dict]) -> li
                     errors.append(f"{prefix}: source_version differs from the pinned index")
                 if link.get("relation") != "PATHWAY_CONTEXT":
                     errors.append(f"{prefix}: unsupported pathway relation")
-                if not str(link.get("basis", "")).strip():
+                basis = link.get("basis")
+                if not isinstance(basis, str) or not basis.strip():
                     errors.append(f"{prefix}: missing correspondence basis")
     return errors

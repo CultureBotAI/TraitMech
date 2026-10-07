@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_appressorium_formation.yaml
+  slug: fungal_appressorium_formation
+session:
+  id: 2026-10-07T053243Z-codex-2a8d25
+  timestamp: '2026-10-07T05:32:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed fungal appressorium formation
+  details: Minted traitmech:000659 with four directly checked primary-source snippets, an
+    NCBI-confirmed Pyricularia oryzae Guy11 example and independently read isolation provenance,
+    and two open morphology/mapping and function/mechanism discussions. Reserve METPO:1061200
+    in v535. Retain source-attributed broad appressorium usage, saprotrophic cellophane-assay
+    limits, the expressorium terminology boundary and nonuniversal cell-cycle/Pmk1 mechanisms.
+    Existing trait records unchanged; no exact xrefs, synonyms or causal graph asserted. Novelty
+    searches included ignored and hidden files.

@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/palmelloid_formation.yaml
+  slug: palmelloid_formation
+session:
+  id: 2026-10-07T005927Z-codex-f28435
+  timestamp: '2026-10-07T00:59:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1767
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Correct palmelloid definition to cover both documented senses
+  details: 'Addresses issue #1767. The initial unqualified definition covered only mother-wall
+    retention. Directly retrieved Herron et al. (2019), DOI:10.1038/s41598-019-39558-8, Discussion
+    explicitly also includes extracellular gelatinous material causing adhesion. Broadened
+    the definition and v530 proposal, added a verified 17-word snippet, and revised scope/mechanism
+    discussions while retaining the qualified Antarctic canonical example. The guarded writer
+    preserves the first curation event and appends CORRECTED_DEFINITION_SCOPE. The original
+    CREATE record history/records/palmelloid_formation/2026-10-07T004714Z-codex-8e7daa.yaml
+    remains accurate about the initial state and is unchanged. Twenty-four revised writer
+    tests and dry run passed; final artifact regeneration, corpus validation and PR review
+    remain pending. The obsolete validation process was deliberately terminated and is not
+    claimed as a complete pass.'

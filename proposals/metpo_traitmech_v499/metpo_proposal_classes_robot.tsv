@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1057600	cytogamy	A sexual-reproduction phenotype in which a paired cell self-fertilizes by fusion of its own gametic nuclei without exchanging gametic nuclei with its partner.	TraitMech:data/traits/physiology/cytogamy.yaml|DOI:10.1017/S0016672300010740|DOI:10.1111/j.1550-7408.1958.tb02567.x|DOI:10.1093/genetics/91.4.657	METPO:1000059			metpo_traitmech_2026_10	HIGH	Paired-cell internal self-fertilization without gametic-nuclear exchange; not unpaired autogamy.	traitmech:000623

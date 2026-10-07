@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents a monofunctional heme-catalase reaction and two alternative bacterial peroxide-sensing regulators. The PerR example supports the S. aureus regulatory branch and is not generalized to OxyR-using taxa.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -632,7 +634,6 @@ Catalase abundance is only one determinant of flux. Activity additionally depend
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -740,8 +741,18 @@ Catalase abundance is only one determinant of flux. Activity additionally depend
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-05T17:56:22Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the Ctt1 example to its peroxide-removal pathway component
+            <p>Follow-up to the pathway context bulk change: the new P06115 Ctt1 example overlaps PathwayMech gomodel:YeastPathways_DETOX1-PWY. Verified that the pinned source explicitly names SGD:S000003320 and its catalase reaction consuming hydrogen peroxide and producing water and dioxygen. Added a PATHWAY_CONTEXT link on the catalase node, expressly excluding superoxide-dismutase equivalence and bacterial regulatory scope. Final manifest contains 19 links on 17 nodes in 11 traits to 15 PathwayMech records. All changes use the guarded writer and preserve the existing example evidence.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/catalase_activity/2026-10-05T175622Z-codex-6ba7c0.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -835,6 +846,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1126,10 +1144,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-05 17:55 UTC
+      Record as of 2026-10-05 17:56 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

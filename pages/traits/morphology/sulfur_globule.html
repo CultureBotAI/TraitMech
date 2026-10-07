@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -438,7 +440,6 @@ Use label-only nodes until the exact ChEBI record and protonation state have bee
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -504,8 +505,18 @@ Use label-only nodes until the exact ChEBI record and protonation state have bee
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-05T00:00:00Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Attach the stranded PDO/sulfite branch to the sulfide-oxidation pathway
+            <p>persulfide_dioxygenase -&gt; sulfite was a correct enzymatic fact with no undirected path to sulfur_globule_trait. PDO acts downstream of SQR in the same sulfide-oxidation pathway this graph already models, so it now participates in oxidative_sulfur_metabolism (biolink:participates_in). The snippet is verbatim from PMID:35653932, checked against the PubMed abstract in the same run. Resolves this graph&#39;s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings. Scope caveat recorded in issue 297: the quote covers heterotrophic bacteria and human mitochondria rather than the Thiomargarita/Beggiatoa exemplars, so it supports the generic pathway claim the object node makes and no more.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sulfur_globule/2026-08-05T000000Z-claude-code-183a02.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -599,6 +610,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -892,8 +910,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

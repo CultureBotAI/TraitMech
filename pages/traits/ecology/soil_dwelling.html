@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -587,7 +589,6 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -671,8 +672,30 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T00:20:00Z</time>
+           · claude-code
+          <ul><li><strong>REVIEW</strong> — Reviewed soil-dwelling causal evidence for issue #183
+            <p>Reviewed data/traits/ecology/soil_dwelling.yaml after the issue #183 priority pass. Added source-verified verbatim snippets to the two record-level evidence items and all eight causal-edge evidence items in soil_dwelling_biogeochemistry; regrounded the five broad observational ecology edges to biolink:associated_with; and narrowed the climate-extreme edge to the heat treatment supported by DOI:10.1038/s41586-024-08185-3. The transform is dry-run by default, uses write_validated_trait for LinkML validation before writes, and has focused regression tests for idempotence, source drift, migrated drift, and partial replay.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/soil_dwelling/2026-09-04T002000Z-claude-code-50a534.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T12:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected soil_dwelling causal-graph components
+            <p>Resolved issue #183 graph fragmentation in data/traits/ecology/soil_dwelling.yaml. Added a soil life-history/activity context node and 6 source- and verbatim-snippet-backed association connectors to collapse the reviewed nonmechanistic habitat graph from 6 components to 1. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/soil_dwelling/2026-09-04T120000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-06T13:30:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Repair PR 664 soil connector evidence
+            <p>Addressed adversarial review issue #666 by replacing borrowed snippets on the six soil_life_history_activity_context connectors with connector-specific exact snippets from the same supporting sources; the focused replay tests verify the patched script and curated YAML stay in sync.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/soil_dwelling/2026-09-06T133000Z-codex-0f1048.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -766,6 +789,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1059,8 +1089,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-07 20:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_sclerotium_formation.yaml
+  slug: fungal_sclerotium_formation
+session:
+  id: 2026-10-07T065139Z-codex-f97994
+  timestamp: '2026-10-07T06:51:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1776
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - identity
+  summary: Correct session actor attribution without rewriting history
+  details: 'Correction to history/records/fungal_sclerotium_formation/2026-10-07T064956Z-claude-code-77563e.yaml:
+    the actual curation actor was codex, using model gpt-5 and agent_tool codex, not the scaffolder
+    default claude-code recorded in session.actors.name. The original append-only record is
+    preserved. No TraitRecord content changes in this audit. The add-trait skill now warns
+    that --model and --agent-tool do not override --actor-name and requires inspecting the
+    emitted session actors. README morphology prose is reconciled with the live 14 PROPOSED
+    morphology records. Tracked by issue #1776.'

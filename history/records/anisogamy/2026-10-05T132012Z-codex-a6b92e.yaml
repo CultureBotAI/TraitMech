@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/anisogamy.yaml
+  slug: anisogamy
+session:
+  id: 2026-10-05T132012Z-codex-a6b92e
+  timestamp: '2026-10-05T13:20:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1711
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Qualify anisogamy against behavioural-only diatom usage
+  details: 'Addressed review finding #1711 with DOI:10.1371/journal.pone.0181413, a 17-word
+    contiguous Discussion snippet checked against publisher HTML and raw manuscript XML, and
+    an explicit boundary distinguishing physiological/behavioural usage from the selected
+    size-dimorphism sense. Preserved definition, canonical example and all earlier history.
+    Updated the METPO proposal attribution and scope note. Guarded repair dry run/apply and
+    17 original/repair regression cases passed; derived regeneration and final broader validation
+    remain pending at this event.'

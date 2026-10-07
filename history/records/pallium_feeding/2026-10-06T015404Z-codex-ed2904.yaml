@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pallium_feeding.yaml
+  slug: pallium_feeding
+session:
+  id: 2026-10-06T015404Z-codex-ed2904
+  timestamp: '2026-10-06T01:54:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed pallium feeding phenotype
+  details: Added PROPOSED traitmech:000632 with three DOI-backed source snippets, natural-specimen-qualified
+    NCBITaxon:402581 Oblea rotunda, and METPO v508 placeholder 1058500. Whole-repository ignored-and-hidden
+    searches and parsed pinned METPO found no exact trait or ID collision. Direct source inspection
+    preserves complete/partial enclosure, missing 1986 scan pages and unresolved 1992 membrane
+    topology; no unsupported protein graph or sequence inference. Guarded writer dry run and
+    focused tests passed before history creation.

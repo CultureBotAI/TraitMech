@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1058200	kleptoplasty	A physiological phenotype in which a microbial organism selectively retains plastids acquired from algal prey after discarding or digesting other prey components.	TraitMech:data/traits/physiology/kleptoplasty.yaml|DOI:10.1038/s41598-018-28455-1|DOI:10.1073/pnas.2220100120|DOI:10.1038/s41467-026-70516-x|DOI:10.1111/1462-2920.14433	METPO:1000059			metpo_traitmech_2026_10		Prey-plastid retention; photosynthesis and plastid replication are not required.	traitmech:000629

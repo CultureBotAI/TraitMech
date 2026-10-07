@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/macropinocytosis.yaml
+  slug: macropinocytosis
+session:
+  id: 2026-10-06T053541Z-codex-f0fe58
+  timestamp: '2026-10-06T05:35:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Refine macropinocytosis parent to pinocytosis
+  details: The guarded writer changes the direct parent of traitmech:000634 from phenotype
+    to new traitmech:000635 by definition-based hierarchy inference. Resolved only macropinocytosis-scope-and-hierarchy
+    with resolution note/date while preserving its historical rationale. Identity, definition,
+    evidence, DdB example, native-mechanism discussion and earlier history are unchanged.
+    Historical v510 phenotype axiom remains true and unchanged; v511 explicitly requests METPO:1058700
+    SubClassOf METPO:1058800 on upstream adoption. Guarded dry run and 26 focused tests passed
+    before application, including preservation, replay and drift refusal. Broader validation
+    follows separately.

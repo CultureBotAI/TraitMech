@@ -123,6 +123,8 @@ Bas67	B.2	MG1655	24-07-17_AAA2_VPUS_VAME_EV.png	20000000	IMPD	H335A	24-07-18	24-
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-11 as the validated IMPD transcriptional unit with one product accession, final Table S8 HEPN and CBS HHpred-domain rows, and one DefenseFinder DS-11 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or ligand, the HEPN substrate, whether ATP binding or CBS-ligand binding activates the effector, phage target breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -412,7 +414,6 @@ Bas67	B.2	MG1655	24-07-17_AAA2_VPUS_VAME_EV.png	20000000	IMPD	H335A	24-07-18	24-
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -436,8 +437,19 @@ Bas67	B.2	MG1655	24-07-17_AAA2_VPUS_VAME_EV.png	20000000	IMPD	H335A	24-07-18	24-
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T13:46:47Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-11 system trait
+            <p>Minted traitmech:000435 as a DS-11 system GENOMICS record under phage defense system, backed by the DeWeirdt et al. Science article, final supplementary Tables S6/S7/S8, and the pinned DefenseFinder DS-11 article/HMM registries. The record keeps IMPD and DS-11__DS-11 as related source identifiers, adds a nonmechanistic locus-level causal graph, opens a DS-11 knowledge gap for unresolved activation and effector chemistry, and leaves canonical_examples empty because the sources support cloned IMPD assays in E. coli MG1655 rather than experimentally verified endogenous DS-11 activity in a named native isolate.</p></li><li><strong>EDIT</strong> — Address DS-11 PR review wording issue
+            <p>Broadened the reduced-phage-plaquing node description after PR #1403 review issue #1404 so it no longer names only T3 while the DS-11 evidence bundle includes Bas67 assay rows.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_11_system/2026-09-28T134647Z-codex-00dd81.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -526,6 +538,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -819,8 +838,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-28 14:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -109,6 +109,8 @@ KP5</blockquote>
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures BrcWGS21 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth outside the reported panels, direct molecular substrate, or a DefenseFinder HMM/rules profile absent from the pinned snapshot.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -388,7 +390,6 @@ KP5</blockquote>
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -406,8 +407,18 @@ KP5</blockquote>
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-01T17:12:44Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added BrcWGS21 system genomics trait
+            <p>Added traitmech:000520 for BrcWGS21 system with DOI:10.1126/science.ads0915 phage-panel, attC, and construct evidence plus the pinned DefenseFinder gcuWGS21 article row; left canonical_examples empty because the supporting BRiC assays are heterologous rather than direct native isolate exemplars; kept the causal graph at a nonmechanistic integron-cassette level because the pinned DefenseFinder HMM inventory and rules table have no exact WGS21 model rows; reserved METPO:1047400 in proposals/metpo_traitmech_v397.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/brcwgs21_system/2026-10-01T171244Z-codex-f8a9ce.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -496,6 +507,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -789,8 +807,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-10-01 17:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

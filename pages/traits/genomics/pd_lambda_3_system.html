@@ -121,6 +121,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures PD-Lambda-3 as a named DefenseFinder phage-defense system while leaving natural host breadth, the direct phage trigger, the effector mechanism, the third protein in the experimental source locus, and exact PD-Lambda-3 profile-to-protein correspondence unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -413,7 +415,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -431,8 +432,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-26T12:33:19Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add PD-Lambda-3 system trait
+            <p>Minted traitmech:000382 for the DOI- and DefenseFinder-backed PD-Lambda-3 phage-defense system; added a conservative nonmechanistic LambdaVir protection graph with pinned DefenseFinder wiki, rules, HMM, and article-registry evidence; recorded the canonical-example evidence gap; and reserved METPO:1033600 in proposals/metpo_traitmech_v259.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/pd_lambda_3_system/2026-09-26T123319Z-codex-506dc4.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -521,6 +532,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -812,10 +830,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-26 12:32 UTC
+      Record as of 2026-09-26 12:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This first graph captures process-level light harvesting, photophosphorylation, and organic-carbon assimilation without claiming an exact AAP reaction-center protein family. pufLM examples need an audit-verifiable accession/proteome pair before promotion to a mechanistic protein-level graph.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -339,7 +341,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -351,8 +352,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-14T23:14:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added the aerobic anoxygenic phototrophy TraitRecord
+            <p>Minted traitmech:000194 as a DOI-backed aerobic bacteriochlorophyll reaction-center photoheterotrophy, parented it to photoheterotrophic, anoxygenic photosynthesis, and aerobic, added Erythrobacter sp. NAP1 as a canonical example, added a compact light/organic-carbon causal graph, moved the metpo.owl source key from broad phototrophic, and reserved METPO:1014800 in proposals/metpo_traitmech_v71.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/aerobic_anoxygenic_phototrophy/2026-09-14T231400Z-codex-63cede.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -441,6 +452,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -734,8 +752,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-14 23:14 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

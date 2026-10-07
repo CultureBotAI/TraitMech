@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the DefenseFinder DUF262_Shlafen article namespace at system level and deliberately leaves the exact locus architecture, the DUF262-associated domain boundary, accession-level protein examples, native host exemplars, phage trigger breadth, and DefenseFinder HMM/rules profiles unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -298,7 +300,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -316,8 +317,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-02T01:00:02Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Mint DUF262 Schlafen system trait
+            <p>Minted traitmech:000530 as a DOI- and DefenseFinder-backed DUF262 Schlafen phage-defense-system record, reserved METPO:1048400 in proposals/metpo_traitmech_v407 for upstream replacement, captured the DUF262_Shlafen article-registry source key, left exact HMM/rules and native-host exemplars as open knowledge gaps, and validated the record through write_validated_trait. The ignored-and-hidden duplicate search found no exact DUF262_Shlafen trait, history record, prior proposal, page, script, or reserved CURIE before curation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/duf262_schlafen_system/2026-10-02T010002Z-codex-f229ea.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -406,6 +417,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -699,8 +717,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-10-02 01:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

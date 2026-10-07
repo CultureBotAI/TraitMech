@@ -1,4 +1,5 @@
 path	identifier	n_citations	citations	malformed	passes
+data/traits/ecology/bacterial_cannibalism.yaml	traitmech:000626	3	DOI:10.1126/science.1086462; DOI:10.1111/j.1365-2958.2009.06882.x; DOI:10.1128/mbio.00525-26		yes
 data/traits/ecology/endophytic.yaml	traitmech:000442	2	DOI:10.3390/microorganisms5040077; DOI:10.1128/MMBR.00050-14		yes
 data/traits/ecology/epiphytic.yaml	traitmech:000443	2	DOI:10.1186/s12915-024-01967-1; DOI:10.1128/AEM.69.4.1875-1883.2003		yes
 data/traits/genomics/abi2_system.yaml	traitmech:000338	8	DOI:10.1016/j.mib.2005.06.006; DOI:10.1128/jb.177.13.3818-3823.1995; DOI:10.1128/jb.177.13.3824-3829.1995; https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/; https://rest.uniprot.org/uniprotkb/Q48717.tsv?fields=accession,id,gene_names,protein_name,xref_pfam,organism_name; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv; https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md		yes
@@ -406,14 +407,28 @@ data/traits/metabolism/tetrathionate_respiration.yaml	traitmech:000200	2	DOI:10.
 data/traits/metabolism/thiosulfate_respiration.yaml	traitmech:000126	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2023.1108245		yes
 data/traits/metabolism/trimethylamine_n_oxide_respiration.yaml	traitmech:000199	2	DOI:10.1111/1462-2920.12726; DOI:10.3389/fmicb.2024.1467153		yes
 data/traits/morphology/akinete.yaml	traitmech:000185	2	DOI:10.1159/000517443; DOI:10.3389/fmicb.2025.1677844		yes
+data/traits/morphology/coenobium_formation.yaml	traitmech:000655	3	DOI:10.1098/rspb.2023.1882; DOI:10.1242/jcs.212233; DOI:10.1038/s41598-018-28627-z		yes
 data/traits/morphology/ferrosome.yaml	traitmech:000527	2	DOI:10.1038/s41586-022-04741-x; DOI:10.1038/s41586-023-06719-9		yes
+data/traits/morphology/fungal_appressorium_formation.yaml	traitmech:000659	4	DOI:10.3390/jof5030072; DOI:10.1371/journal.ppat.1002514; DOI:10.1186/1741-7007-6-9; DOI:10.1111/nph.13931		yes
+data/traits/morphology/fungal_arbuscule_formation.yaml	traitmech:000664	2	DOI:10.3390/plants8060142; DOI:10.1104/pp.109.141879		yes
+data/traits/morphology/fungal_chlamydospore_formation.yaml	traitmech:000658	6	DOI:10.1038/s41467-020-20010-9; DOI:10.1099/13500872-141-7-1507; DOI:10.3389/fmicb.2016.01697; DOI:10.1111/j.1567-1364.2009.00533.x; https://research.fs.usda.gov/treesearch/30277; DOI:10.1007/s10886-012-0171-1		yes
+data/traits/morphology/fungal_conidiation.yaml	traitmech:000657	4	DOI:10.2336/nishinihonhifu.40.1083; DOI:10.1101/gad.3.4.559; DOI:10.1016/j.simyco.2017.09.001; PMID:9199700		yes
+data/traits/morphology/fungal_rhizomorph_formation.yaml	traitmech:000662	4	DOI:10.1016/j.fgb.2009.04.005; DOI:10.1016/j.mycres.2005.09.006; DOI:10.1186/s12862-017-0877-3; DOI:10.3114/fuse.2024.14.03		yes
+data/traits/morphology/fungal_sclerotium_formation.yaml	traitmech:000660	5	DOI:10.1128/AEM.00565-08; DOI:10.3390/jof9070737; DOI:10.1016/j.micres.2019.126326; DOI:10.1128/spectrum.02084-21; DOI:10.2478/s11658-007-0047-5		yes
 data/traits/morphology/holdfast.yaml	traitmech:000184	2	DOI:10.1128/jb.00276-19; DOI:10.1128/jb.00273-22		yes
+data/traits/morphology/hormogonium_formation.yaml	traitmech:000651	3	DOI:10.1128/mSphere.00231-19; DOI:10.1099/00221287-111-1-1; DOI:10.1128/aem.55.1.125-131.1989		yes
+data/traits/morphology/microbial_haustorium_formation.yaml	traitmech:000663	4	DOI:10.1016/j.fgb.2014.08.006; DOI:10.1080/00275514.1994.12026373; DOI:10.1111/mpp.13072; DOI:10.1104/pp.18.00979		yes
+data/traits/morphology/palmelloid_formation.yaml	traitmech:000654	3	DOI:10.1038/s41598-019-39558-8; DOI:10.3390/ijms24098374; DOI:10.3389/fpls.2022.911035		yes
+data/traits/morphology/pseudohyphal_growth.yaml	traitmech:000653	2	DOI:10.1590/S1517-83822013005000056; DOI:10.1016/0092-8674(92)90079-r		yes
+data/traits/morphology/rosette_cell_arrangement.yaml	traitmech:000652	2	DOI:10.7554/eLife.41482; DOI:10.1128/jb.00064-19		yes
+data/traits/morphology/synnema_formation.yaml	traitmech:000656	3	DOI:10.1016/j.simyco.2017.09.001; DOI:10.3390/ijms21186660; DOI:10.1099/00221287-87-2-292		yes
 data/traits/morphology/type_iv_pilus.yaml	traitmech:000175	2	DOI:10.1093/femsre/fuab053; DOI:10.1042/BST20160221		yes
 data/traits/other/specialist.yaml	traitmech:000177	2	DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7		yes
 data/traits/physiology/acid_phosphatase_activity.yaml	traitmech:000142	2	DOI:10.1128/JB.182.23.6850-6853.2000; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml	traitmech:000194	3	DOI:10.1128/AEM.01747-12; DOI:10.1186/s40168-024-01786-0; DOI:10.1186/s40793-024-00573-6		yes
 data/traits/physiology/aerotaxis.yaml	traitmech:000589	3	DOI:10.1128/jb.178.17.5199-5204.1996; DOI:10.1128/jb.169.7.3118-3123.1987; DOI:10.1103/PhysRevE.106.034404		yes
 data/traits/physiology/aerotropism.yaml	traitmech:000601	2	DOI:10.1016/S0168-6496(03)00161-2; DOI:10.1155/2012/517529		yes
+data/traits/physiology/aggrephagy.yaml	traitmech:000646	4	DOI:10.1080/15548627.2026.2724473; DOI:10.1038/s44319-024-00275-7; DOI:10.1016/j.cell.2014.05.048; DOI:10.1080/27694127.2023.2236407		yes
 data/traits/physiology/alanine_arylamidase_activity.yaml	traitmech:000161	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html; DOI:10.1099/ijsem.0.006017		yes
 data/traits/physiology/alkaline_phosphatase_activity.yaml	traitmech:000141	2	DOI:10.1128/JB.185.16.4983-4991.2003; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/alpha_chymotrypsin_activity.yaml	traitmech:000159	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html; DOI:10.1099/ijsem.0.006017		yes
@@ -422,9 +437,15 @@ data/traits/physiology/alpha_galactosidase_activity.yaml	traitmech:000149	2	DOI:
 data/traits/physiology/alpha_glucosidase_activity.yaml	traitmech:000145	2	DOI:10.1371/journal.pone.0322500; DOI:10.3390/microorganisms13092005		yes
 data/traits/physiology/alpha_mannosidase_activity.yaml	traitmech:000150	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html; DOI:10.1128/jcm.32.3.854-855.1994		yes
 data/traits/physiology/amylase_activity.yaml	traitmech:000162	2	DOI:10.3389/fbioe.2020.00871; DOI:10.1007/s00018-023-04812-w		yes
+data/traits/physiology/anisogamy.yaml	traitmech:000620	4	DOI:10.1038/s42003-018-0019-5; DOI:10.1186/1471-2148-14-37; DOI:10.1186/s12915-024-01878-1; DOI:10.1371/journal.pone.0181413		yes
 data/traits/physiology/arginine_arylamidase_activity.yaml	traitmech:000167	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html; DOI:10.3389/fgene.2023.1240581; DOI:10.1099/ijsem.0.006017		yes
 data/traits/physiology/arginine_dihydrolase_activity.yaml	traitmech:000164	4	DOI:10.1128/aem.07724-11; https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html; DOI:10.1016/j.fm.2010.11.016; DOI:10.1016/j.resmic.2012.11.004		yes
+data/traits/physiology/autogamy.yaml	traitmech:000622	4	DOI:10.1017/S0016672300010740; DOI:10.1016/0014-4827(86)90492-1; DOI:10.1093/gbe/evaa052; DOI:10.1080/0269249X.2013.791344		yes
+data/traits/physiology/automixis.yaml	traitmech:000625	2	DOI:10.1111/j.1095-8312.1986.tb01761.x; DOI:10.1186/s13059-021-02521-w		yes
+data/traits/physiology/autophagic_glycogen_degradation.yaml	traitmech:000647	4	DOI:10.4161/auto.6.4.11736; DOI:10.3390/cells13060467; DOI:10.3390/ijms252111772; DOI:10.1016/j.isci.2024.109810		yes
+data/traits/physiology/autophagy.yaml	traitmech:000638	5	DOI:10.1083/jcb.119.2.301; DOI:10.1242/jcs.108.1.25; DOI:10.1073/pnas.0813319106; DOI:10.1371/journal.ppat.1006344; DOI:10.1007/s00284-024-03838-y		yes
 data/traits/physiology/bacteriocin_production.yaml	traitmech:000183	3	DOI:10.3389/fmicb.2016.00461; DOI:10.1146/annurev.micro.56.012302.161024; DOI:10.1038/srep27973		yes
+data/traits/physiology/ballistospore_discharge.yaml	traitmech:000661	3	DOI:10.1371/journal.pone.0004163; DOI:10.1371/journal.pone.0105147; DOI:10.1242/jeb.029975		yes
 data/traits/physiology/beta_galactosidase_activity.yaml	traitmech:000148	2	DOI:10.3389/fmicb.2021.742300; DOI:10.1128/jcm.22.3.333-335.1985		yes
 data/traits/physiology/beta_glucosidase_activity.yaml	traitmech:000146	3	DOI:10.1007/s13205-015-0328-z; DOI:10.2323/jgam.60.59; DOI:10.3390/microorganisms12040776		yes
 data/traits/physiology/beta_glucuronidase_activity.yaml	traitmech:000151	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html; DOI:10.1128/aem.50.6.1383-1387.1985		yes
@@ -436,10 +457,16 @@ data/traits/physiology/cellular_buoyancy.yaml	traitmech:000528	2	DOI:10.1186/s13
 data/traits/physiology/chemokinesis.yaml	traitmech:000586	4	DOI:10.1038/ismej.2013.210; DOI:10.1073/pnas.1602307113; DOI:10.1038/s41396-021-01024-7; DOI:10.7717/peerj.17126		yes
 data/traits/physiology/chemotropism.yaml	traitmech:000597	2	DOI:10.1371/journal.pbio.3002726; DOI:10.1038/s41598-020-67597-z		yes
 data/traits/physiology/cold_shock_response.yaml	traitmech:000206	2	DOI:10.3184/003685003783238707; DOI:10.1046/j.1365-2958.1999.01541.x		yes
+data/traits/physiology/contact_dependent_outer_membrane_exchange.yaml	traitmech:000650	4	DOI:10.7554/eLife.00868; DOI:10.1371/journal.pgen.1002626; DOI:10.1128/jb.00850-13; DOI:10.1371/journal.pone.0224817		yes
 data/traits/physiology/cystine_arylamidase_activity.yaml	traitmech:000147	3	DOI:10.14202/vetworld.2024.143-149; DOI:10.3389/fmicb.2022.1034816; DOI:10.2323/jgam.60.59		yes
+data/traits/physiology/cytogamy.yaml	traitmech:000623	3	DOI:10.1017/S0016672300010740; DOI:10.1111/j.1550-7408.1958.tb02567.x; DOI:10.1093/genetics/91.4.657		yes
 data/traits/physiology/dnase_activity.yaml	traitmech:000138	2	DOI:10.3389/fmicb.2019.00969; DOI:10.22207/JPAM.14.1.44		yes
 data/traits/physiology/durotaxis.yaml	traitmech:000596	3	DOI:10.7554/eLife.96821; DOI:10.1088/1361-6463/adb6b8; DOI:10.1038/s41563-022-01294-2		yes
+data/traits/physiology/endocytosis.yaml	traitmech:000636	2	DOI:10.1083/jcb.128.5.779; DOI:10.1128/mcb.14.11.7245-7255.1994		yes
 data/traits/physiology/energy_taxis.yaml	traitmech:000590	2	DOI:10.1128/jb.186.19.6595-6604.2004; DOI:10.1128/jb.182.21.6042-6048.2000		yes
+data/traits/physiology/er_phagy.yaml	traitmech:000642	3	DOI:10.15252/embj.2019102586; DOI:10.1242/jcs.154716; DOI:10.1038/nature14506		yes
+data/traits/physiology/exocytosis.yaml	traitmech:000637	3	DOI:10.1083/jcb.56.1.153; DOI:10.1007/BF01870409; DOI:10.1016/s0143-4160(98)90030-6		yes
+data/traits/physiology/extracellular_membrane_vesicle_production.yaml	traitmech:000649	4	DOI:10.1038/ncomms11220; DOI:10.1038/s41467-017-00492-w; DOI:10.1371/journal.pone.0011113; DOI:10.1038/s41467-025-60272-9		yes
 data/traits/physiology/galvanotaxis.yaml	traitmech:000581	2	DOI:10.1101/sqb.1988.053.01.006; DOI:10.1128/jb.178.4.1113-1119.1996		yes
 data/traits/physiology/galvanotropism.yaml	traitmech:000595	3	DOI:10.1128/jb.176.3.702-713.1994; DOI:10.1099/00221287-136-2-311; DOI:10.1016/j.cub.2006.12.043		yes
 data/traits/physiology/gamma_glutamyltransferase_activity.yaml	traitmech:000160	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html; DOI:10.3389/fgene.2023.1240581		yes
@@ -457,41 +484,62 @@ data/traits/physiology/histidine_arylamidase_activity.yaml	traitmech:000171	2	DO
 data/traits/physiology/homeoviscous_adaptation.yaml	traitmech:000208	4	DOI:10.1039/d4cc03114h; DOI:10.1146/annurev-micro-091313-103612; DOI:10.1128/spectrum.03925-23; DOI:10.1038/s41467-024-53677-5		yes
 data/traits/physiology/homothallism.yaml	traitmech:000609	3	DOI:10.5598/imafungus.2015.06.01.13; DOI:10.1371/journal.pgen.1006981; DOI:10.7554/elife.79114		yes
 data/traits/physiology/hyphal_anastomosis.yaml	traitmech:000605	3	DOI:10.1128/aem.65.12.5571-5575.1999; DOI:10.1128/ec.00191-12; DOI:10.1111/j.1469-8137.2008.02726.x		yes
+data/traits/physiology/isogamy.yaml	traitmech:000619	2	DOI:10.1038/s42003-022-04275-y; DOI:10.1111/evo.13427		yes
+data/traits/physiology/karyoklepty.yaml	traitmech:000630	3	DOI:10.1038/nature05496; DOI:10.1186/s12864-015-2052-9; DOI:10.3389/fmicb.2017.00423		yes
+data/traits/physiology/kleptoplasty.yaml	traitmech:000629	4	DOI:10.1038/s41598-018-28455-1; DOI:10.1073/pnas.2220100120; DOI:10.1038/s41467-026-70516-x; DOI:10.1111/1462-2920.14433		yes
 data/traits/physiology/lecithinase_activity.yaml	traitmech:000140	2	DOI:10.2147/IDR.S365254; DOI:10.1128/jb.81.6.939-945.1961		yes
 data/traits/physiology/leucine_arylamidase_activity.yaml	traitmech:000143	2	DOI:10.1099/ijsem.0.002327; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/leucyl_glycine_arylamidase_activity.yaml	traitmech:000178	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/lipase_activity.yaml	traitmech:000139	2	DOI:10.22207/JPAM.16.4.27; DOI:10.1016/j.mex.2018.01.004		yes
+data/traits/physiology/lipophagy.yaml	traitmech:000644	3	DOI:10.1091/mbc.e13-08-0448; DOI:10.1016/j.devcel.2024.01.014; DOI:10.1080/15548627.2024.2325297		yes
 data/traits/physiology/lysine_decarboxylase_activity.yaml	traitmech:000153	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/18.html; DOI:10.1128/jb.01306-06		yes
+data/traits/physiology/macropinocytosis.yaml	traitmech:000634	2	DOI:10.1242/jcs.213736; DOI:10.7554/eLife.04940		yes
 data/traits/physiology/magnetotaxis.yaml	traitmech:000176	3	DOI:10.1128/JB.00398-20; DOI:10.1038/s41396-018-0098-9; DOI:10.1128/mbio.01649-23		yes
 data/traits/physiology/mating_type_switching.yaml	traitmech:000611	3	DOI:10.5598/imafungus.2015.06.01.13; DOI:10.1534/genetics.107.076315; DOI:10.1371/journal.pgen.1006981		yes
+data/traits/physiology/mitophagy.yaml	traitmech:000639	4	DOI:10.7554/eLife.61245; DOI:10.1016/j.devcel.2009.06.014; DOI:10.1016/j.devcel.2009.06.013; DOI:10.4161/auto.4034		yes
+data/traits/physiology/myzocytosis.yaml	traitmech:000631	3	DOI:10.3390/microorganisms11081945; DOI:10.1111/jeu.13050; DOI:10.1038/ismej.2012.29		yes
 data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml	traitmech:000165	3	https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html; DOI:10.1111/j.1432-1033.1986.tb09366.x; DOI:10.1128/jb.169.6.2591-2597.1987		yes
 data/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.yaml	traitmech:000174	2	DOI:10.14202/vetworld.2024.143-149; DOI:10.1128/JCM.43.8.3713-3717.2005		yes
 data/traits/physiology/negative_autotropism.yaml	traitmech:000603	2	DOI:10.3390/biomimetics10050287; DOI:10.1093/jxb/19.1.125		yes
+data/traits/physiology/nucleophagy.yaml	traitmech:000643	5	DOI:10.1007/s00284-024-03838-y; DOI:10.1091/mbc.e02-08-0483; DOI:10.1091/mbc.e08-04-0363; DOI:10.1371/journal.pone.0033270; DOI:10.1242/jcs.133090		yes
+data/traits/physiology/oogamy.yaml	traitmech:000621	4	DOI:10.5194/essd-15-2711-2023; DOI:10.1186/s12915-024-01878-1; DOI:10.1186/s40529-018-0227-9; DOI:10.1371/journal.pbio.1001904		yes
 data/traits/physiology/ornithine_decarboxylase_activity.yaml	traitmech:000154	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html; DOI:10.1128/jb.124.2.791-799.1975		yes
 data/traits/physiology/osmotaxis.yaml	traitmech:000592	3	DOI:10.1016/s0014-4894(03)00031-6; DOI:10.1016/j.exppara.2005.10.005; DOI:10.1073/pnas.1620945114		yes
+data/traits/physiology/paedogamy.yaml	traitmech:000624	3	DOI:10.1080/0269249X.2013.791344; DOI:10.3390/d14121133; DOI:10.1007/s12223-008-0018-x		yes
+data/traits/physiology/pallium_feeding.yaml	traitmech:000632	3	DOI:10.1111/j.1529-8817.1986.tb00021.x; DOI:10.1111/j.0022-3646.1992.00069.x; DOI:10.4319/lo.1993.38.5.0965		yes
 data/traits/physiology/parasexuality.yaml	traitmech:000607	3	DOI:10.1093/emboj/cdg235; DOI:10.1128/ec.00128-13; DOI:10.1038/s41467-019-12376-2		yes
+data/traits/physiology/pexophagy.yaml	traitmech:000640	4	DOI:10.1038/emboj.2012.151; DOI:10.1016/j.devcel.2007.12.011; DOI:10.1242/jcs.108.1.25; DOI:10.1080/15548627.2019.1603546		yes
 data/traits/physiology/ph_taxis.yaml	traitmech:000591	2	DOI:10.1128/jb.00491-19; DOI:10.1128/jb.188.7.2656-2665.2006		yes
 data/traits/physiology/ph_tropism.yaml	traitmech:000602	2	DOI:10.1128/mbio.00285-23; DOI:10.1371/journal.pbio.3002726		yes
+data/traits/physiology/phagocytosis.yaml	traitmech:000627	2	DOI:10.1371/journal.pone.0095577; DOI:10.1111/nph.20388		yes
+data/traits/physiology/phagotrophy.yaml	traitmech:000628	2	DOI:10.1038/ismej.2017.68; DOI:10.1007/s00248-001-1024-6		yes
 data/traits/physiology/phenylalanine_arylamidase_activity.yaml	traitmech:000168	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/photokinesis.yaml	traitmech:000587	2	DOI:10.1128/AEM.67.12.5410-5419.2001; DOI:10.1016/S0176-1617(00)80045-0		yes
 data/traits/physiology/phototaxis.yaml	traitmech:000588	3	DOI:10.1105/tpc.108.057919; DOI:10.7554/eLife.12620; DOI:10.1093/dnares/dss024		yes
 data/traits/physiology/phototropism.yaml	traitmech:000598	3	DOI:10.1073/pnas.0600633103; DOI:10.1073/pnas.0900879106; DOI:10.1128/EC.00203-13		yes
+data/traits/physiology/pinocytosis.yaml	traitmech:000635	2	DOI:10.1083/jcb.53.3.681; DOI:10.1099/00221287-92-2-246		yes
 data/traits/physiology/positive_autotropism.yaml	traitmech:000604	2	DOI:10.1093/jxb/19.1.125; DOI:10.1039/d3lc00859b		yes
 data/traits/physiology/primary_homothallism.yaml	traitmech:000614	4	DOI:10.1371/journal.pgen.1006110; DOI:10.5598/imafungus.2015.06.01.13; DOI:10.1016/j.cub.2007.07.012; DOI:10.1128/EC.00019-10		yes
 data/traits/physiology/prolyl_aminopeptidase_activity.yaml	traitmech:000166	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html; DOI:10.1111/j.1365-2958.1993.tb01249.x; DOI:10.1099/ijsem.0.006017		yes
+data/traits/physiology/proteaphagy.yaml	traitmech:000645	3	DOI:10.1074/jbc.M115.699124; DOI:10.1016/j.celrep.2016.07.015; DOI:10.1016/j.jbc.2021.101494		yes
+data/traits/physiology/pseudobipolar_mating_system.yaml	traitmech:000617	2	DOI:10.1371/journal.pgen.1001052; DOI:10.1371/journal.pbio.3003417		yes
 data/traits/physiology/pseudohomothallism.yaml	traitmech:000612	4	DOI:10.5598/imafungus.2015.06.01.13; DOI:10.1093/genetics/143.2.789; DOI:10.1002/dvg.1020150111; DOI:10.1371/journal.pgen.1000030		yes
 data/traits/physiology/pyrazinamidase_activity.yaml	traitmech:000163	3	DOI:10.1111/j.1742-4658.2007.06241.x; https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html; DOI:10.1371/journal.pone.0015785		yes
 data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml	traitmech:000155	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html; DOI:10.1128/JCM.37.11.3443-3447.1999		yes
 data/traits/physiology/rheotaxis.yaml	traitmech:000582	2	DOI:10.1073/pnas.1120955109; DOI:10.1016/j.bpj.2012.03.001		yes
 data/traits/physiology/rheotropism.yaml	traitmech:000600	3	DOI:10.1016/S0006-3495(65)86719-4; DOI:10.1016/S0168-1656(97)00147-8; DOI:10.1007/BF00397538		yes
+data/traits/physiology/ribophagy.yaml	traitmech:000641	4	DOI:10.1038/ncb1723; DOI:10.1083/jcb.201308139; DOI:10.15252/embj.201489083; DOI:10.1016/j.jbc.2025.108554		yes
 data/traits/physiology/serine_arylamidase_activity.yaml	traitmech:000172	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/siderophore_production.yaml	traitmech:000186	3	DOI:10.1111/1462-2920.14937; DOI:10.15698/mic2018.10.649; DOI:10.1073/pnas.0908760106		yes
 data/traits/physiology/sos_response.yaml	traitmech:000207	2	DOI:10.1002/em.22267; DOI:10.1002/advs.202203260		yes
 data/traits/physiology/tetrapolar_mating_system.yaml	traitmech:000615	2	DOI:10.1371/journal.pgen.1002528; DOI:10.1534/genetics.115.177717		yes
 data/traits/physiology/thermotaxis.yaml	traitmech:000580	2	DOI:10.7554/eLife.26607; DOI:10.1073/pnas.0709903105		yes
 data/traits/physiology/thigmotropism.yaml	traitmech:000594	4	DOI:10.1080/02681219280000621; DOI:10.1099/00221287-144-3-689; DOI:10.1016/j.cub.2006.12.043; DOI:10.1111/cmi.12369		yes
+data/traits/physiology/tripolar_mating_system.yaml	traitmech:000618	2	DOI:10.1128/ec.00271-08; DOI:10.1128/mbio.00059-26		yes
+data/traits/physiology/trogocytosis.yaml	traitmech:000633	2	DOI:10.1038/nature13242; DOI:10.1128/mBio.00068-19		yes
 data/traits/physiology/trypsin_activity.yaml	traitmech:000158	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html; DOI:10.1371/journal.pone.0322500		yes
 data/traits/physiology/tyrosine_arylamidase_activity.yaml	traitmech:000169	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
+data/traits/physiology/unconventional_protein_secretion.yaml	traitmech:000648	4	DOI:10.3389/fcell.2022.852028; DOI:10.7554/eLife.16299; DOI:10.1083/jcb.201407119; DOI:10.1083/jcb.202312120		yes
 data/traits/physiology/unisexual_reproduction.yaml	traitmech:000613	4	DOI:10.1371/journal.pgen.1003688; DOI:10.1038/nature03448; DOI:10.1038/nature08252; DOI:10.1371/journal.pbio.1001653		yes
 data/traits/physiology/valine_arylamidase_activity.yaml	traitmech:000144	2	DOI:10.3389/fmicb.2022.1034816; DOI:10.1099/ijsem.0.002327		yes
 data/traits/physiology/viscotaxis.yaml	traitmech:000593	3	DOI:10.1099/00221287-109-1-113; DOI:10.1038/s41598-020-79887-7; DOI:10.1103/physrevlett.120.208002		yes

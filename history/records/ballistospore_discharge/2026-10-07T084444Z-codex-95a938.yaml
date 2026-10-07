@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/ballistospore_discharge.yaml
+  slug: ballistospore_discharge
+session:
+  id: 2026-10-07T084444Z-codex-95a938
+  timestamp: '2026-10-07T08:44:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add ballistospore discharge with source-bounded physical and developmental evidence
+  details: Added PROPOSED traitmech:000661 under phenotype METPO:1000059 using DOI:10.1371/journal.pone.0004163,
+    DOI:10.1371/journal.pone.0105147 and DOI:10.1242/jeb.029975. All three snippets were matched
+    to directly retrieved source text. Retained a provenance-qualified Sporobolomyces salmonicolor
+    NPM01 example, separated measured velocity from modeled range and formation from discharge,
+    and documented source access limits and deferred graph formalization. Ignored-and-hidden
+    searches and structured METPO/seed review found no exact prior trait. Reserved METPO:1061400
+    in proposal v537. Writer dry run and 20 focused tests passed before application; broader
+    validation and generated-artifact review remain subsequent steps. Existing traits, including
+    protected spore germination, were not edited.

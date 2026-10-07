@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/anisogamy.yaml
+  slug: anisogamy
+session:
+  id: 2026-10-05T141605Z-codex-9dccf9
+  timestamp: '2026-10-05T14:16:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link the source-backed oogamy child in anisogamy scope notes
+  details: Replaced the future-child TODO with traitmech:000621 and its male-motility qualification.
+    Preserved the existing definition, parent, evidence, canonical example, behavioural-anisogamy
+    caveat and original METPO proposal row. The discussion remains OPEN for narrower-parent
+    and mapping questions. Appended a LINKED_NARROWER_TRAIT event through the guarded validated
+    writer; dry run and 14 focused tests passed.

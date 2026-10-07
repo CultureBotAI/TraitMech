@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/tripolar_mating_system.yaml
+  slug: tripolar_mating_system
+session:
+  id: 2026-10-05T105341Z-codex-13b9f1
+  timestamp: '2026-10-05T10:53:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed tripolar mating system
+  details: Added PROPOSED PHYSIOLOGY traitmech:000618 and v495 reservation METPO:1057200 under
+    released phenotype. Two primary sources, DOI:10.1128/ec.00271-08 and DOI:10.1128/mbio.00059-26,
+    support a cross-level phenotype with one linked and one unlinked partner. Both snippets
+    were exact-matched to raw full text; the maintained resolver returned NOT_IN_ABSTRACT
+    twice, not VERIFIED. Actual 2008 Figures 1/2 were inspected; 2026 figures and supplements
+    remain unread after image access failed. Engineered provenance, no natural canonical examples,
+    no fixed fertility fraction, and deferred protein mechanisms are explicit. Ignored-and-hidden
+    novelty and allocation searches, fresh seed classification and open-PR inventories were
+    checked. Writer dry run, seven focused tests, LinkML and strict validation passed; broader
+    validation and regenerated artifacts follow before PR review.

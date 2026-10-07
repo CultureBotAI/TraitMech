@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -569,7 +571,6 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -641,8 +642,18 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T20:45:06Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Connect trehalose biosynthesis to osmotic stress tolerance in free_living
+            <p>Resolves the record&#39;s own x-compatible-solute-partitioning knowledge gap against its stated would_refute criterion. Added trehalose_biosynthesis -[RO:0002327 enables]-&gt; osmotic_stress_tolerance to free_living_environmental_habitat with two independent experimental references and verbatim snippets: DOI:10.1128/mBio.00390-21 (Bradyrhizobium diazoefficiens USDA 110; the otsCB-otsA deletion loses viability at 400 mM sorbitol, 27 mM NaCl, 50 mM MgCl2 and 75 mM MgSO4, the nonionic sorbitol condition separating osmotic pressure from ion toxicity; a cytoplasmic trehalase phenocopies it and exogenous trehalose rescues the otsA deletion but not the transporter-deficient strains) and DOI:10.1128/AEM.02483-09 (independently constructed mutants in the same background inhibited on 60 mM NaCl). Both DOIs and both snippets were verified against the primary sources this session, not taken from the research artifact. The edit merges the graph&#39;s stranded trehalose_biosynthesis/environmental_stress_tolerance component into the main one, taking the graph from 2 wired components to 1 with no unwired nodes; that fragmentation was invisible to audit-graphs because the graph is NONMECHANISTIC, filed as issue 613. The pre-existing trehalose_biosynthesis to environmental_stress_tolerance edge was RETAINED, not deleted: its comparative-genomics evidence is weaker than what is added here and the desiccation result in AEM.02483-09 argues trehalose&#39;s role is specifically osmotic, but removing a cited edge is a semantic decision and evidence removal without provenance is the issue 520 failure mode. Written through write_validated_trait with a CONNECT_CAUSAL_GRAPH curation event. Gates: validate-strict 0 errors, audit-snippets 2592 findings all baselined with 0 new, audit-graphs 0 new, audit-derived-reports clean after just gen-pages. Also set the x-compatible-solute-partitioning discussion to RESOLVED with resolved_date 2026-08-31 and a resolution_note recording the verdict, the two references, and the two questions deliberately left open (the retained environmental_stress_tolerance edge, and the absence of a desiccation defect for low-trehalose otsA mutants). Regenerated pages/ via just gen-pages and app/discussions/data.js via just gen-discussions-data. This record is one record for one coherent change to one target, per history/README.md.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/free_living/2026-08-31T204506Z-claude-code-ca81b1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -736,6 +747,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1029,8 +1047,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-10-05 17:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

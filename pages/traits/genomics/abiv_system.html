@@ -134,6 +134,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the SaV-dependent AbiV complex and translation block without asserting the direct host translational target of the complex, the detailed route to late phage-DNA maturation arrest, or why one tested 936 phage and the P335 phages were insensitive.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -465,7 +467,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -489,8 +490,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T03:12:26Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added AbiV system
+            <p>Created traitmech:000300 for the AbiV abortive-infection system, with DOI-backed Haaber et al. evidence, pinned DefenseFinder model registry evidence, a Lactococcus lactis canonical example, a source-bounded nonmechanistic phage-DNA maturation graph, an AbiV mechanism knowledge-gap discussion, the companion METPO v177 proposal, and the abortive-infection parent discussion update that records AbiV as split out.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abiv_system/2026-09-20T031226Z-codex-d3a693.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-20T04:10:53Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Refine AbiV follow-up mechanism evidence
+            <p>Corrected the PR #1107 AbiV review response by reframing the abortive-infection parent discussion from phage-DNA-maturation to translation-inhibition, replacing the AbiV translation-block propagation edge with a Haaber et al. 2010 abstract snippet that names both lytic-cycle inhibition and rapid protein-synthesis inhibition, and recording the second adversarial review correction after the initial history record history/records/abiv_system/2026-09-20T031226Z-codex-d3a693.yaml.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abiv_system/2026-09-20T041053Z-codex-93bcb1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -579,6 +596,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -872,8 +896,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-20 04:10 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

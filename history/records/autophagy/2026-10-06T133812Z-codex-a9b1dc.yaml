@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/autophagy.yaml
+  slug: autophagy
+session:
+  id: 2026-10-06T133812Z-codex-a9b1dc
+  timestamp: '2026-10-06T13:38:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1754
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Correct autophagy definition to include nuclear cargo
+  details: Changed cytoplasmic to intracellular in traitmech:000638 after directly reading
+    DOI:10.1007/s00284-024-03838-y and current GO scope. Added a source-faithful snippet and
+    clarified the existing scope discussion. Kept stable identity, prior evidence and history,
+    existing parent, and route/flux limits. A whole-record preimage guard protects this repair
+    and v519 supplies corrected proposal context without changing historical TSVs.

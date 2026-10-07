@@ -15,13 +15,89 @@ also catches a typo the old rule could not see.
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
+
+import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import verify_metpo_proposal as vmp  # noqa: E402
+
+
+def property_rows(width):
+    # Headers match kg-microbe 1408e7099d039026d7611c240938d8e177753406.
+    rows = [
+        ["proposed_id", "label", "definition", "definition_source", "type", "domain",
+         "range", "synonyms", "xrefs", "subset", "priority", "traits_addressed", "observations"],
+        ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "TYPE", "DOMAIN", "RANGE",
+         "A oboInOwl:hasRelatedSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+         "A oboInOwl:inSubset", "", "", ""],
+        ["METPO:2007400", "test relation", "A test relation.", "DOI:10.1234/test",
+         "owl:ObjectProperty", "METPO:1000525", "METPO:1000059", "alias one|alias two",
+         "", "metpo_traitmech_2026_10", "", "test", "0"],
+    ]
+    if width == 12:
+        for row in rows:
+            del row[7]
+    return rows
+
+
+def write_template(path, rows):
+    with path.open("w", newline="") as stream:
+        csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+
+
+@pytest.mark.parametrize("width", [12, 13])
+@pytest.mark.parametrize("defect", [None, "short_row", "xref", "subset_header", "empty_subset"])
+def test_property_layout_end_to_end(tmp_path, monkeypatch, capsys, width, defect):
+    rows = property_rows(width)
+    subset_column = width - 4
+    if defect == "short_row":
+        rows[2].pop()
+    elif defect == "xref":
+        rows[1][subset_column - 1] = ""
+    elif defect == "subset_header":
+        rows[1][subset_column] = ""
+    elif defect == "empty_subset":
+        rows[2][subset_column] = ""
+    write_template(tmp_path / "metpo_proposal_properties_robot.tsv", rows)
+    monkeypatch.setattr(sys, "argv", ["verify", str(tmp_path), "--skip-scope-a", "--skip-scope-c"])
+    assert vmp.main() == (0 if defect is None else 1)
+    errors = capsys.readouterr().err
+    if defect == "empty_subset":
+        assert "empty subset tag" in errors
+    elif defect == "short_row":
+        assert f"expected {width}" in errors
+
+
+@pytest.mark.parametrize("directive", ["", "A oboInOwl:hasExactSynonym SPLIT=|",
+                                      "A oboInOwl:hasRelatedSynonym"])
+def test_property_related_synonyms_need_correct_split_directive(tmp_path, monkeypatch, directive):
+    rows = property_rows(13)
+    rows[1][7] = directive
+    write_template(tmp_path / "metpo_proposal_properties_robot.tsv", rows)
+    monkeypatch.setattr(sys, "argv", ["verify", str(tmp_path), "--skip-scope-a", "--skip-scope-c"])
+    assert vmp.main() == 1
+
+
+@pytest.mark.parametrize("width", [12, 13])
+def test_property_class_subset_mismatch_is_rejected(tmp_path, monkeypatch, capsys, width):
+    write_template(tmp_path / "metpo_proposal_properties_robot.tsv", property_rows(width))
+    write_template(tmp_path / "metpo_proposal_classes_robot.tsv", [
+        ["proposed_id", "label", "definition", "definition_source", "parent", "synonyms",
+         "xrefs", "subset", "priority", "observations", "traits_addressed"],
+        ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "SC %",
+         "A oboInOwl:hasExactSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+         "A oboInOwl:inSubset", "", "", ""],
+        ["METPO:1007400", "test class", "A test class.", "DOI:10.1234/test",
+         "METPO:1000059", "", "", "metpo_traitmech_2026_09", "", "", "test"],
+    ])
+    monkeypatch.setattr(sys, "argv", ["verify", str(tmp_path), "--skip-scope-a", "--skip-scope-c"])
+    assert vmp.main() == 1
+    assert "subset tag mismatch between classes" in capsys.readouterr().err
 
 
 def test_class_width_is_fixed_by_header_row():

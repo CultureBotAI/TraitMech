@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This composite graph combines substrate-level phosphorylation with ferredoxin-linked and ion-gradient modules found in subsets of fermenters. The C. acetobutylicum ATCC 824 PFOR example supports the pyruvate-to-reduced-ferredoxin branch and is not a universal fermentation marker.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -686,7 +688,6 @@ This scope is narrower than the bioprocess use of *fermentation*. In biotechnolo
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -788,8 +789,18 @@ This scope is narrower than the bioprocess use of *fermentation*. In biotechnolo
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T12:15:06Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the fermentation graph
+            <p>Added 3 exact public-source connector(s), moving the mechanistic graph from 4 components to one without removing in-scope nodes. The structural, evidence, and predicate-domain audits passed. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fermentation/2026-08-31T121506Z-codex-1d2427.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -883,6 +894,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1176,8 +1194,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 12:15 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

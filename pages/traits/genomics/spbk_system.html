@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures SpbK as a named DefenseFinder single-profile abortive-infection system whose Bacillus ICEBs1 prototype requires the SPβ YonE trigger. It leaves the direct SpbK-YonE coupling, TIR-domain output, essential host target, and homolog breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -296,7 +298,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -314,8 +315,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T03:17:37Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add SpbK system trait
+            <p>Added traitmech:000325 SpbK system as a DOI-backed GENOMICS TraitRecord under abortive infection system after an ignored-and-hidden duplicate review found no exact same-scope live record, METPO class, history record, or prior proposal. Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SPβ and causes host cell death, and the pinned DefenseFinder article, rules, and HMM registries map SpbK to the required SpbK__SpbK profile. Reserved METPO:1027900 in proposals/metpo_traitmech_v202 for the upstream replacement class.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/spbk_system/2026-09-21T031737Z-codex-f36385.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-21T03:45:47Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Standardize SpbK SPβ spelling
+            <p>Standardized curator-written SPβ phage mentions to the canonical Greek beta spelling in the SpbK system definition, notes, canonical example, causal graph, discussion, METPO proposal, and generated artifacts while preserving Johnson et al. evidence snippets exactly as exposed by the PLOS XML.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/spbk_system/2026-09-21T034547Z-codex-2d41cc.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -404,6 +421,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -697,8 +721,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-21 03:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

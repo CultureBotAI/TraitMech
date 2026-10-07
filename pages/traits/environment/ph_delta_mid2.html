@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -449,7 +451,6 @@ The final convergence into **METPO:1000476** remains a mechanistic synthesis, be
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -539,8 +540,36 @@ The final convergence into **METPO:1000476** remains a mechanistic synthesis, be
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T01:20:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Review pH-delta-mid2 causal graph evidence
+            <p>Reviewed data/traits/environment/ph_delta_mid2.yaml for issue #183. Added snippets to six edge-level evidence items in ph_delta_mid2_broad_breadth and grounded the external-pH, Na+/H+ antiporter, and cytoplasmic-buffer edges to existing RO predicates. Existing deep-research findings were reused alongside the open PMC manuscript for the Krulwich et al. bacterial pH-homeostasis review and the open Rebelo et al. review; no paid research provider was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid2/2026-09-04T012000Z-codex-c2b994.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T15:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected pH-delta-mid2 causal-graph components
+            <p>Resolved issue #183 graph fragmentation in data/traits/environment/ph_delta_mid2.yaml. Added 6 source- and verbatim-snippet-backed association connectors to collapse the reviewed nonmechanistic graph from 7 components to 1 while keeping PMF, respiratory proton pumping, ATPase-mediated proton translocation, alkaline antiport, Gad acid-side support, and cytoplasmic buffering scoped as support branches for a 3-4 pH-unit growth breadth. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid2/2026-09-04T150000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-06T13:30:00Z</time>
+           · codex
+          <ul><li><strong>REVIEW</strong> — Repair PR 664 pH connector evidence
+            <p>Addressed adversarial review issue #666 by replacing borrowed snippets on the six broad_ph_homeostasis connectors with connector-specific exact snippets from the same supporting sources; the focused replay tests verify the patched script and curated YAML stay in sync.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid2/2026-09-06T133000Z-codex-2bd449.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-08T03:30:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Correct ph_delta_mid2 component provenance
+            <p>Appended corrective issue-183 provenance after PR #664 adversarial review issue #702 identified a stale 7 components to 1 claim. The unsupported pH-breadth hub connectors have been pruned, so this NONMECHANISTIC graph intentionally ships with 7 disconnected components pending independently supported pH-specific connectors. Validated with scripts/repair_pr664_adversarial_review.py and LinkML write-time validation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid2/2026-09-08T033000Z-codex-9842a8.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -634,6 +663,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -927,8 +963,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-08 03:30 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -1,0 +1,212 @@
+"""Add a source-bounded microbial cell-nibbling phenotype."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import csv
+import io
+import tempfile
+from pathlib import Path
+
+import yaml
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import write_validated_trait
+
+ROOT = Path(__file__).resolve().parent.parent
+TARGET = ROOT / "data/traits/physiology/trogocytosis.yaml"
+PARENT_PATH = ROOT / "data/traits/upper/phenotype.yaml"
+PROPOSAL = ROOT / "proposals/metpo_traitmech_v509/metpo_proposal_classes_robot.tsv"
+IDENTIFIER = "traitmech:000633"
+METPO_ID = "METPO:1058600"
+DEFINITION = "DOI:10.1038/nature13242"
+MEMBRANE = "DOI:10.1128/mBio.00068-19"
+PROVENANCE = "https://www.atcc.org/products/30459"
+TIMESTAMP = "2026-10-06T03:16:00Z"
+PARENT = {
+    "identifier": "METPO:1000059",
+    "label": "phenotype",
+    "definition": (
+        "A quality that differentiates specific instances of a species from other "
+        "instances of the same species."
+    ),
+    "definition_source": "DOI:10.1186/gb-2010-11-1-r2",
+    "parent_traits": ["METPO:1000188"],
+}
+RECORD = {
+    "identifier": IDENTIFIER,
+    "label": "trogocytosis",
+    "definition": (
+        "A physiological phenotype in which a microbial organism removes and "
+        "takes up discrete portions of another living cell during direct "
+        "contact instead of engulfing that cell whole."
+    ),
+    "definition_source": DEFINITION,
+    "trait_category": "PHYSIOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": [PARENT["identifier"]],
+    "evidence": [
+        {
+            "reference": DEFINITION,
+            "snippet": "amoebae kill by ingesting distinct pieces of living human cells",
+            "notes": (
+                "PMID:24717428, PMC4006097. Direct scientific Abstract quote "
+                "from the final Nature/PubMed version, not the differently "
+                "worded PMC author-manuscript Summary. Author-manuscript "
+                "Results and Discussion, relevant imaging and cell-culture "
+                "Methods, and actual Figures 1-2 were inspected at "
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC4006097/. "
+                "Uptake precedes target-cell death; attachment alone is not "
+                "uptake. Internalization and fragmentation gates are "
+                "distinct measurements. Other figures and movies were not "
+                "visually audited. No universal killing threshold, "
+                "nutritional benefit or complete protein mechanism is inferred."
+            ),
+        },
+        {
+            "reference": MEMBRANE,
+            "snippet": (
+                "Protection from human serum occurs only after amoebae have "
+                "undergone trogocytosis of live cells but not phagocytosis "
+                "of dead cells."
+            ),
+            "notes": (
+                "PMID:31040235, PMC6495370. Direct scientific Abstract quote, "
+                "not the separate Importance/precis block. Cell-culture "
+                "Methods, membrane-display and live/dead-cell Results, "
+                "Discussion, and actual Figures 1, 6 and 8 were inspected at "
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6495370/. "
+                "Figure 6B measures the percentage of internalizing amoebae, "
+                "not material mass per cell. Figure 8 is a proposed model, "
+                "not direct proof of a membrane-fusion or trafficking route. "
+                "Other figures and supplements were not visually audited. "
+                "Serum protection is condition-specific, not definitional."
+            ),
+        },
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:5759",
+            "taxon_label": "Entamoeba histolytica",
+            "reference": MEMBRANE,
+            "note": (
+                "Strain-qualified HM1:IMSS parental trophozoites interacting "
+                "with live Jurkat cells in the 2019 study, not engineered "
+                "knockdowns, vector controls or every isolate. Cell-culture "
+                "Methods name ATCC as the supplier, without a catalog or "
+                "lot number. The matching HM-1:IMSS collection record at "
+                + PROVENANCE + " documents natural clinical isolation from "
+                "a colonic biopsy; it does not establish an exact study "
+                "lot or clone. NCBI ESearch/EFetch verified the scientific "
+                "name and species rank on 2026-10-06. This taxon ID is "
+                "species-level, not strain-level."
+            ),
+        },
+    ],
+    "discussions": [
+        {
+            "discussion_id": "trogocytosis-scope-and-hierarchy",
+            "prompt": "Keep cell nibbling distinct from nutrition and whole-cell uptake.",
+            "kind": "CURATION_TODO", "status": "OPEN",
+            "rationale": (
+                "This record concerns the microbe as the nibbling organism, "
+                "not host immune-cell attack on a microbe. Retain phenotype "
+                "METPO:1000059 pending a closer uptake hierarchy. Local "
+                "phagocytosis traitmech:000627 covers particle enclosure "
+                "and internalization; phagotrophy traitmech:000628 requires "
+                "nutrient assimilation. Myzocytosis traitmech:000631 "
+                "denotes prey-content aspiration through a localized "
+                "connection, and pallium feeding traitmech:000632 involves "
+                "an enveloping feeding veil. None is asserted equivalent "
+                "or disjoint at organism level. The existing myzocytosis "
+                "contrast is not an unresolved exact trogocytosis node. "
+                "Neither nutrition, killing, serum protection, a human "
+                "target nor a fixed fragment size is a class requirement. "
+                "Free-particle uptake or attachment alone is insufficient. "
+                "No unverified synonym or process-level xref is asserted."
+            ),
+            "posed_by": "codex", "posed_date": "2026-10-06",
+        },
+        {
+            "discussion_id": "trogocytosis-native-mechanism",
+            "prompt": "Resolve native molecular mechanisms without universalizing dependencies.",
+            "kind": "KNOWLEDGE_GAP", "status": "OPEN",
+            "rationale": (
+                "The two papers are distinct experiments from an overlapping "
+                "research group, not independent taxon replication. "
+                "Perturbation, localization and sequence similarity are "
+                "different evidence types. Neither a conceptual model nor "
+                "a homologous sequence establishes a universal pathway. "
+                "Inspect the remaining figures and obtain taxon-paired "
+                "functional and accession evidence before adding protein "
+                "examples or a causal graph."
+            ),
+            "posed_by": "codex", "posed_date": "2026-10-06",
+        },
+    ],
+}
+
+
+def build_record() -> dict:
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record, curator="codex", action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Added trogocytosis with two DOI-backed scientific-abstract "
+            "snippets and an HM1:IMSS-qualified example. Ignored-and-hidden "
+            "novelty searches and pinned METPO review found no exact "
+            "record. Reserved METPO:1058600 in v509. Kept nutrition, "
+            "killing and serum protection out of the definition and "
+            "deferred unsupported protein mechanisms."
+        ),
+        llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def proposal_tsv(record: dict) -> str:
+    rows = [
+        ["proposed_id", "label", "definition", "definition_source", "parent",
+         "synonyms", "xrefs", "subset", "priority", "observations", "traits_addressed"],
+        ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "SC %",
+         "A oboInOwl:hasExactSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+         "A oboInOwl:inSubset", "", "", ""],
+        [METPO_ID, record["label"], record["definition"],
+         "|".join(["TraitMech:data/traits/physiology/trogocytosis.yaml",
+                   DEFINITION, MEMBRANE]),
+         PARENT["identifier"], "", "", "metpo_traitmech_2026_10", "",
+         "Portions of living cells, not whole-cell engulfment or a nutritional requirement.",
+         IDENTIFIER],
+    ]
+    stream = io.StringIO(newline="")
+    csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    return stream.getvalue()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    parent = yaml.safe_load(PARENT_PATH.read_text())
+    if any(parent.get(k) != v for k, v in PARENT.items()):
+        raise SystemExit("Parent identity or scope differs from reviewed projection")
+    record = build_record()
+    proposal = proposal_tsv(record)
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+        raise SystemExit("Existing target differs from reviewed result")
+    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+        raise SystemExit("Existing proposal differs from reviewed result")
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        PROPOSAL.parent.mkdir(parents=True, exist_ok=True)
+        PROPOSAL.write_text(proposal)
+    print("Applied" if args.apply else "Validated dry run; pass --apply to write")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

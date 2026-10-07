@@ -81,6 +81,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the CARD_NLR_Subtilase subtype at DefenseFinder rule-row level without asserting the exact subtilase substrate, phage trigger, native host breadth, CARD-to-effector activation sequence, how the missing CARD_NLR__Subtilase_long_new HMM row maps to the listed CARD_NLR subtilase profiles, or whether every DefenseFinder CARD_NLR_Subtilase prediction is a complete experimentally active locus.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -300,7 +302,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -318,8 +319,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-02T19:23:13Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add CARD-NLR subtilase system trait
+            <p>Minted traitmech:000553 for the DOI- and pinned DefenseFinder-backed CARD-NLR subtilase phage-defense subtype after ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record for the target ID, placeholder, cohort, slug, or label. The record anchors CARD_NLR_Subtilase to the CARD-NLR parent, records the CARD_NLR_Subtilase rule-row evidence, documents the missing CARD_NLR__Subtilase_long_new HMM inventory row as an open coverage gap, leaves canonical examples empty pending accession-backed native-host evidence, and reserves METPO:1050700 in proposals/metpo_traitmech_v430 for upstream replacement.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/card_nlr_subtilase_system/2026-10-02T192313Z-codex-f30c1a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -408,6 +419,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -701,8 +719,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-10-02 19:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

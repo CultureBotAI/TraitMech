@@ -33,6 +33,19 @@ paid literature research before its causal graph can be curated. Use
 - The closest existing `data/traits/<category>/*.yaml` record, to copy local
   shape but not facts.
 
+Run commands from the repository root. Direct `.venv/bin/python` calls assume
+the project package is importable; check with
+`.venv/bin/python -c 'import traitmech'`. If an uninstalled source checkout
+fails that import, set the local source path before writer dry runs, validation
+or pytest, preserving any existing import paths:
+
+```bash
+export PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}"
+.venv/bin/python -c 'import traitmech'
+```
+
+An import or test-collection failure is not a successful validation run.
+
 ## Accept or reject
 
 Add the record only if the target is a reusable microbial
@@ -215,7 +228,11 @@ TraitMech is METPO-first:
    suffix, and do not infer novelty from a target file merely existing under a
    temporary seed root.
 4. If METPO has no exact term and the trait is in scope, mint the next
-   zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
+   zero-padded `traitmech:NNNNNN` through `manage-identifiers`. Its reservation
+   check must include current main, local worktrees and pending PR heads,
+   including drafts, for the local ID, cohort and full METPO block. A local
+   maximum alone does not establish availability. Recheck before publishing
+   and record the relevant pending reservations in the proposal (#1785).
 5. Add or extend a METPO ROBOT-template proposal for every minted
    `traitmech:` ID. The same PR that adds the local record must reserve the
    upstream `METPO:` placeholder, document the round-trip path, and verify the
@@ -301,6 +318,22 @@ or flatten separate field labels and values into a prose `snippet` (#1660).
 
 Every added record needs at least one DOI, PMID, or stable URL in
 `definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
+
+For morphology labels, check for distinct established senses before adopting
+an unqualified name. Either support the documented scope or qualify the label;
+do not silently promote one paper's operational definition to a universal
+meaning. Attribute conflicting usages and keep their mechanisms separate
+(#1767).
+
+For numerical proportions, inspect the Methods' numerator, denominator and
+measurement unit. Image-area fractions, cluster fractions and individual-cell
+counts are not interchangeable, even when a figure caption calls them a
+percentage of cells. Preserve the measured quantity in evidence notes.
+
+When Results, Methods or captions disagree on an assay condition, attribute
+each description to its section and retain the discrepancy unless direct
+evidence resolves it. Do not silently choose one description for the record
+or proposal; distinguish the disputed condition from the supported phenotype.
 
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
@@ -539,6 +572,12 @@ under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
 or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
 and omit SSSOM mappings when there is no exact external equivalence to assert.
 
+Check the pinned upstream template headers, not just column counts quoted in
+older proposals. Canonical properties include a related-synonym column (13
+columns); legacy 12-column property cohorts remain valid. Use the proposal
+skill's layout-specific directives and subset position; never drop aliases
+to satisfy an obsolete width assumption (#1749).
+
 When the new trait resolves exact mentions in older records, update those
 records through the same validated writer path and give each touched record a
 focused curation-history event and repository history record. Regenerate the
@@ -589,6 +628,10 @@ sections were written. A graph deliberately deferred in a discussion does not
 make `causal_graphs` a touched section. For example, a new record with evidence,
 an example and discussions but no graph uses
 `identity,evidence,canonical_examples,discussions` (#1674).
+
+Pass the actual session actor with `--actor-name`; `--agent-tool` and `--model`
+do not override the scaffolder's default actor name (`claude-code`). Inspect
+`session.actors` after scaffolding, including when using Codex (#1776).
 
 History remains append-only after it is written, including before PR merge.
 Correct a mistaken history claim with a new record naming the original file
@@ -651,6 +694,22 @@ git diff --cached --check
 .venv/bin/python -m pytest -q
 ```
 
+ROBOT directive headers deliberately end in tabs for empty cells; normal
+`git diff --check` can flag them (#1715). Do not trim required cells or invent
+synonyms/annotations to silence whitespace checks. Run the maintained proposal
+verifier, then inspect every flagged line to confirm that only required trailing
+tabs are involved and that both header widths match the template. For that exact
+inspected TSV path in `template`, use scoped checks:
+
+```bash
+git diff --cached --check -- . ":(exclude)$template"
+git -c core.whitespace=-blank-at-eol diff --cached --check -- "$template"
+```
+
+Omit `--cached` for unstaged edits. Report the ordinary check's finding and this
+narrow exception; do not claim an unqualified whitespace pass, weaken global
+Git settings, or exempt other whitespace defects or files.
+
 Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<category>/<slug>.yaml`
 after adding a `snippet`. A `VERIFIED` row establishes a match to returned text;
 confirm its source section before describing it as a scientific-abstract quote.
@@ -679,6 +738,8 @@ status. METPO CURIEs in proposal IDs and parents must expand to `https://w3id.or
 matching the pinned ontology; confirm that the merged parent has its expected
 label and hierarchy. A legacy `purl.obolibrary.org/obo/METPO_` stub is not the
 same parent, even when ELK exits successfully (#1658).
+The ROBOT wrapper reports physical OWL line counts, not RDF triple counts.
+Use an RDF parser to measure graph cardinality before reporting triples (#1722).
 
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before

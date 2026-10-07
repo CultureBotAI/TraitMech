@@ -3,7 +3,7 @@
 
 Runs every pre-submission check the `metpo-proposal` skill specifies:
 
-  1. Column-count sanity (classes=11 or 12 cols by file, properties=12 cols).
+  1. Column-count sanity (classes=11 or 12 cols, properties=12 or 13 cols by file).
   2. ROBOT header row 2 has the required directives.
   3. Parent integrity — every `SC %` parent resolves either in-file or to
      `METPO:<n>`.
@@ -41,7 +41,7 @@ SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
 TRAITS_DIR = REPO_ROOT / "data/traits"
 
 CLASS_COLS = {11, 12}
-PROP_COLS = 12
+PROP_COLS = {12, 13}
 
 # Built-in CURIE prefixes accepted as external parents/ranges without
 # requiring an in-file declaration.
@@ -127,6 +127,20 @@ def check_robot_header(
         actual = header2[col_idx].strip()
         if directive not in actual:
             _emit(failures, f"{label} header row 2 col {col_idx} = {actual!r}, expected to contain {directive!r}")
+
+
+def property_robot_header_requirements(width: int | None) -> list[tuple[int, str]]:
+    # The canonical layout inserts related synonyms before xrefs; legacy cohorts omit it.
+    xref_column = 8 if width == 13 else 7
+    required = [
+        (0, "ID"), (1, "LABEL"), (2, "A IAO:0000115"), (3, ">A IAO:0000119"),
+        (4, "TYPE"), (5, "DOMAIN"), (6, "RANGE"),
+        (xref_column, "A oboInOwl:hasDbXref"),
+        (xref_column + 1, "A oboInOwl:inSubset"),
+    ]
+    if width == 13:
+        required.append((7, "A oboInOwl:hasRelatedSynonym SPLIT=|"))
+    return required
 
 
 def check_parents(class_rows: list[list[str]], failures: list[str]) -> None:
@@ -340,15 +354,14 @@ def main() -> int:
 
     if prop_rows:
         print(f"  properties TSV: {len(prop_rows)} rows", file=sys.stderr)
-        check_columns(prop_rows, PROP_COLS, "properties", failures)
+        prop_width = check_columns(prop_rows, PROP_COLS, "properties", failures)
         check_robot_header(
             prop_rows,
-            [(0, "ID"), (1, "LABEL"), (2, "A IAO:0000115"), (3, ">A IAO:0000119"), (4, "TYPE"),
-             (5, "DOMAIN"), (6, "RANGE"), (8, "A oboInOwl:inSubset")],
+            property_robot_header_requirements(prop_width),
             "properties",
             failures,
         )
-        prop_subset = check_subset(prop_rows, 8, "properties", failures)
+        prop_subset = check_subset(prop_rows, 9 if prop_width == 13 else 8, "properties", failures)
         if class_subset and prop_subset and class_subset != prop_subset:
             _emit(failures, f"subset tag mismatch between classes ({class_subset!r}) and properties ({prop_subset!r})")
     else:

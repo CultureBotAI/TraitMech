@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Gao-Her as the DefenseFinder Gao_Her family containing Gao_Her_DUF and Gao_Her_SIR subsystems while leaving natural hosts, subtype-specific phage triggers, and DUF4297, HerA_DUF, HerA_SIR2, and SIR2 molecular functions unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -293,7 +295,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -311,8 +312,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T13:53:17Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Gao-Her phage-defense system parent
+            <p>Added traitmech:000409 for the DefenseFinder Gao_Her phage-defense family, backed by Gao et al. plus the pinned DefenseFinder article and rules registries. Reserved METPO:1036300 in proposals/metpo_traitmech_v286 and left subtype-specific triggers and effector activities as an explicit knowledge gap.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gao_her_system/2026-09-27T135317Z-codex-32f9c1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -401,6 +412,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -694,8 +712,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-27 13:56 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

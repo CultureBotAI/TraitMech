@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Sirona as a named SCI-derived anti-phage system with a VCA0356 DefenseFinder profile while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -266,7 +268,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -284,8 +285,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T04:28:18Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Sirona phage-defense system
+            <p>Minted traitmech:000264 for the DefenseFinder Sirona system with DOI-backed SCI antiphage evidence, pinned DefenseFinder article and HMM registry evidence, a conservative nonmechanistic phage-restriction graph, an open Sirona mechanism knowledge gap, and a v141 METPO placeholder proposal for METPO:1021800.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sirona_system/2026-09-19T042818Z-codex-9d7037.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-19T04:32:58Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reduce repeated Sirona snippets
+            <p>Replaced repeated DefenseFinder article-registry evidence in the Sirona causal graph with VCA0356 HMM inventory evidence where the edge asserts the component profile, and removed a duplicate registry citation from the confers edge so the graph no longer repeats the same URL snippet three times.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sirona_system/2026-09-19T043258Z-codex-7ca897.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -374,6 +391,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -667,8 +691,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-19 04:32 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

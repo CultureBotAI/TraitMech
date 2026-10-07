@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Brig1 as a named DefenseFinder DNA-glycosylase phage-defense system at locus level and deliberately defers a protein-resolved glycosylase mechanism. Hallinan et al. characterized the prototype Brig1 DNA glycosylase, alpha-glucosyl-hmC base excision, and abasic-site generation, but the natural host, accession-level Brig1-family proteins, broader substrate specificity, and the relationship of the DefenseFinder Brig1__ADP_ribosyl profile to characterized Brig1 activity remain unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -332,7 +334,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -350,8 +351,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-20T10:40:37Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Brig1 system trait
+            <p>Added traitmech:000307 for the Brig1 DNA-glycosylase phage-defense system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, history, or proposal record for Brig1, the expected slug, the Hallinan et al. DOI, or the reserved IDs. Hallinan et al. support the Brig1 identity, alpha-glucosyl-hydroxymethylcytosine base excision, abasic-site generation, and inhibition of T4 DNA replication; pinned DefenseFinder rows support the Brig1 model namespace. Added a same-PR METPO v184 proposal reserving METPO:1026100 and a nonmechanistic causal graph for Brig1-mediated T-even phage defense, while leaving natural host examples and subtype-specific profile questions open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/brig1_system/2026-09-20T104037Z-codex-11bfdc.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -440,6 +451,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -733,8 +751,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-20 11:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/autogamy.yaml
+  slug: autogamy
+session:
+  id: 2026-10-05T171617Z-codex-f0e552
+  timestamp: '2026-10-05T17:16:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1719
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Clarify autogamy versus separate-gamete fusion
+  details: Addressed issue 1719 by explicitly retaining nuclear fusion in an unpaired undivided
+    cell and excluding fusion of separate gametes. Added directly read DOI:10.1080/0269249X.2013.791344
+    section 5.2.2 evidence and resolved the formerly unread terminology lead; linked paedogamy
+    traitmech:000624. Preserved all prior evidence, the natural A-25 canonical example, parent,
+    status and previous curation events. Did not impose universal immediate post-meiosis-II
+    timing, forbid postmeiotic mitosis, or infer species disjointness. Updated the existing
+    v498 template definition/citations in parity. Full-preimage guards, dry-run validation
+    and 50 focused tests passed; broader gates follow.

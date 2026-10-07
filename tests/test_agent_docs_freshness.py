@@ -37,6 +37,24 @@ def test_add_trait_skill_does_not_infer_mutant_origin():
     assert "leave provenance unresolved (#1684)" in guidance
 
 
+def test_new_trait_allocation_checks_in_flight_reservations():
+    identifiers = " ".join(read(".claude/skills/manage-identifiers/SKILL.md").split())
+    assert "Candidate requiring reservation checks" in identifiers
+    assert "git worktree list --porcelain" in identifiers
+    assert "gh api --paginate" in identifiers
+    assert "pulls?state=open&per_page=100" in identifiers
+    assert "reported head SHA" in identifiers
+    assert "including drafts" in identifiers
+    assert "entire declared block" in identifiers
+    assert "Recheck main and open PR heads immediately before publishing" in identifiers
+    assert "If remote reservation state is unavailable" in identifiers
+    for path in ("add-trait", "metpo-proposal"):
+        guidance = " ".join(read(f".claude/skills/{path}/SKILL.md").split())
+        assert "local worktrees" in guidance
+        assert "before publishing" in guidance
+        assert "#1785" in guidance
+
+
 def test_priority_guidance_uses_only_the_live_queue():
     guidance = read(".claude/skills/trait-priority/SKILL.md")
     justfile = read("justfile")

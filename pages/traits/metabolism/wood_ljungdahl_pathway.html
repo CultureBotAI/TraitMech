@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the methyl and carbonyl branches through acetyl-CoA formation, with an explicit alpha-subunit protein exemplar for the CODH/ACS complex; energetic variants outside this canonical acetogen route are not generalized.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -616,7 +618,6 @@ Identifiers below are deliberately conservative. Where an exact stable identifie
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -706,8 +707,18 @@ Identifiers below are deliberately conservative. Where an exact stable identifie
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T09:05:05Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the Wood-Ljungdahl pathway graph
+            <p>Added three exact public-source bridges for formyl-THF synthetase, methyltransferase, and CODH/ACS. The graph moved from four components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/wood_ljungdahl_pathway/2026-08-31T090505Z-codex-8e1a0a.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -801,6 +812,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1094,8 +1112,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-10-05 17:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

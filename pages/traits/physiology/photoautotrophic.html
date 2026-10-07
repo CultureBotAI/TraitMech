@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph specifically represents oxygenic cyanobacterial photoautotrophy, even though the trait also has an anoxygenic canonical example. The Synechocystis protein example is the D1 component of photosystem II and does not denote the complete multisubunit complex.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -649,7 +651,6 @@ Identifiers below are conservative candidates. Label-only nodes are preferable w
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -775,8 +776,18 @@ Identifiers below are conservative candidates. Label-only nodes are preferable w
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-30T20:17:23Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the photoautotrophic carbon-fixation graph
+            <p>Applied the existing tracked research artifact without commissioning paid research. Added three source- and snippet-backed relations among existing nodes: light enables photosynthetic electron transport, the cyanobacterial carbon-concentrating mechanism includes the carboxysome, and the carboxysome includes RuBisCO. These relations join all four components while preserving the graph&#39;s explicit oxygenic-cyanobacterial scope; genes and proteins remain supporting YAML graph fields and are not primary entries.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/photoautotrophic/2026-08-30T201723Z-codex-5f2237.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -870,6 +881,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1163,8 +1181,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-30 20:17 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

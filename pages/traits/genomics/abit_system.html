@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiT at the system level without asserting a molecular function for AbiTi or AbiTii, the exact host target, the direct phage activator, or that every AbiT-insensitive phage mutates the same phage gene.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -295,7 +297,6 @@
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -307,8 +308,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T22:05:02Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add AbiT system trait
+            <p>Minted traitmech:000230 for the AbiT two-component abortive-infection system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior proposal record for AbiT, the expected slug, the source DOIs, or the reserved IDs. Curated DOI-backed Bouchard and Labrie evidence, a Lactococcus lactis canonical example, a nonmechanistic causal graph for AbiTi-AbiTii antiphage activity and late phage-development blockage, and a same-PR METPO v107 proposal.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/abit_system/2026-09-15T220502Z-codex-347ee6.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -397,6 +408,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -690,8 +708,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-15 22:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

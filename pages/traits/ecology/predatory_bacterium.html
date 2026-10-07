@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -325,6 +327,15 @@
 
 
 
+    <div class="card">
+      <h2>Children (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/ecology/bacterial_cannibalism.html">bacterial cannibalism <code>traitmech:000626</code></a></li>
+
+      </ul>
+    </div>
+
 
 
     <div class="card">
@@ -523,7 +534,6 @@ Because taxonomic accessions were not independently verified here, retain labels
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -565,8 +575,18 @@ Because taxonomic accessions were not independently verified here, retain labels
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-21T19:45:20Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the predatory-bacterium lifecycle graph
+            <p>Verified the paid research against the current record and primary publisher text. Added a taxon-scoped Bdellovibrio bacteriovorus type IV pilus plus prey-attachment and prey-invasion processes, then joined attachment, invasion, intraperiplasmic growth, and progeny release with six evidence-backed edges. The graph moved from four components to one, reducing the corpus baseline by one fragmented graph and seven unreachable nodes without new predicate-domain or evidence-snippet debt.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/predatory_bacterium/2026-08-21T194520Z-codex-c23281.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -660,6 +680,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -953,8 +980,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

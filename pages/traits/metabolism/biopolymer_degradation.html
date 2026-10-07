@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This is a composite umbrella graph spanning cellulose, chitin, polysaccharide-import, and lignin branches. The C. fimi CenA example supports the cellulose branch only; it is not presented as a protein that realizes every branch.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -620,7 +622,6 @@ Source-stated identifiers that can safely be carried forward include:
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -710,8 +711,18 @@ Source-stated identifiers that can safely be carried forward include:
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-26T09:54:20Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect four polymer-specific branches to the biopolymer-degradation umbrella
+            <p>Added five source-supported contributes-to edges from endoglucanase, beta-glucosidase, a SusC-like transporter, endo-chitinase, and lignin-oxidizing enzymes to the umbrella trait. These edges connect the existing cellulose, polysaccharide-uptake, chitin, and lignin islands without inventing transport, assimilation, or growth coupling that the record&#39;s paid research artifact explicitly leaves unresolved. Every edge is branch-qualified; no enzyme or gene was promoted to a primary TraitRecord.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/biopolymer_degradation/2026-08-26T095420Z-codex-b7d184.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -805,6 +816,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1098,8 +1116,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 09:54 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

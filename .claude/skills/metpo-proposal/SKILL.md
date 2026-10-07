@@ -24,7 +24,7 @@ Up to four artifacts are produced under `proposals/<cohort-name>/`:
 | File | Format |
 |---|---|
 | `metpo_proposal_classes_robot.tsv` | 11/12-column ROBOT template (mirrors kg-microbe convention, with an optional `hasRelatedSynonym` column) |
-| `metpo_proposal_properties_robot.tsv` | 12-column ROBOT template |
+| `metpo_proposal_properties_robot.tsv` | 13-column canonical ROBOT template with related synonyms; legacy 12-column cohorts remain supported |
 | `metpo_proposal_mappings.sssom.tsv` | SSSOM mapping set — cross-ontology equivalents with `skos:exactMatch`/`closeMatch`/`narrowMatch` and match confidence. **Optional**: emit only when ≥1 proposed term aligns to an existing OMP/MICRO/PATO/GO/CHEBI/… class. See "Cross-ontology equivalents are mappings, not definition_source" in [`reference/conventions.md`](reference/conventions.md). |
 | `proposal.md` | Reviewer narrative: scope, hierarchy decisions, predicate rationale, verification, upstream path |
 
@@ -113,7 +113,7 @@ ROBOT column structure and the citation-vs-mapping rule (issue #83) — all in
 
 - **Required reading** — the upstream `kg-microbe` metpo-proposal SKILL.md (Aristotelian
   definitions, `definition_source` citation forms, family-aware ID slotting, the 12-point
-  checklist, paired-predicate convention), the canonical 11/12-column ROBOT templates, the
+  checklist, paired-predicate convention), the current canonical ROBOT templates, the
   most recent worked cohort, and TraitMech's `manage-identifiers` allocation policy.
 - **ROBOT template column conventions** — tab-separated, two header rows, trailing tabs on
   the ROBOT header to reach full column count.
@@ -162,14 +162,20 @@ rg --no-ignore --hidden -n "METPO:10114[0-9]{2}" proposals data/raw/metpo.owl
 
 Replace `10114[0-9]{2}` with a regex for the exact placeholder IDs or whole
 block you intend to reserve. Empty output means the block is free in this
-checkout.
+checkout only. Complete the
+[identifier skill's reservation check](../manage-identifiers/SKILL.md#1-find-a-candidate-then-check-reservations)
+against current main, local worktrees and every relevant open PR head, including
+drafts, before allocating the cohort or block. Read proposal narratives as well
+as TSV rows: a one-row proposal can reserve an entire hundred block. Record
+pending reservations in the proposal and recheck before publishing (#1785).
 
 ---
 
 ## Subset tag
 
 Every row must carry the same `oboInOwl:inSubset` value in column 8 (classes)
-or column 9 (properties). Format: `metpo_traitmech_<YYYY>_<MM>`.
+or column 10 (canonical 13-column properties; column 9 in legacy 12-column
+properties). Format: `metpo_traitmech_<YYYY>_<MM>`.
 
 Examples:
 - `metpo_traitmech_2026_05` — initial TraitMech cohort (v1)
@@ -280,8 +286,9 @@ open(p, 'w').writelines(lines)
 
 (The 11-column exact-synonym-only classes template needs 3 trailing tabs. A
 12-column classes template can put `A oboInOwl:hasRelatedSynonym SPLIT=|` in
-the final column instead. The properties template needs 3 trailing tabs to
-reach 12 columns when the header lists only the first 9 directives.)
+the final column instead. The canonical properties template needs 3 trailing
+tabs to reach 13 columns after its 10 directives; legacy 12-column templates
+have 9 directives.)
 
 
 ### 5. Verify

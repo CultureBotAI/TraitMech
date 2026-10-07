@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_chlamydospore_formation.yaml
+  slug: fungal_chlamydospore_formation
+session:
+  id: 2026-10-07T043622Z-codex-e88c80
+  timestamp: '2026-10-07T04:36:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1772
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Remove hypha-only chlamydospore formation restriction
+  details: 'Addressed #1772 with directly retrieved Li et al. 2012 evidence, DOI:10.1007/s10886-012-0171-1,
+    PMID:22932866: Fusarium can form chlamydospores inside conidia under the tested treatment.
+    Broadened the definition, added a sixth exact snippet and source-access/treatment limits,
+    and preserved the initial curation event and canonical example. The earlier CREATE record
+    2026-10-07T042707Z-codex-070b8d.yaml remains unchanged; this EDIT documents its pre-merge
+    scope correction. Interrupted pre-fix validation is not counted as a successful final
+    run.'

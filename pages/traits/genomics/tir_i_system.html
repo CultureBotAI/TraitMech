@@ -87,6 +87,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures TIR-I at TIR-system and anti-phage assay level without asserting exact native-host breadth, one universal domain architecture, a direct phage trigger, TIR-domain catalytic output, accession-level components, or a DefenseFinder detection rule absent from the pinned rules table.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -304,7 +306,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -322,8 +323,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-30T02:42:10Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add TIR-I system trait
+            <p>Minted traitmech:000480 for TIR-I system with Wang et al. DOI evidence, pinned DefenseFinder article and HMM rows, a nonmechanistic TIR-I locus graph, an open DefenseFinder rules and TIR-trigger knowledge gap, and a v357 METPO proposal reserving METPO:1043400.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/tir_i_system/2026-09-30T024210Z-codex-2dfcfe.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -412,6 +423,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -703,10 +721,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-30 02:41 UTC
+      Record as of 2026-09-30 02:42 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1011 TraitRecords
-      · embedding coverage 47.2%
+      · 1059 TraitRecords
+      · embedding coverage 45.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
