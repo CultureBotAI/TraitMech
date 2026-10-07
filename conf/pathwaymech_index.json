@@ -1,0 +1,6184 @@
+{
+ "format": "pathwaymech-pathway-index/1",
+ "source": "https://github.com/CultureBotAI/PathwayMech",
+ "records": [
+  {
+   "id": "MIBiG:BGC0002072",
+   "label": "linearmycin A and related metabolites biosynthetic gene cluster",
+   "pathway_type": "biosynthetic-gene-cluster",
+   "page": "records/MIBiG_BGC0002072.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MIBiG_BGC0002072.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:465541",
+     "label": "Streptomyces sp. Mg1"
+    }
+   ],
+   "proteins": [],
+   "reactions": []
+  },
+  {
+   "id": "MetaCyc:ARABCAT-PWY",
+   "label": "L-arabinose degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_ARABCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ARABCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.3.1.4",
+     "label": "L-arabinose isomerase"
+    },
+    {
+     "id": "EC:2.7.1.16",
+     "label": "ribulokinase"
+    },
+    {
+     "id": "EC:5.1.3.4",
+     "label": "L-ribulose-5-phosphate 4-epimerase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14824",
+    "RHEA:22073",
+    "RHEA:22371"
+   ]
+  },
+  {
+   "id": "MetaCyc:ARGDEG-III-PWY",
+   "label": "L-arginine degradation IV (arginine decarboxylase/agmatine deiminase pathway)",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/MetaCyc_ARGDEG-III-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ARGDEG-III-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:287",
+     "label": "Pseudomonas aeruginosa"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.1.1.19",
+     "label": "arginine decarboxylase"
+    },
+    {
+     "id": "EC:3.5.3.12",
+     "label": "agmatine deiminase"
+    },
+    {
+     "id": "EC:3.5.1.53",
+     "label": "N-carbamoylputrescine amidase"
+    }
+   ],
+   "reactions": [
+    "RHEA:17642",
+    "RHEA:18038",
+    "RHEA:22285"
+   ]
+  },
+  {
+   "id": "MetaCyc:ARGDEGRAD-PWY",
+   "label": "L-arginine degradation V (arginine deiminase pathway)",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/MetaCyc_ARGDEGRAD-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ARGDEGRAD-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2242",
+     "label": "Halobacterium salinarum"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:3.5.3.6",
+     "label": "arginine deiminase"
+    },
+    {
+     "id": "EC:2.1.3.3",
+     "label": "ornithine carbamoyltransferase"
+    },
+    {
+     "id": "EC:2.7.2.2",
+     "label": "carbamate kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:19598",
+    "RHEA:19515",
+    "RHEA:10154"
+   ]
+  },
+  {
+   "id": "MetaCyc:ARGSYN-PWY",
+   "label": "L-arginine biosynthesis I (via L-ornithine)",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_ARGSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ARGSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.1",
+     "label": "N-acetylglutamate synthase"
+    },
+    {
+     "id": "EC:2.7.2.8",
+     "label": "acetylglutamate kinase"
+    },
+    {
+     "id": "EC:1.2.1.38",
+     "label": "N-acetyl-gamma-glutamyl-phosphate reductase"
+    },
+    {
+     "id": "EC:2.6.1.11",
+     "label": "acetylornithine aminotransferase"
+    },
+    {
+     "id": "EC:3.5.1.16",
+     "label": "acetylornithine deacetylase"
+    },
+    {
+     "id": "EC:2.1.3.3",
+     "label": "ornithine carbamoyltransferase"
+    },
+    {
+     "id": "EC:6.3.4.5",
+     "label": "argininosuccinate synthase"
+    },
+    {
+     "id": "EC:4.3.2.1",
+     "label": "argininosuccinate lyase"
+    }
+   ],
+   "reactions": [
+    "RHEA:24293",
+    "RHEA:14630",
+    "RHEA:21590",
+    "RHEA:18051",
+    "RHEA:15942",
+    "RHEA:19514",
+    "RHEA:10933",
+    "RHEA:24021"
+   ]
+  },
+  {
+   "id": "MetaCyc:ARO-PWY",
+   "label": "chorismate biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_ARO-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ARO-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.5.1.54",
+     "label": "3-deoxy-7-phosphoheptulonate synthase"
+    },
+    {
+     "id": "EC:4.2.3.4",
+     "label": "3-dehydroquinate synthase"
+    },
+    {
+     "id": "EC:4.2.1.10",
+     "label": "3-dehydroquinate dehydratase"
+    },
+    {
+     "id": "EC:1.1.1.25",
+     "label": "shikimate dehydrogenase"
+    },
+    {
+     "id": "EC:2.7.1.71",
+     "label": "shikimate kinase"
+    },
+    {
+     "id": "EC:2.5.1.19",
+     "label": "3-phosphoshikimate 1-carboxyvinyltransferase"
+    },
+    {
+     "id": "EC:4.2.3.5",
+     "label": "chorismate synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14718",
+    "RHEA:21969",
+    "RHEA:21097",
+    "RHEA:17739",
+    "RHEA:13122",
+    "RHEA:21257",
+    "RHEA:21021"
+   ]
+  },
+  {
+   "id": "MetaCyc:AST-PWY",
+   "label": "L-arginine degradation II (AST pathway)",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/MetaCyc_AST-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_AST-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:287",
+     "label": "Pseudomonas aeruginosa"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.109",
+     "label": "arginine N-succinyltransferase"
+    },
+    {
+     "id": "EC:3.5.3.23",
+     "label": "N-succinylarginine dihydrolase"
+    },
+    {
+     "id": "EC:2.6.1.81",
+     "label": "succinylornithine transaminase"
+    },
+    {
+     "id": "EC:1.2.1.71",
+     "label": "succinylglutamate-semialdehyde dehydrogenase"
+    },
+    {
+     "id": "EC:3.5.1.96",
+     "label": "succinylglutamate desuccinylase"
+    }
+   ],
+   "reactions": [
+    "RHEA:15186",
+    "RHEA:19534",
+    "RHEA:16954",
+    "RHEA:10813",
+    "RHEA:15170"
+   ]
+  },
+  {
+   "id": "MetaCyc:COA-PWY",
+   "label": "coenzyme A biosynthesis I (prokaryotic)",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_COA-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_COA-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:6.3.2.5",
+     "label": "phosphopantothenate--cysteine ligase"
+    },
+    {
+     "id": "EC:4.1.1.36",
+     "label": "phosphopantothenoylcysteine decarboxylase"
+    },
+    {
+     "id": "EC:2.7.7.3",
+     "label": "pantetheine-phosphate adenylyltransferase"
+    },
+    {
+     "id": "EC:2.7.1.24",
+     "label": "dephospho-CoA kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:19398",
+    "RHEA:16794",
+    "RHEA:19802",
+    "RHEA:18246"
+   ]
+  },
+  {
+   "id": "MetaCyc:CYSTSYN-PWY",
+   "label": "L-cysteine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_CYSTSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_CYSTSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.30",
+     "label": "serine O-acetyltransferase"
+    },
+    {
+     "id": "EC:2.5.1.47",
+     "label": "cysteine synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:24561",
+    "RHEA:14830"
+   ]
+  },
+  {
+   "id": "MetaCyc:DAPLYSINESYN-PWY",
+   "label": "L-lysine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_DAPLYSINESYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_DAPLYSINESYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.2.4",
+     "label": "aspartate kinase"
+    },
+    {
+     "id": "EC:1.2.1.11",
+     "label": "aspartate-semialdehyde dehydrogenase"
+    },
+    {
+     "id": "EC:4.3.3.7",
+     "label": "4-hydroxy-tetrahydrodipicolinate synthase"
+    },
+    {
+     "id": "EC:1.17.1.8",
+     "label": "4-hydroxy-tetrahydrodipicolinate reductase"
+    },
+    {
+     "id": "EC:2.3.1.117",
+     "label": "tetrahydrodipicolinate N-succinyltransferase"
+    },
+    {
+     "id": "EC:2.6.1.17",
+     "label": "succinyldiaminopimelate transaminase"
+    },
+    {
+     "id": "EC:3.5.1.18",
+     "label": "succinyl-diaminopimelate desuccinylase"
+    },
+    {
+     "id": "EC:5.1.1.7",
+     "label": "diaminopimelate epimerase"
+    },
+    {
+     "id": "EC:4.1.1.20",
+     "label": "diaminopimelate decarboxylase"
+    }
+   ],
+   "reactions": [
+    "RHEA:23777",
+    "RHEA:24286",
+    "RHEA:34172",
+    "RHEA:35325",
+    "RHEA:35333",
+    "RHEA:17326",
+    "RHEA:11962",
+    "RHEA:22609",
+    "RHEA:15394",
+    "RHEA:15102"
+   ]
+  },
+  {
+   "id": "MetaCyc:DARABCAT-PWY",
+   "label": "D-arabinose degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_DARABCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_DARABCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:37762",
+     "label": "Escherichia coli B"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.3.1.3",
+     "label": "D-arabinose isomerase"
+    },
+    {
+     "id": "EC:2.7.1.47",
+     "label": "D-ribulokinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13852",
+    "RHEA:17602"
+   ]
+  },
+  {
+   "id": "MetaCyc:FUCCAT-PWY",
+   "label": "L-fucose degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_FUCCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_FUCCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:511145",
+     "label": "Escherichia coli str. K-12 substr. MG1655"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.1.3.29",
+     "label": "L-fucose mutarotase"
+    },
+    {
+     "id": "EC:5.3.1.25",
+     "label": "L-fucose isomerase"
+    },
+    {
+     "id": "EC:2.7.1.51",
+     "label": "L-fuculokinase"
+    },
+    {
+     "id": "EC:4.1.2.17",
+     "label": "L-fuculose-phosphate aldolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:25583",
+    "RHEA:17236",
+    "RHEA:12377",
+    "RHEA:12934"
+   ]
+  },
+  {
+   "id": "MetaCyc:GALACTUROCAT-PWY",
+   "label": "D-galacturonate degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_GALACTUROCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GALACTUROCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:511145",
+     "label": "Escherichia coli str. K-12 substr. MG1655"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.3.1.12",
+     "label": "glucuronate isomerase"
+    },
+    {
+     "id": "EC:1.1.1.58",
+     "label": "tagaturonate reductase"
+    },
+    {
+     "id": "EC:4.2.1.7",
+     "label": "altronate dehydratase"
+    },
+    {
+     "id": "EC:2.7.1.45",
+     "label": "2-dehydro-3-deoxygluconokinase"
+    },
+    {
+     "id": "EC:4.1.2.14",
+     "label": "2-dehydro-3-deoxy-phosphogluconate aldolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:27705",
+    "RHEA:17816",
+    "RHEA:15958",
+    "RHEA:14798",
+    "RHEA:17090"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLUAMCAT-PWY",
+   "label": "N-acetylglucosamine degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_GLUAMCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLUAMCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:3.5.1.25",
+     "label": "N-acetylglucosamine-6-phosphate deacetylase"
+    },
+    {
+     "id": "EC:3.5.99.6",
+     "label": "glucosamine-6-phosphate deaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:22937",
+    "RHEA:12175"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLUCARDEG-PWY",
+   "label": "D-glucarate degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_GLUCARDEG-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLUCARDEG-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2",
+     "label": "Bacteria"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.2.1.40",
+     "label": "D-glucarate dehydratase"
+    },
+    {
+     "id": "EC:1.1.1.60",
+     "label": "tartronate-semialdehyde reductase"
+    },
+    {
+     "id": "EC:2.7.1.165",
+     "label": "D-glycerate 2-kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14574",
+    "RHEA:27729",
+    "RHEA:18843",
+    "RHEA:18847",
+    "RHEA:27378"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLUTATHIONESYN-PWY",
+   "label": "glutathione biosynthesis",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_GLUTATHIONESYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLUTATHIONESYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:6.3.2.2",
+     "label": "glutamate--cysteine ligase"
+    },
+    {
+     "id": "EC:6.3.2.3",
+     "label": "glutathione synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13286",
+    "RHEA:13558"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLUTORN-PWY",
+   "label": "L-ornithine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_GLUTORN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLUTORN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.1",
+     "label": "N-acetylglutamate synthase"
+    },
+    {
+     "id": "EC:2.7.2.8",
+     "label": "acetylglutamate kinase"
+    },
+    {
+     "id": "EC:1.2.1.38",
+     "label": "N-acetyl-gamma-glutamyl-phosphate reductase"
+    },
+    {
+     "id": "EC:2.6.1.11",
+     "label": "acetylornithine aminotransferase"
+    },
+    {
+     "id": "EC:3.5.1.16",
+     "label": "acetylornithine deacetylase"
+    }
+   ],
+   "reactions": [
+    "RHEA:24293",
+    "RHEA:14630",
+    "RHEA:21590",
+    "RHEA:18051",
+    "RHEA:15942"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLYCEROLMETAB-PWY",
+   "label": "glycerol degradation V",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_GLYCEROLMETAB-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLYCEROLMETAB-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:511145",
+     "label": "Escherichia coli str. K-12 substr. MG1655"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:1.1.1.6",
+     "label": "glycerol dehydrogenase"
+    },
+    {
+     "id": "EC:2.7.1.121",
+     "label": "dihydroxyacetone kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13772",
+    "RHEA:18382"
+   ]
+  },
+  {
+   "id": "MetaCyc:GLYOXYLATE-BYPASS",
+   "label": "glyoxylate cycle",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/MetaCyc_GLYOXYLATE-BYPASS.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_GLYOXYLATE-BYPASS.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:1773",
+     "label": "Mycobacterium tuberculosis"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.1.3.1",
+     "label": "isocitrate lyase"
+    },
+    {
+     "id": "EC:2.3.3.9",
+     "label": "malate synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13246",
+    "RHEA:18182"
+   ]
+  },
+  {
+   "id": "MetaCyc:HISTSYN-PWY",
+   "label": "L-histidine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_HISTSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_HISTSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.4.2.17",
+     "label": "ATP phosphoribosyltransferase"
+    },
+    {
+     "id": "EC:3.6.1.31",
+     "label": "phosphoribosyl-ATP diphosphatase"
+    },
+    {
+     "id": "EC:3.5.4.19",
+     "label": "phosphoribosyl-AMP cyclohydrolase"
+    },
+    {
+     "id": "EC:5.3.1.16",
+     "label": "phosphoribulosylformimino-AICAR-phosphate isomerase"
+    },
+    {
+     "id": "EC:4.3.2.10",
+     "label": "imidazoleglycerol-phosphate synthase"
+    },
+    {
+     "id": "EC:4.2.1.19",
+     "label": "imidazoleglycerol-phosphate dehydratase"
+    },
+    {
+     "id": "EC:2.6.1.9",
+     "label": "histidinol-phosphate aminotransferase"
+    },
+    {
+     "id": "EC:3.1.3.15",
+     "label": "histidinol-phosphatase"
+    },
+    {
+     "id": "EC:1.1.1.23",
+     "label": "histidinol dehydrogenase"
+    }
+   ],
+   "reactions": [
+    "RHEA:18475",
+    "RHEA:22829",
+    "RHEA:20050",
+    "RHEA:15470",
+    "RHEA:24794",
+    "RHEA:11041",
+    "RHEA:23746",
+    "RHEA:14466",
+    "RHEA:33800",
+    "RHEA:33804"
+   ]
+  },
+  {
+   "id": "MetaCyc:HOMOSER-METSYN-PWY",
+   "label": "L-methionine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_HOMOSER-METSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_HOMOSER-METSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.46",
+     "label": "homoserine O-succinyltransferase"
+    },
+    {
+     "id": "EC:2.5.1.48",
+     "label": "cystathionine gamma-synthase"
+    },
+    {
+     "id": "UniProtKB:P06721",
+     "label": "cystathionine beta-lyase MetC"
+    },
+    {
+     "id": "EC:2.1.1.13",
+     "label": "methionine synthase"
+    },
+    {
+     "id": "EC:2.1.1.14",
+     "label": "5-methyltetrahydropteroyltriglutamate--homocysteine S-methyltransferase"
+    }
+   ],
+   "reactions": [
+    "RHEA:22009",
+    "RHEA:20398",
+    "RHEA:13966",
+    "RHEA:11173",
+    "RHEA:21197"
+   ]
+  },
+  {
+   "id": "MetaCyc:HOMOSER-THRESYN-PWY",
+   "label": "L-threonine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_HOMOSER-THRESYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_HOMOSER-THRESYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.1.39",
+     "label": "homoserine kinase"
+    },
+    {
+     "id": "EC:4.2.3.1",
+     "label": "threonine synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13986",
+    "RHEA:10841"
+   ]
+  },
+  {
+   "id": "MetaCyc:HOMOSERSYN-PWY",
+   "label": "L-homoserine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_HOMOSERSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_HOMOSERSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.2.4",
+     "label": "aspartate kinase"
+    },
+    {
+     "id": "EC:1.2.1.11",
+     "label": "aspartate-semialdehyde dehydrogenase"
+    },
+    {
+     "id": "EC:1.1.1.3",
+     "label": "homoserine dehydrogenase"
+    }
+   ],
+   "reactions": [
+    "RHEA:23777",
+    "RHEA:24286",
+    "RHEA:15763"
+   ]
+  },
+  {
+   "id": "MetaCyc:ILEUSYN-PWY",
+   "label": "L-isoleucine biosynthesis I (from threonine)",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_ILEUSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_ILEUSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.3.1.19",
+     "label": "threonine ammonia-lyase"
+    },
+    {
+     "id": "EC:2.2.1.6",
+     "label": "acetolactate synthase"
+    },
+    {
+     "id": "EC:1.1.1.86",
+     "label": "ketol-acid reductoisomerase (NADP(+))"
+    },
+    {
+     "id": "EC:4.2.1.9",
+     "label": "dihydroxy-acid dehydratase"
+    },
+    {
+     "id": "EC:2.6.1.42",
+     "label": "branched-chain-amino-acid transaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:22109",
+    "RHEA:27655",
+    "RHEA:13495",
+    "RHEA:27695",
+    "RHEA:24803"
+   ]
+  },
+  {
+   "id": "MetaCyc:LEUSYN-PWY",
+   "label": "L-leucine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_LEUSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_LEUSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.3.13",
+     "label": "2-isopropylmalate synthase"
+    },
+    {
+     "id": "EC:4.2.1.33",
+     "label": "3-isopropylmalate dehydratase"
+    },
+    {
+     "id": "EC:1.1.1.85",
+     "label": "3-isopropylmalate dehydrogenase"
+    },
+    {
+     "id": "EC:2.6.1.42",
+     "label": "branched-chain-amino-acid transaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:21525",
+    "RHEA:32289",
+    "RHEA:32272",
+    "RHEA:18323"
+   ]
+  },
+  {
+   "id": "MetaCyc:NONOXIPENT-PWY",
+   "label": "pentose phosphate pathway (non-oxidative branch) I",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/MetaCyc_NONOXIPENT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_NONOXIPENT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.3.1.6",
+     "label": "ribose-5-phosphate isomerase"
+    },
+    {
+     "id": "EC:5.1.3.1",
+     "label": "ribulose-phosphate 3-epimerase"
+    },
+    {
+     "id": "EC:2.2.1.1",
+     "label": "transketolase"
+    },
+    {
+     "id": "EC:2.2.1.2",
+     "label": "transaldolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14660",
+    "RHEA:13680",
+    "RHEA:10511",
+    "RHEA:17056",
+    "RHEA:27629"
+   ]
+  },
+  {
+   "id": "MetaCyc:OXIDATIVEPENT-PWY",
+   "label": "pentose phosphate pathway (oxidative branch) I",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/MetaCyc_OXIDATIVEPENT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_OXIDATIVEPENT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:1.1.1.49",
+     "label": "glucose-6-phosphate dehydrogenase"
+    },
+    {
+     "id": "EC:3.1.1.31",
+     "label": "6-phosphogluconolactonase"
+    },
+    {
+     "id": "EC:1.1.1.44",
+     "label": "6-phosphogluconate dehydrogenase"
+    }
+   ],
+   "reactions": [
+    "RHEA:15842",
+    "RHEA:12557",
+    "RHEA:10117"
+   ]
+  },
+  {
+   "id": "MetaCyc:P101-PWY",
+   "label": "ectoine biosynthesis",
+   "pathway_type": "compatible-solute-biosynthesis",
+   "page": "records/MetaCyc_P101-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_P101-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2746",
+     "label": "Halomonas elongata"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.2.4",
+     "label": "aspartate kinase"
+    },
+    {
+     "id": "EC:1.2.1.11",
+     "label": "aspartate-semialdehyde dehydrogenase"
+    },
+    {
+     "id": "EC:2.6.1.76",
+     "label": "diaminobutyrate-2-oxoglutarate transaminase"
+    },
+    {
+     "id": "EC:2.3.1.178",
+     "label": "diaminobutyrate acetyltransferase"
+    },
+    {
+     "id": "EC:4.2.1.108",
+     "label": "ectoine synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:23777",
+    "RHEA:24286",
+    "RHEA:11162",
+    "RHEA:16902",
+    "RHEA:17282"
+   ]
+  },
+  {
+   "id": "MetaCyc:PANTO-PWY",
+   "label": "phosphopantothenate biosynthesis I",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PANTO-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PANTO-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.1.2.11",
+     "label": "3-methyl-2-oxobutanoate hydroxymethyltransferase"
+    },
+    {
+     "id": "EC:1.1.1.169",
+     "label": "2-dehydropantoate reductase"
+    },
+    {
+     "id": "EC:6.3.2.1",
+     "label": "pantoate--beta-alanine ligase"
+    },
+    {
+     "id": "EC:2.7.1.33",
+     "label": "pantothenate kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:11825",
+    "RHEA:16235",
+    "RHEA:10913",
+    "RHEA:16374"
+   ]
+  },
+  {
+   "id": "MetaCyc:PHESYN",
+   "label": "L-phenylalanine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_PHESYN.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PHESYN.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.4.99.5",
+     "label": "chorismate mutase"
+    },
+    {
+     "id": "EC:4.2.1.51",
+     "label": "prephenate dehydratase"
+    },
+    {
+     "id": "EC:2.6.1.57",
+     "label": "aromatic-amino-acid transaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13898",
+    "RHEA:21649",
+    "RHEA:25154"
+   ]
+  },
+  {
+   "id": "MetaCyc:PLPSAL-PWY",
+   "label": "pyridoxal 5'-phosphate salvage I",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PLPSAL-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PLPSAL-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.1.35",
+     "label": "pyridoxal kinase"
+    },
+    {
+     "id": "EC:1.4.3.5",
+     "label": "pyridoxine 5'-phosphate oxidase"
+    }
+   ],
+   "reactions": [
+    "RHEA:10225",
+    "RHEA:25105",
+    "RHEA:15818",
+    "RHEA:25109",
+    "RHEA:15150"
+   ]
+  },
+  {
+   "id": "MetaCyc:PPGPPMET-PWY",
+   "label": "ppGpp metabolism",
+   "pathway_type": "metabolic-regulator-biosynthesis",
+   "page": "records/MetaCyc_PPGPPMET-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PPGPPMET-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2",
+     "label": "Bacteria"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.4.6",
+     "label": "nucleoside-diphosphate kinase"
+    },
+    {
+     "id": "EC:2.7.6.5",
+     "label": "GTP diphosphokinase"
+    },
+    {
+     "id": "EC:3.1.7.2",
+     "label": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase"
+    },
+    {
+     "id": "EC:3.6.1.40",
+     "label": "guanosine-5'-triphosphate,3'-diphosphate diphosphatase"
+    }
+   ],
+   "reactions": [
+    "RHEA:27687",
+    "RHEA:33056",
+    "RHEA:28099",
+    "RHEA:22089",
+    "RHEA:14254",
+    "RHEA:13074"
+   ]
+  },
+  {
+   "id": "MetaCyc:PROSYN-PWY",
+   "label": "L-proline biosynthesis I (from L-glutamate)",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_PROSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PROSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.7.2.11",
+     "label": "glutamate 5-kinase"
+    },
+    {
+     "id": "EC:1.2.1.41",
+     "label": "glutamate-5-semialdehyde dehydrogenase"
+    },
+    {
+     "id": "EC:1.5.1.2",
+     "label": "pyrroline-5-carboxylate reductase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14878",
+    "RHEA:19543",
+    "RHEA:28235",
+    "RHEA:14111"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-5686",
+   "label": "UMP biosynthesis I",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/MetaCyc_PWY-5686.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-5686.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:6.3.5.5",
+     "label": "carbamoyl-phosphate synthase (glutamine-hydrolysing)"
+    },
+    {
+     "id": "EC:2.1.3.2",
+     "label": "aspartate carbamoyltransferase"
+    },
+    {
+     "id": "EC:3.5.2.3",
+     "label": "dihydroorotase"
+    },
+    {
+     "id": "EC:1.3.5.2",
+     "label": "dihydroorotate dehydrogenase (quinone)"
+    },
+    {
+     "id": "EC:2.4.2.10",
+     "label": "orotate phosphoribosyltransferase"
+    },
+    {
+     "id": "EC:4.1.1.23",
+     "label": "orotidine-5'-phosphate decarboxylase"
+    }
+   ],
+   "reactions": [
+    "RHEA:18634",
+    "RHEA:20014",
+    "RHEA:24298",
+    "RHEA:30188",
+    "RHEA:10382",
+    "RHEA:11597"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-6121",
+   "label": "5-aminoimidazole ribonucleotide biosynthesis I",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/MetaCyc_PWY-6121.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-6121.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.4.2.14",
+     "label": "amidophosphoribosyltransferase"
+    },
+    {
+     "id": "EC:6.3.4.13",
+     "label": "phosphoribosylamine-glycine ligase"
+    },
+    {
+     "id": "EC:2.1.2.2",
+     "label": "phosphoribosylglycinamide formyltransferase"
+    },
+    {
+     "id": "EC:6.3.5.3",
+     "label": "phosphoribosylformylglycinamidine synthase"
+    },
+    {
+     "id": "EC:6.3.3.1",
+     "label": "phosphoribosylformylglycinamidine cyclo-ligase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14907",
+    "RHEA:17454",
+    "RHEA:15054",
+    "RHEA:17130",
+    "RHEA:23033"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-6122",
+   "label": "5-aminoimidazole ribonucleotide biosynthesis II",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/MetaCyc_PWY-6122.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-6122.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.4.2.14",
+     "label": "amidophosphoribosyltransferase"
+    },
+    {
+     "id": "EC:6.3.4.13",
+     "label": "phosphoribosylamine-glycine ligase"
+    },
+    {
+     "id": "EC:6.3.1.21",
+     "label": "phosphoribosylglycinamide formyltransferase 2"
+    },
+    {
+     "id": "EC:6.3.5.3",
+     "label": "phosphoribosylformylglycinamidine synthase"
+    },
+    {
+     "id": "EC:6.3.3.1",
+     "label": "phosphoribosylformylglycinamidine cyclo-ligase"
+    }
+   ],
+   "reactions": [
+    "RHEA:14907",
+    "RHEA:17454",
+    "RHEA:24830",
+    "RHEA:17130",
+    "RHEA:23033"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-6123",
+   "label": "inosine-5'-phosphate biosynthesis I",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/MetaCyc_PWY-6123.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-6123.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:6.3.4.18",
+     "label": "5-(carboxyamino)imidazole ribonucleotide synthase"
+    },
+    {
+     "id": "EC:5.4.99.18",
+     "label": "5-(carboxyamino)imidazole ribonucleotide mutase"
+    },
+    {
+     "id": "EC:6.3.2.6",
+     "label": "phosphoribosylaminoimidazolesuccinocarboxamide synthase"
+    },
+    {
+     "id": "EC:4.3.2.2",
+     "label": "adenylosuccinate lyase"
+    },
+    {
+     "id": "EC:2.1.2.3",
+     "label": "phosphoribosylaminoimidazolecarboxamide formyltransferase"
+    },
+    {
+     "id": "EC:3.5.4.10",
+     "label": "IMP cyclohydrolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:19318",
+    "RHEA:13194",
+    "RHEA:22629",
+    "RHEA:23921",
+    "RHEA:22193",
+    "RHEA:18447"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-6124",
+   "label": "inosine-5'-phosphate biosynthesis II",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/MetaCyc_PWY-6124.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-6124.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:158",
+     "label": "Treponema denticola"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.1.1.21",
+     "label": "phosphoribosylaminoimidazole carboxylase"
+    },
+    {
+     "id": "EC:6.3.2.6",
+     "label": "phosphoribosylaminoimidazolesuccinocarboxamide synthase"
+    },
+    {
+     "id": "EC:4.3.2.2",
+     "label": "adenylosuccinate lyase"
+    },
+    {
+     "id": "EC:2.1.2.3",
+     "label": "phosphoribosylaminoimidazolecarboxamide formyltransferase"
+    },
+    {
+     "id": "EC:3.5.4.10",
+     "label": "IMP cyclohydrolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:10795",
+    "RHEA:22629",
+    "RHEA:23921",
+    "RHEA:22193",
+    "RHEA:18447"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY-6543",
+   "label": "4-aminobenzoate biosynthesis I",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PWY-6543.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY-6543.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.6.1.85",
+     "label": "aminodeoxychorismate synthase"
+    },
+    {
+     "id": "EC:4.1.3.38",
+     "label": "aminodeoxychorismate lyase"
+    }
+   ],
+   "reactions": [
+    "RHEA:11673",
+    "RHEA:16202"
+   ]
+  },
+  {
+   "id": "MetaCyc:PWY0-1312",
+   "label": "acetate and ATP formation from acetyl-CoA I",
+   "pathway_type": "fermentation",
+   "page": "records/MetaCyc_PWY0-1312.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PWY0-1312.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2336",
+     "label": "Thermotoga maritima"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.3.1.8",
+     "label": "phosphate acetyltransferase"
+    },
+    {
+     "id": "EC:2.7.2.1",
+     "label": "acetate kinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:19522",
+    "RHEA:11354"
+   ]
+  },
+  {
+   "id": "MetaCyc:PYRIDNUCSAL-PWY",
+   "label": "NAD salvage pathway I (PNC VI cycle)",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PYRIDNUCSAL-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PYRIDNUCSAL-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2",
+     "label": "Bacteria"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:3.6.1.22",
+     "label": "NAD(+) diphosphatase"
+    },
+    {
+     "id": "EC:3.2.2.14",
+     "label": "NMN nucleosidase"
+    },
+    {
+     "id": "EC:3.5.1.19",
+     "label": "nicotinamidase"
+    },
+    {
+     "id": "EC:6.3.4.21",
+     "label": "nicotinate phosphoribosyltransferase"
+    },
+    {
+     "id": "EC:2.7.7.18",
+     "label": "nicotinate-nucleotide adenylyltransferase"
+    },
+    {
+     "id": "EC:6.3.5.1",
+     "label": "NAD(+) synthase (glutamine-hydrolyzing)"
+    }
+   ],
+   "reactions": [
+    "RHEA:11801",
+    "RHEA:23141",
+    "RHEA:14546",
+    "RHEA:36164",
+    "RHEA:22861",
+    "RHEA:24385"
+   ]
+  },
+  {
+   "id": "MetaCyc:PYRIDNUCSYN-PWY",
+   "label": "NAD de novo biosynthesis I (from aspartate)",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PYRIDNUCSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PYRIDNUCSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2",
+     "label": "Bacteria"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:1.4.3.16",
+     "label": "L-aspartate oxidase"
+    },
+    {
+     "id": "EC:2.5.1.72",
+     "label": "quinolinate synthase"
+    },
+    {
+     "id": "EC:2.4.2.19",
+     "label": "quinolinate phosphoribosyltransferase"
+    },
+    {
+     "id": "EC:2.7.7.18",
+     "label": "nicotinate-nucleotide adenylyltransferase"
+    },
+    {
+     "id": "EC:6.3.1.5",
+     "label": "NAD(+) synthase"
+    },
+    {
+     "id": "EC:6.3.5.1",
+     "label": "NAD(+) synthase (glutamine-hydrolyzing)"
+    }
+   ],
+   "reactions": [
+    "RHEA:25877",
+    "RHEA:25889",
+    "RHEA:12735",
+    "RHEA:22861",
+    "RHEA:21189",
+    "RHEA:24385"
+   ]
+  },
+  {
+   "id": "MetaCyc:PYRIDOXSYN-PWY",
+   "label": "pyridoxal 5'-phosphate biosynthesis I",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_PYRIDOXSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_PYRIDOXSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:1.2.1.72",
+     "label": "erythrose-4-phosphate dehydrogenase"
+    },
+    {
+     "id": "EC:1.1.1.290",
+     "label": "4-phosphoerythronate dehydrogenase"
+    },
+    {
+     "id": "EC:2.6.1.52",
+     "label": "phosphoserine transaminase"
+    },
+    {
+     "id": "EC:1.1.1.262",
+     "label": "4-hydroxythreonine-4-phosphate dehydrogenase"
+    },
+    {
+     "id": "EC:2.2.1.7",
+     "label": "1-deoxy-D-xylulose-5-phosphate synthase"
+    },
+    {
+     "id": "EC:2.6.99.2",
+     "label": "pyridoxine 5'-phosphate synthase"
+    },
+    {
+     "id": "EC:1.4.3.5",
+     "label": "pyridoxine 5'-phosphate oxidase"
+    }
+   ],
+   "reactions": [
+    "RHEA:12057",
+    "RHEA:18830",
+    "RHEA:16575",
+    "RHEA:32276",
+    "RHEA:12606",
+    "RHEA:15266",
+    "RHEA:15150"
+   ]
+  },
+  {
+   "id": "MetaCyc:RHAMCAT-PWY",
+   "label": "L-rhamnose degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_RHAMCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_RHAMCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:2",
+     "label": "Bacteria"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.1.3.32",
+     "label": "L-rhamnose mutarotase"
+    },
+    {
+     "id": "EC:5.3.1.14",
+     "label": "L-rhamnose isomerase"
+    },
+    {
+     "id": "EC:2.7.1.5",
+     "label": "rhamnulokinase"
+    },
+    {
+     "id": "EC:4.1.2.19",
+     "label": "rhamnulose-1-phosphate aldolase"
+    }
+   ],
+   "reactions": [
+    "RHEA:25587",
+    "RHEA:23163",
+    "MetaCyc:RXN-15356",
+    "RHEA:20118",
+    "RHEA:19692"
+   ]
+  },
+  {
+   "id": "MetaCyc:RIBOSYN2-PWY",
+   "label": "flavin biosynthesis I",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/MetaCyc_RIBOSYN2-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_RIBOSYN2-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:3.5.4.25",
+     "label": "GTP cyclohydrolase II"
+    },
+    {
+     "id": "EC:3.5.4.26",
+     "label": "diaminohydroxyphosphoribosylaminopyrimidine deaminase"
+    },
+    {
+     "id": "EC:1.1.1.193",
+     "label": "5-amino-6-(5-phosphoribosylamino)uracil reductase"
+    },
+    {
+     "id": "EC:4.1.99.12",
+     "label": "3,4-dihydroxy-2-butanone 4-phosphate synthase"
+    },
+    {
+     "id": "EC:3.1.3.104",
+     "label": "5-amino-6-(5-phospho-D-ribitylamino)uracil phosphatase"
+    },
+    {
+     "id": "EC:2.5.1.78",
+     "label": "6,7-dimethyl-8-ribityllumazine synthase"
+    },
+    {
+     "id": "EC:2.5.1.9",
+     "label": "riboflavin synthase"
+    },
+    {
+     "id": "EC:2.7.1.26",
+     "label": "riboflavin kinase"
+    },
+    {
+     "id": "EC:2.7.7.2",
+     "label": "FAD synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:23705",
+    "RHEA:21869",
+    "RHEA:17847",
+    "RHEA:18458",
+    "RHEA:25198",
+    "RHEA:26153",
+    "RHEA:20773",
+    "RHEA:14358",
+    "RHEA:17238"
+   ]
+  },
+  {
+   "id": "MetaCyc:SERSYN-PWY",
+   "label": "L-serine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_SERSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_SERSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:1.1.1.95",
+     "label": "phosphoglycerate dehydrogenase"
+    },
+    {
+     "id": "EC:2.6.1.52",
+     "label": "phosphoserine transaminase"
+    },
+    {
+     "id": "EC:3.1.3.3",
+     "label": "phosphoserine phosphatase"
+    }
+   ],
+   "reactions": [
+    "RHEA:12642",
+    "RHEA:14331",
+    "RHEA:21209"
+   ]
+  },
+  {
+   "id": "MetaCyc:TRESYN-PWY",
+   "label": "trehalose biosynthesis I",
+   "pathway_type": "compatible-solute-biosynthesis",
+   "page": "records/MetaCyc_TRESYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_TRESYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.4.1.15",
+     "label": "alpha,alpha-trehalose-phosphate synthase (UDP-forming)"
+    },
+    {
+     "id": "EC:3.1.3.12",
+     "label": "trehalose-phosphatase"
+    }
+   ],
+   "reactions": [
+    "RHEA:18890",
+    "RHEA:23421"
+   ]
+  },
+  {
+   "id": "MetaCyc:TRPSYN-PWY",
+   "label": "L-tryptophan biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_TRPSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_TRPSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:4.1.3.27",
+     "label": "anthranilate synthase"
+    },
+    {
+     "id": "EC:2.4.2.18",
+     "label": "anthranilate phosphoribosyltransferase"
+    },
+    {
+     "id": "EC:5.3.1.24",
+     "label": "phosphoribosylanthranilate isomerase"
+    },
+    {
+     "id": "EC:4.1.1.48",
+     "label": "indole-3-glycerol-phosphate synthase"
+    },
+    {
+     "id": "EC:4.2.1.20",
+     "label": "tryptophan synthase"
+    }
+   ],
+   "reactions": [
+    "RHEA:21733",
+    "RHEA:11770",
+    "RHEA:21541",
+    "RHEA:23477",
+    "RHEA:10533"
+   ]
+  },
+  {
+   "id": "MetaCyc:TYRSYN",
+   "label": "L-tyrosine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_TYRSYN.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_TYRSYN.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.4.99.5",
+     "label": "chorismate mutase"
+    },
+    {
+     "id": "EC:1.3.1.12",
+     "label": "prephenate dehydrogenase"
+    },
+    {
+     "id": "EC:2.6.1.57",
+     "label": "aromatic-amino-acid transaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:13898",
+    "RHEA:13870",
+    "RHEA:15095"
+   ]
+  },
+  {
+   "id": "MetaCyc:VALSYN-PWY",
+   "label": "L-valine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/MetaCyc_VALSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_VALSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:2.2.1.6",
+     "label": "acetolactate synthase"
+    },
+    {
+     "id": "EC:1.1.1.86",
+     "label": "ketol-acid reductoisomerase (NADP(+))"
+    },
+    {
+     "id": "EC:4.2.1.9",
+     "label": "dihydroxy-acid dehydratase"
+    },
+    {
+     "id": "EC:2.6.1.42",
+     "label": "branched-chain-amino-acid transaminase"
+    }
+   ],
+   "reactions": [
+    "RHEA:25250",
+    "RHEA:22070",
+    "RHEA:24810",
+    "RHEA:24815"
+   ]
+  },
+  {
+   "id": "MetaCyc:XYLCAT-PWY",
+   "label": "D-xylose degradation I",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/MetaCyc_XYLCAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/MetaCyc_XYLCAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "EC:5.3.1.5",
+     "label": "xylose isomerase"
+    },
+    {
+     "id": "EC:2.7.1.17",
+     "label": "xylulokinase"
+    }
+   ],
+   "reactions": [
+    "RHEA:22819",
+    "RHEA:10965"
+   ]
+  },
+  {
+   "id": "Reactome:R-MTU-868688",
+   "label": "Mycobacterium tuberculosis trehalose biosynthesis",
+   "pathway_type": "biopax-pathway",
+   "page": "records/Reactome_R-MTU-868688.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/Reactome_R-MTU-868688.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:1773",
+     "label": "Mycobacterium tuberculosis"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "UniProtKB:P9WN11",
+     "label": "alpha,alpha-trehalose-phosphate synthase OtsA"
+    },
+    {
+     "id": "UniProtKB:P9WFZ5",
+     "label": "trehalose-phosphatase OtsB2"
+    },
+    {
+     "id": "UniProtKB:P9WQ19",
+     "label": "trehalose synthase TreS"
+    },
+    {
+     "id": "UniProtKB:P9WQ21",
+     "label": "maltooligosyl trehalose synthase TreY"
+    },
+    {
+     "id": "UniProtKB:P9WQ23",
+     "label": "maltooligosyl trehalose trehalohydrolase TreZ"
+    }
+   ],
+   "reactions": [
+    "Reactome:R-MTU-868622",
+    "Reactome:R-MTU-868608",
+    "Reactome:R-MTU-868709",
+    "Reactome:R-MTU-868658",
+    "Reactome:R-MTU-868657"
+   ]
+  },
+  {
+   "id": "Reactome:R-MTU-879299",
+   "label": "Mycothiol biosynthesis",
+   "pathway_type": "biopax-pathway",
+   "page": "records/Reactome_R-MTU-879299.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/Reactome_R-MTU-879299.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:1773",
+     "label": "Mycobacterium tuberculosis"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "UniProtKB:P9WKI1",
+     "label": "inositol-3-phosphate synthase Ino1"
+    },
+    {
+     "id": "UniProtKB:P9WMY7",
+     "label": "mycothiol biosynthesis glycosyltransferase MshA"
+    },
+    {
+     "id": "UniProtKB:P95189",
+     "label": "inositol monophosphatase ImpC"
+    },
+    {
+     "id": "UniProtKB:P9WJN1",
+     "label": "mycothiol S-conjugate amidase Mca"
+    },
+    {
+     "id": "UniProtKB:P9WJM9",
+     "label": "mycothiol biosynthesis ligase MshC"
+    },
+    {
+     "id": "UniProtKB:P9WJM7",
+     "label": "mycothiol synthase MshD"
+    }
+   ],
+   "reactions": [
+    "Reactome:R-MTU-879331",
+    "Reactome:R-MTU-879298",
+    "Reactome:R-MTU-879274",
+    "Reactome:R-MTU-879327",
+    "Reactome:R-MTU-879319",
+    "Reactome:R-MTU-879248"
+   ]
+  },
+  {
+   "id": "Reactome:R-MTU-879325",
+   "label": "Mycothiol catabolism",
+   "pathway_type": "biopax-pathway",
+   "page": "records/Reactome_R-MTU-879325.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/Reactome_R-MTU-879325.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:1773",
+     "label": "Mycobacterium tuberculosis"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "UniProtKB:P9WJN1",
+     "label": "mycothiol S-conjugate amidase Mca"
+    }
+   ],
+   "reactions": [
+    "Reactome:R-MTU-879281"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP171",
+   "label": "NAD salvage pathway V",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/WikiPathways_WP171.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP171.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002200",
+     "label": "SIR2"
+    },
+    {
+     "id": "SGD:S000003005",
+     "label": "PNC1"
+    },
+    {
+     "id": "SGD:S000005735",
+     "label": "NPT1"
+    },
+    {
+     "id": "SGD:S000001116",
+     "label": "QNS1"
+    },
+    {
+     "id": "SGD:S000004320",
+     "label": "NMA1"
+    },
+    {
+     "id": "SGD:S000003242",
+     "label": "NMA2"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP171/id4b00dac6",
+    "WikiPathways:WP171/id58e1978f",
+    "WikiPathways:WP171/id5b2236e7",
+    "WikiPathways:WP171/ide26ea2c3",
+    "WikiPathways:WP171/idfac03b17"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP178",
+   "label": "Isoleucine degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/WikiPathways_WP178.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP178.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP178/id59c25f71",
+    "WikiPathways:WP178/idf1c4befb",
+    "WikiPathways:WP178/idbcd10869"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP266",
+   "label": "Triglyceride biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/WikiPathways_WP266.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP266.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP266/idc8402cc8",
+    "WikiPathways:WP266/id85e34cbe",
+    "WikiPathways:WP266/id60909eec",
+    "WikiPathways:WP266/id1cd7ea26",
+    "WikiPathways:WP266/id3bcd2f4"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP287",
+   "label": "Ubiquinol-6 biosynthesis from 4-hydroxybenzoate",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/WikiPathways_WP287.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP287.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP287/id46b5e257",
+    "WikiPathways:WP287/id4c332e28",
+    "WikiPathways:WP287/id646fb25b",
+    "WikiPathways:WP287/id55520bdd",
+    "WikiPathways:WP287/id74367dd4",
+    "WikiPathways:WP287/id1105b8d9",
+    "WikiPathways:WP287/idac01794e",
+    "WikiPathways:WP287/id86d34e80"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP296",
+   "label": "TCA cycle - detailed",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/WikiPathways_WP296.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP296.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005284",
+     "label": "citrate synthase 1"
+    },
+    {
+     "id": "SGD:S000000598",
+     "label": "citrate synthase 2"
+    },
+    {
+     "id": "SGD:S000006205",
+     "label": "citrate synthase 3"
+    },
+    {
+     "id": "SGD:S000003736",
+     "label": "aconitate hydratase"
+    },
+    {
+     "id": "SGD:S000004295",
+     "label": "aconitase"
+    },
+    {
+     "id": "SGD:S000004982",
+     "label": "isocitrate dehydrogenase 1"
+    },
+    {
+     "id": "SGD:S000005662",
+     "label": "isocitrate dehydrogenase 2"
+    },
+    {
+     "id": "SGD:S000001387",
+     "label": "2-ketoglutarate dehydrogenase"
+    },
+    {
+     "id": "SGD:S000002555",
+     "label": "dihydrolipoyl transsuccinylase"
+    },
+    {
+     "id": "SGD:S000001876",
+     "label": "dihydrolipoamide dehydrogenase"
+    },
+    {
+     "id": "SGD:S000005668",
+     "label": "succinyl-CoA ligase 1"
+    },
+    {
+     "id": "SGD:S000003476",
+     "label": "succinyl-CoA ligase 2"
+    },
+    {
+     "id": "SGD:S000001624",
+     "label": "succinate dehydrogenase 3"
+    },
+    {
+     "id": "SGD:S000001631",
+     "label": "succinate dehydrogenase 1"
+    },
+    {
+     "id": "SGD:S000002585",
+     "label": "succinate dehydrogenase 4"
+    },
+    {
+     "id": "SGD:S000003964",
+     "label": "succinate dehydrogenase 2"
+    },
+    {
+     "id": "SGD:S000006183",
+     "label": "fumarate hydratase"
+    },
+    {
+     "id": "SGD:S000005486",
+     "label": "cytoplasmic malate dehydrogenase"
+    },
+    {
+     "id": "SGD:S000001568",
+     "label": "mitochondrial malate dehydrogenase"
+    },
+    {
+     "id": "SGD:S000002236",
+     "label": "malate dehydrogenase"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP296/id892d5e82",
+    "WikiPathways:WP296/id718be16e",
+    "WikiPathways:WP296/id21c76d83",
+    "WikiPathways:WP296/ida3b8a465",
+    "WikiPathways:WP296/id238f9689",
+    "WikiPathways:WP296/idaf5b761e",
+    "WikiPathways:WP296/b7797",
+    "WikiPathways:WP296/bec38",
+    "WikiPathways:WP296/c084d"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP392",
+   "label": "Glutathione-glutaredoxin redox reaction",
+   "pathway_type": "glutathione-redox",
+   "page": "records/WikiPathways_WP392.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP392.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000006012",
+     "label": "GLR1"
+    },
+    {
+     "id": "SGD:S000001509",
+     "label": "GPX1"
+    },
+    {
+     "id": "SGD:S000000448",
+     "label": "GPX2"
+    },
+    {
+     "id": "SGD:S000001476",
+     "label": "HYR1"
+    },
+    {
+     "id": "SGD:S000003983",
+     "label": "GTT2"
+    },
+    {
+     "id": "SGD:S000001477",
+     "label": "GTT1"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP392/id3206f739",
+    "WikiPathways:WP392/id8cc08cdf",
+    "WikiPathways:WP392/id8fe92484",
+    "WikiPathways:WP392/idb13bbbe"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP478",
+   "label": "Glycogen catabolism",
+   "pathway_type": "glycogen-catabolism",
+   "page": "records/WikiPathways_WP478.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP478.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001610",
+     "label": "PGM1"
+    },
+    {
+     "id": "SGD:S000004711",
+     "label": "PGM2"
+    },
+    {
+     "id": "SGD:S000006364",
+     "label": "GPH1"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP478/id16beba20",
+    "WikiPathways:WP478/id5442c585"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP5019",
+   "label": "Acetogenesis",
+   "pathway_type": "acetogenesis",
+   "page": "records/WikiPathways_WP5019.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5019.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:33952",
+     "label": "Acetobacterium woodii"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP5019/idee9950c3",
+    "WikiPathways:WP5019/idcb0cc195",
+    "WikiPathways:WP5019/id59fbd0e3",
+    "WikiPathways:WP5019/id192c7b4a",
+    "WikiPathways:WP5019/ide2e37f0",
+    "WikiPathways:WP5019/id8e976caf",
+    "WikiPathways:WP5019/id48aa4469",
+    "WikiPathways:WP5019/ideb932d04",
+    "WikiPathways:WP5019/id48bab90b",
+    "WikiPathways:WP5019/e7431",
+    "WikiPathways:WP5019/id4f3af248",
+    "WikiPathways:WP5019/idb70e2922",
+    "WikiPathways:WP5019/idf6f6d75"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP5060",
+   "label": "Peptidoglycan cytoplasmic synthesis and recycling pathways",
+   "pathway_type": "cell-wall-biosynthesis",
+   "page": "records/WikiPathways_WP5060.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5060.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:562",
+     "label": "Escherichia coli"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "UniProtKB:P76008",
+     "label": "Murein tetrapeptide carboxypeptidase (LdcA)"
+    },
+    {
+     "id": "UniProtKB:P0A6B4",
+     "label": "alr"
+    },
+    {
+     "id": "UniProtKB:P75949",
+     "label": "nagZ"
+    },
+    {
+     "id": "UniProtKB:P13016",
+     "label": "1,6-anhydro-N-acetylmuramyl-L-alanine amidase (AmpD)"
+    },
+    {
+     "id": "UniProtKB:Q2TL65",
+     "label": "Penicillin-binding protein 2 (Peptidoglycan D,D-transpeptidase MrdA)"
+    },
+    {
+     "id": "UniProtKB:P0AD68",
+     "label": "Penicillin-binding protein 3 (Peptidoglycan D,D-transpeptidase FtsI)"
+    },
+    {
+     "id": "UniProtKB:P17169",
+     "label": "glmS"
+    },
+    {
+     "id": "UniProtKB:P0A6W3",
+     "label": "mraY"
+    },
+    {
+     "id": "UniProtKB:P07862",
+     "label": "ddlB"
+    },
+    {
+     "id": "UniProtKB:P0AF16",
+     "label": "murJ"
+    },
+    {
+     "id": "UniProtKB:P02918",
+     "label": "Penicillin-binding protein 1A"
+    },
+    {
+     "id": "UniProtKB:P14900",
+     "label": "murD"
+    },
+    {
+     "id": "UniProtKB:P17952",
+     "label": "murC"
+    },
+    {
+     "id": "UniProtKB:P0A749",
+     "label": "murA"
+    },
+    {
+     "id": "UniProtKB:P08373",
+     "label": "murB"
+    },
+    {
+     "id": "UniProtKB:P22634",
+     "label": "murI"
+    },
+    {
+     "id": "UniProtKB:P22188",
+     "label": "murE"
+    },
+    {
+     "id": "UniProtKB:P60932",
+     "label": "Undecaprenyl-diphosphatase"
+    },
+    {
+     "id": "UniProtKB:P17443",
+     "label": "murG"
+    },
+    {
+     "id": "UniProtKB:P76577",
+     "label": "Penicillin-binding protein 1C"
+    },
+    {
+     "id": "UniProtKB:P0ACC7",
+     "label": "glmU"
+    },
+    {
+     "id": "UniProtKB:P46022",
+     "label": "mtgA"
+    },
+    {
+     "id": "UniProtKB:P11880",
+     "label": "murF"
+    },
+    {
+     "id": "UniProtKB:P0ABG4",
+     "label": "ftsW"
+    },
+    {
+     "id": "UniProtKB:P02919",
+     "label": "Penicillin-binding protein 1B"
+    },
+    {
+     "id": "UniProtKB:P31120",
+     "label": "glmM"
+    },
+    {
+     "id": "UniProtKB:P0AE16",
+     "label": "ampG"
+    },
+    {
+     "id": "UniProtKB:P0AF18",
+     "label": "nagA"
+    },
+    {
+     "id": "UniProtKB:P76535",
+     "label": "murQ"
+    },
+    {
+     "id": "UniProtKB:P77570",
+     "label": "anmK"
+    },
+    {
+     "id": "UniProtKB:P77272",
+     "label": "murP"
+    },
+    {
+     "id": "UniProtKB:P75959",
+     "label": "nagK"
+    },
+    {
+     "id": "UniProtKB:P0A759",
+     "label": "nagB"
+    },
+    {
+     "id": "UniProtKB:P37773",
+     "label": "mpl"
+    },
+    {
+     "id": "UniProtKB:P29012",
+     "label": "dadX"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP5060/id535c37a4",
+    "WikiPathways:WP5060/id92720196",
+    "WikiPathways:WP5060/idb435b98e",
+    "WikiPathways:WP5060/eff80",
+    "WikiPathways:WP5060/d5182",
+    "WikiPathways:WP5060/f628a",
+    "WikiPathways:WP5060/e2f23",
+    "WikiPathways:WP5060/adda4",
+    "WikiPathways:WP5060/eb85c",
+    "WikiPathways:WP5060/b8d40",
+    "WikiPathways:WP5060/f4fde",
+    "WikiPathways:WP5060/ebc50",
+    "WikiPathways:WP5060/d013c",
+    "WikiPathways:WP5060/b8180",
+    "WikiPathways:WP5060/f53c7",
+    "WikiPathways:WP5060/af0e7",
+    "WikiPathways:WP5060/cdc0a",
+    "WikiPathways:WP5060/bcf55",
+    "WikiPathways:WP5060/fb09e",
+    "WikiPathways:WP5060/d89b1",
+    "WikiPathways:WP5060/b5af5",
+    "WikiPathways:WP5060/c131c",
+    "WikiPathways:WP5060/af315",
+    "WikiPathways:WP5060/c0f79",
+    "WikiPathways:WP5060/ac9d2",
+    "WikiPathways:WP5060/eab24",
+    "WikiPathways:WP5060/e8b23",
+    "WikiPathways:WP5060/ffa50",
+    "WikiPathways:WP5060/b423c"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP556",
+   "label": "Glutamate degradation I",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/WikiPathways_WP556.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP556.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP556/id1356da06",
+    "WikiPathways:WP556/b960c",
+    "WikiPathways:WP556/adc8e"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP5587",
+   "label": "2-phenylethanol biosynthesis",
+   "pathway_type": "aromatic-alcohol-biosynthesis",
+   "page": "records/WikiPathways_WP5587.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5587.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "WikiPathways:WP5587/id32159333",
+    "WikiPathways:WP5587/id5c945cbf",
+    "WikiPathways:WP5587/id7ed21248",
+    "WikiPathways:WP5587/id864096aa",
+    "WikiPathways:WP5587/id88645eca",
+    "WikiPathways:WP5587/idbd32b592",
+    "WikiPathways:WP5587/idc5e5e165",
+    "WikiPathways:WP5587/idda151004",
+    "WikiPathways:WP5587/idf0d0e924",
+    "WikiPathways:WP5587/idf107e51d"
+   ]
+  },
+  {
+   "id": "WikiPathways:WP71",
+   "label": "Phospholipids degradation",
+   "pathway_type": "phospholipid-degradation",
+   "page": "records/WikiPathways_WP71.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP71.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:4932",
+     "label": "Saccharomyces cerevisiae"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001739",
+     "label": "SPO14"
+    }
+   ],
+   "reactions": [
+    "WikiPathways:WP71/id3a707ae4"
+   ]
+  },
+  {
+   "id": "gomodel:6882d2b800000609",
+   "label": "lipid IV(A) biosynthesis pathway",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_6882d2b800000609.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_6882d2b800000609.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:83333",
+     "label": "Escherichia coli K-12"
+    }
+   ],
+   "proteins": [],
+   "reactions": [
+    "gomodel:6882d2b800000609/6882d2b800000610",
+    "gomodel:6882d2b800000609/6882d2b800000627",
+    "gomodel:6882d2b800000609/6882d2b800000632",
+    "gomodel:6882d2b800000609/6882d2b800000638",
+    "gomodel:6882d2b800000609/6882d2b800000645",
+    "gomodel:6882d2b800000609/6882d2b800000652"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_AERO-GLYCEROL-CAT-PWY",
+   "label": "aerobic glycerol degradation",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/gomodel_YeastPathways_AERO-GLYCEROL-CAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_AERO-GLYCEROL-CAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001024",
+     "label": "GUT1 Scer"
+    },
+    {
+     "id": "SGD:S000001417",
+     "label": "GUT2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GLYCEROL-KIN-RXN",
+    "gomodel:RXN3O-9815"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_ARGSPECAT-PWY",
+   "label": "spermine biosynthesis",
+   "pathway_type": "polyamine-biosynthesis",
+   "page": "records/gomodel_YeastPathways_ARGSPECAT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_ARGSPECAT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005412",
+     "label": "SPE2 Scer"
+    },
+    {
+     "id": "SGD:S000004136",
+     "label": "SPE4 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SAMDECARB-RXN",
+    "gomodel:SPERMINE-SYNTHASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_ARGSYNBSUB-PWY",
+   "label": "L-arginine biosynthesis II (acetyl cycle)",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_ARGSYNBSUB-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_ARGSYNBSUB-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003607",
+     "label": "ARG2 Scer"
+    },
+    {
+     "id": "SGD:S000000871",
+     "label": "ARG56 Scer"
+    },
+    {
+     "id": "SGD:S000005500",
+     "label": "ARG8 Scer"
+    },
+    {
+     "id": "SGD:S000004666",
+     "label": "ARG7 Scer"
+    },
+    {
+     "id": "SGD:S000217863",
+     "label": "CPX-579 Scer"
+    },
+    {
+     "id": "SGD:S000003624",
+     "label": "ARG3 Scer"
+    },
+    {
+     "id": "SGD:S000005419",
+     "label": "ARG1 Scer"
+    },
+    {
+     "id": "SGD:S000001060",
+     "label": "ARG4 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:N-ACETYLTRANSFER-RXN",
+    "gomodel:ACETYLGLUTKIN-RXN",
+    "gomodel:N-ACETYLGLUTPREDUCT-RXN",
+    "gomodel:ACETYLORNTRANSAM-RXN",
+    "gomodel:GLUTAMATE-N-ACETYLTRANSFERASE-RXN",
+    "gomodel:YeastPathways_ARGSYNBSUB-PWY/6a4c244800000704",
+    "gomodel:CARBPSYN-RXN",
+    "gomodel:ORNCARBAMTRANSFER-RXN",
+    "gomodel:ARGSUCCINSYN-RXN",
+    "gomodel:ARGSUCCINLYA-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_ASPARAGINE-BIOSYNTHESIS-1",
+   "label": "L-asparagine biosynthesis I",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_ASPARAGINE-BIOSYNTHESIS-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_ASPARAGINE-BIOSYNTHESIS-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001589",
+     "label": "AAT1 Scer"
+    },
+    {
+     "id": "SGD:S000004017",
+     "label": "AAT2 Scer"
+    },
+    {
+     "id": "SGD:S000006349",
+     "label": "ASN1 Scer"
+    },
+    {
+     "id": "SGD:S000003356",
+     "label": "ASN2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ASPAMINOTRANS-RXN",
+    "gomodel:YeastPathways_ASPARAGINE-BIOSYNTHESIS-1/6a4c244800003553",
+    "gomodel:ASNSYNB-RXN",
+    "gomodel:YeastPathways_ASPARAGINE-BIOSYNTHESIS-1/6a4c244800003568"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY",
+   "label": "asparagine degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_ASPARAGINE-DEG2-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_ASPARAGINE-DEG2-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002729",
+     "label": "ASP1 Scer"
+    },
+    {
+     "id": "SGD:S000004145",
+     "label": "ASP3-1 Scer"
+    },
+    {
+     "id": "SGD:S000004147",
+     "label": "ASP3-2 Scer"
+    },
+    {
+     "id": "SGD:S000004148",
+     "label": "ASP3-3 Scer"
+    },
+    {
+     "id": "SGD:S000004150",
+     "label": "ASP3-4 Scer"
+    },
+    {
+     "id": "SGD:S000001589",
+     "label": "AAT1 Scer"
+    },
+    {
+     "id": "SGD:S000004017",
+     "label": "AAT2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ASPARAGHYD-RXN",
+    "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY/6a4c244800002822",
+    "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY/6a4c244800002839",
+    "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY/6a4c244800002870",
+    "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY/6a4c244800002855",
+    "gomodel:ASPAMINOTRANS-RXN",
+    "gomodel:YeastPathways_ASPARAGINE-DEG2-PWY/6a4c244800002808"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_ASPBIO-PWY",
+   "label": "aspartate biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_ASPBIO-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_ASPBIO-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004017",
+     "label": "AAT2 Scer"
+    },
+    {
+     "id": "SGD:S000001589",
+     "label": "AAT1 Scer"
+    },
+    {
+     "id": "SGD:S000003030",
+     "label": "PYC1 Scer"
+    },
+    {
+     "id": "SGD:S000000422",
+     "label": "PYC2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_ASPBIO-PWY/6a4c244800002268",
+    "gomodel:ASPAMINOTRANS-RXN",
+    "gomodel:PYRUVATE-CARBOXYLASE-RXN",
+    "gomodel:YeastPathways_ASPBIO-PWY/6a4c244800002248"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_BSUBPOLYAMSYN-PWY",
+   "label": "spermidine biosynthesis I",
+   "pathway_type": "polyamine-biosynthesis",
+   "page": "records/gomodel_YeastPathways_BSUBPOLYAMSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_BSUBPOLYAMSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005412",
+     "label": "SPE2 Scer"
+    },
+    {
+     "id": "SGD:S000006273",
+     "label": "SPE3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SAMDECARB-RXN",
+    "gomodel:SPERMIDINESYN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_CITRUL-BIO2-PWY",
+   "label": "citrulline biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_CITRUL-BIO2-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_CITRUL-BIO2-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000217863",
+     "label": "CPX-579 Scer"
+    },
+    {
+     "id": "SGD:S000003624",
+     "label": "ARG3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ORNCARBAMTRANSFER-RXN",
+    "gomodel:CARBPSYN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_DETOX1-PWY",
+   "label": "superoxide radicals degradation",
+   "pathway_type": "detoxification",
+   "page": "records/gomodel_YeastPathways_DETOX1-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_DETOX1-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003865",
+     "label": "SOD1 Scer"
+    },
+    {
+     "id": "SGD:S000002664",
+     "label": "CTA1 Scer"
+    },
+    {
+     "id": "SGD:S000003320",
+     "label": "CTT1 Scer"
+    },
+    {
+     "id": "SGD:S000001050",
+     "label": "SOD2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SUPEROX-DISMUT-RXN",
+    "gomodel:CATAL-RXN",
+    "gomodel:YeastPathways_DETOX1-PWY/6a4c244800000271",
+    "gomodel:YeastPathways_DETOX1-PWY/6a4c244800000257"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_FASYN-ELONG2-PWY",
+   "label": "fatty acid elongation",
+   "pathway_type": "fatty-acid-elongation",
+   "page": "records/gomodel_YeastPathways_FASYN-ELONG2-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_FASYN-ELONG2-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000006152",
+     "label": "FAS2 Scer"
+    },
+    {
+     "id": "SGD:S000001538",
+     "label": "OAR1 Scer"
+    },
+    {
+     "id": "SGD:S000000863",
+     "label": "CEM1 Scer"
+    },
+    {
+     "id": "SGD:S000001665",
+     "label": "FAS1 Scer"
+    },
+    {
+     "id": "SGD:S000003780",
+     "label": "TES1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:3-OXOACYL-ACP-REDUCT-RXN",
+    "gomodel:YeastPathways_FASYN-ELONG2-PWY/6a4c244800003411",
+    "gomodel:3-HYDROXYDECANOYL-ACP-DEHYDR-RXN",
+    "gomodel:ENOYL-ACP-REDUCT-NADPH-RXN",
+    "gomodel:RXN3O-9780",
+    "gomodel:YeastPathways_FASYN-ELONG2-PWY/6a4c244800003428",
+    "gomodel:PALMITOYL-COA-HYDROLASE-RXN",
+    "gomodel:3-OXOACYL-ACP-SYNTH-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_GLUCONEO-PWY-1",
+   "label": "gluconeogenesis I",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/gomodel_YeastPathways_GLUCONEO-PWY-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_GLUCONEO-PWY-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001635",
+     "label": "GPM1 Scer"
+    },
+    {
+     "id": "SGD:S000001512",
+     "label": "MAE1 Scer"
+    },
+    {
+     "id": "SGD:S000003424",
+     "label": "TDH3 Scer"
+    },
+    {
+     "id": "SGD:S000000605",
+     "label": "PGK1 Scer"
+    },
+    {
+     "id": "SGD:S000005486",
+     "label": "MDH2 Scer"
+    },
+    {
+     "id": "SGD:S000001217",
+     "label": "ENO2 Scer"
+    },
+    {
+     "id": "SGD:S000001805",
+     "label": "PCK1 Scer"
+    },
+    {
+     "id": "SGD:S000004369",
+     "label": "FBP1 Scer"
+    },
+    {
+     "id": "SGD:S000003486",
+     "label": "ENO1 Scer"
+    },
+    {
+     "id": "SGD:S000000422",
+     "label": "PYC2 Scer"
+    },
+    {
+     "id": "SGD:S000003030",
+     "label": "PYC1 Scer"
+    },
+    {
+     "id": "SGD:S000000400",
+     "label": "PGI1 Scer"
+    },
+    {
+     "id": "SGD:S000003588",
+     "label": "TDH1 Scer"
+    },
+    {
+     "id": "SGD:S000001543",
+     "label": "FBA1 Scer"
+    },
+    {
+     "id": "SGD:S000003769",
+     "label": "TDH2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-15513",
+    "gomodel:1.1.1.39-RXN",
+    "gomodel:YeastPathways_GLUCONEO-PWY-1/6a4c244800005158",
+    "gomodel:PHOSGLYPHOS-RXN",
+    "gomodel:MALATE-DEH-RXN",
+    "gomodel:YeastPathways_GLUCONEO-PWY-1/6a4c244800005125",
+    "gomodel:PEPCARBOXYKIN-RXN",
+    "gomodel:F16BDEPHOS-RXN",
+    "gomodel:2PGADEHYDRAT-RXN",
+    "gomodel:YeastPathways_GLUCONEO-PWY-1/6a4c244800005103",
+    "gomodel:PYRUVATE-CARBOXYLASE-RXN",
+    "gomodel:YeastPathways_GLUCONEO-PWY-1/6690711d00001655",
+    "gomodel:PGLUCISOM-RXN",
+    "gomodel:GAPOXNPHOSPHN-RXN",
+    "gomodel:F16ALDOLASE-RXN",
+    "gomodel:YeastPathways_GLUCONEO-PWY-1/6a4c244800005138"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_GLYCLEAV-PWY",
+   "label": "glycine cleavage",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_GLYCLEAV-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_GLYCLEAV-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004801",
+     "label": "GCV2 Scer"
+    },
+    {
+     "id": "SGD:S000002426",
+     "label": "GCV1 Scer"
+    },
+    {
+     "id": "SGD:S000001876",
+     "label": "LPD1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GCVP-RXN",
+    "gomodel:GCVT-RXN",
+    "gomodel:RXN-8629"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_GLYCOLYSIS",
+   "label": "glycolysis I (from glucose 6-phosphate)",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/gomodel_YeastPathways_GLYCOLYSIS.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_GLYCOLYSIS.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001635",
+     "label": "GPM1 Scer"
+    },
+    {
+     "id": "SGD:S000004369",
+     "label": "FBP1 Scer"
+    },
+    {
+     "id": "SGD:S000000605",
+     "label": "PGK1 Scer"
+    },
+    {
+     "id": "SGD:S000218025",
+     "label": "CPX-554 Scer"
+    },
+    {
+     "id": "SGD:S000000400",
+     "label": "PGI1 Scer"
+    },
+    {
+     "id": "SGD:S000005874",
+     "label": "PYK2 Scer"
+    },
+    {
+     "id": "SGD:S000001543",
+     "label": "FBA1 Scer"
+    },
+    {
+     "id": "SGD:S000003486",
+     "label": "ENO1 Scer"
+    },
+    {
+     "id": "SGD:S000003588",
+     "label": "TDH1 Scer"
+    },
+    {
+     "id": "SGD:S000003769",
+     "label": "TDH2 Scer"
+    },
+    {
+     "id": "SGD:S000002457",
+     "label": "TPI1 Scer"
+    },
+    {
+     "id": "SGD:S000003424",
+     "label": "TDH3 Scer"
+    },
+    {
+     "id": "SGD:S000000036",
+     "label": "CDC19 Scer"
+    },
+    {
+     "id": "SGD:S000001217",
+     "label": "ENO2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:F16ALDOLASE-RXN",
+    "gomodel:TRIOSEPISOMERIZATION-RXN",
+    "gomodel:RXN-15513",
+    "gomodel:2PGADEHYDRAT-RXN",
+    "gomodel:YeastPathways_GLYCOLYSIS/6a4c244800004606",
+    "gomodel:F16BDEPHOS-RXN",
+    "gomodel:YeastPathways_GLYCOLYSIS/6a4c244800004579",
+    "gomodel:6PFRUCTPHOS-RXN",
+    "gomodel:PHOSGLYPHOS-RXN",
+    "gomodel:YeastPathways_GLYCOLYSIS/6a4c244800004636",
+    "gomodel:GAPOXNPHOSPHN-RXN",
+    "gomodel:PGLUCISOM-RXN",
+    "gomodel:YeastPathways_GLYCOLYSIS/6a4c244800004626",
+    "gomodel:PEPDEPHOS-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_HEME-BIOSYNTHESIS-II",
+   "label": "heme b biosynthesis I (aerobic)",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/gomodel_YeastPathways_HEME-BIOSYNTHESIS-II.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_HEME-BIOSYNTHESIS-II.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002451",
+     "label": "HEM13 Scer"
+    },
+    {
+     "id": "SGD:S000005702",
+     "label": "HEM15 Scer"
+    },
+    {
+     "id": "SGD:S000002454",
+     "label": "HEM12 Scer"
+    },
+    {
+     "id": "SGD:S000000816",
+     "label": "HEM14 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN0-1461",
+    "gomodel:PROTOHEMEFERROCHELAT-RXN",
+    "gomodel:UROGENDECARBOX-RXN",
+    "gomodel:PROTOPORGENOXI-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_HEXPPSYN-PWY-2",
+   "label": "hexaprenyl diphosphate biosynthesis",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/gomodel_YeastPathways_HEXPPSYN-PWY-2.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_HEXPPSYN-PWY-2.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003703",
+     "label": "ERG20 Scer"
+    },
+    {
+     "id": "SGD:S000005990",
+     "label": "BTS1 Scer"
+    },
+    {
+     "id": "SGD:S000000207",
+     "label": "COQ1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GPPSYN-RXN",
+    "gomodel:FPPSYN-RXN",
+    "gomodel:FARNESYLTRANSTRANSFERASE-RXN",
+    "gomodel:RXN-8813",
+    "gomodel:RXN3O-9805"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_HOMOCYS-CYS-CONVERT",
+   "label": "homocysteine and cysteine interconversion",
+   "pathway_type": "amino-acid-metabolism",
+   "page": "records/gomodel_YeastPathways_HOMOCYS-CYS-CONVERT.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_HOMOCYS-CYS-CONVERT.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003152",
+     "label": "STR3 Scer"
+    },
+    {
+     "id": "SGD:S000000010",
+     "label": "CYS3 Scer"
+    },
+    {
+     "id": "SGD:S000003387",
+     "label": "CYS4 Scer"
+    },
+    {
+     "id": "SGD:S000003891",
+     "label": "STR2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:CYSTAGLY-RXN",
+    "gomodel:CYSTATHIONINE-BETA-LYASE-RXN",
+    "gomodel:RXN-721",
+    "gomodel:CYSTATHIONINE-BETA-SYNTHASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_HOMOCYSDEGR-PWY-1",
+   "label": "L-cysteine biosynthesis III (from L-homocysteine)",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_HOMOCYSDEGR-PWY-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_HOMOCYSDEGR-PWY-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003387",
+     "label": "CYS4 Scer"
+    },
+    {
+     "id": "SGD:S000000010",
+     "label": "CYS3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:CYSTATHIONINE-BETA-SYNTHASE-RXN",
+    "gomodel:CYSTAGLY-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_IPPSYN-PWY",
+   "label": "mevalonate pathway",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_IPPSYN-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_IPPSYN-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005949",
+     "label": "ERG10 Scer"
+    },
+    {
+     "id": "SGD:S000004821",
+     "label": "ERG12 Scer"
+    },
+    {
+     "id": "SGD:S000005326",
+     "label": "MVD1 Scer"
+    },
+    {
+     "id": "SGD:S000006038",
+     "label": "IDI1 Scer"
+    },
+    {
+     "id": "SGD:S000004442",
+     "label": "HMG2 Scer"
+    },
+    {
+     "id": "SGD:S000004833",
+     "label": "ERG8 Scer"
+    },
+    {
+     "id": "SGD:S000004540",
+     "label": "HMG1 Scer"
+    },
+    {
+     "id": "SGD:S000004595",
+     "label": "ERG13 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:HYDROXYMETHYLGLUTARYL-COA-SYNTHASE-RXN",
+    "gomodel:MEVALONATE-KINASE-RXN",
+    "gomodel:ACETYL-COA-ACETYLTRANSFER-RXN",
+    "gomodel:1.1.1.34-RXN",
+    "gomodel:DIPHOSPHOMEVALONTE-DECARBOXYLASE-RXN",
+    "gomodel:PHOSPHOMEVALONATE-KINASE-RXN",
+    "gomodel:IPPISOM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_LYSINE-AMINOAD-PWY-2",
+   "label": "L-lysine biosynthesis IV",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_LYSINE-AMINOAD-PWY-2.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_LYSINE-AMINOAD-PWY-2.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002642",
+     "label": "LYS4 Scer"
+    },
+    {
+     "id": "SGD:S000001356",
+     "label": "LYS12 Scer"
+    },
+    {
+     "id": "SGD:S000001473",
+     "label": "LYS1 Scer"
+    },
+    {
+     "id": "SGD:S000002289",
+     "label": "LYS21 Scer"
+    },
+    {
+     "id": "SGD:S000005333",
+     "label": "LYS9 Scer"
+    },
+    {
+     "id": "SGD:S000000319",
+     "label": "LYS2 Scer"
+    },
+    {
+     "id": "SGD:S000002341",
+     "label": "LYS20 Scer"
+    },
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:HOMOCITRATE-SYNTHASE-RXN",
+    "gomodel:2-AMINOADIPATE-AMINOTRANSFERASE-RXN",
+    "gomodel:HOMOACONITATE-HYDRATASE-RXN",
+    "gomodel:YeastPathways_LYSINE-AMINOAD-PWY-2/6a4c244800001076",
+    "gomodel:RXN3O-1983",
+    "gomodel:RXN3O-9808",
+    "gomodel:RXN3O-127",
+    "gomodel:1.5.1.7-RXN",
+    "gomodel:RXN-7970"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PERIPLASMA-NAD-DEGRADATION",
+   "label": "periplasmic NAD degradation",
+   "pathway_type": "cofactor-degradation",
+   "page": "records/gomodel_YeastPathways_PERIPLASMA-NAD-DEGRADATION.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PERIPLASMA-NAD-DEGRADATION.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003035",
+     "label": "NPY1 Scer"
+    },
+    {
+     "id": "SGD:S000001245",
+     "label": "SMN1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:NADPYROPHOSPHAT-RXN",
+    "gomodel:AMP-DEPHOSPHORYLATION-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PHOSLIPSYN2-PWY-1",
+   "label": "phospholipid biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PHOSLIPSYN2-PWY-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PHOSLIPSYN2-PWY-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003402",
+     "label": "PSD2 Scer"
+    },
+    {
+     "id": "SGD:S000005113",
+     "label": "PSD1 Scer"
+    },
+    {
+     "id": "SGD:S000003834",
+     "label": "OPI3 Scer"
+    },
+    {
+     "id": "SGD:S000000510",
+     "label": "PGS1 Scer"
+    },
+    {
+     "id": "SGD:S000001142",
+     "label": "GEP4 Scer"
+    },
+    {
+     "id": "SGD:S000002301",
+     "label": "CRD1 Scer"
+    },
+    {
+     "id": "SGD:S000000828",
+     "label": "CHO1 Scer"
+    },
+    {
+     "id": "SGD:S000003389",
+     "label": "CHO2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:2.1.1.71-RXN",
+    "gomodel:2.1.1.17-RXN",
+    "gomodel:YeastPathways_PHOSLIPSYN2-PWY-1/6a4c244800007485",
+    "gomodel:PGPPHOSPHA-RXN",
+    "gomodel:CARDIOLIPSYN-RXN",
+    "gomodel:PHOSPHASERSYN-RXN",
+    "gomodel:RXN3O-349",
+    "gomodel:PHOSPHASERDECARB-RXN",
+    "gomodel:PHOSPHAGLYPSYN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PROUT-PWY",
+   "label": "L-proline degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_PROUT-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PROUT-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004132",
+     "label": "PUT1 Scer"
+    },
+    {
+     "id": "SGD:S000001079",
+     "label": "PUT2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-14903",
+    "gomodel:SPONTPRO-RXN",
+    "gomodel:RXN-14116"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-1801-1",
+   "label": "formaldehyde oxidation II (glutathione-dependent)",
+   "pathway_type": "formaldehyde-degradation",
+   "page": "records/gomodel_YeastPathways_PWY-1801-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-1801-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002327",
+     "label": "SFA1 Scer"
+    },
+    {
+     "id": "SGD:S000003604",
+     "label": "YJL068C Scer"
+    },
+    {
+     "id": "SGD:S000005915",
+     "label": "FDH1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-2961",
+    "gomodel:RXN-2962",
+    "gomodel:S-FORMYLGLUTATHIONE-HYDROLASE-RXN",
+    "gomodel:1.2.1.2-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-2301",
+   "label": "myo-inositol biosynthesis",
+   "pathway_type": "myo-inositol-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-2301.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-2301.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003689",
+     "label": "INO1 Scer"
+    },
+    {
+     "id": "SGD:S000002695",
+     "label": "INM2 Scer"
+    },
+    {
+     "id": "SGD:S000001088",
+     "label": "INM1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:MYO-INOSITOL-1-PHOSPHATE-SYNTHASE-RXN",
+    "gomodel:YeastPathways_PWY-2301/6a2b236300005397",
+    "gomodel:MYO-INOSITOL-1OR-4-MONOPHOSPHATASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5041",
+   "label": "S-adenosyl-L-methionine cycle II",
+   "pathway_type": "amino-acid-metabolism",
+   "page": "records/gomodel_YeastPathways_PWY-5041.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5041.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000893",
+     "label": "MET6 Scer"
+    },
+    {
+     "id": "SGD:S000004170",
+     "label": "SAM1 Scer"
+    },
+    {
+     "id": "SGD:S000000845",
+     "label": "SAH1 Scer"
+    },
+    {
+     "id": "SGD:S000002910",
+     "label": "SAM2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:HOMOCYSMET-RXN",
+    "gomodel:S-ADENMETSYN-RXN",
+    "gomodel:ADENOSYLHOMOCYSTEINASE-RXN",
+    "gomodel:YeastPathways_PWY-5041/6a2b236300005409"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5080-1",
+   "label": "very long chain fatty acid biosynthesis I",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5080-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5080-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000630",
+     "label": "ELO2 Scer"
+    },
+    {
+     "id": "SGD:S000002173",
+     "label": "TSC13 Scer"
+    },
+    {
+     "id": "SGD:S000000363",
+     "label": "IFA38 Scer"
+    },
+    {
+     "id": "SGD:S000004364",
+     "label": "ELO3 Scer"
+    },
+    {
+     "id": "SGD:S000003633",
+     "label": "PHS1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN3O-9811",
+    "gomodel:RXN3O-9814",
+    "gomodel:RXN3O-9813",
+    "gomodel:RXN3O-9812",
+    "gomodel:YeastPathways_PWY-5080-1/6a2b236300005423"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5123",
+   "label": "trans, trans-farnesyl diphosphate biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5123.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5123.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003703",
+     "label": "ERG20 Scer"
+    },
+    {
+     "id": "SGD:S000006038",
+     "label": "IDI1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GPPSYN-RXN",
+    "gomodel:FPPSYN-RXN",
+    "gomodel:IPPISOM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5194-1",
+   "label": "siroheme biosynthesis",
+   "pathway_type": "siroheme-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5194-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5194-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001777",
+     "label": "MET1 Scer"
+    },
+    {
+     "id": "SGD:S000000417",
+     "label": "MET8 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-13403",
+    "gomodel:DIMETHUROPORDEHYDROG-RXN",
+    "gomodel:SIROHEME-FERROCHELAT-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5340",
+   "label": "sulfate activation (for sulfonation)",
+   "pathway_type": "metabolic",
+   "page": "records/gomodel_YeastPathways_PWY-5340.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5340.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001484",
+     "label": "MET14 Scer"
+    },
+    {
+     "id": "SGD:S000003771",
+     "label": "MET3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SULFATE-ADENYLYLTRANS-RXN",
+    "gomodel:ADENYLYLSULFKIN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5344",
+   "label": "L-homocysteine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5344.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5344.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005221",
+     "label": "MET2 Scer"
+    },
+    {
+     "id": "SGD:S000004294",
+     "label": "MET17 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ACETYLHOMOSER-CYS-RXN",
+    "gomodel:HOMOSERINE-O-ACETYLTRANSFERASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5651",
+   "label": "L-tryptophan degradation to 2-amino-3-carboxymuconate semialdehyde",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_PWY-5651.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5651.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003839",
+     "label": "BNA2 Scer"
+    },
+    {
+     "id": "SGD:S000003596",
+     "label": "BNA3 Scer"
+    },
+    {
+     "id": "SGD:S000002836",
+     "label": "BNA7 Scer"
+    },
+    {
+     "id": "SGD:S000000194",
+     "label": "BNA4 Scer"
+    },
+    {
+     "id": "SGD:S000004221",
+     "label": "BNA5 Scer"
+    },
+    {
+     "id": "SGD:S000003786",
+     "label": "BNA1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-8665",
+    "gomodel:ARYLFORMAMIDASE-RXN",
+    "gomodel:YeastPathways_PWY-5651/6a4c244800001147",
+    "gomodel:KYNURENINE-3-MONOOXYGENASE-RXN",
+    "gomodel:3-HYDROXY-KYNURENINASE-RXN",
+    "gomodel:1.13.11.6-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5653",
+   "label": "NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5653.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5653.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001943",
+     "label": "BNA6 Scer"
+    },
+    {
+     "id": "SGD:S000003242",
+     "label": "NMA2 Scer"
+    },
+    {
+     "id": "SGD:S000004320",
+     "label": "NMA1 Scer"
+    },
+    {
+     "id": "SGD:S000001116",
+     "label": "QNS1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-5721",
+    "gomodel:QUINOPRIBOTRANS-RXN",
+    "gomodel:YeastPathways_PWY-5653/6a4c244800000432",
+    "gomodel:NICONUCADENYLYLTRAN-RXN",
+    "gomodel:NAD-SYNTH-GLN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5669",
+   "label": "phosphatidylethanolamine biosynthesis I",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5669.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5669.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000828",
+     "label": "CHO1 Scer"
+    },
+    {
+     "id": "SGD:S000003402",
+     "label": "PSD2 Scer"
+    },
+    {
+     "id": "SGD:S000005113",
+     "label": "PSD1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:PHOSPHASERSYN-RXN",
+    "gomodel:YeastPathways_PWY-5669/6a46ef0600000808",
+    "gomodel:PHOSPHASERDECARB-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5670-1",
+   "label": "epoxysqualene biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5670-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5670-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001233",
+     "label": "ERG9 Scer"
+    },
+    {
+     "id": "SGD:S000003407",
+     "label": "ERG1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-12263",
+    "gomodel:RXN66-281",
+    "gomodel:RXN3O-9816"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5694",
+   "label": "allantoin degradation to glyoxylate I",
+   "pathway_type": "purine-degradation",
+   "page": "records/gomodel_YeastPathways_PWY-5694.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5694.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001466",
+     "label": "DAL1 Scer"
+    },
+    {
+     "id": "SGD:S000001468",
+     "label": "DAL2 Scer"
+    },
+    {
+     "id": "SGD:S000001471",
+     "label": "DAL3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ALLANTOINASE-RXN",
+    "gomodel:ALLANTOICASE-RXN",
+    "gomodel:UREIDOGLYCOLATE-LYASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5697",
+   "label": "allantoin degradation to ureidoglycolate I (urea producing)",
+   "pathway_type": "purine-degradation",
+   "page": "records/gomodel_YeastPathways_PWY-5697.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5697.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001466",
+     "label": "DAL1 Scer"
+    },
+    {
+     "id": "SGD:S000001468",
+     "label": "DAL2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ALLANTOINASE-RXN",
+    "gomodel:ALLANTOICASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5703",
+   "label": "urea degradation I",
+   "pathway_type": "urea-degradation",
+   "page": "records/gomodel_YeastPathways_PWY-5703.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5703.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000412",
+     "label": "DUR12 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:UREA-CARBOXYLASE-RXN",
+    "gomodel:ALLOPHANATE-HYDROLASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-5760-1",
+   "label": "beta-alanine biosynthesis IV",
+   "pathway_type": "beta-alanine-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-5760-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-5760-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004622",
+     "label": "FMS1 Scer"
+    },
+    {
+     "id": "SGD:S000004780",
+     "label": "ALD2 Scer"
+    },
+    {
+     "id": "SGD:S000004779",
+     "label": "ALD3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-9015",
+    "gomodel:3-PROPANAL-DEHYDROGENASE-RXN",
+    "gomodel:YeastPathways_PWY-5760-1/6a46ef0600000716"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-6074-1",
+   "label": "zymosterol biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-6074-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-6074-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002969",
+     "label": "ERG26 Scer"
+    },
+    {
+     "id": "SGD:S000003292",
+     "label": "ERG25 Scer"
+    },
+    {
+     "id": "SGD:S000001049",
+     "label": "ERG11 Scer"
+    },
+    {
+     "id": "SGD:S000004090",
+     "label": "ERG27 Scer"
+    },
+    {
+     "id": "SGD:S000005224",
+     "label": "ERG24 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN3O-9826",
+    "gomodel:RXN3O-9820",
+    "gomodel:RXN3O-9821",
+    "gomodel:RXN66-314",
+    "gomodel:RXN66-319",
+    "gomodel:RXN3O-9824",
+    "gomodel:RXN66-306",
+    "gomodel:RXN66-313",
+    "gomodel:RXN3O-9823",
+    "gomodel:RXN3O-9825",
+    "gomodel:RXN3O-9822",
+    "gomodel:RXN66-318"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-6075-1",
+   "label": "ergosterol biosynthesis I",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-6075-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-6075-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004467",
+     "label": "ERG6 Scer"
+    },
+    {
+     "id": "SGD:S000004815",
+     "label": "ERG2 Scer"
+    },
+    {
+     "id": "SGD:S000004046",
+     "label": "ERG3 Scer"
+    },
+    {
+     "id": "SGD:S000004617",
+     "label": "ERG5 Scer"
+    },
+    {
+     "id": "SGD:S000002980",
+     "label": "ERG4 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN3O-178",
+    "gomodel:RXN3O-203",
+    "gomodel:RXN3O-9827",
+    "gomodel:RXN3O-9828",
+    "gomodel:1.3.1.71-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-6147",
+   "label": "6-hydroxymethyl-dihydropterin diphosphate biosynthesis I",
+   "pathway_type": "folate-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-6147.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-6147.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003499",
+     "label": "FOL2 Scer"
+    },
+    {
+     "id": "SGD:S000005200",
+     "label": "FOL1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GTP-CYCLOHYDRO-I-RXN",
+    "gomodel:H2NEOPTERINP3PYROPHOSPHOHYDRO-RXN",
+    "gomodel:DIHYDRONEOPTERIN-MONO-P-DEPHOS-RXN",
+    "gomodel:H2NEOPTERINALDOL-RXN",
+    "gomodel:H2PTERIDINEPYROPHOSPHOKIN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-6614",
+   "label": "tetrahydrofolate biosynthesis",
+   "pathway_type": "folate-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-6614.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-6614.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005200",
+     "label": "FOL1 Scer"
+    },
+    {
+     "id": "SGD:S000004719",
+     "label": "FOL3 Scer"
+    },
+    {
+     "id": "SGD:S000005762",
+     "label": "DFR1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:H2PTEROATESYNTH-RXN",
+    "gomodel:DIHYDROFOLATESYNTH-RXN",
+    "gomodel:DIHYDROFOLATEREDUCT-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-7176",
+   "label": "UTP and CTP de novo biosynthesis",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-7176.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-7176.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001507",
+     "label": "URA6 Scer"
+    },
+    {
+     "id": "SGD:S000001550",
+     "label": "YNK1 Scer"
+    },
+    {
+     "id": "SGD:S000003864",
+     "label": "URA8 Scer"
+    },
+    {
+     "id": "SGD:S000000135",
+     "label": "URA7 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-12002",
+    "gomodel:UDPKIN-RXN",
+    "gomodel:CTPSYN-RXN",
+    "gomodel:YeastPathways_PWY-7176/6a4c244800000283"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-7219",
+   "label": "adenosine ribonucleotides de novo biosynthesis",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-7219.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-7219.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005164",
+     "label": "ADE12 Scer"
+    },
+    {
+     "id": "SGD:S000004351",
+     "label": "ADE13 Scer"
+    },
+    {
+     "id": "SGD:S000000972",
+     "label": "ADK2 Scer"
+    },
+    {
+     "id": "SGD:S000002634",
+     "label": "ADK1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ADENYLOSUCCINATE-SYNTHASE-RXN",
+    "gomodel:AMPSYN-RXN",
+    "gomodel:YeastPathways_PWY-7219/6a4c244800000590",
+    "gomodel:ADENYL-KIN-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-7220-1",
+   "label": "adenosine deoxyribonucleotides de novo biosynthesis II",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-7220-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-7220-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000217933",
+     "label": "CPX-1102 Scer"
+    },
+    {
+     "id": "SGD:S000217934",
+     "label": "CPX-1103 Scer"
+    },
+    {
+     "id": "SGD:S000001550",
+     "label": "YNK1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ADPREDUCT-RXN",
+    "gomodel:YeastPathways_PWY-7220-1/6a2b236300005372",
+    "gomodel:DADPKIN-RXN",
+    "gomodel:RXN0-745"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-7221",
+   "label": "guanosine ribonucleotides de novo biosynthesis",
+   "pathway_type": "nucleotide-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY-7221.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-7221.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001550",
+     "label": "YNK1 Scer"
+    },
+    {
+     "id": "SGD:S000002862",
+     "label": "GUK1 Scer"
+    },
+    {
+     "id": "SGD:S000004830",
+     "label": "GUA1 Scer"
+    },
+    {
+     "id": "SGD:S000004424",
+     "label": "IMD3 Scer"
+    },
+    {
+     "id": "SGD:S000004520",
+     "label": "IMD4 Scer"
+    },
+    {
+     "id": "SGD:S000001259",
+     "label": "IMD2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY-7221/6a4c244800000662",
+    "gomodel:GDPKIN-RXN",
+    "gomodel:GUANYL-KIN-RXN",
+    "gomodel:YeastPathways_PWY-7221/6a4c244800000652",
+    "gomodel:GMP-SYN-GLUT-RXN",
+    "gomodel:IMP-DEHYDROG-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY-901",
+   "label": "methylglyoxal catabolism",
+   "pathway_type": "detoxification",
+   "page": "records/gomodel_YeastPathways_PWY-901.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-901.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002680",
+     "label": "GLO2 Scer"
+    },
+    {
+     "id": "SGD:S000004463",
+     "label": "GLO1 Scer"
+    },
+    {
+     "id": "SGD:S000005566",
+     "label": "GLO4 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:GLYOXII-RXN",
+    "gomodel:GLYOXI-RXN",
+    "gomodel:YeastPathways_PWY-901/6a46ef0600000777"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-123",
+   "label": "dolichyl phosphate D-mannose biosynthesis",
+   "pathway_type": "glycan-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-123.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-123.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002213",
+     "label": "PSA1 Scer"
+    },
+    {
+     "id": "SGD:S000006387",
+     "label": "DPM1 Scer"
+    },
+    {
+     "id": "SGD:S000001849",
+     "label": "SEC53 Scer"
+    },
+    {
+     "id": "SGD:S000000805",
+     "label": "PMI40 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:MANNPGUANYLTRANGDP-RXN",
+    "gomodel:2.4.1.83-RXN",
+    "gomodel:PHOSMANMUT-RXN",
+    "gomodel:MANNPISOM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-15",
+   "label": "chitin biosynthesis",
+   "pathway_type": "cell-wall-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-15.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-15.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000227",
+     "label": "CHS3 Scer"
+    },
+    {
+     "id": "SGD:S000005136",
+     "label": "CHS1 Scer"
+    },
+    {
+     "id": "SGD:S000000242",
+     "label": "CHS2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-15/6a6bcaed00000871",
+    "gomodel:CHITIN-SYNTHASE-RXN",
+    "gomodel:YeastPathways_PWY3O-15/6a6bcaed00000891"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-1565",
+   "label": "dolichyl glucosyl phosphate biosynthesis",
+   "pathway_type": "glycan-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-1565.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-1565.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000006148",
+     "label": "ALG5 Scer"
+    },
+    {
+     "id": "SGD:S000001518",
+     "label": "UGP1 Scer"
+    },
+    {
+     "id": "SGD:S000004711",
+     "label": "PGM2 Scer"
+    },
+    {
+     "id": "SGD:S000001610",
+     "label": "PGM1 Scer"
+    },
+    {
+     "id": "SGD:S000001004",
+     "label": "YHL012W Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:2.4.1.117-RXN",
+    "gomodel:YeastPathways_PWY3O-1565/6a4c244800003247",
+    "gomodel:YeastPathways_PWY3O-1565/6a4c244800003258",
+    "gomodel:PHOSPHOGLUCMUT-RXN",
+    "gomodel:GLUC1PURIDYLTRANS-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-17",
+   "label": "thiamine biosynthesis",
+   "pathway_type": "cofactor-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-17.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-17.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000006179",
+     "label": "THI21 Scer"
+    },
+    {
+     "id": "SGD:S000005416",
+     "label": "THI20 Scer"
+    },
+    {
+     "id": "SGD:S000000296",
+     "label": "PHO3 Scer"
+    },
+    {
+     "id": "SGD:S000005669",
+     "label": "THI80 Scer"
+    },
+    {
+     "id": "SGD:S000003376",
+     "label": "THI4 Scer"
+    },
+    {
+     "id": "SGD:S000006135",
+     "label": "THI6 Scer"
+    },
+    {
+     "id": "SGD:S000002403",
+     "label": "THI13 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXNQT-4301",
+    "gomodel:PYRIMSYN3-RXN",
+    "gomodel:YeastPathways_PWY3O-17/6a4c244800007660",
+    "gomodel:RXNQT-4191",
+    "gomodel:YeastPathways_PWY3O-17/6a4c244800007677",
+    "gomodel:RXN3O-401",
+    "gomodel:OHMETPYRKIN-RXN",
+    "gomodel:THI-P-SYN-RXN",
+    "gomodel:RXN3O-9804",
+    "gomodel:THIAMIN-PYROPHOSPHOKINASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-1743",
+   "label": "mannose degradation",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-1743.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-1743.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000545",
+     "label": "GLK1 Scer"
+    },
+    {
+     "id": "SGD:S000000805",
+     "label": "PMI40 Scer"
+    },
+    {
+     "id": "SGD:S000001949",
+     "label": "HXK1 Scer"
+    },
+    {
+     "id": "SGD:S000003222",
+     "label": "HXK2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-1743/6a4c244800000448",
+    "gomodel:RXN3O-9791",
+    "gomodel:YeastPathways_PWY3O-1743/6a4c244800000457",
+    "gomodel:MANNPISOM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-1801",
+   "label": "palmitoleate biosynthesis",
+   "pathway_type": "fatty-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-1801.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-1801.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003023",
+     "label": "OLE1 Scer"
+    },
+    {
+     "id": "SGD:S000003780",
+     "label": "TES1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-10664",
+    "gomodel:RXN-10662"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-214",
+   "label": "tryptophan degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-214.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-214.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004688",
+     "label": "ADH3 Scer"
+    },
+    {
+     "id": "SGD:S000003225",
+     "label": "ADH4 Scer"
+    },
+    {
+     "id": "SGD:S000004918",
+     "label": "ADH2 Scer"
+    },
+    {
+     "id": "SGD:S000000349",
+     "label": "ADH5 Scer"
+    },
+    {
+     "id": "SGD:S000005446",
+     "label": "ADH1 Scer"
+    },
+    {
+     "id": "SGD:S000004124",
+     "label": "PDC5 Scer"
+    },
+    {
+     "id": "SGD:S000001179",
+     "label": "ARO9 Scer"
+    },
+    {
+     "id": "SGD:S000002327",
+     "label": "SFA1 Scer"
+    },
+    {
+     "id": "SGD:S000002788",
+     "label": "ARO10 Scer"
+    },
+    {
+     "id": "SGD:S000003319",
+     "label": "PDC6 Scer"
+    },
+    {
+     "id": "SGD:S000004034",
+     "label": "PDC1 Scer"
+    },
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000708",
+    "gomodel:4.1.1.74-RXN",
+    "gomodel:1.1.1.190-RXN",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000660",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000669",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000694",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000627",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000701",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000621",
+    "gomodel:TRYPTOPHAN-AMINOTRANSFERASE-RXN",
+    "gomodel:YeastPathways_PWY3O-214/65692e7e00000633",
+    "gomodel:2.6.1.28-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-242",
+   "label": "phosphatidylinositol phosphate biosynthesis",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-242.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-242.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001915",
+     "label": "FAB1 Scer"
+    },
+    {
+     "id": "SGD:S000002616",
+     "label": "MSS4 Scer"
+    },
+    {
+     "id": "SGD:S000001695",
+     "label": "SAC1 Scer"
+    },
+    {
+     "id": "SGD:S000005269",
+     "label": "FIG4 Scer"
+    },
+    {
+     "id": "SGD:S000003871",
+     "label": "YMR1 Scer"
+    },
+    {
+     "id": "SGD:S000005050",
+     "label": "INP52 Scer"
+    },
+    {
+     "id": "SGD:S000003636",
+     "label": "LSB6 Scer"
+    },
+    {
+     "id": "SGD:S000004230",
+     "label": "VPS34 Scer"
+    },
+    {
+     "id": "SGD:S000001264",
+     "label": "INP51 Scer"
+    },
+    {
+     "id": "SGD:S000004296",
+     "label": "STT4 Scer"
+    },
+    {
+     "id": "SGD:S000005635",
+     "label": "INP53 Scer"
+    },
+    {
+     "id": "SGD:S000005426",
+     "label": "INP54 Scer"
+    },
+    {
+     "id": "SGD:S000005211",
+     "label": "PIK1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:2.7.1.150-RXN",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800005962",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006112",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006061",
+    "gomodel:1-PHOSPHATIDYLINOSITOL-3-KINASE-RXN",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006079",
+    "gomodel:2.7.1.68-RXN",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006024",
+    "gomodel:RXN-10961",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800005984",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800005945",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006043",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006151",
+    "gomodel:1-PHOSPHATIDYLINOSITOL-KINASE-RXN",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006005",
+    "gomodel:RXN-10938",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006096",
+    "gomodel:RXN3O-364",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800005927",
+    "gomodel:YeastPathways_PWY3O-242/6a4c244800006132",
+    "gomodel:PHOSPHATIDYLINOSITOL-BISPHOSPHATASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-259",
+   "label": "phospholipid biosynthesis II (Kennedy pathway)",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-259.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-259.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002554",
+     "label": "EKI1 Scer"
+    },
+    {
+     "id": "SGD:S000001165",
+     "label": "EPT1 Scer"
+    },
+    {
+     "id": "SGD:S000003239",
+     "label": "ECT1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ETHANOLAMINE-KINASE-RXN",
+    "gomodel:2.7.7.14-RXN",
+    "gomodel:ETHANOLAMINEPHOSPHOTRANSFERASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4",
+   "label": "carnitine shuttle",
+   "pathway_type": "carnitine-shuttle",
+   "page": "records/gomodel_YeastPathways_PWY3O-4.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004506",
+     "label": "CAT2 Scer"
+    },
+    {
+     "id": "SGD:S000000080",
+     "label": "YAT1 Scer"
+    },
+    {
+     "id": "SGD:S000000826",
+     "label": "YAT2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:CARNITINE-O-ACETYLTRANSFERASE-RXN",
+    "gomodel:YeastPathways_PWY3O-4/6a46ef0600000742",
+    "gomodel:YeastPathways_PWY3O-4/6a46ef0600000733",
+    "gomodel:RXN3O-37"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-402",
+   "label": "inositol phosphate biosynthesis",
+   "pathway_type": "inositol-phosphate-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-402.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-402.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002424",
+     "label": "KCS1 Scer"
+    },
+    {
+     "id": "SGD:S000002723",
+     "label": "IPK1 Scer"
+    },
+    {
+     "id": "SGD:S000005689",
+     "label": "DDP1 Scer"
+    },
+    {
+     "id": "SGD:S000002580",
+     "label": "ARG82 Scer"
+    },
+    {
+     "id": "SGD:S000006189",
+     "label": "PLC1 Scer"
+    },
+    {
+     "id": "SGD:S000004402",
+     "label": "VIP1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-7162",
+    "gomodel:RXN-4941",
+    "gomodel:RXN-7163",
+    "gomodel:2.7.1.127-RXN",
+    "gomodel:2.7.1.152-RXN",
+    "gomodel:RXN3O-786",
+    "gomodel:2.7.1.151-RXN",
+    "gomodel:RXN3O-258",
+    "gomodel:YeastPathways_PWY3O-402/6a4c244800000690",
+    "gomodel:RXN3O-785",
+    "gomodel:3.1.4.11-RXN",
+    "gomodel:RXN-7184",
+    "gomodel:RXN3O-143"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4105",
+   "label": "valine degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-4105.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4105.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004918",
+     "label": "ADH2 Scer"
+    },
+    {
+     "id": "SGD:S000004034",
+     "label": "PDC1 Scer"
+    },
+    {
+     "id": "SGD:S000001251",
+     "label": "BAT1 Scer"
+    },
+    {
+     "id": "SGD:S000000349",
+     "label": "ADH5 Scer"
+    },
+    {
+     "id": "SGD:S000003319",
+     "label": "PDC6 Scer"
+    },
+    {
+     "id": "SGD:S000005446",
+     "label": "ADH1 Scer"
+    },
+    {
+     "id": "SGD:S000003225",
+     "label": "ADH4 Scer"
+    },
+    {
+     "id": "SGD:S000002327",
+     "label": "SFA1 Scer"
+    },
+    {
+     "id": "SGD:S000004688",
+     "label": "ADH3 Scer"
+    },
+    {
+     "id": "SGD:S000003909",
+     "label": "BAT2 Scer"
+    },
+    {
+     "id": "SGD:S000004124",
+     "label": "PDC5 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003112",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003202",
+    "gomodel:RXN3O-4133",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003142",
+    "gomodel:BRANCHED-CHAINAMINOTRANSFERVAL-RXN",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003097",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003163",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003124",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003220",
+    "gomodel:YeastPathways_PWY3O-4105/6a4c244800003183",
+    "gomodel:RXN3O-4141"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4106",
+   "label": "NAD salvage pathway IV (from nicotinamide riboside)",
+   "pathway_type": "nad-salvage-pathway-iv",
+   "page": "records/gomodel_YeastPathways_PWY3O-4106.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4106.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005073",
+     "label": "NRK1 Scer"
+    },
+    {
+     "id": "SGD:S000004320",
+     "label": "NMA1 Scer"
+    },
+    {
+     "id": "SGD:S000003242",
+     "label": "NMA2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RIBOSYLNICOTINAMIDE-KINASE-RXN",
+    "gomodel:2.7.7.1-RXN",
+    "gomodel:YeastPathways_PWY3O-4106/6a46ef0600000917"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4108",
+   "label": "L-tyrosine degradation III",
+   "pathway_type": "l-tyrosine-degradation-iii",
+   "page": "records/gomodel_YeastPathways_PWY3O-4108.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4108.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    },
+    {
+     "id": "SGD:S000004688",
+     "label": "ADH3 Scer"
+    },
+    {
+     "id": "SGD:S000000349",
+     "label": "ADH5 Scer"
+    },
+    {
+     "id": "SGD:S000004918",
+     "label": "ADH2 Scer"
+    },
+    {
+     "id": "SGD:S000001179",
+     "label": "ARO9 Scer"
+    },
+    {
+     "id": "SGD:S000005446",
+     "label": "ADH1 Scer"
+    },
+    {
+     "id": "SGD:S000004034",
+     "label": "PDC1 Scer"
+    },
+    {
+     "id": "SGD:S000003225",
+     "label": "ADH4 Scer"
+    },
+    {
+     "id": "SGD:S000003319",
+     "label": "PDC6 Scer"
+    },
+    {
+     "id": "SGD:S000004124",
+     "label": "PDC5 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN3O-4157",
+    "gomodel:4.1.1.80-RXN",
+    "gomodel:TYROSINE-AMINOTRANSFERASE-RXN",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000688",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000677",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000661",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000644",
+    "gomodel:RXN3O-4113",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000699",
+    "gomodel:YeastPathways_PWY3O-4108/6a6bcaed00000710"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4112",
+   "label": "leucine degradation",
+   "pathway_type": "leucine-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-4112.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4112.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005446",
+     "label": "ADH1 Scer"
+    },
+    {
+     "id": "SGD:S000002788",
+     "label": "ARO10 Scer"
+    },
+    {
+     "id": "SGD:S000003909",
+     "label": "BAT2 Scer"
+    },
+    {
+     "id": "SGD:S000002327",
+     "label": "SFA1 Scer"
+    },
+    {
+     "id": "SGD:S000001251",
+     "label": "BAT1 Scer"
+    },
+    {
+     "id": "SGD:S000004688",
+     "label": "ADH3 Scer"
+    },
+    {
+     "id": "SGD:S000003225",
+     "label": "ADH4 Scer"
+    },
+    {
+     "id": "SGD:S000000349",
+     "label": "ADH5 Scer"
+    },
+    {
+     "id": "SGD:S000004918",
+     "label": "ADH2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001224",
+    "gomodel:RXN3O-4109",
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001175",
+    "gomodel:BRANCHED-CHAINAMINOTRANSFERLEU-RXN",
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001189",
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001240",
+    "gomodel:RXN3O-4108",
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001255",
+    "gomodel:YeastPathways_PWY3O-4112/6a4c244800001207"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4120",
+   "label": "tyrosine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-4120.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4120.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000006264",
+     "label": "ARO7 Scer"
+    },
+    {
+     "id": "SGD:S000001179",
+     "label": "ARO9 Scer"
+    },
+    {
+     "id": "SGD:S000000370",
+     "label": "TYR1 Scer"
+    },
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:CHORISMATEMUT-RXN",
+    "gomodel:TYROSINE-AMINOTRANSFERASE-RXN",
+    "gomodel:PREPHENATE-DEHYDROGENASE-NADP+-RXN",
+    "gomodel:RXN3O-4157"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4153",
+   "label": "phenylalanine biosynthesis",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-4153.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4153.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    },
+    {
+     "id": "SGD:S000005260",
+     "label": "PHA2 Scer"
+    },
+    {
+     "id": "SGD:S000006264",
+     "label": "ARO7 Scer"
+    },
+    {
+     "id": "SGD:S000001179",
+     "label": "ARO9 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:2.6.1.58-RXN",
+    "gomodel:CHORISMATEMUT-RXN",
+    "gomodel:RXN-10814",
+    "gomodel:PREPHENATEDEHYDRAT-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-4300",
+   "label": "ethanol degradation",
+   "pathway_type": "alcohol-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-4300.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-4300.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004143",
+     "label": "ACS2 Scer"
+    },
+    {
+     "id": "SGD:S000004918",
+     "label": "ADH2 Scer"
+    },
+    {
+     "id": "SGD:S000003225",
+     "label": "ADH4 Scer"
+    },
+    {
+     "id": "SGD:S000004780",
+     "label": "ALD2 Scer"
+    },
+    {
+     "id": "SGD:S000005446",
+     "label": "ADH1 Scer"
+    },
+    {
+     "id": "SGD:S000004688",
+     "label": "ADH3 Scer"
+    },
+    {
+     "id": "SGD:S000000050",
+     "label": "ACS1 Scer"
+    },
+    {
+     "id": "SGD:S000000349",
+     "label": "ADH5 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-4300/6a4c244800003293",
+    "gomodel:YeastPathways_PWY3O-4300/6a4c244800003369",
+    "gomodel:YeastPathways_PWY3O-4300/6a4c244800003351",
+    "gomodel:RXN66-3",
+    "gomodel:ALCOHOL-DEHYDROG-RXN",
+    "gomodel:YeastPathways_PWY3O-4300/6a4c244800003312",
+    "gomodel:YeastPathways_PWY3O-4300/6a4c244800003332",
+    "gomodel:ACETATE--COA-LIGASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-440",
+   "label": "pyruvate fermentation to acetoin III",
+   "pathway_type": "acetoin-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-440.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-440.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004034",
+     "label": "PDC1 Scer"
+    },
+    {
+     "id": "SGD:S000003319",
+     "label": "PDC6 Scer"
+    },
+    {
+     "id": "SGD:S000004124",
+     "label": "PDC5 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000822",
+    "gomodel:RXN-6161",
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000890",
+    "gomodel:RXN0-2022",
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000876",
+    "gomodel:RXN3O-470",
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000833",
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000863",
+    "gomodel:YeastPathways_PWY3O-440/6a46ef0600000854"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-450",
+   "label": "phosphatidylcholine biosynthesis I",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-450.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-450.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005074",
+     "label": "CPT1 Scer"
+    },
+    {
+     "id": "SGD:S000003434",
+     "label": "PCT1 Scer"
+    },
+    {
+     "id": "SGD:S000004123",
+     "label": "CKI1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:CHOLINE-KINASE-RXN",
+    "gomodel:RXN-5781",
+    "gomodel:2.7.7.15-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-48",
+   "label": "glycerol biosynthesis",
+   "pathway_type": "glycerol-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-48.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-48.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002180",
+     "label": "GPD1 Scer"
+    },
+    {
+     "id": "SGD:S000005420",
+     "label": "GPD2 Scer"
+    },
+    {
+     "id": "SGD:S000001315",
+     "label": "GPP1 Scer"
+    },
+    {
+     "id": "SGD:S000000864",
+     "label": "GPP2 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-48/6a4c244800000498",
+    "gomodel:1.1.1.8-RXN",
+    "gomodel:GLYCEROL-1-PHOSPHATASE-RXN",
+    "gomodel:YeastPathways_PWY3O-48/6a4c244800000482"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-50",
+   "label": "tetrapyrrole biosynthesis",
+   "pathway_type": "tetrapyrrole-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-50.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-50.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002640",
+     "label": "HEM1 Scer"
+    },
+    {
+     "id": "SGD:S000002364",
+     "label": "HEM3 Scer"
+    },
+    {
+     "id": "SGD:S000003008",
+     "label": "HEM2 Scer"
+    },
+    {
+     "id": "SGD:S000005804",
+     "label": "HEM4 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:5-AMINOLEVULINIC-ACID-SYNTHASE-RXN",
+    "gomodel:UROGENIIISYN-RXN",
+    "gomodel:OHMETHYLBILANESYN-RXN",
+    "gomodel:PORPHOBILSYNTH-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-5268",
+   "label": "oleate biosynthesis",
+   "pathway_type": "fatty-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-5268.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-5268.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003023",
+     "label": "OLE1 Scer"
+    },
+    {
+     "id": "SGD:S000003780",
+     "label": "TES1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:1.14.19.1-RXN",
+    "gomodel:RXN-9666"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-64",
+   "label": "methionine salvage pathway",
+   "pathway_type": "amino-acid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-64.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-64.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000003170",
+     "label": "ARO8 Scer"
+    },
+    {
+     "id": "SGD:S000004007",
+     "label": "MEU1 Scer"
+    },
+    {
+     "id": "SGD:S000003785",
+     "label": "MDE1 Scer"
+    },
+    {
+     "id": "SGD:S000006322",
+     "label": "MRI1 Scer"
+    },
+    {
+     "id": "SGD:S000001251",
+     "label": "BAT1 Scer"
+    },
+    {
+     "id": "SGD:S000000764",
+     "label": "UTR4 Scer"
+    },
+    {
+     "id": "SGD:S000003909",
+     "label": "BAT2 Scer"
+    },
+    {
+     "id": "SGD:S000001179",
+     "label": "ARO9 Scer"
+    },
+    {
+     "id": "SGD:S000004611",
+     "label": "ADI1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:R147-RXN",
+    "gomodel:5-METHYLTHIOADENOSINE-PHOSPHORYLASE-RXN",
+    "gomodel:R15-RXN",
+    "gomodel:3.1.3.77-RXN",
+    "gomodel:YeastPathways_PWY3O-64/6a4c244800001410",
+    "gomodel:YeastPathways_PWY3O-64/6a4c244800001394",
+    "gomodel:YeastPathways_PWY3O-64/6a4c244800001425",
+    "gomodel:R145-RXN",
+    "gomodel:5.3.1.23-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-6407",
+   "label": "phosphatidate biosynthesis I (the dihydroxyacetone pathway)",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-6407.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-6407.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000107",
+     "label": "SCT1 Scer"
+    },
+    {
+     "id": "SGD:S000002210",
+     "label": "SLC1 Scer"
+    },
+    {
+     "id": "SGD:S000001775",
+     "label": "GPT2 Scer"
+    },
+    {
+     "id": "SGD:S000001386",
+     "label": "AYR1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-6407/6a4c244800000335",
+    "gomodel:RXN-1623",
+    "gomodel:RXN3O-5279",
+    "gomodel:RXN3O-9800"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-6499",
+   "label": "phosphatidate biosynthesis II (the glycerol-3-phosphate pathway)",
+   "pathway_type": "lipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_PWY3O-6499.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-6499.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000107",
+     "label": "SCT1 Scer"
+    },
+    {
+     "id": "SGD:S000005420",
+     "label": "GPD2 Scer"
+    },
+    {
+     "id": "SGD:S000001775",
+     "label": "GPT2 Scer"
+    },
+    {
+     "id": "SGD:S000002180",
+     "label": "GPD1 Scer"
+    },
+    {
+     "id": "SGD:S000002210",
+     "label": "SLC1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PWY3O-6499/6a4c244800001536",
+    "gomodel:YeastPathways_PWY3O-6499/6a4c244800001520",
+    "gomodel:GLYCEROL-3-P-ACYLTRANSFER-RXN",
+    "gomodel:1.1.1.8-RXN",
+    "gomodel:RXN-1623"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-697",
+   "label": "folate interconversions",
+   "pathway_type": "folate-metabolism",
+   "page": "records/gomodel_YeastPathways_PWY3O-697.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-697.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000288",
+     "label": "MIS1 Scer"
+    },
+    {
+     "id": "SGD:S000003436",
+     "label": "ADE3 Scer"
+    },
+    {
+     "id": "SGD:S000001788",
+     "label": "MTD1 Scer"
+    },
+    {
+     "id": "SGD:S000218158",
+     "label": "CPX-1268 Scer"
+    },
+    {
+     "id": "SGD:S000005944",
+     "label": "MET12 Scer"
+    },
+    {
+     "id": "SGD:S000005762",
+     "label": "DFR1 Scer"
+    },
+    {
+     "id": "SGD:S000003093",
+     "label": "MET13 Scer"
+    },
+    {
+     "id": "SGD:S000004048",
+     "label": "SHM2 Scer"
+    },
+    {
+     "id": "SGD:S000000467",
+     "label": "SHM1 Scer"
+    },
+    {
+     "id": "SGD:S000005600",
+     "label": "CDC21 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:1.5.1.15-RXN",
+    "gomodel:YeastPathways_PWY3O-697/6a4c244800005448",
+    "gomodel:YeastPathways_PWY3O-697/6a4c244800005468",
+    "gomodel:YeastPathways_PWY3O-697/6a4c244800005519",
+    "gomodel:YeastPathways_PWY3O-697/6a4c244800005502",
+    "gomodel:METHYLENETHFDEHYDROG-NADP-RXN",
+    "gomodel:DIHYDROFOLATEREDUCT-RXN",
+    "gomodel:FORMATETHFLIG-RXN",
+    "gomodel:METHENYLTHFCYCLOHYDRO-RXN",
+    "gomodel:THYMIDYLATESYN-RXN",
+    "gomodel:GCVMULTI-RXN",
+    "gomodel:1.5.1.20-RXN",
+    "gomodel:GLYOHMETRANS-RXN",
+    "gomodel:YeastPathways_PWY3O-697/6a4c244800005484"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWY3O-8",
+   "label": "xylose metabolism",
+   "pathway_type": "carbohydrate-degradation",
+   "page": "records/gomodel_YeastPathways_PWY3O-8.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY3O-8.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004060",
+     "label": "XYL2 Scer"
+    },
+    {
+     "id": "SGD:S000001146",
+     "label": "GRE3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-8773",
+    "gomodel:D-XYLULOSE-REDUCTASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PWYQT-4432",
+   "label": "glutathione degradation",
+   "pathway_type": "glutathione-degradation",
+   "page": "records/gomodel_YeastPathways_PWYQT-4432.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWYQT-4432.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004290",
+     "label": "ECM38 Scer"
+    },
+    {
+     "id": "SGD:S000001940",
+     "label": "DUG1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN-6601",
+    "gomodel:RXN-6622"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_PYRUVDEHYD-PWY",
+   "label": "pyruvate decarboxylation to acetyl CoA",
+   "pathway_type": "central-carbon-metabolism",
+   "page": "records/gomodel_YeastPathways_PYRUVDEHYD-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PYRUVDEHYD-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000005015",
+     "label": "LAT1 Scer"
+    },
+    {
+     "id": "SGD:S000001876",
+     "label": "LPD1 Scer"
+    },
+    {
+     "id": "SGD:S000000425",
+     "label": "PDB1 Scer"
+    },
+    {
+     "id": "SGD:S000000980",
+     "label": "PDA1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:YeastPathways_PYRUVDEHYD-PWY/6a4c244800000320",
+    "gomodel:RXN0-1134",
+    "gomodel:RXN0-1132",
+    "gomodel:RXN0-1133"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_SO4ASSIM-PWY",
+   "label": "assimilatory sulfate reduction I",
+   "pathway_type": "metabolic",
+   "page": "records/gomodel_YeastPathways_SO4ASSIM-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_SO4ASSIM-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001484",
+     "label": "MET14 Scer"
+    },
+    {
+     "id": "SGD:S000003771",
+     "label": "MET3 Scer"
+    },
+    {
+     "id": "SGD:S000217821",
+     "label": "CPX-3163 Scer"
+    },
+    {
+     "id": "SGD:S000006371",
+     "label": "MET16 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SULFITE-REDUCT-RXN",
+    "gomodel:ADENYLYLSULFKIN-RXN",
+    "gomodel:SULFATE-ADENYLYLTRANS-RXN",
+    "gomodel:1.8.4.8-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1",
+   "label": "sphingolipid biosynthesis (yeast)",
+   "pathway_type": "sphingolipid-biosynthesis",
+   "page": "records/gomodel_YeastPathways_SPHINGOLIPID-SYN-PWY-1.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_SPHINGOLIPID-SYN-PWY-1.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002705",
+     "label": "SUR2 Scer"
+    },
+    {
+     "id": "SGD:S000001761",
+     "label": "YSR3 Scer"
+    },
+    {
+     "id": "SGD:S000001487",
+     "label": "AUR1 Scer"
+    },
+    {
+     "id": "SGD:S000002702",
+     "label": "DPL1 Scer"
+    },
+    {
+     "id": "SGD:S000002479",
+     "label": "IPT1 Scer"
+    },
+    {
+     "id": "SGD:S000000469",
+     "label": "TSC10 Scer"
+    },
+    {
+     "id": "SGD:S000003670",
+     "label": "LCB3 Scer"
+    },
+    {
+     "id": "SGD:S000002469",
+     "label": "LCB2 Scer"
+    },
+    {
+     "id": "SGD:S000004911",
+     "label": "LCB1 Scer"
+    },
+    {
+     "id": "SGD:S000000387",
+     "label": "YPC1 Scer"
+    },
+    {
+     "id": "SGD:S000218096",
+     "label": "CPX-1706 Scer"
+    },
+    {
+     "id": "SGD:S000004250",
+     "label": "LCB5 Scer"
+    },
+    {
+     "id": "SGD:S000004885",
+     "label": "SCS7 Scer"
+    },
+    {
+     "id": "SGD:S000005697",
+     "label": "LCB4 Scer"
+    },
+    {
+     "id": "SGD:S000006008",
+     "label": "YDC1 Scer"
+    },
+    {
+     "id": "SGD:S000218211",
+     "label": "CPX-1739 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:SERINE-C-PALMITOYLTRANSFERASE-RXN",
+    "gomodel:DHS-PHOSPHATASE-RXN",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006275",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006260",
+    "gomodel:RXN3O-328",
+    "gomodel:RXN3O-663",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006208",
+    "gomodel:3-DEHYDROSPHINGANINE-REDUCTASE-RXN",
+    "gomodel:RXN3O-4042",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006292",
+    "gomodel:RXN3O-680",
+    "gomodel:RXN3O-1380",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006241",
+    "gomodel:YeastPathways_SPHINGOLIPID-SYN-PWY-1/6a4c244800006227",
+    "gomodel:RXN3O-458",
+    "gomodel:RXN3O-581",
+    "gomodel:SPHINGANINE-1-PHOSPHATE-ALDOLASE-RXN",
+    "gomodel:CERAMIDASE-YEAST-RXN",
+    "gomodel:RXN3O-504",
+    "gomodel:SPHINGANINE-KINASE-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_THREOCAT2-PWY",
+   "label": "threonine degradation",
+   "pathway_type": "amino-acid-degradation",
+   "page": "records/gomodel_YeastPathways_THREOCAT2-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_THREOCAT2-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000569",
+     "label": "CHA1 Scer"
+    },
+    {
+     "id": "SGD:S000000010",
+     "label": "CYS3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:THREDEHYD2-RXN",
+    "gomodel:CYSTAGLY-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_UDPNAGSYN-YEAST-PWY",
+   "label": "UDP-N-acetylglucosamine biosynthesis",
+   "pathway_type": "amino-sugar-biosynthesis",
+   "page": "records/gomodel_YeastPathways_UDPNAGSYN-YEAST-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_UDPNAGSYN-YEAST-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000001587",
+     "label": "GFA1 Scer"
+    },
+    {
+     "id": "SGD:S000001877",
+     "label": "GNA1 Scer"
+    },
+    {
+     "id": "SGD:S000000784",
+     "label": "PCM1 Scer"
+    },
+    {
+     "id": "SGD:S000002261",
+     "label": "QRI1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:L-GLN-FRUCT-6-P-AMINOTRANS-RXN",
+    "gomodel:GLUCOSAMINEPNACETYLTRANS-RXN",
+    "gomodel:PHOSACETYLGLUCOSAMINEMUT-RXN",
+    "gomodel:NAG1P-URIDYLTRANS-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_YEAST-4AMINOBUTMETAB-PWY",
+   "label": "4-aminobutyrate degradation",
+   "pathway_type": "4-aminobutyrate-degradation",
+   "page": "records/gomodel_YeastPathways_YEAST-4AMINOBUTMETAB-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_YEAST-4AMINOBUTMETAB-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000000210",
+     "label": "UGA2 Scer"
+    },
+    {
+     "id": "SGD:S000003251",
+     "label": "UGA1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:RXN0-5293",
+    "gomodel:GABATRANSAM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_YEAST-FAO-PWY",
+   "label": "fatty acid oxidation pathway",
+   "pathway_type": "fatty-acid-oxidation",
+   "page": "records/gomodel_YeastPathways_YEAST-FAO-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_YEAST-FAO-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004860",
+     "label": "FAA4 Scer"
+    },
+    {
+     "id": "SGD:S000001717",
+     "label": "FOX2 Scer"
+    },
+    {
+     "id": "SGD:S000004274",
+     "label": "ECI1 Scer"
+    },
+    {
+     "id": "SGD:S000005844",
+     "label": "FAA1 Scer"
+    },
+    {
+     "id": "SGD:S000001422",
+     "label": "POT1 Scer"
+    },
+    {
+     "id": "SGD:S000000245",
+     "label": "FAT1 Scer"
+    },
+    {
+     "id": "SGD:S000003173",
+     "label": "POX1 Scer"
+    },
+    {
+     "id": "SGD:S000005706",
+     "label": "DCI1 Scer"
+    },
+    {
+     "id": "SGD:S000000817",
+     "label": "FAA2 Scer"
+    },
+    {
+     "id": "SGD:S000001271",
+     "label": "FAA3 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:ENOYL-COA-HYDRAT-RXN",
+    "gomodel:OHACYL-COA-DEHYDROG-RXN",
+    "gomodel:ACYLCOASYN-RXN",
+    "gomodel:KETOACYLCOATHIOL-RXN",
+    "gomodel:YeastPathways_YEAST-FAO-PWY/6a4c244800006831",
+    "gomodel:YeastPathways_YEAST-FAO-PWY/6a4c244800006810",
+    "gomodel:RXN-11026",
+    "gomodel:YeastPathways_YEAST-FAO-PWY/6a4c244800006852",
+    "gomodel:YeastPathways_YEAST-FAO-PWY/6a4c244800006775",
+    "gomodel:YeastPathways_YEAST-FAO-PWY/6a4c244800006787",
+    "gomodel:ENOYL-COA-DELTA-ISOM-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_YEAST-GALACT-METAB-PWY",
+   "label": "galactose degradation",
+   "pathway_type": "galactose-degradation",
+   "page": "records/gomodel_YeastPathways_YEAST-GALACT-METAB-PWY.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_YEAST-GALACT-METAB-PWY.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000004711",
+     "label": "PGM2 Scer"
+    },
+    {
+     "id": "SGD:S000000223",
+     "label": "GAL10 Scer"
+    },
+    {
+     "id": "SGD:S000000224",
+     "label": "GAL1 Scer"
+    },
+    {
+     "id": "SGD:S000000222",
+     "label": "GAL7 Scer"
+    },
+    {
+     "id": "SGD:S000001610",
+     "label": "PGM1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:PHOSPHOGLUCMUT-RXN",
+    "gomodel:YeastPathways_YEAST-GALACT-METAB-PWY/6a4c244800000632",
+    "gomodel:UDPGLUCEPIM-RXN",
+    "gomodel:GALACTOKIN-RXN",
+    "gomodel:ALDOSE1EPIM-RXN",
+    "gomodel:GALACTURIDYLYLTRANS-RXN"
+   ]
+  },
+  {
+   "id": "gomodel:YeastPathways_YEAST-RNT-SALV",
+   "label": "salvage pathways of pyrimidine ribonucleotides",
+   "pathway_type": "nucleotide-salvage",
+   "page": "records/gomodel_YeastPathways_YEAST-RNT-SALV.html",
+   "url": "https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_YEAST-RNT-SALV.html",
+   "taxa": [
+    {
+     "id": "NCBITaxon:559292",
+     "label": "Saccharomyces cerevisiae S288C"
+    }
+   ],
+   "proteins": [
+    {
+     "id": "SGD:S000002808",
+     "label": "URH1 Scer"
+    },
+    {
+     "id": "SGD:S000005295",
+     "label": "URK1 Scer"
+    },
+    {
+     "id": "SGD:S000001550",
+     "label": "YNK1 Scer"
+    },
+    {
+     "id": "SGD:S000001507",
+     "label": "URA6 Scer"
+    },
+    {
+     "id": "SGD:S000006266",
+     "label": "FCY1 Scer"
+    },
+    {
+     "id": "SGD:S000004235",
+     "label": "CDD1 Scer"
+    },
+    {
+     "id": "SGD:S000001170",
+     "label": "FUR1 Scer"
+    }
+   ],
+   "reactions": [
+    "gomodel:URACIL-PRIBOSYLTRANS-RXN",
+    "gomodel:URIDINE-NUCLEOSIDASE-RXN",
+    "gomodel:RXN0-361",
+    "gomodel:RXN-11832",
+    "gomodel:CYTDEAM-RXN",
+    "gomodel:URIDINEKIN-RXN",
+    "gomodel:CDPKIN-RXN",
+    "gomodel:CYTIDINEKIN-RXN",
+    "gomodel:CYTIDEAM2-RXN"
+   ]
+  }
+ ]
+}

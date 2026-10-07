@@ -15,6 +15,7 @@ from connect_trophic_physiology_graphs_183 import (  # noqa: E402
     ACTION,
     ADDITIONS,
     EXPECTED_COMPONENTS,
+    TIMESTAMP,
     _components,
     _edge_key,
     transform,
@@ -30,6 +31,10 @@ def _before(slug: str) -> dict:
     keys = {_edge_key(edge) for edge in ADDITIONS[slug]}
     graph = doc["causal_graphs"][0]
     graph["edges"] = [edge for edge in graph["edges"] if _edge_key(edge) not in keys]
+    # Reconstruct the migration's historical input, including provenance.
+    # Later independent curation must not become this fixture's "before" state.
+    doc["curation_history"] = [event for event in doc.get("curation_history", [])
+                               if event["timestamp"] < TIMESTAMP]
     return doc
 
 

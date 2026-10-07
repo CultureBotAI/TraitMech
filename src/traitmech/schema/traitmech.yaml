@@ -415,6 +415,26 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: ProteinExample
+      related_records:
+        description: >-
+          Curator-reviewed pathway context for this node, pinned to a sibling
+          record version. These contextual links do not assert exact equivalence
+          or transfer the sibling organism scope to the trait.
+        multivalued: true
+        inlined_as_list: true
+        range: PathwayContextLink
+
+  PathwayContextLink:
+    is_a: CrossCorpusLink
+    description: A versioned PathwayMech example of a node's biochemical context.
+    slot_usage:
+      corpus:
+        pattern: '^PathwayMech$'
+      relation:
+        range: PathwayContextRelationEnum
+      source_version:
+        required: true
+        pattern: '^[0-9a-f]{40}$'
 
   ProteinExample:
     description: >-
@@ -536,6 +556,14 @@ classes:
 # ================================================================
 
 enums:
+
+  PathwayContextRelationEnum:
+    permissible_values:
+      PATHWAY_CONTEXT:
+        description: >-
+          An organism-scoped pathway record provides biochemical context for
+          this node; the basis states the shared route or component and limits
+          of the correspondence. This is not an exact-equivalence mapping.
 
   TraitCategoryEnum:
     description: Coarse-grained trait bucket — used for filesystem layout.
