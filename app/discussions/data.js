@@ -9922,6 +9922,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/autophagy.html#autophagy-exemplar-and-mechanism"
  },
  {
+  "discussion_id": "ballistospore-discharge-scope-and-hierarchy",
+  "prompt": "Review dispersal hierarchy without equating formation and discharge.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ballistospore discharge",
+  "source_id": "traitmech:000661",
+  "source_file": "ballistospore_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. The sporulation and spore-forming records METPO:1000870 and METPO:1000871 concern endospores. Fungal conidiation traitmech:000657 concerns production of asexual propagules, whereas ballistospores include sexual and asexual forms and formation can persist without release. Discharge is also distinct from passive shedding, later wind transport and pressure-driven ascospore or sporangium ejection. Motility METPO:1000701 emphasizes independent locomotion; a closer dispersal parent and process-versus-phenotype mappings need review. Ballistospore and ballistoconidium name cells, not exact synonyms of this disposition; no exact synonyms or xrefs are asserted. Do not require a particular speed, distance, fruiting body or asexual developmental mode.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ballistospore_discharge.html#ballistospore-discharge-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "ballistospore-discharge-mechanism-and-readouts",
+  "prompt": "Keep measured discharge, formation defects and physical models distinct.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ballistospore discharge",
+  "source_id": "traitmech:000661",
+  "source_file": "ballistospore_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "The cited studies support a surface-tension mechanism, not an unknown-mechanism claim. A causal graph is deferred until the full mechanical study and supplementary observations are inspected and the repository's protein-required MECHANISTIC graph convention is reconciled with a physical coalescence mechanism. Do not invent a protein motor or label a physical causal model NONMECHANISTIC merely to pass the audit. PHS1 possession or expression does not establish discharge; the 2014 formation-defect experiments do not isolate a universal ejection pathway. Negative mirror transfer can reflect impaired production, release or subsequent growth. The 2017 study at https://pmc.ncbi.nlm.nih.gov/articles/PMC5550963/ remains an unread research lead: PMC returned a challenge and two XML requests failed. It is not counted as verified evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ballistospore_discharge.html#ballistospore-discharge-mechanism-and-readouts"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -12577,9 +12611,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 613,
- "total_knowledge_gaps": 402,
- "total_source_entries": 526,
+ "total_discussions": 615,
+ "total_knowledge_gaps": 403,
+ "total_source_entries": 527,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
