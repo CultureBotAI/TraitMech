@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_appressorium_formation.yaml
+  slug: fungal_appressorium_formation
+session:
+  id: 2026-10-07T054720Z-codex-47e97d
+  timestamp: '2026-10-07T05:47:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1774
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Preserve conflicting Guy11 assay-surface descriptions
+  details: 'Correct the initial evidence note from history/records/fungal_appressorium_formation/2026-10-07T053243Z-codex-2a8d25.yaml:
+    Soanes et al. 2012 Results describing Figure 1A name hydrophobic glass, while Methods
+    name plastic coverslips with 1,16-hexadecanediol. Both directly retrieved descriptions
+    are now attributed to their sections and left unresolved. The snippet, phenotype, canonical
+    example and proposal class remain unchanged. Add a guarded exact-preimage migration and
+    regression tests; clarify source-discrepancy guidance in add-trait. Regenerate derived
+    artifacts and rerun validation before merge.'

@@ -8987,6 +8987,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "fungal-appressorium-scope-and-mapping",
+  "prompt": "Reconcile broad appressorium usage and neighboring structures.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal appressorium formation",
+  "source_id": "traitmech:000659",
+  "source_file": "fungal_appressorium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059 rather than plant pathogen METPO:1004003, black pigmented METPO:1003022 or thigmotropism traitmech:000594. Formation is neither disease causation nor generic adhesion or contact-directed growth. Demoor et al. (2019) explicitly use a broad appressorium umbrella for saprotrophic penetration structures and compound infection cushions; preserve this source attribution rather than silently imposing a single-celled, melanized or germ-tube-only definition. Becker et al. (2016) distinguish expressoria from external appressoria despite the intrinsecus convention. Whether to include that exit structure or propose narrower subclasses remains unresolved; no exact synonym is asserted. QuickGO resolves GO:0075016 as a host-associated biological process, not an exact organismal phenotype covering the saprotrophic observations, so xrefs and SSSOM are omitted. Research-report appressorium mentions describe candidate material structures, not an existing exact formation-trait node that can simply be regrounded.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_appressorium_formation.html#fungal-appressorium-scope-and-mapping"
+ },
+ {
+  "discussion_id": "fungal-appressorium-function-and-mechanism",
+  "prompt": "Separate formation, functional penetration and regulatory mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal appressorium formation",
+  "source_id": "traitmech:000659",
+  "source_file": "fungal_appressorium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Formation does not guarantee successful penetration, host entry, invasion or disease. Do not require one shape, cell number, pigmentation, turgor level, surface chemistry or nutritional regime. Cellophane penetration is not evidence of natural-host infection or of a functional haustorium. The Colletotrichum cell-cycle results and the Guy11 Pmk1 comparison do not support a universal mitosis, autophagy or kinase dependency. A causal graph awaits review of primary perturbation/complementation experiments, remaining figures and supplements, and taxon-paired protein accessions. Transcriptional association or possession of a candidate gene is not proof of this formation phenotype. Keep the unresolved 3.1.3 provenance/species assignment and all unverified survey strains out of canonical examples.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_appressorium_formation.html#fungal-appressorium-function-and-mechanism"
+ },
+ {
   "discussion_id": "fungal-chlamydospore-scope-and-hierarchy",
   "prompt": "Resolve conidiation, dormancy and process-ontology mappings.",
   "kind": "CURATION_TODO",
@@ -12509,9 +12543,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 609,
- "total_knowledge_gaps": 400,
- "total_source_entries": 524,
+ "total_discussions": 611,
+ "total_knowledge_gaps": 401,
+ "total_source_entries": 525,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
