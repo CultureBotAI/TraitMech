@@ -124,7 +124,9 @@ phrase was not in the abstract and was instead exact-matched in the primary
 publisher HTML. Both snippets are contiguous, at 15 and 13 words.
 
 Artifact review preserved all 1,059 prior trait YAMLs, all prior history and
-proposal narratives, and all 545 historical class templates byte-for-byte.
+proposal narratives, and all 545 historical proposal TSVs byte-for-byte:
+534 class templates, six property templates and five SSSOM mappings. The
+artifact-type breakdown corrects the audit-receipt wording reported in #1789.
 Of the existing trait pages, 1,058 changed only their corpus-count footer;
 the phenotype page additionally gained the new child. RDF review found 15
 proposal, 12,628 merged and 12,632 reasoned triples, with the expected
