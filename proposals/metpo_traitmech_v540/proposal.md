@@ -114,9 +114,10 @@ separate append-only repository history. No protected record is modified.
 ## Verification
 
 The writer dry run and all 27 focused tests passed. LinkML/strict record
-validation, proposal verification, ROBOT/ELK, `just validate-history` and
-`just validate-products` passed. Full QC and focused/full test-suite runs
-remain in progress; no independent approval or merged state is claimed.
+validation, proposal verification, ROBOT/ELK, `just validate-history`,
+`just validate-products` and `just qc` passed. Final focused/full pytest and
+GitHub gate outcomes are recorded in [PR #1787](https://github.com/CultureBotAI/TraitMech/pull/1787)
+rather than inferred from these narrower checks.
 
 The maintained snippet resolver reports one VERIFIED scientific-abstract
 quote and one NOT_IN_ABSTRACT full-text quote. Both are exact contiguous
@@ -145,6 +146,29 @@ Neither exact configured embedding source exists, so embedding products
 were not regenerated. Both history actors are explicitly Codex:
 `history/records/fungal_arbuscule_formation/2026-10-07T132515Z-codex-7af269.yaml`
 and `history/records/microbial_haustorium_formation/2026-10-07T132517Z-codex-b76f8d.yaml`.
+
+Ordinary staged whitespace checking reports only the class directive row's
+three required trailing blank cells, whose width and values match upstream.
+The scoped ordinary check excluding that exact TSV and its separate check
+with `core.whitespace=-blank-at-eol` both passed. No global exception is used.
+
+## Adversarial Review
+
+[Local author review](https://github.com/CultureBotAI/TraitMech/pull/1787#issuecomment-6039114053)
+found no actionable curation or code defect. It attempted to falsify novelty,
+scope, source text, culture provenance, ontology semantics, mutation guards
+and generated artifacts. All 1,088 remote changed-file blobs matched the
+reviewed first commit. This is not independent approval; no artificial
+curation issue was created.
+
+Actual Claude and Shepherd logs still show the unexpired weekly account
+quota through October 10. No redundant dispatch or paid fallback was used.
+Copilot was requested but initially returned no requested reviewer or review.
+The [availability receipt](https://github.com/CultureBotAI/TraitMech/issues/742#issuecomment-6039122481)
+keeps these failures separate from review. Later findings and exact-head
+follow-ups belong on the PR, with issues and fixes for actionable defects.
+All required gates and the normal merge queue remain mandatory; enqueueing
+alone does not establish merge or authorize premature branch deletion.
 
 ## Upstream Path and Round Trip
 
