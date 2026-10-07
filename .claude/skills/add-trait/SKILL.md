@@ -625,6 +625,10 @@ make `causal_graphs` a touched section. For example, a new record with evidence,
 an example and discussions but no graph uses
 `identity,evidence,canonical_examples,discussions` (#1674).
 
+Pass the actual session actor with `--actor-name`; `--agent-tool` and `--model`
+do not override the scaffolder's default actor name (`claude-code`). Inspect
+`session.actors` after scaffolding, including when using Codex (#1776).
+
 History remains append-only after it is written, including before PR merge.
 Correct a mistaken history claim with a new record naming the original file
 and the corrected claim. Use an `AUDIT` with `outcome: no_change` when only

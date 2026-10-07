@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_sclerotium_formation.yaml
+  slug: fungal_sclerotium_formation
+session:
+  id: 2026-10-07T064956Z-claude-code-77563e
+  timestamp: '2026-10-07T06:49:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add fungal sclerotium formation with explicit identity and developmental scope
+  details: Added traitmech:000660, a PROPOSED MORPHOLOGY phenotype under METPO:1000059, with
+    five directly checked source snippets and a provenance-qualified wild-type strain 1980
+    example. Ignored-and-hidden duplicate searches distinguish three deprecated bare sclerotia
+    labels from the new organismal phenotype; legacy identity and GO process mapping remain
+    unresolved. Reserved METPO:1061300 in proposal v536. Formation, maturation, count versus
+    mass and functional readouts are distinguished; no causal graph, xrefs or exact synonyms
+    are asserted. Twenty focused writer tests and dry-run validation passed before application;
+    broader generated-artifact, corpus and online checks follow in the PR receipt. Existing
+    trait records are unchanged.
