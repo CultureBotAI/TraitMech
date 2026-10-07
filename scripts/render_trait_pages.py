@@ -193,7 +193,23 @@ def corpus_timestamp(traits: list[tuple[Path, dict]]) -> str:
     return latest.strftime("%Y-%m-%d %H:%M UTC") if latest else ""
 
 
-def record_timestamp(doc: dict) -> str:
+def synonym_search_text(doc: dict) -> str:
+    """Index synonym names, never metadata keys or their serialized mappings."""
+    return " ".join(value.get("synonym_text", "") if isinstance(value, dict) else value
+                    for value in (doc.get("synonyms") or [])
+                    if isinstance(value, (dict, str)))
+
+
+def load_record_sessions(root: Path = REPO_ROOT) -> dict[str, list[dict]]:
+    sessions: dict[str, list[dict]] = defaultdict(list)
+    for path in sorted((root / "history" / "records").glob("*/*.yaml")):
+        entry = yaml.safe_load(path.read_text())
+        entry["source_url"] = f"{GH_BLOB_BASE}/{path.relative_to(root).as_posix()}"
+        sessions[entry["target"]["path"]].append(entry)
+    return dict(sessions)
+
+
+def record_timestamp(doc: dict, sessions: list[dict] | None = None) -> str:
     """The latest ``curation_history`` timestamp for ONE record.
 
     Trait pages carry this rather than the corpus-wide stamp (#304). The
@@ -210,8 +226,10 @@ def record_timestamp(doc: dict) -> str:
     on the aggregate pages, where it is a property of the thing being shown.
     """
     latest: datetime | None = None
-    for entry in (doc.get("curation_history") or []):
-        parsed = _as_utc(entry.get("timestamp"))
+    timestamps = [entry.get("timestamp") for entry in (doc.get("curation_history") or [])]
+    timestamps += [entry["session"]["timestamp"] for entry in (sessions or [])]
+    for timestamp in timestamps:
+        parsed = _as_utc(timestamp)
         if parsed is None:
             continue
         if latest is None or parsed > latest:
@@ -404,6 +422,7 @@ def render_pages(args: argparse.Namespace) -> int:
     match_table = load_match_table()
     # One value for every page in the run, derived from the data (#228).
     corpus_stamp = corpus_timestamp(traits)
+    record_sessions = load_record_sessions()
 
     if args.dry_run:
         print(f"[dry-run] {len(traits)} traits; {sum(1 for v in match_table.values() if v['n_kgm_nodes'] > 0)} matched")
@@ -523,7 +542,8 @@ def render_pages(args: argparse.Namespace) -> int:
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
             yaml_raw_url=f"{GH_RAW_BASE}/{yaml_rel}",
             yaml_edit_url=f"{GH_EDIT_BASE}/{yaml_rel}",
-            generated_at=record_timestamp(doc),
+            generated_at=record_timestamp(doc, record_sessions.get(yaml_rel, [])),
+            curation_sessions=record_sessions.get(yaml_rel, []),
             stamp_scope="Record",
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
@@ -542,7 +562,7 @@ def render_pages(args: argparse.Namespace) -> int:
             "definition": doc.get("definition", ""),
             "category": doc.get("trait_category", "OTHER"),
             "kind": doc.get("term_kind", ""),
-            "synonyms": " ".join(str(value) for value in (doc.get("synonyms") or [])),
+            "synonyms": synonym_search_text(doc),
         })
 
     # Render category index pages.

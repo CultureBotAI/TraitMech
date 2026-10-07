@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents hydrogenotrophic C1 reduction and the terminal methyl-coenzyme M reductase reaction, with branch labels for alternative methanogenic substrates; the exemplar is explicitly the McrA component, not the entire complex.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -632,7 +634,6 @@ Conservative candidate grounding includes methane **CHEBI:16183**, carbon dioxid
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -770,8 +771,30 @@ Conservative candidate grounding includes methane **CHEBI:16183**, carbon dioxid
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T09:05:01Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the methanogenesis graph
+            <p>Added three exact public-source bridges for hydrogenotrophic, acetoclastic, and methylotrophic branches. The graph moved from four components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/methanogenesis/2026-08-31T090501Z-codex-078c90.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-14T21:20:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Ground acetoclastic methanogenesis branch
+            <p>Grounded the methanogenesis graph&#39;s acetoclastic_methanogenesis node to the newly minted traitmech:000191 record after confirming the node has the same acetate-using methanogenesis scope.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/methanogenesis/2026-09-14T212000Z-codex-5a2d3f.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-14T21:28:54Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Ground methyl-based methanogenesis branch
+            <p>Grounded the existing methyl_based_methanogenesis causal node to traitmech:000192 after minting the same-scope methyl-substrate methanogenesis TraitRecord.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/methanogenesis/2026-09-14T212854Z-codex-5b73a0.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -865,6 +888,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1156,7 +1186,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-14 21:27 UTC
+      Record as of 2026-09-14 21:28 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

@@ -98,6 +98,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Tan et al. Hailong oligodeoxyadenylate-gated phage-exonuclease-response evidence without asserting one universal ODA-transfer mechanism, phage trigger, HalA ion specificity, ancillary gene architecture, or host-processing factor across all Hailong homologs.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -369,7 +371,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -381,8 +382,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-18T13:30:04Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Hailong system trait
+            <p>Minted traitmech:000242 for the Hailong NTase DNA-signal phage-defense system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior proposal record for Hailong. Added DOI-backed Tan and Kuehn/Pinilla-Redondo evidence, a nonmechanistic causal graph linking a Hailong locus to HalB oligodeoxyadenylate synthesis, HalA repression, phage-exonuclease-triggered HalA activation, and host cell growth arrest, one Escherichia coli canonical example, a v119 METPO proposal, plus a knowledge-gap discussion for Hailong ODA transfer and family breadth before adding narrower Hailong mechanism children.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/hailong_system/2026-09-18T133004Z-codex-780709.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -471,6 +482,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -762,7 +780,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-18 13:27 UTC
+      Record as of 2026-09-18 13:30 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

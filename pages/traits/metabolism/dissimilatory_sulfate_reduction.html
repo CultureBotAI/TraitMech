@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the canonical Sat-Apr-Dsr route and uses explicit DsrA and DsrC components from N. vulgaris Hildenborough. One accession is not treated as denoting the DsrAB-DsrC assembly or the separate DsrMKJOP membrane complex.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -588,7 +590,6 @@ Modern seawater contains about 28 mM sulfate, whereas many freshwater environmen
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -648,8 +649,18 @@ Modern seawater contains about 28 mM sulfate, whereas many freshwater environmen
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T08:25:01Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the dissimilatory sulfate-reduction causal graph
+            <p>Added a public-source, exact-snippet-backed edge linking sulfate as terminal electron acceptor to the named dissimilatory sulfate-reduction trait. The graph moved from two components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/dissimilatory_sulfate_reduction/2026-08-31T082501Z-codex-49e4b5.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -743,6 +754,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

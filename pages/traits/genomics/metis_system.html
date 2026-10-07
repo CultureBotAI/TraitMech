@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Metis as a named m6dAMP-sensing phage-defense system while leaving exact type I and type II locus composition, native host breadth, subtype distribution, effector biochemistry, and DefenseFinder HMM/rules detection criteria unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -356,7 +358,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -374,8 +375,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-30T22:52:54Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Metis system
+            <p>Minted traitmech:000502 for the m6dAMP-sensing Metis system under phage defense system, citing Osterman et al. for phage-mediated host-genome-degradation sensing and type-specific toxic effectors plus the pinned DefenseFinder Metis article-registry row; added a same-PR METPO proposal v379 reserving METPO:1045600.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/metis_system/2026-09-30T225254Z-codex-42bf52.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -464,6 +475,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -755,7 +773,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-30 22:51 UTC
+      Record as of 2026-09-30 22:52 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

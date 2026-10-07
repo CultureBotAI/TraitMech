@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <header>
-  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> {{ category }}</p>
-  <h1>{{ category }} <span class="meta">({{ traits|length }})</span></h1>
+  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> {{ category|replace("_", " ")|title }}</p>
+  <h1>{{ category|replace("_", " ")|title }} <span class="meta">({{ traits|length }})</span></h1>
 </header>
 {% set records = traits %}
 {% include "record_table.html" %}

@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -608,7 +610,6 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -692,8 +693,24 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-01T02:33:38Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Close the gut_associated oxygen loop through colonocyte metabolism
+            <p>Resolves the record&#39;s x-gut-oxygen-causal-direction knowledge gap in favour of its would_support criterion. Added nodes butyrate (CHEBI:17968, CHEMICAL) and colonocyte_oxidative_metabolism (BIOLOGICAL_PROCESS), plus three edges closing the loop against the existing luminal_oxygen_limitation to primary_fermenter_community edge: primary_fermenter_community -[biolink:produces]-&gt; butyrate -[RO:0002213 positively regulates]-&gt; colonocyte_oxidative_metabolism -[RO:0002326 contributes to]-&gt; luminal_oxygen_limitation. Six evidence items across the three edges, every snippet verbatim and verified against the primary source this session, from four studies: DOI:10.1016/j.chom.2016.03.004 (depletion, tributyrin rescue, 17-strain recolonisation), DOI:10.1126/science.aam9949 (PPAR-gamma and beta-oxidation), DOI:10.1016/j.chom.2015.03.005 (independent replication; butyrate raises epithelial oxygen consumption) and DOI:10.1073/pnas.1718635115. That last one is attached as BOUNDING evidence on the closing edge: direct phosphorescent-probe measurement shows bulk centre-lumen pO2 is near-identical in germ-free and conventional mice, so the community does not create bulk anoxia and this edge asserts only a limit on mucosal-to-luminal oxygen flux, which is how the target node is already defined. The return arm is deliberately modelled as host-mediated rather than as direct microbial oxygen consumption. Two things were deliberately NOT done: no abiotic_luminal_oxygen_consumption node was added, and no connectivity-only edge was invented to attach this component to gut_associated_trait, since no source supports one and issue 183 warns explicitly against edges added to satisfy a check. The graph therefore still has three components; that fragmentation is invisible to audit-graphs because the graph is NONMECHANISTIC, which is issue 613. Also set the discussion to RESOLVED with resolved_date 2026-08-31 and a resolution_note recording both bounds. Written through write_validated_trait with CONNECT_CAUSAL_GRAPH and RESOLVE_DISCUSSION events. Gates: validate-strict 0 errors, audit-predicate-domains 0 findings, audit-snippets 2592 all baselined with 0 new, audit-graphs 0 new.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gut_associated/2026-09-01T023338Z-claude-code-d63e1b.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-02T05:09:16Z</time>
+           · claude-code
+          <ul><li><strong>REVIEW</strong> — Correct two fabricated or elided snippets and one overstated note found reviewing PR 618
+            <p>Adversarial review of my own PR 618 before merge, correcting three defects. Issue 619 (critical): the DOI:10.1073/pnas.1718635115 snippet was a PARAPHRASE presented as a verbatim quote; the sentence it claimed does not exist in the source. Replaced with the real abstract sentence retrieved from the Europe PMC REST API, and verified as an exact substring. Issue 620: the DOI:10.1016/j.chom.2016.03.004 snippet on the fermenter-to-butyrate edge silently dropped the statistic (P &lt; 0.05) from mid-quote; restored to the contiguous source text and confirmed against the PMC full text. Issue 621: the notes on the Friedman evidence asserted that the microbiota is NOT responsible for bulk centre-lumen anoxia, which is a stronger negative than the source supports; the paper concludes that both the microbes and the oxidative chemical reactions regulate luminal oxygen levels and credits microbial biomass with the proximal-to-distal gradient, so the note now bounds SOLE causation rather than denying a microbial contribution. No causal claim, edge, node or predicate changed. Root cause recorded in issue 623: the snippets were obtained through a summarising fetch layer that paraphrases and silently drops markup, and audit_evidence_snippets.py checks snippet SHAPE only, so all three defects passed it cleanly. Verification now uses the Europe PMC REST API. Gates after correction: qc 0, validate-strict 0 errors, audit-snippets 2592 all baselined with 0 new.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gut_associated/2026-09-02T050916Z-claude-code-3d5b85.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -787,6 +804,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1078,7 +1102,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-02 05:05 UTC
+      Record as of 2026-09-02 05:09 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

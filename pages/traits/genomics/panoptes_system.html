@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph captures OptS/OptE/Acb2 coupling from Sullivan et al. while leaving cyclic-dinucleotide identity, anti-defense breadth, phage breadth, and OptE oligomerization unspecified for untested optSE homologs.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -611,7 +613,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -641,8 +642,36 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T09:24:23Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added Panoptes system trait
+            <p>Minted traitmech:000407 for the DOI-backed Panoptes optSE phage-defense system under phage defense system, added the v284 METPO placeholder proposal, rendered the Panoptes page, and left canonical_examples empty pending a native endogenous microbial isolate assay.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panoptes_system/2026-09-27T092423Z-codex-a1d5bb.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-27T12:16:13Z</time>
+           · claude-code
+          <ul><li><strong>REVIEW</strong> — Reviewed Panoptes canonical example evidence
+            <p>Follow-up to session 2026-09-27T092423Z-codex-a1d5bb: reviewed the Vibrio navarrensis canonical-example evidence gap, retained the species as the VnOptSE source exemplar, documented that the native chromosomal Panoptes validation gap remains open, and appended REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP to the TraitRecord curation history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panoptes_system/2026-09-27T121613Z-claude-code-22e975.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-27T12:16:14Z</time>
+           · claude-code
+          <ul><li><strong>REVIEW</strong> — Verified Panoptes protein groundings
+            <p>Follow-up to session 2026-09-27T092423Z-codex-a1d5bb: verified UniProtKB:A0A099LXT1 and UniProtKB:A0A099LW44 against the UniProt audit, confirmed their UP000029994 Vibrio navarrensis metadata and InterPro cross-references, regenerated reports/uniprot_grounding_audit.tsv with both Panoptes rows, and appended VERIFY_PANOPTES_PROTEIN_GROUNDINGS to the TraitRecord curation history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panoptes_system/2026-09-27T121614Z-claude-code-2e0431.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-27T12:16:15Z</time>
+           · claude-code
+          <ul><li><strong>REVIEW</strong> — Documented Panoptes InterPro scope
+            <p>Follow-up to session 2026-09-27T092423Z-codex-a1d5bb: documented the scope of InterPro:IPR040942 and InterPro:IPR041208 on the Panoptes OptS and OptE nodes with grounding_notes, recorded that IPR040942 is broader than an OptS-only family, and appended DOCUMENT_PANOPTES_INTERPRO_SCOPE to the TraitRecord curation history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/panoptes_system/2026-09-27T121615Z-claude-code-c62076.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -731,6 +760,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1022,7 +1058,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-27 11:59 UTC
+      Record as of 2026-09-27 12:16 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

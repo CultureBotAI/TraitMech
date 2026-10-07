@@ -74,6 +74,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures RAZR as a named phage-defense RNase activated by phage protein ring scaffolds while leaving natural hosts, the complete phage-trigger set, exact RNA-substrate preference, and profile-to-component DefenseFinder modeling unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -342,7 +344,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -354,8 +355,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T15:45:19Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added RAZR system
+            <p>Minted traitmech:000411 for the RAZR system genomics trait, backed it with DOI evidence from Zhang et al. and the pinned DefenseFinder article registry, added a nonmechanistic RAZR ring-activated RNase graph, recorded the unresolved natural-host, phage-trigger, RNA-substrate, and DefenseFinder model-coverage gaps, and reserved METPO:1036500 in proposals/metpo_traitmech_v288.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/razr_system/2026-09-27T154519Z-codex-b2f734.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -444,6 +455,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

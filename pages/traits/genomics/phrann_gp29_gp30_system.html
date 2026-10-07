@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Phrann gp29-gp30 as a named anti-phage system with DefenseFinder gp29 and gp30 profiles while leaving the direct lytic trigger, Phrann gp30 regulatory role, and exact (p)ppGpp-linked arrest mechanism unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -305,7 +307,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -329,8 +330,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-19T23:37:58Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Phrann gp29-gp30 system genomics trait
+            <p>Minted traitmech:000296 for Phrann gp29-gp30 system as a DOI-backed GENOMICS phage-defense-system possession trait, reserved METPO:1025000 in proposals/metpo_traitmech_v173 for upstream migration, and carried the pinned DefenseFinder gp29 and gp30 HMM profile rows plus the gp29-gp30 rules row as related profile evidence rather than individual gene, protein, prophage, or HMM traits.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/phrann_gp29_gp30_system/2026-09-19T233758Z-codex-ab63b6.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -419,6 +430,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

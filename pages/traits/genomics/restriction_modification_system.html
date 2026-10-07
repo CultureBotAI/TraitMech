@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The HindII accession anchors the type II restriction-endonuclease branch in H. influenzae Rd. It is not presented as an example of the cognate methyltransferase, type IV enzymes, or mobile-element counterdefense proteins.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -528,7 +530,6 @@ Type II systems are especially clear examples: an REase cuts double-stranded DNA
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -588,8 +589,24 @@ Type II systems are especially clear examples: an REase cuts double-stranded DNA
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T05:48:09Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Scoped the restriction-modification causal graph
+            <p>Removed the isolated Type IV modification-dependent restriction branch because the tracked report distinguishes it from the graph&#39;s canonical Types I-III self/non-self mechanism; graph moved from two components to one without inventing a connector. No research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/restriction_modification_system/2026-08-31T054809Z-codex-034225.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-15T07:49:28Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reparent R-M under phage defense
+            <p>Reparented the reviewed restriction-modification system record from the broad genomics root to the newly minted phage defense system parent so it sits under an exact antiviral genome-defense superclass.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/restriction_modification_system/2026-09-15T074928Z-codex-0a1cbc.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -683,6 +700,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

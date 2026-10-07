@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved proteostasis output of the heat-shock response without making the E. coli sigma-32 branch, B. subtilis HrcA/CtsR branches, or other lineage-specific heat-shock regulators universal.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -436,7 +438,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -448,8 +449,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T04:55:16Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add heat shock response trait
+            <p>Minted traitmech:000205 heat shock response as a DOI-backed physiology TraitRecord under stress response, with evidence from Schumann 2016 and Guisbert et al. 2008, Escherichia coli and Bacillus subtilis canonical examples, a conserved proteostasis causal graph, an xref-gap discussion, and the companion metpo_traitmech_v82 ROBOT proposal reserving METPO:1015900.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/heat_shock_response/2026-09-15T045516Z-codex-99d094.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -538,6 +549,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

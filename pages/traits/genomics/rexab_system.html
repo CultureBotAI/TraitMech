@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures RexAB as a named DefenseFinder two-profile abortive-infection system whose lambda prototype aborts lytic growth. It leaves the direct phage trigger, RexA/RexB molecular coupling, ion-channel activity, self-exclusion control, and phage escape routes unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -270,7 +272,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -288,8 +289,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T02:18:00Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add RexAB system trait
+            <p>Added traitmech:000324 RexAB system as a DOI-backed GENOMICS TraitRecord under abortive infection system after an ignored-and-hidden duplicate review found no exact same-scope live record, METPO class, history record, or prior proposal. Parma et al. support bacteriophage-lambda rexA and rexB as a two-component system that aborts lytic growth of bacterial viruses, and the pinned DefenseFinder article, rules, and HMM registries map RexAB to required RexAB__RexA and RexAB__RexB profiles. Reserved METPO:1027800 in proposals/metpo_traitmech_v201 for the upstream replacement class.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/rexab_system/2026-09-21T021800Z-codex-7a77c9.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -378,6 +389,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -669,7 +687,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 02:17 UTC
+      Record as of 2026-09-21 02:18 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

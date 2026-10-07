@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -554,7 +556,6 @@ The latest strong mechanistic study is Xing et al. (published 5 April 2024). *Na
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -614,8 +615,18 @@ The latest strong mechanistic study is Xing et al. (published 5 April 2024). *Na
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-26T10:44:05Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the NaCl-delta-high osmoadaptation graph
+            <p>Added five source-supported edges among existing process and quality nodes, joining the graph&#39;s six components while preserving the quantitative boundary: the record denotes a measured NaCl growth breadth above approximately 8% w/v, and generic salt mechanisms do not themselves establish that breadth. Genes and operons remain eligible only as supporting YAML fields and were not promoted to primary entries.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/nacl_delta_high/2026-08-26T104405Z-codex-cab03f4.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -709,6 +720,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

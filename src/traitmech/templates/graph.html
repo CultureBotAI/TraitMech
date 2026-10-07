@@ -12,11 +12,13 @@
 
 <section class="umap-controls">
   <label>Search
-    <input type="search" id="search-input" placeholder="label or CURIE…">
+    <input type="search" id="search-input" disabled placeholder="label or CURIE…">
   </label>
-  <span class="meta" id="visible-count">{{ n_points }} visible</span>
+  <span class="meta" id="visible-count">Loading…</span>
 </section>
 
+<p id="map-status" role="status">Loading map data…</p>
+<button id="map-retry" type="button" hidden>Retry loading map</button>
 <div id="umap-plot"></div>
 <div id="umap-tooltip" class="umap-tooltip"></div>
 
@@ -24,7 +26,7 @@
 
 <details class="data-table-details">
   <summary>View data as table</summary>
-  <div class="data-table-actions"><a id="csv-download" href="#" download="trait_graph.csv">Download CSV</a></div>
+  <div class="data-table-actions"><a id="csv-download" hidden download="trait_graph.csv">Download CSV</a></div>
   <div class="data-table-scroll">
     <table class="data-table" id="data-table">
       <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Layout x</th><th>Layout y</th></tr></thead>
@@ -38,9 +40,20 @@
 const HREF_BY_ID = {{ href_by_id | safe }};  // id -> authoritative page href (built by renderer)
 const GRAPH_EDGES = {{ graph_edges | safe }};
 
-fetch("{{ data_url }}")
-  .then(r => r.json())
+let loading = false;
+function loadMap() {
+  if (loading) return;
+  loading = true;
+  document.getElementById("map-retry").hidden = true;
+  document.getElementById("map-status").textContent = "Loading map data…";
+  document.getElementById("visible-count").textContent = "Loading…";
+  return fetch("{{ data_url }}")
+  .then(r => { if (!r.ok) throw new Error("Map request failed"); return r.json(); })
   .then(points => {
+    if (!Array.isArray(points) || points.some(p => !p || typeof p.id !== "string" ||
+        !Number.isFinite(p.umap_x) || !Number.isFinite(p.umap_y))) {
+      throw new Error("Invalid map data");
+    }
     const W = Math.min(1100, window.innerWidth - 40);
     const H = 640;
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
@@ -165,7 +178,7 @@ fetch("{{ data_url }}")
       const fc = document.getElementById("facet-count");
       if (fc) fc.textContent = points.filter(d => activeCategories.has(facetCat(d))).length.toLocaleString();
     }
-    document.getElementById("search-input").addEventListener("input", update);
+    document.getElementById("search-input").oninput = update;
     buildFacets();
     update();
 
@@ -196,6 +209,24 @@ fetch("{{ data_url }}")
       if (link) link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
     }
     buildDataTable();
-  });
+    document.getElementById("search-input").disabled = false;
+    document.getElementById("csv-download").hidden = false;
+    document.getElementById("map-status").textContent = points.length + " records loaded.";
+  }).catch(() => {
+    document.getElementById("umap-plot").replaceChildren();
+    document.getElementById("facet-panel").replaceChildren();
+    document.querySelector("#data-table tbody").replaceChildren();
+    document.getElementById("visible-count").textContent = "Unavailable";
+    document.getElementById("map-status").textContent =
+      "Map data could not be loaded. Retry, or use Browse to read the trait records.";
+    document.getElementById("map-retry").hidden = false;
+    document.getElementById("search-input").disabled = true;
+    const download = document.getElementById("csv-download");
+    download.hidden = true;
+    download.removeAttribute("href");
+  }).finally(() => { loading = false; });
+}
+document.getElementById("map-retry").addEventListener("click", loadMap);
+loadMap();
 </script>
 {% endblock %}

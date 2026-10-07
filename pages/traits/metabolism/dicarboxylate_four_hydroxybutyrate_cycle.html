@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph represents the experimentally reconstructed I. hospitalis DC/4HB cycle. The Igni_0341 PEP-carboxylase example supports one of its two carbon-fixing reactions; its recombinant protein was insoluble, so the source treats gene identity as unambiguous but does not report purified-enzyme activity for that locus.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -598,7 +600,6 @@ High-priority enzyme nodes are:
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -682,8 +683,18 @@ High-priority enzyme nodes are:
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T08:25:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the DC/4HB causal graph
+            <p>Added a public-source, exact-snippet-backed edge from PEP carboxylase to the DC/4HB trait, reflecting its role as one of the cycle&#39;s two carboxylating enzymes. The graph moved from two components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/dicarboxylate_four_hydroxybutyrate_cycle/2026-08-31T082500Z-codex-575bd4.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -777,6 +788,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1068,7 +1086,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 08:20 UTC
+      Record as of 2026-08-31 08:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

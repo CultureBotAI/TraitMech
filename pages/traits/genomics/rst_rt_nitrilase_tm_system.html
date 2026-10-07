@@ -118,6 +118,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Rst_RT-nitrilase-Tm as a named DefenseFinder two-profile phage-defense system while leaving native host breadth, the exact Rst_RT-nitrilase-Tm-to-Rst_RT-Tm naming relationship, RT and RT-Tm molecular roles, the relationship to UG5-large systems, and the mechanism of AL505_P2 restriction unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -382,7 +384,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -400,8 +401,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-27T06:37:52Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Rst_RT-nitrilase-Tm system trait
+            <p>Minted traitmech:000403 for the DefenseFinder Rst_RT-nitrilase-Tm phage-defense system, reserved METPO:1035700 in proposals/metpo_traitmech_v280, and curated DOI/stable-URL evidence from Rousset et al., the pinned DefenseFinder wiki, and pinned DefenseFinder registry rows for the Rst_RT-Tm profiles.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/rst_rt_nitrilase_tm_system/2026-09-27T063752Z-codex-63f27e.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -490,6 +501,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -781,7 +799,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-27 06:35 UTC
+      Record as of 2026-09-27 06:37 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

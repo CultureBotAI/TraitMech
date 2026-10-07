@@ -80,6 +80,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the shared system-level CBASS logic of phage-triggered cyclic oligonucleotide synthesis and effector activation across multiple effector subtypes. The subtype-specific protein families carry the exact mechanistic edges and remain shifted from this first organism-level trait.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -330,7 +332,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -342,8 +343,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T10:06:02Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add CBASS system trait
+            <p>Added traitmech:000212 for CBASS system with DOI-backed Cohen and Millman evidence, an Escherichia coli TW11681 canonical example, a cyclic-oligonucleotide antiphage-defense causal graph without premature subtype-specific protein grounding, and an upstream placeholder reserved in proposals/metpo_traitmech_v89.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cbass_system/2026-09-15T100602Z-codex-820552.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -432,6 +443,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

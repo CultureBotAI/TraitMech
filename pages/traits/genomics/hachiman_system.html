@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures characterized type I-A and type I-B Hachiman nuclease-helicase outputs without asserting one universal DNA-damage trigger, DNA substrate, active nuclease domain, HamC accessory role, Cap4 architecture, phage breadth, or abortive-infection pathway across all Hachiman loci.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -354,7 +356,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -378,8 +379,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T14:50:54Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Hachiman system trait
+            <p>Minted traitmech:000219 for the DOI-backed Hachiman antiphage system with Tuck and Cui evidence, an Escherichia coli canonical example, a nonmechanistic HamAB DNA-cleavage graph, an open subtype-and-trigger knowledge gap, and an upstream METPO v96 placeholder reservation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/hachiman_system/2026-09-15T145054Z-codex-da4285.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T18:12:06Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Separate Hachiman family identity from type-I mechanism
+            <p>Addressed #1630 through the validated add_hachiman_type_ii_system_trait.py writer: removed the unsupported universal DNA-cleavage requirement, restricted the existing locus node description to the graph type-I scope, and linked HamABC child traitmech:000574 while keeping mechanism questions open. Preserved evidence, examples, graph edges and stable local identifier. Proposal v451 replaces v96 family semantics with a fresh placeholder; the v96 TSV remains historical.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/hachiman_system/2026-10-03T181206Z-codex-6a024b.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T18:41:10Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Link the accepted Hachiman type-I architecture class
+            <p>Through the validated add_hachiman_type_i_system_trait.py writer, appended the traitmech:000575 resolution to the existing discovery discussion and retained its OPEN status for subtype mechanism questions. Preserved definition, hierarchy, evidence, canonical examples and source-qualified I-A/I-B graph. Component absence follows the cited classification, not a failed detector hit.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/hachiman_system/2026-10-03T184110Z-codex-22ffa1.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -468,6 +491,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -759,7 +789,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 18:37 UTC
+      Record as of 2026-10-03 18:41 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

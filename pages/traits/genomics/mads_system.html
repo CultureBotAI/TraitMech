@@ -146,6 +146,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures MADS as a named eight-gene DefenseFinder profile set whose activity is associated with methylation and DNA restriction while leaving the exact mapping from the MADS__mad profiles to nuclease, ATPase, kinase, specificity, and methyltransferase activities unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -480,7 +482,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -492,8 +493,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-25T03:36:01Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Added MADS system phage-defense TraitRecord
+            <p>Created traitmech:000370 for the MADS methylation-associated phage-defense system, backed it with the Maestri final and preprint DOIs plus the pinned DefenseFinder article-registry, rule, and HMM URLs, reserved METPO:1032400 in proposals/metpo_traitmech_v247, added a canonical Pseudomonas aeruginosa example, and recorded the MADS subtype/profile activity boundary as a knowledge gap.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/mads_system/2026-09-25T033601Z-codex-8c6a84.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -582,6 +593,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

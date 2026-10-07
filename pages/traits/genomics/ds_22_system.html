@@ -110,6 +110,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures DS-22 as the validated MVB1 transcriptional unit with one product accession and one DefenseFinder DS-22 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, DS-22 molecular activity, trigger, substrate, low-confidence HHpred-domain interpretations, complete phage breadth, or DefenseFinder rule-level detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -395,7 +397,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -431,8 +432,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T23:30:13Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add DS-22 system trait
+            <p>Minted traitmech:000447 as a DS-22 system GENOMICS record under phage defense system, backed by DeWeirdt et al. DOI evidence, final Science Tables S6/S7/S8 OpenData rows for MVB1, and the pinned DefenseFinder DS-22 article/HMM registries. The record keeps MVB1 and DS-22__DS-22 as related source/profile labels, uses a nonmechanistic graph for reduced bacteriophage plaquing, leaves native-host, molecular-output, HHpred-domain, and DefenseFinder rules gaps open, and reserves METPO:1040100 in proposals/metpo_traitmech_v324.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_22_system/2026-09-28T233013Z-codex-22ds22.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-29T00:35:51Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Record DS-22 post-review fixes
+            <p>Recorded the PR #1418 post-review fixes after the initial DS-22 CREATE history record history/records/ds_22_system/2026-09-28T233013Z-codex-22ds22.yaml: #1419 added exact final Table S8 HHpred rows for the low-probability MVB1 Mvb12 and JAB hits, #1420 aligned the DS-22 exact-synonym source with adjacent DS records, and #1421 split the two HHpred rows into separate evidence items so each snippet quotes one source row. The TraitRecord curation_history carries the matching UPDATED_EVIDENCE and UPDATED_SYNONYM_SOURCE events, and the DS-22 page and discussions browser data were regenerated.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ds_22_system/2026-09-29T003551Z-codex-f94ebf.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -521,6 +538,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -812,7 +836,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-29 00:23 UTC
+      Record as of 2026-09-29 00:35 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

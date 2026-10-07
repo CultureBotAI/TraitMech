@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph represents the experimentally characterized S. marcescens chitinolytic system. ChiA and CBP21 examples support complementary hydrolytic and oxidative branches, respectively.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -542,7 +544,6 @@ A concise set of the strongest candidate triples is shown below.
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -620,8 +621,18 @@ A concise set of the strongest candidate triples is shown below.
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-26T09:03:02Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connect the chitinolysis hydrolytic core
+            <p>Verified the tracked research against the current graph and the publisher-hosted foundational review. Added two verbatim-snippet-backed chitinase-to-chitin substrate edges, connecting the generic hydrolytic core and exochitinase branch to the LPMO/chitin branch. The graph moves from three components to one without treating downstream product utilization as evidence of primary chitinolysis and without creating gene or operon primary records.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/chitinolysis/2026-08-26T090302Z-codex-740650.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -715,6 +726,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1006,7 +1024,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 09:02 UTC
+      Record as of 2026-08-26 09:03 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

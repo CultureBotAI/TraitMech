@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -465,7 +467,6 @@ Bacteria can tolerate external pH values outside the narrower cytoplasmic range 
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -603,8 +604,30 @@ Bacteria can tolerate external pH values outside the narrower cytoplasmic range 
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T01:40:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Review ph_delta_mid3 causal evidence
+            <p>Reviewed data/traits/environment/ph_delta_mid3.yaml for issue 183. Added source-checked snippets to eight edge-level evidence items, replaced four ungrounded pH-homeostasis predicates with grounded RO:0002211, RO:0002326, or biolink:produces predicates, and kept the graph NONMECHANISTIC because the record is a pH-breadth bin rather than a taxon-specific molecular mechanism. Validated via the write-time LinkML gate in scripts/review_ph_delta_mid3_graph_183.py.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid3/2026-09-04T014000Z-codex-398efe.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-04T16:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected pH-delta-mid3 causal-graph components
+            <p>Resolved issue #183 graph fragmentation in data/traits/environment/ph_delta_mid3.yaml. Added 5 source- and verbatim-snippet-backed association connectors to collapse the reviewed nonmechanistic graph from 6 components to 1 while keeping PMF generation, PMF regulation, alkaline Na+/H+ antiport, ATPase, phosphate-buffering, amino-acid decarboxylation, and membrane proton-permeability branches scoped as support for a 4-5 pH-unit growth breadth. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid3/2026-09-04T160000Z-codex-183.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-08T03:30:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Correct ph_delta_mid3 component provenance
+            <p>Appended corrective issue-183 provenance after PR #664 adversarial review issue #702 identified a stale 6 components to 1 claim. The unsupported pH-breadth hub connectors have been pruned, so this NONMECHANISTIC graph intentionally ships with 6 disconnected components pending independently supported pH-specific connectors. Validated with scripts/repair_pr664_adversarial_review.py and LinkML write-time validation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/ph_delta_mid3/2026-09-08T033000Z-codex-b36abc.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -698,6 +721,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

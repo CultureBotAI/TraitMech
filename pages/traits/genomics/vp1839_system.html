@@ -117,6 +117,8 @@ Vibrio parahaemolyticus	1	5e-113	100	ARC19797.1</blockquote>
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures VP1839 as a RIMD 2210633 integron cassette with cloned phage-plating readouts, a PSI-BLAST homolog lead, one pinned DefenseFinder custom HMM-profile row, and no pinned DefenseFinder rule row. It does not assert native host breadth, exact profile-to-protein correspondence, molecular activity, phage trigger, substrate, complete homolog boundary, endogenous activity, or rule-level DefenseFinder detection criteria.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -436,7 +438,6 @@ Vibrio parahaemolyticus	1	5e-113	100	ARC19797.1</blockquote>
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -454,8 +455,18 @@ Vibrio parahaemolyticus	1	5e-113	100	ARC19797.1</blockquote>
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-30T10:38:27Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add VP1839 system trait
+            <p>Added a DOI-backed VP1839 system GENOMICS TraitRecord under phage defense system with Springer supplementary-table snippets for the VSV105-vp1839 cloned integron cassette and phage-plating evidence, a VP1839 PSI-BLAST worksheet snippet, pinned DefenseFinder article and HMM evidence, an open DefenseFinder model-gap discussion, and a one-row METPO proposal reserving METPO:1044300 for the local traitmech:000489 fallback.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/vp1839_system/2026-09-30T103827Z-codex-c63b14.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -544,6 +555,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -835,7 +853,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-30 10:36 UTC
+      Record as of 2026-09-30 10:38 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures characterized Type I ZorC/ZorD and Type II ZorE outputs without asserting one universal ZorAB-coupled effector, ion substrate, DNA target, cell-death pathway, Type III mechanism, or anti-Zorya-evasion mechanism across all Zorya loci.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -361,7 +363,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -391,8 +392,36 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T13:47:45Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add Zorya system trait
+            <p>Minted traitmech:000217 for the DOI-backed Zorya system under phage defense system with Hu and Mariano evidence, an Escherichia coli canonical example, a nonmechanistic ZorAB/effector antiphage graph, an open subtype-effector knowledge gap, and an upstream METPO v94 placeholder reservation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/zorya_system/2026-09-15T134745Z-codex-bd2a11.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-02T18:08:03Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Track Zorya type II split
+            <p>Documented traitmech:000552 Zorya type II system in the open Zorya subtype-effector discussion after minting the DefenseFinder-backed Zorya_TypeII child. Type I, Type III, and finer Zorya subtype mechanisms remain open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/zorya_system/2026-10-02T180803Z-codex-2056b6.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-02T20:14:02Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Track Zorya type I split
+            <p>Documented traitmech:000554 Zorya type I system in the open Zorya subtype-effector discussion after minting the DefenseFinder-backed Zorya_TypeI child. Type III and finer Zorya subtype mechanisms remain open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/zorya_system/2026-10-02T201402Z-claude-code-87e434.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T19:14:55Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Link accepted Zorya type III architecture
+            <p>Appended the accepted traitmech:000576 ZorA/B/F/G class to the existing open subtype discussion using DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57397-2. Recorded the source component discrepancy and incomplete detector-call caveat. Preserved family identity, definition, hierarchy, evidence, canonical example and graph; type-III biochemical questions remain open. The guarded writer uses preimage hashes, validated writes and provenance events; controlled-fixture tests passed.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/zorya_system/2026-10-03T191455Z-codex-fcc021.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -481,6 +510,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

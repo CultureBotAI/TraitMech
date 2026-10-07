@@ -92,6 +92,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures SspABCD-SspE restriction at the system level without asserting one universal host taxon, PT frequency, DNA motif outside 5&#39;-CPSCA-3&#39;-characterized systems, full SspE conformational cycle, or relationship to SspFGH and archaeal PT antiviral systems.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -336,7 +338,6 @@
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -348,8 +349,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-15T16:38:07Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add SspABCD-SspE system trait
+            <p>Minted traitmech:000222 for the DOI-backed SspABCD-SspE phosphorothioate restriction system with Xiong, Gao, and Jiang evidence, a Vibrio cyclitrophicus canonical example, a nonmechanistic SspE PT-site-dependent DNA-nicking graph, and an upstream METPO v99 placeholder reservation.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/sspabcd_sspe_system/2026-09-15T163807Z-codex-6ef44c.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -438,6 +449,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

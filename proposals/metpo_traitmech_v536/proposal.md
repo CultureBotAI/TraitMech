@@ -137,6 +137,22 @@ supports idempotent replay. Curation is LLM-assisted; history is append-only.
 
 ## Verification
 
+After initial validation, website PR #1733 advanced main to
+`cc362b6b773f8e6b7c5368838b008222d03bae30`. It changed rendering and browser
+behavior, not trait data, history, proposal allocation or the new writer.
+The branch incorporates that main commit; two generated browse/category
+conflicts are resolved by regeneration with the new renderer, never by
+discarding either side. Final artifact comparisons use that updated base.
+The updated renderer also displays both the original history session and
+its append-only actor correction. The post-integration validation receipt
+supersedes the earlier head/tree receipt on the PR.
+Integration-focused writer/site/browser tests passed all 28 tests. Fresh
+artifact comparisons against the updated base reproduce the unchanged-YAML,
+historical-template, footer-only and phenotype-child-count results below.
+Desktop/mobile browser checks also verify the two rendered history links,
+the correction text and search/navigation for `traitmech:000660`; the
+correction section was visually inspected at both viewport widths.
+
 The writer dry run, guarded application/replay and 20 focused writer tests
 passed. The combined writer/README/priority/dashboard run passed 65 tests.
 `just qc` and Ruff passed, with no new blocking corpus audit findings.
@@ -192,3 +208,5 @@ OPEN until their evidence and mapping questions are resolved.
   checked source snippets and a provenance-qualified strain 1980 example.
 - Address #1776 with append-only actor-attribution correction and a focused
   add-trait skill warning.
+- Integrate main's #1733 website fixes and regenerate from its updated
+  renderer while preserving the trait data and both history records.

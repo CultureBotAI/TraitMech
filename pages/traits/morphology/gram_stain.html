@@ -62,6 +62,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record describes a differential staining assay and envelope-level classification, for which one inherited protein example would be misleading.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -478,7 +480,6 @@ Crystal violet enters both conventionally Gram-positive and Gram-negative cells.
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -544,8 +545,18 @@ Crystal violet enters both conventionally Gram-positive and Gram-negative cells.
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-04T06:00:00Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Reviewed gram_stain causal evidence
+            <p>Reviewed data/traits/morphology/gram_stain.yaml for issue #183. Added exact public snippets to assay-chemistry and retention evidence, replaced residual predicates in the gram_stain_cell_envelope_retention graph, connected the crystal-violet and iodine chemistry to dye-complex retention, and preserved the record as a nonmechanistic Gram-stain assay classification. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gram_stain/2026-09-04T060000Z-codex-928ff5.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -639,6 +650,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });

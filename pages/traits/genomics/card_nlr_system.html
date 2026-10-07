@@ -134,6 +134,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures CARD-NLR as a named DefenseFinder model namespace supported by Wein et al. CARD-like domain anti-phage defense evidence while leaving subtype-specific phage triggers, the effector activation sequence, GasderMIN-associated subtype boundaries, and endonuclease, Trypsin_Phospho, or Subtilase outputs unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -414,7 +416,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -444,8 +445,36 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-21T13:50:32Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add CARD-NLR phage-defense trait
+            <p>Minted traitmech:000337 for the DOI- and stable-URL-backed CARD-NLR bacterial phage-defense system under the phage defense system parent, added Wein et al. CARD-like anti-phage defense evidence from DOI:10.1101/2023.05.28.542683 and a stable Europe PMC abstract page, added pinned DefenseFinder registry/profile/rules evidence for CARD_NLR subtypes, and recorded a knowledge gap for CARD-NLR subtype triggers, effectors, and natural-host examples.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/card_nlr_system/2026-09-21T135032Z-codex-e14c05.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-02T19:23:14Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Track CARD-NLR subtilase split
+            <p>Documented traitmech:000553 CARD-NLR subtilase system in the open CARD-NLR subtype-mechanism discussion after minting the DefenseFinder-backed CARD_NLR_Subtilase child. CARD_NLR_GasderMIN, CARD_NLR_like, CARD_NLR_Subtilase_long_new HMM inventory coverage, exact subtilase substrates, and finer activation mechanisms remain open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/card_nlr_system/2026-10-02T192314Z-codex-a674fe.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-02T21:05:04Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Track CARD-NLR GasderMIN split
+            <p>Documented traitmech:000555 CARD-NLR GasderMIN system in the open CARD-NLR subtype-mechanism discussion after minting the DefenseFinder-backed CARD_NLR_GasderMIN child. CARD_NLR_like, exact phage triggers, standalone GasderMIN versus CARD_NLR_GasderMIN mechanism boundaries, CARD_NLR_Subtilase_long_new HMM inventory coverage, native-host components, and finer activation mechanisms remain open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/card_nlr_system/2026-10-02T210504Z-claude-code-da12ab.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-03T00:04:45Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Track CARD-NLR-like split
+            <p>Documented traitmech:000559 CARD-NLR-like system in the open CARD-NLR subtype-mechanism discussion after minting the DefenseFinder-backed CARD_NLR_like child. Exact phage triggers, CARD-to-effector activation, natural-host components, CARD_NLR__Subtilase_long_new HMM inventory coverage, two-of-four effector-profile semantics, and finer activation mechanisms remain open.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/card_nlr_system/2026-10-03T000445Z-codex-b7017f.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -534,6 +563,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -825,7 +861,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-03 00:02 UTC
+      Record as of 2026-10-03 00:04 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

@@ -222,7 +222,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -234,8 +233,24 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-07T06:49:56Z</time>
+           · claude-code
+          <ul><li><strong>CREATE</strong> — Add fungal sclerotium formation with explicit identity and developmental scope
+            <p>Added traitmech:000660, a PROPOSED MORPHOLOGY phenotype under METPO:1000059, with five directly checked source snippets and a provenance-qualified wild-type strain 1980 example. Ignored-and-hidden duplicate searches distinguish three deprecated bare sclerotia labels from the new organismal phenotype; legacy identity and GO process mapping remain unresolved. Reserved METPO:1061300 in proposal v536. Formation, maturation, count versus mass and functional readouts are distinguished; no causal graph, xrefs or exact synonyms are asserted. Twenty focused writer tests and dry-run validation passed before application; broader generated-artifact, corpus and online checks follow in the PR receipt. Existing trait records are unchanged.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_sclerotium_formation/2026-10-07T064956Z-claude-code-77563e.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-07T06:51:39Z</time>
+           · codex
+          <ul><li><strong>AUDIT</strong> — Correct session actor attribution without rewriting history
+            <p>Correction to history/records/fungal_sclerotium_formation/2026-10-07T064956Z-claude-code-77563e.yaml: the actual curation actor was codex, using model gpt-5 and agent_tool codex, not the scaffolder default claude-code recorded in session.actors.name. The original append-only record is preserved. No TraitRecord content changes in this audit. The add-trait skill now warns that --model and --agent-tool do not override --actor-name and requires inspecting the emitted session actors. README morphology prose is reconciled with the live 14 PROPOSED morphology records. Tracked by issue #1776.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_sclerotium_formation/2026-10-07T065139Z-codex-f97994.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -287,7 +302,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-07 06:42 UTC
+      Record as of 2026-10-07 06:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

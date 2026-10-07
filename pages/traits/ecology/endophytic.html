@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad plant-host habitat trait spans bacteria, archaea, fungi, and protists and does not assert one universal molecular colonization mechanism.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -187,7 +189,6 @@
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -205,8 +206,18 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-28T19:39:53Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add endophytic trait
+            <p>Minted traitmech:000442 for the DOI-backed endophytic plant-host residence trait under host-associated, added a conservative internal-plant-colonization graph, left canonical examples empty after first-pass review, and reserved METPO:1039600 in proposals/metpo_traitmech_v319.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/endophytic/2026-09-28T193953Z-codex-532a66.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -295,6 +306,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -586,7 +604,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 19:37 UTC
+      Record as of 2026-09-28 19:39 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

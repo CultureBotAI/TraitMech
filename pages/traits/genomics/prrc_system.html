@@ -104,6 +104,8 @@
       <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures PrrC as a named DefenseFinder two-profile phage-exclusion system while leaving natural homolog substrate specificity, the exact EcoprrI accessory composition and profile matching, the phage trigger logic, and PrrC profile-to-activity mapping unresolved.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -327,7 +329,6 @@
     </div>
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -351,8 +352,30 @@
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-09-22T11:27:08Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add PrrC phage-exclusion system trait
+            <p>Added traitmech:000364 for the DefenseFinder PrrC two-profile phage-exclusion system, reserved METPO:1031800 in proposals/metpo_traitmech_v241, recorded Uzan and Blanga-Kanfi literature plus pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap discussion for unresolved natural homolog substrates, exact EcoprrI accessory composition, phage trigger logic, and PrrC profile-to-activity mapping.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/prrc_system/2026-09-22T112708Z-codex-6f8966.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-22T11:40:54Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Record PrrC canonical-example evidence gap
+            <p>Addressed issue #1247 by adding a REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP curation-history event to the PrrC system record and its guarded writer. The review left canonical_examples empty because the current Uzan, Blanga-Kanfi, and pinned DefenseFinder sources support a named PrrC phage-exclusion system and EcoprrI-linked PrrC homologs, but do not cite a directly observed natural microbial taxon with a source-backed PrrC locus; no paid research was used.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/prrc_system/2026-09-22T114054Z-claude-code-8d1659.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-09-22T11:43:30Z</time>
+           · claude-code
+          <ul><li><strong>EDIT</strong> — Narrow PrrC related synonyms
+            <p>Addressed issue #1249 from PR #1245 review by removing the bare EcoprrI component name from PrrC system related synonyms. PrrC__EcoprrI remains as a DefenseFinder profile name, and the Blanga-Kanfi EcoprrI-linked PrrC-family evidence remains on the record without representing EcoprrI itself as a system synonym.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/prrc_system/2026-09-22T114330Z-claude-code-2bf5f2.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -441,6 +464,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -732,7 +762,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-22 11:42 UTC
+      Record as of 2026-09-22 11:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%

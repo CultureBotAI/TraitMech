@@ -68,6 +68,8 @@
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the canonical cyanobacterial linear electron-transfer route and uses the D1 component of photosystem II from Synechocystis PCC 6803 as its taxon-paired example; one D1 accession does not denote the complete PSII complex.</p>
 
 
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -581,7 +583,6 @@ A practical positive phenotype is therefore demonstrable **light-dependent O2 ev
 
 
 
-
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -683,8 +684,18 @@ A practical positive phenotype is therefore demonstrable **light-dependent O2 ev
         </li>
 
       </ol>
-    </div>
 
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-08-31T09:05:02Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Connected the oxygenic photosynthesis graph
+            <p>Added exact public-source bridges from PSII to the trait and from ferredoxin to FNR. The graph moved from three components to one. No paid research service was called.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/oxygenic_photosynthesis/2026-08-31T090502Z-codex-0a8e16.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
   </section>
 </article>
 
@@ -778,6 +789,13 @@ function renderPathograph(containerId, data) {
   var legendEl = document.getElementById(containerId + "-legend");
   if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
 
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
   var graph = new dagre.graphlib.Graph();
   graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
   graph.setDefaultEdgeLabel(function() { return {}; });
@@ -1069,7 +1087,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 09:00 UTC
+      Record as of 2026-08-31 09:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1055 TraitRecords
       · embedding coverage 45.2%
