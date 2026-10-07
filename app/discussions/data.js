@@ -9004,6 +9004,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/hormogonium_formation.html#hormogonium-formation-stage-and-mechanism-grounding"
  },
  {
+  "discussion_id": "pseudohyphal-growth-scope-and-hierarchy",
+  "prompt": "Review a yeast growth-form parent and exact external mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pseudohyphal growth",
+  "source_id": "traitmech:000653",
+  "source_file": "pseudohyphal_growth.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial. Filament shaped METPO:1000674 has a broad hypha-like description but is classified under individual cell shape METPO:1000666; this record denotes attached budding-cell chains, not merely an elongated cell. Colony morphology METPO:1007062 concerns macroscopic colonies, not this microscopic growth form. Obsolete cell arrangement METPO:1000046 is not an active parent. Do not equate pseudohyphae with uninterrupted true hyphae, disordered aggregation, or every filamentous form. No exact synonym or xref is asserted. Different forms may coexist in one culture; this is not organism-level disjointness.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/pseudohyphal_growth.html#pseudohyphal-growth-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "pseudohyphal-growth-mechanism-scope",
+  "prompt": "Resolve organism-specific morphogenesis mechanisms before graphing.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pseudohyphal growth",
+  "source_id": "traitmech:000653",
+  "source_file": "pseudohyphal_growth.yaml",
+  "attaches_to": [],
+  "rationale": "A causal graph is deferred pending full perturbation and protein-accession review, not because mechanisms are unknown. Do not transfer the 1992 budding-pattern or ploidy constraints to all yeasts, or treat the Candida comparison mutants as natural canonical examples. Gene possession alone does not establish pseudohyphal growth. Serum exposure, branching, agar invasion, numerical aspect-ratio cutoffs and virulence are not universal requirements. The 2013 study's bloodstream pathogenesis discussion does not directly demonstrate a pseudohypha-specific virulence mechanism. Additional Saccharomyces examples need direct strain-provenance review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/pseudohyphal_growth.html#pseudohyphal-growth-mechanism-scope"
+ },
+ {
   "discussion_id": "rosette-cell-arrangement-scope-and-hierarchy",
   "prompt": "Review a multicellular arrangement parent and exact external mappings.",
   "kind": "CURATION_TODO",
@@ -12288,9 +12322,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 596,
- "total_knowledge_gaps": 394,
- "total_source_entries": 518,
+ "total_discussions": 598,
+ "total_knowledge_gaps": 395,
+ "total_source_entries": 519,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
