@@ -1,0 +1,82 @@
+identifier: traitmech:000680
+label: fungal nonconstricting-ring trap formation
+definition: A morphological phenotype in which a fungus forms stalked, three-celled
+  hyphal rings that trap nematodes without inward inflation of the ring cells.
+definition_source: DOI:10.1007/s102670200061
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1007/s102670200061
+  snippet: A nonconstricting ring (arrow) is capturing a nematode (asterisk).
+  notes: Saikawa and Takahashi (2002), Figure 8 caption, page 418; all three pages
+    and actual Figures 1-20 directly inspected at https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_pdf.
+    Time-lapse microscopy distinguishes noninflating three-cell rings in Dactylella
+    leptospora and Dactylaria candida from the inflating Arthrobotrys dactyloides
+    comparator. Figures 8-14 and 15-20 show the former taxa; Figures 1-7 show the
+    comparator. Hook-tip fusion lacks the opposing bud seen in that comparator; stalk
+    lengths vary. Adhesive ultrastructure is attributed to Saikawa (1985), not newly
+    imaged here. These morphological observations do not identify causal proteins.
+- reference: DOI:10.1016/j.mycres.2006.04.011
+  snippet: D. varietas forms both adhesive knobs and non-constricting rings
+  notes: 'Li et al. (2006), scientific Abstract, directly retrieved as published abstract
+    XML for PMID:16876699 at https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=16876699&retmode=xml.
+    Abstract-only access: full Methods and figures were not retrieved. The independent
+    description of Dactylellina sichuanensis and D. varietas from China reports capture
+    with knobs and nonconstricting rings. The quoted clause contrasts D. varietas
+    with nontrapping Dactylella oxyspora. Co-occurring trap types are not disjoint
+    organism categories. The sequence analyses concern taxonomy, not a sequence-predicted
+    trapping phenotype; no current taxonomic equivalence for those new taxa is asserted.'
+canonical_examples:
+- taxon_id: NCBITaxon:430499
+  taxon_label: Dactylellina leptospora
+  reference: DOI:10.1007/s102670200061
+  note: Source-named Dactylella leptospora, natural TGU orchard-soil isolate collected
+    June 1998. Observed on water agar at 18-22 degrees C with Rhabditis sp.; Figures
+    8-14 document capture and ring development. Live NCBI https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=430499
+    resolves rank species, exact label Dactylellina leptospora and synonym Dactylella
+    leptospora. This is not a strain accession or an assertion about every isolate,
+    universal culture conditions or field biocontrol.
+discussions:
+- discussion_id: nonconstricting-ring-scope-and-parent
+  prompt: Resolve a closer trap-morphology parent without conflating cell shape.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is a broad parent. Ring shaped METPO:1000680
+    concerns individual-cell geometry, not this multicellular trapping apparatus.
+    Mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis
+    traitmech:000605 concerns fusion. Distinguish nonconstricting traps from an immature
+    constricting ring that has not yet acquired inflation competence, adhesive-net
+    loops, unicellular knobs, columns and intracellular cytokinetic rings. A circular
+    outline or nematophagous genus is not sufficient. No exact synonyms, xrefs, SSSOM
+    equivalences or organism-level disjointness are asserted. Neighboring scope exclusions
+    do not constitute unresolved groundings, and their closer-parent TODOs remain
+    open.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: nonconstricting-ring-mechanism
+  prompt: Separate ring morphogenesis from adhesion and infection mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The observed developmental sequence is not evidence that a particular
+    protein is necessary or sufficient. Formation, adhesion, capture, penetration
+    and digestion are separate endpoints; formation alone does not guarantee capture
+    in every condition. A protein-resolved causal graph needs direct perturbation/complementation
+    evidence and taxon-paired accessions. Do not transfer inflation mechanisms from
+    constricting rings or adhesion proteins from knobs and nets. No universal stalk
+    length, detachment, induction medium or prey requirement is asserted; mechanism
+    is deferred, not claimed absent.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T12:40:34Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal nonconstricting-ring trap formation with two primary DOI sources,
+    contiguous source-checked snippets and a qualified natural-isolate example. Ignored-and-hidden
+    main/worktree/open-PR checks support 000680 and v556 block 1063300-1063399. Separated
+    morphology from molecular mechanism and species rank from strain identity. Existing
+    records unchanged. Timestamp is observed UTC.
+  llm_assisted: true
