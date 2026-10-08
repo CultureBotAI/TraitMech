@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/shedu_system.yaml
+  slug: shedu_system
+session:
+  id: 2026-10-08T025652Z-claude-code-39f650
+  timestamp: '2026-10-08T02:56:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5-5
+    agent_tool: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Add B. cereus B4264 SduA protein example to Shedu system
+  details: 'Added a GENE_OR_PROTEIN node (sdua_immune_nuclease, REVIEWED_LABEL_ONLY because
+    InterPro has only domain-level SduA entries IPR025359/IPR048396) carrying UniProtKB:B7HFR2
+    as a taxon-paired protein example, plus one contributes-to edge into shedu_nuclease_activation.
+    UniProt REST (anonymous, no contact address sent) confirmed B7HFR2 on 2026-10-07 as a
+    current reviewed Swiss-Prot primary accession, no secondary accessions, entry version
+    58, sequence version 1, organism Bacillus cereus strain B4264 (NCBITaxon:405532), Pfam
+    PF14082 (SduA_C, formerly DUF4263) and PF21407. Evidence: Gu et al. 2024 Mol Cell PMID:39742666
+    / DOI:10.1016/j.molcel.2024.12.004, whose cryo-EM entries 8TI8/8TI9/8TIA PDBe maps to
+    this exact accession; both snippets verified as verbatim substrings of the Europe PMC
+    abstract. Candidate UniProtKB:C0VHC9 (Cap4) and UniProtKB:P0DW34 (DruA) were NOT added:
+    see the PR description for the per-protein reasons (system mismatch for Cap4, no Europe
+    PMC-verifiable primary snippet for either). Written through scripts/add_shedu_sdua_protein_example.py
+    (--apply opt-in, write_validated_trait, record_curation_event); gates in the PR body.'

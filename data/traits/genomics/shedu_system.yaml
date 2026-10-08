@@ -64,6 +64,53 @@ causal_graphs:
     node_type: GENETIC_ELEMENT
     description: A Shedu antiphage defense locus encoding a single-protein SduA-like
       immune nuclease.
+  - node_id: sdua_immune_nuclease
+    label: SduA immune nuclease
+    node_type: GENE_OR_PROTEIN
+    description: The single-protein Shedu immune nuclease, comprising a conserved
+      nuclease core and an N-terminal regulatory/sensor domain.
+    gene_symbols:
+    - sduA
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 'InterPro carries only domain-level entries for this single-protein
+      system: IPR025359 (Shedu protein SduA, C-terminal; Pfam PF14082, whose InterPro
+      name history is DUF4263 then SduA_C) and IPR048396 (Shedu protein SduA, N-terminal;
+      Pfam PF21407). Grounding a whole-protein node to one of its domains would be
+      the subunit/domain trap docs/GROUNDING_POLICY.md forbids. A bounded search of
+      all InterPro member databases and of GO via OLS4 for ''Shedu'' on 2026-10-07
+      returned only those two Pfam domains and their InterPro integrations, with no
+      GO or NCBIfam term naming the family, so the node stays reviewed label-only.'
+    protein_examples:
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-07'
+      entry_version: 58
+      sequence_version: 1
+      role: Bacillus cereus B4264 SduA is the single protein of this Shedu system;
+        its nuclease active site is switched between inactive and active states by
+        its own N-terminal domain.
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2024.12.004
+        snippet: we reveal the structural basis for activation of Bacillus cereus
+          Shedu
+        notes: Gu et al. determined cryo-EM structures of Bacillus cereus Shedu; PDBe
+          maps their entries 8TI8, 8TI9 and 8TIA to UniProtKB:B7HFR2 (Bacillus cereus
+          B4264), so the structurally characterized protein is this accession. Snippet
+          verified verbatim in the Europe PMC abstract of PMID:39742666.
+      - reference: DOI:10.1016/j.molcel.2024.12.004
+        snippet: Two cryoelectron microscopy structures of Shedu show that it switches
+          between inactive and active states through conformational changes affecting
+          active-site architecture, which are controlled by the protein's N-terminal
+          domain (NTD)
+        notes: Gu et al. establish the N-terminal domain as the regulator of the nuclease
+          active site in this B. cereus protein. The role statement is scoped to the
+          tested protein; the paper's survey of 79 N-terminal domain types is explicitly
+          about homologs, not about this accession. Snippet verified verbatim in the
+          Europe PMC abstract of PMID:39742666.
   - node_id: shedu_nuclease_activation
     label: Shedu nuclease activation
     node_type: BIOLOGICAL_PROCESS
@@ -89,6 +136,20 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   edges:
+  - subject: sdua_immune_nuclease
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: shedu_nuclease_activation
+    description: SduA carries both the Shedu nuclease core and the N-terminal domain
+      that switches that core between inactive and active states.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2024.12.004
+      snippet: Two cryoelectron microscopy structures of Shedu show that it switches
+        between inactive and active states through conformational changes affecting
+        active-site architecture, which are controlled by the protein's N-terminal
+        domain (NTD)
+      notes: Gu et al. support N-terminal-domain-controlled activation of the B. cereus
+        Shedu nuclease active site.
   - subject: shedu_locus
     predicate: contributes to
     predicate_id: RO:0002326
@@ -181,4 +242,21 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v97.
+  llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: claude
+  action: ADD_SDUA_PROTEIN_EXAMPLE
+  changes: Added a GENE_OR_PROTEIN node for the single-protein Shedu immune nuclease
+    with UniProtKB:B7HFR2 (Shedu protein SduA, Bacillus cereus B4264, NCBITaxon:405532)
+    as a taxon-paired protein example, plus one contributes-to edge to Shedu nuclease
+    activation. UniProt REST verified the accession anonymously on 2026-10-07 as a
+    current reviewed (Swiss-Prot) primary accession with no secondary accessions,
+    entry version 58 and sequence version 1, organism Bacillus cereus strain B4264
+    (taxon 405532), cross-referenced to Pfam PF14082 (SduA_C, whose InterPro name
+    history is DUF4263 then SduA_C) and PF21407. Evidence is Gu et al. 2024 Mol Cell
+    (PMID:39742666, DOI:10.1016/j.molcel.2024.12.004), whose cryo-EM entries 8TI8/8TI9/8TIA
+    PDBe maps to this exact accession; both snippets were verified verbatim against
+    the Europe PMC abstract. The node is REVIEWED_LABEL_ONLY because InterPro only
+    has domain-level SduA entries. Graph scope_status, mapping_status, definition,
+    hierarchy and existing evidence are unchanged.
   llm_assisted: true
