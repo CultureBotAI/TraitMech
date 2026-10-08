@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/false_branching.yaml
+  slug: false_branching
+session:
+  id: 2026-10-08T063135Z-codex-0b8330
+  timestamp: '2026-10-08T06:31:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified cyanobacterial false branching
+  details: Mint traitmech:000675 and reserve v551 METPO:1062800-1062899. Three DOI references
+    with verbatim snippets support both developmental modes and a natural NUACC06 example
+    at verified species rank. Defer closer-parent and protein-mechanism questions; preserve
+    existing records.

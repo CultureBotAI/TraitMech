@@ -9038,6 +9038,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/cyanophycin_granule.html#cyanophycin-granule-mechanism-scope"
  },
  {
+  "discussion_id": "false-branching-scope",
+  "prompt": "Review a closer multicellular morphology parent and branching terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "false branching",
+  "source_id": "traitmech:000675",
+  "source_file": "false_branching.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059 below quality METPO:1000188. Branched shaped METPO:1000687 concerns lateral branches in cell shape, not necessarily this arrangement of trichomes; no subclass or equivalence is asserted. The Golubic 1996 definition authority includes bundle partitioning as well as lateral protrusion. The Scytonema example demonstrates the latter and must not narrow the whole class. Necridium formation traitmech:000674 describes a separation cell, not all false branches. Hormogonium formation traitmech:000651 describes dispersal filaments, not the branching topology. Obsolete cell-arrangement METPO terms redirect to flagellar arrangement, which is not a suitable parent here. No exact synonyms, xrefs, SSSOM mappings or organism-level disjointness are asserted; historical pseudo-branch usages need review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/false_branching.html#false-branching-scope"
+ },
+ {
+  "discussion_id": "false-branching-mechanism",
+  "prompt": "Resolve mechanisms separately for each developmental mode.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "false branching",
+  "source_id": "traitmech:000675",
+  "source_file": "false_branching.yaml",
+  "attaches_to": [],
+  "rationale": "The inspected microscopy supports a phenotype and cellular developmental routes, not an accession-resolved protein mechanism. Taxonomic sequence markers do not establish causality. Do not require necridia, heterocytes, a fixed branch count, one division plane, a universal trigger or a fitness benefit. No causal graph is proposed pending direct mechanistic evidence and verified protein examples; a mechanism is not claimed biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/false_branching.html#false-branching-mechanism"
+ },
+ {
   "discussion_id": "ferrosome-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial ferrosome morphology trait.",
   "kind": "CURATION_TODO",
@@ -13053,9 +13087,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 641,
- "total_knowledge_gaps": 416,
- "total_source_entries": 540,
+ "total_discussions": 643,
+ "total_knowledge_gaps": 417,
+ "total_source_entries": 541,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
