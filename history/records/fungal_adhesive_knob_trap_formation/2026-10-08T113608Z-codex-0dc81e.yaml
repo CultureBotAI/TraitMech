@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_adhesive_knob_trap_formation.yaml
+  slug: fungal_adhesive_knob_trap_formation
+session:
+  id: 2026-10-08T113608Z-codex-0dc81e
+  timestamp: '2026-10-08T11:36:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Add evidence-backed fungal adhesive-knob trap formation
+  details: Created traitmech:000679 with primary DOI:10.1128/AEM.01390-13 and DOI:10.1016/j.femsle.2005.02.027,
+    contiguous scientific-abstract snippets, and NCBITaxon:1284197 Dactylellina haptotyla
+    CBS 200.50. ASM HTML and actual Figure 1 read; 2005 evidence is abstract-only. DOI:10.1080/23802359.2018.1507650
+    primary XML supports natural strain provenance, not a third phenotype replication. Kept
+    morphology, detachment, prey induction and sequence-derived mechanism claims separate;
+    closer parent and molecular mechanism remain open. Ignored-and-hidden whole-root and complete
+    open-PR snapshot checks support local ID, cohort v555 and whole METPO block 1063200-1063299.
+    Guarded writer dry-run and 20 focused tests passed; both snippets VERIFIED by the maintained
+    live resolver. Broader validation results will be recorded in the PR. Existing trait YAMLs
+    and protected spore_germination remain unchanged.

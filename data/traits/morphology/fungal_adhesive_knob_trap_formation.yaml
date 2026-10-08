@@ -1,0 +1,87 @@
+identifier: traitmech:000679
+label: fungal adhesive-knob trap formation
+definition: A morphological phenotype in which a fungus forms unicellular knobs at
+  hyphal apices that serve as adhesive nematode traps.
+definition_source: DOI:10.1128/AEM.01390-13
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1128/AEM.01390-13
+  snippet: The trap of M. haptotylum consists of a unicellular structure called a
+    knob that develops at the apex of a hypha.
+  notes: Andersson et al. (2013), scientific Abstract; primary publisher HTML https://journals.asm.org/doi/10.1128/AEM.01390-13.
+    Introduction, Culture Methods, relevant Results/Discussion and Conclusion, and
+    actual Figure 1 were inspected. CBS 200.50 formed knobs in aerated liquid culture.
+    Figure 1 shows residual attached knobs and isolated knobs after filtration, not
+    a capture time course. Detachment is a culture observation, not a defining requirement.
+    Proteomic and transcript changes do not establish causal functions of individual
+    proteins; WSC adhesion roles remain hypotheses. Supplements were not used to assert
+    protein mechanisms.
+- reference: DOI:10.1016/j.femsle.2005.02.027
+  snippet: The adhesive knobs were produced frequently on nutritional agar plates
+    even in the absence of challenging nematodes.
+  notes: 'Liu, Liu and Zhuang (2005), scientific Abstract, directly retrieved from
+    the primary publisher https://academic.oup.com/femsle/article/245/1/99/483775
+    (minimal-article redirect). Abstract-only access: full Methods and figures were
+    not retrieved. Orbilia querci material came from rotten Quercus wood in Huai-rou
+    County, Beijing, and pure culture from ascospores. The authors report nematode
+    capture with adhesive stalked knobs. Formation without added prey under these
+    conditions excludes an obligatory prey-induction definition; neither medium nor
+    stalk length is universal. The reported Dactylellina querci anamorph name is source
+    terminology, not an independently verified current taxonomic equivalence.'
+canonical_examples:
+- taxon_id: NCBITaxon:1284197
+  taxon_label: Dactylellina haptotyla CBS 200.50
+  reference: DOI:10.1128/AEM.01390-13
+  note: Source-named Monacrosporium haptotylum CBS 200.50. Live NCBI https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1284197
+    resolves rank strain, the exact label Dactylellina haptotyla CBS 200.50 and the
+    historical name. Zhou et al. (2018), DOI:10.1080/23802359.2018.1507650, body paragraph
+    2, directly read primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7801010/fullTextXML,
+    reports collection from a decaying leaf in a pond at Chelsea Physic Garden, London,
+    by M.P. Peach in 1948. That genome study is strain-provenance support, not an
+    independent knob-formation experiment. The unperturbed natural-origin strain example
+    is qualified by the 2013 culture conditions, not every isolate or field biocontrol
+    efficacy.
+discussions:
+- discussion_id: adhesive-knob-scope-and-parent
+  prompt: Resolve a closer fungal trap-morphology parent.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074
+    explicitly concerns bacteria; hyphal anastomosis traitmech:000605 concerns fusion.
+    Distinguish unicellular adhesive knobs from multicellular adhesive nets, adhesive
+    columns, nonconstricting rings and mechanically constricting rings. Auxiliary
+    cells and appressoria have different biological roles; a generic rounded hyphal
+    tip or nematophagous genus is not sufficient. Detachment, a particular stalk length
+    and nematode induction are not defining requirements. Formation alone does not
+    demonstrate adhesion or successful capture in every condition. No exact synonyms,
+    xrefs, SSSOM equivalences or organism-level disjointness are asserted; closer
+    hierarchy remains open.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: adhesive-knob-mechanism
+  prompt: Separate knob morphogenesis from adhesion and infection mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Sequence features and expression correlations alone do not establish
+    a necessary or sufficient gene effect. A protein-resolved causal graph requires
+    perturbation and complementation evidence, relevant remaining figures and supplements,
+    and taxon-paired accessions. Formation, adhesion, capture, penetration and digestion
+    remain separate endpoints. No universal lectin, WSC-domain protein or signaling-gene
+    requirement is asserted; mechanism is deferred, not claimed absent. Taxonomic
+    membership alone does not establish this phenotype.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T11:29:45Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal adhesive-knob trap formation with two independent primary
+    DOI sources, contiguous snippets and a natural-origin strain example. Ignored-and-hidden
+    main/worktree/open-PR checks support 000679 and v555 block 1063200-1063299. Distinguished
+    abstract-only access and provenance-only support; separated morphology from sequence-derived
+    mechanism hypotheses. Existing records unchanged. Timestamp is observed UTC.
+  llm_assisted: true
