@@ -9327,6 +9327,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_conidiation.html#fungal-conidiation-development-and-mechanism"
  },
  {
+  "discussion_id": "constricting-ring-scope-and-parent",
+  "prompt": "Resolve a closer trap-morphology parent without conflating cell shape.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal constricting-ring trap formation",
+  "source_id": "traitmech:000677",
+  "source_file": "fungal_constricting_ring_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Parent phenotype METPO:1000059 is broader than this multicellular differentiation phenotype. Ring shaped METPO:1000680 denotes individual cell geometry, not a three-cell trapping apparatus. Mycelial growth and hyphal anastomosis alone do not define this trap. Exclude adhesive non-constricting rings, adhesive nets and generic nematophagy; neither a taxonomic genus nor prey capture by any mechanism is an exact synonym. Formation includes morphologically complete immature rings, not only already inflated traps. Do not infer that every formed ring immediately inflates. No xrefs, synonyms, SSSOM mappings or organism-level disjointness are asserted; closer hierarchy remains open. Stachowiak et al. (2014), DOI:10.1016/j.devcel.2014.04.021, also use constricting-ring terminology for fission-yeast cytokinesis. The trap-qualified label explicitly excludes those intracellular actomyosin rings; they are not synonyms or phenotype evidence here.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_constricting_ring_formation.html#constricting-ring-scope-and-parent"
+ },
+ {
+  "discussion_id": "constricting-ring-mechanism-and-taxonomy",
+  "prompt": "Separate trap formation, inflation mechanism and nomenclatural validity.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal constricting-ring trap formation",
+  "source_id": "traitmech:000677",
+  "source_file": "fungal_constricting_ring_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Chen et al. investigate membrane reservoirs and SNARE-dependent inflation, but a protein-resolved causal graph requires review of the remaining perturbation/complementation figures, supplements and taxon-paired accessions. No universal SNARE requirement is inferred from morphology; mechanism is deferred, not claimed absent. Native provenance of laboratory strain 29 has not been established here, so it remains qualified evidence rather than a natural canonical example. NCBI's nom. inval. qualifier for D. daliensis concerns nomenclature, not absence of the observed trap; retain it pending nomenclatural review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_constricting_ring_formation.html#constricting-ring-mechanism-and-taxonomy"
+ },
+ {
   "discussion_id": "fungal-hartig-net-scope-and-hierarchy",
   "prompt": "Resolve a closer morphology parent without collapsing root interfaces.",
   "kind": "CURATION_TODO",
@@ -13121,9 +13155,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 645,
- "total_knowledge_gaps": 418,
- "total_source_entries": 542,
+ "total_discussions": 647,
+ "total_knowledge_gaps": 419,
+ "total_source_entries": 543,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

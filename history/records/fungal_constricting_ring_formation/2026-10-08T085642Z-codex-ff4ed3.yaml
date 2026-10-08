@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_constricting_ring_formation.yaml
+  slug: fungal_constricting_ring_formation
+session:
+  id: 2026-10-08T085642Z-codex-ff4ed3
+  timestamp: '2026-10-08T08:56:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add fungal constricting-ring formation
+  details: Added traitmech:000677 with two directly inspected DOI sources and verbatim snippets;
+    natural soil-isolate CGMCC3.20131 is paired with live NCBITaxon:2743661 and its nom. inval.
+    qualifier. Distinguishes immature-ring formation, maturation, inflation and capture. Reserved
+    full METPO:1063000-1063099 block in v553 after ignored-and-hidden worktree and exact-head
+    open-PR checks. Protein mechanism remains explicitly deferred; no existing trait was changed.

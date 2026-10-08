@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_constricting_ring_formation.yaml
+  slug: fungal_constricting_ring_formation
+session:
+  id: 2026-10-08T091510Z-codex-6edf3d
+  timestamp: '2026-10-08T09:15:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1823
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Qualify constricting-ring trap label after adversarial review
+  details: 'Addressed #1823 by adding trap to the label and explicit exclusion of intracellular
+    actomyosin rings. Added DOI:10.1016/j.devcel.2014.04.021 with a verified scientific-abstract
+    snippet as terminology-boundary evidence, not a third positive trap study. Preserved the
+    original CREATE record history/records/fungal_constricting_ring_formation/2026-10-08T085642Z-codex-ff4ed3.yaml
+    and initial TraitRecord event; appended the correction. Definition, ID, natural example,
+    parent and block reservation unchanged.'
