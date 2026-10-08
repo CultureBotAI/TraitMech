@@ -116,7 +116,32 @@ The dry-run-first writer guards the phenotype projection, exact target and
 template replay, prevalidates and uses the validated mutation/history APIs.
 Existing records stay unchanged. Controlled fixture tests cover refusal of
 drift, dry run, replay and validation failure before writes. The initial
-writer dry run and all 20 writer tests pass; broader validation is pending.
+writer dry run and all 20 writer tests pass. On the independent checkpoint
+`7d803fd1ee2b43794d9aa779d5426077f2de3ad5`, all 65 expanded focused tests
+passed in 1028.19 seconds and all 3,212 full-suite tests passed in 1094.95
+seconds. LinkML/strict, proposal/ROBOT/RDF, Ruff, committed QC,
+history/products and PR sanity passed. Online taxonomy resolved 744 examples
+with zero errors and 24 existing warnings. The maintained snippet resolver
+returned VERIFIED for the 1975 abstract and NOT_IN_ABSTRACT for the 2019
+body quote; manual primary-source and URL checks are separate, not renamed
+resolver passes. Desktop/mobile checks at 1440/390 and inspected screenshots
+passed, including the qualified example, evidence, hierarchy and dashboard.
+
+Against its original main, preservation checked all 1,061 prior YAMLs,
+547 proposal TSVs, old history, narratives, discussion templates and
+embedding products. Existing pages changed only in their count footer,
+except phenotype's added child; its priority child count rose from 162
+to 163. The protected record is unchanged. Parsed ROBOT graphs contain
+15, 12,628 and 12,632 triples with the expected w3id.org hierarchy.
+Neither configured embedding source path exists, so no rebuild is claimed.
+The ordinary whitespace check flagged only the required three trailing
+empty TSV cells; exact-path-scoped checks passed.
+
+Hartig subsequently landed as `f9bd6b23517bc85f27af8dfdaae7d1d14a0e0454`.
+The receipts above apply to the independent checkpoint, not a future
+combined tree. Incorporate actual main and pending dependencies, regenerate
+all affected products and validate the combined corpus before publishing;
+keep any dependency draft out of the queue until its predecessors land.
 Repository history is scaffolded and append-only. Regenerate the citation
 audit separately from discussion, QC, page and priority products. Preserve
 actual resolver outcomes rather than relabeling manual source checks.
