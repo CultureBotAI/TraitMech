@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.yaml
+  slug: fungal_internal_mycorrhizal_vesicle_formation
+session:
+  id: 2026-10-07T231455Z-codex-a36f36
+  timestamp: '2026-10-07T23:14:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal internal mycorrhizal vesicle formation
+  details: Minted traitmech:000670, PROPOSED MORPHOLOGY, and v546 block 1062300-1062399. Two
+    primary DOI sources (10.1139/m75-258 and 10.3390/plants8060142), attributed Brundrett
+    terminology and three verbatim snippets support plant-tissue vesicle formation. Direct
+    S1 microscopy and separately verified NARO/NCBI provenance qualify MAFF520053 under NCBITaxon:937382;
+    the 2025 identification study supplies provenance context, not trait evidence. Internal
+    does not mean root-only, intercellular-only or membrane vesicles. No exact mappings or
+    protein mechanism are asserted. Ignored/hidden searches cover all worktrees, current main,
+    complete pending PR heads and CommunityMech; neighboring definitions were reviewed. Existing
+    trait records remain unchanged. Initial writer dry run and 20 focused writer tests passed;
+    broader gates pending.
