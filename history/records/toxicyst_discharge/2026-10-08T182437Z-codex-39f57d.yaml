@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/toxicyst_discharge.yaml
+  slug: toxicyst_discharge
+session:
+  id: 2026-10-08T182437Z-codex-39f57d
+  timestamp: '2026-10-08T18:24:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded toxicyst discharge
+  details: Created traitmech:000685 with DOI:10.1111/jeu.12106, DOI:10.1007/BF01279249 and
+    DOI:10.1186/s12915-024-01904-2; directly checked scientific Abstract/Summary snippets.
+    Reserved v561 and METPO:1063800-1063899 after ignored-and-hidden worktree and open-head
+    checks. Retained phenotype parent with explicit unresolved exocytosis classification.
+    Distinguished discharge from injury, organelle possession and sequence predictions. No
+    canonical examples, xrefs or protein graph without verified provenance and mechanism.
+    Existing records unchanged.

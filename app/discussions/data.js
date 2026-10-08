@@ -13137,6 +13137,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/thigmotropism.html#thigmotropism-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "toxicyst-discharge-scope-and-parent",
+  "prompt": "Resolve the exocytosis hierarchy without equating all extrusome types.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "toxicyst discharge",
+  "source_id": "traitmech:000685",
+  "source_file": "toxicyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Parent phenotype METPO:1000059 is conservative. The 2024 Background describes telescopic discharge and/or membrane fusion; its Discussion reports fusion observations. These statements do not establish that every toxicyst-discharge phenotype satisfies the fusion-pore definition of exocytosis traitmech:000637. That placement remains unresolved, not excluded. Mere toxicyst possession, docking, predation, prey injury or cell lysis does not alone establish this trait. Preserve the organelle-specific scope rather than equating mucocyst discharge traitmech:000684, trichocyst discharge traitmech:000683, pexicysts or haptocysts. Historical type-I/II terminology needs reconciliation before synonym or hierarchy expansion. No exact synonyms, xrefs or organism-level disjointness are asserted. Prey killing and complete emptying are not universal defining requirements.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/toxicyst_discharge.html#toxicyst-discharge-scope-and-parent"
+ },
+ {
+  "discussion_id": "toxicyst-discharge-provenance-and-mechanism",
+  "prompt": "Resolve experimental culture provenance and protein-level mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "toxicyst discharge",
+  "source_id": "traitmech:000685",
+  "source_file": "toxicyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Natural provenance and strain-level taxonomy of the positive experimental cultures remain unchecked; no canonical examples are assigned. Wild-collected genomic material is not by itself a positive discharge assay for that isolate. Gene-family expansion, expression and predicted toxin annotations alone do not establish toxicyst discharge or a causal protein. A future graph needs source-specific perturbations and taxon-paired accessions, distinguishing assembly, triggering, extrusion and toxin action. Mechanism is deferred, not claimed absent. Do not transfer a calcium threshold, cargo chemistry or ecological function between species without evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/toxicyst_discharge.html#toxicyst-discharge-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "trichocyst-discharge-scope-and-assays",
   "prompt": "Keep cargo release distinct from organelle presence and component steps.",
   "kind": "CURATION_TODO",
@@ -13393,9 +13427,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 661,
- "total_knowledge_gaps": 426,
- "total_source_entries": 550,
+ "total_discussions": 663,
+ "total_knowledge_gaps": 427,
+ "total_source_entries": 551,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
