@@ -9191,6 +9191,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_hartig_net_formation.html#fungal-hartig-net-mechanism-and-culture-identity"
  },
  {
+  "discussion_id": "fungal-mycelial-cord-scope-and-hierarchy",
+  "prompt": "Reconcile cord/rhizomorph usage and a closer fungal parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal mycelial cord formation",
+  "source_id": "traitmech:000669",
+  "source_file": "fungal_mycelial_cord_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059. The definition adopts the developmental cord sense in the cited terminology source; it does not claim every historical cord, strand or rhizomorph label has this meaning. The broad root-like formation record traitmech:000662 retains its Koch (2017) unmelanized culture usage and Oliveira (2024) narrower organized-tip usage. Its scope discussion is linked, not declared solved. No exact synonyms, xrefs, parent-child or disjointness axioms between these records are asserted. Mycelial growth 000074 is bacterial; hyphal anastomosis 000605 requires cytoplasmic continuity; filament shaped 1000674 describes a cell, while filamentous colony 1007066 and rhizoid colony 1007068 describe colony outlines. Those are not this multihyphal developmental architecture. No universal pigment, rind, vessel-hypha, diameter or habitat condition is imposed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_mycelial_cord_formation.html#fungal-mycelial-cord-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-mycelial-cord-mechanism-and-readout",
+  "prompt": "Separate cord formation from network function and total hyphal coverage.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal mycelial cord formation",
+  "source_id": "traitmech:000669",
+  "source_file": "fungal_mycelial_cord_formation.yaml",
+  "attaches_to": [],
+  "rationale": "A formation-regulatory protein graph is deferred pending primary perturbation evidence and authority-verified protein anchors, not because mechanisms are absent. Visible cords alone do not prove transport efficiency, resource sensing or a universal foraging response. The 1986 authors describe variable curvature and did not discriminate soluble, volatile and other microenvironmental causes. Numerical network edges are not molecular causal edges. Total hyphal image coverage is not a cord-specific formation count or fraction.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_mycelial_cord_formation.html#fungal-mycelial-cord-mechanism-and-readout"
+ },
+ {
   "discussion_id": "fungal-peloton-scope-and-hierarchy",
   "prompt": "Resolve a closer parent without collapsing intracellular architectures.",
   "kind": "CURATION_TODO",
@@ -9234,7 +9268,7 @@ window.searchData = [
   "source_id": "traitmech:000662",
   "source_file": "fungal_rhizomorph_formation.yaml",
   "attaches_to": [],
-  "rationale": "Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605 denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures, whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense and distinguish mycelial cords. The broad formation definition does not settle that anatomical boundary: retain the source attribution and do not assert exact cord/strand synonyms, a universal pigment requirement or an underground-only habitat. A closer fungal growth-form parent and external equivalences require upstream review; no xrefs or SSSOM mappings are asserted.",
+  "rationale": "Use phenotype METPO:1000059. Mycelial growth traitmech:000074 is explicitly bacterial; filament shaped METPO:1000674 is a cell-shape class; rhizoid colony METPO:1007068 and filamentous colony METPO:1007066 concern colony outlines. None is an exact fungal multihyphal formation record. Hyphal anastomosis traitmech:000605 denotes fusion and fungal sclerotium formation traitmech:000660 denotes compact resting bodies. Koch et al. (2017) use rhizomorph for unmelanized culture structures, whereas Oliveira et al. (2024) adopt the narrower melanized, organized-tip sense and distinguish mycelial cords. The broad formation definition does not settle that anatomical boundary: retain the source attribution and do not assert exact cord/strand synonyms, a universal pigment requirement or an underground-only habitat. A closer fungal growth-form parent and external equivalences require upstream review; no xrefs or SSSOM mappings are asserted. Fungal mycelial cord formation traitmech:000669 now represents the diffuse-front aggregation sense defined by Boddy et al. (2009), DOI:10.1007/s10267-008-0450-4, rather than silently equating the two names. Its experimental examples do not resolve all historical usage. Keep this terminology/hierarchy question OPEN: neither equivalence, a parent-child relationship nor organism-level disjointness is asserted.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -12849,9 +12883,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 629,
- "total_knowledge_gaps": 410,
- "total_source_entries": 534,
+ "total_discussions": 631,
+ "total_knowledge_gaps": 411,
+ "total_source_entries": 535,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
