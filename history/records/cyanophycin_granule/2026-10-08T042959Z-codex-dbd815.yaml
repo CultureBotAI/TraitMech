@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/cyanophycin_granule.yaml
+  slug: cyanophycin_granule
+session:
+  id: 2026-10-08T042959Z-codex-dbd815
+  timestamp: '2026-10-08T04:29:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Append correction for initial event timestamp (#1816)
+  details: The initial MINTED_TRAITMECH_ID timestamp 2026-10-08T04:30:00Z was estimated ahead
+    of actual execution. The record had already been written before history/records/cyanophycin_granule/2026-10-08T042808Z-codex-f1df51.yaml
+    was scaffolded at 04:28:08Z. Retained that original per-record event and repository CREATE
+    history unchanged; appended CORRECT_CURATION_PROVENANCE with an observed UTC clock timestamp
+    and an explicit write-time upper bound, not an invented exact time. Biological content
+    is unchanged. Writer replay includes the correction and accepts only the exact original
+    preimage or corrected record. The add-trait skill now requires current-clock timestamps
+    and append-only corrections.

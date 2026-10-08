@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cyanophycin granule — MORPHOLOGY — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../browse.html">Browse</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/morphology.html">MORPHOLOGY</a>
+    </p>
+    <h1>cyanophycin granule</h1>
+    <p class="curie"><code>traitmech:000673</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">An intracellular storage inclusion composed of cyanophycin, a nonribosomal arginine- and aspartate-rich polymer serving as a nitrogen reserve.</p>
+
+  </header>
+
+
+  <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(1)</span></h2>
+    <ul>
+
+      <li>
+        <a href="https://doi.org/10.1007/s002030100281" rel="nofollow noreferrer"><code>DOI:10.1007/s002030100281</code></a>
+        <blockquote>Cyanophycin granules reached a maximum after the peak of nitrogenase activity and eventually were utilized completely.</blockquote>
+        <p class="meta">Li et al. (2001), publisher scientific abstract directly read at https://link.springer.com/article/10.1007/s002030100281. Electron microscopy and biochemistry identified granules in Cyanothece ATCC 51142 during nitrogen-fixing growth on a 12-hour light/12-hour dark cycle. Full text and figures were not accessible; timing is condition-specific, not a universal granule property. The separate PCC 6803 mutant observations do not establish a universal cyanophycinase requirement.</p>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>CphA supplies polymer for cyanophycin storage granules</h2>
+      <p class="meta">A source-bounded synthesis, material-localization and nitrogen-storage sketch, not a claim that every inclusion shares one regulation.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · Integrates PCC 6308 enzyme expression/purification with PCC 6803 cell biology. It is not one experiment or a strain-specific mechanism demonstrated in the ATCC 51142 canonical example. The sequence-family match establishes identity, not granule formation. No universal growth benefit, magnesium dependence in vivo, degradation enzyme, or granule-surface organizer is inferred.</p>
+
+
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>CphA supplies polymer for cyanophycin storage granules</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for cyanophycin granule.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>cyanophycin synthetase CphA</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cyanophycin synthesis</strong>
+            <code>RO:0002327</code>
+            <p>Purified PCC 6308 CphA catalyzes polymer synthesis.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/AEM.67.5.2176-2182.2001" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.67.5.2176-2182.2001</code></a>
+                <span class="evidence-snippet">which catalyzed the incorporation of arginine and aspartic acid into cyanophycin</span>
+                <span class="meta">Aboulmagd et al. (2001), scientific abstract: the quoted relative clause describes the native enzyme purified from recombinant E. coli. Publisher full-text Methods and substrate/primer Results were read, including Tables 2 and 3. No actual figure images were inspected.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>cyanophycin synthesis</strong>
+            <span class="edge-predicate">has output</span>
+            <strong>cyanophycin macromolecule</strong>
+            <code>RO:0002234</code>
+            <p>The assayed reaction incorporates amino acids into cyanophycin.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/AEM.67.5.2176-2182.2001" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.67.5.2176-2182.2001</code></a>
+                <span class="evidence-snippet">which catalyzed the incorporation of arginine and aspartic acid into cyanophycin</span>
+                <span class="meta">Same abstract clause supports the product as well as catalysis. Radiometric incorporation into insoluble polymer is the assay readout. This does not equate soluble synthesis or engineered amino-acid variants with a cellular granule.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>cyanophycin macromolecule</strong>
+            <span class="edge-predicate">located in</span>
+            <strong>cyanophycin granule</strong>
+            <code>biolink:located_in</code>
+            <p>Accumulated cyanophycin forms the material of the inclusion.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/AEM.01298-18" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01298-18</code></a>
+                <span class="evidence-snippet">Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell</span>
+                <span class="meta">Watzer and Forchhammer (2018), Introduction, directly read in publisher HTML. Results report microscopy and arginine-specific Sakaguchi staining during nitrogen resuscitation in the engineered PCC 6803 CphA-eGFP strain. Main text, Methods and supplemental captions were read; actual figure images were not inspected.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>cyanophycin granule</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>temporary nitrogen storage</strong>
+            <code>RO:0002326</code>
+            <p>The inclusion retains cyanophycin as a temporary nitrogen reserve.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/AEM.01298-18" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01298-18</code></a>
+                <span class="evidence-snippet">cyanophycin can be used as a temporary nitrogen storage</span>
+                <span class="meta">Scientific abstract clause. PCC 6803 wild-type versus cphA-deletion comparisons support condition-dependent storage during fluctuating or limiting nitrogen supply and light/dark cycles, not a universal fitness advantage. Granule-loss confirmation is reported as data not shown; no complementation experiment is claimed.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="CphA supplies polymer for cyanophycin storage granules: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>cyanophycin synthetase CphA</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P56947/entry" rel="nofollow noreferrer"><code>UniProtKB:P56947</code></a>
+                  <br>Cyanophycin synthetase <span class="meta">(cphA)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=113355" rel="nofollow noreferrer">Geminocystis herdmanii PCC 6308</a>
+                  <br><code>NCBITaxon:113355</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-08 · entry v91 · sequence v2</span>
+                </td>
+                <td>
+                  <p>PCC 6308 enzyme catalyzes cyanophycin synthesis; functional expression and purification used recombinant E. coli, not a natural E. coli phenotype.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1007/s002030000206" rel="nofollow noreferrer"><code>DOI:10.1007/s002030000206</code></a>
+                      <span class="evidence-snippet">The functionality of cphA was proven by heterologous expression of active enzyme and synthesis of cyanophycin in Escherichia coli</span>
+                      <span class="meta">Aboulmagd et al. (2000), scientific abstract directly read in DOI-matched Europe PMC core metadata (PMID:11131019); full paper not inspected. UniProt REST P56947 links this paper and AF220099/AAF43647.2 to PCC 6308; its entry version 91, sequence version 2 and NCBITaxon:113355 were checked live. The paper&#39;s Synechocystis name is historical. The accession is not PCC 6803 or the heterologous expression host.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Identifier source</dt>
+
+        <dd>TraitMech local identifier</dd>
+
+
+        <dt>Definition source</dt><dd><a href="https://doi.org/10.1128/AEM.01298-18" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01298-18</code></a></dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/morphology/intracellular_inclusion.html" >intracellular inclusion <code>traitmech:000066</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding matched this record
+        in the 2026-04-25 deepwalk.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Crocosphaera subtropica ATCC 51142</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43989"
+             rel="nofollow noreferrer"><code>NCBITaxon:43989</code></a>
+
+
+
+          <a href="https://doi.org/10.1007/s002030100281" rel="nofollow noreferrer"><code>DOI:10.1007/s002030100281</code></a>
+
+          <span class="meta">Historical Cyanothece ATCC 51142: granules observed during nitrogen-fixing light/dark culture, not constitutively in every cell. NCBI directly confirms the current strain name, rank no rank, and BH68/BH68K synonym: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43989. The directly read scientific abstract of the original isolation paper, https://doi.org/10.1128/jb.175.5.1284-1292.1993, places BH68 in intertidal sands of the Texas Gulf coast. This is provenance support, not an independent cyanophycin assay.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="cyanophycin-granule-identity">
+        <p class="discussion-prompt">Keep inclusion morphology distinct from polymer and sequence identity.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>cyanophycin-granule-identity</code>
+          · raised by codex
+          · 2026-10-07
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Uses intracellular inclusion traitmech:000066 like PHA and polyphosphate granules. CHEBI:65318 is a chemical grounding only; CphA activity and family membership are not equivalent traits. CGP names the polymer, not an exact granule synonym. No trait xrefs, exact synonyms or SSSOM equivalences are asserted. Do not require spherical shape, fixed size, constitutive occurrence, or an invariant amino-acid ratio.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+      <div class="discussion" id="cyanophycin-granule-mechanism-scope">
+        <p class="discussion-prompt">Resolve strain-specific assembly and degradation mechanisms separately.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>cyanophycin-granule-mechanism-scope</code>
+          · raised by codex
+          · 2026-10-07
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>The 2001 enzyme paper calls cyanophycin unique to cyanobacteria, but the 2018 primary paper also documents its distribution in heterotrophic bacteria; no cyanobacteria-only restriction is imposed. Soluble engineered polymers do not alone establish granules. The graph integrates distinct source taxa rather than transferring PCC 6308 CphA evidence to the ATCC 51142 example. PCC 6803 without a substrain designation does not establish the Kazusa-specific UniProt instance. Surface localization and magnesium effects in cell extracts do not prove a universal in-vivo assembly requirement.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-10-08T04:30:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Added cyanophycin granule with four primary references, bounded verbatim excerpts, a natural ATCC 51142 example and a five-node mechanistic graph. Verified PCC 6308 CphA protein/family and polymer identity separately from morphology. Ignored-and-hidden novelty and current-main/worktree/complete-open-PR reservation checks support 000673 and v549 block 1062600-1062699. Existing records unchanged.</p>
+        </li>
+
+        <li>
+          <time>2026-10-08T04:29:03Z</time> ·
+          <strong>CORRECT_CURATION_PROVENANCE</strong> · codex
+          <p class="changes">Corrected provenance for #1816 without rewriting the initial event: its 04:30:00Z timestamp was mistakenly set ahead of execution. The initial record was already written before the repository CREATE history timestamp 2026-10-08T04:28:08Z, an observed upper bound, not an exact reconstructed write time. This correction uses the directly observed UTC clock; biological content is unchanged.</p>
+        </li>
+
+      </ol>
+
+      <h3>Recorded curation sessions</h3>
+      <ul>
+        <li><time>2026-10-08T04:28:08Z</time>
+           · codex
+          <ul><li><strong>CREATE</strong> — Add evidence-backed cyanophycin storage granule
+            <p>Minted traitmech:000673 under intracellular inclusion without modifying existing records. Four primary DOI sources support a natural ATCC 51142 example and a five-node, four-edge source-bounded graph. Protein evidence anchors reviewed UniProtKB:P56947 to Geminocystis herdmanii PCC 6308, distinct from the expression host and canonical trait taxon; InterPro:IPR011810 and CHEBI:65318 were authority checked. Full publisher text was read for 2018 cell biology and 2001 purified enzyme work; the 2000 expression and Li 2001 accumulation sources were directly read as scientific abstracts. Actual figure images were not inspected. Reserved v549 METPO:1062600 within block 1062600-1062699 after ignored-and-hidden main, worktree, and complete open-PR reservation checks. Parent context from v5 retains identity and hierarchy with only its cohort subset updated. Guarded writer is dry-run by default and validates before writing.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cyanophycin_granule/2026-10-08T042808Z-codex-f1df51.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-08T04:29:59Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Append correction for initial event timestamp (#1816)
+            <p>The initial MINTED_TRAITMECH_ID timestamp 2026-10-08T04:30:00Z was estimated ahead of actual execution. The record had already been written before history/records/cyanophycin_granule/2026-10-08T042808Z-codex-f1df51.yaml was scaffolded at 04:28:08Z. Retained that original per-record event and repository CREATE history unchanged; appended CORRECT_CURATION_PROVENANCE with an observed UTC clock timestamp and an explicit write-time upper bound, not an invented exact time. Biological content is unchanged. Writer replay includes the correction and accepts only the exact original preimage or corrected record. The add-trait skill now requires current-clock timestamps and append-only corrections.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cyanophycin_granule/2026-10-08T042959Z-codex-dbd815.yaml">Read this curation session</a>
+        </li></ul>
+
+
+    </div>
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/morphology/cyanophycin_granule.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/cyanophycin_granule.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/morphology/cyanophycin_granule.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/morphology/cyanophycin_granule.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+
+      <dt>TraitMech CURIE</dt>
+      <dd><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/cyanophycin_granule.yaml" target="_blank" rel="noopener"><code>traitmech:000673</code></a></dd>
+
+      <dt>Category</dt>
+      <dd>MORPHOLOGY</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "A source-bounded synthesis, material-localization and nitrogen-storage sketch, not a claim that every inclusion shares one regulation.", "edges": [{"description": "Purified PCC 6308 CphA catalyzes polymer synthesis.", "evidence": [{"notes": "Aboulmagd et al. (2001), scientific abstract: the quoted relative clause describes the native enzyme purified from recombinant E. coli. Publisher full-text Methods and substrate/primer Results were read, including Tables 2 and 3. No actual figure images were inspected.", "reference": "DOI:10.1128/AEM.67.5.2176-2182.2001", "snippet": "which catalyzed the incorporation of arginine and aspartic acid into cyanophycin"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cyanophycin_synthetase_cpha", "target": "cyanophycin_synthesis"}, {"description": "The assayed reaction incorporates amino acids into cyanophycin.", "evidence": [{"notes": "Same abstract clause supports the product as well as catalysis. Radiometric incorporation into insoluble polymer is the assay readout. This does not equate soluble synthesis or engineered amino-acid variants with a cellular granule.", "reference": "DOI:10.1128/AEM.67.5.2176-2182.2001", "snippet": "which catalyzed the incorporation of arginine and aspartic acid into cyanophycin"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "cyanophycin_synthesis", "target": "cyanophycin_macromolecule"}, {"description": "Accumulated cyanophycin forms the material of the inclusion.", "evidence": [{"notes": "Watzer and Forchhammer (2018), Introduction, directly read in publisher HTML. Results report microscopy and arginine-specific Sakaguchi staining during nitrogen resuscitation in the engineered PCC 6803 CphA-eGFP strain. Main text, Methods and supplemental captions were read; actual figure images were not inspected.", "reference": "DOI:10.1128/AEM.01298-18", "snippet": "Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell"}], "id": "edge-3", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "cyanophycin_macromolecule", "target": "cyanophycin_granule_trait"}, {"description": "The inclusion retains cyanophycin as a temporary nitrogen reserve.", "evidence": [{"notes": "Scientific abstract clause. PCC 6803 wild-type versus cphA-deletion comparisons support condition-dependent storage during fluctuating or limiting nitrogen supply and light/dark cycles, not a universal fitness advantage. Granule-loss confirmation is reported as data not shown; no complementation experiment is claimed.", "reference": "DOI:10.1128/AEM.01298-18", "snippet": "cyanophycin can be used as a temporary nitrogen storage"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cyanophycin_granule_trait", "target": "temporary_nitrogen_storage"}], "evidence_rows": [{"description": "Purified PCC 6308 CphA catalyzes polymer synthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Aboulmagd et al. (2001), scientific abstract: the quoted relative clause describes the native enzyme purified from recombinant E. coli. Publisher full-text Methods and substrate/primer Results were read, including Tables 2 and 3. No actual figure images were inspected.", "reference": "DOI:10.1128/AEM.67.5.2176-2182.2001", "snippet": "which catalyzed the incorporation of arginine and aspartic acid into cyanophycin"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cyanophycin synthetase CphA", "target": "cyanophycin synthesis"}, {"description": "The assayed reaction incorporates amino acids into cyanophycin.", "edge_id": "edge-2", "evidence": [{"notes": "Same abstract clause supports the product as well as catalysis. Radiometric incorporation into insoluble polymer is the assay readout. This does not equate soluble synthesis or engineered amino-acid variants with a cellular granule.", "reference": "DOI:10.1128/AEM.67.5.2176-2182.2001", "snippet": "which catalyzed the incorporation of arginine and aspartic acid into cyanophycin"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "cyanophycin synthesis", "target": "cyanophycin macromolecule"}, {"description": "Accumulated cyanophycin forms the material of the inclusion.", "edge_id": "edge-3", "evidence": [{"notes": "Watzer and Forchhammer (2018), Introduction, directly read in publisher HTML. Results report microscopy and arginine-specific Sakaguchi staining during nitrogen resuscitation in the engineered PCC 6803 CphA-eGFP strain. Main text, Methods and supplemental captions were read; actual figure images were not inspected.", "reference": "DOI:10.1128/AEM.01298-18", "snippet": "Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "cyanophycin macromolecule", "target": "cyanophycin granule"}, {"description": "The inclusion retains cyanophycin as a temporary nitrogen reserve.", "edge_id": "edge-4", "evidence": [{"notes": "Scientific abstract clause. PCC 6803 wild-type versus cphA-deletion comparisons support condition-dependent storage during fluctuating or limiting nitrogen supply and light/dark cycles, not a universal fitness advantage. Granule-loss confirmation is reported as data not shown; no complementation experiment is claimed.", "reference": "DOI:10.1128/AEM.01298-18", "snippet": "cyanophycin can be used as a temporary nitrogen storage"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cyanophycin granule", "target": "temporary nitrogen storage"}], "graph_id": "cyanophycin_synthesis_and_storage", "issues": [], "nodes": [{"color": "#dbeafe", "description": null, "grounding": "traitmech:000673", "id": "cyanophycin_granule_trait", "is_orphan": false, "label": "cyanophycin granule", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Authority-verified aspartate-backbone, arginine-side-group polymer; chemical identity is not the granule phenotype.", "grounding": "CHEBI:65318", "id": "cyanophycin_macromolecule", "is_orphan": false, "label": "cyanophycin macromolecule", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Nonribosomal polymer synthesis from arginine and aspartate.", "grounding": null, "id": "cyanophycin_synthesis", "is_orphan": false, "label": "cyanophycin synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cyanophycin synthetase family, verified at the InterPro authority; not an isolated ATP-grasp domain.", "grounding": "InterPro:IPR011810", "id": "cyanophycin_synthetase_cpha", "is_orphan": false, "label": "cyanophycin synthetase CphA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 91, "evidence": [{"notes": "Aboulmagd et al. (2000), scientific abstract directly read in DOI-matched Europe PMC core metadata (PMID:11131019); full paper not inspected. UniProt REST P56947 links this paper and AF220099/AAF43647.2 to PCC 6308; its entry version 91, sequence version 2 and NCBITaxon:113355 were checked live. The paper\u0027s Synechocystis name is historical. The accession is not PCC 6803 or the heterologous expression host.", "reference": "DOI:10.1007/s002030000206", "snippet": "The functionality of cphA was proven by heterologous expression of active enzyme and synthesis of cyanophycin in Escherichia coli"}], "gene_symbol": "cphA", "protein_label": "Cyanophycin synthetase", "retrieved_on": "2026-10-08", "role": "PCC 6308 enzyme catalyzes cyanophycin synthesis; functional expression and purification used recombinant E. coli, not a natural E. coli phenotype.", "sequence_version": 2, "taxon_id": "NCBITaxon:113355", "taxon_label": "Geminocystis herdmanii PCC 6308", "uniprot_id": "UniProtKB:P56947"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Retention of assimilated nitrogen for subsequent utilization.", "grounding": null, "id": "temporary_nitrogen_storage", "is_orphan": false, "label": "temporary nitrogen storage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 91, "evidence": [{"notes": "Aboulmagd et al. (2000), scientific abstract directly read in DOI-matched Europe PMC core metadata (PMID:11131019); full paper not inspected. UniProt REST P56947 links this paper and AF220099/AAF43647.2 to PCC 6308; its entry version 91, sequence version 2 and NCBITaxon:113355 were checked live. The paper\u0027s Synechocystis name is historical. The accession is not PCC 6803 or the heterologous expression host.", "reference": "DOI:10.1007/s002030000206", "snippet": "The functionality of cphA was proven by heterologous expression of active enzyme and synthesis of cyanophycin in Escherichia coli"}], "gene_symbol": "cphA", "node_id": "cyanophycin_synthetase_cpha", "node_label": "cyanophycin synthetase CphA", "protein_label": "Cyanophycin synthetase", "retrieved_on": "2026-10-08", "role": "PCC 6308 enzyme catalyzes cyanophycin synthesis; functional expression and purification used recombinant E. coli, not a natural E. coli phenotype.", "sequence_version": 2, "taxon_id": "NCBITaxon:113355", "taxon_label": "Geminocystis herdmanii PCC 6308", "uniprot_id": "UniProtKB:P56947"}], "scope_notes": "Integrates PCC 6308 enzyme expression/purification with PCC 6803 cell biology. It is not one experiment or a strain-specific mechanism demonstrated in the ATCC 51142 canonical example. The sequence-family match establishes identity, not granule formation. No universal growth benefit, magnesium dependence in vivo, degradation enzyme, or granule-surface organizer is inferred.", "scope_status": "MECHANISTIC", "title": "CphA supplies polymer for cyanophycin storage granules"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-10-08 04:30 UTC
+      · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 1068 TraitRecords
+      · embedding coverage 44.7%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

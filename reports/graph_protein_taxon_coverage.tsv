@@ -595,6 +595,7 @@ data/traits/morphology/coccus_shaped.yaml	METPO:1000668	coccus shaped	coccus_sha
 data/traits/morphology/cream_pigmented.yaml	METPO:1003024	cream pigmented	cream_pigmented_low_carotenoid_density	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/crescent_shaped.yaml	METPO:1000669	crescent shaped	crescent_shaped_crescentin_curvature	MECHANISTIC	1	0	1	2	2	1	1	PASS	0	0	-
 data/traits/morphology/curved_shaped.yaml	METPO:1000670	curved shaped	curved_shaped_scaffolded_curvature	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cyanophycin_granule.yaml	traitmech:000673	cyanophycin granule	cyanophycin_synthesis_and_storage	MECHANISTIC	1	1	0	1	1	1	0	PASS	0	0	-
 data/traits/morphology/diplococcus_shaped.yaml	METPO:1000671	diplococcus shaped	diplococcus_shaped_septal_separation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	disc_shaped_anisotropic_wall_growth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbell_shaped_snapping_division	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
