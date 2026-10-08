@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1063400	fungal adhesive-column trap formation	A morphological phenotype in which a fungus forms columns of serially arranged hyphal cells with adhesive surfaces that serve as nematode traps.	TraitMech:data/traits/morphology/fungal_adhesive_column_trap_formation.yaml|DOI:10.1016/j.isci.2020.101057|DOI:10.1111/lam.12557	METPO:1000059			metpo_traitmech_2026_10		Adhesive multicellular columns; no universal inducer or sequence-derived mechanism.	traitmech:000681

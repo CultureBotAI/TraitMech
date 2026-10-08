@@ -1,0 +1,78 @@
+identifier: traitmech:000681
+label: fungal adhesive-column trap formation
+definition: A morphological phenotype in which a fungus forms columns of serially
+  arranged hyphal cells with adhesive surfaces that serve as nematode traps.
+definition_source: DOI:10.1016/j.isci.2020.101057
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1016/j.isci.2020.101057
+  snippet: Fungi with the AC device form a string of cells with adhesive surfaces
+  notes: Ji et al. (2020), Introduction, third paragraph; AC means adhesive column.
+    Primary full-text XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7186526/fullTextXML
+    and actual Figure 1 inspected. Figure 1C shows a column attributed to source-named
+    Dactylellina cionopagum; Figure 1G shows nematode capture by multiple columns.
+    This morphology differs from the network, knob and constricting-ring comparators.
+    Gene-family expansion and expression correlations do not establish a causal protein
+    requirement for column formation. The cited adhesion-gene disruption experiment
+    concerns Arthrobotrys oligospora, not this column-forming organism. Supplemental
+    Methods were not retrieved completely; no strain identity or universal culture
+    condition is inferred from this paper.
+- reference: DOI:10.1111/lam.12557
+  snippet: Dactylellina cionopaga YMF1·01472, producing adhesive columns
+  notes: 'Su et al. (2016), scientific Abstract, final sentence, directly retrieved
+    from NCBI XML for PMID:26928264 at https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26928264&retmode=xml.
+    Abstract-only access: full Methods and figures were not retrieved. The abstract
+    reports ammonia-associated trap induction in several fungi and names this culture
+    as column-producing. The initial 11-bacterium assay and its detailed volatile-compound
+    analysis concern A. oligospora, not eleven independent column-forming isolates.
+    No universal ammonia requirement, dosage, effect size or molecular induction pathway
+    is asserted. Strain provenance remains unresolved; this is qualified phenotype
+    evidence, not a natural canonical exemplar.'
+discussions:
+- discussion_id: adhesive-column-scope-and-parent
+  prompt: Resolve a closer fungal trap-morphology parent.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074
+    explicitly concerns bacteria; hyphal anastomosis traitmech:000605 denotes fusion.
+    Distinguish multicellular adhesive columns from unicellular knobs, interconnected
+    net loops, nonconstricting rings and mechanically constricting rings. A generic
+    hyphal branch, branched-shaped cell or nematophagous genus is not sufficient.
+    Adhesive branch is not asserted as an exact synonym without resolving its usage
+    boundaries. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness
+    are asserted. Neighboring scope exclusions are not unresolved exact groundings;
+    their closer-parent questions remain open.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: adhesive-column-strains-and-mechanism
+  prompt: Resolve natural strain provenance and column-specific mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Live NCBI https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=47266
+    resolves Dactylellina cionopaga at species rank, with Monacrosporium cionopagum
+    and Dactylella cionopaga synonyms. It does not identify YMF1.01472 as a strain
+    accession or establish its origin. The 2020 paper's cionopagum spelling and experimental
+    strain must be reconciled before a canonical example is added; do not conflate
+    strains across these papers. Formation, adhesion, capture, penetration and digestion
+    are separate endpoints; formation alone does not guarantee capture in every condition.
+    Protein-resolved causal graphs require column-specific perturbation/complementation
+    evidence and taxon-paired accessions. Sequence features and expression correlations
+    are not validated phenotype predictors. No mechanism is transferred from nets,
+    knobs or rings; mechanism is deferred, not claimed absent.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T13:53:29Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal adhesive-column trap formation with two primary DOI sources
+    and contiguous source-checked snippets. Ignored-and-hidden main/worktree/open-PR
+    checks support 000681 and v557 block 1063400-1063499. Kept strain provenance and
+    protein mechanism unresolved, distinguishing morphology from sequence correlations
+    and induction observations. Existing records unchanged. Timestamp is observed
+    UTC.
+  llm_assisted: true

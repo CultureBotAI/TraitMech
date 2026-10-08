@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_adhesive_column_trap_formation.yaml
+  slug: fungal_adhesive_column_trap_formation
+session:
+  id: 2026-10-08T140037Z-codex-066d2a
+  timestamp: '2026-10-08T14:00:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1829
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct session actor attribution without changing the trait
+  details: 'Corrects history/records/fungal_adhesive_column_trap_formation/2026-10-08T135713Z-claude-code-9de31b.yaml:
+    session.actors.name should be codex, not claude-code. The original command omitted --actor-name
+    and therefore retained the scaffolder default. The original model gpt-5 and agent_tool
+    codex were correct. This append-only audit preserves the original entry and changes no
+    TraitRecord fields or biological claims. The add-trait skill already explicitly instructs
+    passing and inspecting --actor-name (#1776), so no redundant skill change is needed.'
