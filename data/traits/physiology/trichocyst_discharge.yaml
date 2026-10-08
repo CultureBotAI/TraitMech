@@ -1,0 +1,83 @@
+identifier: traitmech:000683
+label: trichocyst discharge
+definition: An exocytotic phenotype in which a microbial cell releases trichocyst
+  contents to the exterior through fusion of a trichocyst membrane with the plasma
+  membrane.
+definition_source: DOI:10.1083/jcb.111.6.2527
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000637
+evidence:
+- reference: DOI:10.1083/jcb.111.6.2527
+  snippet: A Paramecium possesses secretory organelles called trichocysts which are
+    docked beneath the plasma membrane awaiting an external stimulus that triggers
+    their exocytosis.
+  notes: PMID:1703537, PMC2116420. Scientific Abstract and relevant Methods/Results
+    OCR read directly in Europe PMC fullTextXML. The snippet is from the scientific
+    Abstract; figures were not inspected. AED-triggered release was studied in Paramecium
+    tetraurelia stock d4-2, a stock 51 derivative, and mutants. Calcium influx and
+    concentration requirements concern this assay, not a universal discharge threshold
+    or proven channel identity. The Methods distinguish low-calcium membrane injury
+    from secretion; calcium influx alone does not demonstrate release.
+- reference: DOI:10.1016/s0143-4160(98)90030-6
+  snippet: but only wt cells release trichocysts (t).
+  notes: PMID:9681197. Primary PDF at https://d-nb.info/1107191386/34, Figures 1-4
+    caption, printed page 351. Pages 351-352 were visually inspected, including paired
+    fluorescence/transmitted-light panels and Table 1. Wildtype Paramecium caudatum
+    releases trichocysts after local AED or caffeine stimulation; tnd1 shows calcium
+    transients and membrane fusion without contents release. Most trichocysts remain
+    in wildtype cells during the illustrated local response, so total emptying is
+    not required. Mutant tnd1 is boundary evidence, not a positive discharge exemplar.
+    Reduced calcium binding is a proposed explanation, not a proven protein lesion.
+    Natural strain provenance is unresolved.
+- reference: DOI:10.1016/0143-4160(93)90065-e
+  snippet: trichocyst contents were slowly extruded
+  notes: PMID:7684653. Scientific Abstract retrieved directly using an exact quoted
+    DOI query in Europe PMC. Abstract-only access; full Methods and figures were not
+    inspected. Slow extrusion under AED and low-calcium conditions shows why rapid
+    expansion is not mandatory in this definition. The abstract distinguishes fusion,
+    contents release and resealing; prolonged calcium removal is followed by cell
+    death. Do not infer calcium irrelevance to all stages or treat terminal damage
+    as secretion.
+discussions:
+- discussion_id: trichocyst-discharge-scope-and-assays
+  prompt: Keep cargo release distinct from organelle presence and component steps.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Exocytosis traitmech:000637 is the broader parent; the proposal depends
+    on its v513 placeholder METPO:1059000. Trichocyst formation, docking, fusion without
+    cargo release and isolated matrix expansion do not alone establish completed discharge.
+    Lysis and preparation artifacts must be excluded from positive assays. Neither
+    rapid extrusion, total emptying nor a shared calcium threshold defines this class.
+    The existing myzocytosis record's warning about fixation-associated discharge
+    and uncertain prey capture is not resolved by these secretion experiments. No
+    exact synonyms, xrefs, SSSOM equivalents or universal prey-capture role are asserted.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: trichocyst-discharge-provenance-and-mechanism
+  prompt: Resolve natural culture provenance and taxon-specific release mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: These experiments support a secretion phenotype in source-named Paramecium
+    systems, not every protist bearing an extrusome. Natural culture provenance and
+    strain-level taxonomy remain unchecked, so no canonical examples are assigned.
+    A wildtype designation alone does not establish natural provenance; a mutant designation
+    alone does not establish engineering. Keep assay-specific calcium observations
+    separate and obtain direct functional evidence with taxon-paired accessions before
+    adding a protein-resolved graph. Mechanism is deferred, not claimed absent; sequence
+    features alone do not establish discharge.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T16:03:03Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added trichocyst discharge with three primary DOI sources and directly
+    checked abstract/caption snippets. Ignored-and-hidden main/worktree/open-PR checks
+    support 000683 and v559 block 1063600-1063699. Used existing exocytosis parent
+    and its v513 proposal dependency. Kept calcium conditions, fusion-only mutants,
+    slow extrusion and provenance qualified; deferred protein mechanism. Existing
+    records unchanged. Timestamp is observed UTC.
+  llm_assisted: true

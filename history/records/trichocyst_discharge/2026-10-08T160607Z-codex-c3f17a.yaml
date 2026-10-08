@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/trichocyst_discharge.yaml
+  slug: trichocyst_discharge
+session:
+  id: 2026-10-08T160607Z-codex-c3f17a
+  timestamp: '2026-10-08T16:06:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed trichocyst discharge
+  details: Added traitmech:000683 with three primary DOI sources, directly read scientific-abstract
+    and visually checked caption snippets, exocytosis parent, and v559 proposal depending
+    on v513. Distinguished contents release from fusion alone; retained slow-extrusion, calcium,
+    provenance and mechanism limits. No existing records changed.
