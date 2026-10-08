@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1063600	trichocyst discharge	An exocytotic phenotype in which a microbial cell releases trichocyst contents to the exterior through fusion of a trichocyst membrane with the plasma membrane.	TraitMech:data/traits/physiology/trichocyst_discharge.yaml|DOI:10.1083/jcb.111.6.2527|DOI:10.1016/s0143-4160(98)90030-6|DOI:10.1016/0143-4160(93)90065-e	METPO:1059000			metpo_traitmech_2026_10		Depends on v513 exocytosis; contents release, not fusion alone.	traitmech:000683

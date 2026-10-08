@@ -13103,6 +13103,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/thigmotropism.html#thigmotropism-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "trichocyst-discharge-scope-and-assays",
+  "prompt": "Keep cargo release distinct from organelle presence and component steps.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trichocyst discharge",
+  "source_id": "traitmech:000683",
+  "source_file": "trichocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Exocytosis traitmech:000637 is the broader parent; the proposal depends on its v513 placeholder METPO:1059000. Trichocyst formation, docking, fusion without cargo release and isolated matrix expansion do not alone establish completed discharge. Lysis and preparation artifacts must be excluded from positive assays. Neither rapid extrusion, total emptying nor a shared calcium threshold defines this class. The existing myzocytosis record's warning about fixation-associated discharge and uncertain prey capture is not resolved by these secretion experiments. No exact synonyms, xrefs, SSSOM equivalents or universal prey-capture role are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/trichocyst_discharge.html#trichocyst-discharge-scope-and-assays"
+ },
+ {
+  "discussion_id": "trichocyst-discharge-provenance-and-mechanism",
+  "prompt": "Resolve natural culture provenance and taxon-specific release mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "trichocyst discharge",
+  "source_id": "traitmech:000683",
+  "source_file": "trichocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "These experiments support a secretion phenotype in source-named Paramecium systems, not every protist bearing an extrusome. Natural culture provenance and strain-level taxonomy remain unchecked, so no canonical examples are assigned. A wildtype designation alone does not establish natural provenance; a mutant designation alone does not establish engineering. Keep assay-specific calcium observations separate and obtain direct functional evidence with taxon-paired accessions before adding a protein-resolved graph. Mechanism is deferred, not claimed absent; sequence features alone do not establish discharge.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/trichocyst_discharge.html#trichocyst-discharge-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "tripolar-mating-scope-and-hierarchy",
   "prompt": "Keep the cross-level mating phenotype distinct from sequence inventory.",
   "kind": "CURATION_TODO",
@@ -13325,9 +13359,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 657,
- "total_knowledge_gaps": 424,
- "total_source_entries": 548,
+ "total_discussions": 659,
+ "total_knowledge_gaps": 425,
+ "total_source_entries": 549,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
