@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1062700	necridium formation	A morphological phenotype in which a filamentous cyanobacterium forms degenerating separation cells called necridia whose disintegration permits trichome fragmentation.	TraitMech:data/traits/morphology/necridium_formation.yaml|DOI:10.1127/1864-1318/2005/0117-0239|DOI:10.1111/mmi.12506|DOI:10.3389/fmicb.2015.00278	METPO:1000059			metpo_traitmech_2026_10		Cyanobacterial separation-cell formation; no universal trigger or protein mechanism asserted.	traitmech:000674

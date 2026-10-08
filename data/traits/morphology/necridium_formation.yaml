@@ -1,0 +1,95 @@
+identifier: traitmech:000674
+label: necridium formation
+definition: A morphological phenotype in which a filamentous cyanobacterium forms
+  degenerating separation cells called necridia whose disintegration permits trichome
+  fragmentation.
+definition_source: DOI:10.1127/1864-1318/2005/0117-0239
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1127/1864-1318/2005/0117-0239
+  snippet: Trichome breakage and hormogonia liberation were caused by the disintegration
+    of such necridia
+  notes: 'Hernandez-Marine and Roldan (2005), scientific abstract on article page
+    239, visually checked in the published article reproduced in Roldan''s university
+    thesis: https://diposit.ub.edu/server/api/core/bitstreams/6ce8a85f-d68f-402d-8c13-882f128e4a7f/content
+    (PDF page 106). Article pages 239-247, including Methods, Results, Discussion
+    and actual Figures 1-4, were inspected. Natural cave/catacomb biofilms contain
+    Leptolyngbya and Scytonema; microscopy associates cell degeneration with fragmentation
+    and terminal polysaccharide pads. The proposed adhesive function is not a demonstrated
+    universal requirement. No exact strain exemplar is assigned from these mixed samples.'
+- reference: DOI:10.1111/mmi.12506
+  snippet: Necridia formation inhibits further molecular exchange, determining the
+    fate of a branch likely to become a hormogonium.
+  notes: Nurnberg et al. (2014), scientific abstract directly retrieved from DOI-matched
+    Europe PMC record PMID:24383541. Publisher full-text Results and Methods were
+    read; actual Figures 5-6 were inspected in the accepted manuscript at https://idus.us.es/bitstreams/05b873c9-9775-45f4-a6d6-2b6c54f97978/download
+    (PDF pages 41-42), with final publisher captions cross-checked. Figure 5 follows
+    5-CFDA fluorescence for 24 seconds across a necridium; this is not proof of permanent
+    exclusion of every molecule. Figure 6 shows terminal cell remnants and sealed
+    neighboring membranes. Supplements were not inspected.
+- reference: DOI:10.3389/fmicb.2015.00278
+  snippet: necridic (dead) cells are SYTOX Green-positive and CTC-negative
+  notes: Publisher full-text Methods, Results, Figure 2 caption and actual panels
+    A-I were inspected. The quoted caption identifies dead cells operationally by
+    membrane permeability and lack of CTC reduction. Panels D-F concern Microcoleus
+    vaginatus 858 CCALA after a week at 4 degrees C, before desiccation; Results report
+    frequent necridia and trichome splitting in cold cultures. Injured double-positive
+    cells and nitrogen-starved bleached but active cells are distinguished. Neither
+    cold exposure nor this stain combination defines the entire class. Supplements
+    and strain provenance were not inspected.
+canonical_examples:
+- taxon_id: NCBITaxon:447715
+  taxon_label: Mastigocladus laminosus SAG 4.84
+  reference: DOI:10.1111/mmi.12506
+  note: Necridium-forming stage of the study strain, not a claim that every cell is
+    a necridium. Methods report Castenholz D liquid culture at 40 degrees C under
+    constant white light and fresh medium growth before communication assays. Natural
+    origin from an Icelandic thermal spring in 1967 is independently confirmed by
+    the culture collection at https://sagdb.uni-goettingen.de/detailedList.php?str_number=4.84.
+    NCBI Taxonomy efetch for 447715 confirms this current name and rank strain. These
+    authorities support identity/provenance, not additional phenotype experiments.
+discussions:
+- discussion_id: necridium-formation-scope
+  prompt: Review a closer parent and separation-cell terminology.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use active phenotype METPO:1000059 below quality METPO:1000188. Hormogonium
+    formation traitmech:000651 denotes production of short dispersal filaments, not
+    the degenerating separation cell. The 2005 Introduction describes additional fragmentation
+    routes, so neither trait is asserted a subclass or exact synonym of the other.
+    Filament-shaped morphology concerns elongated cell shape, not this multicellular
+    separation stage. Do not equate all dead cells, all trichome fragmentation or
+    all hormogonium formation with necridia. No exact synonyms, xrefs, SSSOM equivalences
+    or organism-level disjointness are asserted pending review of historical separation-disc
+    usages.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: necridium-formation-mechanism
+  prompt: Resolve the formation mechanism without inferring protein causality.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Cell degeneration, communication loss and fragmentation are observed,
+    but the inspected evidence does not establish a protein-resolved necridium-formation
+    mechanism. SepJ sequence similarity and septal localization in the 2014 paper
+    do not establish its causal role in necridium formation. Programmed cell death
+    is an interpretation, not proof of conserved apoptosis machinery. Do not impose
+    a fixed cell shape, spacing, cold trigger, adhesion function or fitness benefit.
+    A causal graph is deferred pending direct mechanism evidence and authority-verified
+    protein examples; the mechanism is not claimed biologically absent.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T05:29:42Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added necridium formation with three primary DOI references, three verbatim
+    snippets and a source-qualified SAG 4.84 example. Ignored-and-hidden novelty and
+    current-main/worktree/complete-open-PR reservation checks support 000674 and v550
+    block 1062700-1062799. Kept separation-cell morphology distinct from hormogonium
+    formation, generic cell death and inferred protein mechanisms; existing records
+    unchanged. Timestamp is observed UTC curation time.
+  llm_assisted: true
