@@ -1,0 +1,98 @@
+identifier: traitmech:000668
+label: fungal root mantle formation
+definition: A morphological phenotype in which a fungus forms an external sheath of
+  aggregated hyphae, called a mantle, around a plant root.
+definition_source: DOI:10.1128/AEM.01991-15
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1128/AEM.01991-15
+  snippet: the fungus initially grows around the roots to form a mass of mycelium
+    called the fungal mantle.
+  notes: Krause et al. (2015), Introduction, first paragraph, directly read publisher
+    HTML. This contiguous clause describes the root-external mantle separately from
+    the intraradical Hartig net. Main text and captions were read; actual figure images
+    and supplementary contents were not inspected. The ald1-overexpressing T. vaccinum
+    1.16 is an engineered perturbation, not a natural canonical exemplar.
+- reference: DOI:10.3389/fpls.2014.00229
+  snippet: The fungus enwraps the root tip with a hyphal mantle [M] composed of several
+    layers.
+  notes: Pena et al. (2014), Figure 1 caption, complete sentence, exact-matched in
+    primary full-text XML and visually checked in the publisher PDF on p. 3. The actual
+    composite figure contains a root photograph and section image with schematic infrared
+    arrows; it is not an experimental image of radiation penetration. Main Results
+    separately describe multilayered mantles in field-collected roots. Other figure
+    images and Table S1 were not inspected; no numerical thickness, spectral function
+    or additional taxon exemplar is inferred.
+- reference: DOI:10.3390/microorganisms9122612
+  snippet: Three weeks post-inoculation, fungal hyphae formed a thinner but denser
+    mantle.
+  notes: 'Ruytinx et al. (2021), Results 3.3, complete sentence, exact-matched in
+    primary full-text XML. Main text and actual Figure 2 on PDF p. 8 were inspected:
+    https://pure.mpg.de/rest/items/item_3375108_1/component/file_3400121/content The
+    21-day state follows the reported thick, dense 14-day mantle, not loss of the
+    sheath. Methods 2.6 names WGA-Alexa 488 whereas the Figure 2 caption names WGA-oregon
+    green; the discrepancy is retained, not resolved by inference. Other figure images
+    and supplements were not inspected.'
+canonical_examples:
+- taxon_id: NCBITaxon:29883
+  taxon_label: Laccaria bicolor
+  reference: DOI:10.3390/microorganisms9122612
+  note: Reference culture S238N, not haploid S238N-H82. Ruytinx (2021), Methods 2.1/2.3
+    and Results 3.3 with Figure 2B-C, documents a mantle around Populus tremula x
+    alba 717-1B4 lateral roots in P20 sandwich coculture, including the 14- and 21-day
+    states. The laboratory history at https://mycor.iam.inrae.fr/IAM/?page_id=4555
+    traces S238N to a 1976 Crater Lake, Oregon fruitbody collection under Tsuga mertensiana.
+    NCBI EFetch confirms species 29883 and separate child strain 486041 S238N-H82;
+    the genome strain is not substituted for the experimental culture. This is culture-qualified
+    evidence, not independent reidentification or a claim for all strains.
+discussions:
+- discussion_id: fungal-root-mantle-scope-and-hierarchy
+  prompt: Resolve a closer morphology parent without conflating root interfaces.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use active phenotype METPO:1000059 under quality METPO:1000188; METPO:1000198
+    mycorrhization is obsolete. The root qualifier excludes other senses of mantle
+    or sheath. Hartig net formation traitmech:000667 is intercellular within roots;
+    arbuscules 000664 and pelotons 000666 are intracellular, while BAS 000665 are
+    branching groups on extraradical runner hyphae. Mycelial growth 000074 is explicitly
+    bacterial and capsule 000063 is a polymer layer around a cell, not hyphae around
+    a plant root. Colony outline, cell shape, rhizosphere association and ecological
+    symbiosis outcomes are not this architecture. The existing Hartig-net mantle mention
+    is an evidence boundary, not an ungrounded node, synonym or parent-gap TODO requiring
+    repair. Bare mantle and fungal sheath name structures, not formation phenotypes;
+    no exact synonyms, xrefs or SSSOM equivalences are asserted. No organism-level
+    disjointness or fixed thickness, color, host range or nutrient-transfer outcome
+    is implied.
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: fungal-root-mantle-mechanism-and-readout
+  prompt: Separate mantle morphogenesis from bulk expression and perturbation effects.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: A protein-resolved causal graph is deferred pending authority-verified
+    proteins, sequence-to-culture links and inspection of the relevant perturbation
+    images, not because mechanisms are absent. DOI:10.1128/AEM.01991-15 reports a
+    thicker mantle in native ald1 overexpression; it does not establish an obligatory
+    universal pathway. Its mte1 evidence is heterologous yeast growth rescue, not
+    a native mantle-formation knockout. Keep increased thickness, first sheath formation,
+    branching and plant responses separate. DOI:10.3390/microorganisms9122612 uses
+    an EcM transcriptomic sample containing all fungal and mixed plant-fungal material
+    within 0.5 cm of a root. Coexpression in that bulk sample is not mantle-specific
+    localization or functional validation. The paper explicitly presents working models
+    for future experimental tests.
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T19:40:30Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal root mantle formation with three DOI-backed snippets and a
+    culture-qualified S238N example. Ignored-and-hidden novelty and main/worktree/pending-PR
+    checks support 000668, v544 and block 1062100-1062199; pending 000665-000667 reservations
+    remain occupied. Kept root-external sheath architecture separate from Hartig nets,
+    ecological outcomes and unverified protein mechanisms.
+  llm_assisted: true
