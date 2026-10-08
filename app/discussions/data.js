@@ -9123,6 +9123,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "adhesive-column-scope-and-parent",
+  "prompt": "Resolve a closer fungal trap-morphology parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal adhesive-column trap formation",
+  "source_id": "traitmech:000681",
+  "source_file": "fungal_adhesive_column_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis traitmech:000605 denotes fusion. Distinguish multicellular adhesive columns from unicellular knobs, interconnected net loops, nonconstricting rings and mechanically constricting rings. A generic hyphal branch, branched-shaped cell or nematophagous genus is not sufficient. Adhesive branch is not asserted as an exact synonym without resolving its usage boundaries. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted. Neighboring scope exclusions are not unresolved exact groundings; their closer-parent questions remain open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_column_trap_formation.html#adhesive-column-scope-and-parent"
+ },
+ {
+  "discussion_id": "adhesive-column-strains-and-mechanism",
+  "prompt": "Resolve natural strain provenance and column-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal adhesive-column trap formation",
+  "source_id": "traitmech:000681",
+  "source_file": "fungal_adhesive_column_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Live NCBI https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=47266 resolves Dactylellina cionopaga at species rank, with Monacrosporium cionopagum and Dactylella cionopaga synonyms. It does not identify YMF1.01472 as a strain accession or establish its origin. The 2020 paper's cionopagum spelling and experimental strain must be reconciled before a canonical example is added; do not conflate strains across these papers. Formation, adhesion, capture, penetration and digestion are separate endpoints; formation alone does not guarantee capture in every condition. Protein-resolved causal graphs require column-specific perturbation/complementation evidence and taxon-paired accessions. Sequence features and expression correlations are not validated phenotype predictors. No mechanism is transferred from nets, knobs or rings; mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_column_trap_formation.html#adhesive-column-strains-and-mechanism"
+ },
+ {
   "discussion_id": "adhesive-knob-scope-and-parent",
   "prompt": "Resolve a closer fungal trap-morphology parent.",
   "kind": "CURATION_TODO",
@@ -13257,9 +13291,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 653,
- "total_knowledge_gaps": 422,
- "total_source_entries": 546,
+ "total_discussions": 655,
+ "total_knowledge_gaps": 423,
+ "total_source_entries": 547,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

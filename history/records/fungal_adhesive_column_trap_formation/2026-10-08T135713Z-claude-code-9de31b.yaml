@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_adhesive_column_trap_formation.yaml
+  slug: fungal_adhesive_column_trap_formation
+session:
+  id: 2026-10-08T135713Z-claude-code-9de31b
+  timestamp: '2026-10-08T13:57:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add fungal adhesive-column trap formation
+  details: Added traitmech:000681 and companion proposal v557, reserving METPO:1063400-1063499
+    after ignored-and-hidden searches of 20 registered worktrees, CommunityMech and a complete
+    five-open-PR exact-head snapshot including drafts. Two distinct primary DOI sources and
+    contiguous snippets support serially arranged adhesive column traps. Read 2020 full-text
+    XML and actual Figure 1; 2016 scientific abstract only. Supplemental Methods downloads
+    incomplete, so strain provenance and a canonical exemplar are deferred; live NCBI species
+    identity does not establish strain identity. No gene mechanism is inferred from sequence
+    abundance or expression correlations. Existing YAML and previous history are unchanged.
+    Guarded writer, proposal and focused tests accompany the record; validation and review
+    results will be recorded in the PR.
