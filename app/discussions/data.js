@@ -11962,6 +11962,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/mitophagy.html#mitophagy-exemplars-and-native-mechanisms"
  },
  {
+  "discussion_id": "mucocyst-discharge-scope-and-homology",
+  "prompt": "Keep cargo release distinct from organelle presence and homologous types.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "mucocyst discharge",
+  "source_id": "traitmech:000684",
+  "source_file": "mucocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Exocytosis traitmech:000637 is the broader parent; the proposal depends on its v513 placeholder METPO:1059000. Mucocyst formation, docking and fusion without cargo release do not alone establish discharge. Lysis and preparation artifacts must be excluded from positive assays. Neither rapid expansion nor total emptying defines this class. The 2022 Discussion calls Paramecium trichocysts mucocyst homologs. This record preserves the organelle-specific release phenotype rather than asserting independent origins, exact equivalence to trichocyst discharge traitmech:000683, or organism-level disjointness. Resolve historical extrusome terminology before broadening the definition; not all mucus secretion, cortical granules or capsule formation are equivalent. No exact synonyms or xrefs are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mucocyst_discharge.html#mucocyst-discharge-scope-and-homology"
+ },
+ {
+  "discussion_id": "mucocyst-discharge-provenance-and-mechanism",
+  "prompt": "Resolve natural culture provenance and taxon-specific release mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "mucocyst discharge",
+  "source_id": "traitmech:000684",
+  "source_file": "mucocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "These experiments support a secretion phenotype in source-named Tetrahymena systems, not every protist bearing an extrusome. Natural culture provenance and strain-level taxonomy remain unchecked, so no canonical examples are assigned. A wildtype designation alone does not establish natural provenance; a mutant designation alone does not establish engineering. The MDL1 and CTH4 experiments motivate a future protein-resolved graph, but require taxon-paired accessions and separation of maturation, docking, fusion and cargo extrusion. Mechanism is deferred, not claimed absent; sequence features alone do not establish discharge. Do not infer a universal ecological role from induced secretion.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/mucocyst_discharge.html#mucocyst-discharge-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "myzocytosis-feeding-scope-and-parent",
   "prompt": "Reconcile feeding-mode terminology with operational trait boundaries.",
   "kind": "CURATION_TODO",
@@ -13359,9 +13393,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 659,
- "total_knowledge_gaps": 425,
- "total_source_entries": 549,
+ "total_discussions": 661,
+ "total_knowledge_gaps": 426,
+ "total_source_entries": 550,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
