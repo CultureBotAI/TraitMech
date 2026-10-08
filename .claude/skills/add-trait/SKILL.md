@@ -361,6 +361,12 @@ section identity or independent experimental support. For a scientific-abstract
 or full-text quote, retrieve that section directly, identify it in `notes`, and
 retain the resolver's actual verdict separately from the manual source check.
 
+Qualify numeric literature identifiers by their source namespace. In Europe
+PMC, use `EXT_ID:<PMID> AND SRC:MED` for a PubMed ID; an unqualified numeric
+query can also match an unrelated record from another database. Check the
+returned source, identifier, title and DOI together before quoting, and never
+select the first result solely because its numeric identifier matches.
+
 Do not add new-record exceptions to the frozen snippet baseline to pass QC.
 If a new evidence item creates a finding, resolve it with source-faithful
 evidence or leave the candidate in research until support is adequate; keep

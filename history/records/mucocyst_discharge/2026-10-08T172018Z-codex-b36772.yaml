@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/mucocyst_discharge.yaml
+  slug: mucocyst_discharge
+session:
+  id: 2026-10-08T172018Z-codex-b36772
+  timestamp: '2026-10-08T17:20:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed mucocyst discharge
+  details: Created traitmech:000684 with three primary DOI scientific-abstract snippets, qualified
+    assay proxies and homologous extrusome terminology, unresolved natural strain provenance
+    and deferred protein mechanism. Reserved v560 METPO:1063700-1063799 with explicit exocytosis
+    v513 dependency; existing records unchanged.

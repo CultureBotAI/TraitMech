@@ -1,0 +1,86 @@
+identifier: traitmech:000684
+label: mucocyst discharge
+definition: An exocytotic phenotype in which a microbial cell releases mucocyst contents
+  to the exterior through fusion of a mucocyst membrane with the plasma membrane.
+definition_source: DOI:10.1371/journal.pgen.1010194
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000637
+evidence:
+- reference: DOI:10.1371/journal.pgen.1010194
+  snippet: lysosome-related organelles called mucocysts accumulate at the cell periphery
+    where they secrete their contents in response to extracellular events
+  notes: PMID:35587496, PMC9159632. Scientific Abstract, relevant Results/Methods
+    and Discussion read directly in Europe PMC fullTextXML and publisher HTML. Figure
+    1 and its caption were visually inspected; Figure 4 caption, not image, was read.
+    The snippet is from the scientific Abstract, not the Author summary. Dibucaine
+    stimulates release in Tetrahymena thermophila. Sedimented flocculent volume is
+    a secretion proxy, not a count of discharged organelles; cells can be trapped
+    in that layer. The MN175 missense and MDL1 deletion phenotypes differ. S1 Table
+    DOCX text was inspected, not rendered; laboratory strain names and genotypes do
+    not establish natural provenance.
+- reference: DOI:10.1016/0309-1651(77)90012-1
+  snippet: Synchronous secretion of all available mature mucocysts was induced
+  notes: PMID:610868. Scientific Abstract directly retrieved with EXT_ID:610868 AND
+    SRC:MED in Europe PMC; an unqualified numeric query also returns an unrelated
+    database record. The correct MED result matches this DOI and title. Abstract-only
+    access; full Methods and figures were not inspected. The source names Tetrahymena
+    thermophilia (B III). Synchrony and complete release concern late-log cultures
+    treated with dibucaine, not universal requirements for this trait. Fusion-rosette
+    reappearance and new mucocyst precursors are temporally associated, not proof
+    of a universal protein mechanism.
+- reference: DOI:10.1128/ec.00058-15
+  snippet: those cores do not undergo normal directional expansion during exocytosis,
+    and they thus fail to efficiently extrude from the cells.
+  notes: 'PMID:26092918, PMC4519746. Scientific Abstract directly retrieved by exact
+    quoted DOI query in Europe PMC. Abstract-only access; full Methods, figures and
+    supplements were not inspected. The snippet refers to CTH4-disrupted Tetrahymena
+    thermophila: crystalline cores assemble but extrusion is inefficient. It is boundary
+    evidence distinguishing assembly from successful release, not a positive mutant
+    exemplar or proof that no cargo is released. CTH4 dependence is not imposed on
+    all mucocysts.'
+discussions:
+- discussion_id: mucocyst-discharge-scope-and-homology
+  prompt: Keep cargo release distinct from organelle presence and homologous types.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Exocytosis traitmech:000637 is the broader parent; the proposal depends
+    on its v513 placeholder METPO:1059000. Mucocyst formation, docking and fusion
+    without cargo release do not alone establish discharge. Lysis and preparation
+    artifacts must be excluded from positive assays. Neither rapid expansion nor total
+    emptying defines this class. The 2022 Discussion calls Paramecium trichocysts
+    mucocyst homologs. This record preserves the organelle-specific release phenotype
+    rather than asserting independent origins, exact equivalence to trichocyst discharge
+    traitmech:000683, or organism-level disjointness. Resolve historical extrusome
+    terminology before broadening the definition; not all mucus secretion, cortical
+    granules or capsule formation are equivalent. No exact synonyms or xrefs are asserted.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: mucocyst-discharge-provenance-and-mechanism
+  prompt: Resolve natural culture provenance and taxon-specific release mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: These experiments support a secretion phenotype in source-named Tetrahymena
+    systems, not every protist bearing an extrusome. Natural culture provenance and
+    strain-level taxonomy remain unchecked, so no canonical examples are assigned.
+    A wildtype designation alone does not establish natural provenance; a mutant designation
+    alone does not establish engineering. The MDL1 and CTH4 experiments motivate a
+    future protein-resolved graph, but require taxon-paired accessions and separation
+    of maturation, docking, fusion and cargo extrusion. Mechanism is deferred, not
+    claimed absent; sequence features alone do not establish discharge. Do not infer
+    a universal ecological role from induced secretion.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T17:15:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added mucocyst discharge with three primary DOI sources and directly checked
+    scientific-abstract snippets. Ignored-and-hidden main/worktree/open-PR checks
+    support 000684 and v560 block 1063700-1063799. Used existing exocytosis parent
+    and its v513 proposal dependency. Qualified assay proxies, organelle homology,
+    mutant evidence and provenance; deferred protein mechanism. Existing records unchanged.
+    Timestamp is observed UTC.
+  llm_assisted: true
