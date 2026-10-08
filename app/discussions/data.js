@@ -9123,6 +9123,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "adhesive-net-scope-and-parent",
+  "prompt": "Resolve a closer fungal trap-morphology parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal adhesive-net trap formation",
+  "source_id": "traitmech:000678",
+  "source_file": "fungal_adhesive_net_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis traitmech:000605 concerns cytoplasmic fusion, not trap identity. A Hartig net is a plant-root interface, not a prey trap. Exclude generic mycelial networks, biofilms, standalone adhesive rings, knobs and columns, mechanically constricting rings, and individual-cell ring shape. Adhesive nets are multicellular loop networks; generic nematophagy or a fungal genus is not an exact synonym. Network formation does not alone demonstrate adhesion or successful capture under all conditions. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted; closer hierarchy remains open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_net_trap_formation.html#adhesive-net-scope-and-parent"
+ },
+ {
+  "discussion_id": "adhesive-net-mechanism",
+  "prompt": "Separate network morphogenesis from adhesion and predation mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal adhesive-net trap formation",
+  "source_id": "traitmech:000678",
+  "source_file": "fungal_adhesive_net_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The 2011 genomic/proteomic study contains mechanistic leads, but expression changes alone do not establish necessary or sufficient gene effects. Protein-resolved causal graphs require perturbation/complementation evidence, relevant remaining figures/supplements and taxon-paired accessions. Formation, adhesion, capture, penetration and digestion must remain separate endpoints. No universal lectin, signaling or fusion-gene requirement is asserted; mechanism is deferred, not claimed absent. Sequence annotation or taxonomic membership alone does not establish this phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_net_trap_formation.html#adhesive-net-mechanism"
+ },
+ {
   "discussion_id": "fungal-appressorium-scope-and-mapping",
   "prompt": "Reconcile broad appressorium usage and neighboring structures.",
   "kind": "CURATION_TODO",
@@ -13155,9 +13189,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 647,
- "total_knowledge_gaps": 419,
- "total_source_entries": 543,
+ "total_discussions": 649,
+ "total_knowledge_gaps": 420,
+ "total_source_entries": 544,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

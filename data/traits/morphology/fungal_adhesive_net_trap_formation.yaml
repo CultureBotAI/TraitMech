@@ -1,0 +1,90 @@
+identifier: traitmech:000678
+label: fungal adhesive-net trap formation
+definition: A morphological phenotype in which a fungus forms three-dimensional networks
+  of interconnected hyphal loops that serve as adhesive nematode traps.
+definition_source: DOI:10.1371/journal.ppat.1002179
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.ppat.1002179
+  snippet: A. oligospora forms adhesive networks to capture nematodes
+  notes: Yang et al. (2011), Author Summary, not the scientific abstract; primary
+    XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3164635/fullTextXML.
+    Introduction, trap-formation Results, strain/proteomics Methods, actual Figure
+    1 and relevant Text S1 supplemental Methods were inspected. Figure 1I shows connected
+    hyphal loops; the paper describes complex three-dimensional networks. ATCC 24927
+    is the reference strain. Supplemental Methods distinguish nematode-extract induction
+    on vegetative hyphae from subsequent live-nematode interaction assays. Formation,
+    adhesion, capture, penetration and digestion are separate observations. No universal
+    induction medium, prey species or capture efficacy is inferred. Proteomic correlations
+    are not treated as a causal gene requirement.
+- reference: DOI:10.3390/jof8070671
+  snippet: Captures nematodes with adhesive networks.
+  notes: Zhang et al. (2022; published 26 June), Results 3.2 Taxonomy, Arthrobotrys
+    eryuanensis description; primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9317614/fullTextXML.
+    Isolation/observation Methods, all six species descriptions and actual Figure
+    2 were inspected. Figure 2i shows the adhesive network, not time-resolved capture
+    or adhesion kinetics. Holotype CGMCC3.19715 (Figure 2) and ex-type culture DLUCC
+    14-1 are distinguished by the authors. The material originated from freshwater
+    sediment at Xihu Lake, Eryuan, Yunnan, China, collected 20 June 2014. Repeated
+    spore transfers established pure cultures; corn meal agar observation at 26 degrees
+    C with Panagrellus redivivus induced traps. These are study conditions, not universal
+    requirements. The other newly described soil/sediment taxa provide context, not
+    a universal genus-level phenotype assertion.
+canonical_examples:
+- taxon_id: NCBITaxon:756982
+  taxon_label: Orbilia oligospora ATCC 24927
+  reference: DOI:10.1371/journal.ppat.1002179
+  note: Source-named Arthrobotrys oligospora ATCC 24927. Yang et al. Methods identify
+    the purchased ATCC strain as originally isolated from soil in Sweden. Live https://www.atcc.org/products/24927
+    independently confirms environmental soil origin and Sweden; it lists Arthrobotrys
+    oligospora as the former name. Live NCBI https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=756982
+    resolves rank strain with the exact label Orbilia oligospora ATCC 24927. This
+    unperturbed natural-origin reference strain is qualified by the reported induction
+    conditions, not every isolate or field biocontrol efficacy. The 2011 paper's O.
+    auricolor teleomorph wording is not imported as a current taxonomic equivalence
+    or synonym.
+discussions:
+- discussion_id: adhesive-net-scope-and-parent
+  prompt: Resolve a closer fungal trap-morphology parent.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074
+    explicitly concerns bacteria; hyphal anastomosis traitmech:000605 concerns cytoplasmic
+    fusion, not trap identity. A Hartig net is a plant-root interface, not a prey
+    trap. Exclude generic mycelial networks, biofilms, standalone adhesive rings,
+    knobs and columns, mechanically constricting rings, and individual-cell ring shape.
+    Adhesive nets are multicellular loop networks; generic nematophagy or a fungal
+    genus is not an exact synonym. Network formation does not alone demonstrate adhesion
+    or successful capture under all conditions. No exact synonyms, xrefs, SSSOM equivalences
+    or organism-level disjointness are asserted; closer hierarchy remains open.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: adhesive-net-mechanism
+  prompt: Separate network morphogenesis from adhesion and predation mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The 2011 genomic/proteomic study contains mechanistic leads, but expression
+    changes alone do not establish necessary or sufficient gene effects. Protein-resolved
+    causal graphs require perturbation/complementation evidence, relevant remaining
+    figures/supplements and taxon-paired accessions. Formation, adhesion, capture,
+    penetration and digestion must remain separate endpoints. No universal lectin,
+    signaling or fusion-gene requirement is asserted; mechanism is deferred, not claimed
+    absent. Sequence annotation or taxonomic membership alone does not establish this
+    phenotype.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T10:25:48Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal adhesive-net trap formation with two primary DOI sources,
+    source-checked snippets and a natural-origin strain example. Ignored-and-hidden
+    main/worktree/open-PR checks support 000678 and v554 block 1063100-1063199. Separated
+    morphology from adhesion/capture and sequence-derived mechanism hypotheses; existing
+    records unchanged. Corrected draft holotype/ex-type provenance before generation
+    (#1825). Timestamp is observed UTC.
+  llm_assisted: true
