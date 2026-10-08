@@ -9531,6 +9531,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_mycelial_cord_formation.html#fungal-mycelial-cord-mechanism-and-readout"
  },
  {
+  "discussion_id": "nonconstricting-ring-scope-and-parent",
+  "prompt": "Resolve a closer trap-morphology parent without conflating cell shape.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nonconstricting-ring trap formation",
+  "source_id": "traitmech:000680",
+  "source_file": "fungal_nonconstricting_ring_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059 is a broad parent. Ring shaped METPO:1000680 concerns individual-cell geometry, not this multicellular trapping apparatus. Mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis traitmech:000605 concerns fusion. Distinguish nonconstricting traps from an immature constricting ring that has not yet acquired inflation competence, adhesive-net loops, unicellular knobs, columns and intracellular cytokinetic rings. A circular outline or nematophagous genus is not sufficient. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted. Neighboring scope exclusions do not constitute unresolved groundings, and their closer-parent TODOs remain open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_nonconstricting_ring_trap_formation.html#nonconstricting-ring-scope-and-parent"
+ },
+ {
+  "discussion_id": "nonconstricting-ring-mechanism",
+  "prompt": "Separate ring morphogenesis from adhesion and infection mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal nonconstricting-ring trap formation",
+  "source_id": "traitmech:000680",
+  "source_file": "fungal_nonconstricting_ring_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The observed developmental sequence is not evidence that a particular protein is necessary or sufficient. Formation, adhesion, capture, penetration and digestion are separate endpoints; formation alone does not guarantee capture in every condition. A protein-resolved causal graph needs direct perturbation/complementation evidence and taxon-paired accessions. Do not transfer inflation mechanisms from constricting rings or adhesion proteins from knobs and nets. No universal stalk length, detachment, induction medium or prey requirement is asserted; mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_nonconstricting_ring_trap_formation.html#nonconstricting-ring-mechanism"
+ },
+ {
   "discussion_id": "fungal-peloton-scope-and-hierarchy",
   "prompt": "Resolve a closer parent without collapsing intracellular architectures.",
   "kind": "CURATION_TODO",
@@ -13223,9 +13257,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 651,
- "total_knowledge_gaps": 421,
- "total_source_entries": 545,
+ "total_discussions": 653,
+ "total_knowledge_gaps": 422,
+ "total_source_entries": 546,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

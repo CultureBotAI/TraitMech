@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1063300	fungal nonconstricting-ring trap formation	A morphological phenotype in which a fungus forms stalked, three-celled hyphal rings that trap nematodes without inward inflation of the ring cells.	TraitMech:data/traits/morphology/fungal_nonconstricting_ring_trap_formation.yaml|DOI:10.1007/s102670200061|DOI:10.1016/j.mycres.2006.04.011	METPO:1000059			metpo_traitmech_2026_10		Three-cell noninflating trap formation; not immature constricting rings or cell shape.	traitmech:000680
