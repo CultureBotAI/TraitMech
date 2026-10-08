@@ -9055,6 +9055,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/fungal_arbuscule_formation.html#fungal-arbuscule-formation-and-function"
  },
  {
+  "discussion_id": "fungal-auxiliary-cell-scope",
+  "prompt": "Resolve a closer parent and structure-versus-trait terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal auxiliary cell formation",
+  "source_id": "traitmech:000671",
+  "source_file": "fungal_auxiliary_cell_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 below quality METPO:1000188; mycorrhization METPO:1000198 is obsolete. Arbuscular mycorrhizal identifies the fungal context, not a requirement for current host contact: the germ-tube observation is outside plant tissue. Internal mycorrhizal vesicle formation traitmech:000670, arbuscule formation traitmech:000664 and branched absorbing structure formation traitmech:000665 denote different architectures or locations. Not every hyphal swelling is an auxiliary cell; neither fungal chlamydospore formation traitmech:000658 nor membrane-vesicle formation is an exact substitute. External-vesicle and accessory-body usages remain attributed structure labels; no exact synonyms, xrefs, SSSOM equivalents or disjoint organism-level phenotypes are asserted. Typical clustering does not impose a minimum count on every observation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_auxiliary_cell_formation.html#fungal-auxiliary-cell-scope"
+ },
+ {
+  "discussion_id": "fungal-auxiliary-cell-function",
+  "prompt": "Separate auxiliary-cell morphology, counting and function.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal auxiliary cell formation",
+  "source_id": "traitmech:000671",
+  "source_file": "fungal_auxiliary_cell_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Keep individual compartments, clusters, hyphal biomass and spore counts distinct. Morphology or lipid content does not establish universal nutrient transfer, propagule function, lifespan, wall-layer number or obligate host dependence. Hyphal regrowth and root colonization are different endpoints. A protein-resolved formation graph is deferred pending direct causal perturbations and authority-verified fungal protein examples; it is not claimed biologically absent. Host transformation and sequence-profile assignments alone do not demonstrate the fungal formation mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_auxiliary_cell_formation.html#fungal-auxiliary-cell-function"
+ },
+ {
   "discussion_id": "fungal-bas-scope-and-hierarchy",
   "prompt": "Resolve a closer parent while preserving BAS morphology scope.",
   "kind": "CURATION_TODO",
@@ -12917,9 +12951,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 633,
- "total_knowledge_gaps": 412,
- "total_source_entries": 536,
+ "total_discussions": 635,
+ "total_knowledge_gaps": 413,
+ "total_source_entries": 537,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

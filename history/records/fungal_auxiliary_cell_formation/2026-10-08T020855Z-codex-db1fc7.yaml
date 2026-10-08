@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_auxiliary_cell_formation.yaml
+  slug: fungal_auxiliary_cell_formation
+session:
+  id: 2026-10-08T020855Z-codex-db1fc7
+  timestamp: '2026-10-08T02:08:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal auxiliary cell formation
+  details: Minted traitmech:000671, PROPOSED MORPHOLOGY, with v547 block 1062400-1062499,
+    three snippets, two primary DOI sources and Brundrett terminology. Qualified MAFF520054
+    by direct observation, collection provenance and taxon authority; separated morphology
+    from function and retained two OPEN discussions. Ignored/hidden novelty and allocation
+    scans covered 15 roots, all worktrees and complete four-open-PR heads. Existing records
+    unchanged. Validated writer dry run/apply and 20 focused tests passed in 5.71 seconds;
+    broader corpus, proposal, browser and CI checks are pending at creation and will be reported
+    on the PR.
