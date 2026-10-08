@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_adhesive_net_trap_formation.yaml
+  slug: fungal_adhesive_net_trap_formation
+session:
+  id: 2026-10-08T103027Z-codex-5f9190
+  timestamp: '2026-10-08T10:30:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1825
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed fungal adhesive-net trap formation
+  details: Created traitmech:000678 with Yang 2011 and Zhang 2022 primary DOI evidence and
+    source-checked contiguous snippets. Author Summary versus scientific abstract and taxonomy
+    section roles are explicit. Live NCBI strain 756982 and ATCC confirm natural-origin Orbilia
+    oligospora ATCC 24927, historically Arthrobotrys, from Swedish soil. Corrected draft-only
+    holotype CGMCC3.19715 versus ex-type DLUCC 14-1 conflation (#1825) before record generation,
+    with regression coverage. Reserved v554 METPO1063100-1063199 after ignored/hidden full-worktree,
+    CommunityMech and complete open-PR curation checks. Formation separated from adhesion/capture
+    and gene-expression hypotheses; mechanism and closer hierarchy remain open. Guarded writer
+    focused tests passed; broader checks and rendering follow. Existing records untouched.
