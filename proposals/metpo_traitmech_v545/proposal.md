@@ -153,6 +153,21 @@ drift safeguards. No actionable curation defect was found in that pass.
 This is an author review, not independent approval; existing OPEN scientific
 questions remain explicit rather than being represented as solved.
 
+## Dependency Reconciliation
+
+The preceding validation receipts refer to the original independent branch.
+Hartig #1794 subsequently landed as
+`f9bd6b23517bc85f27af8dfdaae7d1d14a0e0454`, with exact landed-tree
+reconstruction before branch cleanup. This draft incorporates that main
+through reconciled mantle head `8538ab496c051fe7d4dac89a478dda381fd8544e`
+and remains dependent on mantle #1796's actual landing. Generated conflicts
+are resolved with the separate citation audit and four maintained product
+generators; README counts are derived from the combined corpus. A fresh full
+suite validates the combined data rather than relabeling the old independent
+branch's run. Final exact-head validation and review receipts are recorded
+on PR #1798. Reconcile actual landed main again and reduce the final scope
+to cord and its coupled rhizomorph discussion before queue admission.
+
 ## Upstream Round Trip
 
 After TraitMech sign-off, submit the class template and terminology question

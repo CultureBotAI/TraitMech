@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 1062,
+    "records": 1064,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 585,
+    "unresearched_mechanism_records": 587,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 11,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 217,
+      "BUILD_CAUSAL_GRAPH": 219,
       "DEEPEN_CAUSAL_GRAPH": 385,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
@@ -4680,6 +4680,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000667",
+      "label": "fungal Hartig net formation",
+      "category": "morphology",
+      "slug": "fungal_hartig_net_formation",
+      "score": 28.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "traitmech:000669",
       "label": "fungal mycelial cord formation",
       "category": "morphology",
@@ -4730,6 +4753,29 @@
       "label": "fungal rhizomorph formation",
       "category": "morphology",
       "slug": "fungal_rhizomorph_formation",
+      "score": 28.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000668",
+      "label": "fungal root mantle formation",
+      "category": "morphology",
+      "slug": "fungal_root_mantle_formation",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -23651,7 +23697,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 163,
+      "children": 165,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

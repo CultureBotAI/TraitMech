@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1062000	fungal Hartig net formation	A morphological phenotype in which a fungus forms an intercellular hyphal network, called a Hartig net, within a plant root.	TraitMech:data/traits/morphology/fungal_hartig_net_formation.yaml|DOI:10.1111/nph.17940|DOI:10.1111/nph.15113|DOI:10.1007/s00572-014-0590-7	METPO:1000059			metpo_traitmech_2026_10		Intercellular root-network morphology; no nutrient-flux or universal mechanism claim.	traitmech:000667
