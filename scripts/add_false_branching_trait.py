@@ -25,6 +25,17 @@ DEVELOPMENT = "DOI:10.1127/algol_stud/83/1996/303"
 SCYTONEMA = "DOI:10.5507/fot.2021.017"
 RHIZONEMA = "DOI:10.1111/jpy.13256"
 TIMESTAMP = "2026-10-08T06:28:38Z"
+CORRECTION_TIMESTAMP = "2026-10-08T06:50:15Z"
+BOUNDARY_NOTE = (
+    " The label is qualified as cyanobacterial false branching because the "
+    "directly read English scientific abstract of Nesterenko et al. (1980), "
+    "PMID:6782438 (https://pubmed.ncbi.nlm.nih.gov/6782438/), uses false "
+    "branching for growth of separated cell ends in the organism historically "
+    "named Brevibacterium helvolum ATCC 19239. That distinct usage is not "
+    "evidence for cyanobacterial trichome development. Its full text and "
+    "modern taxonomic identity were not inspected. No unqualified exact "
+    "synonym or cross-taxon mechanism is asserted. See review issue #1821."
+)
 PARENT = {
     "identifier": "METPO:1000059",
     "label": "phenotype",
@@ -175,7 +186,7 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def build_initial_record() -> dict:
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -189,6 +200,24 @@ def build_record() -> dict:
             "Existing traits unchanged. Timestamp is observed UTC curation time."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_initial_record()
+    record["label"] = "cyanobacterial false branching"
+    record["discussions"][0]["rationale"] += BOUNDARY_NOTE
+    record_curation_event(
+        record, curator="codex", action="QUALIFY_TRAIT_LABEL",
+        changes=(
+            "Addressed #1821: qualified the label to its cyanobacterial scope "
+            "after directly checking the non-cyanobacterial usage in "
+            "PMID:6782438. Preserved definition, evidence, example, identifier, "
+            "proposal block and original curation event. Added source-qualified "
+            "terminology discussion without an unqualified exact synonym."
+        ),
+        llm_assisted=True, timestamp=CORRECTION_TIMESTAMP,
     )
     return record
 
@@ -221,9 +250,10 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    initial = build_initial_record()
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (initial, record):
         raise SystemExit("Existing target differs from reviewed result")
-    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+    if PROPOSAL.exists() and PROPOSAL.read_text() not in (proposal_tsv(initial), proposal):
         raise SystemExit("Existing proposal differs from reviewed result")
     with tempfile.TemporaryDirectory() as tmp:
         write_validated_trait(record, Path(tmp) / TARGET.name)

@@ -36,7 +36,7 @@ def snapshot(root):
 def test_identity_scope_and_copy_isolation():
     record = writer.build_record()
     assert record["identifier"] == "traitmech:000675"
-    assert record["label"] == "false branching"
+    assert record["label"] == "cyanobacterial false branching"
     assert record["mapping_status"] == "PROPOSED"
     assert record["trait_category"] == "MORPHOLOGY"
     assert record["term_kind"] == "CLASS"
@@ -84,6 +84,41 @@ def test_evidence_example_and_limits():
         "METPO:1000687", "traitmech:000674", "traitmech:000651", "flagellar",
     ])
     assert "not claimed biologically absent" in mechanism["rationale"]
+    assert "PMID:6782438" in scope["rationale"]
+    assert "full text and modern taxonomic identity were not inspected" in scope["rationale"]
+
+
+def test_migration_preserves_initial_history_and_other_sections(isolated, monkeypatch):
+    initial = writer.build_initial_record()
+    writer.write_validated_trait(initial, writer.TARGET)
+    writer.PROPOSAL.parent.mkdir(parents=True)
+    writer.PROPOSAL.write_text(writer.proposal_tsv(initial))
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    current = yaml.safe_load(writer.TARGET.read_text())
+    assert current == writer.build_record()
+    assert current["curation_history"][:-1] == initial["curation_history"]
+    assert current["curation_history"][-1]["action"] == "QUALIFY_TRAIT_LABEL"
+    for key in initial.keys() - {"label", "discussions", "curation_history"}:
+        assert current[key] == initial[key], key
+    assert current["discussions"][0]["rationale"] == (
+        initial["discussions"][0]["rationale"] + writer.BOUNDARY_NOTE
+    )
+    after = snapshot(isolated)
+    assert run(monkeypatch, True) == 0
+    assert snapshot(isolated) == after
+
+
+def test_initial_record_drift_refused(isolated, monkeypatch):
+    initial = writer.build_initial_record()
+    initial["discussions"][0]["status"] = "RESOLVED"
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshot(isolated)
+    with pytest.raises(SystemExit, match="differs"):
+        run(monkeypatch, True)
+    assert snapshot(isolated) == before
 
 
 def test_proposal_matches_record():

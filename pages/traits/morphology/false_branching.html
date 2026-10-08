@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>false branching — MORPHOLOGY — TraitMech</title>
+<title>cyanobacterial false branching — MORPHOLOGY — TraitMech</title>
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
       <span>›</span>
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
-    <h1>false branching</h1>
+    <h1>cyanobacterial false branching</h1>
     <p class="curie"><code>traitmech:000675</code> · CLASS · PROPOSED</p>
 
     <p class="definition">A morphological phenotype in which a filamentous cyanobacterium forms an apparent branch by trichome-bundle partitioning or lateral trichome protrusion without generating a branch-point cell connecting at least three neighboring cells at that junction.</p>
@@ -165,7 +165,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Use phenotype METPO:1000059 below quality METPO:1000188. Branched shaped METPO:1000687 concerns lateral branches in cell shape, not necessarily this arrangement of trichomes; no subclass or equivalence is asserted. The Golubic 1996 definition authority includes bundle partitioning as well as lateral protrusion. The Scytonema example demonstrates the latter and must not narrow the whole class. Necridium formation traitmech:000674 describes a separation cell, not all false branches. Hormogonium formation traitmech:000651 describes dispersal filaments, not the branching topology. Obsolete cell-arrangement METPO terms redirect to flagellar arrangement, which is not a suitable parent here. No exact synonyms, xrefs, SSSOM mappings or organism-level disjointness are asserted; historical pseudo-branch usages need review.</p>
+        <p>Use phenotype METPO:1000059 below quality METPO:1000188. Branched shaped METPO:1000687 concerns lateral branches in cell shape, not necessarily this arrangement of trichomes; no subclass or equivalence is asserted. The Golubic 1996 definition authority includes bundle partitioning as well as lateral protrusion. The Scytonema example demonstrates the latter and must not narrow the whole class. Necridium formation traitmech:000674 describes a separation cell, not all false branches. Hormogonium formation traitmech:000651 describes dispersal filaments, not the branching topology. Obsolete cell-arrangement METPO terms redirect to flagellar arrangement, which is not a suitable parent here. No exact synonyms, xrefs, SSSOM mappings or organism-level disjointness are asserted; historical pseudo-branch usages need review. The label is qualified as cyanobacterial false branching because the directly read English scientific abstract of Nesterenko et al. (1980), PMID:6782438 (https://pubmed.ncbi.nlm.nih.gov/6782438/), uses false branching for growth of separated cell ends in the organism historically named Brevibacterium helvolum ATCC 19239. That distinct usage is not evidence for cyanobacterial trichome development. Its full text and modern taxonomic identity were not inspected. No unqualified exact synonym or cross-taxon mechanism is asserted. See review issue #1821.</p>
 
 
 
@@ -220,6 +220,12 @@
           <p class="changes">Added cyanobacterial false branching with three DOI sources, verbatim snippets and a source-qualified NUACC06 example. Ignored-and-hidden searches of current main, worktrees and complete open-PR curation snapshots support 000675 and v551 block 1062800-1062899. Preserved both developmental modes, local branch-point scope and uncertainty about protein mechanisms. Existing traits unchanged. Timestamp is observed UTC curation time.</p>
         </li>
 
+        <li>
+          <time>2026-10-08T06:50:15Z</time> ·
+          <strong>QUALIFY_TRAIT_LABEL</strong> · codex
+          <p class="changes">Addressed #1821: qualified the label to its cyanobacterial scope after directly checking the non-cyanobacterial usage in PMID:6782438. Preserved definition, evidence, example, identifier, proposal block and original curation event. Added source-qualified terminology discussion without an unqualified exact synonym.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -229,6 +235,12 @@
           <ul><li><strong>CREATE</strong> — Add source-qualified cyanobacterial false branching
             <p>Mint traitmech:000675 and reserve v551 METPO:1062800-1062899. Three DOI references with verbatim snippets support both developmental modes and a natural NUACC06 example at verified species rank. Defer closer-parent and protein-mechanism questions; preserve existing records.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/false_branching/2026-10-08T063135Z-codex-0b8330.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-08T06:52:33Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Qualify cyanobacterial false branching after adversarial review
+            <p>Address #1821 after directly reading PMID:6782438: qualify the label, document the non-cyanobacterial terminology boundary, and keep the original definition, evidence, example and ID reservation. Preserve 2026-10-08T063135Z-codex-0b8330.yaml and the original per-record event unchanged; append a correction event and regenerate artifacts.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/false_branching/2026-10-08T065233Z-codex-e44c9f.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -284,7 +296,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-08 06:31 UTC
+      Record as of 2026-10-08 06:52 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1070 TraitRecords
       · embedding coverage 44.6%

@@ -1,4 +1,4 @@
-# METPO proposal v551: false branching
+# METPO proposal v551: cyanobacterial false branching
 
 ## Context and scope
 
@@ -44,6 +44,18 @@ attachment usage in the Rhizonema paper is not accepted as an exact synonym.
 No xrefs, SSSOM equivalences or organism-level disjointness are asserted.
 No causal graph is proposed: taxonomic marker sequences do not establish a
 protein-resolved branching mechanism. This is an explicit knowledge gap.
+
+Author adversarial review found label-scope defect [#1821](https://github.com/CultureBotAI/TraitMech/issues/1821).
+The directly read English abstract of [Nesterenko et al. 1980](https://pubmed.ncbi.nlm.nih.gov/6782438/)
+uses false branching for separated-cell-end growth in a non-cyanobacterial
+organism. The label is therefore **cyanobacterial false branching**, not the
+unqualified umbrella; no unqualified exact synonym is imported. The original
+cyanobacterial definition, two developmental modes and identity reservations
+remain unchanged. Full text and current taxonomic identity of that alternative
+usage were not inspected. It is terminology-boundary evidence in a discussion,
+not a fourth cyanobacterial trait study or a canonical taxon assignment.
+The correction appends both curation and repository history; the original
+creation events remain unchanged.
 
 ## ID space and novelty
 
@@ -106,7 +118,7 @@ maintained snippet resolver without changing its verdicts, live NCBI taxonomy
 audit, focused writer tests, full pytest, committed-history audit and browser
 checks of generated identity, evidence, example, discussions and history.
 
-Local proposal verification and ROBOT template/merge/ELK validation passed.
+Before label correction, local proposal verification and ROBOT template/merge/ELK validation passed.
 RDF inspection found 15 class-template, 12,628 merged and 12,632 reasoned
 triples, with the expected w3id child and phenotype/quality ancestry and no
 legacy METPO stub. The live NCBI audit resolved all 752 examples with zero
@@ -124,7 +136,9 @@ templates, histories and embedding files are byte-preserved. The 1,068 existing
 non-parent trait pages differ only in their footer; phenotype also gains the
 new child link. Embedding regeneration was skipped because both configured
 source paths are absent in the worktree and primary checkout. Committed-tree
-QC, full pytest and CI remain merge gates.
+QC, full pytest and CI remain merge gates. These checks and generated-artifact
+inspection must be repeated on the corrected head; the superseded local QC
+run was stopped rather than counted as a pass.
 
 ## Upstream and round trip
 
@@ -137,3 +151,4 @@ and both history trails. Keep unresolved parent and mechanism discussions.
 ## Change log
 
 - v551, 2026-10-08: source-qualified false branching with both developmental modes.
+- Same-day review correction #1821: qualify the label to cyanobacterial scope.

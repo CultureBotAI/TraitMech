@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/false_branching.yaml
+  slug: false_branching
+session:
+  id: 2026-10-08T065233Z-codex-e44c9f
+  timestamp: '2026-10-08T06:52:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Qualify cyanobacterial false branching after adversarial review
+  details: 'Address #1821 after directly reading PMID:6782438: qualify the label, document
+    the non-cyanobacterial terminology boundary, and keep the original definition, evidence,
+    example and ID reservation. Preserve 2026-10-08T063135Z-codex-0b8330.yaml and the original
+    per-record event unchanged; append a correction event and regenerate artifacts.'
