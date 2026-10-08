@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/cyanobacterial_multiseriate_trichome_formation.yaml
+  slug: cyanobacterial_multiseriate_trichome_formation
+session:
+  id: 2026-10-08T074944Z-codex-9157dc
+  timestamp: '2026-10-08T07:49:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add cyanobacterial multiseriate trichome formation
+  details: Added PROPOSED traitmech:000676 with three DOI-backed snippets, a stage-qualified
+    morphology-identified field example, scope and mechanism discussions, and companion v552
+    METPO proposal. Existing records unchanged; no causal graph asserted.
