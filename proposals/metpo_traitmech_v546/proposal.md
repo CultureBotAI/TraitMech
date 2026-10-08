@@ -152,6 +152,21 @@ checks, exact-head CI, adversarial review and clean late feedback. Use the
 native merge queue, inspect its combined candidate, confirm actual MERGED
 state and reconstruct the landed tree before deleting the branch.
 
+## Dependency Reconciliation
+
+The combined checkpoint incorporates cord
+`301363ee0977aa10e243f267be8d3f1514f2c764`, whose mantle dependency is
+`8538ab496c051fe7d4dac89a478dda381fd8544e` and whose actual-main ancestor
+is the verified Hartig landing `f9bd6b23517bc85f27af8dfdaae7d1d14a0e0454`.
+No vesicle evidence or history is rewritten. Generated conflicts are
+regenerated through the separate citation audit and four maintained product
+recipes, and README counts are derived from the combined data. Rerun full
+validation for this combined corpus; the earlier 3,212-test receipt is not
+a result for the dependency integration. Publish only as a dependency draft
+until mantle #1796 and cord #1798 actually land. Reconcile each actual main,
+confirm the final one-trait/one-history scope and re-review the exact head
+before queue admission. Final validation receipts are recorded on the PR.
+
 ## Upstream Round Trip
 
 After TraitMech review, submit the one-class template and open hierarchy

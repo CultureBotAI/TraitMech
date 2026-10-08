@@ -1,0 +1,87 @@
+identifier: traitmech:000669
+label: fungal mycelial cord formation
+definition: A morphological phenotype in which a fungus forms linear multihyphal cords
+  by aggregation behind an extending margin of diffuse hyphae.
+definition_source: DOI:10.1007/s10267-008-0450-4
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1007/s10267-008-0450-4
+  snippet: the whole organ does not extend apically; rather, it develops behind a
+    mycelial margin of diffuse hyphae
+  notes: 'Boddy et al. (2009), Introduction, printed p. 10; contiguous clause whose
+    antecedent is mature mycelial cords. Directly read and visually checked in the
+    author PDF: https://markfricker.org/wp-content/uploads/2015/12/boddy_et_al-2009-mycoscience-50-9.pdf
+    This review supplies the operational terminology adopted here, not independent
+    experimental replication. First three pages and Figure 1 were inspected; remaining
+    figures and supplements were not.'
+- reference: DOI:10.1099/00221287-132-1-203
+  snippet: Both fungi grew out radially from the inoculum blocks in the form of networks
+    of mycelial cords.
+  notes: 'Dowson, Rayner and Boddy (1986), complete abstract sentence, visually verified
+    in the original-paper reprint: https://www.davidmoore.org.uk/21st_century_guidebook_to_fungi_platinum/REPRINT_collection/Dowson_etal_mycelia_cord-forming_basidiomycetes.pdf
+    All nine pages of text and actual Figures 1 and 3 were inspected. The Introduction
+    describes predominantly parallel, longitudinally aligned hyphal aggregates. Underside
+    photocopies show network development, not microscopic proof of internal anatomy.
+    Inoculum size and culture age are confounded. Other figure images were not inspected.'
+- reference: DOI:10.1016/j.mycres.2006.05.013
+  snippet: After 99 d, all systems had produced distinct mycelial cords
+  notes: Wood et al. (2006), PMID:16891104; contiguous scientific-abstract clause
+    retrieved directly through Europe PMC. The following clause describes regression
+    of diffuse mycelium and thinner cords. This soil-microcosm experiment supports
+    formation and remodeling, not a universal 99-day onset. Full text, figures and
+    strain provenance were not inspected; no additional canonical isolate is inferred.
+canonical_examples:
+- taxon_id: NCBITaxon:194680
+  taxon_label: Phanerochaete velutina
+  reference: DOI:10.1099/00221287-132-1-203
+  note: The unnumbered isolate in Dowson et al. (1986), Methods p. 204 at https://doi.org/10.1099/00221287-132-1-203,
+    originated from decayed Fagus sylvatica wood at Farleigh Hungerford Woods, Wiltshire,
+    UK (ST795563). Colonized beech blocks produced cords on moist unsterile sandy
+    loam at 20 C in darkness; actual Figure 1d-f shows controls at 8, 12 and 44 days.
+    NCBI EFetch confirms species 194680. No later collection number or all-strain
+    claim is inferred.
+discussions:
+- discussion_id: fungal-mycelial-cord-scope-and-hierarchy
+  prompt: Reconcile cord/rhizomorph usage and a closer fungal parent.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use phenotype METPO:1000059. The definition adopts the developmental
+    cord sense in the cited terminology source; it does not claim every historical
+    cord, strand or rhizomorph label has this meaning. The broad root-like formation
+    record traitmech:000662 retains its Koch (2017) unmelanized culture usage and
+    Oliveira (2024) narrower organized-tip usage. Its scope discussion is linked,
+    not declared solved. No exact synonyms, xrefs, parent-child or disjointness axioms
+    between these records are asserted. Mycelial growth 000074 is bacterial; hyphal
+    anastomosis 000605 requires cytoplasmic continuity; filament shaped 1000674 describes
+    a cell, while filamentous colony 1007066 and rhizoid colony 1007068 describe colony
+    outlines. Those are not this multihyphal developmental architecture. No universal
+    pigment, rind, vessel-hypha, diameter or habitat condition is imposed.
+  posed_by: codex
+  posed_date: '2026-10-07'
+- discussion_id: fungal-mycelial-cord-mechanism-and-readout
+  prompt: Separate cord formation from network function and total hyphal coverage.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: A formation-regulatory protein graph is deferred pending primary perturbation
+    evidence and authority-verified protein anchors, not because mechanisms are absent.
+    Visible cords alone do not prove transport efficiency, resource sensing or a universal
+    foraging response. The 1986 authors describe variable curvature and did not discriminate
+    soluble, volatile and other microenvironmental causes. Numerical network edges
+    are not molecular causal edges. Total hyphal image coverage is not a cord-specific
+    formation count or fraction.
+  posed_by: codex
+  posed_date: '2026-10-07'
+curation_history:
+- timestamp: '2026-10-07T22:14:44Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal mycelial cord formation with source-attributed developmental
+    scope, two experimental citations, three short snippets and a provenance-qualified
+    natural isolate. Ignored-and-hidden searches included all worktrees and pending
+    PR artifacts. Reserved 000669/v545/1062200-1062299 after accounting for pending
+    000667 and 000668. Kept terminology and protein mechanisms explicitly unresolved.
+  llm_assisted: true

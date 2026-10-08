@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_mycelial_cord_formation.yaml
+  slug: fungal_mycelial_cord_formation
+session:
+  id: 2026-10-07T221818Z-codex-4b64b2
+  timestamp: '2026-10-07T22:18:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified fungal mycelial cord formation
+  details: Added traitmech:000669 with a directly read operational definition, two primary
+    experimental citations, three contiguous snippets and a natural-isolate-qualified Phanerochaete
+    velutina example. Reserved v545 and METPO:1062200 after ignored-and-hidden main/worktree/pending-PR
+    searches. Preserved unresolved rhizomorph terminology and deferred protein-level mechanisms.
+    The guarded writer passed 35 tests and a production dry run before application; broader
+    validation follows.

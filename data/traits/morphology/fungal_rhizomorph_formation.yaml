@@ -82,7 +82,12 @@ discussions:
     that anatomical boundary: retain the source attribution and do not assert exact
     cord/strand synonyms, a universal pigment requirement or an underground-only habitat.
     A closer fungal growth-form parent and external equivalences require upstream
-    review; no xrefs or SSSOM mappings are asserted.'
+    review; no xrefs or SSSOM mappings are asserted. Fungal mycelial cord formation
+    traitmech:000669 now represents the diffuse-front aggregation sense defined by
+    Boddy et al. (2009), DOI:10.1007/s10267-008-0450-4, rather than silently equating
+    the two names. Its experimental examples do not resolve all historical usage.
+    Keep this terminology/hierarchy question OPEN: neither equivalence, a parent-child
+    relationship nor organism-level disjointness is asserted.'
   posed_by: codex
   posed_date: '2026-10-07'
 - discussion_id: fungal-rhizomorph-formation-and-function
@@ -110,4 +115,11 @@ curation_history:
     experimental limits. Ignored-and-hidden searches found no exact existing trait.
     Reserved METPO:1061500 in v538; existing records unchanged and protein-level formation
     mechanism deferred.
+  llm_assisted: true
+- timestamp: '2026-10-07T22:14:44Z'
+  curator: codex
+  action: LINKED_SCOPE_DISCUSSION
+  changes: Linked the rhizomorph/cord scope discussion to new traitmech:000669. Preserved
+    the attributed conflicting usages, OPEN status and all existing identity, evidence
+    and example fields; no synonym, hierarchy or disjointness axiom was introduced.
   llm_assisted: true
