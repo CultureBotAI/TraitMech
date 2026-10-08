@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/baeocyte_formation.yaml
+  slug: baeocyte_formation
+session:
+  id: 2026-10-08T032322Z-codex-2a271c
+  timestamp: '2026-10-08T03:23:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add source-qualified baeocyte formation
+  details: Added traitmech:000672 with DOI:10.1007/s10482-021-01672-x and PMID:18365724, two
+    verbatim source snippets, a non-axenic Waterburya agarophytonicola KI4 example independently
+    identified as NCBITaxon:2874699, and open hierarchy/mechanism discussions. Directly inspected
+    publisher taxonomy descriptions, Collection Methods and actual Figure 4; used the directly
+    retrieved English scientific abstract for the Russian second paper. Reserved v548 / METPO:1062500-1062599
+    after ignored-and-hidden whole-repository/worktree and complete open-PR reservation checks.
+    No protein graph, exact synonyms or xrefs asserted; existing traits unchanged. Writer
+    is dry-run by default and prevalidates before mutation; broader validations remain pending
+    at scaffolding.

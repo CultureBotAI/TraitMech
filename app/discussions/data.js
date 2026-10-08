@@ -8936,6 +8936,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/akinete.html#akinete-exact-xref-gap"
  },
  {
+  "discussion_id": "baeocyte-formation-scope",
+  "prompt": "Review a closer parent and historical reproductive-cell terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "baeocyte formation",
+  "source_id": "traitmech:000672",
+  "source_file": "baeocyte_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 below quality METPO:1000188. Binary fission METPO:1000033, reproductive process METPO:1000264 and reproductive structure METPO:1000265 are obsolete. Sporulation METPO:1000870 denotes dormant resistant endospores in the local record, not this reproductive-cell phenotype. Coenobium formation traitmech:000655 requires a clonal colony with an established cell complement; multiple fission alone is insufficient. Historical nanocyte and cyanobacterial endospore usages need source-specific review before synonym mapping. No exact synonyms, xrefs, SSSOM equivalents or organism-level disjointness are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/baeocyte_formation.html#baeocyte-formation-scope"
+ },
+ {
+  "discussion_id": "baeocyte-formation-mechanism",
+  "prompt": "Resolve developmental mechanisms without inferring them from sequence features.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "baeocyte formation",
+  "source_id": "traitmech:000672",
+  "source_file": "baeocyte_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Formation, release and subsequent growth are distinct stages. Do not impose an invariant cell count, diameter, release route, motility, dormancy, sheath state or lack of growth between divisions on the whole class. Gene predictions and static morphology do not establish a protein-resolved formation mechanism. A causal graph is deferred pending direct perturbation evidence and authority-verified protein examples; the mechanism is not claimed biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/baeocyte_formation.html#baeocyte-formation-mechanism"
+ },
+ {
   "discussion_id": "coenobium-formation-scope-and-hierarchy",
   "prompt": "Review a multicellular morphology parent and exact mappings.",
   "kind": "CURATION_TODO",
@@ -12951,9 +12985,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 635,
- "total_knowledge_gaps": 413,
- "total_source_entries": 537,
+ "total_discussions": 637,
+ "total_knowledge_gaps": 414,
+ "total_source_entries": 538,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
