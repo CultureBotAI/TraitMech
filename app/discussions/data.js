@@ -12848,6 +12848,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "axopodial-contraction-scope-and-parent",
+  "prompt": "Resolve a closer cellular-contractility parent and assay boundaries.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "rapid axopodial contraction",
+  "source_id": "traitmech:000682",
+  "source_file": "rapid_axopodial_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059 is a broad parent. Existing motile METPO:1000702 is curated around organismal locomotion; rapid shortening of a cellular projection does not alone establish whole-cell locomotion. Keep axopodial contraction separate from ordinary pseudopod extension, re-elongation, slow structural loss, stalk or whole-cell contraction, and drug-induced microtubule disassembly. The reported speed is an observation, not a universal cutoff. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted. Closer hierarchy and comparable time-resolved assays remain open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/rapid_axopodial_contraction.html#axopodial-contraction-scope-and-parent"
+ },
+ {
+  "discussion_id": "axopodial-contraction-provenance-and-mechanism",
+  "prompt": "Resolve culture provenance and taxon-specific contraction mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "rapid axopodial contraction",
+  "source_id": "traitmech:000682",
+  "source_file": "rapid_axopodial_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "The directly read abstracts do not establish natural strain provenance or accession-level identities for canonical examples. Retain the source-named organisms as qualified evidence, not universal taxon assertions; resolve their current taxonomy and original culture descriptions before adding exemplars. Calcium dependence, microtubule disassembly and contractile-tubule observations must not be combined into one universal heliozoan mechanism. A protein-resolved graph requires direct perturbation evidence and taxon-paired accessions. Mechanism is deferred, not claimed absent; tubulin sequence features alone do not establish this response.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/rapid_axopodial_contraction.html#axopodial-contraction-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "rheotaxis-context-specific-mechanism-grounding",
   "prompt": "Ground separate surface and bulk-flow mechanisms without inventing a shear-sensing protein.",
   "kind": "CURATION_TODO",
@@ -13291,9 +13325,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 655,
- "total_knowledge_gaps": 423,
- "total_source_entries": 547,
+ "total_discussions": 657,
+ "total_knowledge_gaps": 424,
+ "total_source_entries": 548,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

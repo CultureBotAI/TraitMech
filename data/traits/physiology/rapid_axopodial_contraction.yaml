@@ -1,0 +1,74 @@
+identifier: traitmech:000682
+label: rapid axopodial contraction
+definition: A physiological phenotype in which a microbial cell rapidly shortens its
+  microtubule-supported axopodia in response to stimulation or prey uptake.
+definition_source: DOI:10.2108/zsj.20.1367
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.2108/zsj.20.1367
+  snippet: Axopodial contraction of the centrohelid heliozoon Raphidiophrys contractilis
+    was induced by mechanical or electrical stimulation.
+  notes: Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC
+    for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:14624035&resultType=core&format=json.
+    Abstract-only access; full Methods and figures were not inspected. The study reports
+    contraction faster than 3.0 mm/sec, followed by re-elongation initially about
+    0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium
+    dependence is restricted to this stimulation assay, not a universal defining threshold.
+    Failure to detect other filaments with the reported fixation method does not prove
+    their biological absence. Source taxon spelling is retained; natural culture provenance
+    and current taxonomic identity are not established here.
+- reference: DOI:10.1111/j.1550-7408.2001.tb00187.x
+  snippet: Upon food uptake, the tubules shorten and transform into a mass of small
+    granules when rapid axopodial contraction occurs
+  notes: Kinoshita et al. (2001), scientific Abstract, directly read at https://pubmed.ncbi.nlm.nih.gov/11596916/
+    and cross-checked against Europe PMC's scientific abstract. Abstract-only access;
+    full Methods and figures were not inspected. The study concerns Actinophrys sol.
+    Contractile-tubule shortening and granulation accompany the food-uptake response;
+    the authors suggest, rather than prove, a causal role. Cold and colchicine both
+    induce microtubule disassembly, but only cold induces tubule granulation in the
+    reported comparison. Neither intervention alone defines the natural rapid-contraction
+    phenotype. No protein identity, effect size or strain provenance is inferred.
+discussions:
+- discussion_id: axopodial-contraction-scope-and-parent
+  prompt: Resolve a closer cellular-contractility parent and assay boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is a broad parent. Existing motile METPO:1000702
+    is curated around organismal locomotion; rapid shortening of a cellular projection
+    does not alone establish whole-cell locomotion. Keep axopodial contraction separate
+    from ordinary pseudopod extension, re-elongation, slow structural loss, stalk
+    or whole-cell contraction, and drug-induced microtubule disassembly. The reported
+    speed is an observation, not a universal cutoff. No exact synonyms, xrefs, SSSOM
+    equivalences or organism-level disjointness are asserted. Closer hierarchy and
+    comparable time-resolved assays remain open.
+  posed_by: codex
+  posed_date: '2026-10-08'
+- discussion_id: axopodial-contraction-provenance-and-mechanism
+  prompt: Resolve culture provenance and taxon-specific contraction mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The directly read abstracts do not establish natural strain provenance
+    or accession-level identities for canonical examples. Retain the source-named
+    organisms as qualified evidence, not universal taxon assertions; resolve their
+    current taxonomy and original culture descriptions before adding exemplars. Calcium
+    dependence, microtubule disassembly and contractile-tubule observations must not
+    be combined into one universal heliozoan mechanism. A protein-resolved graph requires
+    direct perturbation evidence and taxon-paired accessions. Mechanism is deferred,
+    not claimed absent; tubulin sequence features alone do not establish this response.
+  posed_by: codex
+  posed_date: '2026-10-08'
+curation_history:
+- timestamp: '2026-10-08T14:52:39Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added rapid axopodial contraction with two primary DOI sources and contiguous
+    scientific-abstract snippets checked directly. Ignored-and-hidden main/worktree/open-PR
+    checks support 000682 and v558 block 1063500-1063599. Kept natural culture provenance,
+    closer hierarchy and protein mechanism unresolved. Distinguished rapid response
+    from locomotion and induced structural breakdown. Existing records unchanged.
+    Timestamp is observed UTC.
+  llm_assisted: true

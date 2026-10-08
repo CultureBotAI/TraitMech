@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/rapid_axopodial_contraction.yaml
+  slug: rapid_axopodial_contraction
+session:
+  id: 2026-10-08T145708Z-codex-2f9679
+  timestamp: '2026-10-08T14:57:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed rapid axopodial contraction
+  details: Added traitmech:000682 with two primary DOI scientific-abstract snippets, broad
+    phenotype parent and proposal v558. Deferred natural culture exemplars, closer hierarchy
+    and protein mechanism; no existing records changed.
