@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1063800	toxicyst discharge	A physiological phenotype in which a microbial cell releases material from toxicysts, its offensive extrusomes, to the cell exterior.	TraitMech:data/traits/physiology/toxicyst_discharge.yaml|DOI:10.1111/jeu.12106|DOI:10.1007/BF01279249|DOI:10.1186/s12915-024-01904-2	METPO:1000059			metpo_traitmech_2026_10		Toxicyst material release; exocytosis hierarchy unresolved.	traitmech:000685
