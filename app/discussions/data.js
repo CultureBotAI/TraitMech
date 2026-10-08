@@ -9004,6 +9004,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/coenobium_formation.html#coenobium-formation-development-and-mechanism"
  },
  {
+  "discussion_id": "multiseriate-trichome-scope",
+  "prompt": "Review the closer multicellular morphology parent and terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cyanobacterial multiseriate trichome formation",
+  "source_id": "traitmech:000676",
+  "source_file": "cyanobacterial_multiseriate_trichome_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059 below quality METPO:1000188. The definition concerns adjacent cell rows in a trichome, including two rows, not multiple independent uniseriate trichomes merely bundled in a common sheath. It is not a synonym of branched shaped METPO:1000687, generic filament shaped morphology, hormogonium formation traitmech:000651, or cyanobacterial false branching traitmech:000675. Cell-shape parents do not unambiguously capture this multicellular organization; obsolete cell-arrangement terms redirect to flagellar arrangement and are unsuitable. Springstein's parenthetical description speaks of multiple trichomes in a row, whereas its division context and the other inspected sources support adjacent cell rows. Keep that wording distinction explicit. The qualified label does not cover every multiseriate algal or plant structure. No exact synonyms, xrefs, SSSOM mappings, mandatory branching or organism-level disjointness are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/cyanobacterial_multiseriate_trichome_formation.html#multiseriate-trichome-scope"
+ },
+ {
+  "discussion_id": "multiseriate-trichome-mechanism",
+  "prompt": "Resolve native division-plane control without conflating experimental states.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cyanobacterial multiseriate trichome formation",
+  "source_id": "traitmech:000676",
+  "source_file": "cyanobacterial_multiseriate_trichome_formation.yaml",
+  "attaches_to": [],
+  "rationale": "The cited studies distinguish natural developmental states, environment-associated changes and engineered protein overexpression. Do not transfer an engineered phenotype to a natural canonical example or infer a gene mechanism from transcript correlations. Neither salt exposure, a fixed row number, a persistent filament length nor a fitness benefit defines the whole class. No causal graph is proposed pending a protein-resolved native mechanism with verified accessions; mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/cyanobacterial_multiseriate_trichome_formation.html#multiseriate-trichome-mechanism"
+ },
+ {
   "discussion_id": "cyanophycin-granule-identity",
   "prompt": "Keep inclusion morphology distinct from polymer and sequence identity.",
   "kind": "CURATION_TODO",
@@ -13087,9 +13121,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 643,
- "total_knowledge_gaps": 417,
- "total_source_entries": 541,
+ "total_discussions": 645,
+ "total_knowledge_gaps": 418,
+ "total_source_entries": 542,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
