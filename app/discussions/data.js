@@ -9004,6 +9004,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/coenobium_formation.html#coenobium-formation-development-and-mechanism"
  },
  {
+  "discussion_id": "cyanophycin-granule-identity",
+  "prompt": "Keep inclusion morphology distinct from polymer and sequence identity.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cyanophycin granule",
+  "source_id": "traitmech:000673",
+  "source_file": "cyanophycin_granule.yaml",
+  "attaches_to": [],
+  "rationale": "Uses intracellular inclusion traitmech:000066 like PHA and polyphosphate granules. CHEBI:65318 is a chemical grounding only; CphA activity and family membership are not equivalent traits. CGP names the polymer, not an exact granule synonym. No trait xrefs, exact synonyms or SSSOM equivalences are asserted. Do not require spherical shape, fixed size, constitutive occurrence, or an invariant amino-acid ratio.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/cyanophycin_granule.html#cyanophycin-granule-identity"
+ },
+ {
+  "discussion_id": "cyanophycin-granule-mechanism-scope",
+  "prompt": "Resolve strain-specific assembly and degradation mechanisms separately.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cyanophycin granule",
+  "source_id": "traitmech:000673",
+  "source_file": "cyanophycin_granule.yaml",
+  "attaches_to": [],
+  "rationale": "The 2001 enzyme paper calls cyanophycin unique to cyanobacteria, but the 2018 primary paper also documents its distribution in heterotrophic bacteria; no cyanobacteria-only restriction is imposed. Soluble engineered polymers do not alone establish granules. The graph integrates distinct source taxa rather than transferring PCC 6308 CphA evidence to the ATCC 51142 example. PCC 6803 without a substrain designation does not establish the Kazusa-specific UniProt instance. Surface localization and magnesium effects in cell extracts do not prove a universal in-vivo assembly requirement.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/cyanophycin_granule.html#cyanophycin-granule-mechanism-scope"
+ },
+ {
   "discussion_id": "ferrosome-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial ferrosome morphology trait.",
   "kind": "CURATION_TODO",
@@ -12985,9 +13019,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 637,
- "total_knowledge_gaps": 414,
- "total_source_entries": 538,
+ "total_discussions": 639,
+ "total_knowledge_gaps": 415,
+ "total_source_entries": 539,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
