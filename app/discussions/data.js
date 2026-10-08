@@ -9123,6 +9123,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/ferrosome.html#ferrosome-xref-gap"
  },
  {
+  "discussion_id": "adhesive-knob-scope-and-parent",
+  "prompt": "Resolve a closer fungal trap-morphology parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal adhesive-knob trap formation",
+  "source_id": "traitmech:000679",
+  "source_file": "fungal_adhesive_knob_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis traitmech:000605 concerns fusion. Distinguish unicellular adhesive knobs from multicellular adhesive nets, adhesive columns, nonconstricting rings and mechanically constricting rings. Auxiliary cells and appressoria have different biological roles; a generic rounded hyphal tip or nematophagous genus is not sufficient. Detachment, a particular stalk length and nematode induction are not defining requirements. Formation alone does not demonstrate adhesion or successful capture in every condition. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted; closer hierarchy remains open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_knob_trap_formation.html#adhesive-knob-scope-and-parent"
+ },
+ {
+  "discussion_id": "adhesive-knob-mechanism",
+  "prompt": "Separate knob morphogenesis from adhesion and infection mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal adhesive-knob trap formation",
+  "source_id": "traitmech:000679",
+  "source_file": "fungal_adhesive_knob_trap_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Sequence features and expression correlations alone do not establish a necessary or sufficient gene effect. A protein-resolved causal graph requires perturbation and complementation evidence, relevant remaining figures and supplements, and taxon-paired accessions. Formation, adhesion, capture, penetration and digestion remain separate endpoints. No universal lectin, WSC-domain protein or signaling-gene requirement is asserted; mechanism is deferred, not claimed absent. Taxonomic membership alone does not establish this phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/fungal_adhesive_knob_trap_formation.html#adhesive-knob-mechanism"
+ },
+ {
   "discussion_id": "adhesive-net-scope-and-parent",
   "prompt": "Resolve a closer fungal trap-morphology parent.",
   "kind": "CURATION_TODO",
@@ -13189,9 +13223,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 649,
- "total_knowledge_gaps": 420,
- "total_source_entries": 544,
+ "total_discussions": 651,
+ "total_knowledge_gaps": 421,
+ "total_source_entries": 545,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
