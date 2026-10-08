@@ -9582,6 +9582,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/microbial_haustorium_formation.html#microbial-haustorium-formation-and-function"
  },
  {
+  "discussion_id": "necridium-formation-scope",
+  "prompt": "Review a closer parent and separation-cell terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "necridium formation",
+  "source_id": "traitmech:000674",
+  "source_file": "necridium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Use active phenotype METPO:1000059 below quality METPO:1000188. Hormogonium formation traitmech:000651 denotes production of short dispersal filaments, not the degenerating separation cell. The 2005 Introduction describes additional fragmentation routes, so neither trait is asserted a subclass or exact synonym of the other. Filament-shaped morphology concerns elongated cell shape, not this multicellular separation stage. Do not equate all dead cells, all trichome fragmentation or all hormogonium formation with necridia. No exact synonyms, xrefs, SSSOM equivalences or organism-level disjointness are asserted pending review of historical separation-disc usages.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/necridium_formation.html#necridium-formation-scope"
+ },
+ {
+  "discussion_id": "necridium-formation-mechanism",
+  "prompt": "Resolve the formation mechanism without inferring protein causality.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "necridium formation",
+  "source_id": "traitmech:000674",
+  "source_file": "necridium_formation.yaml",
+  "attaches_to": [],
+  "rationale": "Cell degeneration, communication loss and fragmentation are observed, but the inspected evidence does not establish a protein-resolved necridium-formation mechanism. SepJ sequence similarity and septal localization in the 2014 paper do not establish its causal role in necridium formation. Programmed cell death is an interpretation, not proof of conserved apoptosis machinery. Do not impose a fixed cell shape, spacing, cold trigger, adhesion function or fitness benefit. A causal graph is deferred pending direct mechanism evidence and authority-verified protein examples; the mechanism is not claimed biologically absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/necridium_formation.html#necridium-formation-mechanism"
+ },
+ {
   "discussion_id": "palmelloid-formation-scope-and-hierarchy",
   "prompt": "Review a multicellular morphology parent and exact mappings.",
   "kind": "CURATION_TODO",
@@ -13019,9 +13053,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 639,
- "total_knowledge_gaps": 415,
- "total_source_entries": 539,
+ "total_discussions": 641,
+ "total_knowledge_gaps": 416,
+ "total_source_entries": 540,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
