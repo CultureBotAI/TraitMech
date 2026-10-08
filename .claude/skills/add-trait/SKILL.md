@@ -591,6 +591,10 @@ Every manual edit to a new or seeded record must:
 - write with `write_validated_trait`
 - leave unrelated generated fields and source-owned seeded fields alone
 
+Obtain event timestamps from the current UTC clock; do not estimate a future
+write time. If a recorded timestamp is wrong, preserve the original event and
+append a correction distinguishing observed bounds from exact times (#1816).
+
 If a writer updates existing records, make it fail closed on the expected
 preimage: assert the identifier, label, mapping status, old parents, and any
 discussion status before replacing them so a stale branch does not rewrite

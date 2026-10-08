@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/cyanophycin_granule.yaml
+  slug: cyanophycin_granule
+session:
+  id: 2026-10-08T042808Z-codex-f1df51
+  timestamp: '2026-10-08T04:28:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add evidence-backed cyanophycin storage granule
+  details: Minted traitmech:000673 under intracellular inclusion without modifying existing
+    records. Four primary DOI sources support a natural ATCC 51142 example and a five-node,
+    four-edge source-bounded graph. Protein evidence anchors reviewed UniProtKB:P56947 to
+    Geminocystis herdmanii PCC 6308, distinct from the expression host and canonical trait
+    taxon; InterPro:IPR011810 and CHEBI:65318 were authority checked. Full publisher text
+    was read for 2018 cell biology and 2001 purified enzyme work; the 2000 expression and
+    Li 2001 accumulation sources were directly read as scientific abstracts. Actual figure
+    images were not inspected. Reserved v549 METPO:1062600 within block 1062600-1062699 after
+    ignored-and-hidden main, worktree, and complete open-PR reservation checks. Parent context
+    from v5 retains identity and hierarchy with only its cohort subset updated. Guarded writer
+    is dry-run by default and validates before writing.
