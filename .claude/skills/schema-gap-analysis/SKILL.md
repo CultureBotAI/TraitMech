@@ -12,6 +12,10 @@ version: 3.0.0
 Use [`audit-schema-gaps`](../audit-schema-gaps/SKILL.md) for the complete and
 authoritative procedure. This alias remains so older prompts still resolve,
 but it intentionally contains no duplicate audit logic or repository snapshot.
+Its final record/repository assessments follow
+[docs/record-reviews.md](../../../docs/record-reviews.md); use the canonical
+audit skill's inspect/validate/save hand-off. Raw audit output is diagnostic,
+not a completed scientific review.
 
 For a quick current-state check:
 

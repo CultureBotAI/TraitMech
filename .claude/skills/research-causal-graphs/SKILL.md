@@ -9,6 +9,30 @@ Runs literature deep research on TraitMech traits and uses the result to
 assess whether each trait's `causal_graphs` capture the mechanism the
 literature actually describes.
 
+## Final review output
+
+Follow [docs/record-reviews.md](../../../docs/record-reviews.md) and
+[the native profile](../../../docs/record-review-profile.md) for new final
+record/batch reviews. Read `DO_NOT_WORK.md` first and keep excluded records
+untouched. Provider output and `trait_graph_audit_manifest.tsv` success rows
+are acquisition provenance, not completed scientific reviews. Existing
+research artifacts remain inputs and are not migrated or relabelled in place.
+
+Before assessment, capture exact target paths/IDs and all inspected schema,
+research, citation and source inputs with `uv run python scripts/record_review.py
+inspect --targets <targets.yaml>` plus `--input` for each context file. Read
+each record and source claim, retaining edge/node locators, taxonomy/context,
+evidence tier, actual batch membership, population/selection, sampling and
+exclusions. A resumed provider run says nothing about final review coverage.
+
+After the source checks below, author a `kind: record` or `kind: batch`
+observation and run `uv run python scripts/record_review.py validate
+<review.yaml>` then `uv run python scripts/record_review.py save --content
+<review.yaml>`. Link both files under `reviews/structured/<timestamp>-<slug>/`.
+If sources or required checks are unavailable, retain partial/blocked scope;
+do not turn raw provider prose into a passing verdict. Review findings propose
+guarded future curation and cannot themselves change records/history/status.
+
 This is **paid, networked work**. Every real call costs money. Always dry-run
 first, and never launch a corpus-wide sweep without the user explicitly asking
 for it. Derive the batch size from the dry-run output.
@@ -35,7 +59,7 @@ TraitMech therefore accepts **`edison` as a provider alias**, resolved to
 `just research-trait <category> <slug>` and `run_trait_graph_audit.py` both use
 it without being told. The alias resolves *before* output filenames are built,
 so results stay in the existing `-deep-research-falcon.md` namespace and the ten
-already-researched traits still count as done.
+already-researched traits still count as done for acquisition resume only.
 
 ## Preflight
 
@@ -123,7 +147,8 @@ it requires paid calls. Review and commit the complete output bundle.
 
 `scripts/run_trait_graph_audit.py` enumerates eligible `REVIEWED`
 `term_kind: CLASS` traits that already have a causal graph. Use its dry run to
-derive the current eligible, completed, and remaining sets.
+derive the current eligible, acquired, and remaining research sets. These
+counts do not measure completed structured scientific reviews.
 
 ```bash
 just trait-graph-sweep --dry-run
@@ -152,7 +177,10 @@ and rate-limit risk; leave it at 1 unless asked.
 
 ## Turning research into graph changes
 
-The research note is evidence, not a patch. For each trait:
+The research note is a lead; inspect its cited sources before using them as
+evidence. For an audit-only request save proposed actions in the structured
+review. Record mutation requires a separately authorized curation task. For
+each trait:
 
 1. Read the note against the trait's existing `causal_graphs`.
 2. Identify mechanism steps the literature describes that the graph lacks, and

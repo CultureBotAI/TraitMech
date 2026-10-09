@@ -1,0 +1,17 @@
+version: 1
+repository: CultureBotAI/TraitMech
+skills:
+  - .claude/skills/review-yaml-record/SKILL.md
+  - .claude/skills/review-yaml-category/SKILL.md
+  - .claude/skills/curate-yaml-record/SKILL.md
+  - .claude/skills/research-causal-graphs/SKILL.md
+  - .claude/skills/audit-schema-gaps/SKILL.md
+  - .claude/skills/schema-gap-analysis/SKILL.md
+rubrics:
+  - .claude/skills/curate-yaml-record/references/review-checklist.md
+  - docs/CURATION_PLAYBOOK.md
+  - docs/GROUNDING_POLICY.md
+  - docs/PATHWAY_LINKS.md
+  - DO_NOT_WORK.md
+  - .claude/skills/audit-schema-gaps/SKILL.md
+  - templates/trait_causal_graph_research.md

@@ -103,9 +103,24 @@ auditor.
 
 ## Turning findings into work
 
-Use the current audit outputs to update the schema, pipeline, and backlog
-reports under `reports/`. Each actionable item should state its evidence,
-impact, effort, target files, dependencies, and verification command. Rank
+Persist new final record/repository assessments using
+[docs/record-reviews.md](../../../docs/record-reviews.md) and
+[the native profile](../../../docs/record-review-profile.md). Capture exact
+targets and inspected schema/writer inputs with `scripts/record_review.py
+inspect`; state actual selection, population, reviewed IDs, exclusions and
+limits. Read `DO_NOT_WORK.md` and leave excluded records untouched.
+
+Generated audit reports remain deterministic inputs. Use
+`scientific_review: false` for schema/instance/writer diagnostics and preserve
+native rule IDs, evidence and severity normalization. A green audit is not
+source-based biological review. Identify the maintained record, seeder or
+schema owning each fix, with dependencies and acceptance commands.
+
+Run `uv run python scripts/record_review.py validate <review.yaml>` followed
+by `uv run python scripts/record_review.py save --content <review.yaml>` and
+link the saved YAML/Markdown pair under `reviews/structured/<timestamp>-<slug>/`.
+Unavailable required checks remain partial/blocked. Report generation is
+not authorization for schema/record curation or history/status changes. Rank
 correctness or provenance loss above cleanup and presentation issues.
 
 When fixing records in bulk, make the transformation idempotent, default to a

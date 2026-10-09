@@ -393,6 +393,9 @@ def main() -> int:
                          "`rosalind` for OpenAI's GPT-Rosalind)")
     args = ap.parse_args()
     provider = args.provider
+    print("Research acquisition only; manifest ok/resume counts are not completed "
+          "scientific reviews. Adjudicate and save final reviews with "
+          "scripts/record_review.py (docs/record-reviews.md).", file=sys.stderr)
 
     # The Edison platform credential is provisioned as EDISON_PLATFORM_API_KEY
     # (the name the edison_client SDK reads), but this harness's preflight and the
