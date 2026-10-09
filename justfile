@@ -32,6 +32,14 @@ default:
 install:
     uv sync --extra dev
 
+# Validate immutable review bundles, including hidden/ignored ones.
+check-record-reviews:
+    uv run python scripts/record_review.py check
+
+# Check native routes and the shared synthetic save/validation contract.
+test-record-reviews:
+    uv run pytest tests/test_record_review_contract.py -q
+
 # Generate Python dataclasses from LinkML schema
 gen-schema:
     uv run gen-pydantic src/traitmech/schema/traitmech.yaml > src/traitmech/schema/traitmech_dataclasses.py

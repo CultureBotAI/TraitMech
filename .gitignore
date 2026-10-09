@@ -61,6 +61,10 @@ reports/evidence_snippet_audit.tsv
 # Regenerable iModulonDB staging reports.
 reports/imodulondb/
 
+# Durable new review observations; existing report/research policies still apply.
+!reviews/structured/
+!reviews/structured/**
+
 # research/ is TRACKED. It was ignored as "large, regenerable" until the second
 # half of that turned out to be the expensive half: 342 of 353 reports were lost
 # because nothing outside one machine held them, and the manifest recorded 353

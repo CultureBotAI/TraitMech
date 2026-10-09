@@ -48,6 +48,19 @@ def _scan(tmp_path: Path, text: str):
     return scan_malformed_curies([path])
 
 
+def test_dry_run_distinguishes_acquisition_from_scientific_review(tmp_path, monkeypatch, capsys):
+    import run_trait_graph_audit as audit
+
+    monkeypatch.setattr(audit, "target_traits", lambda: [])
+    monkeypatch.setattr(audit, "MANIFEST", tmp_path / "manifest.tsv")
+    monkeypatch.setattr(sys, "argv", ["run_trait_graph_audit.py", "--dry-run"])
+    assert audit.main() == 0
+    output = capsys.readouterr().err
+    assert "Research acquisition only" in output
+    assert "not completed scientific reviews" in output
+    assert "scripts/record_review.py" in output
+
+
 @pytest.mark.parametrize("line,expected", [
     # The shape that actually shipped: the template hands the provider an
     # already-prefixed identifier and asks it to quote it verbatim; it prefixed
