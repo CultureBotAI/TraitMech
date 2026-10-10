@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/kinetocyst_discharge.yaml
+  slug: kinetocyst_discharge
+session:
+  id: 2026-10-10T040828Z-codex-84fa36
+  timestamp: '2026-10-10T04:08:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded kinetocyst discharge
+  details: Created traitmech:000687 with two primary DOI citations and a primary conference
+    abstract; retained historical mucocyst and exocytosis scope questions, omitted unresolved
+    canonical examples and molecular graphs, and reserved METPO:1064000 in proposal v563.
+    No existing trait changed.

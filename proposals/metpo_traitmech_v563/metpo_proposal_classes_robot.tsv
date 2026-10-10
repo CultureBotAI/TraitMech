@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064000	kinetocyst discharge	A physiological phenotype in which a microbial cell releases material from kinetocysts to the cell exterior.	TraitMech:data/traits/physiology/kinetocyst_discharge.yaml|DOI:10.1078/0932-4739-00847|DOI:10.1515/znc-1976-3-418|https://protistology.jp/journal/congress_ab/53th_kobe/Abstract%20Book%20Kobe2020	METPO:1000059			metpo_traitmech_2026_10		Kinetocyst material release; historical mucocyst hierarchy unresolved.	traitmech:000687
