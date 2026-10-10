@@ -11027,6 +11027,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/cytogamy.html#cytogamy-mechanism-and-provenance"
  },
  {
+  "discussion_id": "diatom-frustule-production-scope-and-mappings",
+  "prompt": "Keep frustule-element formation distinct from possession and other silica traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "diatom frustule production",
+  "source_id": "traitmech:000691",
+  "source_file": "diatom_frustule_production.yaml",
+  "attaches_to": [],
+  "rationale": "Use biomineralization traitmech:000690 as the broader phenotype because this endpoint entails formation of mineral cell-wall elements. It is not a material frustule, generic silicification, silica uptake, retention of an inherited valve or adsorption of preformed silica. Production of new wall elements does not require both valves to be synthesized anew in one cell cycle or every element to be formed simultaneously. Keep valve/girdle formation distinct from silica scales, auxospore coverings and setae; their observation alone does not establish this endpoint. The existing scale-production scope note distinguishes these phenotypes and is not an unresolved exact grounding. Do not infer organism-level disjointness or a universal geometry, cell-cycle schedule or fitness effect. Exact synonyms and external phenotype mappings remain unasserted pending authority review; process and material terms are not exact equivalents.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_frustule_production.html#diatom-frustule-production-scope-and-mappings"
+ },
+ {
+  "discussion_id": "diatom-frustule-production-exemplars-and-mechanisms",
+  "prompt": "Resolve assay-strain provenance and production-specific causal evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "diatom frustule production",
+  "source_id": "traitmech:000691",
+  "source_file": "diatom_frustule_production.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned before reconciling study strains, collection provenance and current taxonomy. The two studies support wall-element formation but do not establish a conserved protein mechanism. The contact-site transport model and actin-associated expansion in Aram et al. remain proposals; unobserved vesicle fusion is not proof of its absence. Separate silica deposition, shaping, exocytosis and wall assembly when evaluating perturbation evidence. Functional evidence and taxon-paired accessions are required for protein edges; sequence features alone are insufficient. Mechanism is deferred, not claimed absent, and no universal intracellular route is imposed on all diatom silica structures.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_frustule_production.html#diatom-frustule-production-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "dnase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13597,9 +13631,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 673,
- "total_knowledge_gaps": 432,
- "total_source_entries": 556,
+ "total_discussions": 675,
+ "total_knowledge_gaps": 433,
+ "total_source_entries": 557,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

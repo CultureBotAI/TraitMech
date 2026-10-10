@@ -1,0 +1,82 @@
+identifier: traitmech:000691
+label: diatom frustule production
+definition: A biomineralization phenotype in which a diatom forms the siliceous valve
+  and girdle-band elements of its cell wall (frustule).
+definition_source: DOI:10.1007/s00709-017-1199-4
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000690
+evidence:
+- reference: DOI:10.1007/s00709-017-1199-4
+  snippet: The basic stages of frustule morphogenesis characteristic of raphid pennate
+    diatoms have been traced
+  notes: Bedoshvili et al., journal issue May 2018, online 2017-12-21, PMID:29270874.
+    Scientific Abstract directly read at https://pubmed.ncbi.nlm.nih.gov/29270874/
+    and in Europe PMC CORE on 2026-10-10 using EXT_ID:29270874 AND SRC:MED; exact
+    ID, source, title and DOI checked together. The abstract defines frustule components
+    as silica valves and girdle bands and reports microscopy of morphogenesis in Encyonema
+    ventricosum under the source name. This supports formation, not just an isolated
+    shell's presence. Cytoskeletal proximity is not functional necessity. Full text,
+    Methods, actual figures and supplements were not inspected; no canonical taxon
+    or universal membrane-release mechanism is inferred.
+- reference: DOI:10.1038/s41467-024-52211-x
+  snippet: 'A diatom cell wall consists of two types of building blocks: two plate-shaped
+    valves and several ring-shaped girdle bands.'
+  notes: Aram et al. 2024, PMID:39251596, PMC11385223, Introduction. Scientific Abstract,
+    Introduction, Results, Discussion and Methods directly read in official Europe
+    PMC full-text XML on 2026-10-10; actual Figure 2 inspected, other actual figures
+    and supplements unread. Source-qualified CORE lookup EXT_ID:39251596 AND SRC:MED
+    confirmed ID, source, title and DOI. Silicon-starved CCMP1335 cultures were resupplied
+    and imaged during valve formation. Figure 2 orders different cells by inferred
+    maturation, not a live-cell time series. The paper retains historical Thalassiosira
+    pseudonana naming while noting Cyclotella nana; this is not a current taxonomy
+    assignment. Structural correlations support a membrane-mold hypothesis, not proven
+    contact-site function or a universal molecular mechanism. The quote defines wall
+    elements; the Results provide the production observations.
+discussions:
+- discussion_id: diatom-frustule-production-scope-and-mappings
+  prompt: Keep frustule-element formation distinct from possession and other silica
+    traits.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use biomineralization traitmech:000690 as the broader phenotype because
+    this endpoint entails formation of mineral cell-wall elements. It is not a material
+    frustule, generic silicification, silica uptake, retention of an inherited valve
+    or adsorption of preformed silica. Production of new wall elements does not require
+    both valves to be synthesized anew in one cell cycle or every element to be formed
+    simultaneously. Keep valve/girdle formation distinct from silica scales, auxospore
+    coverings and setae; their observation alone does not establish this endpoint.
+    The existing scale-production scope note distinguishes these phenotypes and is
+    not an unresolved exact grounding. Do not infer organism-level disjointness or
+    a universal geometry, cell-cycle schedule or fitness effect. Exact synonyms and
+    external phenotype mappings remain unasserted pending authority review; process
+    and material terms are not exact equivalents.
+  posed_by: codex
+  posed_date: '2026-10-10'
+- discussion_id: diatom-frustule-production-exemplars-and-mechanisms
+  prompt: Resolve assay-strain provenance and production-specific causal evidence.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: No canonical examples are assigned before reconciling study strains,
+    collection provenance and current taxonomy. The two studies support wall-element
+    formation but do not establish a conserved protein mechanism. The contact-site
+    transport model and actin-associated expansion in Aram et al. remain proposals;
+    unobserved vesicle fusion is not proof of its absence. Separate silica deposition,
+    shaping, exocytosis and wall assembly when evaluating perturbation evidence. Functional
+    evidence and taxon-paired accessions are required for protein edges; sequence
+    features alone are insufficient. Mechanism is deferred, not claimed absent, and
+    no universal intracellular route is imposed on all diatom silica structures.
+  posed_by: codex
+  posed_date: '2026-10-10'
+curation_history:
+- timestamp: '2026-10-10T20:14:43Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added diatom frustule production beneath biomineralization with two primary
+    DOI citations and directly checked short snippets. Ignored-and-hidden main/worktree/open-PR
+    reservation checks support 000691 and v567 block 1064400-1064499. Existing trait
+    records unchanged; mappings, canonical taxa and mechanisms remain open. Timestamp
+    records the observed UTC curation decision.
+  llm_assisted: true
