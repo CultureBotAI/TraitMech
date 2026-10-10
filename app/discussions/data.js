@@ -11061,6 +11061,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/diatom_frustule_production.html#diatom-frustule-production-exemplars-and-mechanisms"
  },
  {
+  "discussion_id": "diatom-perizonium-production-scope-and-mappings",
+  "prompt": "Resolve exact mappings without conflating auxospore wall components.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "diatom perizonium production",
+  "source_id": "traitmech:000693",
+  "source_file": "diatom_perizonium_production.yaml",
+  "attaches_to": [],
+  "rationale": "Biomineralization traitmech:000690 is strictly broader. This is production, not a material band, inherited band possession, silica uptake, or auxosporulation alone. Incunabular scales, epizonium, initial valve/girdle frustules and setae are not automatically this endpoint. Scaly bands in mediophytes do not justify universal parenting to siliceous scale production. Existing frustule/seta boundary notes are not unresolved exact perizonium groundings. No requirement for both transverse and longitudinal bands, a single geometry, one-at-a-time secretion, deposition during expansion, or sexual origin is imposed. No organism-level disjointness or fitness effect is asserted. Exact synonyms, properizonium terminology and external phenotype equivalences remain unasserted pending authority review; structure terms are not automatically phenotype xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_perizonium_production.html#diatom-perizonium-production-scope-and-mappings"
+ },
+ {
+  "discussion_id": "diatom-perizonium-production-exemplars-and-mechanisms",
+  "prompt": "Resolve canonical study material and formation-specific causal evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "diatom perizonium production",
+  "source_id": "traitmech:000693",
+  "source_file": "diatom_perizonium_production.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned: source clone origins were read, but current taxonomy and figure-to-mating-pair attribution need reconciliation, including atypical or aged cultures. Keep mineral deposition, band patterning and shape control separate. Static microscopy, PDMPO/EDS observations and sequence features alone do not establish a conserved causal protein mechanism or necessity for shape control. Protein edges require functional evidence and taxon-paired accessions. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_perizonium_production.html#diatom-perizonium-production-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "diatom-seta-production-scope-and-mappings",
   "prompt": "Keep seta formation distinct from possession and other silica endpoints.",
   "kind": "CURATION_TODO",
@@ -13665,9 +13699,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 677,
- "total_knowledge_gaps": 434,
- "total_source_entries": 558,
+ "total_discussions": 679,
+ "total_knowledge_gaps": 435,
+ "total_source_entries": 559,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

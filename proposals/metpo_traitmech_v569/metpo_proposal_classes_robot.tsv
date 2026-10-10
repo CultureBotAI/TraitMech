@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064600	diatom perizonium production	A biomineralization phenotype in which a diatom produces the siliceous band system called the perizonium in an auxospore wall.	TraitMech:data/traits/physiology/diatom_perizonium_production.yaml|DOI:10.1371/journal.pone.0272778|DOI:10.1371/journal.pone.0181413|DOI:10.1016/j.ejop.2013.06.002	METPO:1000059			metpo_traitmech_2026_10		Local parent biomineralization; request subclass of v566 METPO:1064300 on adoption.	traitmech:000693

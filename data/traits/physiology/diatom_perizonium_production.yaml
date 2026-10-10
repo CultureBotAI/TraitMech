@@ -1,0 +1,92 @@
+identifier: traitmech:000693
+label: diatom perizonium production
+definition: A biomineralization phenotype in which a diatom produces the siliceous
+  band system called the perizonium in an auxospore wall.
+definition_source: DOI:10.1371/journal.pone.0272778
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000690
+evidence:
+- reference: DOI:10.1371/journal.pone.0272778
+  snippet: The deposition of the primary TP band became evident when the auxospore
+    center attained a slim and rigid appearance.
+  notes: 'Kaczmarska et al. 2022, PMID:36067191, PMC9447881, Results: Epizonium and
+    perizonium. TP means transverse perizonium. Scientific Abstract, Introduction,
+    Methods, early Results, this subsection and Discussion: Auxospore structure and
+    development read in official Europe PMC XML on 2026-10-10; actual Figure 11 inspected.
+    Other actual figures and S1 Appendix unread. EXT_ID:36067191 AND SRC:MED confirmed
+    ID, title, DOI and scientific abstract. Clone HK328 (= ECT3902) originated from
+    Florida Bay material in 2011; atypical morphology and prolonged cultivation limit
+    canonical assignment. PDMPO labels silica deposited after addition. SEM resolves
+    inner TP/LP bands apart from initial valves; fixed images do not establish live
+    kinetics. Authors leave some epizonium/perizonium layer boundaries uncertain.
+    Scaly-band architecture and proposed shape control are not universal or demonstrated
+    necessities.'
+- reference: DOI:10.1371/journal.pone.0181413
+  snippet: transverse perizonial bands produced all together or in quick succession
+    rather than being added to the auxospore apex one at a time
+  notes: 'Kaczmarska et al. 2017, PMID:28813426, PMC5558960, scientific Abstract;
+    EXT_ID:28813426 AND SRC:MED confirmed identity. Abstract, Methods prose, Results:
+    Auxospore wall fine structure, related Discussion paragraphs and actual Figure
+    5 read on 2026-10-10. Table 1/2 headers, footnotes and StA:7/8 and Van5:5/6 rows
+    inspected; other rows not fully interpreted. Other actual figures and supplements
+    unread. Fixed stages support the authors'' inferred collapsible-cup sequence,
+    not a live secretion time course. No longitudinal perizonia found under their
+    structural criterion; initial epivalves must be distinguished. Discussion retains
+    the Tabularia fasciculata study (reference 100); reinterpretation targets other
+    papers. Aged small cultures, original isolates and progeny are distinct; culture
+    abnormalities do not define canonical morphology.'
+- reference: DOI:10.1016/j.ejop.2013.06.002
+  snippet: Silica precipitation began throughout the auxospore at or near maximal
+    length, but initially was detectable in isolated regions throughout the structure.
+  notes: Mather et al., online 2013-08-22, 2014 issue, PMID:23972513. Complete scientific
+    Abstract directly read in official Europe PMC CORE on 2026-10-10 using EXT_ID:23972513
+    AND SRC:MED; one exact MED result with matching ID, title and DOI. Tabularia fasciculata
+    under the source name lacked transverse perizonium; longitudinal deposition preceded
+    initial valves near maximal auxospore length. Undetectable silicon by EDS is not
+    absolute absence. Publisher full text unavailable; Methods, actual figures and
+    supplements unread. These three primary studies have overlapping authors, not
+    independent-laboratory replication.
+discussions:
+- discussion_id: diatom-perizonium-production-scope-and-mappings
+  prompt: Resolve exact mappings without conflating auxospore wall components.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Biomineralization traitmech:000690 is strictly broader. This is production,
+    not a material band, inherited band possession, silica uptake, or auxosporulation
+    alone. Incunabular scales, epizonium, initial valve/girdle frustules and setae
+    are not automatically this endpoint. Scaly bands in mediophytes do not justify
+    universal parenting to siliceous scale production. Existing frustule/seta boundary
+    notes are not unresolved exact perizonium groundings. No requirement for both
+    transverse and longitudinal bands, a single geometry, one-at-a-time secretion,
+    deposition during expansion, or sexual origin is imposed. No organism-level disjointness
+    or fitness effect is asserted. Exact synonyms, properizonium terminology and external
+    phenotype equivalences remain unasserted pending authority review; structure terms
+    are not automatically phenotype xrefs.
+  posed_by: codex
+  posed_date: '2026-10-10'
+- discussion_id: diatom-perizonium-production-exemplars-and-mechanisms
+  prompt: Resolve canonical study material and formation-specific causal evidence.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'No canonical examples are assigned: source clone origins were read,
+    but current taxonomy and figure-to-mating-pair attribution need reconciliation,
+    including atypical or aged cultures. Keep mineral deposition, band patterning
+    and shape control separate. Static microscopy, PDMPO/EDS observations and sequence
+    features alone do not establish a conserved causal protein mechanism or necessity
+    for shape control. Protein edges require functional evidence and taxon-paired
+    accessions. Mechanism is deferred, not claimed absent.'
+  posed_by: codex
+  posed_date: '2026-10-10'
+curation_history:
+- timestamp: '2026-10-10T23:15:32Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added diatom perizonium production beneath biomineralization with three
+    primary DOI citations and directly checked short snippets. Ignored-and-hidden
+    main/worktree/open-PR reservation checks support 000693 and v569 block 1064600-1064699.
+    Existing trait records unchanged; mappings, canonical taxa and mechanisms remain
+    open. Timestamp records the observed UTC curation decision.
+  llm_assisted: true

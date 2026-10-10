@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diatom_perizonium_production.yaml
+  slug: diatom_perizonium_production
+session:
+  id: 2026-10-10T231912Z-codex-d4b43a
+  timestamp: '2026-10-10T23:19:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add diatom perizonium production with three primary sources
+  details: Added traitmech:000693 beneath biomineralization, three DOI citations with source-checked
+    snippets, two open scope and mechanism discussions, and v569 METPO:1064600 proposal. No
+    canonical examples or causal graph asserted; existing trait records unchanged.
