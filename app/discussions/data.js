@@ -10857,6 +10857,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/chemotropism.html#chemotropism-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "coccolith-production-scope-and-parent",
+  "prompt": "Resolve broader biomineralization placement without conflating endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "coccolith production",
+  "source_id": "traitmech:000689",
+  "source_file": "coccolith_production.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059 pending a source-backed broader biomineralization phenotype. Coccolith production is not mere possession, secretion or arrangement of preformed elements into a coccosphere. Defective elements still count as production; a complete covering is not required. It is not equivalent to generic calcification, urease-associated calcium carbonate precipitation, siliceous scale production, or magnetosome/ferrosome possession. The physiological trait is distinct from a material coccolith, its vesicle and a process-level ontology term. No exact synonyms, xrefs, common molecular pathway or organism-level disjointness are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/coccolith_production.html#coccolith-production-scope-and-parent"
+ },
+ {
+  "discussion_id": "coccolith-production-exemplars-and-mechanism",
+  "prompt": "Reconcile assay strains, life stages and production-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "coccolith production",
+  "source_id": "traitmech:000689",
+  "source_file": "coccolith_production.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned pending joint strain-provenance and current-taxonomy verification. Skeffington et al., DOI:10.1111/jpy.12942, p. 239, explicitly derives calcifying AWI1516 from CCMP1516; this does not make all descendants equivalent. The current collection https://ncma.bigelow.org/CCMP1516, read 2026-10-10, labels it Gephyrocapsa huxleyi and reports lost coccolith production. Keep historical assay observations separate from this current catalog state; loss alone does not establish engineering. PLY182g provenance remains unresolved here. No universal silicon requirement, ploidy restriction, growth dependence or protective function is inferred. Separate mineral deposition, transport, secretion and covering integrity before adding causal edges. A protein mechanism needs direct functional evidence and taxon-paired accessions; sequence features alone are insufficient. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/coccolith_production.html#coccolith-production-exemplars-and-mechanism"
+ },
+ {
   "discussion_id": "cold-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -13529,9 +13563,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 669,
- "total_knowledge_gaps": 430,
- "total_source_entries": 554,
+ "total_discussions": 671,
+ "total_knowledge_gaps": 431,
+ "total_source_entries": 555,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
