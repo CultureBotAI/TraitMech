@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/haptocyst_discharge.yaml
+  slug: haptocyst_discharge
+session:
+  id: 2026-10-10T015213Z-codex-64152c
+  timestamp: '2026-10-10T01:52:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded haptocyst discharge phenotype
+  details: Added PROPOSED traitmech:000686 with Benwitz 1984 DOI:10.1515/znc-1984-7-821 discharge
+    evidence and Bardele and Grell 1967 DOI:10.1007/BF00331480 organelle identity and attachment
+    evidence, using directly read abstract/Summary snippets. Distinguishes organelle-plasma-membrane
+    continuity from predator-prey fusion. Leaves the exocytosis hierarchy, natural canonical
+    exemplars and protein mechanism unresolved. Ignored-and-hidden searches across main, all
+    22 existing worktrees, CommunityMech and exact open PR heads support novelty and the v562
+    block METPO:1063900-1063999. The guarded writer validates before explicit apply; no existing
+    trait was changed. No causal graph, xref, synonym, taxon or protein accession is asserted.
