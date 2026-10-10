@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diatom_frustule_production.yaml
+  slug: diatom_frustule_production
+session:
+  id: 2026-10-10T201809Z-codex-7489a5
+  timestamp: '2026-10-10T20:18:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded diatom frustule production
+  details: Added traitmech:000691 as a PROPOSED PHYSIOLOGY class beneath biomineralization
+    traitmech:000690. Bedoshvili et al. DOI:10.1007/s00709-017-1199-4 scientific abstract
+    defines frustule components and describes morphogenesis; Aram et al. DOI:10.1038/s41467-024-52211-x
+    Introduction supplies the valve/girdle definition and its Results/Methods support valve
+    formation. Short contiguous snippets checked directly. Aram main scientific sections and
+    actual Figure 2 were inspected; other actual figures/supplements and the Bedoshvili full
+    text remain unread. Reserved local 000691, cohort v567 and METPO block 1064400-1064499
+    after ignored-and-hidden main/all-worktree/current open-PR checks. Proposal uses released
+    phenotype as ancestor and explicitly requests the biomineralization refinement with v566.
+    No canonical taxa, xrefs, synonyms, protein accessions or causal graph added; two open
+    discussions retain scope, provenance and mechanism questions. Existing trait YAMLs are
+    unchanged. Written using the guarded dry-run-default validated writer; focused writer
+    tests and dry run passed before application. Full corpus validation and review outcomes
+    are recorded separately when completed.

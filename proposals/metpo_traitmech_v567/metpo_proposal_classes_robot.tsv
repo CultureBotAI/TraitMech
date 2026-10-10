@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064400	diatom frustule production	A biomineralization phenotype in which a diatom forms the siliceous valve and girdle-band elements of its cell wall (frustule).	TraitMech:data/traits/physiology/diatom_frustule_production.yaml|DOI:10.1007/s00709-017-1199-4|DOI:10.1038/s41467-024-52211-x	METPO:1000059			metpo_traitmech_2026_10		Local parent biomineralization; request subclass of v566 METPO:1064300 on adoption.	traitmech:000691
