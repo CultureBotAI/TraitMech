@@ -23,6 +23,8 @@ paid literature research before its causal graph can be curated. Use
 - `docs/GROUNDING_POLICY.md` before adding or editing `GENE_OR_PROTEIN` causal
   nodes or `protein_examples`.
 - `history/README.md` for repository-level curation history.
+- `docs/record-reviews.md` and `docs/record-review-profile.md` before the
+  adversarial review, for its immutable structured output and native rubric.
 - `.claude/skills/manage-identifiers/SKILL.md` for METPO-first identifiers and
   the fallback `traitmech:NNNNNN` allocation workflow.
 - `.claude/skills/metpo-proposal/SKILL.md` before minting a `traitmech:`
@@ -812,7 +814,8 @@ After local validation passes, finish the record through the same reviewed PR
 loop used for other hand-curated trait changes:
 
 1. Commit only the new record, its history, supporting writer script if any,
-   generated artifacts, and directly related documentation or tests.
+   generated artifacts, structured review bundles, and directly related
+   documentation or tests. The review bundle can follow in a separate commit.
    After committing, run the committed-diff curation-history gate against the
    PR base:
 
@@ -843,13 +846,32 @@ loop used for other hand-curated trait changes:
 
    The local review must try to falsify the trait identity, duplicate search,
    parent choice, xrefs, evidence snippets, canonical examples, any METPO
-   proposal, and regenerated artifacts before the PR merges. A successful PR
+   proposal, and regenerated artifacts before the PR merges. Before judging,
+   capture the reviewed traits, maintained owners, Git base, and hashes of all
+   inspected local inputs with `scripts/record_review.py inspect`, following
+   `docs/record-reviews.md`. Save the assessment with the shared
+   `validate`/`save` workflow as an immutable YAML/Markdown pair under
+   `reviews/structured/`, then commit it and link both files from the PR.
+   Use `kind: record` for one trait or `batch` for an explicitly scoped coupled
+   change; use `category` only when making a category-boundary assessment.
+   Record actual checks and source evidence, limitations, and the reviewer's
+   identity and independence basis. An author's adversarial pass is
+   `independence: self_review`, not independent review; external review requests or
+   passing CI do not change that attribution. A successful PR
    Shepherd run can legitimately leave no comment on a fresh, unstuck PR; record
    that successful outcome instead of treating silence as a failed review.
 4. Inspect every local finding, external review, PR comment, and workflow
    outcome. For each actionable curation defect, file a GitHub issue, fix the
    defect on the same branch, and rerun the relevant local validation before
    pushing.
+   When fixes change reviewed inputs, inspect and reassess the changed content
+   and save a new linked review; never rewrite an existing bundle or merely
+   replace its input hashes. Retain finding lineage and dispositions as required
+   by the shared contract. The final assessment must cover the content being
+   merged, not only a superseded revision. Run `just check-record-reviews` and
+   `just test-record-reviews` with `RECORD_REVIEW_BASE` set to the trusted PR
+   base SHA before the final push. A valid bundle does not promote
+   `mapping_status: REVIEWED` or replace any curation, history, or merge gate.
    Quota and rate-limit failures are not reviews: fetch the failed workflow logs
    or PR review/comment that reported quota exhaustion, confirm no agent read
    the diff, log the affected PR plus each failed workflow run or failed review
@@ -881,5 +903,7 @@ End with:
 - validation commands that passed
 - PR review outcome, issue numbers filed for review findings, merge result, and
   branch cleanup
+- links to the saved review YAML and Markdown, with their declared scope,
+  verdict, finding counts, and any unavailable checks
 - any `CURATION_TODO`, METPO proposal, or upstream METPO issue left open
 - whether duplicate and absence searches included ignored and hidden files

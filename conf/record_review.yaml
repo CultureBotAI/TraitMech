@@ -1,6 +1,7 @@
 version: 1
 repository: CultureBotAI/TraitMech
 skills:
+  - .claude/skills/add-trait/SKILL.md
   - .claude/skills/review-yaml-record/SKILL.md
   - .claude/skills/review-yaml-category/SKILL.md
   - .claude/skills/curate-yaml-record/SKILL.md

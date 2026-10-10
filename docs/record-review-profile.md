@@ -8,6 +8,13 @@ research, reports, scientific records and curation history are not migrated.
 
 ## Native routes
 
+- `add-trait`: persist the local adversarial scientific review before merging
+  a new trait. Use `kind: record` for one trait, `batch` for an explicitly
+  scoped coupled change, or `category` for an actual boundary assessment.
+  Capture inputs before judgement, identify author self-review honestly, and
+  save a new linked observation after fixes change reviewed inputs. The final
+  assessment covers the content being merged; PR comments and green CI do not
+  substitute for the bundle or confer human scientific sign-off.
 - `review-yaml-record`: `kind: record`, one complete `TraitRecord` assessed
   against the curate checklist, grounding policy and curation playbook.
 - `review-yaml-category`: `kind: category`, explicit membership, selection,
