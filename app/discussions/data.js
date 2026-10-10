@@ -11061,6 +11061,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/diatom_frustule_production.html#diatom-frustule-production-exemplars-and-mechanisms"
  },
  {
+  "discussion_id": "diatom-seta-production-scope-and-mappings",
+  "prompt": "Keep seta formation distinct from possession and other silica endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "diatom seta production",
+  "source_id": "traitmech:000692",
+  "source_file": "diatom_seta_production.yaml",
+  "attaches_to": [],
+  "rationale": "Biomineralization traitmech:000690 is the broader phenotype: formation of these siliceous extensions entails mineral formation. A material seta, inherited appendage, silica uptake or adsorption is not this production phenotype. Valve/girdle formation (traitmech:000691), siliceous scales and auxospore coverings alone do not establish seta production, nor do setae alone establish those other endpoints. The existing frustule scope note already distinguishes setae; it is not an unresolved exact grounding. No organism-level disjointness, universal seta number, length, geometry, cell-cycle coupling, buoyancy or fitness effect is asserted. The extracellular route is not definitional. Exact synonyms and external phenotype mappings remain unasserted pending authority review; generic bristles, spines, silica processes and material structures are not automatically equivalent to this diatom phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_seta_production.html#diatom-seta-production-scope-and-mappings"
+ },
+ {
+  "discussion_id": "diatom-seta-production-exemplars-and-mechanisms",
+  "prompt": "Resolve study-strain provenance and formation-specific causal evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "diatom seta production",
+  "source_id": "traitmech:000692",
+  "source_file": "diatom_seta_production.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned before checking collection provenance and current taxonomy. The two studies support seta formation, but structural localization alone does not establish a conserved protein mechanism. Microtubule pushing, a guiding organic scaffold and a diffusion-based silicon route remain hypotheses in Mayzel et al.; unobserved vesicle transport is not proof of its absence. Separate mineral deposition, shape control and organic-sheath assembly when evaluating functional perturbations. Protein edges require direct causal evidence and taxon-paired accessions; sequence features alone are insufficient. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diatom_seta_production.html#diatom-seta-production-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "dnase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13631,9 +13665,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 675,
- "total_knowledge_gaps": 433,
- "total_source_entries": 557,
+ "total_discussions": 677,
+ "total_knowledge_gaps": 434,
+ "total_source_entries": 558,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

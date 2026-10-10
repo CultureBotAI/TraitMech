@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diatom_seta_production.yaml
+  slug: diatom_seta_production
+session:
+  id: 2026-10-10T215740Z-codex-75a65b
+  timestamp: '2026-10-10T21:57:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1854
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct actor attribution in seta CREATE history
+  details: 'Corrects history/records/diatom_seta_production/2026-10-10T215658Z-claude-code-069f12.yaml:
+    the actual session actor was codex, not claude-code. The original invocation supplied
+    --model GPT-5 and --agent-tool codex but omitted --actor-name, retaining the scaffolder
+    default. The original history is preserved byte-for-byte; its scientific, temporal and
+    validation claims are unchanged. This audit only corrects provenance and does not change
+    the TraitRecord. The add-trait skill already explicitly requires --actor-name and post-scaffold
+    actor inspection, so no skill or schema change is needed.'

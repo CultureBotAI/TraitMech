@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diatom_seta_production.yaml
+  slug: diatom_seta_production
+session:
+  id: 2026-10-10T215658Z-claude-code-069f12
+  timestamp: '2026-10-10T21:56:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  - curation_history
+  summary: Add source-bounded diatom seta production
+  details: Created traitmech:000692 beneath biomineralization using the validated writer and
+    native curation event. Mayzel 2021 and Safadi 2025 primary DOI sources support seta formation;
+    exact snippets checked in Introduction and scientific Abstract respectively. Main text
+    and actual Figures 2, 3 and 5 inspected for Mayzel; Safadi full Methods, figures and supplements
+    remain unread. Extracellular route and molecular control remain qualified. No canonical
+    examples, exact mappings or causal graphs assigned. Ignored-and-hidden worktree, current
+    main, complete open-PR and CommunityMech checks support v568 block 1064500-1064599. Twenty
+    focused tests and dry run passed before creation. All existing trait YAMLs remain untouched.
+    Further corpus/product validation and adversarial review are recorded separately. This
+    scaffold timestamp is history-write time, distinct from the recorded UTC curation decision.
