@@ -11724,6 +11724,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/karyoklepty.html#karyoklepty-control-and-inheritance-mechanism"
  },
  {
+  "discussion_id": "kinetocyst-discharge-scope-and-parent",
+  "prompt": "Resolve historical mucocyst terminology and exocytosis placement.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "kinetocyst discharge",
+  "source_id": "traitmech:000687",
+  "source_file": "kinetocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059 pending hierarchy review. Bardele 1976 interprets kinetocysts as compound motile mucocysts; preserve that attribution rather than asserting separation from every historical mucocyst umbrella. Existing mucocyst discharge traitmech:000684 uses a membrane-fusion release definition supported in Tetrahymena and explicitly defers terminology reconciliation. Neither exact equivalence nor a mucocyst parent is established here. The fusion-pore differentia of exocytosis traitmech:000637 also needs class-wide scope review; placement is unresolved, not excluded. Possession, docking, axopodial movement or contraction, prey adhesion, ingestion and nonspecific cell lysis alone do not demonstrate discharge. Complete emptying, prey death and one universal trigger are not required. Historical conicyst organelle terminology does not automatically establish an exact phenotype synonym. No equivalence to haptocyst discharge traitmech:000686, homology, disjointness, exact synonyms or xrefs are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/kinetocyst_discharge.html#kinetocyst-discharge-scope-and-parent"
+ },
+ {
+  "discussion_id": "kinetocyst-discharge-exemplars-and-mechanism",
+  "prompt": "Resolve assay-strain provenance and release-specific molecular evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "kinetocyst discharge",
+  "source_id": "traitmech:000687",
+  "source_file": "kinetocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned: full primary assay Methods and their relation to the deposited natural culture need joint verification. The evidence items have different scopes, not three equivalent discharge replications. Organelle ultrastructure and protein localization alone do not establish a causal release pathway. Separate assembly, movement, triggering, extrusion, attachment and ingestion before adding graph edges. A protein mechanism needs direct functional evidence and taxon-paired accessions; sequence features alone cannot provide that support. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/kinetocyst_discharge.html#kinetocyst-discharge-exemplars-and-mechanism"
+ },
+ {
   "discussion_id": "kleptoplasty-retention-and-hierarchy-scope",
   "prompt": "Keep plastid retention distinct from uptake and acquired photosynthesis.",
   "kind": "CURATION_TODO",
@@ -13461,9 +13495,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 665,
- "total_knowledge_gaps": 428,
- "total_source_entries": 552,
+ "total_discussions": 667,
+ "total_knowledge_gaps": 429,
+ "total_source_entries": 553,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
