@@ -877,6 +877,10 @@ loop used for other hand-curated trait changes:
    the diff, log the affected PR plus each failed workflow run or failed review
    request on standing issue #742, and file GitHub issues only for actual
    curation defects.
+   Fresh clones may need `just fetch-record-review-bases --apply` before those
+   read-only checks. Follow the native profile's review-base procedure; squash
+   merging can remove feature checkpoints from main ancestry even with full
+   history. Never rewrite a saved review to replace its missing base (#1843).
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
 6. Merge the PR only after CI and reviews are clean. Use the native merge-queue
@@ -888,7 +892,10 @@ loop used for other hand-curated trait changes:
    required checks once its SHA exists. Wait until
    `gh pr view <n> --json state,mergedAt,mergeCommit` reports `MERGED`, then
    verify the actual landed tree with `scripts/verify_merge_integrity.py` before
-   deleting the remote feature branch. Fetch with pruning and verify no local
+   deleting the remote feature branch. Also prepare and validate retained
+   reviews in an independent single-branch main clone, as described in
+   `docs/record-review-profile.md`; repeat after branch deletion. Fetch with
+   pruning and verify no local
    or remote branch for that trait remains.
 
 ## Report

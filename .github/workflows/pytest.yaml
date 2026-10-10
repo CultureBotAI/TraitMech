@@ -22,6 +22,9 @@ on:
       - "research/**"
       # As above: the corpus round-trip test reads data/traits/ (#554).
       - "data/traits/**"
+      - "reviews/structured/**"
+      - "schema/record_review.yaml"
+      - "conf/record_review.yaml"
   workflow_dispatch:
 
 permissions:
@@ -49,6 +52,9 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --extra dev
+
+      - name: Recover retained review source commits
+        run: uv run python scripts/fetch_record_review_bases.py --apply
 
       - name: Run pytest
         run: uv run pytest tests/ -v --tb=short
