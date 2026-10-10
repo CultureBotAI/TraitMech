@@ -11435,6 +11435,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/gyrotaxis.html#gyrotaxis-physical-mechanism-representation"
  },
  {
+  "discussion_id": "haptocyst-discharge-scope-and-parent",
+  "prompt": "Resolve the exocytosis placement and historical extrusome terminology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "haptocyst discharge",
+  "source_id": "traitmech:000686",
+  "source_file": "haptocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059 pending broader hierarchy review. Benwitz supports organelle-plasma-membrane continuity in Ephelota, not predator-prey membrane fusion. This supports an exocytotic interpretation in that system but does not establish the fusion-pore differentia of exocytosis traitmech:000637 throughout the unqualified class. That placement is unresolved, not excluded. Mere possession, docking, prey attachment, ingestion or nonspecific cell lysis alone does not demonstrate discharge. Do not require prey death, complete emptying or a universal natural trigger. Toxicyst discharge traitmech:000685 explicitly leaves haptocyst terminology unresolved; this organelle-specific record does not settle whether historical toxicyst umbrellas include haptocysts. Do not equate haptocysts with kinetocysts, trichocysts or mucocysts, or assert homology or organism-level disjointness. No exact synonyms or xrefs are assigned.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/haptocyst_discharge.html#haptocyst-discharge-scope-and-parent"
+ },
+ {
+  "discussion_id": "haptocyst-discharge-provenance-and-mechanism",
+  "prompt": "Verify natural exemplars and separate release from attachment and ingestion.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "haptocyst discharge",
+  "source_id": "traitmech:000686",
+  "source_file": "haptocyst_discharge.yaml",
+  "attaches_to": [],
+  "rationale": "Experimental culture provenance and current strain-level taxonomy remain unchecked; no canonical examples are assigned. The two citations support different claims and are not replicate discharge assays. Tentacular ultrastructure does not establish a conserved protein mechanism, toxin composition or signaling pathway. A future graph needs direct perturbation evidence and taxon-paired accessions, separating assembly, triggering, extrusion, attachment and ingestion. Mechanism is deferred, not claimed absent. Sequence features alone would not establish any of these causal transitions.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/haptocyst_discharge.html#haptocyst-discharge-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "heat-shock-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial heat shock response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -13427,9 +13461,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 663,
- "total_knowledge_gaps": 427,
- "total_source_entries": 551,
+ "total_discussions": 665,
+ "total_knowledge_gaps": 428,
+ "total_source_entries": 552,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
