@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/siliceous_scale_production.yaml
+  slug: siliceous_scale_production
+session:
+  id: 2026-10-10T050443Z-codex-dabe1a
+  timestamp: '2026-10-10T05:04:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded siliceous scale production
+  details: Created traitmech:000688 as a PROPOSED physiological phenotype with two independent
+    primary DOI citations and directly read scientific-abstract snippets. Distinguished new-scale
+    production from possession, extrusion and shell assembly; broader hierarchy, strain-level
+    exemplars and molecular mechanism remain explicitly unresolved. Added a dry-run-first
+    guarded writer, focused tests and METPO proposal v564 reserving the whole 1064100-1064199
+    block. The record timestamp is the observed 2026-10-10T05:02:23Z curation decision, not
+    a claimed exact file-write time. Existing records were not edited.

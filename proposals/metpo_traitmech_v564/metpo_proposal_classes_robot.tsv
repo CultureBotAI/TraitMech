@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064100	siliceous scale production	A physiological phenotype in which a microbial cell produces siliceous scales.	TraitMech:data/traits/physiology/siliceous_scale_production.yaml|DOI:10.1016/j.protis.2016.05.002|DOI:10.1111/j.0022-3646.1996.00675.x	METPO:1000059			metpo_traitmech_2026_10		New-scale production, not scale possession or shell assembly.	traitmech:000688
