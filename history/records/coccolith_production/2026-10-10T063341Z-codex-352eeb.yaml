@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/coccolith_production.yaml
+  slug: coccolith_production
+session:
+  id: 2026-10-10T063341Z-codex-352eeb
+  timestamp: '2026-10-10T06:33:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed coccolith production phenotype
+  details: Added traitmech:000689 as PHYSIOLOGY/CLASS/PROPOSED under phenotype METPO:1000059
+    through the guarded add_coccolith_production_trait writer and record_curation_event. Two
+    primary DOI citations (10.1038/ncomms11228 and 10.1111/nph.15272) and directly checked
+    short scientific-abstract/Results snippets support production, including malformed elements,
+    distinct from coccosphere integrity. Preserved source condition/caption discrepancies
+    and historical strain limits. DOI:10.1111/jpy.12942 and the current CCMP1516 collection
+    support qualified provenance context only. Left two explicit discussions for broader hierarchy,
+    canonical exemplars and functional protein mechanism; no graph, xref or synonym inferred.
+    Ignored-and-hidden searches across current main and 22 worktrees plus all five paginated
+    open PR heads found no exact duplicate or competing allocation. Reserved full METPO block
+    1064200-1064299 in proposal v565, only 1064200 populated. Existing records, including
+    protected spore germination, are unchanged. Validation and review results will be reported
+    after execution, not presumed here.
