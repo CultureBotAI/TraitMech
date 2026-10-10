@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/siliceous_scale_production.yaml
+  slug: siliceous_scale_production
+session:
+  id: 2026-10-10T080731Z-codex-9d54aa
+  timestamp: '2026-10-10T08:07:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve siliceous scale production biomineralization parent gap
+  details: Reparented traitmech:000688 to biomineralization traitmech:000690 by definition-based
+    inference and resolved its parent TODO. Preserved definition, evidence, historical rationale,
+    separate exemplar/mechanism discussion and prior history. Historical v564 template remains
+    unchanged; v566 explicitly requests the additional upstream child axiom. No new experiment
+    or molecular claim is asserted.

@@ -10704,6 +10704,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-xref-gap"
  },
  {
+  "discussion_id": "biomineralization-scope-and-mappings",
+  "prompt": "Keep mineral formation distinct from association and process-level mappings.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "biomineralization",
+  "source_id": "traitmech:000690",
+  "source_file": "biomineralization.yaml",
+  "attaches_to": [],
+  "rationale": "The definition includes controlled, induced and matrix-mediated formation when microbial mediation is demonstrated; it is not restricted to carbonate, intracellular deposition or a crystalline end product. Benzerara et al. DOI:10.1016/j.crte.2010.09.002 section 2 includes passive organic-matter effects under biologically influenced biomineralization. This broad terminology is retained, but precipitation near a cell, isolated nonliving-matrix activity, mineral adhesion, uptake of preformed particles or ion adsorption alone does not establish that organism's formation phenotype. Organic-substrate mineralization, mineral dissolution, metal tolerance and mineral use as an electron donor are not equivalent. Coccolith and siliceous-scale production are narrower endpoints. Magnetosome and ferrosome organelle records retain their structural parents; no automatic cross-axis reparenting or disjointness is asserted. The magnetosome graph's similarly named node has narrower scope and is not exactly grounded to this umbrella. No synonyms or xrefs are asserted pending authority-backed phenotype mapping.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/biomineralization.html#biomineralization-scope-and-mappings"
+ },
+ {
+  "discussion_id": "biomineralization-exemplars-and-mechanisms",
+  "prompt": "Resolve assay-specific exemplars and distinct mineral-forming mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "biomineralization",
+  "source_id": "traitmech:000690",
+  "source_file": "biomineralization.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned before strain provenance and current taxonomy are reconciled with the original assays. A community precipitation assay cannot be assigned wholesale to each community member. Substrate, medium, mineral phase, location and life stage qualify observations. No universal benefit, growth dependence, genetic control, obligatory enzyme or shared protein pathway follows from this umbrella. Separate controlled deposition from metabolically induced precipitation and organic-matrix effects when adding mechanisms. Functional evidence and taxon-paired accessions are required for protein edges; sequence features or mineral co-localization alone are insufficient. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/biomineralization.html#biomineralization-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "bipolar-mating-scope-and-hierarchy",
   "prompt": "Keep genetic compatibility distinct from locus inventory and partner dependence.",
   "kind": "CURATION_TODO",
@@ -10860,7 +10894,7 @@ window.searchData = [
   "discussion_id": "coccolith-production-scope-and-parent",
   "prompt": "Resolve broader biomineralization placement without conflating endpoints.",
   "kind": "CURATION_TODO",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Other discussion",
   "source_name": "coccolith production",
   "source_id": "traitmech:000689",
@@ -13140,7 +13174,7 @@ window.searchData = [
   "discussion_id": "siliceous-scale-production-scope-and-parent",
   "prompt": "Resolve broader biomineralization placement without conflating endpoints.",
   "kind": "CURATION_TODO",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Other discussion",
   "source_name": "siliceous scale production",
   "source_id": "traitmech:000688",
@@ -13563,9 +13597,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 671,
- "total_knowledge_gaps": 431,
- "total_source_entries": 555,
+ "total_discussions": 673,
+ "total_knowledge_gaps": 432,
+ "total_source_entries": 556,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

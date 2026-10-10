@@ -1,0 +1,102 @@
+identifier: traitmech:000690
+label: biomineralization
+definition: A physiological phenotype in which a microbe mediates the formation of
+  mineral phases.
+definition_source: DOI:10.1016/j.crte.2010.09.002
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1016/j.crte.2010.09.002
+  snippet: Microorganisms can mediate the formation of minerals by a process called
+    biomineralization.
+  notes: 'Benzerara et al. 2011, scientific Abstract, directly checked in publisher
+    HTML on 2026-10-10. Definition terminology, not an independent experimental replication:
+    this is a review. Its Introduction and section 2 distinguish controlled, induced
+    and biologically influenced formation, including organic-matrix effects. TraitMech
+    represents the microbial phenotype rather than equating it with a process or material
+    entity. The source cautions that association with pre-existing minerals does not
+    establish formation. The remainder and actual figures were not audited for this
+    record.'
+- reference: DOI:10.1128/AEM.07044-11
+  snippet: All bacteria tested induce the precipitation of a significant amount of
+    calcium carbonate when cultured in M-3P medium.
+  notes: Rodriguez-Navarro et al. 2012, PMID:22447589, PMC3346411, Discussion, Bacterial
+    carbonatogenesis. Publisher scientific Abstract, Introduction, Methods, Results
+    and relevant Discussion directly read on 2026-10-10; actual Figures 1 and 6 inspected,
+    other figures not visually audited. Inoculated assays produced carbonates whereas
+    uninoculated substrate controls did not. Tested M. xanthus strain 422, B. diminuta
+    SJ 63 and a stone bacterial community are assay labels, not verified canonical
+    taxa here. Polymorph selection depends on the stated substrate/medium conditions,
+    not a universal strain rule. The proposed amorphous precursor is not established
+    by morphology alone. No universal urease requirement or functional protein mechanism
+    is inferred.
+- reference: DOI:10.1038/ncomms11228
+  snippet: Coccoliths are calcitic particles produced inside the cells of unicellular
+    marine algae known as coccolithophores.
+  notes: Sviben et al. 2016, PMID:27075521, PMC4834641. Scientific Abstract directly
+    checked in Europe PMC full-text XML on 2026-10-10; Introduction, calcite-resupply
+    Results and Discussion also inspected. This supports controlled mineral production
+    and the coccolith child's placement. Historical E. huxleyi AWI1516 observations
+    do not establish every strain's current phenotype. A separate calcium-rich compartment
+    is not proven to be a necessary direct precursor or bulk-transfer route. No new
+    figure or supplement audit is claimed for this parent; the child's more detailed
+    provenance is retained.
+- reference: DOI:10.1016/j.protis.2016.05.002
+  snippet: Scales were formed one by one in silica deposition vesicles (SDVs)
+  notes: Nomura and Ishida 2016, PMID:27348459. Scientific abstract directly read
+    on 2026-10-10 at https://rrc.nbrp.jp/references/56432?lang=en. Scale formation
+    and silicon detection in immature-scale vesicles support mineral production beyond
+    carbonates and the siliceous-scale child's placement. Historical Paulinella chromatophora
+    naming does not establish current strain taxonomy. Full Methods and figures remain
+    unread; proposed microtubule involvement is not molecular necessity. Scale production
+    is distinct from subsequent shell assembly.
+discussions:
+- discussion_id: biomineralization-scope-and-mappings
+  prompt: Keep mineral formation distinct from association and process-level mappings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The definition includes controlled, induced and matrix-mediated formation
+    when microbial mediation is demonstrated; it is not restricted to carbonate, intracellular
+    deposition or a crystalline end product. Benzerara et al. DOI:10.1016/j.crte.2010.09.002
+    section 2 includes passive organic-matter effects under biologically influenced
+    biomineralization. This broad terminology is retained, but precipitation near
+    a cell, isolated nonliving-matrix activity, mineral adhesion, uptake of preformed
+    particles or ion adsorption alone does not establish that organism's formation
+    phenotype. Organic-substrate mineralization, mineral dissolution, metal tolerance
+    and mineral use as an electron donor are not equivalent. Coccolith and siliceous-scale
+    production are narrower endpoints. Magnetosome and ferrosome organelle records
+    retain their structural parents; no automatic cross-axis reparenting or disjointness
+    is asserted. The magnetosome graph's similarly named node has narrower scope and
+    is not exactly grounded to this umbrella. No synonyms or xrefs are asserted pending
+    authority-backed phenotype mapping.
+  posed_by: codex
+  posed_date: '2026-10-10'
+- discussion_id: biomineralization-exemplars-and-mechanisms
+  prompt: Resolve assay-specific exemplars and distinct mineral-forming mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: No canonical examples are assigned before strain provenance and current
+    taxonomy are reconciled with the original assays. A community precipitation assay
+    cannot be assigned wholesale to each community member. Substrate, medium, mineral
+    phase, location and life stage qualify observations. No universal benefit, growth
+    dependence, genetic control, obligatory enzyme or shared protein pathway follows
+    from this umbrella. Separate controlled deposition from metabolically induced
+    precipitation and organic-matrix effects when adding mechanisms. Functional evidence
+    and taxon-paired accessions are required for protein edges; sequence features
+    or mineral co-localization alone are insufficient. Mechanism is deferred, not
+    claimed absent.
+  posed_by: codex
+  posed_date: '2026-10-10'
+curation_history:
+- timestamp: '2026-10-10T08:03:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added biomineralization with source-backed terminology, three primary studies
+    and directly checked short snippets. Reserved 000690 and v566 block 1064300-1064399
+    after ignored-and-hidden main/worktree/open-PR checks. Resolved the coccolith
+    and siliceous-scale production parent gaps without claiming common mechanisms
+    or canonical taxa. Timestamp records the observed UTC curation decision.
+  llm_assisted: true

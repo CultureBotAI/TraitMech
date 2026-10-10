@@ -1,0 +1,7621 @@
+# Adversarial self-review of biomineralization and two hierarchy refinements
+
+- Review: 20261010T193524Z-biomineralization
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-10T08:26:57Z
+- Finished UTC: 2026-10-10T19:35:24Z
+- Reviewer: codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The new mineral-formation phenotype and the two definition-based child refinements are supported within scope. No actionable defect found. Taxon, mapping and molecular-mechanism questions remain explicit; PROPOSED status is unchanged.
+
+## Scope And Provenance
+
+Full new parent record and bounded parent/discussion/history edits to two existing children, with writer/tests, v566 proposal and generated products.
+
+Selection: Exact traitmech:000690, traitmech:000689 and traitmech:000688 on the trait-scoped branch; no sampling.
+Coverage: partial; 3 reviewed / 3 in the declared population.
+Source: working_tree at Git base bb5d82201fbcd0abbb157de1d99c38a7a49dcad4.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000690 | data/traits/physiology/biomineralization.yaml | maintained | biomineralization |
+| traitmech:000689 | data/traits/physiology/coccolith_production.yaml | maintained | coccolith production |
+| traitmech:000688 | data/traits/physiology/siliceous_scale_production.yaml | maintained | siliceous scale production |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/biomineralization.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/python scripts/validate_strict.py data/traits/physiology/biomineralization.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/coccolith_production.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/python scripts/validate_strict.py data/traits/physiology/coccolith_production.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/siliceous_scale_production.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/python scripts/validate_strict.py data/traits/physiology/siliceous_scale_production.yaml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just audit-proposals | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just ground-predicates | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just ground-nodes | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just audit-graphs | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just audit-graph-protein-taxa | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just audit-predicate-domains | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just check-biolink-coverage | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just audit-snippets | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-discussions-data | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-qc-dashboard | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-pages | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-priority-dashboard | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-discussions-data | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just gen-qc-dashboard | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just qc | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just validate-history | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just validate-products | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| just verify-proposal metpo_traitmech_v566 | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/ruff check scripts/add_biomineralization_trait.py tests/test_add_biomineralization_trait.py | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Completed successfully; scope is the command argument scope, including corpus-wide audits. Existing baselines were not changed. |
+| .venv/bin/python -m pytest -q --junitxml=/tmp/traitmech-biomineralization-checks-20261010/pytest.xml | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | 3770 tests passed with no failures, errors or skips. |
+| robot | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | ROBOT and ELK pass; separate RDF parse verified w3id 1064300 -&gt; labeled phenotype 1000059 -&gt; quality 1000188, without legacy OBO METPO stubs. The v566-only template does not emit historical child IDs. |
+| focused | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | 30 focused tests passed, including dry run, exact replay, child preservation, stale preimage refusal and whole-change prevalidation. |
+| history-diff | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Three changed traits have three new history records; old histories remain byte-identical. |
+| browser | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Chrome at 1440px and 390px passed four parent quotes, two child hierarchy round trips, discussion states, history links, browse search, dashboard image/count, overflow and page-error checks. Desktop parent and mobile evidence screenshots visually inspected. |
+| artifacts | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | 1082 unrelated old YAMLs byte-preserved; two children change only parent, resolution fields and appended event. 1081 old pages change only footer; two children and phenotype additionally reflect hierarchy. Priority only changes phenotype children 182 to 181, plus the new parent with two children. Old histories, proposals, embeddings and discussion templates preserved. |
+| snippets | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Native outcomes retained: terminology UNRESOLVED, precipitation NOT_IN_ABSTRACT, coccolith and scale VERIFIED. The first two quotes were directly checked in publisher Abstract and Discussion respectively; they are not relabeled as abstract-resolver successes. |
+| sources | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Exactly one source-qualified MED match per PMID, matching DOI/title; two scientific-abstract quotes match. Cached publisher HTML and official XML exact quotes also match. |
+| fresh-novelty | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | Refreshed ignored-and-hidden concept, citation and full-block searches across all current worktrees. New matches were inspected own Git metadata and two generated rows for the existing narrower magnetosome node; no unresolved conflict. Main and the original five pending PR heads unchanged. New PR 1850 at f352a9197f1227dfce1abbd46aa779079ea26bfe changes only scripts/.vendored_canon_ref; its complete paginated file list and immutable blob were inspected, with no curation allocation. |
+| whitespace | passed | True | traitmech:000690, traitmech:000689, traitmech:000688 | The ordinary staged TSV check returned 2 only for the required three empty trailing directive cells. This path-scoped exception and the separate non-TSV check passed; structured comparison confirms the canonical 11-column headers. |
+| Embedding source applicability | not_applicable | False | traitmech:000690, traitmech:000689, traitmech:000688 | Exact configured default/fallback sources absent in both layouts, checked independently of gitignore. Existing embedding artifacts preserved. |
+
+## Scientific And Domain Assessments
+
+### Reusable formation phenotype
+
+identity: supported. Targets: traitmech:000690.
+
+Source-backed trait, not a material entity, isolated process, sequence feature or kit label.
+
+### Strictly broader mineral formation
+
+grounding: supported. Targets: traitmech:000690, traitmech:000689, traitmech:000688.
+
+Both child differentiae entail mineral formation. Phenotype remains an ancestor; no structural organelle reparenting, exact process xref or disjointness is inferred.
+
+### Source and quote fidelity
+
+evidence: supported. Targets: traitmech:000690.
+
+Terminology review is distinguished from three primary studies. Assay, substrate and interpretation limits remain explicit.
+
+### Scoped child repair
+
+consistency: supported. Targets: traitmech:000689, traitmech:000688.
+
+Only the direct parent, resolution fields and appended event change. Separate mechanism gaps, evidence and historical rationales remain intact.
+
+### Guarded mutation and histories
+
+provenance: supported. Targets: traitmech:000690, traitmech:000689, traitmech:000688.
+
+Curation events and three repository histories match actual edits. Prevalidation and refusal tests cover conflicting inputs and replay.
+
+### Proposal and generated surfaces
+
+consistency: supported. Targets: traitmech:000690, traitmech:000689, traitmech:000688.
+
+One new canonical TSV row, explicit upstream child-axiom requests, and native regenerated products agree; old cohorts and unrelated records are preserved.
+
+### Taxa, mappings and mechanisms
+
+completeness: unknown. Targets: traitmech:000690, traitmech:000689, traitmech:000688.
+
+Canonical examples, exact xrefs and causal mechanisms remain intentionally unasserted until supported; open discussions retain these questions.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| terminology | DOI:10.1016/j.crte.2010.09.002; Publisher scientific Abstract, Introduction and section 2; https://comptes-rendus.academie-sciences.fr/geoscience/articles/10.1016/j.crte.2010.09.002/. Access time records the direct HTML reread, not the first acquisition. | supports | Review terminology supports microbial mediation of mineral formation, including controlled, induced and passive matrix effects. It distinguishes attachment of pre-existing minerals from formation. This is not experimental replication. |
+| precipitation | DOI:10.1128/AEM.07044-11; Scientific Abstract, Introduction, Methods, Results, relevant Discussion and actual Figures 1/6; https://journals.asm.org/doi/full/10.1128/aem.07044-11. Access timestamp is the refreshed publisher page read; PMID:22447589 separately rechecked. | supports | Inoculated M-3P assays formed carbonates, unlike uninoculated controls. Mineral phase depends on substrate and conditions; community observations are not assigned to each taxon. Discussion snippet is exact. Morphology does not prove the proposed amorphous precursor or a universal urease mechanism. |
+| coccolith | DOI:10.1038/ncomms11228; Scientific Abstract, Introduction, calcite-resupply Results and Discussion in official XML https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4834641/fullTextXML. Timestamp records cached XML reread and exact quote check. | supports | Calcitic cell-element production entails mineral formation. Historical AWI1516 observations do not prove current phenotype across strains or necessary direct transfer from the separate calcium compartment. No new figure audit for this parent. |
+| silica | DOI:10.1016/j.protis.2016.05.002; Scientific abstract at https://rrc.nbrp.jp/references/56432?lang=en and source-qualified PMID:27348459 Europe PMC CORE; timestamp is refreshed abstract lookup. | supports | Siliceous scales form in deposition vesicles; silicon is detected in immature-scale vesicles. Production differs from assembly. Full Methods/figures unread; microtubule association is not a necessary molecular mechanism. |
+| novelty | proposals/metpo_traitmech_v566/proposal.md; Allocation and novelty, upstream template contract and historical-child axiom requests. Access timestamp records proposal reread, not the earlier searches. | supports | No exact umbrella record or conflicting reservation found in the bounded ignored-and-hidden search. Narrower structures and graph endpoints are not exact matches. v566 reserves 1064300-1064399 and populates only 1064300. |
+| hierarchy | data/traits/physiology/biomineralization.yaml; All parent fields plus both child definitions, parent_traits, discussions and curation events. | supports | The new phenotype is broader than both mineral-production endpoints. The child reparenting is definition-based inference; prior evidence, rationales, remaining gaps and historical proposals are preserved. |
+| implementation | scripts/add_biomineralization_trait.py; build_record, build_child, proposal_tsv and main; controlled-preimage regression tests and three history records. | supports | Dry-run default, identity/scope and discussion guards, complete prevalidation and replay refusal protect the coupled edit. Agent attribution and decision timestamp are explicit; all three records remain PROPOSED. |
+| products | reports/proposal_citation_audit.tsv; Completed native pipeline, artifact audit, RDF parse and browser checks. | supports | 1085 records and consistent generated artifacts; exact pinned CLAW 9adf79f source verified across 152 source blobs and used for final shared generation. Protected and unrelated records unchanged; baseline exceptions not expanded. |
+
+## Limits And Additional Notes
+
+- Author self-review, not independent review or human scientific signoff.
+- Full parent assessment; existing children reviewed only for the coupled hierarchy change and preservation. Broad input hashes do not imply whole-corpus scientific review.
+- Benzerara Abstract/Introduction/section 2 read; remainder and actual figures not audited. Rodriguez-Navarro actual Figures 1/6 inspected, other images not visually audited. No new Sviben figure/supplement audit. Nomura full Methods/figures unread.
+- Native snippet resolver returned UNRESOLVED and NOT_IN_ABSTRACT for the first two sources; directly verified publisher text is separately documented.
+- No canonical taxa, synonyms, external equivalences or protein mechanism asserted. Parent scope/mapping and exemplar/mechanism discussions remain OPEN; only child parent gaps are RESOLVED.
+- Configured embedding sources absent; existing artifacts preserved. No paid research performed.
+- Curation decision time, repository-history write times and review access times have distinct meanings. Refreshed source checks do not reconstruct earlier access timestamps.
+- No new defect issue warranted by this bounded pass. External review and final CI/reservation outcomes belong in the PR.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T193524Z-biomineralization
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Adversarial self-review of biomineralization and two hierarchy refinements
+started_at: '2026-10-10T08:26:57Z'
+finished_at: '2026-10-10T19:35:24Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The author performed this falsification-oriented pass. External
+    review requests do not make this assessment independent.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The new mineral-formation phenotype and the two definition-based child refinements
+  are supported within scope. No actionable defect found. Taxon, mapping and molecular-mechanism
+  questions remain explicit; PROPOSED status is unchanged.
+source:
+  git_revision: bb5d82201fbcd0abbb157de1d99c38a7a49dcad4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: 2869d64c2e438f2bb81e9d834496e2c42d0c1c16a4a7b246f531558096856e97
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: 31a472fe425d6b97986e9694d1dd2c51594243b284c7b13569134f9601a39d7e
+    role: context
+  - path: .claude/skills/metpo-proposal/SKILL.md
+    sha256: d617b5e25518ec0cb26f2eda00364a2c4c8b4e5cb703814256af6d8deae892e9
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: README.md
+    sha256: 71be5a81de37b4115343fcb0d747ca565820fb8b5bfb96bd3566ff7ba24694df
+    role: context
+  - path: app/dashboard/priority.html
+    sha256: 9b7cf0d970946cdaea4aba0bc0dccdfdeefedb877d9256064202dd7f079abbae
+    role: context
+  - path: app/dashboard/priority.json
+    sha256: 6fea2b6ea4bc1be436edc8046681c31d35f35358f9eb4fcfd24c45d2ab4707e9
+    role: context
+  - path: app/discussions/data.js
+    sha256: 35c76ca36ff5e4d931b27a081940a4ea1502e025544ec16ec44d7f56a6c4385e
+    role: context
+  - path: app/discussions/index.html
+    sha256: f9c315ab6577de4ac4153205d0edf7237ad1ddce769bdd983997f6d332c7850d
+    role: context
+  - path: app/discussions/theme-toggle.js
+    sha256: 8b34063c7251d55e81f74da73bf8ac872f294bfab96acd7095036c7764af4f72
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: dashboard/coverage.png
+    sha256: e2489804afd79914e5043387e5806e9b476136f2d37102901c7d13510741f47d
+    role: context
+  - path: dashboard/index.html
+    sha256: 6ab74ca421607bca88e36e917321d648a55c0404f971ee87ba1c403642a222de
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/animal_pathogen.yaml
+    sha256: 7399724615acb04a48033bc6834025456a494b05ff26b3a1803b28619feb9cd4
+    role: context
+  - path: data/traits/ecology/bacterial_cannibalism.yaml
+    sha256: d3e755e4acffde487bca3a004a558ae3d853436a7e975bfbce24ce9cb03bb74c
+    role: context
+  - path: data/traits/ecology/biofilm_formation.yaml
+    sha256: 8936e72d19f99bb3f7bb7ad47037a421a1e94d2d1ee3528ee77edcf57c237964
+    role: context
+  - path: data/traits/ecology/biosafety_level.yaml
+    sha256: 11d1e21fa511aedf4e453875ed0c2508b35e82d0e24399e9aa4aa5547c5aa39a
+    role: context
+  - path: data/traits/ecology/biosafety_level_1.yaml
+    sha256: 09a7b97fefc0d6258cedac392707458e254c1b88881352b90dcc443f2a347a9c
+    role: context
+  - path: data/traits/ecology/biosafety_level_2.yaml
+    sha256: cc0fd06d66a12cda1f4d229d91fd7f9c0dd98c69d9d77e756cce8fdfccfb3a8b
+    role: context
+  - path: data/traits/ecology/biosafety_level_3.yaml
+    sha256: 0a0c3454b5eeae41f0e9f6c6202a22df48104afd6324897209ce3d908a475744
+    role: context
+  - path: data/traits/ecology/biosafety_level_4.yaml
+    sha256: f98209531d6bfdab7433313f85d5dddc9a4107a324f40664dcfe32695f80ebcd
+    role: context
+  - path: data/traits/ecology/biosafety_level_5.yaml
+    sha256: f8db13d6c7fb599669e552716227497ddee211173daac5a36a3aab7d58d0d464
+    role: context
+  - path: data/traits/ecology/commensalism.yaml
+    sha256: 145d5d82edb69ec596fe6b1fd068ee6eb686cfd6da37f0aff22427fa8ce5907d
+    role: context
+  - path: data/traits/ecology/endophytic.yaml
+    sha256: a71d78c4bde350bd7941f5e5e7340207d67ee1d86cfa7ee76bc7236c10221d6a
+    role: context
+  - path: data/traits/ecology/endosymbiosis.yaml
+    sha256: e42e413a5d2a662aabbd7add9be674718bfc392a1bcc16f1d55fdb8d3c37cb91
+    role: context
+  - path: data/traits/ecology/epiphytic.yaml
+    sha256: 98678827caa570a3f00e302059beadbb8b72dc2341c8eb5322621ead264ac4b1
+    role: context
+  - path: data/traits/ecology/free_living.yaml
+    sha256: d42d23af7ac02e192ba7a8783aeb9f28335a818c35c552526361b29f2c0a8ea0
+    role: context
+  - path: data/traits/ecology/gut_associated.yaml
+    sha256: 7ff3a740499c51e2f2e4855f56c0f084cc0aa7334d48cdc4eff309d90eb15586
+    role: context
+  - path: data/traits/ecology/habitat_association.yaml
+    sha256: 623d18cf295c01782024055b4dca534217f52d3ef18d46f086af27fe504bbd2a
+    role: context
+  - path: data/traits/ecology/host_associated.yaml
+    sha256: 8f39eb631802725d79cec85d1d80e0a2f24b2fb74940473bc39b32a2c57d6384
+    role: context
+  - path: data/traits/ecology/human_pathogen.yaml
+    sha256: 104a578c4be34231855c6e1ec0e963f58eb89f52cc70152fe4b004ce80ceae43
+    role: context
+  - path: data/traits/ecology/mutualism.yaml
+    sha256: 7247ae4be59ce2eb7f1cc9d7303e1a338af82cd49d255c60aa1442f6dc1c48a3
+    role: context
+  - path: data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    sha256: d4d85f1d5e370d5862b086ae52a716dee3fc5f8880639bffa4e2dff65e9d1574
+    role: context
+  - path: data/traits/ecology/opportunistic_pathogen.yaml
+    sha256: 9dde5e43eafc86ecd22089841463a8d6bfa703a8200a7179375217ed6dd03b52
+    role: context
+  - path: data/traits/ecology/parasitism.yaml
+    sha256: 06714e9bc42a3405dc4700e41a0d6a92ae814c0122375a40b3ad776fda1a6040
+    role: context
+  - path: data/traits/ecology/pathogenic_to_host.yaml
+    sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+    role: context
+  - path: data/traits/ecology/plant_pathogen.yaml
+    sha256: 4c8c4cf20790c060a91495e96a13656c7d7b72ef0856b0fbc2598ff53a99eb00
+    role: context
+  - path: data/traits/ecology/predatory_bacterium.yaml
+    sha256: d69bf9a84c935eb0c3fbd5b31283ab56ec9f06f5e573093d9a145c89205a6287
+    role: context
+  - path: data/traits/ecology/rhizosphere_association.yaml
+    sha256: 311fe0327d4b289718e9fcd0f2e287e119a8274a4293c591a24e654b548a88e7
+    role: context
+  - path: data/traits/ecology/saprotrophy.yaml
+    sha256: 74c1e3065e0ce9dfc86b1b8725061383de4e8800dd5e7c02f48179c85fa3b6f4
+    role: context
+  - path: data/traits/ecology/soil_dwelling.yaml
+    sha256: 9560bc7f560f9f97dab1ffe2cb930feda57eac65ed732215425b1c1f0d434515
+    role: context
+  - path: data/traits/ecology/symbiosis.yaml
+    sha256: 86ad9516ff0879731da3792de1495ba1d0e107394edfcc754be03d052a677b21
+    role: context
+  - path: data/traits/environment/acidophilic.yaml
+    sha256: 4170ebccedecf6a0d53cd984fc98feb9a670ab224f6b66774e937f9ebd93486b
+    role: context
+  - path: data/traits/environment/acidotolerant.yaml
+    sha256: d1b7ecf1ebcf8f9502a82f7ec4fe21ba299fbf0d300a2e4e4575549e2ae540b7
+    role: context
+  - path: data/traits/environment/aerobic.yaml
+    sha256: 5dc5609f2fe58c2bc0b7a95a38a5593fa48dfb71a16b92c683311d79d0005768
+    role: context
+  - path: data/traits/environment/aerotolerant.yaml
+    sha256: 4ae40096583868e5ab9b31f8aec3a81a09938faf24391f57a6a34b32b2efb3a8
+    role: context
+  - path: data/traits/environment/alkalotolerant.yaml
+    sha256: 54f2507b6a29cbfcfe4158addebc27aa973f605374c89e526dc267100577ac63
+    role: context
+  - path: data/traits/environment/alkaphilic.yaml
+    sha256: 9dd8c1ed07700d7960f64e7539118441a563cd71fe78b22d39ee70b058b0fa65
+    role: context
+  - path: data/traits/environment/anaerobic.yaml
+    sha256: bdee031c6277b96ab3f66dbdf1e6782aa21fd74e02676fd287d2f2e70ee6773f
+    role: context
+  - path: data/traits/environment/arsenic_tolerant.yaml
+    sha256: b7c4c9ee1b352e7194421d11f8ed653d6ff01f58ea29bd934f069632071bb320
+    role: context
+  - path: data/traits/environment/cadmium_tolerant.yaml
+    sha256: 219579b7eab2bfdb4787cb3f168f0492fbc5b951f69ffe70d1c6ffdb51683c5b
+    role: context
+  - path: data/traits/environment/capnophilic.yaml
+    sha256: 8cfe3a2ee391c292bd27122711bc3ca3abd9a1f9f7f9d2d79fdfc2daa85d05e5
+    role: context
+  - path: data/traits/environment/cobalt_tolerant.yaml
+    sha256: 7cf345edc60c113f1a805d1a51325710092c7f881a32e7dff59965c5336aefb0
+    role: context
+  - path: data/traits/environment/copper_tolerant.yaml
+    sha256: 2eb94c78ccb7f7c953aa25088585cb9fb46f22b4e2425f924beb82f6caaba5fa
+    role: context
+  - path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    sha256: 3b26342531eb0edef94e6434c2b91a2d066e02d23a9bef03c626767c5fc19171
+    role: context
+  - path: data/traits/environment/desiccation_tolerant.yaml
+    sha256: e5044ef67c4cf892aafe03b7da222c267aea1fdeeb546c3d95f57c13d4122e97
+    role: context
+  - path: data/traits/environment/euryhaline.yaml
+    sha256: c2eece3fd30e76e558eb334fd1cc69c6528069f3a0e5f4219f5959315f14e850
+    role: context
+  - path: data/traits/environment/extreme_hyperthermophilic.yaml
+    sha256: 1ff49bc4ee848f90b6a7e2e1fe17b51fad9c7b952f6c6a7c2e3a433b3de0266c
+    role: context
+  - path: data/traits/environment/extremely_halophilic.yaml
+    sha256: 15bf8267ffc4b393d3db1a13fa0738240dc94f5f017cce8322783f297f35d0f0
+    role: context
+  - path: data/traits/environment/facultative_oxygen_preference.yaml
+    sha256: 146151a10541d48d38410435c282cd022bbafa9630e1f004771c6b85c18c3e6f
+    role: context
+  - path: data/traits/environment/facultative_psychrophilic.yaml
+    sha256: 7db04c3bc2c9e2abd1f006d8f3e7c3d09fa71bf3d881c4a4e78835f583b43c09
+    role: context
+  - path: data/traits/environment/facultatively_acidophilic.yaml
+    sha256: 4aa90a75dc3f89215ac24f6283b52396abf0c4ff36c2917f2e5280ef71225993
+    role: context
+  - path: data/traits/environment/facultatively_aerobic.yaml
+    sha256: 8cbdf86a001a282796f1a651e19f5408020bb44104409b1b69920cd7f87ac2cb
+    role: context
+  - path: data/traits/environment/facultatively_alkaphilic.yaml
+    sha256: 33b818c17dd5f8e21cec644f4a5d64f23e28c7f8b9b8d66ccfff7fad460bad2a
+    role: context
+  - path: data/traits/environment/facultatively_anaerobic.yaml
+    sha256: 705d29c245efc54d1c2df91e2bf8e69ab9be31ec09bf19c60acddbcd6a895ccf
+    role: context
+  - path: data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
+    sha256: ad223791fa379c8f7302c8334153dbbd157fbf9a015a902a6ebb92f5513bfd9b
+    role: context
+  - path: data/traits/environment/haloalkaliphilic.yaml
+    sha256: 4bf7e5d0ff24b684c356a91a625dcb883db2e80a58874e4a625a2f3b0fb19e7e
+    role: context
+  - path: data/traits/environment/halophilic.yaml
+    sha256: 68be1a6259fcc0fe64db3da79a5d924b2930de1bf3a1a5ae42751f66dd641db2
+    role: context
+  - path: data/traits/environment/halophily_preference.yaml
+    sha256: d9d43dfaca09069195f27bdf5ceee8aa3465909f862e4ecff07dd22252b2c5dc
+    role: context
+  - path: data/traits/environment/halotolerant.yaml
+    sha256: e3319db0bcc6539233ad930833fe29cd78a515a30cdbc0dd9661283e16c3efb3
+    role: context
+  - path: data/traits/environment/hyperthermophilic.yaml
+    sha256: e3270047a52bbd8bcfb13db0e638508eafb6983002a09a9e28a9aad1bb239890
+    role: context
+  - path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    sha256: 95ec210aa700b57b5e8235d6078fa04cb0621bf4fd96c46d6970788b400176ba
+    role: context
+  - path: data/traits/environment/mercury_tolerant.yaml
+    sha256: d479ef78e58a331a1a3efef7f2adc3697872fa9bbc6679f4b68d89505d4ed372
+    role: context
+  - path: data/traits/environment/mesophilic.yaml
+    sha256: f1426444bb92913662470e0c46fc2a48d03256ae5f8650a346efc11031bed7af
+    role: context
+  - path: data/traits/environment/metal_tolerant.yaml
+    sha256: 907f78048e48c547d03e3b2b073216a32007a0c0608fb361fba976a3812710c5
+    role: context
+  - path: data/traits/environment/microaerophilic.yaml
+    sha256: fa57dd75a35f503778e764df1e8980a48dbb22e599fe35b96a2102e28ca080a6
+    role: context
+  - path: data/traits/environment/microaerotolerant.yaml
+    sha256: 10a2073270238f7569ea0b93d131438699d93217724f45547f840f707389cbe6
+    role: context
+  - path: data/traits/environment/moderately_halophilic.yaml
+    sha256: d9573c420c8313649a367d48e1c45d391199f5cf2f3e65bae3c607dc2c40f31b
+    role: context
+  - path: data/traits/environment/nacl_delta.yaml
+    sha256: 902bec51cfb3915906b69bd7d35db4b31740f1c7fc0d0e0dd4fa60f39823c553
+    role: context
+  - path: data/traits/environment/nacl_delta_high.yaml
+    sha256: ae4a75f37ed0d38a0f2e6cb73a2590ab4fe2b0b608002d44003ca43d2152ab6e
+    role: context
+  - path: data/traits/environment/nacl_delta_low.yaml
+    sha256: 0ee750074eb279942ebf6b0ea570a05caeebb0e22e101c69fc12c6c9f9e1b634
+    role: context
+  - path: data/traits/environment/nacl_delta_mid1.yaml
+    sha256: 32adf7d95f8545d8c1582b469cb9ce0508c4fe9d8c785fcc46c1b620aeed68df
+    role: context
+  - path: data/traits/environment/nacl_delta_mid2.yaml
+    sha256: 7ad53553e557330df5cc8f19f0253bb98414179fe122901c811c4f6b0ed828a0
+    role: context
+  - path: data/traits/environment/nacl_optimum.yaml
+    sha256: 530e0dd8a618ebef463fc9de538bf3d3d08cccdec8aee025cfb5b42d7a821945
+    role: context
+  - path: data/traits/environment/nacl_optimum_high.yaml
+    sha256: 736caa7d453a19ec5da671a49ef983fa903083741e4bfc04eacb814b75d7651a
+    role: context
+  - path: data/traits/environment/nacl_optimum_low.yaml
+    sha256: fa4740cfe6d4c91ef2f4b7ab6f3c1116231ca8873f277bea70fc400dc00f3c25
+    role: context
+  - path: data/traits/environment/nacl_optimum_mid1.yaml
+    sha256: 65574c9a11183facd18b584bcbfcc4a55252772bf633c2c525261df11e99eb5a
+    role: context
+  - path: data/traits/environment/nacl_optimum_mid2.yaml
+    sha256: 677e3c8c826bfc3a0059c1f1e0ef577b887a5f05ef7546b189a16f4c4642269c
+    role: context
+  - path: data/traits/environment/nacl_range.yaml
+    sha256: 7f2e247297c3053e2d800cb41a3bbf04c9cc362ed1f1fc927b84570ff56d315e
+    role: context
+  - path: data/traits/environment/nacl_range_high.yaml
+    sha256: 7254fd641f856dcb3910dbc27403736b5a730c39e97c4cbca6d4321e5ead2b7b
+    role: context
+  - path: data/traits/environment/nacl_range_low.yaml
+    sha256: d5888822469d24051644b54575da20f1eaba1a91b9ed409368fea310cd1d9b64
+    role: context
+  - path: data/traits/environment/nacl_range_mid1.yaml
+    sha256: 77c2be0184361d837f8e769793033e51fcdb3822aac94da228fb5ec8da9d7e75
+    role: context
+  - path: data/traits/environment/nacl_range_mid2.yaml
+    sha256: e0f008cdd10d8bccce70a55e865abff995277fd4dbd878cb75781f49dee5f80a
+    role: context
+  - path: data/traits/environment/neutrophilic.yaml
+    sha256: 894a324fa882e13b072d209a1c04c6fbf9b313a5c65a23f4c54ef6af25c82d96
+    role: context
+  - path: data/traits/environment/non_halophilic.yaml
+    sha256: d992ae2092eb41b4cb59c1a1d71e975664ee17eb75defede412b020efdaf7168
+    role: context
+  - path: data/traits/environment/obligately_acidophilic.yaml
+    sha256: 17c84a09cbc425d5d0fffdd56929c7f53751c3ae3d426b4209585ea237a08b11
+    role: context
+  - path: data/traits/environment/obligately_aerobic.yaml
+    sha256: fb0a50f675b9eb7bc7cec7229ec38af195351917d6cb62b3e5c6c751c1924289
+    role: context
+  - path: data/traits/environment/obligately_alkaphilic.yaml
+    sha256: 25d692b3e9a7d6862f4620ce1e78d7ddd6cb7b51f462ed7b854c26885d85c359
+    role: context
+  - path: data/traits/environment/obligately_anaerobic.yaml
+    sha256: 1b12125f8ec6d84631f89b837dd2568e670cdeca8997b3afabca31c122130a60
+    role: context
+  - path: data/traits/environment/obligately_piezophilic.yaml
+    sha256: e5164b6120e2e0152d0b03d21e96cf3a66941b47e79909aa52c1c170a2840d44
+    role: context
+  - path: data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
+    sha256: 85423dbaa018cc557495fec708cde21decddd7f0fc0d674f62b09c510d2309ad
+    role: context
+  - path: data/traits/environment/oxygen_preference.yaml
+    sha256: 16829173ea947f2fef083f673c51519aad962d6812fcd54826ea86f055c5a40b
+    role: context
+  - path: data/traits/environment/ph_delta.yaml
+    sha256: bddd29a48492578a5125f903de74f2c5476444e1069cb105008bdaf7fd2eacbf
+    role: context
+  - path: data/traits/environment/ph_delta_high.yaml
+    sha256: 7e7805986348e83258bb0781a6c012cd4f47a1cf1f482397a92ecc2a13cd05ed
+    role: context
+  - path: data/traits/environment/ph_delta_low.yaml
+    sha256: e2b3dfda6c0476d8a79f5f1209f3ec255512c2c5833236df59a05b2563c2e381
+    role: context
+  - path: data/traits/environment/ph_delta_mid1.yaml
+    sha256: 6bf2a4e42d390eed49271db9119209ddf7b6cd0a2290df11a030dc91097479af
+    role: context
+  - path: data/traits/environment/ph_delta_mid2.yaml
+    sha256: 932211da3cea840185defc3a9a984f419dfa0b8a729184259702acb00392b93c
+    role: context
+  - path: data/traits/environment/ph_delta_mid3.yaml
+    sha256: 89eb6743c52450c4a65005a3af42587000019fa496d7d4543d7371f2fd9bcf11
+    role: context
+  - path: data/traits/environment/ph_delta_very_low.yaml
+    sha256: 9126ea29b81127efbc9631999fce6b7d9de5a8318c00160655d954921ad5a802
+    role: context
+  - path: data/traits/environment/ph_growth_preference.yaml
+    sha256: e9ee5a74bff604a7b3ba06ff6610deb83d7df762d7e8b3647699b799be72201f
+    role: context
+  - path: data/traits/environment/ph_optimum.yaml
+    sha256: 55981325e7e0e85fa5e1f52fc04cbc6de77b981783685c4bdab25e8bab26cfc4
+    role: context
+  - path: data/traits/environment/ph_optimum_high.yaml
+    sha256: 7c60e5e61ddbde6b115fbe4be96386696385e87040fb5924daa6c7d4da12cf6f
+    role: context
+  - path: data/traits/environment/ph_optimum_low.yaml
+    sha256: eda82a5cfdd4b820895dbe955872248a5ba07079b6aab93450d332b25498eb41
+    role: context
+  - path: data/traits/environment/ph_optimum_mid1.yaml
+    sha256: a09c605ffca25eb7df2c14729eb53383109bf0c62d645780fd4d617220cf6a8b
+    role: context
+  - path: data/traits/environment/ph_optimum_mid2.yaml
+    sha256: 6e2a9f141a0e75fc3f0f92643724bab5473f925edb95f778dbe9060a9b2e3506
+    role: context
+  - path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    sha256: 643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4
+    role: context
+  - path: data/traits/environment/ph_range.yaml
+    sha256: 8a9cac2ea39eaf0aaafb950fce9b8119713bbef55c43e84550f22c3ee9d13d1a
+    role: context
+  - path: data/traits/environment/ph_range_high.yaml
+    sha256: 3bf384769f08dd98073a67742a098348aca91cfbea63ea35bcee2e9a1a1c1fec
+    role: context
+  - path: data/traits/environment/ph_range_low.yaml
+    sha256: 56a1489044011c883b75e007e5eb0d6a67984b791e77d8f02cf70c64e7fccff0
+    role: context
+  - path: data/traits/environment/ph_range_mid1.yaml
+    sha256: c02a7b617de60a26f91a1594b7e5b568399ea854efea6c810037d3d52f9db9e3
+    role: context
+  - path: data/traits/environment/ph_range_mid2.yaml
+    sha256: e0f668a5ecd91396331c42031c0d07a78af4d5ba12a4a57a1a2ec6ffd0eaaf0d
+    role: context
+  - path: data/traits/environment/ph_range_mid3.yaml
+    sha256: 187d4bf625135bbcc15ee2175a3a7c9495bf3c220149074299b20f3a44d798b8
+    role: context
+  - path: data/traits/environment/ph_range_very_low.yaml
+    sha256: 0955dd61255a701972cd23984962e4b7ad32cb4139ecd6dae6b411d6d119eae4
+    role: context
+  - path: data/traits/environment/piezophilic.yaml
+    sha256: 484e671b502c1c5ced9ff4d93d2a41f5ea025833dfb59edd784a9ea295503317
+    role: context
+  - path: data/traits/environment/piezotolerant.yaml
+    sha256: 39c384c29f9ca7646a4f6c0533d317a8346703609e8c7634c517d4fb6c1546e9
+    role: context
+  - path: data/traits/environment/pressure_delta.yaml
+    sha256: 6fd90cd9c1f1e1404a2fbf6cb0a0462582c0075ee255cb27b4d5d26320077f52
+    role: context
+  - path: data/traits/environment/pressure_optimum.yaml
+    sha256: 98d6f055b4c928fa8d5a2992d82671920a4e7d5cd65d4b4166ab396c4015d0ea
+    role: context
+  - path: data/traits/environment/pressure_range.yaml
+    sha256: 660d7961eb1c41bf856e45872894bc198e82563b035ed19592d20558b07bbe24
+    role: context
+  - path: data/traits/environment/psychrophilic.yaml
+    sha256: 1efc37ea89af76558af8c0ddbba1d67e9c4e6ddb9876d1faf6b884309a274457
+    role: context
+  - path: data/traits/environment/psychrotolerant.yaml
+    sha256: 313c668f6414ba4bc84ef8893c4db094d6037e458290a0354cb584b1767b129e
+    role: context
+  - path: data/traits/environment/radiotolerant.yaml
+    sha256: f3bae2896b2801fcaaacdf9c6783ef0df7b96d441e8858b5e1fa0b10e3713bf6
+    role: context
+  - path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    sha256: 429c11858371b7d407914e75a632071c749e3be29f496b7555c75c7f19fbf5bb
+    role: context
+  - path: data/traits/environment/slightly_halophilic.yaml
+    sha256: 439a1c6cc793eb4a66f9ce16ebd843e808d7dad7f763db81937f4fa65340edba
+    role: context
+  - path: data/traits/environment/stenohaline.yaml
+    sha256: 174f204b4454f531e9d88ef23c144df9b1f10813e7638edf919ebbdb123cac85
+    role: context
+  - path: data/traits/environment/strictly_anaerobic.yaml
+    sha256: f7872f0e68be32ac4e6ccb62c33212750018544dfe7ab67446f1e1b1b2893bd0
+    role: context
+  - path: data/traits/environment/temperature_delta.yaml
+    sha256: 38d2a033d5966f366b6db1a671d9fc2fc1ae09f6f4297cef9894e5eeae23840a
+    role: context
+  - path: data/traits/environment/temperature_delta_high.yaml
+    sha256: 5a14c751b66b3593df2f558e50cedd4983484d782915e1b167e1404eebf12418
+    role: context
+  - path: data/traits/environment/temperature_delta_low.yaml
+    sha256: 53943367c4a023a8cb78d61cecd9c66eecb4c7d92f76db1716ef631e15a90979
+    role: context
+  - path: data/traits/environment/temperature_delta_mid1.yaml
+    sha256: 3f43e2bb4daf2c44cb8b899c2ea09963e96ed83f5a5c0ab3348628955155e9dc
+    role: context
+  - path: data/traits/environment/temperature_delta_mid2.yaml
+    sha256: 7d4ba17fb1f84d0308ebcc5e6980668f15723122acd545a7d64954697882afc1
+    role: context
+  - path: data/traits/environment/temperature_delta_very_low.yaml
+    sha256: bac0524b211d9e86fe45829dcc5c9ff7fa412c5d4b3bab7de5d2ee20e2a5a956
+    role: context
+  - path: data/traits/environment/temperature_optimum.yaml
+    sha256: e419e363fd4b2e26f2ce3f092b117fba3103e5155e6dafb95bb5ce5c76644a0d
+    role: context
+  - path: data/traits/environment/temperature_optimum_high.yaml
+    sha256: 55c6a5d2c2b644a373eb0a21b5d4b7fa32fde87fb625017ae9cc98bf61977280
+    role: context
+  - path: data/traits/environment/temperature_optimum_low.yaml
+    sha256: 77a124a8c80516c4e9e9035da3ed24ab9ffd69ca55e7a87a179b06ef8ae66976
+    role: context
+  - path: data/traits/environment/temperature_optimum_mid1.yaml
+    sha256: 4e13ab907307d4c88f5e787c45400a820c8c12a04fe311717fed3f3c6920510f
+    role: context
+  - path: data/traits/environment/temperature_optimum_mid2.yaml
+    sha256: f97f6bddb24d09ee6fb58c83b569a84f10da84a59cb983b1c917d5ea68242245
+    role: context
+  - path: data/traits/environment/temperature_optimum_mid3.yaml
+    sha256: 123f1ff2b2b7fc37d43aad15d468d12b6ff59d89fab05ba726258cc7cadc02e0
+    role: context
+  - path: data/traits/environment/temperature_optimum_mid4.yaml
+    sha256: 5d1dd70a97245a6878813189e2b01f0a9d94e260bffeb3baf97b08b0e4847f3f
+    role: context
+  - path: data/traits/environment/temperature_optimum_very_low.yaml
+    sha256: 1248a6be1eec6a1c5b4fcaec1102617f04fdf4db70d017bd2f35daeaadc515fa
+    role: context
+  - path: data/traits/environment/temperature_phenotype_with_numerical_limits.yaml
+    sha256: 0eb92c52b7672f072e404d18a007ad19c381367e07601c5cf9cf8445a8562591
+    role: context
+  - path: data/traits/environment/temperature_preference.yaml
+    sha256: 124373347177201d4a2ed44d2d69d1160636e6a99aacc87b4b0ee71e73f0234f
+    role: context
+  - path: data/traits/environment/temperature_range.yaml
+    sha256: e3f8f082de570a8fc3de3ef6a1fdf95a60bdf28a6e2f6dcc43d3558df0775818
+    role: context
+  - path: data/traits/environment/temperature_range_high.yaml
+    sha256: da5c449e9cd2d545f75e7ea7ce3fdae84496d4b0deb5c5cce13b024d429b3c9b
+    role: context
+  - path: data/traits/environment/temperature_range_low.yaml
+    sha256: 88f9b9beb20b6a02eb878596af1e2fefc2de88c9f79eabd8cf4a5ed07510a3c8
+    role: context
+  - path: data/traits/environment/temperature_range_mid1.yaml
+    sha256: 8dcac15a491e204f1a336f20c9cd77c6ff4a28ba17c674056469dd89234f6aed
+    role: context
+  - path: data/traits/environment/temperature_range_mid2.yaml
+    sha256: 8733cf17429fadfda65188c2dcf931a6b8d18de91f2556c5befb5fc993b0e6d6
+    role: context
+  - path: data/traits/environment/temperature_range_mid3.yaml
+    sha256: b0cd559b2373e71d092e1645beef2a9ff17548a43f953fded0eeff3d848cb251
+    role: context
+  - path: data/traits/environment/temperature_range_mid4.yaml
+    sha256: c93988bf8e90168445afa36972a6eae657207e947ae99a422c05cd745ed692d8
+    role: context
+  - path: data/traits/environment/temperature_range_very_low.yaml
+    sha256: c7261e615cd23d77d07a8f71d0f11c81a56a0f2011b15676f2d6bce51812eb9d
+    role: context
+  - path: data/traits/environment/thermophilic.yaml
+    sha256: 66452534ae9ae3fc26d6b427986f1528e48b7b82889dd545c626997e73e381df
+    role: context
+  - path: data/traits/environment/thermotolerant.yaml
+    sha256: 7c362d2643c79b3b7d4e36662b040acef4dc57ef108b9651cae2627786e7b160
+    role: context
+  - path: data/traits/environment/uv_radiation_tolerant.yaml
+    sha256: e797a774782d68d5e3e68f2abbda80b148209fbd1061df80c15e07a956e592e3
+    role: context
+  - path: data/traits/environment/xerophilic.yaml
+    sha256: 63c677d89e869f4c8d40c1c956ece3cf3f1e62d77d9feeb67623cd768d607603
+    role: context
+  - path: data/traits/environment/zinc_tolerant.yaml
+    sha256: 806e51b929896446c6e64221c03ca1b3766673c2012f98608b98de63f23a1975
+    role: context
+  - path: data/traits/genomics/abi2_system.yaml
+    sha256: d237b238b510e2bf3c21c8d7e7d847bdae94d83ad35990824d32d8220798f4d1
+    role: context
+  - path: data/traits/genomics/abia_system.yaml
+    sha256: d04f57bc82074f3225586f96b0c57351fc67c9aa120bc2f87f40e64f4898ddca
+    role: context
+  - path: data/traits/genomics/abialpha_system.yaml
+    sha256: c376cd9ec6fc7a2fb6f0a5b7e92c3eb88c2c03a4856873776b1676007ea30281
+    role: context
+  - path: data/traits/genomics/abib_system.yaml
+    sha256: c226789a1fd07b9f4cc6c7131ff283490d44c77f095232e9cd200a4362734044
+    role: context
+  - path: data/traits/genomics/abic_system.yaml
+    sha256: f7047cf5f85a8ae7a73a84b97e7ffb34c2b8128e0464669d6b63293a2f2a778a
+    role: context
+  - path: data/traits/genomics/abid_system.yaml
+    sha256: 94ac19ccbe0cfed7c5266b502a0c2d552ac25a9ca8fb05e57306daed0eb3a103
+    role: context
+  - path: data/traits/genomics/abie_system.yaml
+    sha256: a52c78863b84b501c0756a8c7020ff9fae3b85da999699ac47035be3757a5bd4
+    role: context
+  - path: data/traits/genomics/abif_system.yaml
+    sha256: ed219bc9054053827cc920c21c293e91c660bc9cb89adb624437b6b90ae9ae38
+    role: context
+  - path: data/traits/genomics/abig_system.yaml
+    sha256: ff228fc702efa4463d2e2222fb5ffa875a81c07bffebdf3f859c29882f235da5
+    role: context
+  - path: data/traits/genomics/abih_system.yaml
+    sha256: 9376b236eefe6f0a4af993b0a46c3f34d1a698ad93b8386ff0495f53ed6a52d7
+    role: context
+  - path: data/traits/genomics/abii_system.yaml
+    sha256: 142e7ac4d805c9aace5e42b025c711614c83ae5cad921d3d4156dc3fb19ceb5c
+    role: context
+  - path: data/traits/genomics/abij_system.yaml
+    sha256: 27e368c62474de912c80afeffad1b0ccd51c3db67a90252c02b31751855806be
+    role: context
+  - path: data/traits/genomics/abik_system.yaml
+    sha256: f7118f09e518b5b2882f2e64c6dbf9e39019b9817082fcd16ba44ee7c4210d71
+    role: context
+  - path: data/traits/genomics/abil_system.yaml
+    sha256: 01c6bd3ec06259578dd307d85339370f58528cefe0befbc30a8cc8d3d172b17d
+    role: context
+  - path: data/traits/genomics/abin_system.yaml
+    sha256: 064ca62e6ed88e06a5cc26f419f14ca8270ae7b09d29b251aabe7c87d274c226
+    role: context
+  - path: data/traits/genomics/abio_system.yaml
+    sha256: fd04b4e8055f59f760bf2a03d8e7b62365c767cce521978d3178c16a8387b981
+    role: context
+  - path: data/traits/genomics/abip2_system.yaml
+    sha256: 32f12178df72761b346a549d35a2251f48cddb95ba1ea749e02ecf49882d0148
+    role: context
+  - path: data/traits/genomics/abiq_system.yaml
+    sha256: d1cb68c549f91cdef6a0354a8dd9f75e181cad9b67bbc05e4ec395a1228dd2ad
+    role: context
+  - path: data/traits/genomics/abir_system.yaml
+    sha256: fd88f9813b95ee68fb4c7184d3329ea9eaa25fe45ab70e9eee82c23283d14069
+    role: context
+  - path: data/traits/genomics/abit_system.yaml
+    sha256: f30a1fa10305a1ed7f416f696c840512e14e6388848b87e9677386f13b3dffc3
+    role: context
+  - path: data/traits/genomics/abiu_system.yaml
+    sha256: 74d0cd2bf49c414fbe6417995203fb91962b84ad5f7b44a71d784e8414caea94
+    role: context
+  - path: data/traits/genomics/abiv_system.yaml
+    sha256: 41c2ac95f396e2f2feaf1cac142e0c15bb0ffd47c4ec5f5bfc9a4edbc15056ee
+    role: context
+  - path: data/traits/genomics/abiz_system.yaml
+    sha256: 266a9edc78b5ded0bb69d42aa1e81d638dedb4420496ee0c3dba17fb15081a3e
+    role: context
+  - path: data/traits/genomics/abortive_infection_system.yaml
+    sha256: a305af937aca9fae8972dbc7add4cd4a5cb913eedddf6b7ee06251d258e1df35
+    role: context
+  - path: data/traits/genomics/aditi_system.yaml
+    sha256: d9b561e2d0bff4016a585ca7a79f45e0c7fea6dca47c9f1f281f0214ca7c14e7
+    role: context
+  - path: data/traits/genomics/ambrosia_system.yaml
+    sha256: 3b0354f0a1710cbdf7c0bc1368073660b24898b6b000c7e75893b6b39b717d5c
+    role: context
+  - path: data/traits/genomics/apsab_system.yaml
+    sha256: 8e342a1c36a768887ec5dee9c26a214040187b10873bc3b3209c3ae060cff2e0
+    role: context
+  - path: data/traits/genomics/aristaios_system.yaml
+    sha256: a5a57c0804622d8839427e6c7bf6f2bfce07c9c7567a288c294627ef8014e8d3
+    role: context
+  - path: data/traits/genomics/armada_system.yaml
+    sha256: cb665518c56977d048962e46de1f5bf34d9a49a36248fcec670c8748539e58ff
+    role: context
+  - path: data/traits/genomics/audmula_system.yaml
+    sha256: 38c1da47841f35d83685290a2cf6155c3bd5c566c612f9e6c236e9bc945ac10e
+    role: context
+  - path: data/traits/genomics/avast_system.yaml
+    sha256: 9228808051302431efb8a0d84406b75f253639eef7021694afa5fd3469aaff6e
+    role: context
+  - path: data/traits/genomics/avs_i_system.yaml
+    sha256: 7c9c1814d611c5f9de1b7cd09ff51a51e2b6888635798e00999cc70d053a267f
+    role: context
+  - path: data/traits/genomics/avs_ii_system.yaml
+    sha256: 0a15546a88bb5f1dbb0a8f421f86eb6a62b5d60fa362ed98a959b8c2906ad505
+    role: context
+  - path: data/traits/genomics/avs_iii_system.yaml
+    sha256: d7417ee6832560ba7871be84f1fc798919ab9f89be2e5bff5421ece21bdb727c
+    role: context
+  - path: data/traits/genomics/avs_iv_system.yaml
+    sha256: f085c3890637fe274f1b0cda02e2773c5ac3e440595e5905ef857452eaa541fa
+    role: context
+  - path: data/traits/genomics/avs_v_system.yaml
+    sha256: 8e1870c6cc4f0f7d7c86348da2f1f6fcc610f4125423818c48a86f14dc365fe1
+    role: context
+  - path: data/traits/genomics/azaca_system.yaml
+    sha256: fd1de4ca89734898d96b831a5a0d0831ecba29818a92ca979c87f42aae72d7d1
+    role: context
+  - path: data/traits/genomics/belenos_system.yaml
+    sha256: ecdbbdde194085cc292c30a0dcca7c265ecaacbbbb0d24e371559afc2d57402a
+    role: context
+  - path: data/traits/genomics/belisama_system.yaml
+    sha256: 463940af5505cbff32f1c8daf61bd93d0a1dedcfe11e9182029834a86b00c3a9
+    role: context
+  - path: data/traits/genomics/bil_system.yaml
+    sha256: b0fca87f4164788c98d88a4f72b3f9081a2a1e579e735c36027584edf0113fc6
+    role: context
+  - path: data/traits/genomics/borvo_system.yaml
+    sha256: 24b798b2c7bccc63bbc1040748d2500a60e38e8f12eddbd16814b1425b2d0eae
+    role: context
+  - path: data/traits/genomics/brc113_system.yaml
+    sha256: ab83fe65c4e6996d1051359d412549677153d75c4f4d00be02fc3db8a89cc4e0
+    role: context
+  - path: data/traits/genomics/brc142_system.yaml
+    sha256: ee14208e040bfe887e71c81a44a600f861a2926da1c962e598379ae828122535
+    role: context
+  - path: data/traits/genomics/brc167_system.yaml
+    sha256: 2a3b06af4c0cb43febae84f0b8ba9c0350747ab287fb768a21e3813d7dcb6ba0
+    role: context
+  - path: data/traits/genomics/brc217_system.yaml
+    sha256: 817c42a07fac318bb82d40d9f9a6e972c5b0dccdc47722534a37d45f248457bf
+    role: context
+  - path: data/traits/genomics/brc22_system.yaml
+    sha256: df83d5e8ddd1f5f84114740418dca20e229d4b947245c352b85bd08d02d2ee50
+    role: context
+  - path: data/traits/genomics/brc233_system.yaml
+    sha256: 90d5760e9622958d396d9bc45763e1a3e2c90331e4c28ad128c647b155328f69
+    role: context
+  - path: data/traits/genomics/brc23_system.yaml
+    sha256: b112c39da29a575f9edc18467a807860bb86f9813da72f85b1405b0d2399240b
+    role: context
+  - path: data/traits/genomics/brc24_system.yaml
+    sha256: dd7bbd9d3a250846222eb1136460b58d1c8b88fe58db3de8288f713b702fadeb
+    role: context
+  - path: data/traits/genomics/brc59_system.yaml
+    sha256: d96700ac0ed9bd192a34f96206978fd7547b94d38b77e83ec56bc9b824b60487
+    role: context
+  - path: data/traits/genomics/brc76_system.yaml
+    sha256: 8e5928c3f75761af15153c4a3d23ce53393457b014a22450a9f948c87150bbac
+    role: context
+  - path: data/traits/genomics/brcwgs21_system.yaml
+    sha256: 19c4284768b052430373d59159733905a53a33954ffdefa0103b6a61b2379d26
+    role: context
+  - path: data/traits/genomics/brex_system.yaml
+    sha256: f4125f3d65f5fcd3da6c7143ea516b154ae141dc89b3d9ac3e985d4d14bdc80c
+    role: context
+  - path: data/traits/genomics/brig1_system.yaml
+    sha256: 489a62715bd4daaf978df18c1b25d860a491567a742bb8b59671dc002a3d5e0d
+    role: context
+  - path: data/traits/genomics/brigantia_system.yaml
+    sha256: 8751825f36b2cbe0c484c6d7625f1c80e81762073a2cf2b269d10f9ab7350621
+    role: context
+  - path: data/traits/genomics/bsta_system.yaml
+    sha256: d9380178a9f9ba4d405c845eaf315e8d71b8d57de7075ab2c946ab56ce8fe55c
+    role: context
+  - path: data/traits/genomics/bunzi_system.yaml
+    sha256: acdcb244a1cc3c0ff0acccb77dbb0998b709a59afb8b28a169621eddfaaf3694
+    role: context
+  - path: data/traits/genomics/butters_gp30_gp31_system.yaml
+    sha256: 3f5e2a4c9a5b8a181d7de9ed7347ff79671daf537fed735075b643d060713040
+    role: context
+  - path: data/traits/genomics/butters_gp57r_system.yaml
+    sha256: 3fe0d4d1efc03b7de5bbb146aeb3c36f36fe30182565502fa78efd7d6b930fcb
+    role: context
+  - path: data/traits/genomics/caprel_system.yaml
+    sha256: f8715d7ae25548c2f749a4456e1fce0d0bd16f9efa7980744b04106fe0aef1e3
+    role: context
+  - path: data/traits/genomics/card_nlr_endonuclease_system.yaml
+    sha256: ee4a8cbb46eba0e735bba36c1e23c60f20f1412ccb5e40ae81e6f559c9408180
+    role: context
+  - path: data/traits/genomics/card_nlr_gasdermin_system.yaml
+    sha256: cfedd559d4468d9d0dcc0d18c417f60fc31dd65a7661a490312bebfce9f6c7d1
+    role: context
+  - path: data/traits/genomics/card_nlr_like_system.yaml
+    sha256: ed64531614ac915ed191f591bee4367987355e6e04848ba89787de53f19f456c
+    role: context
+  - path: data/traits/genomics/card_nlr_phospho_system.yaml
+    sha256: 2b78f61244d35cf9d485df294be18537417b16857d74f0d456e0dbe65daca4a8
+    role: context
+  - path: data/traits/genomics/card_nlr_subtilase_system.yaml
+    sha256: e916099156a4751502e1d3b3ece5aefe1c4a360773eea50047485e44c1da522d
+    role: context
+  - path: data/traits/genomics/card_nlr_system.yaml
+    sha256: ac05a08e8644fceaf05eb549a4ce59bd7ccb390efcb5d3241a10a6cd59a63ba4
+    role: context
+  - path: data/traits/genomics/cbass_system.yaml
+    sha256: 01a88dcaf79b52ee26f1e8cdbfbb2702e7db9bbd56a8e66899ea50ef6c65b206
+    role: context
+  - path: data/traits/genomics/ceres_system.yaml
+    sha256: c9aed8fd7356180b36ddee7e04bcb3abc4c35d648988c2734252c84844774b1a
+    role: context
+  - path: data/traits/genomics/cernunnos_system.yaml
+    sha256: c58f533e219144157da9811361e0ed791f67a5065c23e55f78673eb7d475112d
+    role: context
+  - path: data/traits/genomics/charlie_gp32_system.yaml
+    sha256: 11ad310d0f298ec81ed5d4f6c934a4f6930419f18563c1ad03ab536e84a838c2
+    role: context
+  - path: data/traits/genomics/clover_system.yaml
+    sha256: b57a3a0f268e5ac14d8b15f63d52668603d63013eebcfb731e3a4e9e8245fdb9
+    role: context
+  - path: data/traits/genomics/cmdtac_system.yaml
+    sha256: c68cd0890bb21b490351de2ebba0723bccd3b36d22ddb36e35feba376ad2f840
+    role: context
+  - path: data/traits/genomics/coconut_system.yaml
+    sha256: 551887228e76ed27123bd5931018fc266979ac4c4a04cb2b635192272a819883
+    role: context
+  - path: data/traits/genomics/codon_usage_bias.yaml
+    sha256: d6a0e3764d9ae04c7dd89f0a64fbf31f4f671aebb3308d8e6f54c9529103fcef
+    role: context
+  - path: data/traits/genomics/crispr_cas_system.yaml
+    sha256: ea82ce4078513d1eb07da7a8df76405dce72d48598bc6b05582404e035c28d47
+    role: context
+  - path: data/traits/genomics/crouga_system.yaml
+    sha256: 70149e407c2c22774fe63ec3392fc93414da0598789f49a148fc387b19ecdd8b
+    role: context
+  - path: data/traits/genomics/dag_system.yaml
+    sha256: c5ad9a144e4bfd5988a4126e885b0e37f58afbe7773196d09ac797e835ae2822
+    role: context
+  - path: data/traits/genomics/damona_system.yaml
+    sha256: f84a733639ec63ea60d7223485d1a7d23f1260022d4310e747b4559fe9cdef8c
+    role: context
+  - path: data/traits/genomics/darna_system.yaml
+    sha256: 809ac3d83055297d2f61376f4e82991c30b7e51ade9f5acc18158d395d2ed7ad
+    role: context
+  - path: data/traits/genomics/dartg_system.yaml
+    sha256: f32f22bd3ad9ea9d010b634b5a7ef2f14bcba8461bbf66e4b025cb563bf557db
+    role: context
+  - path: data/traits/genomics/dazbog_system.yaml
+    sha256: 358193066dff80be058f06ed3924f89ce72bd6a59ddf66a31c480aaf60750ba4
+    role: context
+  - path: data/traits/genomics/dctpdeaminase_system.yaml
+    sha256: aa404bd13dbccc5b873b98cdf20985c3748050fdcea42f19160ffefbecb41da8
+    role: context
+  - path: data/traits/genomics/ddmde_system.yaml
+    sha256: 00d5d9f3121861e57e913a8c90c01c58d349aab506cca7bb8f5d2a465efae04a
+    role: context
+  - path: data/traits/genomics/detocs_system.yaml
+    sha256: 1032a85785fe06b7be59166e8ada5e371a6133708e970438a4bbd23be3fca91b
+    role: context
+  - path: data/traits/genomics/dgtpase_system.yaml
+    sha256: f7edd532fbcf17e18ea5cf3ce474bd3ddae431760101b479fabbbeef70268863
+    role: context
+  - path: data/traits/genomics/dionysus_system.yaml
+    sha256: 5bdbf9fa84b07f15e89411abaab67207b395a4a109ae059848451a2242846156
+    role: context
+  - path: data/traits/genomics/disarm1_system.yaml
+    sha256: 1c0e320f5a196a610a9a733df04855a0766249ad5f771c8dfaaf5bc64db03fba
+    role: context
+  - path: data/traits/genomics/disarm2_system.yaml
+    sha256: 3d2569a6316ed712234a3536f2c4156a2eeb63e76afa6e816c37ab37cb03121b
+    role: context
+  - path: data/traits/genomics/disarm_system.yaml
+    sha256: 45d0ad8fc91949a82a90ac65eaf353ab2601754b4bbf2ff3d069f00801b3e969
+    role: context
+  - path: data/traits/genomics/divona_system.yaml
+    sha256: be5034bff844ff9b6636f795578672fb64470468db7c185ac7820e2f0378e54d
+    role: context
+  - path: data/traits/genomics/dnd_system.yaml
+    sha256: 018c13d37be786267669687a2577f98aa5809a1944d54665bcc137034ec64f6e
+    role: context
+  - path: data/traits/genomics/dndcdea_pbeabcd_system.yaml
+    sha256: 0c85f83ac830a0d15702abd84c6d43a6786b0d19912d3c334874edfac9b5599f
+    role: context
+  - path: data/traits/genomics/dodola_system.yaml
+    sha256: edfe88c56e7a30bd697a81c4d3d9c97166373906a1f04478690da414b63ee92c
+    role: context
+  - path: data/traits/genomics/dpd_system.yaml
+    sha256: 24f4f624b97961dc052a52f22fc7ec24eb8b42e14bdeb8ecfb5095fa3d26770d
+    role: context
+  - path: data/traits/genomics/drt1_system.yaml
+    sha256: 9eb5abec48cf9333c8935af6db17511e7813a61bdc1949aef539fe12eb1fe4bf
+    role: context
+  - path: data/traits/genomics/drt2_system.yaml
+    sha256: f81da50a962261afe3326b8244153045f9fbf3ce991a696fc7aa5778e86a1561
+    role: context
+  - path: data/traits/genomics/drt3_system.yaml
+    sha256: b54cc7ee754b09fd4cf4db60718add539c95a886637b0abc64e9ef46fd2ee282
+    role: context
+  - path: data/traits/genomics/drt4_system.yaml
+    sha256: 7b9d1965fd83d54df598a4e6a52e3e80b3f54a2c0129a7533a1773c41a254a6c
+    role: context
+  - path: data/traits/genomics/drt5_system.yaml
+    sha256: 6efa75b3219b2dde1539f39c01e6ea50120deb00f9dfb2157f855f439cd62b5c
+    role: context
+  - path: data/traits/genomics/drt6_system.yaml
+    sha256: 20aac140da2d04166e3487844bc1ac0df5d73455f6e7babbf5fa4dbc19b138d9
+    role: context
+  - path: data/traits/genomics/drt7_system.yaml
+    sha256: cc6b934cadb71e0b02af60c69ec6e752bf10f567a250f7b33c69b0b1b0e7e894
+    role: context
+  - path: data/traits/genomics/drt8_system.yaml
+    sha256: c69c4b7993e7a8da1b3535dd40fe29af1b8332e94acfdb7c2e8738a9fb6aa78c
+    role: context
+  - path: data/traits/genomics/drt9_system.yaml
+    sha256: 26943b43452c435bd77468f5004513a468b09e50069500de9b89e8c09a6495f6
+    role: context
+  - path: data/traits/genomics/drt_system.yaml
+    sha256: 3d34e2025d20cd3f11956652defafcb7f8c55aeda6856ba33faddbb0e0be6a4d
+    role: context
+  - path: data/traits/genomics/druantia_iii_system.yaml
+    sha256: 298ca60ed8e3b1fc79cfcbb7a06eeb598b017e7f50703b9a5da7f560abbcf661
+    role: context
+  - path: data/traits/genomics/druantia_system.yaml
+    sha256: 4cdbaa24d4a0d5eee5ffff6e7d53789574be95fde53aaab880c082523e1781da
+    role: context
+  - path: data/traits/genomics/druantia_type_i_system.yaml
+    sha256: e4061f8df0a889b0b83e93225deb03237013ee14bd58b84d55eed9c1cb5e3e5f
+    role: context
+  - path: data/traits/genomics/druantia_type_ii_system.yaml
+    sha256: 2338e84944aeaaa7f90b660b384e18e6c0ab91036848fcb2ba2f6535a6d86a65
+    role: context
+  - path: data/traits/genomics/druantia_type_iv_system.yaml
+    sha256: 830fd87c88a4b599b5e7c18ec980fd12dd925c12c24b880e3c627d87c8a56d57
+    role: context
+  - path: data/traits/genomics/ds_10_system.yaml
+    sha256: 236b4b45941f65115a7b96a98a70680535fd5266133f0187c3b8091d10e754e5
+    role: context
+  - path: data/traits/genomics/ds_11_system.yaml
+    sha256: 9de77b97b2c0fa5e45d8a7c5566c09fd00c7193c3ca23451c63290abcda0204b
+    role: context
+  - path: data/traits/genomics/ds_12_system.yaml
+    sha256: 68203f89d385cf1e24748a8af86e895c7fe35423a51fffd49b811cc0f26c2607
+    role: context
+  - path: data/traits/genomics/ds_13_system.yaml
+    sha256: db654079947008c30e03cfa4d4b057aa3b53548aa2ca0b585503516968ccaf4f
+    role: context
+  - path: data/traits/genomics/ds_14_system.yaml
+    sha256: a7f7e2c587cfd6b98ecc34f7dc5374bcdcf7854a8cd3701546854b0c453f5946
+    role: context
+  - path: data/traits/genomics/ds_15_system.yaml
+    sha256: 26ed87a1a976d6b2366e0a0e86c9435bd2fe261214d0a96ef149d4a914d22256
+    role: context
+  - path: data/traits/genomics/ds_16_system.yaml
+    sha256: 23df8134f3fef77ba0fc4aa9bc9f9f661c06c1d30ce1754588e8a84f20d9dd9a
+    role: context
+  - path: data/traits/genomics/ds_17_system.yaml
+    sha256: 3cd992e35c028346c332b4c37c7ac4afc8fd6b7c4cce8e276932e48b4c16afbe
+    role: context
+  - path: data/traits/genomics/ds_18_system.yaml
+    sha256: 8d5364d1ebaf2afea19396ce51cf61dff15d53c9b6ccbb10232e20d32b2719d4
+    role: context
+  - path: data/traits/genomics/ds_19_system.yaml
+    sha256: ada227774e0645eb0dbd75f281e8b4b531363b2488c8b44fa4665b93ecb2d7d9
+    role: context
+  - path: data/traits/genomics/ds_1_system.yaml
+    sha256: 6e4ae45e7492468d42f1ed810b2f819d57f76ccf4671a1806e0bf31a465dc897
+    role: context
+  - path: data/traits/genomics/ds_20_system.yaml
+    sha256: 07d1441c05401874d12900bf9d25be6ead46ca174e64595c214c79efb442d47e
+    role: context
+  - path: data/traits/genomics/ds_21_system.yaml
+    sha256: 32a2f178e9a4f7177b707ae00bdefba18ae5632083ff57d0114be6c595268fe8
+    role: context
+  - path: data/traits/genomics/ds_22_system.yaml
+    sha256: 97f963b8cf836ba49aa663ccfa81eba4962cc1812b84e34424c12ec393a04a80
+    role: context
+  - path: data/traits/genomics/ds_23_system.yaml
+    sha256: 49137bb1c4ca1c297da62b4d09e2ac8a470c61dfabdbc9d662dce61bb948089f
+    role: context
+  - path: data/traits/genomics/ds_24_system.yaml
+    sha256: d16d34a5f903cd1ba15fd18383cc0696882b3195e0434cf1ebb1b2a153d738cc
+    role: context
+  - path: data/traits/genomics/ds_25_system.yaml
+    sha256: 4cef63104ee8117a556cb43c09311083a6f89368cf9b191183f5d7ffe67295f8
+    role: context
+  - path: data/traits/genomics/ds_26_system.yaml
+    sha256: 40165c3e647d7c142ba95e155a3e506afa943db45e3e513a14b1ce9dce96a7f5
+    role: context
+  - path: data/traits/genomics/ds_27_system.yaml
+    sha256: 8b964bc06d97c072c838aeaa0703e0c303bf6debcf958de0a4804a0c0ecc7f26
+    role: context
+  - path: data/traits/genomics/ds_28_system.yaml
+    sha256: da5fc52657693612953d416a21e94e4e9b8ba72d49d22c1bc90a535e4dc0ad99
+    role: context
+  - path: data/traits/genomics/ds_29_system.yaml
+    sha256: cf8e577746f7c530e7b29279c8ea687e817c35ab66e8c03298891cee6dcdf0a7
+    role: context
+  - path: data/traits/genomics/ds_2_system.yaml
+    sha256: b8b2c648ae6a6fdc01faf50f321abfe522f394aea8bd14a505480a16245e848d
+    role: context
+  - path: data/traits/genomics/ds_30_system.yaml
+    sha256: 49292ed77b73dac95abac9ac862d5e468abf95d44acde2e59ceed51b148daed3
+    role: context
+  - path: data/traits/genomics/ds_31_system.yaml
+    sha256: d97d758386621a1288a45434711bd7218fba789102600937945f26a411c198bf
+    role: context
+  - path: data/traits/genomics/ds_32_system.yaml
+    sha256: 0b86cb5d61bda0afd04ac27a2a2b5582d0fd76fe80c4f7526b1d2ee77b61464b
+    role: context
+  - path: data/traits/genomics/ds_33_system.yaml
+    sha256: acbafc84509fd94f73b11c3f5b95d37165e6bfbd031dd4c6f3366c5e45ae605d
+    role: context
+  - path: data/traits/genomics/ds_34_system.yaml
+    sha256: f76c88b70405f0552481280b004aa2e9d75d76bb7edfe6fc4b45d9b2d4b4ea55
+    role: context
+  - path: data/traits/genomics/ds_35_system.yaml
+    sha256: 8aa79d65ff4d1e36550f69a7aedc661ce9026de41025fc9e6ddef5ce9887334a
+    role: context
+  - path: data/traits/genomics/ds_36_system.yaml
+    sha256: c2becf6c23652d40dc45a9cf103e86b5a3e8bec6f73821438957fc5b25f5135a
+    role: context
+  - path: data/traits/genomics/ds_37_system.yaml
+    sha256: 88cf7b70c90e0c06069ea4d54ddbd20d1b3d8cf73ef82d281ce131672dfe3649
+    role: context
+  - path: data/traits/genomics/ds_38_system.yaml
+    sha256: 3c974f396cc8ce5d185632ab71aeb2519e63ac885d928a5f85e574e0a8ca6015
+    role: context
+  - path: data/traits/genomics/ds_39_system.yaml
+    sha256: addf7a7b8e76fc6781db0a9478db9539c2d0d522ff61b6c4338b4e1e7296e21a
+    role: context
+  - path: data/traits/genomics/ds_3_system.yaml
+    sha256: 7b345b2de555211aa48ce002bf90ac474f69f92e3972234561aafc2fea205997
+    role: context
+  - path: data/traits/genomics/ds_40_system.yaml
+    sha256: aec809ca6e1847addcb92f879ee56fb7037d33220132ca1ed4765395c25a8d00
+    role: context
+  - path: data/traits/genomics/ds_41_system.yaml
+    sha256: dfb1f220fc81081984434112a998fda5606fa07135cc77b8302a485e808620ab
+    role: context
+  - path: data/traits/genomics/ds_42_system.yaml
+    sha256: 468cbc1317a616b01040adcd0521ebb046eceb1b6a1a75dec8dd38295a2a1f9f
+    role: context
+  - path: data/traits/genomics/ds_43_system.yaml
+    sha256: a7c0db63560ab3ca39962536d0a665e28c7d2fe68afc4a473c58ef1aae55b555
+    role: context
+  - path: data/traits/genomics/ds_44_system.yaml
+    sha256: 2e6da2b5c92bfaf12586b57fa77d2a2b20beccc7f9e38400c5da35bc74d6b598
+    role: context
+  - path: data/traits/genomics/ds_45_system.yaml
+    sha256: 2c996a5ea3b0f8270f71c4fe4eb5713e878466f601fc60ba927af5fb15ba56dc
+    role: context
+  - path: data/traits/genomics/ds_46_system.yaml
+    sha256: ac9459559d5e73774fd5397a4d34bf94a7595c2525f6fcad0267d812f189d593
+    role: context
+  - path: data/traits/genomics/ds_4_system.yaml
+    sha256: 170673b9081c2cc1da288531f4162af1cf5ee7f49be3868896e240b3c797bb1d
+    role: context
+  - path: data/traits/genomics/ds_5_system.yaml
+    sha256: 3e0f6b23722e59dda5a7cf137521a5da69c230f3bb58d7658bc46f3ab1cef48b
+    role: context
+  - path: data/traits/genomics/ds_6_system.yaml
+    sha256: 92eb1f86884aa7a9017da846424f9884eca7972a5d33a84fd32d2401dddaac52
+    role: context
+  - path: data/traits/genomics/ds_7_system.yaml
+    sha256: e532cf614c0a6a4560eb637b142796c88b2dd01ff5ada63c905102130c3b6b20
+    role: context
+  - path: data/traits/genomics/ds_8_system.yaml
+    sha256: f9870987ea45cfe4b600444ce0e77996bab850c1a8a9ad9d5c5e052e4121bd1b
+    role: context
+  - path: data/traits/genomics/ds_9_system.yaml
+    sha256: 583c02548cbdf658398151c0efc11703221d8da7e64591f95a6dec8c5dde8471
+    role: context
+  - path: data/traits/genomics/dsr_system.yaml
+    sha256: 884b66c09abf6e6eddfd9f01a8f3c75f1119212073ad5a659e8e0847f1e8b13f
+    role: context
+  - path: data/traits/genomics/duf262_schlafen_system.yaml
+    sha256: 9707d9f1abf27c465f7b2017b0ee2006a8278b2773a091f6b97d915f3a4321d5
+    role: context
+  - path: data/traits/genomics/ecokmcra_system.yaml
+    sha256: eb09d141f8913c07d320df31d7d319b314717f7bdf018d051ec123cfd37d5cba
+    role: context
+  - path: data/traits/genomics/eleos_system.yaml
+    sha256: a7c81436fa0c0668ae3021b0a15bd440aa3adb5e5b88ad88ec83d36cb4f89a26
+    role: context
+  - path: data/traits/genomics/endpacf1_system.yaml
+    sha256: 9b437e56b4087ccaa81d9eccca24e0ac0245d0c3000651f5cedf467bb80aa22b
+    role: context
+  - path: data/traits/genomics/epona_system.yaml
+    sha256: b18529c9d57dbadd29cdc9d60685e9bcc1f4c3ae302a465522a3f1832ba06271
+    role: context
+  - path: data/traits/genomics/erebus_system.yaml
+    sha256: 71e701c1e3c88fc2802ba066c58c19408af3f6f1224af8a9adda1a98891a9993
+    role: context
+  - path: data/traits/genomics/esos_system.yaml
+    sha256: b23a00809977afd22af412333b26b7ea378a2b1e2d0a2b808e9d9c01f915e9fa
+    role: context
+  - path: data/traits/genomics/fliodhais_system.yaml
+    sha256: 512037fce5dee19c8da26db15d67e6ae0ab2e4d646ac519ea89d44df0d2feaba
+    role: context
+  - path: data/traits/genomics/fs_giy_yig_system.yaml
+    sha256: 41dd2004ff4ecaac057f7e68cda107ada2e45efbf6dc7dcb934f43884d07a9f2
+    role: context
+  - path: data/traits/genomics/fs_hepn_tm_system.yaml
+    sha256: 3b3fe568e37163a52138cfcca530a705cf7b2b4cdf2f8ab6570358ff8383f963
+    role: context
+  - path: data/traits/genomics/fs_hp_sdh_sah_system.yaml
+    sha256: 0e8dbf6ba475f1bed519b3c144e286184450eb01a1824771f5654bece31b9986
+    role: context
+  - path: data/traits/genomics/fs_hp_system.yaml
+    sha256: 8f446e18d66f4b26d0e43d528ae808aec6a21012d6c1e45686e98a676d09ff45
+    role: context
+  - path: data/traits/genomics/fs_hsdr_like_system.yaml
+    sha256: 3c677cb9d7e078c19c0e39774eb0a4d7421ff51875bb36055c088dc831e515ad
+    role: context
+  - path: data/traits/genomics/fs_sma_system.yaml
+    sha256: 5a70093a79eea1f5a86b13bae26501ed2feded25ae5e4fc51bd1567d176f513c
+    role: context
+  - path: data/traits/genomics/gabija_system.yaml
+    sha256: 52a746815263e45bb79fbadec461d83d620bc46c6769656839216fec77f6c42f
+    role: context
+  - path: data/traits/genomics/gao_ape_system.yaml
+    sha256: f2b56bd9f41afa87d8b0633c176398bef8a740a4c75018e4aaa553f4b3499913
+    role: context
+  - path: data/traits/genomics/gao_her_duf_system.yaml
+    sha256: e3e5f8b73d06d3d2bf1238015d09606499850dbd5ef031504b09bd3b13be4b17
+    role: context
+  - path: data/traits/genomics/gao_her_sir_system.yaml
+    sha256: 0be3134ffb384d125614b582cd61dc7594034eb857943ce7b9462b5378d1a193
+    role: context
+  - path: data/traits/genomics/gao_her_system.yaml
+    sha256: b584c084a01b5fe7d5878dfd058412fc8d3bdee028c936ab1ef70caeb2a88921
+    role: context
+  - path: data/traits/genomics/gao_hhe_system.yaml
+    sha256: e9b50ee1d969250b33d56dc3c35b6b0e5106c5ea746f5953e12c74c1981b6755
+    role: context
+  - path: data/traits/genomics/gao_iet_system.yaml
+    sha256: d6751d43aea34fb9fd31232dd1e02bbcc3b68b21ee94a825ccca12b77e61ffed
+    role: context
+  - path: data/traits/genomics/gao_mza_system.yaml
+    sha256: 57e66a7536901458cfe859aa589f257f8184370f9cae9c94dbf4399e7982535d
+    role: context
+  - path: data/traits/genomics/gao_ppl_system.yaml
+    sha256: 4b63516ee624e1eebc4d8ff324d98a006078963238f5e918e0da333d90ebd50e
+    role: context
+  - path: data/traits/genomics/gao_qat_system.yaml
+    sha256: 6fcb78cef9d44a9a7282fd9bb31c1e98bf5899ef62aca320f76132c9b431bc4b
+    role: context
+  - path: data/traits/genomics/gao_rl_system.yaml
+    sha256: 4db346fa22f79f7600fe6c08ac6238adfc542f6f5b4cbbce016f5b5385018089
+    role: context
+  - path: data/traits/genomics/gao_tery_system.yaml
+    sha256: 625e16bf24cbfcb0d99b8bccd078914245a81646ca7f972fb42a8c76eda5350f
+    role: context
+  - path: data/traits/genomics/gao_tmn_system.yaml
+    sha256: 03764bc70687ac116d5b3e76270084fa8869aee504fe199be666b9aac4165807
+    role: context
+  - path: data/traits/genomics/gao_upx_system.yaml
+    sha256: 1fe376ac9556b5b6ec6076329aacff182ad7ab44b5ae3cddac66abb103f7564f
+    role: context
+  - path: data/traits/genomics/gaps1_system.yaml
+    sha256: 48bc97df8db46fc95182d2470f85943ef414070963a61261384276ead5663db3
+    role: context
+  - path: data/traits/genomics/gaps2_system.yaml
+    sha256: fd91a6601ac9edf397b469e3df73ca556725cca1cab40f70ef71747b38e3428e
+    role: context
+  - path: data/traits/genomics/gaps4_system.yaml
+    sha256: a9c2a90492969547cacd961ea46dc1335a04872623419b8fc273da5638b51879
+    role: context
+  - path: data/traits/genomics/gaps6_system.yaml
+    sha256: 8561c9e47e5b7d90db74b8d1744e59a84efcc3e1bfd524c16c3852b84d48b251
+    role: context
+  - path: data/traits/genomics/gasdermin_system.yaml
+    sha256: 1feff0112506f1cb2e822b2a5999192b7506114682735fee8ba04d53bab2365b
+    role: context
+  - path: data/traits/genomics/gc_content.yaml
+    sha256: f1a3c0d833f53f4f147ac14fc1efcaa4dc4f1baf32ce86e2f86db14ec91f2c13
+    role: context
+  - path: data/traits/genomics/gc_high.yaml
+    sha256: d8821b347303be612230f7d1a8cd601055fd877d743b372f86998a77bf48a821
+    role: context
+  - path: data/traits/genomics/gc_low.yaml
+    sha256: 3a79789db689e62df642411d05e6b6eaf7ba30a7e767948b2a8a113426fe4a1e
+    role: context
+  - path: data/traits/genomics/gc_mid1.yaml
+    sha256: 49045ae66ccd685bd0795d4a86923f83b3d8cbb6e12c8fe715b2626ff4fef65c
+    role: context
+  - path: data/traits/genomics/gc_mid2.yaml
+    sha256: a41dda8d92f289f0548845e1f4e55a40318aa24aa438f3b1801e89f8762f3146
+    role: context
+  - path: data/traits/genomics/gc_skew.yaml
+    sha256: 32d9848ade8b11e02e55e7214019b7aac0e05217356354a436cd86a913376090
+    role: context
+  - path: data/traits/genomics/geb_system.yaml
+    sha256: 454932dae01f2a980ffaee1315f7bacebcff6f05a261396a25a07aa65517f903
+    role: context
+  - path: data/traits/genomics/genome_size.yaml
+    sha256: b58f55ea874066ef65e7285e04c4fd7e91bd2dab1fa733da34f30404b5008d03
+    role: context
+  - path: data/traits/genomics/genome_streamlining.yaml
+    sha256: ada8ec62ccbf539d2ddeea638fe21f22f231b5b3eb0a2552bbe5c3ad089732ae
+    role: context
+  - path: data/traits/genomics/genomic_island.yaml
+    sha256: 08f201639a7ba95454ca0eba1e70c5caf179b4cc52527789077401bf028a49de
+    role: context
+  - path: data/traits/genomics/gmrsd_system.yaml
+    sha256: 31d4f7167527b42da3dc6b8a0c5d1ab769495c34fc2a218ea6ef2268507b2e66
+    role: context
+  - path: data/traits/genomics/hachiman_system.yaml
+    sha256: e2a8d9a722e0c52bf560662fb6c2277557ad1910c4ce4d18d32a63bee9185ba4
+    role: context
+  - path: data/traits/genomics/hachiman_type_i_system.yaml
+    sha256: 0abedb1dcea6b34412adbabbe844b852c7c3ca1b18ad0b4dbf7248b1c614649c
+    role: context
+  - path: data/traits/genomics/hachiman_type_ii_system.yaml
+    sha256: 501e02bbbeff161e0d80bec0dfeb4d5603b1d798e686be8ea0b4fc0b3a86d68d
+    role: context
+  - path: data/traits/genomics/hailong_system.yaml
+    sha256: 93f39df79d7b75eb8c919350abe4981dcf8793df725e9356cafbc16c557e7848
+    role: context
+  - path: data/traits/genomics/hec_02_system.yaml
+    sha256: 4f9b965e3b77adb85f809009c8e12c094818af0af9a3bdfa9cf90efed8c9decc
+    role: context
+  - path: data/traits/genomics/hec_03_system.yaml
+    sha256: c0677f0c8b2b1d5d559a3a84513ccdb8ac20547c19b230d3410568d5e16088e0
+    role: context
+  - path: data/traits/genomics/hec_04_system.yaml
+    sha256: 42d2ba249e692aae5bcd2af2a25c954fed585086f79d95d23dc1140dc541ad5d
+    role: context
+  - path: data/traits/genomics/hec_05_system.yaml
+    sha256: 58656aafb5eb6ea57a47ecac61a2e4ab55be6bf43652e113330255d8388f7400
+    role: context
+  - path: data/traits/genomics/hec_06_system.yaml
+    sha256: 0fdd3998455e1d481edf406bb395661ede80304a1207e6b0a3ed63d63b3efb14
+    role: context
+  - path: data/traits/genomics/hec_07_system.yaml
+    sha256: 9cced1ed7728ac85ba37bd4e4a843c7f168777a8eb24cd2a9ebed55494071cbe
+    role: context
+  - path: data/traits/genomics/hec_08_system.yaml
+    sha256: fb43f969e064d0c76727a2b61fff6dc7c7ab90723a63187aabf067cdb714b889
+    role: context
+  - path: data/traits/genomics/hesat_system.yaml
+    sha256: c318d5ace92d8d0f80b9b84244b8c6b31350723675d542e8f4fe0d953062098f
+    role: context
+  - path: data/traits/genomics/heterokaryosis.yaml
+    sha256: 3aedf3905da8e3c27c83aea69fbe9336a8662c899d9d63b81183ebbb35ce1ac2
+    role: context
+  - path: data/traits/genomics/hma_system.yaml
+    sha256: b1b3115dc553272a984daab54d9a214c25520ad73d1477caf3628ac36a5fef60
+    role: context
+  - path: data/traits/genomics/hna_system.yaml
+    sha256: 2775e11e9abcc9fdf6081605d4cbc31f32518b2f788a9343adaa9dc42b08f2a9
+    role: context
+  - path: data/traits/genomics/hypnos_system.yaml
+    sha256: c29ec5782bce54357c5784c73e04d6462f102f4806ce98f7ce529661caa92eb2
+    role: context
+  - path: data/traits/genomics/ig_like_schlafen_system.yaml
+    sha256: 3873a218714c3b5c202c55f49ed7366702ee4c2c648b9bf64157b2776c296c68
+    role: context
+  - path: data/traits/genomics/integrative_conjugative_element.yaml
+    sha256: 4db281729ee587e95fb18d3c87026c93e8e8fd1b5e0cb38210787aa930f06c14
+    role: context
+  - path: data/traits/genomics/jukab_system.yaml
+    sha256: eae952c87f770ca39b722570475ba26bf35570b73aff034765cc5bfd13d58cda
+    role: context
+  - path: data/traits/genomics/kamadhenu_system.yaml
+    sha256: 547b11da4d1e89de31d78f56b30215d74454353d333d7d9dbc9fa0d058ff1d69
+    role: context
+  - path: data/traits/genomics/kiwa_system.yaml
+    sha256: a76313fcd1e2b551d523f88e28dfe9ba797f00f2b750bdfaba97f82854545168
+    role: context
+  - path: data/traits/genomics/kongming_system.yaml
+    sha256: 520c3b282ed1497905bb79c07f2875014204372d76b6588193854aeed3c8417a
+    role: context
+  - path: data/traits/genomics/lamassu_amidase_system.yaml
+    sha256: f57e2ca5a98e22a3760ad7ea0294c68de922b9879dd8166efac823bd45a9cf2e
+    role: context
+  - path: data/traits/genomics/lamassu_cap4_nuclease_system.yaml
+    sha256: bcf5b428da6404b8ecf40efbb16f1fee97adbe349b546469f384984504fd44e6
+    role: context
+  - path: data/traits/genomics/lamassu_fmo_system.yaml
+    sha256: 3bd0e8d15cf27980300c8fc955ac847179283e5654b79ceb4c28874a624ba9ff
+    role: context
+  - path: data/traits/genomics/lamassu_hnh_system.yaml
+    sha256: e39d6cc6e7b9ceafe9f9a453bcbe0a097f65fd9e2138a1fbb8d09d9ed3090c7c
+    role: context
+  - path: data/traits/genomics/lamassu_hydrolase_protease_system.yaml
+    sha256: 8159361949372e39bcff86474dd4a389b69a827b47fa7936f93b876f69535ead
+    role: context
+  - path: data/traits/genomics/lamassu_hydrolase_system.yaml
+    sha256: 6206c93e1beb63ef01db2bd1f94c0c4bcdaec896d17c122e6155163eee76ef35
+    role: context
+  - path: data/traits/genomics/lamassu_lipase_system.yaml
+    sha256: f61a7b7a63e1d612262f4dae027594a038d75465f7d44ab591a54b1c49767d5a
+    role: context
+  - path: data/traits/genomics/lamassu_mrr_system.yaml
+    sha256: f252420644fee7cf1cf2abf75300c1bded0c289805f6fd63a82d30c6d8c92f4c
+    role: context
+  - path: data/traits/genomics/lamassu_pddexk_system.yaml
+    sha256: 708841b5fca19e2c68cea82ef16d87657b3650b04e68ca29f9ac646fe90b753d
+    role: context
+  - path: data/traits/genomics/lamassu_protease_system.yaml
+    sha256: 3c9fd08cd8a3f87dcf984eb24fe9ec849ce8a54b5cd9a5934b883f29ea638a65
+    role: context
+  - path: data/traits/genomics/lamassu_sir2_system.yaml
+    sha256: 4bc3ebb5bab5d68e79cd4b565fa23085835ce93b1b899506b41094fb27d4f483
+    role: context
+  - path: data/traits/genomics/lamassu_smek_system.yaml
+    sha256: 4d8df1f059b146bb9ca465a7f77b4689d9a813dcd338523caf4055ac376bceaf
+    role: context
+  - path: data/traits/genomics/lamassu_system.yaml
+    sha256: ceb6fc4ef2dc65655e801efc7395e61bf43a8600308c556249d2e5f3f3d5b6ed
+    role: context
+  - path: data/traits/genomics/lamassu_type_i_system.yaml
+    sha256: 24bd7dddaad02674d17aabab9807d81fe6419606898393738daff203ebb2cdf0
+    role: context
+  - path: data/traits/genomics/lamassu_type_ii_system.yaml
+    sha256: 108c96bbece6b2f36fb36edc0fdeb8f8b07634cad295a11a982630fc48dc6a68
+    role: context
+  - path: data/traits/genomics/lanthivirin_system.yaml
+    sha256: 1def9e05ca7af8a4ec515fe88489f9b87514add51bea642fc8ce237c3f437a84
+    role: context
+  - path: data/traits/genomics/lit_system.yaml
+    sha256: bde4b3d54e7ae8aeb912c56240587b6f7c504e78890a6fe569096bc2e3ec977e
+    role: context
+  - path: data/traits/genomics/long_lamassu_system.yaml
+    sha256: e04e8ac028d8681ce39e820eebb09c04cc0cace74a926b2dac7d1d063801ae80
+    role: context
+  - path: data/traits/genomics/lugos_system.yaml
+    sha256: d4d87544ae4fb3ac9f238b100b40f4d247e11f86ff020c27de45c797b55d1c20
+    role: context
+  - path: data/traits/genomics/mads_system.yaml
+    sha256: e5006894255bd01dab3ce88fe804ed5012c01c6d3460f171f43f08eb0834cee1
+    role: context
+  - path: data/traits/genomics/mazef_system.yaml
+    sha256: 3a656c9ea5b6a34e57106ac487a47bfc6ba7fb3ecfea6eb452e505fa327c7f3b
+    role: context
+  - path: data/traits/genomics/mcrbc_system.yaml
+    sha256: d44ce382ffe246081003a9ec79268e08c9bba94913ab1805ed9c4a24e82b4f1a
+    role: context
+  - path: data/traits/genomics/menshen_system.yaml
+    sha256: d2cb095f2c0655c0d239f8db3d2a1b1c9af8ae4766c88ed6e8ce3d17b5ba7ad9
+    role: context
+  - path: data/traits/genomics/metis_system.yaml
+    sha256: 7320a02a919163cea1db5c272937f891605ac66ca95fef80ac06d6c9ce1e5805
+    role: context
+  - path: data/traits/genomics/mksbefg_system.yaml
+    sha256: f6af182d9746304a8337bb6ec3115527e9119f8c1af6761e29f92062531bf5d2
+    role: context
+  - path: data/traits/genomics/mmb_gp29_gp30_system.yaml
+    sha256: 57b63cb31bf104735fd997a34159cd592294e91e2883e245f32db28ce1d8f0e3
+    role: context
+  - path: data/traits/genomics/mobile_genetic_element.yaml
+    sha256: 38af7e8dea74370592584be9854b82319612c0eabaf61fad062a5bf6fe07db85
+    role: context
+  - path: data/traits/genomics/mok_hok_sok_system.yaml
+    sha256: b7213810d93fa315da3c3681146a9fa52ee808420e121bafe9714c2b520401bc
+    role: context
+  - path: data/traits/genomics/mokosh_system.yaml
+    sha256: 5ebf21d2816250c189fc43e548132aed54ecb000c17328f634135daa2b9a1eb6
+    role: context
+  - path: data/traits/genomics/mqsrac_system.yaml
+    sha256: bc46cd0a719102f5580e560aedba9b9eae8f30b1e159b1dbd2fbe1b80868de19
+    role: context
+  - path: data/traits/genomics/mspji_system.yaml
+    sha256: d7988a198ff71f96986a342d51cf1363b5f127147d27c8d9ac89440a46df0081
+    role: context
+  - path: data/traits/genomics/nantosuelta_system.yaml
+    sha256: 5e030397f5f470ec4e9b7cebf4059fc935f09d10c78dda59f54fc7926a8cf7f2
+    role: context
+  - path: data/traits/genomics/nemetona_system.yaml
+    sha256: 3b5a77ef46ce663096eb4d1b1b835d582f568255bdaffa00bde83f86b9367464
+    role: context
+  - path: data/traits/genomics/nhi_system.yaml
+    sha256: d67a61bcb94b712532ee38ebf438c6acb913e61f79efba8d8b429455dd55f1b3
+    role: context
+  - path: data/traits/genomics/nixi_system.yaml
+    sha256: ffb69c9a600c1986a4dd414c9db84fa97174f008ed7ac1a99912110461cd7f41
+    role: context
+  - path: data/traits/genomics/nlr_like_bnacht_system.yaml
+    sha256: 44abaf2ea5c8d147650075cbb19ec8a34b8a7de3204f1aada0e471ab48382a18
+    role: context
+  - path: data/traits/genomics/ogmios_system.yaml
+    sha256: 3d1cecd49cd19d33f6d3aac3596b30c84b79193f80bba18d1c17e078043ec2c6
+    role: context
+  - path: data/traits/genomics/old_exonuclease_system.yaml
+    sha256: 1206e440fabb7df1f1352b2d4f013dd8d4946da1c97553cad7ab780c3daf514f
+    role: context
+  - path: data/traits/genomics/olokun_system.yaml
+    sha256: 01bbeba3d41a170d0ea5be9c313ecff59acf6a5adab81692a22042a0c2f7e728
+    role: context
+  - path: data/traits/genomics/ophion_system.yaml
+    sha256: 95b15491202af2892fbca7535145654360e6933e3073a61739e47e95168cf8e5
+    role: context
+  - path: data/traits/genomics/oshun_system.yaml
+    sha256: 0fd71aec6523648d358439abb66d1ab710b8421778cd70b239cf46b39edf89a2
+    role: context
+  - path: data/traits/genomics/pago_system.yaml
+    sha256: da9e930028be01d928b470b716a83e87bfb60d02d8b4710cbc25b9e7a41f99d5
+    role: context
+  - path: data/traits/genomics/panchino_gp28_system.yaml
+    sha256: c16a71144113971e71093e001ae3d2bdd52d19041dcc532a37d5523fa9005227
+    role: context
+  - path: data/traits/genomics/pangenome_openness.yaml
+    sha256: 9ee365c3d174ec25926d9ebbe1d8ea0444832a4a82765e3f2e34367d27694279
+    role: context
+  - path: data/traits/genomics/panoptes_system.yaml
+    sha256: d2f69521f930c6e6bf601751665dea1624dca393edb954ef0ce5fe9d4115001e
+    role: context
+  - path: data/traits/genomics/paris_system.yaml
+    sha256: ca66c103eb77a004672db0b6b71c2fe752c6e5407fb33240989eb1e441e2375e
+    role: context
+  - path: data/traits/genomics/pd_lambda_1_system.yaml
+    sha256: 94eb07dc2f75b0a9e82bde82c49fb5c6ae327cbcbba8b41c7d892a2d6ea1db56
+    role: context
+  - path: data/traits/genomics/pd_lambda_2_system.yaml
+    sha256: c4fef9791d7198072b229a4f7c851d9b4f3e155b284cc2a0526d6bb1401c421e
+    role: context
+  - path: data/traits/genomics/pd_lambda_3_system.yaml
+    sha256: e724fc95d6fcc86ba04b445dcb4e7a9e4901f9a973b1915f08056504cb31acc7
+    role: context
+  - path: data/traits/genomics/pd_lambda_4_system.yaml
+    sha256: 5fd121636dd0402737ac21673a9e0a4d5a92017261f9d7e579c19e6fa695b03a
+    role: context
+  - path: data/traits/genomics/pd_lambda_5_system.yaml
+    sha256: e990428f70f8e946e0b49a54bbe279683a655635a2692419375f8a4661169717
+    role: context
+  - path: data/traits/genomics/pd_lambda_6_system.yaml
+    sha256: fc362672e49f8c7f758151be8893fac10000fda11ff1a0721031201d6735fe02
+    role: context
+  - path: data/traits/genomics/pd_t2_1_system.yaml
+    sha256: 245b1909de8dce096a59386f507fec3cb7b36bf4599089fc8004d822e7f6735a
+    role: context
+  - path: data/traits/genomics/pd_t4_10_system.yaml
+    sha256: 18a3cebc3dfe28776b96da96cd48ec7028942454e3e1d637adca028ac481d9ed
+    role: context
+  - path: data/traits/genomics/pd_t4_1_system.yaml
+    sha256: 150ab2778745dbc7184f1078cb8df458bbeb0eaebf43f340ba8ae45d3cfbce85
+    role: context
+  - path: data/traits/genomics/pd_t4_2_system.yaml
+    sha256: 1e590fbb44ecbf24ebc2c1b094029dbb72bf4c809e36e582a34d6a62a42f537b
+    role: context
+  - path: data/traits/genomics/pd_t4_3_system.yaml
+    sha256: 01c2cab57bdb76e9db4d50aea9e0d9653333fd9ba6f114b4d03e4b29ecec7dd5
+    role: context
+  - path: data/traits/genomics/pd_t4_4_system.yaml
+    sha256: 8768a9732c1f35b9f36231e28f62dc24a41ccf620a138584870481c24622ff81
+    role: context
+  - path: data/traits/genomics/pd_t4_5_system.yaml
+    sha256: ecbb82ba7ae9e2e3897e56692073634ee0cf0866760b7273c56c776db66d4587
+    role: context
+  - path: data/traits/genomics/pd_t4_6_system.yaml
+    sha256: baaabf8b2120905c320273c745c5cdccf09e6527b18ec24e8d38cda92dfd8d6c
+    role: context
+  - path: data/traits/genomics/pd_t4_7_system.yaml
+    sha256: 088fa75371758ad61c47af9883292ed1aa00153927e313d4c81df054c74f861c
+    role: context
+  - path: data/traits/genomics/pd_t4_8_system.yaml
+    sha256: 94536f195ed01935cbe5fa3bb2dade3dc080b22ef4d8473882e0c640260ab657
+    role: context
+  - path: data/traits/genomics/pd_t7_1_system.yaml
+    sha256: 5959351795155b2f260fb1101fa565b43f3ff84d97ec57599216a2e2cc82cd3b
+    role: context
+  - path: data/traits/genomics/pd_t7_2_system.yaml
+    sha256: 8fdbaa2d0e1136701aade0fbc588c16a657299849e7704ec0a7cd81a66286864
+    role: context
+  - path: data/traits/genomics/pd_t7_3_system.yaml
+    sha256: 412774f7ffd7bd6163eb9834556d8fcd961edfc3d2e6d6b5b0974c86973a293f
+    role: context
+  - path: data/traits/genomics/pd_t7_4_system.yaml
+    sha256: c448140eaefaaa7326ad6f45482bb61da0a4f27051b60ede42bf53c09ba6ecc8
+    role: context
+  - path: data/traits/genomics/pd_t7_5_system.yaml
+    sha256: 95b69aa2ace4b26c6ecc961d79588cee05ddd1585abf55bf74d7388dbdd08869
+    role: context
+  - path: data/traits/genomics/pfiat_system.yaml
+    sha256: bc5ba2f14d3b27d12c1758aaf248e2f8f782725b044f98b82156f8035ead3683
+    role: context
+  - path: data/traits/genomics/phage_defense_system.yaml
+    sha256: 37e9acdb5482cc2ed8a9bda28cbc3d6f072008016dbc09f9cdecbd062f1856a6
+    role: context
+  - path: data/traits/genomics/phosphorothioate_defense_system.yaml
+    sha256: dfca429e992f34e564afa0b1e554445f3658c9e16f6783a9867a934ea9c87b28
+    role: context
+  - path: data/traits/genomics/phrann_gp29_gp30_system.yaml
+    sha256: 4a66c1035b6b0945463919185cdab227e0dae6dc90d76979e51f3d81c50ccd39
+    role: context
+  - path: data/traits/genomics/pif_system.yaml
+    sha256: 2895d100ed9f5b2f697e54975664d4912e3b32ad52b6f1c5b4f24771c9715fd8
+    role: context
+  - path: data/traits/genomics/plasmid_carriage.yaml
+    sha256: 79b5e908e06b00d63346d3ede0fd1986260c622bf74fc6a68e2526e299fac205
+    role: context
+  - path: data/traits/genomics/ploidy.yaml
+    sha256: d3aef807f3c382736019d511e86e3f9d6574ebeb2a070c1458198c3e2bc01f45
+    role: context
+  - path: data/traits/genomics/prithvi_system.yaml
+    sha256: 054bec62dd02012d0270be3d3da96f1f563258a648c44e36b5f3d1aa9e679899
+    role: context
+  - path: data/traits/genomics/prometheus_system.yaml
+    sha256: 7f75f5c35aa279aa6c5059e9c8cf82c0ad68dbf9f1c9b4167cf30f5b6e8a5f6f
+    role: context
+  - path: data/traits/genomics/prophage.yaml
+    sha256: ed6392cf2ff78fad8f572cd734afe14ae2875e796ca4ec7398eec3c3c968c121
+    role: context
+  - path: data/traits/genomics/prrc_system.yaml
+    sha256: 8af2c3e79f80f8f4aac53edc6bc7d80befdba89bb1a94ebd4e9796222f3c03de
+    role: context
+  - path: data/traits/genomics/psyrta_system.yaml
+    sha256: 0ea44932bd5bdc9983bb265ed3c95138ebb9c15f0960dcdd39c43572a41254c9
+    role: context
+  - path: data/traits/genomics/pvurts1i_system.yaml
+    sha256: 1a5c831bf74ce82baf10f5da968da555d34d8baebf4d70554d26a3da96bb6f0b
+    role: context
+  - path: data/traits/genomics/pycsar_system.yaml
+    sha256: 970431c93125c39c1cca11df3a8f6cf1b8f21ac6dac78ec057b14dc3b7460c9f
+    role: context
+  - path: data/traits/genomics/radar_system.yaml
+    sha256: d3503a373ece5728b4aeb65fb288a5a32d28d4700036541b4d91073fecb94c87
+    role: context
+  - path: data/traits/genomics/razr_system.yaml
+    sha256: 41c206a9eb9040b76b8783e72e3896269342df1df7baaa708436f99fad58f54f
+    role: context
+  - path: data/traits/genomics/resolvase_duf5677_system.yaml
+    sha256: 0608af75cf8512bb103550d68d0225c9ae88350cea8a0ab2807b8aa32bc67475
+    role: context
+  - path: data/traits/genomics/resolvase_kap_ntpase_system.yaml
+    sha256: f99e7d80b32bacf61ece9b21ed56656b13d678874c762b0d4e10581a3756a646
+    role: context
+  - path: data/traits/genomics/resolvase_schlafen_system.yaml
+    sha256: da0859d7548b97d853a2691730696a2d85130ad37841c9c2e9074100d8e2497d
+    role: context
+  - path: data/traits/genomics/restriction_modification_system.yaml
+    sha256: 64248b0295c9339aad7c18332b2bdc7795836359b981f5e51b13518f64dbcca9
+    role: context
+  - path: data/traits/genomics/retron_system.yaml
+    sha256: acc132f5e715d383a83fbdb9b38065ad66ac9a8bbdd2e2cb00c9ba73e7fd09ab
+    role: context
+  - path: data/traits/genomics/reve_system.yaml
+    sha256: 9bbc5e1139d450659083fc1712a0813bbcbb138aa71d63e2b4904ec7697b595a
+    role: context
+  - path: data/traits/genomics/rexab_system.yaml
+    sha256: 0d4753908d3dca76ff760b254100cf5fc3dc262d6eacb887396d75ebba59418b
+    role: context
+  - path: data/traits/genomics/rhea_system.yaml
+    sha256: a3baf947abefcffa373c9d4aa9290b03c169e9a58ef8a86be2cebd72ab4a869c
+    role: context
+  - path: data/traits/genomics/rloc_system.yaml
+    sha256: 156bb7d8c8eb35e35409e9d737f15fd61fd031f4b5d907103370b6c05e291700
+    role: context
+  - path: data/traits/genomics/rnlab_system.yaml
+    sha256: 50502ee1a7faed77b22b1333040548d7be4e3ac942e454207acffad0812c30a8
+    role: context
+  - path: data/traits/genomics/rosmerta_system.yaml
+    sha256: 584756f418d2b008afa9b0d347a2e32187150cc8f341ea00651dbe73c4d9741b
+    role: context
+  - path: data/traits/genomics/rrna_operon_copy_number.yaml
+    sha256: 18ba873b020cf7419d69ea68ab58eb9a36ec8f7cab19d9dd25169cf501339395
+    role: context
+  - path: data/traits/genomics/rst_2tm_1tm_tir_system.yaml
+    sha256: 6adc9f35eb7f490749801d7cd225076c0e4382d0fb58add6feccaf714a13c062
+    role: context
+  - path: data/traits/genomics/rst_3hp_system.yaml
+    sha256: f92672cd17b4df036185dfff658cd4dc5ab12f63750bc817212c1355f3567758
+    role: context
+  - path: data/traits/genomics/rst_duf4238_system.yaml
+    sha256: 9386bce8625dbc39d527f1ef8ab9bbf9880b274f145b82195adf6e83b952caee
+    role: context
+  - path: data/traits/genomics/rst_gop_beta_cll_system.yaml
+    sha256: c91b5632aa456d4980ca4fd6d0527d4ce2782723bf06cf0407d0105517008f97
+    role: context
+  - path: data/traits/genomics/rst_helicaseduf2290_system.yaml
+    sha256: 5d2de1f2cd5ea724ddb3aa969db7f857287556e958929c239fc7f20b4462e6c9
+    role: context
+  - path: data/traits/genomics/rst_hydrolase_3tm_system.yaml
+    sha256: 7ae9dbd78e05d63080af8dc614e6599bbd0a502e9d8ed1c37294d1342991115d
+    role: context
+  - path: data/traits/genomics/rst_rt_nitrilase_tm_system.yaml
+    sha256: 8dc8ea9466d6d2586f855ef4cede3e8e8dd8107e8dc54d335942f4a53d701c85
+    role: context
+  - path: data/traits/genomics/rst_tir_nlr_system.yaml
+    sha256: 4e8be6cc4c111bb24443352b8725c7fe6309e46a84a4a33d454811653bdb1b52
+    role: context
+  - path: data/traits/genomics/rugutis_system.yaml
+    sha256: 3673ab58634623e02c9a042de8949c1760f4b068374fc5602e7b64aa68837171
+    role: context
+  - path: data/traits/genomics/sanata_system.yaml
+    sha256: 5b4863d0e3de1b2b2df01dfc384b62458104e13adb9133fe8057b9c03402ce90
+    role: context
+  - path: data/traits/genomics/scomcra_system.yaml
+    sha256: 4ab71e616b032db532a4f9eae99141fc2c4b83bc0b9466ceda175fc986c1f08f
+    role: context
+  - path: data/traits/genomics/sdic1_system.yaml
+    sha256: d2f22197062705e49e9a2b294e7697ba83a64c357c2c6307cbafa6ea9021582c
+    role: context
+  - path: data/traits/genomics/sdic3_system.yaml
+    sha256: 2ae819b1a25f182617bb7334b72a95c89b8277ba2c77bc8fff373018b0e293b4
+    role: context
+  - path: data/traits/genomics/sdic4_system.yaml
+    sha256: 75cee2c50c0406e9d342b1797c4a26f1c03ac65c88d855ee5b6a14de2226ae94
+    role: context
+  - path: data/traits/genomics/sefir_system.yaml
+    sha256: 6277c33fad2f8fa444a1303c39bc5fe91dc0b7c4faee5411705358aff5c14530
+    role: context
+  - path: data/traits/genomics/septu_system.yaml
+    sha256: c0fb9b28f979c8ec9ac255ca6c0f3b0e59c4d30a482736b56b7692fc9e0d53f6
+    role: context
+  - path: data/traits/genomics/shango_system.yaml
+    sha256: 303df378e21e8693447c3577eee428fb4451c499ed6e76b931d591f076b2cdcb
+    role: context
+  - path: data/traits/genomics/shedu_system.yaml
+    sha256: 6112ab015ce3f2da3417cc9dca9ad6b6b7267e01ca05c1644c22d62fa2e43196
+    role: context
+  - path: data/traits/genomics/short_lamassu_system.yaml
+    sha256: a7e9855de50259220ec0481eaa6f8e137318acf02e120c75df9b6a519a190a86
+    role: context
+  - path: data/traits/genomics/shosta_system.yaml
+    sha256: 4db93a25e95d0729744ac5b64543405157f4a8910024b21b832fb7083f5f75fe
+    role: context
+  - path: data/traits/genomics/sirona_system.yaml
+    sha256: c22c11b75e1b22b4d61e156a5469e433437deae80857907b6ff74c7637f0fbf5
+    role: context
+  - path: data/traits/genomics/six_a_mbl_system.yaml
+    sha256: 2f126f5a57c8b04aa18a637dc3487b72efe4af6016ee7aec7ff0d956af449d73
+    role: context
+  - path: data/traits/genomics/snipe_system.yaml
+    sha256: 70df2cbb86e06fe7f2346211c4ed5a476a22f0fd8cbe8057ebf206b9b2e71102
+    role: context
+  - path: data/traits/genomics/sofic_system.yaml
+    sha256: c5383269efeaf368e590997cc935c19900e2b59d5e6629221e5693afc2836205
+    role: context
+  - path: data/traits/genomics/sparta_system.yaml
+    sha256: 7e65bc7e375cd2de080b206caddcb535f91e926c325b55bbe1b71a29f4c0a843
+    role: context
+  - path: data/traits/genomics/spbk_system.yaml
+    sha256: 163532c7f75063ac9936f69dc6b497c74f647cfeb66c9c9d5b987eba353de8eb
+    role: context
+  - path: data/traits/genomics/sspabcd_sspe_system.yaml
+    sha256: b2831d6666b4f4e003e2939d6e978c3e85365b96aa5b57a94e28176fde1dd9fb
+    role: context
+  - path: data/traits/genomics/sspabcd_sspfgh_system.yaml
+    sha256: 3c6a7b9c8ad01b783a714ad4b3ec670615922f60b00071ab08a79c592f6acd0b
+    role: context
+  - path: data/traits/genomics/stk2_system.yaml
+    sha256: 5f640f3ca935698c08b16504439202e0b783473d787532e28dac586b91b9278b
+    role: context
+  - path: data/traits/genomics/sucellos_system.yaml
+    sha256: e844f9c8d6a5937cb7f8f627f2284ee4094699de7d85e6ca03b80c8a4db685b8
+    role: context
+  - path: data/traits/genomics/tab_system.yaml
+    sha256: daab000263cc58ac4ff4772914dee0a7ba89b3bdde7530289486685e31538322
+    role: context
+  - path: data/traits/genomics/tagi_system.yaml
+    sha256: cfaf6f1e9bf31c8b01207c3ec3a8eb5eea5ecc609f89d6a2186275bbf6138a46
+    role: context
+  - path: data/traits/genomics/taranis_system.yaml
+    sha256: 2d85758a810c62f58ba4381ac651d003b0f69dcb658b3a34422112fda0b28b2d
+    role: context
+  - path: data/traits/genomics/tgvab_system.yaml
+    sha256: 96dd203a8eb1bb6e44a08fdf8e9f87277a214df26a5ce0fd6483eda72edf3d3c
+    role: context
+  - path: data/traits/genomics/tha_system.yaml
+    sha256: f62dab569dd80807293b376c9cc86bffca958578f30c0e3610e968ec0086c9c4
+    role: context
+  - path: data/traits/genomics/thoeris_system.yaml
+    sha256: 579806cc0c34050f958ea716d7ce7aa3870445f6d43e561bf5efca3a6942ef29
+    role: context
+  - path: data/traits/genomics/tiamat_system.yaml
+    sha256: 56a738da9dd5e88afa6b49a7fe6cebd7d4a9a6e83c837911bac6f1482dcfc96c
+    role: context
+  - path: data/traits/genomics/tir_i_system.yaml
+    sha256: 21214f091907d4a748dc949335f69bfcdd6d644043668b19b43109b337ce4ca1
+    role: context
+  - path: data/traits/genomics/tir_iii_system.yaml
+    sha256: 564e1dece4d01c65ced2f16922f70983c1426b4a555751fa4f70abed40f547e3
+    role: context
+  - path: data/traits/genomics/tir_iv_system.yaml
+    sha256: 5e94b95be395f8986b06fa505c8d4d407f4275b9b9c2800c02eda759d8db6f7d
+    role: context
+  - path: data/traits/genomics/tir_vii_system.yaml
+    sha256: 0308ac75368bf5a9e7894f6ecfbe937f04f28f433073efdcc262e897d6947fdd
+    role: context
+  - path: data/traits/genomics/tir_viii_system.yaml
+    sha256: c922fd81578b8d95d110082505453ac74b68c771e553f0599d00e68dc5c1b7cd
+    role: context
+  - path: data/traits/genomics/toga_system.yaml
+    sha256: 273e044a5825d27805d7458f5ca105da05dda19a5d0778d303b1061eafbc18b7
+    role: context
+  - path: data/traits/genomics/toutatis_system.yaml
+    sha256: c32a94e11f04e77b29dd5c3493ca8f62e6ae653f755f404001977f8f08dcf94b
+    role: context
+  - path: data/traits/genomics/toxin_system.yaml
+    sha256: 91834cdee0678a71caa317b043d5dd22e76dcfcec63d7fe7eb97d10150be698a
+    role: context
+  - path: data/traits/genomics/transposable_element.yaml
+    sha256: 25ecf253ff53d5ac847e11beb59651d6835f19b85b455d107bed4bf18fecb070
+    role: context
+  - path: data/traits/genomics/type_i_restriction_modification_system.yaml
+    sha256: 3685bdbc500152278f2555116870a112fc1705e8d0b6ee0cb4c829a008d08e23
+    role: context
+  - path: data/traits/genomics/type_ii_restriction_modification_system.yaml
+    sha256: 68d8e77b8091bfae1f8500a8041181154ce4b6f2f6d63230fcfa6aca9ed36559
+    role: context
+  - path: data/traits/genomics/type_iig_restriction_modification_system.yaml
+    sha256: dce77865dd26114d2683ba827d0dd603f7becd0c8004c0f72c59b62458a85391
+    role: context
+  - path: data/traits/genomics/type_iii_restriction_modification_system.yaml
+    sha256: 03a2e8f6b8acbfee0339bb4971e22d4f0f0611ff4ac073d1c235231f38db3509
+    role: context
+  - path: data/traits/genomics/type_iv_modification_dependent_restriction_system.yaml
+    sha256: 6ca1de118cdf61f7621d72efecc8a47fe8d281fb167258bf47b7eb9b85ad9685
+    role: context
+  - path: data/traits/genomics/ukko_system.yaml
+    sha256: 0a5e156c4fbd2593c33a8e50e305ac81b88503e67fca64359e15b81a858ffb9d
+    role: context
+  - path: data/traits/genomics/uzume_system.yaml
+    sha256: 3d6fc2852e3f3a5a405dfde998452c2891293afee3cf7e3df9670b8624c8c11b
+    role: context
+  - path: data/traits/genomics/vcam4i_system.yaml
+    sha256: 3b117c18428a46459fd6e9a36f2ead174ef39a8897b091691bafe38a6fe0e4f0
+    role: context
+  - path: data/traits/genomics/veles_system.yaml
+    sha256: fb309ceb5f41cff36ae6b262369476b853b26a0f35eeca03a7824242818762e5
+    role: context
+  - path: data/traits/genomics/viperin_system.yaml
+    sha256: c827ee964ae2dae05db3ee3b05433ec2dc4b6708c7079beff17a90dd2b4ba297
+    role: context
+  - path: data/traits/genomics/vp1796_system.yaml
+    sha256: 23d8ca1a12492a3241241819aab78547bfa5e19e4154af2066e4494d247f1a50
+    role: context
+  - path: data/traits/genomics/vp1817_system.yaml
+    sha256: 897f7bb8d9245a6798fd089a9ab0aa902a5a57c114988dd9a9d96dbcf7f9cce7
+    role: context
+  - path: data/traits/genomics/vp1823_system.yaml
+    sha256: e4a4c750559da0329bc09af7f16e11e4f73bbb2254b13ffc6fe9c9bde0cfd22c
+    role: context
+  - path: data/traits/genomics/vp1826_system.yaml
+    sha256: 1d4f16a78743d74890359a08f13a9fe61ac84a92febe520520049c7893fc91fe
+    role: context
+  - path: data/traits/genomics/vp1839_system.yaml
+    sha256: 525d5263b1677fc52c91f30b37bf9c4e78a832f44aedbac294302124e21965af
+    role: context
+  - path: data/traits/genomics/vp1840_system.yaml
+    sha256: 00b5017481927a4daa8fe5c1cbdffff627c349608e7706beee2b5bfb80df0880
+    role: context
+  - path: data/traits/genomics/vp1848_system.yaml
+    sha256: 205b088f86f68a8316fe882c32d3a9e759bcb4822963962ba42287060d098322
+    role: context
+  - path: data/traits/genomics/vp1851_system.yaml
+    sha256: 41a197db8c536214245a0a47d91d791efceabf6c3b323197d24a4ccb49ed2f2d
+    role: context
+  - path: data/traits/genomics/vp1853_system.yaml
+    sha256: b81b3e869b3fe5000df0328e692a3dc4897a9f8e30efd053a8a582beaccd9d85
+    role: context
+  - path: data/traits/genomics/wadjet_system.yaml
+    sha256: 204fa72a8d5648a60a0308ed7a8da1b45c9b672f3e225d8fa37d5603250b400c
+    role: context
+  - path: data/traits/genomics/zorya_system.yaml
+    sha256: 4c4f3cfaf886a83b173aac64cc89f6545abdb8ef80494ff0f0f2bb297ef74b6a
+    role: context
+  - path: data/traits/genomics/zorya_type_i_system.yaml
+    sha256: a1281526bbf44fc4cedd108d153db3798ac49b595f4c73564e7e7ef1225b5175
+    role: context
+  - path: data/traits/genomics/zorya_type_ii_system.yaml
+    sha256: bb108cc165416f408832d4bdf3f4f584a21e0aaafb5e6316929293c6e4f567e2
+    role: context
+  - path: data/traits/genomics/zorya_type_iii_system.yaml
+    sha256: 14989f4df55866261132114a31ae7b7743ca4609a059c868aacb2a6127ae5ec3
+    role: context
+  - path: data/traits/metabolism/accumulates.yaml
+    sha256: d6e5fa65a557532bcaacf2702e50b247c9bbdc366d3bdc886836bbfd824be05f
+    role: context
+  - path: data/traits/metabolism/acetoclastic_methanogenesis.yaml
+    sha256: e9da2ab8799ddeb56c6bfb1f02deb377945e4968ea1004460284381e95173346
+    role: context
+  - path: data/traits/metabolism/acetogenesis.yaml
+    sha256: 205bdb945eb97d0c824367a08598a304cbd45940984d4fc400da60ad34f7e033
+    role: context
+  - path: data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml
+    sha256: 05b7d4b439b06a5d593e8902a57d6d53fbe76933b85837e4bfb60766290a6c15
+    role: context
+  - path: data/traits/metabolism/aerobic_respiration.yaml
+    sha256: 44848504809996f11e36036212a7345935056e0e1e4406ba456a2ddb30b8e482
+    role: context
+  - path: data/traits/metabolism/anaerobic_ammonium_oxidation.yaml
+    sha256: ca25c9f3e10ccad967e4533f9b9a58d8cda52b6bd73d19962413f75bb5ef8671
+    role: context
+  - path: data/traits/metabolism/anaerobic_oxidation_of_methane.yaml
+    sha256: e4defc8fddab496e6aedea62fec4a64eb8ffade77856641a3bb03e5d7c73cee1
+    role: context
+  - path: data/traits/metabolism/anaerobic_respiration.yaml
+    sha256: a11d1f7561951a2bc5c96602c17c7f8212ae8298d702d2615d2dc8bc82099fea
+    role: context
+  - path: data/traits/metabolism/anoxygenic_photosynthesis.yaml
+    sha256: 789bbf08a9917d03048898fe3584d2668ba4d3cabb04294459c2b8bc3d77596b
+    role: context
+  - path: data/traits/metabolism/aromatic_compound_degradation.yaml
+    sha256: db7d025a61a0c8a84b9afdbd306e37fbaa6a79924229ae49c3153021f00a084d
+    role: context
+  - path: data/traits/metabolism/aromatic_hydrocarbon_degradation.yaml
+    sha256: d0a29fad048bef22ba157ab0ca272ea1b4cfe832e4a646cdbfe0a5c05d25e849
+    role: context
+  - path: data/traits/metabolism/arsenate_respiration.yaml
+    sha256: b192fb4ce85059dfd2bb26997ca60697f35c54b9429e0589a9a2da7176c57781
+    role: context
+  - path: data/traits/metabolism/arsenite_oxidation.yaml
+    sha256: 165e50989bd8040dae587742a98936902af7b92d86d8e3bd1c9b5fd46232cbdb
+    role: context
+  - path: data/traits/metabolism/assimilates.yaml
+    sha256: 6b2048d0c8b7c4fa15a38e04b81647aa5e85cd68fd89c445ab43c8644a710529
+    role: context
+  - path: data/traits/metabolism/biopolymer_degradation.yaml
+    sha256: 96456515c2866c328ad1c10486b5bb6d076cbb51df442a57c812e36b3854cadb
+    role: context
+  - path: data/traits/metabolism/builds_acid_from.yaml
+    sha256: 63e31fc6731a61afc95760566cd65cd354fc6b959c648a07a0c2d6904344ba50
+    role: context
+  - path: data/traits/metabolism/builds_base_from.yaml
+    sha256: 3b09c3e816428b09b9f1702982b62f89632aacb1a9ed80c2d2627126e5c72b70
+    role: context
+  - path: data/traits/metabolism/builds_gas_from.yaml
+    sha256: 43917275c0b96a3685ecc91586ddc2447fb91f31acf7280bbb241bbe18d4d0aa
+    role: context
+  - path: data/traits/metabolism/butanediol_fermentation.yaml
+    sha256: 5b92451a9348f27301c5754ba67c3e211420b78cd9f4ddc80e955483d63ca73e
+    role: context
+  - path: data/traits/metabolism/butyric_acid_fermentation.yaml
+    sha256: c34b3627fa305470695bbdaa9b0fe113cb9e3d6ee1ddc9628c5cb874f57fe479
+    role: context
+  - path: data/traits/metabolism/cable_bacteria_metabolism.yaml
+    sha256: f30709637dce4edcb237a83c9e41e6e213c2dd169b9c174ed6f2f7efdd550550
+    role: context
+  - path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+    sha256: 8037067e8c05f3489de5425be62a118817c9afd1debd54e31b44dd32b121318b
+    role: context
+  - path: data/traits/metabolism/capable_of.yaml
+    sha256: 0fa60bb5a6939a16487936d8d3a33278d13cfebfd24f4697f8c8b05870f11f0f
+    role: context
+  - path: data/traits/metabolism/carbon_fixation.yaml
+    sha256: ace76f1492ebc1759c2623fdb9543d3edf4dc6d9d9696a9094a6ddb408d33979
+    role: context
+  - path: data/traits/metabolism/cellulolysis.yaml
+    sha256: 10d40e341d1a3b283eb0612f82d11b712c199bdb1ba9b1340bcefd62983bfe79
+    role: context
+  - path: data/traits/metabolism/chitinolysis.yaml
+    sha256: b8250664cb24f248f14c370c35377cf7c313876738b1a9976be3275b938d94e2
+    role: context
+  - path: data/traits/metabolism/chlorate_respiration.yaml
+    sha256: 50102421f9a3e109ec9c77c82ee80cb0f9a6d4ca0c5297e0ac97ee01ce74f011
+    role: context
+  - path: data/traits/metabolism/citrate_fermentation.yaml
+    sha256: 7e0f0492ffd5fc13cb68ec0a9afdf9ac0f017c60af7f65978754773e66944752
+    role: context
+  - path: data/traits/metabolism/compartmentalizes.yaml
+    sha256: a3ac4dc67a80998ff008757c82c3edc9642430c50cd77642ac099c4743ca8dc7
+    role: context
+  - path: data/traits/metabolism/complete_ammonia_oxidation.yaml
+    sha256: 3a62bf1de845e11fc738686d39f00b618c1fafb25cc0a8d21f9755250a0b0e90
+    role: context
+  - path: data/traits/metabolism/dark_hydrogen_oxidation.yaml
+    sha256: ad887ad5f0ad65eada14811c87131947cff8e6c281498e11009d3e959e9aec70
+    role: context
+  - path: data/traits/metabolism/dark_oxidation_of_sulfur_compounds.yaml
+    sha256: 89b05104a6e1f47a69595c1a07689d36c16b578bfdbfdf85b689b048565e9d9a
+    role: context
+  - path: data/traits/metabolism/degrades.yaml
+    sha256: 967a2aa8edebbc5a91e2d6c378c7cc4ad03904c2cf98988f3419c591b6715ca8
+    role: context
+  - path: data/traits/metabolism/denitrification.yaml
+    sha256: 81d81d128d269f6b864966e2e9f3db34d704bc83335b2df9cee80684ace7ccaf
+    role: context
+  - path: data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml
+    sha256: b30db7d13c099842c9046ea51fae958df0857c493a8373f3e28793c1e0069ac1
+    role: context
+  - path: data/traits/metabolism/dimethyl_sulfoxide_respiration.yaml
+    sha256: 04b955947811e26a3a96e3451709d195deeb0694c90d9d15004d763f94eaccb3
+    role: context
+  - path: data/traits/metabolism/disproportionates.yaml
+    sha256: fe7545d98079437d03cbe5f9585da542bf0e484a7a013525f61279c14ae69e9e
+    role: context
+  - path: data/traits/metabolism/disproportionation.yaml
+    sha256: f53b44743ff3630f699d50243a9dbc7a1f18325585725f7f63adaf92a1cf0378
+    role: context
+  - path: data/traits/metabolism/dissimilatory_iron_reduction.yaml
+    sha256: e81cb257a8caa7219a63bf8ba04d0b595d70a85634f8fba77e0a3c16eaf5fa6e
+    role: context
+  - path: data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    sha256: 6132ea6f2b13704e74de02bc8f6c7b2f943cd43733649d9e8f28fddddecd724c
+    role: context
+  - path: data/traits/metabolism/dissimilatory_metal_reduction.yaml
+    sha256: f7802f40c2850871b1b1ea574d3d30e13358c28cc3f32356b90e8d4093beb65a
+    role: context
+  - path: data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+    sha256: 8ae952dad8af376036e96373ca0c913c58dd48e4b68c7fef2677da2448debf1f
+    role: context
+  - path: data/traits/metabolism/dissimilatory_sulfate_reduction.yaml
+    sha256: 40590737fa1d21f476292b4415ceb6c99fdf1059dbf2a200a2a90f9ec661b1ad
+    role: context
+  - path: data/traits/metabolism/does_not_accumulate.yaml
+    sha256: 79677593fc5ee5ef95f2015cc9a50af2f220953e84e00105445f2720af7e214c
+    role: context
+  - path: data/traits/metabolism/does_not_assimilate.yaml
+    sha256: c14b6bd9f69d8eeb5f11648ae5f18cd4a8823d6aaadfa8fbf3e35c68e4a04765
+    role: context
+  - path: data/traits/metabolism/does_not_build_acid_from.yaml
+    sha256: 55e49692c9db045ec8517578cdb494014d531eb9692390023cb5616dbf8941e6
+    role: context
+  - path: data/traits/metabolism/does_not_build_base_from.yaml
+    sha256: f20724ca371588278653ad8486894dafabfee55e54b5f0189a445a871add3631
+    role: context
+  - path: data/traits/metabolism/does_not_build_gas_from.yaml
+    sha256: a8e3b5eb1a64222dad40c27a6cf33218a9e01a3cf275defa154870fb00fc587b
+    role: context
+  - path: data/traits/metabolism/does_not_compartmentalize.yaml
+    sha256: 3a1467edd3605861ab51b6210c98183fbc9eb18c04035d5001137df01b574284
+    role: context
+  - path: data/traits/metabolism/does_not_degrade.yaml
+    sha256: 2584006bf77cd2218bab81100c08f80856a4835a4f0a30383a281089a9bf245b
+    role: context
+  - path: data/traits/metabolism/does_not_disproportionate.yaml
+    sha256: a101b8bedbd417811a3ae45d5381e39de17940665876be308014199caf061199
+    role: context
+  - path: data/traits/metabolism/does_not_export.yaml
+    sha256: 71067c027cfcf4334c613e4ea34244c7879587e97577aaba974f794917886f8f
+    role: context
+  - path: data/traits/metabolism/does_not_ferment.yaml
+    sha256: a7e567a9d3382833bbc90406541bf7552f1ccabe69e981ae19e31f0b0f884305
+    role: context
+  - path: data/traits/metabolism/does_not_hydrolyze.yaml
+    sha256: 40b9bae8d2253f88572a427c47185d7ccc7f15f3b7d28db9849147c39837a7ca
+    role: context
+  - path: data/traits/metabolism/does_not_import.yaml
+    sha256: 98440f9d954b35200df7dbb301f32422289c9fcf26f9e8e4e644f00141935c36
+    role: context
+  - path: data/traits/metabolism/does_not_oxidize.yaml
+    sha256: 47c8bf4b6422609e48adf985def1b09431fe6e35f85d5f203726f253e0e33302
+    role: context
+  - path: data/traits/metabolism/does_not_produce.yaml
+    sha256: d81d2981d4c7eaa17c5a834eb0b4fe9c5aec4c41749da9776913c4bb08c26c27
+    role: context
+  - path: data/traits/metabolism/does_not_reduce.yaml
+    sha256: 63e90b4efec9adec8751b1dffbf7e511e4a668476e951eee0522fbe4d4de0acc
+    role: context
+  - path: data/traits/metabolism/does_not_sequester.yaml
+    sha256: 885e3457826daea8f5c90de57845ea5c2d6f2fb7ecd7b63687d30facc4e41181
+    role: context
+  - path: data/traits/metabolism/does_not_show_activity_of.yaml
+    sha256: 7a5b9ca5c1608435dae4c487fbdc1ac9cc16d1cb3e7cca8d14460cd7560fb665
+    role: context
+  - path: data/traits/metabolism/does_not_transport.yaml
+    sha256: 4ddba20b0e06e7727c5ee22f9083f4e98548fb8f042b9ac91b6597f3276a5007
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_carbon_source.yaml
+    sha256: 5a83c77e701aab153f0d4dc891d284372fa0d35c1b2d99448fb9b06e7dfcdac0
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_electron_acceptor.yaml
+    sha256: cd39a8ac147cf347f39e0487627b94adc7b6b6050c8e4da57676e3fff328ce8d
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_electron_donor.yaml
+    sha256: e5ce526a2572446152db31c72a3786f640bc6ab4bae8ba012e1853919858b507
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_energy_source.yaml
+    sha256: 86037f3f49096af61eb6ef53812ced9d0fce18d277231d219005ccea8a552faa
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_nitrogen_source.yaml
+    sha256: 6d43793d4be6d25c78859107f310cb1b69774e33eb5fab7f9bcd05acf381e86e
+    role: context
+  - path: data/traits/metabolism/does_not_use_as_sulfur_source.yaml
+    sha256: 57e58f4dd74b297300540cdc757870cf2b53d47d0cee4b2902d071e644f35476
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_aerobic_catabolization.yaml
+    sha256: d32cdbcfd43743b502a20a2f3827dc1783b441258d2466f2b54cca0596827c3b
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_aerobic_growth.yaml
+    sha256: fac582abda2e19d68271515e74de7d3e632e73b1e0f2cca6bd37205929de1d11
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_anaerobic_catabolization.yaml
+    sha256: 9264cfeb2644911af116805feed3bb587ec6ecd68b75fadd27a03188a6743343
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_anaerobic_growth.yaml
+    sha256: be09bf3e7a573c18691e5a28d1e0eaeb5a4f0aa0dc5e2fbd43b86f5bc50bb4d8
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_anaerobic_growth_in_the_dark.yaml
+    sha256: 042f5c0069eafd8fd704a6acd76eb3658470bc06ac5c2c9833a2f73b95c1f8d4
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_anaerobic_growth_with_light.yaml
+    sha256: 0042eede1b6e2a01064cb239186e951897d06a3e9bf48489c2f2ac4bedc9c40d
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_growth.yaml
+    sha256: 46e1ffbd8890fec4f0e8ef4bce64cb7b373c1eb2493d42a23051e9707a34052f
+    role: context
+  - path: data/traits/metabolism/does_not_use_for_respiration.yaml
+    sha256: 01b486cf7c3129600dc64d275982e875156d47fe60ed8f383489b2605296df61
+    role: context
+  - path: data/traits/metabolism/does_not_use_in_other_way.yaml
+    sha256: f24aab3d7a03cea1d6a38d063a124df8bf8ff0e51a87e5cffe61fc08acef38f6
+    role: context
+  - path: data/traits/metabolism/electron_transfer.yaml
+    sha256: 42b84f932a36b8d30c7c265d57ba59904f6c677f84f7199a06e1f4ca7f1f3820
+    role: context
+  - path: data/traits/metabolism/enzyme_activity_analyzed.yaml
+    sha256: c338148cea98034b5d4f8f6c23d0c9a503736f4de42e1735c448747ae622e484
+    role: context
+  - path: data/traits/metabolism/ethanol_fermentation.yaml
+    sha256: ad65836e4e31389358cd19fcf5b76ea7b3c9e0f151776cc11eaa3bf84178f855
+    role: context
+  - path: data/traits/metabolism/exports.yaml
+    sha256: 21bd92ac6e2c5d56c9ce3e4b93027cd75b3228615e5dea95b9dee8e7a8af7005
+    role: context
+  - path: data/traits/metabolism/fermentation.yaml
+    sha256: e02a622757b033dac2d1df9829a0cca9de9fddc4e9d1bb4db294738cea6f3efe
+    role: context
+  - path: data/traits/metabolism/fermentative_hydrogen_production.yaml
+    sha256: dc0fb33e6af6050df76fb657b7982e1fe0924e659a982ec40c775f2aae50d584
+    role: context
+  - path: data/traits/metabolism/ferments.yaml
+    sha256: 410e8f9cc453925db6d4da69ee95ceac9685bab92df2472099b414ee03938e4f
+    role: context
+  - path: data/traits/metabolism/fumarate_respiration.yaml
+    sha256: 2df908706d702e6e54625f7b5f7cc1b268f10854887758f962cd2cf5aa3a800f
+    role: context
+  - path: data/traits/metabolism/has_growth_nacl_observation.yaml
+    sha256: 9c066c29ede737a6017eb0cda6265835417065a3eb7714380d596d935e2748b5
+    role: context
+  - path: data/traits/metabolism/has_growth_oxygen_observation.yaml
+    sha256: 6c3f3fe76c3dfcdc9cd3de2ef95a1840566d40273daffcc2a2a0a5e82fd51c4a
+    role: context
+  - path: data/traits/metabolism/has_growth_ph_observation.yaml
+    sha256: 5dc6261743ce8a7b9e05543c7bd50caead263616a6b507d5e38d487b3df2721b
+    role: context
+  - path: data/traits/metabolism/has_growth_temperature_observation.yaml
+    sha256: 262f26f4aec92969c5ebc05fa952ed2bf3c4d8da89dfe3e8a27680ff629baf80
+    role: context
+  - path: data/traits/metabolism/has_nacl_delta_observation.yaml
+    sha256: d3375b89f9af58d408edb5d9d091162f716e8004ea8c62b68486dc3fa9ddac68
+    role: context
+  - path: data/traits/metabolism/has_nacl_observation.yaml
+    sha256: 1c5fcd23ec84309267515a6a6bd0984c95276b952375d90318a76029360b95d7
+    role: context
+  - path: data/traits/metabolism/has_observation.yaml
+    sha256: 88cba9b3e0ece41e5ab542bbb768af4593205196b194c82db0a2c1f3e40148d5
+    role: context
+  - path: data/traits/metabolism/has_optimum_nacl_observation.yaml
+    sha256: 9f9f3c908406f8fac2064e54a448a2d7b39a57b77eea953a28550959cbed2b20
+    role: context
+  - path: data/traits/metabolism/has_optimum_oxygen_observation.yaml
+    sha256: f064bad25008cc0c0811426c9f4027ddd5503dbc855186e5a31d4ac2129aa52c
+    role: context
+  - path: data/traits/metabolism/has_optimum_ph_observation.yaml
+    sha256: a65a5b47f0b745a4a40fa51b9674c53923d0f32285b043f9a0d9a9225ca902fb
+    role: context
+  - path: data/traits/metabolism/has_optimum_temperature_observation.yaml
+    sha256: cf275de74b96d2077eba690ae7f4257639d41e4f9cdaad4811352e93a66a6d31
+    role: context
+  - path: data/traits/metabolism/has_oxygen_delta_observation.yaml
+    sha256: 1a8c26d145bfa2d8b1e36c3084fbfb71c83e846094d372858dbd04cbf3e15d17
+    role: context
+  - path: data/traits/metabolism/has_oxygen_observation.yaml
+    sha256: 8d4be962de56ab8d862def9e16b946ae876b8cd7e588505cdfe2c003df9dfd1e
+    role: context
+  - path: data/traits/metabolism/has_ph_delta_observation.yaml
+    sha256: df87fa98eadb9c0940b143fb02a9c350cfe1ec2580179c4207e312feb6794056
+    role: context
+  - path: data/traits/metabolism/has_ph_observation.yaml
+    sha256: 73e5fb59ddc972294f3f46b816162c403c3c131a302884c072c1466b64c36021
+    role: context
+  - path: data/traits/metabolism/has_phenotype.yaml
+    sha256: 02289ec9093bae2d08afdd9d2f8d97ec36ea3d40e9c8c7a1e4435176a5f579d9
+    role: context
+  - path: data/traits/metabolism/has_quality.yaml
+    sha256: 7421df8d387b066c098461c3e0d917127042de95e927f421580ce0cb3edc026c
+    role: context
+  - path: data/traits/metabolism/has_range_nacl_observation.yaml
+    sha256: 294f1576e640327160f8313c158f347b6e36ffd5e3aeada77c9601e95042250c
+    role: context
+  - path: data/traits/metabolism/has_range_oxygen_observation.yaml
+    sha256: 9ac6d5a4e722664cb1dd9bfea957fffe6477d1fe0930b858083fd4f7fe82e739
+    role: context
+  - path: data/traits/metabolism/has_range_ph_observation.yaml
+    sha256: e53bc1da3040ede86308598c7aa6ca33b68e46edf7256a2f3e1b258488409cee
+    role: context
+  - path: data/traits/metabolism/has_range_temperature_observation.yaml
+    sha256: 69aca12b091bb4db7fac19ed63da99851725385c408533def15bf46c229459f4
+    role: context
+  - path: data/traits/metabolism/has_temperature_delta_observation.yaml
+    sha256: be71c9544283c4bf5d43d7462edb963e2e633b34ab46cdc42ac857eeef515ee9
+    role: context
+  - path: data/traits/metabolism/has_temperature_observation.yaml
+    sha256: b1bbdbbdb1f212ef1e2ed68dd4515eefc41705894e1fb1bc0f5229fff4b9b9af
+    role: context
+  - path: data/traits/metabolism/homoacetogenesis.yaml
+    sha256: 7cc9bbc3c866babfba8255bcfc5b93544a02cf41af12fab37300aaf4a04dfb75
+    role: context
+  - path: data/traits/metabolism/hydrocarbon_degradation.yaml
+    sha256: 59f4e83c615f35b49be537a475c731d779411d632bbe0dda642c1c4323b98734
+    role: context
+  - path: data/traits/metabolism/hydrogenotrophic_methanogenesis.yaml
+    sha256: b054d8a8cc3b70f4028db5f2d8532071802dc46e02c1f52ff00db01461cdc58e
+    role: context
+  - path: data/traits/metabolism/hydrolyzes.yaml
+    sha256: ff8837550eeb0eb9ce84bf4a5af973c4ca3f1f19b3186f21a1625bbc443fd571
+    role: context
+  - path: data/traits/metabolism/imports.yaml
+    sha256: c2ad9a72fdbb5323f70932cb1b42d891078d6c8fa6f69ce0b7ae98baa2bd5ed1
+    role: context
+  - path: data/traits/metabolism/iodate_respiration.yaml
+    sha256: c9baed93b80fc5a45ae5859ddd9081af51d77177dcf53a27e356f34dcb4e22fb
+    role: context
+  - path: data/traits/metabolism/iron_oxidation.yaml
+    sha256: 4b760c61b3c72c01e8c1bab0a85b7e76d98efb08fb4bf532faea3f8a693db127
+    role: context
+  - path: data/traits/metabolism/is_not_required_for_growth.yaml
+    sha256: 492df92e202406122c49b9490ba01b7b49f24d2a0abd0e0995fd2132384d22e4
+    role: context
+  - path: data/traits/metabolism/lactic_acid_fermentation.yaml
+    sha256: dba6cdf1607eb842faffe9e4c591abf5ef6e072c1f3cfffb5170e030578e7cc8
+    role: context
+  - path: data/traits/metabolism/lignin_degradation.yaml
+    sha256: 1713a83bc39f47a903a0ce34a08f3a2a0923fccb8d745fff03f7c362fbca2551
+    role: context
+  - path: data/traits/metabolism/lipolysis.yaml
+    sha256: 125557336f1363d756f22c017fa62843228f8f8e1340d0546417a48945b2dee8
+    role: context
+  - path: data/traits/metabolism/manganese_oxidation.yaml
+    sha256: 3c0bd68f2e666505e666ee7adb5e2585eca2e098927d482dc9689885a32f1ad2
+    role: context
+  - path: data/traits/metabolism/metabolism.yaml
+    sha256: 070a8620979cc8adb3091cc6eb64ba04ead16475f45e500658d254ef33579d2f
+    role: context
+  - path: data/traits/metabolism/methanogenesis.yaml
+    sha256: ce7a9c43bbbee899bccd675670df63a27eeefb07de2c4d7dac57acc5bf0cb0fa
+    role: context
+  - path: data/traits/metabolism/methanol_oxidation.yaml
+    sha256: e2895b852ace06dfc2e5d02bae6bfeda1d87f00abcec08b82504ac0c5dc10377
+    role: context
+  - path: data/traits/metabolism/methyl_based_methanogenesis.yaml
+    sha256: f5dba22c290fa6f84b31f433b296cad536e82d84a441c9853c9aae439fb077a2
+    role: context
+  - path: data/traits/metabolism/mixed_acid_fermentation.yaml
+    sha256: d053ee03594e8308fe5c0a30a90aa3e7210872696a4e82a35935b42ae896b398
+    role: context
+  - path: data/traits/metabolism/nitrate_reduction.yaml
+    sha256: b3b678fd461c2575e130a0428a1c48fc8e979f7d443542b889c05d30737e360c
+    role: context
+  - path: data/traits/metabolism/nitrate_respiration.yaml
+    sha256: cb919fd2f22f485d7bbb542993e204c431cea2c7bbb9a418fda86ca9c7d35aea
+    role: context
+  - path: data/traits/metabolism/nitrification.yaml
+    sha256: 9870b941334de2f54cfabbc656ab59c204f2a488d26f4651402a9997a17f0f26
+    role: context
+  - path: data/traits/metabolism/nitrite_respiration.yaml
+    sha256: 8c1b82e2a64f78443cfe0497658d0a03dab9545f2b74a512f376e2865a7f84ec
+    role: context
+  - path: data/traits/metabolism/nitrogen_fixation.yaml
+    sha256: b8134eed52124120441efcc16aecb59d1e37bc28bae0688547439c409bd6d68f
+    role: context
+  - path: data/traits/metabolism/nitrogen_respiration.yaml
+    sha256: f52bc38bf8f54a90a623b9ab98fb5f07e9e2acbf4ae2fc5149030108f7b3a9bc
+    role: context
+  - path: data/traits/metabolism/organism_interacts_with_chemical.yaml
+    sha256: 8aff2516a57de3cc6eb53f404b52a7a33db995dc1a4a5a02a1ee1e56eb967b96
+    role: context
+  - path: data/traits/metabolism/organohalide_respiration.yaml
+    sha256: 781a5f38b7ba1940fa853430e1e60228c8a01f1f62c2782b3e0d52a0a1ae1c55
+    role: context
+  - path: data/traits/metabolism/oxidative_phosphorylation.yaml
+    sha256: c85b2955ee86d9405f2a0f00392f56fbf7d8228aaf332807e9f7219bf145d33e
+    role: context
+  - path: data/traits/metabolism/oxidizes.yaml
+    sha256: f443fdef4a1eb2707df70357c63d7d435c0802719234d790b6eca79fb0dc37de
+    role: context
+  - path: data/traits/metabolism/oxygenic_photosynthesis.yaml
+    sha256: 62194e5b04076c1607c9a66890571013d5f239c042ea52e419f280aefaa3eb0d
+    role: context
+  - path: data/traits/metabolism/pectin_degradation.yaml
+    sha256: fdc392de8588d0612ec0705989235e7f5949ef5c9cce09b1aab41e9fd88c63d0
+    role: context
+  - path: data/traits/metabolism/perchlorate_respiration.yaml
+    sha256: 7d52e4a2c8eb273555621609c5a53e83e28047b30496238217080ef617964246
+    role: context
+  - path: data/traits/metabolism/photoferrotrophy.yaml
+    sha256: f6d5a268ad7226b38f0f65dc02025f05b3f28c55ea5c24edc090b8b8f72f0bcc
+    role: context
+  - path: data/traits/metabolism/photosynthesis.yaml
+    sha256: a47048bcfff53493dd6a65b3c0991ba9ee86f3841eb407e31948063045018dbe
+    role: context
+  - path: data/traits/metabolism/phototrophy.yaml
+    sha256: 65a2abba6f246e0dbc7b2ac602cc46c54dab814d0b31ccb6383a004cb074b13f
+    role: context
+  - path: data/traits/metabolism/produces.yaml
+    sha256: 90befb3fda80aa5ea07633171df9eaf26959c367e64f95ca2f0ab35cff1722fa
+    role: context
+  - path: data/traits/metabolism/propionic_acid_fermentation.yaml
+    sha256: 980497f75b13527e04940ae5ada0fd37dd6be55ee057661a4fbc793e02a31585
+    role: context
+  - path: data/traits/metabolism/proteolysis.yaml
+    sha256: 572dd5ea3c150574dace9ccfc4a8eb0f4564aa674bcc8ceae6f10e98da603e46
+    role: context
+  - path: data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+    sha256: 3c7009e19b8eaf3e827a0a087aef48b2f4efc62348ae203534df1610d1b65a95
+    role: context
+  - path: data/traits/metabolism/reduces.yaml
+    sha256: 107334e374ad70a9ebf82e8594228a3099e524389e490e41d9094e05d8f2047c
+    role: context
+  - path: data/traits/metabolism/reductive_tca_cycle.yaml
+    sha256: ca3e0afdfb6fba4f0dddc1c8dd002ea63946747ba296c0d74bb5dca024a0aa7a
+    role: context
+  - path: data/traits/metabolism/requires_for_growth.yaml
+    sha256: e32092569ea21ca544f3eed4bc87d9fc8061370d7a5eb05724e9e2b9b6e79bbc
+    role: context
+  - path: data/traits/metabolism/respiration.yaml
+    sha256: c16d0b76a342fc930c390e3e550e41f68853bbd5fb16839a6b9acb46b7a41445
+    role: context
+  - path: data/traits/metabolism/respiration_of_sulfur_compounds.yaml
+    sha256: 0309e0e7850d59130a5261af0ab7440d01383ab144ee8776c36b080f6301d59b
+    role: context
+  - path: data/traits/metabolism/selenate_respiration.yaml
+    sha256: c8e0d82064894e3fae5651b317d3bd37e947c52707c1489cafbbf492af80dfe8
+    role: context
+  - path: data/traits/metabolism/sequesters.yaml
+    sha256: 4e9cc9d22abc35a5829817e19b16284868e57f5fba90fd71d2c0fe0576ec0258
+    role: context
+  - path: data/traits/metabolism/shows_activity_of.yaml
+    sha256: d3afaf4a9b278f39b9454407b3516ab78348bfe7d801f99f8afc25295ca1d093
+    role: context
+  - path: data/traits/metabolism/starch_degradation.yaml
+    sha256: aa84058bbc36302383a350751692881992f27ad84e7c8c639af12015bb012d41
+    role: context
+  - path: data/traits/metabolism/substrate_level_phosphorylation.yaml
+    sha256: 4c6c59327a770c45db2d517629809d429ad92dd7aa02eecf1adeef95aa83f70d
+    role: context
+  - path: data/traits/metabolism/sulfur_oxidation.yaml
+    sha256: bbd88856b408101974d4d18582e5f64cb8cc1ba6f5a5915a95fe60a0aa0c78d1
+    role: context
+  - path: data/traits/metabolism/sulfur_respiration.yaml
+    sha256: 32f14b22bdc73c2da05374d318faad1b71325a612f542a87a31588404e0330f9
+    role: context
+  - path: data/traits/metabolism/syntrophy.yaml
+    sha256: 7a16c591d9a3f9645f6f5a418163acd556e342e5735184fb3e6188bf5c9e5e08
+    role: context
+  - path: data/traits/metabolism/tetrathionate_respiration.yaml
+    sha256: e928c378696494d2da00a0774895ff586cb290b7f295ee6f04e17eadbecd5c17
+    role: context
+  - path: data/traits/metabolism/thiosulfate_respiration.yaml
+    sha256: f7f894e90b025ce03a56dfec6821882562e53a4a0afe9098921a350f3b1c9071
+    role: context
+  - path: data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+    sha256: 7879b8de47f9a4611866432142c85b3bd412aafa1b74266a69cf407d4c7c9e24
+    role: context
+  - path: data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml
+    sha256: 877deb65fb8bfc690bdeceea33c7857a5d4585201b5afd6fe00714c0c1a03d82
+    role: context
+  - path: data/traits/metabolism/transports.yaml
+    sha256: 2341b2e8aa85d60fa9e7d11314c7050aa5991bfef9df8d7b9dd492b714c88491
+    role: context
+  - path: data/traits/metabolism/trimethylamine_n_oxide_respiration.yaml
+    sha256: 98e5512c0cf647329e6c424dc12d01d869a4a4ca228f847b30754ac455675d2f
+    role: context
+  - path: data/traits/metabolism/uses_as_carbon_source.yaml
+    sha256: ac97b016972d92634c14fee787ab5f7dc1dca7ff1ed69873da6d8e5b1de49bc6
+    role: context
+  - path: data/traits/metabolism/uses_as_electron_acceptor.yaml
+    sha256: fa47cc87d5e71f34b492617aa6c4503516148c0b5ff23fd5577c15bf11c436a7
+    role: context
+  - path: data/traits/metabolism/uses_as_electron_donor.yaml
+    sha256: 9ccf703b0a1e11701ac5cf682bd2504f9b413e9e4ba42f78ff490dc9617b13e7
+    role: context
+  - path: data/traits/metabolism/uses_as_energy_source.yaml
+    sha256: ac23b771826ed24ecd6771b2b2bb5efb4520abd132189f25d26afbb15648a689
+    role: context
+  - path: data/traits/metabolism/uses_as_nitrogen_source.yaml
+    sha256: f2004b2fb6c8e6aaf9b1ec559734fa3c29ce9186a77ae8a32682209f0d07e99d
+    role: context
+  - path: data/traits/metabolism/uses_as_sulfur_source.yaml
+    sha256: 1303c4ed24973dc9226cedbb2c2e451c2a08d2ea8e9d233062f04fd1d82eeee0
+    role: context
+  - path: data/traits/metabolism/uses_for_aerobic_catabolization.yaml
+    sha256: b7180e949530dffe6269b6b304539ba5a54c300896064bdda7ef71802e64e1c0
+    role: context
+  - path: data/traits/metabolism/uses_for_aerobic_growth.yaml
+    sha256: bb575651e5a8c6abef9a6ae8758e41118e72a64724ecf1e649360801fa09c39b
+    role: context
+  - path: data/traits/metabolism/uses_for_anaerobic_catabolization.yaml
+    sha256: caf4fb7585711de6f80eb88c21db0744b7ded5b73cbbf77f56500ea2c25eedac
+    role: context
+  - path: data/traits/metabolism/uses_for_anaerobic_growth.yaml
+    sha256: d4b59e0e8a54041a9b96785ef5dc6d87051faa4594b12c2ab63045cccc00b5d7
+    role: context
+  - path: data/traits/metabolism/uses_for_anaerobic_growth_in_the_dark.yaml
+    sha256: 3e58cb91eb67ac76f0c322f6deaa6edb93c36358adb69778b452c4d25d87d6a8
+    role: context
+  - path: data/traits/metabolism/uses_for_anaerobic_growth_with_light.yaml
+    sha256: 9362c51d8388ef7ca0d10468ab285cf2abedbdb6f28284a234a039595c6284dc
+    role: context
+  - path: data/traits/metabolism/uses_for_growth.yaml
+    sha256: 47b73743e32e182ddffd99e1ec3e1d2c8c2562d716580aa5253ef989d17a7cdb
+    role: context
+  - path: data/traits/metabolism/uses_for_respiration.yaml
+    sha256: bbd8e6e2e2a3819bdd412a953356b0bc950a11ec6739cc08bb70681b874e3fe7
+    role: context
+  - path: data/traits/metabolism/uses_in_other_way.yaml
+    sha256: bbdddb80cad436ca4a2187826bd004954055294160fab8edb16759f45b396950
+    role: context
+  - path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    sha256: edb5de247572953f0e8ec61e8768be57d8d73b67ed48dea1c5208e9804bc3539
+    role: context
+  - path: data/traits/metabolism/xylan_degradation.yaml
+    sha256: 90460d1496a1ecb2e04ae572067606806aa04d9bf45c2bc107252a7658ca1ce0
+    role: context
+  - path: data/traits/morphology/akinete.yaml
+    sha256: fe282789abcd340ec581c43d6333d3541c4ff0a67724167f2f93aac28e832d1c
+    role: context
+  - path: data/traits/morphology/amphitrichous.yaml
+    sha256: cfaba9d8f756dfccd30e85209b8bbffbd82ed6213d4b54c5d6cb2d5ab0f33abe
+    role: context
+  - path: data/traits/morphology/axially_filamented.yaml
+    sha256: bbfff2a29558906f76ad4f5573eb070fb7e8134f9ec6e0bdba95b788699d434f
+    role: context
+  - path: data/traits/morphology/bacillus_shaped.yaml
+    sha256: 0f5a73de26cd29c35fe234fcf561c7dd31c57f98e6256f54e0e199038d943d2f
+    role: context
+  - path: data/traits/morphology/baeocyte_formation.yaml
+    sha256: c7f30422f83bf2d454fbec1e5aa28d676d243a25676e6acc5ffcbe5e0cdcc578
+    role: context
+  - path: data/traits/morphology/black_pigmented.yaml
+    sha256: f4a75dab414a432188f0732196e17ff5c65db30b5fbb90b24c18473835bbb49e
+    role: context
+  - path: data/traits/morphology/branched_shaped.yaml
+    sha256: 8f47c42623f3bba42b3ea1e5d16e0eb43f833348ad1bc7e5cc21fe114374f428
+    role: context
+  - path: data/traits/morphology/brown_pigmented.yaml
+    sha256: e274c78a53afdc1ab48937ce3077e4950c1186179d9178cb452e557383f361a3
+    role: context
+  - path: data/traits/morphology/capsule.yaml
+    sha256: f3abc80a712bde31112674f145ff48bba6909d35be2b2098c6c78292ed24435f
+    role: context
+  - path: data/traits/morphology/carboxysome.yaml
+    sha256: 30c32b6616b8ca39a66040c9663ea827c60cd9dc21855000ba7f49234933b180
+    role: context
+  - path: data/traits/morphology/carotenoid_pigmentation.yaml
+    sha256: 9b159d65df4aaf13413574e288c470033e45d7e4325155e069572fb0207df95b
+    role: context
+  - path: data/traits/morphology/cell_length.yaml
+    sha256: ea72262d9dcfedf84332fb14ef9000d65158a825427766b592bc08638f77895f
+    role: context
+  - path: data/traits/morphology/cell_length_large.yaml
+    sha256: 9bf98e6a9a0d370ca4fb67d6bb832f06ead457579754293560d785c7784b68fd
+    role: context
+  - path: data/traits/morphology/cell_length_medium.yaml
+    sha256: 17d25ef97f344b52b933a65cb1be18ffdd9267e4ce884342cfc8edc649d17ac4
+    role: context
+  - path: data/traits/morphology/cell_length_small.yaml
+    sha256: 0243a0bb5b7d5c4269d659ea0476d89caed00bad7a370e9e5d0f3b7b2b37ef44
+    role: context
+  - path: data/traits/morphology/cell_length_very_small.yaml
+    sha256: ce82ae71a88e164e7b9b54ae6de25950a6e534b9da3ff4005f08fffb5d4993e0
+    role: context
+  - path: data/traits/morphology/cell_shape.yaml
+    sha256: d9623499ad02929e34aaf6d4be61fe986518bce117457e6261edbe63b39cff59
+    role: context
+  - path: data/traits/morphology/cell_width.yaml
+    sha256: d283a9c4c8cdbb6c86bf9620bc2553ed4813c720f23364c1e9ca3f85096e1a4f
+    role: context
+  - path: data/traits/morphology/cell_width_large.yaml
+    sha256: 4a11564dd5b65be88b806c877ed6ce467d1530479cdf000669340936c4840c53
+    role: context
+  - path: data/traits/morphology/cell_width_medium.yaml
+    sha256: 52ca8e618bf2296aff676f81c1427a8c6037070121accffea4b06d8b54763f2a
+    role: context
+  - path: data/traits/morphology/cell_width_small.yaml
+    sha256: 3e4c1bae320209e4baf52e9f7c4f23b36358df35b4894a71ccb2a00319105f21
+    role: context
+  - path: data/traits/morphology/cell_width_very_small.yaml
+    sha256: 0b3bc10b45899b411eeef4564b807c178f382fd3a7ff32cbfe19e7e905e8efc7
+    role: context
+  - path: data/traits/morphology/coccobacillus_shaped.yaml
+    sha256: 6308a2f63b067c54df58ee5114ea3d40162a42697f2cf7be28a868c5dee63663
+    role: context
+  - path: data/traits/morphology/coccus_shaped.yaml
+    sha256: 2a705c6da67afaa354d630dd4fa63569e9e8c8d8606bd9f90aaf217a3c348b96
+    role: context
+  - path: data/traits/morphology/coenobium_formation.yaml
+    sha256: b600946ad1a3a43dc20d92aa2674714ac0cba6e371d17dd3e2e3ffbbadc8a062
+    role: context
+  - path: data/traits/morphology/cream_pigmented.yaml
+    sha256: a3ba26c66b5df90d4e3e9a7af00730a917ac17914f99d243d794497bd6d56a5c
+    role: context
+  - path: data/traits/morphology/crescent_shaped.yaml
+    sha256: 619d30596a9e6179724da7a788cd608d3cb30d390686971def9d031488060d5e
+    role: context
+  - path: data/traits/morphology/curved_shaped.yaml
+    sha256: 498f4ff2a150b62bb60e900fa32685aa728ff4f1ced2600c9eb6909b80e5fd82
+    role: context
+  - path: data/traits/morphology/cyanobacterial_multiseriate_trichome_formation.yaml
+    sha256: 0a598d258e1f6174e27ba4b951f998e60f2dc479ecac3cf2238897307b6dc087
+    role: context
+  - path: data/traits/morphology/cyanophycin_granule.yaml
+    sha256: 2c171bf6fa13e57b716e45893bd36558aa5ffcf59d8d0559ea33f3e6377381f8
+    role: context
+  - path: data/traits/morphology/diplococcus_shaped.yaml
+    sha256: f53f1860d9bfdcc3b4ba369eeb4a4fb77bd1f6e0aa694df26ade1127241e0cca
+    role: context
+  - path: data/traits/morphology/disc_shaped.yaml
+    sha256: f65f965104bc4ad200354fd99f248ee7b09715caf8e300e6c2552d2251a03369
+    role: context
+  - path: data/traits/morphology/dumbbell_shaped.yaml
+    sha256: 62a8c94ba3e5632d530d395247c7f77e9201e5cc7f3e0dda541480548fed98bd
+    role: context
+  - path: data/traits/morphology/ellipsoidal.yaml
+    sha256: d7744a7e7410294f61fc56ae26eb7b1d173c6a5575dd608472294a62edd9ff92
+    role: context
+  - path: data/traits/morphology/false_branching.yaml
+    sha256: 8aa0c8486100950047ca65237512db18dab295c02414e55284e145d112351bba
+    role: context
+  - path: data/traits/morphology/ferrosome.yaml
+    sha256: aee1ebd31daa71aba1f326fae2a584834f8e98b38a55d0a512baee0ed7c557d7
+    role: context
+  - path: data/traits/morphology/filament_shaped.yaml
+    sha256: 34307c9384e8c33f3f73b9ae5f66c14218f3e1f8c70524639313f2f8d6427516
+    role: context
+  - path: data/traits/morphology/flagellar_arrangement.yaml
+    sha256: 1b944448f88de4fa9ff773e155866a2c592f7e843a4c7dc152534676d4e4f329
+    role: context
+  - path: data/traits/morphology/flagellated.yaml
+    sha256: ef50cfb498de5c66a4f2fb904a2038f4c97fa2615e6090a652758051ad25250b
+    role: context
+  - path: data/traits/morphology/flask_shaped.yaml
+    sha256: 50af05acc9b12607517ffe77b3395641f4a03264a4a538e47845ac3688aea56e
+    role: context
+  - path: data/traits/morphology/fungal_adhesive_column_trap_formation.yaml
+    sha256: a1ea209ca312201003f463ea2aee9f4de146879ca10dba838c7416797d4f0d5c
+    role: context
+  - path: data/traits/morphology/fungal_adhesive_knob_trap_formation.yaml
+    sha256: 4404178edffe424b30bab385f9f62ff83d08853100f95e3b5185eddff1e2795f
+    role: context
+  - path: data/traits/morphology/fungal_adhesive_net_trap_formation.yaml
+    sha256: 6a19dd422c4e687c83938fa16443419f3b5378c350934ebbaaa709d98f75bb2d
+    role: context
+  - path: data/traits/morphology/fungal_appressorium_formation.yaml
+    sha256: 0a6d6008c4e018dd7a08613abcd8ef359e980ae974902f42fc9f4f0330a923d8
+    role: context
+  - path: data/traits/morphology/fungal_arbuscule_formation.yaml
+    sha256: f857ed81b07cdc0c204f5a3e4322ccb9444ab64a37ee927150aa6ca9cbe2386e
+    role: context
+  - path: data/traits/morphology/fungal_auxiliary_cell_formation.yaml
+    sha256: 7de9789e800a1aebfb3d4694fc2571727cbab08997e1c5b2b855f60278eaa4e5
+    role: context
+  - path: data/traits/morphology/fungal_branched_absorbing_structure_formation.yaml
+    sha256: 10d6fa9b9eae5072e7875ac12346be653485756892b52fd4d62499282a7e8cf8
+    role: context
+  - path: data/traits/morphology/fungal_chlamydospore_formation.yaml
+    sha256: 76383d6b5eff746680ca739b22537a610c80ea855c10026a27b79fc5470d64a5
+    role: context
+  - path: data/traits/morphology/fungal_conidiation.yaml
+    sha256: d6435aad1ab68a64578b971bbfe89b89734caf39efe2c1fcdc1aba275480977e
+    role: context
+  - path: data/traits/morphology/fungal_constricting_ring_formation.yaml
+    sha256: 46df30de3dcf02b13fc54cd7ddaef4d256c426a3207078dc860dd73c9f6e7fe2
+    role: context
+  - path: data/traits/morphology/fungal_hartig_net_formation.yaml
+    sha256: c001c2e3d342d0c008942b69267cc32974c12067477d4a26cf80ed862aa9582b
+    role: context
+  - path: data/traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.yaml
+    sha256: c58bd3dc9646fe867b8d1927820dc26fbfe7011bf0ceff20abb598ca4707d89e
+    role: context
+  - path: data/traits/morphology/fungal_mycelial_cord_formation.yaml
+    sha256: 42e6dffb6ce9a17d3f13490c9953c5312fafe616d802e5314649ad603103056f
+    role: context
+  - path: data/traits/morphology/fungal_nonconstricting_ring_trap_formation.yaml
+    sha256: 342bbe3ba7473d88d4010313a01246fa13ae592ec02871aa30fad3efd570efbd
+    role: context
+  - path: data/traits/morphology/fungal_peloton_formation.yaml
+    sha256: 2fd01c85d2549e487ed88f58730de4ea5d1c7d7fc3dcf180b7f816ac7cf236ae
+    role: context
+  - path: data/traits/morphology/fungal_rhizomorph_formation.yaml
+    sha256: 9da4bef863c1ceee825a7f39ebc0195d90c981ed20f0a2d253d139dc7f156ad8
+    role: context
+  - path: data/traits/morphology/fungal_root_mantle_formation.yaml
+    sha256: dcd5a60c222a7d5cca2c7714c66895204e0fddddeaf4136ee9929053e083897b
+    role: context
+  - path: data/traits/morphology/fungal_sclerotium_formation.yaml
+    sha256: 57d3731c9664da47db59a493f40f3bdaf7a42cc39e7332839a64e94e871d5bd8
+    role: context
+  - path: data/traits/morphology/fusiform_shaped.yaml
+    sha256: c300c8eaad2c5624d23590237ea3f1378ed65dbd89b7e63b04b4f7d99fe2523c
+    role: context
+  - path: data/traits/morphology/gas_vesicle.yaml
+    sha256: bd0940162b23b952a56a87edf709dc39ffe205e0cccb78629811a01ede3be065
+    role: context
+  - path: data/traits/morphology/gliding.yaml
+    sha256: 3aa51b4f644a24d02df199e3e9cb8c05fa4541b24896e2a20026371f5f2d44b0
+    role: context
+  - path: data/traits/morphology/gram_negative.yaml
+    sha256: f799d2f3c60c1d771213124feed9fad55f41d23bf02c585d74630ae46180bf56
+    role: context
+  - path: data/traits/morphology/gram_positive.yaml
+    sha256: 06ad8a9820215c8d572a710bb4bc4f73b6d959f6f9b09b170b4fc616df3b7480
+    role: context
+  - path: data/traits/morphology/gram_stain.yaml
+    sha256: 60f83094e141e00f1a86bde7b23cab09bde9c53137bd1f82df2bc62ef9cf130a
+    role: context
+  - path: data/traits/morphology/gram_variable.yaml
+    sha256: 1cbf332264d1fdc4e7073c2909f695f39fd9219eaca45376bad5fbfc1ee9db9e
+    role: context
+  - path: data/traits/morphology/green_pigmented.yaml
+    sha256: 2419bc1a57801b19032db1f09f1b1bb8302e473a48751e4450d4c282426c7d58
+    role: context
+  - path: data/traits/morphology/helical_shaped.yaml
+    sha256: 1ff2e11f213eeff72d8ca79beedbfe74b0d20b98cd9f70bbf63a307cda7cdc6b
+    role: context
+  - path: data/traits/morphology/heterocyst.yaml
+    sha256: f04741f703a380ca8431db759cc7ad49618a45260b94ff17a42701d6e2091b4c
+    role: context
+  - path: data/traits/morphology/holdfast.yaml
+    sha256: 1d624e357936be3c2b1f8a255b2102d4e9cb7141d77784f40fa1edca75238cb6
+    role: context
+  - path: data/traits/morphology/hormogonium_formation.yaml
+    sha256: 7c9974012029aa553c56f5e2a140893f12e0098255339ed987ffd68ee50790bb
+    role: context
+  - path: data/traits/morphology/intracellular_inclusion.yaml
+    sha256: a26a21e12585bcc8db1c744457fdafb2b662bf1ceaa359e01c37b39e7a664aa9
+    role: context
+  - path: data/traits/morphology/irregular_shaped.yaml
+    sha256: bde4332583c7070adadf6be99a11b55145d61d764686c88e9a0d70c616910c63
+    role: context
+  - path: data/traits/morphology/lateral_flagellation.yaml
+    sha256: 2aa1c5768b9ac667a44f11c1c31ab2f501392875753345a85085efa76e2976bb
+    role: context
+  - path: data/traits/morphology/lophotrichous.yaml
+    sha256: f6b56d212311530319c368741831ebfab91a96a63447a8afb0e8969c8b584066
+    role: context
+  - path: data/traits/morphology/magnetosome.yaml
+    sha256: 934ea1971ba4471c9c1c1da84dfe11a791955ab6583f4d2e4317a0b95505102c
+    role: context
+  - path: data/traits/morphology/microbial_haustorium_formation.yaml
+    sha256: eed2f55fec6bec70d27b370bab38016dbaf27b3f5f33f7845e74d6642de2a479
+    role: context
+  - path: data/traits/morphology/monotrichous.yaml
+    sha256: ac8bc6ba4c749b493755542f925140b177d9e4b8d963da6fdfaba97be115ce2e
+    role: context
+  - path: data/traits/morphology/motile.yaml
+    sha256: 69473c9ebbd067e4091e63e3058b627dcdd55f241ce3348da672deb64e612465
+    role: context
+  - path: data/traits/morphology/motility.yaml
+    sha256: 7286049368501afc606a7ddf1ec36fa3ac73dcb3213e7f72bdd94e89b7e71313
+    role: context
+  - path: data/traits/morphology/mycelial_growth.yaml
+    sha256: 1c7e82d2ea218ab2c1595343193f606d9fa1262f36b180b67616bc27f6192eb6
+    role: context
+  - path: data/traits/morphology/necridium_formation.yaml
+    sha256: 2f6a9d1ef83a6315da7833c85d37bae892b8d9d963708e02e5ff3a09161d5956
+    role: context
+  - path: data/traits/morphology/non_motile.yaml
+    sha256: 62bdf647d9897eafd8c2ac577b3910248c66056892ac69b0b516e52516349b89
+    role: context
+  - path: data/traits/morphology/non_spore_forming.yaml
+    sha256: 5384df1a84681d314257f07cbd9fbfed81846c97e0d11666427d57415d85102c
+    role: context
+  - path: data/traits/morphology/orange_pigmented.yaml
+    sha256: a28328e761a8fb35ca970f7a2a3c95dda5175046b6982c4a4d77fdaa92f73b15
+    role: context
+  - path: data/traits/morphology/oval_shaped.yaml
+    sha256: 8d5c8404e8e4dcd54305d85e8f64cbf588725b7f9b7b79dea274485a73d5b1de
+    role: context
+  - path: data/traits/morphology/ovoid_shaped.yaml
+    sha256: e2b9e97a150ad13ce7214a276141ebf5e096e24f1c8b3ff8e9dbcfa598e628a1
+    role: context
+  - path: data/traits/morphology/palmelloid_formation.yaml
+    sha256: 6fec9c7538d049e5301536724aa6ce611e41ebfcdd8d32a9155eeba384eefe1a
+    role: context
+  - path: data/traits/morphology/peritrichous.yaml
+    sha256: 3955664c8ba987e03275311e89f01b8627e8b76f74fcc5e170a794f842d94bc4
+    role: context
+  - path: data/traits/morphology/pigmentation.yaml
+    sha256: cf9a2b39e478a06e4c2683971f62079451067264691f065ea9bca58f6a74486d
+    role: context
+  - path: data/traits/morphology/pink_pigmented.yaml
+    sha256: c171a08dae166dcab700d75cfdc2ea3ad3dfad5fbf6d394c64a31d2a03db88be
+    role: context
+  - path: data/traits/morphology/pleomorphic_shaped.yaml
+    sha256: a831d22afaa49e4c2555001e119ce86bce45a64d5d0e269d8f88ec91749eb9fc
+    role: context
+  - path: data/traits/morphology/polar_flagellation.yaml
+    sha256: 97dbdc1a11601a7802102e1e731c1d8bdd09019561cb01f788b7ea8be4ad7782
+    role: context
+  - path: data/traits/morphology/polyhydroxyalkanoate_granule.yaml
+    sha256: d4b46d10c26ce349527ea0d1b5e856e1c3122f172556456bb3c0aa21bb7303df
+    role: context
+  - path: data/traits/morphology/polyphosphate_granule.yaml
+    sha256: 16059bb919c1ede84a50bb513b4ddf1623bd3fc9f18c25761af03ff41a1def51
+    role: context
+  - path: data/traits/morphology/polytrichous_flagellation.yaml
+    sha256: ce2a45b46c5cc16c11af5541685972dcf6a3ed185f2b1cd965a8786ba8c39ee8
+    role: context
+  - path: data/traits/morphology/prosthecate.yaml
+    sha256: e638fdc43f3d222f063d30f753e460f914105ef565980d536b7fdb0da6c77d2b
+    role: context
+  - path: data/traits/morphology/pseudohyphal_growth.yaml
+    sha256: 5c7b4655335f2b2b48992a15088c84882676cd284d5c0a93b94d34ade784fae9
+    role: context
+  - path: data/traits/morphology/red_pigmented.yaml
+    sha256: bc0bb8263625dab957a9bcff4a6f412700caaa10f1c0d1d65e8124fc36a6c1b2
+    role: context
+  - path: data/traits/morphology/ring_shaped.yaml
+    sha256: 4f45d66725da89fcd4a9a182a4afc069e430dca4a4f33f9fdce0b51ed6fb00a7
+    role: context
+  - path: data/traits/morphology/rod_shaped.yaml
+    sha256: f0909f175e24510b0becfe864bbf01eedf93e92a7d02df31fe27b1c74b8a41c7
+    role: context
+  - path: data/traits/morphology/rosette_cell_arrangement.yaml
+    sha256: 10f175831ec5b7fdc34bdefebec9611abac85617d68dc4f8cf50d4e8cbf137fa
+    role: context
+  - path: data/traits/morphology/s_layer.yaml
+    sha256: 5dc05d23c31e1b3247ac63b94b39527e1e2568fb21584380b79886eb89921284
+    role: context
+  - path: data/traits/morphology/sarcina_arrangement.yaml
+    sha256: 43376a1352ff66a800e534204ba593623307249f1c49271bc28eb6d3cbdf70d0
+    role: context
+  - path: data/traits/morphology/sphere_shaped.yaml
+    sha256: b612bc1e9bddbf43289d78f4858de5de2ad162dfba0baa8f5c51a95b53d6ef6c
+    role: context
+  - path: data/traits/morphology/spindle_shaped.yaml
+    sha256: 31b000d48c308b098436a284afd904297625639a8ee7846d7446c17ba9f2b2c3
+    role: context
+  - path: data/traits/morphology/spiral_shaped.yaml
+    sha256: 3951da3095de8e19b0d3472eb58bb12b1f43d96b1f3daf7cc2c3c526683022ed
+    role: context
+  - path: data/traits/morphology/spirochete_shaped.yaml
+    sha256: 256cd4fc35c002c502bdd9f6b6cf403c7362c9c44421f6de0acada5850e283ac
+    role: context
+  - path: data/traits/morphology/spore_forming.yaml
+    sha256: 9ef9283d75814aa3a351bce46a88f873fd4bb48572b9d72497b1f6cdaefbdc19
+    role: context
+  - path: data/traits/morphology/spore_shaped.yaml
+    sha256: 9c8ef4432b3c8c129a0795ef2024b9e653fb20b6d2020a6657ee6e606f0df913
+    role: context
+  - path: data/traits/morphology/sporulation.yaml
+    sha256: 6f9511fd98b434e4d9667d090e41d4d2147be6d04c5fd9753d306051c7d079de
+    role: context
+  - path: data/traits/morphology/square_shaped.yaml
+    sha256: 6f9e88c9f1c52d1a4b6e28bb6d5ac7b141256e9ed940fcc149276649ad9cf877
+    role: context
+  - path: data/traits/morphology/staphylococcus_arrangement.yaml
+    sha256: f0b8c6b2caeadd109a1df2b6d64b378e75c952be65a29648497fa108dbf928ed
+    role: context
+  - path: data/traits/morphology/star_shaped.yaml
+    sha256: 9361d877ac0340a93fac58488eba94220bacc89b9ca03a2a26c0da5e36b1fe8a
+    role: context
+  - path: data/traits/morphology/streptococcus_arrangement.yaml
+    sha256: aa01a84ad2b70610a80884e9ec711b44d7428674c149b946008f62309d0d5a4f
+    role: context
+  - path: data/traits/morphology/subpolar_flagellation.yaml
+    sha256: 9d4a684170334e88675880d205e2dc1875557a56f1aadf148c5ab9b0d0d29775
+    role: context
+  - path: data/traits/morphology/sulfur_globule.yaml
+    sha256: 06607210a6281d3efd6d39d19fcb7cc2e66fd3c6fc56e2d5a4b01be3d49fe087
+    role: context
+  - path: data/traits/morphology/swarming_motility.yaml
+    sha256: 08b751858460a58152dc799b6dc71d4e51739aed711b486e448d52e3e7a43fed
+    role: context
+  - path: data/traits/morphology/synnema_formation.yaml
+    sha256: bcfaf81a09385e32f2dccbef988598c4a9e48b7c0acf59fe39fcddfc2a933885
+    role: context
+  - path: data/traits/morphology/tailed_shaped.yaml
+    sha256: b3b6e3ace7234906b77028ed86217c980145ab4732736ab1e659569596b1c596
+    role: context
+  - path: data/traits/morphology/tetrad_arrangement.yaml
+    sha256: f0559a9e57e19133a4dfcb051222835b2406ff6fc80d51cc80b97a5f59395ab2
+    role: context
+  - path: data/traits/morphology/triangular_shaped.yaml
+    sha256: 6137c3da3a95004eb2e63018c66ac2050a7aa321888840ba03f0018ed4f17cfc
+    role: context
+  - path: data/traits/morphology/twitching_motility.yaml
+    sha256: c9f8b6796d14a81207c870319b4a46e53c4d2f56c9359e6e4e8caa5051ef19d1
+    role: context
+  - path: data/traits/morphology/type_iv_pilus.yaml
+    sha256: 49a17f1e5551d9308fca143a5c0c81cfed0f85587b20404383cfe73715984cba
+    role: context
+  - path: data/traits/morphology/vibrio_shaped.yaml
+    sha256: 2fab15498c06b57d946f92fd44e253c053faa6114693a8efe09c14bacecf7af1
+    role: context
+  - path: data/traits/morphology/white_pigmented.yaml
+    sha256: 1d5837be5a27cf18a95087c938130ce0f824d087145a4a13f0c8ec48c137124e
+    role: context
+  - path: data/traits/morphology/yellow_pigmented.yaml
+    sha256: 0199480534bfa7174118b19466c492557062b4c20051c3a844df0c34b6b3a964
+    role: context
+  - path: data/traits/observation/growth_nacl_observation.yaml
+    sha256: 0dc18f4f6298a6c0466d2ca6e968853818797d860d4974a150103c9fe03b8d24
+    role: context
+  - path: data/traits/observation/growth_oxygen_observation.yaml
+    sha256: a44f060d1f4873eb9fcde85f41d2295795132107153d936d78329fea63602ba4
+    role: context
+  - path: data/traits/observation/growth_ph_observation.yaml
+    sha256: eccbdaa5e859a7faf7db25c1e3ba51ad014bf4bb0239140454ad12a05c7ba0c5
+    role: context
+  - path: data/traits/observation/growth_temperature_observation.yaml
+    sha256: 723720f686e11734a1c2a1d695a3462bc22a524495719e86677ac3305a110d15
+    role: context
+  - path: data/traits/observation/nacl_delta_observation.yaml
+    sha256: d7e30e9f97234a853da98906d9ad4be2e69159c2592af812bf8eeba493a0c7d8
+    role: context
+  - path: data/traits/observation/nacl_observation.yaml
+    sha256: c56aa57150e28bcb74c87232c3cc4fc60bb88bb8313755e14ff9b2ce6e770562
+    role: context
+  - path: data/traits/observation/nacl_range_observation.yaml
+    sha256: 48b153e6ed10333f46cea6c9ee5edc5c4f34393f96b6f06995d6fb02a026d642
+    role: context
+  - path: data/traits/observation/optimum_nacl_observation.yaml
+    sha256: 6bb0c13bfe4da2e36cddf3df9ef111f0b1f14b3e5c79b3550453ce41cb6c99bc
+    role: context
+  - path: data/traits/observation/optimum_oxygen_observation.yaml
+    sha256: c6d8f17c61c472d02028f7de59ff26c7d9c9943711faf648495ab15b4dd2fc24
+    role: context
+  - path: data/traits/observation/optimum_ph_observation.yaml
+    sha256: b334582e26a21621895a19aae66f108c6b65baa0730ab37acfd22dfc0d74b38e
+    role: context
+  - path: data/traits/observation/optimum_temperature_observation.yaml
+    sha256: 74ec5ec967fe65065257eb77b6708045a66d493ad10d4f1eb4a7914ec9e0ae2e
+    role: context
+  - path: data/traits/observation/oxygen_delta_observation.yaml
+    sha256: 5d29ecd0decae61838a27b185fe4f46c3f8c522f71b1b90554978057fea3188d
+    role: context
+  - path: data/traits/observation/oxygen_observation.yaml
+    sha256: 0722c0bd217ab048c5ee9cb2c5600ea73a0f00997eb555be61bee40c9b07cc59
+    role: context
+  - path: data/traits/observation/oxygen_range_observation.yaml
+    sha256: 8ac192cdcb87cfebffade66f84e6a6a0ece4b2e7e0af1068f6bf9e45f91617da
+    role: context
+  - path: data/traits/observation/ph_delta_observation.yaml
+    sha256: 75be0e45a5c86c5574a77ec4701246f8642909c0631b71882fa89e94bf44cce3
+    role: context
+  - path: data/traits/observation/ph_observation.yaml
+    sha256: 1675530959aa396c4805fbdaa49960e236e4cb03d4a1e7ab4cb3bcba8f49fed3
+    role: context
+  - path: data/traits/observation/ph_range_observation.yaml
+    sha256: cb3f8748ea7147e404153522e8bb4098a984da28cbf036ecc9e4925a1bffd54b
+    role: context
+  - path: data/traits/observation/temperature_delta_observation.yaml
+    sha256: 043a2ce93daac078fd2169b63c25b0aa96836eead912141ba2fdfe59ce0c787d
+    role: context
+  - path: data/traits/observation/temperature_observation.yaml
+    sha256: aa011522499c2853588e98fdf54e24478a5fffe090c5baf659be68f4d0bb472a
+    role: context
+  - path: data/traits/observation/temperature_range_observation.yaml
+    sha256: 04d331b72bed1d33cd0b94aba8f6a9f33786801e545aaab4e753ffc55ffd2000
+    role: context
+  - path: data/traits/other/catalase_negative.yaml
+    sha256: a8ee228a8687c7c5de9581e5a1389dd0d78f23097186592a60af14417367405c
+    role: context
+  - path: data/traits/other/catalase_test.yaml
+    sha256: 170b809adf682d5fb3b82762ed7afe76d74d5511516e3aa61e8ba9a30b9cf588
+    role: context
+  - path: data/traits/other/circular_colony.yaml
+    sha256: 43c499d92c03ab150f51605ae4a95ec85660d4036d742d78be8cc99fc312d9bc
+    role: context
+  - path: data/traits/other/coagulase_negative.yaml
+    sha256: f80d4f8f045b11e931d85dad72b1c9097b195ae7cd170cd970993b7f3f7a05da
+    role: context
+  - path: data/traits/other/coagulase_positive.yaml
+    sha256: fd530e2e96617b6c863ad3866de6f7c7a383ebc6dcd53165e361a6a7435e0f57
+    role: context
+  - path: data/traits/other/colony_morphology.yaml
+    sha256: 814f63c1fdb8d38fe917c6c5a364319774ab6c099284033675ecb6b2a4ca5dde
+    role: context
+  - path: data/traits/other/colony_shape.yaml
+    sha256: 0e8ec60c62d1c2f047d94b63c11bb6aa41c9bf2be22f970397061aee814cf060
+    role: context
+  - path: data/traits/other/epibiont_phenotype.yaml
+    sha256: 1fecbbdd07dfb377a28d1a86814551c2c7b19766617c99293d59e263fb2c0f80
+    role: context
+  - path: data/traits/other/filamentous_colony.yaml
+    sha256: c92e096d904c094b9318814e34c028bf1feb2c8b6597b46439cfced782febda0
+    role: context
+  - path: data/traits/other/fried_egg_shaped_colony.yaml
+    sha256: b492580b6674f8761770d87dd0b2ec663ac940473414f38f9580c9f472e99624
+    role: context
+  - path: data/traits/other/generalist.yaml
+    sha256: 7adc2b3c26b45879c12f50289eb54e3549781b76b5b3506702120f71201eadcc
+    role: context
+  - path: data/traits/other/hemolysis.yaml
+    sha256: 265a4d37b1ca8da730ea3b6386cfcd2a4827cd22a08d404f75ac9dfc3fecf828
+    role: context
+  - path: data/traits/other/hemolytic.yaml
+    sha256: 8858b5da0341f2bb3e5c16ba869cc60b99807062536f1f32cc12f02a26bdb005
+    role: context
+  - path: data/traits/other/indole_test.yaml
+    sha256: e39404258872dd0bcd326f2887f0a25a5c1db11b60e2e9fada0f188882696cdb
+    role: context
+  - path: data/traits/other/indole_test_negative.yaml
+    sha256: 52afa540906ab93023c8d6ffdc5c9add6072784e1b8abcb29dd963834ba0d64f
+    role: context
+  - path: data/traits/other/indole_test_positive.yaml
+    sha256: a2c079a016630fd830863578b196e0d1d46129ad48f1cc15d31b37bc3257617a
+    role: context
+  - path: data/traits/other/irregular_colony.yaml
+    sha256: 4dfd1a5af192c4d39d79d17493d8794e1c71ff8ddc207be2899c89a615638d06
+    role: context
+  - path: data/traits/other/methyl_red_test.yaml
+    sha256: 8cd71269e30dc43ede751a36a37c31b5722c774e679a3181b7dab61ebd8aa471
+    role: context
+  - path: data/traits/other/methyl_red_test_negative.yaml
+    sha256: 80934d2b30203589cb36d6937ba6d5a6f227c006c64fd0218452e90fdccc5a3e
+    role: context
+  - path: data/traits/other/methyl_red_test_positive.yaml
+    sha256: d310b537dc31ac6d5c2459fcb33126d25de383893fae2674a93ad325988a3b45
+    role: context
+  - path: data/traits/other/non_hemolytic.yaml
+    sha256: 84be52a8edd4f6547090d684b2041ed822b583e538eb49bd7e3b529241311b9b
+    role: context
+  - path: data/traits/other/osmotic_tolerance.yaml
+    sha256: fdbc247b183c11c5ef92960ec8008131347e2758a13304b1ae7a494ed41e8914
+    role: context
+  - path: data/traits/other/oxidase_negative.yaml
+    sha256: 0d48ecde43f82fe45e954283c610f7af88b884a5a968bf0352c8f4fc70840f4c
+    role: context
+  - path: data/traits/other/oxidase_test.yaml
+    sha256: d0d4ea6afaf48d1390d25193e69afcc94936c751659494615ea6bb7bfe8dd243
+    role: context
+  - path: data/traits/other/punctiform_colony.yaml
+    sha256: c345b293a6a415d5f187af5c0810f0bae10a4b92b7096c5f97fa5ced0fe696d1
+    role: context
+  - path: data/traits/other/rhizoid_colony.yaml
+    sha256: f4c067f97ed870751b1237dc85a303793e2d55c331dd1eb0425a9de695da8762
+    role: context
+  - path: data/traits/other/specialist.yaml
+    sha256: 8dd83259894f610e66e8744c3c4d210b8a93c40edb304bd79265266ff7ecc1b7
+    role: context
+  - path: data/traits/other/urease_negative.yaml
+    sha256: 51c0948348defd6c735f316edaaddb4126731d8d19c058f385de3c1f3fffe32c
+    role: context
+  - path: data/traits/other/urease_test.yaml
+    sha256: 661068086adb56d6e0c70e122fefc2afe4eb7d91f596d9717fdab268d00f1b8e
+    role: context
+  - path: data/traits/other/voges_proskauer_test.yaml
+    sha256: 17271778e495a307147946393460336bcbe45d433548eb3c3d5f6ae35facb2e4
+    role: context
+  - path: data/traits/other/voges_proskauer_test_negative.yaml
+    sha256: bbf6557bae5e6fe5581873af873004a93ffa20761f45c5012cc9078c33306897
+    role: context
+  - path: data/traits/other/voges_proskauer_test_positive.yaml
+    sha256: e13160c888214dca714df5f5d0e7dc10f3fe0b3a9a955ad4ae75c21d76c4b317
+    role: context
+  - path: data/traits/physiology/acid_phosphatase_activity.yaml
+    sha256: 251a535ee6d18d20738240a35814433c7bbce6386a5bf4dd7ea56d5a63b45303
+    role: context
+  - path: data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml
+    sha256: 456e996a9c4365b5c088fc57fe4fcc61cb7ec2ba508668cc787cb9fdbb2d3c88
+    role: context
+  - path: data/traits/physiology/aerotaxis.yaml
+    sha256: 078da52149d300160661c6f0b0b313ae7ce86d532fac40cabb4cf892f328d2f3
+    role: context
+  - path: data/traits/physiology/aerotropism.yaml
+    sha256: d546f3ad49b5caacca4d61a11fa793397af9e3b7c7a993942543cb773fd7bb74
+    role: context
+  - path: data/traits/physiology/aggrephagy.yaml
+    sha256: 18b4b083891f667f33c361baaf2139d9675314d41ff058336411407a47e48033
+    role: context
+  - path: data/traits/physiology/alanine_arylamidase_activity.yaml
+    sha256: b2169f96ccf63747827f29242fc681740fa371a5af19c0ee8b9bdf8948a5e377
+    role: context
+  - path: data/traits/physiology/alkaline_phosphatase_activity.yaml
+    sha256: 50c8347e7d242c4e96905458a2c0dda13ec2968002f44d50b436150fed09c12b
+    role: context
+  - path: data/traits/physiology/alpha_chymotrypsin_activity.yaml
+    sha256: ff984823c749c6e3459e3e303ace2f9c92eeaa8de70aec761339eb8bb23f0c8a
+    role: context
+  - path: data/traits/physiology/alpha_fucosidase_activity.yaml
+    sha256: e742c4895cb31e72e7bcca6af5485e5bd46f492ae4c90861a5bd13b0a8de7557
+    role: context
+  - path: data/traits/physiology/alpha_galactosidase_activity.yaml
+    sha256: ee901dd425e38aa55dca4b5d75c93827b59ff5f5f758d8f6a0628ffed3eab1d1
+    role: context
+  - path: data/traits/physiology/alpha_glucosidase_activity.yaml
+    sha256: 5ff824cd5da4b6e7c9ea30f5f7824f5c4e17f9c672ad2c3eb66eca1e5fdd3d37
+    role: context
+  - path: data/traits/physiology/alpha_mannosidase_activity.yaml
+    sha256: 9ccc58dace1b206af2b39c1e35437fd03a346fbed14f448cc5d035954d9c3083
+    role: context
+  - path: data/traits/physiology/amylase_activity.yaml
+    sha256: a2367197cc79c1833ce9f92eac7e01efe320ceeced9149a4b7f8ce1527f87c4a
+    role: context
+  - path: data/traits/physiology/anisogamy.yaml
+    sha256: defbaac955abfdfb7cc9551376aba7fb91f63b4523d682a90cbc0f3535e860c0
+    role: context
+  - path: data/traits/physiology/antibiotic_resistance.yaml
+    sha256: 8956f2a9f32e70041b53e1484868871c80861691c708308819ffe653c98cd41b
+    role: context
+  - path: data/traits/physiology/arginine_arylamidase_activity.yaml
+    sha256: 67d3edf79948bd467baee19d594800e774a85200e6998ce86375a068ba48053d
+    role: context
+  - path: data/traits/physiology/arginine_dihydrolase_activity.yaml
+    sha256: 0a1486ba9f0afa2abe8f533fcfca14a9800b6306deb44fcbac4a90da4b51c57e
+    role: context
+  - path: data/traits/physiology/autogamy.yaml
+    sha256: 005639fd2f8e6dc3fe98854856e23d73a3563c5acc742d8cae7cfc9ad66781fd
+    role: context
+  - path: data/traits/physiology/automixis.yaml
+    sha256: 59d487d543fb9b726fe5bff4ff9909682dcd16a1aa2d3bd5ba72a4e4cdf69b50
+    role: context
+  - path: data/traits/physiology/autophagic_glycogen_degradation.yaml
+    sha256: 0765be60b2a08685fe873863b03fa33c060be0ebf2a489996bdc4fa2c0846625
+    role: context
+  - path: data/traits/physiology/autophagy.yaml
+    sha256: aa2ffeb553e2ad01f518db1c66865749655333966438919d5bbd76e800eaf549
+    role: context
+  - path: data/traits/physiology/autotrophic.yaml
+    sha256: 8e34b68ed459c66a249d6d20078d3b5edd4b498a47766a9c45d08f9ab93dbd8c
+    role: context
+  - path: data/traits/physiology/bacteriocin_production.yaml
+    sha256: 0bfc1b908cf5caf01d87f66ea6bf40077a47d00442c4d753cc8fc8ad3f03f2f1
+    role: context
+  - path: data/traits/physiology/ballistospore_discharge.yaml
+    sha256: b740913a744caf8a6dfc3215dc2b7f0fb739bca8b58f86af35a14907559fa2c1
+    role: context
+  - path: data/traits/physiology/beta_galactosidase_activity.yaml
+    sha256: 55c71b352fcffb616713b7e67fc97b7802994c704ec5be16fdd6ae3a0d0d2522
+    role: context
+  - path: data/traits/physiology/beta_glucosidase_activity.yaml
+    sha256: 6164fd6ed98fd56e1b7d935ec038beebd4473d3fe082626bda3a95ea77a941ca
+    role: context
+  - path: data/traits/physiology/beta_glucuronidase_activity.yaml
+    sha256: db9538210bea4ab1ef5e014de1e3c2a8e90b7abe0c98ac8051c5036ba390dfa3
+    role: context
+  - path: data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml
+    sha256: b4c11418d8b31b3df99f81793a09f89941184bab4c25e3aac573c13cdb7e22c5
+    role: context
+  - path: data/traits/physiology/bioluminescence.yaml
+    sha256: 0e8bbff3698f1e35bef7d6fc7548c3f454707bb302c0c8c7a8aeeac8d5fc2897
+    role: context
+  - path: data/traits/physiology/biomineralization.yaml
+    sha256: 63389ce52b522f73f9924008306bc51a9280f912bfde285db7955fd348d3d017
+    role: target
+  - path: data/traits/physiology/bipolar_mating_system.yaml
+    sha256: 5b1f4fbe2c501a517cf8928eb005baa2c0310b7437695f01ba1c00fe7e63123c
+    role: context
+  - path: data/traits/physiology/carboxydotrophic.yaml
+    sha256: b09349aa136927ebac55927aba9710d0b651e566e5ae7c40ff458b77b55410c9
+    role: context
+  - path: data/traits/physiology/carboxylesterase_activity.yaml
+    sha256: 31bdb583eb29f8042743c7beb8a42cdc279dcabddc4a754457a9ccec52b0281a
+    role: context
+  - path: data/traits/physiology/caseinase_activity.yaml
+    sha256: 4490467c0ef8fd18926d125592b1a4d7ed2ae73f4cdb4d209df015d1e0c77217
+    role: context
+  - path: data/traits/physiology/catalase_activity.yaml
+    sha256: 7721392a4851f8d82260d19faf96a415e137dbb0211701f9f14e2016c207db32
+    role: context
+  - path: data/traits/physiology/cellular_buoyancy.yaml
+    sha256: 9c8c66fe229374210777b7d57bb49f661d5a02ea7b56c1169f94d1d69853f6c3
+    role: context
+  - path: data/traits/physiology/chemoautolithotrophic.yaml
+    sha256: 0dbd9e11b4bf4e896641fa2f29a098e41243823d7361e96720a1415fc9c6de10
+    role: context
+  - path: data/traits/physiology/chemoautotrophic.yaml
+    sha256: 3963c38a26f014536b9f05676131df378c2e0878d66b46ffa19a5e1ac9c913e8
+    role: context
+  - path: data/traits/physiology/chemoheterotrophic.yaml
+    sha256: 87e425925b0addba600be5ab4a1f7157474951bfcc8b116283c9f034720b11b5
+    role: context
+  - path: data/traits/physiology/chemokinesis.yaml
+    sha256: 110a966976ff64ac4591ed245423f096be61d2a63b019dfd29c55965896560c0
+    role: context
+  - path: data/traits/physiology/chemolithoautotrophic.yaml
+    sha256: 05fb6585763ed12fed9d7bba5e4990a8271eada14519ee365cf289152a2d297e
+    role: context
+  - path: data/traits/physiology/chemolithoheterotrophic.yaml
+    sha256: 4cd5679b619e3904a39b44660a0e440fe29deacd4c50d944354ee0337b65ec58
+    role: context
+  - path: data/traits/physiology/chemolithotrophic.yaml
+    sha256: 7460783ca89f325f42d59dc99112db85143372359e77d0d95c92b0ad4d1b0274
+    role: context
+  - path: data/traits/physiology/chemoorganoheterotrophic.yaml
+    sha256: 12903629521614b5d201d243712f0dffb0bedcdcf7502ad275e88a6772fab9f3
+    role: context
+  - path: data/traits/physiology/chemoorganotrophic.yaml
+    sha256: a269225654ef32b9d9d62a3502f6c0967f0d13134ac90a8d86badc56de43dc44
+    role: context
+  - path: data/traits/physiology/chemotaxis.yaml
+    sha256: 6ed2ca3f066c8b6920f9534c20cdfb94a5a6a4ffcf54e4fa672eb5a68391824d
+    role: context
+  - path: data/traits/physiology/chemotrophic.yaml
+    sha256: 86e50378c96c3c40b6469f9c1c4b7237883a3051809e8381258b0013727c9f89
+    role: context
+  - path: data/traits/physiology/chemotropism.yaml
+    sha256: 55fd76a30b9ab37c2709b3e9bdae7b67d3a82394b6defb37c977f7e418278c55
+    role: context
+  - path: data/traits/physiology/coagulase_activity.yaml
+    sha256: 0702d06e5f94bfb7db4fe476fdeea9f1a7d37b5c259d2388104f3e40198b112c
+    role: context
+  - path: data/traits/physiology/coccolith_production.yaml
+    sha256: fefe6965ce48f82c93ba5ead98b797553397f10bc6848d056e26d628141eb390
+    role: target
+  - path: data/traits/physiology/cold_shock_response.yaml
+    sha256: 5e131592cffeb87cd2081b3c70a885c3a9d667a52c02cd82537691a1ca57be61
+    role: context
+  - path: data/traits/physiology/contact_dependent_outer_membrane_exchange.yaml
+    sha256: 21b7ee1c94c655f01a420dd348c3b7d3b6224485d77ecb59d95e733b843c6cf5
+    role: context
+  - path: data/traits/physiology/copiotrophic.yaml
+    sha256: eee97d46b470884bee759a04fa532185915fdd28b1e34552fd3d309afc3ce130
+    role: context
+  - path: data/traits/physiology/cystine_arylamidase_activity.yaml
+    sha256: b9c11e5e7dbb4ab65841f58c8991d4a9252afa480dee2b485a745c0f0e3b4deb
+    role: context
+  - path: data/traits/physiology/cytogamy.yaml
+    sha256: 4cda140d798f6404894db0528b2ebfad38960cf5c5a67867b9a862cbb87c34c8
+    role: context
+  - path: data/traits/physiology/dnase_activity.yaml
+    sha256: 840a0c41f2f6f3cb418c0af690c92eedf40c46db7f0f9ec0148c6d1ef74736f9
+    role: context
+  - path: data/traits/physiology/dormancy.yaml
+    sha256: 555f895de4b0de96b4f298d61720b359fcc41bdaf466fbc8c6b0e78c83c64c5d
+    role: context
+  - path: data/traits/physiology/durotaxis.yaml
+    sha256: 75f70834444bee54e52edc46950e4675d86dfc5aa13834585504601c4889c556
+    role: context
+  - path: data/traits/physiology/endocytosis.yaml
+    sha256: c7e4919a0034b286b4b5a19d1159ce1fc61ad60fa4ba0c348c598f4797103244
+    role: context
+  - path: data/traits/physiology/energy_taxis.yaml
+    sha256: 73851f74fa423ebc3ac173f57418f87fd8fc62a961c0f577ced22074a99d3869
+    role: context
+  - path: data/traits/physiology/er_phagy.yaml
+    sha256: eb4d35c8b13e79c916739e13a444c70bfb4bc146951c2c0b28bab3297854a840
+    role: context
+  - path: data/traits/physiology/exocytosis.yaml
+    sha256: 419001cc5f36f27946299f1ac88e532fdb83c0e0f2be2d3ccedb43e60fa41a6f
+    role: context
+  - path: data/traits/physiology/extracellular_membrane_vesicle_production.yaml
+    sha256: 92ca3c1690f09287dc914e597ada9d3d7ac70cc12f50fa52c2a8dd60c6bc12b2
+    role: context
+  - path: data/traits/physiology/galvanotaxis.yaml
+    sha256: b5a80876b6e6d6eae972b83fbc152fd4cc6ee616dabcc6a34bcb35c1743e4f20
+    role: context
+  - path: data/traits/physiology/galvanotropism.yaml
+    sha256: 5347a4d81ce6a3512bbb0cb724d9bf5afed115b5700656be9cdf3567cc38a7d5
+    role: context
+  - path: data/traits/physiology/gamma_glutamyltransferase_activity.yaml
+    sha256: 22d800aa1fd95cafebc7e16953521f7321f4dda7ac8deb6667c51f616af1e79d
+    role: context
+  - path: data/traits/physiology/gelatinase_activity.yaml
+    sha256: d8795c5e5eb3623135a1570acb2f2f2b48fa874a6f01730fa3c8f11838d68b67
+    role: context
+  - path: data/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.yaml
+    sha256: 2fffbafb42e06f669e04c26564a0d2f234465b857a52a9e37f466e20b8497ab6
+    role: context
+  - path: data/traits/physiology/glycine_arylamidase_activity.yaml
+    sha256: 69aac77a8be6ea33e9c6b459561d4915fb82edf77894fe25db0bf1cb80c5500e
+    role: context
+  - path: data/traits/physiology/gravikinesis.yaml
+    sha256: 434d86a3ec8490eb0b008b2b4d6fe24ec5e37e10aeced9b0f050eb1743c09795
+    role: context
+  - path: data/traits/physiology/gravitaxis.yaml
+    sha256: 7aca7807a1b5b8905ca3a50c947c89226eb193b946b20cfe98ba1737d5598efd
+    role: context
+  - path: data/traits/physiology/gravitropism.yaml
+    sha256: 5a054d6bf27794f3c4352b35c5e143901094fd789a37301e5a5c165cd7f31850
+    role: context
+  - path: data/traits/physiology/gyrotaxis.yaml
+    sha256: f407d4af4103a258d0ff8938196105ef9d1d145f3f836572c662733dc337b3e5
+    role: context
+  - path: data/traits/physiology/haptocyst_discharge.yaml
+    sha256: bb52b273be59f347628c18aebfbd4ce2a9811eeab9188dd1964a4646633b4e49
+    role: context
+  - path: data/traits/physiology/heat_shock_response.yaml
+    sha256: 61779b3752cfbc750611471851d6a4adb5d5e7c8c63ff12caf4ec9e57e3b69c8
+    role: context
+  - path: data/traits/physiology/heterokaryon_incompatibility.yaml
+    sha256: 9c2403272ed11b204568668cc9a77595da5c31a0d352f9c76e626a694b7ea3af
+    role: context
+  - path: data/traits/physiology/heterothallism.yaml
+    sha256: fc152f54a195e9634642623defbe0a940d17c7ba3816e9e694662e57113a8a6e
+    role: context
+  - path: data/traits/physiology/heterotrophic.yaml
+    sha256: a2f641e2a351187689ebaaac737e29b66ec4a6e7f497ffc9dad105f21e6e70c5
+    role: context
+  - path: data/traits/physiology/histidine_arylamidase_activity.yaml
+    sha256: cbf311cdebb3c4759a31e2eaf7a5e2888ea66e8b19a06db41776847fbea86c42
+    role: context
+  - path: data/traits/physiology/homeoviscous_adaptation.yaml
+    sha256: 0cdd365c80dcb001ae0c3d7c76f3d9a5947226ad22ae253b24a57cfc9e520ad2
+    role: context
+  - path: data/traits/physiology/homothallism.yaml
+    sha256: f1aecbb3bf8977f617f0ad31139e7eed7221f6c7dc488274775d1b58cabf6808
+    role: context
+  - path: data/traits/physiology/hydrogenotrophic.yaml
+    sha256: a839dc8c18d10795dfcc1620abcbfa109a85b6e2faf63f1ab79d4225c62b7e6e
+    role: context
+  - path: data/traits/physiology/hyphal_anastomosis.yaml
+    sha256: 549ed2e5048173053fc14cdc819e3753c85ed098055d49093fc46a3ad598d997
+    role: context
+  - path: data/traits/physiology/isogamy.yaml
+    sha256: 3456ffc8ee259aa30d3406d2770845be4f3137f1b9f5eebee92f74db3b60d968
+    role: context
+  - path: data/traits/physiology/karyoklepty.yaml
+    sha256: 117f62a3300097a6f49a7366d4d929bb0b45366b01a5d78ee861c240e7781d24
+    role: context
+  - path: data/traits/physiology/kinetocyst_discharge.yaml
+    sha256: 1c64bf19f9b8386a8d465bb374c1d171e6f4c81ef73fe77cc0d0b43d0b4b1683
+    role: context
+  - path: data/traits/physiology/kleptoplasty.yaml
+    sha256: b9c36f4801d962b7c2c1d5ef82529042ad6b3e080d2e346aaa187fbf0c2d5cbe
+    role: context
+  - path: data/traits/physiology/lecithinase_activity.yaml
+    sha256: 93a5226921002a88ea0a32b4416165acdae074a45470d333a5c73424dac8c165
+    role: context
+  - path: data/traits/physiology/leucine_arylamidase_activity.yaml
+    sha256: e05fed3abca3f598e85b2be649afaf0dd3d83b1787f2c5c0f538d11740e92cf8
+    role: context
+  - path: data/traits/physiology/leucyl_glycine_arylamidase_activity.yaml
+    sha256: 3ceee417dae8eb7f8a5f6a9f8a70ec148002ef65e1b78581b4d46cf9e514cd2d
+    role: context
+  - path: data/traits/physiology/lipase_activity.yaml
+    sha256: 71f5d6ce5d8f7df48eefeef137aef6c34adfcf79b08a73a8f2041c60516c50cc
+    role: context
+  - path: data/traits/physiology/lipophagy.yaml
+    sha256: f316b5afa031191a65fae011498dbe20dfbb7e9ea04025a21e12edf783ef112b
+    role: context
+  - path: data/traits/physiology/lithoautotrophic.yaml
+    sha256: e9d80a3af58f9a0683c9783af069b581ff119de5e822443631d2dd0d7834f83c
+    role: context
+  - path: data/traits/physiology/lithoheterotrophic.yaml
+    sha256: 9ae167922594835b67b9dea612789baf8d759233618bcb585b533d79d1066737
+    role: context
+  - path: data/traits/physiology/lithotrophic.yaml
+    sha256: 7dec83f3be65663ceff44f487bf90ed67c31435357a3cc56beb3ce10fd9acb16
+    role: context
+  - path: data/traits/physiology/lysine_decarboxylase_activity.yaml
+    sha256: 1483e8a5057903569cb206cd231e22880d95bfc175ed502af38aaaaf946b3105
+    role: context
+  - path: data/traits/physiology/macropinocytosis.yaml
+    sha256: a9d9b732bab38a666d99d50f50b7bc5056af17c0393d33d35636b1e1a7c753fa
+    role: context
+  - path: data/traits/physiology/magnetotaxis.yaml
+    sha256: 7b56fbdde4da97892102f63d621ec8e28da96e622bbb0c83bb1b16af81a5910e
+    role: context
+  - path: data/traits/physiology/mating_type_switching.yaml
+    sha256: 87a624a01cf324fdd11f70da926bfa7a4cd64a1d50318c85938650d2b55d0a73
+    role: context
+  - path: data/traits/physiology/methanotrophic.yaml
+    sha256: e260f33a208bf379f496975ab86030f6bfad2582f68a9fbab4b77c6ee0667d0d
+    role: context
+  - path: data/traits/physiology/methylotrophic.yaml
+    sha256: 9960b58efbaa69ce4c1a4e7d6d285f330d2792ecf5560f3f6d7badc42b238555
+    role: context
+  - path: data/traits/physiology/mitophagy.yaml
+    sha256: a06f9fe1dc8b47566b808b03fd45ddec9dddfb96ba9a0068763ceeff5995e0bb
+    role: context
+  - path: data/traits/physiology/mixotrophic.yaml
+    sha256: 548fe40353e1418db624fe6aa36fffff5643a2b37181f4cc240ecb812ccf0a49
+    role: context
+  - path: data/traits/physiology/mucocyst_discharge.yaml
+    sha256: cd864028799ee22581df4591b88c5142c753366ece6a8ee7aafad4d131e4b336
+    role: context
+  - path: data/traits/physiology/myzocytosis.yaml
+    sha256: f19a51c942d6a585ef44252829d84ff18d18fc95337b6264bfed9b44d31d2ef7
+    role: context
+  - path: data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml
+    sha256: 744b2c7a2b7bab5a03c3b134938af1a21612996367b9cb1a43519886513b7fe7
+    role: context
+  - path: data/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.yaml
+    sha256: 063edb66c52d5dd7cc0495012ab317bba644f2ed19bc7eb34915db32d424e58b
+    role: context
+  - path: data/traits/physiology/natural_competence.yaml
+    sha256: 772c83dc3be59a6ec2b6dbad97a94d3bf81759bf63ecab9a32ed2a7a170a6f4a
+    role: context
+  - path: data/traits/physiology/negative_autotropism.yaml
+    sha256: 8f39ae14c6be35e0002c38baf142e91071b1f6468f84b36d04a85de19f8cb601
+    role: context
+  - path: data/traits/physiology/nucleophagy.yaml
+    sha256: a51cece7b03ba7bb8588a840fd40dccaf00187770f6d528117cba8b8bc975439
+    role: context
+  - path: data/traits/physiology/nutrient_adaptation.yaml
+    sha256: 7a452667f6d12a9bb508aaf1b48aeab9a99e5e4b9f5c76e914ce745eaf3aaafc
+    role: context
+  - path: data/traits/physiology/oligotrophic.yaml
+    sha256: e958bf8f3e4fc18bfaf38f1f29c7a5949a1b0b521a63f5edab5ec0f60ec5f1be
+    role: context
+  - path: data/traits/physiology/oogamy.yaml
+    sha256: 8a3e909be4c765aa897f07f852ddb32eb1c8e0426073dd7a1fdcc2a77065cfcc
+    role: context
+  - path: data/traits/physiology/organoheterotrophic.yaml
+    sha256: 503a83e8c8fb1ce66c624c83489effac7d50cd5dd018c3149c401ccfe8420891
+    role: context
+  - path: data/traits/physiology/organotrophic.yaml
+    sha256: 4a60a71ade48591ef946095062e2755eceea1df8072e2d6c168d4db096f0825f
+    role: context
+  - path: data/traits/physiology/ornithine_decarboxylase_activity.yaml
+    sha256: 3921954abf5aeee763ff761c8483617314b4f970bb3e673e1b94ec0072c715d2
+    role: context
+  - path: data/traits/physiology/osmotaxis.yaml
+    sha256: cf343c5b697a07cb8ed8c55eb02a4103b544460a14a5ab79f24ee21416e9b238
+    role: context
+  - path: data/traits/physiology/oxidase_activity.yaml
+    sha256: 9c94622e022b67ba7bb02c7c4fdba8ac8bd3fa6f8a4697ab6c14545ed8c4fabe
+    role: context
+  - path: data/traits/physiology/oxidative_stress_response.yaml
+    sha256: 982a30cf6189d2312da8c5f72a88e95ef8aba9d20e05f8b2f81d235c761c84cf
+    role: context
+  - path: data/traits/physiology/paedogamy.yaml
+    sha256: 6e011b1512c4b30eb7e18546160b07226a789bcd3a31eb4b834baf7cc1d09423
+    role: context
+  - path: data/traits/physiology/pallium_feeding.yaml
+    sha256: b7f7ecca3a98e12f001b07c6221a9d63b2a223ed4d2b21a49f184889721f4721
+    role: context
+  - path: data/traits/physiology/parasexuality.yaml
+    sha256: de21f7f2940efdf2e7f86b362ab96b38d237a679895298a59df13a8ff278919a
+    role: context
+  - path: data/traits/physiology/persister_cell_formation.yaml
+    sha256: 757c1c7214848454937636f009194d9d66eda190ecca93e6d2b98fc27907f26d
+    role: context
+  - path: data/traits/physiology/pexophagy.yaml
+    sha256: 25e97eafd0bbf2a0170e624c3e7adb6bc7a4299b214432bfc0bc82d484fbcc87
+    role: context
+  - path: data/traits/physiology/ph_taxis.yaml
+    sha256: ada2442dbe3db8f753af22497cd354da92a341c2ce4c0dae370935e987f8b7bb
+    role: context
+  - path: data/traits/physiology/ph_tropism.yaml
+    sha256: d911e980a767fa3d88c6556aa697cd1024a47f79cb3197d72ae1b1efd57a1fb3
+    role: context
+  - path: data/traits/physiology/phagocytosis.yaml
+    sha256: 19415ea7604722000e5416d490f7924d12eb90f78f6df66ff1fdb2ed8bcc4c99
+    role: context
+  - path: data/traits/physiology/phagotrophy.yaml
+    sha256: b0a59b9889569ae3c57fe567668c43691ad7896640e5b59acc39c7b6bf66db4f
+    role: context
+  - path: data/traits/physiology/phenylalanine_arylamidase_activity.yaml
+    sha256: 052c95df20aea1ba5730ea7f671e1727ce489201f68252a30045f98ee7613a52
+    role: context
+  - path: data/traits/physiology/photoautotrophic.yaml
+    sha256: 16b9f09e1a4bd3f2168c6749bb0dfd7aba9b89ee888bca92515d86733437bb60
+    role: context
+  - path: data/traits/physiology/photoheterotrophic.yaml
+    sha256: 1eb497ffb523830e239a69afe44d469858a3ff8afdfafdc8ac02787bf73b85a3
+    role: context
+  - path: data/traits/physiology/photokinesis.yaml
+    sha256: c75fd43a6b84647ee8d97c07788eefa93e459b61f314f4982d41d8bcbeaf3e41
+    role: context
+  - path: data/traits/physiology/photolithoautotrophic.yaml
+    sha256: af95d5be50fd0cde26b2005cbd37cdeb7dcddb583a219189fe7942f0935073c2
+    role: context
+  - path: data/traits/physiology/photolithotrophic.yaml
+    sha256: aeb448f89b5e394d8c96dcfdbdd7fa976eeba8052886359c65fabe1746ea26ea
+    role: context
+  - path: data/traits/physiology/photoorganoheterotrophic.yaml
+    sha256: 247ceb2fd84c46273f97638141141a3e350712633e43c2529c573e0920209190
+    role: context
+  - path: data/traits/physiology/phototaxis.yaml
+    sha256: 9eb473356ec90119c209f016556b4eb971210802202268692f69cba002f51458
+    role: context
+  - path: data/traits/physiology/phototrophic.yaml
+    sha256: 6a6cacc5cad6e122f104e9898ccdd5eed0d956197035c2d8a4b5c7ce324dc1fc
+    role: context
+  - path: data/traits/physiology/phototropism.yaml
+    sha256: 4e8665bf7f989145d00831132aca90b7ecab35e0688a7ef608db1cb2fdba5c30
+    role: context
+  - path: data/traits/physiology/pinocytosis.yaml
+    sha256: 9ba8da9ddc81b1a1761ec193df59d9d0da0368700a62060007d9e460f87f68d6
+    role: context
+  - path: data/traits/physiology/positive_autotropism.yaml
+    sha256: af212add1359ab9b24c10a1b7866d10f51ee23963aaf16754a7c4726a2c09170
+    role: context
+  - path: data/traits/physiology/primary_homothallism.yaml
+    sha256: 8f98d265f7354a8ce1ca5348080036963f5e0a31146367c5aaad0d2220de7ace
+    role: context
+  - path: data/traits/physiology/prolyl_aminopeptidase_activity.yaml
+    sha256: ace1ced4b6e0ada19aaf7dfe6056124f84a8db89e1717f711afff97446baa8a8
+    role: context
+  - path: data/traits/physiology/proteaphagy.yaml
+    sha256: cc090c9321c747ef4b30b9198babd6b8e03a0f80ea7c8952f3483e95278bfdc9
+    role: context
+  - path: data/traits/physiology/pseudobipolar_mating_system.yaml
+    sha256: a167e3ee6663995c0dfb771df6419f3a586c8cf4e3d9121785e3255fcfce9a0c
+    role: context
+  - path: data/traits/physiology/pseudohomothallism.yaml
+    sha256: c0531b4036c59c7ce6b0780aaab1a71f8e9a8703dce94bba867d7c71ec6850a8
+    role: context
+  - path: data/traits/physiology/pyrazinamidase_activity.yaml
+    sha256: 8fae06a00aecbf265cbd4644eedf4a8dff9628e5bba4b6d5659d15c2d4e30ad0
+    role: context
+  - path: data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml
+    sha256: 3f34fdc117e1a282529fd8d5ebd9e2814b142d80a824c9944871114c19951100
+    role: context
+  - path: data/traits/physiology/quorum_sensing.yaml
+    sha256: 42f80b36e3d6493022a9b1424386d4015c556a33f51bc764c8facc5d9be8bdff
+    role: context
+  - path: data/traits/physiology/rapid_axopodial_contraction.yaml
+    sha256: d47b91ea8671908e5d740e0d0e30c4b42b9739ec48f25fefda38338a3ae30728
+    role: context
+  - path: data/traits/physiology/rheotaxis.yaml
+    sha256: cab4f28d4cd9e81be29ad852ace47064aaae5579fd1089451358db02c48bbf17
+    role: context
+  - path: data/traits/physiology/rheotropism.yaml
+    sha256: 00f44f4af4627914c97fc6bc20cea4b819171831f744dec614e66792d0d2fbd3
+    role: context
+  - path: data/traits/physiology/ribophagy.yaml
+    sha256: a891d3da5ade68c9b446205eb73d7efadbc3fbfc40a6baf7aa20bcfb048102a8
+    role: context
+  - path: data/traits/physiology/serine_arylamidase_activity.yaml
+    sha256: 5c5b23360b62089496c5ed854287af7d9f3f7268d8621198fb6adf8cdff61db8
+    role: context
+  - path: data/traits/physiology/siderophore_production.yaml
+    sha256: ed039a5696153b032170941bf0edf61989d8f72cfc65e40a7071d6a8cd432a87
+    role: context
+  - path: data/traits/physiology/siliceous_scale_production.yaml
+    sha256: b7a45853488a07e0c7372f1fa0987de606914dde1a43e267792fbef463f43c77
+    role: target
+  - path: data/traits/physiology/sos_response.yaml
+    sha256: 0a4f18289d61db084439951f81f4b8486201fb14a18c19cb3c3dbf3367b3f5b8
+    role: context
+  - path: data/traits/physiology/spore_germination.yaml
+    sha256: b614eb85872d7301bf8cac01d04ff4688047b379e0c2a97fc39af0cfad1e8cdf
+    role: context
+  - path: data/traits/physiology/stress_response.yaml
+    sha256: 893593024d19d52ac1174e02bafc5999f2e90a5e353dd26cd6b39f4e0ae43869
+    role: context
+  - path: data/traits/physiology/tetrapolar_mating_system.yaml
+    sha256: 44515040da7f3011d0fb5b587f0e794fb7fdb637a8394c40dd3328e32c654b57
+    role: context
+  - path: data/traits/physiology/thermotaxis.yaml
+    sha256: ec05ef17681845a69777b06a411f043942fd7693ce3049e0f9b25ee487b5977d
+    role: context
+  - path: data/traits/physiology/thigmotropism.yaml
+    sha256: 520870e0134895cd020b093ca0105c193d9f5810b79490ffc065e4878a0b6172
+    role: context
+  - path: data/traits/physiology/toxicyst_discharge.yaml
+    sha256: 8553dca5db86072e2f67dd98a6a9b62fdfa1f79867c86412bd633071d5969638
+    role: context
+  - path: data/traits/physiology/trichocyst_discharge.yaml
+    sha256: 28fa02e24da45affcf679d8e538978a2aec2c7cc02d31e8ac07bd551e85735ad
+    role: context
+  - path: data/traits/physiology/tripolar_mating_system.yaml
+    sha256: 9a59fd392498bd4654af4f9e8eeed61f67a22efb93412c277b8ddf826b6c7b54
+    role: context
+  - path: data/traits/physiology/trogocytosis.yaml
+    sha256: 4216391d2fa2e78d1e0231da46349ba760c7307822f28bf4b473105984ef818d
+    role: context
+  - path: data/traits/physiology/trophic_type.yaml
+    sha256: 3ab7f5c252d73b6c2418594b9ee019a23a8872a7e837f30668ab5278bd431822
+    role: context
+  - path: data/traits/physiology/trypsin_activity.yaml
+    sha256: f765f433804224fd2d20e72d95dc9806205b24dff5f4acff368e95a3f74e459b
+    role: context
+  - path: data/traits/physiology/tyrosine_arylamidase_activity.yaml
+    sha256: 2d6b86f593971371583c3f6b2e946d12993e43b376bf6e2c7c0d72e8404edfbc
+    role: context
+  - path: data/traits/physiology/unconventional_protein_secretion.yaml
+    sha256: ee6348af35e9e65717ef65f18c26514bb4a6b886608d8b5fdbda97f99c5ffc00
+    role: context
+  - path: data/traits/physiology/unisexual_reproduction.yaml
+    sha256: c81a642fbc9a5bccfe7fd3bfa2daa8fd4e4d229d4344b2db8958fa0511c7a317
+    role: context
+  - path: data/traits/physiology/urease_activity.yaml
+    sha256: 26e9f7213b4b52ff906f5cfc191f4b74c06a188e85eb7a23bdec8670db6f6787
+    role: context
+  - path: data/traits/physiology/valine_arylamidase_activity.yaml
+    sha256: 30432a644bb87a25d0ccafd4a0599fe938ed87b01654804a830cd74f9c365750
+    role: context
+  - path: data/traits/physiology/viable_but_nonculturable_state.yaml
+    sha256: 42d6af9aacd5bd697a2363ffbfd7f5f300ca9dea054416dde45c57815718112f
+    role: context
+  - path: data/traits/physiology/viscotaxis.yaml
+    sha256: 0c612901dffb6cb468180bf97e7cc891e31f723eb5aa55b65177837c86edd701
+    role: context
+  - path: data/traits/quantitative_property/has_maximum_observed_value.yaml
+    sha256: dce7a6f58e5ad11f88d2800d2dc6b4ec261f2e5a7d6f7179ddfd60878b48e456
+    role: context
+  - path: data/traits/quantitative_property/has_minimum_observed_value.yaml
+    sha256: e514f181bcc0484824d3f080367a64bbb161f8e04a39f73faad6307031192167
+    role: context
+  - path: data/traits/quantitative_property/has_observed_spot_value.yaml
+    sha256: dcbaa25988272078a39f0c592245c29c134537467d020109536f8d6204e6093c
+    role: context
+  - path: data/traits/quantitative_property/has_value.yaml
+    sha256: 19af535e04f3628b6f153c64595eb0c0f95d2160538caf19871cf224ed874dad
+    role: context
+  - path: data/traits/quantitative_property/has_value_comments.yaml
+    sha256: efb61e59ec2568a68b431e63c9bfd8c852aec40b42a47da76dc04b516ac4e0a7
+    role: context
+  - path: data/traits/quantitative_property/is_negative_data.yaml
+    sha256: dc5cc0f1c2262e49c8bae26a9a256b764438455afdb5a75bfde833c2cfb775f5
+    role: context
+  - path: data/traits/quantitative_property/observation_data_property.yaml
+    sha256: b7d6a2365a499b42aef7afc9c92cf951c58dd745b1887cc57ecc55fee64c29b1
+    role: context
+  - path: data/traits/upper/biological_process.yaml
+    sha256: 1cd0eec88f0d11c0fdfdbfb67b73ed32c781816fa1091d7629982e797aa4c2be
+    role: context
+  - path: data/traits/upper/chemical_entity.yaml
+    sha256: e683cab94ac572acf84b51b498f170bf2761a7bae7a0ab2f4ddda43866153bb1
+    role: context
+  - path: data/traits/upper/enzyme.yaml
+    sha256: 41519ed021c8c85f04f815fecc8b6ef3ad1110998704ae6a254eed8d36c643a8
+    role: context
+  - path: data/traits/upper/material_entity.yaml
+    sha256: 6c114247286bbfe64a3f8dd97dcd70f4363ef54adcc11c356530142a0e26686e
+    role: context
+  - path: data/traits/upper/microbe.yaml
+    sha256: e293dda2cd334eb0a6f383731cf5d2db5aa32d4e349c75846918fe87819fbd5e
+    role: context
+  - path: data/traits/upper/observation.yaml
+    sha256: 86a08f2afddef08edd1b2927c1581f9e3575afc4789033449eecae432c2074d4
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: data/traits/upper/quality.yaml
+    sha256: 16a6aca8b74ea96e3c889d10264328e240e1b63729715ba99a9131ef7009c66d
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 37e37e274e9e884245948242a2b18cee202579ca1f740a7e44a72e0b4817012c
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: f795a191e17978454a8bb80da91ed6873a9405a240e6e5758837dd9bdc3b5c07
+    role: context
+  - path: history/records/biomineralization/2026-10-10T080728Z-codex-a8dd97.yaml
+    sha256: 8ff588159cfe8945de5ed8425591ec8ab03056734fca186552863ad0c15de9c2
+    role: context
+  - path: history/records/coccolith_production/2026-10-10T080730Z-codex-144a31.yaml
+    sha256: 83f38517c4ac757cc0e0ef413baaf6292819a1dca70d7be04b9393089117f7b1
+    role: context
+  - path: history/records/siliceous_scale_production/2026-10-10T080731Z-codex-9d54aa.yaml
+    sha256: a766fb059fb0379ebe82c5d752cebd3a12f9f784366b2ca786fa3a192188273d
+    role: context
+  - path: justfile
+    sha256: e6047ea612115a6a78d100b281483ba824c860c3def59bcd0d40e7fb56b3526a
+    role: context
+  - path: pages/browse.html
+    sha256: 705a1f7fa9338860c7abd0c1b21795f788f6743632c952e8ecb90057a9996009
+    role: context
+  - path: pages/category/ecology.html
+    sha256: 510bf20e07b63c6241cc68850eca57f2590fcb3d9a90b0caf7498bdabdd47f9c
+    role: context
+  - path: pages/category/environment.html
+    sha256: c0d208774e8f98c18c6583e02c73def53af0015c24eab88f65ccb1c5036f4852
+    role: context
+  - path: pages/category/genomics.html
+    sha256: 6c16a2926565df0f852deb5c36aabb5bc1909b9b0212315f497a7a53ee85bf06
+    role: context
+  - path: pages/category/metabolism.html
+    sha256: 2418a7b757e10da6c26e52776510f0ed70cab0baf5fccd51f3850c784665ade0
+    role: context
+  - path: pages/category/morphology.html
+    sha256: e18ce6039ca56cf7bae667e5f1d313631391fb9723d8c888c856829d19816a3a
+    role: context
+  - path: pages/category/observation.html
+    sha256: cddb9d6af0578d1ebceec6889b4faec53a499c97c68471fce8ddc7c0f0841e57
+    role: context
+  - path: pages/category/other.html
+    sha256: 5cc804a5264ee2fcd5e731d45232dade429079a10bbbd25217d87b78fb5d4756
+    role: context
+  - path: pages/category/physiology.html
+    sha256: a82c1027007442706814e27744e8f134c5ab885ac9557fcf91329569f6ea1bbe
+    role: context
+  - path: pages/category/quantitative_property.html
+    sha256: dcfb5d8ff4154a7c66f946c377659950a7bf4de42f678602aca0edd7f3deb307
+    role: context
+  - path: pages/category/upper.html
+    sha256: 70af9fee6df1cf4204fad8ea9b1f28cd561bb82b96f5f73c72e8ffd058cd8ade
+    role: context
+  - path: pages/graph.html
+    sha256: 73f06bdaa8f4c61c9f5396da81d65d0f61bf0a40db315861fe9635dc94c535bc
+    role: context
+  - path: pages/index.html
+    sha256: 5710403b062a4a2621240f610ff757cd2f33025b3c8c1cef426004c26075af53
+    role: context
+  - path: pages/traits/ecology/animal_pathogen.html
+    sha256: 6c52e9c680c09b632072136cb4b49f1cf4e3f9b10e832f1f462ee1ca45e94e46
+    role: context
+  - path: pages/traits/ecology/bacterial_cannibalism.html
+    sha256: e4fd5ba40632d60ce8dcd3b815a9e157ddfd7aa9ea29fb5dc0b4b46265548402
+    role: context
+  - path: pages/traits/ecology/biofilm_formation.html
+    sha256: 585122bb8a12b5d30f5ac6ddec779748bb1ed41ffea70fce4a9b87f6a1e6eec1
+    role: context
+  - path: pages/traits/ecology/biosafety_level.html
+    sha256: a0186cb667ef2ded2e6faca4c0a70c7c16419fddad692359364da7f5a34b99bc
+    role: context
+  - path: pages/traits/ecology/biosafety_level_1.html
+    sha256: e7194f22d2e23cdcab99c7782c778ce160129dc3c3f9bdf49a5835c0aaf21c57
+    role: context
+  - path: pages/traits/ecology/biosafety_level_2.html
+    sha256: ed3c6c21218912519b96d5ab1ba0344f700548102905b3f976abc446e7ec5c91
+    role: context
+  - path: pages/traits/ecology/biosafety_level_3.html
+    sha256: 5953b71975523ac71f4aa5c9f2eaec01528f856734da4a40960b2e69a8ab0260
+    role: context
+  - path: pages/traits/ecology/biosafety_level_4.html
+    sha256: cf18948c65c41b36591c5668218864cdecb0de360c71388725ec915a4d162031
+    role: context
+  - path: pages/traits/ecology/biosafety_level_5.html
+    sha256: c4ec3dddee2e571447f8958417cf45189fec626df518368dd337031cdf857944
+    role: context
+  - path: pages/traits/ecology/commensalism.html
+    sha256: e92961ec3496d15a51bed3d777bd4016aa0bd9393d3d0e059c9f7300ed40642b
+    role: context
+  - path: pages/traits/ecology/endophytic.html
+    sha256: 82e882e738b2b8a63586df8e416ad3d94f4766d6ebe11e64a0b28a296032ec4e
+    role: context
+  - path: pages/traits/ecology/endosymbiosis.html
+    sha256: 06c5cd5f6423ade46cc1d224c4e358da42ee01d4b5801bf386533ead4cbf59a9
+    role: context
+  - path: pages/traits/ecology/epiphytic.html
+    sha256: a9601055b3510abb7f46f175124e97b3d94e166cf0f20c82bf513a58d2f9389e
+    role: context
+  - path: pages/traits/ecology/free_living.html
+    sha256: 33ade1404c69e219261674a1e5c7e0822dc1cd0df1a2026cf5bc4d24022b9ab7
+    role: context
+  - path: pages/traits/ecology/gut_associated.html
+    sha256: 0b6ba0c6fa904cd4817d2878da36b4cea7f15e3afffb41db2b063183b3d748fd
+    role: context
+  - path: pages/traits/ecology/habitat_association.html
+    sha256: 6f97d19bf1b6354eff30d4a4dabeb3289a42abd3315929d342ae1ecaf6b79f63
+    role: context
+  - path: pages/traits/ecology/host_associated.html
+    sha256: 45288f58df93be4302538de009c0ee3d216c227e52c305b1ab7b0920436de371
+    role: context
+  - path: pages/traits/ecology/human_pathogen.html
+    sha256: 39c05bbc2f3f70d75f7df4e53a9bc33424e3b1c2f98283d1077ab380ff02d124
+    role: context
+  - path: pages/traits/ecology/mutualism.html
+    sha256: ca61d0101dd68fc7c55ff307af6687d48651aeb41dbcc8e9c5fa92a646d83725
+    role: context
+  - path: pages/traits/ecology/nitrogen_fixing_symbiosis.html
+    sha256: f27a2eb21bdab97a5ff5e5a8ddac0227c3159c4a34d4e28c1135fcefb44876bc
+    role: context
+  - path: pages/traits/ecology/opportunistic_pathogen.html
+    sha256: e594c3f514561d27ce383edb11833e4722533b868b49eecfdc536024665d8fe4
+    role: context
+  - path: pages/traits/ecology/parasitism.html
+    sha256: 9d256fb5eaefc3a52567a6588ec890dd5995970dc3a689e642eaf3bc60491b1f
+    role: context
+  - path: pages/traits/ecology/pathogenic_to_host.html
+    sha256: c70ac3d88c325ea3deb13ff39640560fd857a434d36dfd109552967c3915824e
+    role: context
+  - path: pages/traits/ecology/plant_pathogen.html
+    sha256: 26fde5cc44d96288a620b340d7b4485e3574ff084cd62ffe85ebbaf7b64b0867
+    role: context
+  - path: pages/traits/ecology/predatory_bacterium.html
+    sha256: 87f45c59f3725fd853b25d5a8f29fdf42d2941ed395b3cca97ec69e30378845f
+    role: context
+  - path: pages/traits/ecology/rhizosphere_association.html
+    sha256: 579247a7650bb4aa96e1f32a7271b2fb52986c4e16960b7bba8ca551af46fb3c
+    role: context
+  - path: pages/traits/ecology/saprotrophy.html
+    sha256: d7ad40c86ecd6b415b92f7c461d5479ba7e8986e63a562f4cb9b43eb567bbd88
+    role: context
+  - path: pages/traits/ecology/soil_dwelling.html
+    sha256: 23ccc2eed0df512a4f052c140e35edb7d5d6adc54fa44dd996013c1ca6b1ec4e
+    role: context
+  - path: pages/traits/ecology/symbiosis.html
+    sha256: 51b2accb2810da5b98c752b8bfd7d7fd2db294c9dd37438de6a5c527ac491deb
+    role: context
+  - path: pages/traits/environment/acidophilic.html
+    sha256: 2bbeb361c953ffe2a3d4a0d4a8a343d84956fdad8a4aceded15a36cbd270f3fb
+    role: context
+  - path: pages/traits/environment/acidotolerant.html
+    sha256: f92877a6cd0adb1aad44ef6c703e947be37994c606ae053fd918a83ce2aa5a32
+    role: context
+  - path: pages/traits/environment/aerobic.html
+    sha256: bc112523625be87e080f63a7d2f8d7c498e0759c149daecf1440b0f8ef4093a1
+    role: context
+  - path: pages/traits/environment/aerotolerant.html
+    sha256: 9a70b1e358c3560ce59bb2c5eb9589dc3004335092844eb4ee797d9db26ae269
+    role: context
+  - path: pages/traits/environment/alkalotolerant.html
+    sha256: 98e9858810619950f81f82924a6994a5350e0334bcb318ff04d1c4857c18ac65
+    role: context
+  - path: pages/traits/environment/alkaphilic.html
+    sha256: 1cd9964706ae64c0361f738a1a3daaa1f8d362b2a3914afe65b805eaf97b8f40
+    role: context
+  - path: pages/traits/environment/anaerobic.html
+    sha256: e03698201134889d75d807da799f7f0e8abf90249f244c5f4ab393473d6062c0
+    role: context
+  - path: pages/traits/environment/arsenic_tolerant.html
+    sha256: 7deb5cb5a77413e0df3a2e90c35e3484acbb037ef79caceeb1d6b70366cfe654
+    role: context
+  - path: pages/traits/environment/cadmium_tolerant.html
+    sha256: c53e7f44e3be4d2487eea0966742bcade96aadde0038c7a54977f80365ac9606
+    role: context
+  - path: pages/traits/environment/capnophilic.html
+    sha256: fc789429da0a973d13c215559850d0f4af76799ae7f93a1f4c21e8d027f31cda
+    role: context
+  - path: pages/traits/environment/cobalt_tolerant.html
+    sha256: 485b1d5fc0b3ea7b64f0a602789b28c0b1b30b31f8da795ddcc7ec0be798533d
+    role: context
+  - path: pages/traits/environment/copper_tolerant.html
+    sha256: 723db5b98c503f5f1924ac83dcf7bb492729d7f2e5e2d6962eca85bcf26ae73e
+    role: context
+  - path: pages/traits/environment/delta_phenotype_with_numerical_limits.html
+    sha256: 8e474f3e8dccb7596b039fe5b4b1400637cdabc705b5d1bb2dff44b11f9cad60
+    role: context
+  - path: pages/traits/environment/desiccation_tolerant.html
+    sha256: e8eac2372e0a1dc8c7350bb03a4b0f96fad53d0e83d167edf51ecfc5a7521709
+    role: context
+  - path: pages/traits/environment/euryhaline.html
+    sha256: cfff19c659d296f360d95f595b8f5900026d8d4f0e3c00d91a511f65e6d9548f
+    role: context
+  - path: pages/traits/environment/extreme_hyperthermophilic.html
+    sha256: 68712c4a1e2e6a012eed9ad7cad0e72e85522b0c6c0b134082929d5fb6e06ddc
+    role: context
+  - path: pages/traits/environment/extremely_halophilic.html
+    sha256: 373301b2df4901e7fdf5872cdb209f7d29f6f8f661219e2cf4d0d64f2cb98cc3
+    role: context
+  - path: pages/traits/environment/facultative_oxygen_preference.html
+    sha256: 14e25eca7f6f695146a8ed1673f21e2e68739181de1a86fc502d99ae8758f219
+    role: context
+  - path: pages/traits/environment/facultative_psychrophilic.html
+    sha256: ce8e90b66935ecb76f474df39523c35140f60781f68e8fb4a8155307a790ea0d
+    role: context
+  - path: pages/traits/environment/facultatively_acidophilic.html
+    sha256: 19dee0eb3136a1d10025f7db23454bc35d722dac3c320bb8ca3e666d912ead88
+    role: context
+  - path: pages/traits/environment/facultatively_aerobic.html
+    sha256: 0db581fd12717d9586070fedb95f4fd2fbcf2872b9e41e3c109b02f727dcdcd2
+    role: context
+  - path: pages/traits/environment/facultatively_alkaphilic.html
+    sha256: 3a0ba4d5ae9e7aab8da2564bd5ef1eb323daf948b47744ad7ef150756c16f6d5
+    role: context
+  - path: pages/traits/environment/facultatively_anaerobic.html
+    sha256: 24b11871c457de2bb0336116d8a00dc9f6f7a296aeea3ee9195d08ff3d8a3f08
+    role: context
+  - path: pages/traits/environment/growth_range_phenotype_with_numerical_limits.html
+    sha256: 454029c7e4aee71928d16ff831189d362ef5638be048e6569a6321762acdc98c
+    role: context
+  - path: pages/traits/environment/haloalkaliphilic.html
+    sha256: b217520357f9ae55c9e29e014dc79e4263a4e3c9bdaa96771d83a02483f8e1fd
+    role: context
+  - path: pages/traits/environment/halophilic.html
+    sha256: 040a320eafe0fa9628dafbfdbc8c9fafe2be16cb5feb5a140f83426a177becaa
+    role: context
+  - path: pages/traits/environment/halophily_preference.html
+    sha256: fa034a1a3b2a16e05014518b17b097291eecabfa1fbe7d7cfd50e28dbe20dd29
+    role: context
+  - path: pages/traits/environment/halotolerant.html
+    sha256: 8f056d917f75747df52e64e2394406ff8a307fa7cf7fd136d668bcf65360a59a
+    role: context
+  - path: pages/traits/environment/hyperthermophilic.html
+    sha256: 935ba7f7ee60706c2f77d3cae84d98ed8d143dd5e14eef38b65a32f18067c3a0
+    role: context
+  - path: pages/traits/environment/ionizing_radiation_tolerant.html
+    sha256: 7dd24e4be2ee174d5001b7dadc864499ec0f7c729e361a4f3da9102832152a18
+    role: context
+  - path: pages/traits/environment/mercury_tolerant.html
+    sha256: 29bbd26ee3ffebd6fb87b3d821551dc82ced71c6b700deeca7d9c7a6e5615268
+    role: context
+  - path: pages/traits/environment/mesophilic.html
+    sha256: d3b6bb523cee473eac6b756065ecc7bd83e764e40fe56d42ca4cb6dcfd278fc7
+    role: context
+  - path: pages/traits/environment/metal_tolerant.html
+    sha256: f3cad6047b34d89fe541fe6581abcc258da8f2454a4a50f33c406d5358c01ae2
+    role: context
+  - path: pages/traits/environment/microaerophilic.html
+    sha256: 731de504b75df7e1ea4fbe78361347589352613ae181fe7d3634793f3ed5d740
+    role: context
+  - path: pages/traits/environment/microaerotolerant.html
+    sha256: 9b49dc95fc49ccea6dbe2c28b26d43cfc2c274df45a2aa994d416b7f663a89ce
+    role: context
+  - path: pages/traits/environment/moderately_halophilic.html
+    sha256: 9ccd3e0a1b69e8d4fa82a49be497921a2fb804821285a4e34281a217492298d2
+    role: context
+  - path: pages/traits/environment/nacl_delta.html
+    sha256: 5931ba6ecccf568222a4a5226fd95219d212a157dcfccecfb3b507250faa8029
+    role: context
+  - path: pages/traits/environment/nacl_delta_high.html
+    sha256: 29bce801f7e5fccdf5058302d270d8fc5a50447be800cb6b74b12cd58d608701
+    role: context
+  - path: pages/traits/environment/nacl_delta_low.html
+    sha256: 06d163f7a95108f9d91d7cf0ff354e8ec6edd667f4da0cb1851e161c40f3f544
+    role: context
+  - path: pages/traits/environment/nacl_delta_mid1.html
+    sha256: 18c87f9e749bf0919586db34abbe15dbb64efd155e287a43b45e981be6203ec3
+    role: context
+  - path: pages/traits/environment/nacl_delta_mid2.html
+    sha256: dc5eca837430296051d7d5d1e6a160a8b15729474cf9cdd3178b682fc22562d9
+    role: context
+  - path: pages/traits/environment/nacl_optimum.html
+    sha256: a954e56baca5dad96e767e332df54e1f4eb390700d8d3dccd697ffa5f513b01a
+    role: context
+  - path: pages/traits/environment/nacl_optimum_high.html
+    sha256: bcdcf93894b088b0a9b94dc085b3010de2add0f44c5e0dfb32589b467ca5496c
+    role: context
+  - path: pages/traits/environment/nacl_optimum_low.html
+    sha256: 715a53fd72a4ca128260497f1fe3cc0d30d966bdce589d50de3d86a50c98c416
+    role: context
+  - path: pages/traits/environment/nacl_optimum_mid1.html
+    sha256: 41a0fcd1dde2064d3274efee86472d5348d89bb06db6c2b91320c3e933a67693
+    role: context
+  - path: pages/traits/environment/nacl_optimum_mid2.html
+    sha256: 634a35fae5a8af86bfb4e6e6a6394e9384139f52dd7e526d60833d01d461609b
+    role: context
+  - path: pages/traits/environment/nacl_range.html
+    sha256: 0334ad826838e20015de21a8e87e05d20fdaca7a47501cf536ed6d8425cee6d8
+    role: context
+  - path: pages/traits/environment/nacl_range_high.html
+    sha256: 42a5b92e3b545642fda4bc132002fd59ebb29c6d03934bc459ecfd4a4600c499
+    role: context
+  - path: pages/traits/environment/nacl_range_low.html
+    sha256: eb4878283f225c0525ea59eef7fd90e8a44eaf3d11385311d2c583bc027aaf1f
+    role: context
+  - path: pages/traits/environment/nacl_range_mid1.html
+    sha256: beeaa4a5950cceb87b49d82dd4334328f4590c54964c0d4fbeff4d070c187531
+    role: context
+  - path: pages/traits/environment/nacl_range_mid2.html
+    sha256: 15e4639ef71219e95fce4836d15e8ccd19525afdb517b791716c86e6cf4b5b6b
+    role: context
+  - path: pages/traits/environment/neutrophilic.html
+    sha256: 5eff51a3dfd0ea024338dbfdbce829d17627612baf15c83a5e9cdd5704839e2f
+    role: context
+  - path: pages/traits/environment/non_halophilic.html
+    sha256: 6c86d8d5817d339d03d29c928c927d9891cfd23c0128fc371ea1d5a60fbdabfc
+    role: context
+  - path: pages/traits/environment/obligately_acidophilic.html
+    sha256: d8f540f0fe27329e3f9494e8af358414016bd06883d0cb9d29aa8ef76675c793
+    role: context
+  - path: pages/traits/environment/obligately_aerobic.html
+    sha256: 0867f19b6f6da00a2005b961ac8301a0420e07ba19f6935ef924fa5720f2bba4
+    role: context
+  - path: pages/traits/environment/obligately_alkaphilic.html
+    sha256: d2a8e2bd194be8f992332db0ae7984cd67cfa4448e32cd6f93b28c8af754f51a
+    role: context
+  - path: pages/traits/environment/obligately_anaerobic.html
+    sha256: e83d7d8719cb8e897631358d5e79c1b6d7241b9bd4fa1f1936176cbfcc266794
+    role: context
+  - path: pages/traits/environment/obligately_piezophilic.html
+    sha256: 5ab06aaaf7c58ff607ab25f94166703b8cee8af8b56eb12b4395087f16dc89bc
+    role: context
+  - path: pages/traits/environment/optimum_phenotype_with_numerical_limits.html
+    sha256: 0c9d0f92f9cff4ea43c7cbe6ebbd5414be924139fc6775071d3b2205474c7f49
+    role: context
+  - path: pages/traits/environment/oxygen_preference.html
+    sha256: 035d21f4b198a9256de940d60e8b8246d9e1265b1815fecc7558d99a4c18ecf6
+    role: context
+  - path: pages/traits/environment/ph_delta.html
+    sha256: 461da90c4dcd036dfb2b860472e37a4fe086b7ae26e3b4a1d91ece220339b7d8
+    role: context
+  - path: pages/traits/environment/ph_delta_high.html
+    sha256: 0c2453fe4fcd37f884fb30cec69de9ac1e74b8849afeb7b80facfcf037f93904
+    role: context
+  - path: pages/traits/environment/ph_delta_low.html
+    sha256: 04fb8e92a0683c8157d78a062d0c104525e09cbf757fc347807a4ec199c1911e
+    role: context
+  - path: pages/traits/environment/ph_delta_mid1.html
+    sha256: bd62819d33be294a4eebd00d4e669bcfd58d7c3abafd7399a0a377e632d6cf99
+    role: context
+  - path: pages/traits/environment/ph_delta_mid2.html
+    sha256: a4162678a02082d43d35f71474d39e94e7dfaf792deafe8dbba0c14f0715f1c4
+    role: context
+  - path: pages/traits/environment/ph_delta_mid3.html
+    sha256: f768d74e40bc36368c8255667c938357dc5db63c67db8c4e9223cba6fa56fb4a
+    role: context
+  - path: pages/traits/environment/ph_delta_very_low.html
+    sha256: f249d8aba64d809e0c9fb9cefab9b33497c844785f5bc9d18483181b05fa8e23
+    role: context
+  - path: pages/traits/environment/ph_growth_preference.html
+    sha256: 9f5760d1a22b007bf41a5d19e916c70d89b16a2a6324702696e9f57864d5c24b
+    role: context
+  - path: pages/traits/environment/ph_optimum.html
+    sha256: b64d68861ffa83c74db5cc14e0fcdddc185b3cd69c561131581f9314a838b63c
+    role: context
+  - path: pages/traits/environment/ph_optimum_high.html
+    sha256: a225fcbd82ea33aff3a72f91996c767dfa6e2fa8f6be334a42d2718dce146da6
+    role: context
+  - path: pages/traits/environment/ph_optimum_low.html
+    sha256: 8a1a79a1ca67fdc2069f199e469a72019d32b5a2f6e2e2d3c0117ed0de01c41e
+    role: context
+  - path: pages/traits/environment/ph_optimum_mid1.html
+    sha256: c275816454277610c96fa28e57f39dc153f8b128264b16742a9eecf1911b5a7a
+    role: context
+  - path: pages/traits/environment/ph_optimum_mid2.html
+    sha256: 8d6173ec65b699e3941cd3d821ce555a26d202a3d0a737e3bc5dab9522a9d989
+    role: context
+  - path: pages/traits/environment/ph_phenotype_with_numerical_limits.html
+    sha256: c6fc2e1b2eab79dfa147aac08d53770111f7559e5ea2d8617d6e2f6409a7c435
+    role: context
+  - path: pages/traits/environment/ph_range.html
+    sha256: eb21515be8261da33c53e2eaff636ea27b80743b98449ff699147982cf083dcb
+    role: context
+  - path: pages/traits/environment/ph_range_high.html
+    sha256: bfa3c8f586a45e11e4d1d66a90a6ccfbaab8ba78af81d82e32f299aa900d5c5f
+    role: context
+  - path: pages/traits/environment/ph_range_low.html
+    sha256: 532b1eb61e803246ac630c2f32d7ea447835c3aa91ebabf6265ad14f7d540c15
+    role: context
+  - path: pages/traits/environment/ph_range_mid1.html
+    sha256: 4078b4b4e1426e99317eb53b9cf1d25ee499d3281e82e240a1a4af564f837ae8
+    role: context
+  - path: pages/traits/environment/ph_range_mid2.html
+    sha256: 724abd4eaa2dbe0791f4a02a0fb9dd096c4f53aea693bfd15eca48f7144756f1
+    role: context
+  - path: pages/traits/environment/ph_range_mid3.html
+    sha256: 904352277d97b28271e2c21224e8ef81389053a49893653907e891096c9c3047
+    role: context
+  - path: pages/traits/environment/ph_range_very_low.html
+    sha256: 7b4b72c01c7203d22fb85b2aa41b0e76ce78dbf3c3eb83d597f8890d9961719b
+    role: context
+  - path: pages/traits/environment/piezophilic.html
+    sha256: a3f619c106fd914fc4a9f07c4845a5f75be8b4adea130e95121326ee669c765f
+    role: context
+  - path: pages/traits/environment/piezotolerant.html
+    sha256: e697da6fcde34ad8e433c1b961b59a558f188f1e573d7328ab1fd4a8645987b7
+    role: context
+  - path: pages/traits/environment/pressure_delta.html
+    sha256: 42942de2d7db2d6fc794bce0780590a016c8c440b0d15764a8e78dee43b44b63
+    role: context
+  - path: pages/traits/environment/pressure_optimum.html
+    sha256: cb5de31562b86077352adfcd7c97d75cd88d6c6c1704ae8c779ae264142b3fbd
+    role: context
+  - path: pages/traits/environment/pressure_range.html
+    sha256: d59da08e07b8a1b68ded3789bdf450e16aecc5c4608fb193f60f5edb6f5e6637
+    role: context
+  - path: pages/traits/environment/psychrophilic.html
+    sha256: 6e3938aec81060ef2f37f03049033e58e329e94f394c3c2ce281e67a2c15424b
+    role: context
+  - path: pages/traits/environment/psychrotolerant.html
+    sha256: d0032e108717a5e3f9212d78779f6f4869e727befb94af29e1ca4a850e82734d
+    role: context
+  - path: pages/traits/environment/radiotolerant.html
+    sha256: 98095633a0debd85e470bd2f7398726863e058f17f7c628cd01d5ae297f919a7
+    role: context
+  - path: pages/traits/environment/salinity_phenotype_with_numerical_limits.html
+    sha256: aed7bd805bbe3ab1d44bea0750a51f10c2995bd16bf25a56a17b3253bc440feb
+    role: context
+  - path: pages/traits/environment/slightly_halophilic.html
+    sha256: b212a36a2954dc0d2284b5a8c9ddef052bc0add18ea1eecceae83d8aed603376
+    role: context
+  - path: pages/traits/environment/stenohaline.html
+    sha256: 8156ac4afde9a0b5a2203c61889f94eaf8d22ba4eebdfe89eff3c9e2b2ac8a95
+    role: context
+  - path: pages/traits/environment/strictly_anaerobic.html
+    sha256: 81e2b1a9188711ffff152aae4475d00fa89196306c10b3ca5dc4a3349772e59e
+    role: context
+  - path: pages/traits/environment/temperature_delta.html
+    sha256: ce3e06f13105500366d04083cf5a5f08ed93aae6ae5acbd6cd97de38595c597f
+    role: context
+  - path: pages/traits/environment/temperature_delta_high.html
+    sha256: 4522e33d8202157d6f9821416107a0d780392b39113c550782bcd8e023f633a7
+    role: context
+  - path: pages/traits/environment/temperature_delta_low.html
+    sha256: db4906ce2c400d74836cd01e6d6ad1b4fa4cd5da18e5d352daedb955e0c09c40
+    role: context
+  - path: pages/traits/environment/temperature_delta_mid1.html
+    sha256: 9858f5ca2f29f4da64623f2aa57987ad20058a608339f648fa3bb7ac0f349945
+    role: context
+  - path: pages/traits/environment/temperature_delta_mid2.html
+    sha256: 0d1ccb2964d2b32a5e37be94c20c7b9e107f98cc8903aebc9d70b997cd754d13
+    role: context
+  - path: pages/traits/environment/temperature_delta_very_low.html
+    sha256: da10fdce2275bac18ae799ba1e82e4ccdad2202fd83a59d20bac819463f543ab
+    role: context
+  - path: pages/traits/environment/temperature_optimum.html
+    sha256: b501d143fb1de2187e7f7f882d4457f6a6b702f469f43860e02590a24be352bb
+    role: context
+  - path: pages/traits/environment/temperature_optimum_high.html
+    sha256: 0a983479a5052671d6afee1ca9a25324d361996888f2f24895310936ce694933
+    role: context
+  - path: pages/traits/environment/temperature_optimum_low.html
+    sha256: c47c061a54904e45ee2c8cc721197f6827055659fe040eac6bcabf5623eab0fd
+    role: context
+  - path: pages/traits/environment/temperature_optimum_mid1.html
+    sha256: 3a1fa3668c2ef34d88645b2067c77ff057e3bd0e2557df0ef44adc6bda82df9b
+    role: context
+  - path: pages/traits/environment/temperature_optimum_mid2.html
+    sha256: 7a654eab464db1ccb035e24dada4d9de076b508db9b90e582d3e96a302293231
+    role: context
+  - path: pages/traits/environment/temperature_optimum_mid3.html
+    sha256: 0a7279a0c7453ff16593a31bdb1062f5799f472486dc66edada88a17b6cd90a9
+    role: context
+  - path: pages/traits/environment/temperature_optimum_mid4.html
+    sha256: 64a824a0afed53a37fd088d86fc386bd5324f76932bb4535c73d3c4e3670c4ef
+    role: context
+  - path: pages/traits/environment/temperature_optimum_very_low.html
+    sha256: bfaa319e882bd0bbd668d49a1219cb470a7f792d134542348b0f0c2522c549c7
+    role: context
+  - path: pages/traits/environment/temperature_phenotype_with_numerical_limits.html
+    sha256: 0493eb081104c4ef01acf80936c91c150909713db6aeb960ef8369c473b686db
+    role: context
+  - path: pages/traits/environment/temperature_preference.html
+    sha256: b25dc2d3aa7b70f0c7c9924458d0587a80a61ac7ab5c2b3a31326a10e504d8c5
+    role: context
+  - path: pages/traits/environment/temperature_range.html
+    sha256: a89a0a6fbbe0e91554e619f8ab5e3d57dbe5ef787c85e6e608826c52170e1897
+    role: context
+  - path: pages/traits/environment/temperature_range_high.html
+    sha256: 504372900eb314b7d8ce998c4fc0b86de80c71c1a8b9615952d3933672dee5de
+    role: context
+  - path: pages/traits/environment/temperature_range_low.html
+    sha256: 3d9b8a592f4bd637cb75ef726f8b38b104f76ff05c6aecd0d4f3744ef9bda016
+    role: context
+  - path: pages/traits/environment/temperature_range_mid1.html
+    sha256: d310f79c1d20d84653d9261e8456b366a5c0c722ba14534909bcdd117608bfee
+    role: context
+  - path: pages/traits/environment/temperature_range_mid2.html
+    sha256: 33a75a84fefd0616a83a7c3e16d270ab31f9130fce4cb025917f2af68c0fe396
+    role: context
+  - path: pages/traits/environment/temperature_range_mid3.html
+    sha256: 5d1654b1ca46401ed057f0ce3c8e43683cb4830cd2049ec2fa3ae521538927b2
+    role: context
+  - path: pages/traits/environment/temperature_range_mid4.html
+    sha256: 11211d6998d5c0a7b0593c8d91980d85f7e21bcf552fb4d6e20677a23cdac753
+    role: context
+  - path: pages/traits/environment/temperature_range_very_low.html
+    sha256: 79ef80bb9d44ae64d686af51bb04e05450e484ce0edba02496381a97beb499fe
+    role: context
+  - path: pages/traits/environment/thermophilic.html
+    sha256: 3840259633f87be98062b189249b8f678f9ef5306ed4acfd97d284b0d70afb16
+    role: context
+  - path: pages/traits/environment/thermotolerant.html
+    sha256: 8496934d1f18db86a0660b098ae9289f31b95ad64a06e5b49d25f368b9d5fac0
+    role: context
+  - path: pages/traits/environment/uv_radiation_tolerant.html
+    sha256: f15cf8e4f579b6f4d4ef9d055a8dd5126720da82d13c717aa556a0666a7a0d08
+    role: context
+  - path: pages/traits/environment/xerophilic.html
+    sha256: 56f5655abc250690543fdda3f7917a632a0765918d98c9eed1497623d3087cd9
+    role: context
+  - path: pages/traits/environment/zinc_tolerant.html
+    sha256: c41afd4a24de167c430471630f3161d2c0ec3e52a81c47daed37fed573eea8b4
+    role: context
+  - path: pages/traits/genomics/abi2_system.html
+    sha256: a6c04b354ecc0455d68adc5893549740d30b3f801095052533403f7de80b930e
+    role: context
+  - path: pages/traits/genomics/abia_system.html
+    sha256: 514cc3b1f889653d8c58a4e61295a0c0237eecfb29f84ab5c829dae84e374686
+    role: context
+  - path: pages/traits/genomics/abialpha_system.html
+    sha256: bb015aa21546bd6833f4442f2ec123bd5473b998f2d946fa4f0565ce98c0cc27
+    role: context
+  - path: pages/traits/genomics/abib_system.html
+    sha256: 504a1b32cd35eb1a7a82adb7bd712a05bf709c99384e710aa3ecd7b6966a2cca
+    role: context
+  - path: pages/traits/genomics/abic_system.html
+    sha256: f901e580a143c57b6413700a80ce6d941a6ea5c0031737de93f28e9fff51c33d
+    role: context
+  - path: pages/traits/genomics/abid_system.html
+    sha256: e0dd235d8834e93a41dd3ba25604d7187769344635135fa1446c4dab42112e12
+    role: context
+  - path: pages/traits/genomics/abie_system.html
+    sha256: f04420231820320d8a8ea059d67a6ca8a9941899df868cecb57b21fcf2ac051d
+    role: context
+  - path: pages/traits/genomics/abif_system.html
+    sha256: 76af9b964823894c8743ab10da26cf9e9ccf8a7a7badceb546fb8cbdc884fc0d
+    role: context
+  - path: pages/traits/genomics/abig_system.html
+    sha256: e999c5a4e1543b37035b4ab432c6fe579a69cf7aa41537ed07cecff36395f714
+    role: context
+  - path: pages/traits/genomics/abih_system.html
+    sha256: b37f6ab2c96df4de7d8c9ed089a1b4fa3a9dc4183c4e2e467c6ae51e96d0100d
+    role: context
+  - path: pages/traits/genomics/abii_system.html
+    sha256: cdd1c117ac6f32def9887d1eb738c36af61bbc9b3e70200bec202f87f8b76051
+    role: context
+  - path: pages/traits/genomics/abij_system.html
+    sha256: 43170d2c7488fad8302ffc26b943bce0507d074a35f9051d018e56287dc6fa06
+    role: context
+  - path: pages/traits/genomics/abik_system.html
+    sha256: 0f09be02c728d4a254addb14c61ecb8d9f756fee304d73f15ec3b817db2be10f
+    role: context
+  - path: pages/traits/genomics/abil_system.html
+    sha256: 887d8ac9555380717c0de157f76829638e98492222c08fc9742c6afbce991668
+    role: context
+  - path: pages/traits/genomics/abin_system.html
+    sha256: 9612596980d089f8525f9b8d4cfbf91d32f180e8295680d1b4cdb0a124ffcd59
+    role: context
+  - path: pages/traits/genomics/abio_system.html
+    sha256: e0ff2a254abf32b5ac7bac11c60e606a48ca1099369fabacf11e56b5da6996d7
+    role: context
+  - path: pages/traits/genomics/abip2_system.html
+    sha256: 84fcb4e7528d28dff0f8e4a875463e4e08c069a65027ead7a7f485cf9788b65f
+    role: context
+  - path: pages/traits/genomics/abiq_system.html
+    sha256: 951cd7bf0a067935449a69b9a7242aa96acb1868c1424292df59d9ddf61c4cfc
+    role: context
+  - path: pages/traits/genomics/abir_system.html
+    sha256: 71d6a1dac41f8325d5ad5de24c6365a1f40399b850d8a0077c5a49c3f8b4278c
+    role: context
+  - path: pages/traits/genomics/abit_system.html
+    sha256: b44e822cbe4d2626adbbf43df72aa5161d0953b8a107bc6df471e6857a59db15
+    role: context
+  - path: pages/traits/genomics/abiu_system.html
+    sha256: ad3b6304d08e0f4d0f89b4b2391aa847129d91602e054f5643a39a0b6e549eff
+    role: context
+  - path: pages/traits/genomics/abiv_system.html
+    sha256: 7d3084600d0e15b6ce9ec76ab578f460d766da770b175beb6ca671ad6d76fd60
+    role: context
+  - path: pages/traits/genomics/abiz_system.html
+    sha256: 38a92f8674778e69f06b0f4820cab81130825b0c51033e6098c396ebedb6195e
+    role: context
+  - path: pages/traits/genomics/abortive_infection_system.html
+    sha256: 344bf2ac1e2a1a72805e487d848246c337c7637eeada60fa921d96f8edc01791
+    role: context
+  - path: pages/traits/genomics/aditi_system.html
+    sha256: 0c039a591dcfe70c1c1d5d013a5578da1827b62bd12cb0d8ff6533c1d09f7a16
+    role: context
+  - path: pages/traits/genomics/ambrosia_system.html
+    sha256: 41cc3517a7fbbf7e90d3b60191aa3e521db75ebe1e44120d533571ce3e659cc6
+    role: context
+  - path: pages/traits/genomics/apsab_system.html
+    sha256: 9cc647359e98f7c8c55c98d94675764e1060c38fd6d32a6419c9780841ddca1c
+    role: context
+  - path: pages/traits/genomics/aristaios_system.html
+    sha256: 3c92d134a79938f0de7facbd422d20b47a5af0326693309487cb98390d76c514
+    role: context
+  - path: pages/traits/genomics/armada_system.html
+    sha256: 427eefde1969c01a7c02fa6472f6cefd399632f19b9a840a120791ad52188c3d
+    role: context
+  - path: pages/traits/genomics/audmula_system.html
+    sha256: 9a6930074e7f5470ad5521a0baf746982638cd0f4ce6dba9adf2a1c6787aa9e9
+    role: context
+  - path: pages/traits/genomics/avast_system.html
+    sha256: 4b3f42aa9aceb5d9aeab3dc17a07aecf416122b10ff24d2e48d1a00651a4cddb
+    role: context
+  - path: pages/traits/genomics/avs_i_system.html
+    sha256: eaf297e4f83bbf21b8c376aceaf045ff43f65bbb2e56a7b0432ec827c4e3aba6
+    role: context
+  - path: pages/traits/genomics/avs_ii_system.html
+    sha256: a1cff2f158ff129296189aea8ed01df00b777770f7fcc05930c781c7ff86b78c
+    role: context
+  - path: pages/traits/genomics/avs_iii_system.html
+    sha256: 860189f3733889ad78a879a8292df315c24097376b304c6641cb6699ab4c7bd2
+    role: context
+  - path: pages/traits/genomics/avs_iv_system.html
+    sha256: 9bfef43287dbffeaad32e1a9060a0baf0c71ed3f7bdc4c5bce6980b5f27e4179
+    role: context
+  - path: pages/traits/genomics/avs_v_system.html
+    sha256: 9f62498e43a13b12d94b398f839cd63888a461fd7ef6dfd456fe3c0804c0e6ba
+    role: context
+  - path: pages/traits/genomics/azaca_system.html
+    sha256: fde89e2d0563cf7ca035709cdb264f902fe84b4d83cc6c18edb91a4fe6a3f48e
+    role: context
+  - path: pages/traits/genomics/belenos_system.html
+    sha256: 0e69ef86afd4667dc1e91bd642e71a28577d414a50a5955c859620897027592f
+    role: context
+  - path: pages/traits/genomics/belisama_system.html
+    sha256: 1440e8a57e7c6f4567e9ff8564d5488c188fad625100067006e540bbb63f16da
+    role: context
+  - path: pages/traits/genomics/bil_system.html
+    sha256: fb8132ae71dcbd3aa74621493dcb9dc194735c3a1e669e9a770c73e54ebf5665
+    role: context
+  - path: pages/traits/genomics/borvo_system.html
+    sha256: d6d8f519dda6a487788d23850f5a8a225c5c4e7ede855c9c0f1814b3c45e71bf
+    role: context
+  - path: pages/traits/genomics/brc113_system.html
+    sha256: 635b2bf531815b7e67f3a59211c18526aac865cf702d7ef227742cf9c12c9816
+    role: context
+  - path: pages/traits/genomics/brc142_system.html
+    sha256: 699629225c084b79fa6c517c6f8e723e08612fdfc59ef3b02a8ef1522eac5e7a
+    role: context
+  - path: pages/traits/genomics/brc167_system.html
+    sha256: 484f41201a6921f7805b62b2534097edb9e1e4ba8ce4c27601e0659abe658a6a
+    role: context
+  - path: pages/traits/genomics/brc217_system.html
+    sha256: 62d7e45a1c20dccbdee1929b50857b9e04744967f05f9e02ed2e62164eebaed8
+    role: context
+  - path: pages/traits/genomics/brc22_system.html
+    sha256: bd1bee54a1a7a5c9733169bbbe7d677641bc51f87564fe0170803882f100bc11
+    role: context
+  - path: pages/traits/genomics/brc233_system.html
+    sha256: 4412f331b09ae77a20c7f1c619cfc7e05befa99ca15407c4b66c172b6127a0ee
+    role: context
+  - path: pages/traits/genomics/brc23_system.html
+    sha256: 0cdfa4a976af84859c4bc4fa45f664badf4a559c6cc8af82a67251d2f4a2766e
+    role: context
+  - path: pages/traits/genomics/brc24_system.html
+    sha256: 85141faa50a0bd2a5f019edb54262eb0c46a3ccf3baa1ac706396b93e2ba993b
+    role: context
+  - path: pages/traits/genomics/brc59_system.html
+    sha256: aa05271b19fa35fc691dc86dfb2ee1ba52b6f0ace09dcd08e471e60f12f4526a
+    role: context
+  - path: pages/traits/genomics/brc76_system.html
+    sha256: 3b1fa033f8724609923ad5559990359570d664826cf9ef508a4ffafccf43d214
+    role: context
+  - path: pages/traits/genomics/brcwgs21_system.html
+    sha256: 3ad7b2d58a5cf833b75359030bf9370b6ae89233a179a37f44f96ea50d999f09
+    role: context
+  - path: pages/traits/genomics/brex_system.html
+    sha256: 45fc7138024939e6d6d35e5ed7a054ed33589dbccb3229677262f12c0f0ae3e8
+    role: context
+  - path: pages/traits/genomics/brig1_system.html
+    sha256: 813e5203b45a9137a75473219b4499ec94800da04d14559dab626971f881a664
+    role: context
+  - path: pages/traits/genomics/brigantia_system.html
+    sha256: adde9638660938b39b3f481a14dc20b6640798c96b0e60b21a754a263d561585
+    role: context
+  - path: pages/traits/genomics/bsta_system.html
+    sha256: d1090f8fac3a2ed065fdf1e4ea8866a70ee21e911a80dec82c84aff6a2232d13
+    role: context
+  - path: pages/traits/genomics/bunzi_system.html
+    sha256: 90b1d9c66fe03130e38b98df81feecabebdf03311a5221b63bfeffa54a8051ac
+    role: context
+  - path: pages/traits/genomics/butters_gp30_gp31_system.html
+    sha256: 6157bb3b5df4fb3109ecf26c9d27542ee9fba50c0b15a354672affcb7f2eb15e
+    role: context
+  - path: pages/traits/genomics/butters_gp57r_system.html
+    sha256: 4ad54e73a230245772872b3fa44b3eb85c5a164f263d21ac26204fd0195f38da
+    role: context
+  - path: pages/traits/genomics/caprel_system.html
+    sha256: c3e71611947b579f8bcad5df079b83a732bdb7c69ca6c08d76f9c562d1e2d23c
+    role: context
+  - path: pages/traits/genomics/card_nlr_endonuclease_system.html
+    sha256: 33e04d00b1b736d06bc12a028586edc100b4cb95deeca7717ce7587b50074fa4
+    role: context
+  - path: pages/traits/genomics/card_nlr_gasdermin_system.html
+    sha256: 1a39e3db218bb4c928a47e939cad53ae8154d423f4531dadee39bbaac0c5ba23
+    role: context
+  - path: pages/traits/genomics/card_nlr_like_system.html
+    sha256: 74bb7fe1f09bbf28511633a8e1a7b2f90de6ae86402b24ba8334c0e1f4c0d264
+    role: context
+  - path: pages/traits/genomics/card_nlr_phospho_system.html
+    sha256: b95566bd36a90d48a6b81dad03b79d50b2a1ff3564213321a7450402b6182c0e
+    role: context
+  - path: pages/traits/genomics/card_nlr_subtilase_system.html
+    sha256: ab035d25a7f93563684aabaf6158f88df250314e527f76200405f2d1984a5b79
+    role: context
+  - path: pages/traits/genomics/card_nlr_system.html
+    sha256: f86d5a81417694ffbcf465d4b479fb773098148908c95a1c736a5635f05104ff
+    role: context
+  - path: pages/traits/genomics/cbass_system.html
+    sha256: e837da430171ce39e3cb1959dd70f51df7e38a12086269ce6d5e52228c953d01
+    role: context
+  - path: pages/traits/genomics/ceres_system.html
+    sha256: 707e95956bf957e4f7ea5fdad7281ef7f7229993ec2190631dd8cf454abebbe2
+    role: context
+  - path: pages/traits/genomics/cernunnos_system.html
+    sha256: 212e567a27975c45c1eab7417a06cbdc24f86ba63912fd513276583a7782d204
+    role: context
+  - path: pages/traits/genomics/charlie_gp32_system.html
+    sha256: 34902bab43145e8568c6dcc27d28eda1f410f645601a3e5723813fd65f108cd3
+    role: context
+  - path: pages/traits/genomics/clover_system.html
+    sha256: e0ae1780835fa403531304facbc7c9d6af82501360297d0f40e3b32cb0fe2baf
+    role: context
+  - path: pages/traits/genomics/cmdtac_system.html
+    sha256: 9d2bdd1801a08b7cac3894e66314b8e02edcf1be0f6c9b18c38ec7a98ddd4dc7
+    role: context
+  - path: pages/traits/genomics/coconut_system.html
+    sha256: 07ec96e4b369587d035c96088a2f70f71ac0a18e508db1a1ceb4f23f6e0e3d13
+    role: context
+  - path: pages/traits/genomics/codon_usage_bias.html
+    sha256: bd589fb78ade4b515fc0712a0d3a2fec65444d33912271b65270490d58bfc740
+    role: context
+  - path: pages/traits/genomics/crispr_cas_system.html
+    sha256: 409005dcfca61d09079e0763dd88f69a9ee2c579c29de5dd5d1dc7eee7e29fb3
+    role: context
+  - path: pages/traits/genomics/crouga_system.html
+    sha256: b579170d91c2dfc7266e9797a712ce4e4c2bc67756623951451c4ef44a4b78dd
+    role: context
+  - path: pages/traits/genomics/dag_system.html
+    sha256: a6e337379623957b6df990d2669279a3511a754e02a4b8e917ac3a35b967efe3
+    role: context
+  - path: pages/traits/genomics/damona_system.html
+    sha256: 670b0be626ce534cdcfec8f2d6bccf7899128ee3d0d71fc8c5c8dce06a9db9b5
+    role: context
+  - path: pages/traits/genomics/darna_system.html
+    sha256: 3e765ede027943e6e87464d1eceb835d0fd15baf8cf8311798eb759af44016c9
+    role: context
+  - path: pages/traits/genomics/dartg_system.html
+    sha256: 65cec594b219c566b9775fc88ce78228c774377665fc8658904103f41afdb6fc
+    role: context
+  - path: pages/traits/genomics/dazbog_system.html
+    sha256: 203568dc24148697573eea96ee4acb561398ea6893dcb1947974e99eb744a2fb
+    role: context
+  - path: pages/traits/genomics/dctpdeaminase_system.html
+    sha256: d0d77b99ce402ffff8d205ad020550562a68fd64f126facd18adc57b5a323fec
+    role: context
+  - path: pages/traits/genomics/ddmde_system.html
+    sha256: e36fbac454f05a9b42e2d5b8b7f7d58eaef04789c458b9d38fdd6555c3598540
+    role: context
+  - path: pages/traits/genomics/detocs_system.html
+    sha256: 0401f87f75bebfd8921d203dfc1f16c3c9b11da7cb2bdd9b2e3ec59fc22767d6
+    role: context
+  - path: pages/traits/genomics/dgtpase_system.html
+    sha256: d746b3da0c1e73b3f70e790882bea02e10a3f75e3047eb09692efb525aa4e1f2
+    role: context
+  - path: pages/traits/genomics/dionysus_system.html
+    sha256: 80b06c7977455611931da84e99233d4cdd072827e21ed84b791d8c56f0bc2b49
+    role: context
+  - path: pages/traits/genomics/disarm1_system.html
+    sha256: 610e8f37ced60ee6bcb38a9e2ecaee0409d9d49ca1e82e8b06ff612fe4716e9f
+    role: context
+  - path: pages/traits/genomics/disarm2_system.html
+    sha256: 75749b1e1a13129de97d4c85fbc29bc9c5fac99220e7d970f68a74903ab1c0f5
+    role: context
+  - path: pages/traits/genomics/disarm_system.html
+    sha256: 342313eeae12fd5b579354899bef889183cca6db9b9422076bc6ee5993c5f62d
+    role: context
+  - path: pages/traits/genomics/divona_system.html
+    sha256: 73f0aea790c13137382b7f2e1d428770318ba13515433319e802eedd561ba891
+    role: context
+  - path: pages/traits/genomics/dnd_system.html
+    sha256: 459d1add6627d1e6dd5194d5bf9c931c0aabbe78a6692ee5e8e3dcb6d376f796
+    role: context
+  - path: pages/traits/genomics/dndcdea_pbeabcd_system.html
+    sha256: cd4c4bfc1a807216a45df4602298e615779ab2393192efe3b3e25f17017b6733
+    role: context
+  - path: pages/traits/genomics/dodola_system.html
+    sha256: 73b609dad5ac0264778ef96ee2348fa65dd11999350b8ca0b24cc61ef6a26438
+    role: context
+  - path: pages/traits/genomics/dpd_system.html
+    sha256: f861b8b869a6564b141574208ecc53fb65e8eefeb989e737495653bc42209fb4
+    role: context
+  - path: pages/traits/genomics/drt1_system.html
+    sha256: 44b97c6e796eaada282f3b9ff69b06701071e6f2b0bec9045c9d064ec80060a9
+    role: context
+  - path: pages/traits/genomics/drt2_system.html
+    sha256: 2bf52798e2e9c25613620709a0b45baa36c59c9ba5fa01a458cde7bf669dfe92
+    role: context
+  - path: pages/traits/genomics/drt3_system.html
+    sha256: 62d7c92e09b3fb1ac2e2e44ed690dd577d116474389b0c524655453e5ff8a8a8
+    role: context
+  - path: pages/traits/genomics/drt4_system.html
+    sha256: 9736dedba62b35f64eb61f6f13bb941e67d16eac960a8ebc90482dc8d4e83d48
+    role: context
+  - path: pages/traits/genomics/drt5_system.html
+    sha256: e3f76c40b8d636aaf384017128f7455b8b9feb6d8042494f294767125a5a16f9
+    role: context
+  - path: pages/traits/genomics/drt6_system.html
+    sha256: 1689192747a871809816bbd284c0a24181df9e96082552e3306e93e146b8d1d7
+    role: context
+  - path: pages/traits/genomics/drt7_system.html
+    sha256: 6b9aaec1a861197691a3d72ce2c8d69c530af2a57830a1b8633e26a9970a4cb3
+    role: context
+  - path: pages/traits/genomics/drt8_system.html
+    sha256: fab5be4a0a79dee04b2c98c8155f75d170174e7bb0facab3fef40954084af1ed
+    role: context
+  - path: pages/traits/genomics/drt9_system.html
+    sha256: a70dab3b9c9ea11b261046a9ede5c293e5a5f535a6f2275f6aa528f6d677f23e
+    role: context
+  - path: pages/traits/genomics/drt_system.html
+    sha256: 24967d3d4f8c5849a8461e8995fe5ee431aad5923384b9062b5cd6abd8c6e2dd
+    role: context
+  - path: pages/traits/genomics/druantia_iii_system.html
+    sha256: 6ba901267ef9bdffdbe2df000b6f0af70a40fa79950d89f09cf53eb254ccabcf
+    role: context
+  - path: pages/traits/genomics/druantia_system.html
+    sha256: 9cdd2b54cdc62d7e11448a36e2f01905a1deda3be8b22ff027b9f15289506a10
+    role: context
+  - path: pages/traits/genomics/druantia_type_i_system.html
+    sha256: a3efbcc5aee66201424c64771f641327aa99642aaad6fa536fda1df14cbe4ff7
+    role: context
+  - path: pages/traits/genomics/druantia_type_ii_system.html
+    sha256: 56daecdf014263ae90347737d7bce73540001a8aaac509f131569c86ba227a0e
+    role: context
+  - path: pages/traits/genomics/druantia_type_iv_system.html
+    sha256: 0424478a544ea2da2a564d9a6b646f16930b91775dd2f14b26f5209d6999e57e
+    role: context
+  - path: pages/traits/genomics/ds_10_system.html
+    sha256: b1d19da129be5817fbfbb7508df3d80b0ead7285332fd6bc865709205e8105f4
+    role: context
+  - path: pages/traits/genomics/ds_11_system.html
+    sha256: 1a2b0edb6e85eef8f95c02f2d3df971047706122a3da7dac04b87b5abf629a8b
+    role: context
+  - path: pages/traits/genomics/ds_12_system.html
+    sha256: ec72e2002e16e38439a24068bdc45c762f88b41f17f4498664aa1b55b8710ebf
+    role: context
+  - path: pages/traits/genomics/ds_13_system.html
+    sha256: ec3f3ba927fe447a45602e639f0996e6936cb869e0cf6f3856ef31a5d4ae9805
+    role: context
+  - path: pages/traits/genomics/ds_14_system.html
+    sha256: e344dc4c96d66855a50301b8a2f09b9b6a7234e075220a37612cd5a6c145a389
+    role: context
+  - path: pages/traits/genomics/ds_15_system.html
+    sha256: 0f8f176308c74be88137559f5a2b7e37fa641c154c501ca946798c02fd724dca
+    role: context
+  - path: pages/traits/genomics/ds_16_system.html
+    sha256: 5e4ea71393d9fd6c0cfd334f2adbcec3bab140427f3990c116604759a953c042
+    role: context
+  - path: pages/traits/genomics/ds_17_system.html
+    sha256: 2b4c7bdcc433ffa9ca7cd1bf8f8c32d9c2f3c5bc60a6425846fb89c61e72f019
+    role: context
+  - path: pages/traits/genomics/ds_18_system.html
+    sha256: 4ec279a7b573ff8e68fad1dc29d20ce93f4d828339b79110eb2b255c030d1d11
+    role: context
+  - path: pages/traits/genomics/ds_19_system.html
+    sha256: e6c37969ae1968ddca16c5f4b79f18cf3b416683542f176134676025042ea207
+    role: context
+  - path: pages/traits/genomics/ds_1_system.html
+    sha256: cdb361ef2ff3cd1c8c61ff917888edf218a8859d346942a4fc952fc33956de6a
+    role: context
+  - path: pages/traits/genomics/ds_20_system.html
+    sha256: b35cc3063d922d4a631f3ad4048e115915540171f979322d76d9e97ded35f2aa
+    role: context
+  - path: pages/traits/genomics/ds_21_system.html
+    sha256: 5d42bf44c60fcb9e50887a5e19d62b1e0212a8ee5235a3b519a7ea75d72cc827
+    role: context
+  - path: pages/traits/genomics/ds_22_system.html
+    sha256: d48945753b0b8cebd2424798316915c0be90b364df6521b65eb47b0b3e487cd1
+    role: context
+  - path: pages/traits/genomics/ds_23_system.html
+    sha256: 5f9a1453f4162057f5043512ce3c8f846b217cf1d0a219e5af8d57925b332779
+    role: context
+  - path: pages/traits/genomics/ds_24_system.html
+    sha256: 4c82d7d48a95ea269386eb2910451a293517e490cf71230995a21bf460466933
+    role: context
+  - path: pages/traits/genomics/ds_25_system.html
+    sha256: cc4e0d63f7db671d6b08b145aa95bb7a803a1d156a332f8c8f56ba389df5bd31
+    role: context
+  - path: pages/traits/genomics/ds_26_system.html
+    sha256: 3796b2b97091de636f8f1905ba9323b320371cf696e8ef79e5ee1e40dab1b785
+    role: context
+  - path: pages/traits/genomics/ds_27_system.html
+    sha256: 72fe5027489726670f90262274b920c0205c8e6d1f2cf05ce81cc502506bc380
+    role: context
+  - path: pages/traits/genomics/ds_28_system.html
+    sha256: 5e008aa4e011652c563f32951519a5004c3c791d41074616419ee675e9dfa1ac
+    role: context
+  - path: pages/traits/genomics/ds_29_system.html
+    sha256: a363a09164742fe219c400ab1137b3330ad554f3add060c0323974dfc9e15272
+    role: context
+  - path: pages/traits/genomics/ds_2_system.html
+    sha256: 59502146e58780b4c4555075f4b30475ba84b1bf9200e56a9401533ce7226bbb
+    role: context
+  - path: pages/traits/genomics/ds_30_system.html
+    sha256: e1d0a7cee8c2c1ef9a6a5e8a4b33415b0d62d582d7c4cf6860e0c0269f580fdf
+    role: context
+  - path: pages/traits/genomics/ds_31_system.html
+    sha256: 7a7f947939a2a085c5c2c1514b5fc908ceb330d0e765d0553d18c6b0e9da42bb
+    role: context
+  - path: pages/traits/genomics/ds_32_system.html
+    sha256: a80d013542ef790a0b691047241546998ad43e04cdb9a3209950f127dd6414a6
+    role: context
+  - path: pages/traits/genomics/ds_33_system.html
+    sha256: f9f119e1ae56355dc47ac4e1ae5f328be3e4488aa2fafd7aa58da0b9709a6eaa
+    role: context
+  - path: pages/traits/genomics/ds_34_system.html
+    sha256: b6e7a01874a92aba9f7e4fccc4326f896a8b95fb5f822d1616092b291d57bf8c
+    role: context
+  - path: pages/traits/genomics/ds_35_system.html
+    sha256: 99ee18d326c32045c7fc8938b63344f5ffb6a6f392feb23fb7b98fd98a710573
+    role: context
+  - path: pages/traits/genomics/ds_36_system.html
+    sha256: 7ed5ba873af97107414c3c8240bbed585dccfdcd72ba889fd3469ea2840bf9b6
+    role: context
+  - path: pages/traits/genomics/ds_37_system.html
+    sha256: 7448f57dc4982ced9ae888467ccce58917c27b11a0f41ab04de53a93a10117ed
+    role: context
+  - path: pages/traits/genomics/ds_38_system.html
+    sha256: c6610a117f068a86c6aa6cf7afed585d1ec17cd108553144d9d3486ea8212712
+    role: context
+  - path: pages/traits/genomics/ds_39_system.html
+    sha256: b4e9dadbb47157de994e55fbc781a4d9fa9ad144b1af4f2ccee65afe16b19730
+    role: context
+  - path: pages/traits/genomics/ds_3_system.html
+    sha256: 65fc12d57c7e0a71278bf20fd8c070e460f596ad71d2dcf79f94ab4858f98a76
+    role: context
+  - path: pages/traits/genomics/ds_40_system.html
+    sha256: e7a6aac53dad41707fe87e5ef411717bfef661bb081ee4f7e3ab40d876378e7a
+    role: context
+  - path: pages/traits/genomics/ds_41_system.html
+    sha256: 74d9074d3048d9afeb051ce0db8ac9f11915eadcdf59c30f2e9fdc0e33df55a3
+    role: context
+  - path: pages/traits/genomics/ds_42_system.html
+    sha256: 7eb4629d80e42a099cb0076e428ed1a4f3eca7f5d77d0d185b3f2557322f065a
+    role: context
+  - path: pages/traits/genomics/ds_43_system.html
+    sha256: beb26fcd459c05b0769dae8920c31bbb54a245b31a7b6574373c72fae3db6175
+    role: context
+  - path: pages/traits/genomics/ds_44_system.html
+    sha256: 55000ee277e3b54529cc4529dfeafbd34d39e6999a71c81a0c8d1d2677acd921
+    role: context
+  - path: pages/traits/genomics/ds_45_system.html
+    sha256: 568429f7b06a095ac9b3238070e84e9e1cf74fae5ad2a416400a2fc06526ccaa
+    role: context
+  - path: pages/traits/genomics/ds_46_system.html
+    sha256: 3a016021d9c4df148c0d56de90f0e1d5561a55234ec6a3e23aded49d71a86262
+    role: context
+  - path: pages/traits/genomics/ds_4_system.html
+    sha256: 4ca8feaa862957f6f3a7c8646e1385694238b78f33052540e910bc8d0a564207
+    role: context
+  - path: pages/traits/genomics/ds_5_system.html
+    sha256: 5f161638bbf446d569fdf4976cbebf4de9370df9d73f7c08a070356d8bb7be77
+    role: context
+  - path: pages/traits/genomics/ds_6_system.html
+    sha256: 347ab69a37dfdfa95f64fe6f55ef32e1f9c0aaa5b483d5c764335592191c13e5
+    role: context
+  - path: pages/traits/genomics/ds_7_system.html
+    sha256: 7b20eeff35ae6bf64148b4ef594f658910f8808cf4638df76b9a18b9fceb8d3f
+    role: context
+  - path: pages/traits/genomics/ds_8_system.html
+    sha256: 8db2fb49c264ed40d22bca8880ca36b1f3e15c9e37cc3fa92b7f2f8f79b8c0bd
+    role: context
+  - path: pages/traits/genomics/ds_9_system.html
+    sha256: 21e1da1fb5d69a4a0608e2fa55ddefc0f999c1f159f3d88f258ad0db63056847
+    role: context
+  - path: pages/traits/genomics/dsr_system.html
+    sha256: 12736e82eda6428c2097b7516ad14d9c2b68a189801c679fbfa4a4e0d9b2506c
+    role: context
+  - path: pages/traits/genomics/duf262_schlafen_system.html
+    sha256: db5f7e84f48bfcc9038a65f24fe643afdaeb2993d04d446d8994bc5a5e1f8818
+    role: context
+  - path: pages/traits/genomics/ecokmcra_system.html
+    sha256: 78c71e6f47f58e9926c1f6ac670d444a32f235caa8e5ba9e13d0088899e5f06e
+    role: context
+  - path: pages/traits/genomics/eleos_system.html
+    sha256: a074bb5c9a45c74c161bbbfe1dec28e166827f7b92b6ef8f0eda6ac692be6a2e
+    role: context
+  - path: pages/traits/genomics/endpacf1_system.html
+    sha256: 619e3c4a3a7317aef5596172818488b0e57eca0b276ab7ba092f1237c4ae3267
+    role: context
+  - path: pages/traits/genomics/epona_system.html
+    sha256: ec27409d6a41562f9ecfeb71f33448b92efaefb25a77f10e6445943f6661baff
+    role: context
+  - path: pages/traits/genomics/erebus_system.html
+    sha256: fcaca27a4cb042a4d56e461812975d2052d8d59fa067fc96f403bb888521eaea
+    role: context
+  - path: pages/traits/genomics/esos_system.html
+    sha256: eafd812ca4cdc76a0008eec54646d85d4f027435bd7cf5a98116cd70f122b619
+    role: context
+  - path: pages/traits/genomics/fliodhais_system.html
+    sha256: b502a3d2881d5e2b772105a171cc6b76d81815b5fd5a432628fd8d48d38fbc81
+    role: context
+  - path: pages/traits/genomics/fs_giy_yig_system.html
+    sha256: d1abec9843bb4d146f5298cc8f327f9ecb5055d98fad216f37804dbcd927d787
+    role: context
+  - path: pages/traits/genomics/fs_hepn_tm_system.html
+    sha256: ab393dfc225136a5925bb093c777e02d547377760af596a84b7efde661d15ef7
+    role: context
+  - path: pages/traits/genomics/fs_hp_sdh_sah_system.html
+    sha256: d3741c53fb564b86fb6c1e0a92521042e3270487fa82762aadc6a73aa6244d91
+    role: context
+  - path: pages/traits/genomics/fs_hp_system.html
+    sha256: 9e09458ecedbb8d39e22d52c07aaaf8307c705497b2206f5c024ab74fcb14731
+    role: context
+  - path: pages/traits/genomics/fs_hsdr_like_system.html
+    sha256: aec6d976cedcf04a63b8720dbeb7d69015da584c1555ad16de7343a839aa0d4e
+    role: context
+  - path: pages/traits/genomics/fs_sma_system.html
+    sha256: ff9f4aa5cddb06aa76148c3a85e4a3a2c6fd05b9d01e72715592b3dcccf8f412
+    role: context
+  - path: pages/traits/genomics/gabija_system.html
+    sha256: dfdc1b4421c80be4087bcdf5d4666dcfb3fa87d37c84060cebc6d206fd719628
+    role: context
+  - path: pages/traits/genomics/gao_ape_system.html
+    sha256: 2478d8f322cdba27d7ae2d0ea596267885b93af46a09ce83a0b9705b03b444c8
+    role: context
+  - path: pages/traits/genomics/gao_her_duf_system.html
+    sha256: 1bc5782b737f53b5c354df6e808d955886c1e50293ac21761b87c7666aa62638
+    role: context
+  - path: pages/traits/genomics/gao_her_sir_system.html
+    sha256: d58038c964073a8b0109e3e0671a097bd7cb8f28c646773b35b604644d8b8dcf
+    role: context
+  - path: pages/traits/genomics/gao_her_system.html
+    sha256: 3b2c1ac5c7a278825bda2dc3c3a4a7d14f08580e8d3c89a65e552e791ba30e9a
+    role: context
+  - path: pages/traits/genomics/gao_hhe_system.html
+    sha256: b89673a853b9aa60d49e9602068d39c0eff11e0682586a889ceed4e454de4ea4
+    role: context
+  - path: pages/traits/genomics/gao_iet_system.html
+    sha256: 90ef4b3347394f67bad88ea62c16481306cec52ffc6cbd8a94aa3d5951991ee7
+    role: context
+  - path: pages/traits/genomics/gao_mza_system.html
+    sha256: 111174646d857b536cfc364f2344e6a8f0d6cb5f7893ed0b339dab51e891e136
+    role: context
+  - path: pages/traits/genomics/gao_ppl_system.html
+    sha256: 8246826bdb22b7202bfc66430068b2bf5bbfc1a75ca4bab4b1862d332b65c741
+    role: context
+  - path: pages/traits/genomics/gao_qat_system.html
+    sha256: a6780d594bc2e2315f1a98e7d163ff61c381e0705b547589759884c100ac0b62
+    role: context
+  - path: pages/traits/genomics/gao_rl_system.html
+    sha256: 65d48d615e7bf3ba784d088d6c8eb99e5a9e9ff9a15615d698284a2ededca898
+    role: context
+  - path: pages/traits/genomics/gao_tery_system.html
+    sha256: e9fd84637c10c9a7dbc7e8d21f243ed05c0c6e5e0ccb945f92b4c013a2653b51
+    role: context
+  - path: pages/traits/genomics/gao_tmn_system.html
+    sha256: 510be151ac75474576e4d0f849520ed49ab9fdc066cf75ec779160e8b466cd66
+    role: context
+  - path: pages/traits/genomics/gao_upx_system.html
+    sha256: 26245185652abdfac5444b4aaf50a549323554537da68e80473bb94b3435e6bb
+    role: context
+  - path: pages/traits/genomics/gaps1_system.html
+    sha256: cfc836dcbd21962e428f713116829ec55c3f858e3511dff6bd258fe728166614
+    role: context
+  - path: pages/traits/genomics/gaps2_system.html
+    sha256: 48f8df44f02dc7f33336a32695a62fa28f5b812a949dbde90286c083fe49c8a0
+    role: context
+  - path: pages/traits/genomics/gaps4_system.html
+    sha256: 1df775bbcff1bfec533c84cda7a39357033a6060711dfb0e63ae9611e58333a7
+    role: context
+  - path: pages/traits/genomics/gaps6_system.html
+    sha256: 2eada23575d311a62f7f7ab5c011a6de643adb9faea9efe18c29ad451e7315bf
+    role: context
+  - path: pages/traits/genomics/gasdermin_system.html
+    sha256: 548691168a62c67c18481875c3980e110a60a1555b871246e7fba4c2ccebef82
+    role: context
+  - path: pages/traits/genomics/gc_content.html
+    sha256: c473eef29f670e7383102ec68e1062d322cc4f8feeaf02d383d51cd314d2867b
+    role: context
+  - path: pages/traits/genomics/gc_high.html
+    sha256: f0a20ab3170845774544b9124bb5950601232512c27466b3093fef3870356e38
+    role: context
+  - path: pages/traits/genomics/gc_low.html
+    sha256: 9f4398e24bbb1840b6fee987814f856e86cad5c342bb07d3330867910fc5a3b0
+    role: context
+  - path: pages/traits/genomics/gc_mid1.html
+    sha256: d679feb10973461440de82afa172e0c65e04d1c2c9ef36b1a0ecb8e8186c42cc
+    role: context
+  - path: pages/traits/genomics/gc_mid2.html
+    sha256: ded8cff4ecd0a1646493efc9a8ae6555bcc316647980b66cfe84d09be1bd67c8
+    role: context
+  - path: pages/traits/genomics/gc_skew.html
+    sha256: fc601dd2dc4213f24468b78d88933264896399c8c3e2da2d14ce8d4bbd8a6140
+    role: context
+  - path: pages/traits/genomics/geb_system.html
+    sha256: a8bc91cf0ab7ef32dc78e173f1fdab587c8a5e821269c1eebfcc600590788a6d
+    role: context
+  - path: pages/traits/genomics/genome_size.html
+    sha256: 87def1e5810fb70bb77d2509ec24ef379cbaf84453a3c1110f38d0858f2e6276
+    role: context
+  - path: pages/traits/genomics/genome_streamlining.html
+    sha256: cbeb6dd5714c50b5ce8e9b45f7165c287372378bcdd9da805da2e0ca4547bf1d
+    role: context
+  - path: pages/traits/genomics/genomic_island.html
+    sha256: adc4f399b9ab0c01172d1ff4e4a5c3f675e3700f90cf93019b75b30ce2fe6a2b
+    role: context
+  - path: pages/traits/genomics/gmrsd_system.html
+    sha256: aa41fecb39e9f797ccb25cf367625c22e0fa3a1fe63bb58493d528d93d3c7361
+    role: context
+  - path: pages/traits/genomics/hachiman_system.html
+    sha256: 7a29e7aa519e94470b993e73fb7d87100dbce44a826fda35604ec2dcb1512e99
+    role: context
+  - path: pages/traits/genomics/hachiman_type_i_system.html
+    sha256: 089667116e2977bb49eee078999d79d41f703d412ebffe24546b337d7781b9a2
+    role: context
+  - path: pages/traits/genomics/hachiman_type_ii_system.html
+    sha256: a679968c701dc8b2f1f3c8c89cc4bcfbdcff2de96146186d8bc309c8a2c5abb8
+    role: context
+  - path: pages/traits/genomics/hailong_system.html
+    sha256: cf5b98cba63ed35d2d01e740915ec6e72738f91107f226409e45d6c69f707589
+    role: context
+  - path: pages/traits/genomics/hec_02_system.html
+    sha256: ee4b3a3ba1588b31c5d6562ed5f6d8b23b631981b4408d0356eef91dce112a67
+    role: context
+  - path: pages/traits/genomics/hec_03_system.html
+    sha256: 0cd162c1f091b0018cb43a5ee047daeba2a5f11c84b50b4f73a0799f35dc440c
+    role: context
+  - path: pages/traits/genomics/hec_04_system.html
+    sha256: 10f7850b6a595477d68b8ad2bbb2eae3b5ae535894e3b625d43c0d358683175d
+    role: context
+  - path: pages/traits/genomics/hec_05_system.html
+    sha256: 9a91f5fc77b2352e0f9833e08ce95393845ffd3d25b52b07fa7b6ea2ae82c383
+    role: context
+  - path: pages/traits/genomics/hec_06_system.html
+    sha256: 06e3b7e0a906163cceecf63e19cf6bca6d59c8d0ba63a32330a8566fa6878431
+    role: context
+  - path: pages/traits/genomics/hec_07_system.html
+    sha256: 03a374a515cd6969ad6583d9ae0a38e541ea26e53446f906c447fc02793bb7fb
+    role: context
+  - path: pages/traits/genomics/hec_08_system.html
+    sha256: 1bb92c73c2c12dce32f35cdd2cbaec75184b75cc1e22eaaa70a5ad1309031726
+    role: context
+  - path: pages/traits/genomics/hesat_system.html
+    sha256: 44d3b892f3746e56fbd753618f9f959a3ab1e5329ef0059668ae9735cd8feafa
+    role: context
+  - path: pages/traits/genomics/heterokaryosis.html
+    sha256: f23492325456ec37e0b591acbd060094bbc3f0655f926f035d98530ecc3a2129
+    role: context
+  - path: pages/traits/genomics/hma_system.html
+    sha256: 0d0440e7cf9856a408034aa25006e7087144f397d0301ec87d8f85a5f278b4e9
+    role: context
+  - path: pages/traits/genomics/hna_system.html
+    sha256: e4abf1c6367aa1166ad65b443ea7dab6dad5ad86fe21ee8b6cdc568dd409793f
+    role: context
+  - path: pages/traits/genomics/hypnos_system.html
+    sha256: 4afd72b4becc2274cc6c5ae2a6a251940ff4e31537adb8ca4f8a130834c17c60
+    role: context
+  - path: pages/traits/genomics/ig_like_schlafen_system.html
+    sha256: a591eccfbe0e977a93be46aabacd084d5333fa4aefed2193126ecb3b34cf2791
+    role: context
+  - path: pages/traits/genomics/integrative_conjugative_element.html
+    sha256: 56498c4f85b48e954c8d3a103891a0f9c6090364cba275be5c633dea6671c29f
+    role: context
+  - path: pages/traits/genomics/jukab_system.html
+    sha256: 7749b6f8de2b00763806976ad1149d79b6c4c95e7d62e9e7fd60d9fdc6c65630
+    role: context
+  - path: pages/traits/genomics/kamadhenu_system.html
+    sha256: 9db1bcb370855cb5fc51a552bb6154417ab029fda90d1d8cf09812eb9adeafff
+    role: context
+  - path: pages/traits/genomics/kiwa_system.html
+    sha256: 8c18663d1aa23135e4bb4bbe70425fe624ec294a1bcf25472ef9f9752190af91
+    role: context
+  - path: pages/traits/genomics/kongming_system.html
+    sha256: 6c9e22adbd602719360c25d02173cf27f778276642c86c096d2a73886e2b4e20
+    role: context
+  - path: pages/traits/genomics/lamassu_amidase_system.html
+    sha256: bf7448ee42cbe97e2fee937324ef74185a215b69a1b72b6da9f7b90fd89806c2
+    role: context
+  - path: pages/traits/genomics/lamassu_cap4_nuclease_system.html
+    sha256: f162faee80373f822ac6303b625e1a8278c255a99326db1d5c98300f938d4967
+    role: context
+  - path: pages/traits/genomics/lamassu_fmo_system.html
+    sha256: 355e384a136a54e7f8a28b51047e931c3e58c27415f0f423147aa2abffaf5852
+    role: context
+  - path: pages/traits/genomics/lamassu_hnh_system.html
+    sha256: 04efab372fdab88b4547a13b6f2dada7aeaa6e5dd4c5c60a17e0d9bed472a95e
+    role: context
+  - path: pages/traits/genomics/lamassu_hydrolase_protease_system.html
+    sha256: cb53b2cc968a571bae113a07d50fc56e79c6beb1fc4e65f57792e5c2f118aec3
+    role: context
+  - path: pages/traits/genomics/lamassu_hydrolase_system.html
+    sha256: 8726308e1a9d00aeeb59c9e62755d1e3d020d83aeb056220d8010bfeef104d3f
+    role: context
+  - path: pages/traits/genomics/lamassu_lipase_system.html
+    sha256: 6ed83a8a1ce41dcbad3f7ab28c0bec01df1ba5a21dc102d096663257c7d6111a
+    role: context
+  - path: pages/traits/genomics/lamassu_mrr_system.html
+    sha256: 382fb74c81a37472d33ddb027aefaadd93d11d6dbc6353294947e24b9c1ca992
+    role: context
+  - path: pages/traits/genomics/lamassu_pddexk_system.html
+    sha256: 6d6ad9a5b289710a19bbf01bd7bb32b8e4590671c96590b508d6004e58a84027
+    role: context
+  - path: pages/traits/genomics/lamassu_protease_system.html
+    sha256: 1c2eb3d90a303af90d39345047aa151ffb95f60df458042d03581d2153c0821e
+    role: context
+  - path: pages/traits/genomics/lamassu_sir2_system.html
+    sha256: c05721d7540429026d87eb67aea303b437c5271c5757e54269429a965704fd78
+    role: context
+  - path: pages/traits/genomics/lamassu_smek_system.html
+    sha256: aae0e010a9cb103221ed61e58362f2cba89529a065a1286570748f4a454a0457
+    role: context
+  - path: pages/traits/genomics/lamassu_system.html
+    sha256: d28429807a91e56710e39d2d03a0da54a2e2b5104b88785877eee00c17cee4d0
+    role: context
+  - path: pages/traits/genomics/lamassu_type_i_system.html
+    sha256: c0455baefbeb2b7cf57eba69270fb3a567d89e796325f620bf4b7f5f4e4051f3
+    role: context
+  - path: pages/traits/genomics/lamassu_type_ii_system.html
+    sha256: b98476c2770e2e7b5fb1f2ac04f955aaac08c09d40ef9771bd8e8030b52c2842
+    role: context
+  - path: pages/traits/genomics/lanthivirin_system.html
+    sha256: 3eb015588b9d2bc141854f27f82ef8bd25c7b7ce60920ca6b6296bf8a7bd865d
+    role: context
+  - path: pages/traits/genomics/lit_system.html
+    sha256: 08c53649e9e267ce9e6173f269f5ac3d16595ca1f56ad60d322b1096983debae
+    role: context
+  - path: pages/traits/genomics/long_lamassu_system.html
+    sha256: cf87d0205582689b174fe4568a924e6d4c8ddeaf7e3c5dc61a0b307b0181f0b6
+    role: context
+  - path: pages/traits/genomics/lugos_system.html
+    sha256: 0bdda1110ba3eeae163db7d116627d37d64a6ba48ef7bc8ed083703ac34d9a82
+    role: context
+  - path: pages/traits/genomics/mads_system.html
+    sha256: 696c65abc5a1e817d077c68f284a1b994e50515082d52e5c5e1d1c386c911b98
+    role: context
+  - path: pages/traits/genomics/mazef_system.html
+    sha256: f921900d0f5f68e9f21866acc1ea18a1fe40477abf6533fcd91a9f4b75416ecb
+    role: context
+  - path: pages/traits/genomics/mcrbc_system.html
+    sha256: 36eefa1590827b5b5401eb4a9c10ee84d939e34b75358081550f8b2ffc2da18d
+    role: context
+  - path: pages/traits/genomics/menshen_system.html
+    sha256: e28160c0b8fc761928ca28b5a1f661ee8f598036a73f62d4dcc01ff8ac3fa06d
+    role: context
+  - path: pages/traits/genomics/metis_system.html
+    sha256: d83de15726260f7a1c95214af13a7d922f64f7187881dbb6a62e9f4dfacfa55b
+    role: context
+  - path: pages/traits/genomics/mksbefg_system.html
+    sha256: 45548ab36e6706770760677249ec3624f0b7cf08791b1f36b72daa3a508a07f2
+    role: context
+  - path: pages/traits/genomics/mmb_gp29_gp30_system.html
+    sha256: 79c301fc03a97c6432e66acc17f5e5f3cb2b1c3f0e1ced31ea7db0e3a6fd5936
+    role: context
+  - path: pages/traits/genomics/mobile_genetic_element.html
+    sha256: 6e7ae22f9f1208515e8b4d7e1fd60dc9686dc93602a6a54354286919910e64ea
+    role: context
+  - path: pages/traits/genomics/mok_hok_sok_system.html
+    sha256: 9c9c7ae12e508b08de7eafb4b99cbfe4b26e432904016342d7c57aa05f4760aa
+    role: context
+  - path: pages/traits/genomics/mokosh_system.html
+    sha256: 7307e4d99e53bdfd814ccbaac242dff374f8d166d6e123e884e851003ff3e4a1
+    role: context
+  - path: pages/traits/genomics/mqsrac_system.html
+    sha256: 320a3fd9440c7ae53e3e148ed6c19928f1997f5e803f1fda12eccef6a9248498
+    role: context
+  - path: pages/traits/genomics/mspji_system.html
+    sha256: fd44be4cb976419ef890b8984d58901150c8a1117a11cca6130f6a991a7e11c4
+    role: context
+  - path: pages/traits/genomics/nantosuelta_system.html
+    sha256: f6d57ae70e522ac17f5811756579a198cce3a1a4bf7ac4695154c23e426ae8a7
+    role: context
+  - path: pages/traits/genomics/nemetona_system.html
+    sha256: d67f8432e153992cbbc9b0582c410746487283bda4d57bf2c43b01915736d592
+    role: context
+  - path: pages/traits/genomics/nhi_system.html
+    sha256: d2c8c09c3c47be8a56de57cc342285f5041fefe3dc58189ea733d9c00732c36d
+    role: context
+  - path: pages/traits/genomics/nixi_system.html
+    sha256: adf7227f029018ef7465a9e8916ec8db7dd7819f56cf1982a5cd6dca6dc3eeb6
+    role: context
+  - path: pages/traits/genomics/nlr_like_bnacht_system.html
+    sha256: c6061963d95e87de01653823659abc5b50eb15a99faf65c5a2639ef77ef5b689
+    role: context
+  - path: pages/traits/genomics/ogmios_system.html
+    sha256: 123a0352d7e61f08e39a1bb7e332ec7831bca986294c6d0202e84cb19b8f9056
+    role: context
+  - path: pages/traits/genomics/old_exonuclease_system.html
+    sha256: bc32a965e2ab10366f236e92ce7a6c8da7d9fced9bcedab89143790abd21f15f
+    role: context
+  - path: pages/traits/genomics/olokun_system.html
+    sha256: d0bcec4e7b5ba4ba7c08e722fe3c42a9020004edd894abafd4ec90919476d38e
+    role: context
+  - path: pages/traits/genomics/ophion_system.html
+    sha256: 4d10ffb667a1738cecda3afc815ef0c71465924262345de938398f7a37106b71
+    role: context
+  - path: pages/traits/genomics/oshun_system.html
+    sha256: a70acbcd7248df1b4cf4336ec44d606590a3a2b76fb657ae9500d835614b0740
+    role: context
+  - path: pages/traits/genomics/pago_system.html
+    sha256: b62301d3a405a42f8552bb925dd6c2270b8d6d0045cee1020af608f07115017f
+    role: context
+  - path: pages/traits/genomics/panchino_gp28_system.html
+    sha256: 6a7b5ffa76c7b42459ce87d8c7d3b4c37542b08132dd4ac7ff4260f9e3c7385c
+    role: context
+  - path: pages/traits/genomics/pangenome_openness.html
+    sha256: eddffcc0b3c49ee1e94a6182b2583db4c4ac85cd2879b336833105a59e07b3d4
+    role: context
+  - path: pages/traits/genomics/panoptes_system.html
+    sha256: b36ec72b5722b2b3ebd35a699e4e2e391f1116ff64c83b803c2cac1a20a7be66
+    role: context
+  - path: pages/traits/genomics/paris_system.html
+    sha256: d4433616492c907d88eeddde6bfce0d66ddef674032618eda0537b181247c5d7
+    role: context
+  - path: pages/traits/genomics/pd_lambda_1_system.html
+    sha256: 11ea8d3bd91e0a033efa3b0d4cd6470da44f642297e2e8256560e800fbe6f257
+    role: context
+  - path: pages/traits/genomics/pd_lambda_2_system.html
+    sha256: 089a80686026b0ba3d8513ec4817109c2d6da143f18c38f7baaffcfd7323e270
+    role: context
+  - path: pages/traits/genomics/pd_lambda_3_system.html
+    sha256: 067523e20a4bb3fb84fdcf2e878e5c7eb7bdfe79f5b2fcbed71d120086b9cdd1
+    role: context
+  - path: pages/traits/genomics/pd_lambda_4_system.html
+    sha256: ab82da103b1024e29d14861fd35f7233d098e7d3ece57f14cf4820256196194f
+    role: context
+  - path: pages/traits/genomics/pd_lambda_5_system.html
+    sha256: d1be803eaca84cea18c6c3d6d84043ef407c38b2d22735ea47b74575185ce939
+    role: context
+  - path: pages/traits/genomics/pd_lambda_6_system.html
+    sha256: 184d1c56515cd2dc5d1e73b3bebbb5cdf34b9cc70f4ffff80a7a506e461084d9
+    role: context
+  - path: pages/traits/genomics/pd_t2_1_system.html
+    sha256: 9a9967e65f6180bc8cf50415d5d798a5a045d43fcaef5ce2ae68f4edf500bb2d
+    role: context
+  - path: pages/traits/genomics/pd_t4_10_system.html
+    sha256: b72e2af207d1f5328a718c0c4ff4f6377676b0298948b4eb737b358a96a66aed
+    role: context
+  - path: pages/traits/genomics/pd_t4_1_system.html
+    sha256: 9b06441a2fb1c012817b7fca5f142c6193d7c728de799db0903779e867ec7500
+    role: context
+  - path: pages/traits/genomics/pd_t4_2_system.html
+    sha256: a3ba78ed598032b071b0695d3b0bb004cf807d9d9257b1c2f3aeac4c65fe4ff4
+    role: context
+  - path: pages/traits/genomics/pd_t4_3_system.html
+    sha256: ec6c091fb3fa5d4208f01417ab2f22af17c7c1191dd8403efe66d2a64b8382e7
+    role: context
+  - path: pages/traits/genomics/pd_t4_4_system.html
+    sha256: 7b4ed3923350fd5a3a59764fe5f2a578c9176f18c3175f0dba314ab6700de7aa
+    role: context
+  - path: pages/traits/genomics/pd_t4_5_system.html
+    sha256: 5903a5c90db43cb6088a0f3d969492ad0bbb308cd42cfbc5d66ae13602325a3b
+    role: context
+  - path: pages/traits/genomics/pd_t4_6_system.html
+    sha256: a87f395bf9dd7558314902b2f6d19a382ae61660b68386e8c4e35bd80c595fa4
+    role: context
+  - path: pages/traits/genomics/pd_t4_7_system.html
+    sha256: b84754360f2bc62c66fcb1b37b04533a7eddc658b68ac57b1f1fcb4d8307b0fd
+    role: context
+  - path: pages/traits/genomics/pd_t4_8_system.html
+    sha256: 35460977ab5c551ec930a5f8437a49e8e8317d39f044ef6ebed4c13b592ad24d
+    role: context
+  - path: pages/traits/genomics/pd_t7_1_system.html
+    sha256: 2aa097fd475d4df10bc59d1397a5ae654f67b6df11d612b7f63f757ad10c53cf
+    role: context
+  - path: pages/traits/genomics/pd_t7_2_system.html
+    sha256: 514b0425631a2502e28032c738b4b238daab6ce6d78ef250992dd22a4bf960db
+    role: context
+  - path: pages/traits/genomics/pd_t7_3_system.html
+    sha256: bbf7f5811c92b543f8bc55b39445c05959fd6dee401e0cd8576a024c9b9070de
+    role: context
+  - path: pages/traits/genomics/pd_t7_4_system.html
+    sha256: a6bdaadbf8fe16413a394fd8770b6cf7d72cca8f2ad9b3c57e0e539cf6e97c05
+    role: context
+  - path: pages/traits/genomics/pd_t7_5_system.html
+    sha256: 7241f9ff1a2462ae98a968ee8ede88cc5d3c18e92684d006cc66f560c2eca563
+    role: context
+  - path: pages/traits/genomics/pfiat_system.html
+    sha256: e624586f0b655cd7015860a9556a374ee11d169fe461ac30d89d63dc79190e5c
+    role: context
+  - path: pages/traits/genomics/phage_defense_system.html
+    sha256: 3dd177366663474a1dd8d2910302dcfdd97f78a2c5fb8e620b17e26023cfdfe2
+    role: context
+  - path: pages/traits/genomics/phosphorothioate_defense_system.html
+    sha256: 12fb6fb2ece66470e24e113ae884de25d0d76c4916478bad688cf9acb4aaa3ba
+    role: context
+  - path: pages/traits/genomics/phrann_gp29_gp30_system.html
+    sha256: db39c53f46bb4a0bcf9ba6a1cc676242bf9b866d4b7a151c0122b2fc268a2529
+    role: context
+  - path: pages/traits/genomics/pif_system.html
+    sha256: f240ac497d8e3ea9ef3f7f0e4a803314d34981044a62aaccf30becfe82fa9f3d
+    role: context
+  - path: pages/traits/genomics/plasmid_carriage.html
+    sha256: 9150e3c2e92c73fc32c9b4de2c085908d8bde445df12418c2607bae8eb10f9fd
+    role: context
+  - path: pages/traits/genomics/ploidy.html
+    sha256: eaf082b5573a77575bfb867f858d2a6151ce53aa599458eaf12f375819d8bb4b
+    role: context
+  - path: pages/traits/genomics/prithvi_system.html
+    sha256: 730d21b2eed0ae752b9630a3c878def9ff71e45c2bbfb9e1a5d7d53f764b9115
+    role: context
+  - path: pages/traits/genomics/prometheus_system.html
+    sha256: 9027453372c3ffddd8805e821a921e0b95266918caa2ff53b8479fd242501352
+    role: context
+  - path: pages/traits/genomics/prophage.html
+    sha256: 3b633119dbfc48742f8b96e344104662e2ae3be6ffb20e5adc4f9b746439fa59
+    role: context
+  - path: pages/traits/genomics/prrc_system.html
+    sha256: b60e17930e1ed0df7c119a630ba244dce836e9c2789cb12df17ae3f128ce3239
+    role: context
+  - path: pages/traits/genomics/psyrta_system.html
+    sha256: a62421d26faecb194ae28b25cc9779abd5d42ea622287e295b3e433d9bc6a5d7
+    role: context
+  - path: pages/traits/genomics/pvurts1i_system.html
+    sha256: 7773a5b6b7c0de3d66224355796c90b4dc2916845d36bb722690a44f0869ea49
+    role: context
+  - path: pages/traits/genomics/pycsar_system.html
+    sha256: 9710509e710b1ccbc4846f1ff0eb717073136de47ecd75694baa4b8b9968ac6b
+    role: context
+  - path: pages/traits/genomics/radar_system.html
+    sha256: 87614b789b12d1b04809e8ea3e0911ac23ab7183953b2cfdf2346b3520ae6336
+    role: context
+  - path: pages/traits/genomics/razr_system.html
+    sha256: cea8a9ab25a2bd9d752181480d716e4a8ceae97c81c3fde2b336e39a33ea9b40
+    role: context
+  - path: pages/traits/genomics/resolvase_duf5677_system.html
+    sha256: 5abd287d412c96dd7a6cc6cbcc84d1b4d613f855cfb3d35a6fa722d379da4da0
+    role: context
+  - path: pages/traits/genomics/resolvase_kap_ntpase_system.html
+    sha256: aef8d55e9cdce2344ea5c17a6e9dc63e5cc9dbebd1500dd801e0959e334a6af5
+    role: context
+  - path: pages/traits/genomics/resolvase_schlafen_system.html
+    sha256: 6f326a97cf916b7ada7f22b5e6418089f0be1eb3e1a019243b399a5c64504077
+    role: context
+  - path: pages/traits/genomics/restriction_modification_system.html
+    sha256: 2da38f097a69e2f6a56b09b651158d3930f2de38d676396e062a4255bcc17f93
+    role: context
+  - path: pages/traits/genomics/retron_system.html
+    sha256: 12d0a8d608d9c7996dfc179705ab875c55da4d17d552e83ddf523670ec71f9f6
+    role: context
+  - path: pages/traits/genomics/reve_system.html
+    sha256: b9913be5e59f1a33fef4f58a4c3762d1f3c5b065520f19db4022bc4fbee5242d
+    role: context
+  - path: pages/traits/genomics/rexab_system.html
+    sha256: fdbb1d3d97d6f1f45b9675040e4dbb5fd84bedeec7d9ca5917db662b647ab0aa
+    role: context
+  - path: pages/traits/genomics/rhea_system.html
+    sha256: 98a010134ef9fd6cbb1d233467422da67d0a41d963c47a9286d072eb67750d9f
+    role: context
+  - path: pages/traits/genomics/rloc_system.html
+    sha256: 28010a7d95761f4702cdf7d515ca06303291d9c6157b6b96b3998961aff30e2e
+    role: context
+  - path: pages/traits/genomics/rnlab_system.html
+    sha256: 1d720f8fa8e0b49e62d9657b8566ef71d1e837c1e39e7b5107e1a2b8973ae231
+    role: context
+  - path: pages/traits/genomics/rosmerta_system.html
+    sha256: 8382fcfdfdb95661483eeed67f5b201a56cd9661e1cf1a56a2d88089b68f3790
+    role: context
+  - path: pages/traits/genomics/rrna_operon_copy_number.html
+    sha256: e517efedff67b6537aa90de67420e731eab32520c62e0a17791e1fe90a925ff4
+    role: context
+  - path: pages/traits/genomics/rst_2tm_1tm_tir_system.html
+    sha256: 57d7dd659006794f938e43cce7bf4fcd8fb3db820bb8a082cbfcdfd2d325603b
+    role: context
+  - path: pages/traits/genomics/rst_3hp_system.html
+    sha256: cee5d6897d9333260a4137117519e3eef41b9637f88dbb8b36dac2b98f218172
+    role: context
+  - path: pages/traits/genomics/rst_duf4238_system.html
+    sha256: 71609fa68ec4eaa321eb0c1e4facb2bce0a76d3a0e616a5e7e92b7f8b62f8061
+    role: context
+  - path: pages/traits/genomics/rst_gop_beta_cll_system.html
+    sha256: 0cbd10db0cdf67700f15537eb4678b57f1b24cb1c5166b13d8a64a7a2646fcdd
+    role: context
+  - path: pages/traits/genomics/rst_helicaseduf2290_system.html
+    sha256: 7f4d176cdfb209011b7a37e699c81534ca3a6b79a54f3936b45c15bc3142c064
+    role: context
+  - path: pages/traits/genomics/rst_hydrolase_3tm_system.html
+    sha256: e0d723a53af01fc183ebfdfd52161cd0e94f44012d1de0aae6cdda037dbed97c
+    role: context
+  - path: pages/traits/genomics/rst_rt_nitrilase_tm_system.html
+    sha256: 2ebed47ea62bc3fef164edf4455a73c7f72431e5744dd9efbc2ce16d385d4573
+    role: context
+  - path: pages/traits/genomics/rst_tir_nlr_system.html
+    sha256: cec1885232fb14e9eaab3e1c52ab5d42643909069f9b6d28e890cac9a04fe26d
+    role: context
+  - path: pages/traits/genomics/rugutis_system.html
+    sha256: 02e38c42a0ffe03467282cb544e5e42affced3abc77fc1a0795fbc3cc2a32d9d
+    role: context
+  - path: pages/traits/genomics/sanata_system.html
+    sha256: 46b48900e028d7a469f26c5f308c4a1fb0ae087faf51861ae871ea9fb090baa7
+    role: context
+  - path: pages/traits/genomics/scomcra_system.html
+    sha256: d14fb7de291c943a3ed8cdf9bf8abae18188d7df9a544c7fdc8ec743de02b308
+    role: context
+  - path: pages/traits/genomics/sdic1_system.html
+    sha256: ce0b5d803a1a4e52616c617d9a7515838ee658a3b5eddbc35e8a39eab94cc82a
+    role: context
+  - path: pages/traits/genomics/sdic3_system.html
+    sha256: 24a112386c233c7e2cf134990d25a102ca61074c91d2f3b546e7c3eecc0222b5
+    role: context
+  - path: pages/traits/genomics/sdic4_system.html
+    sha256: 579e1dc171238180eb46e4c2e23f7cab050383f1f8cd3052dc8d4a544e03ce77
+    role: context
+  - path: pages/traits/genomics/sefir_system.html
+    sha256: 0822b533691ba97acdf2fff9f64c783cd36500ece75d63496497710ef62e02b9
+    role: context
+  - path: pages/traits/genomics/septu_system.html
+    sha256: 2efcedb0afaceaa937703f233c8182ee03dd1d6f4fcb35e3a7140fdf809c02c8
+    role: context
+  - path: pages/traits/genomics/shango_system.html
+    sha256: 72ccc9672d165e0338b0e8f59aba41ef0ecc378f6174411b5dce4922025193d8
+    role: context
+  - path: pages/traits/genomics/shedu_system.html
+    sha256: 34394a44521a0c4a68eaf2b4eacf57e4e03c6bc826ab6838002975802800e90e
+    role: context
+  - path: pages/traits/genomics/short_lamassu_system.html
+    sha256: 809d33ad4a805c96d8579685b24b71e74c5648659890063e6267d60517c0fb86
+    role: context
+  - path: pages/traits/genomics/shosta_system.html
+    sha256: 2b2599e9a0cf0a3a7ffe1ac80be53a2401263b0f9497fed0128e974c65b4efcf
+    role: context
+  - path: pages/traits/genomics/sirona_system.html
+    sha256: 7add7b8464849d7cf316a11f1caf45d8fdfb229f57219bd1e5f0e4dcaf604cca
+    role: context
+  - path: pages/traits/genomics/six_a_mbl_system.html
+    sha256: 3ab8dfabc3b5791cfda2efe1eaff09afcc98f9b72a42902be3af9ed96bb69b63
+    role: context
+  - path: pages/traits/genomics/snipe_system.html
+    sha256: 83ceacfb0d338c382a138f03293dc713416f830fd34319ca8e3d40d106c8edab
+    role: context
+  - path: pages/traits/genomics/sofic_system.html
+    sha256: a82e1c7d437a8180120a75fdc175a7cdff73a2090c2b33e8a5696ea2cfeb2730
+    role: context
+  - path: pages/traits/genomics/sparta_system.html
+    sha256: d03ec0c773afb4c24e4cb9cf662706a5e7840111d4ef4619ab6210b0c022846d
+    role: context
+  - path: pages/traits/genomics/spbk_system.html
+    sha256: c1ebb9e02db567e81e918c161bb092e954f95c271c737189f9e5af433479891e
+    role: context
+  - path: pages/traits/genomics/sspabcd_sspe_system.html
+    sha256: 2c984d11434ce7547ad928d6bde05d285eae3e08d359960feee9547f5ef6f0dc
+    role: context
+  - path: pages/traits/genomics/sspabcd_sspfgh_system.html
+    sha256: e6ac0d25db8db26e68926fe4a020c6f209f2ec0b9e4a0335f81d2173ee33718c
+    role: context
+  - path: pages/traits/genomics/stk2_system.html
+    sha256: b39bd69154961ccb1256777568fcbf07807144be243b32f94660237cc3e43ad3
+    role: context
+  - path: pages/traits/genomics/sucellos_system.html
+    sha256: 4e0c562ea886631c483ce41f0ac2484bac259fef168cbf1fa49e5b736246f27f
+    role: context
+  - path: pages/traits/genomics/tab_system.html
+    sha256: fc4123c88daf952c667ebd34d8009e10dc1ea06658701b0ed928a1451b0f3e40
+    role: context
+  - path: pages/traits/genomics/tagi_system.html
+    sha256: 871d6a81412ea84fc282c63e8ae472d736745e0522fadce3195c89b84692a824
+    role: context
+  - path: pages/traits/genomics/taranis_system.html
+    sha256: 18b5fc351141a0bb8fa1b25667b2d0b8c4f1a63d960e48b18085eab5fccc73f7
+    role: context
+  - path: pages/traits/genomics/tgvab_system.html
+    sha256: fe05d976082fa6055884b8c6de0f1b1b09f826cc1f842f5a89652e8f8ed02c1e
+    role: context
+  - path: pages/traits/genomics/tha_system.html
+    sha256: 931aded66f0af50010c33f6fdf9f5a6ed9aaae42ec610a64e2147b8c1491ca5d
+    role: context
+  - path: pages/traits/genomics/thoeris_system.html
+    sha256: 0b12fc6c9e16f30485cca8220417ded9bad2894bf85f5369253c2f6e81eebfb6
+    role: context
+  - path: pages/traits/genomics/tiamat_system.html
+    sha256: 128b425aae0a88bdef61f7b356e49dcd4a43aa107f2e3546975084b5321040df
+    role: context
+  - path: pages/traits/genomics/tir_i_system.html
+    sha256: 757a17b3f4e6e7b9ae696e5df1375741c53fa247aced3d70110ee99f09c5e1c1
+    role: context
+  - path: pages/traits/genomics/tir_iii_system.html
+    sha256: b14c3ad41a4624fb94dbeb9b256375e3d05665c81abd118748958d15aa8b0b0f
+    role: context
+  - path: pages/traits/genomics/tir_iv_system.html
+    sha256: b097e3c65f6fd834c15905d8787abddf29b473ed90bacaf01e211d9afc016fbd
+    role: context
+  - path: pages/traits/genomics/tir_vii_system.html
+    sha256: cb80e0c94af782807fb7e7c9e06438ab7fafcae95c6ac5edc8d8b56e13b134cd
+    role: context
+  - path: pages/traits/genomics/tir_viii_system.html
+    sha256: 91f571c1e293621572677f2f228ffc25d48a5da97a2afea75e080ea7be5d08f3
+    role: context
+  - path: pages/traits/genomics/toga_system.html
+    sha256: 29b02f52adb96551deadd785f28c9f276d56188ded8665a34bb16fd44b3cf1df
+    role: context
+  - path: pages/traits/genomics/toutatis_system.html
+    sha256: 36873498f200da1a2934905a89b2d458bf4ee300c849207e6ab40cc367dc37b1
+    role: context
+  - path: pages/traits/genomics/toxin_system.html
+    sha256: eb6cd73e71425b07dea5125b6933baa081a324f6c4947ded5eec283f523af6d5
+    role: context
+  - path: pages/traits/genomics/transposable_element.html
+    sha256: f7f5d04df7f82f829afb35526b14cebf74fa1797b56d8fde745b667cf4caed1d
+    role: context
+  - path: pages/traits/genomics/type_i_restriction_modification_system.html
+    sha256: 79c9b18268d5925ffab15274834f57371b1098381a7bcde904e5c6689470466e
+    role: context
+  - path: pages/traits/genomics/type_ii_restriction_modification_system.html
+    sha256: 96884b84159e66d78698aa3b11afaca043917cee1e8fdefe593a896ac043d7a9
+    role: context
+  - path: pages/traits/genomics/type_iig_restriction_modification_system.html
+    sha256: 2d45cdac5af40a0a25ebcb746b14231b2082d5e6ddd7805006ceb80a58073801
+    role: context
+  - path: pages/traits/genomics/type_iii_restriction_modification_system.html
+    sha256: 5e7ae28db0350e611c48cfbc90165606ed7b705dbc6cd3aa21a6af135d757bd6
+    role: context
+  - path: pages/traits/genomics/type_iv_modification_dependent_restriction_system.html
+    sha256: 60c8738ba1f470e9692474b25bf01ceb42302439fff4060079a472902d18ffb4
+    role: context
+  - path: pages/traits/genomics/ukko_system.html
+    sha256: e94214a3bb9893e8910265ce6309482f861352557cea8b196ea263bf6a2d2b9a
+    role: context
+  - path: pages/traits/genomics/uzume_system.html
+    sha256: fa844f7846dfbd5618ffd26c3b28f13a5e49f97c6810031c2e1b9d84d5683f44
+    role: context
+  - path: pages/traits/genomics/vcam4i_system.html
+    sha256: ad179db7ba3116eba4f09228fc5a7cf12348d1e2cf8166b3d72f9b1c190baff1
+    role: context
+  - path: pages/traits/genomics/veles_system.html
+    sha256: 889cda0133973854bda17003de90bf439d47f4b1f2d024b53942facb44ee89a9
+    role: context
+  - path: pages/traits/genomics/viperin_system.html
+    sha256: 55619de3afafc1439eb64baf38291e8c5e03ceeeda809199634305b1bd273a91
+    role: context
+  - path: pages/traits/genomics/vp1796_system.html
+    sha256: 3e5aa73b92378c2ddeefd35b6661ff322240801d4c8f24492b133ac2f9463ba0
+    role: context
+  - path: pages/traits/genomics/vp1817_system.html
+    sha256: 70d73b1b00c1625d28d47339ddd44245625872ebef9d5553c6af0f79c060ec85
+    role: context
+  - path: pages/traits/genomics/vp1823_system.html
+    sha256: 078f621444f3b1372494e0a51919ccd4cee3a17e33d208ddd57130545af93ce9
+    role: context
+  - path: pages/traits/genomics/vp1826_system.html
+    sha256: c5e62fe46abad703df05e0148641144c61ad55c21551ac3b17333c99fac62bf7
+    role: context
+  - path: pages/traits/genomics/vp1839_system.html
+    sha256: cb4c3ff5708902c7d4ed761df63d623c1080fddcaf699e1d9e9bcb5d4815416f
+    role: context
+  - path: pages/traits/genomics/vp1840_system.html
+    sha256: 63cab0d9a3815178cdf57e7d96e4cb265ec7e6945eb2cd45387fb712af15afd5
+    role: context
+  - path: pages/traits/genomics/vp1848_system.html
+    sha256: 4d30fc5f5418c2d24afd47e40ef2756f2c10315926abf24d597107c40d913741
+    role: context
+  - path: pages/traits/genomics/vp1851_system.html
+    sha256: 81685a5c55a575b7bec63f838c2a2057323a0f2d4c820e5ad0098c8c7b31542f
+    role: context
+  - path: pages/traits/genomics/vp1853_system.html
+    sha256: 50528ec7382d6aeca23617ab1623fc6433a49fd7791a5fa0a2d1d9a1d7e804ee
+    role: context
+  - path: pages/traits/genomics/wadjet_system.html
+    sha256: 418c0901175fdedd1adbf468990eb6fb33fbdcd540c1d3fa90b113322c4aa147
+    role: context
+  - path: pages/traits/genomics/zorya_system.html
+    sha256: b5e728420297b485decdcc8ccb7dd374bba868985628718947bcf247184b74d2
+    role: context
+  - path: pages/traits/genomics/zorya_type_i_system.html
+    sha256: 59826d10ad36030a90875b9c175aafcd3407789c1b81b6a7bc99a9ec485d7902
+    role: context
+  - path: pages/traits/genomics/zorya_type_ii_system.html
+    sha256: f1d5b579820854f2d21a72384e3cfe103f40d4382a02befe752a32f4d43551c5
+    role: context
+  - path: pages/traits/genomics/zorya_type_iii_system.html
+    sha256: 5b8f93e9e375f565f2f816baace3d56d41dfd1b0b20a7ac267221d5799eddfae
+    role: context
+  - path: pages/traits/metabolism/accumulates.html
+    sha256: 8d04a3c1ee56e7acaf66ab0059e781546b4a0e71b9d820b4b102337cc913654c
+    role: context
+  - path: pages/traits/metabolism/acetoclastic_methanogenesis.html
+    sha256: f0af399117e738cdc14e35471d1bee9831eb15d8a659fb0908ea5ae2e800939e
+    role: context
+  - path: pages/traits/metabolism/acetogenesis.html
+    sha256: da4b0100047d05d3d43dc788ca19f51db9b4066cd5f811e220bf016e49affd17
+    role: context
+  - path: pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html
+    sha256: 398c49ed4fb8a5f8bef95754c4f03909e83c55f87e1889a948b9f1510f1bf1bc
+    role: context
+  - path: pages/traits/metabolism/aerobic_respiration.html
+    sha256: e7c94dba68d4f844d433c5625520785a6667f4b8384b5ae7f6d9bb471e20a050
+    role: context
+  - path: pages/traits/metabolism/anaerobic_ammonium_oxidation.html
+    sha256: 14678c28ca8434291db6eef76b40e2262d68abc9019f1ad8431165d3f5dfe57a
+    role: context
+  - path: pages/traits/metabolism/anaerobic_oxidation_of_methane.html
+    sha256: b928befcce04f571b452f129ca999d2fcb1abce59f38a8beaffc93e1a7ecef89
+    role: context
+  - path: pages/traits/metabolism/anaerobic_respiration.html
+    sha256: 1dcd1abafeb5676116ab1bca9ca365051b5d8a5de6efbad10dbb5c851969187a
+    role: context
+  - path: pages/traits/metabolism/anoxygenic_photosynthesis.html
+    sha256: 258cad508f38ac09812db58b08b94b622f8d419e53660a83e93b5e3abd65233b
+    role: context
+  - path: pages/traits/metabolism/aromatic_compound_degradation.html
+    sha256: bd41682d216cab3bdaaf27b76a3feafc4c22f6276747cffee05571eb7feaffda
+    role: context
+  - path: pages/traits/metabolism/aromatic_hydrocarbon_degradation.html
+    sha256: 684fbde2776d7b10304d9e3bdc10ba98c9789dfba7f1e224217722b9c6c3c947
+    role: context
+  - path: pages/traits/metabolism/arsenate_respiration.html
+    sha256: 35d0407f4e4fe1e5f0e286bad5617876da3a5456c2a9309cf88b501123102c9f
+    role: context
+  - path: pages/traits/metabolism/arsenite_oxidation.html
+    sha256: cb1e72186bf295b2bbe3a06b46c526c4f48e561ceb33e6b50c8a1e1536a74d5e
+    role: context
+  - path: pages/traits/metabolism/assimilates.html
+    sha256: 75c23da036c28be0a4c0255756f49455a90f157bcc3bdde836155a76ea1d08ae
+    role: context
+  - path: pages/traits/metabolism/biopolymer_degradation.html
+    sha256: 053bdde8c4ba142ecc26aab9de91f32a2fd473227713051421150939a9e901b0
+    role: context
+  - path: pages/traits/metabolism/builds_acid_from.html
+    sha256: 6c33b28e778ac66d887119e38484e0c5d0a56e630050121e02fcbe24494ba9d1
+    role: context
+  - path: pages/traits/metabolism/builds_base_from.html
+    sha256: 94cc5fde966ce2a8c0000115888898086a7e004de55e83d19421cb04dda093a1
+    role: context
+  - path: pages/traits/metabolism/builds_gas_from.html
+    sha256: 5d6e06d0bfa5dae33dbc8911f1df9d6db34783bf3c2bda2e8057b0c55149172f
+    role: context
+  - path: pages/traits/metabolism/butanediol_fermentation.html
+    sha256: acec3605ead1105202f83ca3de3ad0500db32fbe7f0acdf496b206f8787ae868
+    role: context
+  - path: pages/traits/metabolism/butyric_acid_fermentation.html
+    sha256: b1518c89e8d23f4c6f16ad6e57f0cff827febce7e2b6ae077d08556afa8fc3cd
+    role: context
+  - path: pages/traits/metabolism/cable_bacteria_metabolism.html
+    sha256: d00f05038b60aad2c2857a00f62142bfae8b3703b89e05b7e3c7961fbb3f079b
+    role: context
+  - path: pages/traits/metabolism/calvin_benson_bassham_cycle.html
+    sha256: edced066c88bf69aa94dc128e47c026da6ae53dba5dcb85c1306861104fafb5f
+    role: context
+  - path: pages/traits/metabolism/capable_of.html
+    sha256: 2447a13fa159360933770c26dc466d993c23e1120928d36642aebe43f68eb63f
+    role: context
+  - path: pages/traits/metabolism/carbon_fixation.html
+    sha256: f784f203b33f229fdc034dd9abd37e0798fb418a363ef1176b4f54e0d0481d1f
+    role: context
+  - path: pages/traits/metabolism/cellulolysis.html
+    sha256: 176b559cc50f1d10cf845836fdac31e2529c4fe69a23fedada0ec6492dba7b26
+    role: context
+  - path: pages/traits/metabolism/chitinolysis.html
+    sha256: 7824657b5f9f2c8465ce0769614d772e1bdfcde911a477901ac9ffbd1897460d
+    role: context
+  - path: pages/traits/metabolism/chlorate_respiration.html
+    sha256: 2bf0b866396c1bfcd610ccdc522965fbb4980602cda08dbd651b5b5dbc7d2d20
+    role: context
+  - path: pages/traits/metabolism/citrate_fermentation.html
+    sha256: 2d5c43672cfacdc858482644280bcf642c9b5b12e559f3d96ea3ba46c7f0644d
+    role: context
+  - path: pages/traits/metabolism/compartmentalizes.html
+    sha256: c337461628647d79247492a1240545c6420a8b8176fb8a2ed2900d6f542cbeed
+    role: context
+  - path: pages/traits/metabolism/complete_ammonia_oxidation.html
+    sha256: 9e9191dff7cfbe5c7f2e4d4b3763cde5cc9c3a51b07b7919b2a700399a794c81
+    role: context
+  - path: pages/traits/metabolism/dark_hydrogen_oxidation.html
+    sha256: 9df7bd38d3593bd2a9da605e400bff52a5b5388283f88b94e6899eddcfd46554
+    role: context
+  - path: pages/traits/metabolism/dark_oxidation_of_sulfur_compounds.html
+    sha256: 1c330a07c126a9aacb1d5bf74cd84c8c63cb089e7d0b455c75db98b300c681a6
+    role: context
+  - path: pages/traits/metabolism/degrades.html
+    sha256: f43304401b2ba7d58723b8470706ba5e8a59a8efc21adbd74299b3f24ad17b6f
+    role: context
+  - path: pages/traits/metabolism/denitrification.html
+    sha256: 0deb455a7a2dccc3e934ea8c08cfa44d2f462be369cc0e31a1b2eaa104a1fa7a
+    role: context
+  - path: pages/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html
+    sha256: ba3e58a6c0ea1197b751b49b99c72d0320502c037da620244a3d6531381462d7
+    role: context
+  - path: pages/traits/metabolism/dimethyl_sulfoxide_respiration.html
+    sha256: 57bbd9b1bd0f89b1cb28879b82b815ef315b20b2253758d2d7123a23d53648ac
+    role: context
+  - path: pages/traits/metabolism/disproportionates.html
+    sha256: dbc4e3175fcdbf22acefd1dbedb8bf99c3c0aad7ec1398868087cd5f882df1c4
+    role: context
+  - path: pages/traits/metabolism/disproportionation.html
+    sha256: fe802c894ec3c0f42261747f0b9d6b1a4b4eccffabade0e067f607a65e6189c9
+    role: context
+  - path: pages/traits/metabolism/dissimilatory_iron_reduction.html
+    sha256: 75a273954b319b0ef78a0d944ad638da106e0f7de5f079786c43fb9bed4146da
+    role: context
+  - path: pages/traits/metabolism/dissimilatory_manganese_reduction.html
+    sha256: f311b2d9730c07bec8bd57eec75c71468966cfce64544529985ea541ccf0e2b9
+    role: context
+  - path: pages/traits/metabolism/dissimilatory_metal_reduction.html
+    sha256: 518620eaa763f3a044fadf4b36a6d0501ae2a71e2fc632976522bee0127afc37
+    role: context
+  - path: pages/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html
+    sha256: 7f9c72992a1cc062ec47494d040ecca6055a799ef6c9d7d779aa6e4719624ea5
+    role: context
+  - path: pages/traits/metabolism/dissimilatory_sulfate_reduction.html
+    sha256: 8c44e594555d8876a86b406513d650722b38d67fa063c960f5ef471aafe645c2
+    role: context
+  - path: pages/traits/metabolism/does_not_accumulate.html
+    sha256: 8b8c7fbc112c1efb73208ebdd4e3e7952549b65ff426758a1578ce232c7d3479
+    role: context
+  - path: pages/traits/metabolism/does_not_assimilate.html
+    sha256: 0fb2a366f1bef469c5f8d74f7916f9287b44c62dadda20e877b7aa648aac91b7
+    role: context
+  - path: pages/traits/metabolism/does_not_build_acid_from.html
+    sha256: 19aee3fb295ac248ed04b2bcd3a9ce58c3f1835047a441661c88d1cf82f1d9b1
+    role: context
+  - path: pages/traits/metabolism/does_not_build_base_from.html
+    sha256: fabdb2dfbade58aca25767eb8e2a176929d7a85f796916a375f0aeb013a595c5
+    role: context
+  - path: pages/traits/metabolism/does_not_build_gas_from.html
+    sha256: 0e8b4f9f4754cb998db3665bb3a9456e3913ed37f99374233749e0ec8ecdcc27
+    role: context
+  - path: pages/traits/metabolism/does_not_compartmentalize.html
+    sha256: 62e4becbdf5fed59df6ba41195343b7fc4847b4c351674d143a513baab0e1897
+    role: context
+  - path: pages/traits/metabolism/does_not_degrade.html
+    sha256: 7510b74600cad531c8e277a3a03f6ceee267a7d4d227b3cf838aa0419b343297
+    role: context
+  - path: pages/traits/metabolism/does_not_disproportionate.html
+    sha256: 84739e81818dcc17c860e8a5920b42f154a84b98785a4d0d6749a7cdf3ee77a6
+    role: context
+  - path: pages/traits/metabolism/does_not_export.html
+    sha256: 4d1c556c5b37f54ddcee1844bb189ca828c2c6cd4f6ac349abf20949a4e93c9d
+    role: context
+  - path: pages/traits/metabolism/does_not_ferment.html
+    sha256: 0df03861befa1f66697ad1c63c9d9a8188470925cb1742d9a4a42409c408e90d
+    role: context
+  - path: pages/traits/metabolism/does_not_hydrolyze.html
+    sha256: d84456040c09207dde9bf5393f8ef8796c26496dd5efcc2b01af0724de6a4f2b
+    role: context
+  - path: pages/traits/metabolism/does_not_import.html
+    sha256: 9f6f8bc2f22fe42c5a3d4cb2b6af4822d06bc79b75bd05bc2611be64ae88fe68
+    role: context
+  - path: pages/traits/metabolism/does_not_oxidize.html
+    sha256: 41bc1da09d15fc36aff8d9a0718de197c04a93faa92289fa7004b6a60568c517
+    role: context
+  - path: pages/traits/metabolism/does_not_produce.html
+    sha256: b2301edbc23822fda6f3fee9051d10661381757c7de948d17b569c38c531ede5
+    role: context
+  - path: pages/traits/metabolism/does_not_reduce.html
+    sha256: 40aea2d349ae4751b78fec7625a0d73508baa0f23656b83adf263775999dc7a2
+    role: context
+  - path: pages/traits/metabolism/does_not_sequester.html
+    sha256: 516da17f8c69ddb2406430a9e006edfce2561cb9c3f68897e93204568c6f33c8
+    role: context
+  - path: pages/traits/metabolism/does_not_show_activity_of.html
+    sha256: e37bf9ad90bb86676329fa2cee386a0edcc89e2d212617166ec877eaed137e32
+    role: context
+  - path: pages/traits/metabolism/does_not_transport.html
+    sha256: b0fc45693e14415aec694184c0cb8ea05c17b19c10cdf6100307839193357d1f
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_carbon_source.html
+    sha256: 054e73f7961903e3cf539dc6c64c248fbe924e04de12fa13add26316aa4f5e28
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_electron_acceptor.html
+    sha256: 4bbbeb7a788dd4d4f70864bbac1d49a15890a281fbf42cc914e108cadba63c11
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_electron_donor.html
+    sha256: 0c2c433bed6e1ee204c46685a010a8c1e7ead618e38a45941d482810bc81c5f5
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_energy_source.html
+    sha256: 69d296935447ffe268abc92ad9758f26ee1acea91d1f8820a4f696ae5f4accae
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_nitrogen_source.html
+    sha256: 1f259a978176bb0eb3c3e041c6007541ac9367d875bb027efecb9aa0185accd2
+    role: context
+  - path: pages/traits/metabolism/does_not_use_as_sulfur_source.html
+    sha256: f0ec9a008996023bc399d70544c9478abcb058ebbdad59ea5aac985f1621b8e4
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_aerobic_catabolization.html
+    sha256: b9787b1402d62b8510ca8268301d60219207607cbd53c2c0fb7887bf0bdd6088
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_aerobic_growth.html
+    sha256: 1f30f8cc5d54e5aec160ab94df4f768cd4ad4070254af9e90ccff34218f79499
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_anaerobic_catabolization.html
+    sha256: 0e8537956be9df4192a94be847ce4085ebf8a15788bfb5a1c2a43d6ae22d9c30
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_anaerobic_growth.html
+    sha256: 2b95831a5ac4347288629a4dd7866667466f8d4c183b1c030f6da481eeae9877
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_anaerobic_growth_in_the_dark.html
+    sha256: c2389ad30f9d30e4ec5ddd3cf8cbcef72a768e6a8257241036b3f2cca099110c
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_anaerobic_growth_with_light.html
+    sha256: 908a2e4f0aaf2a8d6e672563492a4ebb1004e64b10ea3c988e2d2df9bb7ddcbb
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_growth.html
+    sha256: 116d0de7279624e3988a8e23628d25b93ac402ea74abf995a4688246c53e4b8a
+    role: context
+  - path: pages/traits/metabolism/does_not_use_for_respiration.html
+    sha256: 964a27c2f1f01dcde89d152612739e0bc7c9bf66d65f4b3f8885664dd1c7ac61
+    role: context
+  - path: pages/traits/metabolism/does_not_use_in_other_way.html
+    sha256: 025da148721b6079685967dc3d9747ff27ec5ec111c0cabbe5f9b1a4315cd0db
+    role: context
+  - path: pages/traits/metabolism/electron_transfer.html
+    sha256: 6ea7c78c7053c5ffea1581ca5590f06c9aa31ed05507dd0b662d9486d29251b4
+    role: context
+  - path: pages/traits/metabolism/enzyme_activity_analyzed.html
+    sha256: f9534fa8e90b1a32f198f69a1bce567a388ae55a99388806d6f7ea0065e769cf
+    role: context
+  - path: pages/traits/metabolism/ethanol_fermentation.html
+    sha256: 92459e60f9c64f521f0e0af62c73cfe99d13e31bb0963d09681569c922c0569e
+    role: context
+  - path: pages/traits/metabolism/exports.html
+    sha256: 104fc5953996d7d58628ccee9b2d660391763789a4520283687fb287ddc5c600
+    role: context
+  - path: pages/traits/metabolism/fermentation.html
+    sha256: 9d37871411768829fff6f95fa49e576cd3e604ab2e3ccd686f783832a8d46f5e
+    role: context
+  - path: pages/traits/metabolism/fermentative_hydrogen_production.html
+    sha256: 72e86c9e34ca56194f299262147ae7dfa169a00787d75a4eccd7fda7ac5b74a6
+    role: context
+  - path: pages/traits/metabolism/ferments.html
+    sha256: d349dde09a5194b9b8f34ab11d0f81995a08324a009c506084715a908222cf84
+    role: context
+  - path: pages/traits/metabolism/fumarate_respiration.html
+    sha256: 238bb0d0c1bed484a61745729f26f04c10521e70bf4d3a1424c8d2dea258a0b9
+    role: context
+  - path: pages/traits/metabolism/has_growth_nacl_observation.html
+    sha256: 1d56b9e7fc04e94023697c96316777a6ad7f8fdd8e0d5a8b61fea40bbd4b8382
+    role: context
+  - path: pages/traits/metabolism/has_growth_oxygen_observation.html
+    sha256: 966339081d5b720b72387b7d3cf4324765d2d8e184eb9652e8a6cb53f21f248a
+    role: context
+  - path: pages/traits/metabolism/has_growth_ph_observation.html
+    sha256: 8b1ecf1805c25e9f09e78629d5bc0e6c92340091f2ac9b1d26e204fe9b6d344a
+    role: context
+  - path: pages/traits/metabolism/has_growth_temperature_observation.html
+    sha256: 7a32dc0999f9a8653f12b456eef998af82b30ca21793f075667253b200729cb4
+    role: context
+  - path: pages/traits/metabolism/has_nacl_delta_observation.html
+    sha256: 2bf08c0234a5ceb5351abb526c9729b3016d5fcc0fd1ef5a395fa0afbb54dfcc
+    role: context
+  - path: pages/traits/metabolism/has_nacl_observation.html
+    sha256: 51219943efa74675bb17dc62fed9484d40173eb2626e43aaa94cade217c11da5
+    role: context
+  - path: pages/traits/metabolism/has_observation.html
+    sha256: 29d5a5006b5cf421594dbf814805b5751454881d8d025a0d3e59b73c255391a4
+    role: context
+  - path: pages/traits/metabolism/has_optimum_nacl_observation.html
+    sha256: a44d5a8d8f022e6c201335cf1e46a3ad74b54adeb7f63199c6bbe97546e6df9f
+    role: context
+  - path: pages/traits/metabolism/has_optimum_oxygen_observation.html
+    sha256: 31d876bceea59d2307878465be434a5d6b0908a8b7052b202a26984160eed816
+    role: context
+  - path: pages/traits/metabolism/has_optimum_ph_observation.html
+    sha256: 53e4113dda98c5be2602661e1794967ba0401be8b383c2230c1434ce0c38b8ad
+    role: context
+  - path: pages/traits/metabolism/has_optimum_temperature_observation.html
+    sha256: 4fa85a3baeb4e76b1894301c832e79acffa2f8919cf5a3de5807e20a9b631aab
+    role: context
+  - path: pages/traits/metabolism/has_oxygen_delta_observation.html
+    sha256: 1d76cfc10ff5409265aa666e344fed25bb1318586f2867d060c674ae168ce4ea
+    role: context
+  - path: pages/traits/metabolism/has_oxygen_observation.html
+    sha256: 8986d2926771f845ee45285a025b1f7a720871818f182cea5d16bae373464ef6
+    role: context
+  - path: pages/traits/metabolism/has_ph_delta_observation.html
+    sha256: 535cb7f0bf62c26ba8572f3c60fa6ab120d55d01d3ce5d135ea182047f247402
+    role: context
+  - path: pages/traits/metabolism/has_ph_observation.html
+    sha256: 4be66b000e71073fc000e7fd725907533ee18f97883a9601e3c236ae3129f342
+    role: context
+  - path: pages/traits/metabolism/has_phenotype.html
+    sha256: f7743ee67c21c06833406ad70b191c9ac82d49e0fb083edf3fb67f9058639851
+    role: context
+  - path: pages/traits/metabolism/has_quality.html
+    sha256: 2cd6dc3b6ed571c642bd4ce3c1044006ddcad5760794d9f2ce1a4f96e1aaea60
+    role: context
+  - path: pages/traits/metabolism/has_range_nacl_observation.html
+    sha256: 4530572dc3727e3fbb3d74a7dc9668ff4b52fb32205041db5de2a3841bd65191
+    role: context
+  - path: pages/traits/metabolism/has_range_oxygen_observation.html
+    sha256: 00ca96b0c28e93bdd4c6259c37ef73119cd9b80272962991e111526ae5cbfb76
+    role: context
+  - path: pages/traits/metabolism/has_range_ph_observation.html
+    sha256: 091f04774bc6344c8950ac3824446b4b90ac4aee48d1b54e60c2635ee054aa18
+    role: context
+  - path: pages/traits/metabolism/has_range_temperature_observation.html
+    sha256: a28af8cf3b03c833ad337e3ee05f7112c56b7b86a2e5ce5609766a92b15e0ff0
+    role: context
+  - path: pages/traits/metabolism/has_temperature_delta_observation.html
+    sha256: 9cb870ccf068e1a5842e46cd49636a12c902bed6829d3b1703d65a05909d8e2a
+    role: context
+  - path: pages/traits/metabolism/has_temperature_observation.html
+    sha256: c58e94ac3b62ec4834d6fa1e894bc323214f94bc9fc42d8e1b0083af20422cb3
+    role: context
+  - path: pages/traits/metabolism/homoacetogenesis.html
+    sha256: 5470447a6137263f33068b1a61865a4b7bc56e9551ed1659c2d52b9813813b86
+    role: context
+  - path: pages/traits/metabolism/hydrocarbon_degradation.html
+    sha256: 8174fe476af3fe7ecfb327c1d62a7cf39a8d2a058a86260da4046496104c8573
+    role: context
+  - path: pages/traits/metabolism/hydrogenotrophic_methanogenesis.html
+    sha256: eea9406fcc9841ec2b25b09947b4ea6ce50b41744b678f7875a135b3b11af1f0
+    role: context
+  - path: pages/traits/metabolism/hydrolyzes.html
+    sha256: 0c3e5f557becbd67a470ce8dbd6dbe75f6b19d0bb683a3666f74354b871b1e69
+    role: context
+  - path: pages/traits/metabolism/imports.html
+    sha256: 4a65d931072c439ce167df01ef952586f4f9da3d24acb9790a7493b6c96118d3
+    role: context
+  - path: pages/traits/metabolism/iodate_respiration.html
+    sha256: b3ff5ece2e5cc8afecb89120bcd87044583384341a69451158a318a37e6b2d3b
+    role: context
+  - path: pages/traits/metabolism/iron_oxidation.html
+    sha256: 36639097318bb76ad14527e20527c150ec45f5277c870541d7944b7ccfa18647
+    role: context
+  - path: pages/traits/metabolism/is_not_required_for_growth.html
+    sha256: de26fcac8500242439ee90e3e7456cd0aca2ca7d1ad0c8b8597161b1c607e858
+    role: context
+  - path: pages/traits/metabolism/lactic_acid_fermentation.html
+    sha256: b5be03629f81b513d7ce7e94e2960b8d1370724e36bd4754ff10e312478bdca3
+    role: context
+  - path: pages/traits/metabolism/lignin_degradation.html
+    sha256: 0252313490309b7c7c037fc6009dd486c39acc02b66aa45010637f06f18f36c9
+    role: context
+  - path: pages/traits/metabolism/lipolysis.html
+    sha256: 530f360add82b25648047f479e7de43844b0c9dc61eb99b3cee0c28effc9ec6f
+    role: context
+  - path: pages/traits/metabolism/manganese_oxidation.html
+    sha256: 94365dd2a6219858b4cce339c648e49ef126d1b72473f3a73c2fcdad20629517
+    role: context
+  - path: pages/traits/metabolism/metabolism.html
+    sha256: cb2d6df7b606ac5e4f0fc12d30d6f4bfd01daebcf3f810e02ba27a2039053b36
+    role: context
+  - path: pages/traits/metabolism/methanogenesis.html
+    sha256: aecb001cd035474948ff5480eba8267a031350f0dc0ce35a7414ada1beec879d
+    role: context
+  - path: pages/traits/metabolism/methanol_oxidation.html
+    sha256: 689c45e7a9748db37986484bcaea2cda24309043db3c7b750abc75d30711148c
+    role: context
+  - path: pages/traits/metabolism/methyl_based_methanogenesis.html
+    sha256: f1c4d7d5fccda70b34177f8b1c878b195756e0f35387479c09fd9dee6001d583
+    role: context
+  - path: pages/traits/metabolism/mixed_acid_fermentation.html
+    sha256: 6e9b3c815f1bdd253cd122116d09480239b6339e597dee37652073fc0db6059d
+    role: context
+  - path: pages/traits/metabolism/nitrate_reduction.html
+    sha256: 864effc72120165c0624f148617fd9e6ffbf04a39deb24c1c0e7af3f252bd0ea
+    role: context
+  - path: pages/traits/metabolism/nitrate_respiration.html
+    sha256: 6f6721678862b27c9e75dbfd20d3c956d0aac8f86d7dc88d17a2032b955e64fa
+    role: context
+  - path: pages/traits/metabolism/nitrification.html
+    sha256: 9721e407cb53eb0ed68bd154ebc0a8ff979fe7799dc0dc1b462306f3f5cef211
+    role: context
+  - path: pages/traits/metabolism/nitrite_respiration.html
+    sha256: 0f3ccc84df9b59d0deec705d4a02cb3403acb5ac8815626939f8969693a897f6
+    role: context
+  - path: pages/traits/metabolism/nitrogen_fixation.html
+    sha256: 80814acbac9e02e80484b74e4447da3a116aa6a31e148b37af4fb8577871f849
+    role: context
+  - path: pages/traits/metabolism/nitrogen_respiration.html
+    sha256: a935f78216dab0ddebab8467130b3144a77ae6ef400da5b7efaed0ca6b7f6a2b
+    role: context
+  - path: pages/traits/metabolism/organism_interacts_with_chemical.html
+    sha256: 0e22e28e6c98941f9d7d31f0c6151e2ba08895198dab684702116cc436ad1784
+    role: context
+  - path: pages/traits/metabolism/organohalide_respiration.html
+    sha256: 4ecb8c0574ea597129eec9147aa1bb34c4266e5a360f52ce7fd90e95ea1eebf0
+    role: context
+  - path: pages/traits/metabolism/oxidative_phosphorylation.html
+    sha256: 75fdaef97e74e6af898c9c8dea7348f20fc2e2d3a9f420823b032784b2c59ab3
+    role: context
+  - path: pages/traits/metabolism/oxidizes.html
+    sha256: 6f01a05d5fef6c1fc9a8f98e0021850069558e7736823c7437ce600ebc3d8945
+    role: context
+  - path: pages/traits/metabolism/oxygenic_photosynthesis.html
+    sha256: ad58a5fd1798c0538bc8eb37e0536318e7ca911b7f8ba02ad8612718054d808c
+    role: context
+  - path: pages/traits/metabolism/pectin_degradation.html
+    sha256: 77d88b85c37dbd7a5f8d8f4ddfcb0194b56b4b6794bef552519216031579e21f
+    role: context
+  - path: pages/traits/metabolism/perchlorate_respiration.html
+    sha256: 3f15d52919dea541162606f665d500c471208840407ae294d597129046770567
+    role: context
+  - path: pages/traits/metabolism/photoferrotrophy.html
+    sha256: faf4a56979cf3e95e9ff67bfa45463f8ffa82bc87c2c3c67dc2a7ff4284fabc7
+    role: context
+  - path: pages/traits/metabolism/photosynthesis.html
+    sha256: cd2ba0db3fbf2709e5c32183e066582357116e6a3db33b2d3244b5e6db0264a5
+    role: context
+  - path: pages/traits/metabolism/phototrophy.html
+    sha256: 0cf6b322632720aca30ffddcdf04198e2a4cd9535d8250f7078ae86d427f76cb
+    role: context
+  - path: pages/traits/metabolism/produces.html
+    sha256: 5a8cac6a97999ba06b60cf041f40177a0a04a43ddfd7d24a741309056d3ed320
+    role: context
+  - path: pages/traits/metabolism/propionic_acid_fermentation.html
+    sha256: 475ae44ed100eb67751fe451bd32964c5bb7d494df24bb5c38c205757499d05c
+    role: context
+  - path: pages/traits/metabolism/proteolysis.html
+    sha256: 7a9956bd5d6174cfd57f98c04ecd5429dfeffe2e1e32c5bc4e6b204198341916
+    role: context
+  - path: pages/traits/metabolism/proteorhodopsin_phototrophy.html
+    sha256: 65e891de90f683b005f72122d9a108701c29a7414c4c736b8e3295e3b4968186
+    role: context
+  - path: pages/traits/metabolism/reduces.html
+    sha256: 5ce087eb6052e841cdd5fda845bc1560589967c2c7639537d22d95a8430a3cd2
+    role: context
+  - path: pages/traits/metabolism/reductive_tca_cycle.html
+    sha256: 1b841c7a95b23d69250b9af5361cd4e4b0ddf41d50b0cee113fccd1694aeb23c
+    role: context
+  - path: pages/traits/metabolism/requires_for_growth.html
+    sha256: 219322dbed4494ae25fcafdf39dc133739c2ba7681d90a37c492fb48cbdd3725
+    role: context
+  - path: pages/traits/metabolism/respiration.html
+    sha256: b865cc92aecb5d1a6498576c037c0e8c27ca7b7ea0da9cdbd25b2774590d3766
+    role: context
+  - path: pages/traits/metabolism/respiration_of_sulfur_compounds.html
+    sha256: 4610b5c2656391d7b1b1985a9616def99e55ce536b660de31a2231d0f9da6e70
+    role: context
+  - path: pages/traits/metabolism/selenate_respiration.html
+    sha256: 3b414a298d7ddf3bf81c6aab8ce4b46e755fe6793ab866e380187fd55a6e20cc
+    role: context
+  - path: pages/traits/metabolism/sequesters.html
+    sha256: 1febe1bcdfd9402fe32b64681cb50760fe61d7e8725d121abadd1e880506bae1
+    role: context
+  - path: pages/traits/metabolism/shows_activity_of.html
+    sha256: 3f0e1c20a6de6606a73c819ab454e981c908c3fb90137e2a6695fa5efc4d2d44
+    role: context
+  - path: pages/traits/metabolism/starch_degradation.html
+    sha256: c6fa6831caceddfc2392045ef81e3b3a89ef292e9ec32e77b8ababf0d4a8c515
+    role: context
+  - path: pages/traits/metabolism/substrate_level_phosphorylation.html
+    sha256: 72025989ef28270a576d1a830409c3c1e46b789ff4a1ea1130eb003387d2e4b5
+    role: context
+  - path: pages/traits/metabolism/sulfur_oxidation.html
+    sha256: 7ac69c9e9ed0bd0e91a2c025cbedf7ddb8e383e3ef25ad5cc50e388d58ad10f8
+    role: context
+  - path: pages/traits/metabolism/sulfur_respiration.html
+    sha256: b5f18ee66f54c73748a596fa0f6a92724aed40d3cbb26205714d0246d0fab458
+    role: context
+  - path: pages/traits/metabolism/syntrophy.html
+    sha256: 93b5b012dff3d99bec6134432b186b0f9f0eb7704e3a243e81f2c6c6b15fc254
+    role: context
+  - path: pages/traits/metabolism/tetrathionate_respiration.html
+    sha256: 3ec9c6b281b557b5f3bbc37e65b632134d032df0323b2a5819607c176b71fa25
+    role: context
+  - path: pages/traits/metabolism/thiosulfate_respiration.html
+    sha256: e5937ff2519b5afba15d873d835d3309bff9d2f4f61ac826fca2f403c7a23aad
+    role: context
+  - path: pages/traits/metabolism/three_hydroxypropionate_bicycle.html
+    sha256: 9d8695e941426add66df98d052b1dbf713f165063c0e462eaf27938b8ce6cefc
+    role: context
+  - path: pages/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.html
+    sha256: c8f92493170ac9456c19fe3b4bcfb1f9562a93aa3d6a8e7fb1b0e64cf31fadfd
+    role: context
+  - path: pages/traits/metabolism/transports.html
+    sha256: d344bf4f68e74da30a200936c2705664052fad382f42a8c357b3fbe0e251c47c
+    role: context
+  - path: pages/traits/metabolism/trimethylamine_n_oxide_respiration.html
+    sha256: 8aa3bc98d1c4ec2e0b7c0ca51aaaa30ba35c5b0280c4c196fe8a43eedf64a008
+    role: context
+  - path: pages/traits/metabolism/uses_as_carbon_source.html
+    sha256: f746dabd92ebc502e0c867cb9a4992d9f735a1b89ccaca324dbdf4352829907a
+    role: context
+  - path: pages/traits/metabolism/uses_as_electron_acceptor.html
+    sha256: fffc25accf4b0146c798a99a1c7a0fb1f513b74f2e025cadbc9adb38f1a0fe54
+    role: context
+  - path: pages/traits/metabolism/uses_as_electron_donor.html
+    sha256: d965f2363cb10c96ca59c600fd692c643d1e5c222d03f849a7b791100a3c15f9
+    role: context
+  - path: pages/traits/metabolism/uses_as_energy_source.html
+    sha256: 5dac1fbca350590cf785cdbaeee844e608112f14cebc469ae884c213210cf733
+    role: context
+  - path: pages/traits/metabolism/uses_as_nitrogen_source.html
+    sha256: d53231ff46bd9ec46debc3498153e2bface11f1c58d84a0596349ace763ebc77
+    role: context
+  - path: pages/traits/metabolism/uses_as_sulfur_source.html
+    sha256: 0ab9895b66a69acd933e4cd621cb5a5bedb83a8579fef4d220ac87b3f1c9795a
+    role: context
+  - path: pages/traits/metabolism/uses_for_aerobic_catabolization.html
+    sha256: 0994a6d494b5bd92b498d42c3b99783471c7a22cbab481ac81c4fb4685b82dad
+    role: context
+  - path: pages/traits/metabolism/uses_for_aerobic_growth.html
+    sha256: 586b95279240081bbba20d5c05bd39aa6044149a47a32dc0adb0762357a63a92
+    role: context
+  - path: pages/traits/metabolism/uses_for_anaerobic_catabolization.html
+    sha256: 44576b0c46c00242cbf4bd634313c96d6447305440ebcbd355a212035ade0898
+    role: context
+  - path: pages/traits/metabolism/uses_for_anaerobic_growth.html
+    sha256: 4b6720ff8c4da3fe076684a0e1e33ca9def336eb3b078ffead1daed4d7c1b81b
+    role: context
+  - path: pages/traits/metabolism/uses_for_anaerobic_growth_in_the_dark.html
+    sha256: 5c1301b14a691c3c788f43cefae5fecc277838ae9d3ad4324c392ef76565473f
+    role: context
+  - path: pages/traits/metabolism/uses_for_anaerobic_growth_with_light.html
+    sha256: 32bb7fba0f65d1c06dd89aacce11f326b1c4a45d7a32ca53cbb9da0923af5198
+    role: context
+  - path: pages/traits/metabolism/uses_for_growth.html
+    sha256: 741087700a2c0fdbd4af5921c41b87f070ba69bc94c7a495521dbc14838b4f00
+    role: context
+  - path: pages/traits/metabolism/uses_for_respiration.html
+    sha256: bb7855ae3f49ff5470a0faf02051f3bf7679ed5add50a6959783257f6fa8f748
+    role: context
+  - path: pages/traits/metabolism/uses_in_other_way.html
+    sha256: 8ee74523aa65ff5c5b992befd17a6a4330bf4b4e733b76f09434b7ace45ddae9
+    role: context
+  - path: pages/traits/metabolism/wood_ljungdahl_pathway.html
+    sha256: 1ac1d22e27887e79ce572ee55c4770095774e32e25e4d0bd5963780089587599
+    role: context
+  - path: pages/traits/metabolism/xylan_degradation.html
+    sha256: 996b86ac1ed1645a10529d7ffe56e48bf0e84ad07e4ab7faa36c7a13223a6424
+    role: context
+  - path: pages/traits/morphology/akinete.html
+    sha256: d8dc518e9de5ce55f77fb34502496fca6d7b826ab7c9b75b385892d35c820a23
+    role: context
+  - path: pages/traits/morphology/amphitrichous.html
+    sha256: 19921db2c1c86f6f05cde8fd461f5d2db97fa87873bad44807752f54ad4a36b8
+    role: context
+  - path: pages/traits/morphology/axially_filamented.html
+    sha256: 48ff7a8a679ac8ab8f94c3be378dd907de006588aadd09eee0180de08d7ae291
+    role: context
+  - path: pages/traits/morphology/bacillus_shaped.html
+    sha256: 1bc04fca8e89bbb9185b0a628669fce480e7b1e75d8c359562096bdf4292ae6e
+    role: context
+  - path: pages/traits/morphology/baeocyte_formation.html
+    sha256: 27bbce5df5ff61e0e5407ba05932999cae829a256a221773271e1c682e9367bb
+    role: context
+  - path: pages/traits/morphology/black_pigmented.html
+    sha256: 90f5e537eb40001d080a7ca12276572ecda1633161cf27b89bf92bb117f1b730
+    role: context
+  - path: pages/traits/morphology/branched_shaped.html
+    sha256: 2e200ec518d7b4f2b2dac7d0bff568a377a4c92492e3395704e9aea520c1e5d4
+    role: context
+  - path: pages/traits/morphology/brown_pigmented.html
+    sha256: b7deafa264614a7f9dd7442c7662c0bf8e223659e969896a5fddbec2986df407
+    role: context
+  - path: pages/traits/morphology/capsule.html
+    sha256: 2c24439067ff64d9ef249b99b5645b21ada12b623962952973fcfd0ec84b3791
+    role: context
+  - path: pages/traits/morphology/carboxysome.html
+    sha256: e0b7e63243cf30b861cc259fe66f174ac3452bdb4b1486e4519a09244c749636
+    role: context
+  - path: pages/traits/morphology/carotenoid_pigmentation.html
+    sha256: 56c5428e9e7b1d8ca96bf39f8dcbbb18b263cdda9a2ba435eb6f30bb635bfeb5
+    role: context
+  - path: pages/traits/morphology/cell_length.html
+    sha256: 44d6152246cfd6dbe4dd98c3e728c004038861b686eb4a9dcb59e09517ff589d
+    role: context
+  - path: pages/traits/morphology/cell_length_large.html
+    sha256: eda4df48361ce762b2987930478221ff0f86d44e230f55c5bbe208bca05cfef4
+    role: context
+  - path: pages/traits/morphology/cell_length_medium.html
+    sha256: 3edc3b047dc02baa211822b1abb8bb8dda73f8bc3da5d88a2e7e972587fb6f69
+    role: context
+  - path: pages/traits/morphology/cell_length_small.html
+    sha256: cd49ed011f4ae4c85939fd86c2bdba77975fdb482ee19d73cd04269683c5d1c2
+    role: context
+  - path: pages/traits/morphology/cell_length_very_small.html
+    sha256: 223cc1cc76c1b0eb20306dfa1d347e2c51e5aeca521efa0abb0d54f8c8d72f4f
+    role: context
+  - path: pages/traits/morphology/cell_shape.html
+    sha256: 20422ac12ed94e4998842ff6bdcea4961ce054dc9cc1e50027bed36113491fb3
+    role: context
+  - path: pages/traits/morphology/cell_width.html
+    sha256: ff862c79b25c06b185d97e5669ca420f85ff3670dc3a961304b5f2a6c75a6584
+    role: context
+  - path: pages/traits/morphology/cell_width_large.html
+    sha256: b0e31740a9339c5802b8b9e429be4a459544637d9cc41d9381b1d9ee554556e6
+    role: context
+  - path: pages/traits/morphology/cell_width_medium.html
+    sha256: e29f1b1cabbfa1c872407382c0f7af4096dd819d6931eb3e58e1ff70caa02e5e
+    role: context
+  - path: pages/traits/morphology/cell_width_small.html
+    sha256: be54be5d6b05054e60840bac79db5253dace537a17b2183e1be89aa410e0de4e
+    role: context
+  - path: pages/traits/morphology/cell_width_very_small.html
+    sha256: f72f3ea055c414e850a3ee6fda627938fb993db668bab760538312aad7963e32
+    role: context
+  - path: pages/traits/morphology/coccobacillus_shaped.html
+    sha256: 087f8b7fda0a0ff3af5aa40fb4e9bff2184d86189f104a3b3af4ce285dfa2029
+    role: context
+  - path: pages/traits/morphology/coccus_shaped.html
+    sha256: f074395b3f697259b1abc21868b7cd8044cae866979abc0f9b638953d5b8b732
+    role: context
+  - path: pages/traits/morphology/coenobium_formation.html
+    sha256: 2833d4d11e9efb2b772da60f41fa942a3e31734b4c37090a022d810be24800e3
+    role: context
+  - path: pages/traits/morphology/cream_pigmented.html
+    sha256: 59e2d04488d74d0afaca1750fd0f4b212e956875c55924f421216006dd6038d0
+    role: context
+  - path: pages/traits/morphology/crescent_shaped.html
+    sha256: f64f43d381e40f8de7919e9d478dfc95f874ce89b059aed18f4db0121045e1e7
+    role: context
+  - path: pages/traits/morphology/curved_shaped.html
+    sha256: 862a276165c7f17c213429f8c7a0b4951ae218cd39cbfd5e7c0af8ab2a20dac5
+    role: context
+  - path: pages/traits/morphology/cyanobacterial_multiseriate_trichome_formation.html
+    sha256: 3ca2ce18926e9fbfc00810a56251bb0b76598a863362e644d2b95fb941789f3d
+    role: context
+  - path: pages/traits/morphology/cyanophycin_granule.html
+    sha256: 12dc2c0702364e5a47635c8d8f9b65f6dd5fb64ebf36e7f1f2e235cb905192eb
+    role: context
+  - path: pages/traits/morphology/diplococcus_shaped.html
+    sha256: 93e9b4ab3f7380cbe11b47285f21aa113063d0b2477c40d3fbeb5f70aaa091df
+    role: context
+  - path: pages/traits/morphology/disc_shaped.html
+    sha256: 75ea779765bb62db9e931299dfa58193ada9e0bccf4ce1d816c7b76ff3fac5c3
+    role: context
+  - path: pages/traits/morphology/dumbbell_shaped.html
+    sha256: 7a5208ded6ae4d41631eb3e9222dfcaf9436f2ab8a55a6a7b59a8782001be1e1
+    role: context
+  - path: pages/traits/morphology/ellipsoidal.html
+    sha256: 1c7509411988fa4281d59e1b3b70ca976865987d28c89c1ad2fc6944f4857bc4
+    role: context
+  - path: pages/traits/morphology/false_branching.html
+    sha256: 51220865acec8199881a2d0efd461ab8102105ab78bd22792be8bf3d8b47d56e
+    role: context
+  - path: pages/traits/morphology/ferrosome.html
+    sha256: be5c4c2308413b052f38bebc8181b167deb5d74cba81d1cb6422e3cbea7468ed
+    role: context
+  - path: pages/traits/morphology/filament_shaped.html
+    sha256: b02276006b8e95422d9d7ccf7012cead4d0675110aa97c5f5a80c8df20c67919
+    role: context
+  - path: pages/traits/morphology/flagellar_arrangement.html
+    sha256: f87aef4bf0ddc2bc216115dfa9d2dd48bc17610010d98c37f8ae12d907e4ff2d
+    role: context
+  - path: pages/traits/morphology/flagellated.html
+    sha256: 6f888ca47b3eed407420c53da036aeb9c40f888f6b89ecb38a6047e3564ee769
+    role: context
+  - path: pages/traits/morphology/flask_shaped.html
+    sha256: c6ab560a2ae077cdbad5a88a331a5ed877f9e76315a341f46a053437ed86560b
+    role: context
+  - path: pages/traits/morphology/fungal_adhesive_column_trap_formation.html
+    sha256: 05e27b963bffc4447b138e4b4aaed325a86dc1ce0afcbac05e56e866575ee590
+    role: context
+  - path: pages/traits/morphology/fungal_adhesive_knob_trap_formation.html
+    sha256: 604121ea7f647068e9ef13eff06eec40f288ee3e3a7f767fff1b82ad610c7b92
+    role: context
+  - path: pages/traits/morphology/fungal_adhesive_net_trap_formation.html
+    sha256: ca132f6e3ee3d23bf72bde6cd1a6757060385eaf064d57dcabdae94266aa6a5b
+    role: context
+  - path: pages/traits/morphology/fungal_appressorium_formation.html
+    sha256: 4acf2d7edbc91824dc168acaca7517fd37219b4d8be530646ee8a19bfb3b40e7
+    role: context
+  - path: pages/traits/morphology/fungal_arbuscule_formation.html
+    sha256: 6dfa20ba05e55bde9c9e1d5428bd472a452c140da9b3ba45156e0e035c82a622
+    role: context
+  - path: pages/traits/morphology/fungal_auxiliary_cell_formation.html
+    sha256: 667d4988288cbf8ef2873d621ea122f3a85e91b12981092b7835a8cd8a36609e
+    role: context
+  - path: pages/traits/morphology/fungal_branched_absorbing_structure_formation.html
+    sha256: a4afdd7c23f5088ad000429db94e50159d71e908959f99a8cab5c5b9f074e47a
+    role: context
+  - path: pages/traits/morphology/fungal_chlamydospore_formation.html
+    sha256: 207994018b02a53fd5446e0d83968bfcdeb11a012c3ee42b8fc877a13871677d
+    role: context
+  - path: pages/traits/morphology/fungal_conidiation.html
+    sha256: 175c01ea03ef7d75f7baf84038bb36f4a70676db62545862820792da3e86de19
+    role: context
+  - path: pages/traits/morphology/fungal_constricting_ring_formation.html
+    sha256: 4e2584a59015bc2c25891054b534ed4ec6e26a77d5686eb869a10e7bb6f5cfd9
+    role: context
+  - path: pages/traits/morphology/fungal_hartig_net_formation.html
+    sha256: 3a5c1930f4ed42ddff039ddf1387a38eece6f6698f36482f4f92999d8f0790a1
+    role: context
+  - path: pages/traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.html
+    sha256: 1ffb2fcec0e687f499b5765dc35b1b16182e07262454e17d5d67b8631ac82dc8
+    role: context
+  - path: pages/traits/morphology/fungal_mycelial_cord_formation.html
+    sha256: 420d49c0710bed41b17fcadc6a1112fa37b123d655fb24fcc3e8a748abd2fd09
+    role: context
+  - path: pages/traits/morphology/fungal_nonconstricting_ring_trap_formation.html
+    sha256: ee48f4fabc72915f673bffb31f1c633b9f39298d9c555c9140f219c1db9da7fd
+    role: context
+  - path: pages/traits/morphology/fungal_peloton_formation.html
+    sha256: 314634f2bd983c46d0a1690f93441f51fff49bdc527cbc92e2b2489a9fb30713
+    role: context
+  - path: pages/traits/morphology/fungal_rhizomorph_formation.html
+    sha256: 50f4c50d97b528bcb4ce930a369b4e3131db86f7ffcc16bd114f108c18563712
+    role: context
+  - path: pages/traits/morphology/fungal_root_mantle_formation.html
+    sha256: 00b2a3f9c9764e881e4055f34cc6f2061a80d5ebb8aafe982fcda0a7e2445907
+    role: context
+  - path: pages/traits/morphology/fungal_sclerotium_formation.html
+    sha256: f069b7b5eee026c1bf5769c0794a03bb3085cc335ad429912403ef4a64acfa81
+    role: context
+  - path: pages/traits/morphology/fusiform_shaped.html
+    sha256: a053e120dab1b8245b684a8dec6edd20680a3d78b1e6a8eb9a7d37a6a9b801b4
+    role: context
+  - path: pages/traits/morphology/gas_vesicle.html
+    sha256: 596080f2a459a0277596fdadd12f28ed8e61a1f2430493846f3e954c6cc38dd7
+    role: context
+  - path: pages/traits/morphology/gliding.html
+    sha256: 3d58707a9f89f2279179cead2d33147d72bf6d68f816e3b2ca01e0dea43d9ef0
+    role: context
+  - path: pages/traits/morphology/gram_negative.html
+    sha256: d2f3d17eb8054ac98c5ce7c67008445b52160ba767627e95c09097bbe1716f14
+    role: context
+  - path: pages/traits/morphology/gram_positive.html
+    sha256: 9036d2655bfcd15b6a55cb40f55720cb127858fc46383c44256056cd03463896
+    role: context
+  - path: pages/traits/morphology/gram_stain.html
+    sha256: 5f5b807410ce0bc58d8fa8e08ad024b3a9bd9375ce64a2ad658ed69ca4450335
+    role: context
+  - path: pages/traits/morphology/gram_variable.html
+    sha256: 8b9b5d84a12664a1d97b4f79e978f8119ae5dc579d76473847435900efab4a56
+    role: context
+  - path: pages/traits/morphology/green_pigmented.html
+    sha256: f382ba01f75f5c58ced13b9ca335b8f3680f0dac404b967b9bb1209cd9743d0a
+    role: context
+  - path: pages/traits/morphology/helical_shaped.html
+    sha256: bfd99228d4e93056c55f1773ae9a97fd5b4aa92bf797cc2d144e6c3cd8fe1a68
+    role: context
+  - path: pages/traits/morphology/heterocyst.html
+    sha256: 8169d8ab1791615b5488194333be080670171f4b8259c4363e6edf60372331bf
+    role: context
+  - path: pages/traits/morphology/holdfast.html
+    sha256: a696414ab49bb9bb69cfe31acedcf6ba5ec7b8517c6e15b77f8f79a9e76b5913
+    role: context
+  - path: pages/traits/morphology/hormogonium_formation.html
+    sha256: aa93d0cdb2fd552d7e46dd40f0d071b8810e832b341c10b678d85719c48ebd78
+    role: context
+  - path: pages/traits/morphology/intracellular_inclusion.html
+    sha256: e1732a0843e4e164d9d6d23329d2a53921f3a458fb93f9643d3fa98e20ed07f7
+    role: context
+  - path: pages/traits/morphology/irregular_shaped.html
+    sha256: 35761aa8884ca8b31e1e43a42affb9071f2e2c4e7ea1499c0f1ba7573a4a197f
+    role: context
+  - path: pages/traits/morphology/lateral_flagellation.html
+    sha256: 3bd666d55aea5bd07db54610466fec7dee883304ccae6ec0d26833c1ab363e68
+    role: context
+  - path: pages/traits/morphology/lophotrichous.html
+    sha256: 4c8afe8e274096a1c8b5f672c5c0b6f767554ec6f6253ed97ac165b73f758171
+    role: context
+  - path: pages/traits/morphology/magnetosome.html
+    sha256: da2ddfeda9d4b191270c947d6a770caa38c6fcb491787652d01bee1beb242349
+    role: context
+  - path: pages/traits/morphology/microbial_haustorium_formation.html
+    sha256: d9fd76a94f2498dd6e24100790eb35339e8c06041007adbeabe27d1d6b8240cd
+    role: context
+  - path: pages/traits/morphology/monotrichous.html
+    sha256: 08496c1fa6fcb71ff228fe82216d2a0ba3d9e925334828afd1d450c7485f62eb
+    role: context
+  - path: pages/traits/morphology/motile.html
+    sha256: 31dfd5ce84ed128ce6e36c2cd4f16f97b608fd327488abd509d154ee1819fd1d
+    role: context
+  - path: pages/traits/morphology/motility.html
+    sha256: a93801f1ff3eb449945ff9a61a063f04acc6808e2939d2747b01bd3a3131f289
+    role: context
+  - path: pages/traits/morphology/mycelial_growth.html
+    sha256: 0ac8fd7a03d4e1eb37787554db9ae90803080568b307e219fdeef47cf376ac05
+    role: context
+  - path: pages/traits/morphology/necridium_formation.html
+    sha256: 5cca1ec77400f9fb4ba2969a44aea7149df8313ea7d57ce042609d5c6deed718
+    role: context
+  - path: pages/traits/morphology/non_motile.html
+    sha256: 7167793e44dbff9f3cc2fcc8b855b6d4966aa64cc957c198e95cb9f20d5a62e7
+    role: context
+  - path: pages/traits/morphology/non_spore_forming.html
+    sha256: 46175a43788af3f5a7cab937d4df37d002ceabc93b7951750d656b9729da722c
+    role: context
+  - path: pages/traits/morphology/orange_pigmented.html
+    sha256: 77d2779dcacb483adc3533b6d6044e8d129085a1e7e7a71daa4d53677080fbf2
+    role: context
+  - path: pages/traits/morphology/oval_shaped.html
+    sha256: dd6139a51f00195be706f5bcdf1ad47ac3d3c1fb087605762d84dc4abf2665fe
+    role: context
+  - path: pages/traits/morphology/ovoid_shaped.html
+    sha256: 0e326d78fb77d5fc2194cd119dca0b8771fc51c9838d18c005461695f60ef3c8
+    role: context
+  - path: pages/traits/morphology/palmelloid_formation.html
+    sha256: 35f408074cd9aaee2d6169f954647f66e13e6a5c9f7e8d5eff3a3c95effe2e48
+    role: context
+  - path: pages/traits/morphology/peritrichous.html
+    sha256: daa35dd08e033a0eabd759f813882cbced0b2d483036aa812ba9f12e78d704b2
+    role: context
+  - path: pages/traits/morphology/pigmentation.html
+    sha256: e21efc2af37fa43d49a707eed02f98eb837c414728d9be39ec46e804fa6f8cb7
+    role: context
+  - path: pages/traits/morphology/pink_pigmented.html
+    sha256: d8d9f6a55150f7d395454aaa9e35f91ed00e129883ad14a0d244c40d10e09a37
+    role: context
+  - path: pages/traits/morphology/pleomorphic_shaped.html
+    sha256: 65893482bba8d830ea1560f94eb2f012ccca14f0070f7125136249b40541e7ac
+    role: context
+  - path: pages/traits/morphology/polar_flagellation.html
+    sha256: ae5b486088e68948a34dd9289f1db2a3f98c9c8c55e9af1488c8b21b6e0ac2ef
+    role: context
+  - path: pages/traits/morphology/polyhydroxyalkanoate_granule.html
+    sha256: 8bf4ad899f5b7e6d9321f54a916ace8cb84aa9321c51323579fa44638d08c46f
+    role: context
+  - path: pages/traits/morphology/polyphosphate_granule.html
+    sha256: b6ba848dc75a93dede77ba6ef2f5a81534df8bf3d681106132e6a7348d19e6fa
+    role: context
+  - path: pages/traits/morphology/polytrichous_flagellation.html
+    sha256: 02bb48df99cf1a7cf15d918412ce650d31a0153c4a154e9f26725af2a6d7ea55
+    role: context
+  - path: pages/traits/morphology/prosthecate.html
+    sha256: 7ed545149abc6ca276a0287addabdd2e7d58d414e1138cb88c768ad7e4fabea8
+    role: context
+  - path: pages/traits/morphology/pseudohyphal_growth.html
+    sha256: 5d2a359d90bfab3b19ee552359c4f044c6fe42319ff657ca832b7280552fb07f
+    role: context
+  - path: pages/traits/morphology/red_pigmented.html
+    sha256: 6e294f5cd6e2242ac7d3409b08a43228f5f47438906741cca7010f28a3d70866
+    role: context
+  - path: pages/traits/morphology/ring_shaped.html
+    sha256: 4bb614cb712395f910753295d60677228ece88945bb58f16a9e2abdafb2c9a54
+    role: context
+  - path: pages/traits/morphology/rod_shaped.html
+    sha256: 2599903b72f87fe1b293f72c9a4ed95d5ce04bd61c77485dd23a74585bad49b4
+    role: context
+  - path: pages/traits/morphology/rosette_cell_arrangement.html
+    sha256: 9094a861c19aa298b70ae7b8dedefae9afb2b31062a96c5e1913ce3845955164
+    role: context
+  - path: pages/traits/morphology/s_layer.html
+    sha256: 022c692baf9056516fafdadab23cc61c025387c4ebd2afe891c73e8062674e6d
+    role: context
+  - path: pages/traits/morphology/sarcina_arrangement.html
+    sha256: fab34506e893146ee438a256729098c77c1312842e9367d3bd4e13b13053e84c
+    role: context
+  - path: pages/traits/morphology/sphere_shaped.html
+    sha256: b1e5c01082116eed9efa3b3256641237209681d40f3a3220260104cb6579290e
+    role: context
+  - path: pages/traits/morphology/spindle_shaped.html
+    sha256: 52c3f51041680f5cfb1b1496886ff037cf49b7c938e1f34abed412a5471e30b0
+    role: context
+  - path: pages/traits/morphology/spiral_shaped.html
+    sha256: beb7305cabd8d0f4f1a487303828610ff396d4145986a5f6f8fceb1baba1359d
+    role: context
+  - path: pages/traits/morphology/spirochete_shaped.html
+    sha256: f7dcda7fdefd1b69e048d50de78296363dce73be04b6b74326b607340fc0ce0b
+    role: context
+  - path: pages/traits/morphology/spore_forming.html
+    sha256: ed2b0f7850878075dadc800d78beba3b50030658114e1498e202f5472d731ec7
+    role: context
+  - path: pages/traits/morphology/spore_shaped.html
+    sha256: b0809741eb19e864cfa7fb90d52cf846e6f825461fc64f1a6cb0b0320067b699
+    role: context
+  - path: pages/traits/morphology/sporulation.html
+    sha256: 17b4ffc840d740b290243daf4c478993d5dd88978ef63fc71d89ff57a477f230
+    role: context
+  - path: pages/traits/morphology/square_shaped.html
+    sha256: 5dd204f2e0830498e7e14ebaee9c59ca84aa52700339528edba7a3ce8c1d852f
+    role: context
+  - path: pages/traits/morphology/staphylococcus_arrangement.html
+    sha256: 8e40c06204c8a375fabfb913e92a653da5ec0b08f3f9d75dfc29b3703c0ca4fd
+    role: context
+  - path: pages/traits/morphology/star_shaped.html
+    sha256: dade7885ecaa1e3394d5c0f4c1e274aaa0cdecffe3d68b2b451c833b54caece0
+    role: context
+  - path: pages/traits/morphology/streptococcus_arrangement.html
+    sha256: e6b872573f0264ac139152f5b017036c145e634b8be1fc2b97a8929094f311fc
+    role: context
+  - path: pages/traits/morphology/subpolar_flagellation.html
+    sha256: 5b7d96ec9bb851c8220dde5486acd1cf9a1d175c982d43b5a67ed462b4f69a23
+    role: context
+  - path: pages/traits/morphology/sulfur_globule.html
+    sha256: d3b16a7b20c5248a1f04c81d2b64e1e8dd7f514df9f3364f80be049613a61d49
+    role: context
+  - path: pages/traits/morphology/swarming_motility.html
+    sha256: 94f28c224614c3dc919c5f833d87df00cbf2b4bf6adfb56fa4c434d06f985e18
+    role: context
+  - path: pages/traits/morphology/synnema_formation.html
+    sha256: 5bdc3a0a2c4d22e7f77b182733a96c7fd388acb4dfa4d3d19e6a0aa7ab82921f
+    role: context
+  - path: pages/traits/morphology/tailed_shaped.html
+    sha256: baf794f4f3b0c1bea5bd402a304f56b86c6180117971fb6bebdc1dcb14ac7fac
+    role: context
+  - path: pages/traits/morphology/tetrad_arrangement.html
+    sha256: 5e721c20560d010fa512fd899fbc5b184c28fa6fa9cd3ec0dd0b33051ee47a35
+    role: context
+  - path: pages/traits/morphology/triangular_shaped.html
+    sha256: 8d5966b0a7aee9e096da01f4ee1339111dc986557f68203440bc1f8fc06e3d7c
+    role: context
+  - path: pages/traits/morphology/twitching_motility.html
+    sha256: c025345eea70b3a5ae845c8abb858174e143e775477050139fdcaa1e9e1a9557
+    role: context
+  - path: pages/traits/morphology/type_iv_pilus.html
+    sha256: 05b0e9b715d54103b7f9b0bfb168afcc8d2bbee724059064a37e3cdce8544e1c
+    role: context
+  - path: pages/traits/morphology/vibrio_shaped.html
+    sha256: 858840fb43c0ee29179091e562ea71972bebb4b2fa836669fb60c8cfa471c947
+    role: context
+  - path: pages/traits/morphology/white_pigmented.html
+    sha256: b814af66559276987b019b22cf7c51cd52975c928c4441004f90fb3f8ca5ea36
+    role: context
+  - path: pages/traits/morphology/yellow_pigmented.html
+    sha256: 58e6a9ce013f0ae8351f2a1ba7f23eaf2397c34ad5d0ea0569649800d76c2126
+    role: context
+  - path: pages/traits/observation/growth_nacl_observation.html
+    sha256: 5cb1a4da588f0492a90665188fed61ca97fa264ba1c9ee9171e8b55b89da2554
+    role: context
+  - path: pages/traits/observation/growth_oxygen_observation.html
+    sha256: e0263f7a69d2cdfbe4c5528570a6047e7902b7e7ab249a80acfa7204694969ba
+    role: context
+  - path: pages/traits/observation/growth_ph_observation.html
+    sha256: 39a0515fc9bc4a4a982d00874e150d071ed054d0f9440b9951e80b84e6545ec3
+    role: context
+  - path: pages/traits/observation/growth_temperature_observation.html
+    sha256: 3e516009159b14886ab62c6ad026853d717bc772c74e5e389bacf25849fe09f0
+    role: context
+  - path: pages/traits/observation/nacl_delta_observation.html
+    sha256: 7f106f057a5ae1270182c3782ae6210ee823646e49bba729527d79332e2d3a2b
+    role: context
+  - path: pages/traits/observation/nacl_observation.html
+    sha256: a42a0fc56f892988eb547714e4d2b80b35025836e1fc862637de7ac11a649f47
+    role: context
+  - path: pages/traits/observation/nacl_range_observation.html
+    sha256: 7962ed300747ae3a332696a3200762554e4fa74d37181270223dd346b73f0dae
+    role: context
+  - path: pages/traits/observation/optimum_nacl_observation.html
+    sha256: d4952a1571dd43d5b99a71f042697af4874d39803e131a7078222be557c9a1f1
+    role: context
+  - path: pages/traits/observation/optimum_oxygen_observation.html
+    sha256: e51122826a7a12d28c4fdbb13d6185eb8ceb207445b679393918c811a59adbf4
+    role: context
+  - path: pages/traits/observation/optimum_ph_observation.html
+    sha256: 766607dfbbc9bc04e9125fb4a981cc1d4d99bf87e05ba4bc2bb090ef09c4e23d
+    role: context
+  - path: pages/traits/observation/optimum_temperature_observation.html
+    sha256: 772a9596872d4797da1d3cbce64b80c9a5b11092b49f9fce4e71b5714e87840c
+    role: context
+  - path: pages/traits/observation/oxygen_delta_observation.html
+    sha256: 498e1fe57aeb407119ab84dcfeab20e77c976d0dea315c2d115fa4222a64c75d
+    role: context
+  - path: pages/traits/observation/oxygen_observation.html
+    sha256: 6053f2a53eb53c62fbd4c1da35daf30a8718356aa3cf5ac71aec4ff96706ef0c
+    role: context
+  - path: pages/traits/observation/oxygen_range_observation.html
+    sha256: cdf558504b13465777aeae219f67badd655fa4a1e0dc1cb823851c01dbc19b93
+    role: context
+  - path: pages/traits/observation/ph_delta_observation.html
+    sha256: 93311c7cabca65fa157c8051aab6ce68d06e744973447becc805d3e5de61bdb7
+    role: context
+  - path: pages/traits/observation/ph_observation.html
+    sha256: 82cf42212e85b3cd70e3d27aea32de9dfa7db682c94ae215e537141f22db1991
+    role: context
+  - path: pages/traits/observation/ph_range_observation.html
+    sha256: 41d7c7a4e82289d7ae8a7b2190e936cde439919cb4320761b9262110003a8ccb
+    role: context
+  - path: pages/traits/observation/temperature_delta_observation.html
+    sha256: 567c45e829f86e0839fe8b2c22ba395f9dee1bd7effa86779ebd7d9547799017
+    role: context
+  - path: pages/traits/observation/temperature_observation.html
+    sha256: 53d76dbe7d6b2377be3fa41e122909d0e70712cb977f48a2db9337242ae723d6
+    role: context
+  - path: pages/traits/observation/temperature_range_observation.html
+    sha256: 8271060f6d1cfca48a5182984b0bb9b45563cba9e5c3779e070d0a23d1044075
+    role: context
+  - path: pages/traits/other/catalase_negative.html
+    sha256: c862b9de99444b942d80d2a850da4fd9debf173a609c471a46646e4d7a5c1de5
+    role: context
+  - path: pages/traits/other/catalase_test.html
+    sha256: ef814436dc3dc69796f673f02eb73ae44815386bd55a6dda94c72af8abf45b78
+    role: context
+  - path: pages/traits/other/circular_colony.html
+    sha256: 5577a6fd604ca58c4c7d92d24310f27517b3ab932c4480ab9e0b0b49629d1b53
+    role: context
+  - path: pages/traits/other/coagulase_negative.html
+    sha256: 9ce14e158b6b59984267cf6e86afcb70a8a2caabcbdc1ec7dd1c4b3d7ca411ae
+    role: context
+  - path: pages/traits/other/coagulase_positive.html
+    sha256: 3f673a7f5a23df20b54fb25d0e13d84c5c4839732bc6c921b48ddc8e9039f0ac
+    role: context
+  - path: pages/traits/other/colony_morphology.html
+    sha256: d740f6a42a8eec8a5ef83e2cb307a88ceaf0bd4b29a85c73cb5aaca3af306cce
+    role: context
+  - path: pages/traits/other/colony_shape.html
+    sha256: d1260942a85c67fc29bd76659681d6332e469de7d14bf7b869784d1c788b2951
+    role: context
+  - path: pages/traits/other/epibiont_phenotype.html
+    sha256: b10f54ad7af9fce8c951612eeee4f599a3f4b8666621039bc98306b848f7ec98
+    role: context
+  - path: pages/traits/other/filamentous_colony.html
+    sha256: 6207c9123c23a1a786f4f9410e1014510ff96d490eb63dd7f6ce41a626846c78
+    role: context
+  - path: pages/traits/other/fried_egg_shaped_colony.html
+    sha256: 2dd6cb939df4492fae40e480fdddba73c1f33083f7b7de8c113ca02d5ae08b1e
+    role: context
+  - path: pages/traits/other/generalist.html
+    sha256: 00211332908a257d52bc5a224de3db6abbd93f0c706f27cadb67d03fc3ff98aa
+    role: context
+  - path: pages/traits/other/hemolysis.html
+    sha256: 41757d8dab32e224ab3d8996b9abf60763156334a315bbf3988d653ee0ed2465
+    role: context
+  - path: pages/traits/other/hemolytic.html
+    sha256: b9c540593f91289fdff6610d326ea4b882799db42298c233e9116f847b849c4a
+    role: context
+  - path: pages/traits/other/indole_test.html
+    sha256: 76a244f9372e8078b957560195d9d4dc1217f9f5ca3ccf08b8202f08308ec8e0
+    role: context
+  - path: pages/traits/other/indole_test_negative.html
+    sha256: c093af3d4ed017ceebbb0b883042acbad31ad522f4663fd227173934de88a39e
+    role: context
+  - path: pages/traits/other/indole_test_positive.html
+    sha256: 186c12d0cd3d9c41618fd2b5c8c8509d1bba7a3c6afabae1518e445c4dc0ee20
+    role: context
+  - path: pages/traits/other/irregular_colony.html
+    sha256: 7e5b80131a24e2594ea38eef2f200e3d2cc49b5871f49d5301cfe7ace15879a3
+    role: context
+  - path: pages/traits/other/methyl_red_test.html
+    sha256: a24d17e78158aefdf67301d3cb3b904894c6d4c429b22b4b86a6d6be515e49e6
+    role: context
+  - path: pages/traits/other/methyl_red_test_negative.html
+    sha256: 054dd7cbeff4d32f3cb1c572f3bc82d567d3b988898987eee3b55992481092e8
+    role: context
+  - path: pages/traits/other/methyl_red_test_positive.html
+    sha256: 1351cd10514821268f6cdbc56c184a62e9b9bb62cdbd75ca6a9173f403be9f0c
+    role: context
+  - path: pages/traits/other/non_hemolytic.html
+    sha256: 43217bb1efa63a18e113565a6fe8051d9bb6fa83473e3ef6d9c06ed8ed4f9f6e
+    role: context
+  - path: pages/traits/other/osmotic_tolerance.html
+    sha256: b8d887ccb4e2e6b8655befdaecb97528c36685f7d09ab720196a01e7f246efa6
+    role: context
+  - path: pages/traits/other/oxidase_negative.html
+    sha256: 1075e0d0c3a91c9bf7fb37d0a9dc89745903d9787dd949e437df4c8f8c0dc760
+    role: context
+  - path: pages/traits/other/oxidase_test.html
+    sha256: d0ed5910fc84702431472b704eb23dfcda7ddeba8b4f03b9306e504629d9d80f
+    role: context
+  - path: pages/traits/other/punctiform_colony.html
+    sha256: 037eef5cffd59c4605d65de1f9e7fe607dc697a986ac599ca39f3b0ca0b5e167
+    role: context
+  - path: pages/traits/other/rhizoid_colony.html
+    sha256: 3e01d190c4de4c355f8bc553e7c4af074182bbd556140199dd6bde7eba2b23b4
+    role: context
+  - path: pages/traits/other/specialist.html
+    sha256: 608cc068702074d933185309b01babfb985f492f56c9f59d6ac9a34307e5b533
+    role: context
+  - path: pages/traits/other/urease_negative.html
+    sha256: 4e11998fe9df95f5aecb30fc679e88e235f474f29cc564c0a7b816a775229560
+    role: context
+  - path: pages/traits/other/urease_test.html
+    sha256: eb441bf12ed973c38268f18f9ea82f72e77d6a151e87f632d6e6182f83cd5d47
+    role: context
+  - path: pages/traits/other/voges_proskauer_test.html
+    sha256: 42e407aea0c2cfa3f8e09b6d7836973b4753768a0453f0317a0938ca279b945c
+    role: context
+  - path: pages/traits/other/voges_proskauer_test_negative.html
+    sha256: 2bfcfaa6c60826fe264be4d618d4526028a11d70a33e32f0388bc890ff8ba073
+    role: context
+  - path: pages/traits/other/voges_proskauer_test_positive.html
+    sha256: 6f02be3d53fdf11cda87077720b4e30cc2425f96dcab20ebec33e4c0fcf76884
+    role: context
+  - path: pages/traits/physiology/acid_phosphatase_activity.html
+    sha256: 310128fcbafa95876cf31bb7a42be6442ca773966ff99c8fbc1373c6a22db686
+    role: context
+  - path: pages/traits/physiology/aerobic_anoxygenic_phototrophy.html
+    sha256: 611af4f3615af444ba3c952b7e738493ed6edfbeb837b82f5af39dd5e5c596e8
+    role: context
+  - path: pages/traits/physiology/aerotaxis.html
+    sha256: d0c95def5bc7982a68089a481cb6fef8b475c61a1f971fb96acf8e5a1a88c46d
+    role: context
+  - path: pages/traits/physiology/aerotropism.html
+    sha256: b305dda64e3c178babd6e74578944e86faf4ad0e821a5afa37a16e8c8bb1fd77
+    role: context
+  - path: pages/traits/physiology/aggrephagy.html
+    sha256: 443c93fb66745a80e47c93bfabdd576f2f6922675aa4fdf61da4c648e6e448c2
+    role: context
+  - path: pages/traits/physiology/alanine_arylamidase_activity.html
+    sha256: 2c26df92c6ef6fd7b29f585862a421b159723ee3035218e25b4b82221d40af63
+    role: context
+  - path: pages/traits/physiology/alkaline_phosphatase_activity.html
+    sha256: db6a88c4594c15c44143512dc49d275cd066b2879bc40fa66177fef9f3652b5a
+    role: context
+  - path: pages/traits/physiology/alpha_chymotrypsin_activity.html
+    sha256: ceceb1bd8442f4d69b3a61a341be6c09d3d9b57ea779114e2197688d64a574c6
+    role: context
+  - path: pages/traits/physiology/alpha_fucosidase_activity.html
+    sha256: cd0ca31471d2ba95d01a962f9f7888b09685451755c5005149cb5dd92aa5489d
+    role: context
+  - path: pages/traits/physiology/alpha_galactosidase_activity.html
+    sha256: 4a44e9cb991e5192c3277948ee529b9cf4f747d9c0d892c92731973d8eb177d4
+    role: context
+  - path: pages/traits/physiology/alpha_glucosidase_activity.html
+    sha256: fdebdbe87a35f35663c68ea7b54919efa9431b06ea94265c18d70872ccd4eb2f
+    role: context
+  - path: pages/traits/physiology/alpha_mannosidase_activity.html
+    sha256: 385bcf4be1c391c7af2c900d032068c0dd7df63c42a5c0b5fb9fce5f72a849aa
+    role: context
+  - path: pages/traits/physiology/amylase_activity.html
+    sha256: 9b38772f5d91303483b4dfdcbc81b1d8bb8bcef51baa99f6a78419aa8f3c3864
+    role: context
+  - path: pages/traits/physiology/anisogamy.html
+    sha256: 01d0f9bbbf5fc9e7632e6e4078b0af42d8de471ecad73bce1f2dd111339d17de
+    role: context
+  - path: pages/traits/physiology/antibiotic_resistance.html
+    sha256: 8558a9d059a11af1d3b80fb9562a454746fdf80e8929b79d2192d6e0100fe7c9
+    role: context
+  - path: pages/traits/physiology/arginine_arylamidase_activity.html
+    sha256: 3bb65a8399e6af1cb97efb3a53f074f078e4e5508755cc19d56f878c52ce2cc6
+    role: context
+  - path: pages/traits/physiology/arginine_dihydrolase_activity.html
+    sha256: c4efdbe63911d898e865a8855752fa212054243cecd00a0027f9e18f40b81251
+    role: context
+  - path: pages/traits/physiology/autogamy.html
+    sha256: 24eab6254d26124f24b432b5763ccb398ee2d79f8cf67948fab73ec6942cb045
+    role: context
+  - path: pages/traits/physiology/automixis.html
+    sha256: abf67679d9defdb967fd705e46b7b96456202b2687e4e3ecfa10dbcee17f034c
+    role: context
+  - path: pages/traits/physiology/autophagic_glycogen_degradation.html
+    sha256: 1cbf3488f442b83d0f133df2d22ff6920d30fe10e9828d144a391c6a6142cdb9
+    role: context
+  - path: pages/traits/physiology/autophagy.html
+    sha256: bc2d0805f8fd08e014556476585b8ba601f4941c5e90c5b51ae2faa86d4b0ec1
+    role: context
+  - path: pages/traits/physiology/autotrophic.html
+    sha256: 54ec158805fb89075b27278579f2e767f0ac7cae6985c356444ff857892c575c
+    role: context
+  - path: pages/traits/physiology/bacteriocin_production.html
+    sha256: 8b84522b92a2d832838723df2a873d0a93ec83dab1935bd2d30bc5d031610c64
+    role: context
+  - path: pages/traits/physiology/ballistospore_discharge.html
+    sha256: 245ee400d672c80e3d31c58f2bf12b6d8c04fa8663ea4882335f6905eeb6f66d
+    role: context
+  - path: pages/traits/physiology/beta_galactosidase_activity.html
+    sha256: 7e3dd689e725570a7091637b4d31c5dade5c7c8188b1aa1242c1e8145be635d0
+    role: context
+  - path: pages/traits/physiology/beta_glucosidase_activity.html
+    sha256: ca3126886e81f3d78679368bcb642b8e0b6bada9d8dadea4353e0858e1a279e7
+    role: context
+  - path: pages/traits/physiology/beta_glucuronidase_activity.html
+    sha256: 55c08846fcb86edcbe4b358859d855029a1573fa419926f9e62f746da55be12b
+    role: context
+  - path: pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html
+    sha256: f3828adff5e567539b0f547b992ccf9210e826b94bff8b60af8e3d39c1c01b77
+    role: context
+  - path: pages/traits/physiology/bioluminescence.html
+    sha256: 8c3b9c1dd425fa23ebc050c28fbaa6be355e5497adff1e65fdccc1ab8c99ca53
+    role: context
+  - path: pages/traits/physiology/biomineralization.html
+    sha256: 5b374d78208d035f8d478c68dd8c3137c9f9e4000eebae6b3ef4ffd9a27275f9
+    role: context
+  - path: pages/traits/physiology/bipolar_mating_system.html
+    sha256: 44c7443336a6ccc442ce37b176922e1f6fac447d75226f6d3298982206a73170
+    role: context
+  - path: pages/traits/physiology/carboxydotrophic.html
+    sha256: 1904b9cd695bcadec0f52c5b56a551724d27b6b3eff14dea6b3be021dbb98bbf
+    role: context
+  - path: pages/traits/physiology/carboxylesterase_activity.html
+    sha256: ffb2cab900904631dafbad79bd7a4a41778f4104f78e958393f55b26cec49033
+    role: context
+  - path: pages/traits/physiology/caseinase_activity.html
+    sha256: 7ceb0f9711069abb23c6af2cb09bedd4d1b82c09b134a4ee4f415ba6ead8f04c
+    role: context
+  - path: pages/traits/physiology/catalase_activity.html
+    sha256: aa7d1a1a4feb45b3edefbf9e9e9cbdcc3274381a492f48878347e0baae4060ec
+    role: context
+  - path: pages/traits/physiology/cellular_buoyancy.html
+    sha256: 6565a2303a5d70010a7a3a564af41612107ff4a8d402a6cdb85c1bf15b0794b4
+    role: context
+  - path: pages/traits/physiology/chemoautolithotrophic.html
+    sha256: 5de35170ff4225d46ebcb9e11da0fd7bc7799ecff99dfd536985333554b1e274
+    role: context
+  - path: pages/traits/physiology/chemoautotrophic.html
+    sha256: 9edd6c44ed7664ec16c8d42e4054fa91781161a8794d0ee2e8b164f480c27b99
+    role: context
+  - path: pages/traits/physiology/chemoheterotrophic.html
+    sha256: 2dfc62ed2c351c6eab0efa381f1f7da5723235048db83a5e1609244a8f604876
+    role: context
+  - path: pages/traits/physiology/chemokinesis.html
+    sha256: 6828ca171375576e8314980ba0445d22ffc355c8db101f0b1b30d3f24e32145b
+    role: context
+  - path: pages/traits/physiology/chemolithoautotrophic.html
+    sha256: 7f441b0a936bf10a7ae799a974884995f4f537c956a76bf6cce9eed6e74a4ccf
+    role: context
+  - path: pages/traits/physiology/chemolithoheterotrophic.html
+    sha256: c042384f0acd794f7d94cb7139300236ee60677cc426a2972f46981eb5377ddf
+    role: context
+  - path: pages/traits/physiology/chemolithotrophic.html
+    sha256: 4dcf244e7ee7315415521e27915ee40fd4b764bf680bf07f3852c3132db216ab
+    role: context
+  - path: pages/traits/physiology/chemoorganoheterotrophic.html
+    sha256: ed453fed026d99e9b4db3c7f11c2b7d3510b8a9aa414fcea815280c0728187e4
+    role: context
+  - path: pages/traits/physiology/chemoorganotrophic.html
+    sha256: 40f02e1f8a8af021cca2482785351eed747344bbcba34ff1e81fa6e2eb8e82a9
+    role: context
+  - path: pages/traits/physiology/chemotaxis.html
+    sha256: b3392e9a81fb1e6dc47725c72b8b751b46974d38bea817b8d21da0f0fb4571ea
+    role: context
+  - path: pages/traits/physiology/chemotrophic.html
+    sha256: be8ea3e7989383e1042e92be578fff24dc2f912f37ea7ca08a4aea509eefd74a
+    role: context
+  - path: pages/traits/physiology/chemotropism.html
+    sha256: a4c15de5b3ae5be72b797d575e76a1500479e27e66af10573b09f64a322d181e
+    role: context
+  - path: pages/traits/physiology/coagulase_activity.html
+    sha256: cb02b9336aa4a85485a549fe914f5bfe0ad4e02d8abeb39a26d43545982b2729
+    role: context
+  - path: pages/traits/physiology/coccolith_production.html
+    sha256: c701a580959becee3efe18d65ca23743795717c73cf60bcf75090859d5db1ea4
+    role: context
+  - path: pages/traits/physiology/cold_shock_response.html
+    sha256: 76473bb62a73dc60842c6b8234660775951cb2c7102bdef7c80fea2303d30f2d
+    role: context
+  - path: pages/traits/physiology/contact_dependent_outer_membrane_exchange.html
+    sha256: e17bb1b2b31c8ff1312ddfc5b1ce628116063406e9bf37d21630885cf45d54a9
+    role: context
+  - path: pages/traits/physiology/copiotrophic.html
+    sha256: 8332fc354680caa6c348a80cd8eee319cee8a04109e66af98b406ad130358dc4
+    role: context
+  - path: pages/traits/physiology/cystine_arylamidase_activity.html
+    sha256: a58b19aa2cd22fb0895f88f22a9d9c64e19a44cc315c81b33571b742f5818d48
+    role: context
+  - path: pages/traits/physiology/cytogamy.html
+    sha256: a5d3b5d3b56df22eb9b20e1902ea0797fbc513b44eb883ce4d28dea7d961a177
+    role: context
+  - path: pages/traits/physiology/dnase_activity.html
+    sha256: 64b1ead29ca441bcc831573ce4a462d022e77336c73ad5998e2a31464333e37b
+    role: context
+  - path: pages/traits/physiology/dormancy.html
+    sha256: 8f71c655eab85ffc68317dea268f5c5b5c5c83f7b9666fb9594b202f734c22fd
+    role: context
+  - path: pages/traits/physiology/durotaxis.html
+    sha256: 1c019626d65f164cd4194165cca4f30ad3e965067fbeacf4bea17c55bbd450e3
+    role: context
+  - path: pages/traits/physiology/endocytosis.html
+    sha256: add3df816015a5ab9e2fa98ff5a9c15d957a7a3fe2eb239ae4a3329c9f11322d
+    role: context
+  - path: pages/traits/physiology/energy_taxis.html
+    sha256: 8d58f5010b919ee6fe83798d5427e16fc4d01018454551e3b5ef98aeeee77f8c
+    role: context
+  - path: pages/traits/physiology/er_phagy.html
+    sha256: c23e94a4f6753c72c2cb8b5b69054f637c8c9d535da20dc550d604706240f984
+    role: context
+  - path: pages/traits/physiology/exocytosis.html
+    sha256: 595e5596ff130b2b544e9bfe16af0718a40f689c9c8999db91a764e338d0b6d4
+    role: context
+  - path: pages/traits/physiology/extracellular_membrane_vesicle_production.html
+    sha256: a3953075250ef5a4f605ef263d53100088fd050f3b687172b3bd9034b035c4cd
+    role: context
+  - path: pages/traits/physiology/galvanotaxis.html
+    sha256: 8f7f0046b1a05aab3bf0150e2a7ec954e9aa0c1b2a326154aa6b5dd400b6a41d
+    role: context
+  - path: pages/traits/physiology/galvanotropism.html
+    sha256: 6db30cf47ad3c0e2ab9b638bd1715d2ce479efac3341a6842f92ef9f7d0035a9
+    role: context
+  - path: pages/traits/physiology/gamma_glutamyltransferase_activity.html
+    sha256: c0116188cc7b6a98961aa086efe29b7548c1534c5ee5d432a813a33a30372a10
+    role: context
+  - path: pages/traits/physiology/gelatinase_activity.html
+    sha256: 7ef914835f64a2eb4cd2b275694bc7e4a7b930cd55b12e0a9d286a1e61063d05
+    role: context
+  - path: pages/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.html
+    sha256: 1bedf75ed1d7b2c5bad7e9880834dd45b353fed060665330b2e90be54b57c832
+    role: context
+  - path: pages/traits/physiology/glycine_arylamidase_activity.html
+    sha256: dcf7fcef617ad4e1443e4dcac90b4a32b49bc190c9b167475ad74912881033c9
+    role: context
+  - path: pages/traits/physiology/gravikinesis.html
+    sha256: 5ec2a1cc8071dd175dae178eac7b87b273d05ba3d03d60dfccf2a98beb23ad2c
+    role: context
+  - path: pages/traits/physiology/gravitaxis.html
+    sha256: 143775555c4cdf0cd9dbdfb5d07b789335f6bcf2e5a7d7759c0ac7e646813577
+    role: context
+  - path: pages/traits/physiology/gravitropism.html
+    sha256: 1aded468a38ac3df25a4796b8bee0d284ab88803c7785ab3d09934cc19152d4e
+    role: context
+  - path: pages/traits/physiology/gyrotaxis.html
+    sha256: f2fd475633db10347b13dfefff932749e19d4f6ca7d0a9cb503dd6f73f647368
+    role: context
+  - path: pages/traits/physiology/haptocyst_discharge.html
+    sha256: c4c2ac331ec80f27382a894fda79f5056730686a5e1417f90996fb1c45036ee5
+    role: context
+  - path: pages/traits/physiology/heat_shock_response.html
+    sha256: ff0f7daac3f7bc5660606feb2cc7fc642da4d9ddf0b7594de70770f3263cdbdb
+    role: context
+  - path: pages/traits/physiology/heterokaryon_incompatibility.html
+    sha256: f70422d37bac86ae7c279b90e602717f87ecace8ae63a6ae18208f269ed8ffe0
+    role: context
+  - path: pages/traits/physiology/heterothallism.html
+    sha256: 70be27ecd2a37395638633c3c346edc64bd475289d35a200c439c908ef638bc5
+    role: context
+  - path: pages/traits/physiology/heterotrophic.html
+    sha256: 9a5732e422931c0631642747e5db05e911961a92627e3255807c25ccd786f563
+    role: context
+  - path: pages/traits/physiology/histidine_arylamidase_activity.html
+    sha256: ab0c5882e8a901e184b03a4f9b64e3a4fa4014a0ce0d4e8421f6105150f73203
+    role: context
+  - path: pages/traits/physiology/homeoviscous_adaptation.html
+    sha256: da5774275ac833ad01f1adcec3efac4165db49ff1b113a1e4349ced75a15aa58
+    role: context
+  - path: pages/traits/physiology/homothallism.html
+    sha256: 614844d16a95c62630e96b58781c6499a99c1c5976a481312b22b17014a28f7c
+    role: context
+  - path: pages/traits/physiology/hydrogenotrophic.html
+    sha256: 9a472571232dd6b3e2db636db336736d1c8be215c69169acfa779f761cac87c1
+    role: context
+  - path: pages/traits/physiology/hyphal_anastomosis.html
+    sha256: caf690e4070614d34ea9514ac9aafd33aee04f4fd4bdaf13041810adb3fc346f
+    role: context
+  - path: pages/traits/physiology/isogamy.html
+    sha256: b3ed8253bf6e5e2ac7032b63d3e1758ff22db45233f86e16beaf80f25ee7136e
+    role: context
+  - path: pages/traits/physiology/karyoklepty.html
+    sha256: 7d2326af9943773e39fd0fe14fef016484a2f886b5c82e7d1945075fb1a99d60
+    role: context
+  - path: pages/traits/physiology/kinetocyst_discharge.html
+    sha256: 11fe37d2e36470b6e3a4d3f7a7ccaaad2958f44a99779070215261856b4a664b
+    role: context
+  - path: pages/traits/physiology/kleptoplasty.html
+    sha256: 0a60276b5d78af8b63fc9176b19bbccdb0a8f847857f6f1fd020d08e72fbd9e8
+    role: context
+  - path: pages/traits/physiology/lecithinase_activity.html
+    sha256: 842672f8a1239cf9159c0f75fb5127f69e9ed15aa8d44476b8e74017275e7a5d
+    role: context
+  - path: pages/traits/physiology/leucine_arylamidase_activity.html
+    sha256: 3e0afae8d1aee8cb4d04cdbca96519aa22114c9d8f9d37146c161eacfec761a6
+    role: context
+  - path: pages/traits/physiology/leucyl_glycine_arylamidase_activity.html
+    sha256: ea5f09b72aff07c68b776f114cb914c0be1cbabb6f8fdb1d0499f1dc0859b27a
+    role: context
+  - path: pages/traits/physiology/lipase_activity.html
+    sha256: a29c80e565373b8ded2d2a9a8bcf577a32bec89e3407ee1f264a537edc454aff
+    role: context
+  - path: pages/traits/physiology/lipophagy.html
+    sha256: 62830334e01c86032be96c6988e0f38f6e70eafaa9d35ad55cc1b0d2d89f3e24
+    role: context
+  - path: pages/traits/physiology/lithoautotrophic.html
+    sha256: 126551d12efa4c3235e51d30d4e204d680f4499ec69c9199fa5cc671ed66911f
+    role: context
+  - path: pages/traits/physiology/lithoheterotrophic.html
+    sha256: 607c3aaa6dad3f9c9be1d24e6360608a23da8a21fbbe3bc62c46f00d73fe5ddf
+    role: context
+  - path: pages/traits/physiology/lithotrophic.html
+    sha256: ff19afd70630d131ec5cfe3ae7868936720afb9073e10bb0a6076d772a52a40d
+    role: context
+  - path: pages/traits/physiology/lysine_decarboxylase_activity.html
+    sha256: 0fb409d59d6322be06d1cf8283ca75ed5bf35cada27515ae57882f7c81da65d3
+    role: context
+  - path: pages/traits/physiology/macropinocytosis.html
+    sha256: a2f5357ab3e47d6d73b2e155325068cad7d4f62fe24f0ceefb533fde292b1c66
+    role: context
+  - path: pages/traits/physiology/magnetotaxis.html
+    sha256: f5c0b643d70dc03d64034afd10410c98cb0be64da5da7daa9b63235fa9f07338
+    role: context
+  - path: pages/traits/physiology/mating_type_switching.html
+    sha256: 095602af1d093434520ae3e476651b98549bb1ae3ce558eed0ae430f56a79440
+    role: context
+  - path: pages/traits/physiology/methanotrophic.html
+    sha256: 03ab8769b408934c751847928809d400c9f0e9dff532af738a99bd26f8f19dc0
+    role: context
+  - path: pages/traits/physiology/methylotrophic.html
+    sha256: 07950b733dfcf56d660cebcd8892ea00ea3214873135f1af7a55466eed78724c
+    role: context
+  - path: pages/traits/physiology/mitophagy.html
+    sha256: 15ba86d8eeaf8ffb1f2b85250259300a51ac3c6541fee58aa298d61fb8a9b6e9
+    role: context
+  - path: pages/traits/physiology/mixotrophic.html
+    sha256: 5c1e9f5b10e58c434dc45ac3996c85fbc6f461cc5e685cbccec346167510be16
+    role: context
+  - path: pages/traits/physiology/mucocyst_discharge.html
+    sha256: 7b9c02a17d6b26fc5b2a487801f649aed4d1a482e00d366c6e9d98ebe55ab3fa
+    role: context
+  - path: pages/traits/physiology/myzocytosis.html
+    sha256: 9a345afa8a721b4c1ca1fcfcfe220b5d3fcac8e5b140e99e2dff5b9fa7ee0b87
+    role: context
+  - path: pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html
+    sha256: 914b2c136a84d5f2d7eced179ac02a6c0a518a3b2507fc4fb75360cd28fe90d2
+    role: context
+  - path: pages/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.html
+    sha256: 67b99e0f7f90bc9fb49624f16f72791b85c4a34c79d8773d7488c28bd81ed94e
+    role: context
+  - path: pages/traits/physiology/natural_competence.html
+    sha256: a1ec665413b46790df057db3c8c9591c35be019bfce22ef9f4099643a8098f7d
+    role: context
+  - path: pages/traits/physiology/negative_autotropism.html
+    sha256: 7696ab38147f8e20d45fe6d983c6f76efc5cf76c8f65afab04ed30cc8962be7e
+    role: context
+  - path: pages/traits/physiology/nucleophagy.html
+    sha256: e65a825cada2e42b09c51f64790fea02e6a847292cab7da8ab843ef9f0b7de96
+    role: context
+  - path: pages/traits/physiology/nutrient_adaptation.html
+    sha256: 92b4dbbfdca3478c889ff5d20c91357c7efae65957891d98ccfd7dbca44a62f7
+    role: context
+  - path: pages/traits/physiology/oligotrophic.html
+    sha256: 8c2aafec8c12b49a7962a5d0bfd51b1857d8823fb962d7142f89e85a2ebbd513
+    role: context
+  - path: pages/traits/physiology/oogamy.html
+    sha256: b71bdcbd6d442a70f4f327955e794fcb6490c26038c299280ffc23be930f9ff0
+    role: context
+  - path: pages/traits/physiology/organoheterotrophic.html
+    sha256: 81a298fc6aa30b7b0113b8ca3072966537884bacd06271bdca0a92b777c3a0e6
+    role: context
+  - path: pages/traits/physiology/organotrophic.html
+    sha256: 92b324c210811c13aa721dda87cb84861c1aec145673df3f0c012ca0481b2368
+    role: context
+  - path: pages/traits/physiology/ornithine_decarboxylase_activity.html
+    sha256: faafd76b3ea108c2e95bafe586d83d03e3110b653bb576ce0383a70ac0705751
+    role: context
+  - path: pages/traits/physiology/osmotaxis.html
+    sha256: 0e354785fcd75753d7b1089a8a0b46d2de1d75e57806c45b1a707a4031d9cc7a
+    role: context
+  - path: pages/traits/physiology/oxidase_activity.html
+    sha256: e4cc0dc9d7023349908ee97d0b8d86b0d609fce913140300a88058cfa54ffbc1
+    role: context
+  - path: pages/traits/physiology/oxidative_stress_response.html
+    sha256: 51e874f5ac87d8828200b20487a8770173487f1130a735cd460237e9495fd5ca
+    role: context
+  - path: pages/traits/physiology/paedogamy.html
+    sha256: a45ca068ad37bf89d1581a3d1308309b36b5c02da46f7467427bee031d86acbb
+    role: context
+  - path: pages/traits/physiology/pallium_feeding.html
+    sha256: 3a1eca95f9e385f8341ebee082aabe96ae0787db8f6acbe204dbbeab7aa956db
+    role: context
+  - path: pages/traits/physiology/parasexuality.html
+    sha256: 3b2926d8e8b40885b8605545fbde0a43ecaa11aa2bea7937f3480a9c1c1f88bd
+    role: context
+  - path: pages/traits/physiology/persister_cell_formation.html
+    sha256: 2378375959f35431f7ddebc12559434cbbf8d25deb95b339a6eb9db2a0600980
+    role: context
+  - path: pages/traits/physiology/pexophagy.html
+    sha256: 4df15cdf37d42156746e2f1af9cee730b258637c8d9dde1306757710a32f8501
+    role: context
+  - path: pages/traits/physiology/ph_taxis.html
+    sha256: bd4b2891fd5edd908deba531f09156996d2f9daf10c3ac5e730337b04f47253d
+    role: context
+  - path: pages/traits/physiology/ph_tropism.html
+    sha256: 75015a9ed0ab1133c46e46aacfcdd22955aafc1ed302d2c74b0351821ef51036
+    role: context
+  - path: pages/traits/physiology/phagocytosis.html
+    sha256: 2a8b292fe9a3b0622df72f6b72413690989bd480b6a729d49f0e4d3b33c7e3e1
+    role: context
+  - path: pages/traits/physiology/phagotrophy.html
+    sha256: bdbd8f90c1a534f36d58bbf873de656ad3b0b2d5b4d4b880015fb0e253b2fd93
+    role: context
+  - path: pages/traits/physiology/phenylalanine_arylamidase_activity.html
+    sha256: 26dcbf4b44d2c16780f74a2815a69ea1f6c08e2fa3f31612114a2e134b251552
+    role: context
+  - path: pages/traits/physiology/photoautotrophic.html
+    sha256: 8df85d6d94e2efc64101d751e53eb65984e7547db2d1ccfd34c1f3da2ac464b6
+    role: context
+  - path: pages/traits/physiology/photoheterotrophic.html
+    sha256: b273a147d31916c39359bffc0662e0a141d50b056b1832ba7ee755e4d81ffff4
+    role: context
+  - path: pages/traits/physiology/photokinesis.html
+    sha256: 4aa1510ff6fddfbf4544eba549bb26c3b38cdf9dc7d836af7f69ba9c06c20898
+    role: context
+  - path: pages/traits/physiology/photolithoautotrophic.html
+    sha256: 232484a08ff3f740bcb686aa5afa96eaf7f95148f8c77f2c8cf99c046e8c5fde
+    role: context
+  - path: pages/traits/physiology/photolithotrophic.html
+    sha256: cf41b8cba986fbda4050704060ffda0042054e89df3ed7f670c5a135507223e5
+    role: context
+  - path: pages/traits/physiology/photoorganoheterotrophic.html
+    sha256: 4dbf77fd6ca899ea17f2e5b0cfa835caa57390703a28f9f9dcc32ba7ed444c73
+    role: context
+  - path: pages/traits/physiology/phototaxis.html
+    sha256: e94a7ea5313eef354ea253852f1ff04bf60616b80ac19c820ff59aedbca5eadf
+    role: context
+  - path: pages/traits/physiology/phototrophic.html
+    sha256: e3d5b661837bd21d2ec106976044d7c1ad433de75184bf89c23a200aff2a9129
+    role: context
+  - path: pages/traits/physiology/phototropism.html
+    sha256: 69d19fefc260ea6c9bf06a1b6a37ed7dde006d08027fc03b192d8809ceaceda3
+    role: context
+  - path: pages/traits/physiology/pinocytosis.html
+    sha256: ff859420798fc1a77011e029b5b4ed3076e44af0f0a6d48b896cdfec79703488
+    role: context
+  - path: pages/traits/physiology/positive_autotropism.html
+    sha256: 1ab255b1b3c2c61fd602d80fca8718b592221a23f421b7dbcb948d99783a9111
+    role: context
+  - path: pages/traits/physiology/primary_homothallism.html
+    sha256: 8f58d307f7ffd52a3c58428de54d1e0e83c8131c96558dce9a11e86b0fa64a45
+    role: context
+  - path: pages/traits/physiology/prolyl_aminopeptidase_activity.html
+    sha256: dda220a8331005603fdbd8e1d7014bdd47098a1694bc85e5264c74418fb9c7ca
+    role: context
+  - path: pages/traits/physiology/proteaphagy.html
+    sha256: d418775e12400cba616781c3e5c3fb7c1071f3a8b565690df1a4e7b40a39f391
+    role: context
+  - path: pages/traits/physiology/pseudobipolar_mating_system.html
+    sha256: 29a939c8a9f9f6b2477d816c4fa3b2d8469d12b3a94586a14ebbc4ac83be3f25
+    role: context
+  - path: pages/traits/physiology/pseudohomothallism.html
+    sha256: 3f5841eef382dab7eb684dff4024f1b7289cd9b11d8cf89a0b3b7b9bc0105c34
+    role: context
+  - path: pages/traits/physiology/pyrazinamidase_activity.html
+    sha256: 60b614da23b21ff86539a842048c8deafe5739cc6bbb2d7fa5c7e7b9df5b4b1d
+    role: context
+  - path: pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html
+    sha256: ded4a2be612bca9ad36fb334d241982e491c013d5a095d9660d34bc131915200
+    role: context
+  - path: pages/traits/physiology/quorum_sensing.html
+    sha256: d569535dd012595b20715a3807afe039579553796e9b03fab3a216fe864a52ab
+    role: context
+  - path: pages/traits/physiology/rapid_axopodial_contraction.html
+    sha256: 9d7a9a5d50077398f4bfcad42d1d9fc7cc43dbac3893bcdd8bc020472dc47cf8
+    role: context
+  - path: pages/traits/physiology/rheotaxis.html
+    sha256: 7601f63d04b80b87175f335d8e0daac73a9f650aa825d8bc38065ae254cb767d
+    role: context
+  - path: pages/traits/physiology/rheotropism.html
+    sha256: ebcf7045e916e27613b0e3f213b63154bd2ec9ebbc8f4315203dcf6c3421670b
+    role: context
+  - path: pages/traits/physiology/ribophagy.html
+    sha256: 0ab9e9b8517e0a74cefeb5eef0c83c626facd85b142ac90d1dee20672a9ae755
+    role: context
+  - path: pages/traits/physiology/serine_arylamidase_activity.html
+    sha256: f960a73dfa3cb14dfc0e41da43f2c8b6966f268567acad12a19a5c02c7656298
+    role: context
+  - path: pages/traits/physiology/siderophore_production.html
+    sha256: 7cb13488b45386b03b0ce2608d924b05ffd52161a4b8e5ec7fc84a326320863a
+    role: context
+  - path: pages/traits/physiology/siliceous_scale_production.html
+    sha256: 80cba2c25dfe92b2825f4a54391046bb3701b5ffb2f2e26d7b1da8a244559b0c
+    role: context
+  - path: pages/traits/physiology/sos_response.html
+    sha256: c9c1621441b69176ad90cf33e01d2b8d2baf637460eb8d1c48edf7ebff8e2674
+    role: context
+  - path: pages/traits/physiology/spore_germination.html
+    sha256: cfe1daac4dba71de9a95cf7faa93b739839240e724609e465078fc4959107866
+    role: context
+  - path: pages/traits/physiology/stress_response.html
+    sha256: 0ddd226a0e21095e31e3fbebebef6b4348a50f606d143d673adf69de5042d6d8
+    role: context
+  - path: pages/traits/physiology/tetrapolar_mating_system.html
+    sha256: 989c21bbf861a67f7859a58cdc69a11ec4144b90ef8b12e03db2e8fabbb37bfd
+    role: context
+  - path: pages/traits/physiology/thermotaxis.html
+    sha256: d3a6252faca5a076bbe04d5cb8c98f70447a2098ea1e8165888ac5e7e68ff921
+    role: context
+  - path: pages/traits/physiology/thigmotropism.html
+    sha256: 501beeb950a2901a55f6f20a027123a762bcd96032b9019cb45da3b95e9cf5c8
+    role: context
+  - path: pages/traits/physiology/toxicyst_discharge.html
+    sha256: 771cfe196315ca1807cb32449bf34b9145d13c9ccacaf40c568712b79bf3d564
+    role: context
+  - path: pages/traits/physiology/trichocyst_discharge.html
+    sha256: 6da7961773ef919a1bc9924c8c3a55c723bdbe026c676b090b24904c253d0f0d
+    role: context
+  - path: pages/traits/physiology/tripolar_mating_system.html
+    sha256: 2082f20a01c92acaeadcee7a5f35bd247f979681f2a7f13f4335068d37dbaf96
+    role: context
+  - path: pages/traits/physiology/trogocytosis.html
+    sha256: 6836d2d1aba9b6de5ad6c221586f7623fb391287fcc658139fda0cfdbcd83a56
+    role: context
+  - path: pages/traits/physiology/trophic_type.html
+    sha256: e3e987f4738ca128e3ea1c6f478f82be75266118e2c3ba297cd5f4000503856f
+    role: context
+  - path: pages/traits/physiology/trypsin_activity.html
+    sha256: 75bcef71e4720fe03ed9ed53bcd1e4f096f1bf93da178565acaff17180513169
+    role: context
+  - path: pages/traits/physiology/tyrosine_arylamidase_activity.html
+    sha256: 62013a8a012c7b4589342f112142be6f11d08cf1d1142a2a596958359df5253d
+    role: context
+  - path: pages/traits/physiology/unconventional_protein_secretion.html
+    sha256: 37efc7dacbfc412969410887ff177a833a25efa900d7350c2239773b2a86c5cb
+    role: context
+  - path: pages/traits/physiology/unisexual_reproduction.html
+    sha256: 01c3b97a504fce318b47ccbfea0c0b972912f125304c544b17befbf5f8cb379d
+    role: context
+  - path: pages/traits/physiology/urease_activity.html
+    sha256: 734f41249157c132a0f9e17cb87af7f41c06e4c7dac5140fe24bdfec4121c4b5
+    role: context
+  - path: pages/traits/physiology/valine_arylamidase_activity.html
+    sha256: 4c804c507912ef6f4fa87214f1efc77851c483c2487009ae9a889afc3e7ae290
+    role: context
+  - path: pages/traits/physiology/viable_but_nonculturable_state.html
+    sha256: f980ee025f414f5a3889b44433a828a0684dca9b076a746ef66a055a344d16fa
+    role: context
+  - path: pages/traits/physiology/viscotaxis.html
+    sha256: 3ddfc8f700479b6e7a43e782eb0501901cae37382898c1399eaf9a9501021673
+    role: context
+  - path: pages/traits/quantitative_property/has_maximum_observed_value.html
+    sha256: df6a402f3f953350a36637b195bfdc69880f131b58ba73d4626defbd0bfd79a7
+    role: context
+  - path: pages/traits/quantitative_property/has_minimum_observed_value.html
+    sha256: d71cb4f1c1c795f05074d5d27956dfd623a8387659d8601c1132be5fc4e51a67
+    role: context
+  - path: pages/traits/quantitative_property/has_observed_spot_value.html
+    sha256: b30c89e7225c171ed24398483f84541c61c4128f74c9bb5d69e9124d6bf4beb3
+    role: context
+  - path: pages/traits/quantitative_property/has_value.html
+    sha256: 54b09d9363564a0572bdf89e8aa15ca9fb0983ecb517e71687f948fa3d612fee
+    role: context
+  - path: pages/traits/quantitative_property/has_value_comments.html
+    sha256: 08bec946bb9483f2ad54e1794f0a3e18ac3633e273bb6f769ad1015481f04b73
+    role: context
+  - path: pages/traits/quantitative_property/is_negative_data.html
+    sha256: 98904641c6e42a7f7c78102a0aff87a77099de9d686188ba34f04a2b11a0a3ac
+    role: context
+  - path: pages/traits/quantitative_property/observation_data_property.html
+    sha256: dfc05b3a51c58ca2b2e7c13f48f2aaa4719a74bbbe860646612ed487e14fc38b
+    role: context
+  - path: pages/traits/upper/biological_process.html
+    sha256: a1f0bddee14248075d959a3d189b5893884d7ecd93d93bd0fefefa9477e6b3c0
+    role: context
+  - path: pages/traits/upper/chemical_entity.html
+    sha256: ed4afe224278ceccc76f7ef8ce232b054d637c815ebe601c228bcb0c174aec16
+    role: context
+  - path: pages/traits/upper/enzyme.html
+    sha256: 513485accee3afc98293451a557fcd16f6e1a68054e67bdedd20f21afaa0049a
+    role: context
+  - path: pages/traits/upper/material_entity.html
+    sha256: ba999df7d2764287dd2f392f79b8e1a09dec216a6774404883d4dd3e9435f848
+    role: context
+  - path: pages/traits/upper/microbe.html
+    sha256: 9b58c25ad376b3d71e6e6d1d9710a94a9cbdc6da3331edb3c4ea8d2fccdedee6
+    role: context
+  - path: pages/traits/upper/observation.html
+    sha256: e7ac7820015b91ac78c9cede9ef5dd1303a3d898870dd8c55e3d5ec6866ed15f
+    role: context
+  - path: pages/traits/upper/phenotype.html
+    sha256: 0f9f55edb066f8d035c08ca05de09474d26ccd0e56595910c51bf618b3dce590
+    role: context
+  - path: pages/traits/upper/quality.html
+    sha256: cb16f73f1d7932609b50c6b2f7cf1d168b16f917345870d8f40d1f36be415424
+    role: context
+  - path: pages/umap.html
+    sha256: 9b46022180ae5b4dbe869c3b6fe313c7e3cc06a3629c88e67bf11ceb07d09455
+    role: context
+  - path: proposals/metpo_traitmech_v564/metpo_proposal_classes_robot.tsv
+    sha256: 0ee6a5f53bebfebde58ee63e652430452143c89c53c06773e62224d81d6188af
+    role: context
+  - path: proposals/metpo_traitmech_v564/proposal.md
+    sha256: 9e57693bc431c35ee5703a87334fcfb6e41a22a9d13162df0b4f91de4842d617
+    role: context
+  - path: proposals/metpo_traitmech_v565/metpo_proposal_classes_robot.tsv
+    sha256: 9f0217b5512739d86cea61e7ed7e0126782801fdcc8db0af49c9260586930c3e
+    role: context
+  - path: proposals/metpo_traitmech_v565/proposal.md
+    sha256: 131e22178a9ffffa9922f9386df806329c5d7042651fdf34e588c6b7c629b424
+    role: context
+  - path: proposals/metpo_traitmech_v566/metpo_proposal_classes_robot.tsv
+    sha256: 86db04745500177cb68184b43b8d9e842c318875128a30b4eb0d37fd46cb995e
+    role: context
+  - path: proposals/metpo_traitmech_v566/proposal.md
+    sha256: 9200e3e4a67479d632cfe9fc479eccf1f31ee6aa36631baa45aadac3ce39bf40
+    role: context
+  - path: reports/proposal_citation_audit.tsv
+    sha256: b6587ac5cb9585244a23a5765aab9d30a1c9d4f4d5a17cd189144d7e99b1b036
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_biomineralization_trait.py
+    sha256: aa79240cfb2d4b371520b27b130ff6e2f6f450d6ef3845b6aae751e98aa0c63e
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/render_trait_pages.py
+    sha256: e588477da7c22b7c8e6ae796dc53b5b16a3d4dc3ecfa3677ce8c16a7c1e112ea
+    role: context
+  - path: scripts/robot_validate_proposal.py
+    sha256: 8b038824905e36ba7a7afd0ed3181e85255522e8e6eace7466a6b2416adef916
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: scripts/verify_snippets.py
+    sha256: e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc
+    role: context
+  - path: src/traitmech/curate/curation_event.py
+    sha256: d9b3e70539bbf13f9130544e18ed7664ff2c3b7c60bcc2cae5185663fe25badd
+    role: context
+  - path: src/traitmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+  - path: tests/test_add_biomineralization_trait.py
+    sha256: b0a3d43e59a5c5e7805c83e7282704aedfbb9dae22c7f2f01938c406deffe9af
+    role: context
+targets:
+- target_id: traitmech:000690
+  path: data/traits/physiology/biomineralization.yaml
+  label: biomineralization
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/biomineralization.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_biomineralization_trait.py
+    role: guarded writer
+- target_id: traitmech:000689
+  path: data/traits/physiology/coccolith_production.yaml
+  label: coccolith production
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/coccolith_production.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_biomineralization_trait.py
+    role: hierarchy writer
+- target_id: traitmech:000688
+  path: data/traits/physiology/siliceous_scale_production.yaml
+  label: siliceous scale production
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/siliceous_scale_production.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_biomineralization_trait.py
+    role: hierarchy writer
+scope:
+  description: Full new parent record and bounded parent/discussion/history edits
+    to two existing children, with writer/tests, v566 proposal and generated products.
+  selection: Exact traitmech:000690, traitmech:000689 and traitmech:000688 on the
+    trait-scoped branch; no sampling.
+  coverage: partial
+  population_size: 3
+  reviewed_target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  exclusions:
+  - target: Unchanged child scientific claims
+    reason: Read for hierarchy context and byte preservation; not a fresh complete
+      literature/figure audit of both children.
+  - target: Other 1082 TraitRecords
+    reason: Comparator and automated corpus checks only, not whole-corpus scientific
+      adjudication.
+  - target: data/traits/physiology/spore_germination.yaml
+    reason: DO_NOT_WORK exclusion; byte-preserved and not curated.
+checks:
+- check_id: records-0
+  name: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/biomineralization.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/biomineralization.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: records-1
+  name: .venv/bin/python scripts/validate_strict.py data/traits/physiology/biomineralization.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/validate_strict.py data/traits/physiology/biomineralization.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: records-2
+  name: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/coccolith_production.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/coccolith_production.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: records-3
+  name: .venv/bin/python scripts/validate_strict.py data/traits/physiology/coccolith_production.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/validate_strict.py data/traits/physiology/coccolith_production.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: records-4
+  name: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/siliceous_scale_production.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class
+    TraitRecord data/traits/physiology/siliceous_scale_production.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: records-5
+  name: .venv/bin/python scripts/validate_strict.py data/traits/physiology/siliceous_scale_production.yaml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/validate_strict.py data/traits/physiology/siliceous_scale_production.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-0
+  name: just audit-proposals
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just audit-proposals
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-1
+  name: just ground-predicates
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just ground-predicates
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-2
+  name: just ground-nodes
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just ground-nodes
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-3
+  name: just audit-graphs
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just audit-graphs
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-4
+  name: just audit-graph-protein-taxa
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just audit-graph-protein-taxa
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-5
+  name: just audit-predicate-domains
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just audit-predicate-domains
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-6
+  name: just check-biolink-coverage
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just check-biolink-coverage
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-7
+  name: just audit-snippets
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just audit-snippets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-8
+  name: just gen-discussions-data
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-discussions-data
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-9
+  name: just gen-qc-dashboard
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-qc-dashboard
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-10
+  name: just gen-pages
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-pages
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: generate-11
+  name: just gen-priority-dashboard
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-priority-dashboard
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: shared-0
+  name: just gen-discussions-data
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-discussions-data
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: shared-1
+  name: just gen-qc-dashboard
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just gen-qc-dashboard
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: verify-0
+  name: just qc
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: verify-1
+  name: just validate-history
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: verify-2
+  name: just validate-products
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: verify-3
+  name: just verify-proposal metpo_traitmech_v566
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: just verify-proposal metpo_traitmech_v566
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: verify-4
+  name: .venv/bin/ruff check scripts/add_biomineralization_trait.py tests/test_add_biomineralization_trait.py
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/ruff check scripts/add_biomineralization_trait.py tests/test_add_biomineralization_trait.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed successfully; scope is the command argument scope, including
+    corpus-wide audits. Existing baselines were not changed.
+- check_id: tests-0
+  name: .venv/bin/python -m pytest -q --junitxml=/tmp/traitmech-biomineralization-checks-20261010/pytest.xml
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python -m pytest -q --junitxml=/tmp/traitmech-biomineralization-checks-20261010/pytest.xml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 3770 tests passed with no failures, errors or skips.
+- check_id: robot
+  name: robot
+  status: passed
+  required: true
+  summary: ROBOT and ELK pass; separate RDF parse verified w3id 1064300 -> labeled
+    phenotype 1000059 -> quality 1000188, without legacy OBO METPO stubs. The v566-only
+    template does not emit historical child IDs.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/robot_validate_proposal.py proposals/metpo_traitmech_v566
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: focused
+  name: focused
+  status: passed
+  required: true
+  summary: 30 focused tests passed, including dry run, exact replay, child preservation,
+    stale preimage refusal and whole-change prevalidation.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python -m pytest tests/test_add_biomineralization_trait.py -q
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: history-diff
+  name: history-diff
+  status: passed
+  required: true
+  summary: Three changed traits have three new history records; old histories remain
+    byte-identical.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/audit_history_records.py --base 0e33d17c84b579d827db87e268f5b1780284a422
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: browser
+  name: browser
+  status: passed
+  required: true
+  summary: Chrome at 1440px and 390px passed four parent quotes, two child hierarchy
+    round trips, discussion states, history links, browse search, dashboard image/count,
+    overflow and page-error checks. Desktop parent and mobile evidence screenshots
+    visually inspected.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: node /tmp/traitmech-biomineralization-browser-qa-20261010.cjs
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: artifacts
+  name: artifacts
+  status: passed
+  required: true
+  summary: 1082 unrelated old YAMLs byte-preserved; two children change only parent,
+    resolution fields and appended event. 1081 old pages change only footer; two children
+    and phenotype additionally reflect hierarchy. Priority only changes phenotype
+    children 182 to 181, plus the new parent with two children. Old histories, proposals,
+    embeddings and discussion templates preserved.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python /tmp/traitmech-biomineralization-artifact-audit-20261010.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: snippets
+  name: snippets
+  status: passed
+  required: true
+  summary: 'Native outcomes retained: terminology UNRESOLVED, precipitation NOT_IN_ABSTRACT,
+    coccolith and scale VERIFIED. The first two quotes were directly checked in publisher
+    Abstract and Discussion respectively; they are not relabeled as abstract-resolver
+    successes.'
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python scripts/verify_snippets.py --record data/traits/physiology/biomineralization.yaml
+    --out /tmp/traitmech-biomineralization-snippets-20261010.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: sources
+  name: sources
+  status: passed
+  required: true
+  summary: Exactly one source-qualified MED match per PMID, matching DOI/title; two
+    scientific-abstract quotes match. Cached publisher HTML and official XML exact
+    quotes also match.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python /tmp/traitmech-biomineralization-source-check-20261010.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: fresh-novelty
+  name: fresh-novelty
+  status: passed
+  required: true
+  summary: Refreshed ignored-and-hidden concept, citation and full-block searches
+    across all current worktrees. New matches were inspected own Git metadata and
+    two generated rows for the existing narrower magnetosome node; no unresolved conflict.
+    Main and the original five pending PR heads unchanged. New PR 1850 at f352a9197f1227dfce1abbd46aa779079ea26bfe
+    changes only scripts/.vendored_canon_ref; its complete paginated file list and
+    immutable blob were inspected, with no curation allocation.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: .venv/bin/python /tmp/traitmech-biomineralization-prepublish-20261010.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: whitespace
+  name: whitespace
+  status: passed
+  required: true
+  summary: The ordinary staged TSV check returned 2 only for the required three empty
+    trailing directive cells. This path-scoped exception and the separate non-TSV
+    check passed; structured comparison confirms the canonical 11-column headers.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  command: git -c core.whitespace=-blank-at-eol diff --cached --check -- proposals/metpo_traitmech_v566/metpo_proposal_classes_robot.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: embeddings
+  name: Embedding source applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  summary: Exact configured default/fallback sources absent in both layouts, checked
+    independently of gitignore. Existing embedding artifacts preserved.
+evidence:
+- evidence_id: terminology
+  kind: authority
+  reference: DOI:10.1016/j.crte.2010.09.002
+  locator: Publisher scientific Abstract, Introduction and section 2; https://comptes-rendus.academie-sciences.fr/geoscience/articles/10.1016/j.crte.2010.09.002/.
+    Access time records the direct HTML reread, not the first acquisition.
+  accessed_at: '2026-10-10T08:22:44Z'
+  support: supports
+  summary: Review terminology supports microbial mediation of mineral formation, including
+    controlled, induced and passive matrix effects. It distinguishes attachment of
+    pre-existing minerals from formation. This is not experimental replication.
+- evidence_id: precipitation
+  kind: primary_source
+  reference: DOI:10.1128/AEM.07044-11
+  locator: Scientific Abstract, Introduction, Methods, Results, relevant Discussion
+    and actual Figures 1/6; https://journals.asm.org/doi/full/10.1128/aem.07044-11.
+    Access timestamp is the refreshed publisher page read; PMID:22447589 separately
+    rechecked.
+  accessed_at: '2026-10-10T08:22:44Z'
+  support: supports
+  summary: Inoculated M-3P assays formed carbonates, unlike uninoculated controls.
+    Mineral phase depends on substrate and conditions; community observations are
+    not assigned to each taxon. Discussion snippet is exact. Morphology does not prove
+    the proposed amorphous precursor or a universal urease mechanism.
+- evidence_id: coccolith
+  kind: primary_source
+  reference: DOI:10.1038/ncomms11228
+  locator: Scientific Abstract, Introduction, calcite-resupply Results and Discussion
+    in official XML https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4834641/fullTextXML.
+    Timestamp records cached XML reread and exact quote check.
+  accessed_at: '2026-10-10T08:24:12.658604Z'
+  support: supports
+  snapshot_sha256: cb92f360326ea29a36cd37f6bf417250926d35f9dd2327659475a6bcb26633ab
+  summary: Calcitic cell-element production entails mineral formation. Historical
+    AWI1516 observations do not prove current phenotype across strains or necessary
+    direct transfer from the separate calcium compartment. No new figure audit for
+    this parent.
+- evidence_id: silica
+  kind: primary_source
+  reference: DOI:10.1016/j.protis.2016.05.002
+  locator: Scientific abstract at https://rrc.nbrp.jp/references/56432?lang=en and
+    source-qualified PMID:27348459 Europe PMC CORE; timestamp is refreshed abstract
+    lookup.
+  accessed_at: '2026-10-10T08:24:12.639540Z'
+  support: supports
+  summary: Siliceous scales form in deposition vesicles; silicon is detected in immature-scale
+    vesicles. Production differs from assembly. Full Methods/figures unread; microtubule
+    association is not a necessary molecular mechanism.
+- evidence_id: novelty
+  kind: search
+  reference: proposals/metpo_traitmech_v566/proposal.md
+  locator: Allocation and novelty, upstream template contract and historical-child
+    axiom requests. Access timestamp records proposal reread, not the earlier searches.
+  accessed_at: '2026-10-10T19:35:24Z'
+  support: supports
+  summary: No exact umbrella record or conflicting reservation found in the bounded
+    ignored-and-hidden search. Narrower structures and graph endpoints are not exact
+    matches. v566 reserves 1064300-1064399 and populates only 1064300.
+  search_scope: All 23 pre-existing TraitMech worktrees including ignored/hidden files;
+    exact/local/full-block identifiers, biomineralization variants, mineral-formation
+    variants and cited DOI/PMID/PMCID strings. All five pending PR heads including
+    draft 924, paginated changed files and immutable curation blobs. Pinned METPO
+    RDF, fresh 399-record seed and complete release dispositions checked. CommunityMech
+    whole-block search included ignored files. Absent seed IDs do not establish exhaustion.
+- evidence_id: hierarchy
+  kind: record_content
+  reference: data/traits/physiology/biomineralization.yaml
+  locator: All parent fields plus both child definitions, parent_traits, discussions
+    and curation events.
+  accessed_at: '2026-10-10T19:35:24Z'
+  support: supports
+  summary: The new phenotype is broader than both mineral-production endpoints. The
+    child reparenting is definition-based inference; prior evidence, rationales, remaining
+    gaps and historical proposals are preserved.
+- evidence_id: implementation
+  kind: record_content
+  reference: scripts/add_biomineralization_trait.py
+  locator: build_record, build_child, proposal_tsv and main; controlled-preimage regression
+    tests and three history records.
+  accessed_at: '2026-10-10T19:35:24Z'
+  support: supports
+  summary: Dry-run default, identity/scope and discussion guards, complete prevalidation
+    and replay refusal protect the coupled edit. Agent attribution and decision timestamp
+    are explicit; all three records remain PROPOSED.
+- evidence_id: products
+  kind: validation
+  reference: reports/proposal_citation_audit.tsv
+  locator: Completed native pipeline, artifact audit, RDF parse and browser checks.
+  accessed_at: '2026-10-10T19:35:24Z'
+  support: supports
+  summary: 1085 records and consistent generated artifacts; exact pinned CLAW 9adf79f
+    source verified across 152 source blobs and used for final shared generation.
+    Protected and unrelated records unchanged; baseline exceptions not expanded.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Reusable formation phenotype
+  summary: Source-backed trait, not a material entity, isolated process, sequence
+    feature or kit label.
+  target_ids:
+  - traitmech:000690
+  evidence_ids:
+  - terminology
+  - precipitation
+  - novelty
+  outcome: supported
+- assessment_id: parent
+  area: grounding
+  topic: Strictly broader mineral formation
+  summary: Both child differentiae entail mineral formation. Phenotype remains an
+    ancestor; no structural organelle reparenting, exact process xref or disjointness
+    is inferred.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  evidence_ids:
+  - hierarchy
+  - coccolith
+  - silica
+  outcome: supported
+- assessment_id: evidence
+  area: evidence
+  topic: Source and quote fidelity
+  summary: Terminology review is distinguished from three primary studies. Assay,
+    substrate and interpretation limits remain explicit.
+  target_ids:
+  - traitmech:000690
+  evidence_ids:
+  - terminology
+  - precipitation
+  - coccolith
+  - silica
+  outcome: supported
+- assessment_id: child-preservation
+  area: consistency
+  topic: Scoped child repair
+  summary: Only the direct parent, resolution fields and appended event change. Separate
+    mechanism gaps, evidence and historical rationales remain intact.
+  target_ids:
+  - traitmech:000689
+  - traitmech:000688
+  evidence_ids:
+  - hierarchy
+  - products
+  outcome: supported
+- assessment_id: provenance
+  area: provenance
+  topic: Guarded mutation and histories
+  summary: Curation events and three repository histories match actual edits. Prevalidation
+    and refusal tests cover conflicting inputs and replay.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  evidence_ids:
+  - implementation
+  outcome: supported
+- assessment_id: products
+  area: consistency
+  topic: Proposal and generated surfaces
+  summary: One new canonical TSV row, explicit upstream child-axiom requests, and
+    native regenerated products agree; old cohorts and unrelated records are preserved.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  evidence_ids:
+  - novelty
+  - products
+  outcome: supported
+- assessment_id: gaps
+  area: completeness
+  topic: Taxa, mappings and mechanisms
+  summary: Canonical examples, exact xrefs and causal mechanisms remain intentionally
+    unasserted until supported; open discussions retain these questions.
+  target_ids:
+  - traitmech:000690
+  - traitmech:000689
+  - traitmech:000688
+  evidence_ids:
+  - hierarchy
+  - precipitation
+  - coccolith
+  - silica
+  outcome: unknown
+findings: []
+actions: []
+limitations:
+- Author self-review, not independent review or human scientific signoff.
+- Full parent assessment; existing children reviewed only for the coupled hierarchy
+  change and preservation. Broad input hashes do not imply whole-corpus scientific
+  review.
+- Benzerara Abstract/Introduction/section 2 read; remainder and actual figures not
+  audited. Rodriguez-Navarro actual Figures 1/6 inspected, other images not visually
+  audited. No new Sviben figure/supplement audit. Nomura full Methods/figures unread.
+- Native snippet resolver returned UNRESOLVED and NOT_IN_ABSTRACT for the first two
+  sources; directly verified publisher text is separately documented.
+- No canonical taxa, synonyms, external equivalences or protein mechanism asserted.
+  Parent scope/mapping and exemplar/mechanism discussions remain OPEN; only child
+  parent gaps are RESOLVED.
+- Configured embedding sources absent; existing artifacts preserved. No paid research
+  performed.
+- Curation decision time, repository-history write times and review access times have
+  distinct meanings. Refreshed source checks do not reconstruct earlier access timestamps.
+notes:
+- No new defect issue warranted by this bounded pass. External review and final CI/reservation
+  outcomes belong in the PR.
+tags:
+- add-trait
+- biomineralization
+- self-review
+```

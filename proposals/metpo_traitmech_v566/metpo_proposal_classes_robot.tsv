@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064300	biomineralization	A physiological phenotype in which a microbe mediates the formation of mineral phases.	TraitMech:data/traits/physiology/biomineralization.yaml|DOI:10.1016/j.crte.2010.09.002|DOI:10.1128/AEM.07044-11|DOI:10.1038/ncomms11228|DOI:10.1016/j.protis.2016.05.002	METPO:1000059			metpo_traitmech_2026_10		Microbial formation phenotype; add v564/v565 child axioms documented in proposal.md.	traitmech:000690
