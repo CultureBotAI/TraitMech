@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/coccolith_production.yaml
+  slug: coccolith_production
+session:
+  id: 2026-10-10T080730Z-codex-144a31
+  timestamp: '2026-10-10T08:07:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve coccolith production biomineralization parent gap
+  details: Reparented traitmech:000689 to biomineralization traitmech:000690 by definition-based
+    inference and resolved its parent TODO. Preserved definition, evidence, historical rationale,
+    separate exemplar/mechanism discussion and prior history. Historical v565 template remains
+    unchanged; v566 explicitly requests the additional upstream child axiom. No new experiment
+    or molecular claim is asserted.

@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/physiology/biomineralization.html" >biomineralization <code>traitmech:000690</code></a></li>
 
       </ul>
     </div>
@@ -121,7 +121,7 @@
         <p class="discussion-prompt">Resolve broader biomineralization placement without conflating endpoints.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>siliceous-scale-production-scope-and-parent</code>
           · raised by codex
           · 2026-10-10
@@ -140,6 +140,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added biomineralization traitmech:000690 as the direct broader phenotype. Production of the mineral elements specified by this record entails mineral formation; this is a definition-based hierarchy inference, not a new child experiment. Phenotype METPO:1000059 remains an ancestor. The historical rationale and endpoint distinctions are preserved; the separate exemplar and mechanism gap remains OPEN. The v566 proposal requests the additional child axiom without rewriting the historical proposal cohort.</p>
 
 
 
@@ -189,6 +191,12 @@
           <p class="changes">Added siliceous scale production with two primary DOI citations, directly checked scientific-abstract snippets and explicit access limits. Ignored-and-hidden main/worktree/open-PR reservation checks support 000688 and v564 block 1064100-1064199. Broader hierarchy, canonical exemplars and protein mechanism remain unresolved. Existing records unchanged. Timestamp records the observed UTC curation decision.</p>
         </li>
 
+        <li>
+          <time>2026-10-10T08:03:12Z</time> ·
+          <strong>REFINE_BIOMINERALIZATION_PARENT</strong> · codex
+          <p class="changes">Refined the direct parent to biomineralization traitmech:000690 and resolved the temporary parent gap by definition-based inference. Preserved the definition, evidence, historical rationale, independent mechanism gap and prior curation history. No organism or molecular mechanism was added.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -198,6 +206,12 @@
           <ul><li><strong>CREATE</strong> — Add source-bounded siliceous scale production
             <p>Created traitmech:000688 as a PROPOSED physiological phenotype with two independent primary DOI citations and directly read scientific-abstract snippets. Distinguished new-scale production from possession, extrusion and shell assembly; broader hierarchy, strain-level exemplars and molecular mechanism remain explicitly unresolved. Added a dry-run-first guarded writer, focused tests and METPO proposal v564 reserving the whole 1064100-1064199 block. The record timestamp is the observed 2026-10-10T05:02:23Z curation decision, not a claimed exact file-write time. Existing records were not edited.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/siliceous_scale_production/2026-10-10T050443Z-codex-dabe1a.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-10T08:07:31Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Resolve siliceous scale production biomineralization parent gap
+            <p>Reparented traitmech:000688 to biomineralization traitmech:000690 by definition-based inference and resolved its parent TODO. Preserved definition, evidence, historical rationale, separate exemplar/mechanism discussion and prior history. Historical v564 template remains unchanged; v566 explicitly requests the additional upstream child axiom. No new experiment or molecular claim is asserted.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/siliceous_scale_production/2026-10-10T080731Z-codex-9d54aa.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -253,9 +267,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-10 05:04 UTC
+      Record as of 2026-10-10 08:07 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1084 TraitRecords
+      · 1085 TraitRecords
       · embedding coverage 44.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

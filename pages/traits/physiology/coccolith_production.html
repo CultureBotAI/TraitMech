@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/physiology/biomineralization.html" >biomineralization <code>traitmech:000690</code></a></li>
 
       </ul>
     </div>
@@ -121,7 +121,7 @@
         <p class="discussion-prompt">Resolve broader biomineralization placement without conflating endpoints.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>coccolith-production-scope-and-parent</code>
           · raised by codex
           · 2026-10-10
@@ -140,6 +140,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added biomineralization traitmech:000690 as the direct broader phenotype. Production of the mineral elements specified by this record entails mineral formation; this is a definition-based hierarchy inference, not a new child experiment. Phenotype METPO:1000059 remains an ancestor. The historical rationale and endpoint distinctions are preserved; the separate exemplar and mechanism gap remains OPEN. The v566 proposal requests the additional child axiom without rewriting the historical proposal cohort.</p>
 
 
 
@@ -189,6 +191,12 @@
           <p class="changes">Added coccolith production with two primary DOI citations and short directly checked snippets, retaining assay and source-conflict limits. Ignored-and-hidden main/worktree/open-PR reservation checks support 000689 and v565 block 1064200-1064299. Broader hierarchy, canonical exemplars and protein mechanism remain unresolved. Existing records unchanged. Timestamp records the observed UTC curation decision.</p>
         </li>
 
+        <li>
+          <time>2026-10-10T08:03:12Z</time> ·
+          <strong>REFINE_BIOMINERALIZATION_PARENT</strong> · codex
+          <p class="changes">Refined the direct parent to biomineralization traitmech:000690 and resolved the temporary parent gap by definition-based inference. Preserved the definition, evidence, historical rationale, independent mechanism gap and prior curation history. No organism or molecular mechanism was added.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -198,6 +206,12 @@
           <ul><li><strong>CREATE</strong> — Add evidence-backed coccolith production phenotype
             <p>Added traitmech:000689 as PHYSIOLOGY/CLASS/PROPOSED under phenotype METPO:1000059 through the guarded add_coccolith_production_trait writer and record_curation_event. Two primary DOI citations (10.1038/ncomms11228 and 10.1111/nph.15272) and directly checked short scientific-abstract/Results snippets support production, including malformed elements, distinct from coccosphere integrity. Preserved source condition/caption discrepancies and historical strain limits. DOI:10.1111/jpy.12942 and the current CCMP1516 collection support qualified provenance context only. Left two explicit discussions for broader hierarchy, canonical exemplars and functional protein mechanism; no graph, xref or synonym inferred. Ignored-and-hidden searches across current main and 22 worktrees plus all five paginated open PR heads found no exact duplicate or competing allocation. Reserved full METPO block 1064200-1064299 in proposal v565, only 1064200 populated. Existing records, including protected spore germination, are unchanged. Validation and review results will be reported after execution, not presumed here.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/coccolith_production/2026-10-10T063341Z-codex-352eeb.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-10T08:07:30Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Resolve coccolith production biomineralization parent gap
+            <p>Reparented traitmech:000689 to biomineralization traitmech:000690 by definition-based inference and resolved its parent TODO. Preserved definition, evidence, historical rationale, separate exemplar/mechanism discussion and prior history. Historical v565 template remains unchanged; v566 explicitly requests the additional upstream child axiom. No new experiment or molecular claim is asserted.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/coccolith_production/2026-10-10T080730Z-codex-144a31.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -253,9 +267,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-10 06:33 UTC
+      Record as of 2026-10-10 08:07 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1084 TraitRecords
+      · 1085 TraitRecords
       · embedding coverage 44.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

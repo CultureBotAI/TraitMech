@@ -7,7 +7,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000690
 evidence:
 - reference: DOI:10.1016/j.protis.2016.05.002
   snippet: Scales were formed one by one in silica deposition vesicles (SDVs)
@@ -34,7 +34,7 @@ discussions:
 - discussion_id: siliceous-scale-production-scope-and-parent
   prompt: Resolve broader biomineralization placement without conflating endpoints.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Use phenotype METPO:1000059 pending a source-backed broader biomineralization
     phenotype. This is production of scales, not mere possession, acquisition or reuse
     of preformed scales, their extrusion, or their arrangement into a shell or scale
@@ -46,6 +46,14 @@ discussions:
     are asserted.
   posed_by: codex
   posed_date: '2026-10-10'
+  resolved_date: '2026-10-10'
+  resolution_note: Added biomineralization traitmech:000690 as the direct broader
+    phenotype. Production of the mineral elements specified by this record entails
+    mineral formation; this is a definition-based hierarchy inference, not a new child
+    experiment. Phenotype METPO:1000059 remains an ancestor. The historical rationale
+    and endpoint distinctions are preserved; the separate exemplar and mechanism gap
+    remains OPEN. The v566 proposal requests the additional child axiom without rewriting
+    the historical proposal cohort.
 - discussion_id: siliceous-scale-production-exemplars-and-mechanism
   prompt: Verify assay-strain identity and production-specific molecular evidence.
   kind: KNOWLEDGE_GAP
@@ -73,4 +81,12 @@ curation_history:
     main/worktree/open-PR reservation checks support 000688 and v564 block 1064100-1064199.
     Broader hierarchy, canonical exemplars and protein mechanism remain unresolved.
     Existing records unchanged. Timestamp records the observed UTC curation decision.
+  llm_assisted: true
+- timestamp: '2026-10-10T08:03:12Z'
+  curator: codex
+  action: REFINE_BIOMINERALIZATION_PARENT
+  changes: Refined the direct parent to biomineralization traitmech:000690 and resolved
+    the temporary parent gap by definition-based inference. Preserved the definition,
+    evidence, historical rationale, independent mechanism gap and prior curation history.
+    No organism or molecular mechanism was added.
   llm_assisted: true

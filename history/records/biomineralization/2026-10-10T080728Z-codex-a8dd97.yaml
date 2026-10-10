@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/biomineralization.yaml
+  slug: biomineralization
+session:
+  id: 2026-10-10T080728Z-codex-a8dd97
+  timestamp: '2026-10-10T08:07:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-backed biomineralization phenotype
+  details: 'Added PROPOSED traitmech:000690 under phenotype with four DOI citations and directly
+    checked snippets: Benzerara 2011 terminology review and three primary studies on induced
+    precipitation, coccolith production and siliceous scale production. Reserved v566 METPO
+    block 1064300-1064399 after ignored-and-hidden worktree and immutable open-PR checks.
+    Canonical taxa, exact external mappings and universal protein mechanism remain unasserted.
+    Coupled child hierarchy refinements have separate history records.'
