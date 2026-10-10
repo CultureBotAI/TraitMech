@@ -8,12 +8,17 @@ import os
 import re
 import subprocess
 import sys
+import traceback
 from pathlib import Path
 
 import record_review as reviews
 
 REF_PREFIX = "refs/record-review-bases/"
 ZERO_SHA = "0" * 40
+
+
+class FetchError(reviews.ReviewError):
+    """A remote fetch failed; callers may retry within a fixed bound."""
 
 
 def git(root: Path, *args: str, missing_ok: bool = False) -> str | None:
@@ -23,12 +28,22 @@ def git(root: Path, *args: str, missing_ok: bool = False) -> str | None:
             timeout=300, env={**os.environ, "GIT_NO_LAZY_FETCH": "1",
                              "GIT_TERMINAL_PROMPT": "0"},
         )
-    except (OSError, subprocess.TimeoutExpired) as exc:
-        raise reviews.ReviewError(f"Git operation failed: {args[0]}") from exc
+    except subprocess.TimeoutExpired as exc:
+        error = FetchError if args[0] == "fetch" else reviews.ReviewError
+        stderr = exc.stderr or ""
+        if isinstance(stderr, bytes):
+            stderr = stderr.decode("utf-8", errors="replace")
+        message = f"Git operation timed out after {exc.timeout}s: {' '.join(args)}"
+        if stderr.strip():
+            message += f": {stderr.strip()}"
+        raise error(message) from exc
+    except OSError as exc:
+        raise reviews.ReviewError(f"Cannot execute Git {' '.join(args)}: {exc}") from exc
     if result.returncode:
         if missing_ok and result.returncode == 1:
             return None
-        raise reviews.ReviewError(f"Git operation failed: {' '.join(args)}: {result.stderr.strip()}")
+        error = FetchError if args[0] == "fetch" else reviews.ReviewError
+        raise error(f"Git operation failed: {' '.join(args)}: {result.stderr.strip()}")
     return result.stdout.strip()
 
 
@@ -70,13 +85,15 @@ def recover(root: Path, *, apply: bool = False) -> dict:
                 raise reviews.ReviewError(f"source provenance {provenance['status']}: {provenance['reason']}")
 
     if apply:
+        missing = [item["revision"] for item in plan if item["missing"]]
+        if missing:
+            # Only the matching GitHub repository is contacted; no URL or ref
+            # is accepted from the reviews. Fetched content is never executed.
+            git(root, "fetch", "--no-tags", "--no-write-fetch-head",
+                "--no-recurse-submodules", f"https://github.com/{identity}.git", *missing)
         for item in plan:
             revision, ref = item["revision"], item["ref"]
             if item["missing"]:
-                # Only the matching GitHub repository is contacted; no URL or ref
-                # is accepted from the review. Fetched content is never executed.
-                git(root, "fetch", "--no-tags", "--no-write-fetch-head",
-                    "--no-recurse-submodules", f"https://github.com/{identity}.git", revision)
                 if git(root, "rev-parse", "--verify", f"{revision}^{{commit}}") != revision:
                     raise reviews.ReviewError(f"fetched source is not the requested commit: {revision}")
             if not item["retained"]:
@@ -96,9 +113,16 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         print(json.dumps(recover(args.repo_root, apply=args.apply), indent=2))
-    except (reviews.ReviewError, OSError) as exc:
-        print(f"error: {exc}", file=sys.stderr)
+    except FetchError as exc:
+        print(f"fetch error: {exc}", file=sys.stderr)
         return 1
+    except (reviews.ReviewError, OSError, UnicodeError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    except Exception:
+        # Unexpected local failures must retain diagnostics, not trigger fetch retries.
+        traceback.print_exc()
+        return 2
     return 0
 
 

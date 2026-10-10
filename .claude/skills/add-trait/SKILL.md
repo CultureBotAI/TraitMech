@@ -895,8 +895,7 @@ loop used for other hand-curated trait changes:
    deleting the remote feature branch. Also prepare and validate retained
    reviews in an independent single-branch main clone, as described in
    `docs/record-review-profile.md`; repeat after branch deletion. Fetch with
-   pruning and verify no local
-   or remote branch for that trait remains.
+   pruning and verify no local or remote branch for that trait remains.
 
 ## Report
 
