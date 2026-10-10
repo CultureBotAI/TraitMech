@@ -22,6 +22,17 @@ on:
       - "research/**"
       # As above: the corpus round-trip test reads data/traits/ (#554).
       - "data/traits/**"
+      # Structured review validation consumes retained bundles and their schema.
+      - "reviews/structured/**"
+      - "schema/record_review.yaml"
+      # The contract reads the profile's skill/rubric inputs and review guides.
+      - "conf/record_review.yaml"
+      - ".claude/skills/**"
+      - "docs/**"
+      - "DO_NOT_WORK.md"
+      - "templates/**"
+      # Native review recovery tests also verify the maintained recipe.
+      - "justfile"
   workflow_dispatch:
 
 permissions:
@@ -49,6 +60,33 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --extra dev
+
+      - name: Recover retained review source commits
+        # Match vendored-sync: retry fetch failures, not invalid local evidence.
+        run: |
+          set -uo pipefail
+          for attempt in 1 2 3; do
+            status=0
+            uv run python scripts/fetch_record_review_bases.py --apply || status=$?
+            case "$status" in
+              0) exit 0 ;;
+              1) ;;
+              2)
+                echo "::error::review-base validation or local precondition failed" >&2
+                exit 2
+                ;;
+              *)
+                echo "::error::review-base recovery returned unexpected exit $status" >&2
+                exit "$status"
+                ;;
+            esac
+            if [ "$attempt" -lt 3 ]; then
+              echo "::warning::review-base fetch attempt $attempt failed; retrying in 5s" >&2
+              sleep 5
+            fi
+          done
+          echo "::error::review bases unavailable after 3 fetch attempts" >&2
+          exit 1
 
       - name: Run pytest
         run: uv run pytest tests/ -v --tb=short

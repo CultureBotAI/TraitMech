@@ -48,6 +48,8 @@ Run in TraitMech's environment (`just install` installs project/dev dependencies
 uv run python scripts/record_review.py inspect --targets /tmp/targets.yaml --input src/traitmech/schema/traitmech.yaml
 uv run python scripts/record_review.py validate /tmp/completed-review.yaml
 uv run python scripts/record_review.py save --content /tmp/completed-review.yaml
+just fetch-record-review-bases
+just fetch-record-review-bases --apply
 just check-record-reviews
 just test-record-reviews
 just validate <record-path>
@@ -96,3 +98,42 @@ Only explicit manual workflow runs fall back to HEAD (also the local default).
 `reviews/structured/<timestamp>-<slug>/review.yaml` and
 derived `review.md` are Git-visible immutable observations. Existing research
 and ignored report policies remain unchanged.
+
+## Review bases after squash merges
+
+Full main history does not include pre-squash feature commits. Use a full-history
+checkout as CI does: recovering a base in a shallow clone can require downloading
+unrelated missing ancestry and exceed the command's five-minute Git timeout.
+Before checking reviews in a fresh clone, run `just fetch-record-review-bases`
+to inspect local commit presence. This dry-run is offline: it does not check
+remote availability or predict whether a subsequent fetch will succeed.
+Run `just fetch-record-review-bases --apply` to recover missing exact
+source commits from the matching GitHub repository. The command validates all
+bundle pairs and repository identities before fetching; it retains source
+commits under local `refs/record-review-bases/<sha>` so Git garbage collection
+does not discard them. These are local provenance refs, not feature branches.
+No review, working file, remote branch or tag is changed. An unavailable source
+commit fails explicitly; do not rewrite the review or skip its provenance check.
+
+Missing SHAs are fetched together in one `git fetch`. The CLI returns 1 for a failed
+or timed-out fetch and 2 for deterministic local validation/precondition errors.
+Only CI retries exit 1, at most three times with five-second delays; it propagates
+other nonzero statuses immediately. Fetch failure is not necessarily transient:
+a permanently unavailable SHA still fails after the bound. Neither the CLI nor
+the read-only check/test recipes retry or weaken validation automatically.
+
+CI explicitly runs this preparation before pytest. The native check/test recipes
+remain read-only, and the trusted `RECORD_REVIEW_BASE` append-only gate is
+unchanged. Direct shared-helper callers and fleet ingestion must prepare their
+own object stores too; this native command does not change CLAW ingestion.
+A fetched base still establishes only a base for `working_tree` attestations,
+not proof that their recorded input bytes were committed. For `git_commit`
+reviews the shared validator still checks historical regular-file blob hashes.
+
+After a squash merge, verify review preparation and validation in an independent
+single-branch main clone before branch cleanup. Use `--no-local` for a local
+clone: a linked worktree or copied object store can conceal missing commits
+(#1843). Repeat with a new independent clone after deleting the remote feature
+branch; reusing the prepared clone would conceal remote availability failures.
+GitHub must still serve each exact source commit; the command cannot reconstruct
+a lost object.

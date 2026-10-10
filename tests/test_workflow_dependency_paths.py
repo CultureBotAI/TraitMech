@@ -121,6 +121,18 @@ def _path_is_included(filename: str, patterns: list[str]) -> bool:
     return included
 
 
+def test_post_merge_pytest_covers_declared_review_inputs():
+    profile = yaml.safe_load((REPO_ROOT / "conf/record_review.yaml").read_text())
+    workflow = yaml.safe_load((WORKFLOWS / "pytest.yaml").read_text())
+    patterns = (workflow.get(True) or workflow["on"])["push"]["paths"]
+    inputs = set(profile["skills"]) | set(profile["rubrics"]) | {
+        "conf/record_review.yaml", "schema/record_review.yaml",
+        "docs/record-reviews.md", "docs/record-review-profile.md", "justfile",
+    }
+    missing = sorted(path for path in inputs if not _path_is_included(path, patterns))
+    assert not missing, f"Post-merge pytest excludes configured review inputs: {missing}"
+
+
 def test_filtered_pr_jobs_that_install_dependencies_are_triggered_by_them():
     offenders: list[str] = []
     workflows = _filtered_dependency_workflows()

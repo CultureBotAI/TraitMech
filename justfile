@@ -32,7 +32,12 @@ default:
 install:
     uv sync --extra dev
 
+# Recover/retain review source commits after squash merges; dry-run by default.
+fetch-record-review-bases *args:
+    uv run python scripts/fetch_record_review_bases.py {{args}}
+
 # Validate immutable review bundles, including hidden/ignored ones.
+# Fresh clones may first need `just fetch-record-review-bases --apply`.
 check-record-reviews:
     uv run python scripts/record_review.py check
 
