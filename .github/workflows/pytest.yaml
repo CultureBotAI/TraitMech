@@ -22,9 +22,17 @@ on:
       - "research/**"
       # As above: the corpus round-trip test reads data/traits/ (#554).
       - "data/traits/**"
+      # Structured review validation consumes retained bundles and their schema.
       - "reviews/structured/**"
       - "schema/record_review.yaml"
+      # The contract reads the profile's skill/rubric inputs and review guides.
       - "conf/record_review.yaml"
+      - ".claude/skills/**"
+      - "docs/**"
+      - "DO_NOT_WORK.md"
+      - "templates/**"
+      # Native review recovery tests also verify the maintained recipe.
+      - "justfile"
   workflow_dispatch:
 
 permissions:
