@@ -101,8 +101,10 @@ and ignored report policies remain unchanged.
 
 ## Review bases after squash merges
 
-Full main history does not include pre-squash feature commits. Before checking
-reviews in a fresh clone, run `just fetch-record-review-bases` to inspect the
+Full main history does not include pre-squash feature commits. Use a full-history
+checkout as CI does: recovering a base in a shallow clone can require downloading
+unrelated missing ancestry and exceed the command's five-minute Git timeout.
+Before checking reviews in a fresh clone, run `just fetch-record-review-bases` to inspect the
 plan, then `just fetch-record-review-bases --apply` to recover missing exact
 source commits from the matching GitHub repository. The command validates all
 bundle pairs and repository identities before fetching; it retains source
@@ -122,5 +124,7 @@ reviews the shared validator still checks historical regular-file blob hashes.
 After a squash merge, verify review preparation and validation in an independent
 single-branch main clone before branch cleanup. Use `--no-local` for a local
 clone: a linked worktree or copied object store can conceal missing commits
-(#1843). Recheck after deleting the remote feature branch. GitHub must still
+(#1843). Repeat with a new independent clone after deleting the remote feature
+branch; reusing the prepared clone would conceal remote availability failures.
+GitHub must still
 serve each exact source commit; the command cannot reconstruct a lost object.
