@@ -13103,6 +13103,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-xref-gap"
  },
  {
+  "discussion_id": "siliceous-scale-production-scope-and-parent",
+  "prompt": "Resolve broader biomineralization placement without conflating endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "siliceous scale production",
+  "source_id": "traitmech:000688",
+  "source_file": "siliceous_scale_production.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059 pending a source-backed broader biomineralization phenotype. This is production of scales, not mere possession, acquisition or reuse of preformed scales, their extrusion, or their arrangement into a shell or scale layer. It is not equivalent to general silicification, diatom frustule formation, magnetosome or ferrosome possession, substrate adhesion, or growth on a particular chemical. These neighboring endpoints do not alone demonstrate new-scale production. Do not infer a universal scale geometry, covering architecture, cell-cycle coupling or fitness effect. No exact synonyms, xrefs, homology or organism-level disjointness are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/siliceous_scale_production.html#siliceous-scale-production-scope-and-parent"
+ },
+ {
+  "discussion_id": "siliceous-scale-production-exemplars-and-mechanism",
+  "prompt": "Verify assay-strain identity and production-specific molecular evidence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "siliceous scale production",
+  "source_id": "traitmech:000688",
+  "source_file": "siliceous_scale_production.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned until primary assay Methods, strain provenance and current taxonomy are jointly reconciled. NIES-4060 is currently catalogued as Paulinella micropora (MYN1) at https://mcc.next.nbrp.jp/strainList.do?strainNumber=NIES-4060; its reference list links the 2016 historical chromatophora paper, but this collection association is not an independent production experiment or authority to rename every historical observation. The two primary abstracts support a reusable phenotype through different methods, not one conserved molecular pathway. Ultrastructure and cytoskeletal association alone cannot establish causal protein requirements. Separate deposition, vesicle transport, extrusion and assembly before adding causal edges. A protein mechanism needs functional evidence and taxon-paired accessions; sequence features alone cannot supply that support. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/siliceous_scale_production.html#siliceous-scale-production-exemplars-and-mechanism"
+ },
+ {
   "discussion_id": "sos-response-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level microbial SOS response before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -13495,9 +13529,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 667,
- "total_knowledge_gaps": 429,
- "total_source_entries": 553,
+ "total_discussions": 669,
+ "total_knowledge_gaps": 430,
+ "total_source_entries": 554,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
