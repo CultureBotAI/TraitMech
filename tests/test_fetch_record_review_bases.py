@@ -149,6 +149,53 @@ def test_ignored_bundles_are_included(squashed):
     assert recovery.recover(root)["reviews"] == 1
 
 
+@pytest.mark.parametrize("apply", [False, True])
+@pytest.mark.parametrize("marker", ["remote", "legacy", "pack", "linked_pack"])
+def test_partial_clone_rejected_before_provenance_or_mutation(
+    squashed, monkeypatch, capsys, apply, marker,
+):
+    root, _, _, calls = squashed
+    if marker == "remote":
+        git(root, "config", "remote.origin.promisor", "true")
+    elif marker == "legacy":
+        git(root, "config", "extensions.partialClone", "origin")
+    else:
+        (root / ".git/objects/pack/fixture.promisor").touch()
+        if marker == "linked_pack":
+            linked = root.parent / "linked-review-check"
+            git(root, "worktree", "add", "--detach", str(linked), "HEAD")
+            root = linked
+    before = git(root, "for-each-ref")
+    status = git(root, "status", "--porcelain")
+    assert git(root, "rev-parse", "--is-shallow-repository") == "false"
+
+    def unexpected(*args, **kwargs):
+        pytest.fail("partial clone reached historical provenance inspection")
+
+    monkeypatch.setattr(recovery.reviews, "source_provenance", unexpected)
+    monkeypatch.setattr(recovery.reviews, "read_review", unexpected)
+    with pytest.raises(recovery.reviews.ReviewError, match="full-history, full-object clone"):
+        recovery.recover(root, apply=apply)
+    args = ["--repo-root", str(root)] + (["--apply"] if apply else [])
+    assert recovery.main(args) == 2
+    result = capsys.readouterr()
+    assert not result.out and "partial clones are unsupported" in result.err
+    assert not any(call[0] in {"fetch", "update-ref"} for call in calls)
+    assert git(root, "for-each-ref") == before
+    assert git(root, "status", "--porcelain") == status
+
+
+@pytest.mark.parametrize("setting", ["false", "filter_only"])
+def test_non_promisor_configuration_keeps_full_clone_recovery(squashed, setting):
+    root, _, _, _ = squashed
+    if setting == "false":
+        git(root, "config", "remote.origin.promisor", "false")
+    else:
+        git(root, "config", "remote.origin.partialclonefilter", "blob:none")
+    assert recovery.recover(root)["status"] == "dry_run"
+    assert recovery.recover(root, apply=True)["status"] == "validated"
+
+
 def test_bad_origin_refused_before_fetch(squashed, reviews):
     root, _, _, calls = squashed
     git(root, "remote", "set-url", "origin", "https://example.invalid/Example/FixtureMech.git")
