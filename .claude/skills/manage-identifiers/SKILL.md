@@ -55,7 +55,9 @@ This is the inverse of CultureMech / MediaIngredientMech / CommunityMech, all of
 
 ## Looking up the right METPO CURIE
 
-METPO is mirrored at `data/raw/metpo.owl`. To find a CURIE for a trait you want to add:
+METPO is mirrored at `data/raw/metpo.owl`. Search lexical variants as well as
+the requested label; historical labels may be prefixed with `obsolete ` (for
+example, `obsolete sliding`). These are search leads, not exact mappings.
 
 ```bash
 # Find lexical leads, including ignored and hidden files
@@ -195,7 +197,7 @@ curation_history:
   - timestamp: '2026-05-19T00:00:00+00:00'
     curator: <your name or handle>    # match an existing convention: seed_from_metpo, codex, or your name
     action: MINTED_TRAITMECH_ID
-    changes: 'METPO has no matching term yet; reserved in proposals/metpo_traitmech_v<N>'
+    changes: 'No active exact METPO match after identity assessment; reserved in proposals/metpo_traitmech_v<N>'
     llm_assisted: false
 ```
 
@@ -252,7 +254,7 @@ grep -rh "^identifier:" data/traits/ \
 - **Don't mint a `traitmech:NNNNNN` ID for a trait with an active exact METPO match.** Search labels and synonyms, then check status, kind and scope. Deprecated-only matches require the assessment above, not automatic reuse or fallback.
 - **Don't change an existing `identifier:` value.** Identifiers are stable. If a trait's *meaning* drifts, deprecate the old record and create a new one with a new identifier. If only the *label* changes, edit `label:` / `synonyms:` and leave `identifier:` alone.
 - **Don't backfill `traitmech:` over `METPO:`** when re-seeding. The seeder is the source of truth for METPO-mapped traits; never overwrite a METPO CURIE with a TraitMech-minted one.
-- **Don't use a sequential number that collides with an in-flight METPO ID range.** METPO uses 7-digit numerics (`METPO:1000430`); TraitMech-minted IDs use 6-digit zero-padded under the `traitmech:` prefix to avoid any visual collision.
+- **Don't infer namespace or availability from digit width.** Historical METPO IDs include six-digit numeric suffixes such as `METPO:000097`, as well as seven-digit forms. The full CURIE, including its prefix and unchanged local ID, determines identity; matching numeric suffixes in different namespaces are not identifier collisions. Preserve leading zeros and check each candidate CURIE, cohort and entire reserved METPO block through the reservation workflow above (#1876).
 
 ## Cross-references
 

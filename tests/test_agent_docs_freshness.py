@@ -74,11 +74,19 @@ def test_trait_identity_guidance_distinguishes_deprecated_matches():
         assert "`consider` suggestion does not assert equivalence" in guidance
         assert "keep the candidate in research" in guidance
         assert "Do not put historical IDs in exact `xrefs`" in guidance
+        assert "`obsolete `" in guidance
         assert "#1874" in guidance
-    identifiers = read(".claude/skills/manage-identifiers/SKILL.md")
-    assert "including leading" in identifiers
+    identifiers = " ".join(read(".claude/skills/manage-identifiers/SKILL.md").split())
+    assert "including leading zeros" in identifiers
     assert "It deliberately skips deprecated terms" in identifiers
     assert "does not fetch" in identifiers
+    assert "Historical METPO IDs include six-digit numeric suffixes" in identifiers
+    assert "The full CURIE, including its prefix and unchanged local ID, determines identity" in identifiers
+    assert "No active exact METPO match after identity assessment" in identifiers
+    assert "METPO uses 7-digit numerics" not in identifiers
+    assert "avoid any visual collision" not in identifiers
+    assert "METPO has no matching term yet" not in identifiers
+    assert "#1876" in identifiers
     proposal = " ".join(read(".claude/skills/metpo-proposal/SKILL.md").split())
     assert "active exact METPO match" in proposal
     assert "historical-match assessment for deprecated-only matches" in proposal

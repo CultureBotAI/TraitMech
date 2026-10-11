@@ -206,7 +206,8 @@ and `history/` with the ignored-and-hidden search above.
 TraitMech is METPO-first:
 
 1. Search `data/raw/metpo.owl` for an exact class or property for the target,
-   including historical labels. Inspect `owl:deprecated`, replacement and
+   including lexical variants and historical labels prefixed with `obsolete `.
+   Inspect `owl:deprecated`, replacement and
    consider annotations, and upstream context as described in
    `manage-identifiers`; a lexical match is not an identity decision.
 2. If METPO has an active exact match, use its METPO CURIE as `identifier`.
