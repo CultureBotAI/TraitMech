@@ -10177,6 +10177,40 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/rosette_cell_arrangement.html#rosette-cell-arrangement-mechanism-scope"
  },
  {
+  "discussion_id": "swimming-motility-scope-and-assays",
+  "prompt": "Keep liquid propulsion distinct from surface movement and passive displacement.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "swimming motility",
+  "source_id": "traitmech:000702",
+  "source_file": "swimming_motility.yaml",
+  "attaches_to": [],
+  "rationale": "Motile METPO:1000702 is the broader energy-dependent locomotion phenotype. Swimming concerns propulsion through liquid, including near a boundary, not locomotion across a supporting substrate. Swarming traitmech:000062, twitching traitmech:000061 and gliding METPO:1000706 are not exact synonyms. Passive advection, settling, Brownian motion, colony growth and appendage possession alone are insufficient. Neither a particular speed, solitary behavior, chemotaxis nor a specified propulsion apparatus is required. Bacterial flagella and archaeal archaella must not be conflated. An organism can exhibit swimming and surface motility in different conditions; no organism-level disjointness is asserted. Existing flagellar-motility process nodes, swimming-velocity capacities and taxis discussions are not exact ungrounded instances of this trait. Upstream METPO issue 271 requests this gap; it does not supply an accepted identifier. External phenotype equivalences and lexical variants remain unasserted pending authority checks.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/swimming_motility.html#swimming-motility-scope-and-assays"
+ },
+ {
+  "discussion_id": "swimming-motility-examples-and-mechanisms",
+  "prompt": "Resolve taxon-specific examples and mechanisms without inferring motion from sequence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "swimming motility",
+  "source_id": "traitmech:000702",
+  "source_file": "swimming_motility.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned in this first pass: the haloarchaeal isolates lack resolved species identities in the study, and exact taxon anchors for the bacterial experimental background have not been independently verified here. Engineered material remains valid qualified phenotype evidence, not an unmodified natural exemplar. A causal graph is deferred pending source-bounded branches and eligible taxon-paired protein examples. Do not impose one lineage's motor or chemotaxis machinery on all swimming organisms, or use a NONMECHANISTIC graph to bypass grounding requirements. A flagellin, archaellin, motor gene or predicted motility system alone does not establish liquid propulsion under a tested condition. The present evidence covers bacterial and archaeal cases, not a systematic survey of eukaryotic propulsion or every swimming mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/swimming_motility.html#swimming-motility-examples-and-mechanisms"
+ },
+ {
   "discussion_id": "synnema-formation-scope-and-hierarchy",
   "prompt": "Review a fungal reproductive morphology parent and terminology.",
   "kind": "CURATION_TODO",
@@ -13971,9 +14005,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 695,
- "total_knowledge_gaps": 443,
- "total_source_entries": 567,
+ "total_discussions": 697,
+ "total_knowledge_gaps": 444,
+ "total_source_entries": 568,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

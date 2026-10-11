@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/swimming_motility.yaml
+  slug: swimming_motility
+session:
+  id: 2026-10-11T182009Z-codex-de5a4b
+  timestamp: '2026-10-11T18:20:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed swimming motility
+  details: Added traitmech:000702 below METPO:1000702 with two DOI-backed primary studies,
+    scientific-abstract and full-text snippets, and explicit liquid-propulsion, assay, strain
+    and sequence-inference limits. Reserved v578 block METPO:1065500-1065599 after ignored/hidden
+    worktree, upstream and pending-PR audits. Canonical examples and graphs remain deferred;
+    prior trait YAMLs are unchanged.
