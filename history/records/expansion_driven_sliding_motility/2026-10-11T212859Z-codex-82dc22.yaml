@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/expansion_driven_sliding_motility.yaml
+  slug: expansion_driven_sliding_motility
+session:
+  id: 2026-10-11T212859Z-codex-82dc22
+  timestamp: '2026-10-11T21:28:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  - proposal
+  summary: Add qualified expansion-driven sliding motility
+  details: Created traitmech:000703 through the guarded validated writer with two primary
+    DOI-backed studies and checked snippets. Passive expansion has phenotype as parent; broader
+    surfing terminology, deprecated METPO identities and qualified laboratory strain provenance
+    remain explicit discussions. Reserve v579 and 1065600-1065699 after ignored/hidden multi-worktree
+    and remote allocation checks. No existing trait changed; canonical examples and graphs
+    await exact grounding. Initial writer tests passed (20); full native gates and saved scientific
+    review follow.

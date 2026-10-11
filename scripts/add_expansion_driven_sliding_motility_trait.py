@@ -1,0 +1,242 @@
+"""Add expansion-driven sliding through the guarded validated writer."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import csv
+import io
+import tempfile
+from pathlib import Path
+
+import yaml
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import write_validated_trait
+
+ROOT = Path(__file__).resolve().parent.parent
+SLUG = "expansion_driven_sliding_motility"
+TARGET = ROOT / f"data/traits/morphology/{SLUG}.yaml"
+PARENT_PATH = ROOT / "data/traits/upper/phenotype.yaml"
+PROPOSAL = ROOT / "proposals/metpo_traitmech_v579/metpo_proposal_classes_robot.tsv"
+IDENTIFIER = "traitmech:000703"
+METPO_ID = "METPO:1065600"
+IDENTITY = "DOI:10.1111/1758-2229.70214"
+CONVENTIONAL = "DOI:10.1186/1471-2180-6-31"
+TIMESTAMP = "2026-10-11T21:19:38Z"
+PARENT = {
+    "identifier": "METPO:1000059",
+    "label": "phenotype",
+    "definition": (
+        "A quality that differentiates specific instances of a species from other "
+        "instances of the same species."
+    ),
+    "definition_source": "DOI:10.1186/gb-2010-11-1-r2",
+    "trait_category": "UPPER",
+    "term_kind": "CLASS",
+    "mapping_status": "REVIEWED",
+    "parent_traits": ["METPO:1000188"],
+}
+RECORD = {
+    "identifier": IDENTIFIER,
+    "label": "expansion-driven sliding motility",
+    "definition": (
+        "A phenotype in which a microbial population spreads across a supporting "
+        "surface through passive displacement of cells by expansive forces generated "
+        "within the colony, without active locomotory propulsion of the displaced cells."
+    ),
+    "definition_source": IDENTITY,
+    "trait_category": "MORPHOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": [PARENT["identifier"]],
+    "evidence": [
+        {
+            "reference": IDENTITY,
+            "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces.",
+            "notes": (
+                "Pollitt et al. 2025, PMID:41152213, PMC12568390; scientific abstract, "
+                "not graphical abstract. Full text, Figure 1 and the actual DOCX "
+                "supplement were inspected. Results 2.8-2.9 interpret digitate-colony "
+                "expansion as hydraulic displacement, not a direct force measurement; "
+                "unobserved division does not establish absent growth. Supplementary "
+                "Methods identify mc2 155. The Figure 1 comparison varies both gel "
+                "material and concentration, not material alone. The qualified "
+                "definition includes this interpretation without making cell-division "
+                "pressure universal. Raw movies were not reanalyzed. Qualified MED, "
+                "Crossref and the retrieved publisher page exposed no linked correction "
+                "or retraction at the 2026-10-11 check."
+            ),
+        },
+        {
+            "reference": CONVENTIONAL,
+            "snippet": "sliding motility is a passive mode of translocation for spreading over surfaces.",
+            "notes": (
+                "Fall et al. 2006, PMID:16545127, PMC1501027; Background's "
+                "source-attributed terminology, not an abstract quote. Results and "
+                "Methods directly describe surface expansion of constructed B. subtilis "
+                "DS64 hag-replacement material. Growth-associated, surfactin-dependent "
+                "spreading supports the conventional case, not a universal transporter "
+                "or surfactant requirement. Actual Figure 1 says 24 hours, whereas its "
+                "caption and Results say 18 hours; retain this unresolved discrepancy. "
+                "Proposed plant-root benefit is not observed natural colonization. "
+                "Qualified MED, Crossref and the retrieved publisher page exposed no "
+                "linked correction or retraction at the 2026-10-11 check."
+            ),
+        },
+    ],
+    "discussions": [
+        {
+            "discussion_id": "expansion-sliding-scope-and-naming",
+            "prompt": "Retain the qualified expansion-driven scope without settling broader sliding terminology.",
+            "kind": "CONTROVERSY",
+            "status": "OPEN",
+            "rationale": (
+                "The label is deliberately qualified: Kovacs et al. include "
+                "gravity-assisted droplet surfing under sliding, whereas Hennes et al. "
+                "distinguish it by driving force. Neither unqualified sliding nor "
+                "surfing is asserted as an exact synonym here. Translation of an "
+                "entire droplet under gravity alone is outside this expansion-driven "
+                "definition. Fall's Background uses motility as a broader umbrella "
+                "than current METPO:1000701 independent movement and METPO:1000702 "
+                "energy-dependent independent movement; phenotype is therefore the "
+                "conservative parent. This is not swimming, active gliding, swarming "
+                "or twitching, and does not require absence of locomotory appendages "
+                "from the organism. Different modes can coexist; no organism-level "
+                "disjointness is asserted. Colony diameter, wetting, bulk advection "
+                "or a sequence feature alone is insufficient. The letters document "
+                "terminology, not additional experimental replication."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1073/pnas.1710371114",
+                    "evidence_source": "full_text",
+                    "snippet": (
+                        "we therefore propose considering the finding of Hennes et al. "
+                        "(1) as a novel example of sliding motility"
+                    ),
+                    "notes": (
+                        "Kovacs et al. 2017 letter, E8802, penultimate paragraph; "
+                        "publisher PDF at the authors' DTU repository. A proposed "
+                        "broader naming convention, not an independent experiment."
+                    ),
+                },
+                {
+                    "reference": "DOI:10.1073/pnas.1712278114",
+                    "evidence_source": "full_text",
+                    "snippet": "gravity is the driving force of surfing",
+                    "notes": (
+                        "Hennes et al. 2017 reply, first bullet; author-hosted PDF. "
+                        "Contrasting physical classification, not experimental replication."
+                    ),
+                },
+            ],
+            "posed_by": "codex",
+            "posed_date": "2026-10-11",
+        },
+        {
+            "discussion_id": "expansion-sliding-historical-metpo-identity",
+            "prompt": "Resolve upstream identity without reviving deprecated sliding identifiers.",
+            "kind": "CURATION_TODO",
+            "status": "OPEN",
+            "rationale": (
+                "Pinned and current METPO contain deprecated METPO:0000096, "
+                "METPO:000097 and METPO:1000388, without replacement annotations. "
+                "Their reason codes were assigned by ID era in generator commit "
+                "38fbfb82c6cc962009582eb7f8652e48ede0f9c2, not by a sliding-specific "
+                "biological assessment. https://github.com/berkeleybop/metpo/issues/521 "
+                "still disputes this metadata; issue 271 requests motility coverage. "
+                "Neither authorizes reactivation or resolves equivalence to this "
+                "qualified class. Independent primary evidence supports the present "
+                "scope, and no active exact replacement was found in the inspected "
+                "ontology and pending proposals. Keep historical IDs out of xrefs "
+                "and replaces; the new v579 proposal is not an upstream acceptance."
+            ),
+            "posed_by": "codex",
+            "posed_date": "2026-10-11",
+        },
+        {
+            "discussion_id": "expansion-sliding-examples-and-mechanisms",
+            "prompt": "Ground taxon-specific examples and causal branches before adding a graph.",
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "DS64 is engineered hag-replacement material. For mc2 155, the "
+                "first-person provenance account DOI:10.1128/microbiolspec.MGM2-0037-2013 "
+                "describes a laboratory-selected, plasmid-cured mutant derivative. "
+                "Neither is presented as an unqualified natural canonical example. "
+                "These qualifications do not invalidate the observed phenotype. "
+                "No exact taxon-paired protein branch is established here, and the "
+                "hydraulic molecular mechanism remains unresolved. Defer the graph "
+                "rather than impose one lineage's mechanism or use NONMECHANISTIC "
+                "to bypass grounding. Gene presence, appendage absence and predicted "
+                "motility annotations cannot establish observed passive surface "
+                "expansion. External equivalences remain unasserted."
+            ),
+            "posed_by": "codex",
+            "posed_date": "2026-10-11",
+        },
+    ],
+}
+
+
+def build_record() -> dict:
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record, curator="codex", action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Added qualified expansion-driven sliding with two primary DOI-backed "
+            "studies and directly checked snippets. Reserved 000703, v579 and "
+            "1065600-1065699 after ignored/hidden worktree and pending-PR checks. "
+            "Historical deprecated identities are not reused. Naming controversy, "
+            "strain provenance and mechanism gaps remain explicit. Existing traits "
+            "unchanged; timestamp is the observed UTC curation decision."
+        ),
+        llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def proposal_tsv(record: dict) -> str:
+    rows = [
+        ["proposed_id", "label", "definition", "definition_source", "parent",
+         "synonyms", "xrefs", "subset", "priority", "observations", "traits_addressed"],
+        ["ID", "LABEL", "A IAO:0000115", ">A IAO:0000119", "SC %",
+         "A oboInOwl:hasExactSynonym SPLIT=|", "A oboInOwl:hasDbXref SPLIT=|",
+         "A oboInOwl:inSubset", "", "", ""],
+        [METPO_ID, record["label"], record["definition"],
+         "|".join([f"TraitMech:data/traits/morphology/{SLUG}.yaml",
+                   *(e["reference"] for e in record["evidence"])]),
+         PARENT["identifier"], "", "", "metpo_traitmech_2026_10", "",
+         "Qualified expansion-driven phenotype; historical sliding IDs remain deprecated.", IDENTIFIER],
+    ]
+    stream = io.StringIO(newline="")
+    csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    return stream.getvalue()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    parent = yaml.safe_load(PARENT_PATH.read_text())
+    if not isinstance(parent, dict) or any(parent.get(k) != v for k, v in PARENT.items()):
+        raise SystemExit("Parent identity or scope differs from reviewed projection")
+    record = build_record()
+    proposal = proposal_tsv(record)
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+        raise SystemExit("Existing target differs from reviewed result")
+    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+        raise SystemExit("Existing proposal differs from reviewed result")
+    with tempfile.TemporaryDirectory() as tmp:
+        write_validated_trait(record, Path(tmp) / TARGET.name)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        PROPOSAL.parent.mkdir(parents=True, exist_ok=True)
+        PROPOSAL.write_text(proposal)
+    print("Applied" if args.apply else "Validated dry run; pass --apply to write")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
