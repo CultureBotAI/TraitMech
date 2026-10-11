@@ -9,6 +9,7 @@ that fails if someone "fixes" it back, while live values must stay generated.
 
 from __future__ import annotations
 
+import json
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -405,6 +406,19 @@ def test_unresearched_mechanism_meta_matches_queue_filter():
     rows, meta = build_queue()
     expected = sum(1 for row in rows if _unresearched_mechanism(row))
     assert meta["unresearched_mechanism_records"] == expected, meta
+
+
+def test_committed_dashboard_graph_counts_match_live_records():
+    root = Path(__file__).resolve().parent.parent
+    dashboard = json.loads((root / "app/dashboard/priority.json").read_text())
+    rows, _ = build_queue()
+    expected = {row["identifier"]: (row["nodes"], row["edges"]) for row in rows}
+    actual = {
+        row["identifier"]: (row["nodes"], row["edges"])
+        for row in dashboard["rows"]
+    }
+    assert len(actual) == len(dashboard["rows"]), "duplicate dashboard identifiers"
+    assert actual == expected, "Regenerate with just gen-priority-dashboard"
 
 
 def test_unresearched_filter_does_not_return_non_mechanism_records():

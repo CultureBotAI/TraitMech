@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: report
+  path: app/dashboard/priority.json
+  slug: shedu_priority_refresh
+session:
+  id: 2026-10-11T090552Z-codex-b394ce
+  timestamp: '2026-10-11T09:05:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1860
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - dashboard
+  - tests
+  summary: Refresh stale Shedu priority graph counts and add a live graph-count guard
+  details: Native priority regeneration during the lethal algicidal addition corrected the
+    pre-existing Shedu row from six nodes/five edges to seven nodes/six edges, including the
+    matching thin-graph reason. The Shedu record, score and action are unchanged. Added a
+    corpus-derived regression test comparing each dashboard row with live graph counts without
+    fixed corpus or graph sizes. The preservation audit against 2dab429bf6f8d0d6764394acde4fec66a0d28f29
+    confirms the only other old priority-row delta is phenotype children 182 to 183; all 1089
+    older trait YAMLs are byte-preserved. Broader validation follows in the structured review
+    and PR.
