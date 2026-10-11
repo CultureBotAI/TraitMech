@@ -9276,6 +9276,60 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/cyanophycin_granule.html#cyanophycin-granule-mechanism-scope"
  },
  {
+  "discussion_id": "expansion-sliding-scope-and-naming",
+  "prompt": "Retain the qualified expansion-driven scope without settling broader sliding terminology.",
+  "kind": "CONTROVERSY",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "expansion-driven sliding motility",
+  "source_id": "traitmech:000703",
+  "source_file": "expansion_driven_sliding_motility.yaml",
+  "attaches_to": [],
+  "rationale": "The label is deliberately qualified: Kovacs et al. include gravity-assisted droplet surfing under sliding, whereas Hennes et al. distinguish it by driving force. Neither unqualified sliding nor surfing is asserted as an exact synonym here. Translation of an entire droplet under gravity alone is outside this expansion-driven definition. Fall's Background uses motility as a broader umbrella than current METPO:1000701 independent movement and METPO:1000702 energy-dependent independent movement; phenotype is therefore the conservative parent. This is not swimming, active gliding, swarming or twitching, and does not require absence of locomotory appendages from the organism. Different modes can coexist; no organism-level disjointness is asserted. Colony diameter, wetting, bulk advection or a sequence feature alone is insufficient. The letters document terminology, not additional experimental replication.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.1710371114",
+   "DOI:10.1073/pnas.1712278114"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/expansion_driven_sliding_motility.html#expansion-sliding-scope-and-naming"
+ },
+ {
+  "discussion_id": "expansion-sliding-historical-metpo-identity",
+  "prompt": "Resolve upstream identity without reviving deprecated sliding identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "expansion-driven sliding motility",
+  "source_id": "traitmech:000703",
+  "source_file": "expansion_driven_sliding_motility.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and current METPO contain deprecated METPO:0000096, METPO:000097 and METPO:1000388, without replacement annotations. Their reason codes were assigned by ID era in generator commit 38fbfb82c6cc962009582eb7f8652e48ede0f9c2, not by a sliding-specific biological assessment. https://github.com/berkeleybop/metpo/issues/521 still disputes this metadata; issue 271 requests motility coverage. Neither authorizes reactivation or resolves equivalence to this qualified class. Independent primary evidence supports the present scope, and no active exact replacement was found in the inspected ontology and pending proposals. Keep historical IDs out of xrefs and replaces; the new v579 proposal is not an upstream acceptance.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/expansion_driven_sliding_motility.html#expansion-sliding-historical-metpo-identity"
+ },
+ {
+  "discussion_id": "expansion-sliding-examples-and-mechanisms",
+  "prompt": "Ground taxon-specific examples and causal branches before adding a graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "expansion-driven sliding motility",
+  "source_id": "traitmech:000703",
+  "source_file": "expansion_driven_sliding_motility.yaml",
+  "attaches_to": [],
+  "rationale": "DS64 is engineered hag-replacement material. For mc2 155, the first-person provenance account DOI:10.1128/microbiolspec.MGM2-0037-2013 describes a laboratory-selected, plasmid-cured mutant derivative. Neither is presented as an unqualified natural canonical example. These qualifications do not invalidate the observed phenotype. No exact taxon-paired protein branch is established here, and the hydraulic molecular mechanism remains unresolved. Defer the graph rather than impose one lineage's mechanism or use NONMECHANISTIC to bypass grounding. Gene presence, appendage absence and predicted motility annotations cannot establish observed passive surface expansion. External equivalences remain unasserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/expansion_driven_sliding_motility.html#expansion-sliding-examples-and-mechanisms"
+ },
+ {
   "discussion_id": "false-branching-scope",
   "prompt": "Review a closer multicellular morphology parent and branching terminology.",
   "kind": "CURATION_TODO",
@@ -14005,9 +14059,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 697,
- "total_knowledge_gaps": 444,
- "total_source_entries": 568,
+ "total_discussions": 700,
+ "total_knowledge_gaps": 445,
+ "total_source_entries": 569,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
