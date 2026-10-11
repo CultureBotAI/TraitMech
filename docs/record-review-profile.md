@@ -101,9 +101,16 @@ and ignored report policies remain unchanged.
 
 ## Review bases after squash merges
 
-Full main history does not include pre-squash feature commits. Use a full-history
-checkout as CI does: recovering a base in a shallow clone can require downloading
-unrelated missing ancestry and exceed the command's five-minute Git timeout.
+Full main history does not include pre-squash feature commits. Use a full-history,
+full-object checkout as CI does: recovering a base in a shallow clone can require
+downloading unrelated missing ancestry and exceed the command's five-minute Git
+timeout.
+Partial clones (`--filter`, including `blob:none`) are not supported. Even with
+full commit history, an incoming pack can depend on omitted objects while native
+inspection deliberately disables lazy fetching. The command rejects configured
+promisor repositories, the legacy partial-clone extension, and local promisor-pack
+markers with exit 2 before historical provenance inspection or mutation (#1878).
+Do not remove those markers to bypass the check; use a new unfiltered clone.
 Before checking reviews in a fresh clone, run `just fetch-record-review-bases`
 to inspect local commit presence. This dry-run is offline: it does not check
 remote availability or predict whether a subsequent fetch will succeed.
@@ -137,3 +144,18 @@ clone: a linked worktree or copied object store can conceal missing commits
 branch; reusing the prepared clone would conceal remote availability failures.
 GitHub must still serve each exact source commit; the command cannot reconstruct
 a lost object.
+
+For an independent remote clone, choose a new destination for each check:
+
+```bash
+check_root="$(mktemp -d "${TMPDIR:-/tmp}/traitmech-review-check.XXXXXX")"
+git clone --single-branch --branch main --no-tags \
+  https://github.com/CultureBotAI/TraitMech.git "$check_root"
+cd "$check_root"
+```
+
+Do not add `--filter`, `--depth`, `--reference`, or copied objects. Before native
+preparation, use `GIT_NO_LAZY_FETCH=1 git cat-file -e '<source-sha>^{commit}'`
+for any initial presence probe so it cannot silently acquire the object that
+the recovery test is meant to exercise. Then run the dry-run, explicit apply,
+and native review check/test recipes with the trusted `RECORD_REVIEW_BASE`.

@@ -47,9 +47,28 @@ def git(root: Path, *args: str, missing_ok: bool = False) -> str | None:
     return result.stdout.strip()
 
 
+def require_full_object_checkout(root: Path) -> None:
+    """Keep offline inspection and pack recovery out of promisor repositories."""
+    promisors = git(root, "config", "--type=bool", "--get-regexp",
+                    r"^remote\..*\.promisor$", missing_ok=True)
+    legacy = git(root, "config", "--get", "extensions.partialClone", missing_ok=True)
+    object_dir = Path(git(root, "rev-parse", "--git-path", "objects"))
+    if not object_dir.is_absolute():
+        object_dir = root / object_dir
+    configured = any(line.rsplit(" ", 1)[-1] == "true"
+                     for line in (promisors or "").splitlines())
+    if configured or legacy is not None or any((object_dir / "pack").glob("*.promisor")):
+        raise reviews.ReviewError(
+            "partial clones are unsupported for review-base recovery; use an independent "
+            "full-history, full-object clone without --filter or --depth "
+            "(see docs/record-review-profile.md)"
+        )
+
+
 def recover(root: Path, *, apply: bool = False) -> dict:
     root = root.absolute()
     identity = reviews.repository_identity(root)
+    require_full_object_checkout(root)
     documents = []
     # Validate every bundle before any network request or Git mutation.
     for relative in reviews.review_paths(root):

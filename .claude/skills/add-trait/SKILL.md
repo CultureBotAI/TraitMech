@@ -922,8 +922,11 @@ loop used for other hand-curated trait changes:
    `gh pr view <n> --json state,mergedAt,mergeCommit` reports `MERGED`, then
    verify the actual landed tree with `scripts/verify_merge_integrity.py` before
    deleting the remote feature branch. Also prepare and validate retained
-   reviews in an independent single-branch main clone, as described in
-   `docs/record-review-profile.md`; repeat after branch deletion. Fetch with
+   reviews in an independent full-history, full-object, single-branch main
+   clone without `--filter` or `--depth`, as described in
+   `docs/record-review-profile.md`; repeat with a fresh clone after branch
+   deletion. Keep initial presence probes non-lazy so they cannot conceal a
+   recovery failure (#1878). Fetch with
    pruning and verify no local or remote branch for that trait remains.
 
 ## Report
