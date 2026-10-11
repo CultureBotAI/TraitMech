@@ -1,0 +1,97 @@
+identifier: traitmech:000698
+label: ixotrophy
+definition: A trophic-ecology phenotype in which filamentous bacteria capture microbial
+  prey on their cell surface and kill the captured cells to obtain prey-derived nutrients.
+definition_source: DOI:10.1126/science.adp0614
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1126/science.adp0614
+  snippet: Single-cell analyses with stable isotope-labeled prey revealed that prey
+    components are taken up by the attacker.
+  notes: 'Lien et al. 2024, PMID:39418385, scientific Abstract, not the separate article
+    summary; directly matched source-qualified MED text. Introduction and contact/capture
+    Results support the surface-trapping differentia. Nutrient-uptake Results, culture,
+    killing, imaging and Raman Methods, Discussion and actual Figures 1, 5 and 6 read.
+    Raman labeling supports uptake from killed prey; Figure 6 is a model, not independent
+    flux data. On solid surfaces, gliding can establish contact without flagellar
+    trapping; this record denotes a capability, not a mandatory sequence for every
+    feeding event. Other figures, supplements and movies not fully assessed. Author-hosted
+    published full text: https://stockerlab.ethz.ch/wp-content/uploads/2024/10/183.Lien-et-al_Science_Kang.pdf.
+    MED linked a commentary and preprint, not a correction/retraction; publisher status
+    page was inaccessible, so that check remains limited.'
+- reference: DOI:10.1007/s002489900052
+  snippet: can subsist on other microbes and can even catch motile bacteria by their
+    flagella before killing and digesting them.
+  notes: 'Lewin 1997, PMID:9337418, directly retrieved publisher Abstract. The subject
+    is Saprospira grandis; supports prey capture, killing and nutrition, not universal
+    dependence on flagellated prey. MED metadata matched title and DOI but exposed
+    no abstract; do not report an abstract-resolver verification for this quote. Full
+    text, figures and strain provenance were unavailable. Publisher page and qualified
+    MED metadata showed no linked correction/retraction at access, not proof none
+    exists. Source: https://link.springer.com/article/10.1007/s002489900052.'
+- reference: DOI:10.1099/mic.0.000158
+  snippet: The ability of cells to aggregate or adhere is thought to be a significant
+    initial step in ixotrophy.
+  notes: 'Furusawa et al. 2015, PMID:26306656, scientific Abstract directly read at
+    the publisher and matched qualified MED metadata. CCB-QB1 adhesion/capture assays
+    support an initial interaction, not by themselves nutrient transfer. Calcium and
+    acidic polysaccharide interpretations are model-specific, not defining requirements.
+    Full-text delivery failed; Methods, figures and supplement remain unread. Publisher
+    page and MED record exposed no linked correction/retraction. Authors and CCB-QB1
+    material overlap with 2024, so these are not independent-group replications. Source:
+    https://doi.org/10.1099/mic.0.000158.'
+canonical_examples:
+- taxon_id: NCBITaxon:1313421
+  taxon_label: Aureispira sp. CCB-QB1
+  reference: DOI:10.1126/science.adp0614
+  note: 'Qualified to the ixotrophy-positive WT studied with Vibrio campbellii, not
+    all culture derivatives or the entire genus. The primary scientific Abstract at
+    https://pubmed.ncbi.nlm.nih.gov/25468060/ (DOI:10.1016/j.margen.2014.10.006) directly
+    identifies CCB-QB1 as an isolate from the coastal area of Penang, Malaysia; this
+    is provenance, not another predation experiment. NCBI identifier/name independently
+    checked on 2026-10-11: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1313421.
+    The 2024 IS-inactivated predator derivatives are not the exemplar.'
+discussions:
+- discussion_id: ixotrophy-boundaries-and-mappings
+  prompt: Keep prey capture and nutrition distinct from attachment alone.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Use phenotype METPO:1000059 as parent. Predatory bacterium traitmech:000054
+    requires bacterial prey, whereas ixotrophy literature also includes nonbacterial
+    microbial prey. Epibiotic bacterial predation traitmech:000697 denotes attached
+    external growth on bacterial prey and is not an exact synonym or proven broader
+    parent. Heng et al. 2026 (DOI:10.1007/s00248-026-02864-6), publisher Abstract
+    only, calls ixotrophy epibiotic in a broader usage; retain that attribution without
+    equating the scopes. Gliding, aggregation, adhesive surfaces, antagonism and prey
+    lysis alone do not establish ixotrophy. No universal prey range, obligate dependence
+    or organism-level disjointness is asserted. No exact external xrefs or synonyms
+    assigned pending authority and scope reconciliation.
+  posed_by: codex
+  posed_date: '2026-10-11'
+- discussion_id: ixotrophy-mechanism-grounding
+  prompt: Ground taxon-specific machinery before adding causal edges.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The 2024 CCB-QB1 study provides a mechanism lead, but a protein-resolved
+    graph and protein examples are deferred, not claimed absent. Verify exact accession
+    identities, taxon pairing and all relevant figures/supplements before curating
+    those edges. Do not infer this feeding phenotype from secretion-system genes,
+    profile matches or an insertion sequence alone, or generalize the CCB-QB1 machinery
+    to every ixotrophic lineage. Environmental sequence covariation is not direct
+    field predation.
+  posed_by: codex
+  posed_date: '2026-10-11'
+curation_history:
+- timestamp: '2026-10-11T12:55:05Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added ixotrophy beneath phenotype with three DOI-backed sources, short
+    checked snippets and a WT-qualified CCB-QB1 example. Ignored/hidden main/worktree
+    and pending-PR checks support 000698 and v574 block 1065100-1065199. Existing
+    records unchanged; mechanism grounding and exact mappings remain open. Timestamp
+    records the observed UTC curation decision.
+  llm_assisted: true

@@ -307,6 +307,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "ixotrophy-boundaries-and-mappings",
+  "prompt": "Keep prey capture and nutrition distinct from attachment alone.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ixotrophy",
+  "source_id": "traitmech:000698",
+  "source_file": "ixotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "Use phenotype METPO:1000059 as parent. Predatory bacterium traitmech:000054 requires bacterial prey, whereas ixotrophy literature also includes nonbacterial microbial prey. Epibiotic bacterial predation traitmech:000697 denotes attached external growth on bacterial prey and is not an exact synonym or proven broader parent. Heng et al. 2026 (DOI:10.1007/s00248-026-02864-6), publisher Abstract only, calls ixotrophy epibiotic in a broader usage; retain that attribution without equating the scopes. Gliding, aggregation, adhesive surfaces, antagonism and prey lysis alone do not establish ixotrophy. No universal prey range, obligate dependence or organism-level disjointness is asserted. No exact external xrefs or synonyms assigned pending authority and scope reconciliation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/ixotrophy.html#ixotrophy-boundaries-and-mappings"
+ },
+ {
+  "discussion_id": "ixotrophy-mechanism-grounding",
+  "prompt": "Ground taxon-specific machinery before adding causal edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ixotrophy",
+  "source_id": "traitmech:000698",
+  "source_file": "ixotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "The 2024 CCB-QB1 study provides a mechanism lead, but a protein-resolved graph and protein examples are deferred, not claimed absent. Verify exact accession identities, taxon pairing and all relevant figures/supplements before curating those edges. Do not infer this feeding phenotype from secretion-system genes, profile matches or an insertion sequence alone, or generalize the CCB-QB1 machinery to every ixotrophic lineage. Environmental sequence covariation is not direct field predation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/ixotrophy.html#ixotrophy-mechanism-grounding"
+ },
+ {
   "discussion_id": "abi2-family-boundary-gap",
   "prompt": "Resolve the natural Abi2 locus breadth, phage trigger, and AbiD/F-group mapping before minting narrower Abi2 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -13835,9 +13869,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 687,
- "total_knowledge_gaps": 439,
- "total_source_entries": 563,
+ "total_discussions": 689,
+ "total_knowledge_gaps": 440,
+ "total_source_entries": 564,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
