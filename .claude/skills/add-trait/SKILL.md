@@ -205,9 +205,17 @@ and `history/` with the ignored-and-hidden search above.
 
 TraitMech is METPO-first:
 
-1. Search `data/raw/metpo.owl` for an exact class or property for the target.
-2. If METPO already has the term, use the METPO CURIE as `identifier`.
-3. If the term is in METPO but missing under `data/traits`, run the seeder
+1. Search `data/raw/metpo.owl` for an exact class or property for the target,
+   including lexical variants and historical labels prefixed with `obsolete `.
+   Inspect `owl:deprecated`, replacement and
+   consider annotations, and upstream context as described in
+   `manage-identifiers`; a lexical match is not an identity decision.
+2. If METPO has an active exact match, use its METPO CURIE as `identifier`.
+   Do not reuse or reactivate a deprecated CURIE for a new record. Resolve any
+   `IAO:0100001` replacement's own status and meaning before using it; a
+   `consider` suggestion does not assert equivalence. Deprecated-only matches
+   require the historical-match assessment below, not an automatic fallback.
+3. If the active exact term is missing under `data/traits`, run the seeder
    against a temporary output root and copy only the target YAML into the real
    tree:
 
@@ -229,7 +237,8 @@ TraitMech is METPO-first:
    seeder-chosen category and generated file name, including any slug collision
    suffix, and do not infer novelty from a target file merely existing under a
    temporary seed root.
-4. If METPO has no exact term and the trait is in scope, mint the next
+4. If METPO has no active exact term and the trait is independently accepted
+   as in scope and evidence-backed, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`. Its reservation
    check must include current main, local worktrees and pending PR heads,
    including drafts, for the local ID, cohort and full METPO block. A local
@@ -240,6 +249,18 @@ TraitMech is METPO-first:
    upstream `METPO:` placeholder, document the round-trip path, and verify the
    proposal. If a separate upstream METPO issue already exists, reference it,
    but do not substitute an issue link for a proposal artifact.
+
+For deprecated-only matches, document the exact historical CURIEs, available
+replacement annotations, obsolescence rationale and any unresolved upstream
+questions in the candidate's research notes before acceptance. Check current
+upstream status without silently replacing the pinned ontology. Reason codes
+can themselves be disputed; an obsolete label is neither evidence that the
+biology is invalid nor permission to revive its identifier. If scope or
+replacement identity remains unresolved, keep the candidate in research. If
+the candidate is independently accepted without an active exact replacement,
+carry that assessment into the new record's `discussions` and proposal, then
+complete the usual novelty and reservation checks. Do not put historical IDs
+in exact `xrefs` or weaken the seeder's deprecated-term exclusion (#1874).
 
 Use `parent_traits` only for true broader trait classes. Put true equivalent
 external terms in `xrefs`; do not use `xrefs` for broader, narrower, merely

@@ -64,6 +64,34 @@ def test_priority_guidance_uses_only_the_live_queue():
     assert not (REPO_ROOT / "scripts/prioritize_graph_research.py").exists()
 
 
+def test_trait_identity_guidance_distinguishes_deprecated_matches():
+    for skill in ("add-trait", "manage-identifiers"):
+        guidance = " ".join(read(f".claude/skills/{skill}/SKILL.md").split())
+        assert "active exact match" in guidance
+        assert "owl:deprecated" in guidance
+        assert "do not reuse or reactivate a deprecated curie" in guidance.lower()
+        assert "replacement's own status and meaning" in guidance
+        assert "`consider` suggestion does not assert equivalence" in guidance
+        assert "keep the candidate in research" in guidance
+        assert "Do not put historical IDs in exact `xrefs`" in guidance
+        assert "`obsolete `" in guidance
+        assert "#1874" in guidance
+    identifiers = " ".join(read(".claude/skills/manage-identifiers/SKILL.md").split())
+    assert "including leading zeros" in identifiers
+    assert "It deliberately skips deprecated terms" in identifiers
+    assert "does not fetch" in identifiers
+    assert "Historical METPO IDs include six-digit numeric suffixes" in identifiers
+    assert "The full CURIE, including its prefix and unchanged local ID, determines identity" in identifiers
+    assert "No active exact METPO match after identity assessment" in identifiers
+    assert "METPO uses 7-digit numerics" not in identifiers
+    assert "avoid any visual collision" not in identifiers
+    assert "METPO has no matching term yet" not in identifiers
+    assert "#1876" in identifiers
+    proposal = " ".join(read(".claude/skills/metpo-proposal/SKILL.md").split())
+    assert "active exact METPO match" in proposal
+    assert "historical-match assessment for deprecated-only matches" in proposal
+
+
 def test_schema_gap_alias_has_no_duplicate_procedure_or_snapshot():
     alias = read(".claude/skills/schema-gap-analysis/SKILL.md")
     assert "../audit-schema-gaps/SKILL.md" in alias
