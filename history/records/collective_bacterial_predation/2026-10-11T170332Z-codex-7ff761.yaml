@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/collective_bacterial_predation.yaml
+  slug: collective_bacterial_predation
+session:
+  id: 2026-10-11T170332Z-codex-7ff761
+  timestamp: '2026-10-11T17:03:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - definition
+  - evidence
+  - discussions
+  - curation_history
+  summary: Add collective bacterial predation with explicit cooperation limits
+  details: Added traitmech:000701 using Rombouts et al. 2023 DOI:10.1038/s41467-023-41193-x
+    and Zhang et al. 2020 DOI:10.1128/AEM.02286-19. Two directly checked scientific-abstract
+    snippets distinguish collective feeding from obligate cooperation or solitary-cell incapacity.
+    Relevant Results and Methods, Figure 5 and the 2023 supplementary strain table were inspected;
+    laboratory reporter evidence is not asserted a natural canonical example. Ignored/hidden
+    worktree and complete open-PR checks support v577 block 1065400-1065499. Dry run and validated
+    writer applied. No existing trait, including protected spore_germination, changed. Full
+    validation and immutable adversarial review follow; no human scientific approval or upstream
+    METPO acceptance is claimed.

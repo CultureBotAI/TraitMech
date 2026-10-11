@@ -189,6 +189,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/biosafety_level_4.html#kgscan-e770cf01677c"
  },
  {
+  "discussion_id": "collective-predation-scope-and-cooperation",
+  "prompt": "Keep coordinated group feeding distinct from claims of obligatory cooperation.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "collective bacterial predation",
+  "source_id": "traitmech:000701",
+  "source_file": "collective_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "Predatory bacterium traitmech:000054 supplies killing and nutrition; coordinated multicellular predation supplies the differentia. Mere cell density, aggregation, motility or prey lysis without feeding is insufficient. This is a capability expressed by cells in a group context, not a claim that a lone cell displays a collective phenotype. It does not require every cell to attack one prey simultaneously or benefit equally. Solitary killing and collective feeding can coexist in the same organism; no obligate group dependence or disjointness is asserted. Cooperative predation and wolf-pack predation are not assigned exact synonym status: cooperation in an evolutionary fitness sense requires separate evidence. The 2023 scout/loner/swarm bins are analysis states, not distinct primary traits. Swarming motility traitmech:000062 is explicitly flagella-dependent; gliding METPO:1000706 and twitching traitmech:000061 do not require predation. Epibiotic, periplasmic and cytoplasmic predation classify predator location, not group organization. No exact xrefs or synonyms are assigned.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/collective_bacterial_predation.html#collective-predation-scope-and-cooperation"
+ },
+ {
+  "discussion_id": "collective-predation-examples-and-mechanism",
+  "prompt": "Resolve natural examples and mechanism breadth without inferring feeding from sequence.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "collective bacterial predation",
+  "source_id": "traitmech:000701",
+  "source_file": "collective_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "The directly inspected collective-imaging evidence concerns DZ2 laboratory material, engineered reporters and motility perturbations. Canonical examples remain unset pending natural material provenance and independently checked taxon identity. A- and S-motility contribute to the studied M. xanthus assay, but their combination is not imposed on every possible bearer of this trophic phenotype. A causal graph and protein examples are deferred until taxon-scoped machinery and mechanism boundaries are grounded. Motility genes, secretion systems, hydrolases or other sequence features alone do not establish coordinated prey consumption. Direct nutrient assimilation and individual fitness benefits require evidence beyond the reported fluorescence-loss readout. These limits are not evidence that collective predation is absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/collective_bacterial_predation.html#collective-predation-examples-and-mechanism"
+ },
+ {
   "discussion_id": "kgscan-3606bdcc991b",
   "prompt": "Commensalism is defined in this record by a neutral effect on host fitness. Has neutrality ever been measured for these associations, or is it inferred from the absence of visible disease -- and does it hold when the host is stressed, starved, or co-infected?",
   "kind": "KNOWLEDGE_GAP",
@@ -13937,9 +13971,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 693,
- "total_knowledge_gaps": 442,
- "total_source_entries": 566,
+ "total_discussions": 695,
+ "total_knowledge_gaps": 443,
+ "total_source_entries": 567,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
