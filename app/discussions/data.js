@@ -341,6 +341,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/ixotrophy.html#ixotrophy-mechanism-grounding"
  },
  {
+  "discussion_id": "periplasmic-predation-boundaries-and-mappings",
+  "prompt": "Distinguish periplasmic feeding from invasion alone.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "periplasmic bacterial predation",
+  "source_id": "traitmech:000699",
+  "source_file": "periplasmic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "Predatory bacterium traitmech:000054 is broader; its intraperiplasmic_growth node denotes a lifecycle stage, not this whole feeding phenotype, and must not be equated to it. Epibiotic bacterial predation traitmech:000697 keeps the predator cell body external. Generic intracellular predation, endoparasitism and endosymbiosis are not exact synonyms of periplasmic predation. Attachment, killing without entry, or residence without nutritional growth are insufficient. Exact synonyms and xrefs remain unassigned pending authority and scope reconciliation. No organism-level disjointness, universal prey range, division pattern, progeny number or obligate dependence is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/periplasmic_bacterial_predation.html#periplasmic-predation-boundaries-and-mappings"
+ },
+ {
+  "discussion_id": "periplasmic-predation-mechanism-grounding",
+  "prompt": "Ground model-specific machinery before adding causal edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "periplasmic bacterial predation",
+  "source_id": "traitmech:000699",
+  "source_file": "periplasmic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "A protein-resolved graph and protein examples are deferred, not claimed absent. The 2025 proteome and perturbation experiments provide leads, but protein abundance, gene presence and predicted sequence function do not establish the complete feeding mechanism. Heterologous prey lysis does not establish predator invasion or nutrient uptake. Verify exact accessions, taxon pairing and relevant supplements before curating machinery; do not transfer the HD100 mechanism to every periplasmic predator.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/periplasmic_bacterial_predation.html#periplasmic-predation-mechanism-grounding"
+ },
+ {
   "discussion_id": "abi2-family-boundary-gap",
   "prompt": "Resolve the natural Abi2 locus breadth, phage trigger, and AbiD/F-group mapping before minting narrower Abi2 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -13869,9 +13903,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 689,
- "total_knowledge_gaps": 440,
- "total_source_entries": 564,
+ "total_discussions": 691,
+ "total_knowledge_gaps": 441,
+ "total_source_entries": 565,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
