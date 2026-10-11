@@ -11996,6 +11996,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lecithinase_activity.html#lecithinase-activity-xref-gap"
  },
  {
+  "discussion_id": "lethal-algicidal-scope-and-mappings",
+  "prompt": "Resolve mappings while retaining a lethal endpoint and actor-level scope.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lethal algicidal activity",
+  "source_id": "traitmech:000695",
+  "source_file": "lethal_algicidal_activity.yaml",
+  "attaches_to": [],
+  "rationale": "The lethal qualifier distinguishes this capability from broader algicidal usage. Paul and Pohnert 2011, DOI:10.1371/journal.pone.0021032, Methods Monitoring algicidal activity and Results, uses fluorescence-based growth inhibition as an algicidal readout; those directly read passages provide terminology context, not additional killing evidence. This record requires killing, not reduced fluorescence, reversible growth arrest, ecdysis, passive removal or a protease sequence alone. It denotes the acting microbe's capability, not an algicide molecule, treated alga's susceptibility or assay row. Cyanobacteria are included explicitly, not classified as eukaryotic algae. Activity against some susceptible targets suffices; universal host range is not asserted. Predatory bacterium traitmech:000054 requires killing and consuming bacteria for nutrients, so it is not a parent of this class. Killing may overlap predation but neither consumption, grazing nor nutritional benefit is required or inferred; no organismal disjointness is asserted. No exact synonym or phenotype xref is assigned pending authority and scope review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lethal_algicidal_activity.html#lethal-algicidal-scope-and-mappings"
+ },
+ {
+  "discussion_id": "lethal-algicidal-strains-and-mechanisms",
+  "prompt": "Reconcile study strains and build independently supported mechanism graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lethal algicidal activity",
+  "source_id": "traitmech:000695",
+  "source_file": "lethal_algicidal_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Canonical examples await authoritative strain/taxon reconciliation, including HY's conflicting isolate numbers. Retain source strain names as qualified evidence without species-wide assignments or promotion of induced mutants. Secreted activity is demonstrated, not a universal restriction excluding contact-dependent routes. Neither a common protein mechanism, a universal lethal threshold, bloom-control efficacy nor environmental safety is established. Protein graphs require exact functional evidence and taxon-paired accessions, not a short sequence match. Mechanisms are deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lethal_algicidal_activity.html#lethal-algicidal-strains-and-mechanisms"
+ },
+ {
   "discussion_id": "leucine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for leucine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13733,9 +13767,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 681,
- "total_knowledge_gaps": 436,
- "total_source_entries": 560,
+ "total_discussions": 683,
+ "total_knowledge_gaps": 437,
+ "total_source_entries": 561,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

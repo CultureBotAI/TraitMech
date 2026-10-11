@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_algicidal_activity.yaml
+  slug: lethal_algicidal_activity
+session:
+  id: 2026-10-11T085403Z-codex-03b40b
+  timestamp: '2026-10-11T08:54:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-bounded lethal algicidal activity phenotype
+  details: Created traitmech:000695 as a PROPOSED PHYSIOLOGY class beneath METPO:1000059 with
+    three primary DOI references and directly checked contiguous quotations. Qualifies the
+    lethal endpoint, explicitly includes cyanobacterial targets, and retains study controls,
+    isolate discrepancies and unresolved canonical taxa, mappings and mechanisms. Companion
+    v571 reserves METPO:1064800-1064899. All 22 pre-existing worktrees were searched including
+    ignored/hidden files; all four current open PRs including draft 924 were inspected at
+    immutable heads. Existing records and protected spore germination are unchanged. Guarded
+    writer focused tests passed 20/20; full validation follows separately.
