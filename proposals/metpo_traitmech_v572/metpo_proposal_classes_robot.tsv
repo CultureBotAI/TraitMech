@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1064900	bacterial mycophagy	A trophic-ecology phenotype in which a bacterium actively obtains nutrients from living fungi or oomycetes and uses them for its own growth.	TraitMech:data/traits/ecology/bacterial_mycophagy.yaml|DOI:10.1111/j.1469-8137.2007.02325.x|DOI:10.1099/ijs.0.02920-0|DOI:10.1038/ismej.2008.97	METPO:1000059			metpo_traitmech_2026_10		Active nutritional growth; neither killing nor obligate dependence required.	traitmech:000696
