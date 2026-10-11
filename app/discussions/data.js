@@ -13120,6 +13120,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "quorum-quenching-scope-and-mappings",
+  "prompt": "Resolve phenotype mappings without conflating signaling actors and molecules.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "quorum quenching",
+  "source_id": "traitmech:000694",
+  "source_file": "quorum_quenching.yaml",
+  "attaches_to": [],
+  "rationale": "This is the microbial interference capability, not its enzyme, peptide, sequence feature, molecular function or treated target's loss of sensing. Positive quorum sensing traitmech:000084 is not a parent; a microorganism can both sense and quench, so organism-level disjointness is not asserted. The existing AiiA and inhibitor nodes there denote a protein and a chemical, not unresolved exact trait nodes. Reduced reporter output from toxicity or impaired growth alone is insufficient. Signal inactivation and inhibitory products are demonstrated routes, not an exhaustive mechanism restriction. No requirement for AHL, aiiA, interspecies interaction, growth neutrality, fitness benefit or disease prevention is imposed. No exact synonym or external phenotype equivalence is asserted pending authority review; molecular-function terms are not phenotype xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/quorum_quenching.html#quorum-quenching-scope-and-mappings"
+ },
+ {
+  "discussion_id": "quorum-quenching-exemplars-and-mechanisms",
+  "prompt": "Resolve natural study strains and source-specific causal mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "quorum quenching",
+  "source_id": "traitmech:000694",
+  "source_file": "quorum_quenching.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical examples are assigned until taxonomic authorities and exact strain provenance are reconciled, including laboratory derivatives and the unread 2019 strain supplement. Preserve native coculture and supernatant evidence apart from isolated enzymes, recombinant hosts and synthetic peptides. AHL hydrolysis and agr interference need separate, source-bounded graphs; reporter inhibition alone does not establish receptor binding. Protein edges require functional evidence and taxon-paired accessions, not sequence homology alone. Mechanism is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/quorum_quenching.html#quorum-quenching-exemplars-and-mechanisms"
+ },
+ {
   "discussion_id": "axopodial-contraction-scope-and-parent",
   "prompt": "Resolve a closer cellular-contractility parent and assay boundaries.",
   "kind": "CURATION_TODO",
@@ -13699,9 +13733,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 679,
- "total_knowledge_gaps": 435,
- "total_source_entries": 559,
+ "total_discussions": 681,
+ "total_knowledge_gaps": 436,
+ "total_source_entries": 560,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

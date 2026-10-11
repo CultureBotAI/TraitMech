@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/quorum_quenching.yaml
+  slug: quorum_quenching
+session:
+  id: 2026-10-11T024948Z-codex-e72d59
+  timestamp: '2026-10-11T02:49:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - discussions
+  - mapping_status
+  - parent_traits
+  summary: Add source-bounded quorum-quenching phenotype and METPO proposal v570
+  details: Added traitmech:000694 as a PROPOSED PHYSIOLOGY CLASS under METPO:1000059 through
+    the guarded validated writer. DOI:10.1128/AEM.70.2.954-960.2004, DOI:10.1128/AEM.68.4.1754-1759.2002
+    and DOI:10.1126/scitranslmed.aat8329 support signal interference; each has a directly
+    matched contiguous snippet. Qualified MED metadata confirmed source, PMID, title and DOI.
+    Native resolver verdicts are NOT_IN_ABSTRACT for the manually checked 2004 Results quote
+    and VERIFIED for the two scientific-abstract quotes. Record notes delimit reading coverage,
+    experimental conditions, derivatives, synthetic-peptide assays and the unread 2019 supplement.
+    No canonical examples, synonyms, xrefs or graph are asserted; two OPEN discussions retain
+    gaps. Quorum-sensing protein and chemical nodes are not retyped as phenotype nodes. Ignored-and-hidden
+    searches covered all 22 pre-existing worktrees, CommunityMech and all five open PR heads
+    including draft 924; no exact trait or conflicting reservation was found. METPO, current
+    seed projection and prior release-review dispositions were inspected. Reserve v570 and
+    METPO:1064700-1064799, with only 1064700 populated. Writer dry run and 20 focused tests
+    passed; full validation and immutable review follow. Existing records including protected
+    spore germination remain unchanged. No paid research was used.
