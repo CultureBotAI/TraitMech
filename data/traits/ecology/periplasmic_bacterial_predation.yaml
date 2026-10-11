@@ -1,0 +1,91 @@
+identifier: traitmech:000699
+label: periplasmic bacterial predation
+definition: A predatory bacterial phenotype in which a bacterium enters the periplasm
+  of a bacterial prey cell and grows and reproduces there using nutrients obtained
+  by killing and consuming the prey.
+definition_source: DOI:10.1038/s42003-025-09010-x
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000054
+evidence:
+- reference: DOI:10.1038/s42003-025-09010-x
+  snippet: establishes itself in the prey periplasm, feeding on the prey’s cytoplasmic
+    contents as a main nutrient source.
+  notes: 'Lai et al. 2025, PMID:41125861, PMC12546842, Introduction, second paragraph;
+    the subject is B. bacteriovorus. Direct publisher HTML and Europe PMC full-text
+    XML match. Scientific Abstract, Introduction, selected growth/exit Results and
+    culture, sampling, time-lapse and statistics Methods, Discussion and actual Figures
+    1 and 4 read. Figure 1a is a lifecycle schematic, not direct imaging; Figure 4a
+    includes WT exit measurements. Other figures and supplements not fully assessed.
+    Publisher and MED showed no linked notice; MED linked the earlier preprint, not
+    a correction. Published source: https://doi.org/10.1038/s42003-025-09010-x.'
+- reference: DOI:10.1128/JB.00914-10
+  snippet: Nutrients for the replication of Bdellovibrio bacteria come entirely from
+    the digestion of the single invaded bacterium
+  notes: 'Fenton et al. 2010, PMID:20935099, scientific Abstract retrieved from source-qualified
+    MED metadata. Supports prey-derived nutrition during intrabacterial replication;
+    do not generalize its single-prey wording to a fixed predator occupancy or universal
+    prey dependence. Full-text delivery failed; Methods, actual figures and supplement
+    remain unread. MED links a commentary, not a correction/retraction; publisher
+    notice check was inaccessible. Source: https://pubmed.ncbi.nlm.nih.gov/20935099/.'
+- reference: DOI:10.1128/jb.96.4.1366-1381.1968
+  snippet: Although partial disruption of the cytoplasmic membrane was always apparent,
+    the parasite did not appear to actively penetrate through this barrier.
+  notes: 'Burnham et al. 1968, PMID:4879563, scientific Abstract directly read at
+    PubMed and matched source-qualified MED metadata. Electron microscopy supports
+    entry without observed active penetration of the prey cytoplasmic membrane, not
+    an intact membrane throughout predation or direct nutrient tracing. Full text
+    and actual figures were unavailable; no strain-level example inferred. MED/PubMed
+    exposed no linked notice, but publisher notice status was not verified. Source:
+    https://pubmed.ncbi.nlm.nih.gov/4879563/.'
+canonical_examples:
+- taxon_id: NCBITaxon:264462
+  taxon_label: Bdellovibrio bacteriovorus HD100
+  reference: DOI:10.1038/s42003-025-09010-x
+  note: 'Qualified to wild-type HD100, not deletion, complemented or host-independent
+    derivatives. Lai et al. used E. coli laboratory prey; this is not direct field
+    observation. DSM 50701 is HD100 and is recorded as a soil isolate at https://webshop.dsmz.de/en/bacteria/Bdellovibrio-bacteriovorus.html;
+    this establishes natural provenance, not another predation assay. NCBI strain
+    identifier, scientific name and DSM 50701 synonym independently checked on 2026-10-11:
+    https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=264462.'
+discussions:
+- discussion_id: periplasmic-predation-boundaries-and-mappings
+  prompt: Distinguish periplasmic feeding from invasion alone.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Predatory bacterium traitmech:000054 is broader; its intraperiplasmic_growth
+    node denotes a lifecycle stage, not this whole feeding phenotype, and must not
+    be equated to it. Epibiotic bacterial predation traitmech:000697 keeps the predator
+    cell body external. Generic intracellular predation, endoparasitism and endosymbiosis
+    are not exact synonyms of periplasmic predation. Attachment, killing without entry,
+    or residence without nutritional growth are insufficient. Exact synonyms and xrefs
+    remain unassigned pending authority and scope reconciliation. No organism-level
+    disjointness, universal prey range, division pattern, progeny number or obligate
+    dependence is asserted.
+  posed_by: codex
+  posed_date: '2026-10-11'
+- discussion_id: periplasmic-predation-mechanism-grounding
+  prompt: Ground model-specific machinery before adding causal edges.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: A protein-resolved graph and protein examples are deferred, not claimed
+    absent. The 2025 proteome and perturbation experiments provide leads, but protein
+    abundance, gene presence and predicted sequence function do not establish the
+    complete feeding mechanism. Heterologous prey lysis does not establish predator
+    invasion or nutrient uptake. Verify exact accessions, taxon pairing and relevant
+    supplements before curating machinery; do not transfer the HD100 mechanism to
+    every periplasmic predator.
+  posed_by: codex
+  posed_date: '2026-10-11'
+curation_history:
+- timestamp: '2026-10-11T14:16:57Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added periplasmic bacterial predation beneath predatory bacterium with
+    three DOI-backed sources, checked snippets and a WT-qualified HD100 example. Ignored/hidden
+    main/worktree and pending-PR checks support 000699 and v575 block 1065200-1065299.
+    Existing records unchanged; exact mappings and mechanism grounding remain open.
+    Timestamp records the observed UTC curation decision.
+  llm_assisted: true

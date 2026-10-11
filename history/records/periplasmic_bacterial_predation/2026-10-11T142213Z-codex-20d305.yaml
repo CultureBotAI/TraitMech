@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/periplasmic_bacterial_predation.yaml
+  slug: periplasmic_bacterial_predation
+session:
+  id: 2026-10-11T142213Z-codex-20d305
+  timestamp: '2026-10-11T14:22:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add periplasmic bacterial predation as an evidence-backed microbial trait
+  details: Added traitmech:000699 under predatory bacterium with three DOI-backed sources,
+    directly checked short snippets, WT-qualified HD100 canonical example and two open scope/grounding
+    discussions. Included v575 proposal reserving METPO:1065200-1065299 and reusing the existing
+    v5 parent. Ignored/hidden worktree and upstream reservation checks were completed before
+    allocation; no prior TraitRecord was changed. Source access and inference limits are explicit.
+    Writer dry run and 20 focused tests passed before application; broader generated-artifact,
+    review and PR gates follow.
