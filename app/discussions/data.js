@@ -208,6 +208,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/commensalism.html#kgscan-3606bdcc991b"
  },
  {
+  "discussion_id": "cytoplasmic-predation-boundaries-and-mappings",
+  "prompt": "Keep prey-cytoplasmic feeding distinct from generic intracellular residence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cytoplasmic bacterial predation",
+  "source_id": "traitmech:000700",
+  "source_file": "cytoplasmic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "Predatory bacterium traitmech:000054 supplies the broader trophic phenotype. Periplasmic bacterial predation traitmech:000699 has a different replication compartment; epibiotic bacterial predation traitmech:000697 keeps the predator cell body external. Generic endobiotic or intracellular predation, endoparasitism and endosymbiosis are not exact synonyms. Guerrero et al. discuss predator/parasite and primary-consumer terminology on pp. 2141-2142; the operational feeding/location definition here does not settle that broader ecological vocabulary. Entry alone or intracellular growth without destructive prey consumption is insufficient. No organism-level disjointness, fixed prey range or obligate prey dependence is asserted. Exact synonyms and authority-backed xrefs remain unassigned pending scope reconciliation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/cytoplasmic_bacterial_predation.html#cytoplasmic-predation-boundaries-and-mappings"
+ },
+ {
+  "discussion_id": "cytoplasmic-predation-taxon-and-mechanism",
+  "prompt": "Resolve the historical isolate and its mechanism before grounding examples.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cytoplasmic bacterial predation",
+  "source_id": "traitmech:000700",
+  "source_file": "cytoplasmic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "The primary study describes Daptobacter in lake-derived enrichment cultures and reports axenic growth; it does not make cytoplasmic predation an obligate lifestyle. No exact NCBITaxon identity for the observed material has been established in this curation, so canonical_examples is intentionally omitted. LPSN nomenclature does not supply that missing mapping. The second evidence item is terminology support, not another experiment. Protein-resolved mechanism, modern replication and lineage breadth remain open; do not infer causal machinery from a taxon name, sequence prediction or the different Bdellovibrio model. No causal graph or protein examples are proposed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/cytoplasmic_bacterial_predation.html#cytoplasmic-predation-taxon-and-mechanism"
+ },
+ {
   "discussion_id": "kgscan-a6758e26f5a6",
   "prompt": "Two edges reach genome reduction here: confined habitat through metabolic gene loss, and the trait itself, whose description bundles drift in as `with small Ne`. The nodes that would give drift a mechanism -- transmission bottleneck, limited recombination -- connect to neither. Should they feed the drift edge, and which mechanism dominates?",
   "kind": "CONTROVERSY",
@@ -13903,9 +13937,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 691,
- "total_knowledge_gaps": 441,
- "total_source_entries": 565,
+ "total_discussions": 693,
+ "total_knowledge_gaps": 442,
+ "total_source_entries": 566,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

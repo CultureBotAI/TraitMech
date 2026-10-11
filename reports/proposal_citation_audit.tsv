@@ -1,6 +1,7 @@
 path	identifier	n_citations	citations	malformed	passes
 data/traits/ecology/bacterial_cannibalism.yaml	traitmech:000626	3	DOI:10.1126/science.1086462; DOI:10.1111/j.1365-2958.2009.06882.x; DOI:10.1128/mbio.00525-26		yes
 data/traits/ecology/bacterial_mycophagy.yaml	traitmech:000696	3	DOI:10.1111/j.1469-8137.2007.02325.x; DOI:10.1099/ijs.0.02920-0; DOI:10.1038/ismej.2008.97		yes
+data/traits/ecology/cytoplasmic_bacterial_predation.yaml	traitmech:000700	2	DOI:10.1073/pnas.83.7.2138; https://lpsn.dsmz.de/genus/daptobacter		yes
 data/traits/ecology/endophytic.yaml	traitmech:000442	2	DOI:10.3390/microorganisms5040077; DOI:10.1128/MMBR.00050-14		yes
 data/traits/ecology/epibiotic_bacterial_predation.yaml	traitmech:000697	3	DOI:10.1038/ismej.2013.164; DOI:10.1099/ijs.0.039701-0; DOI:10.1038/s41467-024-48042-5		yes
 data/traits/ecology/epiphytic.yaml	traitmech:000443	2	DOI:10.1186/s12915-024-01967-1; DOI:10.1128/AEM.69.4.1875-1883.2003		yes
