@@ -41,6 +41,11 @@ Canonical examples, protein examples and graphs await exact taxon and
 mechanism grounding; engineered observations are not thereby invalidated.
 No xrefs, synonyms or SSSOM equivalence are asserted.
 
+Local review [#1872](https://github.com/CultureBotAI/TraitMech/issues/1872)
+identified a strain-scope overstatement. The corrected note attributes the
+main-text deletion-background claim and preserves Supplementary Figure 11's
+different background in a separate agar assay, rather than harmonizing them.
+
 ## Novelty and reservations
 
 Reserve `traitmech:000702`, cohort v578 and the entire
@@ -107,3 +112,4 @@ local ID as provenance, and do not create a duplicate or rewrite history.
 ## Change log
 
 - v578, 2026-10-11: propose swimming motility.
+- Same branch: qualify conflicting experimental-background descriptions (#1872).

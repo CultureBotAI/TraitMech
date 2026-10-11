@@ -24,6 +24,17 @@ METPO_ID = "METPO:1065500"
 IDENTITY = "DOI:10.1038/s41467-020-18253-7"
 BOUNDARY = "DOI:10.1038/s41467-018-07802-w"
 TIMESTAMP = "2026-10-11T18:17:31Z"
+REPAIR_TIMESTAMP = "2026-10-11T18:27:36Z"
+ORIGINAL_BACKGROUND = (
+    "All studied S. putrefaciens CN-32 backgrounds lack lateral flagellin genes; "
+    "the paper calls this delta-flaA2B2 background wild type relative to the polar flagellum. "
+)
+REVISED_BACKGROUND = (
+    "Main Results describe a delta-flaA2B2 background, called wild type for the "
+    "polar system. Supplementary Figure 11 (printed p. 7, PDF p. 8) instead "
+    "retains both lateral flagellins for a separate soft-agar assay. Preserve "
+    "this discrepancy; do not apply the main-text claim to every experiment. "
+)
 PARENT = {
     "identifier": "METPO:1000702",
     "label": "motile",
@@ -81,9 +92,8 @@ RECORD = {
                 "composition affects flagella-mediated swimming; quote checked directly "
                 "in full-text XML, not the abstract. Qualified MED identity and DOI "
                 "checked. Figure 3 and Supplementary Table 1 (printed p. 10, PDF "
-                "p. 11) were visually inspected. All studied S. putrefaciens CN-32 "
-                "backgrounds lack lateral flagellin genes; the paper calls this "
-                "delta-flaA2B2 background wild type relative to the polar flagellum. "
+                "p. 11) were visually inspected. "
+                + REVISED_BACKGROUND +
                 "Methods distinguish three-dimensional cell tracking in regular or "
                 "Ficoll-supplemented liquid from soft-agar spreading, and reject "
                 "Brownian-only tracks. Thus liquid swimming is observed in engineered "
@@ -164,6 +174,17 @@ def build_record() -> dict:
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
     )
+    record_curation_event(
+        record, curator="codex", action="CURATED_WITH_LITERATURE",
+        changes=(
+            "Corrected the unqualified bacterial strain-background statement "
+            "after visually checking Supplementary Figure 11. Attributed the "
+            "main-text deletion claim and retained the supplementary lateral-"
+            "flagellin exception without conflating soft-agar and liquid assays. "
+            "Addresses issue #1872; prior curation event preserved."
+        ),
+        llm_assisted=True, timestamp=REPAIR_TIMESTAMP,
+    )
     return record
 
 
@@ -194,8 +215,15 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
-        raise SystemExit("Existing target differs from reviewed result")
+    if TARGET.exists():
+        existing = yaml.safe_load(TARGET.read_text())
+        initial = copy.deepcopy(record)
+        initial["evidence"][1]["notes"] = initial["evidence"][1]["notes"].replace(
+            REVISED_BACKGROUND, ORIGINAL_BACKGROUND
+        )
+        initial["curation_history"] = initial["curation_history"][:-1]
+        if existing not in (initial, record):
+            raise SystemExit("Existing target differs from reviewed result or exact initial preimage")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")
     with tempfile.TemporaryDirectory() as tmp:

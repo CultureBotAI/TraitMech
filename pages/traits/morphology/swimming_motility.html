@@ -50,7 +50,7 @@
       <li>
         <a href="https://doi.org/10.1038/s41467-018-07802-w" rel="nofollow noreferrer"><code>DOI:10.1038/s41467-018-07802-w</code></a>
         <blockquote>However, the free-swimming capability of the different strains did not correlate well to the spreading capability in soft agar.</blockquote>
-        <p class="meta">Kuhn et al. 2018, PMID:30560868, PMC6299084, Results, Filament composition affects flagella-mediated swimming; quote checked directly in full-text XML, not the abstract. Qualified MED identity and DOI checked. Figure 3 and Supplementary Table 1 (printed p. 10, PDF p. 11) were visually inspected. All studied S. putrefaciens CN-32 backgrounds lack lateral flagellin genes; the paper calls this delta-flaA2B2 background wild type relative to the polar flagellum. Methods distinguish three-dimensional cell tracking in regular or Ficoll-supplemented liquid from soft-agar spreading, and reject Brownian-only tracks. Thus liquid swimming is observed in engineered material; it is not inferred from agar halos or a sequence feature. Filament simulations are separate model evidence. Raw movies were not reanalyzed. MED, Crossref and the retrieved publisher page exposed no linked correction or retraction at the check. Source: https://www.nature.com/articles/s41467-018-07802-w.</p>
+        <p class="meta">Kuhn et al. 2018, PMID:30560868, PMC6299084, Results, Filament composition affects flagella-mediated swimming; quote checked directly in full-text XML, not the abstract. Qualified MED identity and DOI checked. Figure 3 and Supplementary Table 1 (printed p. 10, PDF p. 11) were visually inspected. Main Results describe a delta-flaA2B2 background, called wild type for the polar system. Supplementary Figure 11 (printed p. 7, PDF p. 8) instead retains both lateral flagellins for a separate soft-agar assay. Preserve this discrepancy; do not apply the main-text claim to every experiment. Methods distinguish three-dimensional cell tracking in regular or Ficoll-supplemented liquid from soft-agar spreading, and reject Brownian-only tracks. Thus liquid swimming is observed in engineered material; it is not inferred from agar halos or a sequence feature. Filament simulations are separate model evidence. Raw movies were not reanalyzed. MED, Crossref and the retrieved publisher page exposed no linked correction or retraction at the check. Source: https://www.nature.com/articles/s41467-018-07802-w.</p>
       </li>
 
     </ul>
@@ -189,6 +189,12 @@
           <p class="changes">Added liquid swimming motility beneath motile with two DOI-backed primary studies and checked verbatim abstract/full-text snippets. Ignored/hidden worktree, live ontology and pending-PR checks support 000702 and v578 block 1065500-1065599. Existing records unchanged. Assay, strain and sequence-inference limits are explicit. Timestamp records the observed UTC curation decision.</p>
         </li>
 
+        <li>
+          <time>2026-10-11T18:27:36Z</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Corrected the unqualified bacterial strain-background statement after visually checking Supplementary Figure 11. Attributed the main-text deletion claim and retained the supplementary lateral-flagellin exception without conflating soft-agar and liquid assays. Addresses issue #1872; prior curation event preserved.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -198,6 +204,12 @@
           <ul><li><strong>CREATE</strong> — Add evidence-backed swimming motility
             <p>Added traitmech:000702 below METPO:1000702 with two DOI-backed primary studies, scientific-abstract and full-text snippets, and explicit liquid-propulsion, assay, strain and sequence-inference limits. Reserved v578 block METPO:1065500-1065599 after ignored/hidden worktree, upstream and pending-PR audits. Canonical examples and graphs remain deferred; prior trait YAMLs are unchanged.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/swimming_motility/2026-10-11T182009Z-codex-de5a4b.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-11T18:28:35Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Qualify swimming experiment strain backgrounds
+            <p>Addressed issue #1872: the draft generalized a main-text lateral-flagellin-deletion statement to all studied strains. After visual inspection of Supplementary Figure 11 (printed p. 7, PDF p. 8), attributed the main-text claim and retained its separate lateral-flagellin-bearing soft-agar experiment. Liquid-tracking evidence, identity, parent, citations and snippets are unchanged. Preserved the initial event and appended a literature-curation event through the guarded writer.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/swimming_motility/2026-10-11T182835Z-codex-3885ed.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -253,7 +265,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-11 18:20 UTC
+      Record as of 2026-10-11 18:28 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1097 TraitRecords
       · embedding coverage 43.5%

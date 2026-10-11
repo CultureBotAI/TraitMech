@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/swimming_motility.yaml
+  slug: swimming_motility
+session:
+  id: 2026-10-11T182835Z-codex-3885ed
+  timestamp: '2026-10-11T18:28:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1872
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Qualify swimming experiment strain backgrounds
+  details: 'Addressed issue #1872: the draft generalized a main-text lateral-flagellin-deletion
+    statement to all studied strains. After visual inspection of Supplementary Figure 11 (printed
+    p. 7, PDF p. 8), attributed the main-text claim and retained its separate lateral-flagellin-bearing
+    soft-agar experiment. Liquid-tracking evidence, identity, parent, citations and snippets
+    are unchanged. Preserved the initial event and appended a literature-curation event through
+    the guarded writer.'

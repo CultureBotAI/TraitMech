@@ -48,9 +48,10 @@ def test_identity_evidence_and_copy_isolation():
     assert [e["reference"] for e in record["evidence"]] == [writer.IDENTITY, writer.BOUNDARY]
     assert all(5 <= len(e["snippet"].split()) <= 25 for e in record["evidence"])
     assert all(not record.get(k) for k in ["causal_graphs", "xrefs", "synonyms", "canonical_examples"])
-    event, = record["curation_history"]
-    assert event["curator"] == "codex" and event["llm_assisted"]
-    assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
+    assert len(record["curation_history"]) == 2
+    for event in record["curation_history"]:
+        assert event["curator"] == "codex" and event["llm_assisted"]
+        assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
     record["discussions"][0]["rationale"] = "mutated"
     assert len(writer.build_record()["evidence"]) == 2
@@ -66,6 +67,10 @@ def test_evidence_and_inference_limits():
     assert "delta-flaA2B2 background" in boundary["notes"]
     assert "Brownian-only tracks" in boundary["notes"]
     assert "printed p. 10, PDF p. 11" in boundary["notes"]
+    assert "Supplementary Figure 11 (printed p. 7, PDF p. 8)" in boundary["notes"]
+    assert "retains both lateral flagellins" in boundary["notes"]
+    assert "do not apply the main-text claim to every experiment" in boundary["notes"]
+    assert writer.ORIGINAL_BACKGROUND not in boundary["notes"]
     scope, mechanism = record["discussions"]
     assert all(d["status"] == "OPEN" for d in record["discussions"])
     assert "no organism-level disjointness" in scope["rationale"]
@@ -144,5 +149,35 @@ def test_prevalidation_failure_writes_nothing(isolated, monkeypatch):
     monkeypatch.setattr(writer, "build_record", lambda: bad)
     before = snapshot(isolated)
     with pytest.raises(ValidationFailedError):
+        run(monkeypatch, True)
+    assert snapshot(isolated) == before
+
+
+def test_exact_initial_record_repair_preserves_history(isolated, monkeypatch):
+    initial = writer.build_record()
+    initial["evidence"][1]["notes"] = initial["evidence"][1]["notes"].replace(
+        writer.REVISED_BACKGROUND, writer.ORIGINAL_BACKGROUND
+    )
+    initial["curation_history"] = initial["curation_history"][:-1]
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0
+    assert snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    repaired = yaml.safe_load(writer.TARGET.read_text())
+    assert repaired == writer.build_record()
+    assert repaired["curation_history"][:-1] == initial["curation_history"]
+
+
+def test_modified_initial_preimage_is_refused(isolated, monkeypatch):
+    initial = writer.build_record()
+    initial["evidence"][1]["notes"] = initial["evidence"][1]["notes"].replace(
+        writer.REVISED_BACKGROUND, writer.ORIGINAL_BACKGROUND
+    )
+    initial["curation_history"] = initial["curation_history"][:-1]
+    initial["evidence"][0]["notes"] += " concurrent curation"
+    writer.write_validated_trait(initial, writer.TARGET)
+    before = snapshot(isolated)
+    with pytest.raises(SystemExit, match="differs"):
         run(monkeypatch, True)
     assert snapshot(isolated) == before

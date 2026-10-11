@@ -29,12 +29,14 @@ evidence:
   notes: 'Kuhn et al. 2018, PMID:30560868, PMC6299084, Results, Filament composition
     affects flagella-mediated swimming; quote checked directly in full-text XML, not
     the abstract. Qualified MED identity and DOI checked. Figure 3 and Supplementary
-    Table 1 (printed p. 10, PDF p. 11) were visually inspected. All studied S. putrefaciens
-    CN-32 backgrounds lack lateral flagellin genes; the paper calls this delta-flaA2B2
-    background wild type relative to the polar flagellum. Methods distinguish three-dimensional
-    cell tracking in regular or Ficoll-supplemented liquid from soft-agar spreading,
-    and reject Brownian-only tracks. Thus liquid swimming is observed in engineered
-    material; it is not inferred from agar halos or a sequence feature. Filament simulations
+    Table 1 (printed p. 10, PDF p. 11) were visually inspected. Main Results describe
+    a delta-flaA2B2 background, called wild type for the polar system. Supplementary
+    Figure 11 (printed p. 7, PDF p. 8) instead retains both lateral flagellins for
+    a separate soft-agar assay. Preserve this discrepancy; do not apply the main-text
+    claim to every experiment. Methods distinguish three-dimensional cell tracking
+    in regular or Ficoll-supplemented liquid from soft-agar spreading, and reject
+    Brownian-only tracks. Thus liquid swimming is observed in engineered material;
+    it is not inferred from agar halos or a sequence feature. Filament simulations
     are separate model evidence. Raw movies were not reanalyzed. MED, Crossref and
     the retrieved publisher page exposed no linked correction or retraction at the
     check. Source: https://www.nature.com/articles/s41467-018-07802-w.'
@@ -85,4 +87,12 @@ curation_history:
     live ontology and pending-PR checks support 000702 and v578 block 1065500-1065599.
     Existing records unchanged. Assay, strain and sequence-inference limits are explicit.
     Timestamp records the observed UTC curation decision.
+  llm_assisted: true
+- timestamp: '2026-10-11T18:27:36Z'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: 'Corrected the unqualified bacterial strain-background statement after
+    visually checking Supplementary Figure 11. Attributed the main-text deletion claim
+    and retained the supplementary lateral-flagellin exception without conflating
+    soft-agar and liquid assays. Addresses issue #1872; prior curation event preserved.'
   llm_assisted: true
