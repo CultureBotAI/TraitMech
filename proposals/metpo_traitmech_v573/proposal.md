@@ -100,6 +100,15 @@ bodies and 654 issue comments yielded no exact candidate proposal. The
 is broader, not a competing feeding class. These snapshots are not an atomic
 reservation service; recheck before publishing.
 
+The pre-publication recheck at 11:55 UTC confirmed unchanged remote main and
+all pending heads and complete file lists above. Ignored-and-hidden searches
+across all 23 registered TraitMech roots found no new non-Git candidate or
+reservation matches outside this branch. At 11:58 UTC, all 530 extant proposal
+files across 127 registered CommunityMech roots were rechecked; cohort bytes
+and registered heads were unchanged. Prunable registrations were recorded,
+not repaired or treated as live Git checkouts. Direct proposal documents were
+checked against the unchanged heads and had no candidate reservation.
+
 The canonical class headers were read at kg-microbe commit
 `1408e7099d039026d7611c240938d8e177753406`. Preserve the 11 columns and three
 empty trailing directive cells. TraitMech's maintained wrapper expands METPO
@@ -113,8 +122,21 @@ to `https://w3id.org/metpo/`, not the older OBO stub in upstream example prose.
 | property template | Omitted |
 | SSSOM mappings | Omitted |
 
-Validation results will be recorded after the maintained gates run. No baseline
-exceptions, source-counter inflation or human-review status promotion is intended.
+Direct LinkML and strict validation passed for the child and bounded parent
+repair. The guarded writer passed 23 focused tests and final dry-run replay.
+Proposal verification and ROBOT/ELK passed. Live taxonomy resolved 759 example
+uses with zero errors and 24 pre-existing label warnings. The snippet resolver
+returned two VERIFIED abstracts and one NOT_IN_ABSTRACT Introduction quote;
+all three short spans were directly matched to their stated source sections.
+
+Generated products contain 1,092 unique records. All 1,090 other old YAMLs,
+including the protected record, are byte-preserved. Those records' pages differ
+only in the corpus footer; the existing parent page reflects the bounded repair
+and second child. Desktop/mobile navigation, identity, evidence and dashboard
+checks passed. Full native gate and adversarial-review results are recorded in
+the accompanying immutable review bundle and PR. No baseline exception or
+human-review status promotion is used. Existing embedding artifacts are retained
+because the configured input paths are absent.
 
 ## Upstream and Round Trip
 
