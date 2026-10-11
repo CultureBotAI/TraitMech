@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/shedu_system.yaml
+  slug: shedu_system
+session:
+  id: 2026-10-08T025652Z-claude-code-39f650
+  timestamp: '2026-10-08T02:56:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1807
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1802
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Add B. cereus B4264 SduA protein example to Shedu system
+  details: >-
+    Added a GENE_OR_PROTEIN node (sdua_immune_nuclease) carrying UniProtKB:B7HFR2 as a
+    taxon-paired protein example, plus one contributes-to edge into
+    shedu_nuclease_activation. The node is REVIEWED_LABEL_ONLY because no family-level
+    InterPro, NCBIfam or GO term covers SduA: a bounded search of all InterPro member
+    databases and of GO via OLS4 for 'Shedu' returned only the domain entries IPR025359
+    (Pfam PF14082, InterPro name history DUF4263 then SduA_C) and IPR048396 (Pfam
+    PF21407), and PF14082 spans 1304 UniProt proteins across 2464 taxa with 18 domain
+    architectures, so a domain term would not denote this protein family. UniProt REST
+    (anonymous, no contact address sent) confirmed B7HFR2 on 2026-10-08 as a current
+    reviewed Swiss-Prot primary accession, no secondary accessions, entry version 58,
+    sequence version 1, organism Bacillus cereus strain B4264 (NCBITaxon:405532, resolved
+    independently at NCBI Datasets). Evidence: Gu et al. 2024 Mol Cell PMID:39742666 /
+    DOI:10.1016/j.molcel.2024.12.004, whose cryo-EM entries 8TI8/8TI9/8TIA PDBe maps to
+    this exact accession; both snippets verified as verbatim substrings of the Europe PMC
+    abstract via just verify-snippets. Candidate UniProtKB:C0VHC9 (Cap4) and
+    UniProtKB:P0DW34 (DruA) were NOT added: Cap4 is a CBASS effector rather than a
+    Gao-Her or Lamassu component, and neither protein has a Europe PMC-verifiable primary
+    snippet for its own role, since both source papers are closed access there. Those two
+    leads and their completed verification are recorded in issue 1807. Written through
+    scripts/add_shedu_sdua_protein_example.py (--apply opt-in, write_validated_trait,
+    record_curation_event). Review fixes from issues 1808-1813 were applied in the same
+    pull request: the uniprot_grounding_audit report was regenerated, the edge description
+    and role wording were scoped to the tested protein and to source wording, the
+    label-only justification was corrected, the curation event carries the real UTC time,
+    and these links were added.
