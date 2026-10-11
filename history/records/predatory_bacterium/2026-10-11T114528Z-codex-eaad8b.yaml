@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/predatory_bacterium.yaml
+  slug: predatory_bacterium
+session:
+  id: 2026-10-11T114528Z-codex-eaad8b
+  timestamp: '2026-10-11T11:45:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1865
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Qualify the invasion example to B. bacteriovorus
+  details: 'Issue #1865: qualified the first prey-killing edge and graph scope to the cited
+    B. bacteriovorus model so epibiotic predators are not required to invade prey. Parent
+    identity, evidence, graph nodes and topology are preserved. The initial local wording
+    added an unnecessary temporal implication; a second curation event at 11:43:59 UTC records
+    its removal without replacing the first event at 11:39:38 UTC. Final edge states invasion
+    and digestion without asserting their timing relative to killing. Guarded whole-record
+    preimage, append-only intermediate correction and replay were verified in the 23 focused
+    tests. Direct external-feeding counterevidence is retained in child traitmech:000697.'

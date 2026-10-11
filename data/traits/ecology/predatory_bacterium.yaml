@@ -31,7 +31,9 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
     spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    UniProt examples. The invasion and bdelloplast branch illustrates B. bacteriovorus,
+    not a requirement for every predatory bacterium; epibiotic bacterial predators
+    feed with their cell bodies outside the prey.
   description: Evidence-backed causal sketch linking prey invasion to bacteriolytic
     killing and predator nutrient acquisition.
   nodes:
@@ -102,7 +104,7 @@ causal_graphs:
   - subject: predatory_trait
     predicate: enables
     object: prey_killing
-    description: Predatory bacteria invade and lyse prey cells for nutrients.
+    description: B. bacteriovorus invades and digests bacterial prey for nutrients.
     evidence:
     - reference: DOI:10.1146/annurev.micro.091208.073346
       notes: Sockett describes Bdellovibrio invasion and digestion of prey bacteria.
@@ -258,4 +260,18 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope predatory_bacterium_prey_killing=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-11T11:39:38Z'
+  curator: codex
+  action: QUALIFY_GRAPH_SCOPE
+  changes: 'Qualified invasion wording to the B. bacteriovorus model, not all predatory
+    bacteria (issue #1865). Epibiotic child traitmech:000697 retains external predator
+    bodies; parent identity, evidence and graph topology are unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-11T11:43:59Z'
+  curator: codex
+  action: CLARIFY_EVIDENCE_SCOPE
+  changes: Removed the interim edge's unnecessary temporal implication about invasion
+    preceding killing. The final wording only qualifies the existing invasion/digestion
+    claim to B. bacteriovorus; prior event retained.
   llm_assisted: true

@@ -418,6 +418,14 @@ than reconstructing a plausible heading. Distinguish isolated-component and
 heterologous assays from full-system or native-host validation; a biochemical
 result alone does not establish the complete organismal mechanism.
 
+Check publisher and authoritative indexing records for linked corrections,
+expressions of concern and retractions. Read notices affecting curated claims,
+cite them in evidence notes, and use the corrected scope without discarding
+unaffected observations. A correction is not an independent experiment or an
+additional replication. Do not use a retracted claim as positive support;
+seek unretracted evidence before acceptance. Record unavailable status checks
+as access limits, not as proof that no notice exists (#1864).
+
 Verify cited figure panels against the actual supplement and its captions,
 not just pointers in the main text. When the pointer is wrong, cite the
 observed panel and record the discrepancy in evidence notes. A nonsignificant
