@@ -1,0 +1,77 @@
+identifier: traitmech:000700
+label: cytoplasmic bacterial predation
+definition: A predatory bacterial phenotype in which a bacterium enters the cytoplasm
+  of a bacterial prey cell and grows and reproduces there by consuming and degrading
+  the prey cytoplasm.
+definition_source: DOI:10.1073/pnas.83.7.2138
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000054
+evidence:
+- reference: DOI:10.1073/pnas.83.7.2138
+  snippet: Daptobacter penetrates both membranes of the prey cell walls and reproduces
+    in their degrading cytoplasm.
+  notes: 'Guerrero et al. 1986, PMID:11542073, PMC323246, Figure 2E caption continued
+    on p. 2141. Full five-page primary paper read from the Europe PMC PDF, including
+    Methods, Results and Discussion, Table 2 and the note added in proof; actual Figure
+    2E/F micrographs and continued caption visually inspected. Enrichment-culture
+    thin sections support prey-cytoplasmic invasion, degradation and division; these
+    are not live-cell time courses or nutrient-tracing experiments. Figure 3 is a
+    schematic, not additional experimental imaging. The scientific abstract was independently
+    retrieved with EXT_ID:11542073 AND SRC:MED and title/DOI checked. MED and Crossref
+    exposed no linked correction/retraction; publisher notice access returned HTTP
+    403, so that status is unverified. Source: https://europepmc.org/articles/PMC323246?pdf=render.'
+- reference: https://lpsn.dsmz.de/genus/daptobacter
+  snippet: invade their host cells and replicate in the cytoplasm, consuming their
+    prey from the inside out
+  notes: LPSN genus Daptobacter, Notes, directly retrieved 2026-10-11. LPSN quotes
+    this description from Madigan et al. 2019; that book was not independently read.
+    Supports established terminology, not independent experimental replication of
+    Guerrero et al. LPSN marks the genus name not validly published and preferred
+    rather than correct. Its permanent record link is https://doi.org/10.83108/rn.684.
+    The nomenclatural record is not evidence for a sequence-defined lineage or an
+    NCBITaxon mapping.
+discussions:
+- discussion_id: cytoplasmic-predation-boundaries-and-mappings
+  prompt: Keep prey-cytoplasmic feeding distinct from generic intracellular residence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Predatory bacterium traitmech:000054 supplies the broader trophic phenotype.
+    Periplasmic bacterial predation traitmech:000699 has a different replication compartment;
+    epibiotic bacterial predation traitmech:000697 keeps the predator cell body external.
+    Generic endobiotic or intracellular predation, endoparasitism and endosymbiosis
+    are not exact synonyms. Guerrero et al. discuss predator/parasite and primary-consumer
+    terminology on pp. 2141-2142; the operational feeding/location definition here
+    does not settle that broader ecological vocabulary. Entry alone or intracellular
+    growth without destructive prey consumption is insufficient. No organism-level
+    disjointness, fixed prey range or obligate prey dependence is asserted. Exact
+    synonyms and authority-backed xrefs remain unassigned pending scope reconciliation.
+  posed_by: codex
+  posed_date: '2026-10-11'
+- discussion_id: cytoplasmic-predation-taxon-and-mechanism
+  prompt: Resolve the historical isolate and its mechanism before grounding examples.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The primary study describes Daptobacter in lake-derived enrichment cultures
+    and reports axenic growth; it does not make cytoplasmic predation an obligate
+    lifestyle. No exact NCBITaxon identity for the observed material has been established
+    in this curation, so canonical_examples is intentionally omitted. LPSN nomenclature
+    does not supply that missing mapping. The second evidence item is terminology
+    support, not another experiment. Protein-resolved mechanism, modern replication
+    and lineage breadth remain open; do not infer causal machinery from a taxon name,
+    sequence prediction or the different Bdellovibrio model. No causal graph or protein
+    examples are proposed.
+  posed_by: codex
+  posed_date: '2026-10-11'
+curation_history:
+- timestamp: '2026-10-11T15:30:45Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added cytoplasmic bacterial predation beneath predatory bacterium with
+    primary microscopy and explicitly secondary LPSN terminology evidence, both carrying
+    checked snippets. Ignored/hidden main/worktree and pending-PR checks support 000700
+    and v576 block 1065300-1065399. Existing records unchanged; taxon identity, mappings
+    and mechanism remain open. Timestamp records the observed UTC curation decision.
+  llm_assisted: true

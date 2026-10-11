@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/cytoplasmic_bacterial_predation.yaml
+  slug: cytoplasmic_bacterial_predation
+session:
+  id: 2026-10-11T153412Z-codex-1e630f
+  timestamp: '2026-10-11T15:34:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed cytoplasmic bacterial predation
+  details: Added traitmech:000700 at PROPOSED under predatory bacterium, with a primary Figure
+    2E caption snippet from DOI:10.1073/pnas.83.7.2138 (PMID:11542073; full PDF and actual
+    microscopy read) and explicitly secondary LPSN terminology evidence at https://lpsn.dsmz.de/genus/daptobacter.
+    No taxon ID or protein mechanism inferred; two open scope and evidence discussions retained.
+    Main/worktree ignored-and-hidden novelty searches, full-block reservation checks, live
+    upstream snapshots and complete open/draft PR file lists support v576 METPO:1065300-1065399.
+    Native writer dry run and schema prevalidation were used. Existing TraitRecords are unchanged;
+    generated products and full validation/review follow in this branch.
