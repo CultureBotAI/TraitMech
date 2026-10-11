@@ -1,6 +1,6 @@
 ---
 name: manage-identifiers
-description: TraitMech identifier policy and workflow — METPO-first by default, with a reserved `traitmech:NNNNNN` prefix for synthetic traits that aren't in METPO. Covers looking up the right ID, minting a fallback when needed, and validating ID hygiene across the corpus.
+description: TraitMech identifier policy and workflow — METPO-first by default, with a reserved `traitmech:NNNNNN` prefix for accepted traits lacking an active exact METPO term. Covers active and deprecated matches, fallback minting, and corpus identifier hygiene.
 category: workflow
 requires_database: false
 requires_internet: true
@@ -34,7 +34,11 @@ identifier:
   required: true
 ```
 
-There is no TraitMech-side sequential numbering for the seeded majority — IDs come from the upstream ontology. The minted-ID workflow exists only as a fallback for synthetic traits that don't yet have a METPO term.
+There is no TraitMech-side sequential numbering for the seeded majority: IDs
+come from the upstream ontology. The minted-ID workflow exists only as a
+fallback for accepted traits that do not have an active exact METPO term. A
+deprecated historical match requires the assessment below; it is not automatic
+permission to mint or reactivate an ID.
 
 This is the inverse of CultureMech / MediaIngredientMech / CommunityMech, all of which mint their own `<RepoName>:NNNNNN` sequential IDs. If you're coming from one of those repos, **don't reach for the minting workflow first** — almost every TraitMech change should pick up the existing METPO CURIE.
 
@@ -42,30 +46,75 @@ This is the inverse of CultureMech / MediaIngredientMech / CommunityMech, all of
 
 | Trigger | Decision |
 |---|---|
-| Re-seeding from a new METPO release | Use the METPO CURIE directly. No minting. |
-| Adding an organism-level trait that exists in METPO | Look up the METPO CURIE; use that as `identifier:`. |
-| Adding a trait that **does not yet exist** in METPO | Mint `traitmech:NNNNNN`, add a same-PR METPO ROBOT-template proposal, and document the round-trip path. Reference any pre-existing upstream METPO issue, but do not use an issue link instead of the proposal artifact. |
+| Re-seeding from a new METPO release | Use active METPO CURIEs directly. Preserve the seeder's deprecated-term exclusion. |
+| Adding an organism-level trait with an active exact match in METPO | Look up the METPO CURIE; use that as `identifier:`. |
+| Finding only deprecated historical matches | Assess status, replacements and scope below; do not reuse or reactivate a deprecated CURIE for a new record. |
+| Adding an accepted trait with no active exact METPO match | Complete the historical-match assessment if applicable, mint `traitmech:NNNNNN`, add a same-PR METPO ROBOT-template proposal, and document the round-trip path. Reference any pre-existing upstream METPO issue, but do not use an issue link instead of the proposal artifact. |
 | Validating that no two trait YAMLs share an identifier | Use the duplicate-check snippet below. |
-| Curating a renamed METPO term | Keep the old METPO CURIE in `identifier:`; add the new label to `synonyms:`. Identifiers don't change. |
+| Curating a renamed active METPO term | Keep its METPO CURIE. A label change alone does not change identity; deprecation or replacement requires a separate migration assessment. |
 
 ## Looking up the right METPO CURIE
 
 METPO is mirrored at `data/raw/metpo.owl`. To find a CURIE for a trait you want to add:
 
 ```bash
-# Search the OWL for a label
-grep -B2 "rdfs:label.*\"YOUR_TRAIT_HERE\"" data/raw/metpo.owl | head
-
-# Or scan already-seeded traits for similar concepts
-grep -rh "label:" data/traits/ | grep -i "YOUR_TRAIT_HERE"
+# Find lexical leads, including ignored and hidden files
+rg --no-ignore --hidden -n -i 'YOUR_TRAIT_HERE' data/raw/metpo.owl data/traits history proposals
 ```
 
-For the `definition`, `synonyms`, and other slots, the seeder (`scripts/seed_from_metpo.py`) is the canonical source — re-running the seed pulls every change METPO has accepted upstream.
+Inspect candidate subjects with an RDF parser, not a label-only grep. For each
+exact candidate CURIE, preserve its full numeric spelling, including leading
+zeros, and inspect its own `owl:deprecated` and related annotations:
+
+```bash
+.venv/bin/python - <<'PY'
+from rdflib import Graph, OWL, RDF, RDFS, URIRef
+
+curie = "METPO:1000388"  # Replace with the candidate being assessed.
+term = URIRef("https://w3id.org/metpo/" + curie.split(":", 1)[1])
+graph = Graph().parse("data/raw/metpo.owl")
+for predicate in (
+    RDF.type,
+    RDFS.label,
+    URIRef("http://purl.obolibrary.org/obo/IAO_0000115"),  # definition
+    OWL.deprecated,
+    URIRef("http://purl.obolibrary.org/obo/IAO_0000231"),  # obsolescence reason
+    URIRef("http://purl.obolibrary.org/obo/IAO_0100001"),  # term replaced by
+    URIRef("http://www.geneontology.org/formats/oboInOwl#consider"),
+):
+    print(predicate, list(graph.objects(term, predicate)))
+PY
+```
+
+An active exact match must have the right class/property kind and biological
+scope, not just the same label. Resolve any `IAO:0100001` replacement's own
+status and meaning before using it; a `consider` suggestion does not assert
+equivalence. Follow replacement chains without treating a cycle, missing
+target, several alternatives or a broader successor as a resolved exact match.
+
+For deprecated-only matches, inspect the obsolescence rationale and current
+upstream ontology/issues without silently replacing the pinned mirror. Reason
+codes may themselves be disputed (for example,
+[METPO #521](https://github.com/berkeleybop/metpo/issues/521)); do not infer that
+the biology is invalid, reactivate an ID, or mint a duplicate from the label or
+reason code alone. If scope or replacement identity remains unresolved, keep
+the candidate in research. Document the exact historical IDs, status,
+replacements, rationale and unresolved questions in research notes. If the
+candidate is independently accepted as evidence-backed and in scope without
+an active exact replacement, carry that assessment into the new record's
+`discussions` and proposal before completing the usual novelty and reservation
+checks. Do not put historical IDs in exact `xrefs` (#1874).
+
+For active terms, the seeder (`scripts/seed_from_metpo.py`) projects definitions,
+synonyms and other slots from the pinned `data/raw/metpo.owl`; it does not fetch
+unreleased upstream changes. It deliberately skips deprecated terms. An empty
+seed target does not justify hand-creating a record with a retired identifier.
 
 ## Minting `traitmech:NNNNNN` (fallback path)
 
-Only when METPO truly has no matching term and the curator wants to record the
-trait now rather than wait on an upstream METPO release. Every new fallback ID
+Only when METPO has no active exact match, any historical matches have been
+assessed above, and the trait has independently passed the add-trait scope,
+evidence and novelty checks. Every new fallback ID
 must be paired with a `proposals/metpo_traitmech_v<N>/` cohort in the same PR
 that reserves the proposed `METPO:` placeholder.
 
@@ -200,7 +249,7 @@ grep -rh "^identifier:" data/traits/ \
 
 ## Anti-patterns
 
-- **Don't mint a `traitmech:NNNNNN` ID for a trait that already exists in METPO.** Look it up first. Run a search across `data/raw/metpo.owl` or `data/traits/` for the label / synonym before minting.
+- **Don't mint a `traitmech:NNNNNN` ID for a trait with an active exact METPO match.** Search labels and synonyms, then check status, kind and scope. Deprecated-only matches require the assessment above, not automatic reuse or fallback.
 - **Don't change an existing `identifier:` value.** Identifiers are stable. If a trait's *meaning* drifts, deprecate the old record and create a new one with a new identifier. If only the *label* changes, edit `label:` / `synonyms:` and leave `identifier:` alone.
 - **Don't backfill `traitmech:` over `METPO:`** when re-seeding. The seeder is the source of truth for METPO-mapped traits; never overwrite a METPO CURIE with a TraitMech-minted one.
 - **Don't use a sequential number that collides with an in-flight METPO ID range.** METPO uses 7-digit numerics (`METPO:1000430`); TraitMech-minted IDs use 6-digit zero-padded under the `traitmech:` prefix to avoid any visual collision.

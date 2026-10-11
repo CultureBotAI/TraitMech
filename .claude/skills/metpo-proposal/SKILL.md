@@ -40,8 +40,10 @@ TraitMech-specific triggers. Each maps to one of three legitimate proposal scope
 
 ### Scope A — Synthetic trait class lift (most common)
 
-A curator has minted a `traitmech:NNNNNN` ID for a trait that doesn't yet
-exist in METPO (per `manage-identifiers` skill, fallback path). Until that
+A curator has minted a `traitmech:NNNNNN` ID for an accepted trait with no
+active exact METPO match (per `manage-identifiers`, including its historical-match
+assessment for deprecated-only matches). Do not reactivate retired CURIEs or
+mint duplicates simply because a lexical match is deprecated (#1874). Until that
 trait has an upstream METPO ID it can't be cross-referenced from kg-microbe.
 Lift it via this skill so METPO maintainers can mint the real ID.
 
@@ -199,7 +201,7 @@ propose.**
 Write a one-line statement of why each candidate belongs in METPO:
 
 - **Scope A** answer: "This trait was minted as `traitmech:NNNNNN` on
-  `<date>` because METPO had no equivalent; it has been used in `N` trait
+  `<date>` because METPO had no active exact equivalent; it has been used in `N` trait
   records since."
 - **Scope B** answer: "This predicate appears in `N` causal edges across `M`
   trait records; no RO/OBI relation fits because `<reason>`."
