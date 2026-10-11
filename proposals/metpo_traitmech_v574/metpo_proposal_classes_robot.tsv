@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1065100	ixotrophy	A trophic-ecology phenotype in which filamentous bacteria capture microbial prey on their cell surface and kill the captured cells to obtain prey-derived nutrients.	TraitMech:data/traits/ecology/ixotrophy.yaml|DOI:10.1126/science.adp0614|DOI:10.1007/s002489900052|DOI:10.1099/mic.0.000158	METPO:1000059			metpo_traitmech_2026_10		Surface capture, prey killing and nutritional uptake; not adhesion alone.	traitmech:000698
