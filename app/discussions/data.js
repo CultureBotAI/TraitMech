@@ -53,6 +53,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/bacterial_cannibalism.html#bacterial-cannibalism-feeding-evidence"
  },
  {
+  "discussion_id": "bacterial-mycophagy-scope-and-mappings",
+  "prompt": "Resolve exact mappings without conflating trophic endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bacterial mycophagy",
+  "source_id": "traitmech:000696",
+  "source_file": "bacterial_mycophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Follow Leveau and Preston's active nutritional definition and explicit oomycete scope, without classifying oomycetes as true fungi or asserting experimentally demonstrated feeding on every target group. Merely consuming passive leaks or tissue dead through unrelated causes is excluded. Fungal inhibition, lysis, chitinase activity or a sequence annotation alone is insufficient. Killing and obligate fungal dependence are not required. Predatory bacterium traitmech:000054 requires bacterial prey; saprotrophy traitmech:000055 concerns dead material; parasitism traitmech:000043 requires host harm; phagotrophy traitmech:000628 requires particle ingestion. None is an established broader parent here. No organism-level disjointness is asserted. Unqualified mycophagy, fungivory and mycetophagy also cover nonbacterial organisms and are not exact synonyms. No exact xref or synonym assigned pending authority/scope reconciliation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/bacterial_mycophagy.html#bacterial-mycophagy-scope-and-mappings"
+ },
+ {
+  "discussion_id": "bacterial-mycophagy-mechanisms-and-assays",
+  "prompt": "Resolve active nutrient acquisition and taxon-specific mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "bacterial mycophagy",
+  "source_id": "traitmech:000696",
+  "source_file": "bacterial_mycophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Causal graphs and protein examples are deferred, not claimed absent. Separate fungal damage, nutrient release and bacterial assimilation; require functional evidence and taxon-paired accessions before encoding protein mechanisms. CommunityMech CommunityMech:000364 led to DOI:10.1093/ismejo/wrag201 (PMID:42523014, PMC13615538). Its Abstract, antagonistic-assay Methods and mycophagy Results/Discussion passages were read: CFU after five days with sclerotia is compared with glass beads. This is a follow-up lead, not counted evidence of active feeding rather than released-nutrient consumption. Figures and supplement remain unread; no additional canonical taxon or independent replication is inferred from the assay name.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/bacterial_mycophagy.html#bacterial-mycophagy-mechanisms-and-assays"
+ },
+ {
   "discussion_id": "kgscan-aa46cc9b34ab",
   "prompt": "This record draws nitric oxide straight to biofilm dispersal with nothing in between, while c-di-GMP sits in the same graph wired only to the sessile state. Is the NO effect on dispersal mediated by lowering c-di-GMP, and should that intermediate be on the edge?",
   "kind": "KNOWLEDGE_GAP",
@@ -13767,9 +13801,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 683,
- "total_knowledge_gaps": 437,
- "total_source_entries": 561,
+ "total_discussions": 685,
+ "total_knowledge_gaps": 438,
+ "total_source_entries": 562,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

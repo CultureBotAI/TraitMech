@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/bacterial_mycophagy.yaml
+  slug: bacterial_mycophagy
+session:
+  id: 2026-10-11T102324Z-codex-c8de15
+  timestamp: '2026-10-11T10:23:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1862
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct focused-test count in bacterial mycophagy history
+  details: 'Correction to history/records/bacterial_mycophagy/2026-10-11T102255Z-codex-d97695.yaml:
+    the focused command PYTHONPATH=src .venv/bin/python -m pytest tests/test_add_bacterial_mycophagy_trait.py
+    -q reported 20 passed in 2.36s, not 21. The original remains intact; this correction changes
+    no TraitRecord or scientific claim.'

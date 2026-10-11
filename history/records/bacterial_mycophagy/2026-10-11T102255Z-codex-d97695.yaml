@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/bacterial_mycophagy.yaml
+  slug: bacterial_mycophagy
+session:
+  id: 2026-10-11T102255Z-codex-d97695
+  timestamp: '2026-10-11T10:22:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add evidence-backed bacterial mycophagy
+  details: Created PROPOSED traitmech:000696 beneath phenotype using the directly read Leveau
+    and Preston definition and de Boer 2004/Hoppener-Ogawa 2009 experiments, three short checked
+    snippets, and NCBI-resolved Ter6-qualified Collimonas fungivorans. Preserved active nutrition
+    versus inhibition, passive exudates and dead biomass; killing is not required. Reserved
+    v572 METPO:1064900-1064999 after ignored-and-hidden worktree and pending-PR checks. Mechanisms,
+    exact mappings and a newer sclerotia assay remain qualified discussions; no existing trait
+    or protected spore germination changed. Guarded writer dry run and 21 focused tests passed
+    before apply.
