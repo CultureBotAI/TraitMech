@@ -230,6 +230,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/endosymbiosis.html#kgscan-a6758e26f5a6"
  },
  {
+  "discussion_id": "epibiotic-predation-scope-and-mappings",
+  "prompt": "Keep external feeding distinct from general surface association.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "epibiotic bacterial predation",
+  "source_id": "traitmech:000697",
+  "source_file": "epibiotic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "Predatory bacterium traitmech:000054 supplies killing and nutrition; external attachment and growth supply the differentia. The broader METPO:1007093 epibiont phenotype does not require predation. Epibiosis, ectosymbiosis, ectoparasitism and vampirism are not asserted exact synonyms. The existing predation research report also calls wolf-pack Myxococcus feeding epibiotic; this record follows the attached-feeding sense of Pasternak et al., not every use of external killing. Attachment, prey lysis or sequence signatures alone are insufficient. Bacterial cannibalism traitmech:000626 concerns prey relatedness, an orthogonal axis. No organism-level disjointness is asserted. No exact xrefs or synonyms are assigned pending authority and scope reconciliation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/epibiotic_bacterial_predation.html#epibiotic-predation-scope-and-mappings"
+ },
+ {
+  "discussion_id": "epibiotic-predation-mechanism-limits",
+  "prompt": "Resolve feeding machinery without generalizing model-specific observations.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "epibiotic bacterial predation",
+  "source_id": "traitmech:000697",
+  "source_file": "epibiotic_bacterial_predation.yaml",
+  "attaches_to": [],
+  "rationale": "Causal graphs and protein examples are deferred, not claimed absent. An external predator cell body does not exclude envelope-crossing feeding structures or secreted effectors. JSS imaging supports a feeding junction but does not identify its molecular machinery; fluorescence loss is not direct nutrient tracing. Comparative gene content is not functional causality. Do not require polar attachment, binary division, fixed progeny number, a universal prey range, or obligate dependence merely because particular models exhibit them. The corrected 2024 S-layer experiments concern tested prey backgrounds, not all predators or all S-layers. The 2013/2014 studies share authors and JSS material; three citations are not three independent laboratory replications.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/epibiotic_bacterial_predation.html#epibiotic-predation-mechanism-limits"
+ },
+ {
   "discussion_id": "kgscan-d5aefedf82bb",
   "prompt": "Ectoine and glycine betaine both enable osmotic stress tolerance here, but trehalose is wired instead to environmental stress tolerance -- a node with no outgoing edge. Is that split a real distinction, or does trehalose belong on the osmotic route too?",
   "kind": "KNOWLEDGE_GAP",
@@ -13801,9 +13835,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 685,
- "total_knowledge_gaps": 438,
- "total_source_entries": 562,
+ "total_discussions": 687,
+ "total_knowledge_gaps": 439,
+ "total_source_entries": 563,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

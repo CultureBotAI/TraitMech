@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-literature-status
+session:
+  id: 2026-10-11T114533Z-codex-70d17a
+  timestamp: '2026-10-11T11:45:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1864
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - documentation
+  summary: Require literature correction and retraction checks
+  details: 'Issue #1864: added explicit publisher/indexing notice checks, corrected-scope
+    handling, retraction safeguards, and access-limit reporting to the add-trait evidence
+    guidance. A correction is not another independent experiment. The epibiotic candidate''s
+    2025 correction to DOI:10.1038/s41467-024-48042-5 provides the concrete scope example;
+    existing source-identity, snippet and two-citation gates are unchanged.'
