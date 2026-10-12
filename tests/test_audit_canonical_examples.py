@@ -9,6 +9,7 @@ than no audit, because the zero looks like a result.
 from __future__ import annotations
 
 import sys
+from http.client import HTTPResponse, IncompleteRead
 from io import BytesIO
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -372,4 +373,102 @@ def test_cli_http_error_still_exits_two_with_diagnostic(monkeypatch, capsys, tmp
     assert ace.main(["--traits-dir", str(tmp_path), "--ncbi-api"]) == 2
     captured = capsys.readouterr()
     assert "resolution FAILED" in captured.err and "request rejected" in captured.err
+    assert "SKIPPED" not in captured.out and "resolved against" not in captured.out
+
+
+class _TruncatedBody(BytesIO):
+    def read(self, size=-1):
+        assert size == ace.HTTP_ERROR_BODY_LIMIT + 1
+        raise IncompleteRead(b"partial", 10)
+
+
+def _truncated_http_error():
+    stream = _TruncatedBody()
+    return HTTPError(ace.NCBI_TAXONOMY_EFETCH, 400, "Bad Request", {}, stream), stream
+
+
+def test_truncated_error_body_keeps_status_and_closes():
+    error, stream = _truncated_http_error()
+    detail = ace._ncbi_http_error_detail(error)
+    assert detail == "HTTP Error 400: Bad Request; response body unavailable (IncompleteRead)"
+    assert stream.closed
+
+
+def test_truncated_chunked_http_response_keeps_status_and_closes():
+    stream = BytesIO(
+        b"HTTP/1.1 400 Bad Request\r\nTransfer-Encoding: chunked\r\n\r\na\r\nshort"
+    )
+
+    class Socket:
+        def makefile(self, mode):
+            assert mode == "rb"
+            return stream
+
+    response = HTTPResponse(Socket())
+    response.begin()
+    error = HTTPError(
+        ace.NCBI_TAXONOMY_EFETCH, response.status, response.reason, response.headers, response
+    )
+    detail = ace._ncbi_http_error_detail(error)
+    assert detail == "HTTP Error 400: Bad Request; response body unavailable (IncompleteRead)"
+    assert response.closed and stream.closed
+
+
+def test_truncated_error_body_preserves_all_attempts(monkeypatch):
+    calls, sleeps, streams = [], [], []
+
+    def fail(request, timeout):
+        calls.append((request.data, timeout))
+        error, stream = _truncated_http_error()
+        streams.append(stream)
+        raise error
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fail)
+    monkeypatch.setattr(ace.time, "sleep", sleeps.append)
+    with pytest.raises(RuntimeError, match="after 3 attempt.*HTTP Error 400.*IncompleteRead"):
+        ace._ncbi_api_adapter(["NCBITaxon:2261"], timeout=7)
+    assert len(calls) == 3 and len(set(calls)) == 1
+    assert calls[0][1] == 7 and b"id=2261" in calls[0][0]
+    assert sleeps == [1, 2] and all(stream.closed for stream in streams)
+
+
+def test_truncated_error_body_can_recover_on_valid_response(monkeypatch):
+    calls, streams = [], []
+
+    def fetch(request, timeout):
+        calls.append(request.data)
+        if len(calls) == 1:
+            error, stream = _truncated_http_error()
+            streams.append(stream)
+            raise error
+        return BytesIO(b"<TaxaSet><Taxon><TaxId>2261</TaxId>"
+                       b"<ScientificName>Pyrococcus furiosus</ScientificName></Taxon></TaxaSet>")
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fetch)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    adapter = ace._ncbi_api_adapter(["NCBITaxon:2261"])
+    assert len(calls) == 2 and calls[0] == calls[1] and streams[0].closed
+    assert adapter.label("NCBITaxon:2261") == "Pyrococcus furiosus"
+
+
+def test_truncated_error_body_cli_stays_fail_closed(monkeypatch, capsys, tmp_path):
+    (tmp_path / "trait.yaml").write_text(
+        "canonical_examples:\n  - taxon_id: NCBITaxon:2261\n"
+        "    taxon_label: Pyrococcus furiosus\n"
+    )
+    calls, streams = [], []
+
+    def fail(request, timeout):
+        calls.append(request.data)
+        error, stream = _truncated_http_error()
+        streams.append(stream)
+        raise error
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fail)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    assert ace.main(["--traits-dir", str(tmp_path), "--ncbi-api"]) == 2
+    captured = capsys.readouterr()
+    assert len(calls) == 3 and all(stream.closed for stream in streams)
+    assert "resolution FAILED" in captured.err
+    assert "IncompleteRead" in captured.err and "HTTP Error 400" in captured.err
     assert "SKIPPED" not in captured.out and "resolved against" not in captured.out

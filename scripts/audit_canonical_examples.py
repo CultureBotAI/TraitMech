@@ -44,6 +44,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections.abc import Sequence
+from http.client import HTTPException
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -121,7 +122,7 @@ def _ncbi_http_error_detail(error: urllib.error.HTTPError) -> str:
     try:
         with error:
             payload = error.read(HTTP_ERROR_BODY_LIMIT + 1)
-    except (OSError, ValueError) as body_error:
+    except (OSError, ValueError, HTTPException) as body_error:
         return f"{error}; response body unavailable ({type(body_error).__name__})"
     body = payload[:HTTP_ERROR_BODY_LIMIT].decode("utf-8", errors="replace")
     truncated = " [truncated]" if len(payload) > HTTP_ERROR_BODY_LIMIT else ""
