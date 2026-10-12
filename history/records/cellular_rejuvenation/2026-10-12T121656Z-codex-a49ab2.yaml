@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_rejuvenation.yaml
+  slug: cellular_rejuvenation
+session:
+  id: 2026-10-12T121656Z-codex-a49ab2
+  timestamp: '2026-10-12T12:16:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add functional cellular rejuvenation with endpoint-qualified evidence
+  details: Five primary DOI references distinguish recovery in aged cells, descendant-lineage
+    recovery and gamete replicative-potential reset from marker change, maturation-state reset
+    and dormancy exit. Reserved traitmech:000710 and v586 with block 1066300-1066399 after
+    ignored/hidden and pending-change checks; canonical examples and mechanism graph deferred
+    with explicit source limits.
