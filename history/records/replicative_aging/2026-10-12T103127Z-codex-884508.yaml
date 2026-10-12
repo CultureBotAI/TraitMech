@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/replicative_aging.yaml
+  slug: replicative_aging
+session:
+  id: 2026-10-12T103127Z-codex-884508
+  timestamp: '2026-10-12T10:31:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1891
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Qualify replicative-aging label to match functional decline (#1891)
+  details: Adversarial source review found that the bare aging label also denotes healthy
+    age progression in Horkai et al. 2023. A guarded correction qualifies the record and v585
+    proposal label without changing identifier, definition, evidence or original history.
+    Scope discussion retains remaining upstream terminology questions. Correction writer dry
+    run and 31 focused regression tests passed; full final gates follow regeneration.

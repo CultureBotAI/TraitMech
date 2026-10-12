@@ -13684,6 +13684,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/rapid_axopodial_contraction.html#axopodial-contraction-provenance-and-mechanism"
  },
  {
+  "discussion_id": "replicative-aging-operational-scope",
+  "prompt": "Assess remaining upstream terminology for the explicitly decline-qualified phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "replicative aging with functional decline",
+  "source_id": "traitmech:000709",
+  "source_file": "replicative_aging.yaml",
+  "attaches_to": [],
+  "rationale": "Replicative age follows a cell or inherited cell lineage across successive divisions; culture age alone is not that measurement. Use age-resolved performance or mortality risk, not merely a finite lifespan, old-pole identity, endpoint death, cumulative survival loss or an old/new sibling difference. A decline can approach a plateau; continuous worsening until death is not required. The record uses the functional-decline sense of aging, while Horkai et al. 2023 explicitly distinguish senescence from broader replicative ageing. The label is now explicitly qualified as replicative aging with functional decline (#1891); bare replicative aging is not asserted as an exact synonym. Upstream review should assess remaining terminology and hierarchy choices; no external xref is asserted. Chronological survival in nondividing cultures, population-wide clonal senescence and irreversible mammalian cell-cycle arrest are not equated with this phenotype. The existing gram-variable culture_aging node denotes stationary-phase conditions and is not an exact grounding target. METPO:1000059 phenotype is the conservative broader class; no existing record is reparented.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/replicative_aging.html#replicative-aging-operational-scope"
+ },
+ {
+  "discussion_id": "replicative-aging-mechanism-and-example-limits",
+  "prompt": "Resolve strain provenance and taxon-scoped mechanisms without inferring them from lifespan or markers.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "replicative aging with functional decline",
+  "source_id": "traitmech:000709",
+  "source_file": "replicative_aging.yaml",
+  "attaches_to": [],
+  "rationale": "This is an assayable cellular phenotype, not a locus, protein profile, numeric lifespan field or claim that all microbes age under all conditions. No canonical example is asserted pending strain-provenance and taxonomy checks, including the 2019 strain-name discrepancy. A protein-resolved causal graph is deferred; non-detection of visible aggregates does not exclude all damage, and correlations with fluorescent markers do not establish universal causes. Supplements and raw data were not independently reanalysed. MED and Crossref notice fields were checked on 2026-10-12; a linked preprint or evaluation is not independent experimental support. Publisher access was incomplete for the 2017 and 2019 papers, so no exhaustive notice-absence claim is made. Pinned/current METPO and ignored/hidden repository searches found no exact term in the inspected sources; the pinned ontology is unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/replicative_aging.html#replicative-aging-mechanism-and-example-limits"
+ },
+ {
   "discussion_id": "rheotaxis-context-specific-mechanism-grounding",
   "prompt": "Ground separate surface and bulk-flow mechanisms without inventing a shear-sensing protein.",
   "kind": "CURATION_TODO",
@@ -14229,9 +14263,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 710,
- "total_knowledge_gaps": 450,
- "total_source_entries": 574,
+ "total_discussions": 712,
+ "total_knowledge_gaps": 451,
+ "total_source_entries": 575,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
