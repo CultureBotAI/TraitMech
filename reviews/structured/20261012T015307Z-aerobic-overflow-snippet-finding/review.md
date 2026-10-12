@@ -1,0 +1,293 @@
+# Reassessment of the yeast overflow evidence snippet
+
+- Review: 20261012T015307Z-aerobic-overflow-snippet-finding
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-12T01:51:23Z
+- Finished UTC: 2026-10-12T01:53:07Z
+- Reviewer: codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The external review correctly identifies a claim-support gap in the Hagman snippet. It reports data collection rather than the positive phenotype result. Record identity is not thereby refuted; replace this one snippet and retain its assay context.
+
+## Scope And Provenance
+
+Reassessment of evidence[2].snippet and its source context; the broader previous pass is not repeated.
+
+Selection: Exact yeast evidence entry on one record.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base c4e64607a1f072a3accd3eeeb8174b380be1c68a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000705 | data/traits/physiology/aerobic_overflow_metabolism.yaml | maintained | aerobic overflow metabolism |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Manual quotation-to-claim comparison | failed | True | traitmech:000705 | Direct source and schema comparison confirms that the current quotation describes data collection, not the phenotype result. This is a scientific support failure, not a failed source-text match. |
+
+## Scientific And Domain Assessments
+
+### Claim-bearing quotation
+
+evidence: concern. Targets: traitmech:000705.
+
+Replace the generic measurement span with an exact positive ethanol-formation result, preserving oxygen-control and taxonomic qualifiers in notes.
+
+## Findings
+
+### yeast-snippet-support: Yeast snippet does not state the supporting phenotype result
+
+minor / open / confirmed; issue key: github-1883-yeast-overflow-snippet.
+
+The existing quotation is verbatim but only describes data generation. The source supports the trait in other passages; this is a bounded snippet-selection defect, not a wrong citation or invalid trait.
+
+## Recommended Actions And Acceptance Checks
+
+### replace-quote
+
+Select an exact claim-bearing source span, append history, regenerate products and save a linked disposition.
+
+- Direct source-span and context verification within 25 words.
+- Native snippet resolver outcome accurately retained.
+- Guarded-writer regression tests, strict validation and generated-product checks pass.
+- Original histories and review bundles remain unchanged.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| external | https://github.com/CultureBotAI/TraitMech/pull/1882#pullrequestreview-5485934905; Yellow Hagman snippet finding; exact reviewed head c4e64607a1f072a3accd3eeeb8174b380be1c68a. | supports | The external reviewer identifies a real mismatch between measurement-description prose and a trait-supporting snippet. |
+| source | DOI:10.1111/febs.13019; Scientific abstract; Results and Discussion / Consumption of glucose and generation of biomass and ethanol; Experimental procedures. | supports | The current abstract span states that measurements were collected. The Results separately report significant ethanol formation after a glucose pulse, and Methods specify oxygen control above 30% air saturation. A short claim-bearing Results span can replace the generic quote without relaxing the 25-word bound. |
+| contract | src/traitmech/schema/traitmech.yaml; EvidenceItem.snippet and current evidence[2].snippet; CURATION_PLAYBOOK evidence guidance. | supports | A snippet must support the trait claim; a verbatim source match alone is insufficient. |
+
+## Limits And Additional Notes
+
+- Focused author reassessment, not a repeat of the complete initial review or independent human signoff.
+- No new deterministic suite is claimed here; the finding is established by source and schema comparison.
+- The separate Molenaar access concern is not established as a defect; its exact body sentence and source location remain directly verified.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T015307Z-aerobic-overflow-snippet-finding
+kind: record
+repository: CultureBotAI/TraitMech
+title: Reassessment of the yeast overflow evidence snippet
+started_at: '2026-10-12T01:51:23Z'
+finished_at: '2026-10-12T01:53:07Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author rechecks an external culturebot-reviewer finding; external
+    origin does not make this author observation independent.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The external review correctly identifies a claim-support gap in the Hagman
+  snippet. It reports data collection rather than the positive phenotype result. Record
+  identity is not thereby refuted; replace this one snippet and retain its assay context.
+source:
+  git_revision: c4e64607a1f072a3accd3eeeb8174b380be1c68a
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: 21d9f052a12213d2d9b6b4371840d43d5ae6ee2f2b813a8b20eff2557ba65993
+    role: context
+  - path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+    sha256: ba9b8c7d4f0509618b55d3fc9c682c6517a095613d9c6cfc248ebd63c2f5c375
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: reviews/structured/20261012T013705Z-aerobic-overflow/review.md
+    sha256: 2d0fa708836d844c988b4f3c3221103bce5fb60de130b2ef00a37a01fc469252
+    role: context
+  - path: reviews/structured/20261012T013705Z-aerobic-overflow/review.yaml
+    sha256: fc0dfebd1f96be39a42959d27d7c0b0c3ed4885c93230b96f6b40a3c92649b5b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_aerobic_overflow_trait.py
+    sha256: 96a37ea1f5a194e95c54ff8b1ae0c04e7b45b665264c1b6b47d3377306bf1496
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_add_aerobic_overflow_trait.py
+    sha256: 72c2dc63418894078a4335318a94d1dbce017fb47235fc6d44eebdaefd3386db
+    role: context
+targets:
+- target_id: traitmech:000705
+  path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+  label: aerobic overflow metabolism
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_aerobic_overflow_trait.py
+    role: guarded curation writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+    role: maintained trait record
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v581/metpo_proposal_classes_robot.tsv
+    role: companion METPO proposal
+scope:
+  description: Reassessment of evidence[2].snippet and its source context; the broader
+    previous pass is not repeated.
+  selection: Exact yeast evidence entry on one record.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000705
+  exclusions:
+  - target: Other fields and records
+    reason: No new full-record or corpus review in this focused finding observation.
+checks:
+- check_id: manual-claim-support
+  name: Manual quotation-to-claim comparison
+  status: failed
+  required: true
+  target_ids:
+  - traitmech:000705
+  evidence_ids:
+  - source
+  - contract
+  summary: Direct source and schema comparison confirms that the current quotation
+    describes data collection, not the phenotype result. This is a scientific support
+    failure, not a failed source-text match.
+evidence:
+- evidence_id: external
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/TraitMech/pull/1882#pullrequestreview-5485934905
+  locator: Yellow Hagman snippet finding; exact reviewed head c4e64607a1f072a3accd3eeeb8174b380be1c68a.
+  accessed_at: '2026-10-12T01:53:07Z'
+  support: supports
+  summary: The external reviewer identifies a real mismatch between measurement-description
+    prose and a trait-supporting snippet.
+- evidence_id: source
+  kind: primary_source
+  reference: DOI:10.1111/febs.13019
+  locator: Scientific abstract; Results and Discussion / Consumption of glucose and
+    generation of biomass and ethanol; Experimental procedures.
+  accessed_at: '2026-10-12T01:53:07Z'
+  support: supports
+  snapshot_sha256: 1e7bfc8e5b6a5e0166874af6e4054537562740da7482523b8f54f31485a87e33
+  summary: The current abstract span states that measurements were collected. The
+    Results separately report significant ethanol formation after a glucose pulse,
+    and Methods specify oxygen control above 30% air saturation. A short claim-bearing
+    Results span can replace the generic quote without relaxing the 25-word bound.
+- evidence_id: contract
+  kind: record_content
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: EvidenceItem.snippet and current evidence[2].snippet; CURATION_PLAYBOOK
+    evidence guidance.
+  accessed_at: '2026-10-12T01:53:07Z'
+  support: supports
+  summary: A snippet must support the trait claim; a verbatim source match alone is
+    insufficient.
+assessments:
+- assessment_id: support
+  area: evidence
+  topic: Claim-bearing quotation
+  outcome: concern
+  target_ids:
+  - traitmech:000705
+  evidence_ids:
+  - external
+  - source
+  - contract
+  summary: Replace the generic measurement span with an exact positive ethanol-formation
+    result, preserving oxygen-control and taxonomic qualifiers in notes.
+findings:
+- finding_id: yeast-snippet-support
+  issue_key: github-1883-yeast-overflow-snippet
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Yeast snippet does not state the supporting phenotype result
+  description: The existing quotation is verbatim but only describes data generation.
+    The source supports the trait in other passages; this is a bounded snippet-selection
+    defect, not a wrong citation or invalid trait.
+  target_ids:
+  - traitmech:000705
+  field_paths:
+  - evidence[2].snippet
+  evidence_ids:
+  - external
+  - source
+  - contract
+  rule_id: UNSUPPORTIVE_SNIPPET
+  native_severity: yellow external review finding
+  normalization_reason: Minor because the relevant source and qualified notes are
+    sound and two other citations independently support the phenotype.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_aerobic_overflow_trait.py
+    role: guarded curation writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+    role: maintained trait record
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1883
+actions:
+- action_id: replace-quote
+  finding_ids:
+  - yeast-snippet-support
+  target_ids:
+  - traitmech:000705
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_aerobic_overflow_trait.py
+    role: guarded curation writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+    role: maintained trait record
+  description: Select an exact claim-bearing source span, append history, regenerate
+    products and save a linked disposition.
+  acceptance_checks:
+  - Direct source-span and context verification within 25 words.
+  - Native snippet resolver outcome accurately retained.
+  - Guarded-writer regression tests, strict validation and generated-product checks
+    pass.
+  - Original histories and review bundles remain unchanged.
+limitations:
+- Focused author reassessment, not a repeat of the complete initial review or independent
+  human signoff.
+- No new deterministic suite is claimed here; the finding is established by source
+  and schema comparison.
+- The separate Molenaar access concern is not established as a defect; its exact body
+  sentence and source location remain directly verified.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261012T013705Z-aerobic-overflow
+  relationship: Reassesses the yeast snippet support missed by the earlier zero-finding
+    pass.
+tags:
+- add-trait
+- aerobic-overflow
+- snippet-support
+```

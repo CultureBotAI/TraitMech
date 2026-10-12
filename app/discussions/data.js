@@ -10452,6 +10452,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/aerobic_anoxygenic_phototrophy.html#aerobic-anoxygenic-phototrophy-xref-gap"
  },
  {
+  "discussion_id": "aerobic-overflow-scope-and-parent",
+  "prompt": "Retain oxygen-sufficient overflow as a conditional phenotype with an explicit hierarchy boundary.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "aerobic overflow metabolism",
+  "source_id": "traitmech:000705",
+  "source_file": "aerobic_overflow_metabolism.yaml",
+  "attaches_to": [],
+  "rationale": "The qualifier aerobic is deliberate. Unqualified overflow, Crabtree effect, respiro-fermentation and industrial aerobic fermentation are not asserted as exact synonyms. The local METPO:1002005 fermentation record is donor/acceptor-defined and excludes external electron acceptors; Basan's oxidative branch uses different accounting. https://github.com/berkeleybop/metpo/issues/468 discusses fermentation hierarchy, and the pinned ontology already differs from the retained local parent/definition. Neither that process nor METPO:1000060 metabolism is adopted as an is-a parent of this organismal phenotype. METPO:1000059 phenotype is used pending upstream hierarchy review. Product-specific ethanol/butanediol fermentation, aerotolerance, facultative anaerobiosis, copiotrophy and diauxic growth are not equivalent. Product detection or oxygen presence alone is insufficient: oxygen limitation must be excluded. No universal substrate, product, concentration, growth-rate threshold, complete respiratory shutdown or fixed molecular mechanism is required.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aerobic_overflow_metabolism.html#aerobic-overflow-scope-and-parent"
+ },
+ {
+  "discussion_id": "aerobic-overflow-examples-and-mechanism",
+  "prompt": "Resolve natural strain provenance and taxon-specific mechanisms before adding canonical examples or a graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "aerobic overflow metabolism",
+  "source_id": "traitmech:000705",
+  "source_file": "aerobic_overflow_metabolism.yaml",
+  "attaches_to": [],
+  "rationale": "Laboratory reference strains and engineered perturbations are qualified evidence, not proof that every member of a species has this phenotype under all conditions. Canonical taxa require primary strain provenance and authority-resolved identities. No common protein-resolved causal graph is established here; bacterial and yeast mechanisms must retain their experimental scope. Gene presence and predicted flux alone do not demonstrate overflow. Canonical examples, causal graphs and external xrefs are therefore unasserted. Qualified MED and Crossref records for all three citations exposed no linked correction or retraction on 2026-10-12; this bounded check is not a guarantee that no notice exists. Basan's publisher access remains unavailable.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aerobic_overflow_metabolism.html#aerobic-overflow-examples-and-mechanism"
+ },
+ {
   "discussion_id": "aerotaxis-direction-and-mapping-boundaries",
   "prompt": "Preserve oxygen-directed scope and verify external equivalents.",
   "kind": "CURATION_TODO",
@@ -14093,9 +14127,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 702,
- "total_knowledge_gaps": 446,
- "total_source_entries": 570,
+ "total_discussions": 704,
+ "total_knowledge_gaps": 447,
+ "total_source_entries": 571,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
