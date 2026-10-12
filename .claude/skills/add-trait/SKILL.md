@@ -358,6 +358,9 @@ A state appearing before stress need not be independent of environmental cues.
 For diversifying bet hedging, distinguish environment-independent reversible
 interconversion from cue-triggered preparation without requiring purely
 stochastic or binary switching (#1888).
+Check that scope discussions preserve the direction of each implication: a
+required environmental criterion need not require a particular mechanism, but
+that does not make the criterion optional for that mechanism (#1890).
 
 When Results, Methods or captions disagree on an assay condition, attribute
 each description to its section and retain the discrepancy unless direct

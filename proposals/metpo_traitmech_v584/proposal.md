@@ -40,6 +40,13 @@ substitute for measuring long-term geometric mean fitness against a stated
 comparison strategy. Figures, supplements and raw data were not independently
 assessed; molecular mechanisms and natural canonical exemplars remain deferred.
 
+The reversible-lineage boundary is deliberate, following Levy et al. Box 1.
+Terminal differentiation without reversible lineage interconversion is outside
+this proposal's current operational scope, not an overlooked exemplar. Upstream
+curators should assess whether a broader term or a more specific label is needed;
+this proposal does not assert that every use of diversifying bet hedging in the
+literature requires that boundary (#1890).
+
 Source-qualified MED, Crossref and visible publisher notice links were checked.
 Commentary, reviews and an earlier preprint are not counted as additional
 experiments. No correction or retraction was exposed by those bounded checks;

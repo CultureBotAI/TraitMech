@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diversifying_bet_hedging.yaml
+  slug: diversifying_bet_hedging
+session:
+  id: 2026-10-12T081113Z-codex-d6790f
+  timestamp: '2026-10-12T08:11:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1890
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1889
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct inverted bet-hedging independence implication
+  details: 'External review identified an inverted implication missed by the prior self-review.
+    Corrected the first scope discussion through correct_bet_hedging_independence.py: environmental
+    independence remains required but does not require a purely stochastic mechanism, following
+    directly reopened Levy et al. Box 1. Appended a curation event, preserved definition/evidence
+    and both earlier history records including 2026-10-12T070727Z-codex-919cc1, and added
+    positive/negative regression assertions. The proposal now explicitly states its reversible-lineage
+    boundary; the add-trait skill guards implication direction. No previous TraitRecord was
+    changed.'

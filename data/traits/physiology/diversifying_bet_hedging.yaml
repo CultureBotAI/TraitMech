@@ -62,8 +62,8 @@ discussions:
     Levy et al. Box 1, the relevant state interconversion must be independent of the
     prevailing environment; temporal precedence alone does not establish this criterion.
     Cue-triggered preparation before a later change is not sufficient. Deterministic
-    age-related variation can qualify, so environmental independence is not a requirement
-    for a purely stochastic switching mechanism.'
+    age-related variation can qualify, so environmental independence does not require
+    a purely stochastic switching mechanism.'
   posed_by: codex
   posed_date: '2026-10-12'
 - discussion_id: bet-hedging-evidence-and-mechanism-limits
@@ -104,4 +104,13 @@ curation_history:
     Temporal precedence alone is insufficient; purely stochastic or binary switching
     is not required. Preserved evidence and original provenance. Timestamp is the
     observed UTC correction decision.'
+  llm_assisted: true
+- timestamp: '2026-10-12T08:09:20Z'
+  curator: codex
+  action: CORRECTED_SCOPE_WORDING
+  changes: 'Addressed external review #1890: corrected the inverted implication in
+    the first scope discussion. Environment-independent interconversion remains required;
+    a purely stochastic mechanism is not required, consistent with Levy et al. Box
+    1. Preserved the definition, evidence, proposal definition and both previous events.
+    Timestamp is the observed UTC correction decision.'
   llm_assisted: true
