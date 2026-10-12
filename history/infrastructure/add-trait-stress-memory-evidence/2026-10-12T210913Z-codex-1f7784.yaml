@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-stress-memory-evidence
+session:
+  id: 2026-10-12T210913Z-codex-1f7784
+  timestamp: '2026-10-12T21:09:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - workflow
+  summary: Distinguish stress-memory endpoints and observation levels
+  details: Added source-informed guidance to require stress removal and matched challenge
+    context, separate persistent resistance from transcriptional reactivation or reacquisition,
+    preserve cell/lineage versus population-average effects, and distinguish native stress
+    pretreatment from synthetic induction. Motivated by Guan 2012 DOI:10.1534/genetics.112.143016
+    and Govers 2018 DOI:10.1371/journal.pbio.2003853; no additional biological mechanism or
+    human review status is asserted.

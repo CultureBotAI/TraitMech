@@ -10435,6 +10435,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/acid_phosphatase_activity.html#acid-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "stress-resistance-memory-scope-and-hierarchy",
+  "prompt": "Preserve persistence after stress removal and the resistance endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "memory of acquired stress resistance",
+  "source_id": "traitmech:000712",
+  "source_file": "acquired_stress_resistance_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Compare matched genetic backgrounds and challenge conditions after removal of the inducing stress. Persistent resistance is not merely faster transcriptional reactivation or faster reacquisition after a second induction. A marker, aggregate, gene, ongoing stress response or single survival measurement alone does not establish this history-dependent phenotype. Cell-level or lineage-restricted protection need not improve population-average survival. No fixed duration, number of divisions, stressor identity or molecular mechanism is required. Genetic adaptation, carbon-source memory, cue-triggered anticipation, diversifying bet hedging, persister formation and unequal aggregate inheritance are not equivalent, though particular observations can overlap. Unqualified cellular memory, stress priming and cross-protection are not asserted as exact synonyms. Stress response (traitmech:000078) concerns sensing and mounting protection; its research report includes cross-protection as an output but does not establish persistence after removal. METPO:1000059 phenotype is the conservative parent pending hierarchy review; existing records are unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/acquired_stress_resistance_memory.html#stress-resistance-memory-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "stress-resistance-memory-evidence-limits",
+  "prompt": "Resolve natural strain provenance and assay-specific mechanisms before extending this draft.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "memory of acquired stress resistance",
+  "source_id": "traitmech:000712",
+  "source_file": "acquired_stress_resistance_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Neither a uniform species-wide phenotype nor a shared molecular mechanism is established. Laboratory backgrounds and engineered reporters remain qualified evidence, not natural canonical taxa. No causal graph, exact synonym or external equivalence is asserted. MED/Crossref and visible publisher notice checks on 2026-10-12 exposed no linked correction or retraction for the retained sources; this bounded check does not prove notice absence. Guan's Crossref has-review relation is not a correction or independent experiment. The publisher HTML was directly retrieved through its public redirect after other endpoints failed. Source access limits and section-specific assay descriptions are retained rather than silently harmonized.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/acquired_stress_resistance_memory.html#stress-resistance-memory-evidence-limits"
+ },
+ {
+  "discussion_id": "stress-resistance-memory-metpo-identity",
+  "prompt": "Retain historical stress-response neighbors without reactivating their identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "memory of acquired stress resistance",
+  "source_id": "traitmech:000712",
+  "source_file": "acquired_stress_resistance_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and current released METPO contain METPO:1000293 obsolete stress response and METPO:1000222 obsolete oxidative stress response, marked deprecated below ObsoleteClass with an OMO:0001000 reason annotation and no replacement or consider annotation in the inspected releases. These broader lexical neighbors do not define persistence after stress removal. Their historical rationale remains unresolved; neither is reactivated or used as an exact xref. Ignored/hidden available-file searches, retained historical trees, normalized trait semantics, pending PRs and ontology RDF found no exact memory class in the inspected scope. The pinned ontology is unchanged; this is not discovery exhaustion or a sequence-feature trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/acquired_stress_resistance_memory.html#stress-resistance-memory-metpo-identity"
+ },
+ {
   "discussion_id": "aerobic-anoxygenic-phototrophy-xref-gap",
   "prompt": "Resolve an exact external ontology class for aerobic anoxygenic phototrophy before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14348,9 +14399,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 717,
- "total_knowledge_gaps": 453,
- "total_source_entries": 577,
+ "total_discussions": 720,
+ "total_knowledge_gaps": 454,
+ "total_source_entries": 578,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

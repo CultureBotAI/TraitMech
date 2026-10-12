@@ -369,6 +369,15 @@ Check that scope discussions preserve the direction of each implication: a
 required environmental criterion need not require a particular mechanism, but
 that does not make the criterion optional for that mechanism (#1890).
 
+For acquired stress-resistance memory, establish removal of the inducing stress
+and retain the interval, lineage, matched challenge and resistance endpoint.
+Persistent resistance, faster transcriptional reactivation and faster
+reacquisition after another induction are distinct outcomes. A benefit confined
+to descendants retaining a cellular state need not improve population-average
+survival. Keep native stress pretreatment separate from synthetic induction;
+do not transfer durations or mechanisms between them. Persistent reporter
+fluorescence or inherited cargo alone does not establish remembered resistance.
+
 For aging candidates, separate age-dependent performance decline or increasing
 mortality risk from finite lifespan, lifespan extension and cumulative survival
 loss. Preserve the age axis, division history, conditions and assay limitations;

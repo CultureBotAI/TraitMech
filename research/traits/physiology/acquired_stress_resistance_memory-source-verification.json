@@ -1,0 +1,1027 @@
+{
+  "checked_at": "2026-10-12T20:57:55.419501+00:00",
+  "label": "memory of acquired stress resistance",
+  "rows": [
+    {
+      "doi": "10.1534/genetics.112.143016",
+      "pmid": "22851651",
+      "pmcid": "PMC3454879",
+      "snippet": "resistance persisted for four to five generations after cells were removed from the prior salt treatment",
+      "locator": "Scientific abstract; persistence result independently checked in Results, Methods, actual Figure 1 and S1/S2.",
+      "limits": "Four-to-five generations is the abstract statement; main Figure 1 describes three-to-four doublings over 360 minutes. Methods specifies 11 peroxide doses plus control, whereas Figure 1A captions ten plotted doses. Preserve these section-specific descriptions. The normalized survival score is not a fraction of memory-bearing cells. Main BY4741 background and engineered UCC8613 daughter-marking assays are separate. No natural canonical taxon or common molecular mechanism is asserted.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "manual_abstract_match": true,
+      "native_verdict": "VERIFIED",
+      "sources": [
+        {
+          "path": "/tmp/traitmech-stress-memory-guan2012-minimal-20261012.html",
+          "sha256": "eb97f86a7134114fa570d5ab66416d91dfb1da2f6b6fc5d98682a9cf685a4241"
+        },
+        {
+          "path": "/tmp/traitmech-stress-memory-guan2012-med-20261012.json",
+          "sha256": "2c4e473dcbec83625790c53e509be3c919e4d2e7d676567f004dba67bdedf87c"
+        },
+        {
+          "path": "/tmp/traitmech-stress-memory-guan2012-crossref-20261012.json",
+          "sha256": "5ce6c120b889240a150171cfc6cdc13ecef76f9dd6747185c9560d15ecadf19c"
+        }
+      ],
+      "bounded_notice_fields": {
+        "commentCorrectionList": null,
+        "relation": {
+          "has-review": [
+            {
+              "id-type": "doi",
+              "id": "10.3410/f.717961008.793463906",
+              "asserted-by": "object"
+            }
+          ]
+        },
+        "update_to": null,
+        "updated_by": null
+      }
+    },
+    {
+      "doi": "10.1371/journal.pbio.2003853",
+      "pmid": "30153247",
+      "pmcid": "PMC6112618",
+      "snippet": "the cells inheriting this ancestral PA displayed a significantly increased heat resistance compared to their isogenic, PA-free siblings.",
+      "locator": "Scientific abstract, not Author Summary; native heat-induced PA result checked in Results sec007, relevant Methods, actual Figure 4 and S6.",
+      "limits": "Engineered MG1655 IbpA-msfGFP reporters: 47 C for 15 minutes, growth recovery, then 51 C for 7 minutes. Figure 4C detects no improved population-average survival; Figure 4D compares aggregate-bearing and aggregate-free descendants. Survival requires growth and division within eight hours. S6 detects no age-bin difference in this assay, not universal age independence. Figure 4F illustrates a lineage, not a fixed duration for the whole trait. Synthetic induction experiments and their seven-to-eight-generation endpoint are not transferred to native heat-induced lineages. Raw data were not independently reanalyzed.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "manual_abstract_match": true,
+      "native_verdict": "VERIFIED",
+      "sources": [
+        {
+          "path": "/tmp/traitmech-aggregate-inheritance-reporter-review-20261012/govers2018.xml",
+          "sha256": "f5e8ed02e307d9153f512ea747a9a0c109eb9ac4b7bc4070a68cb7aba82cdd91"
+        },
+        {
+          "path": "/tmp/traitmech-aggregate-inheritance-reporter-review-20261012/govers2018-med.json",
+          "sha256": "a8f643fb6d29621b0a2a59701628aaab28e03b4ddb60302b088f3a2c0b8085b5"
+        },
+        {
+          "path": "/tmp/traitmech-aggregate-inheritance-reporter-review-20261012/govers2018-crossref.json",
+          "sha256": "901023743207950e794835b377cf0e30994c84171659e38e0ad550c71e4e1525"
+        }
+      ],
+      "bounded_notice_fields": {
+        "commentCorrectionList": null,
+        "relation": {},
+        "update_to": null,
+        "updated_by": null
+      }
+    }
+  ],
+  "new_visually_inspected_figures": [
+    "Govers Figure 4",
+    "Govers S6"
+  ],
+  "figure_assets": [
+    {
+      "path": "/tmp/traitmech-stress-memory-govers-figure4-20261012.png",
+      "sha256": "0a206091b18814f18c5da46f479d9b10903c252c3f0fbfd91483326ebe81cca4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-govers-s6-20261012.tif",
+      "sha256": "b5c47574343184c2291159e4bee2b650b897a72723fc5cc4f13e610d5711931d"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-govers-s6-20261012.png",
+      "sha256": "9043c15d9326358451851b4f2ad296b46fa2bab5b2356af3498f983ee3266450"
+    }
+  ],
+  "source_urls": [
+    "https://doi.org/10.1534/genetics.112.143016",
+    "https://doi.org/10.1371/journal.pbio.2003853"
+  ],
+  "notice_limit": "Publisher and MED/Crossref exposed no linked correction or retraction in the bounded checks. This is not exhaustive notice absence. Guan has a Crossref has-review relation, not an independent experiment or correction.",
+  "acceptance": {
+    "decision": "Accept memory of acquired stress resistance as a new first-pass PROPOSED microbial physiological class, subject to reservation checks and the full validation/review lifecycle.",
+    "base": "8de77540cae640dc1cf4740027187bfc050f07b1",
+    "definition_boundary": "Persistence of elevated resistance after an inducing stress has been removed, through a non-genetic state retained in a microbial cell or lineage.",
+    "primary_evidence": "/tmp/traitmech-stress-memory-evidence-assessment-20261012.json",
+    "novelty_receipts": "/tmp/traitmech-stress-memory-discovery-20261012",
+    "novelty_scope": "Ignored and hidden available files in all 22 registered TraitMech roots and five known independent main copies; 18 retained historical tracked trees; normalized semantics across 1121 distinct trait versions; fresh seed projection and frozen release inventories; all open/draft TraitMech, CommunityMech and METPO PR file lists, relevant full blobs and all 20 changed METPO files; pinned/released/edit METPO RDF; current upstream CommunityMech proposals and KG-Microbe mappings/proposals; paginated METPO issues and comments.",
+    "semantic_disposition": "No exact record or active/deprecated memory class found in the inspected scope. Carbon-source memory bounds nutrient-history responses. Stress response denotes sensing/mounting protection, not specifically persistence after removal. Anticipation requires a cue-to-later-condition interpretation, not cross-protection alone. Aggregate inheritance describes allocation, not retained stress resistance. Tolerance classes and cold acclimation references do not require this history-dependent endpoint. Research-report preconditioning and cross-protection mentions are leads, not curated exact records or primary snippet sources.",
+    "historical_metpo": "METPO:1000293 obsolete stress response and METPO:1000222 obsolete oxidative stress response are deprecated broader lexical neighbors with an OMO:0001000 reason annotation and no replacement/consider in the inspected releases. They are not exact memory terms and are neither reactivated nor used as xrefs. METPO:1000059 phenotype is the conservative parent.",
+    "evidence_limits": "Guan peroxide-survival persistence and faster transcriptional reactivation are separate. Govers cell-level survival advantage does not imply improved population-average survival. Engineered reporter and daughter-marking contexts remain qualified; natural canonical taxa, universal mechanisms, exact synonyms and external equivalences are not asserted.",
+    "remaining": "Allocate only after fresh full-block reservation checks, curate via guarded writer, run native validation/snippet/proposal/products/tests, persist adversarial review, create and address supported issues, publish and merge through the native queue, independently recover saved review bases before and after deleting the owned branch/worktree.",
+    "limits": "Historical unavailable ignored/untracked bytes cannot be reconstructed. No archive expansion or symlink-directory traversal. Not an exhaustive filesystem or global biological discovery claim. Raw experimental data were not independently reanalyzed.",
+    "identifier_allocated": false,
+    "discovery_exhausted": false
+  },
+  "exhaustion": false,
+  "allocation": {
+    "checked_at": "2026-10-12T21:00:54.944866+00:00",
+    "base": "8de77540cae640dc1cf4740027187bfc050f07b1",
+    "local_id": "traitmech:000712",
+    "cohort": "metpo_traitmech_v588",
+    "block": [
+      1066500,
+      1066599
+    ],
+    "roots": 22,
+    "independent_copies": 5,
+    "cohorts": 587,
+    "ranges_checked": 7686,
+    "community_roots": 128,
+    "interval_adjudications": [
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-reporter-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "raw_interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "quoted_editor_namespace_assessment_not_new_reservation"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-reporter-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "raw_interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "quoted_editor_namespace_assessment_not_new_reservation"
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "raw_interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "quoted_editor_namespace_assessment_not_new_reservation"
+      },
+      {
+        "path": "docs/metpo_id_ranges_research.md",
+        "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+        "line": 14,
+        "raw_interval": [
+          1000000,
+          1999999
+        ],
+        "context": "| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |",
+        "classification": "editor_namespace_envelope_not_term_or_cohort_reservation",
+        "rationale": "The editor namespace is not an exclusive cohort assignment; narrower current, historical and retired reservations remain checked."
+      }
+    ],
+    "conflicts": [],
+    "ignored_hidden_included": true,
+    "limits": "Available files and registered historical tracked trees plus five known independent copies. Unavailable historical ignored/untracked bytes cannot be reconstructed. Normal binary handling, no archive expansion or symlink-directory traversal. All pending METPO source/range documents included. Recheck before publication."
+  },
+  "guan_source_assessment": {
+    "checked_at": "2026-10-12T19:08:06Z",
+    "status": "research lead only; no identifier, proposal or record accepted",
+    "predecessor": "/tmp/traitmech-stress-memory-followup-20261012.json",
+    "identity": {
+      "doi": "10.1534/genetics.112.143016",
+      "pmid": "22851651",
+      "pmcid": "PMC3454879",
+      "stable_url": "https://academic.oup.com/genetics/article/192/2/495/5935173",
+      "retrieved_publisher_redirect": "https://oup.silverchair-cdn.com/article-minimal/5935173"
+    },
+    "access": "The exact public publisher redirect observed through the web tool was subsequently downloaded successfully. This supersedes only the earlier local-cache limitation; the original publisher URL returned 403 and Europe PMC fullTextXML returned 500. Source-qualified MED marks isOpenAccess N; free publisher access is not claimed as an open-reuse license.",
+    "source_files": {
+      "/tmp/traitmech-stress-memory-guan2012-minimal-20261012.html": "eb97f86a7134114fa570d5ab66416d91dfb1da2f6b6fc5d98682a9cf685a4241",
+      "/tmp/traitmech-stress-memory-guan2012-med-20261012.json": "2c4e473dcbec83625790c53e509be3c919e4d2e7d676567f004dba67bdedf87c",
+      "/tmp/traitmech-stress-memory-guan2012-crossref-20261012.json": "5ce6c120b889240a150171cfc6cdc13ecef76f9dd6747185c9560d15ecadf19c",
+      "/tmp/traitmech-stress-memory-guan-assets-20261012/figure1.jpg": "81c5b6286948a59bfce6c8e323a840c8f9cec71bedc073ad96abe0f8b533922c",
+      "/tmp/traitmech-stress-memory-guan-assets-20261012/figure-s1.pdf": "b70122425a106cb74e1c2f97f60e61869dc97fbc7c7145e8be590ee125c0ff77",
+      "/tmp/traitmech-stress-memory-guan-assets-20261012/figure-s2.pdf": "d820d629227523843d53ddbc01dac62a5d7386187db7fa87a5359c8bf001dd35",
+      "/tmp/traitmech-stress-memory-guan-assets-20261012/figure-s1.jpg": "09bf84309713e34ea13088023f44e078db0516159dbfc8adfb2c17740b2821ba",
+      "/tmp/traitmech-stress-memory-guan-assets-20261012/figure-s2.jpg": "603b173dce07c0c4dcc766320cd9b1f70c94a4c32fe2c92b142b106fb92d22d2"
+    },
+    "visual_assessment": "Actual main Figure 1 and complete individual supplementary S1/S2 pages were visually inspected. Initial transparent PNG renders obscured captions; JPEG renders from the original PDFs gave readable white backgrounds. S1 compares decay under growth-arrest interventions; those conditions must not be generalized to ordinary dividing cells. S2 uses UCC8613 and an engineered daughter-marking system, with peroxide survival rather than a generic transcription endpoint.",
+    "notice_scope": "One exact MED result matched PMID, DOI, title and PMCID. Its commentCorrectionList was absent. Crossref matched the DOI/title and exposed a has-review relation, not a correction or retraction; update-to/updated-by were absent. These bounded fields do not establish exhaustive notice absence.",
+    "local_search_scope": "rg --no-ignore --hidden over data/raw/metpo.owl and data/traits on main a57b006b found the carbon-source-memory stress-priming exclusion. This limited search is not an exhaustive novelty result and does not cover historical/worktree/pending-PR reservations.",
+    "remaining": [
+      "Assess Govers stress-memory experiments, actual figures and controls separately from its already reviewed inheritance observations.",
+      "Inspect any remaining relevant methods, strain provenance and notice sources before using the lead as curated evidence.",
+      "Complete ignored/hidden full-repository, ontology, history, registered-worktree and pending-PR novelty checks.",
+      "Accept a source-backed phenotype boundary before allocating any identifier or proposal block."
+    ],
+    "exhaustion": false
+  },
+  "native_record_checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate",
+        "-s",
+        "src/traitmech/schema/traitmech.yaml",
+        "--target-class",
+        "TraitRecord",
+        "data/traits/physiology/acquired_stress_resistance_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 2.500192159321159,
+      "log": "/tmp/traitmech-stress-memory-checks-20261012/records-00.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/validate_strict.py",
+        "data/traits/physiology/acquired_stress_resistance_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 3.2982609858736396,
+      "log": "/tmp/traitmech-stress-memory-checks-20261012/records-01.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/acquired_stress_resistance_memory.yaml",
+        "--out",
+        "/tmp/traitmech-stress-memory-checks-20261012/snippet-results.tsv"
+      ],
+      "exit": 0,
+      "seconds": 3.7984289890155196,
+      "log": "/tmp/traitmech-stress-memory-checks-20261012/records-02.log"
+    }
+  ],
+  "input_receipts": [
+    {
+      "path": "/tmp/traitmech-stress-memory-acceptance-20261012.json",
+      "sha256": "f137e2e29cd61836df22823d6437c4bab6a88071b9fdea43ae472d61da3dbcc6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-allocation-20261012/assessment.json",
+      "sha256": "d1db2247dab0e2dc673b56706bced133ac9d8022fe795c47247160bf9765a400"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-guan-source-assessment-20261012.json",
+      "sha256": "4ff5b71d94f7f129ebe29cb1185c10c315a9fd05d1fb96cbf3e8100c5005e6d7"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-checks-20261012/records.json",
+      "sha256": "a5112a40c0d9a8f956f00626efc49ffa7db75c02d6d5079015ca868201cf4221"
+    }
+  ],
+  "discovery_receipts": [
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/community-all-registered-proposals.json",
+      "sha256": "cc537843097c99424f4d1aad8d700fe9286e7d1692ed50ae5e2aa445dee37f4f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/open-prs-after.json",
+      "sha256": "12bf16f8b31e1ff1878c1f528654ac263c0880c89a09224757727333cd396c01"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/open-prs-before.json",
+      "sha256": "72b6a73266532f42df7ff2629863af3a15da320aa063d065414f730dad851c26"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-1992/detail-after.json",
+      "sha256": "08c3600649743f97d3c6b9be78fd52a3eaef6d73a9cd0791a03d160541bca568"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-1992/detail-before.json",
+      "sha256": "313a82d2044edaac9645fb63f9b03afb572e5e6ec71d5abf7c4bf3532975d1a5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-1992/files.json",
+      "sha256": "e60749b110c17a07c5372f853b83712c55d85d4902c5a12cd6794d3bf06d7e90"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-1992/inspection.json",
+      "sha256": "791a338f6e555e0f1000850a28b79913d0f80abf8105d01dc8a2f31073321eb3"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-935/detail-after.json",
+      "sha256": "e5f754d3ebab327bb2b62b8f19dcf21bf761f946adad4b9a86ce51689f2be59d"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-935/detail-before.json",
+      "sha256": "d5b44f4bd22a64776069eeeaa0bd3c1cee75226dc6edc487ba4dc4de95db4eb0"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-935/files.json",
+      "sha256": "9c5f29cb772c6afa2bc4370306ac1cbb59ec53be34778f113b5be96e57d1b056"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/pr-935/inspection.json",
+      "sha256": "9bc426752014d60456d76492aac86e405a0390233568dbae94f3cfa9b6a9b3cd"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community/summary.json",
+      "sha256": "c2992b73e232409d0f3589c0f207b7d7721f0c78568c7cfa109a2b85d0c2510c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/head-before.json",
+      "sha256": "400b0c9aff71ad33de646cddd95f920d55523877552fe7e3ade49a20c30a8751"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/repo.json",
+      "sha256": "2daca8b4c5ef48673f68f40ac1d49974e6e8c2059545544625ef58833edbf13f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/source-refresh/head-after.json",
+      "sha256": "d6ff4ca99eea2a494e2754d8a8a699114e16477e04a6b4f0d578246a97cc9cc6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/source-refresh/head-before.json",
+      "sha256": "99018cd06230eee793981eac3f6e7e89f74229415df46eaf974e08c23ad48d87"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/source-refresh/repo.json",
+      "sha256": "efd014d2777b3578c9348e2518ea3123f7ad9719ec487668503e38c120d3db04"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-community-main/verified-snapshot.json",
+      "sha256": "93c74c6dc78a0212affcc509d807a5b5004ca74ca13f56f1af1675afa91129cf"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-kg-microbe/source-refresh/head-after.json",
+      "sha256": "a57484160d0e00c301ffc285d6450d4315f934db1b329477a61ae13b15a8143c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-kg-microbe/source-refresh/head-before.json",
+      "sha256": "dfd7070a05cefc5362302cbe19c4dc4a9834ae6fea8d329f97deb0b1780cf13e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-kg-microbe/source-refresh/repo.json",
+      "sha256": "9de4ca9bbfc7a5a0b6d9641c8ec3c25fb3bb10c21f4bb7f1a0b92c441dcc8604"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-kg-microbe/tree.json",
+      "sha256": "7e54ea5c7b635840c4a9c0abed585367c565a267c4cae3389a7c1b7a5c89d85d"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-kg-microbe/verified-snapshot.json",
+      "sha256": "0fec35e7763e26209a594d00351a815e02fc026d39374107d3a9b58d9e7087ff"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/comments-hits.json",
+      "sha256": "0e96500210dbeb7dfeb3d92776b6df3bb056fa6b1f2a6d01b0b5879d28d4a386"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/comments.json",
+      "sha256": "bcdd061b3383157f12f50407a39e04d20d4431df535e711223b195987f896aab"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/issues-hits.json",
+      "sha256": "c0575fced76b9813177c36acdef74f376a8289813589349524519fef92be2a91"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/issues.json",
+      "sha256": "f73f24e2ff3eee1415067af611e5ea8d4f1c42a2bd4de6864a68980dcf2bb87e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/open-prs-after.json",
+      "sha256": "9a65cf89a49838be4ad53098c03a6f5d7778f914787a616f21e8b8d8576dcca0"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/open-prs-before.json",
+      "sha256": "d00c6306e1f427c3be80105f869b18024646c5d3c3ecbcc702cc6bf34778501e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629/detail-after.json",
+      "sha256": "d7a571837c49b2d939d0d83ed8394c2f41517919a1dd87e32bdd7c61a3f15c50"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629/detail-before.json",
+      "sha256": "5438d986516d41c3c53ed266cac7d044bd9ca66ebe908378a99c69408730fe22"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629/files.json",
+      "sha256": "eba40872215ea7180729ad656b320abdc9d9832a04b6f7a2d72f41e76411607b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629/inspection.json",
+      "sha256": "ba190ba7fe7d4c83bdfad679bafd24eda2fb88c4d8cd599b3309776fefc80542"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629-complete/after.json",
+      "sha256": "5e36cc65fac87aebc3bfdb9fa455e10ab4d7d9c7cb9a3e083a243735d031aebd"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629-complete/before.json",
+      "sha256": "d6bb8d3656f690501e08d78d70c0e0072df915a943d236907ef49f458f055306"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-629-complete/manifest.json",
+      "sha256": "63ba5bda0b24e746e6e1fc4160cf1e9a71c48026dc4a07aef6a2d402dd838ab9"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638/detail-after.json",
+      "sha256": "0111159153a4ab3ec364edcbc7c1e13d068286df2f645206eb0136521e370440"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638/detail-before.json",
+      "sha256": "b71a17aebaeb907480cb7ccece2ecaa22eac524c3efb5e06e0dd3b28a45ee538"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638/files.json",
+      "sha256": "d1ffde5c06200afa235876ece814abd2a96606a718bec0e558b669f221adb663"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638/inspection.json",
+      "sha256": "ef4bc99519d4f1246a2e9d2770e9fc2f4e9a22dff18c473582e96c3ffb645be7"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638-complete/after.json",
+      "sha256": "a63021db4630e3d4a67484e335c32b98d94a8a8cb0fe9898e574c851cf981ca4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638-complete/before.json",
+      "sha256": "49e4289be8d5ec4de958fbf2ffafd2155a9472399bb11b3ca20341a9454dae27"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-638-complete/manifest.json",
+      "sha256": "7339121e28de5a6dfc587d83246b71b8695590714340a9e980228cb10f402ea8"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640/detail-after.json",
+      "sha256": "99aad660ae4384eacab936c714f46d646a5ab37a4e9b934df345ac8cd8dd896d"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640/detail-before.json",
+      "sha256": "605ad80fb73db11c502f9463a61155707a41896a0028362f4537ed3b1180a211"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640/files.json",
+      "sha256": "0c46ba56a9327fae1592ddaac89910a7d4238069874ad3624d9e3daa3fb8660e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640/inspection.json",
+      "sha256": "04b1115d286ab3095741739e8c673f6511d24d4432737b78f6ea40a9ac0fee83"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640-complete/after.json",
+      "sha256": "6f5e412bf9e9950b7352a091e544a9e14c8bd65f43d040bf62cc71c7d6d38bda"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640-complete/before.json",
+      "sha256": "1753df9a28458d02fe4e74edbfab8ba861a2335d80136a505f836adfe52ffecd"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-640-complete/manifest.json",
+      "sha256": "61970221f757b585638edaa5162959a69d50060735b3fb3427a38d6256cb5b13"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641/detail-after.json",
+      "sha256": "6b43fd6b5e43cbe15553aff9e90ff966eedbd4e006201b1f4f3acf148b953a46"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641/detail-before.json",
+      "sha256": "72e64d8441c18ce10a077fdc9a081af040d0648ed5492b781bf1616de5bec6c5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641/files.json",
+      "sha256": "6a6846290ea807eef13d39202c4c4195770043cd1c97c02140c69ed0ae611c94"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641/inspection.json",
+      "sha256": "7dda48a5e1447eef90f941c257325435c8b76e70ac05897eea87ed9a1a1044d4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641-complete/after.json",
+      "sha256": "34544b4843f82b9d71a10af4d7f24189dec39b16bb1172bd3b8c6608228d3f4e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641-complete/before.json",
+      "sha256": "7dfd5ad504d6d770b2c5686dd4e89d49f73a8808c9d061842930906afd8a09af"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-641-complete/manifest.json",
+      "sha256": "6cacf60f999cf1a15e9b207ce58fb22a08efe42378cedc33d922017736db7fac"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643/detail-after.json",
+      "sha256": "f94e8defa85b3eb22cc193e102cd6184ecd6a2de51470f18da3bfb488aa9770c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643/detail-before.json",
+      "sha256": "9e74a7f93db7c7cca73c7b3ca8ef1e8691932b753d8d9862e8be0f54e793baa6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643/files.json",
+      "sha256": "886470057d1974235bb1f7a66fd3d6d8269323419ba012e1e53948bae9398c17"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643/inspection.json",
+      "sha256": "a3bc9d0c68e2f2aaf0aa3e1764fe906425ada954f7a579828a3cd5080ead7584"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643-complete/after.json",
+      "sha256": "6021eb855e443c331ddda6f3c147c31e0bbda057102f839aa16421de6a6287f1"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643-complete/before.json",
+      "sha256": "1901e195cc00a54130faf177d3b15620b56c3d6a9e5b75acad97c49a0df94a39"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-643-complete/manifest.json",
+      "sha256": "4260ed519f05a245ae5cf8aa43a86333ecd8b199cf996bb5977324abd711ade5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644/detail-after.json",
+      "sha256": "3f78cca2c2323889a096e61316b1f39ab559f6940ed7dfa2190487e6d2c41871"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644/detail-before.json",
+      "sha256": "8eff924dba88dff91750eba38c8d47655f7c5e722e21963fd66f6807fa1664bf"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644/files.json",
+      "sha256": "d2b1d8de57a55c8ef0a99667c80c978cdc68210d58a74be85e84d59724fcadd6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644/inspection.json",
+      "sha256": "aec3075cbcd7ed0ce10a5c777370bc1d2c2d47086133fceee2a6929f6ec403e9"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644-complete/after.json",
+      "sha256": "b6f8ab1ac97fb578eeef3a491f7890b626b1d97fdf0b09bcb232c0766dc85b82"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644-complete/before.json",
+      "sha256": "b3a66266679db8394af0b241e8307fc848e1d89af612c3ac13ba7f22081e5a35"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/pr-644-complete/manifest.json",
+      "sha256": "86fd04589940292f994c7bd7a93860641f50ac3c1088b5d885c74618155f0811"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/0f8bb6372b842ac70a0c6e2a3096c07f21319abc.json",
+      "sha256": "1981df8a208f5217f24b7f6803b8646b52ecd4ad438565fe92193dc8e9904363"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/260d905f380fd363fd59f0005d319f9aaca9c5bf.json",
+      "sha256": "1332847979a1dba638ef611449e963ade4ca09ce7fc418e799ab7e790933648b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/48ddbc4ea357e839502789ff3220013ffd7a9d5b.json",
+      "sha256": "b2feea10117868523756745f8d3100b6e6f52ce925f6e71f5b52134a644c144f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/49266a52e135c654ad1037abd830a7dd5ef398b8.json",
+      "sha256": "5487850feb64ece40e4eac1498a5a1a06c75afda36eab6969bb861cc41fe4ac2"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/602754a600de3cea2d1f98d0e4a9080d07633d5e.json",
+      "sha256": "e2a8e7a5f2ab4cabbe3a6a1a3edab4d091a9d16f8fc3723cbf25afdbe1269e58"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/6993b711fa82e865a6f44a2462525b50bc59dc86.json",
+      "sha256": "65ab82ea35c0c53efab6e71cbadeae5b25bc2d02c35a69945a0162b5ff6a9933"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/88a414410be68458ba732f943d86858933cb2b56.json",
+      "sha256": "9f888642448db14e94383924fcc67de17eff770ec60705adc091a5a5ff994169"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/8bb4a55e00c21c215986d5809b929e9416200782.json",
+      "sha256": "936ffbc508d55a1b923c57c5cbf7d4a3757164710b4d89d60cce95cf0d5e6038"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/8fa971f45d01864839ccf1c68f9df81b5782d018.json",
+      "sha256": "b13ccaaf95230b9f209b27fd691f1ba4d78609428512aba983416d893eb035b7"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/9220424a1260f519cccefc70429f2b12b5dc83bf.json",
+      "sha256": "43a795962f5d94a10b88481934abefbe3a7f09950a6c4b7fdf195bf032542e1f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/994619f57ee9293fb5d261652ed0c0e356fc0d1a.json",
+      "sha256": "dda9af6decc25288b5dd753d32443d2a7e26cf9f4cc4755f17cf75d2766ef4a8"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/a4e78dc11c2dd21a27c6aa320d01aed60ba4c57b.json",
+      "sha256": "e519e9a394b715a3ebbd15a84a91d4087f075ab655b7e5f6719db61a136a5b3b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/ae120d97eb7753db481b2f0ca527963f2f01e24d.json",
+      "sha256": "6abfcd1730c51b7b4bd7cbf7fa7f762e5c2f541ba6e80244f81a11b8c5961d3f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/d04db849c2a9cd0a3848f29e067c0fe76b600515.json",
+      "sha256": "76b69dff69c6b540b2a14f09985f2f61242ede422e2075d0b58f2c8881c66e1a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/source-blobs/e162c66af0b7e873e54d4921c01eff3b1b0064c4.json",
+      "sha256": "90cb5b1a5a3114f5b8f40f4b9a0735688013413324760a0c68f7931b7539483c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo/summary.json",
+      "sha256": "2986aef5cc0a2343806bb4f210fb1c94c5c3df2370746df709afa1511759b6ae"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo-main/source-refresh/head-after.json",
+      "sha256": "0b44bf843aefcb0706543638e4d18290b236d8600a23f25cdc28f2672bb091e5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo-main/source-refresh/head-before.json",
+      "sha256": "6406e65b77c21674c5c26736d723b9e7ed9e265396109ff8d3f64d3b2045855f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo-main/source-refresh/repo.json",
+      "sha256": "6b57cc2dacb6cc692efd4f3b35ac79c1934250e773fe7f3884f7f2d7048c1210"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-metpo-main/verified-snapshot.json",
+      "sha256": "b4f73d60434f3498a8d7fa1cebcce3837678ecf7e3001d1458eaa830b93def5f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/open-prs-after.json",
+      "sha256": "caa73bb93e5a3258b632cca25410634bea7a09f3b5948f039cff1d8e6fbd7f6f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/open-prs-before.json",
+      "sha256": "c167d9af92e918ce809129b05a4a3c98f27d1b9da125c5c1cadc6a849460792a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1476/detail-after.json",
+      "sha256": "d845edb106a3d7a0ea7969c01b18dfe1c28389d3ae4e47ddf147a070f0af1416"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1476/detail-before.json",
+      "sha256": "1865a6694e83c12960318b56b77a18708d73875080abc0a1e2c335d0cce1e1f7"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1476/files.json",
+      "sha256": "8dd16f697905da61308a9343136140c0b2261e4f33f262012c5a299d0f06f9f7"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1476/inspection.json",
+      "sha256": "94e87da65d4c6e17abfdeaf0dd18fa3ee771a20a28188a14898e458cebf0075a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1782/detail-after.json",
+      "sha256": "e2552eec7a1bf8943e0d509a801a46333c79d97eaadb7c3f279e91bdc3a3d830"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1782/detail-before.json",
+      "sha256": "c19a176559afa4d3472b69b053f0bd4ca09be6a6827981dbeb8e87934ae04803"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1782/files.json",
+      "sha256": "6d2bf423ec8d147a16bc8e80888ab3d174cb2f134344ce6850313b4c4f278ca2"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-1782/inspection.json",
+      "sha256": "9bf2a24fd014483105fb257d957a1c34e73c9b751c9ab65d57e5135deee3b69b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-924/detail-after.json",
+      "sha256": "7f9acffe4d30ae2812f518360029cd26e19fdda770ea31f99662df896792d1df"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-924/detail-before.json",
+      "sha256": "0ee04495212658d70e1a8ebbfc17b8c213b2557301fd83c09b90cd0a70e10f9a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-924/files.json",
+      "sha256": "6af20d1fe407cda07f65b31d6e00f2dbad8e287e70afcf3898c99b0d541438d3"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-924/inspection.json",
+      "sha256": "2cd8a838e326116dc48f5872c7306c4376ccb4d9e7eb3d6feb3da6982943276a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-973/detail-after.json",
+      "sha256": "417a345369dd027a14b29a1dd20e70a530e43d4b782420215a4925334e779374"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-973/detail-before.json",
+      "sha256": "fd85dc1542f2f507e70f73e8e625a571dd452624bdf2259fbb9eab5142816dee"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-973/files.json",
+      "sha256": "393bbec3c5ca5db46b9e95df163f3028667d6585f9fd66564a0815715d7daff0"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/pr-973/inspection.json",
+      "sha256": "bb1548048b82d9a1d222412b680d0e3021da348f3f9a8b8961f3408cbb608999"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/github-traitmech/summary.json",
+      "sha256": "ce4eba4d6b7b7c4bb8b91966170ba9b563119f87b80e0b87e88f276886dffd44"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-03.json",
+      "sha256": "9a8e5fca204bcf52876b9e9174bffabfec37c258dcb72b081224ef81eccf907b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-04.json",
+      "sha256": "6e5ca069e31962883c90ab2f11507ca68254e3f442825026a710ed388c0d37a6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-05.json",
+      "sha256": "84ad8a76d2001b0996be27d4ceac3faae91d44cd3851323a222044591493cfbd"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-06.json",
+      "sha256": "521562e6a05ac2f5a4de5f78bf929d1644a71ef97ab520fb519b97f0c0af6633"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-07.json",
+      "sha256": "4db63d343df45d476fa87e74a671b436d9b881f7fc4077dd7da3a46343bafe7b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-08.json",
+      "sha256": "e50076b4c4dffed017641e9a2acbf38adc5a1573fed5a2d48ef903f62f82af9d"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-09.json",
+      "sha256": "436cda4f1a827a049d4274a19bc3b1f738ea5e78431f54a071a81904ac409afe"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-10.json",
+      "sha256": "e8c42ca63544cfdef4b485f7213e93268c1c534814888af4faebcdd9d11bd86f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-11.json",
+      "sha256": "b0317f3f7777797046ba7d1a790b9ca7f15d2d1d8320e8a9ed7e5e74c15e18c6"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-12.json",
+      "sha256": "67a145878df72412c763255ca572323659e55efafa09916cd70da8c7d72fad99"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-13.json",
+      "sha256": "5c55fb24643e595f7770651d3d4d3f079bc96efef8e04886db22411eb4810f8c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-14.json",
+      "sha256": "ceac0ad0934d68e6ec491002cf27f7f57e6ca9b5590fbdf9d6d89f866f9ef644"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-15.json",
+      "sha256": "ade4cbcf33ab4f3a7c54941698f258ed6179f64cd7a891d8b8cff52278d17ad3"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-16.json",
+      "sha256": "1a40f7958eb8426308dcb679f739c4277118157630ef8e9a56c3ecebdaa600fc"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-17.json",
+      "sha256": "07cc3a6955379223b019569ed84a6b29304d57061984e9f613c74d0748a21fab"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-19.json",
+      "sha256": "ae2d27567ea5c1f04a2b0da5561451bc327c04bcc8352794fb0b01286c5bd15b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-20.json",
+      "sha256": "5ead9bfd74ebe34dbd14cf3a0e927b165d26162487707cde4af9269900587cd5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical/worktree-21.json",
+      "sha256": "b3a32979ee1df90365be5e7fa7c9341969a36d0139c594367932c46aa3ee2b30"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/historical-regex-control.json",
+      "sha256": "9b82f4c5a28f986bbb417ef36d0a537224573044cbe61bf7719d51cb2db98035"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/independent-copies/0.json",
+      "sha256": "fdc9c8ec1e1f1ba9479552b8fcec6e9c304d51a2930f764fd1c7f704c0f4c584"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/independent-copies/1.json",
+      "sha256": "57c9463303d13f26dcec6a095695670c7e76cab672c098516f1d230268d40097"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/independent-copies/2.json",
+      "sha256": "d37406da4337c6957bc14314e8fff48ca94a03391cc514aa073ccfb19bfcab2a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/independent-copies/3.json",
+      "sha256": "a1050c86fb29a807e5ae140164374d09f57b32a5a1a6d9488982769a0b601e43"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/independent-copies/4.json",
+      "sha256": "0e6df94404f6a8466a73327e8d907fce797184920153d506a211ad873e95444a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-00.json",
+      "sha256": "e0c49e666d83dd9823e5847406a5c422c39f45984699a7ea081100f75c01ec40"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-01.json",
+      "sha256": "e5743827bffcfdbb9057c3e82c211fbb06765bbded4907106a283216fccc667b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-02.json",
+      "sha256": "6377b27448a279ff07f3a32bc898e72ffe620f7fb77afe1818685d6a9e10165b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-03.json",
+      "sha256": "032413963aa517c75f01b22ef991f8ee9394f82f8af04a0b23011e20b2f514f1"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-04.json",
+      "sha256": "be31ef2e81a6ed202618f16b447681b997a2fc77cce30af3311990665c4b31be"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-05.json",
+      "sha256": "48c0cc76de757754d0900757134995257958eeaaa98aeca11b26b5e9832ccfb8"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-06.json",
+      "sha256": "44fed660b7e09b34e9adf64bebbedd6627b2930bf1cdc39fd3aa41a8f0b8179f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-07.json",
+      "sha256": "72e436922fe4e9a252c89a079cdb2b2786dbf46e66b43e7c84b817fe42d9a6ff"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-08.json",
+      "sha256": "66b1e12cfbe0faee926073a17953e5ef156a51257e1b90f882580310368710b8"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-09.json",
+      "sha256": "59d0482f2e1ed2b6e31e2f8ab9ef620f572f329a9f8cf13097720fed3fc5d343"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-10.json",
+      "sha256": "5dc4290b5e457646f0f98b854ca2d03f9d5e30f7ef746cb87b9e3c04f28f141a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-11.json",
+      "sha256": "171af2f0c5ca814be1b57388976f2d3427f0b676f2acaa591d1f6af7f0a352f4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-12.json",
+      "sha256": "be3c5cc79b25d403d5a7af024164823626a87d973ee2efa1b7eaed4e3d475e55"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-13.json",
+      "sha256": "d35ee0a16899da6127e616a153ac7a32c7ee13c817e25649c0ba1f20780926e9"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-14.json",
+      "sha256": "28d4e9f278a99678583df58d5bcd07cc793426bc42704fc7378ed767a4490713"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-15.json",
+      "sha256": "e30eb076059bb32790ca56c886377aee346a3f557384f7ef413339f02d2ae2d4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-16.json",
+      "sha256": "0babb5b2b8129eaf2accae0a65ffd54aad1c8aa47cb0fc90f8b46a6c34b883a4"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-17.json",
+      "sha256": "52add5a583fa85d3677d994fd9dd175a5d5a2de51174a8f5c840a19e27a020e3"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-18.json",
+      "sha256": "41d17bd99da3981b3fde9a48dd216f10317e85342e0eef715b45ddc57bd0ea14"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-19.json",
+      "sha256": "45253c12f030f8893cefa619b8b8617977c48183c661e432033b41abfde483fd"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-20.json",
+      "sha256": "28e3a2e5f09dbd0d8f0f90962479ec15d9071775d494163375a3e35086189f14"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/inventories/worktree-21.json",
+      "sha256": "c34bb7de74a54f063db1476cb582f2d2753f7e9a8ce8206da4b784c1222abb74"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/main-inventory.json",
+      "sha256": "bace5863929d7dddf9a144a29183a473a40c08dcacf8be8b0a197361b4059300"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/normalized-trait-semantics.json",
+      "sha256": "22248ad5edb17be43b35e8d0dba208b1500de41fa8909c6038a83baeb4c6760a"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/rdf.json",
+      "sha256": "b5b9518ec865f4e53890101af42a8bc9ec62d10aa0ff1504dde5821b22465196"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-00.json",
+      "sha256": "0155796cbd842d87f0f4c1fcb84d8500a02690f6541e5c855af9ac0e2e91d222"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-01.json",
+      "sha256": "0a61b3c4e102fa3013c1c329ff2ad4df40a6100044bce0530d4401f2a5c54e87"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-02.json",
+      "sha256": "7a5532ab521ef8548278ca377f7de03d2c64cd44e2a451524d3b996127955f12"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-03.json",
+      "sha256": "e3bff8bce706bc991117105aebe6c9cfd55b2db6b91a39121a41663933d4629c"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-04.json",
+      "sha256": "2f43fc77c84ec6073e49aa25f4f2906a87e4d5359c9708712864c818f29aa674"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-05.json",
+      "sha256": "f5adee0f86c60e03ff1e2e7f2f8ff89e49319417e1165b59e50cf65187219fa5"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-06.json",
+      "sha256": "5108c064f753cc64dc28c5995a175a3645e3c3f701f6f20d9fe1004679d128eb"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-07.json",
+      "sha256": "0676036f0435c6ed324eec7df2779d7cfb48acd0a9b20e80f62d0e2473d89d95"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-08.json",
+      "sha256": "4a70122b874f7ce062e04530792fbf2b783c3d67cb5e1c990f0d6119936281cc"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-09.json",
+      "sha256": "90371acacfe4b3d79357eb85bced2365069c10a57829741bf57b3dbb34c92e25"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-10.json",
+      "sha256": "1c902b8ec0438e097d3e857d7b296b94787a8290733f2cc4624a81eb42b64a38"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-11.json",
+      "sha256": "c2eece117975a8b566dcefdade7bdedc973aec7f44e15012a9916d63877499f1"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-12.json",
+      "sha256": "727f591867d90ef8a85c492c4642afd78d8935476a8b5f7a69a3b2ab1d311c72"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-13.json",
+      "sha256": "269a783fb9917d53e6a140fde654fe0ec3770bc00a42593c62ab8424ff240c7e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-14.json",
+      "sha256": "844e4552df7cc4d16fdc0ba11254a6fb59f28cd84d7e3f3181c15b55778d417f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-15.json",
+      "sha256": "512c8b07f363f33a7dfa5fcead4d3394c67ef84470e8458cf56abb8a884f2b2b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-16.json",
+      "sha256": "102ed74d89973bfa3e0690a09f5949e38639c7b817be274e7d91b9d1c71ecc8f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-17.json",
+      "sha256": "66ec8baa4d22f936b82e1957c4c8237da45325feb69f605935c9c6517890af29"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-18.json",
+      "sha256": "5bb0c00bc758ebf8aa7f7469190f16ce5f0485dbf21b5d651a2b2559b488d144"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-19.json",
+      "sha256": "96b9dad1cba2b5208388b7a663ddc1245178902c0dfe6d37f14752d526cebbea"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-20.json",
+      "sha256": "4bffe76ed68ba71f257aaf2212c5514f7a45cf46330c75de345f6bb4d105c06b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/search/worktree-21.json",
+      "sha256": "a9df58f66a173766d8ba6caea029265838b9b6d2bcc4cbe77318ee01586a5b6b"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/seed-and-frozen.json",
+      "sha256": "f797dfa05debf117ae01500e8d875da2e04cf8af65cf35d8e4a61531a5f3fb3f"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/seed-command.json",
+      "sha256": "b98fc7366d1f92884f4bd00d45da529d0c2b87d50b4954cdb3d44e8a642a7f3e"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/semantic.json",
+      "sha256": "243391689c231f61bb75642151150445895eff8abe6005903ac0b89adfcb3a91"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/worktrees-after.json",
+      "sha256": "32d1a6abad52fc35facedabab1de94a599cbfb7fcaa5b5032c93b52f73b17c63"
+    },
+    {
+      "path": "/tmp/traitmech-stress-memory-discovery-20261012/worktrees-before.json",
+      "sha256": "32d1a6abad52fc35facedabab1de94a599cbfb7fcaa5b5032c93b52f73b17c63"
+    }
+  ],
+  "curation_decision": {
+    "observed_at": "2026-10-12T21:02:06Z",
+    "identifier": "traitmech:000712",
+    "status": "PROPOSED",
+    "cohort": "metpo_traitmech_v588",
+    "block": [
+      1066500,
+      1066599
+    ],
+    "supersedes": "Only prior unallocated/pending-candidate states; source-access and assay limitations remain.",
+    "native_result": "Maintained CLI checked two snippets over two sources; both VERIFIED. Manual source checks separately establish scientific-abstract identity.",
+    "goal": "active; discovery not exhausted"
+  }
+}
