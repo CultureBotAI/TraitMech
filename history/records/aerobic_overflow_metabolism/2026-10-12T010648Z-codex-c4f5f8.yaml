@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+  slug: aerobic_overflow_metabolism
+session:
+  id: 2026-10-12T010648Z-codex-c4f5f8
+  timestamp: '2026-10-12T01:06:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add DOI-backed aerobic overflow metabolism phenotype
+  details: Created traitmech:000705 as a PROPOSED PHYSIOLOGY class under METPO:1000059 with
+    three directly checked DOI-backed snippets, explicit oxygen and hierarchy scope, and provenance/mechanism
+    gaps. Reserved v581 and METPO:1065800-1065899 after current-main, ignored/hidden worktree
+    and pending-PR checks. Added a guarded writer and focused tests; existing traits are unchanged.
+    Broad QC, generated products and adversarial review follow this curation event.
