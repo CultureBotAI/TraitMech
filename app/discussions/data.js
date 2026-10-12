@@ -14211,6 +14211,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/unconventional_protein_secretion.html#unconventional-secretion-exemplars-and-mechanisms"
  },
  {
+  "discussion_id": "unequal-aggregate-inheritance-operational-scope",
+  "prompt": "Assess the quantity-qualified definition and the level of inheritance evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "unequal protein aggregate inheritance at cell division",
+  "source_id": "traitmech:000711",
+  "source_file": "unequal_protein_aggregate_inheritance.yaml",
+  "attaches_to": [],
+  "rationale": "Require repeated lineage or population observations under stated conditions, not a single unequal sibling pair. Retain aggregate count versus fluorescence-derived amount, the time of measurement, reporter, strain and detection limits. Amount is not concentration; cell area is not volume. Within-pair inequality, cell-type allocation bias and complete aggregate exclusion are distinct readouts. Sharing between daughters need not be equal, and unequal inheritance need not favor a fixed pole or cell type. No universal threshold or programmed asymmetry is specified. Bare asymmetric segregation has narrower source usages and is not asserted as an exact synonym. Aggregate presence, aggrephagy, heat-shock response, morphological division asymmetry, replicative aging and functional rejuvenation are not equivalent traits or demonstrated narrower parents. Use METPO:1000059 phenotype without reparenting existing records.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unequal_protein_aggregate_inheritance.html#unequal-aggregate-inheritance-operational-scope"
+ },
+ {
+  "discussion_id": "unequal-aggregate-inheritance-mechanism-and-source-limits",
+  "prompt": "Resolve assay discrepancies, strain provenance and mechanisms before extending this first-pass record.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "unequal protein aggregate inheritance at cell division",
+  "source_id": "traitmech:000711",
+  "source_file": "unequal_protein_aggregate_inheritance.yaml",
+  "attaches_to": [],
+  "rationale": "This phenotype does not imply active transport, toxic damage, functional decline or rejuvenation. An aggregate-free descendant alone establishes none of those mechanisms or outcomes. The engineered reporter and deletion contexts remain qualified evidence, not natural canonical examples. No shared protein mechanism, graph or external equivalence is asserted. Coelho Figure 4 panel-label and Figure 3C versus Methods temperature discrepancies remain open; actual plotted endpoints are distinguished from text pointers. Primary source/metadata notice checks on 2026-10-12 were bounded by access; they do not prove exhaustive notice absence. Reporter-focus inheritance must be separated from endogenous aggregation: the later Govers study identifies IbpA-YFP label-induced clustering, while its separate post-heat-shock IbpA-msfGFP lineages support inheritance. Monomeric labels also require validation of expression level and assay conditions; no reporter is declared universally artifact-free.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unequal_protein_aggregate_inheritance.html#unequal-aggregate-inheritance-mechanism-and-source-limits"
+ },
+ {
+  "discussion_id": "unequal-aggregate-inheritance-historical-metpo-match",
+  "prompt": "Retain the deprecated aggregate lexical hit without asserting identity or reusing its ID.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "unequal protein aggregate inheritance at cell division",
+  "source_id": "traitmech:000711",
+  "source_file": "unequal_protein_aggregate_inheritance.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and current released METPO contain METPO:1000011, obsolete aggregate, marked deprecated and below ObsoleteClass. It has an IAO:0000231 annotation to OMO:0001000, but no definition, replacement or consider annotation in the inspected releases. Its original scope and reason-code interpretation remain unresolved. A lexical aggregate hit does not establish equivalence to unequal protein aggregate inheritance; this literature-defined phenotype was independently accepted. Do not reactivate 1000011 or include it as an exact xref. Ignored/hidden available-file and registered historical-tree searches, pending PRs and released RDF found no exact trait in the inspected scope; this is not discovery exhaustion.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/unequal_protein_aggregate_inheritance.html#unequal-aggregate-inheritance-historical-metpo-match"
+ },
+ {
   "discussion_id": "unisexual-reproduction-scope-and-hierarchy",
   "prompt": "Keep mating-type contribution distinct from selfing, helper cells and MAT inventory.",
   "kind": "CURATION_TODO",
@@ -14297,9 +14348,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 714,
- "total_knowledge_gaps": 452,
- "total_source_entries": 576,
+ "total_discussions": 717,
+ "total_knowledge_gaps": 453,
+ "total_source_entries": 577,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

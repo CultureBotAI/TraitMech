@@ -1,0 +1,427 @@
+{
+  "evidence_assessment": {
+    "checked_at": "2026-10-12T14:23:24.062158+00:00",
+    "status": "Research evidence, not an allocated TraitRecord",
+    "rows": [
+      {
+        "tag": "lindner2008",
+        "doi": "10.1073/pnas.0708931105",
+        "pmid": "18287048",
+        "snippet": "their position in the mother cell determines which offspring inherits the inclusion body and where it will be located within it",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2268587/",
+        "source_path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/lindner2008-html-response",
+        "xpath": "//section[@id=\"sec3\"]/p",
+        "section": "Results: Inclusion Bodies Are Formed in Discrete Cellular Positions and Accumulate in Old Poles Under Nonstressing Conditions",
+        "notes": "Lindner et al. 2008, PMID:18287048. Primary PMC Results and Methods directly read. The quoted position is that of an IbpA-YFP focus. MGAY is an engineered MG1655 reporter strain, grown on LB-agarose at 37 C without imposed stress. Figure 2 is the inspected localization measurement; Figure 3 is an inspected lineage schematic, not another experiment. Pole identity changes across divisions. The observations support inheritance and eventual older-pole accumulation; they do not establish active transport, universal aggregate toxicity or a natural canonical exemplar. Supplements were not inspected.",
+        "source_sha256": "0c6ab062a08a77b24637fc5dba99c0022749bd66b298159ef4b37d96f206e494",
+        "exact_contiguous_span": true,
+        "matched_xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[2]/main/article/section[2]/section/section[2]/section[2]/p",
+        "word_count": 21,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "native_similarity": 0.3416149068322981,
+        "native_checked_at": "2026-10-12T14:23:22.479877+00:00",
+        "source_identity_verified": true,
+        "title": "Asymmetric segregation of protein aggregates is associated with cellular aging and rejuvenation."
+      },
+      {
+        "tag": "coelho2014",
+        "doi": "10.1371/journal.pbio.1001886",
+        "pmid": "24936793",
+        "snippet": "We experimentally confirmed that fusion increases segregation asymmetry, for a range of stresses, and identified Hsp16 as a fusion factor.",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4061010/",
+        "source_path": "/tmp/traitmech-damage-segregation-source-cache-20261012/coelho2014.xml",
+        "xpath": "/article/front/article-meta/abstract[not(@abstract-type)]/p",
+        "section": "Scientific abstract, not Author Summary",
+        "notes": "Coelho et al. 2014, PMID:24936793. Hsp104-GFP fission-yeast imaging supports stress-associated unequal inheritance without consistent old/new-pole bias. Actual Figures 3, 4 and S4 were inspected. Figure 3C measures an absolute sibling difference in aggregate-associated fluorescence, not concentration; S4I measures count asymmetry. Figure 4B is fusion and 4C is nucleation: the caption reverses them. A Results pointer to 4C for stress-dependent asymmetry disagrees with the plotted endpoints. Figure 3C describes continuous 40 C, whereas Methods describes 40 C for one hour followed by 37 C; this remains unresolved. Text S1 experimental methods and strain table were text-extracted, not visually rendered. No universal transport, death threshold or rejuvenation mechanism is inferred.",
+        "source_sha256": "9a5214b58556a06248e3aa2235e73b3dd604ccc82234a2f3f7e6a539d24a2666",
+        "exact_contiguous_span": true,
+        "matched_xpath": "/article/front/article-meta/abstract[2]/p",
+        "word_count": 20,
+        "native_verdict": "VERIFIED",
+        "native_similarity": 1.0,
+        "native_checked_at": "2026-10-12T14:23:23.235902+00:00",
+        "source_identity_verified": true,
+        "title": "Fusion of protein aggregates facilitates asymmetric damage segregation."
+      },
+      {
+        "tag": "schramm2019",
+        "doi": "10.1111/mmi.14228",
+        "pmid": "30779464",
+        "snippet": "Noticeably, stalked cells always inherited more aggregates (75%) than swarmer cells (25%).",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6850343/",
+        "source_path": "/tmp/traitmech-damage-segregation-source-cache-20261012/schramm2019.xml",
+        "xpath": "//sec[title[contains(., \"aggregate load\")]]/p",
+        "section": "Results: The aggregate load does not sort to swarmer or stalked daughter cells in C. crescentus",
+        "notes": "Schramm et al. 2019, PMID:30779464. Primary XML Results, Discussion and relevant Methods were read; actual Figure 6 was inspected. DnaK-mVenus, delta-clpB cells recovered at 30 C after 10 minutes at 40 C. Figure 6G reports aggregate allocation across daughter cell types over successive divisions, not the fraction of all sibling pairs with unequal counts. Figure 6F measures projected cell area, not volume. Unequal shared inheritance is compatible with the proposed broad phenotype; it contradicts neither sharing nor a stable allocation ratio. The paper limits universal exclusive old-pole retention, not every form of quantitative inequality. Supplements and independent strain provenance were not inspected; no natural canonical example is asserted.",
+        "source_sha256": "184c2029dbe93137ef46e5dc3de03c59814f1617771bf956856b2529f2c08eb0",
+        "exact_contiguous_span": true,
+        "matched_xpath": "/article/body/sec[2]/sec[5]/p[5]",
+        "word_count": 12,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "native_similarity": 0.39344262295081966,
+        "native_checked_at": "2026-10-12T14:23:24.062122+00:00",
+        "source_identity_verified": true,
+        "title": "Growth-driven displacement of protein aggregates along the cell length ensures partitioning to both daughter cells in Caulobacter crescentus."
+      }
+    ],
+    "scope": "Native abstract classifier was called directly with fresh resolver output. This is not a completed verify_snippets.py --record run. Full-text spans retain their native NOT_IN_ABSTRACT result."
+  },
+  "prior_research_handoff": {
+    "status": "research_evidence_checked_pending_final_scope_decision_and_allocation",
+    "goal_status": "active",
+    "turn_classification": "progress",
+    "previous_turn_classification": "progress: PR 1894 merged and lifecycle cleanup verified",
+    "baseline": "a57b006b32f2313579650d105d7da245a99a5b95",
+    "previous_pr": "https://github.com/CultureBotAI/TraitMech/pull/1894",
+    "supersedes_lead_interpretation_in": "/tmp/traitmech-next-lead-damage-segregation-20261012.json",
+    "candidate": {
+      "working_label": "unequal protein aggregate inheritance at cell division",
+      "draft_definition": "A physiological phenotype in which division of a microbial cell produces sibling cells with unequal numbers or amounts of inherited protein aggregates.",
+      "draft_definition_source": "DOI:10.1371/journal.pbio.1001886",
+      "intended_category": "PHYSIOLOGY",
+      "intended_term_kind": "CLASS",
+      "intended_mapping_status": "PROPOSED",
+      "conservative_parent_candidate": "METPO:1000059",
+      "identifier": null,
+      "cohort": null,
+      "reserved_metpo_block": null,
+      "branch": null,
+      "trait_record_written": false,
+      "scope_decision_still_needed": "Confirm the utility of a qualitative phenotype for reproducibly observed unequal cargo apportionment. Do not infer a taxon-level trait from one random sibling split, aggregate presence, reporter-gene presence, or cell size alone. Preserve each assay's count/amount scale and baseline; do not invent a universal threshold or require a fixed lineage bias.",
+      "synonym_policy": "Do not automatically treat asymmetric damage segregation, old-pole retention, aggregate exclusion, protein aggregation or rejuvenation as exact synonyms. A source may use asymmetric segregation more narrowly than numerical inequality.",
+      "mechanism_policy": "First-pass protein examples, canonical taxa, xrefs and causal graphs should remain absent unless separately supported and authority-checked. Reporter/deletion experiments support qualified observations, not natural canonical strain status. No universal active transport, Hsp16 dependence, aggregate toxicity, aging or rejuvenation is implied."
+    },
+    "evidence_bundle": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/evidence.json",
+    "evidence_summary": {
+      "primary_dois": [
+        "10.1073/pnas.0708931105",
+        "10.1371/journal.pbio.1001886",
+        "10.1111/mmi.14228"
+      ],
+      "direct_contiguous_snippets_checked": 3,
+      "native_abstract_classifier": {
+        "VERIFIED": 1,
+        "NOT_IN_ABSTRACT": 2
+      },
+      "verification_limits": "Native resolver and classifier were called directly, not via a completed record CLI. Exact full-text matches, source sections, DOI/MED/PMID identity and snapshot hashes are retained. Native NOT_IN_ABSTRACT results were not relabeled. No complete TraitRecord validation or full repository QC was run because repository content was not changed."
+    },
+    "corrected_precuration_interpretations": [
+      {
+        "finding": "Shared inheritance is not necessarily equal inheritance.",
+        "disposition": "The Caulobacter study is not a categorical negative for a broad unequal-apportionment phenotype. Its measured shared unequal allocation limits universal exclusive old-pole retention. Figure 6G percentages are aggregate allocation across cell types, not the proportion of sibling pairs with unequal counts; Figure 6F uses projected cell area, not volume.",
+        "source": "DOI:10.1111/mmi.14228"
+      },
+      {
+        "finding": "The fission-yeast figure caption cannot be used to infer panel identity without the image.",
+        "disposition": "Both publisher and PMC Figure 4 were inspected: B measures fusion and C nucleation, contrary to the caption. Figure 3C and Figure 4G address amount asymmetry; Figure 4H addresses aggregate-free offspring. Keep the separate continuous-heat discrepancy between Figure 3C and Methods explicit.",
+        "source": "DOI:10.1371/journal.pbio.1001886"
+      }
+    ],
+    "novelty": {
+      "audit_root": "/tmp/traitmech-aggregate-inheritance-discovery-20261012",
+      "semantic_review": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/semantic-review-input.json",
+      "ontology_broad_check": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/ontology-broad-check.json",
+      "current_trait_records": 1105,
+      "registered_traitmech_roots": 22,
+      "historical_roots_without_git_metadata": 18,
+      "unique_structured_record_versions": 1120,
+      "normalized_semantic_slots": 248,
+      "focused_leaf_hits": 332,
+      "focused_aggregate_inheritance_proximity_hits": 0,
+      "known_independent_clean_main_copies": 3,
+      "registered_community_roots_proposal_scan": 127,
+      "fresh_seed_ids": 399,
+      "fresh_seed_live_overlap": 344,
+      "fresh_seed_absent_leads_not_accepted_traits": 55,
+      "frozen_release_delta_rows": 1546,
+      "frozen_active_review_rows": 153,
+      "pinned_ontology_triples": 12617,
+      "current_released_ontology_triples": 12649,
+      "typed_ontology_terms_each": 1679,
+      "pending_traitmech_prs": [
+        1782,
+        1476,
+        973,
+        924
+      ],
+      "pending_community_prs": [
+        935
+      ],
+      "pending_metpo_prs": [
+        644,
+        643,
+        641,
+        640,
+        638,
+        629
+      ],
+      "pending_scope": "Complete paginated changed-file lists, including draft TraitMech 924 with 692 files over seven pages. No authoritative trait/proposal rows were changed. Additionally retrieved all 15 full changed METPO 629 files, including its ID-range/source configuration documentation; no candidate matches there.",
+      "related_not_equivalent": {
+        "traitmech:000646": "aggrephagy: selective macroautophagic degradation, not division-associated apportionment",
+        "traitmech:000205": "heat shock response: induced refolding/degradation, not inheritance",
+        "traitmech:000066": "intracellular inclusion: morphology/compartmentalization, not a quantitative partitioning outcome",
+        "traitmech:000709": "replicative aging with functional decline: an age-linked performance endpoint",
+        "traitmech:000710": "functional cellular rejuvenation: recovery/reset of performance or replicative potential"
+      },
+      "historical_ontology_label": "Broader lexical scanning also found METPO:1000011, obsolete aggregate. Both releases mark it deprecated and provide no definition, replacement or consider annotation. Its reason is OMO:0001000; original scope and the issuing reason meaning were not resolved. Do not reuse it or assert exact equivalence. Keep this historical lexical assessment in any proposal.",
+      "assessment": "No exact current or retained historical TraitRecord or active exact METPO term identified in the inspected scope. Broad hits concern aggregate formation/degradation, protein-complex wording, cell/hyphal aggregation, genomic asymmetry and unrelated segregation. No exact unresolved causal node was identified for grounding to this candidate.",
+      "limits": "Ignored and hidden files were included in available roots, with multiline raw searches and structured YAML normalization. Normal binary handling; archives were not unpacked and symlink directories were not traversed. Unavailable historical ignored/untracked bytes cannot be reconstructed. Known independent clones were checked, not every unregistered clone on the computer. Novelty is bounded by these snapshots and patterns, not a proof of universal absence."
+    },
+    "source_access": {
+      "primary_cache": "/tmp/traitmech-damage-segregation-source-cache-20261012",
+      "assets": "/tmp/traitmech-aggregate-inheritance-assets-20261012",
+      "lindner_fulltext": "Europe PMC XML HTTP 500 and PDF HTTP 403 were retained; primary PMC HTML was subsequently retrieved successfully and parsed, then Figures 2/3 were downloaded and inspected. Do not repeat the earlier full-text-unavailable conclusion.",
+      "coelho_supplement": "S4 EPS was retrieved and rendered with gs-noX11 after the default gs failed due to missing libXt. The source EPS and rendered PNG are retained. Text S1 DOCX was read with textutil; it was not rendered, and model equations/visual table layout were not validated.",
+      "notice_scope": "DOI-matched MED and Crossref records were checked; Lindner Crossmark reported current. PLOS and Wiley article pages were directly opened and targeted correction/retraction searches performed. No exhaustive absence of notices is claimed. Crossref has-review/has-preprint relations are not independent experiments or corrections."
+    },
+    "skill_update_candidate": "Add a short inheritance-specific rule distinguishing within-pair amount/count inequality, concentration, population lineage bias and complete exclusion. Both daughters inheriting cargo does not establish equal partitioning; a clean sibling does not by itself establish active transport, fixed polarity or functional rejuvenation. Existing actual-panel and condition-discrepancy rules already apply.",
+    "next_actions": [
+      "Adjudicate the working label/definition and qualitative-versus-quantitative scope using the complete evidence bundle, preserving the distinctions above.",
+      "Refresh main, local worktree and complete pending/draft reservations, then allocate a local ID, proposal cohort and entire METPO block only if the candidate is accepted. No allocation check has been run for this lead.",
+      "Make a clean owned branch and use the validated writer/history path; add scoped tests, a same-PR METPO proposal and source verification artifacts. Keep mapping_status PROPOSED.",
+      "Regenerate and validate maintained products, perform the requested adversarial PR/issue/fix workflow, use the native merge queue, verify landed integrity and independent recovery before and after deleting only the owned branch/worktree.",
+      "Continue discovery. This lead and 55 seed-only leads remain non-exhausted; do not mark the overarching goal complete."
+    ],
+    "execution_note": "The initial structured historical audit was stopped with SIGTERM after repeatedly reading duplicate blobs. No final result from that attempt was used. A deduplicated immutable-blob pass completed successfully, verified blob identities and unchanged registered roots, and produced normalized-trait-semantics.json. All source/discovery changes in this pass are temporary research artifacts; main was not edited."
+  },
+  "allocation": {
+    "checked_at": "2026-10-12T14:37:47.483291+00:00",
+    "base": "a57b006b32f2313579650d105d7da245a99a5b95",
+    "local_id": "traitmech:000711",
+    "cohort": "metpo_traitmech_v587",
+    "block": [
+      1066400,
+      1066499
+    ],
+    "roots": 22,
+    "cohorts": 586,
+    "ranges_checked": 7143,
+    "community_roots": 127,
+    "interval_adjudications": [
+      {
+        "path": "docs/metpo_id_ranges_research.md",
+        "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+        "line": 14,
+        "raw_interval": [
+          1000000,
+          1999999
+        ],
+        "context": "| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |",
+        "classification": "editor_namespace_envelope_not_term_or_cohort_reservation",
+        "rationale": "The formal ADDITIONAL EDITOR range encompasses ordinary current classes and proposed class IDs; this is not an exclusive biological-term or proposal-cohort assignment. All narrower reserved, retired, current and historical intervals remain checked."
+      }
+    ],
+    "conflicts": [],
+    "ignored_hidden_included": true,
+    "limits": "Surviving files and registered historical tracked trees; unavailable historical ignored/untracked bytes cannot be reconstructed. Normal binary handling, no archive extraction or symlink-directory traversal. Full pending METPO 629 source/range documents included. Recheck before publication."
+  },
+  "asset_verification": {
+    "verified_at": "2026-10-12T14:30:24.517248+00:00",
+    "baseline": "a57b006b32f2313579650d105d7da245a99a5b95",
+    "repository_clean": true,
+    "handoff_sha256": "362f580ccb5b31bcb48ff292ff822457d113996110c2f135cbcb193f92de353d",
+    "source_hashes_checked": 3,
+    "assets": [
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-fig3.jpg",
+        "bytes": 127901,
+        "sha256": "06e929c069ac83799d0a5025221ed4d7f2afb9b4a8feac2a1c7f9570eac192d7"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-fig4.jpg",
+        "bytes": 225818,
+        "sha256": "7168ebb6e7fd9b671b2df87bfe57b1ec4ad1ce8d7d236a016e0a36074a8e7acb"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-publisher-fig4.png",
+        "bytes": 579741,
+        "sha256": "8f169ece118aaefe1a68cbbe6b925835dd830c2232c842c41b210b0f39a4c639"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-s4.eps",
+        "bytes": 5451498,
+        "sha256": "b69db1845ad7e622335d4d67ba1ee5f14aa9e37055c098ddbadbc83742134537"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-s4.png",
+        "bytes": 359711,
+        "sha256": "652a5feab35c48f9174d8614402aa1e15ae2050d73d594c380068bc83d17bf81"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/coelho2014-s8.docx",
+        "bytes": 213116,
+        "sha256": "9ce3254be32eeeb341e99ef79c6d8eae5789317509e530cf2a78ec62f5e799fe"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/lindner2008-fig2.jpg",
+        "bytes": 157140,
+        "sha256": "3beb027cc6fcde58231e0952ea2c9b5111554fd4dddcd1530a1566d7a199473c"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/lindner2008-fig3.jpg",
+        "bytes": 50470,
+        "sha256": "d99ace92de6e298ce720314d47cff5b16fd6a7d49c53b28ae6a3c6c4ae9abbde"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/lindner2008-html-response",
+        "bytes": 184166,
+        "sha256": "0c6ab062a08a77b24637fc5dba99c0022749bd66b298159ef4b37d96f206e494"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/lindner2008-pdf-response",
+        "bytes": 5561,
+        "sha256": "7ea0c1665ae9385b28254869faf75dda2cc9c4c4cafa7d9c7a7f28251db8af6a"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/retrievals.json",
+        "bytes": 4683,
+        "sha256": "8da0184f9e4e7191915fa79e0a0e710a00b09bc022c89480c123447a94152b97"
+      },
+      {
+        "path": "/tmp/traitmech-aggregate-inheritance-assets-20261012/schramm2019-fig6.jpg",
+        "bytes": 132362,
+        "sha256": "035ae407cdb87bea2daf2ea3a40524771b6229551cdbff73406a99399b42c5ff"
+      }
+    ],
+    "limits": "File checks and source extraction validation only; no new TraitRecord, allocation, full QC, commit or PR in this research pass."
+  },
+  "ontology_assessment": {
+    "checked_at": "2026-10-12T14:23:24.528325+00:00",
+    "rows": [
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+        "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+        "broad_lexical_hits": [
+          {
+            "subject": "https://w3id.org/metpo/1000011",
+            "label": "obsolete aggregate",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "value": "obsolete aggregate"
+          }
+        ],
+        "obsolete_aggregate_annotations": [
+          [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "http://www.w3.org/2002/07/owl#Class"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000231",
+            "http://purl.obolibrary.org/obo/OMO_0001000"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "obsolete aggregate"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#deprecated",
+            "true"
+          ]
+        ]
+      },
+      {
+        "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "broad_lexical_hits": [
+          {
+            "subject": "https://w3id.org/metpo/1000011",
+            "label": "obsolete aggregate",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "value": "obsolete aggregate"
+          }
+        ],
+        "obsolete_aggregate_annotations": [
+          [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "http://www.w3.org/2002/07/owl#Class"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000231",
+            "http://purl.obolibrary.org/obo/OMO_0001000"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "obsolete aggregate"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#deprecated",
+            "true"
+          ]
+        ]
+      }
+    ],
+    "issue_hits": [],
+    "assessment": "The only broader lexical hit is deprecated METPO:1000011, obsolete aggregate. Both inspected releases have no definition, replacement or consider annotation on that subject. Its recorded reason is OMO:0001000; the issuing OMO meaning and original biological scope were not established here. A generic obsolete aggregate label does not establish equivalence to unequal inheritance at division. Do not reuse, reactivate or add it as an exact xref; retain this lexical historical assessment in a future proposal. No ontology upgrade was performed."
+  },
+  "input_receipts": [
+    {
+      "path": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/evidence.json",
+      "sha256": "252a89a685bbe9a6feb61031caac0c42abb3a39852f665616406995c8f242711"
+    },
+    {
+      "path": "/tmp/traitmech-aggregate-inheritance-handoff-20261012.json",
+      "sha256": "362f580ccb5b31bcb48ff292ff822457d113996110c2f135cbcb193f92de353d"
+    },
+    {
+      "path": "/tmp/traitmech-aggregate-inheritance-allocation-20261012/assessment.json",
+      "sha256": "2b800ae01278bd54f1f25b4c358daf0085a84fb4aef6a0335cefb29f5d3235f5"
+    },
+    {
+      "path": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/local-final-check.json",
+      "sha256": "c483769306813a1bebb6a187ed5355f78a0db178a3167318f5c3b9cda068aebb"
+    },
+    {
+      "path": "/tmp/traitmech-aggregate-inheritance-assessment-20261012/ontology-broad-check.json",
+      "sha256": "2db2acb2a750ca7c5f2a5ebd22f2773a07f5fb2707ec97e35a60dac21c3873b3"
+    }
+  ],
+  "curation_decision": {
+    "observed_at": "2026-10-12T14:38:12Z",
+    "identifier": "traitmech:000711",
+    "status": "PROPOSED",
+    "label": "unequal protein aggregate inheritance at cell division",
+    "rationale": "Accept a recurrently observed inherited count/amount phenotype, not concentration or universal directional retention. Repeated population/lineage evidence is required; no natural canonical exemplar or shared causal mechanism is asserted.",
+    "supersedes": "Only the pending-scope/allocation state of the preserved prior_research_handoff. Historical source access and scope limits remain in force.",
+    "native_cli": "Not yet run at this receipt creation. The embedded research assessment used direct native resolver/classifier calls; final CLI outcomes belong in the structured review and PR.",
+    "goal": "active; additional leads remain, no discovery-exhaustion claim"
+  },
+  "assessment_corrections": [
+    {
+      "timestamp": "2026-10-12T18:24:02Z",
+      "issue": "https://github.com/CultureBotAI/TraitMech/issues/1896",
+      "supersedes_fields": [
+        "evidence_assessment.rows[0].notes",
+        "curation_decision"
+      ],
+      "scope": "Supersedes the earlier unqualified role of Lindner reporter foci, not the trait identity or historical access record.",
+      "corrected_lindner_notes": "Lindner et al. 2008, PMID:18287048, PMC2268587; Results, Inclusion Bodies Are Formed in Discrete Cellular Positions and Accumulate in Old Poles Under Nonstressing Conditions. Primary PMC Results and Methods directly read. The quoted position is that of an IbpA-YFP focus. MGAY is an engineered MG1655 reporter strain, grown on LB-agarose at 37 C without imposed stress. Figure 2 is the inspected localization measurement; Figure 3 is an inspected lineage schematic, not another experiment. Pole identity changes across divisions. These observations describe reporter-focus inheritance and eventual older-pole accumulation. Govers et al. 2018 (DOI:10.1371/journal.pbio.2003853) subsequently demonstrated label-induced clustering with IbpA-YFP. The older readout is not independent proof of endogenous unstressed aggregation; naming the engineered strain alone does not resolve this assay bias. Neither active transport, universal aggregate toxicity nor a natural canonical exemplar is established. Supplements were not inspected. The full-text span retains the native abstract resolver verdict NOT_IN_ABSTRACT.",
+      "added_evidence": {
+        "reference": "DOI:10.1371/journal.pbio.2003853",
+        "snippet": "the polarly deposited PA was subjected to limited disaggregation and therefore became asymmetrically inherited for a large number of generations",
+        "notes": "Govers et al. 2018, PMID:30153247, PMC6112618; scientific abstract, directly matched in primary XML and source-qualified MED. Results on reporter validation and post-stress inheritance, relevant Methods and actual Figures 1 and 3 were inspected. Figure 1 shows reporter-dependent clustering; Figure 3 separately follows engineered MG1655 IbpA-msfGFP lineages after 47 C for 15 minutes, with microscopy at 37 C. Focus inheritance is distinct from the fluorescence concentration and growth readouts. This does not validate unstressed IbpA-YFP foci as endogenous aggregates or imply universal harm, benefit, aging or rejuvenation. Supplementary controls were read only where described in Results; their images, raw data and independent strain provenance were not assessed."
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6112618/fullTextXML",
+      "source_sha256": "f5e8ed02e307d9153f512ea747a9a0c109eb9ac4b7bc4070a68cb7aba82cdd91",
+      "snippet_locator": "article/front/article-meta/abstract/p",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "source_read_scope": "Scientific abstract; Results sec003, sec004 and sec006; Methods sec014, sec017, sec018 and sec021; actual Figures 1 and 3.",
+      "asset_sha256": {
+        "govers2018-fig1.jpg": "99fdddddb8373d93b160592c81bcd434671c58f59b7cf384ef9d550ccaf84049",
+        "govers2018-fig3.jpg": "e0a41254543cb169e496e0cc8c574a3121ea5267c7c1568ee47164f2d4546923",
+        "govers2018-med.json": "a8f643fb6d29621b0a2a59701628aaab28e03b4ddb60302b088f3a2c0b8085b5",
+        "govers2018-crossref.json": "901023743207950e794835b377cf0e30994c84171659e38e0ad550c71e4e1525"
+      },
+      "asset_root": "/tmp/traitmech-aggregate-inheritance-reporter-review-20261012",
+      "notice_scope": "Source-qualified MED and Crossref identity/notice fields plus accessible publisher article checked on 2026-10-12; no linked correction/retraction exposed by these bounded checks. This is not an exhaustive notice search or a retraction claim about Lindner.",
+      "limits": "Supplementary images/movies, numerical data, independent strain provenance and all unlisted figures were not assessed; no universal reporter validity, harm or benefit claim."
+    }
+  ]
+}

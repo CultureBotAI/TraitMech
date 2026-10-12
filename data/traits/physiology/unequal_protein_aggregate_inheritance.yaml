@@ -1,0 +1,148 @@
+identifier: traitmech:000711
+label: unequal protein aggregate inheritance at cell division
+definition: A physiological phenotype in which microbial cell division recurrently
+  yields sibling cells with unequal numbers or amounts of inherited protein aggregates.
+definition_source: DOI:10.1371/journal.pbio.1001886
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1073/pnas.0708931105
+  snippet: their position in the mother cell determines which offspring inherits the
+    inclusion body and where it will be located within it
+  notes: Lindner et al. 2008, PMID:18287048, PMC2268587; Results, Inclusion Bodies
+    Are Formed in Discrete Cellular Positions and Accumulate in Old Poles Under Nonstressing
+    Conditions. Primary PMC Results and Methods directly read. The quoted position
+    is that of an IbpA-YFP focus. MGAY is an engineered MG1655 reporter strain, grown
+    on LB-agarose at 37 C without imposed stress. Figure 2 is the inspected localization
+    measurement; Figure 3 is an inspected lineage schematic, not another experiment.
+    Pole identity changes across divisions. These observations describe reporter-focus
+    inheritance and eventual older-pole accumulation. Govers et al. 2018 (DOI:10.1371/journal.pbio.2003853)
+    subsequently demonstrated label-induced clustering with IbpA-YFP. The older readout
+    is not independent proof of endogenous unstressed aggregation; naming the engineered
+    strain alone does not resolve this assay bias. Neither active transport, universal
+    aggregate toxicity nor a natural canonical exemplar is established. Supplements
+    were not inspected. The full-text span retains the native abstract resolver verdict
+    NOT_IN_ABSTRACT.
+- reference: DOI:10.1371/journal.pbio.1001886
+  snippet: We experimentally confirmed that fusion increases segregation asymmetry,
+    for a range of stresses, and identified Hsp16 as a fusion factor.
+  notes: 'Coelho et al. 2014, PMID:24936793, PMC4061010; scientific abstract, not
+    Author Summary. Primary XML and actual Figures 3, 4 and S4 were inspected. Hsp104-GFP
+    fission-yeast imaging supports stress-associated unequal inheritance without consistent
+    old/new-pole bias. Figure 3C measures an absolute sibling difference in aggregate-associated
+    fluorescence, not concentration; S4I measures count asymmetry. Figure 4B is fusion
+    and 4C is nucleation: the caption reverses them. A Results pointer to 4C for stress-dependent
+    asymmetry disagrees with the plotted endpoints. Figure 3C describes continuous
+    40 C, whereas Methods describes 40 C for one hour followed by 37 C; this remains
+    unresolved. Text S1 experimental methods and strain table were text-extracted,
+    not visually rendered. No universal transport, death threshold or rejuvenation
+    mechanism is inferred. The scientific-abstract span matches the native resolver
+    text (VERIFIED).'
+- reference: DOI:10.1111/mmi.14228
+  snippet: Noticeably, stalked cells always inherited more aggregates (75%) than swarmer
+    cells (25%).
+  notes: Schramm et al. 2019, PMID:30779464, PMC6850343; Results, The aggregate load
+    does not sort to swarmer or stalked daughter cells in C. crescentus. Primary XML
+    Results, Discussion and relevant Methods were read; actual Figure 6 was inspected.
+    DnaK-mVenus, delta-clpB cells recovered at 30 C after 10 minutes at 40 C. Figure
+    6G reports aggregate allocation across daughter cell types over successive divisions,
+    not the fraction of all sibling pairs with unequal counts. Figure 6F measures
+    projected cell area, not volume. Unequal shared inheritance is compatible with
+    the broad phenotype; it contradicts neither sharing nor a stable allocation ratio.
+    The paper limits universal exclusive old-pole retention, not every form of quantitative
+    inequality. Supplements and independent strain provenance were not inspected;
+    no natural canonical example is asserted. The full-text span retains the native
+    abstract resolver verdict NOT_IN_ABSTRACT.
+- reference: DOI:10.1371/journal.pbio.2003853
+  snippet: the polarly deposited PA was subjected to limited disaggregation and therefore
+    became asymmetrically inherited for a large number of generations
+  notes: Govers et al. 2018, PMID:30153247, PMC6112618; scientific abstract, directly
+    matched in primary XML and source-qualified MED. Results on reporter validation
+    and post-stress inheritance, relevant Methods and actual Figures 1 and 3 were
+    inspected. Figure 1 shows reporter-dependent clustering; Figure 3 separately follows
+    engineered MG1655 IbpA-msfGFP lineages after 47 C for 15 minutes, with microscopy
+    at 37 C. Focus inheritance is distinct from the fluorescence concentration and
+    growth readouts. This does not validate unstressed IbpA-YFP foci as endogenous
+    aggregates or imply universal harm, benefit, aging or rejuvenation. Supplementary
+    controls were read only where described in Results; their images, raw data and
+    independent strain provenance were not assessed.
+discussions:
+- discussion_id: unequal-aggregate-inheritance-operational-scope
+  prompt: Assess the quantity-qualified definition and the level of inheritance evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Require repeated lineage or population observations under stated conditions,
+    not a single unequal sibling pair. Retain aggregate count versus fluorescence-derived
+    amount, the time of measurement, reporter, strain and detection limits. Amount
+    is not concentration; cell area is not volume. Within-pair inequality, cell-type
+    allocation bias and complete aggregate exclusion are distinct readouts. Sharing
+    between daughters need not be equal, and unequal inheritance need not favor a
+    fixed pole or cell type. No universal threshold or programmed asymmetry is specified.
+    Bare asymmetric segregation has narrower source usages and is not asserted as
+    an exact synonym. Aggregate presence, aggrephagy, heat-shock response, morphological
+    division asymmetry, replicative aging and functional rejuvenation are not equivalent
+    traits or demonstrated narrower parents. Use METPO:1000059 phenotype without reparenting
+    existing records.
+  posed_by: codex
+  posed_date: '2026-10-12'
+- discussion_id: unequal-aggregate-inheritance-mechanism-and-source-limits
+  prompt: Resolve assay discrepancies, strain provenance and mechanisms before extending
+    this first-pass record.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'This phenotype does not imply active transport, toxic damage, functional
+    decline or rejuvenation. An aggregate-free descendant alone establishes none of
+    those mechanisms or outcomes. The engineered reporter and deletion contexts remain
+    qualified evidence, not natural canonical examples. No shared protein mechanism,
+    graph or external equivalence is asserted. Coelho Figure 4 panel-label and Figure
+    3C versus Methods temperature discrepancies remain open; actual plotted endpoints
+    are distinguished from text pointers. Primary source/metadata notice checks on
+    2026-10-12 were bounded by access; they do not prove exhaustive notice absence.
+    Reporter-focus inheritance must be separated from endogenous aggregation: the
+    later Govers study identifies IbpA-YFP label-induced clustering, while its separate
+    post-heat-shock IbpA-msfGFP lineages support inheritance. Monomeric labels also
+    require validation of expression level and assay conditions; no reporter is declared
+    universally artifact-free.'
+  posed_by: codex
+  posed_date: '2026-10-12'
+- discussion_id: unequal-aggregate-inheritance-historical-metpo-match
+  prompt: Retain the deprecated aggregate lexical hit without asserting identity or
+    reusing its ID.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Pinned and current released METPO contain METPO:1000011, obsolete aggregate,
+    marked deprecated and below ObsoleteClass. It has an IAO:0000231 annotation to
+    OMO:0001000, but no definition, replacement or consider annotation in the inspected
+    releases. Its original scope and reason-code interpretation remain unresolved.
+    A lexical aggregate hit does not establish equivalence to unequal protein aggregate
+    inheritance; this literature-defined phenotype was independently accepted. Do
+    not reactivate 1000011 or include it as an exact xref. Ignored/hidden available-file
+    and registered historical-tree searches, pending PRs and released RDF found no
+    exact trait in the inspected scope; this is not discovery exhaustion.
+  posed_by: codex
+  posed_date: '2026-10-12'
+curation_history:
+- timestamp: '2026-10-12T14:38:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added unequal protein aggregate inheritance at cell division with three
+    primary DOI references and checked snippets. Retained quantity, population, assay
+    and historical-METPO scope limits. Reserved 000711, v587 and 1066400-1066499 after
+    ignored/hidden, registered historical-tree and pending-PR checks, distinguishing
+    an editor namespace envelope from narrower reservations. Examples and mechanism
+    graph deferred. Existing records unchanged; timestamp is the observed UTC curation
+    decision.
+  llm_assisted: true
+- timestamp: '2026-10-12T18:24:02Z'
+  curator: codex
+  action: QUALIFIED_REPORTER_EVIDENCE
+  changes: 'Addressed issue #1896 by qualifying the Lindner reporter-focus readout
+    against later primary evidence of IbpA-YFP label-induced clustering. Added Govers
+    2018 with a checked abstract snippet and separate post-stress inheritance context.
+    Preserved identity, definition, parent, PROPOSED status, original event and source
+    assessment; appended the correction and updated the proposal sources. Timestamp
+    is the observed UTC correction decision.'
+  llm_assisted: true

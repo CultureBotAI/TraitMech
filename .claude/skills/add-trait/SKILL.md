@@ -397,6 +397,18 @@ each description to its section and retain the discrepancy unless direct
 evidence resolves it. Do not silently choose one description for the record
 or proposal; distinguish the disputed condition from the supported phenotype.
 
+For inheritance phenotypes, distinguish count or amount from concentration,
+within-pair inequality from population cell-type bias, and shared inheritance
+from complete exclusion. Sharing does not imply equal allocation. Preserve the
+measured unit and repeated-lineage or population context; one unequal pair is
+not an organism-level classification. Aggregate-free descendants alone do not
+establish active transport, toxic damage, aging or functional rejuvenation.
+Check primary follow-up studies for reporter-induced clustering, expression-level
+artifacts and controls before treating fluorescent foci as endogenous cargo.
+An engineered-strain qualifier alone does not resolve a known assay bias; retain
+the challenge beside the original quote and distinguish separately validated
+conditions. A monomeric label is not universally artifact-free (#1896).
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
