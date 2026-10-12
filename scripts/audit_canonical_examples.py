@@ -54,6 +54,7 @@ DEFAULT_TRAITS = Path("data/traits")
 CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9_]*:[A-Za-z0-9_.\-]+$")
 NCBITAXON = re.compile(r"^NCBITaxon:\d+$")
 NCBI_TAXONOMY_EFETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+HTTP_ERROR_BODY_LIMIT = 2048
 
 ERRORS = {"MALFORMED_TAXON_CURIE", "MISSING_TAXON_ID", "UNRESOLVED_TAXON"}
 
@@ -115,6 +116,18 @@ def _missing_ncbi_ids(ids: Sequence[str], labels: dict[str, str]) -> list[str]:
     return [tax_id for tax_id in ids if f"NCBITaxon:{tax_id}" not in labels]
 
 
+def _ncbi_http_error_detail(error: urllib.error.HTTPError) -> str:
+    """Keep a bounded, single-line diagnostic without treating an error as data."""
+    try:
+        with error:
+            payload = error.read(HTTP_ERROR_BODY_LIMIT + 1)
+    except (OSError, ValueError) as body_error:
+        return f"{error}; response body unavailable ({type(body_error).__name__})"
+    body = payload[:HTTP_ERROR_BODY_LIMIT].decode("utf-8", errors="replace")
+    truncated = " [truncated]" if len(payload) > HTTP_ERROR_BODY_LIMIT else ""
+    return f"{error}; response body: {body!r}{truncated}"
+
+
 def _ncbi_api_adapter(
     curies: Sequence[str], *, attempts: int = 3, timeout: float = 60.0
 ) -> _LabelAdapter:
@@ -134,7 +147,9 @@ def _ncbi_api_adapter(
     for attempt in range(attempts):
         try:
             labels.update(_fetch_ncbi_taxonomy(pending, timeout=timeout))
-        except (OSError, ET.ParseError, ValueError, urllib.error.HTTPError) as exc:
+        except urllib.error.HTTPError as exc:
+            last_error = OSError(_ncbi_http_error_detail(exc))
+        except (OSError, ET.ParseError, ValueError) as exc:
             last_error = exc
         else:
             pending = _missing_ncbi_ids(pending, labels)

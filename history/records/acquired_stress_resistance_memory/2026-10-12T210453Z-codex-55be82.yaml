@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/acquired_stress_resistance_memory.yaml
+  slug: acquired_stress_resistance_memory
+session:
+  id: 2026-10-12T210453Z-codex-55be82
+  timestamp: '2026-10-12T21:04:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add memory of acquired stress resistance with primary evidence
+  details: Added a PROPOSED physiological class with Guan 2012 DOI:10.1534/genetics.112.143016
+    and Govers 2018 DOI:10.1371/journal.pbio.2003853, directly checked scientific-abstract
+    snippets, inspected endpoint-specific figures, and explicit post-removal, transcription-versus-survival,
+    cell-versus-population and reporter qualifications. Reserved traitmech:000712, v588 and
+    1066500-1066599 after ignored/hidden current-file, retained historical-tree, known independent-copy
+    and pending-PR checks. Natural canonical taxa, exact external mappings and a shared causal
+    mechanism are deferred. Existing TraitRecords and the pinned ontology are unchanged. Validation
+    and adversarial review outcomes are recorded separately rather than claimed in advance.

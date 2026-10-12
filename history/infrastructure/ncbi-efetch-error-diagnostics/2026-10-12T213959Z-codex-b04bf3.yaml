@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_canonical_examples.py
+  slug: ncbi-efetch-error-diagnostics
+session:
+  id: 2026-10-12T213959Z-codex-b04bf3
+  timestamp: '2026-10-12T21:39:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1898
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1897
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - validation
+  - tests
+  summary: Retain bounded NCBI HTTP error diagnostics
+  details: PR 1897 and unchanged main reproduced HTTP 400 after the existing three EFetch
+    attempts, while the same resolver passed locally. Retain up to 2048 response-body bytes
+    as an escaped single-line diagnostic, label truncation or unreadable bodies, and close
+    the response. Retry count, POST payload, partial-response behavior, exit code 2 and fail-closed
+    resolution are unchanged. Add regression tests; no root cause, permanent recovery or scientific-record
+    correction is claimed.
