@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diversifying_bet_hedging.yaml
+  slug: diversifying_bet_hedging
+session:
+  id: 2026-10-12T070727Z-codex-919cc1
+  timestamp: '2026-10-12T07:07:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Clarify environment-independent bet-hedging interconversion
+  details: 'Addressed #1888 with guarded scope correction following Levy et al. Box 1. Definition,
+    scope discussion and v584 proposal now require reversible environment-independent interconversion
+    rather than temporal precedence alone. Preserved all three evidence entries, original
+    curation event and CREATE history. Added regression tests and a matching add-trait interpretation
+    guard; no prior trait was edited.'

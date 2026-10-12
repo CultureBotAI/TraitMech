@@ -353,6 +353,15 @@ measurement unit. Image-area fractions, cluster fractions and individual-cell
 counts are not interchangeable, even when a figure caption calls them a
 percentage of cells. Preserve the measured quantity in evidence notes.
 
+For response-timing phenotypes, preserve the source's discriminating criterion.
+A state appearing before stress need not be independent of environmental cues.
+For diversifying bet hedging, distinguish environment-independent reversible
+interconversion from cue-triggered preparation without requiring purely
+stochastic or binary switching (#1888).
+Check that scope discussions preserve the direction of each implication: a
+required environmental criterion need not require a particular mechanism, but
+that does not make the criterion optional for that mechanism (#1890).
+
 When Results, Methods or captions disagree on an assay condition, attribute
 each description to its section and retain the discrepancy unless direct
 evidence resolves it. Do not silently choose one description for the record
