@@ -29,8 +29,10 @@ origin. [Beaumont et al. 2009](https://doi.org/10.1038/nature08504)
 trade-offs. The three short snippets were checked against directly retrieved
 scientific abstracts, not search-result summaries or editorial digests.
 
-The definition concerns reversible diversification before the relevant
-environmental shift, with condition-dependent performance trade-offs. It does
+The definition concerns reversible state interconversion independent of the
+prevailing environment and before the relevant environmental shift, with
+condition-dependent performance trade-offs. Temporal precedence alone does not
+establish independence from environmental cues (#1888). The definition does
 not classify all heterogeneity or phenotypic switching as bet hedging, require
 only two states or a purely stochastic mechanism, or assert evolutionary
 optimization in every cited experiment. Fitness-proxy measurements are not a
@@ -116,8 +118,9 @@ global microbial-trait discovery exhaustion.
 | `proposal.md` | Evidence, scope, reservation and round-trip rationale |
 
 Property and SSSOM files are inapplicable. The guarded writer is
-`scripts/add_diversifying_bet_hedging_trait.py`; it validates before writing
-and refuses parent, target or proposal drift. Headers match the checked
+`scripts/add_diversifying_bet_hedging_trait.py`; the guarded correction is
+`scripts/qualify_bet_hedging_scope.py`. Both validate before writing and refuse
+parent, target or proposal drift. Headers match the checked
 upstream class template; citation fields do not assert equivalence.
 
 ```bash
@@ -150,3 +153,5 @@ replace the pinned ontology.
 
 - v584, 2026-10-12: propose one qualified diversification phenotype with three
   primary citations, directly checked snippets and explicit evidence limits.
+- Pre-merge review #1888: require environment-independent interconversion
+  explicitly, retaining the initial curation and repository history.

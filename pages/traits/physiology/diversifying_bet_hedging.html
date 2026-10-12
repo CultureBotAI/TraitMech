@@ -32,7 +32,7 @@
     <h1>diversifying bet hedging</h1>
     <p class="curie"><code>traitmech:000708</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A physiological phenotype in which a clonal microbial lineage reversibly generates alternative cell states before environmental change, spreading risk across unpredictable environmental changes through state-specific survival or reproductive trade-offs.</p>
+    <p class="definition">A physiological phenotype in which a clonal microbial lineage reversibly interconverts between alternative cell states independently of the prevailing environment and before environmental change, spreading risk across unpredictable environmental changes through state-specific survival or reproductive trade-offs.</p>
 
   </header>
 
@@ -140,7 +140,7 @@
           mechanism it concerns.</p>
 
 
-        <p>The diversifying qualifier restricts this class to alternative states within a clonal microbial lineage; it does not cover every use of unqualified bet hedging. Heterogeneity, noisy gene expression or switching alone is insufficient: reversible states must precede the relevant environmental shift and differ in survival or reproductive performance across conditions. Generic stress-induced change, carbon-source memory, cue-triggered environmental anticipation, genetic resistance and ecological generalist/specialist niche breadth are not exact synonyms. Particular observations can overlap without making these classes equivalent or disjoint. Dormancy and persister formation can participate in risk spreading, but their presence alone does not establish it, so neither existing record is reparented. METPO:1000059 phenotype is the conservative parent pending upstream review of this lineage-level physiological disposition. This is not a sequence feature, individual assay result or mixed-species community property.</p>
+        <p>The diversifying qualifier restricts this class to alternative states within a clonal microbial lineage; it does not cover every use of unqualified bet hedging. Heterogeneity, noisy gene expression or switching alone is insufficient: reversible states must precede the relevant environmental shift and differ in survival or reproductive performance across conditions. Generic stress-induced change, carbon-source memory, cue-triggered environmental anticipation, genetic resistance and ecological generalist/specialist niche breadth are not exact synonyms. Particular observations can overlap without making these classes equivalent or disjoint. Dormancy and persister formation can participate in risk spreading, but their presence alone does not establish it, so neither existing record is reparented. METPO:1000059 phenotype is the conservative parent pending upstream review of this lineage-level physiological disposition. This is not a sequence feature, individual assay result or mixed-species community property. Following Levy et al. Box 1, the relevant state interconversion must be independent of the prevailing environment; temporal precedence alone does not establish this criterion. Cue-triggered preparation before a later change is not sufficient. Deterministic age-related variation can qualify, so environmental independence is not a requirement for a purely stochastic switching mechanism.</p>
 
 
 
@@ -195,6 +195,12 @@
           <p class="changes">Added diversifying bet hedging with three primary DOI-backed sources and directly checked scientific-abstract snippets. Reserved 000708, v584 and 1066100-1066199 after ignored/hidden worktree and pending-PR checks. Operational risk spreading is distinguished from evolutionary optimization; examples and mechanisms remain deferred. Existing traits unchanged; timestamp is the observed UTC curation decision.</p>
         </li>
 
+        <li>
+          <time>2026-10-12T07:04:27Z</time> ·
+          <strong>QUALIFIED_TRAIT_SCOPE</strong> · codex
+          <p class="changes">Addressed #1888: made reversible environment-independent state interconversion explicit in the definition and scope discussion, following Levy et al. Box 1. Temporal precedence alone is insufficient; purely stochastic or binary switching is not required. Preserved evidence and original provenance. Timestamp is the observed UTC correction decision.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -204,6 +210,12 @@
           <ul><li><strong>CREATE</strong> — Add evidence-backed diversifying bet hedging
             <p>Created one PROPOSED PHYSIOLOGY trait under phenotype with three primary DOI citations and directly verified scientific-abstract spans. Retained operational versus adaptive-fitness distinctions and deferred canonical taxa and molecular graphs. Guarded writer and same-PR v584 proposal reserve traitmech:000708 and the full METPO:1066100-1066199 block after ignored/hidden worktree and pending-PR checks. Existing TraitRecords are unchanged.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/diversifying_bet_hedging/2026-10-12T064244Z-codex-3115b4.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-12T07:07:27Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Clarify environment-independent bet-hedging interconversion
+            <p>Addressed #1888 with guarded scope correction following Levy et al. Box 1. Definition, scope discussion and v584 proposal now require reversible environment-independent interconversion rather than temporal precedence alone. Preserved all three evidence entries, original curation event and CREATE history. Added regression tests and a matching add-trait interpretation guard; no prior trait was edited.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/diversifying_bet_hedging/2026-10-12T070727Z-codex-919cc1.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -259,7 +271,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-12 06:42 UTC
+      Record as of 2026-10-12 07:07 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1103 TraitRecords
       · embedding coverage 43.2%
