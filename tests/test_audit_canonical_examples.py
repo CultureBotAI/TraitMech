@@ -9,8 +9,9 @@ than no audit, because the zero looks like a result.
 from __future__ import annotations
 
 import sys
+from io import BytesIO
 from pathlib import Path
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 
 import pytest
 
@@ -285,3 +286,90 @@ def test_ncbi_api_retries_transient_network_failures(monkeypatch):
     with pytest.raises(RuntimeError, match="after 3 attempt"):
         ace._ncbi_api_adapter(["NCBITaxon:2261"])
     assert calls == 3
+
+
+@pytest.mark.parametrize("payload", [
+    b"<ERROR>request rejected</ERROR>", b"", b"\xff\n::error::remote\x1b[31m",
+    b"x" * (ace.HTTP_ERROR_BODY_LIMIT + 100),
+])
+def test_http_error_detail_is_bounded_and_single_line(payload):
+    stream = BytesIO(payload)
+    error = HTTPError(ace.NCBI_TAXONOMY_EFETCH, 400, "Bad Request", {}, stream)
+    detail = ace._ncbi_http_error_detail(error)
+    assert "HTTP Error 400: Bad Request" in detail
+    assert repr(payload[:ace.HTTP_ERROR_BODY_LIMIT].decode("utf-8", errors="replace")) in detail
+    assert ("[truncated]" in detail) == (len(payload) > ace.HTTP_ERROR_BODY_LIMIT)
+    assert "\n" not in detail and "\x1b" not in detail
+    assert stream.closed
+
+
+def test_http_error_reads_only_the_bounded_prefix():
+    class TrackedStream(BytesIO):
+        def read(self, size=-1):
+            assert size == ace.HTTP_ERROR_BODY_LIMIT + 1
+            return super().read(size)
+
+    stream = TrackedStream(b"x" * 10000)
+    detail = ace._ncbi_http_error_detail(HTTPError("url", 400, "Bad Request", {}, stream))
+    assert detail.endswith("[truncated]") and stream.closed
+
+
+def test_unreadable_http_error_body_preserves_status():
+    class Unreadable(BytesIO):
+        def read(self, _size=-1):
+            raise OSError("unavailable")
+
+    stream = Unreadable()
+    detail = ace._ncbi_http_error_detail(HTTPError("url", 400, "Bad Request", {}, stream))
+    assert detail == "HTTP Error 400: Bad Request; response body unavailable (OSError)"
+    assert stream.closed
+
+
+def test_http_failure_retains_three_attempts_and_cannot_resolve_ids(monkeypatch):
+    calls, sleeps = [], []
+
+    def fail(request, timeout):
+        calls.append((request.data, timeout))
+        raise HTTPError("url", 400, "Bad Request", {}, BytesIO(b"<ERROR>rejected</ERROR>"))
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fail)
+    monkeypatch.setattr(ace.time, "sleep", sleeps.append)
+    with pytest.raises(RuntimeError, match="after 3 attempt.*HTTP Error 400.*rejected"):
+        ace._ncbi_api_adapter(["NCBITaxon:2261"], timeout=7)
+    assert len(calls) == 3 and len(set(calls)) == 1
+    assert calls[0][1] == 7 and b"id=2261" in calls[0][0]
+    assert sleeps == [1, 2]
+
+
+def test_http_failure_can_recover_only_from_a_valid_later_response(monkeypatch):
+    calls = []
+
+    def fetch(request, timeout):
+        calls.append(request.data)
+        if len(calls) == 1:
+            raise HTTPError("url", 400, "Bad Request", {}, BytesIO(b"rejected"))
+        return BytesIO(b"<TaxaSet><Taxon><TaxId>2261</TaxId>"
+                       b"<ScientificName>P. furiosus</ScientificName></Taxon></TaxaSet>")
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fetch)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    adapter = ace._ncbi_api_adapter(["NCBITaxon:2261"])
+    assert len(calls) == 2 and calls[0] == calls[1]
+    assert adapter.label("NCBITaxon:2261") == "P. furiosus"
+
+
+def test_cli_http_error_still_exits_two_with_diagnostic(monkeypatch, capsys, tmp_path):
+    (tmp_path / "trait.yaml").write_text(
+        "canonical_examples:\n  - taxon_id: NCBITaxon:2261\n"
+        "    taxon_label: Pyrococcus furiosus\n"
+    )
+
+    def fail(_request, timeout):
+        raise HTTPError("url", 400, "Bad Request", {}, BytesIO(b"request rejected"))
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fail)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    assert ace.main(["--traits-dir", str(tmp_path), "--ncbi-api"]) == 2
+    captured = capsys.readouterr()
+    assert "resolution FAILED" in captured.err and "request rejected" in captured.err
+    assert "SKIPPED" not in captured.out and "resolved against" not in captured.out
