@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/unequal_protein_aggregate_inheritance.yaml
+  slug: unequal_protein_aggregate_inheritance
+session:
+  id: 2026-10-12T144228Z-codex-c658f7
+  timestamp: '2026-10-12T14:42:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add unequal protein aggregate inheritance at cell division
+  details: Minted traitmech:000711 as PROPOSED with three primary DOI citations and directly
+    checked snippets; reserved v587 and METPO:1066400-1066499 after scoped local, historical
+    and pending-source checks. Preserved count/amount versus concentration, shared versus
+    equal inheritance, population versus pair readouts, source discrepancies and deprecated
+    METPO lexical-hit limits. No existing records, canonical taxa, exact xrefs or mechanism
+    graphs changed. Guarded validated writer dry run and apply succeeded; 21 focused writer
+    tests passed. Broader gates and review follow separately.

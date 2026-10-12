@@ -397,6 +397,13 @@ each description to its section and retain the discrepancy unless direct
 evidence resolves it. Do not silently choose one description for the record
 or proposal; distinguish the disputed condition from the supported phenotype.
 
+For inheritance phenotypes, distinguish count or amount from concentration,
+within-sibling inequality from population cell-type bias, and shared inheritance
+from complete exclusion. Sharing does not imply equal allocation. Preserve the
+measured unit and repeated-lineage or population context; one unequal pair is
+not an organism-level classification. Aggregate-free descendants alone do not
+establish active transport, toxic damage, aging or functional rejuvenation.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
