@@ -150,7 +150,7 @@ def _ncbi_api_adapter(
             labels.update(_fetch_ncbi_taxonomy(pending, timeout=timeout))
         except urllib.error.HTTPError as exc:
             last_error = OSError(_ncbi_http_error_detail(exc))
-        except (OSError, ET.ParseError, ValueError) as exc:
+        except (OSError, ET.ParseError, ValueError, HTTPException) as exc:
             last_error = exc
         else:
             pending = _missing_ncbi_ids(pending, labels)

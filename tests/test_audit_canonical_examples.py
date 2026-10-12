@@ -472,3 +472,87 @@ def test_truncated_error_body_cli_stays_fail_closed(monkeypatch, capsys, tmp_pat
     assert "resolution FAILED" in captured.err
     assert "IncompleteRead" in captured.err and "HTTP Error 400" in captured.err
     assert "SKIPPED" not in captured.out and "resolved against" not in captured.out
+
+
+def _truncated_success_response(encoding):
+    if encoding == "content-length":
+        raw = b"HTTP/1.1 200 OK\r\nContent-Length: 100\r\n\r\n<TaxaSet>"
+    else:
+        assert encoding == "chunked"
+        raw = b"HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\na\r\nshort"
+    stream = BytesIO(raw)
+
+    class Socket:
+        def makefile(self, mode):
+            assert mode == "rb"
+            return stream
+
+    response = HTTPResponse(Socket())
+    response.begin()
+    assert response.status == 200
+    return response, stream
+
+
+@pytest.mark.parametrize("encoding", ["content-length", "chunked"])
+def test_truncated_success_retries_and_closes_every_response(monkeypatch, encoding):
+    calls, sleeps, responses = [], [], []
+
+    def fetch(request, timeout):
+        calls.append((request.data, timeout))
+        response, stream = _truncated_success_response(encoding)
+        responses.append((response, stream))
+        return response
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fetch)
+    monkeypatch.setattr(ace.time, "sleep", sleeps.append)
+    with pytest.raises(RuntimeError, match="after 3 attempt.*IncompleteRead"):
+        ace._ncbi_api_adapter(["NCBITaxon:2261"], timeout=7)
+    assert len(calls) == 3 and len(set(calls)) == 1
+    assert calls[0][1] == 7 and b"id=2261" in calls[0][0]
+    assert sleeps == [1, 2]
+    assert all(response.closed and stream.closed for response, stream in responses)
+
+
+@pytest.mark.parametrize("encoding", ["content-length", "chunked"])
+def test_truncated_success_recovers_only_from_complete_response(monkeypatch, encoding):
+    calls, sleeps, responses = [], [], []
+
+    def fetch(request, timeout):
+        calls.append((request.data, timeout))
+        if len(calls) == 1:
+            response, stream = _truncated_success_response(encoding)
+            responses.append((response, stream))
+            return response
+        return BytesIO(b"<TaxaSet><Taxon><TaxId>2261</TaxId>"
+                       b"<ScientificName>Pyrococcus furiosus</ScientificName></Taxon></TaxaSet>")
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fetch)
+    monkeypatch.setattr(ace.time, "sleep", sleeps.append)
+    adapter = ace._ncbi_api_adapter(["NCBITaxon:2261"], timeout=7)
+    assert len(calls) == 2 and calls[0] == calls[1]
+    assert sleeps == [1]
+    assert all(response.closed and stream.closed for response, stream in responses)
+    assert adapter.label("NCBITaxon:2261") == "Pyrococcus furiosus"
+
+
+@pytest.mark.parametrize("encoding", ["content-length", "chunked"])
+def test_truncated_success_cli_reports_failure(monkeypatch, capsys, tmp_path, encoding):
+    (tmp_path / "trait.yaml").write_text(
+        "canonical_examples:\n  - taxon_id: NCBITaxon:2261\n"
+        "    taxon_label: Pyrococcus furiosus\n"
+    )
+    calls, responses = [], []
+
+    def fetch(request, timeout):
+        calls.append(request.data)
+        response, stream = _truncated_success_response(encoding)
+        responses.append((response, stream))
+        return response
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fetch)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    assert ace.main(["--traits-dir", str(tmp_path), "--ncbi-api"]) == 2
+    captured = capsys.readouterr()
+    assert len(calls) == 3 and all(response.closed and stream.closed for response, stream in responses)
+    assert "resolution FAILED" in captured.err and "IncompleteRead" in captured.err
+    assert "SKIPPED" not in captured.out and "resolved against" not in captured.out
