@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diversifying_bet_hedging.yaml
+  slug: diversifying_bet_hedging
+session:
+  id: 2026-10-12T064244Z-codex-3115b4
+  timestamp: '2026-10-12T06:42:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed diversifying bet hedging
+  details: Created one PROPOSED PHYSIOLOGY trait under phenotype with three primary DOI citations
+    and directly verified scientific-abstract spans. Retained operational versus adaptive-fitness
+    distinctions and deferred canonical taxa and molecular graphs. Guarded writer and same-PR
+    v584 proposal reserve traitmech:000708 and the full METPO:1066100-1066199 block after
+    ignored/hidden worktree and pending-PR checks. Existing TraitRecords are unchanged.

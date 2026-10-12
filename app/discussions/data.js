@@ -11557,6 +11557,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/diauxic_growth.html#diauxie-provenance-and-mechanism"
  },
  {
+  "discussion_id": "bet-hedging-scope-and-hierarchy",
+  "prompt": "Retain lineage-level risk spreading without equating all cellular heterogeneity with bet hedging.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "diversifying bet hedging",
+  "source_id": "traitmech:000708",
+  "source_file": "diversifying_bet_hedging.yaml",
+  "attaches_to": [],
+  "rationale": "The diversifying qualifier restricts this class to alternative states within a clonal microbial lineage; it does not cover every use of unqualified bet hedging. Heterogeneity, noisy gene expression or switching alone is insufficient: reversible states must precede the relevant environmental shift and differ in survival or reproductive performance across conditions. Generic stress-induced change, carbon-source memory, cue-triggered environmental anticipation, genetic resistance and ecological generalist/specialist niche breadth are not exact synonyms. Particular observations can overlap without making these classes equivalent or disjoint. Dormancy and persister formation can participate in risk spreading, but their presence alone does not establish it, so neither existing record is reparented. METPO:1000059 phenotype is the conservative parent pending upstream review of this lineage-level physiological disposition. This is not a sequence feature, individual assay result or mixed-species community property.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diversifying_bet_hedging.html#bet-hedging-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "bet-hedging-evidence-and-mechanism-limits",
+  "prompt": "Assess adaptive origin, natural exemplars and molecular mechanisms separately from the operational phenotype.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "diversifying bet hedging",
+  "source_id": "traitmech:000708",
+  "source_file": "diversifying_bet_hedging.yaml",
+  "attaches_to": [],
+  "rationale": "This first-pass class does not assert that every cited system was selected for diversification or has a measured long-term fitness advantage. Levy et al. Box 1 distinguishes those stronger claims from its operational usage; testing arithmetic and geometric mean fitness requires an explicit environmental distribution and comparison strategy. No fixed switching rate, binary state space or universal protein mechanism is asserted. Canonical taxa await strain-provenance and taxonomy checks; causal_graphs, xrefs and synonyms are omitted. MED, Crossref and visible publisher links checked on 2026-10-12 exposed no correction or retraction for the three retained papers; commentary, review and preprint links are not independent experiments. This bounded check does not exclude every possible notice. Pinned/current METPO RDF and ignored/hidden novelty searches found no exact active or deprecated term; earlier research mentions remain leads, not primary records. The pinned ontology is unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diversifying_bet_hedging.html#bet-hedging-evidence-and-mechanism-limits"
+ },
+ {
   "discussion_id": "dnase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14195,9 +14229,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 708,
- "total_knowledge_gaps": 449,
- "total_source_entries": 573,
+ "total_discussions": 710,
+ "total_knowledge_gaps": 450,
+ "total_source_entries": 574,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
