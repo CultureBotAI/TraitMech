@@ -22,13 +22,16 @@ graph or negative companion is asserted. Property and SSSOM files are omitted.
 ## Primary Evidence
 
 [Lindner et al. 2008](https://doi.org/10.1073/pnas.0708931105), PMID:18287048,
-PMC2268587, supports position-dependent inheritance and eventual older-pole
-accumulation in engineered MGAY (MG1655 IbpA-YFP) at 37 C on LB-agarose without
+PMC2268587, reports position-dependent reporter-focus inheritance and eventual
+older-pole accumulation in engineered MGAY (MG1655 IbpA-YFP) at 37 C on LB-agarose without
 imposed stress. Primary Results and Methods, actual localization Figure 2 and
 lineage schematic Figure 3 were inspected. The schematic is not another
 experiment. Pole identities change across divisions. Supplements were not read.
 Initial XML/PDF access failures did not persist as a full-text blocker: primary
 PMC HTML was subsequently retrieved successfully.
+Govers 2018's later reporter comparison identifies IbpA-YFP label-induced
+clustering. These older foci are not independent evidence of endogenous
+unstressed aggregation; this limitation is retained beside the historical quote.
 
 [Coelho et al. 2014](https://doi.org/10.1371/journal.pbio.1001886), PMID:24936793,
 PMC4061010, is the definition anchor. Hsp104-GFP fission-yeast imaging shows
@@ -53,8 +56,19 @@ sibling pairs. Figure 6F uses projected cell area, not volume. Sharing and a
 stable allocation ratio do not establish equal inheritance. Supplements and
 independent strain provenance were not inspected.
 
-All three snippets are concise contiguous primary-source spans. The scientific
-abstract quotation is distinct from the Coelho Author Summary. The two full-text
+[Govers et al. 2018](https://doi.org/10.1371/journal.pbio.2003853), PMID:30153247,
+PMC6112618, separates reporter bias (actual Figure 1) from post-heat-shock
+inheritance in engineered MG1655 IbpA-msfGFP lineages (actual Figure 3).
+Relevant primary Results and Methods were read. The latter assay uses 47 C for
+15 minutes followed by microscopy at 37 C; fluorescence concentration and
+growth readouts are not substituted for focus inheritance. Supplementary controls
+were read where described in Results, not independently inspected as images or
+raw data. No universal reporter validity, harm, benefit or natural exemplar is
+inferred. This issue #1896 correction preserves the original source assessment
+with an explicit successor, rather than rewriting historical provenance.
+
+All four snippets are concise contiguous primary-source spans. Scientific
+abstract quotations are distinct from Author Summaries. The two full-text
 quotes retain native `NOT_IN_ABSTRACT` verdicts; direct source matches do not
 relabel those resolver outcomes. Hashes, locators, source checks and access limits
 are retained in
@@ -157,3 +171,5 @@ preserving append-only history. Curator `codex` is LLM-assisted, not human sign-
 
 - v587, 2026-10-12: propose quantity-qualified protein aggregate inheritance
   with three primary DOI sources and explicit measurement/source limitations.
+- Same-PR issue #1896 correction: qualify the historical reporter readout and
+  add a fourth primary DOI source without changing the definition or ID reservation.

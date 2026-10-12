@@ -391,5 +391,37 @@
     "supersedes": "Only the pending-scope/allocation state of the preserved prior_research_handoff. Historical source access and scope limits remain in force.",
     "native_cli": "Not yet run at this receipt creation. The embedded research assessment used direct native resolver/classifier calls; final CLI outcomes belong in the structured review and PR.",
     "goal": "active; additional leads remain, no discovery-exhaustion claim"
-  }
+  },
+  "assessment_corrections": [
+    {
+      "timestamp": "2026-10-12T18:24:02Z",
+      "issue": "https://github.com/CultureBotAI/TraitMech/issues/1896",
+      "supersedes_fields": [
+        "evidence_assessment.rows[0].notes",
+        "curation_decision"
+      ],
+      "scope": "Supersedes the earlier unqualified role of Lindner reporter foci, not the trait identity or historical access record.",
+      "corrected_lindner_notes": "Lindner et al. 2008, PMID:18287048, PMC2268587; Results, Inclusion Bodies Are Formed in Discrete Cellular Positions and Accumulate in Old Poles Under Nonstressing Conditions. Primary PMC Results and Methods directly read. The quoted position is that of an IbpA-YFP focus. MGAY is an engineered MG1655 reporter strain, grown on LB-agarose at 37 C without imposed stress. Figure 2 is the inspected localization measurement; Figure 3 is an inspected lineage schematic, not another experiment. Pole identity changes across divisions. These observations describe reporter-focus inheritance and eventual older-pole accumulation. Govers et al. 2018 (DOI:10.1371/journal.pbio.2003853) subsequently demonstrated label-induced clustering with IbpA-YFP. The older readout is not independent proof of endogenous unstressed aggregation; naming the engineered strain alone does not resolve this assay bias. Neither active transport, universal aggregate toxicity nor a natural canonical exemplar is established. Supplements were not inspected. The full-text span retains the native abstract resolver verdict NOT_IN_ABSTRACT.",
+      "added_evidence": {
+        "reference": "DOI:10.1371/journal.pbio.2003853",
+        "snippet": "the polarly deposited PA was subjected to limited disaggregation and therefore became asymmetrically inherited for a large number of generations",
+        "notes": "Govers et al. 2018, PMID:30153247, PMC6112618; scientific abstract, directly matched in primary XML and source-qualified MED. Results on reporter validation and post-stress inheritance, relevant Methods and actual Figures 1 and 3 were inspected. Figure 1 shows reporter-dependent clustering; Figure 3 separately follows engineered MG1655 IbpA-msfGFP lineages after 47 C for 15 minutes, with microscopy at 37 C. Focus inheritance is distinct from the fluorescence concentration and growth readouts. This does not validate unstressed IbpA-YFP foci as endogenous aggregates or imply universal harm, benefit, aging or rejuvenation. Supplementary controls were read only where described in Results; their images, raw data and independent strain provenance were not assessed."
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6112618/fullTextXML",
+      "source_sha256": "f5e8ed02e307d9153f512ea747a9a0c109eb9ac4b7bc4070a68cb7aba82cdd91",
+      "snippet_locator": "article/front/article-meta/abstract/p",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "source_read_scope": "Scientific abstract; Results sec003, sec004 and sec006; Methods sec014, sec017, sec018 and sec021; actual Figures 1 and 3.",
+      "asset_sha256": {
+        "govers2018-fig1.jpg": "99fdddddb8373d93b160592c81bcd434671c58f59b7cf384ef9d550ccaf84049",
+        "govers2018-fig3.jpg": "e0a41254543cb169e496e0cc8c574a3121ea5267c7c1568ee47164f2d4546923",
+        "govers2018-med.json": "a8f643fb6d29621b0a2a59701628aaab28e03b4ddb60302b088f3a2c0b8085b5",
+        "govers2018-crossref.json": "901023743207950e794835b377cf0e30994c84171659e38e0ad550c71e4e1525"
+      },
+      "asset_root": "/tmp/traitmech-aggregate-inheritance-reporter-review-20261012",
+      "notice_scope": "Source-qualified MED and Crossref identity/notice fields plus accessible publisher article checked on 2026-10-12; no linked correction/retraction exposed by these bounded checks. This is not an exhaustive notice search or a retraction claim about Lindner.",
+      "limits": "Supplementary images/movies, numerical data, independent strain provenance and all unlisted figures were not assessed; no universal reporter validity, harm or benefit claim."
+    }
+  ]
 }
