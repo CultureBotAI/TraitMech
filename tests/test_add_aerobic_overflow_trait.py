@@ -49,11 +49,13 @@ def test_identity_evidence_and_copy_isolation():
     ]
     assert all(5 <= len(e["snippet"].split()) <= 25 for e in record["evidence"])
     assert all(not record.get(k) for k in ["synonyms", "causal_graphs", "xrefs", "canonical_examples"])
-    event, correction = record["curation_history"]
+    event, correction, claim = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     assert "#1881" in correction["changes"] and correction["llm_assisted"]
     assert datetime.fromisoformat(correction["timestamp"]) <= datetime.now(timezone.utc)
+    assert "#1883" in claim["changes"] and claim["llm_assisted"]
+    assert datetime.fromisoformat(claim["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
     record["discussions"][0]["rationale"] = "mutated"
     assert len(writer.build_record()["evidence"]) == 3
@@ -71,6 +73,11 @@ def test_scope_and_inference_limits():
     assert "authors report no first-hour repression" in yeast["notes"]
     assert "does not establish monotonic or unchanged" in yeast["notes"]
     assert writer.ORIGINAL_RESPIRATION_NOTE not in yeast["notes"]
+    assert yeast["snippet"] == writer.CLAIM_YEAST_SNIPPET
+    assert "significant ethanol formation" in yeast["snippet"]
+    assert "data on glucose" not in yeast["snippet"]
+    assert len(yeast["snippet"].split()) == 18
+    assert "biomass and ethanol, not the abstract" in yeast["notes"]
     scope, gaps = record["discussions"]
     assert "oxygen limitation must be excluded" in scope["rationale"]
     assert "not asserted as exact synonyms" in scope["rationale"]
@@ -113,7 +120,19 @@ def test_upgrade_original_draft_preserves_earlier_event(isolated, monkeypatch):
     assert run(monkeypatch, True) == 0
     revised = yaml.safe_load(writer.TARGET.read_text())
     assert revised == writer.build_record()
+    assert revised["curation_history"][:len(original["curation_history"])] == original["curation_history"]
+
+
+def test_upgrade_respiration_corrected_draft_preserves_both_events(isolated, monkeypatch):
+    original = writer.build_respiration_corrected_record()
+    writer.write_validated_trait(original, writer.TARGET)
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0 and snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    revised = yaml.safe_load(writer.TARGET.read_text())
+    assert revised == writer.build_record()
     assert revised["curation_history"][:-1] == original["curation_history"]
+    assert revised["evidence"][:2] == original["evidence"][:2]
 
 
 @pytest.mark.parametrize("target", ["TARGET", "PROPOSAL"])

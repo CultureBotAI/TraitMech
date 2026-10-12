@@ -361,6 +361,12 @@ or proposal; distinguish the disputed condition from the supported phenotype.
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+Check what biological claim the quoted words themselves support. A methods or
+data-generation sentence that merely lists measured variables is not a phenotype
+result, even when its text matches an abstract. Use a concise claim-bearing span,
+including full text when needed, and retain assay qualifiers in `notes`. Do not
+weaken quote-length constraints just to obtain an abstract match (#1883).
+
 Search-result text, including an indexed publisher abstract, is a research
 lead, not directly retrieved source text. When publisher access fails and an
 API supplies metadata only, do not copy the indexed text into `snippet` or

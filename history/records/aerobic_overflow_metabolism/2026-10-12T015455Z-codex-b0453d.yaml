@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerobic_overflow_metabolism.yaml
+  slug: aerobic_overflow_metabolism
+session:
+  id: 2026-10-12T015455Z-codex-b0453d
+  timestamp: '2026-10-12T01:54:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1883
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1882
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Replace yeast measurement snippet with a positive result
+  details: Addressed issue 1883 from external review 5485934905 on PR 1882. Replaced the generic
+    data-collection quote with an exact 18-word Results span reporting significant ethanol
+    formation after a glucose pulse. Corrected the source-section note, retained oxygen-control
+    and respiration qualifiers, and appended REPLACED_UNSUPPORTIVE_SNIPPET without altering
+    either prior event or history record. Added a guarded two-event preimage upgrade regression,
+    clarified claim-bearing snippet selection in add-trait, and updated the proposal narrative.
+    Existing review bundles remain unchanged; regenerated-product validation and a linked
+    resolved review follow.

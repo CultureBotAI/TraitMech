@@ -20,8 +20,10 @@ the paper is a modeling Perspective, not a new experimental replication.
 PMC4843128, and [Hagman et al. 2014](https://doi.org/10.1111/febs.13019),
 PMID:25161062, PMC4240471, provide distinct bacterial and yeast studies.
 The record preserves source-section, oxygen-control, model and access limits.
-All three snippets are short, contiguous spans checked against retrieved XML;
-Molenaar's is from the body, not the abstract.
+All three snippets are short, contiguous spans checked against retrieved XML.
+Molenaar's and Hagman's are from the body, not the abstract. The revised Hagman
+snippet reports the positive ethanol result rather than merely data collection
+(TraitMech #1883); its oxygen-controlled assay context remains in notes.
 
 Phenotype is the conservative parent because the record describes a conditional
 organismal property, not a biochemical process. METPO:1000060 metabolism is
@@ -87,8 +89,8 @@ The canonical 11-column class header retains required trailing directive cells.
 Run guarded-writer tests, strict schema, history, snippet, proposal, product and
 QC gates, then inspect ROBOT/ELK's actual w3id METPO parent hierarchy and generated
 pages. Actual results belong in the structured review and PR, not predicted
-success here. The add-trait skill already covers the interpretation and evidence
-requirements encountered; no skill change is necessary for this addition.
+success here. Review #1883 prompted an explicit skill clarification: a short
+verbatim quotation must carry a biological claim, not merely list measurements.
 
 ## Upstream and round trip
 

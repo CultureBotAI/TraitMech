@@ -26,6 +26,11 @@ BACTERIAL = "DOI:10.1038/nature15765"
 YEAST = "DOI:10.1111/febs.13019"
 TIMESTAMP = "2026-10-12T01:03:22Z"
 CORRECTION_TIMESTAMP = "2026-10-12T01:08:15Z"
+CLAIM_TIMESTAMP = "2026-10-12T01:53:37Z"
+CLAIM_YEAST_SNIPPET = (
+    "All fermenting yeasts exhibited significant ethanol formation within the "
+    "first 20 min in response to a glucose pulse"
+)
 ORIGINAL_RESPIRATION_NOTE = "Figure 2 does not show a first-hour respiratory decrease in those yeasts."
 CORRECTED_RESPIRATION_NOTE = (
     "The authors report no first-hour repression of respiration; Figure 2 does "
@@ -188,7 +193,7 @@ def build_initial_record() -> dict:
     return record
 
 
-def build_record() -> dict:
+def build_respiration_corrected_record() -> dict:
     record = build_initial_record()
     notes = record["evidence"][2]["notes"]
     assert notes.count(ORIGINAL_RESPIRATION_NOTE) == 1
@@ -203,6 +208,29 @@ def build_record() -> dict:
             "rates never decrease. Retain the original curation event unchanged."
         ),
         llm_assisted=True, timestamp=CORRECTION_TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_respiration_corrected_record()
+    record["evidence"][2]["snippet"] = CLAIM_YEAST_SNIPPET
+    notes = record["evidence"][2]["notes"]
+    assert notes.count("scientific abstract. Introduction") == 1
+    record["evidence"][2]["notes"] = notes.replace(
+        "scientific abstract. Introduction",
+        "Results and Discussion / Consumption of glucose and generation of "
+        "biomass and ethanol, not the abstract. Introduction",
+    )
+    record_curation_event(
+        record, curator="codex", action="REPLACED_UNSUPPORTIVE_SNIPPET",
+        changes=(
+            "Address #1883: replace the yeast data-collection quotation with an "
+            "18-word Results span that reports significant ethanol formation "
+            "after a glucose pulse. Retain oxygen-controlled assay context, "
+            "the 25-word bound and both earlier curation events unchanged."
+        ),
+        llm_assisted=True, timestamp=CLAIM_TIMESTAMP,
     )
     return record
 
@@ -234,7 +262,8 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (build_initial_record(), record):
+    accepted = (build_initial_record(), build_respiration_corrected_record(), record)
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in accepted:
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")

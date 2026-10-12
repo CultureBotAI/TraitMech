@@ -35,9 +35,10 @@ evidence:
     independently reanalyzed. Publisher retrieval failed; the public full-text XML
     was accessible.
 - reference: DOI:10.1111/febs.13019
-  snippet: We generated an extensive collection of data on glucose and oxygen consumption,
-    and ethanol and carbon dioxide generation.
-  notes: Hagman et al. 2014, PMID:25161062, PMC4240471; scientific abstract. Introduction,
+  snippet: All fermenting yeasts exhibited significant ethanol formation within the
+    first 20 min in response to a glucose pulse
+  notes: Hagman et al. 2014, PMID:25161062, PMC4240471; Results and Discussion / Consumption
+    of glucose and generation of biomass and ethanol, not the abstract. Introduction,
     relevant Results, Experimental procedures and actual Figures 1-2 were inspected.
     Glucose pulses into initially respiratory cultures produced ethanol in responsive
     yeasts while dissolved oxygen was controlled above 30% air saturation. The authors
@@ -100,4 +101,12 @@ curation_history:
   changes: 'Address #1881: distinguish the authors'' reported lack of early respiratory
     repression from a claim that individual oxygen-consumption rates never decrease.
     Retain the original curation event unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-12T01:53:37Z'
+  curator: codex
+  action: REPLACED_UNSUPPORTIVE_SNIPPET
+  changes: 'Address #1883: replace the yeast data-collection quotation with an 18-word
+    Results span that reports significant ethanol formation after a glucose pulse.
+    Retain oxygen-controlled assay context, the 25-word bound and both earlier curation
+    events unchanged.'
   llm_assisted: true
