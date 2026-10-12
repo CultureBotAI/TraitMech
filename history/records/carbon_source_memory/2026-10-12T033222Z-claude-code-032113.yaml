@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/carbon_source_memory.yaml
+  slug: carbon_source_memory
+session:
+  id: 2026-10-12T033222Z-claude-code-032113
+  timestamp: '2026-10-12T03:32:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - discussions
+  - parent_traits
+  summary: Add evidence-backed carbon-source memory
+  details: Added one PROPOSED PHYSIOLOGY record through the dry-run-first validated writer.
+    Three primary DOIs support non-genetic carbon-source history dependence with distinct
+    induction and growth endpoints; all three short snippets directly matched retrieved source
+    text. Read the Lambert author-name correction, primary full text and selected actual figures
+    for Lambert and Cerulus, and the source-qualified Zacharioudakis abstract; full-text and
+    provenance limits remain explicit. Ignored/hidden searches covered all 22 registered TraitMech
+    roots, current upstream snapshots, all open/draft PR file lists, and all-state METPO discussions.
+    Reserved traitmech:000706, v582, and the whole 1065900-1065999 block after no-collision
+    checks against 581 cohorts and 127 CommunityMech worktrees. The temporary seeder has 399
+    records; 55 exact IDs absent from the 1100-record baseline remain discovery leads, not
+    automatically accepted traits. No existing trait, protected spore_germination record,
+    ontology mirror, snippet baseline, or prior review was edited. Canonical examples and
+    causal graphs are intentionally unasserted pending source-specific provenance and mechanism
+    work. Initial writer dry run and 20 focused writer tests passed; broader native validation
+    and saved self-review follow in this branch.

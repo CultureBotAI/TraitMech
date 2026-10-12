@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/carbon_source_memory.yaml
+  slug: carbon_source_memory
+session:
+  id: 2026-10-12T033541Z-codex-11a5ad
+  timestamp: '2026-10-12T03:35:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1884
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct history actor attribution without changing the trait
+  details: 'Corrects history/records/carbon_source_memory/2026-10-12T033222Z-claude-code-032113.yaml:
+    session.actors[0].name retained the scaffolder default claude-code because --actor-name
+    was omitted. The actual actor was codex, using model gpt-5 and agent_tool codex as already
+    recorded. Preserve that original file unchanged as append-only provenance; this successor
+    supplies the corrected attribution. No scientific claim, TraitRecord byte, curation_history
+    event, or proposal changed for this correction. The current add-trait skill already requires
+    the actual --actor-name and post-scaffold inspection, so it needs no duplicate instruction
+    or default modification.'

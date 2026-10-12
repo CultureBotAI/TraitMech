@@ -11098,6 +11098,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/bipolar_mating_system.html#bipolar-mating-mechanism-and-examples"
  },
  {
+  "discussion_id": "carbon-memory-scope-and-hierarchy",
+  "prompt": "Retain carbon-source history dependence without conflating its endpoints or neighboring traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "carbon-source memory",
+  "source_id": "traitmech:000706",
+  "source_file": "carbon_source_memory.yaml",
+  "attaches_to": [],
+  "rationale": "The qualifier carbon-source bounds this curator-defined class. Unqualified cellular, metabolic, phenotypic and transcriptional memory, bistability and hysteresis are not asserted as exact synonyms. Demonstrating the phenotype requires comparing prior histories under matched test conditions and genetic background; a single diauxic transition, persistent reporter fluorescence, gene presence or a different current medium alone is insufficient. Induction kinetics and growth recovery are distinct endpoints, and one must not be substituted for the other. No fixed duration, number of divisions, benefit, particular sugar, or molecular mechanism is required. Genetic adaptation, immune memory, chemotactic temporal sensing, stress priming and stochastic bet hedging are not equivalent. METPO:1000731 nutrient adaptation is a trophic-type class locally framed as the chronic copiotroph/oligotroph axis; diauxic growth denotes sequential nutrient use, and generalist/specialist describe niche breadth. METPO:1000059 phenotype is the conservative parent pending upstream hierarchy review. This is not a sequence-feature record or a precomposed uses-carbon-source assertion.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/carbon_source_memory.html#carbon-memory-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "carbon-memory-examples-and-mechanisms",
+  "prompt": "Resolve natural strain provenance and assay-specific causal branches before adding exemplars or a graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "carbon-source memory",
+  "source_id": "traitmech:000706",
+  "source_file": "carbon_source_memory.yaml",
+  "attaches_to": [],
+  "rationale": "The retained observations do not establish a uniform species-wide phenotype or a common protein-resolved mechanism. Canonical taxa require primary provenance and authority-resolved taxon identity; no canonical_examples, causal_graphs or external xrefs are asserted. Source-qualified MED and Crossref records were checked on 2026-10-12. Lambert's linked correction was read and retained in evidence notes; no other linked correction or retraction was exposed by these bounded records. Publisher/full-text access limits are recorded per source, not treated as absence of notices. The pinned and current upstream METPO releases contain no exact memory class found by the ignored/hidden lexical and RDF assessment; the ontology baseline remains unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/carbon_source_memory.html#carbon-memory-examples-and-mechanisms"
+ },
+ {
   "discussion_id": "carboxylesterase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for carboxylesterase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14127,9 +14161,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 704,
- "total_knowledge_gaps": 447,
- "total_source_entries": 571,
+ "total_discussions": 706,
+ "total_knowledge_gaps": 448,
+ "total_source_entries": 572,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
