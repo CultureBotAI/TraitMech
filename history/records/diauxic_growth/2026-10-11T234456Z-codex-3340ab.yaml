@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/diauxic_growth.yaml
+  slug: diauxic_growth
+session:
+  id: 2026-10-11T234456Z-codex-3340ab
+  timestamp: '2026-10-11T23:44:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed diauxic growth
+  details: Added traitmech:000704 with five DOI-backed primary sources and directly checked
+    snippets, synonym diauxie, conservative phenotype parent, and explicit nutrient-switching,
+    lag, strain-provenance and mechanism limits. Reserved v580 and METPO:1065700-1065799 after
+    ignored/hidden local and pending-PR audits. Guarded writer dry run and 20 focused tests
+    passed; corpus and publication gates remain pending. No existing trait or protected spore_germination
+    record changed.

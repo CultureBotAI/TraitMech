@@ -11421,6 +11421,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/diatom_seta_production.html#diatom-seta-production-exemplars-and-mechanisms"
  },
  {
+  "discussion_id": "diauxie-scope-and-hierarchy",
+  "prompt": "Retain sequential nutrient use without imposing a universal lag or regulatory mechanism.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "diauxic growth",
+  "source_id": "traitmech:000704",
+  "source_file": "diauxic_growth.yaml",
+  "attaches_to": [],
+  "rationale": "Boulineau's Introduction defines sequential carbon use, while lag-emphasizing accounts operationalize a narrower growth-curve pattern. Wang reports short or nonexistent lags; Sandercock and Page extend the observed scope to nitrogen-source transitions. The present definition uses the nutrient-switching sense and does not require glucose preference, a positive minimum lag, complete arrest of every cell or strictly zero secondary-substrate use. An arbitrary biphasic growth curve without nutrient-switching evidence is insufficient. Diauxic shift denotes the transition; polyauxie and unqualified diphasic growth are not exact synonyms. METPO:1000731 nutrient adaptation is a trophic-type class whose local record operationalizes chronic copiotroph/oligotroph nutrient regimes, not this temporal pattern. Phenotype is the conservative parent pending upstream hierarchy review. Generalist and specialist denote niche breadth; dormancy, carbon catabolite repression and generic resource-use predicates are not exact equivalents.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diauxic_growth.html#diauxie-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "diauxie-provenance-and-mechanism",
+  "prompt": "Ground conditional examples and taxon-specific mechanisms before adding canonical taxa or a graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "diauxic growth",
+  "source_id": "traitmech:000704",
+  "source_file": "diauxic_growth.yaml",
+  "attaches_to": [],
+  "rationale": "The studies include laboratory strains and engineered reporter derivatives. No natural canonical example is asserted without primary strain provenance and authority-resolved taxon identity. No shared universal molecular mechanism or taxon-paired protein branch is established here. Gene presence, lac-locus annotation, RpoS expression or predicted flux alone cannot establish observed diauxic growth. It is conditional on culture and nutrients, not a fixed species identity or sequence-feature trait. Qualified MED and Crossref metadata for all five sources exposed no linked correction or retraction at the 2026-10-11 check; available primary pages were also inspected. This bounded check does not guarantee absence of notices; Wang's preprint link is not a correction. Canonical examples, causal graphs and external equivalences remain unasserted rather than being inferred from these observations.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/diauxic_growth.html#diauxie-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "dnase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14059,9 +14093,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 700,
- "total_knowledge_gaps": 445,
- "total_source_entries": 569,
+ "total_discussions": 702,
+ "total_knowledge_gaps": 446,
+ "total_source_entries": 570,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
