@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_canonical_examples.py
+  slug: ncbi-truncated-error-body
+session:
+  id: 2026-10-12T224549Z-codex-a8b685
+  timestamp: '2026-10-12T22:45:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1899
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - diagnostics
+  - tests
+  summary: Preserve taxonomy retries after truncated HTTP error-body reads
+  details: 'Catch http.client.HTTPException only while reading and closing the bounded HTTP
+    error diagnostic. IncompleteRead is not an OSError or ValueError and previously escaped
+    after the first request. Add five regressions covering diagnostic retention and response
+    closure, a real truncated chunked HTTPResponse, all three requests and unchanged backoff,
+    recovery on a valid later response, and CLI exit 2 without a false clean result. All five
+    failed on the pre-fix implementation; all 32 canonical-example audit tests pass after
+    the fix, and focused Ruff passes. Requests, successful parsing, trait records, generated
+    products and validation policies are unchanged. These deterministic failures do not establish
+    a production NCBI failure or the root cause of incident #1898. Wider validation and external
+    review are subsequent gates, not claimed by this event.'

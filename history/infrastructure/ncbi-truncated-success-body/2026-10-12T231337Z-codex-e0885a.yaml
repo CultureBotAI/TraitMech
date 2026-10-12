@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_canonical_examples.py
+  slug: ncbi-truncated-success-body
+session:
+  id: 2026-10-12T231337Z-codex-e0885a
+  timestamp: '2026-10-12T23:13:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1901
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1900
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - retries
+  - tests
+  summary: Retry protocol failures while reading successful NCBI responses
+  details: 'Address the external changes-requested review 5496918637 by adding HTTPException
+    to the adapter retry tuple, complementing the existing HTTP-error diagnostic guard from
+    #1899. Six new cases use real HTTPResponse objects for short Content-Length and truncated
+    chunked HTTP 200 bodies to check all three attempts, unchanged requests and backoff, response
+    closure, complete-response recovery and CLI exit 2 without false clean output. All six
+    failed on the pre-fix implementation; all 38 focused audit tests and focused Ruff now
+    pass. The previous saved review remains immutable; a successor will cover the expanded
+    scope. This was a pre-existing successful-response gap, not introduced by the first error-body
+    fix. The 761 current example rows deduplicate to 340 requested taxon IDs; production truncation
+    likelihood and the cause of incident #1898 are not established. Requests, parser, pending-ID
+    accounting, traits and generated products are unchanged. Full validation and new external
+    approval remain subsequent gates.'
