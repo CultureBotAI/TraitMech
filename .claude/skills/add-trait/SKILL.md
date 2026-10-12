@@ -381,6 +381,17 @@ When cited sources use a bare aging label more broadly, put the functional-decli
 qualifier in both the record and proposal labels; a discussion alone does not
 qualify labels shown without their definitions (#1891).
 
+For rejuvenation, distinguish recovery in the same aged cell from functional
+or replicative-potential reset in descendants. Retain the age axis, measured
+deficit, endpoint, comparator, intervention and persistence. Lifespan extension,
+marker changes, prevention of decline, dormancy exit and a return to sexual
+immaturity do not alone establish restored function. Qualify a functional
+trait's label when sources use rejuvenation more broadly, and do not infer
+shared chemistry from modeled damage or fluorescent aggregate measurements.
+Attribute each figure to its measured endpoint: inspecting two figures does not
+make both direct support for the same claim. In particular, gamete lifespan
+reset and vegetative lifespan extension require separate locators (#1893).
+
 When Results, Methods or captions disagree on an assay condition, attribute
 each description to its section and retain the discrepancy unless direct
 evidence resolves it. Do not silently choose one description for the record

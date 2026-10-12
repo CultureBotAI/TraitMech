@@ -1,0 +1,280 @@
+{
+  "checked_at": "2026-10-12T12:18:21.680122+00:00",
+  "trait": "traitmech:000710",
+  "reviewer": "codex",
+  "independence": "self_review",
+  "method": "Exact source-qualified MED/Crossref DOI identity; primary XML article IDs and smallest containing paragraph where available. Match without whitespace normalization after structured inline-markup removal.",
+  "sources": [
+    {
+      "doi": "10.1242/jcs.86.1.263",
+      "pmid": "3654779",
+      "pmcid": null,
+      "title": "Microinjection of immaturin rejuvenates sexual activity of old Paramecium.",
+      "evidence_role": "support_with_scope_limits",
+      "source_read_scope": "Haga and Karino 1986, PMID:3654779; scientific abstract, directly read in the MED record. Young-cell cytoplasm restored sexual activity in senescent cells (about 700 fissions); recovery persisted for up to 20 fissions. Division rate and fertility after self-conjugation did not improve. This supports endpoint-specific recovery in treated old cells, not whole-cell or permanent rejuvenation. Full methods and figures were unavailable.",
+      "words": 20,
+      "snippet_sha256": "55f446a5e19ab3db188a1cc30fc87f3a02b84ff4846d20a41664a37d87d5319b",
+      "snippet_in_med_abstract": true,
+      "source_qualified_med": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Microinjection+of+immaturin+rejuvenates+sexual+activity+of+old+Paramecium%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=100",
+        "accessed_at": "2026-10-12T10:47:35.338240+00:00",
+        "sha256": "42a36cfef3992bcd38635ac206475303831a4cbeee350e9ea87bd6b4b59a19bc"
+      },
+      "med_notice_fields": {},
+      "crossref": {
+        "doi": "10.1242/jcs.86.1.263",
+        "sha256": "34d0c9bb5804e8c5bf9cf019ab8de8bef922cae9685f542f4a541bdb5087dfa4",
+        "notice_fields": {
+          "relation": {},
+          "update-to": null,
+          "update-policy": null
+        },
+        "url": "https://api.crossref.org/works/10.1242%2Fjcs.86.1.263",
+        "accessed_at": "2026-10-12T12:18:21.033096+00:00"
+      },
+      "snippet_locator": "MED scientific abstract, contiguous span after HTML inline markup removal"
+    },
+    {
+      "doi": "10.1038/s41467-018-06154-9",
+      "pmid": "30213942",
+      "pmcid": "PMC6137065",
+      "title": "Age structure landscapes emerge from the equilibrium between aging and rejuvenation in bacterial populations.",
+      "evidence_role": "support_with_scope_limits",
+      "source_read_scope": "Proenca et al. 2018, PMID:30213942, PMC6137065; Results, Stable equilibria are connected by aging and rejuvenation (Sec6), directly checked in primary XML. Actual Figure 4d was visually inspected: new-daughter lineages from the old-cell equilibrium converge toward faster growth over successive generations. These doubling times are derived from elongation rates, not direct interdivision intervals. Recovery is in descendants, not the same old mother. The tested MG1655 conditions do not establish all-environment recovery or a universal damage mechanism.",
+      "words": 12,
+      "snippet_sha256": "e7c335a60b8767464f106abd4da66b6f3179dba52496013493ff566b6813a57f",
+      "snippet_in_med_abstract": false,
+      "source_qualified_med": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-018-06154-9%22+AND+SRC%3AMED&format=json&resultType=core",
+        "accessed_at": "2026-10-12T12:02:20.238014+00:00",
+        "sha256": "3c2d0a6ace6f7d79bf32dc3365cef20d4257d518572cd2bedd5ad7465f4d7f01"
+      },
+      "med_notice_fields": {},
+      "crossref": {
+        "doi": "10.1038/s41467-018-06154-9",
+        "sha256": "0b37dd8fad0cb749f72bc826e636cec9327259d31edf63dcf17cf67fedaf3174",
+        "notice_fields": {
+          "relation": {},
+          "update-to": null,
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy"
+        },
+        "url": "https://api.crossref.org/works/10.1038%2Fs41467-018-06154-9",
+        "accessed_at": "2026-10-12T12:02:31.385047+00:00"
+      },
+      "primary_xml": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6137065/fullTextXML",
+        "sha256": "a63ca9af79785836d84b4e5e9902a56320c0fb4bf5cf65b1eb3d8d3f83288f58",
+        "snippet_xpath": "/article/body/sec[2]/sec[4]/p[3]",
+        "snippet_in_scientific_abstract": false,
+        "contiguous_match": true
+      }
+    },
+    {
+      "doi": "10.1126/science.1204349",
+      "pmid": "21700873",
+      "pmcid": "PMC3923466",
+      "title": "Gametogenesis eliminates age-induced cellular damage and resets life span in yeast.",
+      "evidence_role": "support_with_scope_limits",
+      "source_read_scope": "Unal et al. 2011, PMID:21700873, PMC3923466; scientific abstract, directly checked in MED and an MIT-hosted author manuscript. Main text and Figures 1 and 4 support gamete replicative-potential reset. Transient NDT80-dependent vegetative lifespan extension is a separate result and does not establish reversal of every aged-cell defect. Supplements and strain tables were not assessed. The retrieved PDF identifies the article but differs in size and checksum from MIT bitstream metadata; original deposited-byte identity remains unresolved.",
+      "words": 17,
+      "snippet_sha256": "a429f101862c9f007b0894353f4386fddc8b7f3328b4aa47fe205e2408ae7083",
+      "snippet_in_med_abstract": true,
+      "source_qualified_med": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21700873+AND+SRC%3AMED&format=json&resultType=core",
+        "accessed_at": "2026-10-12T11:15:20.412252+00:00",
+        "sha256": "b6bc3e93735e7b231243280fef3a4f17590a79fde4d2a3f877fe5e35236ea898"
+      },
+      "med_notice_fields": {
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "MED",
+              "id": "21779021",
+              "reference": "Nat Rev Mol Cell Biol. 2011 Jul 22;12(8):466. doi: 10.1038/nrm3160.",
+              "type": "Comment in",
+              "orderIn": 1
+            }
+          ]
+        }
+      },
+      "crossref": {
+        "doi": "10.1126/science.1204349",
+        "sha256": "1f966ee12d5ab116250ac48c8c19b0251f9d029f481fba9b5a971a393f68b147",
+        "notice_fields": {
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.11636958.14725133",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.11636958.12697056",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.11636958.793565784",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.11636958.14452055",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.11636958.12723055",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "update-to": null,
+          "update-policy": null
+        },
+        "url": "https://api.crossref.org/works/10.1126%2Fscience.1204349",
+        "accessed_at": "2026-10-12T12:18:21.388618+00:00"
+      },
+      "snippet_locator": "MED scientific abstract, contiguous span after HTML inline markup removal"
+    },
+    {
+      "doi": "10.3390/microorganisms11010082",
+      "pmid": "36677375",
+      "pmcid": "PMC9865852",
+      "title": "Immaturin-Nuclease as a Model System for a Gene-Programmed Sexual Development and Rejuvenescence in <i>Paramecium</i> Life History.",
+      "evidence_role": "support_with_scope_limits",
+      "source_read_scope": "Haga 2023, PMID:36677375, PMC9865852; scientific abstract, directly checked in primary XML and PMC text. Results 3.1 uses rejuvenation for suppression of mating in mature cells: that maturation-state reset alone is outside this functional trait. Results 3.2 reports recovery of old-cell mating activity after transformation. Figure 6C measures total cell counts over four days, not direct division times, and lacks a young-cell growth comparator. Engineered treatment is not a natural canonical taxon example; inferred chemistry is not a proven mechanism.",
+      "words": 15,
+      "snippet_sha256": "62f4549c9c7269e879971d29ef559e62a72d36ce041ea187df197a4de88b028a",
+      "snippet_in_med_abstract": true,
+      "source_qualified_med": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A36677375+AND+SRC%3AMED&format=json&resultType=core",
+        "accessed_at": "2026-10-12T11:15:18.704990+00:00",
+        "sha256": "b4f7121de9c54145e4fdd5b144753cbe010012293e1837e940e6e3d6e7bc97fa"
+      },
+      "med_notice_fields": {},
+      "crossref": {
+        "doi": "10.3390/microorganisms11010082",
+        "sha256": "93c7f6089910ad11f5852b3a73f56e87c385c08d120ed3bae174bfecb231e2f2",
+        "notice_fields": {
+          "relation": {},
+          "update-to": null,
+          "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy"
+        },
+        "url": "https://api.crossref.org/works/10.3390%2Fmicroorganisms11010082",
+        "accessed_at": "2026-10-12T11:15:21.792998+00:00"
+      },
+      "primary_xml": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9865852/fullTextXML",
+        "sha256": "22f0a9578b988c8555a87ec03351db9fa15fa01ec5986025f1571ca9713ce754",
+        "snippet_xpath": "/article/front/article-meta/abstract/p",
+        "snippet_in_scientific_abstract": true,
+        "contiguous_match": true
+      }
+    },
+    {
+      "doi": "10.1016/j.isci.2022.103765",
+      "pmid": "35243217",
+      "pmcid": "PMC8858994",
+      "title": "Bacterial respiration during stationary phase induces intracellular damage that leads to delayed regrowth.",
+      "evidence_role": "boundary",
+      "source_read_scope": "Cesar et al. 2022, PMID:35243217, PMC8858994; scientific abstract, directly checked against MED and primary XML. Boundary evidence: culture duration during stationary phase is not individual replicative age. Immediate regrowth can reflect preserved function, not recovery from a demonstrated deficit. Regrowth classes use area-derived growth rates; nongrowth during the observation window is not proof of irreversible death. Results 2.1 and 2.3, Discussion, limitations and classification methods were read; figures and raw data were not independently assessed.",
+      "words": 20,
+      "snippet_sha256": "bebb369ae4f881f80e21986eb9e805c222e4256c30187bed8778a0927a37451b",
+      "snippet_in_med_abstract": true,
+      "source_qualified_med": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.isci.2022.103765%22+AND+SRC%3AMED&format=json&resultType=core",
+        "accessed_at": "2026-10-12T12:02:41.697030+00:00",
+        "sha256": "7a462dec56d75fd62f12981bb8a683335215c8148db2d088ce96ba74d9796658"
+      },
+      "med_notice_fields": {},
+      "crossref": {
+        "doi": "10.1016/j.isci.2022.103765",
+        "sha256": "acb9c4e034a6c0f4f57d7fc558ca0ad466ac78343506134e3f50c7cf8efd9c6f",
+        "notice_fields": {
+          "relation": {},
+          "update-to": null,
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy"
+        },
+        "url": "https://api.crossref.org/works/10.1016%2Fj.isci.2022.103765",
+        "accessed_at": "2026-10-12T12:02:43.968195+00:00"
+      },
+      "primary_xml": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8858994/fullTextXML",
+        "sha256": "40bee57760b257d9b94eedcb21606ee956557342cf8a87a43b15adfdf7c006cd",
+        "snippet_xpath": "/article/front/article-meta/abstract[1]/p",
+        "snippet_in_scientific_abstract": true,
+        "contiguous_match": true
+      }
+    }
+  ],
+  "auxiliary_visual_sources": [
+    {
+      "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-018-06154-9/MediaObjects/41467_2018_6154_Fig4_HTML.png",
+      "sha256": "d9a6c366fc8fa6093667fb72e4f47563cf22ab109f58abee94da4f28490b53d2",
+      "inspected": "Figure 4, especially observed lineage means in panel d"
+    },
+    {
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/48c3/9865852/1ff1a2c8ce06/microorganisms-11-00082-g006b.jpg",
+      "sha256": "5641e1cb0059a0e972bdd357ed71b54fd55a0c0e22d777678d8d8654db07441a",
+      "inspected": "Figure 6C: total cell count over four days, not direct division time"
+    },
+    {
+      "url": "https://dspace.mit.edu/server/api/core/bitstreams/a68f0009-a5f3-4e86-adf1-7327328d193a/content",
+      "stable_handle": "https://hdl.handle.net/1721.1/96160",
+      "sha256": "59b8752682806a55e155502090992dc7de3e01201615192c86a11726d330a7c4",
+      "inspected": "Matching identity, complete main text and figure captions; actual Figures 1 and 4 visually inspected, not all figures or supplements.",
+      "checksum_limit": {
+        "metadata_path": "/tmp/traitmech-rejuvenation-2011-bitstream-metadata-20261012.json",
+        "metadata_sha256": "637816bcf13d4f90385f26b9b710add0e63ea3cb5dcae4e25eb43de1ddd2e103",
+        "catalog_bytes": 2313460,
+        "catalog_md5": "d9b0caf2f4c7c0903a70e029c7abb7e0",
+        "original_size_prefix_md5": "4f4e79845583e6e23e9433b51f4690f6",
+        "assessment": "The delivered document is not byte-identical to the catalog ORIGINAL checksum, including at the tested original-size prefix. The delivered PDF contains a repository cover; whether or how delivery transformed the original bytes has not been established. Cite the actual delivered version and hash, not a claimed original-file checksum match."
+      }
+    }
+  ],
+  "novelty": {
+    "assessment": {
+      "checked_at": "2026-10-12T12:13:01.625507+00:00",
+      "base": "d5ade193d52ce90dfd8cd46adb6b28aa0871eb06",
+      "local_id": "traitmech:000710",
+      "cohort": "metpo_traitmech_v586",
+      "block": [
+        1066300,
+        1066399
+      ],
+      "roots": 22,
+      "cohorts": 585,
+      "ranges_checked": 6296,
+      "community_roots": 127,
+      "conflicts": [],
+      "ignored_hidden_included": true,
+      "limits": "Current surviving files and registered historical tracked trees; unavailable ignored/untracked bytes cannot be reconstructed. Normal binary handling; no archive extraction or symlink-directory traversal. Recheck main and pending reservations before publication."
+    },
+    "discovery_receipts": {
+      "semantic.json": "8a9de99c0761e9fc60810beb09031de534542e2b960af637879450b4d03a727c",
+      "rdf.json": "26650c0c87164e274bce17f85f6f13e956b30e7c608522e0509cebb1118a848c",
+      "seed-and-frozen.json": "021c9a3eaa86a33ee2fe8be10631d2df1d6705bb5f8c16e1ee4aea46094ad8d5",
+      "regex-control.json": "a9397538edb1c25fd72d3fe13dbfade395aa1e1aa1ba4a92f00d3ef2996ff660"
+    },
+    "exclusions": "Normal binary handling, no archive extraction, no symlink-directory traversal; unavailable current ignored/untracked bytes cannot be reconstructed. Historical tracked trees assessed separately. Not discovery exhaustion."
+  },
+  "limits": [
+    "No human sign-off; no canonical taxon or protein-resolved causal graph asserted.",
+    "Incomplete publisher access; checked notice fields do not establish exhaustive absence of correction/retraction.",
+    "MIT delivered PDF differs from catalog size/checksum. Matching article identity does not establish original deposited-byte identity.",
+    "Earlier local unsupported-regex exit and GitHub connection failure were excluded from absence reasoning; corrected fresh reservation checks passed."
+  ],
+  "assessment_corrections": [
+    {
+      "timestamp": "2026-10-12T12:40:17Z",
+      "issue": "https://github.com/CultureBotAI/TraitMech/issues/1893",
+      "source_doi": "10.1126/science.1204349",
+      "supersedes_field": "sources[2].source_read_scope",
+      "corrected_source_read_scope": "Unal et al. 2011, PMID:21700873, PMC3923466; scientific abstract, directly checked in MED and an MIT-hosted author manuscript. Main text and Figure 1 support gamete replicative-potential reset. Figure 4 concerns the separate vegetative lifespan-extension experiment. Transient NDT80-dependent vegetative lifespan extension is a separate result and does not establish reversal of every aged-cell defect. Supplements and strain tables were not assessed. The retrieved PDF identifies the article but differs in size and checksum from MIT bitstream metadata; original deposited-byte identity remains unresolved.",
+      "reason": "Figure 1 tests gamete reset; Figure 4 tests vegetative extension. Original snapshot interpretation is retained, not silently rewritten."
+    }
+  ]
+}

@@ -11183,6 +11183,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/cellular_buoyancy.html#cellular-buoyancy-xref-gap"
  },
  {
+  "discussion_id": "cellular-rejuvenation-operational-scope",
+  "prompt": "Assess the functional qualifier and distinguish same-cell recovery from descendant reset.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "functional cellular rejuvenation",
+  "source_id": "traitmech:000710",
+  "source_file": "cellular_rejuvenation.yaml",
+  "attaches_to": [],
+  "rationale": "Require an age-linked deficit and a measured recovery or replicative-potential reset, retaining the endpoint, age axis, comparison group, treated unit, conditions and persistence. Recovery of one function need not restore all functions, be permanent or extend lifespan. Descendant recovery must not be reported as repair of the old mother. Marker changes, lifespan extension alone, prevention without prior loss and sexual immaturity alone are insufficient. Bare cellular rejuvenation has broader source usages and is not an exact synonym. Autogamy, gametogenesis and dormancy exit are not themselves this phenotype; neither is replicative aging with functional decline. Culture age is not interchangeable with lineage age. METPO:1000059 phenotype is a conservative parent, with no reparenting of existing records or asserted external equivalence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cellular_rejuvenation.html#cellular-rejuvenation-operational-scope"
+ },
+ {
+  "discussion_id": "cellular-rejuvenation-mechanism-and-example-limits",
+  "prompt": "Resolve strain provenance and endpoint-specific mechanisms before adding examples or causal edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "functional cellular rejuvenation",
+  "source_id": "traitmech:000710",
+  "source_file": "cellular_rejuvenation.yaml",
+  "attaches_to": [],
+  "rationale": "This is a reusable physiological outcome, not a gene, protein, sequence feature or intervention. No canonical example or protein-resolved graph is asserted pending strain provenance and mechanistic review. Bacterial model-derived damage and fluorescent aggregates are not direct proof of a universal rejuvenation chemistry. Studies need not share a mechanism. The 2011 PDF/metadata byte mismatch is retained, not explained away by its added cover. MED/Crossref notice fields and accessible primary pages were checked on 2026-10-12; incomplete publisher access prevents an exhaustive notice-absence claim. Ignored/hidden local and pending-source searches plus pinned and current released METPO found no exact term in the inspected scope. No ontology upgrade or discovery-exhaustion claim follows.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cellular_rejuvenation.html#cellular-rejuvenation-mechanism-and-example-limits"
+ },
+ {
   "discussion_id": "chemokinesis-speed-and-taxis-boundaries",
   "prompt": "Preserve the source-defined speed response and its distinction from taxis.",
   "kind": "CURATION_TODO",
@@ -14263,9 +14297,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 712,
- "total_knowledge_gaps": 451,
- "total_source_entries": 575,
+ "total_discussions": 714,
+ "total_knowledge_gaps": 452,
+ "total_source_entries": 576,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
