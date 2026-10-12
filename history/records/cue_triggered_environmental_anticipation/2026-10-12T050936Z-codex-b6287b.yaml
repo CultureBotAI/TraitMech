@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cue_triggered_environmental_anticipation.yaml
+  slug: cue_triggered_environmental_anticipation
+session:
+  id: 2026-10-12T050936Z-codex-b6287b
+  timestamp: '2026-10-12T05:09:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add cue-triggered environmental anticipation
+  details: Added traitmech:000707 as a PROPOSED physiological phenotype under METPO:1000059
+    with primary DOI:10.1038/nature08112 and DOI:10.1038/nmicrobiol.2017.84 evidence and directly
+    checked scientific-abstract snippets. Preserved cue-specific scope and explicit hierarchy,
+    strain-provenance, mechanism and source-access limits in two OPEN discussions. Added guarded
+    writer, tests and companion v583 METPO proposal after ignored/hidden worktree, current
+    ontology and pending-PR reservation checks. No existing TraitRecord was changed; canonical
+    examples, causal graphs and exact mappings are unasserted. Validation outcomes are recorded
+    in the subsequent structured review and PR.

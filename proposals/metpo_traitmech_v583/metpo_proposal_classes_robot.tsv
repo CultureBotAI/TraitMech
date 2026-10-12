@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1066000	cue-triggered environmental anticipation	A physiological phenotype in which exposure to an environmental cue induces changes that prepare a microorganism for a distinct, temporally associated environmental condition before that condition occurs.	TraitMech:data/traits/physiology/cue_triggered_environmental_anticipation.yaml|DOI:10.1038/nature08112|DOI:10.1038/nmicrobiol.2017.84	METPO:1000059			metpo_traitmech_2026_10		Cue-triggered preparation for a distinct later condition; not a sequence feature.	traitmech:000707
