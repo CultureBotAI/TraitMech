@@ -11336,6 +11336,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/contact_dependent_outer_membrane_exchange.html#outer-membrane-exchange-strain-and-mechanism-grounding"
  },
  {
+  "discussion_id": "anticipation-scope-and-hierarchy",
+  "prompt": "Retain cue-dependent preparation without conflating neighboring temporal-response traits.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cue-triggered environmental anticipation",
+  "source_id": "traitmech:000707",
+  "source_file": "cue_triggered_environmental_anticipation.yaml",
+  "attaches_to": [],
+  "rationale": "The cue-triggered qualifier is deliberate: solely clock-driven preparation or constitutive readiness is insufficient. Evidence must link the preceding cue to preparation for a different later condition; correlated expression or cross-protection alone does not establish that interpretation. Generic stress response, stochastic bet hedging, carbon-source memory and diauxic growth are not exact synonyms, although particular observations can overlap. Neither cognition nor learning within an individual's lifetime is required; evolutionary regulatory wiring is compatible. No universal benefit, fixed delay, asymmetric response or single mechanism is required. METPO:1000731 nutrient adaptation is locally framed as chronic copiotroph/oligotroph trophic adaptation, not this cue-to-future-condition phenotype. METPO:1000059 phenotype is the conservative parent pending upstream hierarchy review. This is an organismal disposition, not a sequence feature, regulatory site or precomposed chemical-use assertion.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cue_triggered_environmental_anticipation.html#anticipation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "anticipation-evidence-and-mechanism-limits",
+  "prompt": "Resolve assay-specific mechanisms, natural strain provenance and broader terminology before extending the record.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cue-triggered environmental anticipation",
+  "source_id": "traitmech:000707",
+  "source_file": "cue_triggered_environmental_anticipation.yaml",
+  "attaches_to": [],
+  "rationale": "No canonical_examples, causal_graphs, exact synonyms or xrefs are asserted. The studies do not establish a uniform species-wide phenotype or a common protein mechanism; strain provenance and authority-resolved taxa require further review. Source-qualified MED, Crossref and visible publisher notice links were checked on 2026-10-12; their commentary/review links are not corrections or independent experiments. No correction or retraction was exposed for the two retained papers in these bounded checks. The separate Tagkopoulos 2008 lead (DOI:10.1126/science.1154456) is not counted evidence: its main PMC text was readable, but the indexed 9 June 2008 supplement correction could not be directly inspected. Broad environmental anticipation and adaptive prediction are not assumed exactly equivalent to this qualified class. No exact candidate was found in the pinned/current METPO RDF and ignored/hidden novelty searches; the pinned ontology remains unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cue_triggered_environmental_anticipation.html#anticipation-evidence-and-mechanism-limits"
+ },
+ {
   "discussion_id": "cystine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for cystine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14161,9 +14195,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 706,
- "total_knowledge_gaps": 448,
- "total_source_entries": 572,
+ "total_discussions": 708,
+ "total_knowledge_gaps": 449,
+ "total_source_entries": 573,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,83 @@
+identifier: traitmech:000707
+label: cue-triggered environmental anticipation
+definition: A physiological phenotype in which exposure to an environmental cue induces
+  changes that prepare a microorganism for a distinct, temporally associated environmental
+  condition before that condition occurs.
+definition_source: DOI:10.1038/nature08112
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1038/nature08112
+  snippet: early stimuli pre-induce genes that would be needed for later ones, yet
+    later stimuli only induce genes needed to cope with them.
+  notes: Mitchell et al. 2009, PMID:19536156; scientific abstract, checked against
+    publisher and source-qualified MED text. Main Figures 2-3 and supplementary Figures
+    3 and 6 were visually inspected, with their relevant Methods and control explanations.
+    MG1655 sugar-switch assays distinguish early induction from subsequent growth;
+    glycerol normalization and residual-sugar controls matter. Loss of the association
+    in laboratory-evolved strains concerns selection across generations, not cognitive
+    learning. Ecological explanations remain author interpretations. Not all raw data
+    were reanalyzed.
+- reference: DOI:10.1038/nmicrobiol.2017.84
+  snippet: Here, we identify a metabolic adaptation that is triggered upon entry into
+    hypoxia-induced quiescence but facilitates subsequent cell cycle re-entry.
+  notes: Eoh et al. 2017, PMID:28530656, PMC5540153; scientific abstract, checked
+    against publisher and source-qualified MED text. The abstract and qualitative
+    main-text framing support metabolically encoded preparation, with hypoxia preceding
+    re-aeration in the studied Mycobacterium tuberculosis system. This is not evidence
+    for a universal transcriptional mechanism or an in-vivo demonstration of anticipation.
+    Figures, supplements and raw data were not independently assessed; no molecular
+    causal edges are asserted.
+discussions:
+- discussion_id: anticipation-scope-and-hierarchy
+  prompt: Retain cue-dependent preparation without conflating neighboring temporal-response
+    traits.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'The cue-triggered qualifier is deliberate: solely clock-driven preparation
+    or constitutive readiness is insufficient. Evidence must link the preceding cue
+    to preparation for a different later condition; correlated expression or cross-protection
+    alone does not establish that interpretation. Generic stress response, stochastic
+    bet hedging, carbon-source memory and diauxic growth are not exact synonyms, although
+    particular observations can overlap. Neither cognition nor learning within an
+    individual''s lifetime is required; evolutionary regulatory wiring is compatible.
+    No universal benefit, fixed delay, asymmetric response or single mechanism is
+    required. METPO:1000731 nutrient adaptation is locally framed as chronic copiotroph/oligotroph
+    trophic adaptation, not this cue-to-future-condition phenotype. METPO:1000059
+    phenotype is the conservative parent pending upstream hierarchy review. This is
+    an organismal disposition, not a sequence feature, regulatory site or precomposed
+    chemical-use assertion.'
+  posed_by: codex
+  posed_date: '2026-10-12'
+- discussion_id: anticipation-evidence-and-mechanism-limits
+  prompt: Resolve assay-specific mechanisms, natural strain provenance and broader
+    terminology before extending the record.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'No canonical_examples, causal_graphs, exact synonyms or xrefs are asserted.
+    The studies do not establish a uniform species-wide phenotype or a common protein
+    mechanism; strain provenance and authority-resolved taxa require further review.
+    Source-qualified MED, Crossref and visible publisher notice links were checked
+    on 2026-10-12; their commentary/review links are not corrections or independent
+    experiments. No correction or retraction was exposed for the two retained papers
+    in these bounded checks. The separate Tagkopoulos 2008 lead (DOI:10.1126/science.1154456)
+    is not counted evidence: its main PMC text was readable, but the indexed 9 June
+    2008 supplement correction could not be directly inspected. Broad environmental
+    anticipation and adaptive prediction are not assumed exactly equivalent to this
+    qualified class. No exact candidate was found in the pinned/current METPO RDF
+    and ignored/hidden novelty searches; the pinned ontology remains unchanged.'
+  posed_by: codex
+  posed_date: '2026-10-12'
+curation_history:
+- timestamp: '2026-10-12T05:07:15Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added cue-triggered environmental anticipation with two primary DOI-backed
+    sources and directly checked scientific-abstract snippets. Reserved 000707, v583
+    and 1066000-1066099 after ignored/hidden worktree and pending-PR checks. Scope,
+    mechanism, provenance and source-access limits are explicit. Existing traits unchanged;
+    timestamp is the observed UTC curation decision.
+  llm_assisted: true
