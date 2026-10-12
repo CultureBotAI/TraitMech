@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/replicative_aging.yaml
+  slug: replicative_aging
+session:
+  id: 2026-10-12T101846Z-codex-957baa
+  timestamp: '2026-10-12T10:18:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add source-qualified replicative aging phenotype
+  details: Added traitmech:000709 as PROPOSED under METPO:1000059 with four primary DOI citations
+    and directly checked abstract/full-text snippets. Preserved lifespan, strain, terminology
+    and mechanism limitations. Reserved proposal v585 and METPO:1066200-1066299 after current
+    and registered historical worktree searches including ignored/hidden files and fresh pending-PR
+    checks. No existing TraitRecord, canonical example or causal graph was changed. Focused
+    writer tests and validated dry run passed before application; broader gates and adversarial
+    review follow.

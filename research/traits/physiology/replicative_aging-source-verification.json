@@ -1,0 +1,184 @@
+{
+  "checked_at": "2026-10-12T10:20:27.072823+00:00",
+  "trait": "traitmech:000709",
+  "reviewer": "codex",
+  "independence": "self_review",
+  "method": "Exact DOI identity in source-qualified MED, Crossref and primary JATS XML; contiguous snippet match in its smallest paragraph. No whitespace normalization used for the match.",
+  "sources": [
+    {
+      "doi": "10.1098/rstb.2018.0442",
+      "pmid": "31587633",
+      "pmcid": "PMC6792439",
+      "title": "Bacterial ageing in the absence of external stressors.",
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6792439/fullTextXML",
+      "sha256": {
+        "primary_xml": "31bf56ae9f3d4035f97ad975bf18078a26b960a5606c3a91a417f238a08c20eb",
+        "source_qualified_med": "fbfd6d591a3798c79708bafeaed76821791d8295cdb80b0366987459c5707f23",
+        "crossref": "bf4a46670ee2b9962faf8d93e530acc82bc4ab6d5c9c9198feb662be1d5d4463"
+      },
+      "snippet_sha256": "f3ac5aa4daa599ae3b05613d567e5b538fac0ce2c028078b03b2447ed47729f8",
+      "words": 11,
+      "snippet_xpath": "/article/body/sec[3]/sec[1]/p[3]/fig/caption/p",
+      "snippet_in_scientific_abstract": false,
+      "snippet_in_med_abstract": false,
+      "contiguous_match": true,
+      "med_notice_fields": {},
+      "crossref_notice_fields": {
+        "relation": {
+          "has-review": [
+            {
+              "id-type": "doi",
+              "id": "10.3410/f.736722672.793577954",
+              "asserted-by": "object"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "doi": "10.1186/1471-2148-7-126",
+      "pmid": "17662151",
+      "pmcid": "PMC2174458",
+      "title": "Experimental evolution of aging in a bacterium.",
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2174458/fullTextXML",
+      "sha256": {
+        "primary_xml": "7d6e7d54ea9c0aa558d892e7a9690ab18c0a3b5ad1e531d195f1054bfc19eff6",
+        "source_qualified_med": "91c9bf8b1ce1d591961c455f51a1400e85cc912ff08b6557be90c5d8ff82b553",
+        "crossref": "fdd9e771324d20af576760acc49f70f9c7389353a625ee60765c9dbe81f3d132"
+      },
+      "snippet_sha256": "f1edcbafd7ac2dd0b26d90d28cec5c9a77b6d2f7e4af856b8b760c6f6556e72d",
+      "words": 12,
+      "snippet_xpath": "/article/front/article-meta/abstract/sec[1]/p",
+      "snippet_in_scientific_abstract": true,
+      "snippet_in_med_abstract": true,
+      "contiguous_match": true,
+      "med_notice_fields": {},
+      "crossref_notice_fields": {
+        "relation": {}
+      }
+    },
+    {
+      "doi": "10.7554/eLife.20340",
+      "pmid": "28139976",
+      "pmcid": "PMC5332158",
+      "title": "An aging-independent replicative lifespan in a symmetrically dividing eukaryote.",
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5332158/fullTextXML",
+      "sha256": {
+        "primary_xml": "2e75310f8805c186d9755697731b1f07ce848195f5c35bb8e996436c8d72b32c",
+        "source_qualified_med": "3ce0b2aeed2457967b055994b66157c43492d2e41c159f6251c87b75a366a2cb",
+        "crossref": "4ef1a1aa0da214cfac21f9774998b1a9249ee7eceb226d9e028bc5e6fe2ab2a0"
+      },
+      "snippet_sha256": "0618d06914e3330a89124faaa50030bb529b47067e7d61eba522148cf294f12b",
+      "words": 21,
+      "snippet_xpath": "/article/front/article-meta/abstract[1]/p[1]",
+      "snippet_in_scientific_abstract": true,
+      "snippet_in_med_abstract": true,
+      "contiguous_match": true,
+      "med_notice_fields": {
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "PPR",
+              "id": "PPR29350",
+              "type": "Preprint in",
+              "note": "CrossRef Pre-print loader",
+              "orderIn": 10002
+            }
+          ]
+        }
+      },
+      "crossref_notice_fields": {
+        "relation": {
+          "references": [
+            {
+              "id-type": "uri",
+              "id": "https://www.ncbi.nlm.nih.gov/nuccore/CU329670.1",
+              "asserted-by": "subject"
+            },
+            {
+              "id-type": "uri",
+              "id": "https://www.ncbi.nlm.nih.gov/nuccore/CU329671.1",
+              "asserted-by": "subject"
+            },
+            {
+              "id-type": "uri",
+              "id": "https://www.ncbi.nlm.nih.gov/nuccore/CU329672.1",
+              "asserted-by": "subject"
+            }
+          ],
+          "has-preprint": [
+            {
+              "id-type": "doi",
+              "id": "10.1101/064832",
+              "asserted-by": "object"
+            }
+          ],
+          "has-review": [
+            {
+              "id-type": "doi",
+              "id": "10.7554/eLife.20340.032",
+              "asserted-by": "object"
+            },
+            {
+              "id-type": "doi",
+              "id": "10.3410/f.727254406.793528544",
+              "asserted-by": "object"
+            },
+            {
+              "id-type": "doi",
+              "id": "10.7554/eLife.20340.031",
+              "asserted-by": "object"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "doi": "10.1371/journal.pbio.3002245",
+      "pmid": "37643155",
+      "pmcid": "PMC10464975",
+      "title": "Dietary change without caloric restriction maintains a youthful profile in ageing yeast.",
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10464975/fullTextXML",
+      "sha256": {
+        "primary_xml": "9a5d4eb9234be837681761e43e2295246872425bf1138195e8372b1c7e54fc5f",
+        "source_qualified_med": "876f414690278d610644b253c6691267e3ea134336e58ef36a24860d95facd7a",
+        "crossref": "07e00801771b689de2c57909b220468c65611e945983ca8e6bcf2c243a8a7f38"
+      },
+      "snippet_sha256": "49208a5a1ac92bb6e00784e248ff41f9706fe6bb01ed543602ab04a1eb86c2b2",
+      "words": 22,
+      "snippet_xpath": "/article/body/sec[2]/sec[1]/p[7]",
+      "snippet_in_scientific_abstract": false,
+      "snippet_in_med_abstract": false,
+      "contiguous_match": true,
+      "med_notice_fields": {
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "PPR",
+              "id": "PPR520752",
+              "type": "Preprint in",
+              "note": "Link created based on a title-first author match",
+              "orderIn": 10002
+            }
+          ]
+        }
+      },
+      "crossref_notice_fields": {
+        "relation": {}
+      }
+    }
+  ],
+  "limitations": [
+    "Text matches do not independently validate the scientific interpretation.",
+    "Only the 2019 Figure 2 was visually inspected; other figure images, supplements and raw data were not independently assessed.",
+    "Publisher access was incomplete for 2017 and 2019; metadata relations do not establish global notice absence."
+  ],
+  "visual_inspection": {
+    "source_url": "https://pablocl.com/assets/pub_pdf/2019%20-%20Philosophical%20Transactions%20of%20the%20Royal%20Society%20B%20-%20%C5%81api%C5%84ska.pdf",
+    "source_sha256": "d4e27f64c8f788712731db6e697f31a2a44e7cd06a23e24a76720f800f33dccb",
+    "page": 6,
+    "figure": "2",
+    "method": "mutool draw page 6, then visual inspection of the rendered PNG; Poppler was unavailable.",
+    "assessment": "Early division-time increase and later flattening are shown. The fitted late downward curve is not evidence of rejuvenation: Results report no significant trend for generations 17-24. Statistics and raw data were not reanalysed."
+  }
+}

@@ -176,6 +176,13 @@ METPO proposal, read it before continuing. Never search broad prefixes such as
 When you report "no existing record" or "no prior proposal", explicitly say the
 search included ignored and hidden files.
 
+When supplementing current-file searches with historical `git grep`, verify
+regex behavior using a known-positive control. Regex dialects are not portable:
+for example, some `git grep -E` implementations do not interpret `\b` as a word
+boundary. A nonmatching control invalidates absence reasoning; use a supported
+dialect or fixed strings and repeat the affected search. Historical tracked
+trees cannot reconstruct unavailable ignored or untracked files.
+
 If a seeded METPO label looks absent only because it adds a suffix such as
 `activity`, `capability`, `positive`, or `flagellation`, inspect the parent and
 same-family sibling records before copying the skeleton. Skip the candidate if
@@ -361,6 +368,15 @@ stochastic or binary switching (#1888).
 Check that scope discussions preserve the direction of each implication: a
 required environmental criterion need not require a particular mechanism, but
 that does not make the criterion optional for that mechanism (#1890).
+
+For aging candidates, separate age-dependent performance decline or increasing
+mortality risk from finite lifespan, lifespan extension and cumulative survival
+loss. Preserve the age axis, division history, conditions and assay limitations;
+a plateau need not negate an earlier decline. Distinguish a decline-based
+phenotype from broader uses of aging that include healthy age progression, and
+do not equate culture age, old-pole identity or a fluorescent marker with that
+phenotype. Put unresolved terminology and strain-provenance discrepancies in
+discussions rather than silently resolving them through exact synonyms or taxa.
 
 When Results, Methods or captions disagree on an assay condition, attribute
 each description to its section and retain the discrepancy unless direct
