@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_rejuvenation.yaml
+  slug: cellular_rejuvenation
+session:
+  id: 2026-10-12T124939Z-codex-e5fcad
+  timestamp: '2026-10-12T12:49:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1893
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Separate gamete reset from vegetative-extension figure evidence
+  details: 'Address issue #1893 with guarded correction: Figure 1 supports gamete replicative-potential
+    reset; Figure 4 is the separate vegetative lifespan-extension experiment. DOI, snippet,
+    definition, status, original event and checksum limitation are preserved. The source sidecar
+    retains its original assessment plus an explicit superseding correction.'

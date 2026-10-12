@@ -42,6 +42,12 @@ identifies the manuscript, but returned PDF bytes differ from bitstream
 metadata size/checksum. The added cover is not an established explanation;
 original deposited-byte identity remains unresolved.
 
+Following adversarial issue #1893, the record explicitly attributes gamete
+reset to Figure 1 and the separate vegetative-extension experiment to Figure 4.
+The source-verification sidecar retains its original snapshot interpretation
+with an explicit `assessment_corrections` successor; the original curation
+event is preserved.
+
 [Haga 2023](https://doi.org/10.3390/microorganisms11010082)
 (PMID:36677375, PMC9865852) also uses sexual rejuvenation for mature-cell
 return to immaturity. That Results 3.1 usage is outside the defined functional

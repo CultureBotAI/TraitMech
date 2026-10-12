@@ -266,5 +266,15 @@
     "Incomplete publisher access; checked notice fields do not establish exhaustive absence of correction/retraction.",
     "MIT delivered PDF differs from catalog size/checksum. Matching article identity does not establish original deposited-byte identity.",
     "Earlier local unsupported-regex exit and GitHub connection failure were excluded from absence reasoning; corrected fresh reservation checks passed."
+  ],
+  "assessment_corrections": [
+    {
+      "timestamp": "2026-10-12T12:40:17Z",
+      "issue": "https://github.com/CultureBotAI/TraitMech/issues/1893",
+      "source_doi": "10.1126/science.1204349",
+      "supersedes_field": "sources[2].source_read_scope",
+      "corrected_source_read_scope": "Unal et al. 2011, PMID:21700873, PMC3923466; scientific abstract, directly checked in MED and an MIT-hosted author manuscript. Main text and Figure 1 support gamete replicative-potential reset. Figure 4 concerns the separate vegetative lifespan-extension experiment. Transient NDT80-dependent vegetative lifespan extension is a separate result and does not establish reversal of every aged-cell defect. Supplements and strain tables were not assessed. The retrieved PDF identifies the article but differs in size and checksum from MIT bitstream metadata; original deposited-byte identity remains unresolved.",
+      "reason": "Figure 1 tests gamete reset; Figure 4 tests vegetative extension. Original snapshot interpretation is retained, not silently rewritten."
+    }
   ]
 }
