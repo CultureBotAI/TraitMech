@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>replicative aging — PHYSIOLOGY — TraitMech</title>
+<title>replicative aging with functional decline — PHYSIOLOGY — TraitMech</title>
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
       <span>›</span>
       <a href="../../category/physiology.html">PHYSIOLOGY</a>
     </p>
-    <h1>replicative aging</h1>
+    <h1>replicative aging with functional decline</h1>
     <p class="curie"><code>traitmech:000709</code> · CLASS · PROPOSED</p>
 
     <p class="definition">A physiological phenotype in which microbial cells exhibit declining growth or reproductive performance, or increasing mortality risk, with increasing replicative age under specified conditions.</p>
@@ -130,7 +130,7 @@
 
 
       <div class="discussion" id="replicative-aging-operational-scope">
-        <p class="discussion-prompt">Review the decline-based phenotype label separately from lifespan and broader aging terminology.</p>
+        <p class="discussion-prompt">Assess remaining upstream terminology for the explicitly decline-qualified phenotype.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
           <span class="badge">OPEN</span>
@@ -146,7 +146,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Replicative age follows a cell or inherited cell lineage across successive divisions; culture age alone is not that measurement. Use age-resolved performance or mortality risk, not merely a finite lifespan, old-pole identity, endpoint death, cumulative survival loss or an old/new sibling difference. A decline can approach a plateau; continuous worsening until death is not required. The record uses the functional-decline sense of aging, while Horkai et al. 2023 explicitly distinguish senescence from broader replicative ageing. Upstream review should assess that label boundary; no exact synonym or external xref is asserted. Chronological survival in nondividing cultures, population-wide clonal senescence and irreversible mammalian cell-cycle arrest are not equated with this phenotype. The existing gram-variable culture_aging node denotes stationary-phase conditions and is not an exact grounding target. METPO:1000059 phenotype is the conservative broader class; no existing record is reparented.</p>
+        <p>Replicative age follows a cell or inherited cell lineage across successive divisions; culture age alone is not that measurement. Use age-resolved performance or mortality risk, not merely a finite lifespan, old-pole identity, endpoint death, cumulative survival loss or an old/new sibling difference. A decline can approach a plateau; continuous worsening until death is not required. The record uses the functional-decline sense of aging, while Horkai et al. 2023 explicitly distinguish senescence from broader replicative ageing. The label is now explicitly qualified as replicative aging with functional decline (#1891); bare replicative aging is not asserted as an exact synonym. Upstream review should assess remaining terminology and hierarchy choices; no external xref is asserted. Chronological survival in nondividing cultures, population-wide clonal senescence and irreversible mammalian cell-cycle arrest are not equated with this phenotype. The existing gram-variable culture_aging node denotes stationary-phase conditions and is not an exact grounding target. METPO:1000059 phenotype is the conservative broader class; no existing record is reparented.</p>
 
 
 
@@ -201,6 +201,12 @@
           <p class="changes">Added a decline-based replicative-aging phenotype with four primary DOIs and directly checked snippets; retained lifespan, terminology and strain limitations. Reserved 000709, v585 and 1066200-1066299 after ignored/hidden current-file, registered historical-tree and pending-PR checks. Examples and mechanism graph are deferred. Existing traits unchanged; timestamp is the observed UTC curation decision.</p>
         </li>
 
+        <li>
+          <time>2026-10-12T10:28:34Z</time> ·
+          <strong>QUALIFIED_TRAIT_LABEL</strong> · codex
+          <p class="changes">Addressed #1891 by qualifying the record and v585 proposal label as replicative aging with functional decline. Preserved the definition, evidence, identifier and original provenance; retained the broader healthy-aging usage as an attributed distinction, not an exact synonym. Timestamp is the observed UTC correction decision.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -210,6 +216,12 @@
           <ul><li><strong>CREATE</strong> — Add source-qualified replicative aging phenotype
             <p>Added traitmech:000709 as PROPOSED under METPO:1000059 with four primary DOI citations and directly checked abstract/full-text snippets. Preserved lifespan, strain, terminology and mechanism limitations. Reserved proposal v585 and METPO:1066200-1066299 after current and registered historical worktree searches including ignored/hidden files and fresh pending-PR checks. No existing TraitRecord, canonical example or causal graph was changed. Focused writer tests and validated dry run passed before application; broader gates and adversarial review follow.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/replicative_aging/2026-10-12T101846Z-codex-957baa.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-12T10:31:27Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Qualify replicative-aging label to match functional decline (#1891)
+            <p>Adversarial source review found that the bare aging label also denotes healthy age progression in Horkai et al. 2023. A guarded correction qualifies the record and v585 proposal label without changing identifier, definition, evidence or original history. Scope discussion retains remaining upstream terminology questions. Correction writer dry run and 31 focused regression tests passed; full final gates follow regeneration.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/replicative_aging/2026-10-12T103127Z-codex-884508.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -265,7 +277,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-12 10:18 UTC
+      Record as of 2026-10-12 10:31 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1104 TraitRecords
       · embedding coverage 43.2%

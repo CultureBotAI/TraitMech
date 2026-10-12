@@ -1,4 +1,4 @@
-# Replicative Aging (v585)
+# Replicative Aging With Functional Decline (v585)
 
 ## Context And Scope
 
@@ -41,8 +41,10 @@ the scientific abstract, not the editorial digest.
 engineered yeast assay. Its Results snippet was checked in publisher text
 and primary XML. The paper's broader use of replicative ageing includes
 age progression without senescent decline. That is not an exact synonym of
-this proposal's operational meaning; the label boundary remains an explicit
-upstream curation question.
+this proposal's operational meaning. Following adversarial issue #1891, the
+label explicitly says **replicative aging with functional decline**. The bare
+label is not an exact synonym; remaining upstream terminology and hierarchy
+choices stay open for curator assessment.
 
 Age-specific performance or mortality risk is required. Endpoint death,
 cumulative survival loss, old-pole identity, a sibling difference or a marker

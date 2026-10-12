@@ -1,5 +1,5 @@
 identifier: traitmech:000709
-label: replicative aging
+label: replicative aging with functional decline
 definition: A physiological phenotype in which microbial cells exhibit declining growth
   or reproductive performance, or increasing mortality risk, with increasing replicative
   age under specified conditions.
@@ -52,8 +52,8 @@ evidence:
     phenotype defined here.
 discussions:
 - discussion_id: replicative-aging-operational-scope
-  prompt: Review the decline-based phenotype label separately from lifespan and broader
-    aging terminology.
+  prompt: Assess remaining upstream terminology for the explicitly decline-qualified
+    phenotype.
   kind: CURATION_TODO
   status: OPEN
   rationale: Replicative age follows a cell or inherited cell lineage across successive
@@ -62,9 +62,11 @@ discussions:
     cumulative survival loss or an old/new sibling difference. A decline can approach
     a plateau; continuous worsening until death is not required. The record uses the
     functional-decline sense of aging, while Horkai et al. 2023 explicitly distinguish
-    senescence from broader replicative ageing. Upstream review should assess that
-    label boundary; no exact synonym or external xref is asserted. Chronological survival
-    in nondividing cultures, population-wide clonal senescence and irreversible mammalian
+    senescence from broader replicative ageing. The label is now explicitly qualified
+    as replicative aging with functional decline (#1891); bare replicative aging is
+    not asserted as an exact synonym. Upstream review should assess remaining terminology
+    and hierarchy choices; no external xref is asserted. Chronological survival in
+    nondividing cultures, population-wide clonal senescence and irreversible mammalian
     cell-cycle arrest are not equated with this phenotype. The existing gram-variable
     culture_aging node denotes stationary-phase conditions and is not an exact grounding
     target. METPO:1000059 phenotype is the conservative broader class; no existing
@@ -99,4 +101,12 @@ curation_history:
     Reserved 000709, v585 and 1066200-1066299 after ignored/hidden current-file, registered
     historical-tree and pending-PR checks. Examples and mechanism graph are deferred.
     Existing traits unchanged; timestamp is the observed UTC curation decision.
+  llm_assisted: true
+- timestamp: '2026-10-12T10:28:34Z'
+  curator: codex
+  action: QUALIFIED_TRAIT_LABEL
+  changes: 'Addressed #1891 by qualifying the record and v585 proposal label as replicative
+    aging with functional decline. Preserved the definition, evidence, identifier
+    and original provenance; retained the broader healthy-aging usage as an attributed
+    distinction, not an exact synonym. Timestamp is the observed UTC correction decision.'
   llm_assisted: true

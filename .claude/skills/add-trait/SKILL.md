@@ -377,6 +377,9 @@ phenotype from broader uses of aging that include healthy age progression, and
 do not equate culture age, old-pole identity or a fluorescent marker with that
 phenotype. Put unresolved terminology and strain-provenance discrepancies in
 discussions rather than silently resolving them through exact synonyms or taxa.
+When cited sources use a bare aging label more broadly, put the functional-decline
+qualifier in both the record and proposal labels; a discussion alone does not
+qualify labels shown without their definitions (#1891).
 
 When Results, Methods or captions disagree on an assay condition, attribute
 each description to its section and retain the discrepancy unless direct
