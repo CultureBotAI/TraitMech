@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/nematode_attracting_activity.yaml
+  slug: nematode_attracting_activity
+session:
+  id: 2026-10-13T230410Z-codex-4535c3
+  timestamp: '2026-10-13T23:04:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add nematode-attracting activity
+  details: Added one PROPOSED microbial attracting capability with two primary DOI-backed
+    snippets. Hsueh supplies definition authority; Choi supplies separate primary support.
+    Native canary outcomes VERIFIED and NOT_IN_ABSTRACT remain distinct from exact direct-source
+    matches. Retained host/stage, medium, allele, supplementary-source and mechanism limitations
+    in notes and two OPEN discussions. No canonical taxa, exact xrefs, synonyms, proteins
+    or graph asserted. Ignored/hidden current-copy and retained-history novelty and remote
+    open/draft reservation checks found no same-scope owner or competing allocation after
+    numerical false-positive adjudication. v597 reserves 1067400-1067499 for local 000721.
+    The record timestamp is observed acceptance; this history records the later CREATE. Other
+    records and protected spore germination are unchanged.

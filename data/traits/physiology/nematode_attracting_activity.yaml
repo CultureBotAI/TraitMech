@@ -1,0 +1,83 @@
+identifier: traitmech:000721
+label: nematode-attracting activity
+definition: A physiological capability of a microorganism to elicit directed movement
+  of nematodes toward itself or substances it produces.
+definition_source: DOI:10.7554/eLife.20023
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.7554/eLife.20023
+  snippet: C. elegans and other nematodes were attracted to volatile compounds produced
+    by A. oligospora.
+  notes: 'Hsueh et al. 2017, PMID:28098555, scientific abstract; native VERIFIED and
+    direct original XML match, not an editorial digest. The producer is Arthrobotrys
+    oligospora CBS 115.81. The 2 h assay physically separates fungal material from
+    nematodes and compares fungal volatiles with medium controls. Actual Figure 1B/D
+    inspected: adult responses are stronger than L1/dauer responses, and not every
+    tested nematode species is attracted. Figure 1D, not the capture image 1E, supplies
+    the multispecies behavioral comparison. Sodium azide retains arrivals; it is not
+    microbial killing evidence. No universal host range, evolutionary adaptation or
+    exact pheromone mimicry is inferred.'
+- reference: DOI:10.1038/ismej.2015.134
+  snippet: We showed that C. elegans is attracted to L. paracasei grown on citrate
+    or yuzu media.
+  notes: Choi et al. 2016, online 2015, PMID:26241504, Discussion opening paragraph;
+    native NOT_IN_ABSTRACT and direct publisher HTML match. Lactobacillus paracasei
+    YSM0385-bearing plugs on the lid are compared with matched bacteria-free medium
+    in a 1 h adult C. elegans N2 assay. Citrate medium includes glucose plus citrate.
+    Actual Figures 1-4 and HTML Table 1 inspected; the table's wild co-occurrence
+    observations alone do not establish attraction. Sodium azide retains arrivals,
+    not bacterial toxicity. Wild isolate Y091 is only Lactobacillus sp., not an inferred
+    L. paracasei assignment. Field recruitment, microbial benefit and nematode fitness
+    benefit are not adopted.
+discussions:
+- discussion_id: nematode-attraction-scope-and-hierarchy
+  prompt: Refine the hierarchy while preserving the microbial actor and nematode movement
+    endpoint.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This is the microorganism's attracting capability, not its own chemotaxis
+    or a nematode's sensory trait. Passive retention, co-occurrence, trapping, paralysis,
+    killing or consumption alone are insufficient; attraction need not imply any of
+    those outcomes. Neither infection nor predatory intent is required. Phenotype
+    METPO:1000059 is the conservative parent; the trap-formation, fungal-nematophagy
+    and lethal-nematicidal records are related, not equivalents or necessary parents.
+    Pinned/current METPO annotations and templates yielded no exact active or deprecated
+    counterpart in the documented screen. v597 proposes the missing class. No exact
+    synonyms, xrefs or organism-level disjointness are asserted.
+  posed_by: codex
+  posed_date: '2026-10-13'
+- discussion_id: nematode-attraction-source-and-mechanism-limits
+  prompt: Resolve source discrepancies and strain provenance before adding canonical
+    taxa or microbial mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Hsueh's five-compound exclusivity caption conflicts with a 2-methyl-1-butanol
+    medium-control signal in its source workbook; no exclusive chemical signature
+    is adopted. The published review exchange questions sex-pheromone mimicry and
+    adaptation; host neuronal genetics do not establish fungal genes. Choi's host
+    odr-10 allele is ky32 in Methods/captions but ky10 in Results; no correction is
+    inferred. Its shared supplement link yields a colony-count image, not a separately
+    verified S2 diacetyl calibration. Choi's typeset PDF and complete raw statistics
+    were not audited. Strain provenance and authority taxonomy remain unchecked for
+    canonical-example purposes. No shared microbial mechanism, proteins or causal
+    graph is asserted. Source hashes, native outcomes, bounded notice checks and inspection
+    limits are retained in the source verification sidecar.
+  posed_by: codex
+  posed_date: '2026-10-13'
+curation_history:
+- timestamp: '2026-10-13T23:01:02Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added a microbial nematode-attracting capability with two DOI-backed primary
+    studies and directly matched snippets. Retained host/stage, growth-medium and
+    source discrepancies; distinguished attraction from microbial taxis, trapping,
+    killing and feeding. Reserved 000721, v597 and 1067400-1067499 after ignored/hidden
+    current-copy, retained-history and open/draft PR checks with numeric false positives
+    adjudicated. No exact active METPO counterpart was identified in the inspected
+    scope. Other records remain unchanged. Timestamp is observed acceptance after
+    source and allocation assessment, not the later file write.
+  llm_assisted: true

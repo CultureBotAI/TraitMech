@@ -13278,6 +13278,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/negative_autotropism.html#negative-autotropism-provenance-and-mechanism"
  },
  {
+  "discussion_id": "nematode-attraction-scope-and-hierarchy",
+  "prompt": "Refine the hierarchy while preserving the microbial actor and nematode movement endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nematode-attracting activity",
+  "source_id": "traitmech:000721",
+  "source_file": "nematode_attracting_activity.yaml",
+  "attaches_to": [],
+  "rationale": "This is the microorganism's attracting capability, not its own chemotaxis or a nematode's sensory trait. Passive retention, co-occurrence, trapping, paralysis, killing or consumption alone are insufficient; attraction need not imply any of those outcomes. Neither infection nor predatory intent is required. Phenotype METPO:1000059 is the conservative parent; the trap-formation, fungal-nematophagy and lethal-nematicidal records are related, not equivalents or necessary parents. Pinned/current METPO annotations and templates yielded no exact active or deprecated counterpart in the documented screen. v597 proposes the missing class. No exact synonyms, xrefs or organism-level disjointness are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_attracting_activity.html#nematode-attraction-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "nematode-attraction-source-and-mechanism-limits",
+  "prompt": "Resolve source discrepancies and strain provenance before adding canonical taxa or microbial mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nematode-attracting activity",
+  "source_id": "traitmech:000721",
+  "source_file": "nematode_attracting_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Hsueh's five-compound exclusivity caption conflicts with a 2-methyl-1-butanol medium-control signal in its source workbook; no exclusive chemical signature is adopted. The published review exchange questions sex-pheromone mimicry and adaptation; host neuronal genetics do not establish fungal genes. Choi's host odr-10 allele is ky32 in Methods/captions but ky10 in Results; no correction is inferred. Its shared supplement link yields a colony-count image, not a separately verified S2 diacetyl calibration. Choi's typeset PDF and complete raw statistics were not audited. Strain provenance and authority taxonomy remain unchecked for canonical-example purposes. No shared microbial mechanism, proteins or causal graph is asserted. Source hashes, native outcomes, bounded notice checks and inspection limits are retained in the source verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_attracting_activity.html#nematode-attraction-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "nucleophagy-cargo-route-and-selectivity",
   "prompt": "Review nuclear-cargo scope and source-specific selectivity.",
   "kind": "CURATION_TODO",
@@ -14760,9 +14794,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 741,
- "total_knowledge_gaps": 462,
- "total_source_entries": 586,
+ "total_discussions": 743,
+ "total_knowledge_gaps": 463,
+ "total_source_entries": 587,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
