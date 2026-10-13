@@ -1,0 +1,690 @@
+{
+  "checked_at": "2026-10-13T06:45:10.573145+00:00",
+  "trait_id": "traitmech:000715",
+  "decision_timestamp": "2026-10-13T06:32:45Z",
+  "timestamp_note": "Observed post-audit UTC confirmation, not estimated file-write time.",
+  "acceptance": "Qualified external-trace-guided spatial exploration; PROPOSED, no universal avoidance, internal recall or species-wide canonical assignment.",
+  "rows": [
+    {
+      "reference": "DOI:10.1073/pnas.1215037109",
+      "snippet": "When one arm contained extracellular slime, 39 of 40 plasmodia chose the blank agar arm",
+      "words": 15,
+      "source": {
+        "name": "reid2012",
+        "reference": "DOI:10.1073/pnas.1215037109",
+        "url": "https://chrisrreid.wordpress.com/wp-content/uploads/2015/12/slime-mould-uses-an-externalized-spatial-e28098memory_-to-navigate-in-complex-environments.pdf",
+        "accessed_at": "2026-10-13T05:23:21.285604+00:00",
+        "status": 200,
+        "final_url": "https://chrisrreid.wordpress.com/wp-content/uploads/2015/12/slime-mould-uses-an-externalized-spatial-e28098memory_-to-navigate-in-complex-environments.pdf",
+        "content_type": "application/pdf",
+        "bytes": 655942,
+        "path": "/tmp/traitmech-spatial-memory-canary-20261013/reid2012.response",
+        "sha256": "f690252a6bec2a70b77da8c9550d6b7245eecb009090d91a570f12e43482cccc",
+        "pdf": true
+      },
+      "locator": "Results, first paragraph, printed page 17490 / PDF page 1",
+      "version": "Author-hosted publisher-formatted PDF; current corrected VoR equivalence not verified",
+      "section_type": "Results",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "normalization": "NFC and whitespace folding only; no paraphrase, word repair, punctuation replacement or dehyphenation.",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "direct_source_check": {
+        "reference": "DOI:10.1073/pnas.1215037109",
+        "path": "/tmp/traitmech-spatial-memory-canary-20261013/reid2012.response",
+        "sha256": "f690252a6bec2a70b77da8c9550d6b7245eecb009090d91a570f12e43482cccc",
+        "extraction": "/tmp/traitmech-spatial-memory-reid2012-text-20261013.json",
+        "page": 1,
+        "image": "/tmp/traitmech-spatial-memory-canary-20261013/reid2012-pages/page-1.png",
+        "locator": "Results, first paragraph, printed page 17490 / PDF page 1",
+        "snippet": "When one arm contained extracellular slime, 39 of 40 plasmodia chose the blank agar arm",
+        "role": "Direct trail-avoidance result; the same paper independently tests spatial navigation with trail information masked.",
+        "words": 15,
+        "contiguous_match": true,
+        "extraction_sha256": "826643912525e083fab2fbbf21561b124030905068040c4604f2a1fe783eec63",
+        "image_sha256": "34f0112ef4332c27afb6facd9981ca5f9e32db9af101ed6949b23a2266a1763f",
+        "visual_inspection": "Selected source page directly viewed in this session before this check."
+      },
+      "assay_limits": "Reid et al. 2012, PMID:23045640, PMC3491460; Results opening paragraph, printed page 17490 / PDF page 1. Cultured Physarum polycephalum avoided previously deposited slime in a Y maze. Same-stock coatings do not demonstrate individual recognition of one's own trace. In the separate U-trap experiment, 23/24 plasmodia on blank agar versus 8/24 on slime-coated agar reached the target within 120 hours. Coating masks newly informative trails; it does not abolish secretion or lesion internal memory. Success, completion time among successful trials, speed, path length and revisitation are distinct endpoints. No-trap and speed controls do not exclude every environmental confound. Main Methods, Results, Discussion and all four figures were inspected in an author-hosted publisher-formatted PDF bearing a 2012 download stamp, not verified as the current corrected VoR. Supplements and raw data were not assessed. Southern Biological Supplies culture provenance remains unresolved. The contiguous result span was text-matched and visually checked."
+    },
+    {
+      "reference": "DOI:10.1088/1361-6463/aa87df",
+      "snippet": "Our results suggest that the external memory has an adaptive advantage in \u2018open\u2019 and simple bounded environments.",
+      "words": 17,
+      "source": {
+        "name": "smith-ferguson2017",
+        "reference": "DOI:10.1088/1361-6463/aa87df",
+        "url": "https://chrisrreid.wordpress.com/wp-content/uploads/2017/11/hc3a4nsel-gretel-and-the-slime-mould.pdf",
+        "accessed_at": "2026-10-13T05:23:21.802416+00:00",
+        "status": 200,
+        "final_url": "https://chrisrreid.wordpress.com/wp-content/uploads/2017/11/hc3a4nsel-gretel-and-the-slime-mould.pdf",
+        "content_type": "application/pdf",
+        "bytes": 918191,
+        "path": "/tmp/traitmech-spatial-memory-canary-20261013/smith-ferguson2017.response",
+        "sha256": "b5957278307eb67d93db865c5dc4776a036e731c491b28d363170e72b8256246",
+        "pdf": true
+      },
+      "locator": "Scientific abstract, printed page 1 / PDF page 2",
+      "version": "Author-hosted publisher-formatted PDF; current corrected VoR equivalence not verified",
+      "section_type": "Scientific abstract",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "normalization": "NFC and whitespace folding only; no paraphrase, word repair, punctuation replacement or dehyphenation.",
+      "native_verdict": "UNRESOLVED",
+      "direct_source_check": {
+        "reference": "DOI:10.1088/1361-6463/aa87df",
+        "path": "/tmp/traitmech-spatial-memory-canary-20261013/smith-ferguson2017.response",
+        "sha256": "b5957278307eb67d93db865c5dc4776a036e731c491b28d363170e72b8256246",
+        "extraction": "/tmp/traitmech-spatial-memory-smith-ferguson2017-text-20261013.json",
+        "page": 2,
+        "image": "/tmp/traitmech-spatial-memory-quote-render-20261013/page-2.png",
+        "locator": "Scientific abstract, printed page 1 / PDF page 2",
+        "snippet": "Our results suggest that the external memory has an adaptive advantage in \u2018open\u2019 and simple bounded environments.",
+        "role": "Own-result interpretation, not background quotation; actual endpoint is maze success, not independently measured fitness or natural selection.",
+        "words": 17,
+        "contiguous_match": true,
+        "extraction_sha256": "b69dc009b0aef6b778606ea3e15ba6d394253bcc6015803f15dc00b39d01defe",
+        "image_sha256": "07fce76d27d6a451b38f1b475e5e3d5ba9109f1196729e0e4a9ed9c56714956e",
+        "visual_inspection": "Selected source page directly viewed in this session before this check."
+      },
+      "assay_limits": "Smith-Ferguson et al. 2017; scientific abstract, printed page 1 / PDF page 2. This is the authors' interpretation of maze performance, not a measured fitness or natural-selection endpoint. Within 72 hours, blank versus extracellular-slime conditions yielded success in 24/24 versus 9/24 open trials, 12/15 versus 4/12 simple-maze trials and 11/17 versus 11/13 complex-maze trials; the last comparison showed no significant benefit. Completion times conditional on success were not significantly different. Escaped trials were excluded; split decisions used the dominant front. Printed page 6 pairs the same chi-square 0.802 with P=0.004 and P=0.371; this discrepancy is unresolved. Figure 8 is illustrative, not quantified trajectory evidence. Main Methods, Results, Discussion, Conclusion and all eight figures were inspected; supplements were not. The author-hosted PDF bears a 2017 download stamp, not verified current VoR equivalence. This study shares authors with Reid 2012, not an independent-laboratory replication."
+    },
+    {
+      "reference": "DOI:10.1073/pnas.2312611121",
+      "snippet": "In accordance with the literature, we observe that plasmodia generally avoid previously visited areas marked by their slime trail",
+      "words": 19,
+      "source": {
+        "name": "troger2024-author",
+        "reference": "DOI:10.1073/pnas.2312611121",
+        "url": "https://www.bpm.ph.tum.de/wp-content/uploads/2024/03/Troger_PNAS_2024.pdf",
+        "accessed_at": "2026-10-13T05:51:44.180981+00:00",
+        "status": 200,
+        "final_url": "https://www.bpm.ph.tum.de/wp-content/uploads/2024/03/Troger_PNAS_2024.pdf",
+        "path": "/tmp/traitmech-spatial-memory-expanded-canary-20261013/troger2024-author.pdf",
+        "content_type": "application/pdf",
+        "bytes": 4059746,
+        "sha256": "e6599911fa63b97cfc1895ccb124aa1ee098271fd2c5c64aecd4f00afdecadce"
+      },
+      "locator": "Results / Quantifying Run-and-Tumble and Self-Avoiding Behavior, page 3",
+      "version": "Author-hosted publisher-formatted PDF; current corrected VoR equivalence not verified",
+      "section_type": "Results",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "normalization": "NFC and whitespace folding only; no paraphrase, word repair, punctuation replacement or dehyphenation.",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "direct_source_check": {
+        "reference": "DOI:10.1073/pnas.2312611121",
+        "path": "/tmp/traitmech-spatial-memory-expanded-canary-20261013/troger2024-author.pdf",
+        "sha256": "e6599911fa63b97cfc1895ccb124aa1ee098271fd2c5c64aecd4f00afdecadce",
+        "extraction": "/tmp/traitmech-spatial-memory-troger2024-text-20261013.json",
+        "page": 3,
+        "image": "/tmp/traitmech-spatial-memory-expanded-canary-20261013/troger2024-pages/page-3.png",
+        "locator": "Results / Quantifying Run-and-Tumble and Self-Avoiding Behavior, page 3",
+        "snippet": "In accordance with the literature, we observe that plasmodia generally avoid previously visited areas marked by their slime trail",
+        "role": "Explicit observation by this study; actual Figure 2A was inspected separately from model panels.",
+        "words": 19,
+        "contiguous_match": true,
+        "extraction_sha256": "bd1db6cce412afda87a46a1420d953bdbc0e7ab9135df1fd12558b4f2cdf4a59",
+        "image_sha256": "2d23eeba2bc9f5ae5758607609039786d2cfd6ca842e8ab30f09bc689ffcc521",
+        "visual_inspection": "Selected source page directly viewed in this session before this check."
+      },
+      "assay_limits": "Troger et al. 2024, PMID:38517977, PMC10990088; Results, Quantifying Run-and-Tumble and Self-Avoiding Behavior, page 3. The authors report their own Physarum observations, not only a background citation. Actual trajectories, including Figure 2A, are distinct from simulated-model panels. Page 5 describes 14 trajectories divided into groups of nine each; Figure 4 instead gives seven small and seven large. The discrepancy remains unresolved. The 0.65 square-millimeter median is a cohort split, not a universal threshold. Small plasmodia can cross trails; a modeled three-hour forgetting time is not a measured chemical half-life or internal-memory duration. Main text, Methods and all four main figures were inspected in the author-hosted publisher-formatted PDF with a March 2024 download stamp, not verified current corrected VoR equivalence. Publisher supplements and raw data were not reanalyzed. This different laboratory's assay is not a replication of the earlier maze experiments; no universal molecular receptor is established."
+    }
+  ],
+  "native_record_verification_pending": false,
+  "native_record_verification": {
+    "exit": 0,
+    "report": {
+      "path": "/tmp/traitmech-trail-memory-native-snippets-20261013.tsv",
+      "sha256": "5d3a2cdb2983c4b6c52bb251e7717be62b5a99bcab0251f14da4308182d7834b"
+    },
+    "rows": [
+      {
+        "file": "data/traits/physiology/extracellular_trail_based_spatial_memory.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.1073/pnas.1215037109",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.26",
+        "snippet": "When one arm contained extracellular slime, 39 of 40 plasmodia chose the blank agar arm",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/extracellular_trail_based_spatial_memory.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1088/1361-6463/aa87df",
+        "verdict": "UNRESOLVED",
+        "similarity": "0.00",
+        "snippet": "Our results suggest that the external memory has an adaptive advantage in \u2018open\u2019 and simple bounded environments.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/extracellular_trail_based_spatial_memory.yaml",
+        "locator": "evidence[2]",
+        "reference": "DOI:10.1073/pnas.2312611121",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.34",
+        "snippet": "In accordance with the literature, we observe that plasmodia generally avoid previously visited areas marked by their slime trail",
+        "nearest_sentence": ""
+      }
+    ],
+    "command": "scripts/verify_snippets.py --record data/traits/physiology/extracellular_trail_based_spatial_memory.yaml --out /tmp/traitmech-trail-memory-native-snippets-20261013.tsv",
+    "interpretation": "Two NOT_IN_ABSTRACT full-text results; 2017 UNRESOLVED. Exact quoted DOI source-qualified MED query separately returned zero, while Crossref and the directly inspected PDF establish identity. No global unindexed claim or resolver-success relabeling."
+  },
+  "identity_and_notice_checks": [
+    {
+      "name": "reid2012",
+      "doi": "10.1073/pnas.1215037109",
+      "authority": "crossref",
+      "requested_url": "https://api.crossref.org/works/10.1073%2Fpnas.1215037109",
+      "params": null,
+      "accessed_at": "2026-10-13T05:42:35.263259+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.1215037109",
+      "path": "/tmp/traitmech-spatial-memory-identities-20261013/reid2012-crossref.response",
+      "sha256": "9536217930197fc63eecf67c847af6cd3ad232c04fd6663f0de4b699d67e8cb8",
+      "bytes": 9763,
+      "identity": {
+        "DOI": "10.1073/pnas.1215037109",
+        "title": [
+          "Slime mold uses an externalized spatial \u201cmemory\u201d to navigate in complex environments"
+        ],
+        "publisher": "National Academy of Sciences",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2012,
+              10,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1073/pnas.1215037109"
+      },
+      "notice_fields": {
+        "update-to": null,
+        "updated-by": null,
+        "relation": {}
+      }
+    },
+    {
+      "name": "reid2012",
+      "doi": "10.1073/pnas.1215037109",
+      "authority": "europepmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:23045640 AND SRC:MED",
+        "format": "json",
+        "resultType": "core",
+        "pageSize": 25
+      },
+      "accessed_at": "2026-10-13T05:42:35.737106+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A23045640+AND+SRC%3AMED&format=json&resultType=core&pageSize=25",
+      "path": "/tmp/traitmech-spatial-memory-identities-20261013/reid2012-europepmc.response",
+      "sha256": "8ba985294a0791436a7c200c8f3beda7431252bc9d8e125cc0b73bd35dc798d2",
+      "bytes": 4889,
+      "hit_count": 1,
+      "records": [
+        {
+          "id": "23045640",
+          "source": "MED",
+          "doi": "10.1073/pnas.1215037109",
+          "pmcid": "PMC3491460",
+          "title": "Slime mold uses an externalized spatial \"memory\" to navigate in complex environments.",
+          "pubYear": "2012",
+          "commentCorrectionList": null,
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "smith-ferguson2017",
+      "doi": "10.1088/1361-6463/aa87df",
+      "authority": "crossref",
+      "requested_url": "https://api.crossref.org/works/10.1088%2F1361-6463%2Faa87df",
+      "params": null,
+      "accessed_at": "2026-10-13T05:42:37.592163+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1088%2F1361-6463%2Faa87df",
+      "path": "/tmp/traitmech-spatial-memory-identities-20261013/smith-ferguson2017-crossref.response",
+      "sha256": "279ce5e762f77f1bdc3fe0bc2671c5a73ec2326b3bb39502978de17754fc6faa",
+      "bytes": 18570,
+      "identity": {
+        "DOI": "10.1088/1361-6463/aa87df",
+        "title": [
+          "H\u00e4nsel, Gretel and the slime mould\u2014how an external spatial memory aids navigation in complex environments"
+        ],
+        "publisher": "IOP Publishing",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1088/1361-6463/aa87df"
+      },
+      "notice_fields": {
+        "update-to": null,
+        "updated-by": null,
+        "relation": {}
+      }
+    },
+    {
+      "name": "smith-ferguson2017",
+      "doi": "10.1088/1361-6463/aa87df",
+      "authority": "europepmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "DOI:\"10.1088/1361-6463/aa87df\" AND SRC:MED",
+        "format": "json",
+        "resultType": "core",
+        "pageSize": 25
+      },
+      "accessed_at": "2026-10-13T05:42:37.936512+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1088%2F1361-6463%2Faa87df%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=25",
+      "path": "/tmp/traitmech-spatial-memory-identities-20261013/smith-ferguson2017-europepmc.response",
+      "sha256": "ffaabf8f3ed567e9dde73d14f89ce38f93ff460b5ac2234d02b33af04b616997",
+      "bytes": 207,
+      "hit_count": 0,
+      "records": []
+    },
+    {
+      "name": "troger2024",
+      "doi": "10.1073/pnas.2312611121",
+      "authority": "crossref",
+      "requested_url": "https://api.crossref.org/works/10.1073%2Fpnas.2312611121",
+      "params": null,
+      "accessed_at": "2026-10-13T06:00:30.965552+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1073%2Fpnas.2312611121",
+      "path": "/tmp/traitmech-spatial-memory-expanded-identities-20261013/troger2024-crossref.response",
+      "sha256": "c1dc36ded6ca9489e9d7525011ecd7c24e763def9f50c51f61a75fa5e6ffc6c5",
+      "bytes": 13143,
+      "identity": {
+        "DOI": "10.1073/pnas.2312611121",
+        "title": [
+          "Size-dependent self-avoidance enables superdiffusive migration in macroscopic unicellulars"
+        ],
+        "publisher": "National Academy of Sciences",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              22
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1073/pnas.2312611121"
+      },
+      "notice_fields": {
+        "update-to": null,
+        "updated-by": null,
+        "relation": {}
+      }
+    },
+    {
+      "name": "troger2024",
+      "doi": "10.1073/pnas.2312611121",
+      "authority": "europepmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:38517977 AND SRC:MED",
+        "format": "json",
+        "resultType": "core",
+        "pageSize": 25
+      },
+      "accessed_at": "2026-10-13T06:00:31.435572+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A38517977+AND+SRC%3AMED&format=json&resultType=core&pageSize=25",
+      "path": "/tmp/traitmech-spatial-memory-expanded-identities-20261013/troger2024-europepmc.response",
+      "sha256": "b9977027eb32f7fbf6db4fbf67fc90d3a9edb5e3fd7e3ab14c6a9d45304ab253",
+      "bytes": 5894,
+      "hit_count": 1,
+      "records": [
+        {
+          "id": "38517977",
+          "source": "MED",
+          "doi": "10.1073/pnas.2312611121",
+          "pmcid": "PMC10990088",
+          "title": "Size-dependent self-avoidance enables superdiffusive migration in macroscopic unicellulars.",
+          "pubYear": "2024",
+          "commentCorrectionList": null,
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "allocation": {
+    "checked_at": "2026-10-13T06:31:55.328116+00:00",
+    "base": "496e026915723362abc58c3ab721d99548f0f784",
+    "raw_receipt_sha256": "be4a99cf12ec0517320cf798fc84f7e5d402326e9daf1870208c8b2e9811c79c",
+    "candidate": "traitmech:000715",
+    "cohort": "metpo_traitmech_v591",
+    "block": [
+      1066800,
+      1066899
+    ],
+    "intervals_checked": 9848,
+    "dispositions": [
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 199,
+        "disposition": "not_a_reservation",
+        "reason": "Column 77 is a floating-point embedding coordinate, not a CURIE. No row identifier occupies the proposed block."
+      },
+      {
+        "source": {
+          "repository": "Knowledge-Graph-Hub/kg-microbe",
+          "path": "mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "saved_path": "/tmp/traitmech-anticipation-discovery-20261012/github-kg-microbe/content/mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "blob_sha": "a3ce540da6ee94b71a4770093ce01ff1416c8660",
+          "sha256": "59464e08017cc907a1240a4378d2462efc9e2c1b9d6c3cf0b08b4344ef695ae8",
+          "head": "bb3072f59f6d9e098ae40c4dce2c60a9dec9af42"
+        },
+        "line": 435991,
+        "disposition": "not_a_reservation",
+        "reason": "The subject belongs to the gmelin namespace, not METPO. Numeric suffixes do not equate distinct namespaces."
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-ncbi-success-body-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-transcriptional-memory-provenance-main-after-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-habituation-main-before-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-habituation-main-before-delete-20261013/proposals/metpo_traitmech_v590/proposal.md",
+        "line": 107,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "bc19472ff40da3499688589344580939502e393e75887c6f3ba74846698217a1",
+        "context": "`METPO:1000609` in draft #924; `beilstein:1066722` is a chemical identifier in a\nKG-Microbe mapping, not a METPO identifier. Ten `1000000-1999999` overlaps are\nformal editor-namespace envelopes or prior documentation of those envelopes,\nnot competing block reservations. Narrower reserved and retired ranges stayed\nchecked. No conflicting reservation remained in the inspected scope.\n\nRecheck current main and pending heads before publication. These checks do",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-transcriptional-memory-provenance-main-before-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-habituation-main-after-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-habituation-main-after-delete-20261013/proposals/metpo_traitmech_v590/proposal.md",
+        "line": 107,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "bc19472ff40da3499688589344580939502e393e75887c6f3ba74846698217a1",
+        "context": "`METPO:1000609` in draft #924; `beilstein:1066722` is a chemical identifier in a\nKG-Microbe mapping, not a METPO identifier. Ten `1000000-1999999` overlaps are\nformal editor-namespace envelopes or prior documentation of those envelopes,\nnot competing block reservations. Narrower reserved and retired ranges stayed\nchecked. No conflicting reservation remained in the inspected scope.\n\nRecheck current main and pending heads before publication. These checks do",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-ncbi-success-body-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "context": "and 127 registered CommunityMech roots plus available historical proposals.\nThe raw scan also found `1000000-1999999` in METPO #629's\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\nraw hit while all narrower reserved, retired and used ranges remain checked.",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v590/proposal.md",
+        "line": 107,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "bc19472ff40da3499688589344580939502e393e75887c6f3ba74846698217a1",
+        "context": "`METPO:1000609` in draft #924; `beilstein:1066722` is a chemical identifier in a\nKG-Microbe mapping, not a METPO identifier. Ten `1000000-1999999` overlaps are\nformal editor-namespace envelopes or prior documentation of those envelopes,\nnot competing block reservations. Narrower reserved and retired ranges stayed\nchecked. No conflicting reservation remained in the inspected scope.\n\nRecheck current main and pending heads before publication. These checks do",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      },
+      {
+        "source": {
+          "repository": "berkeleybop/metpo",
+          "path": "docs/metpo_id_ranges_research.md",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "blob_sha": "994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+          "pr": 629,
+          "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+          "status": "modified"
+        },
+        "line": 14,
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "source_sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+        "context": "|--------|------|-----------------|\n| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |\n| **Current class sheet** | `src/templates/metpo_sheet.tsv` | 257 classes, METPO:1000059 to METPO:1004005 |\n| **Current properties sheet** | `src/templates/metpo-properties.tsv` | 109 properties, METPO:2000001 to METPO:2000606 |\n| **BioPortal entity extracts** | `metadata/ontology/historical_submissions/entity_extracts/metpo_submission_{2-10}_all_entities.tsv` | IDs used in each of 9 historical BioPortal submissions |\n| **Historical OWL files** | `external/metpo_historical/metpo_submission_{2-10}.owl` | Actual OWL files for each submission |\n| **Stability report** | `reports/METPO_Stability_Analysis_Comprehensive_Report.md` | Comprehensive analysis from Sep 2025 |",
+        "disposition": "formal_namespace_envelope_or_documentation_not_specific_reservation"
+      }
+    ],
+    "conflicting_reservations": [],
+    "status": "Candidate available in the inspected scope; this is not an atomic global reservation.",
+    "limits": "Ignored/hidden current files included; retained tracked HEADs do not reconstruct unavailable ignored historical bytes. Recheck before publication."
+  },
+  "novelty": {
+    "ignored_hidden_included": true,
+    "local_scope": {
+      "checked_at": "2026-10-13T06:14:53.484853+00:00",
+      "traitmech_registered": 22,
+      "independent_copies": 12,
+      "sibling_proposal_roots": 129,
+      "sibling_historical_revisions": 105,
+      "ignored_hidden_included": true,
+      "accepted": false,
+      "identifier_reserved": false,
+      "sibling_catalog_changed_during_scan": false,
+      "limits": [
+        "Bounded lexical search; semantic adjudication pending.",
+        "Historical tracked HEADs cannot reconstruct unavailable ignored/untracked files.",
+        "Archives and packed Git objects are not semantically unpacked; no symlink directory traversal.",
+        "After-delete clone excluded while recovery checks run.",
+        "Current sibling records are covered by the separate pinned remote audit, not all sibling worktrees.",
+        "Sibling proposals describe the start catalog only; a changed catalog needs a refresh before any allocation."
+      ]
+    },
+    "remote_scope": {
+      "checked_at": "2026-10-13T06:14:19.314943+00:00",
+      "pattern": "spatial[ _-]memor|external(i[sz]ed|i[sz]ation)?[ _-](spatial[ _-])?memor|stigmerg|trail[ _-](avoid|follow|guid|memor|navig)|slime.{0,30}trail|(substrate|surface|environmental|foraging)[ _-]memor|self[ _-]avoid|pnas[.]1215037109|beheco/art032|1361-6463/aa87df|pnas[.]2312611121|nature12155|23045640|38517977|23657259|PMC3491460|PMC10990088|PMC4109411",
+      "main": "496e026915723362abc58c3ab721d99548f0f784",
+      "prs": 12,
+      "pending_files": 828,
+      "upstream_files": 129,
+      "pending_hits": [],
+      "upstream_hits": [],
+      "body_hits": [],
+      "limits": "Lexical screen only. Binary limits recorded per file. Requires ontology and semantic adjudication; no reservation."
+    },
+    "disposition": "Completed lexical screens preceded acceptance. Full matched records and RDF neighbors were subsequently assessed; no exact active record or node requiring migration was identified in the bounded scope.",
+    "additional_community_records": 458
+  },
+  "input_receipts": [
+    {
+      "path": "/tmp/traitmech-spatial-memory-acceptance-20261013.md",
+      "sha256": "935ac4f34acb30a7b464e176210ed7ca788c52b8d840d65dba6a24a1fc7fb84b"
+    },
+    {
+      "path": "/tmp/traitmech-post-habituation-frontier-20261013.md",
+      "sha256": "3d024c66bda7dc3274b25d661c32c5069a4ab0112ac5c4d134268d073545b602"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-quote-check-20261013.json",
+      "sha256": "da4bf66e9309e078c1743e94a7530a29ac7970c4ac3aa793d618e648d14825e9"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-allocation-20261013/assessment.json",
+      "sha256": "929d98044bfe3e4a5c309d46f40330fbe50ebfb5413d685858deca7dbe33a71b"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-allocation-20261013/remote/interval-reuse.json",
+      "sha256": "0de46a3e8c7423dc9ab3a1e6212ac3a0027593774452e3fa123cfc877e31fb45"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-local-novelty-v3-20261013/scope.json",
+      "sha256": "f0a170e1c09a93dc3f8938b8a8e8d6231c13d4c2111b29776c66333c8ba752a8"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-local-novelty-v3-20261013/semantic.json",
+      "sha256": "bb8b12a1fe803af3002e9ddf9031e96ec673d33e87f385734bf070d532b80a6c"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-remote-novelty-v2-20261013/result.json",
+      "sha256": "75ba53306c9b52f2062c94557476915e6598bb031334fcd100f7b5f7ff1da146"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-identity-boundaries-20261013/community-records.json",
+      "sha256": "887ec49ef1226ce72e5d03fb556252557a22e9ff604899f380c69ddaebf39780"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-identity-boundaries-20261013/ontologies.json",
+      "sha256": "71d8ae0438007b9bb81930675a9791389d95b0ad64b19a0abadce85a0f3f6efa"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-identities-20261013/assessment.json",
+      "sha256": "4b0afecc7cd23b3858964020f8cfc1a074d2ee1ab94cb91730238cc585cf315c"
+    },
+    {
+      "path": "/tmp/traitmech-spatial-memory-expanded-identities-20261013/assessment.json",
+      "sha256": "4a08fe3e54d9f2ae6fd24d3ea71c046ca1bb342c5117ad8140c5136a3be5b762"
+    }
+  ],
+  "limitations": [
+    "No current corrected-VoR equivalence, comprehensive notice clearance, raw-data reanalysis or model rerun. Full papers are retained locally, not redistributed.",
+    "2012 and 2017 main text and figures were inspected; supplements remain unread. 2024 main figures and version-specific arXiv text plus S12/S13 images were inspected; publisher SI and other actual supplementary images remain unassessed.",
+    "The arXiv 2409.12825v1 posting on 2024-09-19 followed journal publication; it is not a prepublication version or an automatic correction of group counts or illumination conditions.",
+    "Quoted 2017 adaptive language is the authors interpretation of maze outcomes, not direct fitness measurement. Coated substrates do not isolate every environmental confound.",
+    "Retained tracked trees cannot recover unavailable ignored historical files; symlink directories and arbitrary archives were not recursively expanded. Allocation is not an atomic reservation and must be refreshed before publication.",
+    "Deprecated adaptation and chemotaxis neighbors remain historically unresolved; no exact mapping or revival follows."
+  ]
+}

@@ -11999,6 +11999,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/extracellular_membrane_vesicle_production.html#extracellular-vesicle-production-route-mechanisms"
  },
  {
+  "discussion_id": "trail-memory-scope-and-hierarchy",
+  "prompt": "Keep external trace-guided exploration distinct from internal memory and universal trail avoidance.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "extracellular-trail-based spatial memory",
+  "source_id": "traitmech:000715",
+  "source_file": "extracellular_trail_based_spatial_memory.yaml",
+  "attaches_to": [],
+  "rationale": "This operational phenotype concerns spatial information persisting outside the microorganism. It does not require always avoiding a trail, improved navigation in every setting, individual self-recognition, or internal recall. Carbon-source memory (traitmech:000706), acquired stress-resistance memory (traitmech:000712), enhanced transcriptional reactivation memory (traitmech:000713) and behavioral habituation (traitmech:000714) have different endpoints. Negative autotropism (traitmech:000603) concerns germ-tube or hyphal orientation. Collective bacterial predation (traitmech:000701) concerns coordinated killing and feeding, despite a trail mention. Contact-dependent outer membrane exchange (traitmech:000650) concerns actual intercellular exchange. METPO:1000059 phenotype is the conservative parent pending hierarchy review; local chemotaxis has a flagellar-specific definition and is not a universal parent. Generic memory, learning, stigmergy and extracellular polymer production are not exact synonyms. Psl-biased visitation and community growth history require separate scope and evidence assessments.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/extracellular_trail_based_spatial_memory.html#trail-memory-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "trail-memory-source-and-mechanism-limits",
+  "prompt": "Resolve source versions, assay discrepancies and culture provenance before assigning taxa or mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "extracellular-trail-based spatial memory",
+  "source_id": "traitmech:000715",
+  "source_file": "extracellular_trail_based_spatial_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Coated-versus-blank substrates manipulate spatial trace information along with the environment, not exclusively a memory molecule. The 2017 significance-statistic discrepancy and 2024 group-size discrepancy remain visible source gaps. The 2024 arXiv v1 was posted after journal publication; its seven-per-group wording and differing illumination details do not silently correct the publisher-formatted PDF. Supplement illustrations do not establish crossing frequencies. Bounded Crossref/MED and publisher checks do not establish exhaustive absence of notices or corrected-version equivalence. The evidence concerns cultured Physarum, not species-wide possession or all microbes. Natural culture provenance remains unverified. No canonical taxa, exact external mappings, protein examples or molecular causal graph are asserted. Unknown trail components, sensory mechanisms, unread supplements and raw-data reanalysis remain research gaps. Source hashes, access limits and actual native snippet-verifier outcomes are retained in the source-verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/extracellular_trail_based_spatial_memory.html#trail-memory-source-and-mechanism-limits"
+ },
+ {
+  "discussion_id": "trail-memory-historical-identity",
+  "prompt": "Retain unresolved historical adaptation and chemotaxis identity without reviving deprecated identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "extracellular-trail-based spatial memory",
+  "source_id": "traitmech:000715",
+  "source_file": "extracellular_trail_based_spatial_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and inspected current METPO graphs mark METPO:0000248 and METPO:000249 Microbial Adaptation, METPO:1000004 adaptation and METPO:1000062 chemotaxis deprecated. Inspected subjects have no replacement or consider annotations; OMO:0001000 reasons are provisional under open METPO issue 521. Original historical scopes remain unresolved. Neither biological invalidity nor exact equivalence follows from their labels or deprecation reasons. This qualified external-trace phenotype is accepted independently from primary evidence. Ignored and hidden current files, available tracked history, independent copies, pending changes and inspected ontology graphs revealed no exact active record within the documented scope. No historical exact mapping is asserted. Existing records and the pinned ontology remain unchanged; discovery is not exhausted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/extracellular_trail_based_spatial_memory.html#trail-memory-historical-identity"
+ },
+ {
   "discussion_id": "galvanotaxis-orientation-and-mapping-boundaries",
   "prompt": "Resolve electrical orientation mechanisms without equating active motility with passive drift.",
   "kind": "KNOWLEDGE_GAP",
@@ -14501,9 +14552,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 726,
- "total_knowledge_gaps": 456,
- "total_source_entries": 580,
+ "total_discussions": 729,
+ "total_knowledge_gaps": 457,
+ "total_source_entries": 581,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
