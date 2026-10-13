@@ -355,6 +355,57 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/free_living.html#kgscan-d5aefedf82bb"
  },
  {
+  "discussion_id": "fungal-nematophagy-scope-and-hierarchy",
+  "prompt": "Resolve the broader feeding hierarchy without imposing a capture mechanism or carbon-specific endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematophagy",
+  "source_id": "traitmech:000719",
+  "source_file": "fungal_nematophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Feeding on living or previously dead nematodes is included; fungal killing, obligacy and starvation are not universal requirements. Mere contact, paralysis, killing, trap formation or a sequence annotation alone is insufficient. Fungal nematode-trap formation (traitmech:000718) is structural, neither necessary nor sufficient for feeding. Mycoparasitism (traitmech:000717) has fungal prey; predatory bacterium (traitmech:000054) has a bacterial actor and prey. Phagotrophy (traitmech:000628), myzocytosis (traitmech:000631) and pallium feeding (traitmech:000632) impose different uptake modes. Saprotrophy (traitmech:000055) can overlap, without organism-level disjointness. Local parasitism (traitmech:000043) inherits persistent association, not required here. Keep phenotype METPO:1000059 pending a closer feeding hierarchy; no universal carbon, nitrogen or energy contribution is specified. Bare nematophagy includes nonfungal actors and is not an exact synonym. No unverified synonyms or xrefs are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematophagy.html#fungal-nematophagy-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-nematophagy-metpo-assessment",
+  "prompt": "Review upstream placement without reviving deprecated identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematophagy",
+  "source_id": "traitmech:000719",
+  "source_file": "fungal_nematophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and current METPO lack an exact active counterpart in the inspected scope. Historical METPO:0000005 and METPO:000005 are deprecated and replace to active METPO:1000631 trophic type, a carbon/energy axis rather than this prey-defined feeding phenotype. METPO:1000644 is organic-carbon heterotrophy and METPO:1000731 concerns nutrient-availability adaptation. Deprecated METPO:0000261, METPO:000262 and METPO:1000125 concern fungal spores; METPO:1000227 is parasitism. No replacement or consider annotation was observed for those four. Their OMO:0001000 reasons neither invalidate biology nor authorize reuse. Historical IDs are not exact xrefs. The pinned ontology remains unchanged; v595 proposes the new class.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematophagy.html#fungal-nematophagy-metpo-assessment"
+ },
+ {
+  "discussion_id": "fungal-nematophagy-source-and-mechanism-limits",
+  "prompt": "Resolve source inconsistencies and taxon-paired effectors before adding a causal graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal nematophagy",
+  "source_id": "traitmech:000719",
+  "source_file": "fungal_nematophagy.yaml",
+  "attaches_to": [],
+  "rationale": "Marlin's Table 2 conflicts with its Introduction on two host responses; Table 3 and Results differ for P. artyukhovskii. Those disputed host ranges are not imported. den Belder's Figure 2 panel labels/caption, Table 3 direction and significance notation disagree with prose; no numerical rates are adopted. Lin's Results uses mep1 where Table 1 and Figure 5 use mcp1; no protein identity is silently reconciled. Its linked DOI:10.1371/journal.pbio.3003178 is a later Update Article, not a correction or independent laboratory replication. Capture and digestion have distinct assays; expression associations do not establish universal effectors. No causal graph, protein example or chemical mechanism is asserted. Source-status checks are bounded: MDPI's notice page returned 403, and no comprehensive notice clearance is claimed. Source hashes, inspected sections and actual native verdicts are retained in the verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematophagy.html#fungal-nematophagy-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "kgscan-4fc1a06fa1e3",
   "prompt": "This record commits to luminal oxygen limitation contributing to the primary fermenter community. Does the reverse arm hold too -- do the fermenters and the epithelium maintain the anoxia -- making this a feedback loop rather than the one-way edge drawn?",
   "kind": "KNOWLEDGE_GAP",
@@ -14673,9 +14724,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 736,
- "total_knowledge_gaps": 460,
- "total_source_entries": 584,
+ "total_discussions": 739,
+ "total_knowledge_gaps": 461,
+ "total_source_entries": 585,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
