@@ -32,14 +32,16 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
   Actual Figure 4, supplement text/tables and its image were inspected.
   The 15-word Results excerpt is directly matched, natively `NOT_IN_ABSTRACT`.
   Strain/accession contradictions remain explicit; no canonical taxon is added.
-- [Harada and Yoshiga 2015](https://doi.org/10.3725/jjn.45.51): viability-assay
-  limitations, not a third microbial-killing experiment. The 13-word abstract
+- Discussion-only [Harada and Yoshiga 2015](https://doi.org/10.3725/jjn.45.51):
+  viability-assay limitations, not supporting trait evidence or a definition
+  citation. The 13-word abstract
   excerpt matches the publisher and PDF. Native result remains `UNRESOLVED`;
   the exact DOI query returned zero results, despite verified publisher and
   Crossref identity. This does not establish absence from all indexing services.
 
 The [verification sidecar](../../research/traits/physiology/lethal_nematicidal_activity-source-verification.json)
-retains hashes, direct locators, source-status checks and limitations. No
+separates the two supporting evidence rows from the discussion-only source,
+retaining hashes, direct locators, source-status checks and limitations. No
 complete supplement or raw-data audit is claimed. No causal graph or protein
 example is proposed while strain identities and mechanisms remain unresolved.
 
@@ -122,5 +124,7 @@ validation does not authorize promotion to human `REVIEWED` status.
 
 ## Change Log
 
-- 2026-10-13, v596: lethal microbial capability, three cited excerpts,
-  explicit assay/provenance limitations and two open discussions.
+- 2026-10-13, v596: lethal microbial capability, two supporting excerpts and
+  one discussion-only methodological excerpt, explicit assay/provenance
+  limitations and two open discussions. Issue #1916 corrected the initial
+  context citation's placement and excluded it from definition annotations.

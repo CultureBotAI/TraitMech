@@ -34,20 +34,12 @@ evidence:
     its embedded image were inspected, not rendered document pages. Strain/accession
     discrepancies prevent a canonical taxon assignment; pot/field efficacy is not
     imported.'
-- reference: DOI:10.3725/jjn.45.51
-  snippet: The J2s inactivated by low temperature showed no reaction to the NaOH treatment.
-  notes: 'Harada and Yoshiga 2015, scientific abstract, printed page 51. Direct publisher
-    HTML/PDF match; actual pages 51-54, Table 1 and Figure 1 inspected. Second-stage
-    M. incognita juveniles could recover after warming or removal of some chemicals.
-    This supports condition-dependent viability-assay caution, not microbial killing
-    or an additional phenotype replication. Native UNRESOLVED: exact DOI query returned
-    zero results; publisher and Crossref verify identity.'
 discussions:
 - discussion_id: lethal-nematicidal-scope-and-mappings
   prompt: Refine the hierarchy while preserving the lethal, microbial-actor endpoint.
   kind: CURATION_TODO
   status: OPEN
-  rationale: Killing susceptible nematodes is required; reversible paralysis, repellence,
+  rationale: 'Killing susceptible nematodes is required; reversible paralysis, repellence,
     reduced egg hatch, host defense induction and a sequence annotation alone are
     insufficient. The label is qualified because nematicidal usage can include nonlethal
     readouts. Neither all nematode species/stages nor all producing strains are implied.
@@ -58,7 +50,15 @@ discussions:
     parent. Pinned/current METPO inspection found no exact active or deprecated counterpart.
     CHEBI:25491 denotes a nematicide chemical, not this microbial capability, and
     is not an xref. No exact synonyms or organism-level disjointness are asserted;
-    v596 proposes the class.
+    v596 proposes the class. Methodological context, DOI:10.3725/jjn.45.51: "The J2s
+    inactivated by low temperature showed no reaction to the NaOH treatment.". Harada
+    and Yoshiga 2015, scientific abstract, printed page 51. Direct publisher HTML/PDF
+    match; actual pages 51-54, Table 1 and Figure 1 inspected. Second-stage M. incognita
+    juveniles could recover after warming or removal of some chemicals. This supports
+    condition-dependent viability-assay caution, not microbial killing or an additional
+    phenotype replication. Native UNRESOLVED: exact DOI query returned zero results;
+    publisher and Crossref verify identity. This citation is discussion-only context,
+    not supporting evidence for the trait or its definition.'
   posed_by: codex
   posed_date: '2026-10-13'
 - discussion_id: lethal-nematicidal-provenance-and-mechanisms
@@ -89,4 +89,13 @@ curation_history:
     history and open/draft PR checks, with numeric false positives adjudicated. No
     exact active METPO counterpart identified. Other records unchanged. Timestamp
     records observed post-audit acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-13T18:14:01Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_ROLE
+  changes: 'Addressed review issue #1916: moved the Harada viability-method citation
+    and exact excerpt from supporting evidence into the scope discussion. Retained
+    its source/resolver provenance as context. The two microbial-killing studies remain
+    supporting evidence; the context-only DOI no longer enters proposal definition
+    annotations. Preserved original history, identity, hierarchy and other records.'
   llm_assisted: true

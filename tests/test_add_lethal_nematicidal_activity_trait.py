@@ -43,27 +43,29 @@ def test_identity_scope_and_history():
     assert record["mapping_status"] == "PROPOSED" and record["term_kind"] == "CLASS"
     assert record["parent_traits"] == ["METPO:1000059"]
     assert record["definition_source"] == "DOI:10.1128/spectrum.02577-21"
-    assert len({e["reference"] for e in record["evidence"]}) == 3
+    assert len({e["reference"] for e in record["evidence"]}) == 2
     assert all(e["reference"].startswith("DOI:") and 10 <= len(e["snippet"].split()) <= 25
                for e in record["evidence"])
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs", "protein_examples"])
-    event, = record["curation_history"]
+    event, correction = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
+    assert correction["action"] == "CORRECTED_EVIDENCE_ROLE"
+    assert datetime.fromisoformat(correction["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
-    assert len(writer.build_record()["evidence"]) == 3
+    assert len(writer.build_record()["evidence"]) == 2
 
 
 def test_evidence_and_endpoint_limits():
     record = writer.build_record()
-    bacterial, fungal, method = record["evidence"]
+    bacterial, fungal = record["evidence"]
     for text in ["VERIFIED", "scientific Abstract", "synthetic standards", "not t-CA/PPA", "No live-culture"]:
         assert text in bacterial["notes"]
     for text in ["NOT_IN_ABSTRACT", "culture filtrate", "water/PDB", "72 h", "without its duration"]:
         assert text in fungal["notes"]
-    for text in ["UNRESOLVED", "not microbial killing", "zero results"]:
-        assert text in method["notes"]
     scope, limits = [d["rationale"] for d in record["discussions"]]
+    for text in [writer.CONTEXT_REFERENCE, "UNRESOLVED", "not microbial killing", "zero results"]:
+        assert text in scope
     for text in ["reversible paralysis", "requires feeding", "CHEBI:25491", "not an xref", "no exact", "infection"]:
         assert text in scope
     for text in ["MT529846.1", "SF_570", "MT529837.1", "SF_561", "FbMi-4", "No corrected accession", "without canonical examples"]:
@@ -78,8 +80,12 @@ def test_source_receipt():
     assert [(r["reference"], r["snippet"]) for r in receipt["rows"]] == [
         (e["reference"], e["snippet"]) for e in writer.build_record()["evidence"]
     ]
-    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT", "UNRESOLVED"]
-    for row in receipt["rows"]:
+    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT"]
+    context, = receipt["context_only_sources"]
+    assert context["reference"] == writer.CONTEXT_REFERENCE and context["native_verdict"] == "UNRESOLVED"
+    assert context["role"] == "discussion_only"
+    assert context["snippet"] in writer.build_record()["discussions"][0]["rationale"]
+    for row in [*receipt["rows"], context]:
         assert row["exact_contiguous_span"] and row["source_identity_verified"]
         assert row["words"] == len(row["snippet"].split()) <= 25
         assert len(row["source"]["sha256"]) == 64 and row["source"]["url"].startswith("https://")
@@ -98,8 +104,28 @@ def test_proposal_contract():
     assert rows[2][4:7] == ["METPO:1000059", "", ""]
     assert rows[2][7] == "metpo_traitmech_2026_10" and rows[2][10] == writer.IDENTIFIER
     citations = rows[2][3].split("|")
-    assert len(citations) == len(set(citations)) == 4
+    assert len(citations) == len(set(citations)) == 3
     assert set(citations) == {f"TraitMech:data/traits/physiology/{writer.SLUG}.yaml", *(e["reference"] for e in record["evidence"])}
+    assert writer.CONTEXT_REFERENCE not in citations
+
+
+def test_known_preimage_migration_retains_context_and_history(isolated, monkeypatch):
+    previous = writer.build_initial_record()
+    writer.write_validated_trait(previous, writer.TARGET)
+    writer.PROPOSAL.parent.mkdir()
+    writer.PROPOSAL.write_text(writer.proposal_tsv(previous))
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0 and snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    current = yaml.safe_load(writer.TARGET.read_text())
+    assert current == writer.build_record()
+    assert current["curation_history"][:-1] == previous["curation_history"]
+    assert current["evidence"] == previous["evidence"][:2]
+    context = previous["evidence"][2]
+    assert context["snippet"] in current["discussions"][0]["rationale"]
+    assert context["reference"] not in writer.PROPOSAL.read_text()
+    after = snapshot(isolated)
+    assert run(monkeypatch, True) == 0 and snapshot(isolated) == after
 
 
 def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):

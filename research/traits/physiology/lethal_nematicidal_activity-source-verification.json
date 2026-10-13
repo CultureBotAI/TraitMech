@@ -34,22 +34,6 @@
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
       "inspection_limits": "Scientific Abstract, in vitro Results, culture-filtrate/juvenile Methods and actual Figure 4 inspected. Supplement OOXML text/tables plus its only embedded image inspected; no full DOCX page render. Pot/field claims and other main figures not fully audited. Recovery duration and criterion unreported. GenBank and supplement isolate labels conflict; no canonical assignment."
-    },
-    {
-      "reference": "DOI:10.3725/jjn.45.51",
-      "snippet": "The J2s inactivated by low temperature showed no reaction to the NaOH treatment.",
-      "words": 13,
-      "source": {
-        "url": "https://www.jstage.jst.go.jp/article/jjn/45/1/45_51/_pdf/-char/en",
-        "path": "/tmp/traitmech-nematicidal-lead-20261013/harada2015.pdf",
-        "bytes": 890995,
-        "sha256": "4f579861d00f3953e760ba4f797e8db75fa80636d96947d04aaf2ad75d767b35"
-      },
-      "locator": "Scientific abstract, printed page 51 (PDF page 1); methodological caveat only.",
-      "exact_contiguous_span": true,
-      "source_identity_verified": true,
-      "native_verdict": "UNRESOLVED",
-      "inspection_limits": "Printed pages 51-54 visually inspected, including abstract, relevant Methods, Table 1 and Figure 1. Method limitations do not independently establish microbial killing or invalidate all NaOH-based viability scoring. Final bibliography page not claimed as scientifically audited."
     }
   ],
   "native_record_verification": {
@@ -59,16 +43,16 @@
       "--record",
       "data/traits/physiology/lethal_nematicidal_activity.yaml",
       "--out",
-      "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv"
+      "/tmp/traitmech-nematicidal-issue1916-checks-20261013/native-record.tsv"
     ],
     "exit": 0,
-    "seconds": 5.362425678875297,
-    "completed_at": "2026-10-13T17:36:49.111658+00:00",
-    "log": "/tmp/traitmech-nematicidal-checks-20261013/records-03.log",
+    "seconds": 4.2845765496604145,
+    "completed_at": "2026-10-13T18:17:02.183779+00:00",
+    "log": "/tmp/traitmech-nematicidal-issue1916-checks-20261013/records-02.log",
     "report": {
-      "path": "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv",
-      "bytes": 779,
-      "sha256": "c2a8c69718654d4a739553e120caf03f7e489e6a2edbe7e848f3d5927c4f5faf"
+      "path": "/tmp/traitmech-nematicidal-issue1916-checks-20261013/native-record.tsv",
+      "bytes": 591,
+      "sha256": "4e4b46061f398fb4f0fec77bbd273e207f41b47168636e40394b361f61cee79f"
     }
   },
   "canary": {
@@ -996,5 +980,53 @@
     },
     "concurrent_limit": "Recheck before publication; this is not an atomic allocation."
   },
-  "skill_assessment": "Existing add-trait guidance already requires endpoint distinctions, direct excerpts, source-discrepancy retention, sequence interpretation, and canonical provenance. No skill change justified by this curation."
+  "skill_assessment": "Issue #1916 exposed an evidence-role error despite existing generic guidance. Add-trait now explicitly separates context-only citations from supporting evidence, supporting-citation counts and proposal definition annotations; sequence-interpretation guidance is unchanged.",
+  "context_only_sources": [
+    {
+      "reference": "DOI:10.3725/jjn.45.51",
+      "snippet": "The J2s inactivated by low temperature showed no reaction to the NaOH treatment.",
+      "words": 13,
+      "source": {
+        "url": "https://www.jstage.jst.go.jp/article/jjn/45/1/45_51/_pdf/-char/en",
+        "path": "/tmp/traitmech-nematicidal-lead-20261013/harada2015.pdf",
+        "bytes": 890995,
+        "sha256": "4f579861d00f3953e760ba4f797e8db75fa80636d96947d04aaf2ad75d767b35"
+      },
+      "locator": "Scientific abstract, printed page 51 (PDF page 1); methodological caveat only.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "UNRESOLVED",
+      "inspection_limits": "Printed pages 51-54 visually inspected, including abstract, relevant Methods, Table 1 and Figure 1. Method limitations do not independently establish microbial killing or invalidate all NaOH-based viability scoring. Final bibliography page not claimed as scientifically audited.",
+      "role": "discussion_only",
+      "discussion_id": "lethal-nematicidal-scope-and-mappings",
+      "native_verdict_scope": "Retained from the pre-correction native run; not a supporting-evidence row in the corrected record."
+    }
+  ],
+  "prior_native_record_verification": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/lethal_nematicidal_activity.yaml",
+        "--out",
+        "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv"
+      ],
+      "exit": 0,
+      "seconds": 5.362425678875297,
+      "completed_at": "2026-10-13T17:36:49.111658+00:00",
+      "log": "/tmp/traitmech-nematicidal-checks-20261013/records-03.log",
+      "report": {
+        "path": "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv",
+        "bytes": 779,
+        "sha256": "c2a8c69718654d4a739553e120caf03f7e489e6a2edbe7e848f3d5927c4f5faf"
+      }
+    }
+  ],
+  "revised_at": "2026-10-13T18:18:01.961093+00:00",
+  "revision": {
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1916",
+    "role_correction": "Two supporting evidence rows; Harada is discussion-only methodological context and is excluded from definition annotations.",
+    "historical_scope": "Original acquisitions, exact excerpts and pre-correction native receipt are retained, not relabeled or discarded."
+  }
 }

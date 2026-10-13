@@ -22,6 +22,8 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v596/metpo_proposal_classes_robot.t
 IDENTIFIER = "traitmech:000720"
 METPO_ID = "METPO:1067300"
 TIMESTAMP = "2026-10-13T17:31:43Z"
+REVISION_TIMESTAMP = "2026-10-13T18:14:01Z"
+CONTEXT_REFERENCE = "DOI:10.3725/jjn.45.51"
 DEFINITION_SOURCE = "DOI:10.1128/spectrum.02577-21"
 PARENT = {
     "identifier": "METPO:1000059",
@@ -36,7 +38,8 @@ PARENT = {
     "mapping_status": "REVIEWED",
     "parent_traits": ["METPO:1000188"],
 }
-RECORD = {
+# Retain the published preimage for guarded migration and append-only history.
+INITIAL_RECORD = {
     "identifier": IDENTIFIER,
     "label": "lethal nematicidal activity",
     "definition": "A physiological capability of a microorganism to kill nematodes.",
@@ -162,8 +165,8 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
-    record = copy.deepcopy(RECORD)
+def build_initial_record() -> dict:
+    record = copy.deepcopy(INITIAL_RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
         changes=(
@@ -177,6 +180,30 @@ def build_record() -> dict:
             "records unchanged. Timestamp records observed post-audit acceptance."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_initial_record()
+    context = record["evidence"].pop()
+    assert context["reference"] == CONTEXT_REFERENCE
+    record["discussions"][0]["rationale"] += (
+        f' Methodological context, {context["reference"]}: "{context["snippet"]}". '
+        f'{context["notes"]} This citation is discussion-only context, not '
+        "supporting evidence for the trait or its definition."
+    )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_EVIDENCE_ROLE",
+        changes=(
+            "Addressed review issue #1916: moved the Harada viability-method "
+            "citation and exact excerpt from supporting evidence into the scope "
+            "discussion. Retained its source/resolver provenance as context. "
+            "The two microbial-killing studies remain supporting evidence; the "
+            "context-only DOI no longer enters proposal definition annotations. "
+            "Preserved original history, identity, hierarchy and other records."
+        ),
+        llm_assisted=True, timestamp=REVISION_TIMESTAMP,
     )
     return record
 
@@ -209,9 +236,10 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    previous = build_initial_record()
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (previous, record):
         raise SystemExit("Existing target differs from reviewed result")
-    if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
+    if PROPOSAL.exists() and PROPOSAL.read_text() not in (proposal_tsv(previous), proposal):
         raise SystemExit("Existing proposal differs from reviewed result")
     with tempfile.TemporaryDirectory() as tmp:
         write_validated_trait(record, Path(tmp) / TARGET.name)
