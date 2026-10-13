@@ -48,23 +48,31 @@ def test_identity_scope_and_history():
     assert all(e["reference"].startswith("DOI:") and 10 <= len(e["snippet"].split()) <= 25
                for e in record["evidence"])
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs", "protein_examples"])
-    event, correction, producer = record["curation_history"]
+    event, correction, producer, endpoint = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     assert correction["action"] == "CORRECTED_EVIDENCE_ROLE"
     assert datetime.fromisoformat(correction["timestamp"]) <= datetime.now(timezone.utc)
     assert producer["action"] == "CORRECTED_PRODUCER_EXCERPT"
     assert datetime.fromisoformat(producer["timestamp"]) <= datetime.now(timezone.utc)
+    assert endpoint["action"] == "CORRECTED_LETHAL_ENDPOINT_EXCERPTS"
+    assert datetime.fromisoformat(endpoint["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
-    assert len(writer.build_record()["evidence"]) == 2
+    assert len(writer.build_record()["evidence"]) == 3
 
 
 def test_evidence_and_endpoint_limits():
     record = writer.build_record()
-    bacterial, fungal = record["evidence"]
-    assert "cultures of P. luminescens sonorensis strain Caborca" in bacterial["snippet"]
-    for text in ["NOT_IN_ABSTRACT", "Discussion", "Photorhabdus", "synthetic standards", "not t-CA/PPA", "No live-culture"]:
-        assert text in bacterial["notes"]
+    producer, mortality, fungal = record["evidence"]
+    assert "culture filtrates of Photorhabdus l. sonorensis strain Caborca" in producer["snippet"]
+    assert mortality["reference"] == producer["reference"] == record["definition_source"]
+    assert "mortality only at high concentrations against these non-target nematodes" in mortality["snippet"]
+    for text in ["VERIFIED", "IMPORTANCE", "not the separately", "scientific Abstract", "synthetic standards", "No live-culture"]:
+        assert text in producer["notes"]
+    for text in ["NOT_IN_ABSTRACT", "Discussion", "non-target", "synthetic standards", "not t-CA/PPA", "one supporting study"]:
+        assert text in mortality["notes"]
+    for reference in {e["reference"] for e in record["evidence"]}:
+        assert sum(len(e["snippet"].split()) for e in record["evidence"] if e["reference"] == reference) <= 25
     for text in ["NOT_IN_ABSTRACT", "culture filtrate", "water/PDB", "72 h", "without its duration"]:
         assert text in fungal["notes"]
     scope, limits = [d["rationale"] for d in record["discussions"]]
@@ -87,7 +95,7 @@ def test_source_receipt():
     assert [(r["reference"], r["snippet"]) for r in receipt["rows"]] == [
         (e["reference"], e["snippet"]) for e in writer.build_record()["evidence"]
     ]
-    assert [r["native_verdict"] for r in receipt["rows"]] == ["NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT"]
+    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT"]
     context, = receipt["context_only_sources"]
     assert context["reference"] == writer.CONTEXT_REFERENCE and context["native_verdict"] == "UNRESOLVED"
     assert context["role"] == "discussion_only"
@@ -116,7 +124,8 @@ def test_proposal_contract():
     assert writer.CONTEXT_REFERENCE not in citations
 
 
-@pytest.mark.parametrize("build_previous", [writer.build_initial_record, writer.build_role_corrected_record])
+@pytest.mark.parametrize("build_previous", [writer.build_initial_record, writer.build_role_corrected_record,
+                                          writer.build_producer_corrected_record])
 def test_known_preimage_migration_retains_context_and_history(isolated, monkeypatch, build_previous):
     previous = build_previous()
     writer.write_validated_trait(previous, writer.TARGET)
@@ -128,7 +137,7 @@ def test_known_preimage_migration_retains_context_and_history(isolated, monkeypa
     current = yaml.safe_load(writer.TARGET.read_text())
     assert current == writer.build_record()
     assert current["curation_history"][:len(previous["curation_history"])] == previous["curation_history"]
-    assert current["evidence"][1] == previous["evidence"][1]
+    assert current["evidence"][2] == previous["evidence"][1]
     context = writer.INITIAL_RECORD["evidence"][2]
     assert context["snippet"] == current["discussions"][0]["evidence"][0]["snippet"]
     assert context["reference"] not in writer.PROPOSAL.read_text()
@@ -140,7 +149,8 @@ def test_context_is_reachable_without_becoming_trait_support():
     record = writer.build_record()
     rows = list(iter_evidence(record))
     assert [locator for locator, _ in rows] == [
-        "evidence[0]", "evidence[1]", "discussion:lethal-nematicidal-scope-and-mappings[0]",
+        "evidence[0]", "evidence[1]", "evidence[2]",
+        "discussion:lethal-nematicidal-scope-and-mappings[0]",
     ]
     context = rows[-1][1]
     assert context["reference"] == writer.CONTEXT_REFERENCE and context["supports"] == "NO_EVIDENCE"

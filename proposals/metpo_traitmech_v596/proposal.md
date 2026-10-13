@@ -24,11 +24,16 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
   PMID:35138171: culture-extract fractionation links microbial production to
   lethal activities of isolated compounds. Commercial standards were used
   for dose-response assays. Actual Figures 2/3 and Table 4 were inspected;
-  Table 4 concerns reversible lower-dose indole paralysis. The 22-word
-  Discussion excerpt (printed/PDF page 12) explicitly links nematicidal
-  metabolites to Caborca cultures. It matches the XML and typeset PDF;
-  native verification reports `NOT_IN_ABSTRACT`. Indole's lower-dose paralysis
-  is not equated with the high-concentration killing reported separately.
+  Table 4 concerns reversible lower-dose indole paralysis. Separate 12-word
+  producer-origin and 13-word mortality excerpts total 25 words from this source.
+  The former is in IMPORTANCE (printed/PDF page 1), matched natively as
+  `VERIFIED`, but is not the separately headed scientific Abstract. The latter
+  is in Discussion (page 12), natively `NOT_IN_ABSTRACT`, and explicitly
+  concerns high concentrations against non-target nematodes. Both match XML
+  and actual typeset pages; page 1 text extraction drops fi ligatures.
+  These are two spans from one study, not independent replications or evidence
+  of live-culture potency. Indole's lower-dose paralysis is not equated with
+  the high-concentration killing reported separately.
 - [Saharan et al. 2023](https://doi.org/10.1038/s41598-023-33669-z),
   PMID:37088805: fungal culture-filtrate juvenile mortality, with fresh-water
   recovery confirmation but unspecified recovery duration/criterion.
@@ -44,7 +49,8 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
   Crossref identity. This does not establish absence from all indexing services.
 
 The [verification sidecar](../../research/traits/physiology/lethal_nematicidal_activity-source-verification.json)
-separates the two supporting evidence rows from the discussion-only source,
+distinguishes three supporting evidence rows from two distinct studies and the
+discussion-only source,
 retaining hashes, direct locators, source-status checks and limitations. No
 complete supplement or raw-data audit is claimed. No causal graph or protein
 example is proposed while strain identities and mechanisms remain unresolved.
@@ -135,3 +141,7 @@ validation does not authorize promotion to human `REVIEWED` status.
 - 2026-10-13, #1917: replaced the compound-only snippet with a producer-linked
   Discussion result and moved method context into structured discussion evidence.
   Identity, hierarchy, two-source definition provenance and prior history remain.
+- 2026-10-13, #1918: replaced the broad producer-linked nematicidal span with
+  separate culture-origin and explicit mortality spans, preserving their section
+  identities, actual native results and high-concentration non-target context.
+  Three evidence rows still contribute only two distinct definition citations.

@@ -5,20 +5,39 @@
   "rows": [
     {
       "reference": "DOI:10.1128/spectrum.02577-21",
-      "snippet": "In this study, three secondary metabolites (SMs) with nematicidal activities were isolated from in vitro cultures of P. luminescens sonorensis strain Caborca",
-      "words": 22,
+      "snippet": "isolated and identified from culture filtrates of Photorhabdus l. sonorensis strain Caborca.",
+      "words": 12,
       "source": {
         "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/fullTextXML",
         "path": "/tmp/traitmech-nematicidal-research-20261013/kusakabe2022.xml",
         "bytes": 172502,
         "sha256": "f69d0e36908b85583ebe2ae1faad1af21dcb011054d3ac890a83957b9f8028cd"
       },
-      "locator": "Discussion opening paragraph, printed/PDF page 12; contiguous clause before the trailing appositive.",
+      "locator": "IMPORTANCE opening sentence, printed/PDF page 1; predicate span about the three secondary metabolites, not the scientific Abstract.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "VERIFIED",
+      "inspection_limits": "Scientific Abstract, Results, culture/extraction and nematicidal-assay Methods inspected; actual Figures 2/3, Table 4, and PDF pages 1, 10, 14, 15 viewed. Supplemental NMR/statistical files, remaining figures and complete raw data not audited. Table 4 is indole recovery, not direct survival testing of t-CA/PPA. Source numerical disagreements are not silently reconciled. Additional direct typeset inspection: PDF page 12, including the producer-linked result, mortality endpoint and lower-dose indole qualifications. Reinspected actual PDF pages 1 and 12 for separate producer-origin and mortality spans. These jointly support the microbial-origin lethal endpoint, not independent studies; no live-culture lethal concentration is inferred.",
+      "native_locator": "evidence[0]",
+      "native_verdict_scope": "VERIFIED matches IMPORTANCE included in returned resolver text; the typeset scientific Abstract is a separate section. Exact XML match; PDFKit drops fi in identified/filtrates, so rendered PDF page 1 was visually checked."
+    },
+    {
+      "reference": "DOI:10.1128/spectrum.02577-21",
+      "snippet": "t-CA and PPA elicited mortality only at high concentrations against these non-target nematodes",
+      "words": 13,
+      "source": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/fullTextXML",
+        "path": "/tmp/traitmech-nematicidal-research-20261013/kusakabe2022.xml",
+        "bytes": 172502,
+        "sha256": "f69d0e36908b85583ebe2ae1faad1af21dcb011054d3ac890a83957b9f8028cd"
+      },
+      "locator": "Discussion second paragraph, printed/PDF page 12; high-concentration mortality of the selected non-target nematodes.",
       "exact_contiguous_span": true,
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
-      "inspection_limits": "Scientific Abstract, Results, culture/extraction and nematicidal-assay Methods inspected; actual Figures 2/3, Table 4, and PDF pages 1, 10, 14, 15 viewed. Supplemental NMR/statistical files, remaining figures and complete raw data not audited. Table 4 is indole recovery, not direct survival testing of t-CA/PPA. Source numerical disagreements are not silently reconciled. Additional direct typeset inspection: PDF page 12, including the producer-linked result, mortality endpoint and lower-dose indole qualifications.",
-      "native_locator": "evidence[0]"
+      "inspection_limits": "Scientific Abstract, Results, culture/extraction and nematicidal-assay Methods inspected; actual Figures 2/3, Table 4, and PDF pages 1, 10, 14, 15 viewed. Supplemental NMR/statistical files, remaining figures and complete raw data not audited. Table 4 is indole recovery, not direct survival testing of t-CA/PPA. Source numerical disagreements are not silently reconciled. Additional direct typeset inspection: PDF page 12, including the producer-linked result, mortality endpoint and lower-dose indole qualifications. Reinspected actual PDF pages 1 and 12 for separate producer-origin and mortality spans. These jointly support the microbial-origin lethal endpoint, not independent studies; no live-culture lethal concentration is inferred.",
+      "native_locator": "evidence[1]",
+      "native_verdict_scope": "NOT_IN_ABSTRACT retained for the directly matched Discussion span; mortality is at high concentrations against non-target nematodes, with synthetic standards used for dose-response assays."
     },
     {
       "reference": "DOI:10.1038/s41598-023-33669-z",
@@ -35,7 +54,7 @@
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
       "inspection_limits": "Scientific Abstract, in vitro Results, culture-filtrate/juvenile Methods and actual Figure 4 inspected. Supplement OOXML text/tables plus its only embedded image inspected; no full DOCX page render. Pot/field claims and other main figures not fully audited. Recovery duration and criterion unreported. GenBank and supplement isolate labels conflict; no canonical assignment.",
-      "native_locator": "evidence[1]"
+      "native_locator": "evidence[2]"
     }
   ],
   "native_record_verification": {
@@ -45,17 +64,17 @@
       "--record",
       "data/traits/physiology/lethal_nematicidal_activity.yaml",
       "--out",
-      "/tmp/traitmech-nematicidal-issue1917-checks-20261013/native-record.tsv"
+      "/tmp/traitmech-nematicidal-issue1918-checks-20261013/native-record.tsv"
     ],
     "exit": 0,
-    "seconds": 5.763787082396448,
-    "completed_at": "2026-10-13T18:58:00.702669+00:00",
-    "log": "/tmp/traitmech-nematicidal-issue1917-checks-20261013/records-02.log",
-    "scope": "Two supporting evidence rows and one structured discussion-only context row; count is not three supporting citations.",
+    "seconds": 5.252816659864038,
+    "completed_at": "2026-10-13T19:41:37.838705+00:00",
+    "log": "/tmp/traitmech-nematicidal-issue1918-checks-20261013/records-02.log",
+    "scope": "Three supporting excerpt rows from two distinct studies, plus one discussion-only context row. IMPORTANCE VERIFIED is not scientific-abstract attribution.",
     "report": {
-      "path": "/tmp/traitmech-nematicidal-issue1917-checks-20261013/native-record.tsv",
-      "bytes": 799,
-      "sha256": "28441a41fc809065d9f99304e789c851c7882fbc8943d7ee2c9205183b328918"
+      "path": "/tmp/traitmech-nematicidal-issue1918-checks-20261013/native-record.tsv",
+      "bytes": 942,
+      "sha256": "5eb7bf577c35afcd72d8db5412441f188351e0705930235ff31201b1a83643cb"
     }
   },
   "canary": {
@@ -988,7 +1007,7 @@
     },
     "concurrent_limit": "Recheck before publication; this is not an atomic allocation."
   },
-  "skill_assessment": "The #1916 citation-role clarification remains. In response to the #1917 review suggestion, add-trait now names structured Discussion.evidence and explicit NO_EVIDENCE role for relevant context; existing claim-bearing excerpt requirements already cover producer linkage, and sequence guidance remains unchanged.",
+  "skill_assessment": "No additional skill change for #1918: existing guidance requires claim-bearing contiguous excerpts, preserves quote limits, permits full text and distinguishes resolver text from scientific-abstract section identity. Earlier #1916/#1917 context-role clarifications and sequence-feature guidance remain.",
   "context_only_sources": [
     {
       "reference": "DOI:10.3725/jjn.45.51",
@@ -1051,14 +1070,35 @@
         "bytes": 591,
         "sha256": "4e4b46061f398fb4f0fec77bbd273e207f41b47168636e40394b361f61cee79f"
       }
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/lethal_nematicidal_activity.yaml",
+        "--out",
+        "/tmp/traitmech-nematicidal-issue1917-checks-20261013/native-record.tsv"
+      ],
+      "exit": 0,
+      "seconds": 5.763787082396448,
+      "completed_at": "2026-10-13T18:58:00.702669+00:00",
+      "log": "/tmp/traitmech-nematicidal-issue1917-checks-20261013/records-02.log",
+      "scope": "Two supporting evidence rows and one structured discussion-only context row; count is not three supporting citations.",
+      "report": {
+        "path": "/tmp/traitmech-nematicidal-issue1917-checks-20261013/native-record.tsv",
+        "bytes": 799,
+        "sha256": "28441a41fc809065d9f99304e789c851c7882fbc8943d7ee2c9205183b328918"
+      }
     }
   ],
-  "revised_at": "2026-10-13T18:58:48.855486+00:00",
+  "revised_at": "2026-10-13T19:42:55.840718+00:00",
   "revision": {
-    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1917",
-    "excerpt_correction": "The producer-linked Discussion clause replaces the compound-only abstract span; NOT_IN_ABSTRACT is retained, not relabeled.",
-    "context_structure": "Harada is stored as Discussion.evidence with NO_EVIDENCE; #1916 exclusion from supporting evidence and definition annotations remains intact.",
-    "historical_scope": "Earlier supporting snippets, native results, revisions and original acquisitions are retained explicitly."
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1918",
+    "excerpt_correction": "Separate 12-word origin and 13-word explicit mortality excerpts replace the broad producer-linked nematicidal span; combined quotation is 25 words for this DOI.",
+    "scope": "Retains high-concentration non-target and synthetic-standard qualifiers. Two excerpts are not two independent supporting citations.",
+    "native_outcomes": "VERIFIED for returned IMPORTANCE text, NOT_IN_ABSTRACT for the Discussion mortality result; section identity is established directly.",
+    "historical_scope": "Preserves earlier supporting rows, native outcomes, revisions, acquisitions and derived assets; #1916 and #1917 role/linkage fixes remain intact."
   },
   "prior_supporting_rows": [
     {
@@ -1097,6 +1137,45 @@
           "inspection_limits": "Scientific Abstract, in vitro Results, culture-filtrate/juvenile Methods and actual Figure 4 inspected. Supplement OOXML text/tables plus its only embedded image inspected; no full DOCX page render. Pot/field claims and other main figures not fully audited. Recovery duration and criterion unreported. GenBank and supplement isolate labels conflict; no canonical assignment."
         }
       ]
+    },
+    {
+      "revision": "ca5102cf9a83cf81584bdedb27303177ef9dac2f",
+      "rows": [
+        {
+          "reference": "DOI:10.1128/spectrum.02577-21",
+          "snippet": "In this study, three secondary metabolites (SMs) with nematicidal activities were isolated from in vitro cultures of P. luminescens sonorensis strain Caborca",
+          "words": 22,
+          "source": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/fullTextXML",
+            "path": "/tmp/traitmech-nematicidal-research-20261013/kusakabe2022.xml",
+            "bytes": 172502,
+            "sha256": "f69d0e36908b85583ebe2ae1faad1af21dcb011054d3ac890a83957b9f8028cd"
+          },
+          "locator": "Discussion opening paragraph, printed/PDF page 12; contiguous clause before the trailing appositive.",
+          "exact_contiguous_span": true,
+          "source_identity_verified": true,
+          "native_verdict": "NOT_IN_ABSTRACT",
+          "inspection_limits": "Scientific Abstract, Results, culture/extraction and nematicidal-assay Methods inspected; actual Figures 2/3, Table 4, and PDF pages 1, 10, 14, 15 viewed. Supplemental NMR/statistical files, remaining figures and complete raw data not audited. Table 4 is indole recovery, not direct survival testing of t-CA/PPA. Source numerical disagreements are not silently reconciled. Additional direct typeset inspection: PDF page 12, including the producer-linked result, mortality endpoint and lower-dose indole qualifications.",
+          "native_locator": "evidence[0]"
+        },
+        {
+          "reference": "DOI:10.1038/s41598-023-33669-z",
+          "snippet": "T. asperellum FbMi6 at 80% concentration had the highest (90.3%) juvenile mortality compared to control.",
+          "words": 15,
+          "source": {
+            "url": "https://www.nature.com/articles/s41598-023-33669-z",
+            "path": "/tmp/traitmech-nematicidal-research-20261013/saharan2023.html",
+            "bytes": 432204,
+            "sha256": "9cd48922e85bd719a9108435fd1c4914f76e2a28bce35ea9ca005bb902243bc1"
+          },
+          "locator": "Results, In vitro activity of T. asperellum FbMi6 against M. incognita; Figure 4 paragraph.",
+          "exact_contiguous_span": true,
+          "source_identity_verified": true,
+          "native_verdict": "NOT_IN_ABSTRACT",
+          "inspection_limits": "Scientific Abstract, in vitro Results, culture-filtrate/juvenile Methods and actual Figure 4 inspected. Supplement OOXML text/tables plus its only embedded image inspected; no full DOCX page render. Pot/field claims and other main figures not fully audited. Recovery duration and criterion unreported. GenBank and supplement isolate labels conflict; no canonical assignment.",
+          "native_locator": "evidence[1]"
+        }
+      ]
     }
   ],
   "prior_revisions": [
@@ -1106,6 +1185,15 @@
         "issue": "https://github.com/CultureBotAI/TraitMech/issues/1916",
         "role_correction": "Two supporting evidence rows; Harada is discussion-only methodological context and is excluded from definition annotations.",
         "historical_scope": "Original acquisitions, exact excerpts and pre-correction native receipt are retained, not relabeled or discarded."
+      }
+    },
+    {
+      "revised_at": "2026-10-13T18:58:48.855486+00:00",
+      "revision": {
+        "issue": "https://github.com/CultureBotAI/TraitMech/issues/1917",
+        "excerpt_correction": "The producer-linked Discussion clause replaces the compound-only abstract span; NOT_IN_ABSTRACT is retained, not relabeled.",
+        "context_structure": "Harada is stored as Discussion.evidence with NO_EVIDENCE; #1916 exclusion from supporting evidence and definition annotations remains intact.",
+        "historical_scope": "Earlier supporting snippets, native results, revisions and original acquisitions are retained explicitly."
       }
     }
   ]

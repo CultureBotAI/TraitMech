@@ -24,6 +24,7 @@ METPO_ID = "METPO:1067300"
 TIMESTAMP = "2026-10-13T17:31:43Z"
 REVISION_TIMESTAMP = "2026-10-13T18:14:01Z"
 PRODUCER_TIMESTAMP = "2026-10-13T18:54:48Z"
+ENDPOINT_TIMESTAMP = "2026-10-13T19:40:13Z"
 CONTEXT_REFERENCE = "DOI:10.3725/jjn.45.51"
 DEFINITION_SOURCE = "DOI:10.1128/spectrum.02577-21"
 PARENT = {
@@ -209,7 +210,7 @@ def build_role_corrected_record() -> dict:
     return record
 
 
-def build_record() -> dict:
+def build_producer_corrected_record() -> dict:
     record = build_role_corrected_record()
     record["evidence"][0].update(
         snippet=(
@@ -267,6 +268,69 @@ def build_record() -> dict:
     return record
 
 
+def build_record() -> dict:
+    record = build_producer_corrected_record()
+    record["evidence"][0].update(
+        snippet=(
+            "isolated and identified from culture filtrates of Photorhabdus l. "
+            "sonorensis strain Caborca."
+        ),
+        notes=(
+            "Kusakabe et al. 2022, PMID:35138171, IMPORTANCE opening sentence, "
+            "printed/PDF page 1, predicate span about three secondary metabolites. "
+            "Native VERIFIED matches returned IMPORTANCE text, not the separately "
+            "headed scientific Abstract. Exact XML match and actual typeset page "
+            "inspected; PDF text extraction drops fi ligatures. The source "
+            "identifies culture-isolated t-CA (trans-cinnamic acid), PPA "
+            "((4E)-5-phenylpent-4-enoic acid), and indole. Read with this DOI's "
+            "separate mortality excerpt: the two spans jointly establish "
+            "microbial origin and a lethal endpoint, not two independent studies. "
+            "Culture-supernatant fractionation establishes origin; equipotent "
+            "synthetic standards were used for dose-response assays. No "
+            "live-culture lethal concentration is inferred."
+        ),
+    )
+    record["evidence"].insert(1, {
+        "reference": DEFINITION_SOURCE,
+        "snippet": (
+            "t-CA and PPA elicited mortality only at high concentrations against "
+            "these non-target nematodes"
+        ),
+        "notes": (
+            "Kusakabe et al. 2022, Discussion second paragraph, printed/PDF "
+            "page 12; native NOT_IN_ABSTRACT and exact XML/PDF text match. "
+            "This result concerns non-target nematodes at high concentrations, "
+            "not low-dose pest selectivity or live-culture toxicity. Read with "
+            "the same DOI's producer-origin excerpt; synthetic standards "
+            "were used for dose-response assays after culture isolation. "
+            "The two excerpts total 25 words and count as one supporting study. "
+            "Indole mainly caused reversible paralysis at lower doses, with "
+            "killing only at high concentrations. Actual Figures 2/3 and Table 4 "
+            "inspected. Needle response and morphology distinguished death "
+            "from paralysis; recovery used washing and 24 h in water. Table 4 "
+            "tests lower-dose indole, not t-CA/PPA survival. Some numerical "
+            "prose conflicts with tables; no potency, selectivity or significance "
+            "values are adopted. Linked supplemental NMR/statistics files were "
+            "not audited; figure inspection is not raw-data verification."
+        ),
+    })
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_LETHAL_ENDPOINT_EXCERPTS",
+        changes=(
+            "Addressed review issue #1918: stored separate producer-origin and "
+            "explicit mortality spans from Kusakabe, totaling 25 words. "
+            "Preserved the high-concentration non-target and synthetic-standard "
+            "assay qualifiers. IMPORTANCE matches native VERIFIED but is not "
+            "the scientific Abstract; the mortality span is NOT_IN_ABSTRACT. "
+            "Three evidence items still represent only two supporting studies. "
+            "Preserved #1916/#1917 fixes, all prior events, fungal evidence, "
+            "discussion-only context, identity, hierarchy and other records."
+        ),
+        llm_assisted=True, timestamp=ENDPOINT_TIMESTAMP,
+    )
+    return record
+
+
 def proposal_tsv(record: dict) -> str:
     rows = [
         ["proposed_id", "label", "definition", "definition_source", "parent",
@@ -295,7 +359,8 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    previous = [build_initial_record(), build_role_corrected_record()]
+    previous = [build_initial_record(), build_role_corrected_record(),
+                build_producer_corrected_record()]
     if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (*previous, record):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() not in (*map(proposal_tsv, previous), proposal):
