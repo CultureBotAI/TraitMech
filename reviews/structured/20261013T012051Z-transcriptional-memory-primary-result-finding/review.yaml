@@ -1,0 +1,180 @@
+schema_version: 1.0.0
+review_id: 20261013T012051Z-transcriptional-memory-primary-result-finding
+kind: record
+repository: CultureBotAI/TraitMech
+title: Reassess the D'Urso primary-result quotation
+started_at: '2026-10-13T01:20:48Z'
+finished_at: '2026-10-13T01:20:51Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author source-based adversarial assessment; not independent
+    review or human scientific sign-off.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Accept external finding #1904: the snippet is a faithfully quoted attributed
+  background claim, but should quote the cited paper''s own confirmed result. No quotation
+  fabrication or concentration spelling defect was established.'
+source:
+  git_revision: 371afaec668e4e5b868edc08aedbd42a323c7f29
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: 6fbcb8190118a0c13ca81a1a49dbb1c2fd1e1aa6c2fb817cf07c2682acc3c073
+    role: context
+  - path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    sha256: 3f788e83b77ad8c279f2b3e89a5e18796735730578d7d55d8accbbd19baad7cc
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    sha256: d2d441472d8926885c38de0baf9d3dae031211032ea1a6151643e405fb1017cd
+    role: context
+  - path: scripts/add_transcriptional_reactivation_memory_trait.py
+    sha256: d6d5584811e4805b5bf295f2e9573285faa6e5726b73df2c5b8bb6cad2aebf02
+    role: context
+  - path: tests/test_add_transcriptional_reactivation_memory_trait.py
+    sha256: 0bc9ab5f163c8e517852bff54e3426f02d88110f6deab51e43b3183e65cb575d
+    role: context
+targets:
+- target_id: traitmech:000713
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  label: enhanced transcriptional reactivation memory
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_transcriptional_reactivation_memory_trait.py
+    role: guarded writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.tsv
+    role: upstream proposal
+scope:
+  description: Evidence[1] source attribution and its maintained owners, not a new
+    complete identity or corpus review.
+  selection: Exact reviewed trait and disputed evidence item.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000713
+checks:
+- check_id: capture
+  target_ids:
+  - traitmech:000713
+  name: Input and source identity capture
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/record_review.py inspect --targets /tmp/traitmech-transcriptional-memory-review-targets-20261013.yaml
+    --input scripts/add_transcriptional_reactivation_memory_trait.py --input tests/test_add_transcriptional_reactivation_memory_trait.py
+    --input research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    --input docs/CURATION_PLAYBOOK.md --input .claude/skills/add-trait/SKILL.md
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native inspection captured the reviewed head and current inputs; cached
+    primary XML hash rechecked.
+evidence:
+- evidence_id: external
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/TraitMech/pull/1903#pullrequestreview-5497733924
+  accessed_at: '2026-10-13T01:20:51Z'
+  support: supports
+  summary: Read the complete CHANGES_REQUESTED review. It identifies the background-attribution
+    weakness and acknowledges no outbound network for its snippet check.
+- evidence_id: source
+  kind: primary_source
+  reference: DOI:10.7554/eLife.16691
+  accessed_at: '2026-10-13T01:20:51Z'
+  locator: Results s2-7 paragraph 1, complete paragraph in retained primary XML.
+  snapshot_sha256: 6f4871eee27285b38bf469d510688964b2c1ccf024d95c3a6f9fdce3a22a384d
+  support: supports
+  summary: The gene-count/duration sentence cites Guan 2012. The next sentence reports
+    D'Urso's own confirmation for selected genes in Figure 7A. The literal concentration
+    spelling in the prior quote is present in the source, so that speculative defect
+    is not supported.
+assessments:
+- assessment_id: attribution
+  area: provenance
+  topic: Prefer the cited paper's own measurement
+  outcome: concern
+  target_ids:
+  - traitmech:000713
+  evidence_ids:
+  - source
+  - external
+  summary: Existing notes honestly attribute the old claim, but the evidence item
+    can and should directly quote D'Urso's own confirmation; retain the two-hour and
+    selected-gene limits.
+findings:
+- finding_id: primary-result
+  issue_key: transcriptional-memory-primary-result-1904
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Evidence quotation uses an attributed earlier result
+  description: Replace evidence[1] with a contiguous quotation from D'Urso's own result
+    and qualify its immediate context. Existing notes prevent a false claim of new
+    four-generation measurement; this is a bounded provenance defect, not invalid
+    trait identity.
+  target_ids:
+  - traitmech:000713
+  field_paths:
+  - evidence[1].snippet
+  - evidence[1].notes
+  evidence_ids:
+  - source
+  - external
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_transcriptional_reactivation_memory_trait.py
+    role: guarded writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.tsv
+    role: upstream proposal
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1904
+actions:
+- action_id: replace-result
+  description: Replace the quotation, update owners and source checks, preserve histories
+    and regenerate products.
+  finding_ids:
+  - primary-result
+  target_ids:
+  - traitmech:000713
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_transcriptional_reactivation_memory_trait.py
+    role: guarded writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.tsv
+    role: upstream proposal
+  acceptance_checks:
+  - Exact contiguous XML and publisher text match for the replacement.
+  - Own-result context and figure inspection support the selected genes and two-hour
+    recovery, not four generations.
+  - Native snippet verdict, writer/sidecar tests, schema/QC/history, generated page
+    and successor review pass.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261013T010510Z-transcriptional-reactivation-memory
+  relationship: Reassesses a provenance weakness missed by the earlier complete self-review.
+limitations:
+- Author reassessment of an external agent finding, not human sign-off.
+- Cached primary source inspected; no fresh publisher access or raw-data reanalysis
+  claimed.
+- External reviewer lacked outbound network. Its faithful-spelling suspicion is not
+  adopted as a finding.
