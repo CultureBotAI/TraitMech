@@ -1,0 +1,580 @@
+{
+  "trait_id": "traitmech:000717",
+  "label": "nutritional fungal mycoparasitism",
+  "decision_timestamp": "2026-10-13T11:20:51Z",
+  "compiled_at": "2026-10-13T11:26:35.249717+00:00",
+  "rows": [
+    {
+      "reference": "DOI:10.1139/b95-389",
+      "snippet": "The term mycoparasitism applies strictly to those relationships in which one living fungus acts as a nutrient source for another",
+      "words": 20,
+      "source": {
+        "path": "/tmp/traitmech-post-kin-mycoparasitism-authority-20261013/jeffries1995-author.html",
+        "sha256": "1dd1474105720b1cc3d0ee9b885ad8dfc84a611d9b389df8bf2e34f3d8bdab65",
+        "bytes": 26147,
+        "url": "https://kar.kent.ac.uk/19621/"
+      },
+      "locator": "Institutional repository scientific abstract; strict sense before the contrasted fungicolous usage.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "scientific_section": "Scientific abstract; 2012 structured Results; 2013 AGR content cross-checked against institutional scientific abstract.",
+      "native_verdict": "UNRESOLVED",
+      "native_returned_identities": [],
+      "native_receipts": [
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1139%2Fb95-389&resultType=core&format=json",
+          "path": "/tmp/traitmech-mycoparasitism-snippet-canary-20261013/native-response-0.json",
+          "sha256": "80504a467104f3aa03d5c923a06fca281a022c4639137519c209d74cbeb6f46c",
+          "status": 200,
+          "at": "2026-10-13T11:11:58.966425+00:00"
+        }
+      ],
+      "inspection_limits": "Jeffries 1995 review; scientific abstract directly retrieved from https://kar.kent.ac.uk/19621/. This strict sense contrasts with broader fungicolous usage in the same abstract. Selected main text and actual PDF pages 1 and 3 support detrimental nutrition with either a living host or killing before use. The record restricts actor and host to fungi, excluding historically grouped oomycetes. The review supplies terminology, not an independent experiment. Not every figure or table was inspected. Native abstract verifier: UNRESOLVED; the direct institutional excerpt was separately matched, not relabeled VERIFIED."
+    },
+    {
+      "reference": "DOI:10.1002/rcm.6131",
+      "snippet": "In dual-culture the mycelia of T. atroviride which remained in direct contact with labeled A. mellea showed an increased \u03b4(13)C value",
+      "words": 21,
+      "source": {
+        "path": "/tmp/traitmech-post-kin-source-canary-20261013/pellegrini2012-med.response",
+        "sha256": "f8fa04ac2c82288d1bdcbf2a48937024c8525d1b0015241a1ac70207d14f1128",
+        "bytes": 5913,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2Frcm.6131+AND+SRC%3AMED&format=json&resultType=core"
+      },
+      "locator": "PMID22302490 scientific structured abstract, Results; the following comparator and conditions are retained in notes.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "scientific_section": "Scientific abstract; 2012 structured Results; 2013 AGR content cross-checked against institutional scientific abstract.",
+      "native_verdict": "VERIFIED",
+      "native_returned_identities": [
+        {
+          "source": "MED",
+          "id": "22302490",
+          "pmid": "22302490",
+          "doi": "10.1002/rcm.6131",
+          "title": "Studying trophic interactions between a plant pathogen and two different antagonistic microorganisms using a 13C-labeled compound and isotope ratio mass spectrometry."
+        }
+      ],
+      "native_receipts": [
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2Frcm.6131&resultType=core&format=json",
+          "path": "/tmp/traitmech-mycoparasitism-snippet-canary-20261013/native-response-1.json",
+          "sha256": "a86ad412be90f6c98db281ad7e1ff1960e10018149c025a710d2307d4269698d",
+          "status": 200,
+          "at": "2026-10-13T11:12:01.919043+00:00"
+        }
+      ],
+      "inspection_limits": "Pellegrini et al. 2012, PMID:22302490; directly retrieved scientific abstract, Results, using DOI and SRC:MED together. Title, DOI and PMID agree. After 29 days in contact, the reported carbon isotope value was 66.4 per mille versus -26.6 per mille with unlabeled host. This supports host-derived carbon assimilation, not by itself host killing, a penetration mechanism or exclusion of all alternative transfer routes. The journal full text was not retrieved; the restricted institutional deposit was not bypassed. The bacterial comparator is not an example of this fungal-actor trait. Native abstract verifier: VERIFIED."
+    },
+    {
+      "reference": "DOI:10.1016/j.apsoil.2012.12.005",
+      "snippet": "Only T. harzianum maintained mycoparasitic activity in the soil microcosm",
+      "words": 10,
+      "source": {
+        "path": "/tmp/traitmech-post-kin-source-canary-20261013/pellegrini2013-author.response",
+        "sha256": "31c9ac927552dd3b8ce620ea5135d9960eeba7eb9fb6a6e1d63e149670978289",
+        "bytes": 70105,
+        "url": "https://iris.unipv.it/handle/11571/604013?mode=complete"
+      },
+      "locator": "Direct institutional scientific abstract; inspected thesis chapter qualifies the microcosm and differs from the unverified journal version.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "scientific_section": "Scientific abstract; 2012 structured Results; 2013 AGR content cross-checked against institutional scientific abstract.",
+      "native_verdict": "VERIFIED",
+      "native_returned_identities": [
+        {
+          "source": "AGR",
+          "id": "IND500606635",
+          "pmid": null,
+          "doi": "10.1016/j.apsoil.2012.12.005",
+          "title": "Isotope ratio mass spectrometry identifies soil microbial biocontrol agents having trophic relations with the plant pathogen Armillaria mellea"
+        }
+      ],
+      "native_receipts": [
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.apsoil.2012.12.005&resultType=core&format=json",
+          "path": "/tmp/traitmech-mycoparasitism-snippet-canary-20261013/native-response-2.json",
+          "sha256": "f6eb7c773be591755c97740d76c8e151f7ec8ea68ffc2c758558ccc64dca0ba0",
+          "status": 200,
+          "at": "2026-10-13T11:12:02.964141+00:00"
+        }
+      ],
+      "inspection_limits": "Pellegrini et al. 2013; scientific abstract directly read at https://iris.unipv.it/handle/11571/604013?mode=complete. Native verifier: VERIFIED via AGR:IND500606635, not PubMed. The author-deposited Corneo thesis chapter identifies this DOI; its version is not presumed identical to the unread journal full text. Its experiment selects three microorganisms: the positive soil result concerns a sterile microcosm at 20 C after 29 days, followed by three-day culture-out before isotope measurement, not direct field flux or all 158 isolates. Dual-culture enrichment accompanies growth inhibition; the host viability endpoint comes from a separate broth assay. Washing and host-specific PCR address contamination without excluding every route of carbon transfer. Leakage versus direct parasitism remains partly interpretive. Shares all six authors with 2012, not independent-laboratory replication."
+    }
+  ],
+  "native_record_verification": {
+    "exit": 0,
+    "command": "scripts/verify_snippets.py --record data/traits/ecology/nutritional_fungal_mycoparasitism.yaml",
+    "receipt": {
+      "path": "/tmp/traitmech-mycoparasitism-native-record-20261013.tsv",
+      "sha256": "9cace0d7ee061d6def88d8a86ad771dda6d57d714eeaedb77d2a7cb6c9fe6220",
+      "bytes": 739
+    },
+    "rows": [
+      {
+        "file": "data/traits/ecology/nutritional_fungal_mycoparasitism.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.1139/b95-389",
+        "verdict": "UNRESOLVED",
+        "similarity": "0.00",
+        "snippet": "The term mycoparasitism applies strictly to those relationships in which one living fungus acts as a nutrient source for another",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/ecology/nutritional_fungal_mycoparasitism.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1002/rcm.6131",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "In dual-culture the mycelia of T. atroviride which remained in direct contact with labeled A. mellea showed an increased \u03b4(13)C value",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/ecology/nutritional_fungal_mycoparasitism.yaml",
+        "locator": "evidence[2]",
+        "reference": "DOI:10.1016/j.apsoil.2012.12.005",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "Only T. harzianum maintained mycoparasitic activity in the soil microcosm",
+        "nearest_sentence": ""
+      }
+    ]
+  },
+  "full_text_inspection": [
+    {
+      "reference": "DOI:10.1139/b95-389",
+      "scope": "Direct institutional abstract, Crossref abstract/identity metadata, reprint text through interfaces section, and actual PDF pages 1 and 3 (printed S1284/S1286) including Table 2. Remaining images/tables and full bibliography not reviewed.",
+      "findings": "Terminological review, not experimental replication. Its strict nutritional sense requires detrimental nutrient acquisition from a fungal host; association alone is insufficient. Necrotrophy includes host killing before utilization. Intraspecific interactions are allowed. Historical examples include oomycetes, so modern fungal scope needs qualification. Biotrophic hosts need not show overt early disease. No universal penetration, obligacy or molecular mechanism inferred.",
+      "status_limits": "Crossref has no relation/update-to entry in this response; not exhaustive correction/retraction clearance. Qualified DOI AND SRC:MED returned zero hits, not proof of global non-indexing.",
+      "asset": {
+        "path": "/tmp/traitmech-post-kin-mycoparasitism-authority-20261013/jeffries1995-reprint.pdf",
+        "sha256": "40aedbb7579ac6d82d8c85a61ed07dcc81b9f07d5f0f0236e53f5770ea9650f7",
+        "bytes": 778078,
+        "url": "https://www.davidmoore.org.uk/21st_Century_Guidebook_to_Fungi_PLATINUM/REPRINT_collection/Jeffries_mycoparasitism.pdf"
+      }
+    },
+    {
+      "reference": "https://openpub.fmach.it/retrieve/handle/10449/23970/10775/Doctoral%20THESIS%20Corneo%20no%2021127.pdf",
+      "associated_doi": "10.1016/j.apsoil.2012.12.005",
+      "version": "Corneo 2013 thesis, chapter 3; journal-version equivalence not established.",
+      "inspected": "PDF pages 62-79 main text; selected table text pages 86/89; actual pages 69/73/75/86/89 including Figure 2 and selected Tables 1/3. Other chapters, Figure 1, complete taxon tables and raw data not reviewed.",
+      "assessment": "Viable labelled host inocula, isotope enrichment and growth inhibition support host-derived nutrition with harm. Washing and host-specific PCR address contamination; negative amplification does not prove absolute absence. Leached metabolites versus direct parasitism remain partly interpretive. Microcosms use sterilized soil and culture-out before isotope measurement, not intact field flux. Table accessions identify BLAST references, not isolate sequences. Growth inhibition conflicts: abstract 80%, Results 88%, Table 1 80%, with different errors. Microcosm controls and sampling days also differ between prose and tables/figure. Nonsignificance is not equivalence. Chitinase readout measures N-acetylglucosaminidase, not an identified causal enzyme. Authors overlap 2012; thesis is not additional replication.",
+      "asset": {
+        "path": "/tmp/traitmech-post-kin-corneo-thesis-20261013/corneo2013-thesis.pdf",
+        "sha256": "12d20d39d2b2bd1a195ea33a37faed2aa8bdeb70d0736deb20047cf7c741cbde",
+        "bytes": 1188567,
+        "url": "https://openpub.fmach.it/retrieve/handle/10449/23970/10775/Doctoral%20THESIS%20Corneo%20no%2021127.pdf"
+      }
+    }
+  ],
+  "novelty": {
+    "ignored_hidden_included": true,
+    "at": "2026-10-13T11:05:50.985493+00:00",
+    "main": "4de96161ea95221bb978bf816d94613230b65cf3",
+    "local_current_locations": 166,
+    "historical_unique_heads": 139,
+    "supplemental_history": [
+      {
+        "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech",
+        "unique_blobs": 24926,
+        "matching_blobs": 9,
+        "binary_blobs": 18
+      },
+      {
+        "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+        "unique_blobs": 6632,
+        "matching_blobs": 0,
+        "binary_blobs": 3
+      }
+    ],
+    "dispositions": [
+      {
+        "owner": "TraitMech current and tracked historical matches",
+        "finding": "Bacterial mycophagy has bacterial actors; haustorium formation denotes morphology rather than nutritional harm. Their proposals, writers, tests, history, rendered views and saved-review input lists do not constitute an exact fungal nutritional trait. No exact orphan node or same-scope synonym requiring an existing-record edit was identified in the inspected matches."
+      },
+      {
+        "owner": "CommunityMech:000364 at pinned current head",
+        "finding": "The inspected identity and engineering-design sections describe a bacterial consortium and include mycophagy as an assay endpoint. This is community-level bacterial evidence, not an exact fungal TraitRecord. No new feeding claim is inferred from the endpoint list."
+      },
+      {
+        "owner": "Historical/current CommunityMech reference caches",
+        "finding": "PMID35992653 matches a bibliography title; PMID40508300 a predicted-guild comparison; PMID41454778 a bacterial-mycophagy bibliography item; PMID41821943 a discussion-level Trichoderma mechanism statement. These retained reference texts are research leads, not canonical trait records or newly verified primary evidence. No scientific audit of those entire papers is claimed."
+      },
+      {
+        "owner": "CommunityMech scouting",
+        "finding": "Four research/scouting paths and eleven tmp scouting paths repeat two truncated forms of the same citrus consortium lead, PMID42054761. This extends the preliminary four-file boundary assessment to ignored temporary files. No directly measured fungal feeding result or new trait definition is inferred."
+      },
+      {
+        "owner": "Historical regex verification",
+        "finding": "Original searches used git grep -i -E with portable groups/classes and no word-boundary escape. The supplementary audit additionally passed a known-positive grouped ERE README control in both repositories, then scanned each distinct tracked UTF-8 blob. Historical ignored/untracked bytes cannot be reconstructed."
+      }
+    ],
+    "neighbors": [
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/ecology/bacterial_mycophagy.yaml",
+        "sha256": "49cf32a3a6c9e4f7a10f201bdba9c87801bc959aa5a70b5035f2c694fb7e56be",
+        "identifier": "traitmech:000696",
+        "label": "bacterial mycophagy",
+        "definition": "A trophic-ecology phenotype in which a bacterium actively obtains nutrients from living fungi or oomycetes and uses them for its own growth.",
+        "parent_traits": [
+          "METPO:1000059"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/ecology/parasitism.yaml",
+        "sha256": "06714e9bc42a3405dc4700e41a0d6a92ae814c0122375a40b3ad776fda1a6040",
+        "identifier": "traitmech:000043",
+        "label": "parasitism",
+        "definition": "A symbiosis in which the microorganism benefits at the expense of its host's fitness, deriving resources from the host while causing it harm.",
+        "parent_traits": [
+          "traitmech:000040"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/ecology/symbiosis.yaml",
+        "sha256": "86ad9516ff0879731da3792de1495ba1d0e107394edfcc754be03d052a677b21",
+        "identifier": "traitmech:000040",
+        "label": "symbiosis",
+        "definition": "An ecological lifestyle in which a microorganism lives in persistent physical association with a host or partner organism. It encompasses mutualism, commensalism, and parasitism, which form an evolutionary continuum.",
+        "parent_traits": [
+          "METPO:1000059"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/ecology/predatory_bacterium.yaml",
+        "sha256": "adcef1a0693a766270509b039ec3d47cb2daa2f94bede513ba82959967d7366d",
+        "identifier": "traitmech:000054",
+        "label": "predatory bacterium",
+        "definition": "A trophic-ecology lifestyle in which a bacterium actively kills and consumes other bacteria for nutrients, e.g. the periplasmic predator Bdellovibrio bacteriovorus.",
+        "parent_traits": [
+          "METPO:1000059"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/ecology/saprotrophy.yaml",
+        "sha256": "74c1e3065e0ce9dfc86b1b8725061383de4e8800dd5e7c02f48179c85fa3b6f4",
+        "identifier": "traitmech:000055",
+        "label": "saprotrophy",
+        "definition": "A trophic-ecology lifestyle in which an organism feeds on dead or decaying organic matter, mineralizing it and driving carbon and nutrient cycling (decomposition).",
+        "parent_traits": [
+          "METPO:1000059"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/morphology/microbial_haustorium_formation.yaml",
+        "sha256": "eed2f55fec6bec70d27b370bab38016dbaf27b3f5f33f7845e74d6642de2a479",
+        "identifier": "traitmech:000663",
+        "label": "microbial haustorium formation",
+        "definition": "A morphological phenotype in which a fungus or oomycete forms specialized hyphal outgrowths, called haustoria, that establish intimate interfaces with living host cells.",
+        "parent_traits": [
+          "METPO:1000059"
+        ]
+      },
+      {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/upper/phenotype.yaml",
+        "sha256": "502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4",
+        "identifier": "METPO:1000059",
+        "label": "phenotype",
+        "definition": "A quality that differentiates specific instances of a species from other instances of the same species.",
+        "parent_traits": [
+          "METPO:1000188"
+        ]
+      }
+    ],
+    "current_upstream_assessment": "Read all six release subject annotation sets: obsolete Fungal Spore Type 0000261 and 000262, fungal spore 1000125, mycolic acid 1000197, mycorrhization 1000198, and parasitism 1000227. All are deprecated with OMO_0001000 and ObsoleteClass; none is exact nutritional fungal mycoparasitism and no replacement/consider annotation is present in those sets. The editor file is an ontology/annotation shell, not an alternative full active class inventory. The selected complete templates and pending changed files were separately screened. No historical CURIE is reused or asserted as exact.",
+    "limits": "No directory-symlink following, archive unpacking, or reconstruction of unavailable ignored history. Supplementary historical binary exclusions were dashboard PNGs, one network screenshot and one compressed embedding table, not YAML record owners. Remote audit covers all nonremoved changed PR blobs and the selected complete upstream owner paths at recorded heads, not every remote repository file. No paid services used.",
+    "exact_existing_record_identified": false,
+    "scope_acceptance": {
+      "at": "2026-10-13T11:13:44.939774+00:00",
+      "decision": "Accept concept for one guarded PROPOSED record, subject to fresh reservation gates; not human sign-off or discovery exhaustion.",
+      "label": "nutritional fungal mycoparasitism",
+      "slug": "nutritional_fungal_mycoparasitism",
+      "definition": "An ecological phenotype in which a fungus obtains nutrients at the expense of another fungus, either from the living host or after killing it.",
+      "definition_source": "DOI:10.1139/b95-389",
+      "category": "ECOLOGY",
+      "term_kind": "CLASS",
+      "parent": "METPO:1000059",
+      "evidence_references": [
+        "DOI:10.1139/b95-389",
+        "DOI:10.1002/rcm.6131",
+        "DOI:10.1016/j.apsoil.2012.12.005"
+      ],
+      "rationale": "A reusable trophic interaction phenotype, not an isolate observation, sequence feature, kit row or precomposed chemical-use pair. Jeffries supports the strict nutritional sense and biotrophic/necrotrophic scope; Pellegrini studies supply host-derived isotope assimilation, with the 2013 source also reporting growth inhibition. Shared authorship is not independent-laboratory replication. Existing bacterial mycophagy and haustorium morphology are not exact equivalents.",
+      "scope_limits": "Fungal actor and host, excluding oomycetes despite historical usage. Require host harm and nutrition, not mere association, inhibition, passive exudate use or unrelated dead-biomass feeding. Killing, penetration, obligacy and a universal molecular mechanism are not required. Phenotype parent avoids importing the local parasitism/symbiosis persistent-association constraint; preserve the attributed hierarchy question.",
+      "evidence_limits": "One native UNRESOLVED review quote is an exact direct institutional abstract match. 2012 is a MED scientific abstract; journal full text unread. 2013 native VERIFIED comes from AGR:IND500606635, not PubMed; the same quote matches the direct institutional abstract. The thesis supplies qualified methods context, not presumed identical journal text or extra replication. Preserve its numerical and assay discrepancies, source-version limits and unavailable publisher notice checks.",
+      "canonical_examples": [],
+      "xrefs": [],
+      "synonyms": [],
+      "causal_graphs": [],
+      "allocation": "Not attempted by this acceptance. No local ID, proposal cohort or METPO block is reserved.",
+      "inputs": [
+        {
+          "path": "/tmp/traitmech-mycoparasitism-research-handoff-v2-20261013/assessment.json",
+          "sha256": "51c4ebcbc39237ce472397eb1fce61a5340b26b81a92a5535bbf6f83c06eff02"
+        },
+        {
+          "path": "/tmp/traitmech-mycoparasitism-research-handoff-v2-20261013/followup.json",
+          "sha256": "5858d1920f9914b2b5410b4e242dbe638fd18b3d2b89d281a6a69bed34df66ac"
+        },
+        {
+          "path": "/tmp/traitmech-mycoparasitism-snippet-canary-20261013/result.json",
+          "sha256": "3548e74b0aa5ec5f332de658b2427dedbcfa080f72fb1bf15414306aa50c7463"
+        },
+        {
+          "path": "/tmp/traitmech-post-kin-corneo-thesis-20261013/assessment.json",
+          "sha256": "d321f08b6107a1bf987213792553ebe6b08ef88e13f78e85ec59488d2604cf48"
+        },
+        {
+          "path": "/tmp/traitmech-post-kin-mycoparasitism-authority-20261013/assessment.json",
+          "sha256": "131c8df362c9f280746475ee77748744de574f4175abfe516ab9731a5f678faa"
+        }
+      ]
+    }
+  },
+  "allocation": {
+    "accepted_at": "2026-10-13T11:20:51.858214+00:00",
+    "identifier": "traitmech:000717",
+    "cohort": "metpo_traitmech_v593",
+    "block": [
+      1067000,
+      1067099
+    ],
+    "label": "nutritional fungal mycoparasitism",
+    "main": "4de96161ea95221bb978bf816d94613230b65cf3",
+    "decision": "Reserve after independently accepted scope and bounded reservation checks.",
+    "exact_numeric_dispositions": [
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 92,
+        "identifier": "METPO:1000658",
+        "values": [
+          "-2.1067007"
+        ],
+        "disposition": "Embedding coordinates, not identifier reservations."
+      },
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 307,
+        "identifier": "METPO:1000805",
+        "values": [
+          "-1.1067002"
+        ],
+        "disposition": "Embedding coordinates, not identifier reservations."
+      }
+    ],
+    "interval_disposition": "All 203 hits are the formal additional-editor namespace envelope or retained documentation of that same envelope, not a competing narrower reservation.",
+    "receipts": {
+      "assessment.json": "3aa18f2969a110a91d3c56746f9357a205db87a779b3567153de8cc4c619685c",
+      "local/complete.json": "e332e674b149e08cde5287d60f172e9a95a0cfef63695172e787eb6d0b8719d9",
+      "local/scans.json": "7d7eef79f04c957d31203a857fb5a85f5a5ac6e7b45d941e1d28b0336ca0b05c",
+      "local/historical.json": "78f05349873f3a6e5858f126c41e34174a3ff5616b4ffaee412efb2a8ba12a96",
+      "remote/result.json": "0dc23371b746ea2bd52657126ab1c3b2c9a9f4ab20397125fad5f805afaf09da",
+      "remote/pending-checks.json": "c1b3fca6c7b5eaea4136a55c79aff31403b467e10caac416b1d04c876031c3f3",
+      "remote/upstream-checks.json": "b891358c6618293e4db66e68ac28413445d9c2c7fcb3990ece4158dbbd89ccb2"
+    },
+    "local_scope": {
+      "at": "2026-10-13T11:15:23.062874+00:00",
+      "paths": 166,
+      "historical_heads": 139,
+      "catalogs_unchanged": true
+    },
+    "remote_scope": {
+      "checked_at": "2026-10-13T11:14:48.803624+00:00",
+      "prs": 11,
+      "pending_files": 783,
+      "upstream_files": 587,
+      "upstream_heads": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "bb3072f59f6d9e098ae40c4dce2c60a9dec9af42"
+      }
+    },
+    "limitations": "Ignored and hidden available files; unavailable TraitMech tracked trees; unavailable CommunityMech proposal trees; all nonremoved pending files and selected upstream owners. No reconstruction of lost untracked/ignored content, symlinks or archives. Numeric matches require semantic adjudication. Not a reservation.",
+    "conflicting_reservations": [],
+    "pending_prs": [
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1782,
+        "head": "35099af2b7d5347f2ca6e418c4a139979071644d",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1476,
+        "head": "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+        "draft": false,
+        "files": 8,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 973,
+        "head": "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+        "draft": false,
+        "files": 3,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 924,
+        "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+        "draft": true,
+        "files": 692,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/CommunityMech",
+        "number": 935,
+        "head": "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+        "draft": true,
+        "files": 64,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 644,
+        "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 643,
+        "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 641,
+        "head": "9681aeacff5ea06a0dd8907906475d270ad61285",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 640,
+        "head": "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 638,
+        "head": "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 629,
+        "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+        "draft": false,
+        "files": 15,
+        "body_hits": {
+          "hits": []
+        }
+      }
+    ]
+  },
+  "source_status": "Crossref metadata for the three candidate DOIs has empty relation and no update-to field; PMID22302490 has Journal Article and no CommentsCorrections entries. Wiley and NRC publisher requests returned 403; Elsevier returned HTTP200 Redirecting HTML, not article text. Bounded web notice queries did not surface a notice, but this is not comprehensive clearance. Corneo thesis and repository abstract remain author-deposited versions; journal-version equivalence is unestablished.",
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-mycoparasitism-snippet-canary-20261013/result.json",
+      "sha256": "3548e74b0aa5ec5f332de658b2427dedbcfa080f72fb1bf15414306aa50c7463",
+      "bytes": 5073
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-native-record-20261013.tsv",
+      "sha256": "9cace0d7ee061d6def88d8a86ad771dda6d57d714eeaedb77d2a7cb6c9fe6220",
+      "bytes": 739
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-research-handoff-v2-20261013/assessment.json",
+      "sha256": "51c4ebcbc39237ce472397eb1fce61a5340b26b81a92a5535bbf6f83c06eff02",
+      "bytes": 14420
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-research-handoff-v2-20261013/followup.json",
+      "sha256": "5858d1920f9914b2b5410b4e242dbe638fd18b3d2b89d281a6a69bed34df66ac",
+      "bytes": 1754
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-research-handoff-v2-20261013/scope-accepted.json",
+      "sha256": "7c3163ace81e0f72349cc89f020bb009dd396a9a0a2b2379917cb6b0a09308f5",
+      "bytes": 3261
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-allocation-20261013/accepted.json",
+      "sha256": "72560a0189a64b0e974e13d21512cec293f9705fe19519ababe8ce35e1726501",
+      "bytes": 3594
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-allocation-20261013/assessment.json",
+      "sha256": "3aa18f2969a110a91d3c56746f9357a205db87a779b3567153de8cc4c619685c",
+      "bytes": 126864
+    },
+    {
+      "path": "/tmp/traitmech-mycoparasitism-status-check-20261013/result.json",
+      "sha256": "7c8935f4958b68be03fab6d0088bab6c2fcd9d8bc06983735d34d6adfbe537af",
+      "bytes": 6291
+    },
+    {
+      "path": "/tmp/traitmech-post-kin-corneo-thesis-20261013/assessment.json",
+      "sha256": "d321f08b6107a1bf987213792553ebe6b08ef88e13f78e85ec59488d2604cf48",
+      "bytes": 3150
+    },
+    {
+      "path": "/tmp/traitmech-post-kin-mycoparasitism-authority-20261013/assessment.json",
+      "sha256": "131c8df362c9f280746475ee77748744de574f4175abfe516ab9731a5f678faa",
+      "bytes": 3508
+    }
+  ],
+  "exclusions": "1994 metadata-only source and other preliminary leads are not counted trait evidence. No taxa or protein accessions are inferred from BLAST reference tables. No paid calls.",
+  "limitations": "Local receipt paths are reproducibility locators, not public durable URLs. Citable source URLs and hashes are retained separately. Full publications are retained locally only. This is source-bounded curation, not exhaustive discovery or statistical replication."
+}
