@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/morphology/fungal_nematode_trap_formation.html" >fungal nematode-trap formation <code>traitmech:000718</code></a></li>
 
       </ul>
     </div>
@@ -111,7 +111,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(3)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -121,7 +121,7 @@
         <p class="discussion-prompt">Resolve a closer fungal trap-morphology parent.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>adhesive-column-scope-and-parent</code>
           · raised by codex
           · 2026-10-08
@@ -140,6 +140,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added fungal nematode-trap formation traitmech:000718 as the direct broader phenotype. The existing child definition entails specialized hyphal trap differentiation. This resolves only the parent gap; the historical scope contrasts, unasserted mappings, examples and separate mechanism questions remain applicable. Formation does not guarantee immediate capture. The column cell-count question is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063400 SubClassOf METPO:1067100 on upstream adoption.</p>
 
 
 
@@ -176,6 +178,48 @@
 
       </div>
 
+
+      <div class="discussion" id="adhesive-column-cell-count-scope">
+        <p class="discussion-prompt">Reconcile serial-cell column scope with the supplement&#39;s broader cell-count description.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>adhesive-column-cell-count-scope</code>
+          · raised by codex
+          · 2026-10-13
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>The current definition retains serially arranged cells, supported by Ji&#39;s Introduction. The newly inspected 2020 Transparent Methods, Fungal strains, PDF page 12, describes columns containing one or more cells. Preserve this source-level difference pending review of single-cell columns versus knobs; do not silently broaden the child or make cell number the sole discriminator. Both usages fit fungal nematode-trap formation, so this question does not reopen the resolved parent gap. The supplement names YMF1.00569 from Deqin soil, not the 2016 paper&#39;s YMF1.01472. That provenance does not establish identity between the strains or a canonical example. The earlier evidence notes record limited supplement access at initial curation; this follow-up adds the inspected page without claiming a complete supplement audit.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.1016/j.isci.2020.101057" rel="nofollow noreferrer"><code>DOI:10.1016/j.isci.2020.101057</code></a>
+
+
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -187,6 +231,12 @@
           <time>2026-10-08T13:53:29Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Added fungal adhesive-column trap formation with two primary DOI sources and contiguous source-checked snippets. Ignored-and-hidden main/worktree/open-PR checks support 000681 and v557 block 1063400-1063499. Kept strain provenance and protein mechanism unresolved, distinguishing morphology from sequence correlations and induction observations. Existing records unchanged. Timestamp is observed UTC.</p>
+        </li>
+
+        <li>
+          <time>2026-10-13T13:31:56Z</time> ·
+          <strong>REFINE_FUNGAL_TRAP_PARENT</strong> · codex
+          <p class="changes">Refined traitmech:000681 below fungal nematode-trap formation traitmech:000718 and resolved its temporary parent discussion by definition-based inference. Preserved child identity, definition, evidence, examples, mechanism gaps and earlier history. Added a separate source-backed cell-count scope question after inspecting the 2020 supplement; no identity broadening.</p>
         </li>
 
       </ol>
@@ -204,6 +254,12 @@
           <ul><li><strong>AUDIT</strong> — Correct session actor attribution without changing the trait
             <p>Corrects history/records/fungal_adhesive_column_trap_formation/2026-10-08T135713Z-claude-code-9de31b.yaml: session.actors.name should be codex, not claude-code. The original command omitted --actor-name and therefore retained the scaffolder default. The original model gpt-5 and agent_tool codex were correct. This append-only audit preserves the original entry and changes no TraitRecord fields or biological claims. The add-trait skill already explicitly instructs passing and inspecting --actor-name (#1776), so no redundant skill change is needed.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_adhesive_column_trap_formation/2026-10-08T140037Z-codex-066d2a.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-13T13:33:30Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Refine fungal trap morphology parent
+            <p>Refined the direct parent to traitmech:000718 and resolved only the parent-gap discussion by definition-based inference; preserved child identity, definition, evidence, examples, other mechanism gaps and previous history. Added a separate OPEN cell-count scope question from Ji 2020 Transparent Methods page 12; preserved the serial-cell definition and distinct strain identities.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_adhesive_column_trap_formation/2026-10-13T133330Z-codex-56172e.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -259,9 +315,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-08 14:00 UTC
+      Record as of 2026-10-13 13:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1112 TraitRecords
+      · 1113 TraitRecords
       · embedding coverage 42.9%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

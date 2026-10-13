@@ -7,7 +7,7 @@ trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000718
 evidence:
 - reference: DOI:10.1016/j.isci.2020.101057
   snippet: Fungi with the AC device form a string of cells with adhesive surfaces
@@ -36,7 +36,7 @@ discussions:
 - discussion_id: adhesive-column-scope-and-parent
   prompt: Resolve a closer fungal trap-morphology parent.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Phenotype METPO:1000059 is a broad parent. Existing mycelial growth traitmech:000074
     explicitly concerns bacteria; hyphal anastomosis traitmech:000605 denotes fusion.
     Distinguish multicellular adhesive columns from unicellular knobs, interconnected
@@ -48,6 +48,14 @@ discussions:
     their closer-parent questions remain open.
   posed_by: codex
   posed_date: '2026-10-08'
+  resolved_date: '2026-10-13'
+  resolution_note: Added fungal nematode-trap formation traitmech:000718 as the direct
+    broader phenotype. The existing child definition entails specialized hyphal trap
+    differentiation. This resolves only the parent gap; the historical scope contrasts,
+    unasserted mappings, examples and separate mechanism questions remain applicable.
+    Formation does not guarantee immediate capture. The column cell-count question
+    is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063400
+    SubClassOf METPO:1067100 on upstream adoption.
 - discussion_id: adhesive-column-strains-and-mechanism
   prompt: Resolve natural strain provenance and column-specific mechanisms.
   kind: KNOWLEDGE_GAP
@@ -65,6 +73,30 @@ discussions:
     knobs or rings; mechanism is deferred, not claimed absent.
   posed_by: codex
   posed_date: '2026-10-08'
+- discussion_id: adhesive-column-cell-count-scope
+  prompt: Reconcile serial-cell column scope with the supplement's broader cell-count
+    description.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The current definition retains serially arranged cells, supported by
+    Ji's Introduction. The newly inspected 2020 Transparent Methods, Fungal strains,
+    PDF page 12, describes columns containing one or more cells. Preserve this source-level
+    difference pending review of single-cell columns versus knobs; do not silently
+    broaden the child or make cell number the sole discriminator. Both usages fit
+    fungal nematode-trap formation, so this question does not reopen the resolved
+    parent gap. The supplement names YMF1.00569 from Deqin soil, not the 2016 paper's
+    YMF1.01472. That provenance does not establish identity between the strains or
+    a canonical example. The earlier evidence notes record limited supplement access
+    at initial curation; this follow-up adds the inspected page without claiming a
+    complete supplement audit.
+  evidence:
+  - reference: DOI:10.1016/j.isci.2020.101057
+    evidence_source: full_text
+    notes: Transparent Methods, Fungal strains, PDF page 12; text and rendered page
+      inspected at https://ars.els-cdn.com/content/image/1-s2.0-S258900422030242X-mmc1.pdf.
+      Source-scope assessment, not an additional experiment.
+  posed_by: codex
+  posed_date: '2026-10-13'
 curation_history:
 - timestamp: '2026-10-08T13:53:29Z'
   curator: codex
@@ -75,4 +107,13 @@ curation_history:
     protein mechanism unresolved, distinguishing morphology from sequence correlations
     and induction observations. Existing records unchanged. Timestamp is observed
     UTC.
+  llm_assisted: true
+- timestamp: '2026-10-13T13:31:56Z'
+  curator: codex
+  action: REFINE_FUNGAL_TRAP_PARENT
+  changes: Refined traitmech:000681 below fungal nematode-trap formation traitmech:000718
+    and resolved its temporary parent discussion by definition-based inference. Preserved
+    child identity, definition, evidence, examples, mechanism gaps and earlier history.
+    Added a separate source-backed cell-count scope question after inspecting the
+    2020 supplement; no identity broadening.
   llm_assisted: true

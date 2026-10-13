@@ -88,7 +88,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/morphology/fungal_nematode_trap_formation.html" >fungal nematode-trap formation <code>traitmech:000718</code></a></li>
 
       </ul>
     </div>
@@ -152,7 +152,7 @@
         <p class="discussion-prompt">Resolve a closer trap-morphology parent without conflating cell shape.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>constricting-ring-scope-and-parent</code>
           · raised by codex
           · 2026-10-08
@@ -171,6 +171,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added fungal nematode-trap formation traitmech:000718 as the direct broader phenotype. The existing child definition entails specialized hyphal trap differentiation. This resolves only the parent gap; the historical scope contrasts, unasserted mappings, examples and separate mechanism questions remain applicable. Formation does not guarantee immediate capture. The column cell-count question is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063000 SubClassOf METPO:1067100 on upstream adoption.</p>
 
 
 
@@ -226,6 +228,12 @@
           <p class="changes">Addressed #1823: qualified the label with trap to distinguish intracellular cytokinetic rings in fungi. Added a directly checked primary boundary-source snippet and explicit exclusion; it is not a third positive trap study. Preserved the initial event, definition, identifier, natural example and reservation.</p>
         </li>
 
+        <li>
+          <time>2026-10-13T13:31:56Z</time> ·
+          <strong>REFINE_FUNGAL_TRAP_PARENT</strong> · codex
+          <p class="changes">Refined traitmech:000677 below fungal nematode-trap formation traitmech:000718 and resolved its temporary parent discussion by definition-based inference. Preserved child identity, definition, evidence, examples, mechanism gaps and earlier history.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -241,6 +249,12 @@
           <ul><li><strong>EDIT</strong> — Qualify constricting-ring trap label after adversarial review
             <p>Addressed #1823 by adding trap to the label and explicit exclusion of intracellular actomyosin rings. Added DOI:10.1016/j.devcel.2014.04.021 with a verified scientific-abstract snippet as terminology-boundary evidence, not a third positive trap study. Preserved the original CREATE record history/records/fungal_constricting_ring_formation/2026-10-08T085642Z-codex-ff4ed3.yaml and initial TraitRecord event; appended the correction. Definition, ID, natural example, parent and block reservation unchanged.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_constricting_ring_formation/2026-10-08T091510Z-codex-6edf3d.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-13T13:33:24Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Refine fungal trap morphology parent
+            <p>Refined the direct parent to traitmech:000718 and resolved only the parent-gap discussion by definition-based inference; preserved child identity, definition, evidence, examples, other mechanism gaps and previous history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_constricting_ring_formation/2026-10-13T133324Z-codex-7dc0e1.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -296,9 +310,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-08 09:15 UTC
+      Record as of 2026-10-13 13:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1112 TraitRecords
+      · 1113 TraitRecords
       · embedding coverage 42.9%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

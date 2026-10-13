@@ -1,0 +1,112 @@
+identifier: traitmech:000718
+label: fungal nematode-trap formation
+definition: A morphological phenotype in which a fungus differentiates hyphae into
+  specialized nematode-capturing structures.
+definition_source: DOI:10.1016/j.isci.2020.101057
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1016/j.isci.2020.101057
+  snippet: Nematode-trapping fungi (NTF) can switch to pathogens by producing various
+    trapping devices to capture nematodes.
+  notes: 'Ji et al. 2020, scientific Summary; PMID:32339992. Direct primary XML at
+    https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7186526/fullTextXML and actual
+    Figure 1 inspected. Introduction and Results group constricting rings, adhesive
+    networks, columns and knobs as four representative devices, not an exhaustive
+    taxonomy. Selected Transparent Methods and actual PDF pages 8, 11, 12, 15 and
+    16 were inspected; not every supplement figure or dataset. The main Introduction
+    describes serial column cells while PDF 12 allows one or more; that narrower child-scope
+    question remains open. Adhesion-gene expansion and expression correlations do
+    not establish a universal molecular mechanism or sequence-only phenotype prediction.
+    Native abstract verifier: VERIFIED.'
+- reference: DOI:10.1371/journal.ppat.1002179
+  snippet: A. oligospora forms adhesive networks to capture nematodes
+  notes: 'Yang et al. 2011, Author Summary, not the scientific abstract; PMID:21909256.
+    Direct primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3164635/fullTextXML
+    and actual Figure 1 inspected. Panel I shows interconnected loops; the caption
+    distinguishes formation, attraction, adhesion, capture, penetration and digestion.
+    These are separate endpoints, not automatic consequences of an observed shape.
+    This parent curation did not renew the full Methods/supplement audit retained
+    by the net child. The old teleomorph wording is not imported as a current taxonomic
+    equivalence. Shares authors with Ji 2020, not independent-laboratory replication.
+    Native verifier: NOT_IN_ABSTRACT; the Author Summary span matches directly.'
+- reference: DOI:10.1038/s41467-023-43235-w
+  snippet: CRs differentiate from hyphae and develop two basal stalk cells (S1 and
+    S2) and three distal ring cells (R1, R2, and R3)
+  notes: 'Chen et al. 2023, Results, Morphogenesis and development of CR; PMID:37968349.
+    CR means constricting ring. Primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10651832/fullTextXML,
+    relevant formation/inflation Methods and actual Figure 1 inspected. Strain 29
+    (CGMCC3.20198) forms morphologically complete rings before inflation competence;
+    panels l/m contrast immature-ring escape with mature-ring capture. Water-agar
+    induction with C. elegans, horse-serum formation and hot-water inflation are distinct
+    assays, not universal requirements. Later protein-mechanism figures and supplements
+    were not fully audited; the incomplete supplementary ZIP is not evidence. No universal
+    SNARE dependency or natural-strain exemplar is inferred. Native verifier: NOT_IN_ABSTRACT;
+    the Results span matches directly.'
+- reference: DOI:10.1007/s102670200061
+  snippet: A nonconstricting ring (arrow) is capturing a nematode (asterisk).
+  notes: 'Saikawa and Takahashi 2002, Figure 8 caption, page 418. All three pages
+    and actual Figures 1-20 inspected at https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_pdf.
+    Figures 8-14 and 15-20 document nonconstricting rings in source-named Dactylella
+    leptospora and Dactylaria candida; Figures 1-7 show the constricting comparator.
+    Curved hyphal branches form the traps. The observations support inclusion of nonconstricting
+    rings, not universal stalk lengths, culture conditions or adhesion proteins. Adhesive
+    ultrastructure is attributed to earlier work, not newly imaged here. DOI/title
+    reconciled against Crossref. Native verifier: UNRESOLVED with no result for that
+    exact DOI query; the caption matches directly. This does not assert that the paper
+    is unindexed everywhere.'
+discussions:
+- discussion_id: fungal-nematode-trap-scope-and-hierarchy
+  prompt: Refine morphological boundaries without equating formation with feeding.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phenotype METPO:1000059 is broader. Existing trap-formation traits 000677-000681
+    entail this parent; their five parent gaps are resolved by definition-based inference,
+    not new child experiments. The five types do not exhaust the class or partition
+    organism-level possession. Morphologically complete immature traps are included;
+    formation does not guarantee immediate capture, killing, penetration, digestion
+    or assimilation. Generic hyphal growth, fusion, individual-cell ring shape, prey
+    attraction, fungal taxonomy and nematicidal activity without trap differentiation
+    are insufficient. Mycelial growth traitmech:000074 is explicitly bacterial; hyphal
+    anastomosis traitmech:000605 denotes fusion. Neither is an exact parent. Nutritional
+    nematophagy is not an exact synonym. The column child's serial-cell versus single-cell
+    terminology remains separately open; no organism-level disjointness is asserted.
+    Pinned/current METPO lexical hits 0000261, 000262 and 1000125 are deprecated fungal-spore
+    concepts, not trap counterparts; no replacement/consider annotations were observed.
+    Their OMO:0001000 reasons do not invalidate biology or license identifier reuse.
+    No exact synonyms or xrefs are asserted.
+  posed_by: codex
+  posed_date: '2026-10-13'
+- discussion_id: fungal-nematode-trap-mechanism-and-source-limits
+  prompt: Resolve trap-specific mechanisms and provenance without universalizing correlations.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Genomic homology, gene-family expansion and expression changes do not
+    validate sequence-only phenotype predictions. Formation, adhesion, ring inflation
+    and subsequent infection require separate functional evidence. No common protein
+    inventory, inducer or mechanism is inferred across traps; protein examples and
+    causal graphs remain unset. Existing narrow children retain their qualified canonical
+    examples; none is duplicated onto the parent. Ji''s ring isolate is described
+    first as derived from a teleomorph and later as soil-derived, and Results/caption
+    adhesive-layer measurements differ. Do not silently reconcile them. Its column
+    strain is not the 2016 child''s strain. Notice checks were bounded: Cell and Crossmark
+    access failed, while PubMed, Crossref and three publisher records were inspected.
+    Yang''s linked CommentIn is commentary, not a correction designation or independent
+    experiment. Source hashes, exact query outcomes and inspection limits are in the
+    sidecar.'
+  posed_by: codex
+  posed_date: '2026-10-13'
+curation_history:
+- timestamp: '2026-10-13T13:31:56Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal nematode-trap formation with four DOI-backed contiguous excerpts
+    and bounded source/phenotype scope. Reserved 000718, v594 and 1067100-1067199
+    after ignored/hidden, retained-history and pending-head checks. Refined five child
+    parents, preserving their definitions and evidence and recording the unresolved
+    column cell-count usage. No sequence-derived mechanism or universal capture guarantee
+    asserted. Timestamp is observed post-audit acceptance, not estimated writing time.
+  llm_assisted: true

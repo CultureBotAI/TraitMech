@@ -1,0 +1,1286 @@
+{
+  "trait_id": "traitmech:000718",
+  "label": "fungal nematode-trap formation",
+  "decision_timestamp": "2026-10-13T13:31:56Z",
+  "compiled_at": "2026-10-13T13:34:16.096095+00:00",
+  "rows": [
+    {
+      "reference": "DOI:10.1016/j.isci.2020.101057",
+      "snippet": "Nematode-trapping fungi (NTF) can switch to pathogens by producing various trapping devices to capture nematodes.",
+      "words": 15,
+      "source": {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020.xml",
+        "sha256": "9d157e3002877b800895da5de05e24026b27cee29e1e93ee723a9abfe2e02452",
+        "bytes": 90380,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7186526/fullTextXML"
+      },
+      "source_identifiers": {
+        "pmcid": "PMC7186526",
+        "pmcaid": "7186526",
+        "pmcaiid": "7186526",
+        "pmid": "32339992",
+        "doi": "10.1016/j.isci.2020.101057"
+      },
+      "locator": "Scientific Summary, not graphical abstract, highlights or teaser",
+      "exact_contiguous_span": true,
+      "native_verdict": "VERIFIED",
+      "native_selected_identity": {
+        "source": "MED",
+        "id": "32339992",
+        "title": "Expansion of Adhesion Genes Drives Pathogenic Adaptation of Nematode-Trapping Fungi.",
+        "doi": "10.1016/j.isci.2020.101057"
+      },
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.isci.2020.101057&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-fungal-trap-parent-canary-20261013/response-0.json",
+        "sha256": "322c792a928e1b33e48a173b8e291a8cbe539a7637fa1573ed2d3f3e5c17b914"
+      },
+      "inspection_limits": "Ji et al. 2020, scientific Summary; PMID:32339992. Direct primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7186526/fullTextXML and actual Figure 1 inspected. Introduction and Results group constricting rings, adhesive networks, columns and knobs as four representative devices, not an exhaustive taxonomy. Selected Transparent Methods and actual PDF pages 8, 11, 12, 15 and 16 were inspected; not every supplement figure or dataset. The main Introduction describes serial column cells while PDF 12 allows one or more; that narrower child-scope question remains open. Adhesion-gene expansion and expression correlations do not establish a universal molecular mechanism or sequence-only phenotype prediction. Native abstract verifier: VERIFIED."
+    },
+    {
+      "reference": "DOI:10.1371/journal.ppat.1002179",
+      "snippet": "A. oligospora forms adhesive networks to capture nematodes",
+      "words": 8,
+      "source": {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/yang2011.xml",
+        "sha256": "6023597d930a6d692c16ed5dde56814059093395ebb223ed6629166e6c1fb852",
+        "bytes": 166072,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3164635/fullTextXML"
+      },
+      "source_identifiers": {
+        "pmcid": "PMC3164635",
+        "pmcaid": "3164635",
+        "pmcaiid": "3164635",
+        "pmid": "21909256",
+        "doi": "10.1371/journal.ppat.1002179"
+      },
+      "locator": "Author Summary, not scientific abstract",
+      "exact_contiguous_span": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_selected_identity": {
+        "source": "MED",
+        "id": "21909256",
+        "title": "Genomic and proteomic analyses of the fungus Arthrobotrys oligospora provide insights into nematode-trap formation.",
+        "doi": "10.1371/journal.ppat.1002179"
+      },
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.ppat.1002179&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-fungal-trap-parent-canary-20261013/response-1.json",
+        "sha256": "7ae98d2564d6c069b911785bcb2858d1e94c0031e8979337a8cb9d982c62169c"
+      },
+      "inspection_limits": "Yang et al. 2011, Author Summary, not the scientific abstract; PMID:21909256. Direct primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3164635/fullTextXML and actual Figure 1 inspected. Panel I shows interconnected loops; the caption distinguishes formation, attraction, adhesion, capture, penetration and digestion. These are separate endpoints, not automatic consequences of an observed shape. This parent curation did not renew the full Methods/supplement audit retained by the net child. The old teleomorph wording is not imported as a current taxonomic equivalence. Shares authors with Ji 2020, not independent-laboratory replication. Native verifier: NOT_IN_ABSTRACT; the Author Summary span matches directly."
+    },
+    {
+      "reference": "DOI:10.1038/s41467-023-43235-w",
+      "snippet": "CRs differentiate from hyphae and develop two basal stalk cells (S1 and S2) and three distal ring cells (R1, R2, and R3)",
+      "words": 22,
+      "source": {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/chen2023.xml",
+        "sha256": "01da5497c8c61c7cefa931a9259d39d98d84548d71ebb336c8c3ac787654c777",
+        "bytes": 135157,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10651832/fullTextXML"
+      },
+      "source_identifiers": {
+        "pmcid": "PMC10651832",
+        "pmcid-ver": "PMC10651832.1",
+        "pmcaid": "10651832",
+        "pmcaiid": "10651832",
+        "pmid": "37968349",
+        "doi": "10.1038/s41467-023-43235-w",
+        "publisher-id": "43235"
+      },
+      "locator": "Results, Morphogenesis and development of CR",
+      "exact_contiguous_span": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_selected_identity": {
+        "source": "MED",
+        "id": "37968349",
+        "title": "A palisade-shaped membrane reservoir is required for rapid ring cell inflation in Drechslerella dactyloides.",
+        "doi": "10.1038/s41467-023-43235-w"
+      },
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41467-023-43235-w&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-fungal-trap-parent-canary-20261013/response-2.json",
+        "sha256": "a5c754b808f5941e13bc38e935df2553b2f0298f7ba1df2cea640f546036abf0"
+      },
+      "inspection_limits": "Chen et al. 2023, Results, Morphogenesis and development of CR; PMID:37968349. CR means constricting ring. Primary XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10651832/fullTextXML, relevant formation/inflation Methods and actual Figure 1 inspected. Strain 29 (CGMCC3.20198) forms morphologically complete rings before inflation competence; panels l/m contrast immature-ring escape with mature-ring capture. Water-agar induction with C. elegans, horse-serum formation and hot-water inflation are distinct assays, not universal requirements. Later protein-mechanism figures and supplements were not fully audited; the incomplete supplementary ZIP is not evidence. No universal SNARE dependency or natural-strain exemplar is inferred. Native verifier: NOT_IN_ABSTRACT; the Results span matches directly."
+    },
+    {
+      "reference": "DOI:10.1007/s102670200061",
+      "snippet": "A nonconstricting ring (arrow) is capturing a nematode (asterisk).",
+      "words": 9,
+      "source": {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002.pdf",
+        "sha256": "714af441b831dbea9f07c4d3f6074c2eaf3f808783571786670621a7c4ee47aa",
+        "bytes": 556740,
+        "url": "https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_pdf"
+      },
+      "source_identifiers": {
+        "doi": "10.1007/s102670200061",
+        "identity": "DOI and title reconciled against Crossref; no native exact-query hit"
+      },
+      "locator": "Figure 8 caption, page 418",
+      "exact_contiguous_span": true,
+      "native_verdict": "UNRESOLVED",
+      "native_selected_identity": null,
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1007%2Fs102670200061&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-fungal-trap-parent-canary-20261013/response-3.json",
+        "sha256": "b74b2cb1bbcd8697db46959f173ad4a25bc65952dd9b79b418b9e3443c6bee12"
+      },
+      "inspection_limits": "Saikawa and Takahashi 2002, Figure 8 caption, page 418. All three pages and actual Figures 1-20 inspected at https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_pdf. Figures 8-14 and 15-20 document nonconstricting rings in source-named Dactylella leptospora and Dactylaria candida; Figures 1-7 show the constricting comparator. Curved hyphal branches form the traps. The observations support inclusion of nonconstricting rings, not universal stalk lengths, culture conditions or adhesion proteins. Adhesive ultrastructure is attributed to earlier work, not newly imaged here. DOI/title reconciled against Crossref. Native verifier: UNRESOLVED with no result for that exact DOI query; the caption matches directly. This does not assert that the paper is unindexed everywhere."
+    }
+  ],
+  "native_record_verification": {
+    "exit": 0,
+    "receipt": {
+      "path": "/tmp/traitmech-fungal-trap-parent-native-record-20261013.tsv",
+      "sha256": "e3d64e3f3731a40b47c6d10b1efd22e773c9509c8ba6dedf8d82c1646b5608e1",
+      "bytes": 909
+    },
+    "rows": [
+      {
+        "file": "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.1016/j.isci.2020.101057",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "Nematode-trapping fungi (NTF) can switch to pathogens by producing various trapping devices to capture nematodes.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1371/journal.ppat.1002179",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.27",
+        "snippet": "A. oligospora forms adhesive networks to capture nematodes",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+        "locator": "evidence[2]",
+        "reference": "DOI:10.1038/s41467-023-43235-w",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.32",
+        "snippet": "CRs differentiate from hyphae and develop two basal stalk cells (S1 and S2) and three distal ring cells (R1, R2, and R3)",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+        "locator": "evidence[3]",
+        "reference": "DOI:10.1007/s102670200061",
+        "verdict": "UNRESOLVED",
+        "similarity": "0.00",
+        "snippet": "A nonconstricting ring (arrow) is capturing a nematode (asterisk).",
+        "nearest_sentence": ""
+      }
+    ],
+    "command": "scripts/verify_snippets.py --record data/traits/morphology/fungal_nematode_trap_formation.yaml"
+  },
+  "scope": {
+    "parent": "METPO:1000059",
+    "category": "MORPHOLOGY",
+    "mapping_status": "PROPOSED",
+    "child_ids": [
+      "traitmech:000677",
+      "traitmech:000678",
+      "traitmech:000679",
+      "traitmech:000680",
+      "traitmech:000681"
+    ],
+    "inference": "Existing child definitions entail specialized hyphal trap differentiation. Not five new experiments.",
+    "preservation": "Only direct parents, parent-gap resolutions, and one separate column-scope question change; child definitions/evidence/examples/mechanism gaps and prior history remain.",
+    "column_question": {
+      "discussion_id": "adhesive-column-cell-count-scope",
+      "prompt": "Reconcile serial-cell column scope with the supplement's broader cell-count description.",
+      "kind": "CURATION_TODO",
+      "status": "OPEN",
+      "rationale": "The current definition retains serially arranged cells, supported by Ji's Introduction. The newly inspected 2020 Transparent Methods, Fungal strains, PDF page 12, describes columns containing one or more cells. Preserve this source-level difference pending review of single-cell columns versus knobs; do not silently broaden the child or make cell number the sole discriminator. Both usages fit fungal nematode-trap formation, so this question does not reopen the resolved parent gap. The supplement names YMF1.00569 from Deqin soil, not the 2016 paper's YMF1.01472. That provenance does not establish identity between the strains or a canonical example. The earlier evidence notes record limited supplement access at initial curation; this follow-up adds the inspected page without claiming a complete supplement audit.",
+      "evidence": [
+        {
+          "reference": "DOI:10.1016/j.isci.2020.101057",
+          "evidence_source": "full_text",
+          "notes": "Transparent Methods, Fungal strains, PDF page 12; text and rendered page inspected at https://ars.els-cdn.com/content/image/1-s2.0-S258900422030242X-mmc1.pdf. Source-scope assessment, not an additional experiment."
+        }
+      ],
+      "posed_by": "codex",
+      "posed_date": "2026-10-13"
+    },
+    "excluded_inferences": "No universal inducer, capture guarantee, nutrition, sequence-derived mechanism, taxonomy equivalence or organism-level disjointness."
+  },
+  "novelty": {
+    "ignored_hidden_included": true,
+    "local_locations": 168,
+    "historical": {
+      "at": "2026-10-13T13:30:34.891357+00:00",
+      "heads": 139,
+      "pattern": "nematod|nematophag|fungal.{0,30}trap|trapping.{0,30}fung|fungal_nematode_trap|predatory fung|hyphal[ _-]+trap|constricting[ _-]+ring|adhesive[ _-]+(knob|net|column)|10\\.1016/j\\.isci\\.2020\\.101057|10\\.1371/journal\\.ppat\\.1002179|10\\.1038/s41467-023-43235-w|10\\.1007/s102670200061|32339992|21909256|37968349",
+      "catalogs_unchanged": true,
+      "status": "raw_matches_for_adjudication",
+      "limits": "Tracked historical trees only; binary files excluded by git grep -I. Lost ignored/untracked history cannot be reconstructed."
+    },
+    "adjudication": {
+      "at": "2026-10-13T13:31:50Z",
+      "heads": 139,
+      "historical_match_paths": 243,
+      "canonical_trait_paths": [
+        "data/traits/morphology/fungal_adhesive_column_trap_formation.yaml",
+        "data/traits/morphology/fungal_adhesive_knob_trap_formation.yaml",
+        "data/traits/morphology/fungal_adhesive_net_trap_formation.yaml",
+        "data/traits/morphology/fungal_constricting_ring_formation.yaml",
+        "data/traits/morphology/fungal_nonconstricting_ring_trap_formation.yaml",
+        "data/traits/physiology/autophagy.yaml",
+        "data/traits/physiology/myzocytosis.yaml"
+      ],
+      "community_paths": [
+        "kb/communities/Alfalfa_Stress_Adapted_Bacterial_SynCom.yaml",
+        "kb/communities/Carbon_Substrate_PMSX_Biofilm_SynCom.yaml",
+        "kb/communities/CeMbio_Caenorhabditis_Elegans_Microbiome.yaml",
+        "kb/communities/MAMC_M48_Lignocellulose.yaml",
+        "kb/communities/Maize_Root_Simplified_Community.yaml",
+        "kb/communities/Maize_SC2_RootRot_Biocontrol_SynCom.yaml",
+        "kb/communities/Pleuromutilin_Degrading_Artificial_Consortium_5_Strain.yaml",
+        "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+        "kb/communities/Teosinte_Maize_Biofertilizer_SynCom7.yaml",
+        "kb/communities/Wheat_SynCom_SASW01_Drought_Inoculant.yaml"
+      ],
+      "unique_canonical_or_proposal_matching_lines": 164,
+      "historical_owner_deltas": [
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "      contributes to stable root-knot nematode inhibition."
+        },
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "      root-knot nematode suppression."
+        },
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "    ability of the community. Biofilm formation is a key mechanism for community cohesion and nematode"
+        },
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "    explanation: Documents synergistic nematode suppression by the complete SynCom"
+        },
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "    nematode inhibition than individual members alone, demonstrating emergent synergistic biocontrol activity."
+        },
+        {
+          "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+          "text": "  description: 'TYQ1 enrichment during root-knot nematode infection causes restructuring of the rhizobacterial"
+        }
+      ],
+      "dispositions": [
+        "TraitMech canonical matches are the five narrower trap morphologies, autophagy and myzocytosis. Their proposals and supporting writers/tests/history are not an exact umbrella. Child definitions and all five parent gaps were read in full.",
+        "CommunityMech canonical matches are ten bacterial community/host records. The six historical lines absent from current TYQ1 concern bacterial rhizosphere restructuring, biofilm cohesion and nematode inhibition, not fungal trap differentiation.",
+        "Other historical paths are generated views, validation/review reports, existing-child history, known research leads and a rejected nematode-pharyngeal regrounding. They are not new parent definitions.",
+        "Reference-cache contexts concern bacterial colonization, host assays, biocontrol, taxonomy, HSPRO1/2 annotations and bibliographies. PMID38228683 cites fungal olfactory luring, a research lead rather than a curated trap parent. These cached excerpts are not counted as newly verified primary evidence."
+      ],
+      "conclusion": "No exact parent record or proposal identified within the inspected ignored/hidden current and retained tracked-history scope. Accept the reusable morphological parent, not feeding, mechanism or taxonomy assertions.",
+      "limits": "No lost ignored/untracked history reconstruction, binary/archival decoding or directory-symlink traversal. Cached-publication contexts were triaged, not fully scientifically reviewed. No global absence or exhaustion claim.",
+      "receipts": [
+        {
+          "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/before.json",
+          "sha256": "4e4a3b3cdf2aa52d2eb8798b630e4e0a470d84d236bed77a66346b022ec33e53"
+        },
+        {
+          "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/after.json",
+          "sha256": "4e4a3b3cdf2aa52d2eb8798b630e4e0a470d84d236bed77a66346b022ec33e53"
+        },
+        {
+          "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/completion.json",
+          "sha256": "2475a1ffc13cb9647dcc8774e5abe623d5ec4957fa9b83e0fc6de5038d935110"
+        },
+        {
+          "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/history.json",
+          "sha256": "a8a67f53d2f7ddc0f8a891be57d5f71a01043767b36c0531a2a9259672e6996c"
+        }
+      ]
+    },
+    "main": "e7207688b2a55056698d31b83a3f3fee0f97b23c",
+    "upstream_heads": {
+      "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+      "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+      "Knowledge-Graph-Hub/kg-microbe": "bb3072f59f6d9e098ae40c4dce2c60a9dec9af42"
+    },
+    "pending_prs": [
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1782,
+        "head": "35099af2b7d5347f2ca6e418c4a139979071644d",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1476,
+        "head": "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+        "draft": false,
+        "files": 8,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 973,
+        "head": "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+        "draft": false,
+        "files": 3,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 924,
+        "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+        "draft": true,
+        "files": 692,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "CultureBotAI/CommunityMech",
+        "number": 935,
+        "head": "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+        "draft": true,
+        "files": 64,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 644,
+        "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 643,
+        "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 641,
+        "head": "9681aeacff5ea06a0dd8907906475d270ad61285",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 640,
+        "head": "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 638,
+        "head": "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+        "draft": false,
+        "files": 1,
+        "body_hits": {
+          "hits": []
+        }
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 629,
+        "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+        "draft": false,
+        "files": 15,
+        "body_hits": {
+          "hits": []
+        }
+      }
+    ],
+    "pending_blobs": 783,
+    "selected_upstream_blobs": 587,
+    "remote_disposition": "The reservation refresh preserved the novelty-audit main, upstream and open/draft PR heads. Inspected novelty hits concern five children, autophagy, myzocytosis, bacterial community outcomes, host references, taxonomic mappings and passive transport, not an exact parent.",
+    "limits": "Known current locations include ignored and hidden files; no directory-symlink following or local archive decoding. Unavailable worktrees have tracked-only fallback; lost ignored/untracked bytes cannot be reconstructed. Remote checks inspect nonremoved changed pending blobs and selected upstream owners, not every unchanged PR file. No global absence or discovery-exhaustion claim."
+  },
+  "allocation": {
+    "at": "2026-10-13T13:31:56Z",
+    "base": "e7207688b2a55056698d31b83a3f3fee0f97b23c",
+    "identifier": "traitmech:000718",
+    "cohort": "metpo_traitmech_v594",
+    "block": [
+      1067100,
+      1067199
+    ],
+    "populated": "METPO:1067100",
+    "scope": "Accepted independently as a fungal morphological phenotype supported by four primary DOI sources; five accepted child definitions entail it. No active exact METPO counterpart was identified in the recorded bounded assessment.",
+    "exact_match_dispositions": [
+      {
+        "source": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/claw-review-unification-20261008-l_r02lxj/repins/repin-fleet-01/repositories/communitymech/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/claw-review-unification-20261008-l_r02lxj/repins/repin-fleet-01/repositories/communitymech/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-pr935-gate-20261010/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-pr935-gate-20261010/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-pr937-20261010/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-pr937-20261010/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review-contract-20261009/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review-contract-20261009/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review1228-20261010/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review1228-20261010/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review935-20261010/references_cache/PMID_42549325.txt",
+        "line": 49266,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": "/private/tmp/communitymech-review935-20261010/references_cache/PMID_42549325.supplement.md",
+        "line": 48897,
+        "reason": "Decimal measurement in retained supplement/reference cache, not identifier."
+      },
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 250,
+        "reason": "Embedding coordinate of METPO:1005014, not an identifier."
+      }
+    ],
+    "interval_overlaps": 259,
+    "interval_disposition": "Formal ADDITIONAL EDITOR namespace envelope or prior documentation, not competing narrower blocks.",
+    "conflicting_reservations": [],
+    "fresh_pending_heads": {
+      "CultureBotAI/TraitMech": [
+        [
+          924,
+          "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          true
+        ],
+        [
+          973,
+          "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+          false
+        ],
+        [
+          1476,
+          "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+          false
+        ],
+        [
+          1782,
+          "35099af2b7d5347f2ca6e418c4a139979071644d",
+          false
+        ]
+      ],
+      "CultureBotAI/CommunityMech": [
+        [
+          935,
+          "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+          true
+        ]
+      ],
+      "berkeleybop/metpo": [
+        [
+          629,
+          "32e9fa86d36092156919b748dbe51b21df2bf702",
+          false
+        ],
+        [
+          638,
+          "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+          false
+        ],
+        [
+          640,
+          "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+          false
+        ],
+        [
+          641,
+          "9681aeacff5ea06a0dd8907906475d270ad61285",
+          false
+        ],
+        [
+          643,
+          "b5051800f0d46753e5cab17043e6740bc357917a",
+          false
+        ],
+        [
+          644,
+          "627963b839cd7fd993ec892da9d5f663dbc3963d",
+          false
+        ]
+      ]
+    },
+    "evidence_limits": "One scientific Summary, one Author Summary, one Results excerpt and one figure caption; actual native outcomes retained separately from direct text matching. Selected visual inspection and notice checks, not comprehensive supplements or notice clearance.",
+    "limits": "Ignored/hidden local files; unavailable TraitMech tracked trees and CommunityMech proposal trees; nonremoved pending changes and selected upstream owners. No lost untracked/ignored reconstruction, symlink following or local archive decoding.",
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-reservations-20261013/assessment.json",
+        "sha256": "22a865e7ce3761294db9495be237f95e4e2225c777a8bd5ff882aed11e6dd4ea"
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-reservations-20261013/remote/result.json",
+        "sha256": "a7e45f9e162d10fbb6d328a1c3af6dbee46d7d89f1e431e2798ffffccfb3c88a"
+      }
+    ]
+  },
+  "ontology_assessment": {
+    "at": "2026-10-13T12:59:15.875817+00:00",
+    "pattern": "trap|hyph|mycel|fung|carniv|nematod|predat",
+    "sources": [
+      {
+        "source": {
+          "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+          "origin": "pinned TraitMech mirror"
+        },
+        "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+        "parsed_path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+        "parsed_sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+        "triples": 12617,
+        "lexical_subjects": [
+          {
+            "subject": "https://w3id.org/metpo/0000261",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete Fungal Spore Type"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "subject": "https://w3id.org/metpo/000262",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete Fungal Spore Type"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "subject": "https://w3id.org/metpo/1000125",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete fungal spore"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "parent_phenotype": [
+          {
+            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "value": "http://www.w3.org/2002/07/owl#Class"
+          },
+          {
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "value": "https://w3id.org/metpo/1000188"
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+            "value": "A quality that differentiates specific instances of a species from other instances of the same species."
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+            "value": "Anthea Guo"
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+            "value": "Luke Wang"
+          },
+          {
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "value": "phenotype"
+          },
+          {
+            "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+            "value": "https://biolink.github.io/biolink-model/PhenotypicQuality"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+          "origin": {
+            "repository": "berkeleybop/metpo",
+            "path": "metpo.owl",
+            "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+            "blob_sha": "125f475bac2758741d2ef8ec46b2984a1abdc048",
+            "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+            "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+          }
+        },
+        "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "parsed_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "parsed_sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "triples": 12649,
+        "lexical_subjects": [
+          {
+            "subject": "https://w3id.org/metpo/0000261",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete Fungal Spore Type"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "subject": "https://w3id.org/metpo/000262",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete Fungal Spore Type"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "subject": "https://w3id.org/metpo/1000125",
+            "annotations": [
+              {
+                "predicate": "http://purl.obolibrary.org/obo/IAO_0000231",
+                "value": "http://purl.obolibrary.org/obo/OMO_0001000"
+              },
+              {
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "value": "obsolete fungal spore"
+              },
+              {
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                "value": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+              },
+              {
+                "predicate": "http://www.w3.org/2002/07/owl#deprecated",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "parent_phenotype": [
+          {
+            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "value": "http://www.w3.org/2002/07/owl#Class"
+          },
+          {
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "value": "https://w3id.org/metpo/1000188"
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+            "value": "A quality that differentiates specific instances of a species from other instances of the same species."
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+            "value": "Anthea Guo"
+          },
+          {
+            "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+            "value": "Luke Wang"
+          },
+          {
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "value": "phenotype"
+          },
+          {
+            "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+            "value": "https://biolink.github.io/biolink-model/PhenotypicQuality"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+          "origin": {
+            "repository": "berkeleybop/metpo",
+            "path": "src/ontology/metpo-edit.owl",
+            "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+            "blob_sha": "d140e6174ada41f8a1cceb5dba286c8af15feb9e",
+            "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+            "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+          }
+        },
+        "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+        "parsed_path": "/tmp/traitmech-fungal-trap-parent-metpo-edit-20261013.rdf",
+        "parsed_sha256": "65b831892d4d51132ddfc6ea3d8c0b84e3fc729accf094ef09655b5a3bb40b4e",
+        "triples": 31,
+        "lexical_subjects": [],
+        "parent_phenotype": []
+      }
+    ],
+    "status": "Exact annotations retained for semantic assessment; no identifier allocated."
+  },
+  "notice_checks": {
+    "at": "2026-10-13T12:54:57.868583+00:00",
+    "crossref": [
+      {
+        "slug": "yang2011",
+        "doi": "10.1371/journal.ppat.1002179",
+        "title": [
+          "Genomic and Proteomic Analyses of the Fungus Arthrobotrys oligospora Provide Insights into Nematode-Trap Formation"
+        ],
+        "relation": {},
+        "update_to": null,
+        "updated_by": null
+      },
+      {
+        "slug": "chen2023",
+        "doi": "10.1038/s41467-023-43235-w",
+        "title": [
+          "A palisade-shaped membrane reservoir is required for rapid ring cell inflation in Drechslerella dactyloides"
+        ],
+        "relation": {},
+        "update_to": null,
+        "updated_by": null
+      }
+    ],
+    "pubmed": [
+      {
+        "pmid": "32339992",
+        "doi": "10.1016/j.isci.2020.101057",
+        "title": "Expansion of Adhesion Genes Drives Pathogenic Adaptation of Nematode-Trapping Fungi.",
+        "publication_types": [
+          "Journal Article"
+        ],
+        "comments_corrections": []
+      },
+      {
+        "pmid": "21909256",
+        "doi": "10.1371/journal.ppat.1002179",
+        "title": "Genomic and proteomic analyses of the fungus Arthrobotrys oligospora provide insights into nematode-trap formation.",
+        "publication_types": [
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "comments_corrections": [
+          {
+            "type": "CommentIn",
+            "text": "Nat Rev Microbiol. 2011 Oct 03;9(11):766-7. doi: 10.1038/nrmicro2674. 21963804"
+          }
+        ]
+      },
+      {
+        "pmid": "37968349",
+        "doi": "10.1038/s41467-023-43235-w",
+        "title": "A palisade-shaped membrane reservoir is required for rapid ring cell inflation in Drechslerella dactyloides.",
+        "publication_types": [
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "comments_corrections": []
+      }
+    ],
+    "publishers": [
+      {
+        "slug": "ji2020",
+        "url": "https://www.cell.com/iscience/fulltext/S2589-0042(20)30242-X",
+        "retrieved": false
+      },
+      {
+        "slug": "yang2011",
+        "url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1002179",
+        "retrieved": true,
+        "title": [
+          "Genomic and Proteomic Analyses of the Fungus Arthrobotrys oligospora Provide Insights into Nematode-Trap Formation | PLOS Pathogens"
+        ],
+        "candidate_notice_links": [
+          {
+            "text": "Corrections, Expressions of Concern, and Retractions",
+            "href": "/plospathogens/s/corrections-expressions-of-concern-and-retractions"
+          }
+        ]
+      },
+      {
+        "slug": "chen2023",
+        "url": "https://www.nature.com/articles/s41467-023-43235-w",
+        "retrieved": true,
+        "title": [
+          "A palisade-shaped membrane reservoir is required for rapid ring cell inflation in Drechslerella dactyloides | Nature Communications",
+          "Close banner",
+          "Close banner"
+        ],
+        "candidate_notice_links": [
+          {
+            "text": "",
+            "href": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41467-023-43235-w"
+          }
+        ]
+      },
+      {
+        "slug": "saikawa2002",
+        "url": "https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_article",
+        "retrieved": true,
+        "title": [
+          "Nonconstricting-ring formation in two species of nematode-capturing hyphomycetes"
+        ],
+        "candidate_notice_links": []
+      }
+    ],
+    "receipts": [
+      {
+        "name": "yang2011-crossref.json",
+        "url": "https://api.crossref.org/works/10.1371/journal.ppat.1002179",
+        "at": "2026-10-13T12:54:50.691881+00:00",
+        "status": 200,
+        "final_url": "https://api.crossref.org/works/10.1371/journal.ppat.1002179",
+        "bytes": 24583,
+        "sha256": "940dab1229116aae059c6ef17ff7e911d20a0c913593001a63f4256e2f7b241e",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/yang2011-crossref.json"
+      },
+      {
+        "name": "chen2023-crossref.json",
+        "url": "https://api.crossref.org/works/10.1038/s41467-023-43235-w",
+        "at": "2026-10-13T12:54:51.212046+00:00",
+        "status": 200,
+        "final_url": "https://api.crossref.org/works/10.1038/s41467-023-43235-w",
+        "bytes": 28651,
+        "sha256": "dd50b40df331f15162fb9d7d4f6e0b03b12c7bab7845276627c8c72e44fdbdd6",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/chen2023-crossref.json"
+      },
+      {
+        "name": "pubmed.xml",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=32339992,21909256,37968349&retmode=xml",
+        "at": "2026-10-13T12:54:52.189048+00:00",
+        "status": 200,
+        "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=32339992,21909256,37968349&retmode=xml",
+        "bytes": 80535,
+        "sha256": "1f43f41b2f610784d6174defe0ba877dcf783d27f0aae8ac1da9c029481da53a",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/pubmed.xml"
+      },
+      {
+        "name": "ji2020-publisher.html",
+        "url": "https://www.cell.com/iscience/fulltext/S2589-0042(20)30242-X",
+        "at": "2026-10-13T12:54:52.766320+00:00",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "name": "yang2011-publisher.html",
+        "url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1002179",
+        "at": "2026-10-13T12:54:52.812428+00:00",
+        "status": 200,
+        "final_url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1002179",
+        "bytes": 295644,
+        "sha256": "ef5b4117846702161a73c3d821960dc440c1abb6f61881a8d31a667c24252ea9",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/yang2011-publisher.html"
+      },
+      {
+        "name": "chen2023-publisher.html",
+        "url": "https://www.nature.com/articles/s41467-023-43235-w",
+        "at": "2026-10-13T12:54:54.104441+00:00",
+        "status": 200,
+        "final_url": "https://www.nature.com/articles/s41467-023-43235-w?error=cookies_not_supported&code=f4f75804-6cef-4d13-ba02-370dd61e7853",
+        "bytes": 506310,
+        "sha256": "f3dbef240ceb11a039fc47c43b03cc883fafbc12fadd21aea6716d4b8929756a",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/chen2023-publisher.html"
+      },
+      {
+        "name": "saikawa2002-publisher.html",
+        "url": "https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_article",
+        "at": "2026-10-13T12:54:56.596603+00:00",
+        "status": 200,
+        "final_url": "https://www.jstage.jst.go.jp/article/mycosci/43/5/43_MYC43417/_article",
+        "bytes": 64557,
+        "sha256": "e4c3d04694291317021791ff9b2c26739567d08935968e784e1d2a215dcf1e8f",
+        "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/saikawa2002-publisher.html"
+      }
+    ],
+    "limits": "Bounded authority records and candidate-link extraction only; failed requests are access limits, not no-notice findings. Generic policy and Crossmark links require semantic assessment."
+  },
+  "research_assets": {
+    "at": "2026-10-13T12:21:48.063920+00:00",
+    "scope": "Research only; inspect assessment and followup limitations",
+    "assets": [
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/assessment.json",
+        "sha256": "c5c4fda79913deee02599ac08f86b129c4fb5fecef62eefceccd484207dbb09b",
+        "size": 9354,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/chen2023-fig1.png",
+        "sha256": "3222ff5e7861ffa0cf4a6216bc635fe4ae0addf6595129035fec0a30b505712c",
+        "size": 2466154,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/chen2023-supplementary.zip",
+        "sha256": "4a05ac1b872ebb1bbbceb558dc571489b8a57e40ecd195829d68d952c9e08bd1",
+        "size": 11604709,
+        "incomplete": true
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/chen2023.txt",
+        "sha256": "97e94e1785654a29ff5249864f28e7616e23b4d6d4b933d58855c6c91c450925",
+        "size": 66840,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/chen2023.xml",
+        "sha256": "01da5497c8c61c7cefa931a9259d39d98d84548d71ebb336c8c3ac787654c777",
+        "size": 135157,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/extract-pdf.swift",
+        "sha256": "1e5e3a682fc3d36382d8bc550860ae44a8a679edfdce5fbff6ba4c39b283dfca",
+        "size": 1232,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/followup.json",
+        "sha256": "2f64c0423a0d2a6915a383a1cb54954336368a94eb41a3c141b32e523e02e1d1",
+        "size": 2802,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/hash_assets.py",
+        "sha256": "194ba4e42d2cd19406cf25c74dd9ac3239492ebd9b60bb85438dcd9583a3a658",
+        "size": 884,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/inspect_sources.py",
+        "sha256": "2ffb482195eaab3f3de346da284c237d3245246ec5ef111483730207c1837665",
+        "size": 2173,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-crossref.json",
+        "sha256": "a1e13058a0f1e7f2cdaa67a7f8d3b9d124896cf33c2e04442a3c813ef20f0223",
+        "size": 16375,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-fig1.jpg",
+        "sha256": "9027bfcbe2efbdaeb30ad8f0161cb72a53f8ce80f5031bd8abdf133d9408a67a",
+        "size": 111533,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-pages/page-11.png",
+        "sha256": "96bed6b43591ad5e8dcbeddf41b71b961b5ad89c32bded1cdbc725d610843740",
+        "size": 59150,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-pages/page-12.png",
+        "sha256": "86c759f296ff286e2ede346b84dab2188e84e6ec344b68564bec73801c809e47",
+        "size": 541002,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-pages/page-15.png",
+        "sha256": "07eba9a2ad853a35eb4cad7e67bef32c854313a8cece0af59c8f1f41659ee340",
+        "size": 468686,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-pages/page-16.png",
+        "sha256": "d1032686d426f47a50dedf65e6cc7599344bb10911c6ca7a37a15427f11edb66",
+        "size": 421809,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-pages/page-8.png",
+        "sha256": "ebd3ffcac01b61bb785ab836ee2e8f626a7a54d292ec71f06308beda2ed9b69f",
+        "size": 211308,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1-text.json",
+        "sha256": "6778aa2dbd4b9aefc21aa7be6137bf37e043d65e5080f30d4146a31d53d7d254",
+        "size": 47992,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020-mmc1.pdf",
+        "sha256": "1b3e7281d6a735b88332d00fae82dc5704fe33af3b241da6aff65e7569d00e50",
+        "size": 2175328,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020.txt",
+        "sha256": "e3d213b577447cee807a69be9f43d777719a59f2d5379ccfa5e792840658b24a",
+        "size": 38541,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/ji2020.xml",
+        "sha256": "9d157e3002877b800895da5de05e24026b27cee29e1e93ee723a9abfe2e02452",
+        "size": 90380,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002-pages/page-1.png",
+        "sha256": "ee26cb08ddac9c4f5877271859b8b5b04bd4b0dd0322197303ff2b3d90b4636c",
+        "size": 808908,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002-pages/page-2.png",
+        "sha256": "06778ae0d79fc9f6efb994ce760cb57666e3ed889fb92a1245a093267a581282",
+        "size": 3100795,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002-pages/page-3.png",
+        "sha256": "8baff394db6608493ecd1f3df909889419a1b1a1444cdf7d81bf300274aae084",
+        "size": 1738770,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002-text.json",
+        "sha256": "38d989752921151c1f1741363662404474e1e3312023fd54956f15bc9a9b14e2",
+        "size": 8434,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/saikawa2002.pdf",
+        "sha256": "714af441b831dbea9f07c4d3f6074c2eaf3f808783571786670621a7c4ee47aa",
+        "size": 556740,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/sources.json",
+        "sha256": "f37ce0f68c08ab08ff7dda8c0bdfdc9299a14c55c78e0b67b8d34f3e85c66359",
+        "size": 1921,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/yang2011-fig1.png",
+        "sha256": "5f9c8381f6b99eebe0f95c92596be5fd1bf2303a5627be2e71879462d8438481",
+        "size": 2569609,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/yang2011.txt",
+        "sha256": "8da38d7d10519cfd4a4958218fb9b6f6b24446379015fe06507ebf561b665334",
+        "size": 63370,
+        "incomplete": false
+      },
+      {
+        "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/yang2011.xml",
+        "sha256": "6023597d930a6d692c16ed5dde56814059093395ebb223ed6629166e6c1fb852",
+        "size": 166072,
+        "incomplete": false
+      }
+    ]
+  },
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-canary-20261013/result.json",
+      "sha256": "8d11dbe769c73b270e12459554f278d9120133c151de7eea647608ff8e63d60b",
+      "bytes": 4105
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-native-record-20261013.tsv",
+      "sha256": "e3d64e3f3731a40b47c6d10b1efd22e773c9509c8ba6dedf8d82c1646b5608e1",
+      "bytes": 909
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/assessment.json",
+      "sha256": "c5c4fda79913deee02599ac08f86b129c4fb5fecef62eefceccd484207dbb09b",
+      "bytes": 9354
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/followup.json",
+      "sha256": "2f64c0423a0d2a6915a383a1cb54954336368a94eb41a3c141b32e523e02e1d1",
+      "bytes": 2802
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/research-v3.md",
+      "sha256": "15a06dc7c07e100ac36ae947e2d4d149e244a63275b5ceff354f24ee147d8e58",
+      "bytes": 11208
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-research-20261013/asset-manifest.json",
+      "sha256": "f43f61f73640c743c1c6020329bdabbfbcbf68b5b4b3e2bbba38ab2fd33a91f4",
+      "bytes": 6908
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/completion.json",
+      "sha256": "2475a1ffc13cb9647dcc8774e5abe623d5ec4957fa9b83e0fc6de5038d935110",
+      "bytes": 608
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-history-broad-20261013/adjudication.json",
+      "sha256": "22e0399fd3ca44a1a81385e165bde0fa345dd0cdc9b750c0cce1740c893ed197",
+      "bytes": 4683
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-reservations-20261013/assessment.json",
+      "sha256": "22a865e7ce3761294db9495be237f95e4e2225c777a8bd5ff882aed11e6dd4ea",
+      "bytes": 157672
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-reservations-20261013/accepted.json",
+      "sha256": "3126de77f312af62b7554c4d4eb91640288da11bdde6022082ad39594e44399e",
+      "bytes": 6648
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-notices-20261013/result.json",
+      "sha256": "25f1b9009c5fd8d9ed6c7a9a9df00a7e3e6b798a87ae44a1d13faf5cc133fb07",
+      "bytes": 6874
+    },
+    {
+      "path": "/tmp/traitmech-fungal-trap-parent-ontology-assessment-20261013.json",
+      "sha256": "8406d74db2271dcf9184f85581391d1067aab328e1e8416225b09d2aad13115f",
+      "bytes": 10394
+    }
+  ],
+  "limitations": "Local receipt paths are not public durable references. Primary DOI/stable URLs and hashes are retained separately. The incomplete Chen supplementary ZIP is excluded as evidence. No paid research, full supplement audit, current taxonomy audit or human sign-off is claimed."
+}

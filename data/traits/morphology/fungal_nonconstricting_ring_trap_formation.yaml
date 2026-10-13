@@ -7,7 +7,7 @@ trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000718
 evidence:
 - reference: DOI:10.1007/s102670200061
   snippet: A nonconstricting ring (arrow) is capturing a nematode (asterisk).
@@ -43,7 +43,7 @@ discussions:
 - discussion_id: nonconstricting-ring-scope-and-parent
   prompt: Resolve a closer trap-morphology parent without conflating cell shape.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Phenotype METPO:1000059 is a broad parent. Ring shaped METPO:1000680
     concerns individual-cell geometry, not this multicellular trapping apparatus.
     Mycelial growth traitmech:000074 explicitly concerns bacteria; hyphal anastomosis
@@ -56,6 +56,14 @@ discussions:
     open.
   posed_by: codex
   posed_date: '2026-10-08'
+  resolved_date: '2026-10-13'
+  resolution_note: Added fungal nematode-trap formation traitmech:000718 as the direct
+    broader phenotype. The existing child definition entails specialized hyphal trap
+    differentiation. This resolves only the parent gap; the historical scope contrasts,
+    unasserted mappings, examples and separate mechanism questions remain applicable.
+    Formation does not guarantee immediate capture. The column cell-count question
+    is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063300
+    SubClassOf METPO:1067100 on upstream adoption.
 - discussion_id: nonconstricting-ring-mechanism
   prompt: Separate ring morphogenesis from adhesion and infection mechanisms.
   kind: KNOWLEDGE_GAP
@@ -79,4 +87,11 @@ curation_history:
     main/worktree/open-PR checks support 000680 and v556 block 1063300-1063399. Separated
     morphology from molecular mechanism and species rank from strain identity. Existing
     records unchanged. Timestamp is observed UTC.
+  llm_assisted: true
+- timestamp: '2026-10-13T13:31:56Z'
+  curator: codex
+  action: REFINE_FUNGAL_TRAP_PARENT
+  changes: Refined traitmech:000680 below fungal nematode-trap formation traitmech:000718
+    and resolved its temporary parent discussion by definition-based inference. Preserved
+    child identity, definition, evidence, examples, mechanism gaps and earlier history.
   llm_assisted: true
