@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-transcriptional-memory
+session:
+  id: 2026-10-13T004059Z-codex-ff5aec
+  timestamp: '2026-10-13T00:40:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Preserve transcriptional reactivation endpoints and synthetic assay contexts
+  details: 'Add a focused interpretation check learned from DOI:10.7554/eLife.77646 and DOI:10.7554/eLife.16691:
+    mutant defects are not within-wild-type enhancement; synthetic induction bypass is not
+    ordinary induction; transcript abundance is not initiation rate; localization, chromatin
+    inheritance and fitness have separate endpoints and durations. Preserve earlier-work attribution.
+    Existing sequence-feature, source-identity, actor-attribution, snippet, two-citation and
+    review gates are unchanged.'

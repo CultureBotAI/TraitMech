@@ -1,0 +1,482 @@
+{
+  "materialized_at": "2026-10-13T00:36:45.353443+00:00",
+  "status": "PROPOSED trait accepted; validation and adversarial review remain separate gates.",
+  "rows": [
+    {
+      "doi": "10.7554/eLife.16691",
+      "pmid": "27336723",
+      "title": "Set1/COMPASS and Mediator are repurposed to promote epigenetic transcriptional memory.",
+      "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
+      "section_type": "Results",
+      "section": "s2-7",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
+      "native_checked_at": "2026-10-12T23:56:10.919158+00:00",
+      "native_similarity": 0.27936507936507937,
+      "manual_contiguous_full_text_matches": {
+        "primary_xml.xml": [
+          1
+        ],
+        "publisher-vor.html": [
+          1
+        ]
+      },
+      "qualification": "This Results sentence attributes the duration and gene count to Guan 2012; D'Urso Figure 7A directly tests selected genes after two-hour recovery. It is not a newly measured four-generation duration in that panel.",
+      "sources": [
+        {
+          "kind": "primary_xml",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
+          "accessed_at": "2026-10-12T21:24:48.138101+00:00",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-primary_xml.xml",
+          "sha256": "6f4871eee27285b38bf469d510688964b2c1ccf024d95c3a6f9fdce3a22a384d"
+        },
+        {
+          "kind": "publisher_version_of_record",
+          "url": "https://journal-symfony7.elifesciences.org/articles/16691",
+          "canonical_url": "https://elifesciences.org/articles/16691",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-publisher-vor.html",
+          "sha256": "8cfc4aab7b5d3c219679c0804ef2f792c99d4fcad374bf933a5fc228d6d1eccf"
+        },
+        {
+          "kind": "source_qualified_med",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
+          "accessed_at": "2026-10-12T21:24:50.079314+00:00",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-source_qualified_med.json",
+          "sha256": "8759e42b1ceafc0928d8300b4dd4d5715561dc5df64cc73f8817ec299ba8a89a"
+        }
+      ]
+    },
+    {
+      "doi": "10.7554/eLife.77646",
+      "pmid": "35579426",
+      "title": "Mitotically heritable, RNA polymerase II-independent H3K4 dimethylation stimulates <i>INO1</i> transcriptional memory.",
+      "snippet": "Upon Anchor Away of Opi1, reactivation was faster than activation",
+      "section_type": "Results",
+      "section": "s2-1",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
+      "native_checked_at": "2026-10-12T23:56:12.643248+00:00",
+      "native_similarity": 0.3595505617977528,
+      "manual_contiguous_full_text_matches": {
+        "primary_xml.xml": [
+          2
+        ],
+        "publisher-vor.html": [
+          2
+        ]
+      },
+      "qualification": "Synthetic Opi1 Anchor-Away assay in Figure 1D, not ordinary-starvation INO1 reactivation in Figure 1B. The following clause reports loss in mrs and nup100 mutant cells; no universal mechanism is inferred.",
+      "sources": [
+        {
+          "kind": "primary_xml",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9129879/fullTextXML",
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9129879/fullTextXML",
+          "accessed_at": "2026-10-12T21:24:51.189605+00:00",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-primary_xml.xml",
+          "sha256": "4d895d6a7b79a8f94e4c9d9cc8177c96c090ff6a619916e57c12a75ea9ceac5e"
+        },
+        {
+          "kind": "publisher_version_of_record",
+          "url": "https://journal-symfony7.elifesciences.org/articles/77646",
+          "canonical_url": "https://elifesciences.org/articles/77646",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-publisher-vor.html",
+          "sha256": "66ed73b8115b175e85ca7a8133196feec989be16e0a55c1eda1e125bf5fd02a3"
+        },
+        {
+          "kind": "source_qualified_med",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35579426+AND+SRC%3AMED&format=json&resultType=core",
+          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35579426+AND+SRC%3AMED&format=json&resultType=core",
+          "accessed_at": "2026-10-12T21:24:52.687356+00:00",
+          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-source_qualified_med.json",
+          "sha256": "d451e408c76bbbf5699051c2713d266bec56c6221c286a212cc17cada1ced115"
+        }
+      ]
+    }
+  ],
+  "figure_assets": [
+    {
+      "requested_url": "https://iiif.elifesciences.org/lax/16691%2Felife-16691-fig7-v2.tif/full/617,/0/default.jpg",
+      "final_url": "https://iiif.elifesciences.org/lax/16691%2Felife-16691-fig7-v2.tif/full/617,/0/default.jpg",
+      "content_type": "image/jpeg",
+      "accessed_at": "2026-10-12T23:37:05.433612+00:00",
+      "bytes": 33792,
+      "sha256": "7bb0f9c78a3f71e8d33abe16d0542c5a94147bdb48baaae3f0a84ed2fbb6f5dd",
+      "path": "/tmp/traitmech-transcriptional-memory-version-check-20261012/durso2016-fig7-publisher.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        617,
+        303
+      ],
+      "source": "durso2016",
+      "figure": "fig7",
+      "status": "Visually inspected after retrieval; limited-resolution panels, not raw-data reanalysis or pixel-equivalence verification."
+    },
+    {
+      "requested_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-v2.tif/full/617,/0/default.jpg",
+      "final_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-v2.tif/full/617,/0/default.jpg",
+      "content_type": "image/jpeg",
+      "accessed_at": "2026-10-12T23:37:05.824582+00:00",
+      "bytes": 68429,
+      "sha256": "2542c8eecf0d2790aabd6529c0f36c4116ce91f713b9a1dd58212fd1f24d2fba",
+      "path": "/tmp/traitmech-transcriptional-memory-version-check-20261012/sump2022-fig1-publisher.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        617,
+        656
+      ],
+      "source": "sump2022",
+      "figure": "fig1",
+      "status": "Visually inspected after retrieval; limited-resolution panels, not raw-data reanalysis or pixel-equivalence verification."
+    },
+    {
+      "requested_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-figsupp1-v2.tif/full/617,/0/default.jpg",
+      "final_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-figsupp1-v2.tif/full/617,/0/default.jpg",
+      "content_type": "image/jpeg",
+      "accessed_at": "2026-10-12T23:37:06.145674+00:00",
+      "bytes": 20624,
+      "sha256": "968a1277d0656dc8b6de5270d5d462200df1ac0808c823eae773b30782956611",
+      "path": "/tmp/traitmech-transcriptional-memory-version-check-20261012/sump2022-fig1s1-publisher.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        617,
+        193
+      ],
+      "source": "sump2022",
+      "figure": "fig1s1",
+      "status": "Visually inspected after retrieval; limited-resolution panels, not raw-data reanalysis or pixel-equivalence verification."
+    },
+    {
+      "requested_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-figsupp2-v2.tif/full/617,/0/default.jpg",
+      "final_url": "https://iiif.elifesciences.org/lax/77646%2Felife-77646-fig1-figsupp2-v2.tif/full/617,/0/default.jpg",
+      "content_type": "image/jpeg",
+      "accessed_at": "2026-10-12T23:37:06.658606+00:00",
+      "bytes": 59347,
+      "sha256": "e0e55b47bb313a12310f6da89be7529debe7edebe865edd90495a6a97336aea3",
+      "path": "/tmp/traitmech-transcriptional-memory-version-check-20261012/sump2022-fig1s2-publisher.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        617,
+        607
+      ],
+      "source": "sump2022",
+      "figure": "fig1s2",
+      "status": "Visually inspected after retrieval; limited-resolution panels, not raw-data reanalysis or pixel-equivalence verification."
+    }
+  ],
+  "source_version_assessment": {
+    "checked_at": "2026-10-12T23:37:06.659742+00:00",
+    "normalization": "Unicode NFKC and whitespace collapse only; all remaining characters compared exactly.",
+    "selected_paragraphs": 15,
+    "result": "Selected Results/Methods paragraphs and separately read scientific abstract/captions match after normalization; not full-article or byte-level equality.",
+    "dates": {
+      "durso2016": {
+        "accepted": "2016-06-23",
+        "version_of_record": "2016-07-19"
+      },
+      "sump2022": {
+        "accepted": "2022-05-17",
+        "version_of_record": "2022-05-24"
+      }
+    },
+    "access_limits": "Ordinary publisher challenges; public alternate publisher host retrieved. A later D'Urso web fetch failed; retained earlier bytes were hash-checked, not represented as fresh access."
+  },
+  "strain_supplement": {
+    "url": "https://cdn.elifesciences.org/articles/77646/elife-77646-supp1-v2.docx",
+    "sha256": "aca587318bb0a8d582e56346514160180e0fa5a151e4778aff8a3d38c40e5cb4",
+    "bytes": 18078,
+    "scope": "53 rows parsed; selected Figure 1 strain rows read, not a rendered or complete scientific table audit.",
+    "limits": "CHO1 DBY1428 locator 1S2 versus actual supplement 1; HTA1-mCherry versus Methods Pho88 description and private glyph retained. Earlier 1817-byte strains.docx response was an HTML challenge, not a valid DOCX."
+  },
+  "curation_decision": {
+    "observed_at": "2026-10-13T00:34:29.009202+00:00",
+    "base": "62f45e1749fa3d3e5ca8b9a3a4ba5bb0361beb8b",
+    "decision": "accepted_as_qualified_PROPOSED_phenotype",
+    "label": "enhanced transcriptional reactivation memory",
+    "local_id": "traitmech:000713",
+    "definition": "A physiological phenotype in which a microbial cell or lineage retains a non-genetic state from prior inducing conditions that enhances the rate or magnitude of later transcriptional activation after intervening repression.",
+    "definition_source": "DOI:10.7554/eLife.77646",
+    "additional_source": "DOI:10.7554/eLife.16691",
+    "parent": "METPO:1000059",
+    "identity_decision": "Positive assay-defined phenotype accepted independently, not inferred from deprecated labels. No exact active record in the inspected scope. Historical original definitions for METPO:1000108 and METPO:1000310 remain unresolved, with reason assignment disputed in METPO#521. No revival, exact synonym or equivalence xref is asserted.",
+    "evidence_limits": "Same research lineage, not independent laboratories. INO1 enhancement uses synthetic Opi1 Anchor Away; ordinary starvation reactivation is not clearly faster. Selected transcript measurements do not directly measure initiation rate or universally establish inheritance, molecular mechanism or duration. D'Urso Figure 7A tests two-hour recovery; its four-generation sentence attributes prior Guan evidence. Preserve figure/caption and supplement discrepancies.",
+    "snippet_decision": "Two contiguous primary full-text spans; native DOI/abstract canaries NOT_IN_ABSTRACT, not VERIFIED. Final-record verifier remains required.",
+    "unchanged": "All existing records, protected spore germination, pinned ontology and snippet baseline.",
+    "omitted": [
+      "canonical_examples",
+      "causal_graphs",
+      "synonyms",
+      "xrefs"
+    ],
+    "goal": "active; discovery not exhausted"
+  },
+  "allocation": {
+    "checked_at": "2026-10-13T00:34:29.009202+00:00",
+    "base": "62f45e1749fa3d3e5ca8b9a3a4ba5bb0361beb8b",
+    "local_id": "traitmech:000713",
+    "cohort": "metpo_traitmech_v589",
+    "block": [
+      1066600,
+      1066699
+    ],
+    "populated_placeholder": "METPO:1066600",
+    "roots": 22,
+    "independent_copies": 9,
+    "cohorts": 588,
+    "intervals_checked": 8742,
+    "community_roots": 127,
+    "conflicts": [],
+    "adjudications": [
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "status": "modified",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "bytes": 924175,
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "coverage": "Full blob retained; binary/non-UTF-8 content not text-searched."
+        },
+        "line": 120,
+        "field": "d459",
+        "value": "1.1066657",
+        "classification": "floating_point_embedding_coordinate_not_identifier",
+        "rows": 375,
+        "columns": 513
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-ncbi-success-body-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/private/tmp/traitmech-ncbi-success-body-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "text": "The raw scan also found `1000000-1999999` in METPO #629's",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      },
+      {
+        "source": {
+          "repository": "berkeleybop/metpo",
+          "pr": 629,
+          "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+          "path": "docs/metpo_id_ranges_research.md",
+          "status": "modified",
+          "blob_sha": "994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "bytes": 13584,
+          "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+          "coverage": "Complete UTF-8 content searched, not a PR patch excerpt.",
+          "hits": []
+        },
+        "line": 14,
+        "text": "| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |",
+        "interval": [
+          1000000,
+          1999999
+        ],
+        "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+        "classification": "editor_namespace_envelope_not_exclusive_term_or_cohort_reservation"
+      }
+    ],
+    "ignored_hidden_included": true,
+    "raw_receipt": {
+      "path": "/tmp/traitmech-transcriptional-memory-allocation-20261013/unadjudicated.json",
+      "sha256": "f34560a6e1e8af3fcb5f7c94da8918ccd3d29ad66e6299b45797581e76bf8d96"
+    },
+    "scope": "Available ignored/hidden files, retained registered historical tracked trees, nine independent copies, current upstream selected ontology/templates/mappings/proposals and complete nonremoved changed blobs of 11 stable open/draft PRs. Gzip content was decoded. No inaccessible historical ignored/untracked bytes, symlink traversal, unchanged PR-tree files or deleted historical blobs. Reservation must be refreshed before publication."
+  },
+  "notice_checks": "Bounded publisher, source-qualified MED and Crossref checks on 2026-10-12 exposed no linked correction/retraction. This is not exhaustive notice absence.",
+  "source_independence": "Two papers in the same Brickner research lineage, not independent laboratory replication.",
+  "input_receipts": [
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-snippet-canary-20261012.json",
+      "sha256": "87acd0df47b651bdeee0fc4319c6ead3087b52e53a828574aa5214142037f418"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-version-check-20261012/result.json",
+      "sha256": "65eee7a07b4ca7a62507007e1e4e80a9293a9a6f1665b06f3e8a2ae7c6cfaf03"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-allocation-20261013/acceptance.json",
+      "sha256": "045f324131794cb07eb23e6c41414f8b2ed43da0dcfa84970cdd53caf96cf9ed"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-allocation-20261013/assessment.json",
+      "sha256": "f61cc2050f668474bd7d8a442167ca26e3c1872f39532599bfd180306bf5e03c"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-version-assessment-20261012.md",
+      "sha256": "f0eb1850c323846390b6f22b08d4eb1e6e4a3883ed38446d6de1be6afddc5132"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-structured-assessment-20261013.md",
+      "sha256": "8c16e40a92c0c2918d885b48e33a820b5609bb66a68a0f59e1ecb4d82ce0c0ef"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-pending-assessment-20261012.md",
+      "sha256": "5bec8c8caa053b793afcc20291d71c7b7a57e80c42110432475b4fff0d0bdb33"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-pending-refresh-20261013/result.json",
+      "sha256": "d15d99e3c02339860b2a79820a4138d58351a8cb335b9943631221618e231612"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-history-assessment-20261012.md",
+      "sha256": "a86bd2bc2404ea2d890593d3d3481f3e93986ba85cc0a7bd780d1908cf0025e6"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-obsolescence-assessment-20261012.md",
+      "sha256": "8bd6679b6cd970031fbba242f2aaeea5229eb9432305ece8ef9718e9532a3959"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-preacceptance-20261012.md",
+      "sha256": "ae13201b6bb74186cba7f76640c3e1069d054982117a39bf2653f3519b67068f"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-checks-20261013/records.json",
+      "sha256": "b8377a9a1a0a5fc2a593a85d03b06f4ed020cbc3089c3badd0daa71538a6cbbe"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-checks-20261013/snippet-results.tsv",
+      "sha256": "d1339529137fc39e7821f0b25b6e1b254468ac2fc28f477bef84ba5ecdca6115"
+    }
+  ],
+  "native_record_checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate",
+        "-s",
+        "src/traitmech/schema/traitmech.yaml",
+        "--target-class",
+        "TraitRecord",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 1.8872046540491283,
+      "log": "/tmp/traitmech-transcriptional-memory-checks-20261013/records-00.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/validate_strict.py",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 3.4736788319423795,
+      "log": "/tmp/traitmech-transcriptional-memory-checks-20261013/records-01.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+        "--out",
+        "/tmp/traitmech-transcriptional-memory-checks-20261013/snippet-results.tsv"
+      ],
+      "exit": 0,
+      "seconds": 3.6458356212824583,
+      "log": "/tmp/traitmech-transcriptional-memory-checks-20261013/records-02.log"
+    }
+  ],
+  "native_record_snippets": [
+    {
+      "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+      "locator": "evidence[0]",
+      "reference": "DOI:10.7554/eLife.77646",
+      "verdict": "NOT_IN_ABSTRACT",
+      "similarity": "0.36",
+      "snippet": "Upon Anchor Away of Opi1, reactivation was faster than activation",
+      "nearest_sentence": ""
+    },
+    {
+      "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+      "locator": "evidence[1]",
+      "reference": "DOI:10.7554/eLife.16691",
+      "verdict": "NOT_IN_ABSTRACT",
+      "similarity": "0.28",
+      "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
+      "nearest_sentence": ""
+    }
+  ],
+  "history_attribution_correction": {
+    "original": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml",
+    "successor": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003824Z-codex-8495dc.yaml",
+    "reason": "Scaffolder default actor name was inadvertently retained; actual CREATE actor was Codex, model gpt-5, tool codex. The immutable original is preserved and the successor explicitly corrects only attribution."
+  }
+}

@@ -378,6 +378,15 @@ survival. Keep native stress pretreatment separate from synthetic induction;
 do not transfer durations or mechanisms between them. Persistent reporter
 fluorescence or inherited cargo alone does not establish remembered resistance.
 
+For enhanced transcriptional-memory candidates, require a later transcript
+response after intervening repression. A mutant reactivation defect alone is
+not proof that wild-type reactivation exceeds its initial response. Distinguish
+ordinary induction from synthetic bypass assays, and transcript abundance
+kinetics from direct initiation-rate measurements. Localization, chromatin-mark
+inheritance and competitive fitness have different endpoints; do not transfer
+their durations or causality to enhanced transcription. Attribute durations
+summarized from earlier work to that source rather than to a later figure.
+
 For aging candidates, separate age-dependent performance decline or increasing
 mortality risk from finite lifespan, lifespan extension and cumulative survival
 loss. Preserve the age axis, division history, conditions and assay limitations;

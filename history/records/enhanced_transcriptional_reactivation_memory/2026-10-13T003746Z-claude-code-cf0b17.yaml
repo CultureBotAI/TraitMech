@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  slug: enhanced_transcriptional_reactivation_memory
+session:
+  id: 2026-10-13T003746Z-claude-code-cf0b17
+  timestamp: '2026-10-13T00:37:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - evidence
+  - discussions
+  - curation_history
+  summary: Add enhanced transcriptional reactivation memory as a qualified proposed phenotype
+  details: Created traitmech:000713 with primary DOI:10.7554/eLife.77646 and DOI:10.7554/eLife.16691,
+    contiguous full-text Results snippets, qualified synthetic induction and transcript endpoints,
+    historical identity TODO, and v589 proposal reserving 1066600-1066699. Bounded ignored/hidden
+    and retained-tree novelty plus current pending/upstream reservation checks are retained
+    in the source-verification sidecar. Canonical examples, exact synonyms, equivalence xrefs
+    and causal graphs are omitted. Existing records, protected spore germination, pinned ontology
+    and snippet baseline are unchanged. Native validation, artifact generation and immutable
+    scientific review are separate required gates; no claim of discovery exhaustion.
