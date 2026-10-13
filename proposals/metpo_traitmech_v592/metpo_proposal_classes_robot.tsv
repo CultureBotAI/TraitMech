@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1066900	kin discrimination	An ecological phenotype in which microbial cells preferentially associate with kin or exclude nonkin through differential interactions according to genetic similarity or relatedness.	TraitMech:data/traits/ecology/kin_discrimination.yaml|DOI:10.1371/journal.pbio.0060287|DOI:10.1073/pnas.1512671112|DOI:10.1128/mBio.00723-17	METPO:1000059			metpo_traitmech_2026_10		Relational interaction phenotype; no universal distance threshold or molecular recognition claim.	traitmech:000716

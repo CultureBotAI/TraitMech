@@ -1,0 +1,621 @@
+{
+  "checked_at": "2026-10-13T09:22:36.606268+00:00",
+  "trait_id": "traitmech:000716",
+  "decision_timestamp": "2026-10-13T09:09:53Z",
+  "correction_timestamp": "2026-10-13T09:17:32Z",
+  "definition_source": "DOI:10.1128/mBio.00723-17",
+  "rows": [
+    {
+      "reference": "DOI:10.1371/journal.pbio.0060287",
+      "pmid": "19067487",
+      "snippet": "Our findings demonstrate that D. discoideum cells co-aggregate more with genetically similar than dissimilar individuals",
+      "words": 15,
+      "source": {
+        "path": "/tmp/traitmech-kin-discrimination-canary-20261013/ostrowski2008-html.response",
+        "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060287",
+        "sha256": "679a0dec436923739acfd1749e64b9df141185e72f7afad408f6d4f011642d9a",
+        "accessed_at": "2026-10-13T08:25:40.593247+00:00"
+      },
+      "locator": "Scientific abstract; PLOS PDF page 1, visually checked",
+      "section_type": "Scientific abstract",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "VERIFIED",
+      "inspection_limits": "Ostrowski et al. 2008, PMID:19067487; scientific abstract, publisher PDF page 1, contiguous span visually checked. Mixtures with AX4-GFP and natural-isolate dye controls support partial sorting during aggregation, not complete clonal exclusion. The measured endpoint is variation in fluorescent spore proportions among fruiting bodies; genetic distance uses 12 microsatellite loci, not genome-wide identity. Main text and all four figures were inspected; Figure 1 is hypothetical. Supplementary Tables S1 and S2 were read by text extraction. Main Methods names QS45, absent from the retrieved S1 strain table; no strain alias is inferred. Kin-selected benefit is an interpretation, not a measured fitness endpoint here. Natural provenance of every laboratory derivative and a molecular recognition mechanism remain unresolved. Native abstract verifier: VERIFIED."
+    },
+    {
+      "reference": "DOI:10.1073/pnas.1512671112",
+      "pmid": "26438858",
+      "snippet": "Some swarms did merge, and most interestingly, this behavior was only seen in the most highly related strain pairs.",
+      "words": 19,
+      "source": {
+        "path": "/tmp/traitmech-kin-source-status-20261013/stefanic2015-med.response",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26438858%20AND%20SRC%3AMED&format=json&resultType=core",
+        "sha256": "d3240849093539c12b791b6acfd8fbf03b1f2d13f56aad46200cc714690b0832",
+        "accessed_at": "2026-10-13T08:35:55.400546+00:00"
+      },
+      "locator": "Scientific abstract; EXT_ID:26438858 AND SRC:MED",
+      "section_type": "Scientific abstract",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "VERIFIED",
+      "inspection_limits": "Stefanic et al. 2015, PMID:26438858, PMC4653157; directly retrieved scientific abstract from Europe PMC with the namespace-qualified query EXT_ID:26438858 AND SRC:MED. Title, PMID and DOI were checked together. The authors define a conspecific scope and report relatedness-associated swarm merging versus boundary formation among sympatric Bacillus subtilis isolates. The separately reported root-colonization outcome is not a direct killing measurement. Full text, figures and supplements were inaccessible and are not claimed as inspected; indexed search passages were not used as excerpts or quantitative evidence. Native abstract verifier: VERIFIED. Linked PMID:26512099 is commentary, not a correction or experimental replication."
+    },
+    {
+      "reference": "DOI:10.1128/mBio.00723-17",
+      "pmid": "28679746",
+      "snippet": "The effects of kin discrimination extend to nearby species, as the other subtilis clade species were treated with the same antagonism as nonkin.",
+      "words": 23,
+      "source": {
+        "path": "/tmp/traitmech-kin-discrimination-canary-20261013/lyons2017-xml.response",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5573675/fullTextXML",
+        "sha256": "340c599e88bd2162637ebe5744c8b882d49ff1ba234fefa26255872517621ff1",
+        "accessed_at": "2026-10-13T08:25:43.849685+00:00"
+      },
+      "locator": "Scientific abstract, not IMPORTANCE; PMC5573675.1 PDF page 1, visually checked",
+      "section_type": "Scientific abstract",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "VERIFIED",
+      "inspection_limits": "Lyons and Kolter 2017, PMID:28679746, PMC5573675; scientific abstract, NLM version 1 PDF page 1 and JATS article-meta abstract without abstract-type. This is not the separate IMPORTANCE summary. Introduction distinguishes preferential kin association from nonkin exclusion and supports the definition's two modes; the paper's own experiments support the nearby-species extension. The comparison concerns interactions with B. subtilis NCIB3610: nearby species can be antagonized, while more distant lineages show varied outcomes. This is not a universal monotonic relation between distance and antagonism. Relatedness uses type-strain 16S, not whole-genome identity of every isolate. Swarm, biofilm and halo assays differ in medium and endpoint. Figure 2A and 2C assign WNC032 to different species; Data Set S1 identifies it as B. megaterium. No silent panel correction or taxon anchor is inferred. Actual Figures 2 and 4 and selected spreadsheet rows/totals were inspected, not all figures or raw assays. Native abstract verifier: VERIFIED. Shares an investigator with 2015; not an independent-laboratory replication."
+    }
+  ],
+  "additional_assets": [
+    {
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/ostrowski2008-pdf.response",
+      "url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0060287&type=printable",
+      "sha256": "c3c18d6fedfe857bee9b24d8e89e2931eb5770f3f0bb2dade85a4ad8bd498fb9",
+      "bytes": 351927
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-pdf.response",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/PMC5573675.1.pdf?md5=5ee2a2b151131acddaf6530032a1cff9",
+      "sha256": "dbdd0c3838d40a426112bcfce12b9b7a2260d41be046f2f6939472c88b1dfe1b",
+      "bytes": 1550250,
+      "metadata_md5_verified": "5ee2a2b151131acddaf6530032a1cff9"
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-data.response",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo003173367sd1.xlsx?md5=c1ce0099205821860c788accf72f2427",
+      "sha256": "9cd1468cbc85d33b9f180ea0b9a6e0101ac8b84a141d1c3635b65ef1651fe5db",
+      "bytes": 84010,
+      "metadata_md5_verified": "c1ce0099205821860c788accf72f2427"
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-fig2.response",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo0031733670002.jpg?md5=e25e27fbe12769179d21becdda3f9aae",
+      "sha256": "e51f6f685f2fcf8289b03480119bc569f8e0f9c44cefd82d23cbbf002d80ca6f",
+      "bytes": 240818,
+      "metadata_md5_verified": "e25e27fbe12769179d21becdda3f9aae"
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-fig4.response",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo0031733670004.jpg?md5=a28344862ef792c4384ae714a59db684",
+      "sha256": "3fc545c24da222570422a33f055eaa96d7a4d699a2c4ff29dd0a9a59109a2a09",
+      "bytes": 149753,
+      "metadata_md5_verified": "a28344862ef792c4384ae714a59db684"
+    }
+  ],
+  "native_record_verification": {
+    "exit": 0,
+    "command": "scripts/verify_snippets.py --record data/traits/ecology/kin_discrimination.yaml --out /tmp/traitmech-kin-corrected-snippets-20261013.tsv",
+    "report": {
+      "path": "/tmp/traitmech-kin-corrected-snippets-20261013.tsv",
+      "sha256": "0e317797d4102ab17cb2fbeb7b6ac1362b4fbd32ef2c213d0ec526660ebe0eb4"
+    },
+    "rows": [
+      {
+        "file": "data/traits/ecology/kin_discrimination.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.1371/journal.pbio.0060287",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "Our findings demonstrate that D. discoideum cells co-aggregate more with genetically similar than dissimilar individuals",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/ecology/kin_discrimination.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1073/pnas.1512671112",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "Some swarms did merge, and most interestingly, this behavior was only seen in the most highly related strain pairs.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/ecology/kin_discrimination.yaml",
+        "locator": "evidence[2]",
+        "reference": "DOI:10.1128/mBio.00723-17",
+        "verdict": "VERIFIED",
+        "similarity": "1.00",
+        "snippet": "The effects of kin discrimination extend to nearby species, as the other subtilis clade species were treated with the same antagonism as nonkin.",
+        "nearest_sentence": ""
+      }
+    ]
+  },
+  "corrections": {
+    "issues": [
+      "https://github.com/CultureBotAI/TraitMech/issues/1909",
+      "https://github.com/CultureBotAI/TraitMech/issues/1910"
+    ],
+    "initial_review": "reviews/structured/20261013T091716Z-kin-discrimination-initial/review.yaml",
+    "disposition": "Initial source-matching spans were insufficiently self-contained; replaced with explicit result spans and broader definition authority. Initial native report (two VERIFIED, one NOT_IN_ABSTRACT) remains a historical receipt, not the corrected result."
+  },
+  "allocation": {
+    "at": "2026-10-13T09:09:53.405812+00:00",
+    "base": "0f58024643a5357500f2eccb805bd4d9368de8eb",
+    "local_id": "traitmech:000716",
+    "cohort": "metpo_traitmech_v592",
+    "block": [
+      1066900,
+      1066999
+    ],
+    "conflicting_reservations": [],
+    "disposition_counts": {
+      "embedding_coordinate": 1,
+      "editor_namespace_envelope_or_prior_documentation": 147,
+      "partial_numeric_match_in_biological_test_fixture": 7
+    },
+    "source_audit": {
+      "path": "/tmp/traitmech-kin-allocation-20261013/assessment.json",
+      "sha256": "8377587486e6e9d69f13aa9a9ba2cda04c4975958a2cbcc367b60e50f89b4e8d"
+    },
+    "reservation_limits": "Ignored and hidden available files; unavailable TraitMech tracked trees; unavailable CommunityMech proposal trees; all nonremoved pending files and selected upstream owners. No reconstruction of lost untracked/ignored content, symlinks or archives. Numeric matches require semantic adjudication. Not a reservation.",
+    "local_completion": {
+      "at": "2026-10-13T09:06:40.879529+00:00",
+      "paths": 164,
+      "historical_heads": 139,
+      "catalogs_unchanged": true
+    }
+  },
+  "novelty": {
+    "ignored_hidden_included": true,
+    "exact_record_found": false,
+    "same_scope_node_or_synonym_requiring_migration": false,
+    "disposition": "Matched DNA defense nodes concern molecular self/nonself; OME is material transfer with an explicit negative kin-discrimination boundary; fungal incompatibility is postfusion restriction; autotropism is polarized growth orientation; predation requires trophic benefit. Community reference-cache recognition mentions are leads, not maintained trait identities. Retained historical owner matches agree with these boundaries.",
+    "source_limits": "164 available-or-registered locations including 15 retained copies; unavailable worktrees have only tracked historical coverage. Alias history limited to named maintained owners. No lost untracked files, arbitrary archives or symlink traversal."
+  },
+  "remote_scope": {
+    "checked_at": "2026-10-13T09:04:46.097433+00:00",
+    "main": "0f58024643a5357500f2eccb805bd4d9368de8eb",
+    "upstream_heads": {
+      "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+      "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+      "Knowledge-Graph-Hub/kg-microbe": "bb3072f59f6d9e098ae40c4dce2c60a9dec9af42"
+    },
+    "prs": 11,
+    "pending_files": 783,
+    "upstream_files": 587
+  },
+  "ontology": [
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+      "format": "xml",
+      "source": "pinned ontology",
+      "triples": 12617,
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+      "lexical_subjects": {
+        "https://w3id.org/metpo/1000077": [
+          [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "http://www.w3.org/2002/07/owl#Class"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000231",
+            "http://purl.obolibrary.org/obo/OMO_0001000"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "obsolete compatible solute"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#deprecated",
+            "true"
+          ]
+        ]
+      },
+      "parent": [
+        [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://www.w3.org/2002/07/owl#Class"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "https://w3id.org/metpo/1000188"
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000115",
+          "A quality that differentiates specific instances of a species from other instances of the same species."
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000117",
+          "Anthea Guo"
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000117",
+          "Luke Wang"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#label",
+          "phenotype"
+        ],
+        [
+          "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "https://biolink.github.io/biolink-model/PhenotypicQuality"
+        ]
+      ]
+    },
+    {
+      "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+      "format": "xml",
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "metpo.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "blob_sha": "125f475bac2758741d2ef8ec46b2984a1abdc048",
+        "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "triples": 12649,
+      "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+      "lexical_subjects": {
+        "https://w3id.org/metpo/1000077": [
+          [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "http://www.w3.org/2002/07/owl#Class"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000231",
+            "http://purl.obolibrary.org/obo/OMO_0001000"
+          ],
+          [
+            "http://www.w3.org/2000/01/rdf-schema#label",
+            "obsolete compatible solute"
+          ],
+          [
+            "http://www.w3.org/2002/07/owl#deprecated",
+            "true"
+          ]
+        ]
+      },
+      "parent": [
+        [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://www.w3.org/2002/07/owl#Class"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "https://w3id.org/metpo/1000188"
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000115",
+          "A quality that differentiates specific instances of a species from other instances of the same species."
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000117",
+          "Anthea Guo"
+        ],
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000117",
+          "Luke Wang"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#label",
+          "phenotype"
+        ],
+        [
+          "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "https://biolink.github.io/biolink-model/PhenotypicQuality"
+        ]
+      ]
+    },
+    {
+      "path": "/tmp/traitmech-kin-metpo-edit-20261013.ttl",
+      "format": "turtle",
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "src/ontology/metpo-edit.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+        "blob_sha": "d140e6174ada41f8a1cceb5dba286c8af15feb9e",
+        "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "triples": 31,
+      "sha256": "78bfc87e1773e4a86625d319e57bb0bf623428b92275a9195dc6a32b0435a482",
+      "lexical_subjects": {},
+      "parent": []
+    }
+  ],
+  "spreadsheet": {
+    "source": "/tmp/traitmech-kin-cloud-content-20261013/lyons-data.response",
+    "sha256": "9cd1468cbc85d33b9f180ea0b9a6e0101ac8b84a141d1c3635b65ef1651fe5db",
+    "md5": "c1ce0099205821860c788accf72f2427",
+    "sheets": [
+      [
+        "All interaction phenotypes",
+        192,
+        9
+      ],
+      [
+        "Quantize phenotypes",
+        196,
+        11
+      ],
+      [
+        "16S accession #s",
+        28,
+        7
+      ]
+    ],
+    "locator": "All interaction phenotypes!A1:I192",
+    "strains": 191,
+    "final_phenotypes": {
+      "Varied": 77,
+      "Antagonism": 82,
+      "No Antagonism": 32
+    },
+    "surfactant_test": {
+      "None": 59,
+      "Yes": 61,
+      "No": 71
+    },
+    "wnc032": [
+      [
+        "Bacillus megaterium",
+        "WNC032",
+        "No Antagonism",
+        "no",
+        "no",
+        "no",
+        "no on LB",
+        null,
+        null
+      ]
+    ],
+    "luciferensis": [
+      [
+        "Bacillus luciferensis",
+        "WNC014",
+        "Varied",
+        "no",
+        "yes",
+        "no",
+        "no on LB & B",
+        "No",
+        null
+      ],
+      [
+        "Bacillus luciferensis",
+        "WNC022",
+        "Varied",
+        "no",
+        "yes",
+        "no",
+        "no on LB & B",
+        "No",
+        null
+      ]
+    ],
+    "limits": "Read-only tabulation and selected-row check, not raw-image reanalysis or independent statistical replication. Unsupported workbook-extension warning; source bytes unchanged."
+  },
+  "notices": "MED linked records were inspected and are commentaries for 2008/2015, with no notice listed for 2017. PLOS linked policy page is generic, not a paper correction. NLM cloud metadata marks 2017 is_retracted=false and is_manuscript=false. Publisher access limits remain; these are bounded checks, not exhaustive notice clearance.",
+  "skill_assessment": "No change justified; current rules already cover the observed interpretation and source-verification risks.",
+  "source_access": [
+    {
+      "requested_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060287",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/ostrowski2008-html.response",
+      "sha256": "679a0dec436923739acfd1749e64b9df141185e72f7afad408f6d4f011642d9a",
+      "finished_at": "2026-10-13T08:25:40.593247+00:00"
+    },
+    {
+      "requested_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0060287&type=printable",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/ostrowski2008-pdf.response",
+      "sha256": "c3c18d6fedfe857bee9b24d8e89e2931eb5770f3f0bb2dade85a4ad8bd498fb9",
+      "finished_at": "2026-10-13T08:25:41.007253+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4653157/fullTextXML",
+      "status": 500,
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/stefanic2015-xml.response",
+      "sha256": "a8758edc8d1958199de055c5afcaea9c3bb6859f29ca2ae62ee1856fe4468fe5",
+      "finished_at": "2026-10-13T08:25:42.049505+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5573675/fullTextXML",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/lyons2017-xml.response",
+      "sha256": "340c599e88bd2162637ebe5744c8b882d49ff1ba234fefa26255872517621ff1",
+      "finished_at": "2026-10-13T08:25:43.849685+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.7554%2FeLife.55587+AND+SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/flo11-med.response",
+      "sha256": "a9bc68787a236c6194f1a9a27214bed52283104c6820b66e6e4ca4cceb64eec2",
+      "finished_at": "2026-10-13T08:25:44.802053+00:00"
+    },
+    {
+      "requested_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.1512671112",
+      "status": 403,
+      "path": "/tmp/traitmech-kin-source-status-20261013/stefanic2015-pnas.response",
+      "sha256": "006bff3560408868406808d6cf9c001dad039496e804a06fa7b9cbec2b19f3c0",
+      "finished_at": "2026-10-13T08:35:54.685525+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26438858%20AND%20SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-source-status-20261013/stefanic2015-med.response",
+      "sha256": "d3240849093539c12b791b6acfd8fbf03b1f2d13f56aad46200cc714690b0832",
+      "finished_at": "2026-10-13T08:35:55.400546+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pbio.0060287%20AND%20SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-source-status-20261013/ostrowski-med.response",
+      "sha256": "0e6bc384a4e53e311a626613d23f312d44669b3df2b6002e39ce9b60dd18ea77",
+      "finished_at": "2026-10-13T08:35:56.146554+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28679746%20AND%20SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-source-status-20261013/lyons-med.response",
+      "sha256": "a4d1e48c1906ad71f48c334b2d235991f7f5b18409f10db4e87e22a24bfa7765",
+      "finished_at": "2026-10-13T08:35:57.872002+00:00"
+    },
+    {
+      "requested_url": "https://journals.asm.org/doi/10.1128/mbio.00723-17",
+      "status": 403,
+      "path": "/tmp/traitmech-kin-source-status-20261013/lyons-publisher.response",
+      "sha256": "1251813dd8a3c0a218d8be71a92bd05a57be3fda6bbd3d36185fc12a46099dc3",
+      "finished_at": "2026-10-13T08:35:57.917638+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/PMC5573675.1.pdf?md5=5ee2a2b151131acddaf6530032a1cff9",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-pdf.response",
+      "sha256": "dbdd0c3838d40a426112bcfce12b9b7a2260d41be046f2f6939472c88b1dfe1b",
+      "finished_at": "2026-10-13T08:46:40.978694+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo003173367sd1.xlsx?md5=c1ce0099205821860c788accf72f2427",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-data.response",
+      "sha256": "9cd1468cbc85d33b9f180ea0b9a6e0101ac8b84a141d1c3635b65ef1651fe5db",
+      "finished_at": "2026-10-13T08:46:41.669714+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo0031733670002.jpg?md5=e25e27fbe12769179d21becdda3f9aae",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-fig2.response",
+      "sha256": "e51f6f685f2fcf8289b03480119bc569f8e0f9c44cefd82d23cbbf002d80ca6f",
+      "finished_at": "2026-10-13T08:46:42.386801+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/mbo0031733670004.jpg?md5=a28344862ef792c4384ae714a59db684",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/lyons-fig4.response",
+      "sha256": "3fc545c24da222570422a33f055eaa96d7a4d699a2c4ff29dd0a9a59109a2a09",
+      "finished_at": "2026-10-13T08:46:42.984957+00:00"
+    },
+    {
+      "requested_url": "https://dash.harvard.edu/bitstreams/3d30b932-8145-4374-b886-e646d8d812b1/download",
+      "status": 405,
+      "path": "/tmp/traitmech-kin-discrimination-followup-20261013/stefanic2015-pdf.response",
+      "sha256": "b3884aa443217bea0dbbbb532916774a4de1e05e65ca2b31cf7fbd1fc8f5930d",
+      "finished_at": "2026-10-13T08:34:20.340660+00:00"
+    },
+    {
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7156268/fullTextXML",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-followup-20261013/flo11-xml.response",
+      "sha256": "dc86c21b6ebf0546b1cfef7226f172dac1c5b74167f25552240a0dc76ceb1bd1",
+      "finished_at": "2026-10-13T08:34:22.651690+00:00"
+    },
+    {
+      "requested_url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.0060287.st001",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-followup-20261013/ostrowski-st001.response",
+      "sha256": "246121aa53efa421381a221ec956dd813556ded9425dba00576ef73e814bbac2",
+      "finished_at": "2026-10-13T08:34:23.123680+00:00"
+    },
+    {
+      "requested_url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.0060287.st002",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-discrimination-followup-20261013/ostrowski-st002.response",
+      "sha256": "a4da028a38b6b32e9b6cbb52ff86ac45689d08a664c3f70d664436ce4d918618",
+      "finished_at": "2026-10-13T08:34:23.487222+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5573675.1/PMC5573675.1.json",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-metadata-20261013/lyons-metadata.response",
+      "sha256": "a6b9d16a8e4d40aa7b6cba5c9a8508f68c7edb4120a378e7770311b645ef9cf0",
+      "finished_at": "2026-10-13T08:46:05.488622+00:00"
+    },
+    {
+      "requested_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC5573675.1/",
+      "status": 200,
+      "path": "/tmp/traitmech-kin-cloud-metadata-20261013/lyons-inventory.response",
+      "sha256": "526d58a1b08621bc4a852bed6e9b1ff27e4d274b669b28f35629edd9c6b4dff5",
+      "finished_at": "2026-10-13T08:46:05.881307+00:00"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/tmp/traitmech-kin-discrimination-canary-20261013/acquisition.json",
+      "sha256": "e6c85b1d2d2c36a14ab0d6504f88b393c27b5aa01dd8d5ae2e5ed832e7f35841"
+    },
+    {
+      "path": "/tmp/traitmech-kin-source-status-20261013/acquisition.json",
+      "sha256": "3936a892c8384f6160557d8f23a914bbca3982fda3da586677fd9cfc08d141a7"
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-content-20261013/acquisition.json",
+      "sha256": "a6885c2f654e86c9c22b34cdfe21ca86447d87752981b3e8b1488e6a1de0d500"
+    },
+    {
+      "path": "/tmp/traitmech-kin-discrimination-followup-20261013/acquisition.json",
+      "sha256": "481604787963d459ff29f7f3e01c472bf5aa172d5cbc295d0bed5d6044b3e7e4"
+    },
+    {
+      "path": "/tmp/traitmech-kin-cloud-metadata-20261013/acquisition.json",
+      "sha256": "ffa785f8fce2cf274289bec174e1eb995ca27c16986574bd13756de2fff65b84"
+    },
+    {
+      "path": "/tmp/traitmech-kin-assessment-20261013.json",
+      "sha256": "0afdcd1c19c1ee0241e3e466bcaa7d9780ad4e46733825bcaa2bae5e71072b68"
+    },
+    {
+      "path": "/tmp/traitmech-kin-local-audit-20261013/completion.json",
+      "sha256": "59f2b691557b495091681b51a834bfd9ad9969c87b77366dabae6f45ff8711e8"
+    },
+    {
+      "path": "/tmp/traitmech-kin-alias-audit-20261013/result.json",
+      "sha256": "11212850efaaba8ef2407431a1b045bbf2d267412f67cc40eda66dea6736b4ec"
+    },
+    {
+      "path": "/tmp/traitmech-kin-remote-audit-20261013/result.json",
+      "sha256": "3377a72d5ac7a0e054c9574a3782b13b066b467702b713ac8a6d9edac6771ab2"
+    },
+    {
+      "path": "/tmp/traitmech-kin-allocation-20261013/accepted.json",
+      "sha256": "2a05fe89c7bf627571843c943234f57b874696ce36986e0cca098424f6d2b658"
+    },
+    {
+      "path": "/tmp/traitmech-kin-allocation-20261013/assessment.json",
+      "sha256": "8377587486e6e9d69f13aa9a9ba2cda04c4975958a2cbcc367b60e50f89b4e8d"
+    },
+    {
+      "path": "/tmp/traitmech-kin-initial-review-v3-20261013.json",
+      "sha256": "add48eb57eba71f9859bd9657cb6ff4a413a1558a60b06ef92ce45847348535b"
+    },
+    {
+      "path": "/tmp/traitmech-kin-native-snippets-20261013.tsv",
+      "sha256": "4fe5243baa71b3d2dda3a877f8106e780e834be9d33ceee4711d708fc7a1722d"
+    },
+    {
+      "path": "/tmp/traitmech-kin-corrected-lyons-render-20261013/page-1.png",
+      "sha256": "fded793ec951679b687384a80b77c26b85cf1eee8c8d4ff0822b3ce188c8ca53"
+    },
+    {
+      "path": "/tmp/traitmech-kin-corrected-snippets-20261013.tsv",
+      "sha256": "0e317797d4102ab17cb2fbeb7b6ac1362b4fbd32ef2c213d0ec526660ebe0eb4"
+    }
+  ],
+  "limitations": [
+    "2015 full text unavailable. 2008 main text and all figures inspected; 2017 selected text, Figures 2/4 and selected spreadsheet rows/totals inspected, not all figures, supplementary EPS or raw assays.",
+    "Public NLM version 1 and bounded notice metadata do not establish exhaustive correction/retraction clearance. No independent statistical replication, canonical taxon grounding or protein-resolved mechanism.",
+    "Available-file searches included ignored and hidden files; unavailable worktree tracked history cannot reconstruct lost ignored/untracked content. No arbitrary archives or symlink-directory traversal. Allocation must be refreshed before publication.",
+    "The preacceptance assessment is a dated research receipt; its original open-work list and provisional excerpts are superseded here, not retrospectively rewritten."
+  ]
+}

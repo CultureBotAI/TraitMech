@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/kin_discrimination.yaml
+  slug: kin_discrimination
+session:
+  id: 2026-10-13T091229Z-codex-2c345e
+  timestamp: '2026-10-13T09:12:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add evidence-backed microbial kin discrimination
+  details: Added PROPOSED traitmech:000716 under METPO:1000059 with three DOI-backed snippets
+    (10.1371/journal.pbio.0060287, 10.1073/pnas.1512671112, 10.1128/mBio.00723-17), two OPEN
+    discussions and companion v592 proposal reserving 1066900-1066999. Retained relational
+    scope, nonmonotonic and assay-dependent outcomes, 2015 abstract-only access, strain-label
+    discrepancies and unresolved mechanisms. No canonical taxa, exact mappings or causal graph
+    inferred. Guarded writer dry-run and apply passed; broader validation and review follow.
+    Existing trait records remain unchanged.

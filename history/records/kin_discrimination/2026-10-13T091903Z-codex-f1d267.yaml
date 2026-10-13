@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/kin_discrimination.yaml
+  slug: kin_discrimination
+session:
+  id: 2026-10-13T091903Z-codex-f1d267
+  timestamp: '2026-10-13T09:19:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1909
+  - https://github.com/CultureBotAI/TraitMech/issues/1910
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Correct kin-discrimination evidence and definition provenance
+  details: 'Addresses #1909 and #1910 from the saved initial adversarial review: replaces
+    two insufficiently self-contained snippets with explicit merging and antagonism results,
+    changes definition_source to DOI:10.1128/mBio.00723-17 for the nearby-species scope, preserves
+    DOI:10.1073/pnas.1512671112 for its own excerpt, and updates the 2017 scientific-abstract
+    locator and discussion. Preserves the original event and history/records/kin_discrimination/2026-10-13T091229Z-codex-2c345e.yaml.
+    Does not alter the phenotype definition, identifiers, parent, PROPOSED status or source
+    limitations. Guarded correction dry-run and apply passed; broader validation follows.'
