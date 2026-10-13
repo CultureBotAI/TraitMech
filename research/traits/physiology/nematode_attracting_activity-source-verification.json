@@ -1,0 +1,284 @@
+{
+  "trait_id": "traitmech:000721",
+  "label": "nematode-attracting activity",
+  "accepted_at": "2026-10-13T23:01:02Z",
+  "checked_at": "2026-10-13T23:06:47.888835+00:00",
+  "definition_source": "DOI:10.7554/eLife.20023",
+  "rows": [
+    {
+      "reference": "DOI:10.7554/eLife.20023",
+      "pmid": "28098555",
+      "role": "definition_support",
+      "snippet": "C. elegans and other nematodes were attracted to volatile compounds produced by A. oligospora.",
+      "words": 14,
+      "native_verdict": "VERIFIED",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "source": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/hsueh2017.xml",
+        "bytes": 203423,
+        "sha256": "1535f2442306d5a284e94b21b517e9d4b5492dbcf0d24347338ef7c1bf743697",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5243009/fullTextXML"
+      },
+      "locator": "Scientific abstract in original primary XML; not an editorial digest",
+      "inspection_limits": "Original XML main text, published decision/response, headspace workbook and actual PDF pages 1/3/4/14 inspected. Figure 1D is the multispecies behavior panel, not capture panel 1E. No full figures 5/6 or raw-statistical replication; molecular exclusivity and adaptation claims are not adopted.",
+      "crossref": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/hsueh-crossref.json",
+        "bytes": 28169,
+        "sha256": "162cb564cc4e3c1014aa94d3284c1fec3ee7604cbfa3dba03b68a2371ba9f911"
+      },
+      "europepmc": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-med.json",
+        "bytes": 8926,
+        "sha256": "482c83f3e366b4dc61374b8f6596aac699c14855416340c5c3782d03d7916eed"
+      },
+      "status_check": {
+        "crossref_update_to": [],
+        "crossref_relation": {
+          "references": [
+            {
+              "id-type": "uri",
+              "id": "https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP015688",
+              "asserted-by": "subject"
+            }
+          ],
+          "is-supplemented-by": [
+            {
+              "id-type": "uri",
+              "id": "https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP074082",
+              "asserted-by": "subject"
+            }
+          ],
+          "has-review": [
+            {
+              "id-type": "doi",
+              "id": "10.3410/f.727218666.793528109",
+              "asserted-by": "object"
+            },
+            {
+              "id-type": "doi",
+              "id": "10.7554/eLife.20023.022",
+              "asserted-by": "object"
+            },
+            {
+              "id-type": "doi",
+              "id": "10.7554/eLife.20023.023",
+              "asserted-by": "object"
+            }
+          ]
+        },
+        "europepmc_comments_corrections": {},
+        "scope": "Inspected retrieved metadata, primary text and prior bounded DOI notice searches. Not comprehensive clearance; relation fields may include peer reviews and supplements rather than corrections."
+      }
+    },
+    {
+      "reference": "DOI:10.1038/ismej.2015.134",
+      "pmid": "26241504",
+      "role": "independent_primary_support",
+      "snippet": "We showed that C. elegans is attracted to L. paracasei grown on citrate or yuzu media.",
+      "words": 16,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "source": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-publisher-minimal.html",
+        "bytes": 241921,
+        "sha256": "c0766d1f8a138eef5e455c6bcfd54cfe5043511b99ca5290faa8d6e86f6c5bbc",
+        "url": "https://academic.oup.com/ismej/article/10/3/558/7538165"
+      },
+      "locator": "Discussion opening paragraph in publisher primary HTML",
+      "inspection_limits": "Publisher HTML Methods/Results/Discussion, Table 1 and actual figures 1-4 inspected. Supplement image shows colony counts, not separately verified S2 calibration. No typeset PDF, full calibration or raw-statistical replication. Host allele and strain-scope differences remain explicit.",
+      "crossref": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/additional-source-checks/choi-crossref.json",
+        "bytes": 28298,
+        "sha256": "980aa80809e0a9708a47e303c39e0951e4becfb6d089ebb8352238d3a4f1aa1e"
+      },
+      "europepmc": {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/additional-source-checks/choi-europepmc.json",
+        "bytes": 11277,
+        "sha256": "30f0dfc805bfb2cde09118e24a2d603f72d7b5304815553b3c3e24b3a27ece81"
+      },
+      "status_check": {
+        "crossref_update_to": [],
+        "crossref_relation": {},
+        "europepmc_comments_corrections": {},
+        "scope": "Inspected retrieved metadata, primary text and prior bounded DOI notice searches. Not comprehensive clearance; relation fields may include peer reviews and supplements rather than corrections."
+      }
+    }
+  ],
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/physiology/nematode_attracting_activity.yaml",
+      "--out",
+      "/tmp/traitmech-attraction-checks-20261013/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 3.6863763723522425,
+    "completed_at": "2026-10-13T23:04:36.677921+00:00",
+    "log": "/tmp/traitmech-attraction-checks-20261013/records-03.log",
+    "receipt": {
+      "path": "/tmp/traitmech-attraction-checks-20261013/native-record.tsv",
+      "bytes": 475,
+      "sha256": "777f7a05da2f05899e87d7861dbdd96bd9979ae51dd14fec7dd3647f28b5574c"
+    }
+  },
+  "allocation": {
+    "accepted_at": "2026-10-13T23:01:02Z",
+    "base": "33d043127f3cd214fc6608745172c95b1fdaf00f",
+    "trait_id": "traitmech:000721",
+    "label": "nematode-attracting activity",
+    "category": "PHYSIOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v597",
+    "proposed_id": "METPO:1067400",
+    "reserved_block": [
+      1067400,
+      1067499
+    ],
+    "distinct_supporting_dois": [
+      "10.7554/eLife.20023",
+      "10.1038/ismej.2015.134"
+    ],
+    "scientific_scope": "Microbial capability to elicit directed nematode movement toward itself or its products; not microbial taxis, killing, trapping, feeding, universal host range or an adaptive intent claim.",
+    "reservation_adjudication": {
+      "exact_numeric_hits": 128,
+      "standalone_decimal_occurrences": 127,
+      "vector_coordinate_occurrences": 1,
+      "broad_editor_envelope_occurrences": 481,
+      "conflicting_reservations": []
+    },
+    "novelty": "Ignored/hidden-inclusive known-copy and retained-history search found no same-scope maintained record/proposal. Cached bibliography DOI mentions and trap/kill distinctions are retained, not called absent. All remote inspected blobs remain identical to the earlier semantic assessment.",
+    "source_limitations": "Keep native VERIFIED/NOT_IN_ABSTRACT outcomes distinct from direct-source matching; retain host/stage, medium, molecular-specificity, allele and supplement access limitations. No canonical taxa, proteins, graph or exact mappings.",
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-attraction-reservations-20261013/numeric-assessment.json",
+        "sha256": "776d5873d6b60d2e499b73d0359d22359f671de61077eb031ebf4d4bbc2e4d17"
+      },
+      {
+        "path": "/tmp/traitmech-attraction-reservations-20261013/local/completion.json",
+        "sha256": "1c79bff6946d9310b29b417b753deb53af68632e4d638020bd5541d9471826d6"
+      },
+      {
+        "path": "/tmp/traitmech-attraction-reservations-20261013/remote/result.json",
+        "sha256": "4e7461aefd574902c7e73ecab3efcd36d511893387a081268d52bcc78cf771ba"
+      },
+      {
+        "path": "/tmp/traitmech-nematode-attraction-fresh-novelty-20261013/local/semantic-assessment.json",
+        "sha256": "be0e4850de0ef2f0676407e43142836730e876bf3749ecfb99f64de688ec76c6"
+      },
+      {
+        "path": "/tmp/traitmech-nematode-attraction-fresh-novelty-20261013/remote/semantic-assessment.json",
+        "sha256": "8d66d21ed236b06e1b23cc98274aeece1733f808875f71aea232df5f31c3fad3"
+      },
+      {
+        "path": "/tmp/traitmech-nematode-attraction-fresh-metpo-screen-20261013.json",
+        "sha256": "3af629d300183a0896c72c8db60bebf0210db6203a417e8ced117ad03e05922d"
+      },
+      {
+        "path": "/tmp/traitmech-nematode-attraction-lead-20261013/preferred-source-readiness-20261013.json",
+        "sha256": "dfc04abff65b2dbd6aa2cd04edb9921d884b0f269e82eda60398f817abffb780"
+      }
+    ],
+    "limits": "Bounded scope, not exhaustive discovery or atomic allocation. Recheck main/open-draft reservations before publication. No lost ignored/untracked history, arbitrary local archive or symlink-target reconstruction. No human signoff."
+  },
+  "novelty": {
+    "ignored_hidden_included": true,
+    "assessment": {
+      "path": "/tmp/traitmech-nematode-attraction-fresh-novelty-20261013/local/semantic-assessment.json",
+      "bytes": 29915,
+      "sha256": "be0e4850de0ef2f0676407e43142836730e876bf3749ecfb99f64de688ec76c6"
+    },
+    "scope": "176 known current locations plus 139 retained tracked heads. No exact maintained owner identified; exact DOI bibliography mentions in ignored literature caches were adjudicated, not called absent."
+  },
+  "inspected_assets": [
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-v1.pdf",
+      "bytes": 2874573,
+      "sha256": "c92710276c7b969abd40a0573d916b881ace0db968586958e7b10b57d5cda100"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/hsueh-headspace-table.json",
+      "bytes": 20050,
+      "sha256": "32efba61fd63521060d0849434c898b9c54274d758181f83b09c05d11dda98d7"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/peer-review-assessment.json",
+      "bytes": 2861,
+      "sha256": "ece480bb07d8732ebac0560e16339cc0b1b127debfaadf34b6061a6fb48acde3"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2016-assessment.json",
+      "bytes": 2894,
+      "sha256": "dad4e933f954ccc0f17cde5b70d73f53dad0c46fe2482502ed20fc4958a4eb80"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi-supplement-followup.json",
+      "bytes": 1287,
+      "sha256": "18c58868e974cd2143d2026136a98733695aa2039a0977e20fdb468f9f8c5f9e"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-assets/supplement-moesm109.jpeg",
+      "bytes": 775780,
+      "sha256": "76ed0cece455d9f8f73859756e715cd349bfc9d0633e81f3c5fb8032c9466d07"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-assets/figure1.jpeg",
+      "bytes": 75446,
+      "sha256": "3047adf39e6a0dc471ef1b0f28a14b2509966d151d37ac534f14d21afb66b9e9"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-assets/figure2.jpeg",
+      "bytes": 33693,
+      "sha256": "6a872422c4d62f75899ffa6232c70f9aa20a98bd4818afe6de170ea996aa0faa"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-assets/figure3.jpeg",
+      "bytes": 34111,
+      "sha256": "03d24a3fcfac84680986bc9fc8404b26a1c9d419076aa38d786d333630afaf5f"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/choi2015-assets/figure4.jpeg",
+      "bytes": 34384,
+      "sha256": "51d8156b96b065e650ec99daa9bcee4ef9470a43e67ada800b4b6a863d4023c2"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-rendered/page-1.png",
+      "bytes": 624962,
+      "sha256": "4fc39062639af2883e4189e620ce952f6d49ba7e5151931bdccd45e734db8126"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-rendered/page-3.png",
+      "bytes": 628204,
+      "sha256": "8859efabf0ac14e2a87d9297a48c75a3dce6d5f202b631692a6349b1e507b819"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-rendered/page-4.png",
+      "bytes": 632524,
+      "sha256": "f08c7b1ba6ddbd281a977ebd1aaba1533bce35362cd811bb8cdac56be1272915"
+    },
+    {
+      "path": "/tmp/traitmech-nematode-attraction-lead-20261013/originals/hsueh-rendered/page-14.png",
+      "bytes": 581536,
+      "sha256": "5705a3b9b1fd194994915934c49da0278ee84a2cd381007e4efe13436aade40f"
+    }
+  ],
+  "source_readiness": {
+    "path": "/tmp/traitmech-nematode-attraction-lead-20261013/preferred-source-readiness-20261013.json",
+    "bytes": 5012,
+    "sha256": "dfc04abff65b2dbd6aa2cd04edb9921d884b0f269e82eda60398f817abffb780"
+  },
+  "access_limits": "Current web opens repeated an eLife client challenge and OUP redirect failure. Previously directly acquired original primary files were hash-checked and reread; no fresh successful publisher retrieval claimed.",
+  "scientific_limits": [
+    "An author self-check, not human signoff or an independent statistical replication.",
+    "Hsueh: host/stage variation; Figure 1D is the multispecies behavior panel, 1E is structural capture.",
+    "Hsueh: medium-control signal in supplementary workbook conflicts with the five-compound exclusivity caption; exact molecular specificity and evolutionary adaptation are not adopted.",
+    "Choi: citrate media include glucose; YSM0385 is the reported L. paracasei strain, Y091 only Lactobacillus sp.; no canonical taxon asserted.",
+    "Choi: host odr-10 ky32/ky10 discrepancy remains. Shared supplement link exposes a colony-count image, not the distinct S2 calibration; no calibration verification claimed.",
+    "Both behavioral assays use sodium azide to retain arrivals. This is not microbial killing evidence.",
+    "No field fitness benefit, pathogenicity, universal attraction or common microbial molecular mechanism is inferred."
+  ],
+  "status": "Source-based author assessment for a PROPOSED record; not independent review or human sign-off. Historical research-only receipts preserve their original scope; acceptance is recorded separately."
+}
