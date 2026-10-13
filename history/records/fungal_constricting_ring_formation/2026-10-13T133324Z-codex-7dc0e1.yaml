@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/fungal_constricting_ring_formation.yaml
+  slug: fungal_constricting_ring_formation
+session:
+  id: 2026-10-13T133324Z-codex-7dc0e1
+  timestamp: '2026-10-13T13:33:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Refine fungal trap morphology parent
+  details: Refined the direct parent to traitmech:000718 and resolved only the parent-gap
+    discussion by definition-based inference; preserved child identity, definition, evidence,
+    examples, other mechanism gaps and previous history.

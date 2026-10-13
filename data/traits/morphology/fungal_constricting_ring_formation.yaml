@@ -7,7 +7,7 @@ trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000718
 evidence:
 - reference: DOI:10.1038/s41467-023-43235-w
   snippet: The R3 cell fuses with the S2 and R1 cells to complete CR formation
@@ -58,7 +58,7 @@ discussions:
 - discussion_id: constricting-ring-scope-and-parent
   prompt: Resolve a closer trap-morphology parent without conflating cell shape.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Parent phenotype METPO:1000059 is broader than this multicellular differentiation
     phenotype. Ring shaped METPO:1000680 denotes individual cell geometry, not a three-cell
     trapping apparatus. Mycelial growth and hyphal anastomosis alone do not define
@@ -73,6 +73,14 @@ discussions:
     or phenotype evidence here.
   posed_by: codex
   posed_date: '2026-10-08'
+  resolved_date: '2026-10-13'
+  resolution_note: Added fungal nematode-trap formation traitmech:000718 as the direct
+    broader phenotype. The existing child definition entails specialized hyphal trap
+    differentiation. This resolves only the parent gap; the historical scope contrasts,
+    unasserted mappings, examples and separate mechanism questions remain applicable.
+    Formation does not guarantee immediate capture. The column cell-count question
+    is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063000
+    SubClassOf METPO:1067100 on upstream adoption.
 - discussion_id: constricting-ring-mechanism-and-taxonomy
   prompt: Separate trap formation, inflation mechanism and nomenclatural validity.
   kind: KNOWLEDGE_GAP
@@ -104,4 +112,11 @@ curation_history:
     cytokinetic rings in fungi. Added a directly checked primary boundary-source snippet
     and explicit exclusion; it is not a third positive trap study. Preserved the initial
     event, definition, identifier, natural example and reservation.'
+  llm_assisted: true
+- timestamp: '2026-10-13T13:31:56Z'
+  curator: codex
+  action: REFINE_FUNGAL_TRAP_PARENT
+  changes: Refined traitmech:000677 below fungal nematode-trap formation traitmech:000718
+    and resolved its temporary parent discussion by definition-based inference. Preserved
+    child identity, definition, evidence, examples, mechanism gaps and earlier history.
   llm_assisted: true

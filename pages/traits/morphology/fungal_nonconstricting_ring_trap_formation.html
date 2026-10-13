@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/morphology/fungal_nematode_trap_formation.html" >fungal nematode-trap formation <code>traitmech:000718</code></a></li>
 
       </ul>
     </div>
@@ -146,7 +146,7 @@
         <p class="discussion-prompt">Resolve a closer trap-morphology parent without conflating cell shape.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>nonconstricting-ring-scope-and-parent</code>
           · raised by codex
           · 2026-10-08
@@ -165,6 +165,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added fungal nematode-trap formation traitmech:000718 as the direct broader phenotype. The existing child definition entails specialized hyphal trap differentiation. This resolves only the parent gap; the historical scope contrasts, unasserted mappings, examples and separate mechanism questions remain applicable. Formation does not guarantee immediate capture. The column cell-count question is separately OPEN. Preserve the historical phenotype axiom and add METPO:1063300 SubClassOf METPO:1067100 on upstream adoption.</p>
 
 
 
@@ -214,6 +216,12 @@
           <p class="changes">Added fungal nonconstricting-ring trap formation with two primary DOI sources, contiguous source-checked snippets and a qualified natural-isolate example. Ignored-and-hidden main/worktree/open-PR checks support 000680 and v556 block 1063300-1063399. Separated morphology from molecular mechanism and species rank from strain identity. Existing records unchanged. Timestamp is observed UTC.</p>
         </li>
 
+        <li>
+          <time>2026-10-13T13:31:56Z</time> ·
+          <strong>REFINE_FUNGAL_TRAP_PARENT</strong> · codex
+          <p class="changes">Refined traitmech:000680 below fungal nematode-trap formation traitmech:000718 and resolved its temporary parent discussion by definition-based inference. Preserved child identity, definition, evidence, examples, mechanism gaps and earlier history.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -223,6 +231,12 @@
           <ul><li><strong>CREATE</strong> — Add evidence-backed fungal nonconstricting-ring trap formation
             <p>Added traitmech:000680 as a PROPOSED morphology class with Saikawa and Takahashi 2002 DOI:10.1007/s102670200061 and Li et al. 2006 DOI:10.1016/j.mycres.2006.04.011. Directly read the three-page primary microscopy paper and all figures; the second study is explicitly abstract-only. Added contiguous caption and abstract snippets, qualified natural TGU isolate example NCBITaxon:430499 at species rank, and open scope/parent and mechanism discussions. Kept formation, noninflating capture and molecular mechanism separate. Writer defaults to dry-run, validates before writing and refuses changed parent/target/proposal preimages; 20 focused tests passed. Ignored-and-hidden main, all worktrees, CommunityMech and complete paginated open-PR checks support local ID000680, cohort v556 and full METPO1063300-1063399 block. Prior records untouched. METPO placeholder is not a released term.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_nonconstricting_ring_trap_formation/2026-10-08T124442Z-codex-b0c1bd.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-13T13:33:28Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Refine fungal trap morphology parent
+            <p>Refined the direct parent to traitmech:000718 and resolved only the parent-gap discussion by definition-based inference; preserved child identity, definition, evidence, examples, other mechanism gaps and previous history.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/fungal_nonconstricting_ring_trap_formation/2026-10-13T133328Z-codex-209ef5.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -278,9 +292,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-08 12:44 UTC
+      Record as of 2026-10-13 13:33 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1112 TraitRecords
+      · 1113 TraitRecords
       · embedding coverage 42.9%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
