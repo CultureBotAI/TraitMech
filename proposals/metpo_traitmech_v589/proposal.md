@@ -33,8 +33,10 @@ asserted. The pinned ontology and all existing records are unchanged.
    (supplement 2E) and competitive fitness panel (1G) have different endpoints.
 2. [D'Urso et al. 2016](https://doi.org/10.7554/eLife.16691), PMID:27336723,
    PMC4951200. Figure 7A compares selected mRNA responses after salt exposure,
-   two-hour recovery and peroxide challenge. The quoted Results sentence
-   attributes its gene count and four-generation duration to Guan 2012;
+   two-hour recovery and peroxide challenge. The complete quoted Results
+   sentence reports the authors' own confirmation for PGM2, PMT5 and YGP1
+   (Figure 7A), plus USV1 explicitly not shown. Its preceding sentence
+   attributes the gene count and four-generation duration to Guan 2012;
    that duration is not measured by Figure 7A. Actual 7B/C/D contents conflict
    with their caption assignments; the discrepancy remains explicit.
 

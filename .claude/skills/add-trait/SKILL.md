@@ -386,6 +386,8 @@ kinetics from direct initiation-rate measurements. Localization, chromatin-mark
 inheritance and competitive fitness have different endpoints; do not transfer
 their durations or causality to enhanced transcription. Attribute durations
 summarized from earlier work to that source rather than to a later figure.
+When a later paper confirms earlier work, quote its own reported result instead
+of its background summary; retain the confirmation's actual assay scope (#1904).
 
 For aging candidates, separate age-dependent performance decline or increasing
 mortality risk from finite lifespan, lifespan extension and cumulative survival

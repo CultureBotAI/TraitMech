@@ -24,6 +24,7 @@ METPO_ID = "METPO:1066600"
 DEFINITION_SOURCE = "DOI:10.7554/eLife.77646"
 STRESS_SOURCE = "DOI:10.7554/eLife.16691"
 TIMESTAMP = "2026-10-13T00:34:29Z"
+RESULT_CORRECTION_TIMESTAMP = "2026-10-13T01:22:19Z"
 PARENT = {
     "identifier": "METPO:1000059",
     "label": "phenotype",
@@ -78,17 +79,21 @@ RECORD = {
         {
             "reference": STRESS_SOURCE,
             "snippet": (
-                "Previous exposure to 0.7M sodium chloride leads to faster or "
-                "stronger induction of ~75 H2O2-inducible genes for up to 4 generations"
+                "We confirmed this observation for several of these genes "
+                "(PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012)."
             ),
             "notes": (
                 "D'Urso et al. 2016, PMID:27336723, PMC4951200; Results s2-7, "
                 "paragraph 1, contiguous in primary XML and publisher Version "
-                "of Record HTML. This sentence attributes the gene count and "
-                "duration to Guan 2012; Figure 7A directly tests selected mRNA "
-                "responses after 0.7 M NaCl for one hour, two-hour rich-medium "
+                "of Record HTML. This complete sentence reports the authors' own "
+                "confirmation: prior salt exposure enhances later peroxide-induced "
+                "mRNA responses. The preceding sentence attributes the gene count "
+                "and duration to Guan 2012, not a new measurement here. Figure 7A "
+                "directly tests selected mRNA responses after 0.7 M NaCl for "
+                "one hour, two-hour rich-medium "
                 "recovery, then 0.5 mM H2O2. PGM2, PMT5 and YGP1 differ from "
-                "the HSP31 control. Four-generation persistence is not measured "
+                "the HSP31 control; USV1 is explicitly not shown. "
+                "Four-generation persistence is not measured "
                 "in that panel. Actual Figure 7B is wild-type ChIP, C mutant "
                 "ChIP, D mutant mRNA and E Ssn3 ChIP; caption B/C/D assignments "
                 "conflict with the image. INO1 mutant reactivation defects in "
@@ -196,6 +201,16 @@ def build_record() -> dict:
             "existing records unchanged. Timestamp is the observed UTC decision."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_EVIDENCE_PROVENANCE",
+        changes=(
+            "Replaced the D'Urso background-attribution snippet with the authors' "
+            "own confirmation sentence for Figure 7A, addressing review issue "
+            "1904. Retained selected-gene, two-hour recovery, unshown-USV1, "
+            "four-generation and assay limits; no definition or identifiers changed."
+        ),
+        llm_assisted=True, timestamp=RESULT_CORRECTION_TIMESTAMP,
     )
     return record
 

@@ -47,9 +47,12 @@ def test_identity_evidence_and_copy_isolation():
     assert [e["reference"] for e in record["evidence"]] == [writer.DEFINITION_SOURCE, writer.STRESS_SOURCE]
     assert all(5 <= len(e["snippet"].split()) <= 25 for e in record["evidence"])
     assert all(not record.get(k) for k in ["synonyms", "causal_graphs", "xrefs", "canonical_examples"])
-    event, = record["curation_history"]
-    assert event["curator"] == "codex" and event["llm_assisted"]
-    assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
+    assert [e["action"] for e in record["curation_history"]] == [
+        "MINTED_TRAITMECH_ID", "CORRECTED_EVIDENCE_PROVENANCE",
+    ]
+    for event in record["curation_history"]:
+        assert event["curator"] == "codex" and event["llm_assisted"]
+        assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
     record["discussions"][0]["rationale"] = "mutated"
     assert len(writer.build_record()["evidence"]) == 2
@@ -63,7 +66,13 @@ def test_scope_and_source_limits():
                  "not that duration of enhanced transcription", "statistical-comparator",
                  "not direct measurements of initiation rate", "NOT_IN_ABSTRACT"]:
         assert text in sump["notes"]
-    for text in ["attributes the gene count and duration to Guan 2012", "two-hour",
+    assert durso["snippet"] == (
+        "We confirmed this observation for several of these genes "
+        "(PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012)."
+    )
+    assert "4 generations" not in durso["snippet"]
+    for text in ["authors' own confirmation", "attributes the gene count and duration to Guan 2012", "two-hour",
+                 "USV1 is explicitly not shown",
                  "Four-generation persistence is not measured", "caption B/C/D assignments",
                  "raw data were not reanalyzed", "NOT_IN_ABSTRACT"]:
         assert text in durso["notes"]

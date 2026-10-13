@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-transcriptional-memory
+session:
+  id: 2026-10-13T012542Z-codex-e681e0
+  timestamp: '2026-10-13T01:25:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1904
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1903
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - provenance
+  summary: Prefer own-result quotations over attributed background summaries
+  details: Issue 1904 showed that an accurately attributed earlier-result quotation can still
+    be weaker than the cited papers own confirmed result. Add guidance to prefer the own-result
+    sentence while retaining its assay scope. The prior skill history and all saved reviews
+    remain unchanged.

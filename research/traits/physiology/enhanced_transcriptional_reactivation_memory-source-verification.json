@@ -6,15 +6,15 @@
       "doi": "10.7554/eLife.16691",
       "pmid": "27336723",
       "title": "Set1/COMPASS and Mediator are repurposed to promote epigenetic transcriptional memory.",
-      "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
+      "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
       "section_type": "Results",
       "section": "s2-7",
       "exact_contiguous_span": true,
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
-      "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
-      "native_checked_at": "2026-10-12T23:56:10.919158+00:00",
-      "native_similarity": 0.27936507936507937,
+      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
+      "native_checked_at": "2026-10-13T01:24:38.259277+00:00",
+      "native_similarity": 0.34,
       "manual_contiguous_full_text_matches": {
         "primary_xml.xml": [
           1
@@ -23,7 +23,7 @@
           1
         ]
       },
-      "qualification": "This Results sentence attributes the duration and gene count to Guan 2012; D'Urso Figure 7A directly tests selected genes after two-hour recovery. It is not a newly measured four-generation duration in that panel.",
+      "qualification": "D'Urso et al. 2016, PMID:27336723, PMC4951200; Results s2-7, paragraph 1, contiguous in primary XML and publisher Version of Record HTML. This complete sentence reports the authors' own confirmation: prior salt exposure enhances later peroxide-induced mRNA responses. The preceding sentence attributes the gene count and duration to Guan 2012, not a new measurement here. Figure 7A directly tests selected mRNA responses after 0.7 M NaCl for one hour, two-hour rich-medium recovery, then 0.5 mM H2O2. PGM2, PMT5 and YGP1 differ from the HSP31 control; USV1 is explicitly not shown. Four-generation persistence is not measured in that panel. Actual Figure 7B is wild-type ChIP, C mutant ChIP, D mutant mRNA and E Ssn3 ChIP; caption B/C/D assignments conflict with the image. INO1 mutant reactivation defects in Figure 1E/F alone do not establish faster within-wild-type reactivation. Relevant Results, Methods, abstract and actual figures were inspected; raw data were not reanalyzed. Native abstract lookup returns NOT_IN_ABSTRACT, with the selected quotation independently matched in full text.",
       "sources": [
         {
           "kind": "primary_xml",
@@ -48,7 +48,15 @@
           "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-source_qualified_med.json",
           "sha256": "8759e42b1ceafc0928d8300b4dd4d5715561dc5df64cc73f8817ec299ba8a89a"
         }
-      ]
+      ],
+      "initial_snippet_check": {
+        "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
+        "native_checked_at": "2026-10-12T23:56:10.919158+00:00",
+        "native_similarity": 0.27936507936507937,
+        "qualification": "This Results sentence attributes the duration and gene count to Guan 2012; D'Urso Figure 7A directly tests selected genes after two-hour recovery. It is not a newly measured four-generation duration in that panel."
+      }
     },
     {
       "doi": "10.7554/eLife.77646",
@@ -60,9 +68,9 @@
       "exact_contiguous_span": true,
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
-      "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
-      "native_checked_at": "2026-10-12T23:56:12.643248+00:00",
-      "native_similarity": 0.3595505617977528,
+      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
+      "native_checked_at": "2026-10-13T01:24:38.259098+00:00",
+      "native_similarity": 0.36,
       "manual_contiguous_full_text_matches": {
         "primary_xml.xml": [
           2
@@ -414,9 +422,22 @@
     {
       "path": "/tmp/traitmech-transcriptional-memory-checks-20261013/snippet-results.tsv",
       "sha256": "d1339529137fc39e7821f0b25b6e1b254468ac2fc28f477bef84ba5ecdca6115"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records.json",
+      "sha256": "7b87c129d6004eace99ddb55abf7617f57a5debcae8c3ca463f32e5fe05b24cd"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/snippet-results.tsv",
+      "sha256": "42d7a5dd654db460f058fe4392261896bf72c8d7457c4e20608d9937b5ee7f67"
     }
   ],
-  "native_record_checks": [
+  "history_attribution_correction": {
+    "original": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml",
+    "successor": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003824Z-codex-8495dc.yaml",
+    "reason": "Scaffolder default actor name was inadvertently retained; actual CREATE actor was Codex, model gpt-5, tool codex. The immutable original is preserved and the successor explicitly corrects only attribution."
+  },
+  "initial_native_record_checks": [
     {
       "command": [
         "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate",
@@ -454,7 +475,7 @@
       "log": "/tmp/traitmech-transcriptional-memory-checks-20261013/records-02.log"
     }
   ],
-  "native_record_snippets": [
+  "initial_native_record_snippets": [
     {
       "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
       "locator": "evidence[0]",
@@ -474,9 +495,73 @@
       "nearest_sentence": ""
     }
   ],
-  "history_attribution_correction": {
-    "original": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml",
-    "successor": "history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003824Z-codex-8495dc.yaml",
-    "reason": "Scaffolder default actor name was inadvertently retained; actual CREATE actor was Codex, model gpt-5, tool codex. The immutable original is preserved and the successor explicitly corrects only attribution."
-  }
+  "primary_result_correction": {
+    "issue": 1904,
+    "review": "https://github.com/CultureBotAI/TraitMech/pull/1903#pullrequestreview-5497733924",
+    "checked_at": "2026-10-13T01:23:29.350626+00:00",
+    "matches": {
+      "primary_xml": true,
+      "publisher_version_of_record": true
+    },
+    "scope": "Complete own-confirmation sentence, contextualized by preceding result and actual Figure 7A. Original quotation spelling was faithful; attribution was the accepted finding.",
+    "native_check_pending": false
+  },
+  "native_record_checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate",
+        "-s",
+        "src/traitmech/schema/traitmech.yaml",
+        "--target-class",
+        "TraitRecord",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 1.6902252440340817,
+      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-00.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/validate_strict.py",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+      ],
+      "exit": 0,
+      "seconds": 3.0285992468707263,
+      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-01.log"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+        "--out",
+        "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/snippet-results.tsv"
+      ],
+      "exit": 0,
+      "seconds": 3.6608592090196908,
+      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-02.log"
+    }
+  ],
+  "native_record_snippets": [
+    {
+      "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+      "locator": "evidence[0]",
+      "reference": "DOI:10.7554/eLife.77646",
+      "verdict": "NOT_IN_ABSTRACT",
+      "similarity": "0.36",
+      "snippet": "Upon Anchor Away of Opi1, reactivation was faster than activation",
+      "nearest_sentence": ""
+    },
+    {
+      "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+      "locator": "evidence[1]",
+      "reference": "DOI:10.7554/eLife.16691",
+      "verdict": "NOT_IN_ABSTRACT",
+      "similarity": "0.34",
+      "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
+      "nearest_sentence": ""
+    }
+  ]
 }
