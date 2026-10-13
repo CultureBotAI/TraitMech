@@ -11013,6 +11013,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ballistospore_discharge.html#ballistospore-discharge-mechanism-and-readouts"
  },
  {
+  "discussion_id": "habituation-scope-and-hierarchy",
+  "prompt": "Retain a behavioral endpoint and distinguish neighboring uses of adaptation.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "behavioral habituation",
+  "source_id": "traitmech:000714",
+  "source_file": "behavioral_habituation.yaml",
+  "attaches_to": [],
+  "rationale": "Repeated-stimulus decrement alone is insufficient: evaluate sensory adaptation, motor fatigue, injury/toxicity, selection and depletion alternatives in the actual assay. Specificity and recovery provide operational support without identifying all underlying mechanisms. Rankin 2009 frames habituation in neural behavioral terms; Rajan 2025 distinguishes that usage from cellular adaptation while modeling related receptor dynamics. This record concerns microbial behavior, not a categorical ban on shared molecular machinery. No fixed time, curve, complete recovery, dishabituation or all ten hallmarks are required in every experiment. Response to a stronger stimulus is not itself dishabituation. Carbon-source memory (traitmech:000706), acquired stress-resistance memory (traitmech:000712), enhanced transcriptional reactivation memory (traitmech:000713), anticipation, bet hedging and nutrient adaptation have distinct endpoints. Chemotaxis is not a parent of every behavioral assay. METPO:1000059 phenotype is the conservative parent; generic learning, memory and adaptation are not asserted as exact synonyms.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/behavioral_habituation.html#habituation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "habituation-evidence-and-mechanism-limits",
+  "prompt": "Resolve source discrepancies and culture provenance before adding taxa or mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "behavioral habituation",
+  "source_id": "traitmech:000714",
+  "source_file": "behavioral_habituation.yaml",
+  "attaches_to": [],
+  "rationale": "Different taxa and assays support the phenotype, not independent replication of each experiment. Laboratory culture provenance has not been independently resolved for natural canonical taxa; no species-wide assignment follows. Unread supplements, raw data and statistical reanalysis remain gaps. The 2025 control cadence, 2026 cycloheximide timing and electrical-control locators remain unresolved source discrepancies. Retained public PDFs and author manuscripts are not verified equivalent to current corrected publisher versions. Bounded MED/Crossref checks are not proof of notice absence. Modeled receptor internalization, exploratory omics and drug/RNAi effects do not justify a universal protein-resolved mechanism. No causal graph, protein examples, canonical taxa or exact external mappings are asserted. Access failures, source hashes and actual snippet-verifier results are in the sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/behavioral_habituation.html#habituation-evidence-and-mechanism-limits"
+ },
+ {
+  "discussion_id": "habituation-historical-identity",
+  "prompt": "Reconcile deprecated adaptation neighbors without reviving their identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "behavioral habituation",
+  "source_id": "traitmech:000714",
+  "source_file": "behavioral_habituation.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and inspected current METPO graphs mark METPO:1000004 adaptation, METPO:1000005 adaptive trait, METPO:0000248 and METPO:000249 Microbial Adaptation deprecated below ObsoleteClass, with OMO:0001000 and no inspected replacement or consider annotations. METPO issue 521 disputes the mechanically assigned reasons. Original historical scopes remain unresolved; labels do not prove equivalence or nonequivalence. This operational behavioral phenotype is accepted independently from primary evidence, not by reviving an obsolete term or inferring biological invalidity. Available ignored/hidden files, retained tracked history, pending changes, ontology graphs and live corpus semantics revealed no exact active record in the inspected scope. No historical exact mapping is asserted. The pinned ontology and existing records remain unchanged; discovery is not exhausted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/behavioral_habituation.html#habituation-historical-identity"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14450,9 +14501,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 723,
- "total_knowledge_gaps": 455,
- "total_source_entries": 579,
+ "total_discussions": 726,
+ "total_knowledge_gaps": 456,
+ "total_source_entries": 580,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
