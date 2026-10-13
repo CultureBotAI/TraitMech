@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-transcriptional-memory
+session:
+  id: 2026-10-13T015926Z-codex-edd1e4
+  timestamp: '2026-10-13T01:59:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1905
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1903
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - skill
+  summary: Require self-contained antecedents in evidence snippets
+  details: 'Added an explicit anaphora check after review issue 1905: a complete sentence
+    can still omit the phenotype. Select another primary-result span or source rather than
+    exceeding the quotation budget or relying on notes to repair an omitted antecedent. No
+    schema, evidence threshold or baseline exceptions changed.'

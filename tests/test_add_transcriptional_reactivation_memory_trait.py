@@ -49,6 +49,7 @@ def test_identity_evidence_and_copy_isolation():
     assert all(not record.get(k) for k in ["synonyms", "causal_graphs", "xrefs", "canonical_examples"])
     assert [e["action"] for e in record["curation_history"]] == [
         "MINTED_TRAITMECH_ID", "CORRECTED_EVIDENCE_PROVENANCE",
+        "CORRECTED_SNIPPET_SELF_CONTAINMENT",
     ]
     for event in record["curation_history"]:
         assert event["curator"] == "codex" and event["llm_assisted"]
@@ -61,26 +62,25 @@ def test_identity_evidence_and_copy_isolation():
 
 def test_scope_and_source_limits():
     record = writer.build_record()
-    sump, durso = record["evidence"]
+    sump, guan = record["evidence"]
     for text in ["synthetic Opi1 Anchor Away", "not clearly faster", "CHO1/ACT1",
                  "not that duration of enhanced transcription", "statistical-comparator",
                  "not direct measurements of initiation rate", "NOT_IN_ABSTRACT"]:
         assert text in sump["notes"]
-    assert durso["snippet"] == (
-        "We confirmed this observation for several of these genes "
-        "(PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012)."
+    assert guan["reference"] == "DOI:10.1534/genetics.112.143016"
+    assert guan["snippet"] == (
+        "Cells with prior NaCl exposure have a faster gene-expression response to H2O2."
     )
-    assert "4 generations" not in durso["snippet"]
-    for text in ["authors' own confirmation", "attributes the gene count and duration to Guan 2012", "two-hour",
-                 "USV1 is explicitly not shown",
-                 "Four-generation persistence is not measured", "caption B/C/D assignments",
-                 "raw data were not reanalyzed", "NOT_IN_ABSTRACT"]:
-        assert text in durso["notes"]
+    assert "this observation" not in guan["snippet"]
+    for text in ["Figure 4 caption", "240 minutes", "mock-treated", "induced and repressed",
+                 "does not prove identical baselines", "not a count of induced genes",
+                 "60-minute response", "different endpoint", "raw data were not reanalyzed"]:
+        assert text in guan["notes"]
     scope, gaps, history = record["discussions"]
     for text in ["not reparented wholesale", "retained resistance", "not asserted as exact synonyms",
                  "synthesis from degradation", "existing records are unchanged"]:
         assert text in scope["rationale"]
-    assert "not independent laboratory replication" in gaps["rationale"]
+    assert "not independent replication of the same experiment" in gaps["rationale"]
     assert "not natural canonical taxa" in gaps["rationale"]
     for text in ["METPO:1000108", "METPO:1000310", "METPO issue 521",
                  "remain unassessed", "accepted independently", "No historical exact-equivalence"]:
@@ -96,7 +96,8 @@ def test_source_sidecar_matches_quotes_and_verdicts():
     }
     assert all(r["exact_contiguous_span"] and r["source_identity_verified"] for r in rows)
     assert all(r["native_verdict"] == "NOT_IN_ABSTRACT" for r in rows)
-    assert all(r["section_type"] == "Results" and len(r["sources"]) == 3 for r in rows)
+    assert {r["section_type"] for r in rows} == {"Results", "Figure caption"}
+    assert all(len(r["sources"]) == 3 for r in rows)
     assert all(len(s["sha256"]) == 64 and s["url"].startswith("https://") for r in rows for s in r["sources"])
 
 

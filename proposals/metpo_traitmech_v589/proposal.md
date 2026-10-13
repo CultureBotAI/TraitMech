@@ -31,25 +31,29 @@ asserted. The pinned ontology and all existing records are unchanged.
    1C separately concerns CHO1/ACT1 after three-hour repression; its generic
    significance comparator is ambiguous. The 18-hour localization assay
    (supplement 2E) and competitive fitness panel (1G) have different endpoints.
-2. [D'Urso et al. 2016](https://doi.org/10.7554/eLife.16691), PMID:27336723,
-   PMC4951200. Figure 7A compares selected mRNA responses after salt exposure,
-   two-hour recovery and peroxide challenge. The complete quoted Results
-   sentence reports the authors' own confirmation for PGM2, PMT5 and YGP1
-   (Figure 7A), plus USV1 explicitly not shown. Its preceding sentence
-   attributes the gene count and four-generation duration to Guan 2012;
-   that duration is not measured by Figure 7A. Actual 7B/C/D contents conflict
-   with their caption assignments; the discrepancy remains explicit.
+2. [Guan et al. 2012](https://doi.org/10.1534/genetics.112.143016), PMID:22851651,
+   PMC3454879. The complete Figure 4 caption opening directly states the
+   enhanced expression response. Salt pretreatment is followed by washing,
+   240 minutes of stress-free recovery and a peroxide challenge, with a
+   matched mock control. Only the induced subset of the mixed 449-gene set
+   supports enhanced activation; this is not a count of induced genes.
+   Methods and Figure 4A sample through 40 minutes, whereas Results describes
+   60 minutes. Figure 5 shows TSA2 qPCR kinetics, not direct initiation rates.
+   The paper's four-to-five-generation resistance claim is a separate endpoint.
+   Guan replaces an anaphoric D'Urso 2016 excerpt after review #1905; the
+   earlier source checks and review #1904 resolution remain historical records.
 
-Two distinct publications do not establish independent-laboratory replication:
-these papers share the Brickner research lineage. Laboratory/engineered strain
+The papers report different laboratory assays, not independent replication of
+the same experiment. Laboratory/engineered strain
 contexts do not establish species-wide natural exemplars. Selected strain-table
 rows were read, not a complete rendered supplement audit. The CHO1 locator and
 HTA1-mCherry/Pho88 source discrepancies remain unresolved.
 
-Both short snippets are contiguous Results spans directly matched in primary
-XML and publisher Version-of-Record HTML. Native DOI/abstract verification
-returns `NOT_IN_ABSTRACT`, not `VERIFIED`; the separate full-text match is the
-supporting check. No snippet baseline exception is introduced. Scientific
+Both short snippets are contiguous primary-result spans: Sump's Results text
+matches its primary XML and publisher HTML, and Guan's Figure 4 caption matches
+the retained publisher HTML. Actual native DOI/abstract-verifier outcomes are
+recorded separately in the sidecar, not relabeled as full-text verification.
+No snippet baseline exception is introduced. Scientific
 abstracts were read separately. Selected text/caption agreement after Unicode
 and whitespace normalization is not whole-article version equality; limited-
 resolution figure inspection is not numerical or raw-data reanalysis.

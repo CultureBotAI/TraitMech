@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  slug: enhanced_transcriptional_reactivation_memory
+session:
+  id: 2026-10-13T015923Z-codex-52e043
+  timestamp: '2026-10-13T01:59:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1905
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1903
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - provenance
+  - discussions
+  summary: Replace anaphoric confirmation with a self-contained primary result
+  details: For PR 1903 issue 1905, replaced the D Urso 2016 snippet with Guan 2012 DOI 10.1534/genetics.112.143016
+    Figure 4 caption opening. Exact publisher text and source identity were checked and actual
+    Figures 4 and 5 inspected. Qualified four-hour recovery, mixed induced/repressed genes
+    and Results versus Methods timing discrepancy. Prior source checks and curation history
+    are retained; definition, identifiers and PROPOSED status unchanged. Native checks and
+    regenerated artifact gates are recorded separately.

@@ -535,6 +535,10 @@ before the head noun of a phrase, after a dangling article, preposition, or
 conjunction, or before a coordinated complement that would change the statement's
 scope. Quote enough of the source sentence for the stored span to read as the
 same claim without relying on omitted words.
+Check anaphora too: a complete sentence that reports "this observation" or
+"these genes" may still omit the phenotype result. Select another self-contained
+primary-result span or source when including the antecedent would exceed the
+quotation budget; explanatory notes do not repair that omission (#1905).
 
 Publisher HTML may encode meaningful symbols as image tags. If a source renders
 part of a passage as an image, quote a source-rendered text alternative when one

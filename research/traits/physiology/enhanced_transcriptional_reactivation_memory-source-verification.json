@@ -3,62 +3,6 @@
   "status": "PROPOSED trait accepted; validation and adversarial review remain separate gates.",
   "rows": [
     {
-      "doi": "10.7554/eLife.16691",
-      "pmid": "27336723",
-      "title": "Set1/COMPASS and Mediator are repurposed to promote epigenetic transcriptional memory.",
-      "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
-      "section_type": "Results",
-      "section": "s2-7",
-      "exact_contiguous_span": true,
-      "source_identity_verified": true,
-      "native_verdict": "NOT_IN_ABSTRACT",
-      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
-      "native_checked_at": "2026-10-13T01:24:38.259277+00:00",
-      "native_similarity": 0.34,
-      "manual_contiguous_full_text_matches": {
-        "primary_xml.xml": [
-          1
-        ],
-        "publisher-vor.html": [
-          1
-        ]
-      },
-      "qualification": "D'Urso et al. 2016, PMID:27336723, PMC4951200; Results s2-7, paragraph 1, contiguous in primary XML and publisher Version of Record HTML. This complete sentence reports the authors' own confirmation: prior salt exposure enhances later peroxide-induced mRNA responses. The preceding sentence attributes the gene count and duration to Guan 2012, not a new measurement here. Figure 7A directly tests selected mRNA responses after 0.7 M NaCl for one hour, two-hour rich-medium recovery, then 0.5 mM H2O2. PGM2, PMT5 and YGP1 differ from the HSP31 control; USV1 is explicitly not shown. Four-generation persistence is not measured in that panel. Actual Figure 7B is wild-type ChIP, C mutant ChIP, D mutant mRNA and E Ssn3 ChIP; caption B/C/D assignments conflict with the image. INO1 mutant reactivation defects in Figure 1E/F alone do not establish faster within-wild-type reactivation. Relevant Results, Methods, abstract and actual figures were inspected; raw data were not reanalyzed. Native abstract lookup returns NOT_IN_ABSTRACT, with the selected quotation independently matched in full text.",
-      "sources": [
-        {
-          "kind": "primary_xml",
-          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
-          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
-          "accessed_at": "2026-10-12T21:24:48.138101+00:00",
-          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-primary_xml.xml",
-          "sha256": "6f4871eee27285b38bf469d510688964b2c1ccf024d95c3a6f9fdce3a22a384d"
-        },
-        {
-          "kind": "publisher_version_of_record",
-          "url": "https://journal-symfony7.elifesciences.org/articles/16691",
-          "canonical_url": "https://elifesciences.org/articles/16691",
-          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-publisher-vor.html",
-          "sha256": "8cfc4aab7b5d3c219679c0804ef2f792c99d4fcad374bf933a5fc228d6d1eccf"
-        },
-        {
-          "kind": "source_qualified_med",
-          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
-          "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
-          "accessed_at": "2026-10-12T21:24:50.079314+00:00",
-          "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-source_qualified_med.json",
-          "sha256": "8759e42b1ceafc0928d8300b4dd4d5715561dc5df64cc73f8817ec299ba8a89a"
-        }
-      ],
-      "initial_snippet_check": {
-        "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
-        "native_verdict": "NOT_IN_ABSTRACT",
-        "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
-        "native_checked_at": "2026-10-12T23:56:10.919158+00:00",
-        "native_similarity": 0.27936507936507937,
-        "qualification": "This Results sentence attributes the duration and gene count to Guan 2012; D'Urso Figure 7A directly tests selected genes after two-hour recovery. It is not a newly measured four-generation duration in that panel."
-      }
-    },
-    {
       "doi": "10.7554/eLife.77646",
       "pmid": "35579426",
       "title": "Mitotically heritable, RNA polymerase II-independent H3K4 dimethylation stimulates <i>INO1</i> transcriptional memory.",
@@ -68,8 +12,8 @@
       "exact_contiguous_span": true,
       "source_identity_verified": true,
       "native_verdict": "NOT_IN_ABSTRACT",
-      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
-      "native_checked_at": "2026-10-13T01:24:38.259098+00:00",
+      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support the Results and figure-caption snippets.",
+      "native_checked_at": "2026-10-13T01:59:53.020508+00:00",
       "native_similarity": 0.36,
       "manual_contiguous_full_text_matches": {
         "primary_xml.xml": [
@@ -105,6 +49,52 @@
           "sha256": "d451e408c76bbbf5699051c2713d266bec56c6221c286a212cc17cada1ced115"
         }
       ]
+    },
+    {
+      "doi": "10.1534/genetics.112.143016",
+      "pmid": "22851651",
+      "pmcid": "PMC3454879",
+      "title": "Cellular memory of acquired stress resistance in Saccharomyces cerevisiae.",
+      "snippet": "Cells with prior NaCl exposure have a faster gene-expression response to H2O2.",
+      "section_type": "Figure caption",
+      "section": "Figure 4, complete opening sentence",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "manual_contiguous_full_text_matches": {
+        "publisher_html_figure_4_caption": true
+      },
+      "qualification": "Guan et al. 2012, PMID:22851651, PMC3454879; complete opening sentence of the Figure 4 caption, contiguous in publisher HTML with chemical subscripts retained as text. BY4741-background laboratory yeast received 0.7 M NaCl for 60 minutes, washing and 240 minutes of stress-free YPD recovery (two generations in Results), then 0.5 mM H2O2, compared with mock-treated cells. No significant pre-challenge expression difference at FDR 0.05 does not prove identical baselines. Figure 4 includes induced and repressed genes; only the enhanced-induction subset supports this activation phenotype. The 449-gene count is not a count of induced genes. Methods and Figure 4A sample through 40 minutes, whereas Results describes a 60-minute response. Figure 5 shows TSA2 mRNA kinetics by qPCR; nup42 deletion reduces the priming benefit, while nup100 naive and primed responses are both fast, not simple evidence of a universal mechanism. Four-to-five generation resistance persistence is a different endpoint. Relevant Results, Methods, scientific abstract and actual Figures 4 and 5 were inspected; raw data were not reanalyzed. Native abstract-verifier results are retained separately in the source sidecar; exact publisher full-text matching supports this caption quotation.",
+      "sources": [
+        {
+          "kind": "publisher_version_of_record",
+          "path": "/tmp/traitmech-stress-memory-guan2012-minimal-20261012.html",
+          "url": "https://academic.oup.com/genetics/article/192/2/495/5935173",
+          "sha256": "eb97f86a7134114fa570d5ab66416d91dfb1da2f6b6fc5d98682a9cf685a4241",
+          "rechecked_at": "2026-10-13T01:58:56.112941+00:00",
+          "acquisition": "Retained 2026-10-12 source bytes, not a fresh retrieval.",
+          "final_url": "https://oup.silverchair-cdn.com/article-minimal/5935173"
+        },
+        {
+          "kind": "source_qualified_med",
+          "path": "/tmp/traitmech-stress-memory-guan2012-med-20261012.json",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22851651+AND+SRC%3AMED&format=json&resultType=core",
+          "sha256": "2c4e473dcbec83625790c53e509be3c919e4d2e7d676567f004dba67bdedf87c",
+          "rechecked_at": "2026-10-13T01:58:56.113099+00:00",
+          "acquisition": "Retained 2026-10-12 source bytes, not a fresh retrieval."
+        },
+        {
+          "kind": "crossref_identity",
+          "path": "/tmp/traitmech-stress-memory-guan2012-crossref-20261012.json",
+          "url": "https://api.crossref.org/works/10.1534/genetics.112.143016",
+          "sha256": "5ce6c120b889240a150171cfc6cdc13ecef76f9dd6747185c9560d15ecadf19c",
+          "rechecked_at": "2026-10-13T01:58:56.113284+00:00",
+          "acquisition": "Retained 2026-10-12 source bytes, not a fresh retrieval."
+        }
+      ],
+      "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support the Results and figure-caption snippets.",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_similarity": 0.35,
+      "native_checked_at": "2026-10-13T01:59:53.021372+00:00"
     }
   ],
   "figure_assets": [
@@ -175,25 +165,34 @@
       "source": "sump2022",
       "figure": "fig1s2",
       "status": "Visually inspected after retrieval; limited-resolution panels, not raw-data reanalysis or pixel-equivalence verification."
+    },
+    {
+      "number": 4,
+      "requested_url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/genetics/192/2/10.1534_genetics.112.143016/8/495fig4.jpeg?Expires=2147483647&Signature=QLM-IseFsOXRe8QeUx2O8GWpP7Zl2H3xndzalwYZuOj0Cs7xQQp0A~bXBQ0a~~aNAU4p7m5GyaVkm2FpHHbvf8ZaPjsAKy4vU6Vmy5iKgE1pWrPo4tYrnPbMzb7oz9b8S9zJ3yN-JnHqNqLINgTomCCSRwHQDyzSLrNOV~PV3Lasd6H7UKbjvhw9b6ioMv-9nRr6TX-oTXHl8XZCiJqKeggv7QvU6YGI47-tuo1iNPyZFQ7Y0Vp8qcOK~KgfX6LEQlnJMUejVPbOQQfLXTB9UnUBgG~cPhJ9VPcSKJBscNngR3ydrCR4Lr1Asltpq~YeCfeXMiJKBY6eXeKb4NZqHg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+      "final_url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/genetics/192/2/10.1534_genetics.112.143016/8/495fig4.jpeg?Expires=2147483647&Signature=QLM-IseFsOXRe8QeUx2O8GWpP7Zl2H3xndzalwYZuOj0Cs7xQQp0A~bXBQ0a~~aNAU4p7m5GyaVkm2FpHHbvf8ZaPjsAKy4vU6Vmy5iKgE1pWrPo4tYrnPbMzb7oz9b8S9zJ3yN-JnHqNqLINgTomCCSRwHQDyzSLrNOV~PV3Lasd6H7UKbjvhw9b6ioMv-9nRr6TX-oTXHl8XZCiJqKeggv7QvU6YGI47-tuo1iNPyZFQ7Y0Vp8qcOK~KgfX6LEQlnJMUejVPbOQQfLXTB9UnUBgG~cPhJ9VPcSKJBscNngR3ydrCR4Lr1Asltpq~YeCfeXMiJKBY6eXeKb4NZqHg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+      "accessed_at": "2026-10-13T01:52:18.413449+00:00",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-transcriptional-memory-selfcontained-20261013/guan2012-figure4.jpeg",
+      "bytes": 151536,
+      "sha256": "b88e0a5d88981895490015cae3a6d0581cd7db07eafb791221ebbc6930809f81",
+      "source": "guan2012",
+      "figure": "fig4",
+      "status": "Actual publisher image visually inspected 2026-10-13; not raw-data reanalysis."
+    },
+    {
+      "number": 5,
+      "requested_url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/genetics/192/2/10.1534_genetics.112.143016/8/495fig5.jpeg?Expires=2147483647&Signature=cVJfoRDmizyl1KRHCxCFDZdhoYne1KFySuiZiTscLJuTKhzMuiptJ4x3~jMck0NSFYUC~AkquU2J5uWJE6yKYEomkqCR1tNnCaJZXs9pBkd1yLcX2sWHF7fc9efNwPWiB9lQbJGqZfVUQj61LrNtKGlgxqJbZgohFnPaQPVTGJtTZWmqRfV0yY6~RwCo3X8OMqXFDZO0B1JqFuYFqm~UQH-vfxqOTcx~JKHHSMCpWMiMGXgytAuG2~eBgu2EpgLpFwHbobp5qU3hdI79mtZukN~AGntikhL0PlB1FjnU0KzeVybzb5XDqWNRGZybXQ4aq9DOzILH~rNR7PasdVVW2w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+      "final_url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/genetics/192/2/10.1534_genetics.112.143016/8/495fig5.jpeg?Expires=2147483647&Signature=cVJfoRDmizyl1KRHCxCFDZdhoYne1KFySuiZiTscLJuTKhzMuiptJ4x3~jMck0NSFYUC~AkquU2J5uWJE6yKYEomkqCR1tNnCaJZXs9pBkd1yLcX2sWHF7fc9efNwPWiB9lQbJGqZfVUQj61LrNtKGlgxqJbZgohFnPaQPVTGJtTZWmqRfV0yY6~RwCo3X8OMqXFDZO0B1JqFuYFqm~UQH-vfxqOTcx~JKHHSMCpWMiMGXgytAuG2~eBgu2EpgLpFwHbobp5qU3hdI79mtZukN~AGntikhL0PlB1FjnU0KzeVybzb5XDqWNRGZybXQ4aq9DOzILH~rNR7PasdVVW2w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+      "accessed_at": "2026-10-13T01:52:19.111432+00:00",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-transcriptional-memory-selfcontained-20261013/guan2012-figure5.jpeg",
+      "bytes": 121869,
+      "sha256": "5f6adb994ffe07f2825a7fb847648961688d0f66905c8a8b4d3f3cb2082d079a",
+      "source": "guan2012",
+      "figure": "fig5",
+      "status": "Actual publisher image visually inspected 2026-10-13; not raw-data reanalysis."
     }
   ],
-  "source_version_assessment": {
-    "checked_at": "2026-10-12T23:37:06.659742+00:00",
-    "normalization": "Unicode NFKC and whitespace collapse only; all remaining characters compared exactly.",
-    "selected_paragraphs": 15,
-    "result": "Selected Results/Methods paragraphs and separately read scientific abstract/captions match after normalization; not full-article or byte-level equality.",
-    "dates": {
-      "durso2016": {
-        "accepted": "2016-06-23",
-        "version_of_record": "2016-07-19"
-      },
-      "sump2022": {
-        "accepted": "2022-05-17",
-        "version_of_record": "2022-05-24"
-      }
-    },
-    "access_limits": "Ordinary publisher challenges; public alternate publisher host retrieved. A later D'Urso web fetch failed; retained earlier bytes were hash-checked, not represented as fresh access."
-  },
   "strain_supplement": {
     "url": "https://cdn.elifesciences.org/articles/77646/elife-77646-supp1-v2.docx",
     "sha256": "aca587318bb0a8d582e56346514160180e0fa5a151e4778aff8a3d38c40e5cb4",
@@ -221,7 +220,8 @@
       "synonyms",
       "xrefs"
     ],
-    "goal": "active; discovery not exhausted"
+    "goal": "active; discovery not exhausted",
+    "scope": "Original acceptance decision; subsequent source substitutions are recorded separately."
   },
   "allocation": {
     "checked_at": "2026-10-13T00:34:29.009202+00:00",
@@ -369,7 +369,7 @@
     "scope": "Available ignored/hidden files, retained registered historical tracked trees, nine independent copies, current upstream selected ontology/templates/mappings/proposals and complete nonremoved changed blobs of 11 stable open/draft PRs. Gzip content was decoded. No inaccessible historical ignored/untracked bytes, symlink traversal, unchanged PR-tree files or deleted historical blobs. Reservation must be refreshed before publication."
   },
   "notice_checks": "Bounded publisher, source-qualified MED and Crossref checks on 2026-10-12 exposed no linked correction/retraction. This is not exhaustive notice absence.",
-  "source_independence": "Two papers in the same Brickner research lineage, not independent laboratory replication.",
+  "source_independence": "Sump and Guan report different laboratory assays; not independent replication of the same experiment.",
   "input_receipts": [
     {
       "path": "/tmp/traitmech-transcriptional-memory-snippet-canary-20261012.json",
@@ -430,6 +430,18 @@
     {
       "path": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/snippet-results.tsv",
       "sha256": "42d7a5dd654db460f058fe4392261896bf72c8d7457c4e20608d9937b5ee7f67"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-selfcontained-20261013/figure-acquisition.json",
+      "sha256": "d8a28e0e948ad95c0a298770176444f32093292898490ae8c4784189893926a1"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/records.json",
+      "sha256": "ff1820b6b8c76a0da385f4561549b5861de1635cfd211c362354b2b89caac9ef"
+    },
+    {
+      "path": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/snippet-results.tsv",
+      "sha256": "7c7a9c7ac134097d3f7df4326e54caf7a85e5cfa7cb764234a30bfb0f60b6966"
     }
   ],
   "history_attribution_correction": {
@@ -506,6 +518,239 @@
     "scope": "Complete own-confirmation sentence, contextualized by preceding result and actual Figure 7A. Original quotation spelling was faithful; attribution was the accepted finding.",
     "native_check_pending": false
   },
+  "pre_self_containment_evidence": {
+    "reason": "Superseded current D'Urso evidence after issue 1905; immutable prior reviews remain valid history.",
+    "rows": [
+      {
+        "doi": "10.7554/eLife.16691",
+        "pmid": "27336723",
+        "title": "Set1/COMPASS and Mediator are repurposed to promote epigenetic transcriptional memory.",
+        "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
+        "section_type": "Results",
+        "section": "s2-7",
+        "exact_contiguous_span": true,
+        "source_identity_verified": true,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
+        "native_checked_at": "2026-10-13T01:24:38.259277+00:00",
+        "native_similarity": 0.34,
+        "manual_contiguous_full_text_matches": {
+          "primary_xml.xml": [
+            1
+          ],
+          "publisher-vor.html": [
+            1
+          ]
+        },
+        "qualification": "D'Urso et al. 2016, PMID:27336723, PMC4951200; Results s2-7, paragraph 1, contiguous in primary XML and publisher Version of Record HTML. This complete sentence reports the authors' own confirmation: prior salt exposure enhances later peroxide-induced mRNA responses. The preceding sentence attributes the gene count and duration to Guan 2012, not a new measurement here. Figure 7A directly tests selected mRNA responses after 0.7 M NaCl for one hour, two-hour rich-medium recovery, then 0.5 mM H2O2. PGM2, PMT5 and YGP1 differ from the HSP31 control; USV1 is explicitly not shown. Four-generation persistence is not measured in that panel. Actual Figure 7B is wild-type ChIP, C mutant ChIP, D mutant mRNA and E Ssn3 ChIP; caption B/C/D assignments conflict with the image. INO1 mutant reactivation defects in Figure 1E/F alone do not establish faster within-wild-type reactivation. Relevant Results, Methods, abstract and actual figures were inspected; raw data were not reanalyzed. Native abstract lookup returns NOT_IN_ABSTRACT, with the selected quotation independently matched in full text.",
+        "sources": [
+          {
+            "kind": "primary_xml",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
+            "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4951200/fullTextXML",
+            "accessed_at": "2026-10-12T21:24:48.138101+00:00",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-primary_xml.xml",
+            "sha256": "6f4871eee27285b38bf469d510688964b2c1ccf024d95c3a6f9fdce3a22a384d"
+          },
+          {
+            "kind": "publisher_version_of_record",
+            "url": "https://journal-symfony7.elifesciences.org/articles/16691",
+            "canonical_url": "https://elifesciences.org/articles/16691",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-publisher-vor.html",
+            "sha256": "8cfc4aab7b5d3c219679c0804ef2f792c99d4fcad374bf933a5fc228d6d1eccf"
+          },
+          {
+            "kind": "source_qualified_med",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
+            "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27336723+AND+SRC%3AMED&format=json&resultType=core",
+            "accessed_at": "2026-10-12T21:24:50.079314+00:00",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/durso2016-source_qualified_med.json",
+            "sha256": "8759e42b1ceafc0928d8300b4dd4d5715561dc5df64cc73f8817ec299ba8a89a"
+          }
+        ],
+        "initial_snippet_check": {
+          "snippet": "Previous exposure to 0.7M sodium chloride leads to faster or stronger induction of ~75 H2O2-inducible genes for up to 4 generations",
+          "native_verdict": "NOT_IN_ABSTRACT",
+          "native_context": "Preacceptance DOI/abstract canary; final-record verifier is separately required.",
+          "native_checked_at": "2026-10-12T23:56:10.919158+00:00",
+          "native_similarity": 0.27936507936507937,
+          "qualification": "This Results sentence attributes the duration and gene count to Guan 2012; D'Urso Figure 7A directly tests selected genes after two-hour recovery. It is not a newly measured four-generation duration in that panel."
+        }
+      },
+      {
+        "doi": "10.7554/eLife.77646",
+        "pmid": "35579426",
+        "title": "Mitotically heritable, RNA polymerase II-independent H3K4 dimethylation stimulates <i>INO1</i> transcriptional memory.",
+        "snippet": "Upon Anchor Away of Opi1, reactivation was faster than activation",
+        "section_type": "Results",
+        "section": "s2-1",
+        "exact_contiguous_span": true,
+        "source_identity_verified": true,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "native_context": "Corrected final-record native abstract verification; separate exact primary full-text matches support Results snippets.",
+        "native_checked_at": "2026-10-13T01:24:38.259098+00:00",
+        "native_similarity": 0.36,
+        "manual_contiguous_full_text_matches": {
+          "primary_xml.xml": [
+            2
+          ],
+          "publisher-vor.html": [
+            2
+          ]
+        },
+        "qualification": "Synthetic Opi1 Anchor-Away assay in Figure 1D, not ordinary-starvation INO1 reactivation in Figure 1B. The following clause reports loss in mrs and nup100 mutant cells; no universal mechanism is inferred.",
+        "sources": [
+          {
+            "kind": "primary_xml",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9129879/fullTextXML",
+            "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9129879/fullTextXML",
+            "accessed_at": "2026-10-12T21:24:51.189605+00:00",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-primary_xml.xml",
+            "sha256": "4d895d6a7b79a8f94e4c9d9cc8177c96c090ff6a619916e57c12a75ea9ceac5e"
+          },
+          {
+            "kind": "publisher_version_of_record",
+            "url": "https://journal-symfony7.elifesciences.org/articles/77646",
+            "canonical_url": "https://elifesciences.org/articles/77646",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-publisher-vor.html",
+            "sha256": "66ed73b8115b175e85ca7a8133196feec989be16e0a55c1eda1e125bf5fd02a3"
+          },
+          {
+            "kind": "source_qualified_med",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35579426+AND+SRC%3AMED&format=json&resultType=core",
+            "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35579426+AND+SRC%3AMED&format=json&resultType=core",
+            "accessed_at": "2026-10-12T21:24:52.687356+00:00",
+            "path": "/tmp/traitmech-transcriptional-memory-sources-20261012/sump2022-source_qualified_med.json",
+            "sha256": "d451e408c76bbbf5699051c2713d266bec56c6221c286a212cc17cada1ced115"
+          }
+        ]
+      }
+    ],
+    "native_record_checks": [
+      {
+        "command": [
+          "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate",
+          "-s",
+          "src/traitmech/schema/traitmech.yaml",
+          "--target-class",
+          "TraitRecord",
+          "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+        ],
+        "exit": 0,
+        "seconds": 1.6902252440340817,
+        "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-00.log"
+      },
+      {
+        "command": [
+          "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+          "scripts/validate_strict.py",
+          "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
+        ],
+        "exit": 0,
+        "seconds": 3.0285992468707263,
+        "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-01.log"
+      },
+      {
+        "command": [
+          "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+          "scripts/verify_snippets.py",
+          "--record",
+          "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+          "--out",
+          "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/snippet-results.tsv"
+        ],
+        "exit": 0,
+        "seconds": 3.6608592090196908,
+        "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-02.log"
+      }
+    ],
+    "native_record_snippets": [
+      {
+        "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.7554/eLife.77646",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.36",
+        "snippet": "Upon Anchor Away of Opi1, reactivation was faster than activation",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.7554/eLife.16691",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.34",
+        "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
+        "nearest_sentence": ""
+      }
+    ],
+    "source_independence": "Two papers in the same Brickner research lineage, not independent laboratory replication.",
+    "source_version_assessment": {
+      "checked_at": "2026-10-12T23:37:06.659742+00:00",
+      "normalization": "Unicode NFKC and whitespace collapse only; all remaining characters compared exactly.",
+      "selected_paragraphs": 15,
+      "result": "Selected Results/Methods paragraphs and separately read scientific abstract/captions match after normalization; not full-article or byte-level equality.",
+      "dates": {
+        "durso2016": {
+          "accepted": "2016-06-23",
+          "version_of_record": "2016-07-19"
+        },
+        "sump2022": {
+          "accepted": "2022-05-17",
+          "version_of_record": "2022-05-24"
+        }
+      },
+      "access_limits": "Ordinary publisher challenges; public alternate publisher host retrieved. A later D'Urso web fetch failed; retained earlier bytes were hash-checked, not represented as fresh access.",
+      "scope": "Prior joint assessment retained; D'Urso portions are historical, not current record evidence."
+    }
+  },
+  "source_version_assessment": {
+    "sump2022": {
+      "checked_at": "2026-10-12T23:37:06.659742+00:00",
+      "normalization": "Unicode NFKC and whitespace collapse only; all remaining characters compared exactly.",
+      "selected_paragraphs": 15,
+      "result": "Selected Results/Methods paragraphs and separately read scientific abstract/captions match after normalization; not full-article or byte-level equality.",
+      "dates": {
+        "durso2016": {
+          "accepted": "2016-06-23",
+          "version_of_record": "2016-07-19"
+        },
+        "sump2022": {
+          "accepted": "2022-05-17",
+          "version_of_record": "2022-05-24"
+        }
+      },
+      "access_limits": "Ordinary publisher challenges; public alternate publisher host retrieved. A later D'Urso web fetch failed; retained earlier bytes were hash-checked, not represented as fresh access.",
+      "scope": "Prior joint assessment retained; D'Urso portions are historical, not current record evidence."
+    },
+    "guan2012": {
+      "source": "Retained publisher article HTML; identity matched source-qualified MED and Crossref.",
+      "quote_match": "Complete Figure 4 caption opening, whitespace normalized; subscript text preserved.",
+      "inspected": "Scientific abstract; relevant strain, microarray and qPCR Methods; complete expression-memory Results and Nup42 Results; relevant Discussion; actual Figures 4 and 5 and captions.",
+      "limits": "Not full-article byte equivalence, raw-data reanalysis or a rendered supplementary audit. S4 not visually inspected in this correction.",
+      "access": "Fresh web publisher fetch on 2026-10-13 failed at its public redirect; retained prior successful source bytes rechecked. Public figure downloads succeeded; an initial URL parser lost outer query fields and returned 403 before corrected parsing of the observed link.",
+      "notice_scope": "One exact MED result matched PMID, DOI, title and PMCID. Its commentCorrectionList was absent. Crossref matched the DOI/title and exposed a has-review relation, not a correction or retraction; update-to/updated-by were absent. These bounded fields do not establish exhaustive notice absence.",
+      "license_scope": "MED isOpenAccess N; free publisher access is not an open-reuse license."
+    }
+  },
+  "self_containment_correction": {
+    "issue": 1905,
+    "review": "https://github.com/CultureBotAI/TraitMech/pull/1903#pullrequestreview-5497886353",
+    "checked_at": "2026-10-13T01:58:56.128996+00:00",
+    "source": "DOI:10.1534/genetics.112.143016",
+    "words": 12,
+    "native_check_pending": false,
+    "rationale": "A self-contained primary caption result replaces an anaphoric own-confirmation sentence. Prior history, definition and identifiers are preserved.",
+    "visual_assessment": "Figure 4A distinguishes salt, naive peroxide and prior-stress peroxide columns; both red induction and green repression are present. Figure 4C separates WT induced/repressed averages from nup42 deletion. Figure 5 shows earlier TSA2 induction after prior stress in WT, reduced distinction in nup42 deletion, retained distinction in nup59 deletion, and fast naive as well as primed nup100 deletion responses.",
+    "assay_limits": [
+      "240-minute recovery, not the superseded D'Urso two-hour assay.",
+      "Methods and Figure 4A stop at 40 minutes, Results describes 60 minutes.",
+      "FDR-nonsignificant baseline difference is not proof of equality.",
+      "449 includes induced and repressed genes; only induced subset supports activation.",
+      "Resistance-duration and reacquisition assays are not transcript-memory duration.",
+      "No natural canonical taxa, universal mechanism or causal graph asserted."
+    ]
+  },
   "native_record_checks": [
     {
       "command": [
@@ -517,8 +762,8 @@
         "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
       ],
       "exit": 0,
-      "seconds": 1.6902252440340817,
-      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-00.log"
+      "seconds": 1.975129656959325,
+      "log": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/records-00.log"
     },
     {
       "command": [
@@ -527,8 +772,8 @@
         "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml"
       ],
       "exit": 0,
-      "seconds": 3.0285992468707263,
-      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-01.log"
+      "seconds": 3.548744056839496,
+      "log": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/records-01.log"
     },
     {
       "command": [
@@ -537,11 +782,11 @@
         "--record",
         "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
         "--out",
-        "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/snippet-results.tsv"
+        "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/snippet-results.tsv"
       ],
       "exit": 0,
-      "seconds": 3.6608592090196908,
-      "log": "/tmp/traitmech-transcriptional-memory-remediation-checks-20261013/records-02.log"
+      "seconds": 3.679770099930465,
+      "log": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/records-02.log"
     }
   ],
   "native_record_snippets": [
@@ -557,10 +802,10 @@
     {
       "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
       "locator": "evidence[1]",
-      "reference": "DOI:10.7554/eLife.16691",
+      "reference": "DOI:10.1534/genetics.112.143016",
       "verdict": "NOT_IN_ABSTRACT",
-      "similarity": "0.34",
-      "snippet": "We confirmed this observation for several of these genes (PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012).",
+      "similarity": "0.35",
+      "snippet": "Cells with prior NaCl exposure have a faster gene-expression response to H2O2.",
       "nearest_sentence": ""
     }
   ]

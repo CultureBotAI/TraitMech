@@ -22,9 +22,10 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.t
 IDENTIFIER = "traitmech:000713"
 METPO_ID = "METPO:1066600"
 DEFINITION_SOURCE = "DOI:10.7554/eLife.77646"
-STRESS_SOURCE = "DOI:10.7554/eLife.16691"
+STRESS_SOURCE = "DOI:10.1534/genetics.112.143016"
 TIMESTAMP = "2026-10-13T00:34:29Z"
 RESULT_CORRECTION_TIMESTAMP = "2026-10-13T01:22:19Z"
+SELF_CONTAINMENT_TIMESTAMP = "2026-10-13T01:56:28Z"
 PARENT = {
     "identifier": "METPO:1000059",
     "label": "phenotype",
@@ -79,29 +80,30 @@ RECORD = {
         {
             "reference": STRESS_SOURCE,
             "snippet": (
-                "We confirmed this observation for several of these genes "
-                "(PGM2, PMT5 and YGP1, Figure 7A; and USV1, not shown; Guan et al., 2012)."
+                "Cells with prior NaCl exposure have a faster gene-expression response to H2O2."
             ),
             "notes": (
-                "D'Urso et al. 2016, PMID:27336723, PMC4951200; Results s2-7, "
-                "paragraph 1, contiguous in primary XML and publisher Version "
-                "of Record HTML. This complete sentence reports the authors' own "
-                "confirmation: prior salt exposure enhances later peroxide-induced "
-                "mRNA responses. The preceding sentence attributes the gene count "
-                "and duration to Guan 2012, not a new measurement here. Figure 7A "
-                "directly tests selected mRNA responses after 0.7 M NaCl for "
-                "one hour, two-hour rich-medium "
-                "recovery, then 0.5 mM H2O2. PGM2, PMT5 and YGP1 differ from "
-                "the HSP31 control; USV1 is explicitly not shown. "
-                "Four-generation persistence is not measured "
-                "in that panel. Actual Figure 7B is wild-type ChIP, C mutant "
-                "ChIP, D mutant mRNA and E Ssn3 ChIP; caption B/C/D assignments "
-                "conflict with the image. INO1 mutant reactivation defects in "
-                "Figure 1E/F alone do not establish faster within-wild-type "
-                "reactivation. Relevant Results, Methods, abstract and actual "
-                "figures were inspected; raw data were not reanalyzed. Native "
-                "abstract lookup returns NOT_IN_ABSTRACT, with the selected "
-                "quotation independently matched in full text."
+                "Guan et al. 2012, PMID:22851651, PMC3454879; complete opening "
+                "sentence of the Figure 4 caption, contiguous in publisher HTML "
+                "with chemical subscripts retained as text. BY4741-background "
+                "laboratory yeast received 0.7 M NaCl for 60 minutes, washing "
+                "and 240 minutes of stress-free YPD recovery (two generations "
+                "in Results), then 0.5 mM H2O2, compared with mock-treated cells. "
+                "No significant pre-challenge expression difference at FDR 0.05 "
+                "does not prove identical baselines. Figure 4 includes induced "
+                "and repressed genes; only the enhanced-induction subset supports "
+                "this activation phenotype. The 449-gene count is not a count "
+                "of induced genes. Methods and Figure 4A sample through 40 minutes, "
+                "whereas Results describes a 60-minute response. Figure 5 shows "
+                "TSA2 mRNA kinetics by qPCR; nup42 deletion reduces the priming "
+                "benefit, while nup100 naive and primed responses are both fast, "
+                "not simple evidence of a universal mechanism. Four-to-five "
+                "generation resistance persistence is a different endpoint. "
+                "Relevant Results, Methods, scientific abstract and actual "
+                "Figures 4 and 5 were inspected; raw data were not reanalyzed. "
+                "Native abstract-verifier results are retained separately in "
+                "the source sidecar; exact publisher full-text matching supports "
+                "this caption quotation."
             ),
         },
     ],
@@ -139,8 +141,8 @@ RECORD = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "The two papers share a research lineage, not independent "
-                "laboratory replication. Laboratory and engineered yeast "
+                "Sump and Guan report different laboratory assays, not "
+                "independent replication of the same experiment. Laboratory and engineered yeast "
                 "backgrounds are qualified evidence, not natural canonical "
                 "taxa. Sump's retrieved v2 strain table has a CHO1 DBY1428 "
                 "figure locator and an HTA1-mCherry versus Methods Pho88 "
@@ -211,6 +213,18 @@ def build_record() -> dict:
             "four-generation and assay limits; no definition or identifiers changed."
         ),
         llm_assisted=True, timestamp=RESULT_CORRECTION_TIMESTAMP,
+    )
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_SNIPPET_SELF_CONTAINMENT",
+        changes=(
+            "Replaced the anaphoric D'Urso confirmation with Guan 2012's "
+            "self-contained Figure 4 result sentence, addressing review issue "
+            "1905 without extending the quotation budget. Preserved prior "
+            "evidence checks as history. Qualified Guan's four-hour recovery, "
+            "mixed induced/repressed gene set and assay timing discrepancy; "
+            "definition, identifiers and PROPOSED status are unchanged."
+        ),
+        llm_assisted=True, timestamp=SELF_CONTAINMENT_TIMESTAMP,
     )
     return record
 
