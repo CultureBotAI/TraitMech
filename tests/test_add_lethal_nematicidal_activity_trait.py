@@ -14,6 +14,7 @@ from traitmech.validation.write_validated import ValidationFailedError
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import add_lethal_nematicidal_activity_trait as writer  # noqa: E402
+from verify_snippets import iter_evidence  # noqa: E402
 
 
 @pytest.fixture
@@ -47,11 +48,13 @@ def test_identity_scope_and_history():
     assert all(e["reference"].startswith("DOI:") and 10 <= len(e["snippet"].split()) <= 25
                for e in record["evidence"])
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs", "protein_examples"])
-    event, correction = record["curation_history"]
+    event, correction, producer = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     assert correction["action"] == "CORRECTED_EVIDENCE_ROLE"
     assert datetime.fromisoformat(correction["timestamp"]) <= datetime.now(timezone.utc)
+    assert producer["action"] == "CORRECTED_PRODUCER_EXCERPT"
+    assert datetime.fromisoformat(producer["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
     assert len(writer.build_record()["evidence"]) == 2
 
@@ -59,13 +62,17 @@ def test_identity_scope_and_history():
 def test_evidence_and_endpoint_limits():
     record = writer.build_record()
     bacterial, fungal = record["evidence"]
-    for text in ["VERIFIED", "scientific Abstract", "synthetic standards", "not t-CA/PPA", "No live-culture"]:
+    assert "cultures of P. luminescens sonorensis strain Caborca" in bacterial["snippet"]
+    for text in ["NOT_IN_ABSTRACT", "Discussion", "Photorhabdus", "synthetic standards", "not t-CA/PPA", "No live-culture"]:
         assert text in bacterial["notes"]
     for text in ["NOT_IN_ABSTRACT", "culture filtrate", "water/PDB", "72 h", "without its duration"]:
         assert text in fungal["notes"]
     scope, limits = [d["rationale"] for d in record["discussions"]]
-    for text in [writer.CONTEXT_REFERENCE, "UNRESOLVED", "not microbial killing", "zero results"]:
-        assert text in scope
+    context, = record["discussions"][0]["evidence"]
+    assert context["reference"] == writer.CONTEXT_REFERENCE
+    assert context["supports"] == "NO_EVIDENCE"
+    for text in ["UNRESOLVED", "not microbial killing", "zero results"]:
+        assert text in context["explanation"]
     for text in ["reversible paralysis", "requires feeding", "CHEBI:25491", "not an xref", "no exact", "infection"]:
         assert text in scope
     for text in ["MT529846.1", "SF_570", "MT529837.1", "SF_561", "FbMi-4", "No corrected accession", "without canonical examples"]:
@@ -80,11 +87,11 @@ def test_source_receipt():
     assert [(r["reference"], r["snippet"]) for r in receipt["rows"]] == [
         (e["reference"], e["snippet"]) for e in writer.build_record()["evidence"]
     ]
-    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT"]
+    assert [r["native_verdict"] for r in receipt["rows"]] == ["NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT"]
     context, = receipt["context_only_sources"]
     assert context["reference"] == writer.CONTEXT_REFERENCE and context["native_verdict"] == "UNRESOLVED"
     assert context["role"] == "discussion_only"
-    assert context["snippet"] in writer.build_record()["discussions"][0]["rationale"]
+    assert context["snippet"] == writer.build_record()["discussions"][0]["evidence"][0]["snippet"]
     for row in [*receipt["rows"], context]:
         assert row["exact_contiguous_span"] and row["source_identity_verified"]
         assert row["words"] == len(row["snippet"].split()) <= 25
@@ -109,8 +116,9 @@ def test_proposal_contract():
     assert writer.CONTEXT_REFERENCE not in citations
 
 
-def test_known_preimage_migration_retains_context_and_history(isolated, monkeypatch):
-    previous = writer.build_initial_record()
+@pytest.mark.parametrize("build_previous", [writer.build_initial_record, writer.build_role_corrected_record])
+def test_known_preimage_migration_retains_context_and_history(isolated, monkeypatch, build_previous):
+    previous = build_previous()
     writer.write_validated_trait(previous, writer.TARGET)
     writer.PROPOSAL.parent.mkdir()
     writer.PROPOSAL.write_text(writer.proposal_tsv(previous))
@@ -119,13 +127,25 @@ def test_known_preimage_migration_retains_context_and_history(isolated, monkeypa
     assert run(monkeypatch, True) == 0
     current = yaml.safe_load(writer.TARGET.read_text())
     assert current == writer.build_record()
-    assert current["curation_history"][:-1] == previous["curation_history"]
-    assert current["evidence"] == previous["evidence"][:2]
-    context = previous["evidence"][2]
-    assert context["snippet"] in current["discussions"][0]["rationale"]
+    assert current["curation_history"][:len(previous["curation_history"])] == previous["curation_history"]
+    assert current["evidence"][1] == previous["evidence"][1]
+    context = writer.INITIAL_RECORD["evidence"][2]
+    assert context["snippet"] == current["discussions"][0]["evidence"][0]["snippet"]
     assert context["reference"] not in writer.PROPOSAL.read_text()
     after = snapshot(isolated)
     assert run(monkeypatch, True) == 0 and snapshot(isolated) == after
+
+
+def test_context_is_reachable_without_becoming_trait_support():
+    record = writer.build_record()
+    rows = list(iter_evidence(record))
+    assert [locator for locator, _ in rows] == [
+        "evidence[0]", "evidence[1]", "discussion:lethal-nematicidal-scope-and-mappings[0]",
+    ]
+    context = rows[-1][1]
+    assert context["reference"] == writer.CONTEXT_REFERENCE and context["supports"] == "NO_EVIDENCE"
+    assert context["snippet"] not in record["discussions"][0]["rationale"]
+    assert context["reference"] not in writer.proposal_tsv(record)
 
 
 def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T185752Z-codex-bb2ac8
+  timestamp: '2026-10-13T18:57:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Link the excerpt to its microbial producer
+  details: 'Addressed #1917 by replacing the compound-only excerpt with a directly matched
+    producer-linked Discussion clause. Preserved actual NOT_IN_ABSTRACT and assay qualifications.
+    Moved the unchanged Harada context snippet into structured discussion evidence with NO_EVIDENCE
+    role; it remains excluded from trait support and definition annotations. Preserved the
+    original CREATE and first EDIT history; appended CORRECTED_PRODUCER_EXCERPT. Guarded migrations
+    and replay retain earlier events. No identity, hierarchy, example, protein, graph or other-record
+    changes.'

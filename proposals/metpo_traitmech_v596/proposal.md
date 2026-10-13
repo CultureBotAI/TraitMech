@@ -24,8 +24,11 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
   PMID:35138171: culture-extract fractionation links microbial production to
   lethal activities of isolated compounds. Commercial standards were used
   for dose-response assays. Actual Figures 2/3 and Table 4 were inspected;
-  Table 4 concerns reversible lower-dose indole paralysis. The 20-word
-  scientific-abstract excerpt matches directly and is natively `VERIFIED`.
+  Table 4 concerns reversible lower-dose indole paralysis. The 22-word
+  Discussion excerpt (printed/PDF page 12) explicitly links nematicidal
+  metabolites to Caborca cultures. It matches the XML and typeset PDF;
+  native verification reports `NOT_IN_ABSTRACT`. Indole's lower-dose paralysis
+  is not equated with the high-concentration killing reported separately.
 - [Saharan et al. 2023](https://doi.org/10.1038/s41598-023-33669-z),
   PMID:37088805: fungal culture-filtrate juvenile mortality, with fresh-water
   recovery confirmation but unspecified recovery duration/criterion.
@@ -35,7 +38,8 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
 - Discussion-only [Harada and Yoshiga 2015](https://doi.org/10.3725/jjn.45.51):
   viability-assay limitations, not supporting trait evidence or a definition
   citation. The 13-word abstract
-  excerpt matches the publisher and PDF. Native result remains `UNRESOLVED`;
+  excerpt is stored in structured discussion evidence with `NO_EVIDENCE` role
+  and matches the publisher and PDF. Native result remains `UNRESOLVED`;
   the exact DOI query returned zero results, despite verified publisher and
   Crossref identity. This does not establish absence from all indexing services.
 
@@ -128,3 +132,6 @@ validation does not authorize promotion to human `REVIEWED` status.
   one discussion-only methodological excerpt, explicit assay/provenance
   limitations and two open discussions. Issue #1916 corrected the initial
   context citation's placement and excluded it from definition annotations.
+- 2026-10-13, #1917: replaced the compound-only snippet with a producer-linked
+  Discussion result and moved method context into structured discussion evidence.
+  Identity, hierarchy, two-source definition provenance and prior history remain.

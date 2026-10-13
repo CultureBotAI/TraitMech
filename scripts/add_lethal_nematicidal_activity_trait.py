@@ -23,6 +23,7 @@ IDENTIFIER = "traitmech:000720"
 METPO_ID = "METPO:1067300"
 TIMESTAMP = "2026-10-13T17:31:43Z"
 REVISION_TIMESTAMP = "2026-10-13T18:14:01Z"
+PRODUCER_TIMESTAMP = "2026-10-13T18:54:48Z"
 CONTEXT_REFERENCE = "DOI:10.3725/jjn.45.51"
 DEFINITION_SOURCE = "DOI:10.1128/spectrum.02577-21"
 PARENT = {
@@ -184,7 +185,7 @@ def build_initial_record() -> dict:
     return record
 
 
-def build_record() -> dict:
+def build_role_corrected_record() -> dict:
     record = build_initial_record()
     context = record["evidence"].pop()
     assert context["reference"] == CONTEXT_REFERENCE
@@ -204,6 +205,64 @@ def build_record() -> dict:
             "Preserved original history, identity, hierarchy and other records."
         ),
         llm_assisted=True, timestamp=REVISION_TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_role_corrected_record()
+    record["evidence"][0].update(
+        snippet=(
+            "In this study, three secondary metabolites (SMs) with nematicidal "
+            "activities were isolated from in vitro cultures of P. luminescens "
+            "sonorensis strain Caborca"
+        ),
+        notes=(
+            "Kusakabe et al. 2022, PMID:35138171, Discussion opening clause, "
+            "printed/PDF page 12; native NOT_IN_ABSTRACT and direct XML/typeset "
+            "PDF match. The producer is Photorhabdus. Culture-supernatant "
+            "fractionation links the isolated metabolites to this microorganism. "
+            "t-CA and PPA caused mortality; indole mainly caused reversible "
+            "paralysis at lower doses, with killing only at high concentrations. "
+            "Equipotent synthetic standards were used for dose-response assays. "
+            "Actual Figures 2/3 and Table 4 inspected. Needle response and "
+            "morphology distinguished death from paralysis; recovery used washing "
+            "and 24 h in water. Table 4 tests lower-dose indole, not t-CA/PPA "
+            "survival. No live-culture lethal concentration is inferred. Some "
+            "numerical prose conflicts with tables; no potency, selectivity or "
+            "significance values are adopted. Linked supplemental NMR/statistics "
+            "files were not audited; figure inspection is not raw-data verification."
+        ),
+    )
+    context = INITIAL_RECORD["evidence"][2]
+    discussion = record["discussions"][0]
+    discussion["rationale"] = INITIAL_RECORD["discussions"][0]["rationale"] + (
+        " The methodological context below cautions against equating "
+        "immobility or a negative NaOH response with death under all conditions. "
+        "It is not evidence of microbial killing or definition support."
+    )
+    discussion["evidence"] = [{
+        "reference": context["reference"],
+        "supports": "NO_EVIDENCE",
+        "evidence_source": "scientific abstract; publisher HTML and PDF",
+        "snippet": context["snippet"],
+        "explanation": context["notes"] + (
+            " This citation is discussion-only context, not supporting evidence "
+            "for the trait or its definition."
+        ),
+    }]
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_PRODUCER_EXCERPT",
+        changes=(
+            "Addressed review issue #1917: replaced the compound-only excerpt "
+            "with a directly matched producer-linked Discussion result and "
+            "retained the actual NOT_IN_ABSTRACT outcome and assay limits. "
+            "Moved the unchanged Harada excerpt into structured discussion "
+            "evidence with NO_EVIDENCE role for native verification. Preserved "
+            "#1916's two-source definition support, prior events, identity, "
+            "hierarchy and other records."
+        ),
+        llm_assisted=True, timestamp=PRODUCER_TIMESTAMP,
     )
     return record
 
@@ -236,10 +295,10 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    previous = build_initial_record()
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (previous, record):
+    previous = [build_initial_record(), build_role_corrected_record()]
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (*previous, record):
         raise SystemExit("Existing target differs from reviewed result")
-    if PROPOSAL.exists() and PROPOSAL.read_text() not in (proposal_tsv(previous), proposal):
+    if PROPOSAL.exists() and PROPOSAL.read_text() not in (*map(proposal_tsv, previous), proposal):
         raise SystemExit("Existing proposal differs from reviewed result")
     with tempfile.TemporaryDirectory() as tmp:
         write_validated_trait(record, Path(tmp) / TARGET.name)

@@ -9,19 +9,20 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: DOI:10.1128/spectrum.02577-21
-  snippet: PPA and t-CA displayed potent, concentration-dependent nematicidal activities
-    against the root-knot nematode (Meloidogyne incognita) and the citrus nematode
-    (Tylenchulus semipenetrans)
-  notes: Kusakabe et al. 2022, PMID:35138171, scientific Abstract clause; native verifier
-    VERIFIED and direct XML/PDF match. Methods connect P. l. sonorensis Caborca culture
-    extracts to isolated t-CA (trans-cinnamic acid) and PPA ((4E)-5-phenylpent-4-enoic
-    acid); synthetic standards were equipotent and used for dose-response assays.
-    Actual Figures 2/3 and Table 4 inspected. Needle response and morphology distinguished
-    death from paralysis; recovery used washing and 24 h in water. Table 4 tests lower-dose
-    indole, not t-CA/PPA survival. No live-culture lethal concentration is inferred.
-    Some numerical prose conflicts with tables; no potency, selectivity or significance
-    values are adopted. Linked supplemental NMR/statistics files were not audited;
-    figure inspection is not raw-data verification.
+  snippet: In this study, three secondary metabolites (SMs) with nematicidal activities
+    were isolated from in vitro cultures of P. luminescens sonorensis strain Caborca
+  notes: Kusakabe et al. 2022, PMID:35138171, Discussion opening clause, printed/PDF
+    page 12; native NOT_IN_ABSTRACT and direct XML/typeset PDF match. The producer
+    is Photorhabdus. Culture-supernatant fractionation links the isolated metabolites
+    to this microorganism. t-CA and PPA caused mortality; indole mainly caused reversible
+    paralysis at lower doses, with killing only at high concentrations. Equipotent
+    synthetic standards were used for dose-response assays. Actual Figures 2/3 and
+    Table 4 inspected. Needle response and morphology distinguished death from paralysis;
+    recovery used washing and 24 h in water. Table 4 tests lower-dose indole, not
+    t-CA/PPA survival. No live-culture lethal concentration is inferred. Some numerical
+    prose conflicts with tables; no potency, selectivity or significance values are
+    adopted. Linked supplemental NMR/statistics files were not audited; figure inspection
+    is not raw-data verification.
 - reference: DOI:10.1038/s41598-023-33669-z
   snippet: T. asperellum FbMi6 at 80% concentration had the highest (90.3%) juvenile
     mortality compared to control.
@@ -39,7 +40,7 @@ discussions:
   prompt: Refine the hierarchy while preserving the lethal, microbial-actor endpoint.
   kind: CURATION_TODO
   status: OPEN
-  rationale: 'Killing susceptible nematodes is required; reversible paralysis, repellence,
+  rationale: Killing susceptible nematodes is required; reversible paralysis, repellence,
     reduced egg hatch, host defense induction and a sequence annotation alone are
     insufficient. The label is qualified because nematicidal usage can include nonlethal
     readouts. Neither all nematode species/stages nor all producing strains are implied.
@@ -50,17 +51,25 @@ discussions:
     parent. Pinned/current METPO inspection found no exact active or deprecated counterpart.
     CHEBI:25491 denotes a nematicide chemical, not this microbial capability, and
     is not an xref. No exact synonyms or organism-level disjointness are asserted;
-    v596 proposes the class. Methodological context, DOI:10.3725/jjn.45.51: "The J2s
-    inactivated by low temperature showed no reaction to the NaOH treatment.". Harada
-    and Yoshiga 2015, scientific abstract, printed page 51. Direct publisher HTML/PDF
-    match; actual pages 51-54, Table 1 and Figure 1 inspected. Second-stage M. incognita
-    juveniles could recover after warming or removal of some chemicals. This supports
-    condition-dependent viability-assay caution, not microbial killing or an additional
-    phenotype replication. Native UNRESOLVED: exact DOI query returned zero results;
-    publisher and Crossref verify identity. This citation is discussion-only context,
-    not supporting evidence for the trait or its definition.'
+    v596 proposes the class. The methodological context below cautions against equating
+    immobility or a negative NaOH response with death under all conditions. It is
+    not evidence of microbial killing or definition support.
   posed_by: codex
   posed_date: '2026-10-13'
+  evidence:
+  - reference: DOI:10.3725/jjn.45.51
+    supports: NO_EVIDENCE
+    evidence_source: scientific abstract; publisher HTML and PDF
+    snippet: The J2s inactivated by low temperature showed no reaction to the NaOH
+      treatment.
+    explanation: 'Harada and Yoshiga 2015, scientific abstract, printed page 51. Direct
+      publisher HTML/PDF match; actual pages 51-54, Table 1 and Figure 1 inspected.
+      Second-stage M. incognita juveniles could recover after warming or removal of
+      some chemicals. This supports condition-dependent viability-assay caution, not
+      microbial killing or an additional phenotype replication. Native UNRESOLVED:
+      exact DOI query returned zero results; publisher and Crossref verify identity.
+      This citation is discussion-only context, not supporting evidence for the trait
+      or its definition.'
 - discussion_id: lethal-nematicidal-provenance-and-mechanisms
   prompt: Reconcile strain provenance and establish taxon-paired mechanisms before
     expanding the record.
@@ -98,4 +107,13 @@ curation_history:
     its source/resolver provenance as context. The two microbial-killing studies remain
     supporting evidence; the context-only DOI no longer enters proposal definition
     annotations. Preserved original history, identity, hierarchy and other records.'
+  llm_assisted: true
+- timestamp: '2026-10-13T18:54:48Z'
+  curator: codex
+  action: CORRECTED_PRODUCER_EXCERPT
+  changes: 'Addressed review issue #1917: replaced the compound-only excerpt with
+    a directly matched producer-linked Discussion result and retained the actual NOT_IN_ABSTRACT
+    outcome and assay limits. Moved the unchanged Harada excerpt into structured discussion
+    evidence with NO_EVIDENCE role for native verification. Preserved #1916''s two-source
+    definition support, prior events, identity, hierarchy and other records.'
   llm_assisted: true
