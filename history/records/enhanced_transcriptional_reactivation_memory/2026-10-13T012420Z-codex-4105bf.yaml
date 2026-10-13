@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  slug: enhanced_transcriptional_reactivation_memory
+session:
+  id: 2026-10-13T012420Z-codex-4105bf
+  timestamp: '2026-10-13T01:24:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1904
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1903
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - provenance
+  summary: Quote the cited paper's own transcriptional-memory result
+  details: Address review issue 1904 by replacing D'Urso's attributed background sentence
+    with its complete own-confirmation sentence. Rechecked contiguous primary XML and publisher
+    text and actual Figure 7A; retained selected-gene, two-hour recovery, USV1 not shown,
+    four-generation and caption limits. Original quote spelling was source-faithful; provenance
+    was the accepted defect. Updated guarded writer, source sidecar, proposal notes and tests.
+    Existing histories and review bundles remain immutable.

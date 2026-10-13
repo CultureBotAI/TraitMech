@@ -11795,6 +11795,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/energy_taxis.html#energy-taxis-signal-and-protein-grounding"
  },
  {
+  "discussion_id": "transcriptional-memory-endpoint-and-hierarchy",
+  "prompt": "Preserve enhanced reactivation after repression as the defining endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "enhanced transcriptional reactivation memory",
+  "source_id": "traitmech:000713",
+  "source_file": "enhanced_transcriptional_reactivation_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Compare induced transcript responses under matched later test conditions and genetic backgrounds, after intervening repression. Continued expression, transcript or reporter persistence, a chromatin mark, peripheral localization or a gene alone does not establish this phenotype. Transcript abundance does not by itself distinguish synthesis from degradation. No identical first and second stimulus, prior production of a particular transcript, fixed duration, universal mitotic inheritance or shared chromatin mechanism is required. Carbon-source memory (traitmech:000706) spans growth and induction endpoints and is not reparented wholesale. Memory of acquired stress resistance (traitmech:000712) concerns retained resistance, not faster transcription. Anticipation and bet hedging are also not exact equivalents. Unqualified transcriptional memory, epigenetic memory and priming are not asserted as exact synonyms. METPO:1000059 phenotype is the conservative parent pending hierarchy review; existing records are unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/enhanced_transcriptional_reactivation_memory.html#transcriptional-memory-endpoint-and-hierarchy"
+ },
+ {
+  "discussion_id": "transcriptional-memory-evidence-limits",
+  "prompt": "Resolve strain provenance and assay-specific mechanisms before extending this draft.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "enhanced transcriptional reactivation memory",
+  "source_id": "traitmech:000713",
+  "source_file": "enhanced_transcriptional_reactivation_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Sump and Guan report different laboratory assays, not independent replication of the same experiment. Laboratory and engineered yeast backgrounds are qualified evidence, not natural canonical taxa. Sump's retrieved v2 strain table has a CHO1 DBY1428 figure locator and an HTA1-mCherry versus Methods Pho88 description discrepancy; no strain-wide extrapolation follows. Selected publisher and XML text agrees after normalization, not complete byte-level version equivalence. Publisher figure images were inspected at limited resolution, without numerical reanalysis. Bounded publisher, qualified MED and Crossref checks on 2026-10-12 exposed no linked correction or retraction; this does not prove notice absence. No causal graph, exact synonym, external equivalence or species-wide phenotype is asserted. Source access challenges and caption discrepancies are retained in the source-verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/enhanced_transcriptional_reactivation_memory.html#transcriptional-memory-evidence-limits"
+ },
+ {
+  "discussion_id": "transcriptional-memory-historical-identity",
+  "prompt": "Reconcile deprecated lexical neighbors without reactivating their identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "enhanced transcriptional reactivation memory",
+  "source_id": "traitmech:000713",
+  "source_file": "enhanced_transcriptional_reactivation_memory.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and inspected current METPO releases mark METPO:1000108 epigenetic modification and METPO:1000310 transcription factor deprecated below ObsoleteClass, with OMO:0001000 and no replacement or consider annotation in those graphs. OMO means out of scope, but METPO issue 521 disputes the mechanical reason assignment. Original historical definitions and parent axioms remain unassessed; labels alone do not prove historical nonequivalence. This operational physiological phenotype is accepted independently from primary experiments, not by reactivating those terms or assuming a sequence-feature meaning. Ignored/hidden available files, retained historical trees, normalized trait semantics, pending changes and ontology graphs revealed no exact active record in the inspected scope. No historical exact-equivalence claim is made. The pinned ontology is unchanged; discovery is not exhausted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/enhanced_transcriptional_reactivation_memory.html#transcriptional-memory-historical-identity"
+ },
+ {
   "discussion_id": "er-phagy-route-scope-and-flux",
   "prompt": "Review route-inclusive scope and cargo-selective degradative flux.",
   "kind": "CURATION_TODO",
@@ -14399,9 +14450,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 720,
- "total_knowledge_gaps": 454,
- "total_source_entries": 578,
+ "total_discussions": 723,
+ "total_knowledge_gaps": 455,
+ "total_source_entries": 579,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

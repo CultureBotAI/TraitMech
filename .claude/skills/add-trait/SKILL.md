@@ -378,6 +378,17 @@ survival. Keep native stress pretreatment separate from synthetic induction;
 do not transfer durations or mechanisms between them. Persistent reporter
 fluorescence or inherited cargo alone does not establish remembered resistance.
 
+For enhanced transcriptional-memory candidates, require a later transcript
+response after intervening repression. A mutant reactivation defect alone is
+not proof that wild-type reactivation exceeds its initial response. Distinguish
+ordinary induction from synthetic bypass assays, and transcript abundance
+kinetics from direct initiation-rate measurements. Localization, chromatin-mark
+inheritance and competitive fitness have different endpoints; do not transfer
+their durations or causality to enhanced transcription. Attribute durations
+summarized from earlier work to that source rather than to a later figure.
+When a later paper confirms earlier work, quote its own reported result instead
+of its background summary; retain the confirmation's actual assay scope (#1904).
+
 For aging candidates, separate age-dependent performance decline or increasing
 mortality risk from finite lifespan, lifespan extension and cumulative survival
 loss. Preserve the age axis, division history, conditions and assay limitations;
@@ -524,6 +535,10 @@ before the head noun of a phrase, after a dangling article, preposition, or
 conjunction, or before a coordinated complement that would change the statement's
 scope. Quote enough of the source sentence for the stored span to read as the
 same claim without relying on omitted words.
+Check anaphora too: a complete sentence that reports "this observation" or
+"these genes" may still omit the phenotype result. Select another self-contained
+primary-result span or source when including the antecedent would exceed the
+quotation budget; explanatory notes do not repair that omission (#1905).
 
 Publisher HTML may encode meaningful symbols as image tags. If a source renders
 part of a passage as an image, quote a source-rendered text alternative when one

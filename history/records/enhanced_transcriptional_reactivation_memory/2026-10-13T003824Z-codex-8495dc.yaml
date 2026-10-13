@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  slug: enhanced_transcriptional_reactivation_memory
+session:
+  id: 2026-10-13T003824Z-codex-8495dc
+  timestamp: '2026-10-13T00:38:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct creator attribution without rewriting the immutable history entry
+  details: The preceding immutable record history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml
+    inherited the scaffolder default actor name claude-code because --actor-name was omitted.
+    Its model gpt-5 and agent_tool codex fields were supplied correctly. The actual actor
+    for that CREATE event was Codex, not Claude Code; no Claude execution is asserted. This
+    successor corrects provenance only, leaving the original entry and TraitRecord unchanged.
+    Future commands explicitly supply --actor-name codex.

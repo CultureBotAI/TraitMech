@@ -1,0 +1,183 @@
+schema_version: 1.0.0
+review_id: 20261013T024613Z-transcriptional-memory-provenance-finding
+kind: record
+repository: CultureBotAI/TraitMech
+title: Make the caption source check reproducible
+started_at: '2026-10-13T02:46:10Z'
+finished_at: '2026-10-13T02:46:13Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author source-based adversarial assessment; not independent
+    review or human scientific sign-off.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: false
+summary: 'Accept #1906 as a bounded tracked-provenance improvement. Fresh publisher
+  bytes refute the suspected hyphen and absent-caption defects; the suggested XML
+  endpoint failed. No trait or quotation correction is supported.'
+source:
+  git_revision: b0098bbf8ceb369639d7c232a72ee6ace364673c
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: a92f9d331d33a4a74147d834d38393b64edb97e6f2d1a157570ca201c0531dfa
+    role: context
+  - path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    sha256: 6fd8d2f12c0ef870bac46ee525f67dec06fbee04d9e0dad03b02df888f8b1f49
+    role: target
+  - path: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    sha256: ad45b0349ead8165adb21825f46e3d905d4681bf407a4a13db5d30e81454a33a
+    role: context
+  - path: tests/test_add_transcriptional_reactivation_memory_trait.py
+    sha256: 4c87297e2a28e410bec7571817b60672ea49943751de8fc08c5b34b57ac8983e
+    role: context
+targets:
+- target_id: traitmech:000713
+  path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+  label: enhanced transcriptional reactivation memory
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_transcriptional_reactivation_memory_trait.py
+    role: guarded writer
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml
+    role: curated record
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.tsv
+    role: upstream proposal
+scope:
+  description: Reproducibility of the current Guan caption verification and the optional
+    Sump clause-boundary concern; not a new whole-record scientific review.
+  selection: Exact reviewed trait and disputed evidence item.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000713
+checks:
+- check_id: capture
+  target_ids:
+  - traitmech:000713
+  name: Input and source identity capture
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/record_review.py inspect --targets /tmp/traitmech-transcriptional-memory-review-targets-20261013.yaml
+    --input research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    --input tests/test_add_transcriptional_reactivation_memory_trait.py --input .claude/skills/add-trait/SKILL.md
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native capture of exact reviewed head and current provenance inputs.
+evidence:
+- evidence_id: external
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/TraitMech/pull/1903#pullrequestreview-5498156035
+  accessed_at: '2026-10-13T02:46:13Z'
+  support: context_only
+  summary: Complete review read. Its no-network limitation prevents its hyphen, caption
+    availability and XML availability conjectures from establishing defects.
+- evidence_id: publisher
+  kind: primary_source
+  reference: https://oup.silverchair-cdn.com/article-minimal/5935173
+  accessed_at: '2026-10-13T02:44:37.056961Z'
+  support: supports
+  snapshot_sha256: eb97f86a7134114fa570d5ab66416d91dfb1da2f6b6fc5d98682a9cf685a4241
+  locator: div[data-id=fig4] caption, complete opening sentence.
+  summary: Fresh HTTP 200 publisher HTML exactly equals retained bytes. The caption
+    and hyphen are present; H2O2 uses sub tags. Same-publisher re-fetch, not independent-source
+    corroboration.
+- evidence_id: sidecar
+  kind: record_content
+  reference: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+  accessed_at: '2026-10-13T02:46:13Z'
+  support: supports
+  locator: rows[1].sources and manual_contiguous_full_text_matches
+  summary: Tracked file records retained-source hash and recheck date but not a short
+    raw caption fragment or the newly measured successful retrieval time. A small
+    receipt improves inspection without redistributing the article.
+- evidence_id: sump
+  kind: primary_source
+  reference: DOI:10.7554/eLife.77646
+  accessed_at: '2026-10-13T02:46:13Z'
+  support: context_only
+  locator: Results s2-1 paragraph 2, primary XML and existing evidence notes.
+  snapshot_sha256: 4d895d6a7b79a8f94e4c9d9cc8177c96c090ff6a619916e57c12a75ea9ceac5e
+  summary: Existing excerpt states a complete comparison. A comma and coordinated
+    mutant-loss clause follow; current notes preserve that qualifier and the synthetic
+    assay. No faithful-text change is needed.
+assessments:
+- assessment_id: attribution
+  area: provenance
+  topic: Tracked source-check auditability
+  outcome: concern
+  target_ids:
+  - traitmech:000713
+  evidence_ids:
+  - external
+  - publisher
+  - sidecar
+  - sump
+  summary: Improve the tracked receipt while rejecting unsupported quote-spelling
+    and missing-caption conjectures. XML HTTP 500 twice and canonical publisher HTTP
+    403 are explicit access limits.
+findings:
+- finding_id: caption-receipt
+  issue_key: transcriptional-memory-caption-receipt-1906
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Retain an inspectable caption provenance receipt
+  description: Add the actual fresh access timestamp, short raw HTML opening, precise
+    caption locator and failed corroboration outcomes to tracked provenance. No trait
+    definition or snippet defect is accepted.
+  target_ids:
+  - traitmech:000713
+  field_paths:
+  - evidence[1]
+  evidence_ids:
+  - publisher
+  - sidecar
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    role: maintained source-verification sidecar
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1906
+actions:
+- action_id: retain-receipt
+  description: Retain the short source fragment, actual access evidence and limitations;
+    add focused regression coverage.
+  finding_ids:
+  - caption-receipt
+  target_ids:
+  - traitmech:000713
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+    role: maintained source-verification sidecar
+  acceptance_checks:
+  - Exact 12-word publisher caption opening retains hyphen and subscript markup.
+  - Fresh successful timestamp, stable URL/hash and precise caption locator are tracked;
+    failures remain unavailable checks.
+  - No independent-source match is asserted; faithful record/writer/proposal/page
+    bytes remain unchanged.
+  - Regression, QC, history and immutable successor review validate before fresh external
+    review.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261013T022227Z-transcriptional-memory-self-contained-resolution
+  relationship: Adds a bounded provenance-auditability finding without reopening resolved
+    result-attribution and anaphora defects.
+limitations:
+- Author provenance reassessment, not independent or human scientific sign-off.
+- Full-text XML was unavailable (HTTP 500 on two actual attempts); no independent
+  XML corroboration claimed.
+- Complete articles are retained locally rather than redistributed without an established
+  reuse license. Only the existing short quotation is proposed for tracked HTML provenance.
+- Underlying biological support was not newly reassessed beyond the cited quotation
+  context.
