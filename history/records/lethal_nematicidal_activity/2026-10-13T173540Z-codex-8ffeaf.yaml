@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T173540Z-codex-8ffeaf
+  timestamp: '2026-10-13T17:35:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add lethal nematicidal activity
+  details: Added one proposed physiological capability backed by two microbial-product studies
+    and one methodological citation. Three directly matched excerpts retain lethal-versus-paralytic
+    assay boundaries and unresolved strain/accession provenance. No canonical examples, exact
+    xrefs, protein examples or causal graphs are asserted. Local/remote novelty and full-block
+    reservation checks include ignored/hidden files and available retained tracked history;
+    all numerical false positives are adjudicated. Other trait records and protected spore
+    germination are unchanged. v596 reserves the upstream placeholder; source receipts and
+    focused tests accompany the guarded writer.

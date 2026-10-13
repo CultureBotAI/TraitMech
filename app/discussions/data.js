@@ -12902,6 +12902,42 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lethal_algicidal_activity.html#lethal-algicidal-strains-and-mechanisms"
  },
  {
+  "discussion_id": "lethal-nematicidal-scope-and-mappings",
+  "prompt": "Refine the hierarchy while preserving the lethal, microbial-actor endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lethal nematicidal activity",
+  "source_id": "traitmech:000720",
+  "source_file": "lethal_nematicidal_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Killing susceptible nematodes is required; reversible paralysis, repellence, reduced egg hatch, host defense induction and a sequence annotation alone are insufficient. The label is qualified because nematicidal usage can include nonlethal readouts. Neither all nematode species/stages nor all producing strains are implied. Fungal nematophagy (traitmech:000719) requires feeding, and trap formation (traitmech:000718) is structural; neither is an exact parent. Predatory bacterium (traitmech:000054) requires consuming bacterial prey. Animal pathogen METPO:1004002 requires infection, unnecessary for culture-derived toxicity. Phenotype METPO:1000059 is the conservative parent. Pinned/current METPO inspection found no exact active or deprecated counterpart. CHEBI:25491 denotes a nematicide chemical, not this microbial capability, and is not an xref. No exact synonyms or organism-level disjointness are asserted; v596 proposes the class. The methodological context below cautions against equating immobility or a negative NaOH response with death under all conditions. It is not evidence of microbial killing or definition support.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3725/jjn.45.51"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lethal_nematicidal_activity.html#lethal-nematicidal-scope-and-mappings"
+ },
+ {
+  "discussion_id": "lethal-nematicidal-provenance-and-mechanisms",
+  "prompt": "Reconcile strain provenance and establish taxon-paired mechanisms before expanding the record.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lethal nematicidal activity",
+  "source_id": "traitmech:000720",
+  "source_file": "lethal_nematicidal_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Saharan's claimed FbMi6 accession MT529846.1 resolves in GenBank to clone SF_570, not FbMi6. Its supplement compares strain 6 with MT529837.1, clone SF_561, but labels the table SF_570 and the mortality image FbMi-4. No corrected accession is inferred. Caborca's primary strain-provenance reference has not been reconciled either. Retain these qualified observations without canonical examples. No common molecular mechanism, natural lethal dose, nutritional benefit or environmental safety is established; graphs and proteins remain unset. Culture-derived activity does not restrict the entire class to secretion. Crossref/publisher/indexing notice checks are bounded, not comprehensive clearance. Source hashes, assay limits and native verification outcomes are retained in the source-verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lethal_nematicidal_activity.html#lethal-nematicidal-provenance-and-mechanisms"
+ },
+ {
   "discussion_id": "leucine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for leucine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14724,9 +14760,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 739,
- "total_knowledge_gaps": 461,
- "total_source_entries": 585,
+ "total_discussions": 741,
+ "total_knowledge_gaps": 462,
+ "total_source_entries": 586,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

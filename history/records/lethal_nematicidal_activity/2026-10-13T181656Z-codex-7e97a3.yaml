@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T181656Z-codex-7e97a3
+  timestamp: '2026-10-13T18:16:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Separate method context from trait support
+  details: 'Addressed #1916 by moving the Harada viability-method citation and verified excerpt
+    into the scope discussion. Only two microbial-killing studies remain supporting evidence
+    and definition citations. Preserved the original minting event and CREATE history; appended
+    CORRECTED_EVIDENCE_ROLE. Source receipt separates context from support and retains historical
+    native outcomes. Guarded writer accepts only the reviewed preimage or corrected result;
+    tests cover migration and replay. No identity, hierarchy, example, protein, graph or other-record
+    changes.'

@@ -1,0 +1,146 @@
+identifier: traitmech:000720
+label: lethal nematicidal activity
+definition: A physiological capability of a microorganism to kill nematodes.
+definition_source: DOI:10.1038/s41598-023-33669-z
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1038/s41598-023-33669-z
+  snippet: T. asperellum FbMi6 at 80% concentration had the highest (90.3%) juvenile
+    mortality compared to control.
+  notes: 'Saharan et al. 2023, PMID:37088805, Results in vitro activity; native NOT_IN_ABSTRACT,
+    direct publisher HTML match. Actual Figure 4 inspected. This is culture filtrate,
+    not live fungal inoculum: 100 newly hatched M. incognita J2, water/PDB controls,
+    72 h endpoint, 25 +/- 2 degrees C, two repeats. Methods reports fresh-water recovery
+    confirmation without its duration or scoring criterion. The quote''s percentage
+    is source-reported, not independently recalculated. Supplement text/tables and
+    its embedded image were inspected, not rendered document pages. Strain/accession
+    discrepancies prevent a canonical taxon assignment; pot/field efficacy is not
+    imported.'
+- reference: DOI:10.1128/spectrum.02577-21
+  snippet: In this study, three secondary metabolites (SMs) with nematicidal activities
+    were isolated from in vitro cultures of P. luminescens sonorensis strain Caborca
+  notes: Producer-origin supporting evidence, not definition authority. The self-contained
+    excerpt establishes microbial origin of nematicidal metabolites; its wording alone
+    does not distinguish death from paralysis. The independently cited Saharan mortality
+    result supplies explicit lethal definition support. Kusakabe et al. 2022, PMID:35138171,
+    Discussion opening clause, printed/PDF page 12; native NOT_IN_ABSTRACT and direct
+    XML/typeset PDF match. The producer is Photorhabdus. Culture-supernatant fractionation
+    links the isolated metabolites to this microorganism. t-CA and PPA caused mortality;
+    indole mainly caused reversible paralysis at lower doses, with killing only at
+    high concentrations. Equipotent synthetic standards were used for dose-response
+    assays. Actual Figures 2/3 and Table 4 inspected. Needle response and morphology
+    distinguished death from paralysis; recovery used washing and 24 h in water. Table
+    4 tests lower-dose indole, not t-CA/PPA survival. No live-culture lethal concentration
+    is inferred. Some numerical prose conflicts with tables; no potency, selectivity
+    or significance values are adopted. Linked supplemental NMR/statistics files were
+    not audited; figure inspection is not raw-data verification.
+discussions:
+- discussion_id: lethal-nematicidal-scope-and-mappings
+  prompt: Refine the hierarchy while preserving the lethal, microbial-actor endpoint.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Killing susceptible nematodes is required; reversible paralysis, repellence,
+    reduced egg hatch, host defense induction and a sequence annotation alone are
+    insufficient. The label is qualified because nematicidal usage can include nonlethal
+    readouts. Neither all nematode species/stages nor all producing strains are implied.
+    Fungal nematophagy (traitmech:000719) requires feeding, and trap formation (traitmech:000718)
+    is structural; neither is an exact parent. Predatory bacterium (traitmech:000054)
+    requires consuming bacterial prey. Animal pathogen METPO:1004002 requires infection,
+    unnecessary for culture-derived toxicity. Phenotype METPO:1000059 is the conservative
+    parent. Pinned/current METPO inspection found no exact active or deprecated counterpart.
+    CHEBI:25491 denotes a nematicide chemical, not this microbial capability, and
+    is not an xref. No exact synonyms or organism-level disjointness are asserted;
+    v596 proposes the class. The methodological context below cautions against equating
+    immobility or a negative NaOH response with death under all conditions. It is
+    not evidence of microbial killing or definition support.
+  posed_by: codex
+  posed_date: '2026-10-13'
+  evidence:
+  - reference: DOI:10.3725/jjn.45.51
+    supports: NO_EVIDENCE
+    evidence_source: scientific abstract; publisher HTML and PDF
+    snippet: The J2s inactivated by low temperature showed no reaction to the NaOH
+      treatment.
+    explanation: 'Harada and Yoshiga 2015, scientific abstract, printed page 51. Direct
+      publisher HTML/PDF match; actual pages 51-54, Table 1 and Figure 1 inspected.
+      Second-stage M. incognita juveniles could recover after warming or removal of
+      some chemicals. This supports condition-dependent viability-assay caution, not
+      microbial killing or an additional phenotype replication. Native UNRESOLVED:
+      exact DOI query returned zero results; publisher and Crossref verify identity.
+      This citation is discussion-only context, not supporting evidence for the trait
+      or its definition.'
+- discussion_id: lethal-nematicidal-provenance-and-mechanisms
+  prompt: Reconcile strain provenance and establish taxon-paired mechanisms before
+    expanding the record.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Saharan's claimed FbMi6 accession MT529846.1 resolves in GenBank to clone
+    SF_570, not FbMi6. Its supplement compares strain 6 with MT529837.1, clone SF_561,
+    but labels the table SF_570 and the mortality image FbMi-4. No corrected accession
+    is inferred. Caborca's primary strain-provenance reference has not been reconciled
+    either. Retain these qualified observations without canonical examples. No common
+    molecular mechanism, natural lethal dose, nutritional benefit or environmental
+    safety is established; graphs and proteins remain unset. Culture-derived activity
+    does not restrict the entire class to secretion. Crossref/publisher/indexing notice
+    checks are bounded, not comprehensive clearance. Source hashes, assay limits and
+    native verification outcomes are retained in the source-verification sidecar.
+  posed_by: codex
+  posed_date: '2026-10-13'
+curation_history:
+- timestamp: '2026-10-13T17:31:43Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added lethal nematicidal activity with two primary microbial-product studies
+    and one viability-method citation, each with a directly matched snippet. Distinguished
+    death from reversible paralysis and feeding; retained strain and assay caveats.
+    Reserved 000720, v596 and 1067300-1067399 after ignored/hidden current-file, retained
+    history and open/draft PR checks, with numeric false positives adjudicated. No
+    exact active METPO counterpart identified. Other records unchanged. Timestamp
+    records observed post-audit acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-13T18:14:01Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_ROLE
+  changes: 'Addressed review issue #1916: moved the Harada viability-method citation
+    and exact excerpt from supporting evidence into the scope discussion. Retained
+    its source/resolver provenance as context. The two microbial-killing studies remain
+    supporting evidence; the context-only DOI no longer enters proposal definition
+    annotations. Preserved original history, identity, hierarchy and other records.'
+  llm_assisted: true
+- timestamp: '2026-10-13T18:54:48Z'
+  curator: codex
+  action: CORRECTED_PRODUCER_EXCERPT
+  changes: 'Addressed review issue #1917: replaced the compound-only excerpt with
+    a directly matched producer-linked Discussion result and retained the actual NOT_IN_ABSTRACT
+    outcome and assay limits. Moved the unchanged Harada excerpt into structured discussion
+    evidence with NO_EVIDENCE role for native verification. Preserved #1916''s two-source
+    definition support, prior events, identity, hierarchy and other records.'
+  llm_assisted: true
+- timestamp: '2026-10-13T19:40:13Z'
+  curator: codex
+  action: CORRECTED_LETHAL_ENDPOINT_EXCERPTS
+  changes: 'Addressed review issue #1918: stored separate producer-origin and explicit
+    mortality spans from Kusakabe, totaling 25 words. Preserved the high-concentration
+    non-target and synthetic-standard assay qualifiers. IMPORTANCE matches native
+    VERIFIED but is not the scientific Abstract; the mortality span is NOT_IN_ABSTRACT.
+    Three evidence items still represent only two supporting studies. Preserved #1916/#1917
+    fixes, all prior events, fungal evidence, discussion-only context, identity, hierarchy
+    and other records.'
+  llm_assisted: true
+- timestamp: '2026-10-13T20:27:02Z'
+  curator: codex
+  action: CORRECTED_DEFINITION_AUTHORITY
+  changes: 'Addressed review issue #1919: selected the unchanged Saharan mortality
+    result as definition authority and first evidence item. Restored the complete
+    22-word Kusakabe producer-linked clause as origin support, not definition authority.
+    Removed the subjectless origin and anaphoric mortality spans. This supersedes
+    #1918''s two-span correction: explicit mortality support now comes from the selected
+    fungal source. Proposal definition annotations cite only that source and the local
+    record; two distinct primary studies remain supporting evidence. Both excerpts
+    retain native NOT_IN_ABSTRACT outcomes. Preserved all prior events, assay limitations,
+    structured context, identity, hierarchy and other records.'
+  llm_assisted: true

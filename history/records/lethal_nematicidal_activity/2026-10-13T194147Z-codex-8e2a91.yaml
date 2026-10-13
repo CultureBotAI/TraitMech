@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T194147Z-codex-8e2a91
+  timestamp: '2026-10-13T19:41:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Quote microbial origin and an explicit lethal endpoint
+  details: 'Addressed #1918 with two separately located Kusakabe excerpts totaling 25 words:
+    culture origin and high-concentration mortality in non-target nematodes. Native VERIFIED
+    matches IMPORTANCE, not the scientific Abstract; mortality remains NOT_IN_ABSTRACT. Three
+    evidence items represent two supporting studies. Preserved #1916/#1917 corrections, fungal
+    evidence, structured discussion context and all prior events. Appended CORRECTED_LETHAL_ENDPOINT_EXCERPTS;
+    guarded migration and replay reject unknown drift. No identity, hierarchy, example, protein,
+    graph or other-record changes.'

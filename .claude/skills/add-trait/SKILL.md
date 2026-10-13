@@ -327,6 +327,17 @@ Make the first record small but independently reviewable:
 - `discussions`: `CURATION_TODO`, `KNOWLEDGE_GAP`, or controversy notes for
   unresolved but reviewable gaps
 
+Keep context-only terminology, assay cautions and counterexamples in the relevant
+discussion, with their citations and any useful verified excerpts. Do not count
+them as supporting `evidence` or toward the minimum supporting-citation count.
+When assembling a proposal, inspect each citation's role instead of copying all
+references into the definition annotation; context-only sources must not become
+definition support (#1916).
+Use `discussions[].evidence` (`SupportingReference`) for these citations and
+excerpts so native source checks can reach them. Set `supports: NO_EVIDENCE`
+when a reference is relevant context rather than support for the attached claim;
+explain the distinction in `explanation`, not only in free-text rationale (#1917).
+
 Distinguish life-stage evidence from the schema's archetypal canonical taxa.
 A directly observed natural transient state can support evidence without making
 the taxon a canonical exemplar; retain the observation with its phase qualifiers
