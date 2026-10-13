@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/nutritional_fungal_mycoparasitism.yaml
+  slug: nutritional_fungal_mycoparasitism
+session:
+  id: 2026-10-13T112641Z-codex-9367c7
+  timestamp: '2026-10-13T11:26:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add nutritional fungal mycoparasitism with DOI-backed excerpts
+  details: Added traitmech:000717 as PROPOSED with a Jeffries 1995 definition and two Pellegrini
+    experimental papers; retained direct-source snippets, source/version limits and two open
+    discussions. Native verification returned two VERIFIED and one UNRESOLVED, with the latter
+    independently matched to the institutional abstract. Reserved v593 and METPO:1067000-1067099
+    after ignored/hidden and pending-head checks; no canonical taxa or causal graph inferred.

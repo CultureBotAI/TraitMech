@@ -443,6 +443,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/kin_discrimination.html#kin-discrimination-evidence-and-mechanism-limits"
  },
  {
+  "discussion_id": "nutritional-fungal-mycoparasitism-scope-and-hierarchy",
+  "prompt": "Resolve the broader hierarchy without importing persistent association or broad fungicolous usage.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nutritional fungal mycoparasitism",
+  "source_id": "traitmech:000717",
+  "source_file": "nutritional_fungal_mycoparasitism.yaml",
+  "attaches_to": [],
+  "rationale": "Nutrition at host expense is required; mere co-occurrence, fungicolous association, antagonism or utilization of already dead material does not establish it. Killing, penetration, obligacy and a single mechanism are not universal requirements. The unqualified mycoparasitism label is not an exact synonym. Local parasitism (traitmech:000043) inherits persistent physical association from symbiosis (traitmech:000040); that narrower local umbrella is not automatically applicable to destructive encounters included by Jeffries. METPO:1000059 phenotype is retained pending hierarchy review. Bacterial mycophagy (traitmech:000696) has a bacterial actor; microbial haustorium formation (traitmech:000663) is a structural phenotype, neither necessary nor sufficient for this nutrition. Saprotrophy (traitmech:000055) alone does not establish attack on a living host; no organism-level disjointness is implied. Pinned and current METPO broad lexical matches (0000261, 000262, 1000125, 1000197, 1000198, 1000227) are deprecated, with no replacement or consider annotation observed. Their OMO:0001000 reason does not disprove the biology or license identifier reuse. None is an exact active counterpart; historical IDs are not xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/nutritional_fungal_mycoparasitism.html#nutritional-fungal-mycoparasitism-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "nutritional-fungal-mycoparasitism-source-and-mechanism-limits",
+  "prompt": "Resolve source discrepancies and isolate provenance before assigning canonical taxa or a causal mechanism.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nutritional fungal mycoparasitism",
+  "source_id": "traitmech:000717",
+  "source_file": "nutritional_fungal_mycoparasitism.yaml",
+  "attaches_to": [],
+  "rationale": "The 2013 abstract reports inhibition of 80 +/- 0.19%; thesis Results gives 88 +/- 0.24% and Table 1 gives 80 +/- 0.29%. Fluorogenic-assay sampling days differ between Methods and Figure 2; soil-control isotope values differ between Results and Table 3. A no-difference statement is paired with P < 0.05, and abstract versus Results pathogen exclusions differ. These are unresolved, not silently harmonized. Selected thesis Methods, Results, Discussion and actual pages 69, 73, 75, 86 and 89 were inspected, not all figures, tables or raw data. Ground inoculum may include nonviable material; no killed-host control was inspected, which is not proof none exists. Table accessions identify BLAST reference strains, not experimental isolate deposits. No canonical taxa, exact external mappings, protein examples or causal graph are asserted. The measured enzyme activity is not a molecular effector identification. Metadata and notice checks were bounded; some publisher endpoints failed. Source URLs, hashes, version distinctions and native verification results are retained in the sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/nutritional_fungal_mycoparasitism.html#nutritional-fungal-mycoparasitism-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "periplasmic-predation-boundaries-and-mappings",
   "prompt": "Distinguish periplasmic feeding from invasion alone.",
   "kind": "CURATION_TODO",
@@ -14586,9 +14620,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 731,
- "total_knowledge_gaps": 458,
- "total_source_entries": 582,
+ "total_discussions": 733,
+ "total_knowledge_gaps": 459,
+ "total_source_entries": 583,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
