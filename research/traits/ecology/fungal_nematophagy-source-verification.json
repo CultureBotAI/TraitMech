@@ -1,0 +1,427 @@
+{
+  "trait_id": "traitmech:000719",
+  "decision_timestamp": "2026-10-13T15:34:51Z",
+  "generated_at": "2026-10-13T15:41:52.843700+00:00",
+  "rows": [
+    {
+      "reference": "DOI:10.3390/f10050404",
+      "snippet": "Nematophagy implies the consumption of nematodes.",
+      "words": 6,
+      "source": {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019.pdf",
+        "sha256": "e16280002fd201d488efc030089c02e1bf942d456451ffef75d4e2dd26edbcd4",
+        "bytes": 1379499,
+        "url": "https://mdpi-res.com/d_attachment/forests/forests-10-00404/article_deploy/forests-10-00404.pdf?version=1557469225"
+      },
+      "locator": "Introduction, PDF page 1",
+      "source_identity_verified": true,
+      "exact_contiguous_span": true,
+      "direct_check": "Original typeset PDF passage visually matched; whitespace and PDF duplicate extraction lines are not quote edits.",
+      "native_verdict": "UNRESOLVED",
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Ff10050404&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-nematophagy-snippet-canary-20261013/response-0.json",
+        "sha256": "de067d2c7dfcdd1715de5c412c4e0f3362f1f43577a4ee3b0bf1923491fd76ac"
+      },
+      "inspection_limits": "Selected Methods/Results/Discussion and actual indicated figures/pages, not every figure, supplement or raw dataset. Interpretation remains in record notes."
+    },
+    {
+      "reference": "DOI:10.3390/f10050404",
+      "snippet": "Susceptible rhabditid species (Poikilolaimus oxycercus) being consumed by Pleurotus ostreatus hyphae.",
+      "words": 11,
+      "source": {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019.pdf",
+        "sha256": "e16280002fd201d488efc030089c02e1bf942d456451ffef75d4e2dd26edbcd4",
+        "bytes": 1379499,
+        "url": "https://mdpi-res.com/d_attachment/forests/forests-10-00404/article_deploy/forests-10-00404.pdf?version=1557469225"
+      },
+      "locator": "Figure 2a caption, PDF page 6",
+      "source_identity_verified": true,
+      "exact_contiguous_span": true,
+      "direct_check": "Original typeset PDF passage visually matched; whitespace and PDF duplicate extraction lines are not quote edits.",
+      "native_verdict": "UNRESOLVED",
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Ff10050404&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-nematophagy-snippet-canary-20261013/response-0.json",
+        "sha256": "de067d2c7dfcdd1715de5c412c4e0f3362f1f43577a4ee3b0bf1923491fd76ac"
+      },
+      "inspection_limits": "Selected Methods/Results/Discussion and actual indicated figures/pages, not every figure, supplement or raw dataset. Interpretation remains in record notes."
+    },
+    {
+      "reference": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/fan/40780.pdf",
+      "snippet": "The saprophytic and predacious ability appeared not to be mutually exclusive.",
+      "words": 11,
+      "source": {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994.pdf",
+        "sha256": "01d264b0095706d95726c2c5067e0a1fde95b092b115ea7d68378e22d83ef42b",
+        "bytes": 381637,
+        "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/fan/40780.pdf"
+      },
+      "locator": "Summary, PDF page 1",
+      "source_identity_verified": true,
+      "exact_contiguous_span": true,
+      "direct_check": "Original typeset PDF passage visually matched; whitespace and PDF duplicate extraction lines are not quote edits.",
+      "native_verdict": "NOT_RUN_URL_REFERENCE",
+      "native_response": null,
+      "inspection_limits": "Selected Methods/Results/Discussion and actual indicated figures/pages, not every figure, supplement or raw dataset. Interpretation remains in record notes."
+    },
+    {
+      "reference": "DOI:10.1371/journal.pbio.3002400",
+      "snippet": "At mid to late time points, we observed hyphal growth inside nematodes following penetration of the cuticle, corresponding to digestion.",
+      "words": 20,
+      "source": {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023.xml",
+        "sha256": "b3248b3dd4be8c3aa405882d0d530c28964bccee3156a2c48862be34fa5e1eee",
+        "bytes": 254218,
+        "url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3002400&type=manuscript"
+      },
+      "locator": "Results, Late time point induced protease and its potential role in digesting nematodes",
+      "source_identity_verified": true,
+      "exact_contiguous_span": true,
+      "direct_check": "Publisher XML scientific Results sec018, direct contiguous match.",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pbio.3002400&resultType=core&format=json",
+        "status": 200,
+        "path": "/tmp/traitmech-nematophagy-snippet-canary-20261013/response-1.json",
+        "sha256": "74c6bc4416b7366991e970ca62b7ad6b85444f61580a3c2da002e1f7b3cce664"
+      },
+      "inspection_limits": "Selected Methods/Results/Discussion and actual indicated figures/pages, not every figure, supplement or raw dataset. Interpretation remains in record notes."
+    }
+  ],
+  "native_record_verification": {
+    "command": "PYTHONPATH=src .venv/bin/python scripts/verify_snippets.py --record data/traits/ecology/fungal_nematophagy.yaml --out /tmp/traitmech-nematophagy-native-record-20261013.tsv",
+    "exit": 0,
+    "report": {
+      "path": "/tmp/traitmech-nematophagy-native-record-20261013.tsv",
+      "sha256": "84c80ce1948af85088c65533f9ca65adb5bd675df91c3d0ef2de720f67857124",
+      "bytes": 657
+    },
+    "checked_snippets": 3,
+    "distinct_references": 2,
+    "url_reference": "NOT_RUN_URL_REFERENCE"
+  },
+  "canonical_example": {
+    "taxon_id": "NCBITaxon:5322",
+    "taxon_label": "Pleurotus ostreatus",
+    "authority": {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/pleurotus-ostreatus-ncbi.xml",
+      "sha256": "09801ab38f52e0d7c51b13b7b4da06b74b5d21e0d9315a38421dc1e2edf4a239",
+      "bytes": 3790,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=5322&retmode=xml"
+    },
+    "native_audit": {
+      "command": "PYTHONPATH=src .venv/bin/python scripts/audit_canonical_examples.py --ncbi-api",
+      "exit": 0,
+      "resolved": 762,
+      "errors": 0,
+      "warnings": 24,
+      "new_example_warning": false
+    },
+    "limits": "Species authority verification does not independently identify the experimental culture; morphology-based identification and unnamed grocery-store isolate are qualified in the record."
+  },
+  "novelty": {
+    "ignored_hidden_included": true,
+    "locations": 170,
+    "historical_heads": 139,
+    "owner_paths": [
+      "data/traits/morphology/fungal_adhesive_column_trap_formation.yaml",
+      "data/traits/morphology/fungal_adhesive_knob_trap_formation.yaml",
+      "data/traits/morphology/fungal_adhesive_net_trap_formation.yaml",
+      "data/traits/morphology/fungal_constricting_ring_formation.yaml",
+      "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+      "data/traits/morphology/fungal_nonconstricting_ring_trap_formation.yaml",
+      "data/traits/physiology/autophagy.yaml",
+      "data/traits/physiology/myzocytosis.yaml",
+      "history/records/TYQ1_Nematode_Biocontrol_SynCom/2026-10-08T133242Z-codex-3eb620.yaml",
+      "history/records/fungal_nematode_trap_formation/2026-10-13T133323Z-codex-8ec347.yaml",
+      "kb/communities/Alfalfa_Stress_Adapted_Bacterial_SynCom.yaml",
+      "kb/communities/Carbon_Substrate_PMSX_Biofilm_SynCom.yaml",
+      "kb/communities/CeMbio_Caenorhabditis_Elegans_Microbiome.yaml",
+      "kb/communities/MAMC_M48_Lignocellulose.yaml",
+      "kb/communities/Maize_Root_Simplified_Community.yaml",
+      "kb/communities/Maize_SC2_RootRot_Biocontrol_SynCom.yaml",
+      "kb/communities/Pleuromutilin_Degrading_Artificial_Consortium_5_Strain.yaml",
+      "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+      "kb/communities/Teosinte_Maize_Biofertilizer_SynCom7.yaml",
+      "kb/communities/Wheat_SynCom_SASW01_Drought_Inoculant.yaml",
+      "proposals/metpo_traitmech_v507/proposal.md",
+      "proposals/metpo_traitmech_v514/proposal.md",
+      "proposals/metpo_traitmech_v553/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v553/proposal.md",
+      "proposals/metpo_traitmech_v554/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v554/proposal.md",
+      "proposals/metpo_traitmech_v555/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v555/proposal.md",
+      "proposals/metpo_traitmech_v556/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v557/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v594/metpo_proposal_classes_robot.tsv",
+      "proposals/metpo_traitmech_v594/proposal.md"
+    ],
+    "disposition": "Six trap-morphology records, autophagy and myzocytosis are different endpoints. Ten bacterial community records describe host association, biocontrol or taxonomy. Their generated views and proposals are not fungal feeding records. KG-Microbe matches are taxonomic provenance, isolation source and nematode life stage. No exact record/proposal or exact unresolved node/synonym requiring repair was identified in the bounded inspected scope."
+  },
+  "ontology": {
+    "pinned_unchanged": true,
+    "current_head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+    "disposition": "No exact active term found. Historical trophic types 0000005 and 000005 replace to active 1000631, a carbon/energy axis, not exact nematode feeding. Active 1000644 is organic-carbon heterotrophy; 1000731 is nutrient-availability adaptation. Deprecated 0000261, 000262, 1000125 are fungal-spore concepts and 1000227 is parasitism, with no replacement/consider observed. OMO:0001000 does not invalidate the biology or authorize reuse. The current editor file is a 31-triple metadata/annotation skeleton, not a populated counterpart to the 12649-triple release; actual class status is assessed from release and template rows. Retain phenotype 1000059, no historical exact xrefs."
+  },
+  "allocation": {
+    "identifier": "traitmech:000719",
+    "cohort": "metpo_traitmech_v595",
+    "block": [
+      1067200,
+      1067299
+    ],
+    "conflicting_reservations": [],
+    "exact_hit_disposition": "Three ast_serialize wheel sizes, not term IDs.",
+    "range_disposition": "318 broad ADDITIONAL EDITOR envelope references or documentation, not narrower reservations.",
+    "pending_heads": [
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1782,
+        "head": "35099af2b7d5347f2ca6e418c4a139979071644d",
+        "draft": false
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 1476,
+        "head": "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+        "draft": false
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 973,
+        "head": "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+        "draft": false
+      },
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "number": 924,
+        "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+        "draft": true
+      },
+      {
+        "repository": "CultureBotAI/CommunityMech",
+        "number": 935,
+        "head": "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+        "draft": true
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 644,
+        "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+        "draft": false
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 643,
+        "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+        "draft": false
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 641,
+        "head": "9681aeacff5ea06a0dd8907906475d270ad61285",
+        "draft": false
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 640,
+        "head": "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+        "draft": false
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 638,
+        "head": "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+        "draft": false
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "number": 629,
+        "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+        "draft": false
+      }
+    ]
+  },
+  "status_checks": {
+    "crossref": [
+      {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-crossref.json",
+        "sha256": "7c344241c0097a75848699ed1d6e678d46752586f703a750ec04232166ae84a9",
+        "bytes": 16434,
+        "url": "https://api.crossref.org/works/10.3390/f10050404"
+      },
+      {
+        "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-crossref.json",
+        "sha256": "18b35f7ed33e107627089b5f1690675725533f73ca3d8d6d380c0d36cf91c4e2",
+        "bytes": 37630,
+        "url": "https://api.crossref.org/works/10.1371/journal.pbio.3002400"
+      }
+    ],
+    "pubmed": {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-pubmed.xml",
+      "sha256": "c0f70e7e848ae2d469cfd87b40b0fcdabbbb9478852ca610952dc733e87ce1a5",
+      "bytes": 50239,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=37988381&retmode=xml"
+    },
+    "interpretation": "Retrieved Crossref records expose no update-to or populated relation. PubMed UpdateIn PMID:40591707 and the publisher link identify DOI:10.1371/journal.pbio.3003178; its directly read publisher page calls it Update Article and adds adhesion research, not a correction. MDPI notice-page request returned HTTP 403 (curl exit 56). The IRD PDF supplies no comprehensive notice history. These are bounded checks, not proof no notices exist."
+  },
+  "inspected_assets": [
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994-pages/page-1.png",
+      "sha256": "92a175308b5a3f3dbf223439434e9dc5bb18dc6155a3148a1bc5bd47e7674b69",
+      "bytes": 1012556
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994-pages/page-6.png",
+      "sha256": "5bf789d42cb51c4a7041530761421bba54d9efcf0eed8c36b0594b7e6ff07693",
+      "bytes": 1409318
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994-pages/page-7.png",
+      "sha256": "1b0e3a1c6186958fdb0d2431b23dc750fcf4ba4d3895ee6d32fd169b4dc6193d",
+      "bytes": 1064368
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994-pages/page-8.png",
+      "sha256": "2b253038fe553c21936817b2d0d002a7348a980affecfc9581d5c36f1f8712c1",
+      "bytes": 1077495
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/denbelder1994.pdf",
+      "sha256": "01d264b0095706d95726c2c5067e0a1fde95b092b115ea7d68378e22d83ef42b",
+      "bytes": 381637
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lee2023.xml",
+      "sha256": "997117f0c6096b4a22d7956fa8878b43216f24fe06e25e58feae9a5494d1d8e9",
+      "bytes": 169796
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-fig5.png",
+      "sha256": "6376e3a965921d2b7caf4ad18418d8bbee0f45746efb521ef326a7a99fe7b09c",
+      "bytes": 1705074
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-pubmed.xml",
+      "sha256": "c0f70e7e848ae2d469cfd87b40b0fcdabbbb9478852ca610952dc733e87ce1a5",
+      "bytes": 50239
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-s7.png",
+      "sha256": "9be9c64e11fe791fa673cb529c7d7f6f7b1e82aa072d57bb926b70d356f052a0",
+      "bytes": 2124569
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-s7.tif",
+      "sha256": "3a5217784bdb05bc5a66aa7d9e7ffa62526b7b5abe5cf84c4beb742cb95d34f6",
+      "bytes": 2491552
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023-table1.png",
+      "sha256": "f678fab99e02458d3f51e8b6d7c18484b266b8abf8fccec36ce194342bddc667",
+      "bytes": 109992
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/lin2023.xml",
+      "sha256": "b3248b3dd4be8c3aa405882d0d530c28964bccee3156a2c48862be34fa5e1eee",
+      "bytes": 254218
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-1.png",
+      "sha256": "8eb2ccf894309553b94f6116876270b866ecc859b1bf749689886cd01f050491",
+      "bytes": 565021
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-3.png",
+      "sha256": "1591336ffbef4a88373491d741175ffacf6247b6366670fe784dea6542a4dcc5",
+      "bytes": 562733
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-4.png",
+      "sha256": "7b92b4798eac6043f7282b43bdcd3862efb9fd133136058245338ff0da2bfaeb",
+      "bytes": 408964
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-5.png",
+      "sha256": "6ccadc6f69669bf1681abf19bc27441518669f87d03c51726d9d4e7a797f1caa",
+      "bytes": 551189
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-6.png",
+      "sha256": "0015b2594ab28482f3738439ced3cce237e549ef7303698736511710844a04cf",
+      "bytes": 1423181
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-7.png",
+      "sha256": "f5d547058965949d530d4107e77be5ab25db2129a89c55407d7204499b101d3e",
+      "bytes": 455276
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019-pages/page-8.png",
+      "sha256": "6afdc50669164a362dfaaaa7316fa921d12997e011dc441727cb8f486dffb9f3",
+      "bytes": 586753
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/marlin2019.pdf",
+      "sha256": "e16280002fd201d488efc030089c02e1bf942d456451ffef75d4e2dd26edbcd4",
+      "bytes": 1379499
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/metpo-edit.ttl",
+      "sha256": "78bfc87e1773e4a86625d319e57bb0bf623428b92275a9195dc6a32b0435a482",
+      "bytes": 4349
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/pleurotus-ostreatus-ncbi.xml",
+      "sha256": "09801ab38f52e0d7c51b13b7b4da06b74b5d21e0d9315a38421dc1e2edf4a239",
+      "bytes": 3790
+    }
+  ],
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/accepted.json",
+      "sha256": "79a2736ead17461ce44346139ba875cf9960d0bcf2e857126fbac3c1d1696a18",
+      "bytes": 9347
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/current-ontology-assessment.json",
+      "sha256": "3b2353747509b81172ff17ecfd39996f6d84f20e8dd814b8d087b5035010d8db",
+      "bytes": 10523
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/pinned-ontology-scan.json",
+      "sha256": "c2b5711039f6cefedb48387c3f89f7ad5f39dc0bb71a614c7f5af5862fb4134a",
+      "bytes": 114529
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/local-owner-contexts.json",
+      "sha256": "c79104fc0edadd0955dc7ce7164db43c637eb34fa563568aef21390cdb52f43c",
+      "bytes": 14377
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-research-20261013/remote-contexts.json",
+      "sha256": "9671b45ba5fc1845d06d8a8a990f71c758b822b6d9a009c6ae0dd6036669b4d9",
+      "bytes": 54315
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-snippet-canary-20261013/result.json",
+      "sha256": "03814c29fad7eecadc3fdaefa22c613d86cbe4798fc5b3345125351808015a11",
+      "bytes": 4634
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-native-record-20261013.tsv",
+      "sha256": "84c80ce1948af85088c65533f9ca65adb5bd675df91c3d0ef2de720f67857124",
+      "bytes": 657
+    },
+    {
+      "path": "/tmp/traitmech-nematophagy-reservations-20261013/assessment.json",
+      "sha256": "e860dfae09790f1e807688ddd6061c1161d2282f293f12c64ccee7b85d735b09",
+      "bytes": 187405
+    }
+  ],
+  "limitations": "Local receipt paths are not public durable evidence. Primary DOI/stable URLs and hashes are recorded separately. No paid research, exhaustive source-status clearance, complete supplement audit, quantified nutrient assimilation or human scientific sign-off is claimed."
+}

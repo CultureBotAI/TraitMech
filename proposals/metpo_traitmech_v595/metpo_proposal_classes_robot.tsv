@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1067200	fungal nematophagy	A nutritional phenotype in which a fungus consumes nematodes as food.	TraitMech:data/traits/ecology/fungal_nematophagy.yaml|DOI:10.3390/f10050404|https://horizon.documentation.ird.fr/exl-doc/pleins_textes/fan/40780.pdf|DOI:10.1371/journal.pbio.3002400	METPO:1000059			metpo_traitmech_2026_10		Fungal feeding on nematodes; no universal trapping, killing or exclusive nutrition.	traitmech:000719
