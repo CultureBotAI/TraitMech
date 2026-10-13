@@ -151,6 +151,22 @@ def test_proposal_narrative_matches_current_evidence_roles():
     assert "natively as\n  `VERIFIED`" not in current
 
 
+def test_history_audit_links_prior_corrections_without_rewriting_them():
+    histories = [(p, yaml.safe_load(p.read_text())) for p in
+                 (writer.ROOT / "history/records" / writer.SLUG).glob("*.yaml")]
+    issue_prefix = "https://github.com/CultureBotAI/TraitMech/issues/"
+    audit, = [d for _, d in histories if issue_prefix + "1921" in d.get("links", {}).get("issues", [])]
+    event, = audit["events"]
+    assert event["type"] == "AUDIT" and event["outcome"] == "no_change"
+    assert audit["target"]["path"] == f"data/traits/physiology/{writer.SLUG}.yaml"
+    assert audit["links"]["prs"] == ["https://github.com/CultureBotAI/TraitMech/pull/1915"]
+    assert {issue_prefix + str(n) for n in range(1916, 1922)} <= set(audit["links"]["issues"])
+    edits = [(p, d) for p, d in histories if any(e["type"] == "EDIT" for e in d["events"])]
+    assert len(edits) == 4
+    assert all(p.name in event["details"] for p, _ in edits)
+    assert len(writer.build_record()["curation_history"]) == 5
+
+
 @pytest.mark.parametrize("build_previous", [writer.build_initial_record, writer.build_role_corrected_record,
                                           writer.build_producer_corrected_record,
                                           writer.build_endpoint_corrected_record])

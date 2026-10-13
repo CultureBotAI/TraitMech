@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T210624Z-codex-d22cad
+  timestamp: '2026-10-13T21:06:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1916
+  - https://github.com/CultureBotAI/TraitMech/issues/1917
+  - https://github.com/CultureBotAI/TraitMech/issues/1918
+  - https://github.com/CultureBotAI/TraitMech/issues/1919
+  - https://github.com/CultureBotAI/TraitMech/issues/1920
+  - https://github.com/CultureBotAI/TraitMech/issues/1921
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1915
+  urls:
+  - https://github.com/CultureBotAI/TraitMech/pull/1915#pullrequestreview-5509892474
+events:
+- type: AUDIT
+  outcome: no_change
+  summary: Link prior nematicidal corrections to structured review issues
+  details: 'Addressed #1921 by appending structured issue and PR links for prior immutable
+    correction records: 2026-10-13T181656Z-codex-7e97a3.yaml, 2026-10-13T185752Z-codex-bb2ac8.yaml,
+    2026-10-13T194147Z-codex-8e2a91.yaml, 2026-10-13T202911Z-codex-c477c5.yaml. These EDIT
+    records named #1916, #1917, #1918 and #1919 only in prose. This audit adds queryable provenance
+    without changing their bytes or claiming they originally had structured links. The initial
+    CREATE predates those review issues and is not retroactively attributed to them. #1920
+    separately corrected the companion proposal narrative. No TraitRecord fact, curation event,
+    identifier, hierarchy, source receipt or biological evidence changed. The generated page
+    gains this audit as its sixth history link.'
