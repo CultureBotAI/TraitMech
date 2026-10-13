@@ -1,0 +1,1000 @@
+{
+  "trait_id": "traitmech:000720",
+  "decision_timestamp": "2026-10-13T17:31:43Z",
+  "assembled_at": "2026-10-13T17:38:22.145207+00:00",
+  "rows": [
+    {
+      "reference": "DOI:10.1128/spectrum.02577-21",
+      "snippet": "PPA and t-CA displayed potent, concentration-dependent nematicidal activities against the root-knot nematode (Meloidogyne incognita) and the citrus nematode (Tylenchulus semipenetrans)",
+      "words": 20,
+      "source": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/fullTextXML",
+        "path": "/tmp/traitmech-nematicidal-research-20261013/kusakabe2022.xml",
+        "bytes": 172502,
+        "sha256": "f69d0e36908b85583ebe2ae1faad1af21dcb011054d3ac890a83957b9f8028cd"
+      },
+      "locator": "Scientific Abstract, first paragraph; contiguous clause before the trailing appositive.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "VERIFIED",
+      "inspection_limits": "Scientific Abstract, Results, culture/extraction and nematicidal-assay Methods inspected; actual Figures 2/3, Table 4, and PDF pages 1, 10, 14, 15 viewed. Supplemental NMR/statistical files, remaining figures and complete raw data not audited. Table 4 is indole recovery, not direct survival testing of t-CA/PPA. Source numerical disagreements are not silently reconciled."
+    },
+    {
+      "reference": "DOI:10.1038/s41598-023-33669-z",
+      "snippet": "T. asperellum FbMi6 at 80% concentration had the highest (90.3%) juvenile mortality compared to control.",
+      "words": 15,
+      "source": {
+        "url": "https://www.nature.com/articles/s41598-023-33669-z",
+        "path": "/tmp/traitmech-nematicidal-research-20261013/saharan2023.html",
+        "bytes": 432204,
+        "sha256": "9cd48922e85bd719a9108435fd1c4914f76e2a28bce35ea9ca005bb902243bc1"
+      },
+      "locator": "Results, In vitro activity of T. asperellum FbMi6 against M. incognita; Figure 4 paragraph.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "inspection_limits": "Scientific Abstract, in vitro Results, culture-filtrate/juvenile Methods and actual Figure 4 inspected. Supplement OOXML text/tables plus its only embedded image inspected; no full DOCX page render. Pot/field claims and other main figures not fully audited. Recovery duration and criterion unreported. GenBank and supplement isolate labels conflict; no canonical assignment."
+    },
+    {
+      "reference": "DOI:10.3725/jjn.45.51",
+      "snippet": "The J2s inactivated by low temperature showed no reaction to the NaOH treatment.",
+      "words": 13,
+      "source": {
+        "url": "https://www.jstage.jst.go.jp/article/jjn/45/1/45_51/_pdf/-char/en",
+        "path": "/tmp/traitmech-nematicidal-lead-20261013/harada2015.pdf",
+        "bytes": 890995,
+        "sha256": "4f579861d00f3953e760ba4f797e8db75fa80636d96947d04aaf2ad75d767b35"
+      },
+      "locator": "Scientific abstract, printed page 51 (PDF page 1); methodological caveat only.",
+      "exact_contiguous_span": true,
+      "source_identity_verified": true,
+      "native_verdict": "UNRESOLVED",
+      "inspection_limits": "Printed pages 51-54 visually inspected, including abstract, relevant Methods, Table 1 and Figure 1. Method limitations do not independently establish microbial killing or invalidate all NaOH-based viability scoring. Final bibliography page not claimed as scientifically audited."
+    }
+  ],
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/physiology/lethal_nematicidal_activity.yaml",
+      "--out",
+      "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 5.362425678875297,
+    "completed_at": "2026-10-13T17:36:49.111658+00:00",
+    "log": "/tmp/traitmech-nematicidal-checks-20261013/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-nematicidal-checks-20261013/native-record.tsv",
+      "bytes": 779,
+      "sha256": "c2a8c69718654d4a739553e120caf03f7e489e6a2edbe7e848f3d5927c4f5faf"
+    }
+  },
+  "canary": {
+    "direct_checks": {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/canary/receipt.json",
+      "bytes": 2124,
+      "sha256": "f4b0244b2ccf8fa546fbefa5a52eafed07a548d2a3d7d6b4a01188373709caaf"
+    },
+    "initial_native_exit": 1,
+    "initial_limitation": "Absolute external path rejected before lookup; not a verification result.",
+    "successful_relative_run": {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/canary/native-relative.tsv",
+      "bytes": 794,
+      "sha256": "563f8da4d1226f0dfe8d04b88add7ff2e5ebe9f5fe562341105762ff8d30128e"
+    },
+    "relative_run_exit": 0
+  },
+  "source_status": {
+    "checked_date": "2026-10-13",
+    "interpretation": "Two exact MED PMID records and Crossref DOI/title metadata agree. Kusakabe/Saharan Crossmark pages report current; no linked correction/retraction identified in these bounded responses. Harada publisher and Crossref agree; exact DOI Europe PMC query returns zero results. Missing update fields and absent page notice links are not comprehensive notice clearance.",
+    "strain_authority": "GenBank MT529846.1 is clone SF_570, not asserted FbMi6; MT529837.1 is clone SF_561. The supplement table and FbMi-4 image caption are not reconciled by inventing an accession."
+  },
+  "acquisitions": [
+    {
+      "name": "epmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A35138171%20OR%20EXT_ID%3A37088805%29%20AND%20SRC%3AMED&format=json&resultType=core",
+      "started_at": "2026-10-13T17:10:04.691840+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A35138171%20OR%20EXT_ID%3A37088805%29%20AND%20SRC%3AMED&format=json&resultType=core",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/epmc.response",
+      "bytes": 15768,
+      "sha256": "1b0b708f77381a81c4953b33c23222174f0f602ca837c29ccd7816c1b4e96a68",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:05.701350+00:00"
+    },
+    {
+      "name": "saharan-crossref",
+      "requested_url": "https://api.crossref.org/works/10.1038%2Fs41598-023-33669-z",
+      "started_at": "2026-10-13T17:10:05.701759+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1038%2Fs41598-023-33669-z",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/saharan-crossref.response",
+      "bytes": 30699,
+      "sha256": "b21777cafac0fcae8d9cf2f4dbf545e9e96cb8e0054d0bf2bd1795987c527552",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:06.129898+00:00"
+    },
+    {
+      "name": "kusakabe-crossref",
+      "requested_url": "https://api.crossref.org/works/10.1128%2Fspectrum.02577-21",
+      "started_at": "2026-10-13T17:10:06.130264+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1128%2Fspectrum.02577-21",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/kusakabe-crossref.response",
+      "bytes": 15234,
+      "sha256": "dc811a3a619bb07811009fca03ee74c7cda0e05ec99771aa571a75ecfa10a603",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:06.474092+00:00"
+    },
+    {
+      "name": "saharan-crossmark",
+      "requested_url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41598-023-33669-z",
+      "started_at": "2026-10-13T17:10:06.474650+00:00",
+      "status": 200,
+      "final_url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41598-023-33669-z",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/saharan-crossmark.response",
+      "bytes": 9863,
+      "sha256": "e7d347a0d0c8628b99d6306fb603d1df68dc0b172a7c84536cfe08c3c3fa43a6",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:06.981027+00:00"
+    },
+    {
+      "name": "saharan-figure4",
+      "requested_url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-023-33669-z/MediaObjects/41598_2023_33669_Fig4_HTML.png",
+      "started_at": "2026-10-13T17:10:06.981604+00:00",
+      "status": 200,
+      "final_url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-023-33669-z/MediaObjects/41598_2023_33669_Fig4_HTML.png",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/saharan-figure4.response",
+      "bytes": 41690,
+      "sha256": "79728a2253689a11cc4703aa08a4eba8e4fbc84fc674bac97c89491680caff13",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:07.171652+00:00"
+    },
+    {
+      "name": "saharan-supplement",
+      "requested_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-023-33669-z/MediaObjects/41598_2023_33669_MOESM1_ESM.docx",
+      "started_at": "2026-10-13T17:10:07.172345+00:00",
+      "status": 200,
+      "final_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-023-33669-z/MediaObjects/41598_2023_33669_MOESM1_ESM.docx",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/saharan-supplement.response",
+      "bytes": 240280,
+      "sha256": "b35fc2f1720f522fea7c8625885cbf4d40acf041bbc1ce4e0b49ecdde4afcaab",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:07.580631+00:00"
+    },
+    {
+      "name": "genbank",
+      "requested_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MT529846.1&rettype=gb&retmode=xml",
+      "started_at": "2026-10-13T17:10:07.581426+00:00",
+      "status": 200,
+      "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MT529846.1&rettype=gb&retmode=xml",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/genbank.response",
+      "bytes": 4864,
+      "sha256": "6c3b463f81732b629022a040a5d5b78e23556e5a34a1b1f5b9f265845e38b7a5",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:07.774030+00:00"
+    },
+    {
+      "name": "taxonomy-search",
+      "requested_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=taxonomy&term=Trichoderma%20asperellum%5BScientific%20Name%5D&retmode=json",
+      "started_at": "2026-10-13T17:10:07.774895+00:00",
+      "status": 200,
+      "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=taxonomy&term=Trichoderma%20asperellum%5BScientific%20Name%5D&retmode=json",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/authority/taxonomy-search.response",
+      "bytes": 337,
+      "sha256": "6437c7a73172c5a6620059ce85b3abf4dfd9c60c2b938287b42c64ac500f4242",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:10:08.000157+00:00"
+    },
+    {
+      "name": "asm",
+      "requested_url": "https://journals.asm.org/doi/full/10.1128/spectrum.02577-21",
+      "started_at": "2026-10-13T17:13:04.916227+00:00",
+      "status": 403,
+      "final_url": "https://journals.asm.org/doi/full/10.1128/spectrum.02577-21",
+      "error": "HTTP Error 403: Forbidden",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/followup/asm.response",
+      "bytes": 5583,
+      "sha256": "c494d806f57dfd9dd140f8905cb4c8277cc80149ecd6b5bd52e0dcb27271bb04",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:05.005632+00:00"
+    },
+    {
+      "name": "kusakabe-crossmark",
+      "requested_url": "https://crossmark.crossref.org/dialog/?doi=10.1128/spectrum.02577-21",
+      "started_at": "2026-10-13T17:13:05.006035+00:00",
+      "status": 200,
+      "final_url": "https://crossmark.crossref.org/dialog/?doi=10.1128/spectrum.02577-21",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/followup/kusakabe-crossmark.response",
+      "bytes": 10657,
+      "sha256": "80225ebe15b35d525eba4f5c0bfa86c9e3cd0d985ce69a41bcc30b095fbab0fc",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:05.442209+00:00"
+    },
+    {
+      "name": "taxonomy",
+      "requested_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=101201&retmode=xml",
+      "started_at": "2026-10-13T17:13:05.442761+00:00",
+      "status": 200,
+      "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=101201&retmode=xml",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/followup/taxonomy.response",
+      "bytes": 4419,
+      "sha256": "48def95d7bdaf8b1b651a75bb4538ab8b26c22c5dd0f0583018b11da142dbd89",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:05.676740+00:00"
+    },
+    {
+      "name": "comparison-genbank",
+      "requested_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MT529837.1&rettype=gb&retmode=xml",
+      "started_at": "2026-10-13T17:13:05.677358+00:00",
+      "status": 200,
+      "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MT529837.1&rettype=gb&retmode=xml",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/followup/comparison-genbank.response",
+      "bytes": 4873,
+      "sha256": "1092b379e0b29638279ad68dfb3fab749667a47f0e887c459e2f9adc346ae292",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:05.874119+00:00"
+    },
+    {
+      "name": "chebi",
+      "requested_url": "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?obo_id=CHEBI:25491",
+      "started_at": "2026-10-13T17:13:05.874589+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?obo_id=CHEBI:25491",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/followup/chebi.response",
+      "bytes": 4248,
+      "sha256": "f3f73668a8ab653f66e1d57b6631f2d32e9e04c941fed92a08b0b5f9ca8c342a",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:06.744748+00:00"
+    },
+    {
+      "name": "files",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/supplementaryFiles",
+      "started_at": "2026-10-13T17:15:32.719388+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8826726/supplementaryFiles",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/files.response",
+      "bytes": 800658,
+      "sha256": "70f0c60fb493027f132c3fa47a9a310e54df378c41b447c4443bc67bddbe639c",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:17:06.791672+00:00"
+    },
+    {
+      "name": "pdf",
+      "requested_url": "https://pdfs.semanticscholar.org/95ad/c170b4f21cd7cd7f0a19e1d4a21308e04386.pdf?skipShowableCheck=true",
+      "started_at": "2026-10-13T17:17:06.792298+00:00",
+      "status": 200,
+      "final_url": "https://pdfs.semanticscholar.org/95ad/c170b4f21cd7cd7f0a19e1d4a21308e04386.pdf?skipShowableCheck=true",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf.response",
+      "bytes": 1134443,
+      "sha256": "0fe725e15d512dc39a0e5e96559989bf95b88569118e7968e145491349cbc25e",
+      "pdf_magic": true,
+      "finished_at": "2026-10-13T17:17:07.315264+00:00"
+    },
+    {
+      "name": "oa",
+      "requested_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC8826726",
+      "started_at": "2026-10-13T17:13:40.166159+00:00",
+      "status": 404,
+      "final_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC8826726",
+      "error": "HTTP Error 404: Not Found",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/oa/oa.response",
+      "bytes": 1584,
+      "sha256": "d2ab3879f82272374d153b724be169470976481d1b0fc012ccd3f983bcf93b18",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:13:40.372653+00:00"
+    },
+    {
+      "name": "oa",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC8826726",
+      "started_at": "2026-10-13T17:14:29.039069+00:00",
+      "status": 404,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC8826726",
+      "error": "HTTP Error 404: Not Found",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/oa-current/oa.response",
+      "bytes": 48716,
+      "sha256": "40230fdc3dde175439fda00c063e31768c308ace29de9f78ff3054b90ac5c0e5",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:14:29.276562+00:00"
+    },
+    {
+      "name": "figure2",
+      "requested_url": "https://europepmc.org/articles/PMC8826726/bin/spectrum.02577-21-f002.jpg",
+      "started_at": "2026-10-13T17:14:29.276989+00:00",
+      "status": 403,
+      "final_url": "https://europepmc.org/articles/PMC8826726/bin/spectrum.02577-21-f002.jpg",
+      "error": "HTTP Error 403: Forbidden",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/oa-current/figure2.response",
+      "bytes": 5650,
+      "sha256": "707d38992443d9f1ecdc42b0615bb7803d9fccdf15debc69c9e41082605ed800",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:14:29.345541+00:00"
+    },
+    {
+      "name": "publisher",
+      "requested_url": "https://www.jstage.jst.go.jp/article/jjn/45/1/45_51/_article/-char/en",
+      "started_at": "2026-10-13T17:28:40.988047+00:00",
+      "status": 200,
+      "final_url": "https://www.jstage.jst.go.jp/article/jjn/45/1/45_51/_article/-char/en",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/harada-authority/publisher.response",
+      "bytes": 74531,
+      "sha256": "ff609996e62bc33082b5bf0226902fc383af5adaf949c6f97db01ba4d8e2596c",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:28:42.261712+00:00"
+    },
+    {
+      "name": "crossref",
+      "requested_url": "https://api.crossref.org/works/10.3725/jjn.45.51",
+      "started_at": "2026-10-13T17:28:42.262279+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.3725/jjn.45.51",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/harada-authority/crossref.response",
+      "bytes": 6581,
+      "sha256": "b75c72f99dd753dbbb0b5087734c819f2d6284fe7b45affd4f8c84f2fbef48eb",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:28:42.607527+00:00"
+    },
+    {
+      "name": "epmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3725%2Fjjn.45.51&resultType=core&format=json",
+      "started_at": "2026-10-13T17:28:42.608071+00:00",
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3725%2Fjjn.45.51&resultType=core&format=json",
+      "path": "/tmp/traitmech-nematicidal-research-20261013/harada-authority/epmc.response",
+      "bytes": 184,
+      "sha256": "aa5b286f60ddc6a33cb3b38a596a67c5cfbe33c37241c6c9b109a1b0171fb754",
+      "pdf_magic": false,
+      "finished_at": "2026-10-13T17:28:43.547408+00:00"
+    }
+  ],
+  "derived_assets": [
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/figures/spectrum.02577-21-f002.jpg",
+      "bytes": 119998,
+      "sha256": "5e06042cdcbd2776db1c6ddd826bf6348ad06dea920d02ddd5332e6110e2a9c1"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/figures/spectrum.02577-21-f003.jpg",
+      "bytes": 110666,
+      "sha256": "0c75387be7cb970f9417226f36e13cce2f70d91c0761ccf15f52be22515ff371"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/figures/spectrum.02577-21-t004.jpg",
+      "bytes": 52233,
+      "sha256": "47d68b7636e6c3b091de9db94c868aa6dc4cab0a5132aea52652310e3e88bb20"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-1.png",
+      "bytes": 679155,
+      "sha256": "65dbbdcdd25740dc1afd9a3e579f1eb11b0e3ff2602ad53e7a90d4837ba913ca"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-10.png",
+      "bytes": 593589,
+      "sha256": "562ce1fb28bd8d07a5a52143cea1d28ed398969e014369d3cc2d755e6aa84d18"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-14.png",
+      "bytes": 774577,
+      "sha256": "5afa5b604dd0f1b42015266c698f2ec77d6f505c3092622a4a2d324041245568"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-15.png",
+      "bytes": 639932,
+      "sha256": "abe27a0000ae160126d7f4f73d9c98d9c8de4c8f572390852be0d79f5d751b49"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-5.png",
+      "bytes": 452983,
+      "sha256": "1ab4caa9e7ad7998af0c70d8f53d4fa37ae5c7e116708135c514a41b1355af2c"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-pages/page-8.png",
+      "bytes": 428037,
+      "sha256": "3026231002a054093858bf46eff1776e5a056f7c414e6b4f1a2456f00e3379c3"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/supplement-assets/word/media/image1.jpeg",
+      "bytes": 222898,
+      "sha256": "7cd21d4ecf61c2f4c94b83b6746c262873ed5a7011477b27ef40a114e0746910"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-research-20261013/media/pdf-text.json",
+      "bytes": 72361,
+      "sha256": "891182894c50e8ef191304fc23040115f0a8639f2ad24aeab1e7fb88bcd932a6"
+    },
+    {
+      "path": "/tmp/traitmech-nematicidal-lead-20261013/harada2015-text.json",
+      "bytes": 19593,
+      "sha256": "7f0839b59f05ab997dd61a98de3e4c70cbccc8dea8ae73e898d4b75ca4818ee6"
+    }
+  ],
+  "novelty": {
+    "ignored_hidden_included": true,
+    "known_locations": 173,
+    "available_locations": 172,
+    "retained_historical_heads": 139,
+    "local_completion": {
+      "path": "/tmp/traitmech-nematicidal-novelty-20261013/local/completion.json",
+      "bytes": 647,
+      "sha256": "7029cba6e624af9fc6ac93939db41492c3f744a62ee012de961b7c9f56e92a68"
+    },
+    "local_scans": {
+      "path": "/tmp/traitmech-nematicidal-novelty-20261013/local/scans.json",
+      "bytes": 217330,
+      "sha256": "afd3edac9058bcc1b64569eb865f8a363ea01047a18d412bb863dd0ddac49143"
+    },
+    "historical_search": {
+      "path": "/tmp/traitmech-nematicidal-novelty-20261013/local/history.json",
+      "bytes": 48956297,
+      "sha256": "ed8eb3b8d25e7fa697ae6a87e38ab3dc4b19afd99f0932879cd064938967ff74"
+    },
+    "remote": {
+      "checked_at": "2026-10-13T17:10:27.976201+00:00",
+      "pattern": "nematicid|nematocid|nematotoxic|nematistatic|nematostatic|kill.{0,40}nematod|nematod.{0,40}(kill|lethal)|10\\.1128/spectrum\\.02577-21|10\\.1038/s41598-023-33669-z|10\\.3725/jjn\\.45\\.51|35138171|37088805|FbMi6|Caborca",
+      "main": "ac91b722fd0ab84cd7f68b0fae26cdca0290d471",
+      "upstream_heads": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "1804424c098337016889ed81a1b3eda01aedeaf0"
+      },
+      "prs": 11,
+      "pending_files": 783,
+      "upstream_files": 587,
+      "pending_hits": [],
+      "upstream_hits": [
+        {
+          "source": {
+            "repository": "CultureBotAI/CommunityMech",
+            "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+            "saved_path": "/tmp/traitmech-kin-remote-audit-20261013/content/12902cef6750bbd7f97b406e40b73b32783b4656",
+            "blob_sha": "12902cef6750bbd7f97b406e40b73b32783b4656",
+            "sha256": "a5c33db18b80a233099b80289b173c8c57e1420ced3a4f282ef99bb9100d0f11",
+            "head": "8df89370be840a4b58a9d8a7407c66c7471a5085"
+          },
+          "hits": [
+            {
+              "line": 76,
+              "text": "    explanation: Documents TYQ1 as keystone species with direct nematicidal and community-restructuring"
+            },
+            {
+              "line": 175,
+              "text": "    notes: Biomarker species with significant nematicidal activity (OTU2649)."
+            },
+            {
+              "line": 186,
+              "text": "    explanation: Documents AF as a member with significant nematicidal activity"
+            },
+            {
+              "line": 343,
+              "text": "      from direct nematicidal activity, biofilm effects or host responses. In-silico node removal is not that biological"
+            },
+            {
+              "line": 447,
+              "text": "    nematicidal effect."
+            },
+            {
+              "line": 512,
+              "text": "    the contribution of TYQ1. Removing an organism also removes its direct nematicidal and host-modulating effects;"
+            }
+          ]
+        },
+        {
+          "source": {
+            "repository": "Knowledge-Graph-Hub/kg-microbe",
+            "path": "mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+            "saved_path": "/tmp/traitmech-anticipation-discovery-20261012/github-kg-microbe/content/mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+            "blob_sha": "a3ce540da6ee94b71a4770093ce01ff1416c8660",
+            "sha256": "59464e08017cc907a1240a4378d2462efc9e2c1b9d6c3cf0b08b4344ef695ae8",
+            "head": "1804424c098337016889ed81a1b3eda01aedeaf0"
+          },
+          "hits": [
+            {
+              "line": 343216,
+              "text": "kgm.name:nematicide\tnematicide\tskos:exactMatch\tCHEBI:25491\tnematicide\tobo:chebi.owl\tsemapv:LexicalMatching\tchebi_xrefs\t2026-09-04\t\tcanonical_name\t\tbiolink:ChemicalEntity"
+            },
+            {
+              "line": 343217,
+              "text": "kgm.name:nematicides\tnematicides\tskos:closeMatch\tCHEBI:25491\tnematicide\tobo:chebi.owl\tsemapv:LexicalMatching\tchebi_xrefs\t2026-09-04\t\tsynonym\t\tbiolink:ChemicalEntity"
+            },
+            {
+              "line": 343218,
+              "text": "kgm.name:nematocide\tnematocide\tskos:closeMatch\tCHEBI:25491\tnematicide\tobo:chebi.owl\tsemapv:LexicalMatching\tchebi_xrefs\t2026-09-04\t\tsynonym\t\tbiolink:ChemicalEntity"
+            },
+            {
+              "line": 343219,
+              "text": "kgm.name:nematocides\tnematocides\tskos:closeMatch\tCHEBI:25491\tnematicide\tobo:chebi.owl\tsemapv:LexicalMatching\tchebi_xrefs\t2026-09-04\t\tsynonym\t\tbiolink:ChemicalEntity"
+            }
+          ]
+        }
+      ],
+      "body_hits": [],
+      "limits": "Lexical screening, not final semantic adjudication or allocation. Binary limits recorded. Removed files not decoded; historical scope is separate."
+    },
+    "disposition": "Existing trapping/feeding exclusions and generated views are not exact trait owners. CommunityMech TYQ1 observations and cached papers are not reservations; no exact TraitMech graph node or synonym needs repair. KG-Microbe maps nematicide chemicals. No exact existing TraitRecord identified within the inspected scope.",
+    "limits": "Known copies, not all host files. No symlink following or archive/packed-object decoding. Unavailable worktrees have tracked-tree fallback, not lost ignored/untracked reconstruction."
+  },
+  "ontology": [
+    {
+      "source": {
+        "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+        "origin": "pinned TraitMech mirror"
+      },
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+      "parsed_path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+      "parsed_sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+      "triples": 12617,
+      "candidates": [
+        {
+          "subject": "Nefc85a2a37b645c893154869880873cd",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "https://bacdive.dsmz.de/"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Axiom"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedProperty",
+              "value": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedSource",
+              "value": "https://w3id.org/metpo/1004002"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+              "value": "animal pathogen"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004000",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A phenotype where a microbe is a pathogen of of some host organism."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "General.keywords"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "Safety information.risk assessment"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "pathogenic to host"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1000059"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004002",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A pathogen that infects organisms in the kingdom Metazoa."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "animal pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "animal pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1004000"
+            }
+          ]
+        }
+      ],
+      "parent": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/metpo/1000188"
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+          "value": "A quality that differentiates specific instances of a species from other instances of the same species."
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+          "value": "Anthea Guo"
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+          "value": "Luke Wang"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "phenotype"
+        },
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "value": "https://biolink.github.io/biolink-model/PhenotypicQuality"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "origin": {
+          "repository": "berkeleybop/metpo",
+          "path": "metpo.owl",
+          "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+          "blob_sha": "125f475bac2758741d2ef8ec46b2984a1abdc048",
+          "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+          "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+        }
+      },
+      "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+      "parsed_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+      "parsed_sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+      "triples": 12649,
+      "candidates": [
+        {
+          "subject": "N1b216c6dd4274ed5b33fb75268a740c0",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/NCBITaxon_33208"
+            },
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/RO_0002556"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Axiom"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedProperty",
+              "value": "http://purl.obolibrary.org/obo/IAO_0000115"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedSource",
+              "value": "https://w3id.org/metpo/1004002"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+              "value": "A pathogenic to host phenotype in which the host organism is an animal (Metazoa)."
+            }
+          ]
+        },
+        {
+          "subject": "N2d0fe0377d2546e6bdbc12a4ac4df97b",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/NCBITaxon_33090"
+            },
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/RO_0002556"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Axiom"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedProperty",
+              "value": "http://purl.obolibrary.org/obo/IAO_0000115"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedSource",
+              "value": "https://w3id.org/metpo/1004003"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+              "value": "A pathogenic to host phenotype in which the host organism is a green plant (Viridiplantae)."
+            }
+          ]
+        },
+        {
+          "subject": "N5edc1357b63043718c134f27e6b99c94",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/IDO_0000639"
+            },
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/IDO_0000666"
+            },
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+            },
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "http://purl.obolibrary.org/obo/RO_0002556"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Axiom"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedProperty",
+              "value": "http://purl.obolibrary.org/obo/IAO_0000115"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedSource",
+              "value": "https://w3id.org/metpo/1004004"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+              "value": "A pathogenic to host phenotype in which the host organism is a human (Homo sapiens)."
+            }
+          ]
+        },
+        {
+          "subject": "Ncfc8ed2d33764b279fb5a5f16b286b38",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000119",
+              "value": "https://bacdive.dsmz.de/"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Axiom"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedProperty",
+              "value": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedSource",
+              "value": "https://w3id.org/metpo/1004002"
+            },
+            {
+              "predicate": "http://www.w3.org/2002/07/owl#annotatedTarget",
+              "value": "animal pathogen"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004000",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A phenotype in which a microbe is a pathogen of some host organism, having the ability to produce an infectious disease or disorder in that host."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "General.keywords"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "Safety information.risk assessment"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "pathogenic"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "pathogenicity phenotype"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "pathogenic to host"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1000059"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004002",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A pathogenic to host phenotype in which the host organism is an animal (Metazoa)."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+              "value": "zoopathogen"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "animal pathogen"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "pathogenic to animals"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "animal pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1004000"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004003",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A pathogenic to host phenotype in which the host organism is a green plant (Viridiplantae)."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+              "value": "phytopathogen"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "pathogenic to plants"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "plant pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "plant pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1004000"
+            }
+          ]
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004004",
+          "annotations": [
+            {
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "value": "A pathogenic to host phenotype in which the host organism is a human (Homo sapiens)."
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "human pathogen"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "human-infecting"
+            },
+            {
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+              "value": "infectious human pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "value": "http://www.w3.org/2002/07/owl#Class"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "human pathogen"
+            },
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+              "value": "https://w3id.org/metpo/1004000"
+            }
+          ]
+        }
+      ],
+      "parent": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/metpo/1000188"
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+          "value": "A quality that differentiates specific instances of a species from other instances of the same species."
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+          "value": "Anthea Guo"
+        },
+        {
+          "predicate": "http://purl.obolibrary.org/obo/IAO_0000117",
+          "value": "Luke Wang"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "phenotype"
+        },
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "value": "https://biolink.github.io/biolink-model/PhenotypicQuality"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+        "origin": {
+          "repository": "berkeleybop/metpo",
+          "path": "src/ontology/metpo-edit.owl",
+          "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+          "blob_sha": "d140e6174ada41f8a1cceb5dba286c8af15feb9e",
+          "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+          "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+        }
+      },
+      "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+      "parsed_path": "/tmp/traitmech-fungal-trap-parent-metpo-edit-20261013.rdf",
+      "parsed_sha256": "65b831892d4d51132ddfc6ea3d8c0b84e3fc729accf094ef09655b5a3bb40b4e",
+      "triples": 31,
+      "candidates": [],
+      "parent": []
+    }
+  ],
+  "allocation": {
+    "local_id": "traitmech:000720",
+    "cohort": "metpo_traitmech_v596",
+    "block": [
+      1067300,
+      1067399
+    ],
+    "exact_numeric_hits": 2,
+    "decimal_vector_false_positives": 2,
+    "range_hits": 379,
+    "range_contexts": [
+      "\"context\": \"`METPO:1000609` in draft #924; `beilstein:1066722` is a chemical identifier in a\\nKG-Microbe mapping, not a METPO identifier. Ten `1000000-1999999` overlaps are\\nformal editor-namespace envelopes or prior documentation of those envelopes,\\nnot competing block reservations. Narrower reserved and retired ranges stayed\\nchecked. No conflicting reservation remained in the inspected scope.\\n\\nRecheck current main and pending heads before publication. These checks do\",",
+      "\"context\": \"and 127 registered CommunityMech roots plus available historical proposals.\\nThe raw scan also found `1000000-1999999` in METPO #629's\\n`docs/metpo_id_ranges_research.md`, line 14, SHA-256\\n`07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c`.\\nThis is the formal ADDITIONAL EDITOR namespace envelope, not a competing\\nterm/cohort reservation. A hash- and context-guarded adjudication retains the\\nraw hit while all narrower reserved, retired and used ranges remain checked.\",",
+      "\"context\": \"| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |\",",
+      "\"context\": \"|--------|------|-----------------|\\n| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |\\n| **Current class sheet** | `src/templates/metpo_sheet.tsv` | 257 classes, METPO:1000059 to METPO:1004005 |\\n| **Current properties sheet** | `src/templates/metpo-properties.tsv` | 109 properties, METPO:2000001 to METPO:2000606 |\\n| **BioPortal entity extracts** | `metadata/ontology/historical_submissions/entity_extracts/metpo_submission_{2-10}_all_entities.tsv` | IDs used in each of 9 historical BioPortal submissions |\\n| **Historical OWL files** | `external/metpo_historical/metpo_submission_{2-10}.owl` | Actual OWL files for each submission |\\n| **Stability report** | `reports/METPO_Stability_Analysis_Comprehensive_Report.md` | Comprehensive analysis from Sep 2025 |\",",
+      "\"text\": \"The raw scan also found `1000000-1999999` in METPO #629's\",",
+      "\"text\": \"| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |\",",
+      "KG-Microbe mapping, not METPO. The `1000000-1999999` overlaps are formal editor",
+      "KG-Microbe mapping, not a METPO identifier. Ten `1000000-1999999` overlaps are",
+      "The raw scan also found `1000000-1999999` in METPO #629's",
+      "`1000000-1999999` editor envelope or documentation, not narrower reservations.",
+      "overlaps denote the broad `1000000-1999999` editor envelope or documentation",
+      "| **ID ranges OWL** | `src/ontology/metpo-idranges.owl` | Formal range allocations: Range 1 (0-999999) for ONTOLOGY-CREATOR, Range 2 (1000000-1999999) for ADDITIONAL EDITOR |"
+    ],
+    "disposition": "All interval hits are the broad 1000000-1999999 editor envelope or prior documentation, not competing narrower reservations.",
+    "conflicting_reservations": [],
+    "limits": "Ignored/hidden local files; unavailable TraitMech tracked trees and CommunityMech proposal trees; nonremoved pending changes and selected upstream owners. No lost untracked/ignored reconstruction, symlink following or local archive decoding.",
+    "source": {
+      "path": "/tmp/traitmech-nematicidal-reservations-20261013/assessment.json",
+      "sha256": "b6b14a30bbeae3e0235b21dfe65a643753666093d8443e25437a8ed8173c186a"
+    },
+    "concurrent_limit": "Recheck before publication; this is not an atomic allocation."
+  },
+  "skill_assessment": "Existing add-trait guidance already requires endpoint distinctions, direct excerpts, source-discrepancy retention, sequence interpretation, and canonical provenance. No skill change justified by this curation."
+}
