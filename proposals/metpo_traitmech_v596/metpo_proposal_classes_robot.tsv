@@ -1,3 +1,3 @@
 proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
 ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
-METPO:1067300	lethal nematicidal activity	A physiological capability of a microorganism to kill nematodes.	TraitMech:data/traits/physiology/lethal_nematicidal_activity.yaml|DOI:10.1128/spectrum.02577-21|DOI:10.1038/s41598-023-33669-z	METPO:1000059			metpo_traitmech_2026_10		Microbial killing capability, not paralysis, feeding or a chemical role.	traitmech:000720
+METPO:1067300	lethal nematicidal activity	A physiological capability of a microorganism to kill nematodes.	TraitMech:data/traits/physiology/lethal_nematicidal_activity.yaml|DOI:10.1038/s41598-023-33669-z	METPO:1000059			metpo_traitmech_2026_10		Microbial killing capability, not paralysis, feeding or a chemical role.	traitmech:000720

@@ -25,8 +25,10 @@ TIMESTAMP = "2026-10-13T17:31:43Z"
 REVISION_TIMESTAMP = "2026-10-13T18:14:01Z"
 PRODUCER_TIMESTAMP = "2026-10-13T18:54:48Z"
 ENDPOINT_TIMESTAMP = "2026-10-13T19:40:13Z"
+AUTHORITY_TIMESTAMP = "2026-10-13T20:27:02Z"
 CONTEXT_REFERENCE = "DOI:10.3725/jjn.45.51"
 DEFINITION_SOURCE = "DOI:10.1128/spectrum.02577-21"
+FUNGAL_DEFINITION_SOURCE = "DOI:10.1038/s41598-023-33669-z"
 PARENT = {
     "identifier": "METPO:1000059",
     "label": "phenotype",
@@ -268,7 +270,7 @@ def build_producer_corrected_record() -> dict:
     return record
 
 
-def build_record() -> dict:
+def build_endpoint_corrected_record() -> dict:
     record = build_producer_corrected_record()
     record["evidence"][0].update(
         snippet=(
@@ -331,7 +333,46 @@ def build_record() -> dict:
     return record
 
 
+def build_record() -> dict:
+    record = build_endpoint_corrected_record()
+    fungal = record["evidence"][2]
+    producer = build_producer_corrected_record()["evidence"][0]
+    producer["notes"] = (
+        "Producer-origin supporting evidence, not definition authority. The "
+        "self-contained excerpt establishes microbial origin of nematicidal "
+        "metabolites; its wording alone does not distinguish death from "
+        "paralysis. The independently cited Saharan mortality result supplies "
+        "explicit lethal definition support. " + producer["notes"]
+    )
+    record["definition_source"] = FUNGAL_DEFINITION_SOURCE
+    record["evidence"] = [fungal, producer]
+    record_curation_event(
+        record, curator="codex", action="CORRECTED_DEFINITION_AUTHORITY",
+        changes=(
+            "Addressed review issue #1919: selected the unchanged Saharan "
+            "mortality result as definition authority and first evidence item. "
+            "Restored the complete 22-word Kusakabe producer-linked clause as "
+            "origin support, not definition authority. Removed the subjectless "
+            "origin and anaphoric mortality spans. This supersedes #1918's "
+            "two-span correction: explicit mortality support now comes from "
+            "the selected fungal source. Proposal definition annotations cite "
+            "only that source and the local record; two distinct primary "
+            "studies remain supporting evidence. Both excerpts retain native "
+            "NOT_IN_ABSTRACT outcomes. Preserved all prior events, assay "
+            "limitations, structured context, identity, hierarchy and other records."
+        ),
+        llm_assisted=True, timestamp=AUTHORITY_TIMESTAMP,
+    )
+    return record
+
+
 def proposal_tsv(record: dict) -> str:
+    # Historical projections must retain their bytes for guarded migrations.
+    references = (
+        [record["definition_source"]]
+        if record["definition_source"] == FUNGAL_DEFINITION_SOURCE
+        else list(dict.fromkeys(e["reference"] for e in record["evidence"]))
+    )
     rows = [
         ["proposed_id", "label", "definition", "definition_source", "parent",
          "synonyms", "xrefs", "subset", "priority", "observations", "traits_addressed"],
@@ -340,7 +381,7 @@ def proposal_tsv(record: dict) -> str:
          "A oboInOwl:inSubset", "", "", ""],
         [METPO_ID, record["label"], record["definition"],
          "|".join([f"TraitMech:data/traits/physiology/{SLUG}.yaml",
-                   *dict.fromkeys(e["reference"] for e in record["evidence"])]),
+                   *references]),
          PARENT["identifier"], "", "", "metpo_traitmech_2026_10", "",
          "Microbial killing capability, not paralysis, feeding or a chemical role.",
          IDENTIFIER],
@@ -360,7 +401,7 @@ def main() -> int:
     record = build_record()
     proposal = proposal_tsv(record)
     previous = [build_initial_record(), build_role_corrected_record(),
-                build_producer_corrected_record()]
+                build_producer_corrected_record(), build_endpoint_corrected_record()]
     if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (*previous, record):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() not in (*map(proposal_tsv, previous), proposal):

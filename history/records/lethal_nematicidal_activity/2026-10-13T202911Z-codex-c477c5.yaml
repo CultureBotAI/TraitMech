@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lethal_nematicidal_activity.yaml
+  slug: lethal_nematicidal_activity
+session:
+  id: 2026-10-13T202911Z-codex-c477c5
+  timestamp: '2026-10-13T20:29:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Select explicit lethal definition authority and self-contained evidence
+  details: 'Addressed #1919 by selecting the unchanged Saharan mortality result as definition
+    authority and restoring the complete 22-word Kusakabe producer-linked clause as origin
+    support, not definition authority. Removed subjectless/anaphoric excerpts. Supersedes
+    the #1918 two-span correction in 2026-10-13T194147Z-codex-8e2a91.yaml by placing explicit
+    mortality support with the selected fungal source. Proposal definition annotations now
+    cite only Saharan and the local record; two primary studies remain supporting evidence.
+    Preserved all prior events, source receipts, assay limits and discussion-only context.
+    Appended CORRECTED_DEFINITION_AUTHORITY; guarded migration accepts four historical preimages
+    and rejects unknown drift. No identifier, hierarchy, example, protein, graph or other-record
+    changes.'
