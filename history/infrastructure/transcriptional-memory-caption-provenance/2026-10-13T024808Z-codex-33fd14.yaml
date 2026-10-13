@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: research/traits/physiology/enhanced_transcriptional_reactivation_memory-source-verification.json
+  slug: transcriptional-memory-caption-provenance
+session:
+  id: 2026-10-13T024808Z-codex-33fd14
+  timestamp: '2026-10-13T02:48:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1906
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1903
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - source_verification
+  - tests
+  summary: Retain fresh caption source receipt and bounded access failures
+  details: Fresh public publisher HTTP 200 on 2026-10-13 exactly matched the retained source
+    hash and confirmed the Figure 4 hyphenated caption. Retained its 12-word raw HTML opening,
+    timestamp, locator and checksum in tracked provenance, with regression assertions. The
+    suggested Europe PMC XML endpoint returned HTTP 500 twice and canonical publisher returned
+    403; no independent XML match is claimed. Sump clause context was rechecked and already
+    qualified. Trait record, writer, proposal, pages, prior histories and saved reviews remain
+    unchanged. Validation follows in the linked successor review.

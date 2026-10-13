@@ -9,6 +9,7 @@ from pathlib import Path
 
 import pytest
 import yaml
+from lxml import html
 
 from traitmech.validation.write_validated import ValidationFailedError
 
@@ -114,6 +115,29 @@ def test_proposal_contract():
         f"TraitMech:data/traits/physiology/{writer.SLUG}.yaml",
         *(e["reference"] for e in record["evidence"]),
     }
+
+
+def test_caption_receipt_preserves_source_markup_and_access_limits():
+    path = writer.ROOT / f"research/traits/physiology/{writer.SLUG}-source-verification.json"
+    sidecar = json.loads(path.read_text())
+    audit = sidecar["caption_provenance_audit"]
+    source = audit["publisher_retrieval"]
+    assert source["http_status"] == 200 and source["bytes"] == 343099
+    assert source["sha256"] == sidecar["rows"][1]["sources"][0]["sha256"]
+    assert source["byte_identical_to_retained_source"]
+    assert source["source_doi_present"] == writer.STRESS_SOURCE.removeprefix("DOI:")
+    assert datetime.fromisoformat(source["accessed_at"]) <= datetime.now(timezone.utc)
+    caption = audit["caption"]
+    raw = caption["raw_opening_html"]
+    assert "gene-expression" in raw and "H<sub>2</sub>O<sub>2</sub>" in raw
+    text = " ".join(html.fragment_fromstring(raw, create_parent="p").text_content().split())
+    assert text == writer.build_record()["evidence"][1]["snippet"]
+    assert len(text.split()) == caption["words"] == 12
+    assert "fig4" in caption["locator"] and not caption["full_article_redistributed"]
+    assert "not independent-source corroboration" in audit["scope"]
+    failures = audit["unavailable_corroboration"]
+    assert [[a["http_status"] for a in row["attempts"]] for row in failures] == [[500, 500], [403]]
+    assert "No XML match claimed" in failures[0]["outcome"]
 
 
 def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):

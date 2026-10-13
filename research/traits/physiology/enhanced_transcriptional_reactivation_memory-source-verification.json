@@ -789,6 +789,49 @@
       "log": "/tmp/traitmech-transcriptional-memory-selfcontained-checks-20261013/records-02.log"
     }
   ],
+  "caption_provenance_audit": {
+    "issue": 1906,
+    "review": "https://github.com/CultureBotAI/TraitMech/pull/1903#pullrequestreview-5498156035",
+    "scope": "Fresh same-publisher retrieval and exact caption verification, not independent-source corroboration or a new biological experiment.",
+    "publisher_retrieval": {
+      "url": "https://oup.silverchair-cdn.com/article-minimal/5935173",
+      "canonical_url": "https://academic.oup.com/genetics/article/192/2/495/5935173",
+      "final_url": "https://oup.silverchair-cdn.com/article-minimal/5935173",
+      "accessed_at": "2026-10-13T02:44:37.056961Z",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 343099,
+      "sha256": "eb97f86a7134114fa570d5ab66416d91dfb1da2f6b6fc5d98682a9cf685a4241",
+      "path": "/tmp/traitmech-transcriptional-memory-provenance-canary-20261013/publisher-public-response.html",
+      "byte_identical_to_retained_source": true,
+      "source_doi_present": "10.1534/genetics.112.143016"
+    },
+    "caption": {
+      "locator": "div[data-id='fig4'] .caption.fig-caption p.chapter-para, complete opening sentence",
+      "raw_opening_html": "Cells with prior NaCl exposure have a faster gene-expression response to H<sub>2</sub>O<sub>2</sub>.",
+      "words": 12,
+      "normalization": "Read HTML text nodes in document order, preserving subscript text; collapse whitespace only. The hyphen is literally present and is not normalization.",
+      "exact_contiguous_span": true,
+      "full_article_redistributed": false
+    },
+    "unavailable_corroboration": [
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3454879/fullTextXML",
+        "attempts": [
+          {"accessed_at": "2026-10-13T02:43:54.490030Z", "http_status": 500},
+          {"accessed_at": "2026-10-13T02:43:58.786278Z", "http_status": 500}
+        ],
+        "outcome": "No XML article retrieved; PMCID identity does not establish API availability. No XML match claimed."
+      },
+      {
+        "url": "https://academic.oup.com/genetics/article/192/2/495/5935173",
+        "attempts": [{"accessed_at": "2026-10-13T02:43:58.952955Z", "http_status": 403}],
+        "outcome": "Canonical publisher request failed. The separately requested, already-observed public publisher rendering succeeded."
+      }
+    ],
+    "sump_clause_assessment": "The existing 10-word span states a complete comparison. Primary XML s2-1 paragraph 2 continues with a comma and a coordinated clause reporting loss in mrs and nup100 mutant cells; current notes already retain that limitation and the synthetic assay. No quotation or phenotype change is supported.",
+    "limitations": "The short tracked excerpt permits inspection but is not an independent copy of the publication. Full HTML is retained locally with a checksum, not redistributed without an established reuse license. Native NOT_IN_ABSTRACT remains inconclusive and unchanged."
+  },
   "native_record_snippets": [
     {
       "file": "data/traits/physiology/enhanced_transcriptional_reactivation_memory.yaml",
