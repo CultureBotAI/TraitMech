@@ -134,6 +134,23 @@ def test_proposal_contract():
     assert writer.CONTEXT_REFERENCE not in citations
 
 
+def test_proposal_narrative_matches_current_evidence_roles():
+    record = writer.build_record()
+    text = (writer.PROPOSAL.parent / "proposal.md").read_text()
+    current = text.split("## Evidence\n", 1)[1].split("## Hierarchy Decisions", 1)[0]
+    fungal, producer = record["evidence"]
+    authority_url = record["definition_source"].replace("DOI:", "https://doi.org/")
+    producer_url = producer["reference"].replace("DOI:", "https://doi.org/")
+    assert f"- **Definition authority:** [Saharan et al. 2023]({authority_url})" in current
+    assert f"- **Producer-origin support, not definition authority:** [Kusakabe et al. 2022]({producer_url})" in current
+    assert f"The {len(fungal['snippet'].split())}-word Results excerpt" in current
+    assert f"one complete {len(producer['snippet'].split())}-word Discussion excerpt" in current
+    assert len(record["evidence"]) == 2 and "two supporting evidence rows" in current
+    assert "Only Saharan and the local record annotate the proposal definition" in current
+    assert "three supporting" not in current and "Separate 12-word" not in current
+    assert "natively as\n  `VERIFIED`" not in current
+
+
 @pytest.mark.parametrize("build_previous", [writer.build_initial_record, writer.build_role_corrected_record,
                                           writer.build_producer_corrected_record,
                                           writer.build_endpoint_corrected_record])

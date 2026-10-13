@@ -20,26 +20,24 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
 
 ## Evidence
 
-- [Kusakabe et al. 2022](https://doi.org/10.1128/spectrum.02577-21),
-  PMID:35138171: culture-extract fractionation links microbial production to
-  lethal activities of isolated compounds. Commercial standards were used
-  for dose-response assays. Actual Figures 2/3 and Table 4 were inspected;
-  Table 4 concerns reversible lower-dose indole paralysis. Separate 12-word
-  producer-origin and 13-word mortality excerpts total 25 words from this source.
-  The former is in IMPORTANCE (printed/PDF page 1), matched natively as
-  `VERIFIED`, but is not the separately headed scientific Abstract. The latter
-  is in Discussion (page 12), natively `NOT_IN_ABSTRACT`, and explicitly
-  concerns high concentrations against non-target nematodes. Both match XML
-  and actual typeset pages; page 1 text extraction drops fi ligatures.
-  These are two spans from one study, not independent replications or evidence
-  of live-culture potency. Indole's lower-dose paralysis is not equated with
-  the high-concentration killing reported separately.
-- [Saharan et al. 2023](https://doi.org/10.1038/s41598-023-33669-z),
+- **Definition authority:** [Saharan et al. 2023](https://doi.org/10.1038/s41598-023-33669-z),
   PMID:37088805: fungal culture-filtrate juvenile mortality, with fresh-water
   recovery confirmation but unspecified recovery duration/criterion.
   Actual Figure 4, supplement text/tables and its image were inspected.
   The 15-word Results excerpt is directly matched, natively `NOT_IN_ABSTRACT`.
   Strain/accession contradictions remain explicit; no canonical taxon is added.
+- **Producer-origin support, not definition authority:** [Kusakabe et al. 2022](https://doi.org/10.1128/spectrum.02577-21),
+  PMID:35138171: culture-extract fractionation links microbial production to
+  isolated nematicidal metabolites. The record retains one complete 22-word Discussion excerpt
+  (printed/PDF page 12), directly matched to XML and typeset PDF, natively
+  `NOT_IN_ABSTRACT`. This excerpt includes the producer and isolation result;
+  its nematicidal wording alone does not distinguish death from paralysis.
+  Full-paper mortality observations and assay limitations remain in notes.
+  Commercial standards were used for dose-response assays, not live cultures.
+  Actual Figures 2/3 and Table 4 were inspected; Table 4 concerns reversible
+  lower-dose indole paralysis, not t-CA/PPA survival. Non-target mortality at
+  high concentrations is not evidence of low-dose non-target toxicity.
+  No universal host range, live-culture potency or shared mechanism is inferred.
 - Discussion-only [Harada and Yoshiga 2015](https://doi.org/10.3725/jjn.45.51):
   viability-assay limitations, not supporting trait evidence or a definition
   citation. The 13-word abstract
@@ -49,11 +47,15 @@ coverage, dose, secretion route, environmental efficacy or safety is asserted.
   Crossref identity. This does not establish absence from all indexing services.
 
 The [verification sidecar](../../research/traits/physiology/lethal_nematicidal_activity-source-verification.json)
-distinguishes three supporting evidence rows from two distinct studies and the
+distinguishes two supporting evidence rows from two distinct studies and the
 discussion-only source,
 retaining hashes, direct locators, source-status checks and limitations. No
 complete supplement or raw-data audit is claimed. No causal graph or protein
 example is proposed while strain identities and mechanisms remain unresolved.
+Only Saharan and the local record annotate the proposal definition. Kusakabe
+supports microbial origin, and Harada remains methodological context; neither
+is promoted into a definition citation. The superseded excerpts and resolver
+outcomes remain in the historical receipt, not as current evidence.
 
 ## Hierarchy Decisions
 
@@ -145,3 +147,10 @@ validation does not authorize promotion to human `REVIEWED` status.
   separate culture-origin and explicit mortality spans, preserving their section
   identities, actual native results and high-concentration non-target context.
   Three evidence rows still contribute only two distinct definition citations.
+- 2026-10-13, #1919: superseded the #1918 two-span approach. Saharan now
+  supplies explicit mortality evidence and definition authority; the complete
+  Kusakabe producer-linked clause is origin support. The TSV cites only Saharan
+  and the local record for the definition. Two supporting rows remain.
+- 2026-10-13, #1920: synchronized this narrative with the #1919 correction
+  and added a consistency regression. The record, TSV, source receipt, generated
+  page and biological curation were already corrected and remain unchanged.
