@@ -409,6 +409,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/ixotrophy.html#ixotrophy-mechanism-grounding"
  },
  {
+  "discussion_id": "kin-discrimination-scope-and-hierarchy",
+  "prompt": "Preserve relational phenotype scope without equating all recognition or cooperation.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "kin discrimination",
+  "source_id": "traitmech:000716",
+  "source_file": "kin_discrimination.yaml",
+  "attaches_to": [],
+  "rationale": "Stefanic 2015 defines conspecific discrimination, whereas Lyons 2017 explicitly extends exclusion to nearby species. The record retains that attributed extension without a universal kin threshold, obligate killing, cognition or monotonic distance-response rule. Kin recognition, allorecognition and self/nonself discrimination are not asserted as exact synonyms. An interaction phenotype is required; a recognition locus, allele match, isolated pairing or spatial assortment alone is insufficient. Recognition-allele specificity, measured relatedness proxies and genome-wide relatedness must not be conflated. METPO:1000059 phenotype is the conservative parent. Mutualism (traitmech:000041) requires reciprocal benefit; biofilm formation (traitmech:000053) is neither necessary nor sufficient. Contact-dependent outer membrane exchange (traitmech:000650) is material transfer, and its existing negative kin-discrimination evidence remains a boundary, not a parent gap. Heterokaryon incompatibility (traitmech:000606) concerns postfusion restriction and is not automatically equivalent or reparented. Predation requires trophic benefit; DNA self/nonself defense has a different target and endpoint. No organism-level disjointness is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/kin_discrimination.html#kin-discrimination-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "kin-discrimination-evidence-and-mechanism-limits",
+  "prompt": "Resolve strain, assay and source gaps before assigning canonical taxa or molecular mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "kin discrimination",
+  "source_id": "traitmech:000716",
+  "source_file": "kin_discrimination.yaml",
+  "attaches_to": [],
+  "rationale": "The QS45 strain-table gap and WNC032 figure-label conflict remain unresolved. The 2015 scientific abstract was read directly, but full text was not. The 2017 scientific abstract and IMPORTANCE summary were distinguished; the corrected excerpt is from the scientific abstract, not IMPORTANCE. Selected supplemental spreadsheet checks are not raw-image reanalysis or a statistical replication; supplementary EPS figures remain unread. Bounded MED, PLOS and NLM metadata checks are not exhaustive clearance of corrections or retractions; some publisher routes were inaccessible. No canonical taxa, exact external mappings, protein examples or causal graph are asserted. Allele-specific adhesion in engineered systems requires separate provenance and mechanism review, not inference of natural species-wide possession. Source URLs, hashes, access limits and native snippet outcomes are retained in the source-verification sidecar.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/kin_discrimination.html#kin-discrimination-evidence-and-mechanism-limits"
+ },
+ {
   "discussion_id": "periplasmic-predation-boundaries-and-mappings",
   "prompt": "Distinguish periplasmic feeding from invasion alone.",
   "kind": "CURATION_TODO",
@@ -14552,9 +14586,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 729,
- "total_knowledge_gaps": 457,
- "total_source_entries": 581,
+ "total_discussions": 731,
+ "total_knowledge_gaps": 458,
+ "total_source_entries": 582,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,228 @@
+schema_version: 1.0.0
+review_id: 20261013T091716Z-kin-discrimination-initial
+kind: record
+repository: CultureBotAI/TraitMech
+title: Initial adversarial evidence review of kin discrimination
+started_at: '2026-10-13T09:17:14Z'
+finished_at: '2026-10-13T09:17:16Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author independently checked two findings raised by a separate
+    read-only agent (Lovelace, 01a13482-b516-7f53-985b-6d629c79ea71). This saved assessment
+    remains author self-review, not human sign-off.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Two supported defects in evidence excerpt self-containment and definition
+  authority require correction before publication.
+source:
+  git_revision: 0f58024643a5357500f2eccb805bd4d9368de8eb
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: a92f9d331d33a4a74147d834d38393b64edb97e6f2d1a157570ca201c0531dfa
+    role: context
+  - path: data/traits/ecology/kin_discrimination.yaml
+    sha256: 7e377f8e917c552318575b9923fda358ed31cc6ff9c7b1b5d1d9160cc2a226df
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    sha256: 23f6cfba38d6eda9e072873420e5c53c04b99489c16bf523e99056733afb4648
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_kin_discrimination_trait.py
+    sha256: 1ea5936f04c3c1aab36e2c5415ec448fdc89b2b71e3ab7329e887ef179d64d60
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+targets:
+- target_id: traitmech:000716
+  path: data/traits/ecology/kin_discrimination.yaml
+  label: kin discrimination
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/kin_discrimination.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_kin_discrimination_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    role: upstream_proposal
+scope:
+  description: Pre-fix evidence and definition-scope assessment of the new record;
+    not release readiness.
+  selection: One newly authored trait; no sampling.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000716
+  exclusions:
+  - target: Generated products, full QC and publication gates
+    reason: Not yet performed; final review must cover the corrected record and complete
+      change set.
+checks:
+- check_id: direct-sources
+  name: Direct primary-source comparison
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000716
+  summary: Manual inspection of source identity, scientific sections, current exact
+    spans and available endpoint-bearing replacements; helper assertions also succeeded.
+evidence:
+- evidence_id: stefanic
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1512671112
+  locator: Namespace-qualified scientific abstract
+  accessed_at: '2026-10-13T09:17:16Z'
+  support: supports
+  snapshot_sha256: d3240849093539c12b791b6acfd8fbf03b1f2d13f56aad46200cc714690b0832
+  summary: Conspecific definition; current quote reports correlation, while an available
+    short result sentence explicitly reports merging restricted to highly related
+    strain pairs.
+- evidence_id: lyons
+  kind: primary_source
+  reference: DOI:10.1128/mBio.00723-17
+  locator: Scientific abstract; Introduction; Results s1.3
+  accessed_at: '2026-10-13T09:17:16Z'
+  support: supports
+  snapshot_sha256: 340c599e88bd2162637ebe5744c8b882d49ff1ba234fefa26255872517621ff1
+  summary: Both discrimination modes and nearby-species extension are supported. Current
+    excerpt omits the antagonistic endpoint; an available scientific-abstract sentence
+    states it.
+- evidence_id: content
+  kind: record_content
+  reference: data/traits/ecology/kin_discrimination.yaml
+  locator: definition_source and evidence items 2-3
+  accessed_at: '2026-10-13T09:17:16Z'
+  support: supports
+  summary: Observed initial record retains intended broader scope, but provenance
+    and quote self-containment require repair.
+assessments:
+- assessment_id: source-scope
+  area: evidence
+  topic: Claim-bearing excerpts and definition authority
+  outcome: concern
+  summary: The phenotype has sufficient distinct citations, but matching words alone
+    do not satisfy the excerpt criterion and the current single definition authority
+    is too narrow.
+  target_ids:
+  - traitmech:000716
+  evidence_ids:
+  - stefanic
+  - lyons
+  - content
+findings:
+- finding_id: snippets
+  issue_key: kin-discrimination-snippets
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two excerpts omit the discriminating behavior
+  description: 'Exact matching does not make either result self-contained: 2015 omits
+    merging direction and 2017 omits antagonism. Notes cannot repair an excerpt that
+    omits its phenotype endpoint.'
+  target_ids:
+  - traitmech:000716
+  field_paths:
+  - evidence[1].snippet
+  - evidence[2].snippet
+  - evidence[2].notes
+  evidence_ids:
+  - stefanic
+  - lyons
+  - content
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/kin_discrimination.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_kin_discrimination_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    role: upstream_proposal
+  native_severity: P2
+  normalization_reason: A bounded but required evidence/provenance repair before publication;
+    normalized as major because source authority and claim-bearing support are material.
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1909
+- finding_id: authority
+  issue_key: kin-discrimination-authority
+  category: provenance
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Definition authority is narrower than the curated scope
+  description: The sole definition source defines conspecific discrimination. The
+    record deliberately includes an interspecies extension. Use the directly inspected
+    2017 authority while keeping the 2015 evidence DOI explicit; changing the shared
+    constant alone would misattribute the quote.
+  target_ids:
+  - traitmech:000716
+  field_paths:
+  - definition_source
+  - evidence[1].reference
+  evidence_ids:
+  - stefanic
+  - lyons
+  - content
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/kin_discrimination.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_kin_discrimination_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    role: upstream_proposal
+  native_severity: P2
+  normalization_reason: A bounded but required evidence/provenance repair before publication;
+    normalized as major because source authority and claim-bearing support are material.
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1910
+actions:
+- action_id: repair-evidence
+  description: Guard initial preimages, correct two snippets and their locators/outcomes,
+    use broader definition authority, and preserve explicit citation assignment.
+  finding_ids:
+  - snippets
+  - authority
+  target_ids:
+  - traitmech:000716
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/kin_discrimination.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_kin_discrimination_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    role: upstream_proposal
+  acceptance_checks:
+  - Direct contiguous scientific-source matches and actual native verifier outcomes
+  - Preserve original curation event; append evidence correction event and repository
+    history
+  - Focused regression tests, full QC, proposal and saved successor review
+limitations:
+- 2015 full text unavailable; abstract identity verified. No statistical reanalysis
+  or independent certification of reservations.
+- This review does not report unfinished generation, full tests, PR checks or merge
+  validation as passed.

@@ -1,0 +1,120 @@
+identifier: traitmech:000716
+label: kin discrimination
+definition: An ecological phenotype in which microbial cells preferentially associate
+  with kin or exclude nonkin through differential interactions according to genetic
+  similarity or relatedness.
+definition_source: DOI:10.1128/mBio.00723-17
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.pbio.0060287
+  snippet: Our findings demonstrate that D. discoideum cells co-aggregate more with
+    genetically similar than dissimilar individuals
+  notes: 'Ostrowski et al. 2008, PMID:19067487; scientific abstract, publisher PDF
+    page 1, contiguous span visually checked. Mixtures with AX4-GFP and natural-isolate
+    dye controls support partial sorting during aggregation, not complete clonal exclusion.
+    The measured endpoint is variation in fluorescent spore proportions among fruiting
+    bodies; genetic distance uses 12 microsatellite loci, not genome-wide identity.
+    Main text and all four figures were inspected; Figure 1 is hypothetical. Supplementary
+    Tables S1 and S2 were read by text extraction. Main Methods names QS45, absent
+    from the retrieved S1 strain table; no strain alias is inferred. Kin-selected
+    benefit is an interpretation, not a measured fitness endpoint here. Natural provenance
+    of every laboratory derivative and a molecular recognition mechanism remain unresolved.
+    Native abstract verifier: VERIFIED.'
+- reference: DOI:10.1073/pnas.1512671112
+  snippet: Some swarms did merge, and most interestingly, this behavior was only seen
+    in the most highly related strain pairs.
+  notes: 'Stefanic et al. 2015, PMID:26438858, PMC4653157; directly retrieved scientific
+    abstract from Europe PMC with the namespace-qualified query EXT_ID:26438858 AND
+    SRC:MED. Title, PMID and DOI were checked together. The authors define a conspecific
+    scope and report relatedness-associated swarm merging versus boundary formation
+    among sympatric Bacillus subtilis isolates. The separately reported root-colonization
+    outcome is not a direct killing measurement. Full text, figures and supplements
+    were inaccessible and are not claimed as inspected; indexed search passages were
+    not used as excerpts or quantitative evidence. Native abstract verifier: VERIFIED.
+    Linked PMID:26512099 is commentary, not a correction or experimental replication.'
+- reference: DOI:10.1128/mBio.00723-17
+  snippet: The effects of kin discrimination extend to nearby species, as the other
+    subtilis clade species were treated with the same antagonism as nonkin.
+  notes: 'Lyons and Kolter 2017, PMID:28679746, PMC5573675; scientific abstract, NLM
+    version 1 PDF page 1 and JATS article-meta abstract without abstract-type. This
+    is not the separate IMPORTANCE summary. Introduction distinguishes preferential
+    kin association from nonkin exclusion and supports the definition''s two modes;
+    the paper''s own experiments support the nearby-species extension. The comparison
+    concerns interactions with B. subtilis NCIB3610: nearby species can be antagonized,
+    while more distant lineages show varied outcomes. This is not a universal monotonic
+    relation between distance and antagonism. Relatedness uses type-strain 16S, not
+    whole-genome identity of every isolate. Swarm, biofilm and halo assays differ
+    in medium and endpoint. Figure 2A and 2C assign WNC032 to different species; Data
+    Set S1 identifies it as B. megaterium. No silent panel correction or taxon anchor
+    is inferred. Actual Figures 2 and 4 and selected spreadsheet rows/totals were
+    inspected, not all figures or raw assays. Native abstract verifier: VERIFIED.
+    Shares an investigator with 2015; not an independent-laboratory replication.'
+discussions:
+- discussion_id: kin-discrimination-scope-and-hierarchy
+  prompt: Preserve relational phenotype scope without equating all recognition or
+    cooperation.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Stefanic 2015 defines conspecific discrimination, whereas Lyons 2017
+    explicitly extends exclusion to nearby species. The record retains that attributed
+    extension without a universal kin threshold, obligate killing, cognition or monotonic
+    distance-response rule. Kin recognition, allorecognition and self/nonself discrimination
+    are not asserted as exact synonyms. An interaction phenotype is required; a recognition
+    locus, allele match, isolated pairing or spatial assortment alone is insufficient.
+    Recognition-allele specificity, measured relatedness proxies and genome-wide relatedness
+    must not be conflated. METPO:1000059 phenotype is the conservative parent. Mutualism
+    (traitmech:000041) requires reciprocal benefit; biofilm formation (traitmech:000053)
+    is neither necessary nor sufficient. Contact-dependent outer membrane exchange
+    (traitmech:000650) is material transfer, and its existing negative kin-discrimination
+    evidence remains a boundary, not a parent gap. Heterokaryon incompatibility (traitmech:000606)
+    concerns postfusion restriction and is not automatically equivalent or reparented.
+    Predation requires trophic benefit; DNA self/nonself defense has a different target
+    and endpoint. No organism-level disjointness is implied.
+  posed_by: codex
+  posed_date: '2026-10-13'
+- discussion_id: kin-discrimination-evidence-and-mechanism-limits
+  prompt: Resolve strain, assay and source gaps before assigning canonical taxa or
+    molecular mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The QS45 strain-table gap and WNC032 figure-label conflict remain unresolved.
+    The 2015 scientific abstract was read directly, but full text was not. The 2017
+    scientific abstract and IMPORTANCE summary were distinguished; the corrected excerpt
+    is from the scientific abstract, not IMPORTANCE. Selected supplemental spreadsheet
+    checks are not raw-image reanalysis or a statistical replication; supplementary
+    EPS figures remain unread. Bounded MED, PLOS and NLM metadata checks are not exhaustive
+    clearance of corrections or retractions; some publisher routes were inaccessible.
+    No canonical taxa, exact external mappings, protein examples or causal graph are
+    asserted. Allele-specific adhesion in engineered systems requires separate provenance
+    and mechanism review, not inference of natural species-wide possession. Source
+    URLs, hashes, access limits and native snippet outcomes are retained in the source-verification
+    sidecar.
+  posed_by: codex
+  posed_date: '2026-10-13'
+curation_history:
+- timestamp: '2026-10-13T09:09:53Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added kin discrimination with three DOI-backed contiguous snippets and
+    bounded assay, source and hierarchy discussions. Reserved 000716, v592 and 1066900-1066999
+    after ignored/hidden current-file, retained-history, independent-copy and open/draft
+    PR checks; numeric false positives were adjudicated. No exact active METPO counterpart
+    identified in inspected sources. No taxa or causal graph inferred; prior records
+    unchanged. Timestamp is observed post-audit acceptance, not an estimated write
+    time.
+  llm_assisted: true
+- timestamp: '2026-10-13T09:17:32Z'
+  curator: codex
+  action: EVIDENCE_CORRECTED
+  changes: 'Addressed adversarial findings #1909 and #1910: replaced two source-matching
+    but insufficiently self-contained excerpts with explicit swarm-merging and antagonism
+    results. Changed sole definition authority to Lyons 2017 for the attributed nearby-species
+    extension, preserving the explicit Stefanic 2015 evidence DOI. Updated section
+    and native-verifier notes. Original event, phenotype definition, identifiers,
+    parent, PROPOSED status and remaining source limits are preserved. Timestamp is
+    observed correction decision time, not an estimated write time.'
+  llm_assisted: true
