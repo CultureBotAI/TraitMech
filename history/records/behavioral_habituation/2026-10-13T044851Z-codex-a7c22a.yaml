@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/behavioral_habituation.yaml
+  slug: behavioral_habituation
+session:
+  id: 2026-10-13T044851Z-codex-a7c22a
+  timestamp: '2026-10-13T04:48:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add proposed microbial behavioral habituation
+  details: Added traitmech:000714 with three primary DOI references and one terminology review,
+    short directly matched full-text excerpts, explicit assay and source-version limitations,
+    three OPEN discussions and a guarded v590 proposal reserving METPO:1066700-1066799. Allocation
+    false positives were adjudicated without ignoring narrower reservations. Existing records,
+    protected spore germination and the pinned ontology are unchanged. Mapping remains PROPOSED;
+    no canonical taxa or universal mechanism is asserted. Writer dry run and apply passed;
+    focused tests passed 21 cases and the native abstract verifier returned four NOT_IN_ABSTRACT
+    results, separately supported by exact retained full-text checks. Broader gates and PR
+    review remain pending.

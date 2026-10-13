@@ -1,0 +1,503 @@
+{
+  "checked_at": "2026-10-13T04:45:09.321884+00:00",
+  "trait_id": "traitmech:000714",
+  "decision_timestamp": "2026-10-13T04:41:26Z",
+  "acceptance": "Independent operational microbial behavioral phenotype; PROPOSED, no universal mechanism or species-wide examples.",
+  "timestamp_note": "The earlier temporary note quoted 04:38:50Z, a pre-completion clock read. 04:41:26Z is the actual observed post-audit confirmation used by the writer; no exact write-time claim.",
+  "rows": [
+    {
+      "reference": "DOI:10.1098/rspb.2016.0446",
+      "snippet": "The Q and CAF slime moulds crossing a bridge containing quinine or caffeine for the sixth time showed reduced aversive behaviour.",
+      "words": 21,
+      "source": {
+        "url": "https://pedagogie.ac-toulouse.fr/svt/sites/default/files/traam_donnees_scientifiques/blob_causse/boisseau_et_al_2016-1.pdf",
+        "final_url": "https://pedagogie.ac-toulouse.fr/svt/sites/default/files/traam_donnees_scientifiques/blob_causse/boisseau_et_al_2016-1.pdf",
+        "accessed_at": "2026-10-13T03:04:10.261316+00:00",
+        "http_status": 200,
+        "path": "/tmp/traitmech-habituation-boisseau2016-20261013.pdf",
+        "bytes": 818687,
+        "sha256": "f55fba2887435eaf344a06cf5e26f57ae96f23884f955fef73590b7fd311eadb",
+        "scope": "Read-only source lead; no candidate accepted."
+      },
+      "locator": "PDF page 4, Results (b) Test phase 1; sentence crosses columns",
+      "exact_contiguous_span": true,
+      "normalization": "Unicode NFKC (PDF ligatures) and whitespace folding only",
+      "source_identity_verified": true,
+      "section_type": "Results",
+      "version": "Public publisher-formatted PDF; current corrected VoR equivalence not verified",
+      "derived_text": {
+        "path": "/tmp/traitmech-habituation-boisseau2016-render-20261013/page-4.txt",
+        "sha256": "36bc7fdd9e4a2b5c5a6c1add77104ad7ce5325eacd5b41cbb1d9161628cb05fb"
+      },
+      "visually_checked": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_similarity": 0.28
+    },
+    {
+      "reference": "DOI:10.1016/j.cub.2025.05.071",
+      "snippet": "the response to the low force stimuli shows extensive habituation even though the response to the alternating high force stimuli does not.",
+      "words": 22,
+      "source": {
+        "name": "stentor2025-html",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13499368/",
+        "accessed_at": "2026-10-13T03:42:41.701478+00:00",
+        "status": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13499368/",
+        "content_type": "text/html; charset=utf-8",
+        "path": "/tmp/traitmech-habituation-followup-fulltext-20261013/stentor2025-html.response",
+        "bytes": 262000,
+        "sha256": "6bc4ac8f7180b87aacb9fb31d7ae9755e8f1ba9ac1b9734c04d116253be527e4",
+        "scope": "Public HTML acquisition only; challenge/content and version must be inspected before use."
+      },
+      "locator": "PMC author manuscript, section S7, Figure 4F caption, concluding result clause",
+      "exact_contiguous_span": true,
+      "normalization": "Unicode NFKC (PDF ligatures) and whitespace folding only",
+      "source_identity_verified": true,
+      "section_type": "Figure caption",
+      "version": "PMC author manuscript",
+      "caption_locator": "//figure[@id='F4']",
+      "caption_text_sha256": "c371e6157fc529e035ddff97a2140c88a22f921406cc8499b2ed69a124357add",
+      "raw_quote_html": "the response to the low force stimuli shows extensive habituation even though the response to the alternating high force stimuli does not.",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_similarity": 0.39
+    },
+    {
+      "reference": "DOI:10.1016/j.cub.2026.03.080",
+      "snippet": "For cells treated with either cycloheximide or puromycin, the primary effect on learning was accelerating habituation (Figure 1C, 1E).",
+      "words": 19,
+      "source": {
+        "name": "stentor2026-html",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13192338/",
+        "accessed_at": "2026-10-13T03:42:42.113013+00:00",
+        "status": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13192338/",
+        "content_type": "text/html; charset=utf-8",
+        "path": "/tmp/traitmech-habituation-followup-fulltext-20261013/stentor2026-html.response",
+        "bytes": 372546,
+        "sha256": "a3007c1343275739103c30a7e6b9170a144bb6b7beeb25c9b919aa56a0418340",
+        "scope": "Public HTML acquisition only; challenge/content and version must be inspected before use."
+      },
+      "locator": "PMC author manuscript, Results S3, paragraph reporting Figure 1C/1E",
+      "exact_contiguous_span": true,
+      "normalization": "Unicode NFKC (PDF ligatures) and whitespace folding only",
+      "source_identity_verified": true,
+      "section_type": "Results",
+      "version": "PMC author manuscript",
+      "section_text_sha256": "697972b250f2103661777204f105b950fd1c72f17e5d6de7a8074874193dd0b4",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_similarity": 0.39
+    },
+    {
+      "reference": "DOI:10.1016/j.nlm.2008.09.012",
+      "snippet": "Habituation is defined as a behavioral response decrement that results from repeated stimulation and that does not involve sensory adaptation/sensory fatigue or motor fatigue.",
+      "words": 24,
+      "source": {
+        "name": "rankin2009",
+        "url": "https://homepages.ecs.vuw.ac.nz/~marslast/PUBS/Neurobiology2.pdf",
+        "status": 200,
+        "final_url": "https://homepages.ecs.vuw.ac.nz/~marslast/PUBS/Neurobiology2.pdf",
+        "checked_at": "2026-10-13T04:24:23.775330+00:00",
+        "content_type": "application/pdf",
+        "pdf_signature": true,
+        "path": "/tmp/traitmech-habituation-final-source-canary-20261013/rankin2009.pdf",
+        "bytes": 134480,
+        "sha256": "8c4a48fd8be726c95a19fa746917985521117d7095061d9df37866b29ee56f3f"
+      },
+      "locator": "PDF page 2 (printed page 136), section 2 opening sentence",
+      "exact_contiguous_span": true,
+      "normalization": "Unicode NFKC (PDF ligatures) and whitespace folding only",
+      "source_identity_verified": true,
+      "section_type": "Review definition",
+      "version": "Public institutional PDF of consensus review; not a microbial experiment",
+      "derived_text": {
+        "path": "/tmp/traitmech-habituation-final-source-canary-20261013/rankin-render/page-2.txt",
+        "sha256": "cf507ebf5ae8e33e437cc7ea43585a97ed380fdcee6193dc11990eed469893f1"
+      },
+      "visually_checked": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_similarity": 0.32
+    }
+  ],
+  "native_record_verification_pending": false,
+  "figure_acquisitions": {
+    "sources": [
+      {
+        "name": "stentor2025-F4",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/057e4eacea2d/nihms-2091963-f0004.webp",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:05.292066+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/057e4eacea2d/nihms-2091963-f0004.webp",
+        "content_type": "image/webp",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2025-F4.webp",
+        "bytes": 170094,
+        "sha256": "17286865bd58939ec2bb3543af22f8aa26b7a651bcbea55b5c236ec0dc2d6094"
+      },
+      {
+        "name": "stentor2025-F5",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/70d4081257a7/nihms-2091963-f0005.webp",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:05.688534+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/70d4081257a7/nihms-2091963-f0005.webp",
+        "content_type": "image/webp",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2025-F5.webp",
+        "bytes": 97774,
+        "sha256": "4872ccd83609fed69b156458f959d5ca9081ec3ad42ac03fef9fa91d87a38b5e"
+      },
+      {
+        "name": "stentor2025-F6",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/bd4417de4d9d/nihms-2091963-f0006.webp",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:05.993988+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/bd4417de4d9d/nihms-2091963-f0006.webp",
+        "content_type": "image/webp",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2025-F6.webp",
+        "bytes": 100374,
+        "sha256": "ff43e93d8a7b71801298c07bb1db0bc59c757512ffa14d1bf4d23757f2890592"
+      },
+      {
+        "name": "stentor2025-F7",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/2a8f7fa92beb/nihms-2091963-f0007.webp",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:06.336619+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ffa7/13499368/2a8f7fa92beb/nihms-2091963-f0007.webp",
+        "content_type": "image/webp",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2025-F7.webp",
+        "bytes": 148794,
+        "sha256": "add81b9f0b739964ecfe1f1418219ef2adb89eaf608b136fbfd0e13afaea185b"
+      },
+      {
+        "name": "stentor2026-F1",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/8709993ae88d/nihms-2168183-f0002.jpg",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:06.782274+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/8709993ae88d/nihms-2168183-f0002.jpg",
+        "content_type": "image/jpeg",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2026-F1.jpg",
+        "bytes": 1102422,
+        "sha256": "6376e49142658d7bfc80bc486e9e5144318eb69e822cb2fe3334a5d0f25463fa"
+      },
+      {
+        "name": "stentor2026-F3",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/dc3d3d0ff116/nihms-2168183-f0004.jpg",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:07.274474+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/dc3d3d0ff116/nihms-2168183-f0004.jpg",
+        "content_type": "image/jpeg",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2026-F3.jpg",
+        "bytes": 902259,
+        "sha256": "e097bb8cad69369757ecbd7989266dfd2832d425c53f6fc8ec8c1e43284a13b2"
+      },
+      {
+        "name": "stentor2026-F4",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/4fa1c546705f/nihms-2168183-f0005.jpg",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:07.905080+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/4fa1c546705f/nihms-2168183-f0005.jpg",
+        "content_type": "image/jpeg",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2026-F4.jpg",
+        "bytes": 993240,
+        "sha256": "1d286d83b955bcb36ca6221886f3d350098caed3f3b135f607038b6ee4720201"
+      },
+      {
+        "name": "stentor2026-F6",
+        "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/86bc8a743fbb/nihms-2168183-f0007.jpg",
+        "expected_content_type": "image/",
+        "accessed_at": "2026-10-13T03:46:08.388521+00:00",
+        "status": 200,
+        "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fa25/13192338/86bc8a743fbb/nihms-2168183-f0007.jpg",
+        "content_type": "image/jpeg",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2026-F6.jpg",
+        "bytes": 785488,
+        "sha256": "fca619212afd1fde042a397f7473f4854a35aa9318b59d2654aeb34572cad970"
+      },
+      {
+        "name": "stentor2026-supplement",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/13192338/bin/NIHMS2168183-supplement-3.pdf",
+        "expected_content_type": "application/pdf",
+        "accessed_at": "2026-10-13T03:46:08.538174+00:00",
+        "status": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/13192338/bin/NIHMS2168183-supplement-3.pdf",
+        "content_type": "text/html; charset=utf-8",
+        "path": "/tmp/traitmech-habituation-figures-20261013/stentor2026-supplement.response",
+        "bytes": 1817,
+        "sha256": "928e451d1b9d9c3f34ff9258304d4bada309fed457fd9ae208bb0b6a70311fce",
+        "error": "AssertionError: "
+      }
+    ],
+    "limits": "Acquisition only; each figure or supplement still needs visual assessment."
+  },
+  "allocation": {
+    "checked_at": "2026-10-13T04:39:02.417422+00:00",
+    "base": "1e4d8170d36324d781ac3d8c29897ff7d1376936",
+    "raw_receipt_sha256": "383c91df51cd33de1d10c47c88c1d13189297864b0f7c056774fb7ddcc45b451",
+    "candidate": "traitmech:000714",
+    "cohort": "metpo_traitmech_v590",
+    "block": [
+      1066700,
+      1066799
+    ],
+    "intervals_checked": 9291,
+    "dispositions": [
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "status": "modified",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "bytes": 924175,
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "coverage": "Full blob retained; binary/non-UTF-8 content not text-searched."
+        },
+        "line": 270,
+        "disposition": "not_a_reservation",
+        "reason": "Column 304 is a numeric embedding value (-1.1066754), not a CURIE. No row identifier occupies the candidate block."
+      },
+      {
+        "source": {
+          "repository": "Knowledge-Graph-Hub/kg-microbe",
+          "head": "1b5c79741b251c9073e6dc2d5eb3028c46ddcaa3",
+          "path": "mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "saved_path": "/tmp/traitmech-anticipation-discovery-20261012/github-kg-microbe/content/mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "blob_sha": "a3ce540da6ee94b71a4770093ce01ff1416c8660",
+          "sha256": "59464e08017cc907a1240a4378d2462efc9e2c1b9d6c3cf0b08b4344ef695ae8"
+        },
+        "line": 465823,
+        "disposition": "not_a_reservation",
+        "reason": "The subject is beilstein:1066722, not METPO:1066722; namespaces are not interchangeable."
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/tmp/traitmech-ncbi-success-body-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/tmp/traitmech-transcriptional-memory-provenance-main-after-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/tmp/traitmech-aggregate-inheritance-reporter-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/tmp/traitmech-transcriptional-memory-provenance-main-before-delete-20261013/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/private/tmp/traitmech-stress-memory-diagnostic-main-after-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/private/tmp/traitmech-ncbi-success-body-main-before-delete-20261012/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v587/proposal.md",
+        "line": 132,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      },
+      {
+        "source": {
+          "repository": "berkeleybop/metpo",
+          "pr": 629,
+          "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+          "path": "docs/metpo_id_ranges_research.md",
+          "status": "modified",
+          "blob_sha": "994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/994619f57ee9293fb5d261652ed0c0e356fc0d1a",
+          "bytes": 13584,
+          "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+          "coverage": "Complete UTF-8 content searched, not a PR patch excerpt.",
+          "hits": []
+        },
+        "line": 14,
+        "disposition": "namespace_envelope_not_specific_reservation",
+        "interval": [
+          1000000,
+          1999999
+        ]
+      }
+    ],
+    "conflicting_reservations": [],
+    "status": "Candidate available in inspected scope; creation/publication still requires race recheck.",
+    "limits": "Available current files include ignored/hidden files. Retained Git trees do not reconstruct unavailable ignored/untracked files; compressed and binary limits remain in underlying receipts. This is not an atomic global reservation."
+  },
+  "novelty": {
+    "pattern": "habituat|dishabituat|desensiti[sz]|non[ _-]?associative[ _-]learn|nlm[.]2008[.]09[.]012|18854219",
+    "files": 908,
+    "local_roots": 33,
+    "hits": [],
+    "ignored_hidden_included": true,
+    "limit": "Lexical current-file/full-blob screen, not semantic universal absence. Remote blobs were identity-checked by the preceding allocation audit; no new network check here."
+  },
+  "input_receipts": [
+    {
+      "path": "/tmp/traitmech-habituation-lead-20261013.md",
+      "sha256": "d1e668ab67436f3665208ca7b5870b90e093664397a7007ebaeffd1ad765a50d"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-acceptance-20261013.md",
+      "sha256": "6f81133108824e1d2425a0fec4b7dcf084d86281108489c9bf9728b05d952e6a"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-allocation-20261013/assessment.json",
+      "sha256": "04f164de5e1cdea50f22a2bfd9a64d88020d9d2c0c8743df6a3284e17216d59e"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-allocation-20261013/unadjudicated.json",
+      "sha256": "383c91df51cd33de1d10c47c88c1d13189297864b0f7c056774fb7ddcc45b451"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-allocation-20261013/expanded-novelty.json",
+      "sha256": "483767cf6fe73019e9f2dbf5e9af77dda937a7e0da6b3c1b1e5d8aac4d33b193"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-novelty-20261013/result.json",
+      "sha256": "52abb9c8e81366c96c4ca729845a9c0bfad7db8c4dc0b0f815034300d714686a"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-canary-20261013/acquisition.json",
+      "sha256": "c2e036b07f3f9e781424b0cd7d7ee3d7b171159b8eff51e3cbf327812677af93"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-followup-canary-20261013/acquisition.json",
+      "sha256": "770c3f3633ca9d58572c5ae24f8ff6c9ef6cf327ff05b0b0329cfad11944da56"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-followup-fulltext-20261013/acquisition.json",
+      "sha256": "15785c3ef4bfce74d68595731e294b90e28537b3e7b8cb280a4b3b490a2f39ab"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-final-source-canary-20261013/acquisition.json",
+      "sha256": "f212144bdc0c088dd7a9fbe1aecace85caa8f78295841723bf8b57069ac65ae0"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-identity-notices-20261013/acquisition.json",
+      "sha256": "ec724c9cccb63c30e7fcfab8c667ee5e42af5cdb332e897042e1bdc8419231cf"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-notice-canary-20261013/acquisition.json",
+      "sha256": "6b73c436d7e4fa3ab3f901e2a748cf3ebe83fcba8b574cab43c5a000ed187481"
+    },
+    {
+      "path": "/tmp/traitmech-habituation-publisher-canary-20261013/acquisition.json",
+      "sha256": "d4c579e5cbb452b3fe4faf731e1adfa576cba3897cb844e26555f66897233c05"
+    }
+  ],
+  "limitations": [
+    "No whole-article version equivalence, raw-data reanalysis or simulation rerun. Full articles are retained locally, not redistributed in this repository.",
+    "Main text, selected Methods and actual figures were inspected; 2016/2026 supplementary requests returned HTML, not PDF. Supplements remain unread.",
+    "MED/Crossref notice checks are bounded metadata. Direct publisher failures and manuscript versions do not establish current corrected VoR status.",
+    "Retained tracked history does not reconstruct unavailable ignored/untracked files. Symlink directories and arbitrary archives were not recursively expanded.",
+    "Four adaptation neighbors remain deprecated with unresolved historical scope; no exact mapping, revival or invalid-biology inference follows.",
+    "2025 and 2026 studies share a laboratory; Rankin 2009 is terminology review, not experimental replication."
+  ],
+  "native_record_verification": {
+    "recorded_at": "2026-10-13T04:50:06.834344+00:00",
+    "exit": 0,
+    "rows": [
+      {
+        "file": "data/traits/physiology/behavioral_habituation.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.1098/rspb.2016.0446",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.28",
+        "snippet": "The Q and CAF slime moulds crossing a bridge containing quinine or caffeine for the sixth time showed reduced aversive behaviour.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/behavioral_habituation.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1016/j.cub.2025.05.071",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.39",
+        "snippet": "the response to the low force stimuli shows extensive habituation even though the response to the alternating high force stimuli does not.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/behavioral_habituation.yaml",
+        "locator": "evidence[2]",
+        "reference": "DOI:10.1016/j.cub.2026.03.080",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.39",
+        "snippet": "For cells treated with either cycloheximide or puromycin, the primary effect on learning was accelerating habituation (Figure 1C, 1E).",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/behavioral_habituation.yaml",
+        "locator": "evidence[3]",
+        "reference": "DOI:10.1016/j.nlm.2008.09.012",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.32",
+        "snippet": "Habituation is defined as a behavioral response decrement that results from repeated stimulation and that does not involve sensory adaptation/sensory fatigue or motor fatigue.",
+        "nearest_sentence": ""
+      }
+    ],
+    "command": "python scripts/verify_snippets.py --record data/traits/physiology/behavioral_habituation.yaml --out /tmp/traitmech-habituation-native-snippets-20261013.tsv",
+    "receipt": {
+      "path": "/tmp/traitmech-habituation-native-snippets-20261013.tsv",
+      "sha256": "056ad5a1664d572c8ee6fff66be9f50931ac72974fa9f1cd606eb59b855467c3"
+    },
+    "scope": "Four inconclusive abstract outcomes, not native full-text VERIFIED results; exact retained full-text checks are separate."
+  }
+}
