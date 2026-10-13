@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/extracellular_trail_based_spatial_memory.yaml
+  slug: extracellular_trail_based_spatial_memory
+session:
+  id: 2026-10-13T064512Z-codex-64c936
+  timestamp: '2026-10-13T06:45:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add extracellular-trail-based spatial memory
+  details: Added traitmech:000715 as PROPOSED under phenotype, with three DOI-backed contiguous
+    snippets, qualified assay/version/provenance limits and three open discussions. Added
+    cohort v591, reserving METPO:1066800-1066899 with only 1066800 populated. No canonical
+    taxa, graph, proteins or exact mappings; existing records unchanged.
