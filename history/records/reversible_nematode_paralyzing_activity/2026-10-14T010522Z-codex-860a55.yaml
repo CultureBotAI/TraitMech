@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/reversible_nematode_paralyzing_activity.yaml
+  slug: reversible_nematode_paralyzing_activity
+session:
+  id: 2026-10-14T010522Z-codex-860a55
+  timestamp: '2026-10-14T01:05:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add reversible nematode-paralyzing activity
+  details: Added one PROPOSED microorganism-level capability requiring movement recovery after
+    exposure ends. Two stable-URL primary studies carry 19-word and 22-word directly inspected
+    excerpts. Kilama supplies definition authority; Cayrol independently supports recovery,
+    not standalone producer identity. The native verifier skips URL references; manual HTML/PDF
+    and typeset checks are distinct from native VERIFIED. Retained control, strain, dose,
+    timing and text-extraction discrepancies in evidence notes and two OPEN discussions. No
+    canonical taxa, exact synonyms, xrefs, proteins or graph asserted. Ignored/hidden current-copy,
+    retained-history and open/draft PR reservation checks found no exact record or competing
+    allocation after numeric false-positive adjudication. Initial Git regex control failure
+    was corrected before completed historical checks. v598 reserves 1067500-1067599 for local
+    000722. Timestamp in the trait records observed acceptance; this history records the later
+    CREATE. Other records and protected spore germination are unchanged.

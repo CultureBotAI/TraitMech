@@ -14198,6 +14198,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/replicative_aging.html#replicative-aging-mechanism-and-example-limits"
  },
  {
+  "discussion_id": "reversible-nematode-paralysis-scope-and-hierarchy",
+  "prompt": "Refine the hierarchy without losing the microbial actor and recovery requirement.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "reversible nematode-paralyzing activity",
+  "source_id": "traitmech:000722",
+  "source_file": "reversible_nematode_paralyzing_activity.yaml",
+  "attaches_to": [],
+  "rationale": "This is the microorganism's capability, not its own nonmotility or the nematode's susceptibility. Recovery after removal is required; immobility, reduced speed, reduced egg hatch, population suppression, trapping or attraction alone is insufficient. The same producer or product may kill under other conditions; no organism-level disjointness follows. Phenotype METPO:1000059 is the conservative parent. Lethal activity, fungal nematophagy, trap formation and attraction are related, not necessary parents. No exact active or deprecated METPO counterpart was identified in the documented pinned/current screen; v598 proposes the class. Nematostatic terminology, chemical roles and sequence annotations are not exact synonyms or xrefs. Infection, feeding and a particular molecular mechanism are not required.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/reversible_nematode_paralyzing_activity.html#reversible-nematode-paralysis-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "reversible-nematode-paralysis-source-and-mechanism-limits",
+  "prompt": "Resolve source discrepancies and strain provenance before adding taxa or mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "reversible nematode-paralyzing activity",
+  "source_id": "traitmech:000722",
+  "source_file": "reversible_nematode_paralyzing_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Kilama assigns 22R5-2 to both species in Methods, versus lilacinus 22R5-1/marquandii 22R5-2 in Results/Figure 1 and marquandii 22R5-1 in Discussion. It also varies 11N4-8/11N8-4 and 23N5-2/23N-5. Upper dose is 375 in Methods/Results but 325 in Table 2; lower dose is 125 in Methods/Table 2 but 150 in Results, in microliters/mL. These discrepancies are not silently corrected. Cayrol's proposed neurotropic action is unresolved, not a demonstrated target. No common active chemical, protein, causal graph, canonical taxon, field efficacy or environmental safety is asserted. Taxonomic authority and strain provenance remain unchecked for exemplar purposes. Source hashes, bounded notice checks, URL-verifier skips and inspection limits are retained in the verification sidecar. No full raw-data or statistical reanalysis was performed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/reversible_nematode_paralyzing_activity.html#reversible-nematode-paralysis-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "rheotaxis-context-specific-mechanism-grounding",
   "prompt": "Ground separate surface and bulk-flow mechanisms without inventing a shear-sensing protein.",
   "kind": "CURATION_TODO",
@@ -14794,9 +14828,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 743,
- "total_knowledge_gaps": 463,
- "total_source_entries": 587,
+ "total_discussions": 745,
+ "total_knowledge_gaps": 464,
+ "total_source_entries": 588,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
