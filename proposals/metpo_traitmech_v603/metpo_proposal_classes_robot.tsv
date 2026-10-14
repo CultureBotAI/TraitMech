@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1068000	fungal nematode endoparasitism	An animal-pathogenic phenotype in which a fungus uses spores attached to or ingested by a vermiform nematode to initiate infection and then grows inside the host.	TraitMech:data/traits/ecology/fungal_nematode_endoparasitism.yaml|DOI:10.1371/journal.pgen.1006017	METPO:1004002			metpo_traitmech_2026_10		Spore-initiated infection and internal fungal growth in vermiform nematodes; no universal host range or effector.	traitmech:000727
