@@ -13346,6 +13346,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/nematode_egg_hatching_inhibitory_activity.html#nematode-egg-hatching-inhibition-source-and-mechanism-limits"
  },
  {
+  "discussion_id": "nematode-egg-hatching-stimulation-scope-and-hierarchy",
+  "prompt": "Refine the hierarchy without changing the microbial actor or positive-hatch endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nematode egg-hatching stimulatory activity",
+  "source_id": "traitmech:000724",
+  "source_file": "nematode_egg_hatching_stimulatory_activity.yaml",
+  "attaches_to": [],
+  "rationale": "This is a microbial capability to increase hatching, not merely lack of inhibition, the microorganism's own development or the nematode's susceptibility. Embryogenesis without emergence, attraction, trapping, juvenile paralysis or killing alone is insufficient. Feeding, infection and benefit to the microbe are not required. No organism-level disjointness from hatch inhibition is asserted: host and culture conditions can reverse responses. Phenotype METPO:1000059 is the conservative parent. Pinned/current METPO screening found only unrelated fried-egg-shaped colony, not an exact active or deprecated counterpart in inspected owners; v600 proposes the class. No exact synonym or xref is asserted. Neither host-generalism nor a secretion/contact mechanism is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_egg_hatching_stimulatory_activity.html#nematode-egg-hatching-stimulation-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "nematode-egg-hatching-stimulation-source-and-mechanism-limits",
+  "prompt": "Resolve host range, strain provenance and mechanism before adding canonical examples or causal edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nematode egg-hatching stimulatory activity",
+  "source_id": "traitmech:000724",
+  "source_file": "nematode_egg_hatching_stimulatory_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Meyer explicitly leaves nutrient depletion versus added compounds unresolved. Some fungal filtrates stimulate one host while inhibiting another, and culture age can reverse activity. The bacterial study reports variable hatch and contrasts two Trichuris hosts; neither study defines universal potency or host range. No canonical taxon, shared active molecule, protein or causal graph is inferred. No field efficacy, environmental safety, infectivity benefit or therapeutic use is asserted. Methods, own results and selected figures were inspected, not the full experimental raw data. Direct snippets and bounded notice checks are retained in the verification sidecar. Crossmark responses were script shells, not current-status verdicts; Meyer publisher access returned 403. No comprehensive correction/retraction clearance is claimed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_egg_hatching_stimulatory_activity.html#nematode-egg-hatching-stimulation-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "nucleophagy-cargo-route-and-selectivity",
   "prompt": "Review nuclear-cargo scope and source-specific selectivity.",
   "kind": "CURATION_TODO",
@@ -14862,9 +14896,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 747,
- "total_knowledge_gaps": 465,
- "total_source_entries": 589,
+ "total_discussions": 749,
+ "total_knowledge_gaps": 466,
+ "total_source_entries": 590,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
