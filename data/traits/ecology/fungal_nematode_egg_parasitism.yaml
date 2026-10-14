@@ -29,6 +29,15 @@ evidence:
     as the only nourishment for the reported 24-hour comparison, but microscopy does
     not quantify nutrient assimilation. RNA-seq replicates were pooled; gene homology
     and expression do not demonstrate a required effector.
+- reference: DOI:10.3389/fmicb.2021.617710
+  snippet: Infection defined by Purpureocillium lilacinum mycelium penetrating through
+    the whole individual Meloidogyne incognita egg
+  notes: Xu et al. 2021, Supplementary Table 1 footnote, Table_1.DOCX from the PMC8058359
+    Europe PMC supplementaryFiles archive. Direct DOCX text match and complete rendered
+    page inspected; native NOT_IN_ABSTRACT is retained. This operational scoring criterion
+    supports individual-egg penetration, not another independent experiment or a direct
+    nutrient-flux measurement. The two Xu excerpts total 23 words. The printed 30-hour
+    mean discrepancy remains unresolved; no infection rate is imported.
 discussions:
 - discussion_id: fungal-nematode-egg-parasitism-scope-and-hierarchy
   prompt: Refine the egg-infection hierarchy without conflating infection, feeding
@@ -80,7 +89,10 @@ discussions:
     Microscopy and source-designated infection are not tracer measurements of nutrient
     flux. No field efficacy or safety claim follows. Source hashes, inspected figures/supplement,
     actual snippet verdicts and bounded notice checks are retained in the verification
-    sidecar; no comprehensive correction/retraction clearance is claimed.
+    sidecar; no comprehensive correction/retraction clearance is claimed. Both counted
+    primary experiments concern Purpureocillium lilacinum (JZD02 and 36-1). The fungal
+    actor class is not evidence that this phenotype was experimentally demonstrated
+    across fungal species; additional species require their own evidence.
   posed_by: codex
   posed_date: '2026-10-14'
 curation_history:
@@ -95,4 +107,14 @@ curation_history:
     proposal ranges. Wheel sizes and broad editor envelopes are not conflicting reservations.
     Animal-pathogen parent scope checked against pinned/current ontology. Other records
     unchanged; timestamp records observed acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-14T12:50:22Z'
+  curator: codex
+  action: CLARIFY_EVIDENCE
+  changes: 'Addressed issue #1931 after the approving PR review: added a directly
+    matched 14-word supplementary penetration criterion and explicitly limited the
+    two primary experiments to one fungal species. Xu quotations total 23 words; the
+    extra excerpt is not a third independent experiment. Retained native NOT_IN_ABSTRACT,
+    original minting history, definition, parent, source discrepancy and PROPOSED
+    status.'
   llm_assisted: true

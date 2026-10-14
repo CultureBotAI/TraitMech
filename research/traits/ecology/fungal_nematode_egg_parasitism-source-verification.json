@@ -1,7 +1,7 @@
 {
   "trait_id": "traitmech:000726",
   "accepted_at": "2026-10-14T11:46:22Z",
-  "checked_at": "2026-10-14T11:56:04.373851+00:00",
+  "checked_at": "2026-10-14T12:54:59.821152+00:00",
   "status": "Author assessment of one PROPOSED trait; not independent review or human sign-off.",
   "rows": [
     {
@@ -111,6 +111,57 @@
         }
       ],
       "assessment": "Xie et al. 2016, PMID:27486440, PMCID:PMC4949223, Figure 5 caption, panel B; actual panels A-C and Methods/Results inspected. P. lilacinum denotes Purpureocillium lilacinum. Direct JATS match; native NOT_IN_ABSTRACT is retained. This is its own 36-1 infection experiment, not a repetition of Xu's citation. Eggs were supplied as the only nourishment for the reported 24-hour comparison, but microscopy does not quantify nutrient assimilation. RNA-seq replicates were pooled; gene homology and expression do not demonstrate a required effector."
+    },
+    {
+      "reference": "DOI:10.3389/fmicb.2021.617710",
+      "pmid": "33897634",
+      "pmcid": "PMC8058359",
+      "role": "operational_scoring_criterion_same_experiment",
+      "snippet": "Infection defined by Purpureocillium lilacinum mycelium penetrating through the whole individual Meloidogyne incognita egg",
+      "words": 14,
+      "source": {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/Table_1.DOCX",
+        "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e",
+        "bytes": 17309
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8058359/supplementaryFiles",
+      "stable_article_url": "https://doi.org/10.3389/fmicb.2021.617710",
+      "archive_member": "Table_1.DOCX",
+      "document_member": "word/document.xml",
+      "source_xpath": "/w:document/w:body/w:p[2]",
+      "xpath_namespaces": {
+        "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+      },
+      "source_format": "docx",
+      "source_section": "Supplementary Table 1 footnote",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_text_layer_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[2]",
+      "native_probe": {
+        "accepted_at": "2026-10-14T12:50:22Z",
+        "issue": "https://github.com/CultureBotAI/TraitMech/issues/1931",
+        "snippet": "Infection defined by Purpureocillium lilacinum mycelium penetrating through the whole individual Meloidogyne incognita egg",
+        "words": 14,
+        "combined_xu_words": 23,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "similarity": 0.375,
+        "closest_sentence": "",
+        "source": {
+          "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/Table_1.DOCX",
+          "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e"
+        },
+        "member": "word/document.xml",
+        "source_xpath": "/w:document/w:body/w:p[2]",
+        "namespaces": {
+          "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        },
+        "direct_source_match": true,
+        "role": "Operational scoring criterion, not an additional independent experiment or direct nutrient-flux measurement.",
+        "scope": "Both counted primary experiments concern Purpureocillium lilacinum, JZD02 and 36-1. No experimentally demonstrated cross-species breadth is asserted."
+      },
+      "assessment": "Xu et al. 2021, Supplementary Table 1 footnote, Table_1.DOCX from the PMC8058359 Europe PMC supplementaryFiles archive. Direct DOCX text match and complete rendered page inspected; native NOT_IN_ABSTRACT is retained. This operational scoring criterion supports individual-egg penetration, not another independent experiment or a direct nutrient-flux measurement. The two Xu excerpts total 23 words. The printed 30-hour mean discrepancy remains unresolved; no infection rate is imported."
     }
   ],
   "allocation": {
@@ -384,19 +435,19 @@
       "--record",
       "data/traits/ecology/fungal_nematode_egg_parasitism.yaml",
       "--out",
-      "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv"
+      "/tmp/traitmech-egg-parasitism-followup-checks-20261014/native-record.tsv"
     ],
     "exit": 0,
-    "seconds": 3.842864708043635,
-    "completed_at": "2026-10-14T11:54:22.519659+00:00",
-    "log": "/tmp/traitmech-egg-parasitism-checks-20261014/records-03.log",
+    "seconds": 3.8346316390670836,
+    "completed_at": "2026-10-14T12:53:51.708913+00:00",
+    "log": "/tmp/traitmech-egg-parasitism-followup-checks-20261014/records-03.log",
     "report": {
-      "path": "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv",
-      "bytes": 416,
-      "sha256": "2b9438901b768f06117ab83f0a17d4b304e741255e8f72974afd19d270e9c37f"
+      "path": "/tmp/traitmech-egg-parasitism-followup-checks-20261014/native-record.tsv",
+      "bytes": 659,
+      "sha256": "5a5c409cc782b648fc0a264677cb784157c23eb08127d89738e50ec0c2c483c9"
     },
-    "report_rows": 2,
-    "explanation": "Actual record CLI outcomes, not upgraded by manual full-text matching."
+    "report_rows": 3,
+    "explanation": "Actual revised-record CLI results; two distinct primary sources and three excerpts, one being a supplementary scoring criterion."
   },
   "read_scope": {
     "xu": "Scientific Abstract, selected Introduction/Methods/Discussion, actual Figure 1 A-C, complete rendered Supplementary Table 1.",
@@ -584,6 +635,10 @@
       "path": "/tmp/traitmech-egg-parasitism-leads-20261014/scope-assessment.json",
       "bytes": 10016,
       "sha256": "0b5ddccf7a5b9e19a314d9c06429de009e616078d5291533993ffc4a8e8895e7"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-followup-probe-20261014.json",
+      "sha256": "826b8b9eebdc56c3692d9c8b42eab852c175b14e5c18b052f1ee4f43f9759e40"
     }
   ],
   "omissions": "No canonical examples without independent strain-provenance/taxonomy checks; no proteins, chemicals, causal graph, exact synonym or equivalent xref. No universal host range, obligacy, field efficacy, safety or quantitative infection threshold.",
@@ -591,6 +646,48 @@
   "limits": [
     "Known local copies and retained regular-file history only; unavailable ignored/untracked history, symlink targets, submodules and arbitrary archives are not reconstructed. Remote inspection covers changed PR blobs and selected upstream owners, not every unchanged file. No exhaustive literature or all-ontology absence claim. Reservation checks and final publication guards remain required.",
     "Temporary raw files are not committed; public retrieval URLs and hashes identify inspected evidence.",
-    "Earlier research-only and alternate snippet probes are retained; this record-specific verification supersedes their unfinished state."
-  ]
+    "Earlier research-only and alternate snippet probes are retained; this record-specific verification supersedes their unfinished state.",
+    "Both supporting experiments are in Purpureocillium lilacinum; no experimental cross-species breadth is established. The extra Xu excerpt is not independent replication."
+  ],
+  "previous_verifications": [
+    {
+      "checked_at": "2026-10-14T11:56:04.373851+00:00",
+      "native_record_verification": {
+        "command": [
+          "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+          "scripts/verify_snippets.py",
+          "--record",
+          "data/traits/ecology/fungal_nematode_egg_parasitism.yaml",
+          "--out",
+          "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv"
+        ],
+        "exit": 0,
+        "seconds": 3.842864708043635,
+        "completed_at": "2026-10-14T11:54:22.519659+00:00",
+        "log": "/tmp/traitmech-egg-parasitism-checks-20261014/records-03.log",
+        "report": {
+          "path": "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv",
+          "bytes": 416,
+          "sha256": "2b9438901b768f06117ab83f0a17d4b304e741255e8f72974afd19d270e9c37f"
+        },
+        "report_rows": 2,
+        "explanation": "Actual record CLI outcomes, not upgraded by manual full-text matching."
+      },
+      "source_commit": "418a9676293fb665baf8810617a6d06646e742fc",
+      "source_path": "research/traits/ecology/fungal_nematode_egg_parasitism-source-verification.json",
+      "source_sha256": "7cd59d3aee2341e5756884093789aac76f95c2caff99261ef7e4cfcb3c2cf272",
+      "explanation": "The prior two-excerpt record passed; this is retained historical verification, not the current three-excerpt CLI report."
+    }
+  ],
+  "evidence_clarification": {
+    "accepted_at": "2026-10-14T12:50:22Z",
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1931",
+    "review_url": "https://github.com/CultureBotAI/TraitMech/pull/1930#pullrequestreview-5518069170",
+    "reviewed_previous_head": "418a9676293fb665baf8810617a6d06646e742fc",
+    "combined_xu_words": 23,
+    "distinct_primary_experiments": 2,
+    "evidence_rows": 3,
+    "scope": "Both counted primary experiments concern Purpureocillium lilacinum, JZD02 and 36-1. No experimentally demonstrated cross-species breadth is asserted.",
+    "role": "Operational scoring criterion, not an additional independent experiment or direct nutrient-flux measurement."
+  }
 }

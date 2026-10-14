@@ -22,6 +22,11 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v602/metpo_proposal_classes_robot.t
 IDENTIFIER = "traitmech:000726"
 METPO_ID = "METPO:1067900"
 TIMESTAMP = "2026-10-14T11:46:22Z"
+CLARIFICATION_TIMESTAMP = "2026-10-14T12:50:22Z"
+SUPPLEMENT_SNIPPET = (
+    "Infection defined by Purpureocillium lilacinum mycelium penetrating "
+    "through the whole individual Meloidogyne incognita egg"
+)
 DEFINITION_SOURCE = "DOI:10.3389/fmicb.2021.617710"
 SUPPORTING_SOURCE = "DOI:10.3389/fmicb.2016.01084"
 PARENT = {
@@ -156,7 +161,7 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def build_previous_record() -> dict:
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -173,6 +178,44 @@ def build_record() -> dict:
             "timestamp records observed acceptance."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = build_previous_record()
+    record["evidence"].append({
+        "reference": DEFINITION_SOURCE,
+        "snippet": SUPPLEMENT_SNIPPET,
+        "notes": (
+            "Xu et al. 2021, Supplementary Table 1 footnote, Table_1.DOCX "
+            "from the PMC8058359 Europe PMC supplementaryFiles archive. "
+            "Direct DOCX text match and complete rendered page inspected; "
+            "native NOT_IN_ABSTRACT is retained. This operational scoring "
+            "criterion supports individual-egg penetration, not another "
+            "independent experiment or a direct nutrient-flux measurement. "
+            "The two Xu excerpts total 23 words. The printed 30-hour mean "
+            "discrepancy remains unresolved; no infection rate is imported."
+        ),
+    })
+    record["discussions"][-1]["rationale"] += (
+        " Both counted primary experiments concern Purpureocillium lilacinum "
+        "(JZD02 and 36-1). The fungal actor class is not evidence that this "
+        "phenotype was experimentally demonstrated across fungal species; "
+        "additional species require their own evidence."
+    )
+    record_curation_event(
+        record, curator="codex", action="CLARIFY_EVIDENCE",
+        changes=(
+            "Addressed issue #1931 after the approving PR review: added a "
+            "directly matched 14-word supplementary penetration criterion "
+            "and explicitly limited the two primary experiments to one "
+            "fungal species. Xu quotations total 23 words; the extra excerpt "
+            "is not a third independent experiment. Retained native "
+            "NOT_IN_ABSTRACT, original minting history, definition, parent, "
+            "source discrepancy and PROPOSED status."
+        ),
+        llm_assisted=True, timestamp=CLARIFICATION_TIMESTAMP,
     )
     return record
 
@@ -204,7 +247,7 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (build_previous_record(), record):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")

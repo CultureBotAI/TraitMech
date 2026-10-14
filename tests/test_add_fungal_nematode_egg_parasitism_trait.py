@@ -45,28 +45,36 @@ def test_identity_evidence_and_history():
     assert record["parent_traits"] == ["METPO:1004002"]
     assert record["definition_source"] == writer.DEFINITION_SOURCE
     assert {e["reference"] for e in record["evidence"]} == {writer.DEFINITION_SOURCE, writer.SUPPORTING_SOURCE}
-    assert [len(e["snippet"].split()) for e in record["evidence"]] == [9, 6]
+    assert [len(e["snippet"].split()) for e in record["evidence"]] == [9, 6, 14]
+    assert sum(len(e["snippet"].split()) for e in record["evidence"] if e["reference"] == writer.DEFINITION_SOURCE) == 23
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs", "protein_examples"])
-    event, = record["curation_history"]
+    event, clarification = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert event["action"] == "MINTED_TRAITMECH_ID"
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
+    assert record["curation_history"][:-1] == writer.build_previous_record()["curation_history"]
+    assert clarification["action"] == "CLARIFY_EVIDENCE" and "#1931" in clarification["changes"]
+    assert event["timestamp"] < clarification["timestamp"]
+    assert datetime.fromisoformat(clarification["timestamp"]) <= datetime.now(timezone.utc)
     record["evidence"].clear()
-    assert len(writer.build_record()["evidence"]) == 2
+    assert len(writer.build_record()["evidence"]) == 3
 
 
 def test_source_and_scope_qualifiers():
-    xu, xie = writer.build_record()["evidence"]
+    xu, xie, supplement = writer.build_record()["evidence"]
     for value in ["native VERIFIED", "JZD02", "individual egg", "30-hour", "no numerical infection rates", "6-hour", "42-hour", "not causal protein"]:
         assert value in xu["notes"]
     for value in ["Figure 5", "panel B", "NOT_IN_ABSTRACT", "its own", "36-1", "does not quantify nutrient", "pooled"]:
         assert value in xie["notes"]
+    assert supplement["snippet"] == writer.SUPPLEMENT_SNIPPET
+    for value in ["Supplementary Table 1 footnote", "NOT_IN_ABSTRACT", "operational scoring", "not another independent experiment", "23 words"]:
+        assert value in supplement["notes"]
     scope, ontology, limits = [d["rationale"] for d in writer.build_record()["discussions"]]
     for value in ["Surface attachment", "not an asserted parent", "persistent symbiosis", "No organism-level disjointness", "not an exact synonym"]:
         assert value in scope
     for value in ["METPO:1000227", "deprecated", "no replacement", "not revived", "pin remains unchanged"]:
         assert value in ontology
-    for value in ["34.7%", "not silently corrected", "No rates", "not tracer measurements", "No field efficacy"]:
+    for value in ["34.7%", "not silently corrected", "No rates", "not tracer measurements", "No field efficacy", "Both counted primary experiments", "across fungal species"]:
         assert value in limits
     assert all(d["status"] == "OPEN" for d in writer.build_record()["discussions"])
 
@@ -88,9 +96,11 @@ def test_source_receipt_and_narrative():
     receipt = json.loads((writer.ROOT / f"research/traits/ecology/{writer.SLUG}-source-verification.json").read_text())
     assert receipt["trait_id"] == writer.IDENTIFIER and receipt["accepted_at"] == writer.TIMESTAMP
     assert receipt["native_record_verification"]["exit"] == 0
-    assert receipt["native_record_verification"]["report_rows"] == 2
+    assert receipt["native_record_verification"]["report_rows"] == 3
     assert receipt["reservation_assessment"]["conflicting_reservations"] == []
-    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT"]
+    assert [r["native_verdict"] for r in receipt["rows"]] == ["VERIFIED", "NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT"]
+    assert receipt["evidence_clarification"]["combined_xu_words"] == 23
+    assert receipt["evidence_clarification"]["distinct_primary_experiments"] == 2
     for row, evidence in zip(receipt["rows"], writer.build_record()["evidence"], strict=True):
         assert row["reference"] == evidence["reference"] and row["snippet"] == evidence["snippet"]
         assert row["words"] == len(row["snippet"].split()) <= 25
@@ -109,6 +119,21 @@ def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):
     assert writer.PARENT_PATH.read_bytes() == before["parent.yaml"]
     after = snapshot(isolated)
     assert run(monkeypatch, True) == 0 and snapshot(isolated) == after
+
+
+def test_reviewed_previous_record_migrates_without_rewriting_history(isolated, monkeypatch):
+    previous = writer.build_previous_record()
+    writer.write_validated_trait(previous, writer.TARGET)
+    before = snapshot(isolated)
+    assert run(monkeypatch) == 0 and snapshot(isolated) == before
+    assert run(monkeypatch, True) == 0
+    result = yaml.safe_load(writer.TARGET.read_text())
+    assert result == writer.build_record()
+    assert result["curation_history"][:-1] == previous["curation_history"]
+    assert result["evidence"][:2] == previous["evidence"]
+    for field in ["identifier", "label", "definition", "definition_source", "parent_traits", "mapping_status"]:
+        assert result[field] == previous[field]
+    assert writer.PARENT_PATH.read_bytes() == before["parent.yaml"]
 
 
 @pytest.mark.parametrize("target", ["TARGET", "PROPOSAL"])

@@ -54,6 +54,16 @@ converted into an abstract match. Record-specific CLI outcomes, source URLs,
 byte hashes and access limitations are in the
 [verification sidecar](../../research/traits/ecology/fungal_nematode_egg_parasitism-source-verification.json).
 
+Following [issue 1931](https://github.com/CultureBotAI/TraitMech/issues/1931),
+a third excerpt quotes the 14-word individual-egg penetration criterion from
+Xu Supplementary Table 1. It directly matches the DOCX; its native
+`NOT_IN_ABSTRACT` is retained. The two Xu excerpts total 23 words. This is an
+operational scoring criterion from the same experiment, not a third independent
+study or a direct nutrient-flux measurement. Both counted primary experiments
+concern Purpureocillium lilacinum (JZD02 and 36-1). The fungal actor class does
+not imply experimentally demonstrated cross-species breadth; additional species
+require their own evidence.
+
 Selected Abstract/Methods/Results/Discussion passages, Xu Figure 1 A-C, Xie
 Figure 5 A-C and the complete rendered Xu Supplementary Table 1 were inspected.
 The supplement came from Europe PMC's supplementaryFiles ZIP. A derived CDN

@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/fungal_nematode_egg_parasitism.yaml
+  slug: fungal_nematode_egg_parasitism
+session:
+  id: 2026-10-14T125318Z-codex-c9d109
+  timestamp: '2026-10-14T12:53:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1931
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1930
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Clarify fungal nematode egg-parasitism evidence
+  details: Addressed the two optional evidence-presentation suggestions in the approving review
+    of head 418a9676293fb665baf8810617a6d06646e742fc. Added a directly matched 14-word criterion
+    from Xu Supplementary Table 1; the two Xu excerpts total 23 words, and the native verdict
+    remains NOT_IN_ABSTRACT. This is a scoring criterion from the same experiment, not a third
+    independent study. Explicitly stated that both counted primary experiments concern Purpureocillium
+    lilacinum JZD02 and 36-1; no experimentally demonstrated cross-species breadth follows
+    from the fungal class. Preserved original evidence, minting history, definition, parent,
+    proposal TSV, PROPOSED status and source-rate discrepancy. Append-only predecessor history
+    and review bundles remain unchanged. This is a scoped evidence enhancement, not a newly
+    discovered blocking identity defect.
