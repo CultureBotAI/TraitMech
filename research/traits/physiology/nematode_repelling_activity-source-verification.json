@@ -1,0 +1,670 @@
+{
+  "trait_id": "traitmech:000725",
+  "accepted_at": "2026-10-14T09:11:26Z",
+  "checked_at": "2026-10-14T09:17:47.398275+00:00",
+  "status": "Author assessment of one PROPOSED trait, not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.1073/pnas.0610281104",
+      "pmid": "17267603",
+      "pmcid": "PMC1892944",
+      "role": "definition_support",
+      "snippet": "C. elegans specifically avoids certain strains of Serratia based on their production of the cyclic lipodepsipentapeptide serrawettin W2.",
+      "words": 18,
+      "source": {
+        "path": "/tmp/traitmech-repellence-sources-20261014/pradel-pmc.response",
+        "bytes": 170176,
+        "sha256": "f3fae8fd3c82bbf27a32294f7b461e75f74b06dd502a9e4998b90c1b42e2982f"
+      },
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1892944/",
+      "stable_article_url": "https://doi.org/10.1073/pnas.0610281104",
+      "source_xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[2]/main/article/section[2]/section/section[1]",
+      "source_section": "Scientific Abstract",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "VERIFIED",
+      "native_locator": "evidence[0]",
+      "native_function_probe": {
+        "verdict": "VERIFIED",
+        "similarity": 1.0,
+        "nearest_sentence": ""
+      },
+      "assessment": "Pradel et al. 2007, PMID:17267603, PMCID:PMC1892944, scientific Abstract; exact normalized PMC match and native VERIFIED. C. elegans denotes Caenorhabditis elegans. Own Results and actual Figures 1-4 distinguish initial entry followed by leaving Serratia marcescens lawns from absence of attraction. A swrA insertion mutant shows reduced lawn leaving but similar multiday killing; reduced avoidance is not loss of pathogenicity. Purified serrawettin W2 on E. coli OP50 lawns and acute drop-induced reversal are separate assays. The 16-hour bacterial-lawn endpoint, 60-minute supplemented-lawn endpoint and acute reversal are not one exposure. Chemical recognition versus a mechanical surfactant cue remains unresolved, and other bacterial cues can contribute. Serratia swrA is not the similarly named Bacillus motility regulator."
+    },
+    {
+      "reference": "DOI:10.15252/embj.2020106938",
+      "pmid": "34086368",
+      "pmcid": "PMC8246062",
+      "role": "supporting_primary_experiment",
+      "snippet": "a specific volatile organic compound, 1\u2010undecene, produced by the pathogen P. aeruginosa is sensed as an aversive signal by C. elegans.",
+      "words": 21,
+      "source": {
+        "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-xml.response",
+        "bytes": 124390,
+        "sha256": "0ee3bcb615186a5c80173172514423253bb7d89cec71cabf44832bb5e14fcf07"
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8246062/fullTextXML",
+      "stable_article_url": "https://doi.org/10.15252/embj.2020106938",
+      "source_xpath": "/article/body/sec[3]/p[1]",
+      "source_section": "Discussion, first paragraph, own-study result",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[1]",
+      "native_function_probe": {
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": 0.44224422442244227,
+        "nearest_sentence": ""
+      },
+      "assessment": "Prakash et al. 2021, PMID:34086368, PMCID:PMC8246062, Discussion first paragraph, own-study result; directly matched JATS, PMC and publisher text. Native NOT_IN_ABSTRACT is retained, not relabeled VERIFIED. This is its own experiment, not a citation of Pradel. P. aeruginosa denotes Pseudomonas aeruginosa. Figure 1A-B measures PA14 lawn occupancy over 12 hours. Pure 1-undecene gives negative chemotaxis and omega turns in distinct Figure 2 and Appendix S2 assays. PA14-versus-undA odor choice establishes relative preference, not by itself repulsion or complete loss of bacterial repellence. Peer-review reply page 14 reports reversals but no complete lawn leaving after 1-undecene on OP50; the alternative adjacent-lawn crossing assay is not eviction from an occupied lawn. Roaming or higher mean square displacement alone is not directional avoidance. Recipient sensory genetics is not a microbial causal pathway."
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-14T09:11:26Z",
+    "base": "55407337d8572f15d01f47bf6c9a99abc05d264a",
+    "trait_id": "traitmech:000725",
+    "label": "nematode-repelling activity",
+    "category": "PHYSIOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v601",
+    "proposed_id": "METPO:1067800",
+    "reserved_block": [
+      1067800,
+      1067899
+    ],
+    "scientific_scope": "A physiological capability of a microorganism to elicit active movement of nematodes away from itself or substances it produces.",
+    "supporting_references": [
+      "DOI:10.1073/pnas.0610281104",
+      "DOI:10.15252/embj.2020106938"
+    ],
+    "fresh_remote": {
+      "main": "55407337d8572f15d01f47bf6c9a99abc05d264a",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1782,
+            "35099af2b7d5347f2ca6e418c4a139979071644d",
+            false
+          ],
+          [
+            1476,
+            "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+      }
+    },
+    "catalog_unchanged": true,
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-repellence-fresh-novelty-20261014/assessment.json",
+        "sha256": "19505bfc73755474d3b5ac603070e65c4d713540b6289cf6d361aa28c3a53027"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-fresh-novelty-20261014/local/completion.json",
+        "sha256": "606b8b195c4648d5df4252ce6fa9284782043d0cee45a8290c3eea9ec2f5af50"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-fresh-novelty-20261014/history/completion.json",
+        "sha256": "21b914bf7af7987ea0d66a1f53b247813523b54b1c26164ab683b29a09cd4925"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-reservations-20261014/numeric-assessment.json",
+        "sha256": "d712ef5824b5025bfd0c041eda7860132e716dcb7d50b624a77e666d883b9af4"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-reservations-20261014/local/completion.json",
+        "sha256": "4873555bcf1256108d0e61cfd6a0ebfb0fce4ebcca0941f1a8a0ede9a3d7e014"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-reservations-20261014/remote/result.json",
+        "sha256": "afe1a9eca2e21a33826df19c9235c007b8dd180a7140ffb4ea4972d8378b4f0d"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-identity-20261014.json",
+        "sha256": "0571b0ab71521445adcf07a5d79b2471d1da96e532778804ccb117a9d03d471b"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-sources-20261014/snippet-probe.json",
+        "sha256": "07e712f0a5eb1515e04b8de3315aed2898d50f4f1a713afe2e131dfa014e9a15"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-prakash-assessment-20261014.json",
+        "sha256": "1a5554321b76e7557776f508af840f301136401847186eac1ce98b2d91fdc264"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-source-successor-20261014.json",
+        "sha256": "3355b6e93cccaa1a5f7f478358c05d36896aae4c4c1a019bd543b261dab1dce9"
+      }
+    ],
+    "evidence_limits": "Pradel abstract quote: native VERIFIED; Prakash Discussion quote: direct full-text match, native NOT_IN_ABSTRACT. Record-specific CLI remains required. Separate bacterial lawn leaving, acute reversals, pure-compound chemotaxis and relative odor preference. No universal host response, shared mechanism, canonical examples, taxonomic/protein/chemical xrefs, safety or field efficacy.",
+    "limits": "One PROPOSED trait, not atomic allocation or discovery exhaustion. Recheck live state before publication."
+  },
+  "reservation_assessment": {
+    "at": "2026-10-14T09:00:32.287052+00:00",
+    "status": "Numeric assessment only; not an allocation or candidate acceptance.",
+    "candidate": "traitmech:000725",
+    "cohort": "metpo_traitmech_v601",
+    "block": [
+      1067800,
+      1067899
+    ],
+    "exact_dispositions": [
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 95,
+        "node": "METPO:1000697",
+        "value": "3.1067874",
+        "disposition": "Floating-point embedding coordinate, not an allocated identifier."
+      },
+      {
+        "source": {
+          "repository": "CultureBotAI/TraitMech",
+          "path": "data/embeddings/deepwalk_traits.tsv.gz",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+          "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+          "pr": 924,
+          "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+          "status": "modified"
+        },
+        "line": 211,
+        "node": "METPO:1001106",
+        "value": "-2.1067863",
+        "disposition": "Floating-point embedding coordinate, not an allocated identifier."
+      }
+    ],
+    "broad_editor_envelope_occurrences": 857,
+    "conflicting_reservations": [],
+    "wrapped_context_check": "The initial same-line context guard failed on 34 copies of two wrapped documentation lines. Inspected v590 proposal lines 105-110 and lethal-activity sidecar range_contexts: the following line explicitly identifies formal editor envelopes, not competing reservations. Exact path/text exceptions are guarded.",
+    "scope": "188 known current-copy locations including ignored/hidden files, 143 retained heads, 11 open/draft PRs and selected upstream owners. Full block and interval overlap checks included.",
+    "source_index": {
+      "path": "/tmp/traitmech-repellence-reservations-20261014/numeric-index.json",
+      "sha256": "470973065e12cdf65caeb5e891bd12e2516273c57e4755c67a9c943ec9720d7b"
+    },
+    "limits": "Only the documented scope and snapshot; current remote state must be rechecked before acceptance/publication."
+  },
+  "novelty": {
+    "assessed_at": "2026-10-14T09:11:26.747396+00:00",
+    "status": "Author semantic acceptance: no exact duplicate in the documented scope; not independent or human sign-off.",
+    "candidate": "nematode-repelling activity",
+    "ignored_and_hidden_included": true,
+    "locations": 188,
+    "retained_heads": 143,
+    "unique_matches": 719,
+    "raw_occurrences": 19208,
+    "carried_assessments": [
+      {
+        "path": "/tmp/traitmech-repellence-baseline-assessment-20261014.json",
+        "sha256": "a9ae515a958c5739fb9ac5799bfdcc5c516a73f91f3102bcf3324df3f3ff96b6"
+      },
+      {
+        "path": "/tmp/traitmech-repellence-fresh-novelty-20261014/partial-assessment.json",
+        "sha256": "25b2453bc681b1000a1536b5934b45d8730a278d67ebf5fe20fca16449a0671b"
+      }
+    ],
+    "historical_delta": [
+      {
+        "path": "pages/traits/ecology/pathogenic_to_host.html",
+        "text_sha256": "4678bf7bf4fc68ada18f9b702e2ac8eb38384058017e92fe18397d22a50b739f",
+        "graph_id": "pathogenic_to_host_virulence_factor_program",
+        "node": {
+          "color": "#ecfccb",
+          "description": "Avoidance or subversion of host immune defenses (e.g., phagocytosis, immune clearance).",
+          "grounding": null,
+          "id": "immune_evasion",
+          "is_orphan": false,
+          "label": "host immune evasion",
+          "node_type": "BIOLOGICAL_PROCESS",
+          "protein_examples": [],
+          "xrefs": []
+        },
+        "disposition": "Historical generated host immune-evasion graph; nodes and edge endpoints read as structured JSON. Avoiding host immune detection is not eliciting nematode movement away. No exact trait node to migrate."
+      },
+      {
+        "path": "pages/traits/ecology/symbiosis.html",
+        "text_sha256": "60dec7678a111e88e65c0ed0431138ccfb30c09c79c373f90375ff323ada4132",
+        "graph_id": "symbiosis_host_interaction",
+        "node": {
+          "color": "#ecfccb",
+          "description": "Avoidance of host innate immune detection during host association.",
+          "grounding": null,
+          "id": "immune_evasion",
+          "is_orphan": false,
+          "label": "immune evasion",
+          "node_type": "BIOLOGICAL_PROCESS",
+          "protein_examples": [],
+          "xrefs": []
+        },
+        "disposition": "Historical generated host immune-evasion graph; nodes and edge endpoints read as structured JSON. Avoiding host immune detection is not eliciting nematode movement away. No exact trait node to migrate."
+      }
+    ],
+    "remote_scope": "11 open/draft PRs, 783 nonremoved changed blobs, 587 selected upstream owners. All 21 matched files assessed; 9 identical prior files retain structured assessments. CeMbio member odor preferences do not define an exact trait or whole-consortium repulsion.",
+    "identity": "Eliciting active nematode movement away, not own microbial chemotaxis, lack of attraction, relative food preference alone, killing, paralysis, trapping, feeding or egg hatching. No organism-level disjointness from attraction or lethality.",
+    "hierarchy": "Active phenotype METPO:1000059 below quality METPO:1000188. Obsolete chemotaxis METPO:1000062 is related, deprecated with no replacement, and not an exact match. No revival or mapping to it.",
+    "coupled_repair": "No exact synonym, same-scope ungrounded node or parent-gap TODO identified in the inspected maintained owners; existing records remain unchanged.",
+    "limits": "Known locations only. Missing ignored/untracked history cannot be reconstructed. Symlink targets, submodules and arbitrary archives excluded. Remote coverage is selected upstream owners and changed blobs, not every unchanged PR file. No literature-exhaustion or all-ontology absence claim."
+  },
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/physiology/nematode_repelling_activity.yaml",
+      "--out",
+      "/tmp/traitmech-repellence-checks-20261014/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 20.54400642029941,
+    "completed_at": "2026-10-14T09:16:59.058515+00:00",
+    "log": "/tmp/traitmech-repellence-checks-20261014/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-repellence-checks-20261014/native-record.tsv",
+      "bytes": 572,
+      "sha256": "71159a0976b618aebcd0d903f2c1761b91989f9a85a332b85d33c75cbaf64a00"
+    },
+    "report_rows": 2,
+    "explanation": "Actual record CLI returned VERIFIED for Pradel and NOT_IN_ABSTRACT for Prakash. Direct full-text matching of the latter is not a native abstract match."
+  },
+  "read_scope": {
+    "pradel": "Scientific abstract, own Results, Discussion, Experimental Procedures and actual Figures 1-4.",
+    "prakash": {
+      "main": "Scientific abstract, all Results, Discussion and Materials and Methods; actual Figures 1 and 2.",
+      "appendix": "All 10 pages extracted and read; actual rendered Figures S1 (page 2), S2 (page 4) and S4 (page 7) inspected. S3 and strain table read as text only.",
+      "peer_review": "Initial reviews pages 3-7, first replies 8-21, revision decision/reviews 24-27 and second replies/acceptance 28-34 read as text. Rebuttal figures not yet visually inspected."
+    },
+    "successor": {
+      "observed_at": "2026-10-14 09:03:48 UTC",
+      "status": "Research-only successor; no accepted record or allocation.",
+      "supersedes_limits_in": "/tmp/traitmech-repellence-prakash-assessment-20261014.json",
+      "visual_checks": [
+        {
+          "source": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/published-assets/review-process.pdf",
+          "pages": [
+            14,
+            30
+          ],
+          "assessment": "Actual rendered page 14 confirms reversals without complete OP50 lawn leaving and the distinct adjacent-lawn crossing experiment. Page 30 shows reviewer concerns and added stress-response measurements; no blanket physiological specificity or universal nonlethality is adopted."
+        }
+      ],
+      "notice_searches": [
+        {
+          "doi": "10.15252/embj.2020106938",
+          "query": "\"10.15252/embj.2020106938\" correction retraction expression of concern",
+          "domains": [
+            "embopress.org",
+            "link.springer.com",
+            "pubmed.ncbi.nlm.nih.gov",
+            "pmc.ncbi.nlm.nih.gov"
+          ]
+        },
+        {
+          "doi": "10.1073/pnas.0610281104",
+          "query": "\"10.1073/pnas.0610281104\" correction retraction",
+          "domains": [
+            "pnas.org",
+            "pubmed.ncbi.nlm.nih.gov",
+            "pmc.ncbi.nlm.nih.gov"
+          ]
+        }
+      ],
+      "notice_assessment": "Returned results include the exact papers and citing literature, but no exact-paper correction/retraction notice. This is a bounded search observation, not comprehensive status clearance. The retained Crossref and namespace-qualified MED records are separate checks.",
+      "source_reinspection": "Pradel own Results, Discussion and Experimental Procedures reread directly from retained PMC HTML. Distinct 16-hour lawn, 60-minute supplemented-lawn, and acute-reversal endpoints remain separate."
+    }
+  },
+  "source_assessment": [
+    "Supports qualified microbial induction of active nematode avoidance: PA14 lawn occupancy decreased over 12 h, with reduced lawn leaving in two odr-3 recipient alleles. Actual Figure 1A-B inspected.",
+    "Pure 1-undecene gave negative chemotaxis and omega turns; actual Figure 2B-C and two-plate odor-only Appendix S2A inspected. These are separate from bacterial lawn leaving.",
+    "Choice between PA14 and undA odors favored undA; Appendix S2C lacks the identified 1-undecene peak. Relative preference alone does not prove repulsion or complete elimination of bacterial repellence.",
+    "Peer-review reply page 14 reports reversals and omega turns but no complete lawn leaving after 1-undecene was adsorbed on OP50. The alternative crossing assay measures lower movement to a treated adjacent lawn, not eviction from an occupied lawn.",
+    "First replies added second odr-3 and lim-4 alleles and ASH controls; AWB ablation was unsuccessful. Do not describe all initial reviewer concerns as unanswered or claim a completed AWB ablation.",
+    "Revised reviewers 1 and 2 accepted the responses. Reviewer 3 retained immune-specificity concerns; authors added atf-4/hsp-4 and other measurements and the editor accepted the second revision. This is not independent replication or blanket physiological specificity.",
+    "Appendix S4E-F measures survival separately. Neither survival differences nor absent reporter changes establish universal nonlethality or intact physiology. No immune-pathway or shared-chemical graph is proposed.",
+    "Appendix S1A labels a 22 h incubation then a 2 h, 37 C step and one-hour collection; main Methods describes 22 h followed by one hour at room temperature. Preserve these source-specific descriptions rather than inventing a single harmonized headspace condition.",
+    "Higher mean square displacement (S2B) and roaming trajectories do not alone demonstrate movement away from a spatial source. Two-plate chemotaxis and bacterial lawn leaving provide the behavioral endpoint evidence.",
+    "This broad capability must remain condition-, recipient- and strain-qualified. Chemical production or gene presence alone cannot establish organism-level repulsion, as the Chai context study illustrates."
+  ],
+  "source_status": "Crossref and namespace-qualified MED identity/status fields plus bounded targeted notice searches were inspected. No exact correction/retraction notice was identified among returned results; not comprehensive clearance.",
+  "requests": [
+    {
+      "tag": "pradel-pmc",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1892944/",
+      "started_at": "2026-10-14T06:30:45.573882+00:00",
+      "status": 200,
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1892944/",
+      "content_type": "text/html; charset=utf-8",
+      "path": "/tmp/traitmech-repellence-sources-20261014/pradel-pmc.response",
+      "bytes": 170176,
+      "sha256": "f3fae8fd3c82bbf27a32294f7b461e75f74b06dd502a9e4998b90c1b42e2982f",
+      "finished_at": "2026-10-14T06:30:45.997342+00:00"
+    },
+    {
+      "tag": "pradel-xml",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1892944/fullTextXML",
+      "started_at": "2026-10-14T06:30:45.998280+00:00",
+      "status": 500,
+      "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1892944/fullTextXML",
+      "content_type": "application/json",
+      "path": "/tmp/traitmech-repellence-sources-20261014/pradel-xml.response",
+      "bytes": 150,
+      "sha256": "942200a8da046b5a355425190595d4002170da6d3ad77da2a34f4dff0e7a20c9",
+      "finished_at": "2026-10-14T06:30:47.703641+00:00"
+    },
+    {
+      "tag": "pradel-crossref",
+      "requested_url": "https://api.crossref.org/works/10.1073/pnas.0610281104",
+      "started_at": "2026-10-14T06:30:47.704189+00:00",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1073/pnas.0610281104",
+      "content_type": "application/json",
+      "path": "/tmp/traitmech-repellence-sources-20261014/pradel-crossref.response",
+      "bytes": 9575,
+      "sha256": "d4b714efccbd89c61658e0b973321573e54529d4679228cf4c08fff6ec00fce9",
+      "finished_at": "2026-10-14T06:30:48.038726+00:00"
+    },
+    {
+      "tag": "pradel-epmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0610281104%22&format=json&resultType=core",
+      "started_at": "2026-10-14T06:30:48.039230+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0610281104%22&format=json&resultType=core",
+      "content_type": "application/json;charset=UTF-8",
+      "path": "/tmp/traitmech-repellence-sources-20261014/pradel-epmc.response",
+      "bytes": 7195,
+      "sha256": "c90289ab77ea309dfe32f7a1709d4ce235f89242882b730ddc21afe99c536648",
+      "finished_at": "2026-10-14T06:30:48.748709+00:00"
+    },
+    {
+      "tag": "pradel-publisher",
+      "requested_url": "https://www.pnas.org/doi/10.1073/pnas.0610281104",
+      "started_at": "2026-10-14T06:30:52.539397+00:00",
+      "status": 403,
+      "resolved_url": "https://www.pnas.org/doi/10.1073/pnas.0610281104",
+      "content_type": "text/html; charset=UTF-8",
+      "path": "/tmp/traitmech-repellence-sources-20261014/pradel-publisher.response",
+      "bytes": 5537,
+      "sha256": "b09e47df4ca030b24a65c350279f9ec12b43577c35ce3be759ec84c0d7bbe398",
+      "finished_at": "2026-10-14T06:30:52.614302+00:00"
+    },
+    {
+      "tag": "pradel-figure1",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/5e32fccc133e/zpq0020748000001.jpg",
+      "started_at": "2026-10-14T07:08:55.389926+00:00",
+      "status": 200,
+      "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/5e32fccc133e/zpq0020748000001.jpg",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-repellence-sources-20261014/followup/pradel-figure1.response",
+      "bytes": 44985,
+      "sha256": "58bc8d4c6090e363f5cf6ebb8f3761c0e7b40c3c8b5c535334291ba39aee8596",
+      "finished_at": "2026-10-14T07:08:55.703280+00:00"
+    },
+    {
+      "tag": "pradel-figure2",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/66264fb21286/zpq0020748000002.jpg",
+      "started_at": "2026-10-14T07:08:55.703914+00:00",
+      "status": 200,
+      "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/66264fb21286/zpq0020748000002.jpg",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-repellence-sources-20261014/followup/pradel-figure2.response",
+      "bytes": 74602,
+      "sha256": "613c1e21dece0ad404b4792dc1172f528e48d17f98ef227e59ccf464e4e501a8",
+      "finished_at": "2026-10-14T07:08:56.002510+00:00"
+    },
+    {
+      "tag": "pradel-figure3",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/4755f3a69733/zpq0020748000003.jpg",
+      "started_at": "2026-10-14T07:08:56.003099+00:00",
+      "status": 200,
+      "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/4755f3a69733/zpq0020748000003.jpg",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-repellence-sources-20261014/followup/pradel-figure3.response",
+      "bytes": 77418,
+      "sha256": "0fa72088ee602e8a7c64d8d2c86b06e533ebf1f74686b0e2a3000f9a227dce57",
+      "finished_at": "2026-10-14T07:08:56.319046+00:00"
+    },
+    {
+      "tag": "pradel-figure4",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/b94041cb5926/zpq0020748000004.jpg",
+      "started_at": "2026-10-14T07:08:56.319595+00:00",
+      "status": 200,
+      "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/dbdf/1892944/b94041cb5926/zpq0020748000004.jpg",
+      "content_type": "image/jpeg",
+      "path": "/tmp/traitmech-repellence-sources-20261014/followup/pradel-figure4.response",
+      "bytes": 86167,
+      "sha256": "efdd50a9b834c83e4a53ad0d56cfde652fa60d0ac0b6dbdc80973a7a89e1d955",
+      "finished_at": "2026-10-14T07:08:56.702671+00:00"
+    },
+    {
+      "name": "prakash",
+      "kind": "xml",
+      "pmid": "34086368",
+      "pmcid": "PMC8246062",
+      "doi": "10.15252/embj.2020106938",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8246062/fullTextXML",
+      "requested_at": "2026-10-14T08:18:54.406450+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8246062/fullTextXML",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-xml.response",
+      "content_type": "application/xml",
+      "bytes": 124390,
+      "sha256": "0ee3bcb615186a5c80173172514423253bb7d89cec71cabf44832bb5e14fcf07"
+    },
+    {
+      "name": "prakash",
+      "kind": "med",
+      "pmid": "34086368",
+      "pmcid": "PMC8246062",
+      "doi": "10.15252/embj.2020106938",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34086368%20AND%20SRC%3AMED&format=json&resultType=core",
+      "requested_at": "2026-10-14T08:18:54.964278+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34086368%20AND%20SRC%3AMED&format=json&resultType=core",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-med.response",
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 7456,
+      "sha256": "d6111cd5dc07356cdad158240b29e77831fc05db64167bc8dd81bb7bd6ba1666"
+    },
+    {
+      "name": "prakash",
+      "kind": "crossref",
+      "pmid": "34086368",
+      "pmcid": "PMC8246062",
+      "doi": "10.15252/embj.2020106938",
+      "requested_url": "https://api.crossref.org/works/10.15252%2Fembj.2020106938",
+      "requested_at": "2026-10-14T08:18:56.131076+00:00",
+      "status": 200,
+      "url": "https://api.crossref.org/works/10.15252%2Fembj.2020106938",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-crossref.response",
+      "content_type": "application/json",
+      "bytes": 24633,
+      "sha256": "c471ee3ca2b53d0f03f08a7da0f76422e7426250054dfd6f442e205b399fe8ca"
+    },
+    {
+      "name": "pmc",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8246062/",
+      "requested_at": "2026-10-14T08:31:22.332653+00:00",
+      "status": 200,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8246062/",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/pmc.response",
+      "bytes": 212305,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2ba75c3cc880572c9ace90ea84573dc961e08a4079493d627002b54da18ae72f"
+    },
+    {
+      "name": "publisher",
+      "requested_url": "https://link.springer.com/10.15252/embj.2020106938",
+      "requested_at": "2026-10-14T08:31:22.667065+00:00",
+      "status": 200,
+      "url": "https://link.springer.com/article/10.15252/embj.2020106938",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/publisher.response",
+      "bytes": 410137,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "b85d74aa9dc2b1719a1753de6dcbe82b6b44ed64177d017e7e30fc4b878baf5f"
+    },
+    {
+      "name": "oa",
+      "requested_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC8246062",
+      "requested_at": "2026-10-14T08:31:24.385049+00:00",
+      "status": 404,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC8246062",
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/oa.response",
+      "bytes": 1584,
+      "content_type": "text/html; charset=ISO-8859-1",
+      "sha256": "af03f570899f6f52baece4578c221f8a465b5db51d45a26ed613dbfb7bb09331"
+    },
+    {
+      "name": "figure-1.jpg",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b068/8246062/c57aa18301b9/EMBJ-40-e106938-g001.jpg",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b068/8246062/c57aa18301b9/EMBJ-40-e106938-g001.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/published-assets/figure-1.jpg",
+      "bytes": 120979,
+      "content_type": "image/jpeg",
+      "sha256": "b718dae1b170e354b06106103cb4b78c4f08bff2374f1825d5a98d4ad13fc6c5"
+    },
+    {
+      "name": "figure-2.jpg",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b068/8246062/196c52d4c8bf/EMBJ-40-e106938-g005.jpg",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b068/8246062/196c52d4c8bf/EMBJ-40-e106938-g005.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/published-assets/figure-2.jpg",
+      "bytes": 164471,
+      "content_type": "image/jpeg",
+      "sha256": "99bdc3e6b81ffdede58fc74199111c02545836a453087623039b1277b8885e04"
+    },
+    {
+      "name": "appendix.docx",
+      "requested_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fembj.2020106938/MediaObjects/44318_2021_BFEMBJ2020106938_MOESM1_ESM.docx",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fembj.2020106938/MediaObjects/44318_2021_BFEMBJ2020106938_MOESM1_ESM.docx",
+      "status": 200,
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/published-assets/appendix.docx",
+      "bytes": 994283,
+      "content_type": "application/octet-stream",
+      "sha256": "c9e1288f57084582a782d66782eaa7381c6ee244e2c34f0eac0f328dae1fcc0a"
+    },
+    {
+      "name": "review-process.pdf",
+      "requested_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fembj.2020106938/MediaObjects/44318_2021_BFEMBJ2020106938_MOESM5_ESM.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fembj.2020106938/MediaObjects/44318_2021_BFEMBJ2020106938_MOESM5_ESM.pdf",
+      "status": 200,
+      "path": "/tmp/traitmech-repellence-sources-20261014/context-followup/prakash-access/published-assets/review-process.pdf",
+      "bytes": 2510891,
+      "content_type": "application/pdf",
+      "sha256": "96905a0844c0997da64f97edb66f6c8fb877f3ebc96b34f747ce72e30764ba94"
+    }
+  ],
+  "access_correction": "Previous figure 404s were caused by a temporary helper omitting /pmc/ from asset URLs, not missing published figures. Exact links from directly retrieved HTML now returned 200. Publisher and PMC HTML returned the article; the web-tool PMC request still returned a browser-check page.",
+  "source_roles": {
+    "Pradel 2007": "Proposed definition and behavioral support, not shared chemistry.",
+    "Prakash 2021": "Proposed second supporting primary study with the assay limitations above.",
+    "Chai 2024": "Context only; chemical presence is not sufficient for avoidance.",
+    "Zhao 2022": "Context only for now: center-start distribution assay versus lawn-leaving terminology.",
+    "Li 2023": "Context only: unresolved figure/threshold and context dependence.",
+    "Chen 2022": "Unread lead; identity retrieval does not establish evidence."
+  },
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-repellence-sources-20261014/snippet-probe.json",
+      "bytes": 2007,
+      "sha256": "07e712f0a5eb1515e04b8de3315aed2898d50f4f1a713afe2e131dfa014e9a15"
+    },
+    {
+      "path": "/tmp/traitmech-repellence-prakash-assessment-20261014.json",
+      "bytes": 6813,
+      "sha256": "1a5554321b76e7557776f508af840f301136401847186eac1ce98b2d91fdc264"
+    },
+    {
+      "path": "/tmp/traitmech-repellence-source-successor-20261014.json",
+      "bytes": 1796,
+      "sha256": "3355b6e93cccaa1a5f7f478358c05d36896aae4c4c1a019bd543b261dab1dce9"
+    },
+    {
+      "path": "/tmp/traitmech-repellence-identity-20261014.json",
+      "bytes": 492547,
+      "sha256": "0571b0ab71521445adcf07a5d79b2471d1da96e532778804ccb117a9d03d471b"
+    },
+    {
+      "path": "/tmp/traitmech-repellence-baseline-assessment-20261014.json",
+      "bytes": 228341,
+      "sha256": "a9ae515a958c5739fb9ac5799bfdcc5c516a73f91f3102bcf3324df3f3ff96b6"
+    },
+    {
+      "path": "/tmp/traitmech-repellence-fresh-novelty-20261014/partial-assessment.json",
+      "bytes": 47289,
+      "sha256": "25b2453bc681b1000a1536b5934b45d8730a278d67ebf5fe20fca16449a0671b"
+    }
+  ],
+  "skill_assessment": "Existing add-trait guidance covers source roles, direct snippets, assay interpretation, sequence-feature limits and full-block reservations. No new skill edit justified.",
+  "supersession": "Earlier research-only states are retained; accepted allocation and record-specific CLI supersede their unfinished steps. The successor source receipt records later visual review checks.",
+  "limits": [
+    "Temporary raw sources are not committed; public URLs and byte hashes identify inspected inputs.",
+    "Two positive primary studies; contextual papers and unread leads are not counted as extra evidence.",
+    "No canonical taxonomy, protein/chemical authority claim, common mechanism, universal nonlethality, safety or field efficacy.",
+    "No full experimental raw-data reanalysis, independent review or exhaustive discovery claim."
+  ]
+}
