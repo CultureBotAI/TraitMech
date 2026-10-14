@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cell_body_contraction.yaml
+  slug: cell_body_contraction
+session:
+  id: 2026-10-14T175927Z-codex-09ab48
+  timestamp: '2026-10-14T17:59:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Clarify source exponent notation
+  details: 'Issue #1933: clarified in the first evidence notes that the primary JATS superscripts
+    denote 10^(-6) to 10^(-2) M. The normalized quotation loses styling but remains verbatim
+    at the text layer; its wording, native NOT_IN_ABSTRACT outcome, phenotype scope, citations
+    and original minting event are unchanged. Appended one per-record correction event through
+    the guarded writer; preserved the original CREATE history and notation-finding review.'

@@ -561,6 +561,12 @@ For PDF snippets with mathematical notation, inspect the typeset passage
 visually. Text extractors can substitute a different letter for a symbol;
 preserve the source-rendered glyph and record the visual check in `notes`.
 
+Plain-text HTML/JATS extraction can preserve words while losing exponent or
+subscript meaning. Inspect the source markup; when retaining a normalized
+quotation, clarify format-sensitive notation in adjacent `notes` or select a
+span without that ambiguity. A text-layer match alone does not establish
+faithful mathematical rendering (#1933).
+
 Fixed-width registry tables, markdown tables, and TSV rows count as verbatim
 sources. When a snippet records a pinned profile or rules table row, quote the
 complete row or a contiguous column span with exact cell text, trimming only
@@ -575,8 +581,11 @@ record the stable sheet URL, not a derived CSV.
 For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
 that supports a definition, canonical example, graph edge, or curation
 decision. If the source exposes no concise contiguous passage for that claim,
-leave `snippet` absent and make `notes` say exactly what the citation supports;
-never synthesize a quote to make the record look complete.
+never synthesize a quote. An absent snippet can be honest provenance, but a new
+`MISSING_SNIPPET` finding still blocks the frozen-baseline gate. Seek a suitable
+primary-result passage (including figure captions), or retain the source as
+qualified research/discussion context rather than counted record evidence.
+Do not add an exception to make an unquoted new evidence item pass (#1935).
 
 Use source-system group keys, database column names, and other identifier-like
 strings as `RELATED_SYNONYM` provenance labels by default, especially when they
