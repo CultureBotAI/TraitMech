@@ -1,0 +1,3236 @@
+{
+  "trait_id": "traitmech:000724",
+  "accepted_at": "2026-10-14T06:04:12Z",
+  "checked_at": "2026-10-14T06:08:08.204990+00:00",
+  "status": "Author assessment of one PROPOSED trait, not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.1163/156854104323072883",
+      "snippet": "Fifteen isolates (5.9%) produced compounds that strongly stimulated SCN egg hatch compared to PDB controls (Table 1).",
+      "words": 17,
+      "role": "definition_support",
+      "source": {
+        "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-pdf.response",
+        "bytes": 177291,
+        "sha256": "277daa845dd300ba8b26d6a92e0b95cfcbcc7cbfe7e54ee30c721b49cfc8813d"
+      },
+      "source_url": "https://www.ars.usda.gov/ARSUserFiles/3830/MeyerActivityoffungalfiltratesagainstSCNandRKNegghatchandjuvmotilityNematologypublicationreprint.pdf",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "actual_typeset_match": true,
+      "exact_normalized_text_layer_match": false,
+      "locator": "Results, printed page 28/PDF page 6, lower left column.",
+      "extraction_note": "Typeset span visually checked. PDFKit splits controls across a line as con- plus trols. Plain whitespace normalization does not match; no native VERIFIED claim.",
+      "assessment": "Fungal isolates are the microbial actors. The study reports increased Heterodera glycines hatch relative to uninoculated potato dextrose broth. Counts include moving and immobile juveniles at 14 days, normalized to initial eggs and then control hatch. Culture age differs from exposure duration. The strong-effect reporting threshold is not a universal trait boundary. Nutrient depletion and added compounds remain alternative explanations; host, isolate and culture age matter. No common secretion mechanism, field efficacy or canonical taxon follows.",
+      "inspection": "Fresh USDA PDF is byte-identical to the prior article. Reread extracted Methods/Results/Discussion pages 2,3,5,6,7; visually inspected actual pages 1,3,6,7 including Figure 1. No new all-pages visual audit or complete raw-data reanalysis.",
+      "retained_assets": [
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-text.json",
+          "bytes": 45392,
+          "sha256": "cd8cd1197027f19e806e1855343b6528c33ef773b1d4d4865dd9af3f42268c49"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-1.png",
+          "bytes": 689011,
+          "sha256": "b758872d0e8433fae257659032f060a5378ccaf4d06cd0a77632e310cbf49627"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-3.png",
+          "bytes": 860224,
+          "sha256": "c92b1cf40bb0319d244e3a46cd40532191818a24b96a08a1fce0ddeb8139c125"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-6.png",
+          "bytes": 802112,
+          "sha256": "94c115028f9f1ff23ab9d9cb2b07a6ebef50fc13cdbc5eca6e608a7e75ccf3b4"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-7.png",
+          "bytes": 873632,
+          "sha256": "b06026e8321111313612a2d1159585cf71f139878de2270c51e405399c6cb7f9"
+        }
+      ],
+      "native_verdict": "UNRESOLVED",
+      "native_locator": "evidence[0]"
+    },
+    {
+      "reference": "DOI:10.1186/s13071-015-0986-z",
+      "pmid": "26174801",
+      "pmcid": "PMC4501204",
+      "snippet": "When incubated with Gram-positive bacteria, only T. muris eggs showed noticeable hatching after 20 h, although with high variability.",
+      "words": 19,
+      "role": "second_primary_hatch_support",
+      "source": {
+        "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-publisher.response",
+        "bytes": 403304,
+        "sha256": "678fd58ee9a03f97a01d81da0f939c6b69bce432509f73d56a59c4a7722e7698"
+      },
+      "source_url": "https://link.springer.com/article/10.1186/s13071-015-0986-z",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_publisher_html_match": true,
+      "exact_normalized_xml_match": true,
+      "locator": "Scientific Abstract, Results; full Results and Figure 2 supply comparator details.",
+      "publisher_xpath": "/html/body/article/div/main/div[3]/section[1]/div/div/p[3]",
+      "xml_xpath": "/article/front/article-meta/abstract/sec[title=\"Results\"]/p",
+      "assessment": "An independent bacterial experiment, not a citation of Meyer. Released larvae divided by initial embryonated eggs measures hatch. Gram-positive results at 20 h without antimicrobials are variable; Enterococcus caccae and Lactobacillus reuteri exceed bacteria-free controls. Tested T. suis groups show little hatch, not proven absolute biological inability. Antimicrobials and storage history affect interpretation. E. coli strain/concentration ANOVA excludes near-zero controls. No direct-contact mechanism, infection benefit, therapeutic use or species-wide canonical exemplar is inferred.",
+      "inspection": "Direct scientific Abstract, Methods, own Results, Table 1, Figure 2 and Discussion read; actual Figure 2 visually inspected. No supplement links identified in retrieved publisher anchors, and Europe PMC reports hasSuppl=N; not proof of universal supplemental absence.",
+      "retained_assets": [
+        {
+          "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-xml.response",
+          "bytes": 77343,
+          "sha256": "d618a42bfcbbfed4d93b2b3996e224430c009628d92610efbc844d55b06a1073"
+        },
+        {
+          "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-pmc.response",
+          "bytes": 170025,
+          "sha256": "0d3357b99a705c02ff6f47a4f75fdeeedf5092c4bdcfbe429ce4056d1e048e1a"
+        },
+        {
+          "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/followup/vejzagic-figure2.jpg",
+          "bytes": 23655,
+          "sha256": "24a47daef3eb488ddd8bb6a0430ae2190e0f94c298b96875bbf2ca534a1ed44d"
+        }
+      ],
+      "native_verdict": "VERIFIED",
+      "native_locator": "evidence[1]"
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-14T06:04:12Z",
+    "base": "e420fcd29b89d3383c3cc9cff2fcf5498cfbd9ae",
+    "trait_id": "traitmech:000724",
+    "label": "nematode egg-hatching stimulatory activity",
+    "category": "PHYSIOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v600",
+    "proposed_id": "METPO:1067700",
+    "reserved_block": [
+      1067700,
+      1067799
+    ],
+    "scientific_scope": "A physiological capability of a microorganism to increase nematode egg hatching over a defined observation interval relative to comparable controls without that microbial influence.",
+    "supporting_references": [
+      "DOI:10.1163/156854104323072883",
+      "DOI:10.1186/s13071-015-0986-z"
+    ],
+    "reservation_adjudication": {
+      "raw_exact_matches": 255,
+      "exact_dispositions": [
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/claw-review-unification-20261008-l_r02lxj/repins/repin-fleet-01/repositories/communitymech",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/claw-review-unification-20261008-l_r02lxj/repins/repin-fleet-01/repositories/communitymech",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-pr935-gate-20261010",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-pr935-gate-20261010",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-pr937-20261010",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-pr937-20261010",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review-contract-20261009",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review-contract-20261009",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review1228-20261010",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review1228-20261010",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review935-20261010",
+            "path": "references_cache/PMID_42549325.txt"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/private/tmp/communitymech-review935-20261010",
+            "path": "references_cache/PMID_42549325.supplement.md"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4ae4ce9c279ecbd457a9772d33a99959ea5fda6c",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4ae4ce9c279ecbd457a9772d33a99959ea5fda6c",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fa6783454fe1391dcae5195b002159a31b12cda8",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fa6783454fe1391dcae5195b002159a31b12cda8",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9cfc3ae1728b475161730bf9d5b74fb8eff0b986",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9cfc3ae1728b475161730bf9d5b74fb8eff0b986",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "98f1628c7b074b4d7e6c82a56d9030a608321a64",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "98f1628c7b074b4d7e6c82a56d9030a608321a64",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4b93535adab513fbc18a07bd32fc2400ab716dbf",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4b93535adab513fbc18a07bd32fc2400ab716dbf",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7023b962afd690973c0b7cb3f33f88c55668cc55",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7023b962afd690973c0b7cb3f33f88c55668cc55",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "56b8c117d428207ad722c5755fd154efd0b40b84",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "56b8c117d428207ad722c5755fd154efd0b40b84",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d54c82fae83a31d5f031d475da0f5c1f7fb3d4da",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d54c82fae83a31d5f031d475da0f5c1f7fb3d4da",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "97f1617c4b3de4b09f9a48c0ff9fd39e68327f80",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "97f1617c4b3de4b09f9a48c0ff9fd39e68327f80",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0532c2f57060f645c622691d5b3bdcd7dab21ab9",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0532c2f57060f645c622691d5b3bdcd7dab21ab9",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3807f528ce04f9e9f410f2948acedb89feee0914",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3807f528ce04f9e9f410f2948acedb89feee0914",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "17d603f6d3a32039b8dae44447d23bdee548cb6c",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "17d603f6d3a32039b8dae44447d23bdee548cb6c",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ce26ebd7735eb5634f266522adddf619a63bdca7",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ce26ebd7735eb5634f266522adddf619a63bdca7",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cbc4d82889dfc000385981f60f98e10c39ca8cbe",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cbc4d82889dfc000385981f60f98e10c39ca8cbe",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "af3b5317abfd3667539e19bfdba10fc8b27d09bb",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "af3b5317abfd3667539e19bfdba10fc8b27d09bb",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "271b02265e59ea1af21584d137c2c22c8c61d2a2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "271b02265e59ea1af21584d137c2c22c8c61d2a2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3471c936fa30e31efb65c677ef4f60dc4d5ea889",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3471c936fa30e31efb65c677ef4f60dc4d5ea889",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "f3c478d398eb3790edaa1605c5059c8651dbc556",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "f3c478d398eb3790edaa1605c5059c8651dbc556",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "1ea62d4f2220b0e2659f96acd52d1a38accee932",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "1ea62d4f2220b0e2659f96acd52d1a38accee932",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d1d05f02bd84e7d578036a38ce69365b62e566ad",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d1d05f02bd84e7d578036a38ce69365b62e566ad",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "afda28391dd8005cf2d99320086025ea87012e49",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "afda28391dd8005cf2d99320086025ea87012e49",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4090932e6e3121a3b353f3ae29e14ee4d0a44ab8",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4090932e6e3121a3b353f3ae29e14ee4d0a44ab8",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "43a916f8543b8274323713a58ae1906010322b88",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "43a916f8543b8274323713a58ae1906010322b88",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85cb8a603be7c241937041e8be7d7f2a4192ba37",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85cb8a603be7c241937041e8be7d7f2a4192ba37",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b68fe05f370a17152ab59ca2a05c6569113e95ea",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b68fe05f370a17152ab59ca2a05c6569113e95ea",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d018b9aa996dbae8f321b171487045668e2847fc",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d018b9aa996dbae8f321b171487045668e2847fc",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0e12db50706409d42cb89436f3d385f08cdc6a1f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0e12db50706409d42cb89436f3d385f08cdc6a1f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0fec90c8d14dc9448d33e058deaacbf6022d732b",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0fec90c8d14dc9448d33e058deaacbf6022d732b",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "985c5cb81bb72d4ff1c763db31797c31fd6ed099",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "985c5cb81bb72d4ff1c763db31797c31fd6ed099",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "6f062d2eb68fedab336b700c758cd21622fabbb6",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "6f062d2eb68fedab336b700c758cd21622fabbb6",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c9900386bfc17f6aa63c57d628428b9933dbfd86",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c9900386bfc17f6aa63c57d628428b9933dbfd86",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b4c71cf7617bdd044d2ba5d4047ba6e623f935f3",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b4c71cf7617bdd044d2ba5d4047ba6e623f935f3",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ac3615b162a0dcfb2b67f2702fc7bc4827574e7c",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ac3615b162a0dcfb2b67f2702fc7bc4827574e7c",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fb32de853d465705d30c18afc88d6f56a1c11d61",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fb32de853d465705d30c18afc88d6f56a1c11d61",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9b1ecc5d14b8dfcdd399ca287203ac061952703a",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9b1ecc5d14b8dfcdd399ca287203ac061952703a",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cb81d27eca14390111d44172aa864bf6742b28b5",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cb81d27eca14390111d44172aa864bf6742b28b5",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "40a56b95aab0793f58572662112d15ad4b2123bc",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "40a56b95aab0793f58572662112d15ad4b2123bc",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8ba7eec608b45142264391513203ae3a518003ac",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8ba7eec608b45142264391513203ae3a518003ac",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e51615ffdca1783499b89587d367e5c4e5fdb2ff",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e51615ffdca1783499b89587d367e5c4e5fdb2ff",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "5e54d86da9142f11defcfdf10cf26d9fac3b2e47",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "5e54d86da9142f11defcfdf10cf26d9fac3b2e47",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3693fc6f57e957b777589251e07a137304077d22",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3693fc6f57e957b777589251e07a137304077d22",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e2aa4cf759a5a2aa28a5aa2be704a0038e62c0f9",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e2aa4cf759a5a2aa28a5aa2be704a0038e62c0f9",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "affb048db28dd190db6870edb2e6260c3505dc8d",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "affb048db28dd190db6870edb2e6260c3505dc8d",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "78d2103c4465cfd73ede5c41de04d193d31c162e",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "78d2103c4465cfd73ede5c41de04d193d31c162e",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "31b7c56bbf3fe83dc4c5f3c2676ac6ce21487641",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "31b7c56bbf3fe83dc4c5f3c2676ac6ce21487641",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b617e5daf0aee7d2888855cdf9ff99580a40bd7f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b617e5daf0aee7d2888855cdf9ff99580a40bd7f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9517b72c725c5624ea520ce2c9436fd24162d012",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9517b72c725c5624ea520ce2c9436fd24162d012",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "bb47fac8bea5832e7fd5c56aa390cfe31cf77540",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "bb47fac8bea5832e7fd5c56aa390cfe31cf77540",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85860d0d6b56b133ce2b2b9032f21af5e0953e0b",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85860d0d6b56b133ce2b2b9032f21af5e0953e0b",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c47ee0df3a621bff7a5d5d0bc0897490994cc0b7",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c47ee0df3a621bff7a5d5d0bc0897490994cc0b7",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a7ec3d47db6b313aa97d8e0bb0c2ac253dc7fca2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a7ec3d47db6b313aa97d8e0bb0c2ac253dc7fca2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3c9c9ad9c824a664c405248d623c484cc797c6cf",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3c9c9ad9c824a664c405248d623c484cc797c6cf",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "17d5884900312be64475b81b952c75aa5e3c7435",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "17d5884900312be64475b81b952c75aa5e3c7435",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8e7d2a6bb522ee35e52b91693119fc9a21e5f092",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8e7d2a6bb522ee35e52b91693119fc9a21e5f092",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a83b413d7eeed6c173432a0d1b432c9a8b4f016b",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a83b413d7eeed6c173432a0d1b432c9a8b4f016b",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cc9a34941aa417cc119faef2b6717f55711e3398",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cc9a34941aa417cc119faef2b6717f55711e3398",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e8cc9b9c84a4835940d03ec092d124ad3e520559",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e8cc9b9c84a4835940d03ec092d124ad3e520559",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "566858145ef8e7d8aa7f16c6471ac3ee7432d95e",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "566858145ef8e7d8aa7f16c6471ac3ee7432d95e",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ca9cbf0b1ac5a4f6ce8764401816e9c9442b9a77",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ca9cbf0b1ac5a4f6ce8764401816e9c9442b9a77",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "26a2022963140afe87eedc2fc0170c9e640ded8f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "26a2022963140afe87eedc2fc0170c9e640ded8f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "285d691ebc1eecf4c41e922e1e2fc3bc068c35bc",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "285d691ebc1eecf4c41e922e1e2fc3bc068c35bc",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "73f3907747db63597b36430a64e4ac979c696430",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "73f3907747db63597b36430a64e4ac979c696430",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "192a17c3a6aeedb36bb9b1dacc36c7945cf23651",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "192a17c3a6aeedb36bb9b1dacc36c7945cf23651",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4e3a2167ae2a0e6013920032b1a6c791d8a2b1fc",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "4e3a2167ae2a0e6013920032b1a6c791d8a2b1fc",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "828d20e5adcb5fdeefc24287155f86bbcbb693bd",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "828d20e5adcb5fdeefc24287155f86bbcbb693bd",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3e8d8a5c66685aa3c83cdef45e25798b46779f1f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3e8d8a5c66685aa3c83cdef45e25798b46779f1f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fc091ae1237f7370a34efc6bf3985aae1ab22f63",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fc091ae1237f7370a34efc6bf3985aae1ab22f63",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0480e0e889a0d5e9afcc28d18a1b268e499e532a",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "0480e0e889a0d5e9afcc28d18a1b268e499e532a",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "52ab1b197a7dcc0949a10812055718ab930f4410",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "52ab1b197a7dcc0949a10812055718ab930f4410",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a48245e4af4f8ef17f8313c869105a3d20a08159",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a48245e4af4f8ef17f8313c869105a3d20a08159",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3f10128e117386358c6e042bb5e4a3e2f952841",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3f10128e117386358c6e042bb5e4a3e2f952841",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7b6e3d62d44aa78ea165ac7d9e9233fa496795d2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7b6e3d62d44aa78ea165ac7d9e9233fa496795d2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e37cab3b42aaa20d7efcf4aec4b2fa08e0beed08",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e37cab3b42aaa20d7efcf4aec4b2fa08e0beed08",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cd8444de4aaea8b56ec605bd70b8ac37520d136e",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cd8444de4aaea8b56ec605bd70b8ac37520d136e",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "def11c66d123fc2568ff979204e2930cd7fbb811",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "def11c66d123fc2568ff979204e2930cd7fbb811",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "059220a6ab41449899c579dd751c4e50dc39c576",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "059220a6ab41449899c579dd751c4e50dc39c576",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "950408e5eff1df5343661c937865b9e42503464f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "950408e5eff1df5343661c937865b9e42503464f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b12290901515b025374c08c285884e8b0a183ca6",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b12290901515b025374c08c285884e8b0a183ca6",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3bb94cdf6c97a6e07fd824fdc230ecc6bf35232a",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3bb94cdf6c97a6e07fd824fdc230ecc6bf35232a",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "2966431109afb2803c4d9acfe8b38ffcb37cf1fd",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "2966431109afb2803c4d9acfe8b38ffcb37cf1fd",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ab85be2e4e649fb6342bcc78a355552db7aeeef2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "ab85be2e4e649fb6342bcc78a355552db7aeeef2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7d0f9a57c1433d5a441d9d9534ef0aae38f069b2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7d0f9a57c1433d5a441d9d9534ef0aae38f069b2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "1851f6296906ea6e3ecd2c2838579cc3c26fe2b2",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "1851f6296906ea6e3ecd2c2838579cc3c26fe2b2",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a0b1fae032a8c970dd3eb67d837c782c97384b39",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a0b1fae032a8c970dd3eb67d837c782c97384b39",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e2ffcfa67919230d0bf3acae7cd2e77032547c1c",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "e2ffcfa67919230d0bf3acae7cd2e77032547c1c",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "6ae3165c646b3441477b6b37e10b19fcebfca5d1",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "6ae3165c646b3441477b6b37e10b19fcebfca5d1",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "eba66c8aeafcc8065cb26efe5dcacc8c1611ec81",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "eba66c8aeafcc8065cb26efe5dcacc8c1611ec81",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fed573d4aab957f225f546cf88e35c1aed7e7920",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fed573d4aab957f225f546cf88e35c1aed7e7920",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9579ad0a53d5fa1376ad89bc23c5c2422ac235b5",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9579ad0a53d5fa1376ad89bc23c5c2422ac235b5",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "99b59a32e1159f7965c6dde10c2146e42961c0cb",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "99b59a32e1159f7965c6dde10c2146e42961c0cb",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3b588e9ebd960e549c76a0707b10adc19991477",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3b588e9ebd960e549c76a0707b10adc19991477",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3b77c0e30caec3f7a08b3058e0def230ef1da7c3",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3b77c0e30caec3f7a08b3058e0def230ef1da7c3",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9da40da1200dbe688493d07053fd4a0ff3540d56",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "9da40da1200dbe688493d07053fd4a0ff3540d56",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "dcac22b85c2a55d0b092cebe43218db3412b735a",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "dcac22b85c2a55d0b092cebe43218db3412b735a",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7d579b724265208e0b5e8efe40ce835143d86d69",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "7d579b724265208e0b5e8efe40ce835143d86d69",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "53a4229f2e939f36ad41aedc4728a497dd4131fb",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "53a4229f2e939f36ad41aedc4728a497dd4131fb",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b5d7c598b22b356aeeb1ceab21df8c64d804e9be",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "b5d7c598b22b356aeeb1ceab21df8c64d804e9be",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "392767f110b2dcac119a8ad051cc0b688361e82d",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "392767f110b2dcac119a8ad051cc0b688361e82d",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "bad7e3e642f2f4fddc6d221e2749493e3d045dc0",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "bad7e3e642f2f4fddc6d221e2749493e3d045dc0",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3a1d397981a5d86ef8182c4161bb82925f8298f",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "d3a1d397981a5d86ef8182c4161bb82925f8298f",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "559b53e37f59e12c2f244252526193fbad8b5a59",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "559b53e37f59e12c2f244252526193fbad8b5a59",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c088d3dba246014f7d964bc5c708cb1c10fb80cd",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c088d3dba246014f7d964bc5c708cb1c10fb80cd",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c93ffc2cbaa872a7356ab25defcaca4bf5207abf",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "c93ffc2cbaa872a7356ab25defcaca4bf5207abf",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cbc40f1f76a999114512b7fb32a783892a09e636",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "cbc40f1f76a999114512b7fb32a783892a09e636",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85f35e204061c822bd762ea53016a705a92ef428",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "85f35e204061c822bd762ea53016a705a92ef428",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "859c87817014bc990e66e047bd68531e37802fb4",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "859c87817014bc990e66e047bd68531e37802fb4",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3d20756860994c1fca1aebe0fad081aa17e49f3a",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "3d20756860994c1fca1aebe0fad081aa17e49f3a",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "435a37279a486485b34f2378b9b3c4f8a2de3647",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "435a37279a486485b34f2378b9b3c4f8a2de3647",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8e1982ef53e1b48315e2675e1808194ddf6add34",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "8e1982ef53e1b48315e2675e1808194ddf6add34",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "694ecc87177f520a10fc664ce2e6f1b668e076e7",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "694ecc87177f520a10fc664ce2e6f1b668e076e7",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "84add08c0e69e7512b6e90950897130ccfeb0b9d",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "84add08c0e69e7512b6e90950897130ccfeb0b9d",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "5756e8e244d1c6e04d9797e91f97b709e41ae619",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "5756e8e244d1c6e04d9797e91f97b709e41ae619",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "250d74907ec1d4ce9e1a56da3542e5200093cca8",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "250d74907ec1d4ce9e1a56da3542e5200093cca8",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a7952f0be74dd576e54cff92b81f60e3d5d7caa0",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "a7952f0be74dd576e54cff92b81f60e3d5d7caa0",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "651a9ba7a1a04e2a0dd24ef7f463d4a755d9b06e",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "651a9ba7a1a04e2a0dd24ef7f463d4a755d9b06e",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "f7c939629cf55a46e6c0113bef4f4f1bab73e661",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "f7c939629cf55a46e6c0113bef4f4f1bab73e661",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "dee5baa5912ab85200549c836cc5ca7cf0f3e99b",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "dee5baa5912ab85200549c836cc5ca7cf0f3e99b",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "03ec662b917cc02de59ce592f5a09b2358208fb5",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "03ec662b917cc02de59ce592f5a09b2358208fb5",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fe1752572a688051e8105e5b89d3099fe2202c63",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "fe1752572a688051e8105e5b89d3099fe2202c63",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "67603e192525899fae75420e2c19e8212b16afc9",
+            "path": "references_cache/PMID_42549325.supplement.md",
+            "blob": "71fc11aaedcadbd964ed899345eb9abbc142f179"
+          },
+          "line": 64517,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech",
+            "head": "67603e192525899fae75420e2c19e8212b16afc9",
+            "path": "references_cache/PMID_42549325.txt",
+            "blob": "fc80752c221891f7d22e1451c78ff6aab5e1fb84"
+          },
+          "line": 64886,
+          "reason": "Decimal measurement in supplementary numeric cells, not an identifier."
+        },
+        {
+          "source": {
+            "repository": "CultureBotAI/TraitMech",
+            "path": "data/embeddings/deepwalk_traits.tsv.gz",
+            "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+            "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+            "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+            "pr": 924,
+            "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            "status": "modified"
+          },
+          "line": 11,
+          "reason": "Float embedding coordinate; inspected structured row has an unrelated METPO node ID."
+        },
+        {
+          "source": {
+            "repository": "CultureBotAI/TraitMech",
+            "path": "data/embeddings/deepwalk_traits.tsv.gz",
+            "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/2547564806f9f15c1ebab36e3170b76cdc15b827",
+            "blob_sha": "2547564806f9f15c1ebab36e3170b76cdc15b827",
+            "sha256": "8220dda1bcce0820ed43de3c504b5c70fabb3a1f2f4f16c0d5a27ce6c0872fa3",
+            "pr": 924,
+            "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            "status": "modified"
+          },
+          "line": 57,
+          "reason": "Float embedding coordinate; inspected structured row has an unrelated METPO node ID."
+        }
+      ],
+      "broad_editor_envelope_occurrences": 760,
+      "conflicting_reservations": []
+    },
+    "fresh_remote": {
+      "main": "e420fcd29b89d3383c3cc9cff2fcf5498cfbd9ae",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1782,
+            "35099af2b7d5347f2ca6e418c4a139979071644d",
+            false
+          ],
+          [
+            1476,
+            "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+      }
+    },
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-novelty-20261014/assessment.json",
+        "sha256": "c987694e305c3659a68f53a020d00e74a989ac45d53111236cfb085246e8598f"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-novelty-20261014/local/completion.json",
+        "sha256": "09205188184147c7c1704d0d94ae45f08f08200adaf35a7552fa591f7b48ff8e"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-novelty-20261014/history/completion.json",
+        "sha256": "3893529797c7c67d7f347e786c903febf0605c55f1c37e404144499a51b1cf47"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-reservations-20261014/numeric-index.json",
+        "sha256": "03cca93253675c704126abdbae4f1fb55da9f474d112778542e017baa0b8feb2"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-reservations-20261014/local/completion.json",
+        "sha256": "cc35c70228840696a90c6615f212d24236a1edf56a48636e5979a001d455a44b"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-reservations-20261014/remote/result.json",
+        "sha256": "0d18199c2919c0a4117884d4e919849f27d0cbfbc233eef70a8983f1f15fdcbc"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/assessment.json",
+        "sha256": "433ca9c383c101926eb4ba70252827933eb37dea3528c822b31bf9392c281ebf"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/native-function-probe.json",
+        "sha256": "58a7bddf2779680925c62d6e9f8b96d21678eb12a2210122426bb24b536edee7"
+      },
+      {
+        "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/metpo-semantic-screen.json",
+        "sha256": "9e82fa0ebe3c3095e121e7087e7e7ac7d59594bfb3c9d8ca6436e90240e97174"
+      }
+    ],
+    "limits": "One PROPOSED trait; not independent review, atomic allocation, canonical taxonomy, a common mechanism or discovery exhaustion. Recheck before publication."
+  },
+  "novelty": {
+    "assessed_at": "2026-10-14T06:04:12.624790+00:00",
+    "candidate": "nematode egg-hatching stimulatory activity",
+    "status": "No exact duplicate identified in documented scope; author semantic acceptance, not human sign-off.",
+    "local_locations": 185,
+    "available_locations": 180,
+    "retained_heads": 139,
+    "ignored_and_hidden_included": true,
+    "matched_paths": 50,
+    "distinct_matches": 252,
+    "paths": [
+      {
+        "path": "app/dashboard/priority.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "app/dashboard/priority.json",
+        "distinct_lines": 2,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "app/discussions/data.js",
+        "distinct_lines": 9,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "data/traits/physiology/lethal_nematicidal_activity.yaml",
+        "distinct_lines": 1,
+        "disposition": "Existing lethal, reversible-paralysis and hatch-inhibition records have different endpoints; no exact positive-hatch synonym, node or parent-gap TODO."
+      },
+      {
+        "path": "data/traits/physiology/nematode_egg_hatching_inhibitory_activity.yaml",
+        "distinct_lines": 9,
+        "disposition": "Existing lethal, reversible-paralysis and hatch-inhibition records have different endpoints; no exact positive-hatch synonym, node or parent-gap TODO."
+      },
+      {
+        "path": "data/traits/physiology/reversible_nematode_paralyzing_activity.yaml",
+        "distinct_lines": 1,
+        "disposition": "Existing lethal, reversible-paralysis and hatch-inhibition records have different endpoints; no exact positive-hatch synonym, node or parent-gap TODO."
+      },
+      {
+        "path": "history/records/nematode_egg_hatching_inhibitory_activity/2026-10-14T031430Z-codex-f597d7.yaml",
+        "distinct_lines": 4,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "pages/browse.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "pages/category/physiology.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "pages/traits/physiology/lethal_nematicidal_activity.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "pages/traits/physiology/nematode_egg_hatching_inhibitory_activity.html",
+        "distinct_lines": 20,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "pages/traits/physiology/reversible_nematode_paralyzing_activity.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "pages/traits/upper/phenotype.html",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v596/proposal.md",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v598/proposal.md",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v599/metpo_proposal_classes_robot.tsv",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v599/proposal.md",
+        "distinct_lines": 5,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "references_cache/PMID_41660888.md",
+        "distinct_lines": 2,
+        "disposition": "TYQ1 consortium literature: reduced hatching and juvenile effects, not an exact positive-hatch trait or same-scope node."
+      },
+      {
+        "path": "references_cache/pmc_full_pmid_41660888.txt",
+        "distinct_lines": 8,
+        "disposition": "TYQ1 consortium literature: reduced hatching and juvenile effects, not an exact positive-hatch trait or same-scope node."
+      },
+      {
+        "path": "reports/proposal_citation_audit.tsv",
+        "distinct_lines": 1,
+        "disposition": "Derived products of the inspected maintained owners, not another trait."
+      },
+      {
+        "path": "research/traits/physiology/nematode_egg_hatching_inhibitory_activity-source-verification.json",
+        "distinct_lines": 53,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T175850Z-lethal-nematicidal-activity/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T175850Z-lethal-nematicidal-activity/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T181400Z-nematicidal-evidence-role-finding/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T181400Z-nematicidal-evidence-role-finding/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T183629Z-nematicidal-evidence-role-resolution/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T183629Z-nematicidal-evidence-role-resolution/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T185353Z-nematicidal-producer-excerpt-finding/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T185353Z-nematicidal-producer-excerpt-finding/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T191543Z-nematicidal-producer-excerpt-resolution/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T191543Z-nematicidal-producer-excerpt-resolution/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T193928Z-nematicidal-lethal-excerpt-finding/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T193928Z-nematicidal-lethal-excerpt-finding/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T200249Z-nematicidal-lethal-excerpt-resolution/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T200249Z-nematicidal-lethal-excerpt-resolution/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T202309Z-nematicidal-self-contained-authority-finding/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T202309Z-nematicidal-self-contained-authority-finding/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T204752Z-nematicidal-definition-authority-resolution/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T204752Z-nematicidal-definition-authority-resolution/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T205712Z-nematicidal-proposal-narrative-finding/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T205712Z-nematicidal-proposal-narrative-finding/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T212638Z-nematicidal-proposal-and-history-resolution/review.md",
+        "distinct_lines": 2,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261013T212638Z-nematicidal-proposal-and-history-resolution/review.yaml",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261014T013353Z-reversible-nematode-paralyzing-activity/review.md",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261014T034553Z-nematode-egg-hatching-inhibitory-activity/review.md",
+        "distinct_lines": 48,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "reviews/structured/20261014T034553Z-nematode-egg-hatching-inhibitory-activity/review.yaml",
+        "distinct_lines": 30,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "scripts/add_lethal_nematicidal_activity_trait.py",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "scripts/add_nematode_egg_hatching_inhibitory_activity_trait.py",
+        "distinct_lines": 11,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "scripts/add_reversible_nematode_paralyzing_activity_trait.py",
+        "distinct_lines": 1,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      },
+      {
+        "path": "tests/test_add_nematode_egg_hatching_inhibitory_activity_trait.py",
+        "distinct_lines": 3,
+        "disposition": "Current or historical provenance, implementation and source checks for those distinct endpoints. Shared Meyer citation is not an already allocated positive-hatch concept."
+      }
+    ],
+    "identity": "A positive microbial hatch-enhancing capability, not the mere absence of inhibition. It need not be secretion-mediated or benefit the microorganism. Not nematode susceptibility, microbial sporulation, embryo development without emergence, attraction, killing, reversible paralysis or fungal feeding. Opposite effects under other conditions do not entail organism-level disjointness.",
+    "hierarchy": "Phenotype METPO:1000059 below quality METPO:1000188. Current and pinned parent agree. Infection, nutrition, secretion, attraction, paralysis and killing are not required.",
+    "ontology": "Pinned/current release and explicit editor OWL plus six TSV owners include deprecated/draft content. Only fried-egg-shaped colony METPO:1007069 and annotations/stub match; not a counterpart. Byte-verified editor conversion has 31 triples and no imports.",
+    "remote": "11 open/draft PRs, 783 nonremoved changed blobs, 587 selected upstream owners; no candidate lexical hit. Fresh heads, PR bodies and states still agree.",
+    "coupled_repair": "No exact synonym, ungrounded node or same-scope parent gap found in maintained matched context. Existing exclusions remain valid.",
+    "limits": "Known locations, not every host path. Five unavailable deleted worktrees; lost ignored/untracked history, symlinks, submodules and arbitrary archives not reconstructed. Selected remote owners/changed blobs, not all unchanged PR files or all ontologies. No literature-exhaustion claim."
+  },
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/physiology/nematode_egg_hatching_stimulatory_activity.yaml",
+      "--out",
+      "/tmp/traitmech-hatch-stimulation-checks-20261014/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 3.973444677889347,
+    "completed_at": "2026-10-14T06:07:45.565959+00:00",
+    "log": "/tmp/traitmech-hatch-stimulation-checks-20261014/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-hatch-stimulation-checks-20261014/native-record.tsv",
+      "bytes": 578,
+      "sha256": "93363634c61b7acfcf580f74ca2d4209f4a070f47076d52a7839b99f49b3745a"
+    },
+    "report_rows": 2,
+    "explanation": "Record-specific CLI returned UNRESOLVED for Meyer and VERIFIED for Vejzagic. Meyer quote is checked against actual typeset text, not a native match. Vejzagic returned text is independently located in the scientific Abstract Results."
+  },
+  "source_status": {
+    "meyer": "Crossref matches article identity and returned empty relation/no update links; exact Europe PMC DOI query returned zero results. Publisher DOI redirect returned 403. USDA full article is directly available. Crossmark HTTP 200 is only a script shell, and web opens failed: no current-status verdict obtained.",
+    "vejzagic": "Publisher and PMC full texts identify DOI/title/PMID; exact Europe PMC result is MED:26174801 and returned no commentCorrectionList. Crossref returned empty relation/no update links. No correction/retraction links identified in retrieved publisher anchors or related-article nodes in XML. Crossmark is a script shell, not a current-status verdict.",
+    "search": "Targeted exact-DOI correction/retraction web searches did not identify an exact notice in returned results. Bounded status checks, not comprehensive notice clearance."
+  },
+  "requests": [
+    {
+      "tag": "meyer-pdf",
+      "requested_url": "https://www.ars.usda.gov/ARSUserFiles/3830/MeyerActivityoffungalfiltratesagainstSCNandRKNegghatchandjuvmotilityNematologypublicationreprint.pdf",
+      "started_at": "2026-10-14T05:43:16.620940+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ars.usda.gov/ARSUserFiles/3830/MeyerActivityoffungalfiltratesagainstSCNandRKNegghatchandjuvmotilityNematologypublicationreprint.pdf",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-pdf.response",
+      "bytes": 177291,
+      "sha256": "277daa845dd300ba8b26d6a92e0b95cfcbcc7cbfe7e54ee30c721b49cfc8813d",
+      "finished_at": "2026-10-14T05:43:18.063045+00:00"
+    },
+    {
+      "tag": "meyer-item",
+      "requested_url": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=142949",
+      "started_at": "2026-10-14T05:43:18.063103+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=142949",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-item.response",
+      "bytes": 31710,
+      "sha256": "ebc6bccb6612c224f2dbdbde063b6b2a3440a191830a845018e6363f49f23068",
+      "finished_at": "2026-10-14T05:43:18.556663+00:00"
+    },
+    {
+      "tag": "vejzagic-pmc",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4501204/",
+      "started_at": "2026-10-14T05:43:18.556712+00:00",
+      "status": 200,
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4501204/",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-pmc.response",
+      "bytes": 170025,
+      "sha256": "0d3357b99a705c02ff6f47a4f75fdeeedf5092c4bdcfbe429ce4056d1e048e1a",
+      "finished_at": "2026-10-14T05:43:18.822308+00:00"
+    },
+    {
+      "tag": "vejzagic-xml",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4501204/fullTextXML",
+      "started_at": "2026-10-14T05:43:18.822355+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4501204/fullTextXML",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-xml.response",
+      "bytes": 77343,
+      "sha256": "d618a42bfcbbfed4d93b2b3996e224430c009628d92610efbc844d55b06a1073",
+      "finished_at": "2026-10-14T05:43:20.159740+00:00"
+    },
+    {
+      "tag": "vejzagic-publisher",
+      "requested_url": "https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-015-0986-z",
+      "started_at": "2026-10-14T05:43:20.159786+00:00",
+      "status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1186/s13071-015-0986-z",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-publisher.response",
+      "bytes": 403304,
+      "sha256": "678fd58ee9a03f97a01d81da0f939c6b69bce432509f73d56a59c4a7722e7698",
+      "finished_at": "2026-10-14T05:43:21.928150+00:00"
+    },
+    {
+      "tag": "meyer-crossref",
+      "requested_url": "https://api.crossref.org/works/10.1163/156854104323072883",
+      "started_at": "2026-10-14T05:43:21.928200+00:00",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1163/156854104323072883",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-crossref.response",
+      "bytes": 3964,
+      "sha256": "927c679504ee33629d412868526b2e4bdd686975623af61169652c1fe55cf841",
+      "finished_at": "2026-10-14T05:43:22.256535+00:00"
+    },
+    {
+      "tag": "meyer-epmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1163%2F156854104323072883%22&format=json&resultType=core",
+      "started_at": "2026-10-14T05:43:22.256581+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1163%2F156854104323072883%22&format=json&resultType=core",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-epmc.response",
+      "bytes": 197,
+      "sha256": "d0d1c97d89e2f33ad3b8a56f7e5fb0376af706cbc54c291d593d8f1d88c18724",
+      "finished_at": "2026-10-14T05:43:22.912865+00:00"
+    },
+    {
+      "tag": "meyer-crossmark",
+      "requested_url": "https://crossmark.crossref.org/dialog/?doi=10.1163/156854104323072883&domain=pdf&date_stamp=",
+      "started_at": "2026-10-14T05:43:22.912909+00:00",
+      "status": 200,
+      "resolved_url": "https://crossmark.crossref.org/dialog/?doi=10.1163/156854104323072883&domain=pdf&date_stamp=",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/meyer-crossmark.response",
+      "bytes": 1018,
+      "sha256": "3cb281d740797d823016646a69979f0e7788419b82e44bda0c89c96e4b9e1471",
+      "finished_at": "2026-10-14T05:43:23.211941+00:00"
+    },
+    {
+      "tag": "vejzagic-crossref",
+      "requested_url": "https://api.crossref.org/works/10.1186/s13071-015-0986-z",
+      "started_at": "2026-10-14T05:43:23.212013+00:00",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1186/s13071-015-0986-z",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-crossref.response",
+      "bytes": 19043,
+      "sha256": "5ee6c48464b2f50a191482f2cb63ded60a3250e798f3208c49758f1816aa37cc",
+      "finished_at": "2026-10-14T05:43:23.629539+00:00"
+    },
+    {
+      "tag": "vejzagic-epmc",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1186%2Fs13071-015-0986-z%22&format=json&resultType=core",
+      "started_at": "2026-10-14T05:43:23.629615+00:00",
+      "status": 200,
+      "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1186%2Fs13071-015-0986-z%22&format=json&resultType=core",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-epmc.response",
+      "bytes": 8132,
+      "sha256": "56d9ab76bda0cfe3cb8d78e052a80d42d4e924417c4d45dddd5c3a94b171bbd7",
+      "finished_at": "2026-10-14T05:43:24.354341+00:00"
+    },
+    {
+      "tag": "vejzagic-crossmark",
+      "requested_url": "https://crossmark.crossref.org/dialog/?doi=10.1186/s13071-015-0986-z&domain=pdf&date_stamp=",
+      "started_at": "2026-10-14T05:43:24.354383+00:00",
+      "status": 200,
+      "resolved_url": "https://crossmark.crossref.org/dialog/?doi=10.1186/s13071-015-0986-z&domain=pdf&date_stamp=",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/vejzagic-crossmark.response",
+      "bytes": 1017,
+      "sha256": "e1c82c79952a5bc0a64f22c104aa0e1b26757cbf55b8df9ee24e67025d5b6846",
+      "finished_at": "2026-10-14T05:43:24.665692+00:00"
+    },
+    {
+      "tag": "vejzagic-figure2",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f7e/4501204/6f632e24d1a4/13071_2015_986_Fig2_HTML.jpg",
+      "started_at": "2026-10-14T05:48:37.754374+00:00",
+      "status": 200,
+      "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f7e/4501204/6f632e24d1a4/13071_2015_986_Fig2_HTML.jpg",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/followup/vejzagic-figure2.jpg",
+      "sha256": "24a47daef3eb488ddd8bb6a0430ae2190e0f94c298b96875bbf2ca534a1ed44d",
+      "bytes": 23655,
+      "finished_at": "2026-10-14T05:48:38.097775+00:00"
+    },
+    {
+      "tag": "meyer-publisher",
+      "url": "https://doi.org/10.1163/156854104323072883",
+      "started_at": "2026-10-14T05:48:38.097846+00:00",
+      "status": 403,
+      "resolved_url": "https://brill.com/view/journals/nemy/6/1/article-p23_4.xml",
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/followup/meyer-publisher.response",
+      "sha256": "2781aa210f791957073c7daacf8573470946451d559778cfe8b9800205ac9dcb",
+      "bytes": 919,
+      "finished_at": "2026-10-14T05:48:38.380461+00:00"
+    }
+  ],
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/assessment.json",
+      "bytes": 24156,
+      "sha256": "433ca9c383c101926eb4ba70252827933eb37dea3528c822b31bf9392c281ebf"
+    },
+    {
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/receipt.json",
+      "bytes": 15423,
+      "sha256": "efa8c2ee4faf278cf647bfb4b1d1e0f0edb5d83503b9405e94aadc830e4999b3"
+    },
+    {
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/native-function-probe.json",
+      "bytes": 1245,
+      "sha256": "58a7bddf2779680925c62d6e9f8b96d21678eb12a2210122426bb24b536edee7"
+    },
+    {
+      "path": "/tmp/traitmech-hatch-stimulation-sources-20261014/metpo-semantic-screen.json",
+      "bytes": 16368,
+      "sha256": "9e82fa0ebe3c3095e121e7087e7e7ac7d59594bfb3c9d8ca6436e90240e97174"
+    }
+  ],
+  "skill_assessment": "Existing add-trait guidance covers source roles, direct snippets, inconclusive resolver limits, sequence-feature interpretation, full-block reservations and all README counts. No new skill edit justified.",
+  "supersession": "Research-only receipts retain their earlier unfinished states. Accepted allocation and actual record-specific report supersede those limitations without rewriting previous receipts.",
+  "limits": [
+    "Temporary raw sources are not committed; URLs and hashes identify inspected bytes.",
+    "No canonical taxonomy, common mechanism, protein inventory, field efficacy, safety or therapy claim.",
+    "No full experimental raw-data reanalysis, independent review or exhaustive discovery claim."
+  ]
+}

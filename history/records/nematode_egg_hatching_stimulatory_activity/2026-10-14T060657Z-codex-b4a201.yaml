@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/nematode_egg_hatching_stimulatory_activity.yaml
+  slug: nematode_egg_hatching_stimulatory_activity
+session:
+  id: 2026-10-14T060657Z-codex-b4a201
+  timestamp: '2026-10-14T06:06:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add nematode egg-hatching stimulatory activity
+  details: Added one PROPOSED microbial capability increasing nematode egg hatching over a
+    defined observation interval relative to comparable controls without that microbial influence.
+    Meyer 2004 supplies definition support; Vejzagic 2015 is a second primary bacterial experiment.
+    Directly checked 17-word and 19-word excerpts preserve source-specific thresholds, controls,
+    host dependence and variable responses. Maintained abstract-function probes returned UNRESOLVED
+    and VERIFIED respectively; the actual record-specific CLI result belongs in the verification
+    sidecar. Hatch enhancement is not merely lack of inhibition or proof of a shared secretion
+    mechanism. No canonical taxon, exact synonym, xref or causal graph inferred. Ignored/hidden
+    current-copy, retained-history and open/draft PR checks found no exact counterpart or
+    competing allocation; decimal measurements, embedding coordinates and broad editor envelopes
+    were adjudicated as false positives. Reserved local 000724, cohort v600 and full 1067700-1067799
+    block. Trait timestamp records observed acceptance; this history records later CREATE.
+    All preexisting records including protected spore germination remain unchanged.
