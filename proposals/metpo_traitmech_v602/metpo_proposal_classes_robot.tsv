@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1067900	fungal nematode egg parasitism	An animal-pathogenic phenotype in which a fungus infects nematode eggs by penetrating their eggshells and colonizing their interiors.	TraitMech:data/traits/ecology/fungal_nematode_egg_parasitism.yaml|DOI:10.3389/fmicb.2021.617710	METPO:1004002			metpo_traitmech_2026_10		Fungal penetration and internal colonization of nematode eggs; no universal host range or shared effector.	traitmech:000726

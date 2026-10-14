@@ -1,0 +1,120 @@
+identifier: traitmech:000726
+label: fungal nematode egg parasitism
+definition: An animal-pathogenic phenotype in which a fungus infects nematode eggs
+  by penetrating their eggshells and colonizing their interiors.
+definition_source: DOI:10.3389/fmicb.2021.617710
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1004002
+evidence:
+- reference: DOI:10.3389/fmicb.2021.617710
+  snippet: The egg-pathogenic fungus Purpureocillium lilacinum parasitizes on nematode
+    eggs
+  notes: Xu et al. 2021, PMID:33897634, PMCID:PMC8058359, scientific Abstract; direct
+    JATS match and native VERIFIED. Own JZD02 experiment, Methods and actual Figure
+    1 A-C support infection of Meloidogyne incognita eggs. Supplementary Table 1 defines
+    infection by hyphal penetration through an individual egg, not mere surface contact.
+    Its 30-hour printed mean disagrees with the replicate counts; no numerical infection
+    rates are adopted. The 6-hour control and 42-hour infected transcriptomes differ
+    in time and include mixed infection stages. Expression associations are not causal
+    protein evidence.
+- reference: DOI:10.3389/fmicb.2016.01084
+  snippet: Infected eggs by P. lilacinum 36-1.
+  notes: Xie et al. 2016, PMID:27486440, PMCID:PMC4949223, Figure 5 caption, panel
+    B; actual panels A-C and Methods/Results inspected. P. lilacinum denotes Purpureocillium
+    lilacinum. Direct JATS match; native NOT_IN_ABSTRACT is retained. This is its
+    own 36-1 infection experiment, not a repetition of Xu's citation. Eggs were supplied
+    as the only nourishment for the reported 24-hour comparison, but microscopy does
+    not quantify nutrient assimilation. RNA-seq replicates were pooled; gene homology
+    and expression do not demonstrate a required effector.
+- reference: DOI:10.3389/fmicb.2021.617710
+  snippet: Infection defined by Purpureocillium lilacinum mycelium penetrating through
+    the whole individual Meloidogyne incognita egg
+  notes: Xu et al. 2021, Supplementary Table 1 footnote, Table_1.DOCX from the PMC8058359
+    Europe PMC supplementaryFiles archive. Direct DOCX text match and complete rendered
+    page inspected; native NOT_IN_ABSTRACT is retained. This operational scoring criterion
+    supports individual-egg penetration, not another independent experiment or a direct
+    nutrient-flux measurement. The two Xu excerpts total 23 words. The printed 30-hour
+    mean discrepancy remains unresolved; no infection rate is imported.
+discussions:
+- discussion_id: fungal-nematode-egg-parasitism-scope-and-hierarchy
+  prompt: Refine the egg-infection hierarchy without conflating infection, feeding
+    and hatching endpoints.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'The fungal bearer penetrates eggshells and colonizes egg interiors.
+    Surface attachment, egg-hatching inhibition, killing, trapping or a gene annotation
+    alone is insufficient. Animal pathogen METPO:1004002 is active below pathogenic
+    to host METPO:1004000 and phenotype METPO:1000059. Its pinned organism-like wording
+    is clarified as a phenotype in current upstream METPO; the local parent is not
+    rewritten. Nematode egg infection does not entail mammalian pathogenicity. Xie
+    describes this fungus as nematophagous, but the operational infection endpoint
+    does not quantify feeding: fungal nematophagy traitmech:000719 requires consumption
+    and also includes dead prey. It is related, not an asserted parent here. Local
+    parasitism traitmech:000043 inherits persistent symbiosis, which is not required.
+    No organism-level disjointness, obligacy, exclusive host stage or universal host
+    range is asserted. Bare egg parasitism does not specify the fungal actor and is
+    not an exact synonym.'
+  posed_by: codex
+  posed_date: '2026-10-14'
+- discussion_id: fungal-nematode-egg-parasitism-metpo-assessment
+  prompt: Review the proposed class without reviving the obsolete parasitism identifier.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: No exact active counterpart was identified in the inspected pinned/current
+    releases, editor and template owners. Historical METPO:1000227 obsolete parasitism
+    is broader, deprecated, under ObsoleteClass with OMO:0001000 reason and no replacement
+    or consider annotation in those releases. METPO issue 521 disputes mechanically
+    assigned reasons; the code neither invalidates the biology nor authorizes reuse.
+    The historical ID is not revived or placed in xrefs. Fried-egg colony is unrelated.
+    The ontology pin remains unchanged; v602 proposes this narrower infection phenotype
+    with PROPOSED status and no equivalent external xref.
+  posed_by: codex
+  posed_date: '2026-10-14'
+- discussion_id: fungal-nematode-egg-parasitism-evidence-limits
+  prompt: Resolve source inconsistencies and strain provenance before adding rates,
+    examples or causal mechanisms.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Xu Supplementary Table 1 reports a 30-hour mean of 38% for replicates
+    38%, 33% and 33%, whose arithmetic mean is about 34.7%. This discrepancy is preserved,
+    not silently corrected. Its main Methods sample-level wording is less precise
+    than the supplement's individual-egg penetration criterion. No rates or infection
+    threshold are curated. Xie's conserved appressorium genes also occur in fungi
+    lacking that structure; neither gene inventory nor differential expression establishes
+    this trait or a protein-resolved mechanism. No causal graph, protein example or
+    canonical taxon is asserted without further authority and strain-provenance checks.
+    Microscopy and source-designated infection are not tracer measurements of nutrient
+    flux. No field efficacy or safety claim follows. Source hashes, inspected figures/supplement,
+    actual snippet verdicts and bounded notice checks are retained in the verification
+    sidecar; no comprehensive correction/retraction clearance is claimed. Both counted
+    primary experiments concern Purpureocillium lilacinum (JZD02 and 36-1). The fungal
+    actor class is not evidence that this phenotype was experimentally demonstrated
+    across fungal species; additional species require their own evidence.
+  posed_by: codex
+  posed_date: '2026-10-14'
+curation_history:
+- timestamp: '2026-10-14T11:46:22Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added fungal nematode egg parasitism with two primary DOI sources and directly
+    matched nine-word and six-word excerpts. Preserved native VERIFIED/NOT_IN_ABSTRACT
+    outcomes and the supplement's inconsistent mean; no rates or sequence-derived
+    mechanism imported. Reserved 000726, v602 and 1067900-1067999 after ignored/hidden
+    current-copy, retained-history and open/draft PR checks, including full-content
+    proposal ranges. Wheel sizes and broad editor envelopes are not conflicting reservations.
+    Animal-pathogen parent scope checked against pinned/current ontology. Other records
+    unchanged; timestamp records observed acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-14T12:50:22Z'
+  curator: codex
+  action: CLARIFY_EVIDENCE
+  changes: 'Addressed issue #1931 after the approving PR review: added a directly
+    matched 14-word supplementary penetration criterion and explicitly limited the
+    two primary experiments to one fungal species. Xu quotations total 23 words; the
+    extra excerpt is not a third independent experiment. Retained native NOT_IN_ABSTRACT,
+    original minting history, definition, parent, source discrepancy and PROPOSED
+    status.'
+  llm_assisted: true

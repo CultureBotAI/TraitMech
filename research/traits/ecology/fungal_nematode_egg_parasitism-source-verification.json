@@ -1,0 +1,693 @@
+{
+  "trait_id": "traitmech:000726",
+  "accepted_at": "2026-10-14T11:46:22Z",
+  "checked_at": "2026-10-14T12:54:59.821152+00:00",
+  "status": "Author assessment of one PROPOSED trait; not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.3389/fmicb.2021.617710",
+      "pmid": "33897634",
+      "pmcid": "PMC8058359",
+      "role": "definition_support",
+      "snippet": "The egg-pathogenic fungus Purpureocillium lilacinum parasitizes on nematode eggs",
+      "words": 9,
+      "source": {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/source.response",
+        "bytes": 161097,
+        "sha256": "4353e844f1ef549588558520026a2a863a259ab021f4ba1c5cc22ea5b712f8d3"
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8058359/fullTextXML",
+      "stable_article_url": "https://doi.org/10.3389/fmicb.2021.617710",
+      "acquired_at": "2026-10-14T10:23:18.151020+00:00",
+      "source_xpath": "/article/front/article-meta/abstract",
+      "source_section": "Scientific Abstract",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "VERIFIED",
+      "native_locator": "evidence[0]",
+      "native_probe": {
+        "source": "xu2021",
+        "doi": "10.3389/fmicb.2021.617710",
+        "pmid": "33897634",
+        "snippet": "The egg-pathogenic fungus Purpureocillium lilacinum parasitizes on nematode eggs",
+        "word_count": 9,
+        "direct_full_text_match": true,
+        "native_verdict": "VERIFIED",
+        "similarity": 1.0,
+        "closest_sentence": "",
+        "at": "2026-10-14T10:33:05.624053+00:00",
+        "europepmc": {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3389%2Ffmicb.2021.617710&format=json&resultType=core",
+          "sha256": "b06ed8ea25c888b1833631ce66ba5c50513d77a4cbf6837f5e7ff393008b372c",
+          "title": "Understanding the Transcriptional Changes During Infection of <i>Meloidogyne incognita</i> Eggs by the Egg-Parasitic Fungus <i>Purpureocillium lilacinum</i>.",
+          "comment_correction": null
+        },
+        "crossref": {
+          "url": "https://api.crossref.org/works/10.3389/fmicb.2021.617710",
+          "sha256": "de8c9b3626acebf0ee4e5eb50f5714d9a5bc2dd45a738476f9d87c310d65b675",
+          "title": [
+            "Understanding the Transcriptional Changes During Infection of Meloidogyne incognita Eggs by the Egg-Parasitic Fungus Purpureocillium lilacinum"
+          ],
+          "relation": {},
+          "update_to": null,
+          "updated_by": null
+        },
+        "limits": "Provisional source probe only; no record, final novelty decision or comprehensive notice clearance."
+      },
+      "figures": [
+        {
+          "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/58aa/8058359/ca0235b8049d/fmicb-12-617710-g001.jpg",
+          "status": 200,
+          "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/visual/figure-0.response",
+          "content_type": "image/jpeg",
+          "sha256": "216a6d624af2e866ebbb279b829ff1daaa1b3f653a190f818d5421855e0ac833"
+        }
+      ],
+      "assessment": "Xu et al. 2021, PMID:33897634, PMCID:PMC8058359, scientific Abstract; direct JATS match and native VERIFIED. Own JZD02 experiment, Methods and actual Figure 1 A-C support infection of Meloidogyne incognita eggs. Supplementary Table 1 defines infection by hyphal penetration through an individual egg, not mere surface contact. Its 30-hour printed mean disagrees with the replicate counts; no numerical infection rates are adopted. The 6-hour control and 42-hour infected transcriptomes differ in time and include mixed infection stages. Expression associations are not causal protein evidence."
+    },
+    {
+      "reference": "DOI:10.3389/fmicb.2016.01084",
+      "pmid": "27486440",
+      "pmcid": "PMC4949223",
+      "role": "supporting_primary_experiment",
+      "snippet": "Infected eggs by P. lilacinum 36-1.",
+      "words": 6,
+      "source": {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xie2016/source.response",
+        "bytes": 197535,
+        "sha256": "7a9fb4b73b857a967bed289364839e9c6b6bff82d022af5239fd04adafa63d3b"
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4949223/fullTextXML",
+      "stable_article_url": "https://doi.org/10.3389/fmicb.2016.01084",
+      "acquired_at": "2026-10-14T10:23:19.566649+00:00",
+      "source_xpath": "/article/body/sec[3]/sec[10]/fig[1]/caption",
+      "source_section": "Figure 5 caption, panel B",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[1]",
+      "native_probe": {
+        "doi": "10.3389/fmicb.2016.01084",
+        "snippet": "Infected eggs by P. lilacinum 36-1.",
+        "words": 6,
+        "source_section": "Figure 5 caption, panel B",
+        "direct_full_text_match": true,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "similarity": 0.33783783783783783,
+        "closest_sentence": "",
+        "at": "2026-10-14T11:31:24.991785+00:00",
+        "source_sha256": "7a9fb4b73b857a967bed289364839e9c6b6bff82d022af5239fd04adafa63d3b",
+        "limits": "Infection evidence, not direct nutrient flux or a causal protein mechanism."
+      },
+      "figures": [
+        {
+          "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c501/4949223/3b3df952ffe2/fmicb-07-01084-g0005.jpg",
+          "status": 200,
+          "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xie2016/visual/figure-0.response",
+          "content_type": "image/jpeg",
+          "sha256": "4083a1eba7d6d39701b955e13b600a5d166456598226c6a85e572a2d598e836b"
+        }
+      ],
+      "assessment": "Xie et al. 2016, PMID:27486440, PMCID:PMC4949223, Figure 5 caption, panel B; actual panels A-C and Methods/Results inspected. P. lilacinum denotes Purpureocillium lilacinum. Direct JATS match; native NOT_IN_ABSTRACT is retained. This is its own 36-1 infection experiment, not a repetition of Xu's citation. Eggs were supplied as the only nourishment for the reported 24-hour comparison, but microscopy does not quantify nutrient assimilation. RNA-seq replicates were pooled; gene homology and expression do not demonstrate a required effector."
+    },
+    {
+      "reference": "DOI:10.3389/fmicb.2021.617710",
+      "pmid": "33897634",
+      "pmcid": "PMC8058359",
+      "role": "operational_scoring_criterion_same_experiment",
+      "snippet": "Infection defined by Purpureocillium lilacinum mycelium penetrating through the whole individual Meloidogyne incognita egg",
+      "words": 14,
+      "source": {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/Table_1.DOCX",
+        "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e",
+        "bytes": 17309
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8058359/supplementaryFiles",
+      "stable_article_url": "https://doi.org/10.3389/fmicb.2021.617710",
+      "archive_member": "Table_1.DOCX",
+      "document_member": "word/document.xml",
+      "source_xpath": "/w:document/w:body/w:p[2]",
+      "xpath_namespaces": {
+        "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+      },
+      "source_format": "docx",
+      "source_section": "Supplementary Table 1 footnote",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_text_layer_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[2]",
+      "native_probe": {
+        "accepted_at": "2026-10-14T12:50:22Z",
+        "issue": "https://github.com/CultureBotAI/TraitMech/issues/1931",
+        "snippet": "Infection defined by Purpureocillium lilacinum mycelium penetrating through the whole individual Meloidogyne incognita egg",
+        "words": 14,
+        "combined_xu_words": 23,
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "similarity": 0.375,
+        "closest_sentence": "",
+        "source": {
+          "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/Table_1.DOCX",
+          "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e"
+        },
+        "member": "word/document.xml",
+        "source_xpath": "/w:document/w:body/w:p[2]",
+        "namespaces": {
+          "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        },
+        "direct_source_match": true,
+        "role": "Operational scoring criterion, not an additional independent experiment or direct nutrient-flux measurement.",
+        "scope": "Both counted primary experiments concern Purpureocillium lilacinum, JZD02 and 36-1. No experimentally demonstrated cross-species breadth is asserted."
+      },
+      "assessment": "Xu et al. 2021, Supplementary Table 1 footnote, Table_1.DOCX from the PMC8058359 Europe PMC supplementaryFiles archive. Direct DOCX text match and complete rendered page inspected; native NOT_IN_ABSTRACT is retained. This operational scoring criterion supports individual-egg penetration, not another independent experiment or a direct nutrient-flux measurement. The two Xu excerpts total 23 words. The printed 30-hour mean discrepancy remains unresolved; no infection rate is imported."
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-14T11:46:22Z",
+    "base": "75cfd0e0bfbfda8110aaf71a22a14b889951c205",
+    "trait_id": "traitmech:000726",
+    "label": "fungal nematode egg parasitism",
+    "category": "ECOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v602",
+    "proposed_id": "METPO:1067900",
+    "reserved_block": [
+      1067900,
+      1067999
+    ],
+    "scientific_scope": "An animal-pathogenic phenotype in which a fungus infects nematode eggs by penetrating their eggshells and colonizing their interiors.",
+    "parent": "METPO:1004002",
+    "supporting_references": [
+      "DOI:10.3389/fmicb.2021.617710",
+      "DOI:10.3389/fmicb.2016.01084"
+    ],
+    "fresh_remote": {
+      "main": "75cfd0e0bfbfda8110aaf71a22a14b889951c205",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1782,
+            "35099af2b7d5347f2ca6e418c4a139979071644d",
+            false
+          ],
+          [
+            1476,
+            "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+      }
+    },
+    "catalog_unchanged": true,
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/scope-assessment.json",
+        "sha256": "0b5ddccf7a5b9e19a314d9c06429de009e616078d5291533993ffc4a8e8895e7"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-leads-20261014/structured-inspection.json",
+        "sha256": "d0c5d2a04c0103891f31d4e35c37abba18df63bc9858b99e6474352a066c9b77"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/local/completion.json",
+        "sha256": "93ff51e27f2d870a8db10a26d4d9f2a45d5d080daa8c711d899f2d1e29df8c60"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/history/completion.json",
+        "sha256": "34b9d993d9fe39847e2ca145ea66b921c060056f7b0962a342317ea3aa67fd0d"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/match-summary.json",
+        "sha256": "4b64e1e42814bfeed9890d1e08e76793c995c2bfb0180b07ba921416a4385465"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-reservations-20261014/numeric-assessment.json",
+        "sha256": "294dd1775e808caea2f1992dc3052b08a0d98aecc76893e6960f00102dd79095"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-reservations-20261014/local/completion.json",
+        "sha256": "20211bcef6669f4d0a51d8368a6a90cd7e6c0f7eebb744446233972b5aea3359"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-reservations-20261014/remote/result.json",
+        "sha256": "5fd684e7bd863181dacb0a9243449ef54a4a50b510b27757e1ffc9ebef4ac50b"
+      }
+    ],
+    "limits": "One author-accepted PROPOSED trait, not independent or human signoff, atomic allocation or discovery exhaustion. Recheck current heads before publication."
+  },
+  "reservation_assessment": {
+    "at": "2026-10-14T11:45:13.916924+00:00",
+    "candidate": "traitmech:000726",
+    "cohort": "metpo_traitmech_v602",
+    "proposed_id": "METPO:1067900",
+    "block": [
+      1067900,
+      1067999
+    ],
+    "exact_dispositions": [
+      {
+        "source": {
+          "repository": "berkeleybop/metpo",
+          "path": "uv.lock",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/a4e78dc11c2dd21a27c6aa320d01aed60ba4c57b",
+          "blob_sha": "a4e78dc11c2dd21a27c6aa320d01aed60ba4c57b",
+          "sha256": "a3453596f55093b1afa64ad4eef3f9206cd3e1ecfd26fcf20158d028fce6da91",
+          "pr": 644,
+          "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+          "status": "modified"
+        },
+        "field": "package.wheels.size",
+        "value": 1067941,
+        "disposition": "Wheel byte size in structured uv.lock TOML, not a METPO reservation."
+      },
+      {
+        "source": {
+          "repository": "berkeleybop/metpo",
+          "path": "uv.lock",
+          "saved_path": "/tmp/traitmech-transcriptional-memory-pending-20261012/content/0f8bb6372b842ac70a0c6e2a3096c07f21319abc",
+          "blob_sha": "0f8bb6372b842ac70a0c6e2a3096c07f21319abc",
+          "sha256": "5f595af742958f9076286ca0ea6c8a5682f47f884b041c20d026e0bd2018788d",
+          "pr": 643,
+          "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+          "status": "modified"
+        },
+        "field": "package.wheels.size",
+        "value": 1067941,
+        "disposition": "Wheel byte size in structured uv.lock TOML, not a METPO reservation."
+      }
+    ],
+    "broad_editor_envelope_occurrences": 956,
+    "full_content_owners": 45499,
+    "unique_full_contents": 2565,
+    "binary_limits": [],
+    "conflicting_reservations": [],
+    "status": "No conflicting reservation identified in inspected scope; fresh main/PR guards required before allocation.",
+    "limits": "Full-content current/retained proposal owners supplement line-based ignored/hidden scans. Remote gzip sources decoded. Other arbitrary archives, lost ignored/untracked history and symlink targets not reconstructed.",
+    "full_receipt": {
+      "path": "/tmp/traitmech-egg-parasitism-reservations-20261014/numeric-assessment.json",
+      "bytes": 13148486,
+      "sha256": "294dd1775e808caea2f1992dc3052b08a0d98aecc76893e6960f00102dd79095"
+    }
+  },
+  "novelty": {
+    "locations": 190,
+    "retained_heads": 143,
+    "unique_variants": 548,
+    "occurrences": 8035,
+    "ignored_and_hidden_included": true,
+    "interpretation": "The recognized egg-parasitic infection strategy requires fungal eggshell penetration and internal colonization, not merely a context suffix on generic feeding. Existing fungal nematophagy requires food consumption but includes previously dead prey; hatching inhibition/stimulation, killing, paralysis, attraction and trapping have different endpoints. No same-scope synonym, ungrounded graph node or parent-gap discussion was identified in matched maintained trait owners.",
+    "cache_dispositions": {
+      "PMID_25369810.md": "Purpureocillium genus mention in acid-environment review and jarosite-biomineralization citation, not egg infection.",
+      "doi_10.3389_fmicb.2024.1423741.md": "Paecilomyces lilacinus member in chromium-removal fungal consortium, not egg infection.",
+      "PMID_38228683.txt": "Bibliography of nematode-attracting fungal odor cues, not egg infection.",
+      "PMID_41660888.md and pmc_full_pmid_41660888.txt": "Bacterial/SynCom nematode suppression, egg-hatching inhibition and plant root gall/egg-mass endpoints, not fungal egg parasitism."
+    },
+    "derived_context": "Remaining path groups are existing trait writers/tests, proposals, history, source receipts, saved reviews and generated representations of the distinct endpoints. No new exact trait was inferred from their references to nematophagy or nematode eggs.",
+    "remote_scope": {
+      "prs": 11,
+      "pending_files": 783,
+      "upstream_files": 587,
+      "upstream_heads": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+      }
+    }
+  },
+  "hierarchy": "METPO:1004002 is active below pathogenic-to-host METPO:1004000, phenotype METPO:1000059 and quality METPO:1000188. Pinned animal-pathogen wording is organism-like, but its phenotype hierarchy and current upstream explicitly phenotype-based definition agree on this host-pathogenic disposition. The source calls the fungus egg-pathogenic and documents infection of a nematode developmental stage; this does not entail mammalian pathogenicity. Fungal nematophagy is related but food consumption is not a required measured endpoint in the operational infection definition. Local parasitism inherits persistent symbiosis, which is not asserted here. No organism-level disjointness is claimed.",
+  "historical_identity": "METPO:1000227 obsolete parasitism is a broader historical lead, deprecated true, under ObsoleteClass, reason OMO:0001000, with no replacement or consider annotation in pinned/current releases. Issue 521 disputes mechanically assigned reasons. It does not supply an exact replacement and is not revived or used as an xref. Fried-egg colony is unrelated. No exact counterpart in inspected releases, editor or template owners; ontology pin is unchanged.",
+  "ontology_inputs": [
+    {
+      "source": {
+        "path": "data/raw/metpo.owl",
+        "saved_path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl"
+      },
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+      "triples": 12617,
+      "imports": [],
+      "conversion": null
+    },
+    {
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "metpo.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "blob_sha": "125f475bac2758741d2ef8ec46b2984a1abdc048",
+        "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+      "triples": 12649,
+      "imports": [],
+      "conversion": null
+    },
+    {
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "src/ontology/metpo-edit.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+        "blob_sha": "d140e6174ada41f8a1cceb5dba286c8af15feb9e",
+        "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+      "triples": 31,
+      "imports": [],
+      "conversion": {
+        "command": [
+          "/usr/local/bin/robot",
+          "convert",
+          "--input",
+          "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+          "--format",
+          "owl",
+          "--output",
+          "/tmp/traitmech-repellence-upstream-edit-20261014.owl"
+        ],
+        "exit": 0,
+        "stdout": "",
+        "stderr": "",
+        "output": "/tmp/traitmech-repellence-upstream-edit-20261014.owl",
+        "sha256": "65b831892d4d51132ddfc6ea3d8c0b84e3fc729accf094ef09655b5a3bb40b4e"
+      }
+    }
+  ],
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/ecology/fungal_nematode_egg_parasitism.yaml",
+      "--out",
+      "/tmp/traitmech-egg-parasitism-followup-checks-20261014/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 3.8346316390670836,
+    "completed_at": "2026-10-14T12:53:51.708913+00:00",
+    "log": "/tmp/traitmech-egg-parasitism-followup-checks-20261014/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-egg-parasitism-followup-checks-20261014/native-record.tsv",
+      "bytes": 659,
+      "sha256": "5a5c409cc782b648fc0a264677cb784157c23eb08127d89738e50ec0c2c483c9"
+    },
+    "report_rows": 3,
+    "explanation": "Actual revised-record CLI results; two distinct primary sources and three excerpts, one being a supplementary scoring criterion."
+  },
+  "read_scope": {
+    "xu": "Scientific Abstract, selected Introduction/Methods/Discussion, actual Figure 1 A-C, complete rendered Supplementary Table 1.",
+    "xie": "Strain/transcriptome Methods, infection Results, Figure 5 caption and actual A-C, selected Discussion paragraphs.",
+    "limitation": "Not complete raw experimental data or all supplements; no independent strain-provenance or taxonomy audit."
+  },
+  "supplement": {
+    "source": {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/Table_1.DOCX",
+      "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e"
+    },
+    "computed_checks": [
+      {
+        "time": "6 pih",
+        "replicates": [
+          0,
+          0,
+          0
+        ],
+        "reported_mean": "0",
+        "computed_mean": 0,
+        "computed_sample_sd": 0.0
+      },
+      {
+        "time": "18 pih",
+        "replicates": [
+          10,
+          9,
+          17
+        ],
+        "reported_mean": "12\u00b14.4",
+        "computed_mean": 12,
+        "computed_sample_sd": 4.358898943540674
+      },
+      {
+        "time": "30 pih",
+        "replicates": [
+          38,
+          33,
+          33
+        ],
+        "reported_mean": "38\u00b12.9",
+        "computed_mean": 34.666666666666664,
+        "computed_sample_sd": 2.8867513459481287
+      },
+      {
+        "time": "42 pih",
+        "replicates": [
+          56,
+          58,
+          71
+        ],
+        "reported_mean": "62\u00b18.1",
+        "computed_mean": 61.666666666666664,
+        "computed_sample_sd": 8.144527815247077
+      },
+      {
+        "time": "54 pih",
+        "replicates": [
+          57,
+          74,
+          63
+        ],
+        "reported_mean": "65\u00b18.6",
+        "computed_mean": 64.66666666666667,
+        "computed_sample_sd": 8.621678104251709
+      },
+      {
+        "time": "72 pih",
+        "replicates": [
+          72,
+          59,
+          67
+        ],
+        "reported_mean": "66\u00b16.6",
+        "computed_mean": 66,
+        "computed_sample_sd": 6.557438524302
+      }
+    ],
+    "visual_files": [
+      {
+        "path": "/tmp/traitmech-egg-parasitism-xu-table-render-20261014/Table_1.pdf",
+        "sha256": "e28b5ec3d47a12c0dd89c4ae54fb8ffe5a17c8b160899c2174325ea6a0a1036d"
+      },
+      {
+        "path": "/tmp/traitmech-egg-parasitism-xu-table-render-20261014/pages/page-1.png",
+        "sha256": "9ae0ca5ced784cd42868c63baf8455e3640855211ca15bd9a29bd02749ee33ac"
+      }
+    ],
+    "visual_assessment": "Actual full page inspected. The 30-hour row prints 38 +/- 2.9 but its replicate values 38,33,33 average 34.6667; the sample SD is about 2.8868. Other printed means agree after whole-percent rounding. Do not import numerical rates. Footnote defines infection by hyphal penetration through the whole individual egg.",
+    "render_limits": "Read-only native LibreOffice conversion plus PDFKit PNG. Sandboxed LibreOffice aborted (134); escalated conversion succeeded. No document editing; original bytes retained. Workspace artifact dependency loader/runtime was not exposed.",
+    "acquisition": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8058359/supplementaryFiles",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8058359/supplementaryFiles",
+      "status": 200,
+      "size": 1069328,
+      "sha256": "748c399140da83a76b71dd4e86039d4965b922ba0a3667a954cca2f5b87373eb",
+      "acquired_at": "2026-10-14T11:31:24.092860+00:00"
+    },
+    "archive_member": {
+      "member": "Table_1.DOCX",
+      "size": 17309,
+      "sha256": "53e1b6322640a7ad217a2252b7c31306c293944d533b4cc30b40f49e5ecdf18e",
+      "archive_members": [
+        "Table_1.DOCX",
+        "fmicb-12-617710-g002.jpg",
+        "fmicb-12-617710-g004.jpg",
+        "Table_4.XLSX",
+        "fmicb-12-617710-g001.gif",
+        "fmicb-12-617710-g002.gif",
+        "fmicb-12-617710-g004.gif",
+        "Table_2.DOCX",
+        "fmicb-12-617710-g001.jpg",
+        "fmicb-12-617710-g003.gif",
+        "fmicb-12-617710-g003.jpg",
+        "Table_3.XLSX"
+      ]
+    }
+  },
+  "source_assessment": {
+    "xu2021": "Own JZD02 infection experiment and actual Figure 1 A-C support egg infection. Supplementary Table 1 explicitly defines infection by penetration through the whole individual egg. Its 30-hour mean is inconsistent with replicates; numerical rates are not curated. Time-separated 6-hour and 42-hour transcriptomes mix infection and time/stage effects; no expression-to-causality claim.",
+    "xie2016": "Own 36-1 experiment, distinct strain/lab from Xu, with microscopy-confirmed infection and actual Figure 5 A-C inspected. The revised six-word caption identifies the fungus and replaces the earlier anaphoric probe. Eggs were supplied as the only nourishment, but no direct nutrient-assimilation measurement is asserted. Pooled RNA-seq replicates and gene conservation/expression do not prove causal protein mechanisms.",
+    "other_leads": "Hao2025 has unresolved setup and stage-category inconsistencies and is not counted as supporting evidence. Lopez-Llorca2002 is an abstract-only contextual lead, not a counted independent experimental support here."
+  },
+  "source_status": "Exact DOI/PMID identities were checked in Europe PMC and Crossref; their returned notice/relation fields did not identify corrections. Bounded web queries for each exact DOI plus correction/retraction returned primary articles. This is not comprehensive notice clearance. Direct PMC supplement returned CAPTCHA and its derived CDN path returned 404; the Europe PMC ZIP succeeded.",
+  "contextual_leads": [
+    {
+      "reference": "DOI:10.3389/fcimb.2025.1600620",
+      "counted_support": false,
+      "assessment": "Hao 2025 has unresolved membrane/contact and stage-category inconsistencies; selected text, Table 2 and actual Figure 1 examined."
+    },
+    {
+      "reference": "DOI:10.1017/S0953756202005798",
+      "counted_support": false,
+      "assessment": "Lopez-Llorca 2002 abstract-only lead; no full-text experimental confirmation counted."
+    }
+  ],
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/local/completion.json",
+      "sha256": "93ff51e27f2d870a8db10a26d4d9f2a45d5d080daa8c711d899f2d1e29df8c60"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/history/completion.json",
+      "sha256": "34b9d993d9fe39847e2ca145ea66b921c060056f7b0962a342317ea3aa67fd0d"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/remote/result.json",
+      "sha256": "913e933407dce6f52a6c85789e6928aa12b19970f895753d3e37f4c93edcb1b7"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-novelty-20261014/unique-matches.json",
+      "sha256": "b4649f922852af0e0ee6f2bd706ac3d57cde0679076692c967cb01e522318ad4"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/structured-inspection.json",
+      "sha256": "d0c5d2a04c0103891f31d4e35c37abba18df63bc9858b99e6474352a066c9b77"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/snippet-probe.json",
+      "sha256": "41ce26d70a9c399481aaebdd4c91a3d9d2aa27cfa064c303d7131146e21f3994"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xie2016/caption-probe.json",
+      "sha256": "6075b1debf140071784664eb8fa89276e2877327915700c52efa16d66a030dce"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/acquisition.json",
+      "sha256": "9d43fe068d02426dd6e776cdcbd58bc6984935fcd635d939d411e0af176ef6f7"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/xu2021/supplement-epmc/member.json",
+      "sha256": "3cefb2d691f5c7a633857ee8aa4bcc7b75cdd3e3e9278175913df012a4f603ff"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/metpo-issue-521.json",
+      "sha256": "4f114b2b2aaf1f77a2098ec585b6c0f1b2873676aad0a80bab8840535df01940"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-reservations-20261014/accepted.json",
+      "bytes": 3991,
+      "sha256": "72e87780517c02c610d2c28c0cde59caf306efe459c4b5296fbe86c33c50a4bd"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-leads-20261014/scope-assessment.json",
+      "bytes": 10016,
+      "sha256": "0b5ddccf7a5b9e19a314d9c06429de009e616078d5291533993ffc4a8e8895e7"
+    },
+    {
+      "path": "/tmp/traitmech-egg-parasitism-followup-probe-20261014.json",
+      "sha256": "826b8b9eebdc56c3692d9c8b42eab852c175b14e5c18b052f1ee4f43f9759e40"
+    }
+  ],
+  "omissions": "No canonical examples without independent strain-provenance/taxonomy checks; no proteins, chemicals, causal graph, exact synonym or equivalent xref. No universal host range, obligacy, field efficacy, safety or quantitative infection threshold.",
+  "skill_assessment": "Existing add-trait guidance already requires direct snippets, two supporting citations, figure inspection, source-contradiction retention, phenotype interpretation and parent entailment. No new skill change is justified by this candidate.",
+  "limits": [
+    "Known local copies and retained regular-file history only; unavailable ignored/untracked history, symlink targets, submodules and arbitrary archives are not reconstructed. Remote inspection covers changed PR blobs and selected upstream owners, not every unchanged file. No exhaustive literature or all-ontology absence claim. Reservation checks and final publication guards remain required.",
+    "Temporary raw files are not committed; public retrieval URLs and hashes identify inspected evidence.",
+    "Earlier research-only and alternate snippet probes are retained; this record-specific verification supersedes their unfinished state.",
+    "Both supporting experiments are in Purpureocillium lilacinum; no experimental cross-species breadth is established. The extra Xu excerpt is not independent replication."
+  ],
+  "previous_verifications": [
+    {
+      "checked_at": "2026-10-14T11:56:04.373851+00:00",
+      "native_record_verification": {
+        "command": [
+          "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+          "scripts/verify_snippets.py",
+          "--record",
+          "data/traits/ecology/fungal_nematode_egg_parasitism.yaml",
+          "--out",
+          "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv"
+        ],
+        "exit": 0,
+        "seconds": 3.842864708043635,
+        "completed_at": "2026-10-14T11:54:22.519659+00:00",
+        "log": "/tmp/traitmech-egg-parasitism-checks-20261014/records-03.log",
+        "report": {
+          "path": "/tmp/traitmech-egg-parasitism-checks-20261014/native-record.tsv",
+          "bytes": 416,
+          "sha256": "2b9438901b768f06117ab83f0a17d4b304e741255e8f72974afd19d270e9c37f"
+        },
+        "report_rows": 2,
+        "explanation": "Actual record CLI outcomes, not upgraded by manual full-text matching."
+      },
+      "source_commit": "418a9676293fb665baf8810617a6d06646e742fc",
+      "source_path": "research/traits/ecology/fungal_nematode_egg_parasitism-source-verification.json",
+      "source_sha256": "7cd59d3aee2341e5756884093789aac76f95c2caff99261ef7e4cfcb3c2cf272",
+      "explanation": "The prior two-excerpt record passed; this is retained historical verification, not the current three-excerpt CLI report."
+    }
+  ],
+  "evidence_clarification": {
+    "accepted_at": "2026-10-14T12:50:22Z",
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1931",
+    "review_url": "https://github.com/CultureBotAI/TraitMech/pull/1930#pullrequestreview-5518069170",
+    "reviewed_previous_head": "418a9676293fb665baf8810617a6d06646e742fc",
+    "combined_xu_words": 23,
+    "distinct_primary_experiments": 2,
+    "evidence_rows": 3,
+    "scope": "Both counted primary experiments concern Purpureocillium lilacinum, JZD02 and 36-1. No experimentally demonstrated cross-species breadth is asserted.",
+    "role": "Operational scoring criterion, not an additional independent experiment or direct nutrient-flux measurement."
+  }
+}

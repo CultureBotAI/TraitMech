@@ -355,6 +355,57 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/free_living.html#kgscan-d5aefedf82bb"
  },
  {
+  "discussion_id": "fungal-nematode-egg-parasitism-scope-and-hierarchy",
+  "prompt": "Refine the egg-infection hierarchy without conflating infection, feeding and hatching endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematode egg parasitism",
+  "source_id": "traitmech:000726",
+  "source_file": "fungal_nematode_egg_parasitism.yaml",
+  "attaches_to": [],
+  "rationale": "The fungal bearer penetrates eggshells and colonizes egg interiors. Surface attachment, egg-hatching inhibition, killing, trapping or a gene annotation alone is insufficient. Animal pathogen METPO:1004002 is active below pathogenic to host METPO:1004000 and phenotype METPO:1000059. Its pinned organism-like wording is clarified as a phenotype in current upstream METPO; the local parent is not rewritten. Nematode egg infection does not entail mammalian pathogenicity. Xie describes this fungus as nematophagous, but the operational infection endpoint does not quantify feeding: fungal nematophagy traitmech:000719 requires consumption and also includes dead prey. It is related, not an asserted parent here. Local parasitism traitmech:000043 inherits persistent symbiosis, which is not required. No organism-level disjointness, obligacy, exclusive host stage or universal host range is asserted. Bare egg parasitism does not specify the fungal actor and is not an exact synonym.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_egg_parasitism.html#fungal-nematode-egg-parasitism-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-nematode-egg-parasitism-metpo-assessment",
+  "prompt": "Review the proposed class without reviving the obsolete parasitism identifier.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematode egg parasitism",
+  "source_id": "traitmech:000726",
+  "source_file": "fungal_nematode_egg_parasitism.yaml",
+  "attaches_to": [],
+  "rationale": "No exact active counterpart was identified in the inspected pinned/current releases, editor and template owners. Historical METPO:1000227 obsolete parasitism is broader, deprecated, under ObsoleteClass with OMO:0001000 reason and no replacement or consider annotation in those releases. METPO issue 521 disputes mechanically assigned reasons; the code neither invalidates the biology nor authorizes reuse. The historical ID is not revived or placed in xrefs. Fried-egg colony is unrelated. The ontology pin remains unchanged; v602 proposes this narrower infection phenotype with PROPOSED status and no equivalent external xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_egg_parasitism.html#fungal-nematode-egg-parasitism-metpo-assessment"
+ },
+ {
+  "discussion_id": "fungal-nematode-egg-parasitism-evidence-limits",
+  "prompt": "Resolve source inconsistencies and strain provenance before adding rates, examples or causal mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal nematode egg parasitism",
+  "source_id": "traitmech:000726",
+  "source_file": "fungal_nematode_egg_parasitism.yaml",
+  "attaches_to": [],
+  "rationale": "Xu Supplementary Table 1 reports a 30-hour mean of 38% for replicates 38%, 33% and 33%, whose arithmetic mean is about 34.7%. This discrepancy is preserved, not silently corrected. Its main Methods sample-level wording is less precise than the supplement's individual-egg penetration criterion. No rates or infection threshold are curated. Xie's conserved appressorium genes also occur in fungi lacking that structure; neither gene inventory nor differential expression establishes this trait or a protein-resolved mechanism. No causal graph, protein example or canonical taxon is asserted without further authority and strain-provenance checks. Microscopy and source-designated infection are not tracer measurements of nutrient flux. No field efficacy or safety claim follows. Source hashes, inspected figures/supplement, actual snippet verdicts and bounded notice checks are retained in the verification sidecar; no comprehensive correction/retraction clearance is claimed. Both counted primary experiments concern Purpureocillium lilacinum (JZD02 and 36-1). The fungal actor class is not evidence that this phenotype was experimentally demonstrated across fungal species; additional species require their own evidence.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_egg_parasitism.html#fungal-nematode-egg-parasitism-evidence-limits"
+ },
+ {
   "discussion_id": "fungal-nematophagy-scope-and-hierarchy",
   "prompt": "Resolve the broader feeding hierarchy without imposing a capture mechanism or carbon-specific endpoint.",
   "kind": "CURATION_TODO",
@@ -14930,9 +14981,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 751,
- "total_knowledge_gaps": 467,
- "total_source_entries": 591,
+ "total_discussions": 754,
+ "total_knowledge_gaps": 468,
+ "total_source_entries": 592,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
