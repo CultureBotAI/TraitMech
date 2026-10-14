@@ -581,8 +581,11 @@ record the stable sheet URL, not a derived CSV.
 For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
 that supports a definition, canonical example, graph edge, or curation
 decision. If the source exposes no concise contiguous passage for that claim,
-leave `snippet` absent and make `notes` say exactly what the citation supports;
-never synthesize a quote to make the record look complete.
+never synthesize a quote. An absent snippet can be honest provenance, but a new
+`MISSING_SNIPPET` finding still blocks the frozen-baseline gate. Seek a suitable
+primary-result passage (including figure captions), or retain the source as
+qualified research/discussion context rather than counted record evidence.
+Do not add an exception to make an unquoted new evidence item pass (#1935).
 
 Use source-system group keys, database column names, and other identifier-like
 strings as `RELATED_SYNONYM` provenance labels by default, especially when they

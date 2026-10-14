@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cell_body_contraction.yaml
+  slug: cell_body_contraction
+session:
+  id: 2026-10-14T185654Z-codex-d5ad35
+  timestamp: '2026-10-14T18:56:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1935
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1934
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - discussions
+  summary: Address external contraction evidence review
+  details: Corrected motility METPO:1000701 terminology and distinguished motile METPO:1000702
+    using pinned RDF definitions. Removed the Floyd data-presentation snippet because it is
+    not a self-contained phenotype result; retained primary Figures 1A and 2A-B as explicitly
+    qualified evidence without inventing a quotation. The two other claim-bearing primary
+    snippets, phenotype definition and parent, PROPOSED status, existing curation/history
+    events and immutable reviews remain unchanged. Appended a source-verification disposition
+    distinguishing historical three-snippet receipts from current two-snippet evidence. Existing
+    add-trait guidance already covers this failure; no rule was weakened.

@@ -23,6 +23,12 @@ IDENTIFIER = "traitmech:000728"
 METPO_ID = "METPO:1068100"
 TIMESTAMP = "2026-10-14T17:32:15Z"
 NOTATION_TIMESTAMP = "2026-10-14T17:58:04Z"
+REVIEW_TIMESTAMP = "2026-10-14T18:54:51Z"
+CAPTION_TIMESTAMP = "2026-10-14T19:02:18Z"
+CAPTION_SNIPPET = (
+    "Asymmetric contraction can be observed as the top end begins contracting "
+    "before the bottom end"
+)
 EXPONENT_NOTE = (
     " The source's superscript exponents mean 10^(-6) to 10^(-2) M; "
     "the normalized plain-text quotation does not preserve superscript styling."
@@ -218,7 +224,7 @@ def minted_record() -> dict:
     return record
 
 
-def build_record() -> dict:
+def notation_record() -> dict:
     record = minted_record()
     record["evidence"][0]["notes"] += EXPONENT_NOTE
     record_curation_event(
@@ -229,6 +235,72 @@ def build_record() -> dict:
             "the native verdict, phenotype scope and original minting event."
         ),
         llm_assisted=True, timestamp=NOTATION_TIMESTAMP,
+    )
+    return record
+
+
+def external_review_record() -> dict:
+    record = notation_record()
+    evidence = record["evidence"][1]
+    del evidence["snippet"]
+    evidence["notes"] = evidence["notes"].replace(
+        "Results A, first paragraph, contiguous result clause. Direct JATS match; "
+        "native NOT_IN_ABSTRACT retained. ",
+        "experimental Figures 1A and 2A-B. No snippet is retained: the former "
+        "Results A excerpt only announced measurements and model fitting, not "
+        "a phenotype result (#1935). Its historical direct match and native "
+        "NOT_IN_ABSTRACT receipt remain in the source-verification sidecar; "
+        "they are not verification of a current quotation. ",
+    )
+    record["discussions"][0]["rationale"] = record["discussions"][0]["rationale"].replace(
+        "Active motility METPO:1000701 and motile METPO:1000702 concern "
+        "independent locomotion, not necessarily body shortening.",
+        "Motility METPO:1000701 concerns locomotion through the environment; "
+        "motile METPO:1000702 specifies independent movement using metabolic "
+        "energy. Neither necessarily establishes body shortening.",
+    )
+    record_curation_event(
+        record, curator="codex", action="EXTERNAL_REVIEW_CORRECTION",
+        changes=(
+            "Addressed #1935: corrected the motility label and distinguished "
+            "METPO:1000701 from the energy-dependent motile class METPO:1000702. "
+            "Removed the non-claim-bearing Floyd snippet while retaining its "
+            "figure-backed evidence and historical verification receipts. "
+            "The two other primary excerpts, phenotype definition, parent, "
+            "PROPOSED status and previous curation events remain unchanged."
+        ),
+        llm_assisted=True, timestamp=REVIEW_TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = external_review_record()
+    evidence = record["evidence"][1]
+    evidence["snippet"] = CAPTION_SNIPPET
+    start = evidence["notes"].index("experimental Figures")
+    end = evidence["notes"].index("Actual Figures")
+    evidence["notes"] = evidence["notes"][:start] + (
+        "Figure 4 caption, contiguous observed-asymmetry clause. Direct JATS "
+        "match; native NOT_IN_ABSTRACT retained. The quoted top and bottom "
+        "ends are those of the imaged Spirostomum cell body in Figure 4A-C, "
+        "not Vorticella's stalk or simulated springs. The actual panel A "
+        "contours and panel B solid length trajectory show body shortening; "
+        "panel C shows the staggered endpoint movements. Dashed model curves "
+        "are separate from observations. The 15-word caption span replaces "
+        "the data-presentation excerpt rejected in #1935; historical source "
+        "receipts remain in the sidecar. "
+    ) + evidence["notes"][end:]
+    record_curation_event(
+        record, curator="codex", action="CLAIM_BEARING_SNIPPET_ADDED",
+        changes=(
+            "Added a directly matched 15-word Floyd Figure 4 caption excerpt "
+            "reporting observed asymmetric contraction (#1935). Checked actual "
+            "panels A-C and distinguished body shortening from fitted model "
+            "curves. The intermediate no-snippet record failed MISSING_SNIPPET "
+            "and was not published or baselined. Prior events remain intact."
+        ),
+        llm_assisted=True, timestamp=CAPTION_TIMESTAMP,
     )
     return record
 
@@ -259,7 +331,7 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (minted_record(), record):
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (minted_record(), notation_record(), external_review_record(), record):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")

@@ -46,15 +46,22 @@ def test_identity_evidence_and_history():
     assert record["definition_source"] == writer.DEFINITION_SOURCE
     assert [e["reference"] for e in record["evidence"]] == [
         writer.DEFINITION_SOURCE, writer.KINEMATICS_SOURCE, writer.VORTICELLA_SOURCE]
-    assert [len(e["snippet"].split()) for e in record["evidence"]] == [22, 19, 19]
+    assert [len(e["snippet"].split()) for e in record["evidence"]] == [22, 15, 19]
+    assert record["evidence"][1]["snippet"] == writer.CAPTION_SNIPPET
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs"])
-    event, correction = record["curation_history"]
+    event, correction, external, caption = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert event["action"] == "MINTED_TRAITMECH_ID"
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
     assert correction["action"] == "EVIDENCE_NOTE_CLARIFIED"
     assert correction["timestamp"] == writer.NOTATION_TIMESTAMP
     assert correction["llm_assisted"] and "#1933" in correction["changes"]
+    assert external["action"] == "EXTERNAL_REVIEW_CORRECTION"
+    assert external["timestamp"] == writer.REVIEW_TIMESTAMP
+    assert external["llm_assisted"] and "#1935" in external["changes"]
+    assert caption["action"] == "CLAIM_BEARING_SNIPPET_ADDED"
+    assert caption["timestamp"] == writer.CAPTION_TIMESTAMP
+    assert "MISSING_SNIPPET" in caption["changes"]
     record["evidence"].clear()
     assert len(writer.build_record()["evidence"]) == 3
 
@@ -70,8 +77,9 @@ def test_source_qualifiers():
     for value in ["native VERIFIED", "first clause", "all-or-nothing stalk", "Triton-extracted", "returned 403"]:
         assert value in third["notes"]
     scope, identity, mechanism = [d["rationale"] for d in writer.build_record()["discussions"]]
-    for value in ["independent locomotion", "passive osmotic shrinkage", "not resolved", "do not reparent", "No universal speed"]:
+    for value in ["locomotion through the environment", "independent movement using metabolic energy", "passive osmotic shrinkage", "not resolved", "do not reparent", "No universal speed"]:
         assert value in scope
+    assert "Active motility" not in scope
     assert "not revived" in identity and "pin remains unchanged" in identity
     assert "sequence features" in mechanism and "not wholly demonstrated" in mechanism
     assert all(d["status"] == "OPEN" for d in writer.build_record()["discussions"])
@@ -96,12 +104,22 @@ def test_source_receipt():
     assert receipt["native_record_verification"]["report_rows"] == 3
     assert not receipt["reservation_assessment"]["conflicting_reservations"]
     assert [r["native_verdict"] for r in receipt["rows"]] == ["NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT", "VERIFIED"]
-    for row, evidence in zip(receipt["rows"], writer.build_record()["evidence"], strict=True):
+    for row, evidence in zip(receipt["rows"], writer.notation_record()["evidence"], strict=True):
         assert row["reference"] == evidence["reference"] and row["snippet"] == evidence["snippet"]
         assert row["words"] == len(row["snippet"].split()) <= 25
         assert row["source_identity_verified"] and row["direct_source_match"]
         assert len(row["source"]["sha256"]) == 64
         assert row["assessment"] == evidence["notes"]
+    corrected = receipt["external_review_correction"]
+    assert corrected["issue"].endswith("/1935")
+    assert corrected["current_evidence"] == writer.external_review_record()["evidence"]
+    assert corrected["prior_rows_are_historical"]
+    assert receipt["caption_correction"]["current_evidence"] == writer.build_record()["evidence"]
+    assert receipt["caption_correction"]["direct_source_match"]
+    native = receipt["caption_correction"]["native_current_record_verification"]
+    assert native["exit"] == 0
+    assert [r["verdict"] for r in native["rows"]] == ["NOT_IN_ABSTRACT", "NOT_IN_ABSTRACT", "VERIFIED"]
+    assert [r["snippet"] for r in native["rows"]] == [e["snippet"] for e in writer.build_record()["evidence"]]
 
 
 def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):
@@ -114,16 +132,18 @@ def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):
     assert run(monkeypatch, True) == 0 and snapshot(isolated) == after
 
 
-def test_minted_preimage_migration_preserves_history_and_excerpt(isolated, monkeypatch):
-    prior = writer.minted_record()
+@pytest.mark.parametrize("preimage", [writer.minted_record, writer.notation_record, writer.external_review_record])
+def test_preimage_migration_preserves_history_and_excerpts(isolated, monkeypatch, preimage):
+    prior = preimage()
     writer.write_validated_trait(prior, writer.TARGET)
     assert run(monkeypatch, True) == 0
     current = yaml.safe_load(writer.TARGET.read_text())
-    assert current["curation_history"][:-1] == prior["curation_history"]
+    assert current["curation_history"][:len(prior["curation_history"])] == prior["curation_history"]
     assert current["evidence"][0]["snippet"] == prior["evidence"][0]["snippet"]
-    current["curation_history"].pop()
-    current["evidence"][0]["notes"] = current["evidence"][0]["notes"].removesuffix(writer.EXPONENT_NOTE)
-    assert current == prior
+    assert current["evidence"][2] == prior["evidence"][2]
+    assert current["evidence"][1]["snippet"] == writer.CAPTION_SNIPPET
+    assert current["definition"] == prior["definition"]
+    assert current["discussions"][1:] == prior["discussions"][1:]
 
 
 @pytest.mark.parametrize("target", ["TARGET", "PROPOSAL"])

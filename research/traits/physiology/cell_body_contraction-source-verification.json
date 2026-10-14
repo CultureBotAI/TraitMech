@@ -16,7 +16,7 @@
         "Giant proteins in a giant cell: Molecular basis of ultrafast Ca\n            <sup>2+</sup>\n            -dependent cell contraction"
       ],
       "role": "definition_support",
-      "snippet": "Ca2+ concentrations from 10\u22126 to 10\u22122 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+      "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
       "words": 22,
       "source": {
         "path": "/tmp/traitmech-body-contraction-leads-20261014/zhang2023/source.response",
@@ -35,7 +35,7 @@
       "native_probe": {
         "name": "zhang2023",
         "doi": "10.1126/sciadv.add6550",
-        "snippet": "Ca2+ concentrations from 10\u22126 to 10\u22122 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+        "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
         "words": 22,
         "direct_source_match": true,
         "xpath": "/article/body/sec[2]/sec[3]/p[2]",
@@ -6388,5 +6388,159 @@
     "issue": "https://github.com/CultureBotAI/TraitMech/issues/1933",
     "checked_at": "2026-10-14T17:59:24.692967+00:00",
     "scope": "Raw primary JATS sup elements rechecked. Adjacent notes now specify 10^(-6) to 10^(-2) M. Source hashes, direct matches, snippets and original native record-CLI receipts remain unchanged; this is not a new assay threshold."
+  },
+  "external_review_correction": {
+    "accepted_at": "2026-10-14T18:54:51Z",
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1935",
+    "review": "https://github.com/CultureBotAI/TraitMech/pull/1934#pullrequestreview-5523017836",
+    "reviewed_head": "82ae09088df583787533ad8145ca02cf591066de",
+    "prior_rows_are_historical": true,
+    "current_evidence": [
+      {
+        "reference": "DOI:10.1126/sciadv.add6550",
+        "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+        "notes": "Zhang et al. 2023, PMID:36812318, PMCID:PMC9946354, Results: functional analysis of giant backbone proteins, second paragraph. Direct JATS match; native NOT_IN_ABSTRACT retained. The study identified its East Lake, Wuhan isolate as Spirostomum minus using morphology, protargol staining and SSU rDNA, then established clonal cultures at 22 C. Actual Figure 1A shows extended and contracted cell bodies. The quoted treatment maintained viability; 38-to-16 seconds describes intervals between contractions, not contraction duration. Selected Results, Methods and Discussion, actual Figures 1, 6 and 9, and relevant supplement pages were inspected. Figure 9 is a mechanistic schematic. Supplementary Figure 7 shows shortening during death, which is insufficient for this trait. Abnormal-cell counts are in Supplementary Table 2, not Table S1 as cited in the RNAi Results. Rare twisted RNAi phenotypes do not establish contraction loss in every treated cell. The source's superscript exponents mean 10^(-6) to 10^(-2) M; the normalized plain-text quotation does not preserve superscript styling."
+      },
+      {
+        "reference": "DOI:10.1073/pnas.2217737120",
+        "notes": "Floyd et al. 2023, PMID:37307463, PMCID:PMC10288572, experimental Figures 1A and 2A-B. No snippet is retained: the former Results A excerpt only announced measurements and model fitting, not a phenotype result (#1935). Its historical direct match and native NOT_IN_ABSTRACT receipt remain in the source-verification sidecar; they are not verification of a current quotation. Actual Figures 1A and 2A-B show Spirostomum body shortening and experimental trajectories separately from fitted curves. Methods used commercially sourced cultures and high-speed imaging without compressing cells; no species identity is inferred. Supplementary Figure S3 measures length along the central backbone curve, with increasing width. Supplementary Figure S6 states that repeated contractions of the same organism were not distinguished from contractions of different organisms: five traces are not five established biological replicates. Vorticella panels measure stalk contraction, not the body endpoint. Calcium-wave and energy models are not universal molecular proof. Selected experimental sections, actual Figures 1-2 and supplementary pages 3 and 5 were inspected; raw videos and the complete model were not reanalyzed."
+      },
+      {
+        "reference": "DOI:10.1242/jeb.189.1.163",
+        "snippet": "Living Vorticella showed a graded shrinkage of the cell body when Ca2+ buffer was injected into the cell body",
+        "notes": "Katoh and Naitoh 1994, PMID:9317557, scientific Abstract item 3, first clause. Direct namespace-qualified Europe PMC MED abstract match and native VERIFIED. The same sentence contrasts graded cell-body shrinkage with all-or-nothing stalk coiling. Triton-extracted preparations in other abstract items are not the living-cell injection assay. Calcium-release causality is presented as an assumption, not direct molecular proof. Publisher HTML and PDF requests returned 403; full Methods, figures and strain provenance were not accessed. No species-wide example, quantitative threshold or universal trigger is inferred."
+      }
+    ],
+    "disposition": "Removed the Floyd data-presentation snippet, not the figure-backed citation. The existing rows and native_record_verification describe the former three-snippet record, not the corrected two-snippet record. Re-read source Results A and C and captions for Figures 1, 2 and 4 from hash-verified JATS; no concise self-contained phenotype-result span was selected. No quotation was synthesized. Motility and motile labels/definitions were checked directly in pinned RDF; the current discussion distinguishes their scopes. The prior Zhang notation correction remains valid and unchanged.",
+    "skill_assessment": "Existing add-trait guidance already requires claim-bearing excerpts and permits absent snippets with explicit citation support notes. No relaxation or additional rule is needed for this correction.",
+    "native_current_record_verification": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/cell_body_contraction.yaml",
+        "--out",
+        "/tmp/traitmech-body-contraction-checks-external-20261014/native-record.tsv"
+      ],
+      "exit": 0,
+      "seconds": 4.200898562092334,
+      "completed_at": "2026-10-14T18:57:22.727436+00:00",
+      "log": "/tmp/traitmech-body-contraction-checks-external-20261014/records-03.log",
+      "rows": [
+        {
+          "file": "data/traits/physiology/cell_body_contraction.yaml",
+          "locator": "evidence[0]",
+          "reference": "DOI:10.1126/sciadv.add6550",
+          "verdict": "NOT_IN_ABSTRACT",
+          "similarity": "0.27",
+          "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+          "nearest_sentence": ""
+        },
+        {
+          "file": "data/traits/physiology/cell_body_contraction.yaml",
+          "locator": "evidence[2]",
+          "reference": "DOI:10.1242/jeb.189.1.163",
+          "verdict": "VERIFIED",
+          "similarity": "1.00",
+          "snippet": "Living Vorticella showed a graded shrinkage of the cell body when Ca2+ buffer was injected into the cell body",
+          "nearest_sentence": ""
+        }
+      ],
+      "report": {
+        "path": "/tmp/traitmech-body-contraction-checks-external-20261014/native-record.tsv",
+        "sha256": "3f17fe9a96c94ed64280a9646d87a0ec86218722f2b855387690e65dc48b1f8e"
+      }
+    }
+  },
+  "caption_correction": {
+    "accepted_at": "2026-10-14T19:02:18Z",
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1935",
+    "current_evidence": [
+      {
+        "reference": "DOI:10.1126/sciadv.add6550",
+        "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+        "notes": "Zhang et al. 2023, PMID:36812318, PMCID:PMC9946354, Results: functional analysis of giant backbone proteins, second paragraph. Direct JATS match; native NOT_IN_ABSTRACT retained. The study identified its East Lake, Wuhan isolate as Spirostomum minus using morphology, protargol staining and SSU rDNA, then established clonal cultures at 22 C. Actual Figure 1A shows extended and contracted cell bodies. The quoted treatment maintained viability; 38-to-16 seconds describes intervals between contractions, not contraction duration. Selected Results, Methods and Discussion, actual Figures 1, 6 and 9, and relevant supplement pages were inspected. Figure 9 is a mechanistic schematic. Supplementary Figure 7 shows shortening during death, which is insufficient for this trait. Abnormal-cell counts are in Supplementary Table 2, not Table S1 as cited in the RNAi Results. Rare twisted RNAi phenotypes do not establish contraction loss in every treated cell. The source's superscript exponents mean 10^(-6) to 10^(-2) M; the normalized plain-text quotation does not preserve superscript styling."
+      },
+      {
+        "reference": "DOI:10.1073/pnas.2217737120",
+        "notes": "Floyd et al. 2023, PMID:37307463, PMCID:PMC10288572, Figure 4 caption, contiguous observed-asymmetry clause. Direct JATS match; native NOT_IN_ABSTRACT retained. The quoted top and bottom ends are those of the imaged Spirostomum cell body in Figure 4A-C, not Vorticella's stalk or simulated springs. The actual panel A contours and panel B solid length trajectory show body shortening; panel C shows the staggered endpoint movements. Dashed model curves are separate from observations. The 15-word caption span replaces the data-presentation excerpt rejected in #1935; historical source receipts remain in the sidecar. Actual Figures 1A and 2A-B show Spirostomum body shortening and experimental trajectories separately from fitted curves. Methods used commercially sourced cultures and high-speed imaging without compressing cells; no species identity is inferred. Supplementary Figure S3 measures length along the central backbone curve, with increasing width. Supplementary Figure S6 states that repeated contractions of the same organism were not distinguished from contractions of different organisms: five traces are not five established biological replicates. Vorticella panels measure stalk contraction, not the body endpoint. Calcium-wave and energy models are not universal molecular proof. Selected experimental sections, actual Figures 1-2 and supplementary pages 3 and 5 were inspected; raw videos and the complete model were not reanalyzed.",
+        "snippet": "Asymmetric contraction can be observed as the top end begins contracting before the bottom end"
+      },
+      {
+        "reference": "DOI:10.1242/jeb.189.1.163",
+        "snippet": "Living Vorticella showed a graded shrinkage of the cell body when Ca2+ buffer was injected into the cell body",
+        "notes": "Katoh and Naitoh 1994, PMID:9317557, scientific Abstract item 3, first clause. Direct namespace-qualified Europe PMC MED abstract match and native VERIFIED. The same sentence contrasts graded cell-body shrinkage with all-or-nothing stalk coiling. Triton-extracted preparations in other abstract items are not the living-cell injection assay. Calcium-release causality is presented as an assumption, not direct molecular proof. Publisher HTML and PDF requests returned 403; full Methods, figures and strain provenance were not accessed. No species-wide example, quantitative threshold or universal trigger is inferred."
+      }
+    ],
+    "direct_source_match": true,
+    "source": {
+      "path": "/tmp/traitmech-body-contraction-leads-20261014/unified2023/source.response",
+      "bytes": 213331,
+      "sha256": "d84cfba9fdfe9758958b8c5557be852e9b0f7ddd8e8d1c376979c71244bd92bc"
+    },
+    "source_locator": "/article/body/sec[2]/sec[3]/fig[2]/caption",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10288572/fullTextXML",
+    "snippet": "Asymmetric contraction can be observed as the top end begins contracting before the bottom end",
+    "inspected_figure": "/tmp/traitmech-body-contraction-inspection-20261014/pnas.2217737120fig04.jpg",
+    "interpretation": "Figure 4A-C shows observed Spirostomum body shortening and staggered movements of its two ends. Solid trajectories and cell contours are observations; dashed curves and panels D-G are models. The excerpt is a complete claim-bearing clause before the optional parenthetical time-difference label; it is not a measurement-list sentence. No universal timing or asymmetry requirement is added to the trait definition.",
+    "prior_rows_and_external_review_correction_are_historical": true,
+    "failed_intermediate_gate": {
+      "command": [
+        "just",
+        "audit-snippets"
+      ],
+      "exit": 1,
+      "seconds": 20.298724004998803,
+      "completed_at": "2026-10-14T19:00:34.831304+00:00",
+      "log": "/tmp/traitmech-body-contraction-checks-external-20261014/generate-07.log"
+    },
+    "skill_correction": "Clarified that optional schema snippet slots do not exempt new MISSING_SNIPPET findings from the frozen-baseline gate. Suitable experimental-result captions can be used; otherwise retain a source only as qualified research context. No baseline or validator changes.",
+    "native_current_record_verification": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/cell_body_contraction.yaml",
+        "--out",
+        "/tmp/traitmech-body-contraction-checks-caption-20261014/native-record.tsv"
+      ],
+      "exit": 0,
+      "seconds": 5.403314550872892,
+      "completed_at": "2026-10-14T19:05:52.749361+00:00",
+      "log": "/tmp/traitmech-body-contraction-checks-caption-20261014/records-03.log",
+      "rows": [
+        {
+          "file": "data/traits/physiology/cell_body_contraction.yaml",
+          "locator": "evidence[0]",
+          "reference": "DOI:10.1126/sciadv.add6550",
+          "verdict": "NOT_IN_ABSTRACT",
+          "similarity": "0.27",
+          "snippet": "Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate cell contraction while maintaining the viability of the cell.",
+          "nearest_sentence": ""
+        },
+        {
+          "file": "data/traits/physiology/cell_body_contraction.yaml",
+          "locator": "evidence[1]",
+          "reference": "DOI:10.1073/pnas.2217737120",
+          "verdict": "NOT_IN_ABSTRACT",
+          "similarity": "0.37",
+          "snippet": "Asymmetric contraction can be observed as the top end begins contracting before the bottom end",
+          "nearest_sentence": ""
+        },
+        {
+          "file": "data/traits/physiology/cell_body_contraction.yaml",
+          "locator": "evidence[2]",
+          "reference": "DOI:10.1242/jeb.189.1.163",
+          "verdict": "VERIFIED",
+          "similarity": "1.00",
+          "snippet": "Living Vorticella showed a graded shrinkage of the cell body when Ca2+ buffer was injected into the cell body",
+          "nearest_sentence": ""
+        }
+      ],
+      "report": {
+        "path": "/tmp/traitmech-body-contraction-checks-caption-20261014/native-record.tsv",
+        "sha256": "d42e879e5d6b3e6669232f3f83f1490024c69ef64ac7d878ccfe3de13c1f9421"
+      }
+    }
   }
 }

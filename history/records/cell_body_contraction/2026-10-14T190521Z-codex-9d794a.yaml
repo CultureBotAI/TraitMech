@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cell_body_contraction.yaml
+  slug: cell_body_contraction
+session:
+  id: 2026-10-14T190521Z-codex-9d794a
+  timestamp: '2026-10-14T19:05:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1935
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1934
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Replace Floyd pointer with observed-contraction caption
+  details: 'Appended a directly matched 15-word Figure 4 caption span reporting observed asymmetric
+    cell-body contraction. Inspected actual panels A-C: body contours, shortening trajectory
+    and staggered endpoint movements are observations, distinct from dashed model curves.
+    This supersedes the no-snippet intermediate described in the preceding external-review
+    EDIT: that state failed MISSING_SNIPPET and was not published. Original 22/19/19-word
+    and intermediate two-snippet receipts remain historical; the current record has 22/15/19-word
+    snippets. Added a new per-record event without rewriting prior events. Clarified the add-trait
+    skill that honest absent snippets do not bypass the frozen-baseline gate; no baseline
+    or validation rule changed.'

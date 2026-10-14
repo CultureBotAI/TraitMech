@@ -21,8 +21,9 @@ was accepted, so no SSSOM file is emitted. Prior cohorts remain unchanged.
 ## Hierarchy Decisions
 
 Phenotype `METPO:1000059` is active below quality `METPO:1000188`.
-Active motility `METPO:1000701` and motile `METPO:1000702` require independent
-locomotion; body shortening need not establish that endpoint. Retain the broad
+Motility `METPO:1000701` concerns locomotion through the environment; motile
+`METPO:1000702` specifies independent movement using metabolic energy.
+Body shortening need not establish either endpoint. Retain the broad
 phenotype parent while a closer contractility hierarchy is assessed.
 
 Body contraction is not displacement caused only by stalk coiling, axopodial
@@ -51,8 +52,14 @@ required. Generic contractility is not asserted as an exact synonym.
    mechanistic schematic, not universal molecular proof.
 2. [Floyd et al. 2023](https://doi.org/10.1073/pnas.2217737120),
    `PMID:37307463`, `PMCID:PMC10288572`: primary Spirostomum length trajectories
-   in Figures 1A/2A-B, distinguished from fitted models. The 19-word Results A
-   clause directly matches JATS; native `NOT_IN_ABSTRACT`. Supplementary S3
+   in Figures 1A/2A-B, distinguished from fitted models. The 15-word Figure 4
+   caption excerpt reports asymmetric contraction of the imaged cell-body
+   endpoints; actual panels A-C show shortening and staggered endpoint movement,
+   separately from dashed fitted curves. It directly matches JATS; native
+   `NOT_IN_ABSTRACT`. The former Results A data-presentation excerpt and the
+   intermediate no-snippet attempt are retained only as historical provenance
+   (#1935). The latter failed the snippet gate and was never published.
+   Supplementary S3
    measures central-backbone length, not area or volume. S6 explicitly leaves
    repeated contractions versus different organisms unresolved: five traces
    are not five established biological replicates. Vorticella panels measure
