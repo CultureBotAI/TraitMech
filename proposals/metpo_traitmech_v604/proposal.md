@@ -40,7 +40,9 @@ required. Generic contractility is not asserted as an exact synonym.
 1. [Zhang et al. 2023](https://doi.org/10.1126/sciadv.add6550),
    `PMID:36812318`, `PMCID:PMC9946354`: definition authority and observed
    contraction in study-identified Spirostomum minus. The 22-word Results
-   excerpt directly matches JATS; native `NOT_IN_ABSTRACT`. Actual Figure 1A
+   excerpt directly matches JATS; native `NOT_IN_ABSTRACT`. Source superscript
+   exponents mean `10^(-6)` to `10^(-2)` M; plain-text normalization loses that
+   styling, so the adjacent record notes clarify it (#1933). Actual Figure 1A
    shows body shortening. The 38-to-16-second quantity is an interval between
    contractions, not contraction duration. Supplementary Figure 7 illustrates
    shortening during death, which is insufficient. The RNAi abnormal-cell

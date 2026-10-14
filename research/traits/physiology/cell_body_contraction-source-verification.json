@@ -47,7 +47,7 @@
         "closest_sentence": "",
         "at": "2026-10-14T17:24:00.080999+00:00"
       },
-      "assessment": "Zhang et al. 2023, PMID:36812318, PMCID:PMC9946354, Results: functional analysis of giant backbone proteins, second paragraph. Direct JATS match; native NOT_IN_ABSTRACT retained. The study identified its East Lake, Wuhan isolate as Spirostomum minus using morphology, protargol staining and SSU rDNA, then established clonal cultures at 22 C. Actual Figure 1A shows extended and contracted cell bodies. The quoted treatment maintained viability; 38-to-16 seconds describes intervals between contractions, not contraction duration. Selected Results, Methods and Discussion, actual Figures 1, 6 and 9, and relevant supplement pages were inspected. Figure 9 is a mechanistic schematic. Supplementary Figure 7 shows shortening during death, which is insufficient for this trait. Abnormal-cell counts are in Supplementary Table 2, not Table S1 as cited in the RNAi Results. Rare twisted RNAi phenotypes do not establish contraction loss in every treated cell."
+      "assessment": "Zhang et al. 2023, PMID:36812318, PMCID:PMC9946354, Results: functional analysis of giant backbone proteins, second paragraph. Direct JATS match; native NOT_IN_ABSTRACT retained. The study identified its East Lake, Wuhan isolate as Spirostomum minus using morphology, protargol staining and SSU rDNA, then established clonal cultures at 22 C. Actual Figure 1A shows extended and contracted cell bodies. The quoted treatment maintained viability; 38-to-16 seconds describes intervals between contractions, not contraction duration. Selected Results, Methods and Discussion, actual Figures 1, 6 and 9, and relevant supplement pages were inspected. Figure 9 is a mechanistic schematic. Supplementary Figure 7 shows shortening during death, which is insufficient for this trait. Abnormal-cell counts are in Supplementary Table 2, not Table S1 as cited in the RNAi Results. Rare twisted RNAi phenotypes do not establish contraction loss in every treated cell. The source's superscript exponents mean 10^(-6) to 10^(-2) M; the normalized plain-text quotation does not preserve superscript styling."
     },
     {
       "reference": "DOI:10.1073/pnas.2217737120",
@@ -6377,10 +6377,16 @@
     }
   ],
   "omissions": "No canonical examples until study-isolate/current-taxonomy correspondence is resolved; source-named cultures remain qualified evidence. No protein accessions, graph, exact synonyms or xrefs are added. Protein-resolved graphs need taxon-paired authority-checked accessions and bounded causal evidence; sequence features and fitted models alone are insufficient.",
-  "skill_assessment": "The existing add-trait requirements already cover sequence-feature interpretation, endpoint distinctions, actual figure checks, source-pointer discrepancies, assay denominators, snippet provenance and reviewed PR lifecycle. No new skill instruction is justified by this candidate.",
+  "skill_assessment_before_notation_finding": "The existing add-trait requirements already cover sequence-feature interpretation, endpoint distinctions, actual figure checks, source-pointer discrepancies, assay denominators, snippet provenance and reviewed PR lifecycle. No new skill instruction is justified by this candidate.",
+  "skill_assessment": "Issue #1933 exposed a format-sensitive text-layer limitation. Add-trait now distinguishes normalized HTML/JATS matching from faithful exponent/subscript rendering and requires clarifying notes or an unambiguous span. Existing sequence-feature and causal-evidence guidance remains unchanged.",
   "limits": [
     "Known copies and selected upstream owners only. Lost ignored/untracked historical files, arbitrary archives, symlink targets and submodules were not reconstructed. No literature-exhaustion claim.",
     "Temporary raw files are not committed; public retrieval URLs and hashes identify evidence. An acquired asset is not necessarily visually inspected; read_scope identifies the actual inspection boundary.",
     "Research probes and actual record-specific CLI outcomes are reported separately."
-  ]
+  ],
+  "notation_correction": {
+    "issue": "https://github.com/CultureBotAI/TraitMech/issues/1933",
+    "checked_at": "2026-10-14T17:59:24.692967+00:00",
+    "scope": "Raw primary JATS sup elements rechecked. Adjacent notes now specify 10^(-6) to 10^(-2) M. Source hashes, direct matches, snippets and original native record-CLI receipts remain unchanged; this is not a new assay threshold."
+  }
 }

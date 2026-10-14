@@ -48,10 +48,13 @@ def test_identity_evidence_and_history():
         writer.DEFINITION_SOURCE, writer.KINEMATICS_SOURCE, writer.VORTICELLA_SOURCE]
     assert [len(e["snippet"].split()) for e in record["evidence"]] == [22, 19, 19]
     assert not any(record.get(k) for k in ["canonical_examples", "causal_graphs", "synonyms", "xrefs"])
-    event, = record["curation_history"]
+    event, correction = record["curation_history"]
     assert event["curator"] == "codex" and event["llm_assisted"]
     assert event["action"] == "MINTED_TRAITMECH_ID"
     assert datetime.fromisoformat(event["timestamp"]) <= datetime.now(timezone.utc)
+    assert correction["action"] == "EVIDENCE_NOTE_CLARIFIED"
+    assert correction["timestamp"] == writer.NOTATION_TIMESTAMP
+    assert correction["llm_assisted"] and "#1933" in correction["changes"]
     record["evidence"].clear()
     assert len(writer.build_record()["evidence"]) == 3
 
@@ -60,6 +63,8 @@ def test_source_qualifiers():
     first, second, third = writer.build_record()["evidence"]
     for value in ["NOT_IN_ABSTRACT", "maintained viability", "not contraction duration", "Supplementary Table 2", "shortening during death"]:
         assert value in first["notes"]
+    assert "10^(-6) to 10^(-2) M" in first["notes"]
+    assert "does not preserve superscript styling" in first["notes"]
     for value in ["NOT_IN_ABSTRACT", "five traces are not five", "central backbone curve", "stalk contraction", "not universal molecular proof"]:
         assert value in second["notes"]
     for value in ["native VERIFIED", "first clause", "all-or-nothing stalk", "Triton-extracted", "returned 403"]:
@@ -96,6 +101,7 @@ def test_source_receipt():
         assert row["words"] == len(row["snippet"].split()) <= 25
         assert row["source_identity_verified"] and row["direct_source_match"]
         assert len(row["source"]["sha256"]) == 64
+        assert row["assessment"] == evidence["notes"]
 
 
 def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):
@@ -106,6 +112,18 @@ def test_dry_run_apply_replay_preserves_parent(isolated, monkeypatch):
     assert writer.PARENT_PATH.read_bytes() == before["parent.yaml"]
     after = snapshot(isolated)
     assert run(monkeypatch, True) == 0 and snapshot(isolated) == after
+
+
+def test_minted_preimage_migration_preserves_history_and_excerpt(isolated, monkeypatch):
+    prior = writer.minted_record()
+    writer.write_validated_trait(prior, writer.TARGET)
+    assert run(monkeypatch, True) == 0
+    current = yaml.safe_load(writer.TARGET.read_text())
+    assert current["curation_history"][:-1] == prior["curation_history"]
+    assert current["evidence"][0]["snippet"] == prior["evidence"][0]["snippet"]
+    current["curation_history"].pop()
+    current["evidence"][0]["notes"] = current["evidence"][0]["notes"].removesuffix(writer.EXPONENT_NOTE)
+    assert current == prior
 
 
 @pytest.mark.parametrize("target", ["TARGET", "PROPOSAL"])

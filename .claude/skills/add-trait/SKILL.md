@@ -561,6 +561,12 @@ For PDF snippets with mathematical notation, inspect the typeset passage
 visually. Text extractors can substitute a different letter for a symbol;
 preserve the source-rendered glyph and record the visual check in `notes`.
 
+Plain-text HTML/JATS extraction can preserve words while losing exponent or
+subscript meaning. Inspect the source markup; when retaining a normalized
+quotation, clarify format-sensitive notation in adjacent `notes` or select a
+span without that ambiguity. A text-layer match alone does not establish
+faithful mathematical rendering (#1933).
+
 Fixed-width registry tables, markdown tables, and TSV rows count as verbatim
 sources. When a snippet records a pinned profile or rules table row, quote the
 complete row or a contiguous column span with exact cell text, trimming only

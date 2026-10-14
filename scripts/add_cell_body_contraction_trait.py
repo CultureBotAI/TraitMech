@@ -22,6 +22,11 @@ PROPOSAL = ROOT / "proposals/metpo_traitmech_v604/metpo_proposal_classes_robot.t
 IDENTIFIER = "traitmech:000728"
 METPO_ID = "METPO:1068100"
 TIMESTAMP = "2026-10-14T17:32:15Z"
+NOTATION_TIMESTAMP = "2026-10-14T17:58:04Z"
+EXPONENT_NOTE = (
+    " The source's superscript exponents mean 10^(-6) to 10^(-2) M; "
+    "the normalized plain-text quotation does not preserve superscript styling."
+)
 DEFINITION_SOURCE = "DOI:10.1126/sciadv.add6550"
 KINEMATICS_SOURCE = "DOI:10.1073/pnas.2217737120"
 VORTICELLA_SOURCE = "DOI:10.1242/jeb.189.1.163"
@@ -191,7 +196,8 @@ RECORD = {
 }
 
 
-def build_record() -> dict:
+def minted_record() -> dict:
+    """Reconstruct the exact accepted preimage for the notation-only migration."""
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record, curator="codex", action="MINTED_TRAITMECH_ID",
@@ -208,6 +214,21 @@ def build_record() -> dict:
             "Other records unchanged; timestamp records observed acceptance."
         ),
         llm_assisted=True, timestamp=TIMESTAMP,
+    )
+    return record
+
+
+def build_record() -> dict:
+    record = minted_record()
+    record["evidence"][0]["notes"] += EXPONENT_NOTE
+    record_curation_event(
+        record, curator="codex", action="EVIDENCE_NOTE_CLARIFIED",
+        changes=(
+            "Clarified source superscript exponents as 10^(-6) to 10^(-2) M "
+            "beside the unchanged normalized JATS excerpt (#1933). Preserved "
+            "the native verdict, phenotype scope and original minting event."
+        ),
+        llm_assisted=True, timestamp=NOTATION_TIMESTAMP,
     )
     return record
 
@@ -238,7 +259,7 @@ def main() -> int:
         raise SystemExit("Parent identity or scope differs from reviewed projection")
     record = build_record()
     proposal = proposal_tsv(record)
-    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:
+    if TARGET.exists() and yaml.safe_load(TARGET.read_text()) not in (minted_record(), record):
         raise SystemExit("Existing target differs from reviewed result")
     if PROPOSAL.exists() and PROPOSAL.read_text() != proposal:
         raise SystemExit("Existing proposal differs from reviewed result")

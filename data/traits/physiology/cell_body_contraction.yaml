@@ -23,7 +23,9 @@ evidence:
     Figure 9 is a mechanistic schematic. Supplementary Figure 7 shows shortening during
     death, which is insufficient for this trait. Abnormal-cell counts are in Supplementary
     Table 2, not Table S1 as cited in the RNAi Results. Rare twisted RNAi phenotypes
-    do not establish contraction loss in every treated cell.'
+    do not establish contraction loss in every treated cell. The source''s superscript
+    exponents mean 10^(-6) to 10^(-2) M; the normalized plain-text quotation does
+    not preserve superscript styling.'
 - reference: DOI:10.1073/pnas.2217737120
   snippet: In Fig. 2A, we show five contraction measurements in Spirostomum along
     with a model solution fitted to their average
@@ -114,4 +116,11 @@ curation_history:
     retained-history, full-content proposal and open/draft PR checks. Contig lengths,
     embedding components and broad editor envelopes are not METPO reservations. Other
     records unchanged; timestamp records observed acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-14T17:58:04Z'
+  curator: codex
+  action: EVIDENCE_NOTE_CLARIFIED
+  changes: Clarified source superscript exponents as 10^(-6) to 10^(-2) M beside the
+    unchanged normalized JATS excerpt (#1933). Preserved the native verdict, phenotype
+    scope and original minting event.
   llm_assisted: true
