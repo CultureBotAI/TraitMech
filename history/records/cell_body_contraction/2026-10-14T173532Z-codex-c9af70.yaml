@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cell_body_contraction.yaml
+  slug: cell_body_contraction
+session:
+  id: 2026-10-14T173532Z-codex-c9af70
+  timestamp: '2026-10-14T17:35:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add cell-body contraction
+  details: Added one PROPOSED active cell-body-shortening phenotype with Zhang 2023, Floyd
+    2023 and Katoh and Naitoh 1994 primary evidence. Direct 22/19/19-word snippets preserve
+    native NOT_IN_ABSTRACT, NOT_IN_ABSTRACT and VERIFIED outcomes. Body shortening is distinct
+    from stalk coiling, axopodial shortening, division, passive shrinkage and death. Actual
+    selected figures and supplement pages were inspected; five contraction traces are not
+    five identified organisms, and the Zhang abnormal-cell table is Supplementary Table 2.
+    No universal speed, calcium/ATP mechanism, canonical taxa or sequence-derived causal proteins
+    imported. Ignored/hidden current files, retained history and open/draft PRs were checked;
+    contig-length and embedding numeric hits are not reservations. Reserved 000728, v604 and
+    the full 1068100-1068199 block. The trait timestamp records observed allocation acceptance;
+    this later CREATE records the written change. Existing records, including protected spore
+    germination and the broader axopodial parent TODO, remain unchanged.

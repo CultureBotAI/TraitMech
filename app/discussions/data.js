@@ -11542,6 +11542,57 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
  },
  {
+  "discussion_id": "cell-body-contraction-scope-and-parent",
+  "prompt": "Resolve a closer parent while distinguishing body shortening from other contractile endpoints.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cell-body contraction",
+  "source_id": "traitmech:000728",
+  "source_file": "cell_body_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Retain phenotype METPO:1000059. Active motility METPO:1000701 and motile METPO:1000702 concern independent locomotion, not necessarily body shortening. Body contraction is not displacement caused only by stalk coiling, rapid axopodial contraction traitmech:000682, contractile-vacuole cycling, injection-system contraction, cytokinetic constriction, passive osmotic shrinkage, death or static short-cell size. Behavioral habituation traitmech:000714 changes response probability rather than defining the contraction response. The axopodial record's broader cellular-contractility parent question is not resolved by this body-specific class; do not reparent it here. No universal speed, fractional shortening, trigger or ecological function is imposed. No organism-level disjointness or exact synonym for generic contractility is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cell_body_contraction.html#cell-body-contraction-scope-and-parent"
+ },
+ {
+  "discussion_id": "cell-body-contraction-metpo-assessment",
+  "prompt": "Review the proposed phenotype without treating locomotion as an exact equivalent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cell-body contraction",
+  "source_id": "traitmech:000728",
+  "source_file": "cell_body_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned/current METPO releases, editor and inspected template owners provided no active exact contraction class. Historical obsolete Motility identifiers METPO:0000006 and METPO:000006 point to active METPO:1000701; obsolete Motile METPO:0000087 and METPO:000088 point to active METPO:1000702. These locomotion leads are related, not exact body-contraction identities. They are not revived or placed in xrefs. The ontology pin remains unchanged; v604 proposes this phenotype below METPO:1000059. No external equivalent or SSSOM mapping has been accepted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cell_body_contraction.html#cell-body-contraction-metpo-assessment"
+ },
+ {
+  "discussion_id": "cell-body-contraction-mechanism-and-provenance",
+  "prompt": "Resolve study-isolate and protein identities before adding canonical examples or a mechanistic graph.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cell-body contraction",
+  "source_id": "traitmech:000728",
+  "source_file": "cell_body_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Keep study-named cultures as qualified evidence pending exact isolate/current-taxonomy correspondence. No canonical taxa, protein accessions or causal graph are asserted. Zhang's localization, RNAi and structural models support source-bounded mechanistic hypotheses, not a common protein mechanism inferred from sequence features. Category-E twisted cells were rare; other abnormal forms also occurred in controls. Figure 9's calcium-storage and energy-coupling scheme is not wholly demonstrated. A protein graph needs authority-checked taxon-paired accessions and edge-specific perturbation evidence; its omission does not claim that mechanisms are unknown. Do not generalize ATP independence or calcium concentrations to the whole class. Floyd's five traces have unresolved organism-level replication. Katoh's full Methods were not accessed. The verification sidecar retains actual sections, hashes, source-status checks and native verdicts; bounded notice checks are not comprehensive clearance.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cell_body_contraction.html#cell-body-contraction-mechanism-and-provenance"
+ },
+ {
   "discussion_id": "cellular-buoyancy-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for gas-vesicle-mediated cellular buoyancy.",
   "kind": "CURATION_TODO",
@@ -15032,9 +15083,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 757,
- "total_knowledge_gaps": 469,
- "total_source_entries": 593,
+ "total_discussions": 760,
+ "total_knowledge_gaps": 470,
+ "total_source_entries": 594,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
