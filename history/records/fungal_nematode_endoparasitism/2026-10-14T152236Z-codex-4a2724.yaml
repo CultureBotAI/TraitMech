@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/fungal_nematode_endoparasitism.yaml
+  slug: fungal_nematode_endoparasitism
+session:
+  id: 2026-10-14T152236Z-codex-4a2724
+  timestamp: '2026-10-14T15:22:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add fungal nematode endoparasitism
+  details: Added one PROPOSED fungal spore-infection phenotype in vermiform nematodes with
+    subsequent internal growth. Lebrigand 2016 supplies definition authority; Sun 2024 supports
+    imaged internal growth and Glockling and Shimazu 1997 supports spore ingestion. Direct
+    20/16/13-word excerpts preserve native VERIFIED, NOT_IN_ABSTRACT and UNRESOLVED outcomes.
+    Selected actual figures and two complete supplements were inspected. Attachment-only scores,
+    tentative intestinal-route claims, engineered and laboratory-passaged strains remain qualified;
+    no infection rates, canonical taxa, causal proteins, universal obligacy or safety claims
+    are imported. Ignored/hidden current-copy, retained-history and open/draft PR checks identified
+    no exact counterpart in the documented scope. A ChemSpider identifier and broad editor
+    envelopes are not METPO reservations. Reserved 000727, v603 and the full 1068000-1068099
+    block. The trait timestamp records observed acceptance; this later event records CREATE.
+    Existing records including protected spore germination remain unchanged.

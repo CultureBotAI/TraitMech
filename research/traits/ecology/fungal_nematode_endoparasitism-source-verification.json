@@ -1,0 +1,1431 @@
+{
+  "trait_id": "traitmech:000727",
+  "accepted_at": "2026-10-14T15:19:28Z",
+  "checked_at": "2026-10-14T15:25:13.755932+00:00",
+  "status": "Author assessment of one PROPOSED trait; not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.1371/journal.pgen.1006017",
+      "identities": {
+        "pmcid": "PMC4859500",
+        "pmcid-ver": "PMC4859500.1",
+        "pmcaid": "4859500",
+        "pmcaiid": "4859500",
+        "pmid": "27153332",
+        "doi": "10.1371/journal.pgen.1006017",
+        "publisher-id": "PGENETICS-D-15-01519"
+      },
+      "title": [
+        "Comparative Genomic Analysis of Drechmeria coniospora Reveals Core and Specific Genetic Requirements for Fungal Endoparasitism of Nematodes"
+      ],
+      "role": "definition_support",
+      "snippet": "Drechmeria coniospora is an obligate fungal pathogen that infects nematodes via the adhesion of specialized spores to the host cuticle.",
+      "words": 20,
+      "source": {
+        "path": "/tmp/traitmech-endoparasitism-leads-20261014/drechmeria2016/source.response",
+        "bytes": 358853,
+        "sha256": "4ced5db48d92810248d7db27dc7119f66bee2bb7c58c5c915343ddc7e8cc4bca"
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4859500/fullTextXML",
+      "stable_article_url": "https://doi.org/10.1371/journal.pgen.1006017",
+      "source_xpath": "/article/front/article-meta/abstract[1]/p",
+      "source_section": "Scientific Abstract",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "VERIFIED",
+      "native_locator": "evidence[0]",
+      "native_probe": {
+        "source": "drechmeria2016",
+        "doi": "10.1371/journal.pgen.1006017",
+        "snippet": "Drechmeria coniospora is an obligate fungal pathogen that infects nematodes via the adhesion of specialized spores to the host cuticle.",
+        "words": 20,
+        "direct_source_match": true,
+        "section": "Scientific Abstract",
+        "xpath": "/article/front/article-meta/abstract[1]/p",
+        "raw_source_path": "/tmp/traitmech-endoparasitism-leads-20261014/drechmeria2016/source.response",
+        "raw_source_sha256": "4ced5db48d92810248d7db27dc7119f66bee2bb7c58c5c915343ddc7e8cc4bca",
+        "native_verdict": "VERIFIED",
+        "similarity": 1.0,
+        "closest_sentence": "",
+        "native_abstract_present": true,
+        "at": "2026-10-14T15:01:54.019840+00:00",
+        "limits": "Research-only probe, not the record CLI, independent review, or ID allocation."
+      },
+      "assessment": "Lebrigand et al. 2016, PMID:27153332, PMCID:PMC4859500, scientific Abstract. Direct JATS match and native VERIFIED. Author Summary and Discussion distinguish spore-initiated endoparasitism from hyphal traps and egg infection. Actual Figures 8 and 9 show recombinant fungal growth in C. elegans, not unmodified natural exemplars. S1 Text was fully read and visually checked: the laboratory line was serially passaged for about 15 years; its source isolate and ARSEF 6962 share provenance. Obligate is the authors' species description, not a universal class requirement or inability to grow on their artificial medium. Predicted genes and expression are not a universal mechanism."
+    },
+    {
+      "reference": "DOI:10.3390/jof10010068",
+      "identities": {
+        "pmcid": "PMC10820206",
+        "pmcaid": "10820206",
+        "pmcaiid": "10820206",
+        "pmid": "38248977",
+        "doi": "10.3390/jof10010068"
+      },
+      "title": [
+        "Parasitism of Hirsutella rhossiliensis on Different Nematodes and Its Endophytism Promoting Plant Growth and Resistance against Root-Knot Nematodes"
+      ],
+      "role": "supporting_internal_growth",
+      "snippet": "Then, the fungal hyphae penetrate into the nematode body cavity and grow in the nematode body",
+      "words": 16,
+      "source": {
+        "path": "/tmp/traitmech-endoparasitism-leads-20261014/hirsutella2024/source.response",
+        "bytes": 106241,
+        "sha256": "2ee0d43ff3bb885f12a9a1fcaba1c7c476709c92b3f206a0d134d5cac84987d4"
+      },
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10820206/fullTextXML",
+      "stable_article_url": "https://doi.org/10.3390/jof10010068",
+      "source_xpath": "/article/body/sec[3]/sec[2]/p",
+      "source_section": "Results 3.2, Figure 2c,d",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[1]",
+      "native_probe": {
+        "source": "hirsutella2024",
+        "doi": "10.3390/jof10010068",
+        "snippet": "Then, the fungal hyphae penetrate into the nematode body cavity and grow in the nematode body",
+        "words": 16,
+        "direct_source_match": true,
+        "section": "Results 3.2, Figure 2c,d",
+        "xpath": "/article/body/sec[3]/sec[2]/p",
+        "raw_source_path": "/tmp/traitmech-endoparasitism-leads-20261014/hirsutella2024/source.response",
+        "raw_source_sha256": "2ee0d43ff3bb885f12a9a1fcaba1c7c476709c92b3f206a0d134d5cac84987d4",
+        "native_verdict": "NOT_IN_ABSTRACT",
+        "similarity": 0.3431372549019608,
+        "closest_sentence": "",
+        "native_abstract_present": true,
+        "at": "2026-10-14T15:01:54.746361+00:00",
+        "limits": "Research-only probe, not the record CLI, independent review, or ID allocation."
+      },
+      "assessment": "Sun et al. 2024, PMID:38248977, PMCID:PMC10820206, Results 3.2. Direct JATS match; native NOT_IN_ABSTRACT retained. Methods 2.5 and actual Figure 2c,d concern GFP-engineered HR-eGFP1 on Bursaphelenchus xylophilus; Figure 2 distinguishes attachment, entry, internal growth and emergence. The entire two-page supplement, including S1-S3, was inspected. Methods 2.6 scores attached spores or colonization as parasitism; no rate is imported as an internal-infection rate. Main-text intestinal infection after swallowing is tentative; do not silently strengthen it using the supplement caption. No field efficacy or safety is inferred."
+    },
+    {
+      "reference": "DOI:10.1017/S0953756296002092",
+      "identities": {
+        "doi": "10.1017/S0953756296002092",
+        "europepmc": "AGR:IND20619532"
+      },
+      "title": [
+        "Culturing of three species of endoparasitic fungi infecting nematodes"
+      ],
+      "role": "supporting_ingestion_route",
+      "snippet": "The infection method for Harposporium cycloides was shown to be by spore ingestion.",
+      "words": 13,
+      "source": {
+        "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-publisher.html",
+        "bytes": 731931,
+        "sha256": "a5b4754f9fb995e3b9469caab6db0145e0e44fdff7c60ce7a58e51ce05acfbb0"
+      },
+      "source_url": "https://www.cambridge.org/core/journals/mycological-research/article/abs/culturing-of-three-species-of-endoparasitic-fungi-infecting-nematodes/58C2A9A0A69D959D32EFB6D43516A3AD",
+      "stable_article_url": "https://doi.org/10.1017/S0953756296002092",
+      "source_xpath": "/html[1]/body/div[4]/div/div/div/div/div/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div/div/div",
+      "source_section": "Publisher scientific Abstract",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_text_layer_match": true,
+      "native_verdict": "UNRESOLVED",
+      "native_locator": "evidence[2]",
+      "native_probe": {
+        "source": "glockling1997",
+        "doi": "10.1017/S0953756296002092",
+        "snippet": "The infection method for Harposporium cycloides was shown to be by spore ingestion.",
+        "words": 13,
+        "direct_source_match": true,
+        "section": "Publisher scientific Abstract",
+        "xpath": "/html[1]/body/div[4]/div/div/div/div/div/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div/div/div",
+        "raw_source_path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-publisher.html",
+        "raw_source_sha256": "a5b4754f9fb995e3b9469caab6db0145e0e44fdff7c60ce7a58e51ce05acfbb0",
+        "native_verdict": "UNRESOLVED",
+        "similarity": 0.0,
+        "closest_sentence": "",
+        "native_abstract_present": false,
+        "at": "2026-10-14T15:01:56.390023+00:00",
+        "limits": "Research-only probe, not the record CLI, independent review, or ID allocation."
+      },
+      "assessment": "Glockling and Shimazu 1997, publisher scientific Abstract. Direct contiguous HTML match; DOI/title confirmed by Crossref and Europe PMC AGR:IND20619532. The native abstract resolver returned UNRESOLVED because it returned no abstract; this is not a missing-index claim. The primary abstract reports spore-ingestion infection in Harposporium cycloides and infectivity testing after pure culture. Full Methods, figures and host/strain provenance were not accessed; no canonical taxon, dose, route universality or pure-culture obligacy is inferred."
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-14T15:19:28Z",
+    "base": "b41e4ed2266eaef45db087014dd707bd1f3f273d",
+    "trait_id": "traitmech:000727",
+    "label": "fungal nematode endoparasitism",
+    "category": "ECOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v603",
+    "proposed_id": "METPO:1068000",
+    "reserved_block": [
+      1068000,
+      1068099
+    ],
+    "scientific_scope": "An animal-pathogenic phenotype in which a fungus uses spores attached to or ingested by a vermiform nematode to initiate infection and then grows inside the host.",
+    "parent": "METPO:1004002",
+    "supporting_references": [
+      "DOI:10.1371/journal.pgen.1006017",
+      "DOI:10.3390/jof10010068",
+      "DOI:10.1017/S0953756296002092"
+    ],
+    "fresh_remote": {
+      "main": "b41e4ed2266eaef45db087014dd707bd1f3f273d",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1782,
+            "35099af2b7d5347f2ca6e418c4a139979071644d",
+            false
+          ],
+          [
+            1476,
+            "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+      }
+    },
+    "catalog_unchanged": true,
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-endoparasitism-leads-20261014/scope-assessment.json",
+        "sha256": "da2621c6c00b0fee4ae66d15997e44e7aef88b7dff9aaa986172d502faa0405f"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-identity-20261014.json",
+        "sha256": "aced06bc60bd836f2cee9055d00feaf5ee90df24233b25674ef86df2a8efb510"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-novelty-20261014/local/completion.json",
+        "sha256": "d4708d2a6defca369ef2f946293b2f31f2b5cc09e0788641fd92aea72bdcfe88"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-novelty-20261014/history/completion.json",
+        "sha256": "c1d959db2a559754ee6891e935af5e6b6cdb884bcf563f00a12afd5a97600af2"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-novelty-20261014/match-summary.json",
+        "sha256": "be3c4d19e0ac621d0eea69222b72f1f02344548143991ae3ff3a8d0e8f80c016"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-reservations-20261014/numeric-assessment.json",
+        "sha256": "c4cf7c478c92d26c6b480de1c72a1f0e596401949322a2a988431fd2fc753cc2"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-reservations-20261014/local/completion.json",
+        "sha256": "c85fcf4eab692e5d9f86a74e77fcc28c9cf7d55404c9dc47c1d1bb915b2298a7"
+      },
+      {
+        "path": "/tmp/traitmech-endoparasitism-reservations-20261014/remote/result.json",
+        "sha256": "afc9661dd3b52777ab546201597f727b8910ae2b42c5deaef6e46802fadf119c"
+      }
+    ],
+    "limits": "One author-accepted PROPOSED trait, not independent or human signoff, atomic allocation or discovery exhaustion. Recheck current heads before publication."
+  },
+  "reservation_assessment": {
+    "at": "2026-10-14T15:18:43.687690+00:00",
+    "candidate": "traitmech:000727",
+    "cohort": "metpo_traitmech_v603",
+    "proposed_id": "METPO:1068000",
+    "block": [
+      1068000,
+      1068099
+    ],
+    "exact_dispositions": [
+      {
+        "source": {
+          "repository": "Knowledge-Graph-Hub/kg-microbe",
+          "path": "mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "saved_path": "/tmp/traitmech-anticipation-discovery-20261012/github-kg-microbe/content/mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz",
+          "blob_sha": "a3ce540da6ee94b71a4770093ce01ff1416c8660",
+          "sha256": "59464e08017cc907a1240a4378d2462efc9e2c1b9d6c3cf0b08b4344ef695ae8",
+          "head": "9d84fdf903788423ea0c36104d7fc64e01be52be"
+        },
+        "parsed_row": {
+          "subject_id": "chemspider:1068002",
+          "subject_label": "",
+          "predicate_id": "skos:exactMatch",
+          "object_id": "CHEBI:171826",
+          "object_label": "(-)-Nopol",
+          "object_source": "obo:chebi.owl",
+          "mapping_justification": "semapv:UnspecifiedMatching",
+          "source": "chebi_xrefs",
+          "mapping_date": "2026-09-04",
+          "confidence": "",
+          "comment": "",
+          "object_formula": "",
+          "object_category": "biolink:ChemicalEntity"
+        },
+        "disposition": "ChemSpider chemical identifier, not the METPO namespace or a reservation."
+      }
+    ],
+    "broad_editor_envelope_occurrences": 1057,
+    "full_content_owners": 47921,
+    "unique_full_contents": 2567,
+    "binary_limits": [],
+    "conflicting_reservations": [],
+    "status": "No conflicting reservation identified in inspected scope; fresh main/PR guards required before allocation.",
+    "limits": "Full-content current/retained proposal owners supplement line-based ignored/hidden scans. Remote gzip sources decoded. Other arbitrary archives, lost ignored/untracked history and symlink targets not reconstructed.",
+    "full_receipt": {
+      "path": "/tmp/traitmech-endoparasitism-reservations-20261014/numeric-assessment.json",
+      "bytes": 13860727,
+      "sha256": "c4cf7c478c92d26c6b480de1c72a1f0e596401949322a2a988431fd2fc753cc2"
+    }
+  },
+  "novelty": {
+    "current_locations": 192,
+    "retained_heads": 143,
+    "unique_variants": 26,
+    "occurrences": 1656,
+    "ignored_and_hidden_included": true,
+    "current_semantics": "Existing bacterial predation records/proposals explicitly reject generic endoparasitism as an exact synonym. Other maintained hits concern spore resistance, infection control or noninfectious tracers. No exact same-scope synonym, graph node or parent-gap discussion was identified for required migration.",
+    "cache_dispositions": {
+      "PMID_41660888.md and pmc_full_pmid_41660888.txt": "The endoparasitic actor is a plant-infecting nematode, not a fungus infecting that nematode.",
+      "PMID_41872736.txt": "Fusarium spores infect Panax notoginseng plant roots, not nematodes.",
+      "PMID_42453107.txt": "Powdery-mildew spores infect barley, not nematodes.",
+      "PMID_42475569.md": "Endozoic ciliate evolutionary clade, not fungal nematode infection."
+    },
+    "remote_dispositions": "Three PR924 generated-page matches concern the same spore/tracer context. The one KG-Microbe compressed-JSON match was parsed structurally: all 103 matching values name Endozoicomonas/Parendozoicomonas bacterial taxa or their references, not an endozoic trait. Alias screening found no Meria coniospora/Haptocillium/spore-initiated or mediated infection matches in the scoped current files, retained regular-file blobs or pinned remote owners.",
+    "remote_scope": {
+      "prs": 11,
+      "pending_files": 783,
+      "upstream_files": 587
+    }
+  },
+  "hierarchy": "Active METPO:1004002 animal pathogen is below pathogenic-to-host 1004000, phenotype 1000059 and quality 1000188. Pinned organism-like wording is clarified as a phenotype in current upstream; do not edit the parent or ontology pin. Fungal nematophagy 000719 is the feeding endpoint, including dead prey; fungal trap formation 000718 is a structural endpoint, not this spore infection route; fungal nematode egg parasitism 000726 concerns eggshell penetration. Local parasitism 000043 inherits persistent symbiosis 000040, not required here. These distinctions do not impose organism-level disjointness or exclusive host stages.",
+  "historical_identity": "No active exact counterpart identified in pinned/current METPO releases, editor and six template owners. METPO:1000227 obsolete parasitism is broader, deprecated true under ObsoleteClass with OMO:0001000 and no replacement/consider in the two releases. Issue521 disputes mechanical reasons; do not revive it or use it as an exact xref. Editor conversion was reused only after checking identical raw and converted source hashes; editor alone is not absence proof.",
+  "ontology_inputs": [
+    {
+      "source": {
+        "path": "data/raw/metpo.owl",
+        "saved_path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl"
+      },
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415",
+      "triples": 12617,
+      "imports": [],
+      "conversion": null,
+      "terms": [
+        {
+          "subject": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "Obsolete Class"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000059",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "phenotype"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A quality that differentiates specific instances of a species from other instances of the same species."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1000188"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000188",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "quality"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A characteristic of an entity that depends on the entity's existence, size, color, and physiological traits."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000227",
+          "matched_literals": [
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "obsolete parasitism"
+            }
+          ],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "obsolete parasitism"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [
+              "true"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [
+              "http://purl.obolibrary.org/obo/OMO_0001000"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004000",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "pathogenic to host"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A phenotype where a microbe is a pathogen of of some host organism."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1000059"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004002",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "animal pathogen"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A pathogen that infects organisms in the kingdom Metazoa."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1004000"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "metpo.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/metpo.owl",
+        "blob_sha": "125f475bac2758741d2ef8ec46b2984a1abdc048",
+        "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "sha256": "21d3ee8c38ceeaade487cf78c75814854e84e976c8d1abbc759ce47f6460db15",
+      "triples": 12649,
+      "imports": [],
+      "conversion": null,
+      "terms": [
+        {
+          "subject": "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "Obsolete Class"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000059",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "phenotype"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A quality that differentiates specific instances of a species from other instances of the same species."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1000188"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000188",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "quality"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A characteristic of an entity that depends on the entity's existence, size, color, and physiological traits."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000227",
+          "matched_literals": [
+            {
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "value": "obsolete parasitism"
+            }
+          ],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "obsolete parasitism"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [
+              "true"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [
+              "http://purl.obolibrary.org/obo/OMO_0001000"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004000",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "pathogenic to host"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A phenotype in which a microbe is a pathogen of some host organism, having the ability to produce an infectious disease or disorder in that host."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1000059"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004002",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+              "http://www.w3.org/2002/07/owl#Class"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              "animal pathogen"
+            ],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [
+              "A pathogenic to host phenotype in which the host organism is an animal (Metazoa)."
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+              "https://w3id.org/metpo/1004000"
+            ],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "berkeleybop/metpo",
+        "path": "src/ontology/metpo-edit.owl",
+        "saved_path": "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+        "blob_sha": "d140e6174ada41f8a1cceb5dba286c8af15feb9e",
+        "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+        "head": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93"
+      },
+      "sha256": "6cdac30329247e94b66bcc5ccbbd8369cdeaf0ca54f1975eab99c93d09885055",
+      "triples": 31,
+      "imports": [],
+      "conversion": {
+        "command": [
+          "/usr/local/bin/robot",
+          "convert",
+          "--input",
+          "/private/tmp/traitmech-epibiotic-allocation-20261011/github-metpo-main/content/src/ontology/metpo-edit.owl",
+          "--format",
+          "owl",
+          "--output",
+          "/tmp/traitmech-repellence-upstream-edit-20261014.owl"
+        ],
+        "exit": 0,
+        "stdout": "",
+        "stderr": "",
+        "output": "/tmp/traitmech-repellence-upstream-edit-20261014.owl",
+        "sha256": "65b831892d4d51132ddfc6ea3d8c0b84e3fc729accf094ef09655b5a3bb40b4e"
+      },
+      "terms": [
+        {
+          "subject": "https://w3id.org/metpo/1000059",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [],
+            "http://www.w3.org/2000/01/rdf-schema#label": [],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000188",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [],
+            "http://www.w3.org/2000/01/rdf-schema#label": [],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1000227",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [],
+            "http://www.w3.org/2000/01/rdf-schema#label": [],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004000",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [],
+            "http://www.w3.org/2000/01/rdf-schema#label": [],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        },
+        {
+          "subject": "https://w3id.org/metpo/1004002",
+          "matched_literals": [],
+          "annotations": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [],
+            "http://www.w3.org/2000/01/rdf-schema#label": [],
+            "http://purl.obolibrary.org/obo/IAO_0000115": [],
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": [],
+            "http://www.w3.org/2002/07/owl#deprecated": [],
+            "http://purl.obolibrary.org/obo/IAO_0000231": [],
+            "http://purl.obolibrary.org/obo/IAO_0100001": [],
+            "http://www.geneontology.org/formats/oboInOwl#consider": []
+          }
+        }
+      ]
+    }
+  ],
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/ecology/fungal_nematode_endoparasitism.yaml",
+      "--out",
+      "/tmp/traitmech-endoparasitism-checks-20261014/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 5.473625774960965,
+    "completed_at": "2026-10-14T15:24:20.503715+00:00",
+    "log": "/tmp/traitmech-endoparasitism-checks-20261014/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-endoparasitism-checks-20261014/native-record.tsv",
+      "bytes": 726,
+      "sha256": "9267c7e2b73ddf3825ed4df1905c67f5cb7f304ee8233f1e3c2e64c39dc92877"
+    },
+    "report_rows": 3,
+    "explanation": "Actual record CLI results; direct full-text matches do not upgrade native abstract verdicts."
+  },
+  "read_scope": "Actual Lebrigand Figures8/9 and both S1Text pages; actual Sun Figures2/3 and both supplement pages S1-S3. Genomic tables, all remaining figures, raw data and Glockling full text were not fully audited. Image comparison is source review, not independent replication.",
+  "source_status": {
+    "checked_at": "2026-10-14T15:09:45.511195+00:00",
+    "publisher_links": [
+      {
+        "path": "drechmeria2016-publisher.html",
+        "links": [
+          {
+            "text": "Corrections, Expressions of Concern, and Retractions",
+            "href": "/plosgenetics/s/corrections-expressions-of-concern-and-retractions"
+          }
+        ]
+      },
+      {
+        "path": "drechmeria2016-pmc.html",
+        "links": []
+      },
+      {
+        "path": "hirsutella2024-pmc.html",
+        "links": []
+      },
+      {
+        "path": "glockling1997-publisher.html",
+        "links": [
+          {
+            "text": "Corrections, retractions and removals for journals",
+            "href": "/core/services/publishing-ethics/corrections-retractions-and-removals-journals"
+          },
+          {
+            "text": "Corrections, retractions and removals for books",
+            "href": "/core/services/publishing-ethics/corrections-retractions-and-removals-books"
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "drechmeria2016": {
+        "crossref": {
+          "DOI": "10.1371/journal.pgen.1006017",
+          "title": [
+            "Comparative Genomic Analysis of Drechmeria coniospora Reveals Core and Specific Genetic Requirements for Fungal Endoparasitism of Nematodes"
+          ],
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.726337427.793518353",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "update-to": null,
+          "updated-by": null
+        },
+        "europepmc": [
+          {
+            "id": "27153332",
+            "source": "MED",
+            "doi": "10.1371/journal.pgen.1006017",
+            "title": "Comparative Genomic Analysis of Drechmeria coniospora Reveals Core and Specific Genetic Requirements for Fungal Endoparasitism of Nematodes.",
+            "commentCorrectionList": null
+          }
+        ]
+      },
+      "hirsutella2024": {
+        "crossref": {
+          "DOI": "10.3390/jof10010068",
+          "title": [
+            "Parasitism of Hirsutella rhossiliensis on Different Nematodes and Its Endophytism Promoting Plant Growth and Resistance against Root-Knot Nematodes"
+          ],
+          "relation": {},
+          "update-to": null,
+          "updated-by": null
+        },
+        "europepmc": [
+          {
+            "id": "38248977",
+            "source": "MED",
+            "doi": "10.3390/jof10010068",
+            "title": "Parasitism of <i>Hirsutella rhossiliensis</i> on Different Nematodes and Its Endophytism Promoting Plant Growth and Resistance against Root-Knot Nematodes.",
+            "commentCorrectionList": null
+          }
+        ]
+      },
+      "glockling1997": {
+        "crossref": {
+          "DOI": "10.1017/s0953756296002092",
+          "title": [
+            "Culturing of three species of endoparasitic fungi infecting nematodes"
+          ],
+          "relation": {},
+          "update-to": null,
+          "updated-by": null
+        },
+        "europepmc": [
+          {
+            "id": "IND20619532",
+            "source": "AGR",
+            "doi": "10.1017/s0953756296002092",
+            "title": "Culturing of three species of endoparasitic fungi infecting nematodes.",
+            "commentCorrectionList": null
+          }
+        ]
+      }
+    },
+    "limits": "Retrieved fields and article-link checks identified no notice affecting the selected claims; PLOS/Cambridge links were generic policies. MDPI direct page returned 403. Exact-DOI correction/retraction web queries returned primary articles and review reports, not a comprehensive notice clearance. No notice is inferred absent globally."
+  },
+  "source_acquisitions": [
+    {
+      "name": "drechmeria2016",
+      "pmcid": "PMC4859500",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4859500/fullTextXML",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4859500/fullTextXML",
+      "status": 200,
+      "sha256": "4ced5db48d92810248d7db27dc7119f66bee2bb7c58c5c915343ddc7e8cc4bca",
+      "bytes": 358853,
+      "at": "2026-10-14T14:51:02.965386+00:00",
+      "ids": {
+        "pmcid": "PMC4859500",
+        "pmcid-ver": "PMC4859500.1",
+        "pmcaid": "4859500",
+        "pmcaiid": "4859500",
+        "pmid": "27153332",
+        "doi": "10.1371/journal.pgen.1006017",
+        "publisher-id": "PGENETICS-D-15-01519"
+      },
+      "title": "Comparative Genomic Analysis of Drechmeria coniospora Reveals Core and Specific Genetic Requirements for Fungal Endoparasitism of Nematodes",
+      "license": [
+        "\u00a9 2016 Lebrigand et al2016Lebrigand et alhttps://creativecommons.org/licenses/by/4.0/This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited."
+      ]
+    },
+    {
+      "name": "hirsutella2024",
+      "pmcid": "PMC10820206",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10820206/fullTextXML",
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10820206/fullTextXML",
+      "status": 200,
+      "sha256": "2ee0d43ff3bb885f12a9a1fcaba1c7c476709c92b3f206a0d134d5cac84987d4",
+      "bytes": 106241,
+      "at": "2026-10-14T14:51:04.233547+00:00",
+      "ids": {
+        "pmcid": "PMC10820206",
+        "pmcaid": "10820206",
+        "pmcaiid": "10820206",
+        "pmid": "38248977",
+        "doi": "10.3390/jof10010068"
+      },
+      "title": "Parasitism of Hirsutella rhossiliensis on Different Nematodes and Its Endophytism Promoting Plant Growth and Resistance against Root-Knot Nematodes",
+      "license": [
+        "\u00a9 2024 by the authors.Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/)."
+      ]
+    },
+    {
+      "name": "drechmeria2016-pmc.html",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4859500/",
+      "params": null,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4859500/",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pmc.html",
+      "bytes": 468364,
+      "sha256": "b7699b0d6276988c44182b0593a518a6e8e8f9a40653448b2fed17e686a7cc74",
+      "content_type": "text/html; charset=utf-8",
+      "at": "2026-10-14T14:55:20.703230+00:00"
+    },
+    {
+      "name": "drechmeria2016-pgen.1006017.g008-0.image",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/225d/4859500/43d1f7390a7d/pgen.1006017.g008.jpg",
+      "params": null,
+      "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/225d/4859500/43d1f7390a7d/pgen.1006017.g008.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pgen.1006017.g008-0.image",
+      "bytes": 201046,
+      "sha256": "0366bd8f5c278b1677677b75f328e5fdb449144d1c8fea7622892cf07b4dd33d",
+      "content_type": "image/jpeg",
+      "at": "2026-10-14T14:55:21.135316+00:00"
+    },
+    {
+      "name": "drechmeria2016-pgen.1006017.g009-0.image",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/225d/4859500/a1d99ab0a0b8/pgen.1006017.g009.jpg",
+      "params": null,
+      "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/225d/4859500/a1d99ab0a0b8/pgen.1006017.g009.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pgen.1006017.g009-0.image",
+      "bytes": 62693,
+      "sha256": "412480b7263569ecfc40157ac333794f3bdfb3cecc45f33ebdb0e63e6060ce12",
+      "content_type": "image/jpeg",
+      "at": "2026-10-14T14:55:21.509456+00:00"
+    },
+    {
+      "name": "drechmeria2016-med.json",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:27153332 AND SRC:MED",
+        "format": "json",
+        "resultType": "core"
+      },
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27153332+AND+SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-med.json",
+      "bytes": 11806,
+      "sha256": "39f2893b6c2ca2331d70ffd97f7101a2daf110f4b8e5172357000006c735bb73",
+      "content_type": "application/json;charset=UTF-8",
+      "at": "2026-10-14T14:55:22.138330+00:00"
+    },
+    {
+      "name": "drechmeria2016-crossref.json",
+      "requested_url": "https://api.crossref.org/works/10.1371%2Fjournal.pgen.1006017",
+      "params": null,
+      "final_url": "https://api.crossref.org/works/10.1371%2Fjournal.pgen.1006017",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-crossref.json",
+      "bytes": 46365,
+      "sha256": "d888434cffcdaddb9395119fa2e0cc9eb14619ce96be48a3ef6ff6a8337c8965",
+      "content_type": "application/json",
+      "at": "2026-10-14T14:55:22.560993+00:00"
+    },
+    {
+      "name": "hirsutella2024-pmc.html",
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10820206/",
+      "params": null,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10820206/",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-pmc.html",
+      "bytes": 203044,
+      "sha256": "7adacc79ccb0ba839ebfc9e0477f5d5a2d41341832e1a67ce291af75a6a232ee",
+      "content_type": "text/html; charset=utf-8",
+      "at": "2026-10-14T14:55:22.848610+00:00"
+    },
+    {
+      "name": "hirsutella2024-jof-10-00068-g002-0.image",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ee25/10820206/58f4060bea52/jof-10-00068-g002.jpg",
+      "params": null,
+      "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ee25/10820206/58f4060bea52/jof-10-00068-g002.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-jof-10-00068-g002-0.image",
+      "bytes": 106589,
+      "sha256": "4fa987bf301b875d01534de1c9e7d2e87736bd08b8a58a5ad66cb53c2dbd3b47",
+      "content_type": "image/jpeg",
+      "at": "2026-10-14T14:55:23.223348+00:00"
+    },
+    {
+      "name": "hirsutella2024-jof-10-00068-g003-0.image",
+      "requested_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ee25/10820206/a35ddd0103fa/jof-10-00068-g003.jpg",
+      "params": null,
+      "final_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ee25/10820206/a35ddd0103fa/jof-10-00068-g003.jpg",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-jof-10-00068-g003-0.image",
+      "bytes": 95165,
+      "sha256": "61d280ebb69a98cc6ddb0745702861359d7e83d8caa43c1f11f1c7219d043b0c",
+      "content_type": "image/jpeg",
+      "at": "2026-10-14T14:55:23.570706+00:00"
+    },
+    {
+      "name": "hirsutella2024-med.json",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:38248977 AND SRC:MED",
+        "format": "json",
+        "resultType": "core"
+      },
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A38248977+AND+SRC%3AMED&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-med.json",
+      "bytes": 6936,
+      "sha256": "4cd402a29b9b891ff2d38f6d5d101eaabca802281eb36c97b2fde62dd88547bc",
+      "content_type": "application/json;charset=UTF-8",
+      "at": "2026-10-14T14:55:24.247051+00:00"
+    },
+    {
+      "name": "hirsutella2024-crossref.json",
+      "requested_url": "https://api.crossref.org/works/10.3390%2Fjof10010068",
+      "params": null,
+      "final_url": "https://api.crossref.org/works/10.3390%2Fjof10010068",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-crossref.json",
+      "bytes": 17895,
+      "sha256": "73e8fdcc7eb0229124ba4c3c43112df33cb697e101285b52af7eab15bd83d964",
+      "content_type": "application/json",
+      "at": "2026-10-14T14:55:24.585808+00:00"
+    },
+    {
+      "name": "hirsutella2024-supplements.zip",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10820206/supplementaryFiles",
+      "params": null,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10820206/supplementaryFiles",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-supplements.zip",
+      "bytes": 1622407,
+      "sha256": "d1cadc8756bb0e9153032810fd9e81821c82e95a119093ae3e00b23d51b1e4dc",
+      "content_type": "application/zip",
+      "at": "2026-10-14T14:57:20.457389+00:00"
+    },
+    {
+      "name": "drechmeria2016-S1Text.pdf",
+      "requested_url": "https://journals.plos.org/plosgenetics/article/file",
+      "params": {
+        "id": "10.1371/journal.pgen.1006017.s018",
+        "type": "supplementary"
+      },
+      "final_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1006017/1/pgen.1006017.s018.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20261014%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20261014T145720Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=558a673fcb146d6b527413735ea07c03a2009d2fe62e277bb49e3642a47b29e05a604011c646a632f659cdf0e3f03a030faad1e9bae8882e324113e2e7b58d936867d1306054e72c56c8da3393fc74c007a3149fc5dcb66deb99ac7c4bcddff3aef1585feb003117a1690ede9077f1884e4875251dd9fad48801bf51e643d80acbe0c29cd5176d10940c748f9db726e6e8a2c93e8d66438f49819fd225bf25331c5508ee998bcd3d8ee6b7ffe9ef10afcd6e407097f0b25557d38a5a6b6b996d4b4f23cc024b443c0be48b7ec2986ae9ac98add5c1cc4b9b11fb0e344142a41f4a63cf499a26ada41aa0460bd98264c699e98b0d47ed9ce8c2120c53ecf3f94c",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-S1Text.pdf",
+      "bytes": 103211,
+      "sha256": "7e42bec469b2ad2b4beaceb80e631b6dfe643c03d1310c78c451a30f82853e95",
+      "content_type": "application/pdf",
+      "at": "2026-10-14T14:57:21.004938+00:00"
+    },
+    {
+      "name": "glockling1997-publisher.html",
+      "requested_url": "https://www.cambridge.org/core/journals/mycological-research/article/abs/culturing-of-three-species-of-endoparasitic-fungi-infecting-nematodes/58C2A9A0A69D959D32EFB6D43516A3AD",
+      "params": null,
+      "final_url": "https://www.cambridge.org/core/journals/mycological-research/article/abs/culturing-of-three-species-of-endoparasitic-fungi-infecting-nematodes/58C2A9A0A69D959D32EFB6D43516A3AD",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-publisher.html",
+      "bytes": 731931,
+      "sha256": "a5b4754f9fb995e3b9469caab6db0145e0e44fdff7c60ce7a58e51ce05acfbb0",
+      "content_type": "text/html; charset=utf-8",
+      "at": "2026-10-14T14:57:21.694932+00:00"
+    },
+    {
+      "name": "glockling1997-crossref.json",
+      "requested_url": "https://api.crossref.org/works/10.1017%2FS0953756296002092",
+      "params": null,
+      "final_url": "https://api.crossref.org/works/10.1017%2FS0953756296002092",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-crossref.json",
+      "bytes": 9723,
+      "sha256": "e17dd8ed20bdd7a989235a0971cc329dea8272361c1adfd5462de5da84010e41",
+      "content_type": "application/json",
+      "at": "2026-10-14T14:57:22.162547+00:00"
+    },
+    {
+      "name": "glockling1997-med.json",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "DOI:\"10.1017/S0953756296002092\"",
+        "format": "json",
+        "resultType": "core"
+      },
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1017%2FS0953756296002092%22&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-med.json",
+      "bytes": 1632,
+      "sha256": "802eb455b8ca785cf9f7499c68666974267a44ac09e91f6c7939f656419ce666",
+      "content_type": "application/json;charset=UTF-8",
+      "at": "2026-10-14T14:57:23.501527+00:00"
+    },
+    {
+      "name": "jansson1993-publisher.html",
+      "requested_url": "https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-8-1899?crawler=true",
+      "params": null,
+      "final_url": "https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-8-1899?crawler=true",
+      "status": 403,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-publisher.html",
+      "bytes": 5716,
+      "sha256": "0b3327770473e59d21d85c6634b402e833e086e3a711d1194bc8ac8c514ef1ce",
+      "content_type": "text/html; charset=UTF-8",
+      "at": "2026-10-14T14:57:23.842267+00:00"
+    },
+    {
+      "name": "jansson1993-crossref.json",
+      "requested_url": "https://api.crossref.org/works/10.1099%2F00221287-139-8-1899",
+      "params": null,
+      "final_url": "https://api.crossref.org/works/10.1099%2F00221287-139-8-1899",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-crossref.json",
+      "bytes": 1625,
+      "sha256": "ba9846b7563304d916903d3410fd1135e30d8a32109dc04d29b0a1f498f4ba7a",
+      "content_type": "application/json",
+      "at": "2026-10-14T14:57:24.259766+00:00"
+    },
+    {
+      "name": "jansson1993-med.json",
+      "requested_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "DOI:\"10.1099/00221287-139-8-1899\"",
+        "format": "json",
+        "resultType": "core"
+      },
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1099%2F00221287-139-8-1899%22&format=json&resultType=core",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-med.json",
+      "bytes": 198,
+      "sha256": "5b9280d838af8ea1c2afad59175562afa3a3bf1657b2197694ab5c1c408d60ff",
+      "content_type": "application/json;charset=UTF-8",
+      "at": "2026-10-14T14:57:25.043211+00:00"
+    },
+    {
+      "name": "drechmeria2016-publisher.html",
+      "requested_url": "https://journals.plos.org/plosgenetics/article",
+      "params": {
+        "id": "10.1371/journal.pgen.1006017"
+      },
+      "final_url": "https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1006017",
+      "status": 200,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-publisher.html",
+      "bytes": 482634,
+      "sha256": "f1774d1c6be44d063a9f27eb8c685dc94aba2612c5db56eab2cad0ebd2d5d528",
+      "content_type": "text/html;charset=UTF-8",
+      "at": "2026-10-14T14:57:28.190034+00:00"
+    },
+    {
+      "name": "hirsutella2024-publisher.html",
+      "requested_url": "https://www.mdpi.com/2309-608X/10/1/68",
+      "params": null,
+      "final_url": "https://www.mdpi.com/2309-608X/10/1/68",
+      "status": 403,
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-publisher.html",
+      "bytes": 399,
+      "sha256": "3f8ff98bc41ba1d8bcdc36f9fa51140e3276d1a373d41c5bb33634647632ec01",
+      "content_type": "text/html",
+      "at": "2026-10-14T14:57:28.534793+00:00"
+    }
+  ],
+  "inspected_assets": [
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/S1Text-render/page-1.png",
+      "bytes": 607646,
+      "sha256": "03883bcbf116bb5290cc375f133599d8fa2c8f8b67a4a411fda6a06d49f84557"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/S1Text-render/page-2.png",
+      "bytes": 511799,
+      "sha256": "5a4f32fdda251d3f84c245be413616af07f58f939b1f9886656cec986183114f"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/acquisition.json",
+      "bytes": 12806,
+      "sha256": "2326d0bb25de50fffb3a783381b38a0fd396ce53da739b1ade7de06f6b5da898"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-S1Text-pages.json",
+      "bytes": 6691,
+      "sha256": "8948fe4012d669524366e3489d05a45b5abf855b64e8f84f53395a6d476f0c5c"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-S1Text.pdf",
+      "bytes": 103211,
+      "sha256": "7e42bec469b2ad2b4beaceb80e631b6dfe643c03d1310c78c451a30f82853e95"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-crossref.json",
+      "bytes": 46365,
+      "sha256": "d888434cffcdaddb9395119fa2e0cc9eb14619ce96be48a3ef6ff6a8337c8965"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-links.json",
+      "bytes": 195366,
+      "sha256": "4e393ac0748559e74a12b6d3eb1d950edda10ad7b872bea6662e650338bf7259"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-med.json",
+      "bytes": 11806,
+      "sha256": "39f2893b6c2ca2331d70ffd97f7101a2daf110f4b8e5172357000006c735bb73"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pgen.1006017.g008-0.image",
+      "bytes": 201046,
+      "sha256": "0366bd8f5c278b1677677b75f328e5fdb449144d1c8fea7622892cf07b4dd33d"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pgen.1006017.g009-0.image",
+      "bytes": 62693,
+      "sha256": "412480b7263569ecfc40157ac333794f3bdfb3cecc45f33ebdb0e63e6060ce12"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-pmc.html",
+      "bytes": 468364,
+      "sha256": "b7699b0d6276988c44182b0593a518a6e8e8f9a40653448b2fed17e686a7cc74"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/drechmeria2016-publisher.html",
+      "bytes": 482634,
+      "sha256": "f1774d1c6be44d063a9f27eb8c685dc94aba2612c5db56eab2cad0ebd2d5d528"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-crossref.json",
+      "bytes": 9723,
+      "sha256": "e17dd8ed20bdd7a989235a0971cc329dea8272361c1adfd5462de5da84010e41"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-med.json",
+      "bytes": 1632,
+      "sha256": "802eb455b8ca785cf9f7499c68666974267a44ac09e91f6c7939f656419ce666"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/glockling1997-publisher.html",
+      "bytes": 731931,
+      "sha256": "a5b4754f9fb995e3b9469caab6db0145e0e44fdff7c60ce7a58e51ce05acfbb0"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-crossref.json",
+      "bytes": 17895,
+      "sha256": "73e8fdcc7eb0229124ba4c3c43112df33cb697e101285b52af7eab15bd83d964"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-jof-10-00068-g002-0.image",
+      "bytes": 106589,
+      "sha256": "4fa987bf301b875d01534de1c9e7d2e87736bd08b8a58a5ad66cb53c2dbd3b47"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-jof-10-00068-g003-0.image",
+      "bytes": 95165,
+      "sha256": "61d280ebb69a98cc6ddb0745702861359d7e83d8caa43c1f11f1c7219d043b0c"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-links.json",
+      "bytes": 68860,
+      "sha256": "ba3b58f2a1828a0e41509d12c8784ddcc147ce2a8d2be86adca06efaffb57c7d"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-med.json",
+      "bytes": 6936,
+      "sha256": "4cd402a29b9b891ff2d38f6d5d101eaabca802281eb36c97b2fde62dd88547bc"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-pmc.html",
+      "bytes": 203044,
+      "sha256": "7adacc79ccb0ba839ebfc9e0477f5d5a2d41341832e1a67ce291af75a6a232ee"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-publisher.html",
+      "bytes": 399,
+      "sha256": "3f8ff98bc41ba1d8bcdc36f9fa51140e3276d1a373d41c5bb33634647632ec01"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/hirsutella2024-supplements.zip",
+      "bytes": 1622407,
+      "sha256": "d1cadc8756bb0e9153032810fd9e81821c82e95a119093ae3e00b23d51b1e4dc"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-crossref.json",
+      "bytes": 1625,
+      "sha256": "ba9846b7563304d916903d3410fd1135e30d8a32109dc04d29b0a1f498f4ba7a"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-med.json",
+      "bytes": 198,
+      "sha256": "5b9280d838af8ea1c2afad59175562afa3a3bf1657b2197694ab5c1c408d60ff"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/jansson1993-publisher.html",
+      "bytes": 5716,
+      "sha256": "0b3327770473e59d21d85c6634b402e833e086e3a711d1194bc8ac8c514ef1ce"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/jof-10-00068-s001.zip",
+      "bytes": 1068935,
+      "sha256": "080d58efe0daaa04143181445ed0ed87ff84d06bbed82a4e672ff7fbf3682489"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/members/jof-2783228-supplementary.pdf",
+      "bytes": 1127475,
+      "sha256": "a6e6e7bdf3ddf0a85f9b6ff2f9600ac9ac8962e1767fa2f0d8fc10a646a38efd"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/members.json",
+      "bytes": 478,
+      "sha256": "f5e759cc9069bd5f5f72641a7332700918360a0fabc4f4e517f2100c89ce4051"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/pages.json",
+      "bytes": 1002,
+      "sha256": "69fd59b90d947ad2e03bb0edda626fd248e198613f403bcfedc6898f92c593c5"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/render/page-1.png",
+      "bytes": 2608734,
+      "sha256": "a53bfd2955c62f7d5833859fd59df3bed4f1d93d2689be567b85d513e40cad0b"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-assets-20261014/supplement-inspection/render/page-2.png",
+      "bytes": 1511484,
+      "sha256": "8cda14291f8a73568aa47f3a6883da7fa1df21b0de33953267eedcfa5cd7e185"
+    }
+  ],
+  "contextual_leads": "Jansson1993 was searched as an adhesion-vs-infection caution, but direct publisher retrieval returned403 and the DOI query returned no EuropePMC result. Search excerpts are not counted support. The 2021 laboratory-adaptation paper and other Meria/Drechmeria leads were not promoted to evidence. The separate 2016 genome paper is not asserted to be an unrelated isolate.",
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-endoparasitism-novelty-20261014/local/completion.json",
+      "bytes": 886,
+      "sha256": "d4708d2a6defca369ef2f946293b2f31f2b5cc09e0788641fd92aea72bdcfe88"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-novelty-20261014/history/completion.json",
+      "bytes": 1420,
+      "sha256": "c1d959db2a559754ee6891e935af5e6b6cdb884bcf563f00a12afd5a97600af2"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-novelty-20261014/unique-matches.json",
+      "bytes": 505708,
+      "sha256": "07d9f444f76ab15c4bfadb9fdb6b0e0fa069807093214f624c3f24fdc0ad47e4"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-novelty-20261014/remote/result.json",
+      "bytes": 82077613,
+      "sha256": "05224400769917aea46cd2cff628d67ab012eee03e27ad1b7c66562358119e3e"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-novelty-20261014/remote/structured-matches.json",
+      "bytes": 36392,
+      "sha256": "fb7fe25c27d7d566591fc7cd6d26bdc6204ee2cdf54df977d5a41d4a673931ed"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-aliases-20261014/local/completion.json",
+      "bytes": 326,
+      "sha256": "5f47f4ccbd6c7c419d38d4392cea7b0dd401bb39f6aac7341e5dcd35114acfe7"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-aliases-20261014/history/completion.json",
+      "bytes": 1091,
+      "sha256": "6540e092e2fc0a809a53317304b4df149631399fc91081a2edabea2aa90f19b4"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-aliases-20261014/remote-pinned-alias-checks.json",
+      "bytes": 714429,
+      "sha256": "f13e55ca9a4df16862410be655cfd32673d231157b0614cb3c8cb77ca91bb9bb"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-leads-20261014/acquisition.json",
+      "bytes": 2225,
+      "sha256": "3028e7e368720b46e825c002f8dea429895b083afdd63eff3f9adbe273125dbe"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-leads-20261014/snippet-probe.json",
+      "bytes": 2859,
+      "sha256": "7b2da55d1377898e71c0ef5e733e0e0f032d7369ddb78f425a65ac62a158302f"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-leads-20261014/fresh-state.json",
+      "bytes": 1537,
+      "sha256": "b1ec7ff7f30b496f9932015a28b26fb8e7c6de9932c728d5bf63132f0a671107"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-leads-20261014/metpo-issue-521.json",
+      "bytes": 4575,
+      "sha256": "4f114b2b2aaf1f77a2098ec585b6c0f1b2873676aad0a80bab8840535df01940"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-identity-20261014.json",
+      "bytes": 58128,
+      "sha256": "aced06bc60bd836f2cee9055d00feaf5ee90df24233b25674ef86df2a8efb510"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-reservations-20261014/accepted.json",
+      "bytes": 4036,
+      "sha256": "5e39e84df637f6e027b9789f7c2c615ec271575871e53c765c6a3af38c9ebe37"
+    },
+    {
+      "path": "/tmp/traitmech-endoparasitism-leads-20261014/scope-assessment.json",
+      "bytes": 24556,
+      "sha256": "da2621c6c00b0fee4ae66d15997e44e7aef88b7dff9aaa986172d502faa0405f"
+    }
+  ],
+  "omissions": "No canonical examples, proteins, chemical mechanisms, causal graph, exact synonyms or equivalent xrefs without further authority/provenance work. No universal obligacy, host range, exclusive infection route for an organism, quantitative threshold, nutrient flux, field efficacy or safety.",
+  "skill_assessment": "Existing add-trait instructions already require phenotype-vs-sequence interpretation, exact source snippets, endpoint qualifiers, strain provenance, immutable review and full PR lifecycle. This candidate does not justify a new skill change.",
+  "limits": [
+    "Known copies, retained regular-file history and selected upstream owners only; unavailable ignored/untracked history, symlink targets, submodules and arbitrary archives are not reconstructed. Fresh head guard verifies this research snapshot, not atomic ID allocation. No literature exhaustion.",
+    "Temporary raw files are not committed; public retrieval URLs and hashes identify inspected evidence.",
+    "Research-only probes are retained; actual record-specific CLI outcomes are reported separately."
+  ]
+}

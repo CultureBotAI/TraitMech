@@ -406,6 +406,57 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/fungal_nematode_egg_parasitism.html#fungal-nematode-egg-parasitism-evidence-limits"
  },
  {
+  "discussion_id": "fungal-nematode-endoparasitism-scope-and-hierarchy",
+  "prompt": "Refine the infection-strategy hierarchy without conflating infection, trapping and feeding.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematode endoparasitism",
+  "source_id": "traitmech:000727",
+  "source_file": "fungal_nematode_endoparasitism.yaml",
+  "attaches_to": [],
+  "rationale": "The fungal bearer has the established spore-infection-strategy phenotype, not merely an anatomical location inside a nematode. The host-contacting or ingested spore is the infectious unit; spore germination into an external hyphal trap is not this route. Adhesion or ingestion alone, killing alone, internal occupancy without the specified route and sequence annotation are insufficient. Vermiform stages distinguish the selected strategy from eggshell penetration in fungal nematode egg parasitism traitmech:000726. Fungal nematophagy traitmech:000719 requires feeding and includes dead prey; fungal nematode trap formation traitmech:000718 concerns hyphal differentiation. Neither is asserted as a parent. Local parasitism traitmech:000043 inherits persistent symbiosis, not required here. Animal pathogen METPO:1004002 is active below pathogenic to host METPO:1004000 and phenotype METPO:1000059. Current upstream clarifies its pinned organism-like wording as a phenotype; the local parent remains unchanged. No organism-level disjointness, exclusive host stage, universal host range or obligacy is asserted. Bare endoparasitism does not specify the fungal actor, host or infection route and is not an exact synonym.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_endoparasitism.html#fungal-nematode-endoparasitism-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "fungal-nematode-endoparasitism-metpo-assessment",
+  "prompt": "Review the proposed infection class without reviving the obsolete parasitism identifier.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fungal nematode endoparasitism",
+  "source_id": "traitmech:000727",
+  "source_file": "fungal_nematode_endoparasitism.yaml",
+  "attaches_to": [],
+  "rationale": "No exact active counterpart was identified in inspected pinned/current releases, editor and six template owners. Historical METPO:1000227 obsolete parasitism is broader, deprecated, under ObsoleteClass with OMO:0001000 reason and no replacement or consider annotation in those releases. METPO issue 521 disputes mechanically assigned reasons; the code neither invalidates the biology nor authorizes reuse. The historical ID is not revived or placed in xrefs. The ontology pin remains unchanged; v603 proposes this narrower infection phenotype with PROPOSED status and no equivalent external xref. Existing bacterial endoparasitic predation is not this fungal spore-infection strategy.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_endoparasitism.html#fungal-nematode-endoparasitism-metpo-assessment"
+ },
+ {
+  "discussion_id": "fungal-nematode-endoparasitism-evidence-limits",
+  "prompt": "Resolve assay endpoints and strain provenance before adding rates, canonical taxa or causal proteins.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fungal nematode endoparasitism",
+  "source_id": "traitmech:000727",
+  "source_file": "fungal_nematode_endoparasitism.yaml",
+  "attaches_to": [],
+  "rationale": "Sun's Methods 2.6 counts attached spores or colonization; reported parasitism percentages are not curated as internal infection rates. Its imaged HR-eGFP1 is engineered, and morphological similarity to the wild type does not establish unchanged virulence. Its intestinal-route suggestion remains tentative; the distinct 1997 primary abstract supports ingestion in Harposporium cycloides. Lebrigand's S1 Text reports long laboratory passage and related isolate provenance, so these are not independent natural-strain exemplars. Predicted genes, expression and disputed assembly or mating-type interpretations are not required causal effectors. No canonical taxa, proteins or causal graph are asserted without further authority and strain-provenance work. Microscopy does not measure nutrient flux; no quantitative threshold, field efficacy or safety is inferred. The verification sidecar retains actual source locators, hashes and native verdicts; direct matching does not upgrade NOT_IN_ABSTRACT or UNRESOLVED. Full Glockling Methods and all raw experimental data were not accessed, and bounded notice checks are not comprehensive correction/retraction clearance.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/ecology/fungal_nematode_endoparasitism.html#fungal-nematode-endoparasitism-evidence-limits"
+ },
+ {
   "discussion_id": "fungal-nematophagy-scope-and-hierarchy",
   "prompt": "Resolve the broader feeding hierarchy without imposing a capture mechanism or carbon-specific endpoint.",
   "kind": "CURATION_TODO",
@@ -14981,9 +15032,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 754,
- "total_knowledge_gaps": 468,
- "total_source_entries": 592,
+ "total_discussions": 757,
+ "total_knowledge_gaps": 469,
+ "total_source_entries": 593,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
