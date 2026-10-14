@@ -5916,7 +5916,9 @@
       "traitmech:000728",
       "traitmech:000682"
     ],
-    "current_parent": "METPO:1000059",
+    "pre_change_parent": "METPO:1000059",
+    "post_change_parent": "traitmech:000729",
+    "plan_scope": "The safeguards retain the pre-curation research checklist; pre_change_parent describes that plan, while post_change_parent records the accepted written hierarchy.",
     "interpretation": "Definition-based subclass inference; not new experiments on the children.",
     "safeguards": [
       "Preserve both child definitions, evidence qualifiers and complete prior curation histories.",

@@ -180,6 +180,19 @@ def test_invalid_new_record_cannot_partially_write(isolated, monkeypatch):
     assert snapshot(isolated) == before
 
 
+def test_receipt_parent_transition(isolated):
+    path = writer.ROOT / "research/traits/physiology/cellular_contraction-source-verification.json"
+    repair = json.loads(path.read_text())["child_repair"]
+    assert "current_parent" not in repair
+    assert repair["pre_change_parent"] == writer.PARENT["identifier"]
+    assert repair["post_change_parent"] == writer.IDENTIFIER
+    assert "pre-curation research checklist" in repair["plan_scope"]
+    for slug, path in writer.CHILD_PATHS.items():
+        before = yaml.safe_load(path.read_text())
+        assert before["parent_traits"] == [repair["pre_change_parent"]]
+        assert writer.build_child(slug, before)["parent_traits"] == [repair["post_change_parent"]]
+
+
 def test_source_receipt():
     path = writer.ROOT / "research/traits/physiology/cellular_contraction-source-verification.json"
     receipt = json.loads(path.read_text())
