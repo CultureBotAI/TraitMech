@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_contraction.yaml
+  slug: cellular_contraction
+session:
+  id: 2026-10-14T223936Z-codex-5fdb55
+  timestamp: '2026-10-14T22:39:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add cellular contraction parent
+  details: Added one PROPOSED shortening-defined cellular contraction parent with Katoh and
+    Naitoh 1994, Khan 2003 and Febvre-Chevalier and Febvre 1992 primary evidence. Direct 19/15/15-word
+    excerpts retain native VERIFIED, VERIFIED and NOT_IN_ABSTRACT probe outcomes. The primary
+    PDF result measures head-to-stalk-base length, not isolated body length, and does not
+    establish force production. Reserved 000729, v605 and 1068200-1068299 after ignored/hidden
+    known-copy, retained-head and open/draft PR checks. Two narrower children are reparented
+    by definition-based inference; no universal molecular mechanism, canonical taxon, exact
+    contractility synonym or new biological experiment is inferred. Timestamp in the record
+    is observed allocation acceptance; this later CREATE records the written curation.

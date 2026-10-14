@@ -1,0 +1,112 @@
+identifier: traitmech:000729
+label: cellular contraction (body or cytoplasmic projection shortening)
+definition: A physiological phenotype in which a microbial cell actively contracts
+  its body or a cytoplasmic projection, reducing its length or extension.
+definition_source: DOI:10.1242/jeb.189.1.163
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1242/jeb.189.1.163
+  snippet: Living Vorticella showed a graded shrinkage of the cell body when Ca2+
+    buffer was injected into the cell body
+  notes: Katoh and Naitoh 1994, PMID:9317557, scientific Abstract item 3, first clause.
+    Direct namespace-qualified Europe PMC MED match; native VERIFIED. The same sentence
+    contrasts graded cell-body shrinkage with all-or-nothing stalk coiling. This supports
+    the curator-synthesized body/projection-shortening parent, not a universal calcium
+    threshold. Other abstract items use Triton-extracted preparations, not the living-cell
+    injection assay. Calcium-induced calcium release is an assumption, not direct
+    molecular proof. Publisher requests returned 403; full Methods, figures and strain
+    provenance were not accessed.
+- reference: DOI:10.2108/zsj.20.1367
+  snippet: Axopodial contraction of the centrohelid heliozoon Raphidiophrys contractilis
+    was induced by mechanical or electrical stimulation.
+  notes: Khan et al. 2003, PMID:14624035, scientific Abstract opening sentence. Direct
+    namespace-qualified Europe PMC MED match; native VERIFIED. This supports stimulated
+    shortening of a cytoplasmic projection rather than whole-cell locomotion. Reported
+    calcium dependence and speed apply to this assay, not every member of the parent
+    class. Non-detection of other filaments after fixation is not proof of their absence.
+    Full Methods and figures were not accessed; the publisher's HTTP 200 response
+    was an access challenge, not readable article content. Current taxonomic and culture
+    identities remain unresolved.
+- reference: DOI:10.1083/jcb.118.3.585
+  snippet: Both recording techniques showed that the rapid contraction involves 80%
+    of the total cell length.
+  notes: Febvre-Chevalier and Febvre 1992, PMID:1639845, PMCID:PMC2289557, Results,
+    Kinetics of the Contraction, printed page 588, right column. Direct extracted-PDF
+    match with the typeset passage visually checked; native NOT_IN_ABSTRACT retained.
+    The primary PDF was retrieved from its Semantic Scholar mirror after official
+    PDF attempts failed. Selected Methods/Results and actual Figures 1 and 3-6 were
+    inspected. Length was measured from head top to stalk base, not isolated cell-body
+    length; graph axes use stalk length. The percentage is study-specific. Natural-seawater
+    responses differ from artificially slowed responses. The specimens were collected
+    near Villefranche and cultured at 14-18 C; current taxonomic identity is not verified.
+    The n=20 initial-length sample is not asserted as independent contraction replication.
+    Microtubule disassembly accompanies shortening, but this study expressly does
+    not establish force production. Its disassembly half-time is not automatically
+    contraction duration. The accessible JATS contains an abstract and PDF pointer,
+    not the complete experimental text.
+discussions:
+- discussion_id: cellular-contraction-scope-and-mappings
+  prompt: Review the shortening-defined parent without equating all contractility
+    endpoints.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Require active reduction of cell-body length or the extension of a cytoplasmic
+    projection. Generic force production or isometric contractility alone is insufficient.
+    Extracellular pilus retraction, injection-system contraction, contractile-vacuole
+    cycling and cytokinetic constriction alone do not establish this endpoint. Neither
+    passive osmotic shrinkage, death-associated shortening nor static short-cell morphology
+    suffices. The existing body and rapid axopodial traits are narrower children;
+    stalk contraction remains a possible future child, not a new allocation here.
+    Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily
+    shortening. Active denotes the cellular response, not demonstrated ATP-driven
+    motor action. No universal speed, fractional shortening, trigger, calcium threshold,
+    ATP dependence, ecological role, exact synonym for generic contractility or organism-level
+    disjointness is asserted.
+  posed_by: codex
+  posed_date: '2026-10-14'
+- discussion_id: cellular-contraction-metpo-assessment
+  prompt: Review the proposed shortening phenotype and its upstream hierarchy.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Pinned/current METPO releases, editor and inspected template owners yielded
+    no active exact class in the bounded identity assessment. Deprecated Motility
+    METPO:0000006 and METPO:000006 lead to METPO:1000701; deprecated Motile METPO:0000087
+    and METPO:000088 lead to METPO:1000702. These are related locomotion concepts,
+    not exact replacements for shortening. They are not revived or put in xrefs. Keep
+    phenotype METPO:1000059 as the direct parent. Proposal v605 reserves METPO:1068200;
+    the ontology pin and historical child cohorts v558/v604 remain unchanged. No external
+    equivalence or SSSOM mapping is accepted.
+  posed_by: codex
+  posed_date: '2026-10-14'
+- discussion_id: cellular-contraction-provenance-and-mechanism
+  prompt: Resolve isolate identities and endpoint-specific mechanisms before adding
+    exemplars or causal proteins.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Keep source-named organisms as qualified observations, not species-wide
+    canonical exemplars. Verify culture provenance and current taxonomic identity
+    before adding canonical_examples. Calcium dependence, microtubule breakdown, contractile
+    fibers and fitted calcium-wave models must not be combined into one universal
+    mechanism. Protein sequence features alone cannot establish this phenotype. A
+    protein-resolved graph requires authority-checked taxon-paired accessions and
+    edge-specific perturbation evidence. No graph is asserted; mechanisms are deferred,
+    not claimed absent. Source checks covered identified metadata fields and selected
+    text/figures, not comprehensive correction or retraction clearance.
+  posed_by: codex
+  posed_date: '2026-10-14'
+curation_history:
+- timestamp: '2026-10-14T22:35:09Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added a shortening-defined cellular contraction parent with three primary
+    DOI sources and directly checked 19/15/15-word excerpts. Retained native VERIFIED,
+    VERIFIED and NOT_IN_ABSTRACT outcomes. Reserved 000729, v605 and 1068200-1068299
+    after ignored/hidden known-copy, retained-history and open/draft PR checks with
+    full proposal-range inspection. Resolved the body and axopodial parent gaps while
+    keeping assay and mechanism questions open. No universal molecular mechanism or
+    canonical taxon inferred. Timestamp records observed allocation and curation acceptance.
+  llm_assisted: true

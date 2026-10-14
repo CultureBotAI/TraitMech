@@ -201,6 +201,10 @@ post-merge cleanup.
 When adding a missing parent for already accepted positive or negative
 assay-result children, reparent those children below the new exact parent and
 mark their temporary parent-gap discussions `RESOLVED` in the same branch.
+If a discussion combines that parent gap with an independent assay or evidence
+question, preserve the historical rationale and carry the unresolved question
+into a linked OPEN discussion. State which part the hierarchy repair resolves;
+adding a parent is not evidence that the assay question has been answered.
 
 Do not treat a temporary seeder output directory as a missing-work queue. It is
 a reusable METPO projection that can contain records already live under

@@ -7,7 +7,7 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000729
 evidence:
 - reference: DOI:10.1126/sciadv.add6550
   snippet: Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could stimulate
@@ -63,7 +63,7 @@ discussions:
   prompt: Resolve a closer parent while distinguishing body shortening from other
     contractile endpoints.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Retain phenotype METPO:1000059. Motility METPO:1000701 concerns locomotion
     through the environment; motile METPO:1000702 specifies independent movement using
     metabolic energy. Neither necessarily establishes body shortening. Body contraction
@@ -78,6 +78,13 @@ discussions:
     is asserted.
   posed_by: codex
   posed_date: '2026-10-14'
+  resolved_date: '2026-10-14'
+  resolution_note: Added cellular contraction (body or cytoplasmic projection shortening)
+    traitmech:000729 as the direct broader phenotype. This is a definition-based subclass
+    inference, not a new child experiment or evidence of a common molecular mechanism.
+    Phenotype METPO:1000059 remains an ancestor. Preserved the historical rationale
+    and endpoint boundaries; the v605 proposal requests the child axiom without rewriting
+    the historical proposal cohort.
 - discussion_id: cell-body-contraction-metpo-assessment
   prompt: Review the proposed phenotype without treating locomotion as an exact equivalent.
   kind: CURATION_TODO
@@ -146,4 +153,12 @@ curation_history:
     observed asymmetric contraction (#1935). Checked actual panels A-C and distinguished
     body shortening from fitted model curves. The intermediate no-snippet record failed
     MISSING_SNIPPET and was not published or baselined. Prior events remain intact.
+  llm_assisted: true
+- timestamp: '2026-10-14T22:35:09Z'
+  curator: codex
+  action: REFINE_CELLULAR_CONTRACTION_PARENT
+  changes: Refined the direct parent to cellular contraction traitmech:000729 by definition-based
+    inference. Preserved child definition, supporting excerpts, prior curation history
+    and independent provenance/mechanism gaps. Resolved only the parent question.
+    No new experiment, canonical taxon or molecular mechanism is asserted.
   llm_assisted: true

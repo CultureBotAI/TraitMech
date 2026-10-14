@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/rapid_axopodial_contraction.yaml
+  slug: rapid_axopodial_contraction
+session:
+  id: 2026-10-14T223943Z-codex-966313
+  timestamp: '2026-10-14T22:39:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Refine cellular contraction hierarchy
+  details: Refined the direct parent to cellular contraction traitmech:000729 by definition-based
+    inference. Preserved child definition, evidence excerpts, prior history, original rationale
+    and independent provenance/mechanism gap. Resolved only the hierarchy component of the
+    combined discussion and carried assay comparability into a linked OPEN discussion. Qualified
+    the Khan Europe PMC source URL with SRC:MED after checking PMID, source, title and DOI.
+    v558 remains unchanged and v605 requests the additional upstream child axiom. No comparative
+    assay was performed.
