@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1067500	reversible nematode-paralyzing activity	A physiological capability of a microorganism to induce a loss of active nematode movement that reverses after exposure to the microorganism or its products ends.	TraitMech:data/traits/physiology/reversible_nematode_paralyzing_activity.yaml|https://journals.flvc.org/nematropica/article/view/64427	METPO:1000059			metpo_traitmech_2026_10		Microbial paralyzing capability requiring recovery; not mere immobility or killing.	traitmech:000722
