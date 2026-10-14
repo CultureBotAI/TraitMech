@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/fungal_nematode_egg_parasitism.yaml
+  slug: fungal_nematode_egg_parasitism
+session:
+  id: 2026-10-14T115348Z-codex-baf9ad
+  timestamp: '2026-10-14T11:53:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add fungal nematode egg parasitism
+  details: Added one PROPOSED fungal egg-infection phenotype with eggshell penetration and
+    internal colonization. Xu 2021 supplies definition authority and Xie 2016 a distinct primary
+    experiment. Direct nine-word and six-word excerpts retain native VERIFIED and NOT_IN_ABSTRACT
+    results. Actual figures and Xu Supplementary Table 1 were inspected; its inconsistent
+    30-hour mean is retained as a limitation, not a curated rate. No protein mechanism is
+    inferred from sequence or expression. No canonical taxa, exact synonyms, equivalent xrefs,
+    obligacy, universal host range, field efficacy or safety claims. Ignored/hidden current-copy,
+    retained-history and open/draft PR checks identified no exact counterpart in documented
+    scope. Wheel byte sizes and broad editor envelopes were adjudicated as non-reservations.
+    Reserved 000726, v602 and the full 1067900-1067999 block; the trait timestamp records
+    acceptance, this event later CREATE. Existing records and protected spore germination
+    remain unchanged.
