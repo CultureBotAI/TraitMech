@@ -13312,6 +13312,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/nematode_attracting_activity.html#nematode-attraction-source-and-mechanism-limits"
  },
  {
+  "discussion_id": "nematode-egg-hatching-inhibition-scope-and-hierarchy",
+  "prompt": "Refine the hierarchy while preserving the microbial actor and hatching endpoint.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nematode egg-hatching inhibitory activity",
+  "source_id": "traitmech:000723",
+  "source_file": "nematode_egg_hatching_inhibitory_activity.yaml",
+  "attaches_to": [],
+  "rationale": "The microorganism has the inhibitory capability; this is not its own development or the nematode's susceptibility. Reduced hatching over an observed interval does not establish egg death, irreversible arrest or subsequent recovery. Juvenile paralysis or killing, fewer root egg masses, population suppression, trapping, attraction and sequence annotations alone are insufficient. Feeding and infection are not required. Related lethal, paralyzing, trapping, attracting and fungal-nematophagy records are not necessary parents; no organism-level disjointness is asserted. Phenotype METPO:1000059 is the conservative parent. Pinned/current METPO screening found only the unrelated fried-egg-shaped colony, not an exact active or deprecated counterpart in inspected owners; v599 proposes the class. Ovicidal terminology and nematicide chemical roles are not exact synonyms or xrefs. Neither a universal host/stage range nor a particular secretion mechanism is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_egg_hatching_inhibitory_activity.html#nematode-egg-hatching-inhibition-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "nematode-egg-hatching-inhibition-source-and-mechanism-limits",
+  "prompt": "Resolve strain provenance and assay discrepancies before adding taxa or mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nematode egg-hatching inhibitory activity",
+  "source_id": "traitmech:000723",
+  "source_file": "nematode_egg_hatching_inhibitory_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Meyer's USDA technical abstract reports six motility-inhibitory isolates, versus four in the published paper; that separate endpoint is not silently reconciled. Saharan's claimed FbMi6 accession resolves to clone SF_570, while its supplement has SF_561/SF_570 and FbMi-4 inconsistencies documented in the lethal-nematicidal source assessment. Do not infer a corrected strain or canonical taxon. No shared active chemical, microbial protein, causal graph, field efficacy or environmental safety is asserted. Culture-filtrate effects do not define the entire class as secretion. Source hashes, direct quote checks and bounded notice checks are retained in the verification sidecar. Meyer has no Crossmark data available; no comprehensive notice clearance or full raw-data/statistical reanalysis is claimed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_egg_hatching_inhibitory_activity.html#nematode-egg-hatching-inhibition-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "nucleophagy-cargo-route-and-selectivity",
   "prompt": "Review nuclear-cargo scope and source-specific selectivity.",
   "kind": "CURATION_TODO",
@@ -14828,9 +14862,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 745,
- "total_knowledge_gaps": 464,
- "total_source_entries": 588,
+ "total_discussions": 747,
+ "total_knowledge_gaps": 465,
+ "total_source_entries": 589,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

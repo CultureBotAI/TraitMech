@@ -1,0 +1,824 @@
+{
+  "trait_id": "traitmech:000723",
+  "accepted_at": "2026-10-14T03:09:57Z",
+  "checked_at": "2026-10-14T03:16:22.985734+00:00",
+  "status": "Author assessment for one PROPOSED trait; not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.1163/156854104323072883",
+      "snippet": "The least hatches were recorded in 7-day-old C. globosum (L250) filtrate, with 85 and 98% hatch reductions for SCN and RKN, respectively.",
+      "words": 22,
+      "role": "definition_support",
+      "source": {
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004.response",
+        "bytes": 177291,
+        "sha256": "277daa845dd300ba8b26d6a92e0b95cfcbcc7cbfe7e54ee30c721b49cfc8813d",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/3830/MeyerActivityoffungalfiltratesagainstSCNandRKNegghatchandjuvmotilityNematologypublicationreprint.pdf"
+      },
+      "repository_item": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=142949",
+      "locator": "Results, printed page 28/PDF page 6, lower left column.",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "actual_typeset_match": true,
+      "exact_normalized_text_layer_match": false,
+      "extraction_discrepancy": "PDFKit loses the fi ligature in filtrate; quote follows actual typeset page, not corrected text-layer proof.",
+      "native_verdict": "UNRESOLVED",
+      "native_locator": "evidence[0]",
+      "identity": "Crossref DOI/title, six authors, journal, volume/issue and pages match the USDA-hosted article. Exact Europe PMC DOI query returned zero records; no claim of globally absent indexing.",
+      "inspection_scope": "All ten article pages, Methods, Results, Table 1 and Figure 1 inspected. Quoted page re-inspected during curation. No full raw-data reanalysis or canonical taxonomy verification.",
+      "source_assets": [
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-text.json",
+          "bytes": 45392,
+          "sha256": "cd8cd1197027f19e806e1855343b6528c33ef773b1d4d4865dd9af3f42268c49"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-crossref.json",
+          "bytes": 3964,
+          "sha256": "927c679504ee33629d412868526b2e4bdd686975623af61169652c1fe55cf841"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-europepmc.json",
+          "bytes": 193,
+          "sha256": "f0f1e6544ccba8781cdd94e1e1d5f59fdfb7f72d835c799d81f60ded4d6f88d9"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-1.png",
+          "bytes": 689011,
+          "sha256": "b758872d0e8433fae257659032f060a5378ccaf4d06cd0a77632e310cbf49627"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-10.png",
+          "bytes": 803940,
+          "sha256": "57c40c2ea58f877a6e46de4dac0076fcc79e5f6e16e279dbe1b76d7293498e60"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-2.png",
+          "bytes": 827015,
+          "sha256": "1fbe6d89f7c9ba851bc5076d524e5d1d337196c7eacd76c2641f8636698b8bee"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-3.png",
+          "bytes": 860224,
+          "sha256": "c92b1cf40bb0319d244e3a46cd40532191818a24b96a08a1fce0ddeb8139c125"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-4.png",
+          "bytes": 433069,
+          "sha256": "e575aac672c13b0ea60eec4390c1a7529f31a56dac77cc738709b32a08f5b573"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-5.png",
+          "bytes": 528430,
+          "sha256": "1787ef8168dc89770d67ef89452bfc06a1a0f703723f7b9666a4bf006aa4f4b5"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-6.png",
+          "bytes": 802112,
+          "sha256": "94c115028f9f1ff23ab9d9cb2b07a6ebef50fc13cdbc5eca6e608a7e75ccf3b4"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-7.png",
+          "bytes": 873632,
+          "sha256": "b06026e8321111313612a2d1159585cf71f139878de2270c51e405399c6cb7f9"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-8.png",
+          "bytes": 869382,
+          "sha256": "b2f5628983eb25c53b5c667b14c84796dd7ed3b176bb1c2779b6e7b282c299e9"
+        },
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-pages/page-9.png",
+          "bytes": 911849,
+          "sha256": "ac5eb8b993bcb4f1a06cb83088fb556a7786d48b7adf4d98fc9d47641da8863f"
+        }
+      ]
+    },
+    {
+      "reference": "DOI:10.1038/s41598-023-33669-z",
+      "snippet": "T. asperellum FbMi6 inhibited egg hatching in all concentrations as compared to control.",
+      "words": 13,
+      "role": "second_primary_hatch_support",
+      "source": {
+        "path": "/tmp/traitmech-nematicidal-research-20261013/saharan2023.html",
+        "bytes": 432204,
+        "sha256": "9cd48922e85bd719a9108435fd1c4914f76e2a28bce35ea9ca005bb902243bc1",
+        "url": "https://www.nature.com/articles/s41598-023-33669-z"
+      },
+      "locator": "Results, egg-hatching paragraph; not a named egg-assay Results subsection.",
+      "snippet_xpath": "/html/body/div[2]/main/article/div[3]/div[3]/section[2]/div/div/p[2]",
+      "source_identity_verified": true,
+      "direct_source_match": true,
+      "exact_normalized_publisher_html_match": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[1]",
+      "pmid": "37088805",
+      "pmcid": "PMC10123068",
+      "inspection_scope": "Original publisher HTML scientific Abstract, own hatch Results, culture-filtrate and hatch Methods, actual Figure 3 inspected. Prior qualified supplement/GenBank checks were reread; no full DOCX page render or complete field/raw-data audit.",
+      "source_assets": [
+        {
+          "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/saharan2023-fig3.png",
+          "bytes": 47697,
+          "sha256": "3c4f0f0db4befae23b40b8c8c3fe5d83f70525f1f7fb68882ac7d42d4bb15c48",
+          "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-023-33669-z/MediaObjects/41598_2023_33669_Fig3_HTML.png"
+        }
+      ],
+      "provenance_context": {
+        "path": "/tmp/traitmech-nematode-egg-hatching-inhibitory-activity-20261014/research/traits/physiology/lethal_nematicidal_activity-source-verification.json",
+        "bytes": 67640,
+        "sha256": "7ad1e8d7c558e0e695cb9e942509eb7ae1f560ba6409e458dada4b696bfea78b"
+      },
+      "provenance_limits": "The prior record verifies the same source bytes, strain/accession discrepancies and a different lethal endpoint. Its evidence verdict is not substituted for the current hatch-specific native run.",
+      "access_limits": "Follow-up Nature web access failed through identity redirect, and PMC web access returned a browser challenge. The previously acquired original HTML and separately acquired Figure 3 remain hash-checked, not described as a fresh full-page download."
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-14T03:09:57Z",
+    "base": "4200c75a930654cfec7e635edcbcec896efef919",
+    "trait_id": "traitmech:000723",
+    "label": "nematode egg-hatching inhibitory activity",
+    "category": "PHYSIOLOGY",
+    "mapping_status": "PROPOSED",
+    "cohort": "metpo_traitmech_v599",
+    "proposed_id": "METPO:1067600",
+    "reserved_block": [
+      1067600,
+      1067699
+    ],
+    "scientific_scope": "A physiological capability of a microorganism to reduce nematode egg hatching over a defined observation interval relative to comparable unexposed controls.",
+    "supporting_references": [
+      "DOI:10.1163/156854104323072883",
+      "DOI:10.1038/s41598-023-33669-z"
+    ],
+    "reservation_adjudication": {
+      "exact_matches": 0,
+      "broad_editor_envelope_occurrences": 665,
+      "conflicting_reservations": []
+    },
+    "fresh_remote": {
+      "main": "4200c75a930654cfec7e635edcbcec896efef919",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1782,
+            "35099af2b7d5347f2ca6e418c4a139979071644d",
+            false
+          ],
+          [
+            1476,
+            "b4b8d1280e25bd3e340241e7ac23b51bbe7aaec3",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "8df89370be840a4b58a9d8a7407c66c7471a5085",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "3db7393ad591a7876f3c981dd70cc68ce9d37add"
+      }
+    },
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-egg-hatching-novelty-20261014/assessment.json",
+        "sha256": "e4d7ef1d6b8f86ec8dc6824735c7d7f1dbecd930472a8d199635776db462b7f5"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-novelty-20261014/local/completion.json",
+        "sha256": "84a3faa43d1b4ea0939a6bba5ba33b5888e891538d42137c4212fe9bd03c3abd"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-novelty-20261014/history/completion.json",
+        "sha256": "f2d2ed0881ca49e32db57bed423727e1731df31252a81553be483ce6ffa26b23"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-reservations-20261014/numeric-index.json",
+        "sha256": "5e361c16cc603219a927ba0ca41a3b91492859f83b57de61419b6b5e7db6196d"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-reservations-20261014/local/completion.json",
+        "sha256": "01277a4c8a02227685472cb5200a203606c5006010c51de103e8bc3c11b22918"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-reservations-20261014/remote/result.json",
+        "sha256": "46d52b09fa31f75aa94578bbc24e12b4b06f8742ab81a85cb8949affb0ab0f6a"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/metpo-semantic-screen.json",
+        "sha256": "053a4a512fd1b10390a5a495d6fab3c76eae4051b47edc11d19a309fb4de4555"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-assessment.json",
+        "sha256": "3e45198c5482f00518f59e59a1bafbd9dc1e5beb5303d075cc0318eaf131b6d0"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/saharan2023-hatch-assessment.json",
+        "sha256": "168c566444e9ddbd09a94177c03393b814c6747dc712f12ce8194a5cf2673f7e"
+      },
+      {
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/receipt.json",
+        "sha256": "19b658ecd88aafbedb352ecb82a47074c4ea2ae5042dce15c513ed5733fd9acc"
+      }
+    ],
+    "limits": "Author acceptance for one PROPOSED trait, not independent review, atomic allocation, biological mechanism, canonical taxonomy or discovery exhaustion. Recheck before publication."
+  },
+  "novelty": {
+    "assessed_at": "2026-10-14T03:09:57.514676+00:00",
+    "candidate": "nematode egg-hatching inhibitory activity",
+    "status": "No exact duplicate identified in documented scope; semantic acceptance, not human sign-off.",
+    "local_locations": 182,
+    "available_locations": 178,
+    "retained_heads": 139,
+    "matched_paths": 76,
+    "distinct_matches": 1675,
+    "ignored_and_hidden_included": true,
+    "paths": [
+      {
+        "path": "app/dashboard/priority.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "app/dashboard/priority.json",
+        "distinct_lines": 2,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "app/discussions/data.js",
+        "distinct_lines": 10,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "data/traits/morphology/fungal_nematode_trap_formation.yaml",
+        "distinct_lines": 1,
+        "disposition": "Trapping, attraction, lethal activity or reversible paralysis has a distinct endpoint. Reduced egg hatch occurs as an exclusion, not an exact synonym, ungrounded node or same-scope parent-gap TODO."
+      },
+      {
+        "path": "data/traits/physiology/lethal_nematicidal_activity.yaml",
+        "distinct_lines": 11,
+        "disposition": "Trapping, attraction, lethal activity or reversible paralysis has a distinct endpoint. Reduced egg hatch occurs as an exclusion, not an exact synonym, ungrounded node or same-scope parent-gap TODO."
+      },
+      {
+        "path": "data/traits/physiology/nematode_attracting_activity.yaml",
+        "distinct_lines": 1,
+        "disposition": "Trapping, attraction, lethal activity or reversible paralysis has a distinct endpoint. Reduced egg hatch occurs as an exclusion, not an exact synonym, ungrounded node or same-scope parent-gap TODO."
+      },
+      {
+        "path": "data/traits/physiology/reversible_nematode_paralyzing_activity.yaml",
+        "distinct_lines": 1,
+        "disposition": "Trapping, attraction, lethal activity or reversible paralysis has a distinct endpoint. Reduced egg hatch occurs as an exclusion, not an exact synonym, ungrounded node or same-scope parent-gap TODO."
+      },
+      {
+        "path": "docs/communities/TYQ1_Nematode_Biocontrol_SynCom.html",
+        "distinct_lines": 2,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T173540Z-codex-8ffeaf.yaml",
+        "distinct_lines": 3,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T181656Z-codex-7e97a3.yaml",
+        "distinct_lines": 2,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T185752Z-codex-bb2ac8.yaml",
+        "distinct_lines": 2,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T194147Z-codex-8e2a91.yaml",
+        "distinct_lines": 2,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T202911Z-codex-c477c5.yaml",
+        "distinct_lines": 2,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "history/records/lethal_nematicidal_activity/2026-10-13T210624Z-codex-d22cad.yaml",
+        "distinct_lines": 3,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "kb/communities/TYQ1_Nematode_Biocontrol_SynCom.yaml",
+        "distinct_lines": 6,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      },
+      {
+        "path": "pages/browse.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/category/physiology.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/community/000072.html",
+        "distinct_lines": 1,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      },
+      {
+        "path": "pages/traits/morphology/fungal_nematode_trap_formation.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/traits/physiology/lethal_nematicidal_activity.html",
+        "distinct_lines": 25,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/traits/physiology/nematode_attracting_activity.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/traits/physiology/reversible_nematode_paralyzing_activity.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "pages/traits/upper/phenotype.html",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v594/proposal.md",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v596/metpo_proposal_classes_robot.tsv",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v596/proposal.md",
+        "distinct_lines": 11,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v597/proposal.md",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "proposals/metpo_traitmech_v598/proposal.md",
+        "distinct_lines": 3,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "references_cache/PMID_34468166.md",
+        "distinct_lines": 2,
+        "disposition": "HCN grazing-deterrence context and bibliography, not an exact trait."
+      },
+      {
+        "path": "references_cache/PMID_36118206.md",
+        "distinct_lines": 1,
+        "disposition": "Nematicide journal-title bibliography, not a trait."
+      },
+      {
+        "path": "references_cache/PMID_41660888.md",
+        "distinct_lines": 3,
+        "disposition": "TYQ1 hatching-result literature lead, not an existing TraitRecord or exact same-scope node."
+      },
+      {
+        "path": "references_cache/PMID_41736136.md",
+        "distinct_lines": 2,
+        "disposition": "Bionematicide bibliography, not a trait."
+      },
+      {
+        "path": "references_cache/PMID_42351244.txt",
+        "distinct_lines": 1,
+        "disposition": "Post-hatching chick treatment timing, not inhibition of nematode hatching."
+      },
+      {
+        "path": "references_cache/PMID_42602126.supplement.md",
+        "distinct_lines": 4,
+        "disposition": "PGPT sequence/prediction categories do not establish an experimentally supported hatching phenotype."
+      },
+      {
+        "path": "references_cache/PMID_42602126.txt",
+        "distinct_lines": 4,
+        "disposition": "PGPT sequence/prediction categories do not establish an experimentally supported hatching phenotype."
+      },
+      {
+        "path": "references_cache/doi_10.1038_s41598-021-95324-9.md",
+        "distinct_lines": 2,
+        "disposition": "Francisella novicida is a lexical false positive for ovicid."
+      },
+      {
+        "path": "references_cache/pmc_full_pmid_41660888.txt",
+        "distinct_lines": 14,
+        "disposition": "TYQ1 hatching-result literature lead, not an existing TraitRecord or exact same-scope node."
+      },
+      {
+        "path": "reports/causal_graph_review/decisions/20261008-four-records-batch119.yaml",
+        "distinct_lines": 1,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      },
+      {
+        "path": "reports/proposal_citation_audit.tsv",
+        "distinct_lines": 1,
+        "disposition": "Derived rendering or audit of the inspected maintained owners, not an additional trait."
+      },
+      {
+        "path": "research/local-cache-backups/20261013-1994-p1voGO/PMID_42602126.supplement.md",
+        "distinct_lines": 4,
+        "disposition": "PGPT sequence/prediction categories do not establish an experimentally supported hatching phenotype."
+      },
+      {
+        "path": "research/traits/physiology/lethal_nematicidal_activity-source-verification.json",
+        "distinct_lines": 90,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T175850Z-lethal-nematicidal-activity/review.md",
+        "distinct_lines": 48,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T175850Z-lethal-nematicidal-activity/review.yaml",
+        "distinct_lines": 30,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T181400Z-nematicidal-evidence-role-finding/review.md",
+        "distinct_lines": 54,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T181400Z-nematicidal-evidence-role-finding/review.yaml",
+        "distinct_lines": 35,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T183629Z-nematicidal-evidence-role-resolution/review.md",
+        "distinct_lines": 57,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T183629Z-nematicidal-evidence-role-resolution/review.yaml",
+        "distinct_lines": 38,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T185353Z-nematicidal-producer-excerpt-finding/review.md",
+        "distinct_lines": 64,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T185353Z-nematicidal-producer-excerpt-finding/review.yaml",
+        "distinct_lines": 43,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T191543Z-nematicidal-producer-excerpt-resolution/review.md",
+        "distinct_lines": 69,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T191543Z-nematicidal-producer-excerpt-resolution/review.yaml",
+        "distinct_lines": 47,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T193928Z-nematicidal-lethal-excerpt-finding/review.md",
+        "distinct_lines": 64,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T193928Z-nematicidal-lethal-excerpt-finding/review.yaml",
+        "distinct_lines": 45,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T200249Z-nematicidal-lethal-excerpt-resolution/review.md",
+        "distinct_lines": 74,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T200249Z-nematicidal-lethal-excerpt-resolution/review.yaml",
+        "distinct_lines": 53,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T202309Z-nematicidal-self-contained-authority-finding/review.md",
+        "distinct_lines": 67,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T202309Z-nematicidal-self-contained-authority-finding/review.yaml",
+        "distinct_lines": 50,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T204752Z-nematicidal-definition-authority-resolution/review.md",
+        "distinct_lines": 88,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T204752Z-nematicidal-definition-authority-resolution/review.yaml",
+        "distinct_lines": 62,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T205712Z-nematicidal-proposal-narrative-finding/review.md",
+        "distinct_lines": 80,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T205712Z-nematicidal-proposal-narrative-finding/review.yaml",
+        "distinct_lines": 59,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T210420Z-nematicidal-history-issue-links-finding/review.md",
+        "distinct_lines": 48,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T210420Z-nematicidal-history-issue-links-finding/review.yaml",
+        "distinct_lines": 44,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T212638Z-nematicidal-proposal-and-history-resolution/review.md",
+        "distinct_lines": 110,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T212638Z-nematicidal-proposal-and-history-resolution/review.yaml",
+        "distinct_lines": 81,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T233841Z-nematode-attracting-activity/review.md",
+        "distinct_lines": 4,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261013T233841Z-nematode-attracting-activity/review.yaml",
+        "distinct_lines": 3,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261014T013353Z-reversible-nematode-paralyzing-activity/review.md",
+        "distinct_lines": 4,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "reviews/structured/20261014T013353Z-reversible-nematode-paralyzing-activity/review.yaml",
+        "distinct_lines": 3,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "scripts/add_fungal_nematode_trap_formation_trait.py",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "scripts/add_lethal_nematicidal_activity_trait.py",
+        "distinct_lines": 14,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "scripts/add_nematode_attracting_activity_trait.py",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "scripts/add_reversible_nematode_paralyzing_activity_trait.py",
+        "distinct_lines": 1,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "tests/test_add_lethal_nematicidal_activity_trait.py",
+        "distinct_lines": 5,
+        "disposition": "Implementation, source verification and current/historical provenance of existing related traits. Shared Saharan citation supports a different endpoint in the lethal record; no new hatch trait is already allocated here."
+      },
+      {
+        "path": "tmp/community-pages-review-test/000072.html",
+        "distinct_lines": 1,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      },
+      {
+        "path": "tmp/community-pages-test/000072.html",
+        "distinct_lines": 1,
+        "disposition": "Related CommunityMech consortium and its provenance/derived products, not an equivalent organism-level trait. Existing nodes concern consortium mechanisms and host effects; no exact hatch-inhibition node needs a TraitMech repair."
+      }
+    ],
+    "identity": "Reusable microbial capability reducing nematode egg hatching over a defined observation interval. Not the microorganism own development, a one-off assay row or sequence feature. Hatch reduction alone establishes neither egg death nor reversible arrest.",
+    "hierarchy": "Phenotype METPO:1000059 below quality METPO:1000188. Current/pinned exact phenotype parent agrees. Pinned animal pathogen mentions infection; current animal-pathogen parent entails infectious disease/disorder. Neither is required by cell-free hatch inhibition. Existing feeding, trapping, lethal, attraction and paralysis traits are not exact or necessary parents.",
+    "ontology": "Three explicit OWL inputs and six selected TSV owners, including deprecated/draft rows, yield only METPO:1007069 fried-egg-shaped colony and its annotations/stub. This morphological analogy is not a historical counterpart; no exact active/deprecated hatch class found in that scope. Editor conversion has 31 triples and no imports; failed initial parser/format attempts are retained as failures.",
+    "remote": "11 open/draft PRs, 783 nonremoved changed blobs, 587 selected upstream owners. No candidate hit in pending bodies/blobs. Related CommunityMech consortium and four nematicide chemical-name mappings are not equivalents. All source blobs remain identical to the refreshed screen.",
+    "coupled_repair": "No exact synonym, ungrounded node or same-scope parent gap identified in maintained matched context. Existing exclusions remain correct and need no edits.",
+    "limits": "Known copies, not every host path. Four unavailable locations, lost ignored/untracked history, symlinks, submodules and arbitrary archives are not reconstructed. Remote changed blobs, not every unchanged PR file. Ontology owners, not all ontologies. No complete literature exhaustion claim."
+  },
+  "native_record_verification": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+      "scripts/verify_snippets.py",
+      "--record",
+      "data/traits/physiology/nematode_egg_hatching_inhibitory_activity.yaml",
+      "--out",
+      "/tmp/traitmech-egg-hatching-checks-20261014/native-record.tsv"
+    ],
+    "exit": 0,
+    "seconds": 3.7823472158052027,
+    "completed_at": "2026-10-14T03:15:10.164490+00:00",
+    "log": "/tmp/traitmech-egg-hatching-checks-20261014/records-03.log",
+    "report": {
+      "path": "/tmp/traitmech-egg-hatching-checks-20261014/native-record.tsv",
+      "bytes": 559,
+      "sha256": "1a32bf2b97b99a31edf26654b42fec3a72962c63357526074a1e3755539d28b1"
+    },
+    "report_rows": 2,
+    "explanation": "Successful transport with two inconclusive abstract verdicts. Direct full-text/typeset checks establish quote fidelity; neither result is native VERIFIED."
+  },
+  "source_status": {
+    "requests": [
+      {
+        "name": "saharan-epmc",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41598-023-33669-z&resultType=core&format=json",
+        "started_at": "2026-10-14T03:03:44.847618+00:00",
+        "status": 200,
+        "effective_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41598-023-33669-z&resultType=core&format=json",
+        "content_type": "application/json;charset=UTF-8",
+        "bytes": 5506,
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/saharan-epmc.response",
+        "sha256": "72b9f53734f0242d1e3223305f4681a42b40c9d802826aacd64254b33aceb2f1",
+        "headers_sha256": "f0758568734498946e5b557360a930831fae6de9f9d668ac7e43625b8169c797",
+        "assessment": {
+          "id": "37088805",
+          "source": "MED",
+          "pmcid": "PMC10123068",
+          "doi": "10.1038/s41598-023-33669-z",
+          "title": "The nematicidal potential of novel fungus, Trichoderma asperellum FbMi6 against Meloidogyne incognita.",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "commentCorrectionList": null
+        }
+      },
+      {
+        "name": "saharan-crossref",
+        "url": "https://api.crossref.org/works/10.1038/s41598-023-33669-z",
+        "started_at": "2026-10-14T03:03:45.506562+00:00",
+        "status": 200,
+        "effective_url": "https://api.crossref.org/works/10.1038/s41598-023-33669-z",
+        "content_type": "application/json",
+        "bytes": 30699,
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/saharan-crossref.response",
+        "sha256": "b21777cafac0fcae8d9cf2f4dbf545e9e96cb8e0054d0bf2bd1795987c527552",
+        "headers_sha256": "5468f5c6fce869658a8e04998b9cef9edc288b22482e9a4ddea081e66d957be1",
+        "assessment": {
+          "DOI": "10.1038/s41598-023-33669-z",
+          "title": [
+            "The nematicidal potential of novel fungus, Trichoderma asperellum FbMi6 against Meloidogyne incognita"
+          ],
+          "relation": {},
+          "update-to": null,
+          "updated-by": null,
+          "is-referenced-by-count": 33
+        }
+      },
+      {
+        "name": "saharan-crossmark",
+        "url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41598-023-33669-z",
+        "started_at": "2026-10-14T03:03:46.791639+00:00",
+        "status": 200,
+        "effective_url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41598-023-33669-z",
+        "content_type": "text/html;charset=UTF-8",
+        "bytes": 9863,
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/saharan-crossmark.response",
+        "sha256": "e7d347a0d0c8628b99d6306fb603d1df68dc0b172a7c84536cfe08c3c3fa43a6",
+        "headers_sha256": "8babf9a9dbd5a41ef716d7af024a81c11ed63740f3a5b4caaa5cfd7f728050ab",
+        "assessment": {
+          "h1": [
+            "Document is current"
+          ],
+          "h2": [
+            "Any future updates will be listed below"
+          ]
+        }
+      },
+      {
+        "name": "meyer-crossmark",
+        "url": "https://crossmark.crossref.org/dialog/?doi=10.1163/156854104323072883",
+        "started_at": "2026-10-14T03:03:47.677839+00:00",
+        "status": 200,
+        "effective_url": "https://crossmark.crossref.org/dialog/?doi=10.1163/156854104323072883",
+        "content_type": "text/html;charset=UTF-8",
+        "bytes": 3605,
+        "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/meyer-crossmark.response",
+        "sha256": "b9e9b8f62713a356af9d8cba403d694d4d5c9f5080ec455403fd2181a583ffbc",
+        "headers_sha256": "72e7ea462738a4d9fe84e059d2ed335fcc35acf5dc2a2967b53c6fb247bcfde7",
+        "assessment": {
+          "h1": [
+            "CrossMark data for this content is not currently available."
+          ],
+          "h2": []
+        }
+      }
+    ],
+    "meyer": "Crossref returned no update links; Crossmark has no data available. Publisher Brill access returned 403 during research. USDA item/PDF identify the article; no comprehensive notice clearance.",
+    "saharan": "Exact DOI Europe PMC MED record matches PMID/PMCID and returned no commentCorrectionList; Crossref has no update links; Crossmark reports current. Bounded status checks, not proof of complete notice coverage."
+  },
+  "retained_receipts": [
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-assessment.json",
+      "bytes": 3930,
+      "sha256": "3e45198c5482f00518f59e59a1bafbd9dc1e5beb5303d075cc0318eaf131b6d0"
+    },
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/meyer2004-index-followup.json",
+      "bytes": 903,
+      "sha256": "ef252265ce664ced370a94399610618cc1d6bda18b6960cfeb7866eeb9306c59"
+    },
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/saharan2023-hatch-assessment.json",
+      "bytes": 2346,
+      "sha256": "168c566444e9ddbd09a94177c03393b814c6747dc712f12ce8194a5cf2673f7e"
+    },
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/saharan2023-snippet-candidate.json",
+      "bytes": 1072,
+      "sha256": "6adf8f42e93587d3899e75a8c725171584c8df84d03e56dcbe9e3e6a63bf9895"
+    },
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/metpo-semantic-screen.json",
+      "bytes": 16338,
+      "sha256": "053a4a512fd1b10390a5a495d6fab3c76eae4051b47edc11d19a309fb4de4555"
+    },
+    {
+      "path": "/tmp/traitmech-egg-hatching-source-acquisition-20261014/followup/receipt.json",
+      "bytes": 4981,
+      "sha256": "19b658ecd88aafbedb352ecb82a47074c4ea2ae5042dce15c513ed5733fd9acc"
+    }
+  ],
+  "skill_assessment": "Existing add-trait guidance covers source-role selection, direct snippets, failed resolver limits, sequence-feature interpretation and reservation checks. No additional skill edit justified by this addition.",
+  "supersession": "Earlier research-only receipts retain historical unfinished states. The accepted allocation, direct quote checks and current record-specific native report supersede those limitations without rewriting prior receipts.",
+  "limits": [
+    "Temporary raw source assets are not committed; acquisition URLs and hashes identify inspected bytes.",
+    "No canonical taxonomy, mechanism, protein inventory, field efficacy or environmental-safety assertion.",
+    "No complete experimental raw-data reanalysis or exhaustive literature/ontology search."
+  ]
+}

@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1067600	nematode egg-hatching inhibitory activity	A physiological capability of a microorganism to reduce nematode egg hatching over a defined observation interval relative to comparable unexposed controls.	TraitMech:data/traits/physiology/nematode_egg_hatching_inhibitory_activity.yaml|DOI:10.1163/156854104323072883	METPO:1000059			metpo_traitmech_2026_10		Microbial inhibition of nematode egg hatching; neither egg death nor recovery is entailed.	traitmech:000723

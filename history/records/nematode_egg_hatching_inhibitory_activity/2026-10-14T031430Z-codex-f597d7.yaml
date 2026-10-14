@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/nematode_egg_hatching_inhibitory_activity.yaml
+  slug: nematode_egg_hatching_inhibitory_activity
+session:
+  id: 2026-10-14T031430Z-codex-f597d7
+  timestamp: '2026-10-14T03:14:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add nematode egg-hatching inhibitory activity
+  details: Added one PROPOSED microbial capability reducing nematode egg hatching over a defined
+    observation interval against comparable unexposed controls. Meyer 2004 is definition authority;
+    Saharan 2023 supplies a second primary hatch experiment, not a background summary. Directly
+    checked 22-word and 13-word excerpts retain native UNRESOLVED and NOT_IN_ABSTRACT outcomes.
+    Preserved control denominators, culture-age versus exposure timing, source/figure discrepancies
+    and strain-provenance limitations. No egg death, recovery, identified molecule, canonical
+    taxon, exact synonym, xref or causal graph inferred. Ignored/hidden current-copy, retained-history
+    and open/draft PR checks found no exact counterpart or competing allocation; broad editor
+    envelopes are not narrower reservations. Local 000723, cohort v599 and full 1067600-1067699
+    block reserved. Trait timestamp records observed acceptance, while this history records
+    later CREATE. Other records, including protected spore germination, remain unchanged.
