@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/nematode_repelling_activity.yaml
+  slug: nematode_repelling_activity
+session:
+  id: 2026-10-14T091602Z-codex-145498
+  timestamp: '2026-10-14T09:16:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add nematode-repelling activity
+  details: Added one PROPOSED microbial capability eliciting active nematode movement away
+    from itself or its products. Pradel 2007 supplies definition support; Prakash 2021 supplies
+    a second primary experiment. Directly checked 18-word and 21-word snippets retain native
+    VERIFIED and NOT_IN_ABSTRACT outcomes. Lawn leaving, acute reversal, pure-compound chemotaxis
+    and relative odor preference remain separate endpoints. No universal host range, shared
+    mechanism, canonical taxa, chemical/protein xrefs, causal graph, nonlethality or field
+    efficacy inferred. Ignored/hidden current-copy, retained-history and open/draft PR checks
+    found no exact counterpart or competing allocation in documented scope. Two embedding
+    coordinates and 857 broad editor-envelope matches were adjudicated as false positives.
+    Reserved local 000725, v601 and the full 1067800-1067899 block. Trait timestamp records
+    observed acceptance; this event records later CREATE. All preexisting records including
+    protected spore germination remain unchanged.

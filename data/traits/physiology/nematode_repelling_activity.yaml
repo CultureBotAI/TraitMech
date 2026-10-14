@@ -1,0 +1,93 @@
+identifier: traitmech:000725
+label: nematode-repelling activity
+definition: A physiological capability of a microorganism to elicit active movement
+  of nematodes away from itself or substances it produces.
+definition_source: DOI:10.1073/pnas.0610281104
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1073/pnas.0610281104
+  snippet: C. elegans specifically avoids certain strains of Serratia based on their
+    production of the cyclic lipodepsipentapeptide serrawettin W2.
+  notes: Pradel et al. 2007, PMID:17267603, PMCID:PMC1892944, scientific Abstract;
+    exact normalized PMC match and native VERIFIED. C. elegans denotes Caenorhabditis
+    elegans. Own Results and actual Figures 1-4 distinguish initial entry followed
+    by leaving Serratia marcescens lawns from absence of attraction. A swrA insertion
+    mutant shows reduced lawn leaving but similar multiday killing; reduced avoidance
+    is not loss of pathogenicity. Purified serrawettin W2 on E. coli OP50 lawns and
+    acute drop-induced reversal are separate assays. The 16-hour bacterial-lawn endpoint,
+    60-minute supplemented-lawn endpoint and acute reversal are not one exposure.
+    Chemical recognition versus a mechanical surfactant cue remains unresolved, and
+    other bacterial cues can contribute. Serratia swrA is not the similarly named
+    Bacillus motility regulator.
+- reference: DOI:10.15252/embj.2020106938
+  snippet: a specific volatile organic compound, 1‐undecene, produced by the pathogen
+    P. aeruginosa is sensed as an aversive signal by C. elegans.
+  notes: Prakash et al. 2021, PMID:34086368, PMCID:PMC8246062, Discussion first paragraph,
+    own-study result; directly matched JATS, PMC and publisher text. Native NOT_IN_ABSTRACT
+    is retained, not relabeled VERIFIED. This is its own experiment, not a citation
+    of Pradel. P. aeruginosa denotes Pseudomonas aeruginosa. Figure 1A-B measures
+    PA14 lawn occupancy over 12 hours. Pure 1-undecene gives negative chemotaxis and
+    omega turns in distinct Figure 2 and Appendix S2 assays. PA14-versus-undA odor
+    choice establishes relative preference, not by itself repulsion or complete loss
+    of bacterial repellence. Peer-review reply page 14 reports reversals but no complete
+    lawn leaving after 1-undecene on OP50; the alternative adjacent-lawn crossing
+    assay is not eviction from an occupied lawn. Roaming or higher mean square displacement
+    alone is not directional avoidance. Recipient sensory genetics is not a microbial
+    causal pathway.
+discussions:
+- discussion_id: nematode-repelling-activity-scope-and-hierarchy
+  prompt: Refine the hierarchy without confusing microbial repellence with recipient
+    behavior or microbial taxis.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: 'The bearer is a microorganism capable of eliciting active nematode movement
+    away. Lack of attraction, relative food preference alone, paralysis, killing,
+    feeding, trapping or altered egg hatching is insufficient. Infection, benefit
+    to the microbe and prior ingestion are not required. No organism-level disjointness
+    from attraction or lethality is asserted: responses depend on strain, recipient
+    and conditions. Phenotype METPO:1000059 is the conservative parent. Pinned/current
+    releases and inspected editor/template owners have no exact counterpart identified.
+    Deprecated chemotaxis METPO:1000062 has no replacement or consider annotation
+    in the inspected ontology and concerns the moving organism, not this microbial
+    capability. It is not revived or used as a mapping. The v601 proposal retains
+    PROPOSED status; no exact synonym or external equivalence is asserted.'
+  posed_by: codex
+  posed_date: '2026-10-14'
+- discussion_id: nematode-repelling-activity-source-and-mechanism-limits
+  prompt: Resolve assay conditions, host range and strain provenance before adding
+    canonical examples or causal edges.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Two bacterial studies support the capability, not a shared molecule or
+    universal nematode response. Gene presence or compound production alone cannot
+    establish repellence. No canonical taxon, protein, chemical xref or causal graph
+    is asserted without authority checks. Prakash Appendix S1A depicts a 22-hour incubation
+    then a 2-hour, 37 C step, whereas main Methods describes 22 hours followed by
+    one hour at room temperature; these are not harmonized into one headspace condition.
+    Added recipient alleles and controls in peer review do not establish a successful
+    AWB ablation or blanket physiological specificity. Neither study proves universal
+    nonlethality, field efficacy, environmental safety or therapeutic use. Own results,
+    methods and selected figures/supplement/replies were inspected, not all raw data.
+    Source URLs, hashes, direct snippet checks and bounded correction/retraction searches
+    are retained in the verification sidecar; no comprehensive notice clearance is
+    claimed.
+  posed_by: codex
+  posed_date: '2026-10-14'
+curation_history:
+- timestamp: '2026-10-14T09:11:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added microbial nematode-repelling activity with two primary DOI studies
+    and directly checked 18-word and 21-word snippets. Preserved native VERIFIED/NOT_IN_ABSTRACT
+    outcomes and distinct lawn-leaving, reversal, chemotaxis and relative-preference
+    endpoints. Reserved 000725, v601 and 1067800-1067899 after ignored/hidden current-copy,
+    retained-history and open/draft PR checks. Decimal embedding values and broad
+    editor ranges are not conflicting reservations. No exact active METPO counterpart
+    or same-scope node migration identified in inspected owners; no canonical examples
+    or shared mechanism inferred. Other records unchanged. Timestamp records observed
+    acceptance.
+  llm_assisted: true

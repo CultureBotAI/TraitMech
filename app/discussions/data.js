@@ -13380,6 +13380,40 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/nematode_egg_hatching_stimulatory_activity.html#nematode-egg-hatching-stimulation-source-and-mechanism-limits"
  },
  {
+  "discussion_id": "nematode-repelling-activity-scope-and-hierarchy",
+  "prompt": "Refine the hierarchy without confusing microbial repellence with recipient behavior or microbial taxis.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nematode-repelling activity",
+  "source_id": "traitmech:000725",
+  "source_file": "nematode_repelling_activity.yaml",
+  "attaches_to": [],
+  "rationale": "The bearer is a microorganism capable of eliciting active nematode movement away. Lack of attraction, relative food preference alone, paralysis, killing, feeding, trapping or altered egg hatching is insufficient. Infection, benefit to the microbe and prior ingestion are not required. No organism-level disjointness from attraction or lethality is asserted: responses depend on strain, recipient and conditions. Phenotype METPO:1000059 is the conservative parent. Pinned/current releases and inspected editor/template owners have no exact counterpart identified. Deprecated chemotaxis METPO:1000062 has no replacement or consider annotation in the inspected ontology and concerns the moving organism, not this microbial capability. It is not revived or used as a mapping. The v601 proposal retains PROPOSED status; no exact synonym or external equivalence is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_repelling_activity.html#nematode-repelling-activity-scope-and-hierarchy"
+ },
+ {
+  "discussion_id": "nematode-repelling-activity-source-and-mechanism-limits",
+  "prompt": "Resolve assay conditions, host range and strain provenance before adding canonical examples or causal edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nematode-repelling activity",
+  "source_id": "traitmech:000725",
+  "source_file": "nematode_repelling_activity.yaml",
+  "attaches_to": [],
+  "rationale": "Two bacterial studies support the capability, not a shared molecule or universal nematode response. Gene presence or compound production alone cannot establish repellence. No canonical taxon, protein, chemical xref or causal graph is asserted without authority checks. Prakash Appendix S1A depicts a 22-hour incubation then a 2-hour, 37 C step, whereas main Methods describes 22 hours followed by one hour at room temperature; these are not harmonized into one headspace condition. Added recipient alleles and controls in peer review do not establish a successful AWB ablation or blanket physiological specificity. Neither study proves universal nonlethality, field efficacy, environmental safety or therapeutic use. Own results, methods and selected figures/supplement/replies were inspected, not all raw data. Source URLs, hashes, direct snippet checks and bounded correction/retraction searches are retained in the verification sidecar; no comprehensive notice clearance is claimed.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nematode_repelling_activity.html#nematode-repelling-activity-source-and-mechanism-limits"
+ },
+ {
   "discussion_id": "nucleophagy-cargo-route-and-selectivity",
   "prompt": "Review nuclear-cargo scope and source-specific selectivity.",
   "kind": "CURATION_TODO",
@@ -14896,9 +14930,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 749,
- "total_knowledge_gaps": 466,
- "total_source_entries": 590,
+ "total_discussions": 751,
+ "total_knowledge_gaps": 467,
+ "total_source_entries": 591,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
