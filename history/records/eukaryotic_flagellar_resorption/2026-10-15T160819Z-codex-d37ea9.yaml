@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  slug: eukaryotic_flagellar_resorption
+session:
+  id: 2026-10-15T160819Z-codex-d37ea9
+  timestamp: '2026-10-15T16:08:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add eukaryotic flagellar resorption
+  details: Added one PROPOSED microbial-eukaryote axonemal-resorption phenotype with two primary
+    DOI sources and directly checked 8/9-word snippets, both retaining native NOT_IN_ABSTRACT.
+    Kept the 12-word remnant-limitation scientific-abstract excerpt with native VERIFIED in
+    a discussion, not definition evidence. Reserved 000733, v609 and 1068600-1068699 after
+    ignored/hidden current files, retained history, complete ranges and open/draft PR checks.
+    The phenotype parent is a definition-based inference. Preserved assay, strain and access
+    limits; no obsolete identifier, canonical taxon, exact mapping, complete disappearance/recycling
+    or universal molecular mechanism is inferred. The per-record timestamp records the observed
+    post-guard allocation decision, not source acquisition.

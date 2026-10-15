@@ -12445,6 +12445,76 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-provenance"
  },
  {
+  "discussion_id": "eukaryotic-flagellar-resorption-scope",
+  "prompt": "Review shortening through disassembly without requiring complete disappearance.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar resorption",
+  "source_id": "traitmech:000733",
+  "source_file": "eukaryotic_flagellar_resorption.yaml",
+  "attaches_to": [],
+  "rationale": "This physiological phenotype concerns shortening of a previously assembled eukaryotic axoneme. Static short flagella, failed assembly, nonmotility, bending or coiling, passive breakage, or shedding a largely intact organelle alone do not establish it. Neither complete structural disappearance nor complete protein recycling is required. Basal severing and residual transition zones can accompany resorption; the class does not require an intact base or the absence of severing. Eukaryotic flagellar autotomy traitmech:000731 and bacterial polar flagellar ejection traitmech:000732 have different endpoints. Bacterial periplasmic resorption involves a different apparatus. No organism-level disjointness is asserted. Phenotype METPO:1000059 is the definition-based parent; locomotion is not required. Palmelloid formation traitmech:000654 does not require flagellar loss.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1002/cm.20454"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_resorption.html#eukaryotic-flagellar-resorption-scope"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-resorption-metpo",
+  "prompt": "Review microbial-eukaryote scope without reviving obsolete morphology identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar resorption",
+  "source_id": "traitmech:000733",
+  "source_file": "eukaryotic_flagellar_resorption.yaml",
+  "attaches_to": [],
+  "rationale": "The inspected pinned/current METPO releases, editor and templates have no active exact resorption class. Historical METPO:0000089 and METPO:000090 carry OMO:0001000; METPO:1000381 carries IAO:0000226. All are deprecated and point to active METPO:1000704, which denotes locomotory flagellar possession, not resorption. Deprecated ciliated METPO:0000093 and METPO:000094 carry OMO:0001000, while METPO:1000385 carries IAO:0000226; no replacement or consider annotation was observed for those or deprecated flagellum METPO:1000123, whose reason is OMO:0001000. Historical terms are not exact xrefs and are not reactivated. https://github.com/berkeleybop/metpo/issues/521 records unresolved reason-code interpretation. Upstream's bacterial/archaeal focus requires maintainer review of this microbial-eukaryote proposal. The ontology pin stays unchanged. Proposal v609 reserves METPO:1068600 in 1068600-1068699; neither upstream release nor human sign-off is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_resorption.html#eukaryotic-flagellar-resorption-metpo"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-resorption-mechanism",
+  "prompt": "Keep the phenotype separate from universal disassembly or sequence-based mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar resorption",
+  "source_id": "traitmech:000733",
+  "source_file": "eukaryotic_flagellar_resorption.yaml",
+  "attaches_to": [],
+  "rationale": "The studies discuss different models of axonemal disassembly. Do not require a universal tip-to-base direction, basal severing site, tubulin modification, IFT defect, calcium threshold, stimulus or cell-cycle transition. Induced and mutant observations support the phenotype without becoming natural canonical exemplars. A protein-resolved graph requires taxon-paired authority-checked accessions and edge-specific experiments. A gene, domain, motif or sequence profile alone does not establish organelle resorption. Mechanisms are deferred, not claimed absent. No exact synonyms or mappings are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_resorption.html#eukaryotic-flagellar-resorption-mechanism"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-resorption-provenance",
+  "prompt": "Resolve strain provenance and preserve source-access limits before adding canonical taxa.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar resorption",
+  "source_id": "traitmech:000733",
+  "source_file": "eukaryotic_flagellar_resorption.yaml",
+  "attaches_to": [],
+  "rationale": "Source-designated strain names remain qualified observations; laboratory wild type is not proof of natural provenance, and a mutant label alone does not establish genetic engineering. Two distinct supporting publications are not a claim of independent-laboratory replication. The 2010 context paper shares authors with the 2003 study and is not a third definition citation. MED/Crossref identities and available publisher/PubMed notice fields were checked; this is not comprehensive correction/retraction clearance. Some publisher, PMC and PubMed attempts failed or returned challenge pages. Public PMC cloud assets and the directly retrieved 2003 PDF/XML retain their own successful provenance; failed requests are not relabeled as successful source checks. No raw-data reanalysis, paid research or human scientific sign-off is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_resorption.html#eukaryotic-flagellar-resorption-provenance"
+ },
+ {
   "discussion_id": "exocytosis-scope-and-mapping",
   "prompt": "Separate the secretion phenotype from its component steps.",
   "kind": "CURATION_TODO",
@@ -15342,9 +15412,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 775,
- "total_knowledge_gaps": 476,
- "total_source_entries": 598,
+ "total_discussions": 779,
+ "total_knowledge_gaps": 478,
+ "total_source_entries": 599,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

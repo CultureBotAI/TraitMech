@@ -1,0 +1,480 @@
+{
+  "at": "2026-10-15T15:33:54.674739+00:00",
+  "status": "CURATED_PROPOSED_SOURCE_VERIFICATION_NOT_HUMAN_SIGNOFF",
+  "acceptance": {
+    "path": "/tmp/traitmech-next-resorption-acceptance-20261015.json",
+    "sha256": "c7cf55287c1eeb642dcf82fea9aa65663f0ca88d5b2472d0f9c6227a894d60fd"
+  },
+  "handoff": {
+    "path": "/tmp/traitmech-next-resorption-curation-handoff-20261015.json",
+    "sha256": "c8378356efb79e63bbe39996bbfd2f908040a088d879ee4b4b92da43c1556786"
+  },
+  "native": {
+    "path": "/tmp/traitmech-next-resorption-snippets-20261015/result.json",
+    "sha256": "dcbea87e99f3ca534ec049c30e83a4ce4e247cc8248d0df908a612e6bb047716"
+  },
+  "native_script": {
+    "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/scripts/verify_snippets.py",
+    "sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc"
+  },
+  "rows": [
+    {
+      "reference": "DOI:10.1083/jcb.100.2.457",
+      "snippet": "Cells under resorption-inducing conditions rapidly shortened their flagella",
+      "words": 8,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_checked_at": "2026-10-15T13:53:13.930484+00:00",
+      "native_scientific_abstract_identity_confirmed": true,
+      "direct_text_match": true,
+      "asset": {
+        "name": "1985",
+        "path": "/tmp/traitmech-next-resorption-cloud-assets-20261015/PMC2113451.1.xml",
+        "sha256": "a33d99bbd9187566e8245fe149fc469f71618cc2a2505653969fba570496057c",
+        "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2113451.1/PMC2113451.1.xml?md5=83cdf332f386e5da92347393a3a82ce8",
+        "xpath": "//body/preformat",
+        "locator": "Printed page 458, Results, Monitoring of Flagellar Length during In Vivo Labeling, sole paragraph; Figure 2 on page 459.",
+        "limitation": "XML body is a single OCR preformat block, not section-structured JATS. All six PDF pages, three figures and Table I were inspected earlier; the quoted typeset page was reinspected. OCR matching does not establish accuracy of every extracted symbol."
+      },
+      "role": "definition_support"
+    },
+    {
+      "reference": "DOI:10.1186/1471-2121-4-11",
+      "snippet": "Acid shock causes resorption of mutants unable to deflagellate.",
+      "words": 9,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_checked_at": "2026-10-15T13:53:16.295936+00:00",
+      "native_scientific_abstract_identity_confirmed": true,
+      "direct_text_match": true,
+      "asset": {
+        "name": "2003",
+        "path": "/tmp/traitmech-next-flagellar-2003-primary-20261015/primary.xml",
+        "sha256": "0b91015e94682c644e8164bebc8961ce0651fa339179aedfaccb09ebe4fa5566",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC194436/fullTextXML",
+        "xpath": "//fig[@id=\"F7\"]/caption",
+        "locator": "Figure 7 caption, first sentence, page 9 of 12; JATS F7 under sec9/sec5.",
+        "limitation": "All twelve PDF pages and eight figures were inspected earlier; Figure 7 was reinspected. It scores cells with flagella longer than 7 micrometers, not directly resorption rates. Coiling and incomplete resorption are described; low calcium is not zero calcium."
+      },
+      "role": "definition_support"
+    }
+  ],
+  "scope_limitation": {
+    "reference": "DOI:10.1002/cm.20454",
+    "snippet": "resorbing flagella of Chlamydomonas leave remnants associated with the mother cell wall.",
+    "words": 12,
+    "native_verdict": "VERIFIED",
+    "native_checked_at": "2026-10-15T13:53:18.195969+00:00",
+    "native_scientific_abstract_identity_confirmed": true,
+    "direct_text_match": true,
+    "asset": {
+      "name": "2010",
+      "path": "/tmp/traitmech-next-resorption-2010-assets-20261015/PMC2897710.1.xml",
+      "sha256": "c0449b68e840512edbd47c494de31683d472f02f25a46aee9a86321d00d04a77",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2897710.1/PMC2897710.1.xml?md5=eb24c0d3fac83950e8450e87018ecef9",
+      "xpath": "//abstract//p[@id=\"P2\"]",
+      "locator": "Scientific abstract, JATS paragraph P2, third sentence.",
+      "limitation": "Main text, Methods, Results, Discussion, Conclusions and three captions read; actual figures, PDF, video, supplementary legend and raw data remain unread. Retained as remnant/scope context, not another definition citation."
+    },
+    "role": "scope_limit_context"
+  },
+  "source_assets": [
+    {
+      "path": "/tmp/traitmech-next-resorption-cloud-assets-20261015/PMC2113451.1.pdf",
+      "bytes": 720651,
+      "sha256": "a1c8aa8743c804619f568c58922f1864a6eb365beb9b5c27fb41ee1b0e9a124f"
+    },
+    {
+      "path": "/tmp/traitmech-next-flagellar-2003-primary-20261015/primary.pdf",
+      "bytes": 1240372,
+      "sha256": "7ff9d25f30d82e320b27a51137931864a43b83113a41e08b14bcf3ba0553a36c"
+    },
+    {
+      "path": "/tmp/traitmech-next-flagellar-2003-primary-20261015/primary.xml",
+      "bytes": 88866,
+      "sha256": "0b91015e94682c644e8164bebc8961ce0651fa339179aedfaccb09ebe4fa5566"
+    },
+    {
+      "path": "/tmp/traitmech-next-resorption-2010-assets-20261015/PMC2897710.1.xml",
+      "bytes": 56214,
+      "sha256": "c0449b68e840512edbd47c494de31683d472f02f25a46aee9a86321d00d04a77"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "1985",
+      "doi": "10.1083/jcb.100.2.457",
+      "pmid": "3968171",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1083%2Fjcb.100.2.457",
+      "requested_at": "2026-10-15T13:52:07.964521+00:00",
+      "status": 200,
+      "sha256": "4dbd4cbd9dc06690f19ecdf0dc1a924d84766b31548c0f9885534741ee9d5c9c",
+      "identity": {
+        "DOI": "10.1083/jcb.100.2.457",
+        "title": [
+          "Reversal of the posttranslational modification on Chlamydomonas flagellar alpha-tubulin occurs during flagellar resorption."
+        ],
+        "relation": {},
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "1985",
+      "doi": "10.1083/jcb.100.2.457",
+      "pmid": "3968171",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3968171+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T13:52:08.390909+00:00",
+      "status": 200,
+      "sha256": "b22e39cbf7abda4f0761af4bc3121844d6bd023ff243c351828a21984b91449c",
+      "identity": {
+        "source": "MED",
+        "id": "3968171",
+        "title": "Reversal of the posttranslational modification on Chlamydomonas flagellar alpha-tubulin occurs during flagellar resorption.",
+        "doi": "10.1083/jcb.100.2.457",
+        "commentCorrectionList": null
+      }
+    },
+    {
+      "name": "2003",
+      "doi": "10.1186/1471-2121-4-11",
+      "pmid": "12930563",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1186%2F1471-2121-4-11",
+      "requested_at": "2026-10-15T13:52:09.006390+00:00",
+      "status": 200,
+      "sha256": "881b6523c1718f58c05ef2691e3c923b2ea5dd1b5df31443e10509bf3b632ef9",
+      "identity": {
+        "DOI": "10.1186/1471-2121-4-11",
+        "title": [
+          "Chlamydomonas fla mutants reveal a link between deflagellation and intraflagellar transport"
+        ],
+        "relation": {},
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "2003",
+      "doi": "10.1186/1471-2121-4-11",
+      "pmid": "12930563",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12930563+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T13:52:09.287443+00:00",
+      "status": 200,
+      "sha256": "d78a24b093a05d1ca680b943d091fbeba6f9e0a679a1fd23aec3afeaacf2194e",
+      "identity": {
+        "source": "MED",
+        "id": "12930563",
+        "title": "Chlamydomonas fla mutants reveal a link between deflagellation and intraflagellar transport.",
+        "doi": "10.1186/1471-2121-4-11",
+        "commentCorrectionList": null
+      }
+    },
+    {
+      "name": "2010",
+      "doi": "10.1002/cm.20454",
+      "pmid": "20506243",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1002%2Fcm.20454",
+      "requested_at": "2026-10-15T13:52:09.908444+00:00",
+      "status": 200,
+      "sha256": "1450186d542aa78cf6849511138274a198cdc5e8e477877e2618bdcd8146760f",
+      "identity": {
+        "DOI": "10.1002/cm.20454",
+        "title": [
+          "Centrioles are freed from cilia by severing prior to mitosis"
+        ],
+        "relation": {},
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "2010",
+      "doi": "10.1002/cm.20454",
+      "pmid": "20506243",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20506243+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T13:52:10.241513+00:00",
+      "status": 200,
+      "sha256": "6f83891604b07bc9597c5f75bd11b4b5f0fb8025fe2fb764c54132a93676527e",
+      "identity": {
+        "source": "MED",
+        "id": "20506243",
+        "title": "Centrioles are freed from cilia by severing prior to mitosis.",
+        "doi": "10.1002/cm.20454",
+        "commentCorrectionList": null
+      }
+    }
+  ],
+  "publisher_followup": {
+    "path": "/tmp/traitmech-next-resorption-publisher-followup-20261015.json",
+    "sha256": "5f60937a144b28c973a50da404c8bcb7c257f052ad24fa32ef3660170750cc74"
+  },
+  "limits": "Native results are abstract-match outcomes, not replacements for full-text checks. Separate publications are not claimed as independent-laboratory replication. Source-designated strains remain qualified observations. Notice checks are bounded, not comprehensive correction/retraction clearance. Some publisher/PMC/PubMed requests failed or returned challenges; those are not successful retrievals. No raw-data reanalysis, paid research or human sign-off. Identifier allocation is bounded and must be refreshed before publication. No new-record snippet-baseline exception was added.",
+  "evidence_receipt": {
+    "path": "/tmp/traitmech-eukaryotic-resorption-evidence-receipt-20261015.json",
+    "sha256": "a5e03e96926e6b5d76bc4caf6167a10f15463de6090967ae057ba22fee2b9e1a"
+  },
+  "allocation": {
+    "identifier": "traitmech:000733",
+    "cohort": "metpo_traitmech_v609",
+    "block": [
+      1068600,
+      1068699
+    ],
+    "observed_at": "2026-10-15T16:01:11Z",
+    "base": "565b6ef5602922935029943db3229c91968da10d",
+    "current_locations": 207,
+    "retained_heads": 303,
+    "unique_blobs": {
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech": 87457,
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech": 9308
+    },
+    "ignored_hidden_included": true,
+    "unavailable": [
+      "/private/tmp/traitmech-fungal-nematophagy-20261013",
+      "/private/tmp/traitmech-lethal-nematicidal-activity-20261013",
+      "/private/tmp/traitmech-nematode-attracting-activity-20261013",
+      "/private/tmp/traitmech-reversible-nematode-paralyzing-activity-20261014",
+      "/private/tmp/traitmech-nematode-egg-hatching-inhibitory-activity-20261014",
+      "/private/tmp/traitmech-nematode-egg-hatching-stimulatory-activity-20261014",
+      "/private/tmp/traitmech-fungal-nematode-endoparasitism-20261014",
+      "/private/tmp/traitmech-cell-body-contraction-20261014",
+      "/private/tmp/traitmech-cellular-contraction-20261014",
+      "/private/tmp/traitmech-bacterial-polar-flagellar-ejection-20261015"
+    ],
+    "biological_contexts": {
+      "inherited": 75,
+      "newly_unassessed": 0,
+      "basis": "Exact normalized-context SHA-256 inheritance, not fresh full-owner review of every copy."
+    },
+    "local_contexts": 81,
+    "local_disposition": "Nine NCBI taxonomy fields in an ignored Biopython BLAST test fixture; remaining contexts document the general editor envelope. None is a candidate-specific METPO reservation.",
+    "full_range": {
+      "owners": 197791,
+      "unique_contents": 2623,
+      "overlapping_contents": 29,
+      "exact_contents": 2,
+      "full_pr_descriptions": 12,
+      "binary_limits": []
+    },
+    "full_range_disposition": "Twenty-nine contents document the general editor envelope; two additional matched contents contain embedding decimals and a GMELIN chemical identifier. Complete descriptions of all twelve pending PRs were checked, including wrapped ranges.",
+    "assessment": {
+      "path": "/tmp/traitmech-eukaryotic-resorption-allocation-assessment-20261015.json",
+      "sha256": "7b2142dfea19c9a5a253cc3bf635bf1b7c1c226453329a94db4d88513adcd476"
+    },
+    "raw_audit_inputs": [
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-reservations-20261015/local/completion.json",
+        "sha256": "1595a5c275f4d20576201fead73e501c5b81a5ea087cb6d6d98312380f7401ed"
+      },
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-reservations-20261015/local/scans.json",
+        "sha256": "635ad88f62fd5f26a792ddb22b0ae16bea03848e06584a58d9da56c88e9ec918"
+      },
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-allocation-contexts-20261015.json",
+        "sha256": "57a147c752a2adc937eda0f9fcae8fe58d1bd4fcd18f6c05e9a01f46c36a93d0"
+      },
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-full-ranges-20261015.json",
+        "sha256": "1f7596a47301648b286348ae20e26f308fdcc0aba1245dbe7779e654227b82f7"
+      },
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-window-inheritance-20261015.json",
+        "sha256": "323803f1adc53f6e36f547809de2d11195fd3044c94434bb34d4b6eadae75350"
+      },
+      {
+        "path": "/tmp/traitmech-eukaryotic-resorption-remote-assessment-20261015.json",
+        "sha256": "4a7685f215977c60c908393c4959d9a6f1e44acebf887a655f6728642be56de6"
+      }
+    ],
+    "limits": "Bounded current/retained and selected remote content. No reconstruction of unavailable ignored history, arbitrary archives or symlink targets; removed PR files rely on separate retained scope. No atomic allocation, universal absence or literature exhaustion. Refresh heads/catalogues before minting and publication."
+  },
+  "preallocation_guard": {
+    "at": "2026-10-15T16:00:17.605197+00:00",
+    "stable": true,
+    "receipt": {
+      "path": "/tmp/traitmech-eukaryotic-resorption-preallocation-guard-20261015/result.json",
+      "sha256": "8d31e3a72bd9f31383f82024ff4577b6dcd1107d0818c63c0cecc86d1122f0d0"
+    },
+    "heads": [
+      {
+        "repository": "CultureBotAI/TraitMech",
+        "expected": "565b6ef5602922935029943db3229c91968da10d",
+        "actual": "565b6ef5602922935029943db3229c91968da10d",
+        "unchanged": true
+      },
+      {
+        "repository": "CultureBotAI/CommunityMech",
+        "expected": "6c81bb71692cb460efcf749f92e510fe2d7cd4d9",
+        "actual": "6c81bb71692cb460efcf749f92e510fe2d7cd4d9",
+        "unchanged": true
+      },
+      {
+        "repository": "berkeleybop/metpo",
+        "expected": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "actual": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "unchanged": true
+      },
+      {
+        "repository": "Knowledge-Graph-Hub/kg-microbe",
+        "expected": "1acb8b61fcae24fafc0640b1bf6e5be669f315f9",
+        "actual": "1acb8b61fcae24fafc0640b1bf6e5be669f315f9",
+        "unchanged": true
+      }
+    ]
+  },
+  "pending_prs": [
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1938,
+      "head": "0af267aa2455e0723eb6758096aba47a2798168d",
+      "draft": false,
+      "files": 8
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1937,
+      "head": "4bf40537837c32d6b059cdef78d99d087186af8a",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1936,
+      "head": "2896ca8db089d85ff3951a8b2b26327483dddb80",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 973,
+      "head": "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+      "draft": false,
+      "files": 3
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 924,
+      "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+      "draft": true,
+      "files": 692
+    },
+    {
+      "repository": "CultureBotAI/CommunityMech",
+      "number": 935,
+      "head": "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+      "draft": true,
+      "files": 64
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 644,
+      "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 643,
+      "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 641,
+      "head": "9681aeacff5ea06a0dd8907906475d270ad61285",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 640,
+      "head": "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 638,
+      "head": "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+      "draft": false,
+      "files": 1
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 629,
+      "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+      "draft": false,
+      "files": 15
+    }
+  ],
+  "remote_audit": {
+    "receipt": {
+      "path": "/tmp/traitmech-eukaryotic-resorption-remote-assessment-20261015.json",
+      "sha256": "4a7685f215977c60c908393c4959d9a6f1e44acebf887a655f6728642be56de6"
+    },
+    "open_or_draft_prs": 12,
+    "nonremoved_changed_blobs": 784,
+    "selected_upstream_blobs": 587,
+    "disposition": "The biological matches concern bacterial appendages or pilus retraction. Exact numeric matches are floating-point embedding components or a GMELIN chemical identifier, not METPO reservations."
+  },
+  "ontology": {
+    "receipt": {
+      "path": "/tmp/traitmech-next-resorption-ontology-assessment-20261015.json",
+      "sha256": "3c63e8def110fd546583b17bf2fcef206e021a72c5080243fc759c79b4d42515"
+    },
+    "observations": [
+      "The pinned and current upstream release files have the same 24 lexical/context URI subjects for this search. These include possession, arrangement, locomotion, deprecated morphology and an incidental facilities match, not an exact resorption phenotype.",
+      "The upstream editor is a small metadata-only Functional Syntax ontology. ROBOT conversion to a temporary RDF/XML copy succeeded with exit 0; its 31 triples do not substitute for inspection of generated release terms and maintained templates.",
+      "METPO:1000059 is active phenotype below METPO:1000188 quality. This is a plausible broader class by definition, not an accepted parent assignment yet. Locomotion is not required for the candidate phenotype.",
+      "Deprecated METPO:0000089 and METPO:000090 carry OMO:0001000; METPO:1000381 carries IAO:0000226. Their replacement METPO:1000704 is active locomotory flagellar possession, not resorption.",
+      "Deprecated ciliated METPO:0000093 and METPO:000094 carry OMO:0001000, while METPO:1000385 carries IAO:0000226; these inspected subjects have no replacement or consider annotations. Deprecated flagellum METPO:1000123 also has OMO:0001000 without a replacement or consider annotation.",
+      "Upstream issue 521 remains OPEN; its reason-code ambiguity is not evidence that resorption biology is invalid or permission to reactivate an old morphology identifier.",
+      "The upstream ontology description explicitly emphasizes bacterial and archaeal traits. A microbial-eukaryote proposal needs explicit maintainer scope review rather than an implicit claim of upstream adoption."
+    ],
+    "accepted_parent": "METPO:1000059 by definition-based inference; requires maintainer review, not upstream adoption."
+  },
+  "inspected_current_owners": [
+    {
+      "path": "data/traits/physiology/eukaryotic_flagellar_autotomy.yaml",
+      "sha256": "e4d4924721768cd6c677b9cdc4781960a0526aa83537b182c7e9df1ba07f3bdc"
+    },
+    {
+      "path": "data/traits/physiology/bacterial_polar_flagellar_ejection.yaml",
+      "sha256": "6db8657e3504202ba495f77be2487d63c479c433a032d81f93cbf522d0dcf007"
+    },
+    {
+      "path": "data/traits/morphology/flagellated.yaml",
+      "sha256": "ef50cfb498de5c66a4f2fb904a2038f4c97fa2615e6090a652758051ad25250b"
+    },
+    {
+      "path": "data/traits/morphology/flagellar_arrangement.yaml",
+      "sha256": "1b944448f88de4fa9ff773e155866a2c592f7e843a4c7dc152534676d4e4f329"
+    },
+    {
+      "path": "data/traits/morphology/palmelloid_formation.yaml",
+      "sha256": "6fec9c7538d049e5301536724aa6ce611e41ebfcdd8d32a9155eeba384eefe1a"
+    },
+    {
+      "path": "data/traits/upper/phenotype.yaml",
+      "sha256": "502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4"
+    },
+    {
+      "path": "data/traits/upper/quality.yaml",
+      "sha256": "16a6aca8b74ea96e3c889d10264328e240e1b63729715ba99a9131ef7009c66d"
+    },
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.claude/skills/add-trait/SKILL.md",
+      "sha256": "a9cb4e5e6180e0cd7c62943174af5eb70d558eaa76901b004ac29ca9389f0d90"
+    },
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/DO_NOT_WORK.md",
+      "sha256": "9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712"
+    }
+  ]
+}

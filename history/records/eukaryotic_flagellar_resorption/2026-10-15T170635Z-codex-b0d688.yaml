@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  slug: eukaryotic_flagellar_resorption
+session:
+  id: 2026-10-15T170635Z-codex-b0d688
+  timestamp: '2026-10-15T17:06:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1948
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Preserve the replication lower bound
+  details: 'Corrected evidence[1].notes and the maintained guarded writer to retain at least
+    three independent cultures, as stated in the 2003 Methods on page 11 of 12, Timecourses
+    and flagella length measurements. Source XML and the typeset page were reread. The biological
+    definition, source roles, verbatim snippets, native resolver outcomes, proposal, other
+    records and earlier curation/history/review bytes are unchanged. This supplements history/records/eukaryotic_flagellar_resorption/2026-10-15T160819Z-codex-d37ea9.yaml.
+    Issue #1948 tracks the quantitative-provenance wording correction and successor review.'
