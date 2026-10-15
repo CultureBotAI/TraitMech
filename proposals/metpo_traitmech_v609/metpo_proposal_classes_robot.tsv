@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1068600	eukaryotic flagellar resorption	A physiological phenotype in which a microbial eukaryote shortens previously assembled cilia or flagella through disassembly of their axonemes.	TraitMech:data/traits/physiology/eukaryotic_flagellar_resorption.yaml|DOI:10.1083/jcb.100.2.457	METPO:1000059			metpo_traitmech_2026_10	MEDIUM		traitmech:000733
