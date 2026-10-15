@@ -1,0 +1,208 @@
+{
+  "trait_id": "traitmech:000732",
+  "accepted_at": "2026-10-15T11:39:29Z",
+  "compiled_at": "2026-10-15T11:43:24.897335+00:00",
+  "status": "PROPOSED evidence-backed curation, not human sign-off or exhaustive discovery.",
+  "rows": [
+    {
+      "reference": "DOI:10.1371/journal.pbio.3000165",
+      "snippet": "Plesiomonas cells consistently lose their flagella at the base of the hook",
+      "words": 12,
+      "locator": "Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, third paragraph; Figure 1G",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+      "direct_contiguous_match": true,
+      "assets": [
+        {
+          "path": "/tmp/traitmech-bacterial-ejection-ferreira-result-20261015/publisher.html",
+          "sha256": "ae764839eb4744db1307bd422cc836504005ab51e24908150e1d5ca17071a7ba",
+          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000165"
+        },
+        {
+          "path": "/tmp/traitmech-next-bacterial-ejection-primary-20261015/ferreira2019.pdf",
+          "sha256": "33e869bd92c92ef3a93e5a47bbad39e7221d8d5a6a19f587ea229ebb2b95267e",
+          "url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3000165&type=printable"
+        }
+      ],
+      "assessment": "Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, third paragraph; Figure 1G. Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts and relic/assembly comparisons support ejection rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion conditions vary among assays; minimal medium containing glucose is not complete carbon starvation. All 25 main PDF pages and six figures were inspected, not raw supplementary data. Energy conservation and leakage prevention are interpretations."
+    },
+    {
+      "reference": "DOI:10.1111/mmi.14511",
+      "snippet": "bacteria can actively abandon flagella after prolonged stationary culturing",
+      "words": 9,
+      "locator": "Scientific abstract; sentence beginning Interestingly, we observed",
+      "native_verdict": "VERIFIED",
+      "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+      "direct_contiguous_match": true,
+      "assets": [
+        {
+          "path": "/tmp/traitmech-next-bacterial-ejection-primary-20261015/zhuang2020-med.json",
+          "sha256": "02f8c92aa90d05daa118f1cf2cfdd5735caeafeb695f2f733278c53680d31240",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:32259388%20AND%20SRC:MED&format=json&resultType=core"
+        }
+      ],
+      "assessment": "Zhuang et al. 2020, PMID:32259388, scientific abstract, sentence beginning Interestingly. Direct MED/publisher match and native VERIFIED. Main publisher text and six figure captions were subsequently read, not the actual figures or supplement. Sections 2.4-2.7 separate daughter-cell dilution from stationary-phase shedding. OD times flagellated fraction is a population proxy, not a direct cell count. VIO5 and engineered EGFP-FliG strain NMB344 are distinct; red/green panels in Figure 3 are not the same cells. Two-color experiments in Figures 5-6 support basal release, but rod breakage is inferred, not a directly imaged cut. Surface immobilization and medium exchanges constrain the assay."
+    },
+    {
+      "reference": "DOI:10.1038/s41467-026-75593-6",
+      "snippet": "Nutrient depletion significantly increases the frequency of flagellar shedding and the accumulation of closed FOMCs",
+      "words": 15,
+      "locator": "Results, Two distinct in situ architectures of the flagellar motor in V. cholerae; Supplementary Figure 4 and Table 4",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+      "direct_contiguous_match": true,
+      "assets": [
+        {
+          "path": "/tmp/traitmech-next-bacterial-ejection-current-primary-20261015/guo2026.xml",
+          "sha256": "0f4ef185dfeca2420817818579dfcfac5f78d637b16735ae136747c30352f81e",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13521929/fullTextXML"
+        },
+        {
+          "path": "/tmp/traitmech-next-bacterial-ejection-current-primary-20261015/guo2026.pdf",
+          "sha256": "60307ea2cca5306fff39323f0f2ee6ecf00b68cd6ca6e1aa5834b5e8f1b151f6",
+          "url": "https://www.nature.com/articles/s41467-026-75593-6.pdf"
+        },
+        {
+          "path": "/tmp/traitmech-next-bacterial-ejection-cloud-20261015/41467_2026_75593_MOESM1_ESM.pdf",
+          "sha256": "17f8e49ad00974e9aedd3b93e018fa7e4cc8693ee8bf459af3b522b1ab4b33f7",
+          "url": "https://www.nature.com/articles/s41467-026-75593-6#Sec20"
+        }
+      ],
+      "assessment": "Guo et al. 2026, PMID:42660870, PMC13521929.1, Results, Two distinct in situ architectures of the flagellar motor in V. cholerae, and Supplementary Figure 4. Direct JATS match; native NOT_IN_ABSTRACT. FOMC denotes the flagellar outer membrane complex. The quoted experiment uses wild-type V. cholerae; delta-flhG structural samples are distinct. All 12 main PDF pages and six main figures were inspected, plus the actual supplementary Figure 4 and supplementary tables. Its 81/273 observations are cells in the figure caption and tomograms in Methods/Table 4, not biological replicates or ejection rates. The main-text Table 3 pointer instead corresponds to Table 4. Other supplements remain incompletely read."
+    }
+  ],
+  "allocation": {
+    "local_id": "traitmech:000732",
+    "cohort": "metpo_traitmech_v608",
+    "block": [
+      1068500,
+      1068599
+    ],
+    "local": {
+      "paths": 204,
+      "retained_heads": 295,
+      "unique_blobs": {
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech": 86276,
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech": 9268
+      },
+      "ignored_and_hidden": true,
+      "unavailable": [
+        "/private/tmp/traitmech-fungal-nematophagy-20261013",
+        "/private/tmp/traitmech-lethal-nematicidal-activity-20261013",
+        "/private/tmp/traitmech-nematode-attracting-activity-20261013",
+        "/private/tmp/traitmech-reversible-nematode-paralyzing-activity-20261014",
+        "/private/tmp/traitmech-nematode-egg-hatching-inhibitory-activity-20261014",
+        "/private/tmp/traitmech-nematode-egg-hatching-stimulatory-activity-20261014",
+        "/private/tmp/traitmech-fungal-nematode-endoparasitism-20261014",
+        "/private/tmp/traitmech-cell-body-contraction-20261014",
+        "/private/tmp/traitmech-cellular-contraction-20261014"
+      ],
+      "catalogue_unchanged": false,
+      "original_audit": {
+        "path": "/tmp/traitmech-bacterial-ejection-screen-20261015/local/completion.json",
+        "sha256": "c8a2d12f2c6a66d4d5d7fdc2b71a081ddeb43e73f47181f6705759cb000baf70"
+      }
+    },
+    "biological_windows": 458,
+    "allocation_windows": 66,
+    "semantic_assessment": "All biological contexts concern distinct eukaryotic autotomy, resorption, assembly/motility defects or provenance. No exact represented ejection trait was identified. All 66 allocation windows concern the general editor envelope.",
+    "full_range_check": {
+      "owners": 189221,
+      "unique_contents": 2636,
+      "matched_contents": 27,
+      "exact_hits": 0,
+      "binary_limits": 0,
+      "interpretation": "All overlapping intervals are the general 1000000-1999999 editor envelope, not competing narrower reservations.",
+      "complete_local_audit": {
+        "path": "/tmp/traitmech-bacterial-ejection-full-ranges-20261015.json",
+        "sha256": "ef76d164321aad578a9653d3636d414838121e3e6ac036054f938374169f2d6e"
+      }
+    },
+    "remote": {
+      "checked_at": "2026-10-15T11:34:38.830918+00:00",
+      "main": "616a97577299f7a33d9b6c98ab29c28b30c64758",
+      "prs": 13,
+      "pending_files": 812,
+      "upstream_files": 587,
+      "upstream_heads": {
+        "CultureBotAI/CommunityMech": "f42697b3660d8832a54852f9b3593aafe229bc6b",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "1acb8b61fcae24fafc0640b1bf6e5be669f315f9"
+      }
+    },
+    "remote_guard": {
+      "at": "2026-10-15T11:39:13.825099+00:00",
+      "unchanged": true,
+      "main": "616a97577299f7a33d9b6c98ab29c28b30c64758",
+      "prs": 13,
+      "differences": [],
+      "original_snapshot": "/tmp/traitmech-bacterial-ejection-remote-refresh-20261015",
+      "allocated": false,
+      "limit": "Stable commit/base/description comparison reuses inspected immutable content; not an atomic reservation."
+    },
+    "drift": {
+      "at": "2026-10-15T11:38:21.959425+00:00",
+      "stable": true,
+      "allocated": false,
+      "note": "New tracked head also screened as CommunityMech PR2018; ignored current files rechecked here.",
+      "path": "/private/tmp/communitymech-causal-20261014",
+      "head": "262d1716cd587693f5784e064c93dd112d0829b8",
+      "remote_changed_files": 28,
+      "remote_hits": 0,
+      "local_scan": {
+        "path": "/tmp/traitmech-bacterial-ejection-local-drift-20261015/scan-000.jsonl",
+        "sha256": "398974dd02c2c534997136295ddaa1777cb9eedb8426635624b4dc98398f7740"
+      },
+      "interpretation": "Read local matches are unrelated numeric intervals, reference coordinates or earlier nonoverlapping reservations."
+    },
+    "limits": "Known copies include ignored/hidden files, and retained regular Git blobs. No symlink targets, arbitrary archives or lost ignored files. Catalogue changes require explicit assessment, not loss of completed pinned results. Unchanged PR files were not reconstructed. Temporary full audit files are not guaranteed permanent availability. No atomic reservation or global exhaustion is claimed."
+  },
+  "ontology": {
+    "assessment": "Pinned/current releases distinguish possession and arrangement from ejection. Deprecated identifiers are not revived or exact-mapped. Editor import stub is not the full ontology; pin unchanged.",
+    "receipt": {
+      "path": "/tmp/traitmech-bacterial-ejection-identity-20261015.json",
+      "sha256": "b5b04021d38fc3a3881d4a28a42955d96cfc2f826b202c19dd202b7def1fe1f9"
+    }
+  },
+  "source_access_limits": [
+    "Ferreira full publisher HTML download succeeded; optional bs4 parsing initially failed. Standard-library follow-up exactly matched the archived excerpt. Preliminary anaphoric abstract quote is superseded, not reused as native verification of this Results quote.",
+    "Wiley native HTML/figure/supplement requests returned 403. Web access supplied main full text and six captions; actual figures, PDF, supplement and raw data remain unread.",
+    "Guo main PDF/JATS and the relevant supplemental figure/tables were inspected; other supplementary pages/assets remain unread. Full source version PMC13521929.1 is preserved.",
+    "Notice checks are bounded. PMID30948839 is a Comment on Ferreira 2019, not a correction or independent experiment. Missing MED notice fields and inaccessible pages are not comprehensive clearance.",
+    "No authority-resolved canonical taxa, universal protein mechanism, independent replication, paid research or raw-data reanalysis is implied."
+  ],
+  "detailed_reading": {
+    "ferreira": [
+      "Flagella counts and CFU-based estimates distinguish population loss from downregulated production. Recovered hook-filament structures and distal rod support determinate release rather than arbitrary filament breakage.",
+      "Figure 1E counts 34 hooked ends among 70 ends, not 34 out of 70 complete flagella. Figure 1C uses 150 cells across three biological replicates. Released structure assays and population estimates remain distinct endpoints.",
+      "Figure 3 contains one cryo-ET snapshot interpreted as recent ejection, not a live time course. Delta-flhA and complementation help distinguish relics from assembly precursors.",
+      "Plesiomonas fresh/spent/minimal-medium comparisons and yeast-extract rescue support the tested nutrient response. The minimal medium includes 0.5% glucose: do not relabel this as complete carbon starvation.",
+      "VdcA overexpression-induced nonmotility without flagella loss does not establish absence of every c-di-GMP contribution. ClpA/ClpX deletion results are in Shewanella, not proof of universal protease independence.",
+      "The unidentified plug and proposed leakage prevention are mechanistic interpretations, not a grounded protein or direct permeability measurement. Energy conservation is proposed, not directly measured fitness benefit.",
+      "Species and conditions differ: Vibrio cholerae was held in seawater for a month at 4 C; Pseudomonas samples underwent CCCP and ciprofloxacin treatment. Do not generalize the Plesiomonas nutrient assay to all imaged species.",
+      "Clark-Evans sample sizes differ internally: Results N=71, figure caption N=74, Methods N=70. This ancillary positioning analysis should not be used as precise trait-support quantification without reconciliation.",
+      "Table 2 gives Plesiomonas ATCC 14029/DSM-8224, Shewanella CN-32, Vibrio fischeri ES114, Vibrio cholerae N16961 and Pseudomonas PAOI. These are source labels, not authority-validated canonical taxa."
+    ],
+    "zhuang": {
+      "reference": "DOI:10.1111/mmi.14511",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.14511",
+      "date_read": "2026-10-15",
+      "scope": "Direct publisher HTML scientific abstract, Introduction, Results 2.1-2.7, Discussion, Experimental Procedures 4.1-4.6, six figure captions and availability statement. Actual six figures, PDF, supplement and raw data remain unread.",
+      "observations": [
+        "PFB is fluorescent-flagellated cells divided by examined cells. Population plot uses OD times PFB, not a directly measured absolute count or CFU correction.",
+        "Source-designated wild-type VIO5 is used for flagellar visualization; NMB344 is an engineered EGFP-FliG derivative. Natural strain provenance is not established by the wild-type label.",
+        "Figure 3 red and green images are not the same cells. Figures 5 and 6e describe simultaneous two-color measurements.",
+        "69 of 72 shedding cases lose a localized FliG spot before visible detachment; three retain it. That is a case count, not 72 independent biological cultures.",
+        "Rod breakage is inferred from mobile peripheral FliG clusters and subsequent detachment; Figure 6f is a model rather than a directly observed molecular severing site.",
+        "Poly-L-lysine immobilizes cells and flagella. Sample preparation includes TMK washing, centrifugation, and chamber attachment; glucose experiments use separate 30-degree incubation in TMN or spent VC.",
+        "Glucose, glycerol and mannose retention assays do not establish one universal trigger or complete absence of every metabolizable carbon-containing compound.",
+        "The figure captions state at least 150 cells and three biological replicates for population/time-course experiments; methods describe 150-500 immobilized cells per time point. These denominators are distinct from FliG-trajectory sample sizes."
+      ],
+      "access_limits": "Native URL retrieval of main HTML, first figure PowerPoint, and supplement returned 403; the web tool successfully returned main HTML. Web PowerPoint links returned unsupported content-type, not actual figures. The supplement web request also returned 403.",
+      "notice_checks": "Publisher returned text has no Correction string; that bounded lexical check is not comprehensive notice clearance. PMID30948839 was directly checked as a Comment on Ferreira 2019, not a correction, retraction or supporting experiment.",
+      "allocated": false
+    },
+    "guo": "Supplementary Figure 4 shows representative 10/30-minute live-cell series, a cryo-ET snapshot and assembled/disassembled percentages. Caption denominators are 81 depleted and 273 rich wild-type cells, while Methods and Supplementary Table 4 report matching tomogram counts; these are not biological replicates or shedding rates. Main page 9 cites Table 3, but the tomography table is Table 4. Page 10 live-cell preparation uses supplemented M9 followed by M9 without added carbon; do not transfer that precise protocol to other assays. Table 2 includes both A1552 and C6706 backgrounds; exact assay assignment needs checking before strain-level claims."
+  },
+  "skill_assessment": "Existing add-trait rules cover phenotype/sequence boundaries, source-faithful snippets, measured denominators, notice limits, guarded curation and reviewed queue workflow. No further skill update justified by this candidate."
+}

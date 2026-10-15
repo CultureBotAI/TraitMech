@@ -1,0 +1,118 @@
+identifier: traitmech:000732
+label: bacterial polar flagellar ejection
+definition: A physiological phenotype in which a bacterium actively ejects previously
+  assembled axial structures of a polar flagellum by separation at its base.
+definition_source: DOI:10.1371/journal.pbio.3000165
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1371/journal.pbio.3000165
+  snippet: Plesiomonas cells consistently lose their flagella at the base of the hook
+  notes: Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament
+    structures accumulate in P. shigelloides supernatant, third paragraph; Figure
+    1G. Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released
+    structures, population counts and relic/assembly comparisons support ejection
+    rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion
+    conditions vary among assays; minimal medium containing glucose is not complete
+    carbon starvation. All 25 main PDF pages and six figures were inspected, not raw
+    supplementary data. Energy conservation and leakage prevention are interpretations.
+- reference: DOI:10.1111/mmi.14511
+  snippet: bacteria can actively abandon flagella after prolonged stationary culturing
+  notes: Zhuang et al. 2020, PMID:32259388, scientific abstract, sentence beginning
+    Interestingly. Direct MED/publisher match and native VERIFIED. Main publisher
+    text and six figure captions were subsequently read, not the actual figures or
+    supplement. Sections 2.4-2.7 separate daughter-cell dilution from stationary-phase
+    shedding. OD times flagellated fraction is a population proxy, not a direct cell
+    count. VIO5 and engineered EGFP-FliG strain NMB344 are distinct; red/green panels
+    in Figure 3 are not the same cells. Two-color experiments in Figures 5-6 support
+    basal release, but rod breakage is inferred, not a directly imaged cut. Surface
+    immobilization and medium exchanges constrain the assay.
+- reference: DOI:10.1038/s41467-026-75593-6
+  snippet: Nutrient depletion significantly increases the frequency of flagellar shedding
+    and the accumulation of closed FOMCs
+  notes: Guo et al. 2026, PMID:42660870, PMC13521929.1, Results, Two distinct in situ
+    architectures of the flagellar motor in V. cholerae, and Supplementary Figure
+    4. Direct JATS match; native NOT_IN_ABSTRACT. FOMC denotes the flagellar outer
+    membrane complex. The quoted experiment uses wild-type V. cholerae; delta-flhG
+    structural samples are distinct. All 12 main PDF pages and six main figures were
+    inspected, plus the actual supplementary Figure 4 and supplementary tables. Its
+    81/273 observations are cells in the figure caption and tomograms in Methods/Table
+    4, not biological replicates or ejection rates. The main-text Table 3 pointer
+    instead corresponds to Table 4. Other supplements remain incompletely read.
+discussions:
+- discussion_id: bacterial-polar-flagellar-ejection-scope
+  prompt: Review active basal release separately from possession, loss and resorption.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: This qualified phenotype requires active basal release of previously
+    assembled polar flagellar axial structures. Hook-filament release is an observed
+    endpoint, not a universal component-completeness requirement. Flagellar possession
+    or arrangement, assembly failure, motor arrest, reduced motility, a decreasing
+    flagellated fraction or passive filament breakage alone do not establish it. Periplasmic
+    resorption and microbial-eukaryotic axonemal autotomy are distinct. Phenotype
+    METPO:1000059 is a definition-based parent inference; locomotory possession is
+    not a required parent. The definition does not require every flagellum to be lost,
+    nonmotility, a particular stimulus, exact severing site, relic morphology or universal
+    behavior among polar-flagellated bacteria. No bare shedding or deflagellation
+    exact synonym is asserted.
+  posed_by: codex
+  posed_date: '2026-10-15'
+- discussion_id: bacterial-polar-flagellar-ejection-metpo
+  prompt: Review the phenotype hierarchy without reviving retired flagellar identifiers.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Pinned and current METPO release annotations distinguish motility, locomotory
+    flagellar possession and polar arrangement from ejection. Historical METPO:0000089
+    and METPO:000090 are deprecated with OMO:0001000; METPO:1000381 is deprecated
+    with IAO:0000226. Their replacement METPO:1000704 denotes possession, not shedding.
+    Deprecated flagellum METPO:1000123 has OMO:0001000 and no observed replacement
+    or consider annotation. These are not exact mappings and are not reactivated.
+    The current editor is an import stub, not a full release. The ontology pin remains
+    unchanged. Proposal v608 reserves METPO:1068500 within 1068500-1068599; the local
+    identifier is traitmech:000732. No upstream release or human sign-off is implied.
+  posed_by: codex
+  posed_date: '2026-10-15'
+- discussion_id: bacterial-polar-flagellar-ejection-mechanism
+  prompt: Keep organismal ejection separate from universal molecular and sequence
+    claims.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The 2026 structures assign closure to FlgI conformational changes in
+    V. cholerae; the 2019 interpretation of an unidentified added plug is not imposed
+    as a universal mechanism. Assembly defects in gate-deletion mutants do not by
+    themselves demonstrate failure of ejection. Cryo-ET states are not a longitudinal
+    trajectory of the same motor. A protein-resolved causal graph needs taxon-paired
+    authority-checked accessions and edge-specific evidence. Gene, motif and domain
+    presence alone do not establish this organism-level phenotype. Mechanisms are
+    deferred, not claimed absent.
+  posed_by: codex
+  posed_date: '2026-10-15'
+- discussion_id: bacterial-polar-flagellar-ejection-provenance
+  prompt: Resolve assay-specific strain provenance before asserting canonical taxa.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Source organism names remain qualified observations, not independently
+    resolved canonical taxon assertions. Engineered structural samples and source-designated
+    wild-type nutrient assays must not be conflated. MED metadata and accessible publisher
+    text were checked; unavailable publisher or PubMed pages are access limits, not
+    evidence that no notice exists. This is not comprehensive correction/retraction
+    clearance, raw-data reanalysis, independent replication, paid research or human
+    sign-off.
+  posed_by: codex
+  posed_date: '2026-10-15'
+curation_history:
+- timestamp: '2026-10-15T11:39:29Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Added active basal release of assembled bacterial polar flagellar structures
+    with three primary DOI sources and directly checked 12/9/15-word snippets. Native
+    NOT_IN_ABSTRACT/VERIFIED/NOT_IN_ABSTRACT remain distinct from direct full-text
+    checks. Reserved 000732, v608 and 1068500-1068599 after ignored/hidden current-file,
+    retained-history, complete-range and open/draft PR checks, including the changed
+    CommunityMech PR2018 worktree. No obsolete identifier, exact mapping, canonical
+    taxon or universal molecular mechanism is inferred. Timestamp records observed
+    acceptance, not source acquisition.
+  llm_assisted: true

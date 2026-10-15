@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  slug: bacterial_polar_flagellar_ejection
+session:
+  id: 2026-10-15T114344Z-codex-e46fbc
+  timestamp: '2026-10-15T11:43:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add bacterial polar flagellar ejection
+  details: Added one PROPOSED active basal-release phenotype with three primary DOI sources
+    and directly checked 12/9/15-word snippets. Native outcomes NOT_IN_ABSTRACT, VERIFIED
+    and NOT_IN_ABSTRACT remain distinct from direct full-text checks. Reserved 000732, v608
+    and 1068500-1068599 after ignored/hidden current files, retained history, full ranges
+    and open/draft PR checks, including changed CommunityMech PR2018 and its worktree. Phenotype
+    parent is a definition-based inference. Preserved assay, strain and source-access limits;
+    no obsolete identifier, canonical taxon, exact mapping or universal protein mechanism
+    is inferred. Acceptance time is observed, not reconstructed source acquisition.
