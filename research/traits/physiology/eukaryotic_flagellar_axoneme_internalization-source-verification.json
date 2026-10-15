@@ -1,0 +1,378 @@
+{
+  "captured_at": "2026-10-15T19:35:54.535860+00:00",
+  "status": "SOURCE_RECEIPT_NOT_IDENTIFIER_ALLOCATION",
+  "acceptance": {
+    "path": "/tmp/traitmech-axoneme-internalization-acceptance-20261015.json",
+    "bytes": 4877,
+    "sha256": "23a21290c0ef6a99c619c052783225f65e06a1115e44f96b13b1bdd8ae5c557b"
+  },
+  "research_handoff": {
+    "path": "/tmp/traitmech-next-axoneme-curation-handoff-20261015.json",
+    "bytes": 8815,
+    "sha256": "6d6db2005458ebee5abc2a277ea96bd6f583b248db8f8dc8228980345760c0d0"
+  },
+  "native": {
+    "path": "/tmp/traitmech-next-axoneme-snippets-20261015/result.json",
+    "bytes": 5232,
+    "sha256": "011f2d67f88197b7810ba658f80c64608064c41f84788dbff98252ee1ce5e515"
+  },
+  "context_native": {
+    "path": "/tmp/traitmech-axoneme-internalization-context-snippet-20261015.json",
+    "bytes": 2865,
+    "sha256": "7a6a4d13397f1af44c437c2583b16d020f12b06de7340bfc46ee13a8776c36f8"
+  },
+  "native_script": {
+    "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/scripts/verify_snippets.py",
+    "bytes": 15184,
+    "sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc"
+  },
+  "rows": [
+    {
+      "year": 2017,
+      "reference": "DOI:10.1083/jcb.201701074",
+      "pmid": "28473602",
+      "snippet": "Bd zoospores retracting their flagella by coiling the entire axoneme into the cell body",
+      "locator": "Discussion, JATS s11; printed page 1681, PDF page 9.",
+      "full_text_check": "Exact normalized JATS text, with the typeset PDF page previously inspected.",
+      "limitation": "Source-designated JEL423 under the described microscopy preparation. No new rate, replication count, natural-provenance or protein-mechanism assertion.",
+      "words": 14,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "checked_at": "2026-10-15T18:28:09.161871+00:00",
+      "qualified_med_identity_confirmed": true,
+      "metadata_sha256": "4a146e9fc9621f67fc9be9b5e9e3673baac29161d782044dcb90ec53bee0787d",
+      "role": "definition_support"
+    },
+    {
+      "year": 2020,
+      "reference": "DOI:10.1002/cm.21637",
+      "pmid": "33103844",
+      "snippet": "axonemes remain intact during internalization",
+      "locator": "Results 2.2, TEM interpretation paragraph following Figure 2; PMC HTML lines 164-167 in the 2026-10-15 direct retrieval.",
+      "full_text_check": "Contiguous span manually verified in directly retrieved PMC HTML; actual Figure 2 was inspected earlier. No local HTML exact-match assertion.",
+      "limitation": "R. globosum and S. punctatus fixed preparations; 9+2 architecture in cross-sections supports intact axonemes, not continuous same-cell TEM tracking or an intact surrounding ciliary membrane.",
+      "words": 5,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "checked_at": "2026-10-15T18:28:09.898073+00:00",
+      "qualified_med_identity_confirmed": true,
+      "metadata_sha256": "233dd6992061c9c1eeab19aafb16a48627b05b466e8155f1a3c68420a28f9404",
+      "role": "definition_support"
+    }
+  ],
+  "scope_context": {
+    "checked_at": "2026-10-15T19:23:45.758799+00:00",
+    "reference": "DOI:10.1091/mbc.E24-12-0577",
+    "pmid": "40833813",
+    "pmcid_version": "PMC12659703.2",
+    "snippet": "Centrioles separated from the degrading axoneme and remained parallel",
+    "words": 9,
+    "locator": "Results S7, Centrioles shorten but are not degraded during ciliary disassembly; sentence after the coiled cilium-centriole observation; Figure 4C.",
+    "role": "Supports the scope discussion's distinction between internalization and later axoneme degradation/centriole remodeling; not an additional definition citation or same-cell kinetic assay.",
+    "direct_full_text_match": true,
+    "native_verdict": "NOT_IN_ABSTRACT",
+    "qualified_med_identity_confirmed": true,
+    "xml_sha256": "3c45fd8706025eedf7deaf7dde3469b67d0213dc81543072c7b8731129b3b51d",
+    "metadata_sha256": "769a950764a1c5b0781ab7e020852a93c9c5f773c5baec1d96308ded46071412",
+    "native_script_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+    "limits": "Actual Figure 4 and supplement S3 were inspected in the prior recorded source review. Fixed preparations are not longitudinal imaging. Keep the S2/S3 pointer and 4.5/5.5-fold expansion discrepancies; no new rate, universal centriole fate, independent-laboratory replication or human sign-off."
+  },
+  "source_assets": [
+    {
+      "path": "/tmp/traitmech-next-axoneme-2017-primary-20261015.xml",
+      "bytes": 205448,
+      "sha256": "ccd2a9f8ae1b630f98af3dfcac6fcc6d35aad0dcca027f3db63a8f84aa0319e0",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5461030/fullTextXML",
+      "inspected_scope": "JATS Results s10, Discussion s11 and Methods s20 read completely, in addition to the earlier selected PDF pages. The reported axoneme withdrawal is distinct from the paper's WASP/SCAR motility experiments; neither those perturbations nor pseudopod replication counts establish a retraction mechanism or replication count."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2025-primary-20261015.xml",
+      "bytes": 150123,
+      "sha256": "3c45fd8706025eedf7deaf7dde3469b67d0213dc81543072c7b8731129b3b51d",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12659703/fullTextXML",
+      "inspected_scope": "Introduction, all Results subsections S3-S8, conclusion S9 and Methods S12-S20. Figure 4 actual image and caption inspected. Supplement text extracted across all eight pages; pages 4, 7 and 8 visually read, including all Figure S3 panels and captions. Other main figures and supplemental pages were not visually inspected."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2017-primary-20261015.pdf",
+      "bytes": 3458248,
+      "sha256": "2612b17c96f4048999b690ed2e161928af339de3faad775be65db44e83298008",
+      "url": "https://mullinslab.ucsf.edu/wp-content/uploads/2020/05/WASP-and-SCAR-are-evolutionarily-conserved-in-actin-filled-pseudopod-based-motility.pdf",
+      "inspected_scope": "Complete PDF pages 8, 9, 13, 14 and 20, including printed pages 1680, 1681, 1685, 1686 and S20. These are not a complete-paper review."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2017-supplement-assets-20261015/JCB_201701074_V5.mp4",
+      "bytes": 6858629,
+      "sha256": "71dcaf7c7bc1418a97c25c362906f282a7caf17883d8e4e9a59724ced936d9a7",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5461030/supplementaryFiles",
+      "inspected_scope": "All 16 timestamped contact-sheet samples and full-resolution sample 07. These show one cell's external flagellum becoming shorter and disappearing. This is sampled-frame inspection, not continuous playback, every-frame review, ultrastructural proof or independent rate measurement. Native media metadata reports 10.1 seconds and nominal 10 fps. Burned-in labels span 0 to 20 seconds. The paper's Video 5 caption states 0.1-second acquisition and 20-fps playback. Keep these observations distinct; no silent reconciliation or rate inferred from the sampling."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-supplement-20261015.zip",
+      "bytes": 296,
+      "sha256": "98f511d42334bf0f7dbcb33350c4ec07f648d79e726455898c8a67acb7be5fe8",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7944584/supplementaryFiles",
+      "inspected_scope": "HTTP 200 application/xml, 296 bytes, is an API error saying the article is not open access, not a ZIP archive. ZIP validation failed. No extraction or bypass attempted; actual supplemental PDFs and movies remain unread."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figure1-20261015.jpg",
+      "bytes": 488356,
+      "sha256": "534ac8c13446407dd3e2c826818d34749195a42c6dc8143d821cd6d314acf126",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+      "inspected_scope": "Actual main Figure 1, visually inspected; not a supplemental image."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figure2-20261015.jpg",
+      "bytes": 614697,
+      "sha256": "bb16244226aa809168a65c8a49761deaad035d460e94f23c18fe415755a0834a",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+      "inspected_scope": "Actual main Figure 2, visually inspected; not a supplemental image."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figure3-20261015.jpg",
+      "bytes": 371794,
+      "sha256": "bcd03a33434d365c23f4d8bd00074b6315a7028c84ed9a925e631d7f523e7816",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+      "inspected_scope": "Actual main Figure 3, visually inspected; not a supplemental image."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figure4-20261015.jpg",
+      "bytes": 405691,
+      "sha256": "8894ec3dce0485c86e1117b9a9c55d51b888d5ca1d16ec30d9f00a5afb0e6c48",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+      "inspected_scope": "Actual main Figure 4, visually inspected; not a supplemental image."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figure5-20261015.jpg",
+      "bytes": 280847,
+      "sha256": "a6a523c3c2854bca13e8b82f0664be48e51bdb389435b0b6a2cbda081f1224e3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+      "inspected_scope": "Actual main Figure 5, visually inspected; not a supplemental image."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2025-supplement-assets-20261015/nihms-2134680-f0004.jpg",
+      "bytes": 1837287,
+      "sha256": "e0e36aed6e8a61d6b57cf2c6598eb0817af14b3bca44ada2c83963df0e318ed3",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12659703/supplementaryFiles",
+      "inspected_scope": "Actual Figure 4 image and caption; fixed stages, not longitudinal tracking."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2025-supplement-assets-20261015/NIHMS2134680-supplement-Supp.pdf",
+      "bytes": 881155,
+      "sha256": "58ac9be4e79f5c5f67411915aec849c3dd7e3d32a30bad2009436f6a2267ba47",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12659703/supplementaryFiles",
+      "inspected_scope": "All eight pages extracted as text; visual pages 4, 7 and 8, including all S3 panels."
+    }
+  ],
+  "metadata": [
+    {
+      "name": "2017",
+      "doi": "10.1083/jcb.201701074",
+      "pmid": "28473602",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1083%2Fjcb.201701074",
+      "requested_at": "2026-10-15T17:58:35.742037+00:00",
+      "status": 200,
+      "sha256": "a095fa84ad48869881973be189d9aed44be3e7c2acf7a2bdd31ca493e7629e04",
+      "identity": {
+        "DOI": "10.1083/jcb.201701074",
+        "title": [
+          "WASP and SCAR are evolutionarily conserved in actin-filled pseudopod-based motility"
+        ],
+        "relation": {
+          "has-preprint": [
+            {
+              "id-type": "doi",
+              "id": "10.1101/051821",
+              "asserted-by": "object"
+            }
+          ]
+        },
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "2017",
+      "doi": "10.1083/jcb.201701074",
+      "pmid": "28473602",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28473602+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T17:58:36.259367+00:00",
+      "status": 200,
+      "sha256": "4a146e9fc9621f67fc9be9b5e9e3673baac29161d782044dcb90ec53bee0787d",
+      "identity": {
+        "source": "MED",
+        "id": "28473602",
+        "title": "WASP and SCAR are evolutionarily conserved in actin-filled pseudopod-based motility.",
+        "doi": "10.1083/jcb.201701074",
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "MED",
+              "id": "28820330",
+              "reference": "Cell Cycle. 2017 Oct 2;16(19):1735-1736. doi: 10.1080/15384101.2017.1360655.",
+              "type": "Comment in",
+              "orderIn": 1
+            },
+            {
+              "source": "PPR",
+              "id": "PPR26998",
+              "type": "Preprint in",
+              "note": "CrossRef Pre-print loader",
+              "orderIn": 10002
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "2020",
+      "doi": "10.1002/cm.21637",
+      "pmid": "33103844",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1002%2Fcm.21637",
+      "requested_at": "2026-10-15T17:58:37.066553+00:00",
+      "status": 200,
+      "sha256": "93688f2edbaa04e818bd10dcdc8f3811caa72eb5fae37b862bfac3720cb375fa",
+      "identity": {
+        "DOI": "10.1002/cm.21637",
+        "title": [
+          "Cilium axoneme internalization and degradation in chytrid fungi"
+        ],
+        "relation": {},
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "2020",
+      "doi": "10.1002/cm.21637",
+      "pmid": "33103844",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33103844+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T17:58:37.353542+00:00",
+      "status": 200,
+      "sha256": "233dd6992061c9c1eeab19aafb16a48627b05b466e8155f1a3c68420a28f9404",
+      "identity": {
+        "source": "MED",
+        "id": "33103844",
+        "title": "Cilium axoneme internalization and degradation in chytrid fungi.",
+        "doi": "10.1002/cm.21637",
+        "commentCorrectionList": null
+      }
+    },
+    {
+      "name": "2025",
+      "doi": "10.1091/mbc.E24-12-0577",
+      "pmid": "40833813",
+      "authority": "crossref",
+      "url": "https://api.crossref.org/works/10.1091%2Fmbc.E24-12-0577",
+      "requested_at": "2026-10-15T17:58:38.096091+00:00",
+      "status": 200,
+      "sha256": "ae2347891bc03aed35b94aa5f278d9bce67240ac8b73179dfd5a9b3eb25beae9",
+      "identity": {
+        "DOI": "10.1091/mbc.e24-12-0577",
+        "title": [
+          "Dynamic remodeling of centrioles and the microtubule cytoskeleton in the lifecycle of chytrid fungi"
+        ],
+        "relation": {},
+        "update-to": null,
+        "updated-by": null
+      }
+    },
+    {
+      "name": "2025",
+      "doi": "10.1091/mbc.E24-12-0577",
+      "pmid": "40833813",
+      "authority": "med",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A40833813+AND+SRC%3AMED&resultType=core&format=json",
+      "requested_at": "2026-10-15T17:58:38.417167+00:00",
+      "status": 200,
+      "sha256": "769a950764a1c5b0781ab7e020852a93c9c5f773c5baec1d96308ded46071412",
+      "identity": {
+        "source": "MED",
+        "id": "40833813",
+        "title": "Dynamic remodeling of centrioles and the microtubule cytoskeleton in the lifecycle of chytrid fungi.",
+        "doi": "10.1091/mbc.e24-12-0577",
+        "commentCorrectionList": {
+          "commentCorrection": [
+            {
+              "source": "MED",
+              "id": "40661493",
+              "reference": "bioRxiv. 2025 Jan 03:2025.01.03.631223. doi: 10.1101/2025.01.03.631223.",
+              "type": "Update of",
+              "orderIn": 1
+            },
+            {
+              "source": "PPR",
+              "id": "PPR963489",
+              "type": "Preprint in",
+              "note": "CrossRef Pre-print loader",
+              "orderIn": 10002
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "research_receipts": [
+    {
+      "path": "/tmp/traitmech-next-axoneme-primary-followup-20261015.json",
+      "bytes": 6939,
+      "sha256": "e731660b3dc444e35990432758e1568de3d388cbed98f7b3bb32dacddea0a395"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2017-2025-followup-20261015.json",
+      "bytes": 3799,
+      "sha256": "15bff187b4b5ab9481d4c77b5a0e1ec224083b760ffd89992901849fe5ac8330"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2020-figures-followup-20261015.json",
+      "bytes": 2394,
+      "sha256": "d4f2e787cda0f66a2d72f60efa4506a6eb1787e10788dc4ccaa8f9e4168d8335"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-internalization-access-followup-20261015.json",
+      "bytes": 2677,
+      "sha256": "99e022b85b5de3450adc79b0508727b0d97417f3b7de2bd3b4bbd1a867007154"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-internalization-leads-20261015.json",
+      "bytes": 3512,
+      "sha256": "a7336380080528f6d9a30b00c870934868d38aa5f5ab727848004ee3a7def626"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-metadata-20261015/result.json",
+      "bytes": 19004,
+      "sha256": "510f022915597c951d267ece2dc1cc1cbf0648490c0a20657b99b8931779aa9a"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-snippets-20261015/result.json",
+      "bytes": 5232,
+      "sha256": "011f2d67f88197b7810ba658f80c64608064c41f84788dbff98252ee1ce5e515"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-supplement-extraction-20261015.json",
+      "bytes": 1530,
+      "sha256": "7b182fbc6d36727dee1e71c6f26029832c1a6f7299436e182957207aac33dcc3"
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-2017-video-samples-native-20261015/receipt.json",
+      "bytes": 2503,
+      "sha256": "5d4655d7f5ec26a764646c7ec1cca0b973c35884d9f365df22b278a580e9633d"
+    }
+  ],
+  "manual_html_check": {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944584/",
+    "locator": "Results 2.2, TEM interpretation paragraph following Figure 2; PMC HTML lines 164-167 in the 2026-10-15 direct retrieval.",
+    "outcome": "The 5-word span was directly checked in PMC HTML during this curation session; no local-HTML byte-match claim.",
+    "later_access_limit": "A subsequent Methods-positioned request returned a reCAPTCHA page. That attempt is not a successful retrieval and does not replace the earlier direct reading."
+  },
+  "limits": [
+    "Native NOT_IN_ABSTRACT results are preserved for all three excerpts; they are not failed full-text matches or scientific-validation verdicts.",
+    "Two distinct supporting publications do not establish independent-laboratory replication. The 2025 paper and its preprint are one follow-up study, retained only for scope context.",
+    "The 2020 main text and five main figures were read. Its main PDF and actual supplementary PDFs/videos remain unread; the official API returned HTTP 200 with an XML error, not a ZIP.",
+    "The 2017 video was inspected through 16 samples and one enlarged frame, not continuously or frame-by-frame; conflicting media/caption timing is not converted to a rate.",
+    "The 2025 fixed-stage counts are sporangia, not internalization events. Preserve the S2/S3 locator discrepancy and 4.5 versus 5.5 +/- 0.2 expansion factors. The two-hour timeline is attributed to 2020.",
+    "The linked 2017 editorial has no returned abstract and its content remains unread. Returned notice fields are bounded checks, not comprehensive correction/retraction clearance.",
+    "No authority-verified canonical taxa, universal mechanism, raw-data reanalysis, paid research or human scientific sign-off is claimed."
+  ]
+}

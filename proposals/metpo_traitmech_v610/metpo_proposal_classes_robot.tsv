@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1068700	eukaryotic flagellar axoneme internalization	A physiological phenotype in which a microbial eukaryote internalizes the intact axoneme of its own cilium or flagellum into its cell body.	TraitMech:data/traits/physiology/eukaryotic_flagellar_axoneme_internalization.yaml|DOI:10.1002/cm.21637	METPO:1000059			metpo_traitmech_2026_10	MEDIUM		traitmech:000734
