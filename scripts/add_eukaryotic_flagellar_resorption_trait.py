@@ -23,6 +23,7 @@ SOURCE_SHA256 = "24a186fd10b1bd4c4729e86197cc7b5ab4824df57422912fce0bb8e55ca1f52
 IDENTIFIER = "traitmech:000733"
 METPO_ID = "METPO:1068600"
 TIMESTAMP = "2026-10-15T16:01:11Z"
+REPLICATION_CORRECTION_TIMESTAMP = "2026-10-15T17:05:25Z"
 RECORD = {
     "identifier": IDENTIFIER,
     "label": "eukaryotic flagellar resorption",
@@ -70,7 +71,7 @@ RECORD = {
                 "organelles. The separate fla10 temperature experiments must not be merged "
                 "with this assay. Low-calcium HEPES is not calcium-free: Methods retain trace "
                 "calcium and do not add chelators. The main length measurements count at least "
-                "70 cells per time point and use three independent cultures. All twelve main "
+                "70 cells per time point and use at least three independent cultures. All twelve main "
                 "PDF pages and eight figures were inspected. Proposed basal disassembly and "
                 "shared severing machinery are not universal requirements of this class."
             ),
@@ -226,10 +227,46 @@ def proposal_tsv(record: dict) -> str:
     return stream.getvalue()
 
 
+def correct_replication_bound(current: dict) -> dict:
+    expected = build_record()
+    original = copy.deepcopy(expected)
+    original["evidence"][1]["notes"] = original["evidence"][1]["notes"].replace(
+        "use at least three independent cultures.", "use three independent cultures."
+    )
+    corrected = copy.deepcopy(expected)
+    record_curation_event(
+        corrected, curator="codex", action="CORRECT_EVIDENCE_QUANTITY",
+        changes=(
+            "Retained at least three independent cultures as the replication lower bound "
+            "reported in the 2003 Methods, Timecourses and flagella length measurements, "
+            "page 11 of 12. Source XML and the typeset page were rechecked for issue #1948. "
+            "Preserved definition, snippets, references, other evidence and prior history."
+        ),
+        llm_assisted=True, timestamp=REPLICATION_CORRECTION_TIMESTAMP,
+    )
+    if current == expected or current == corrected:
+        return copy.deepcopy(current)
+    if current != original:
+        raise SystemExit("Existing target differs from reviewed replication-repair input")
+    return corrected
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--correct-replication-bound", action="store_true")
     args = parser.parse_args()
+    if args.correct_replication_bound:
+        if not TARGET.is_file():
+            raise SystemExit("Replication repair requires the existing target")
+        current = yaml.safe_load(TARGET.read_text())
+        record = correct_replication_bound(current)
+        with tempfile.TemporaryDirectory() as temporary:
+            write_validated_trait(record, Path(temporary) / TARGET.name)
+        if args.apply and record != current:
+            write_validated_trait(record, TARGET)
+        print("Applied replication repair" if args.apply else "Validated replication repair dry run")
+        return 0
     record = build_record()
     proposal = proposal_tsv(record)
     if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:

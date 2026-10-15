@@ -35,9 +35,9 @@ evidence:
     rate or count of released organelles. The separate fla10 temperature experiments
     must not be merged with this assay. Low-calcium HEPES is not calcium-free: Methods
     retain trace calcium and do not add chelators. The main length measurements count
-    at least 70 cells per time point and use three independent cultures. All twelve
-    main PDF pages and eight figures were inspected. Proposed basal disassembly and
-    shared severing machinery are not universal requirements of this class.'
+    at least 70 cells per time point and use at least three independent cultures.
+    All twelve main PDF pages and eight figures were inspected. Proposed basal disassembly
+    and shared severing machinery are not universal requirements of this class.'
 discussions:
 - discussion_id: eukaryotic-flagellar-resorption-scope
   prompt: Review shortening through disassembly without requiring complete disappearance.
@@ -137,4 +137,12 @@ curation_history:
     complete-range and open/draft PR checks. No obsolete identifier, canonical taxon,
     exact mapping or universal protein mechanism is inferred. The timestamp records
     the observed allocation decision after the fresh guard, not source acquisition.
+  llm_assisted: true
+- timestamp: '2026-10-15T17:05:25Z'
+  curator: codex
+  action: CORRECT_EVIDENCE_QUANTITY
+  changes: 'Retained at least three independent cultures as the replication lower
+    bound reported in the 2003 Methods, Timecourses and flagella length measurements,
+    page 11 of 12. Source XML and the typeset page were rechecked for issue #1948.
+    Preserved definition, snippets, references, other evidence and prior history.'
   llm_assisted: true

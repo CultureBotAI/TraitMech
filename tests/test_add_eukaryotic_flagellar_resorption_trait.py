@@ -73,6 +73,7 @@ def test_source_roles_and_scope():
     assert "short stubs" in record["evidence"][0]["notes"]
     assert "Figure 7 caption" in record["evidence"][1]["notes"]
     assert "not a resorption rate" in record["evidence"][1]["notes"]
+    assert "use at least three independent cultures." in record["evidence"][1]["notes"]
     context = record["discussions"][0]["evidence"][0]
     assert context["reference"] == "DOI:10.1002/cm.20454"
     assert context["supports"] == "SUPPORT"
@@ -147,3 +148,75 @@ def test_result_prevalidated_before_any_write(isolated, monkeypatch):
     with pytest.raises(Exception):
         run(monkeypatch, True)
     assert snapshot(isolated) == before
+
+
+def test_replication_repair_is_narrow_dry_run_and_idempotent(isolated, monkeypatch):
+    original = writer.build_record()
+    original["evidence"][1]["notes"] = original["evidence"][1]["notes"].replace(
+        "use at least three independent cultures.", "use three independent cultures."
+    )
+    writer.TARGET.write_text(yaml.safe_dump(original))
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound"])
+    assert writer.main() == 0
+    assert snapshot(isolated) == before
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound", "--apply"])
+    assert writer.main() == 0
+    corrected = yaml.safe_load(writer.TARGET.read_text())
+    assert corrected["curation_history"][:-1] == original["curation_history"]
+    assert corrected["curation_history"][-1]["action"] == "CORRECT_EVIDENCE_QUANTITY"
+    assert corrected["curation_history"][-1]["timestamp"] == writer.REPLICATION_CORRECTION_TIMESTAMP
+    assert corrected["evidence"][1]["notes"] == writer.RECORD["evidence"][1]["notes"]
+    restored = copy.deepcopy(corrected)
+    restored["curation_history"].pop()
+    restored["evidence"][1]["notes"] = original["evidence"][1]["notes"]
+    assert restored == original
+    after = snapshot(isolated)
+    assert writer.main() == 0
+    assert snapshot(isolated) == after
+    with pytest.raises(SystemExit):
+        run(monkeypatch, True)
+    assert snapshot(isolated) == after
+
+
+@pytest.mark.parametrize("field", ["identifier", "definition", "evidence", "curation_history", "discussions"])
+def test_replication_repair_preserves_unreviewed_changes(isolated, monkeypatch, field):
+    current = writer.build_record()
+    current[field] = [] if isinstance(current[field], list) else "Unreviewed change"
+    writer.TARGET.write_text(yaml.safe_dump(current))
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound", "--apply"])
+    with pytest.raises(SystemExit):
+        writer.main()
+    assert snapshot(isolated) == before
+
+
+def test_replication_repair_requires_existing_record(isolated, monkeypatch):
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound", "--apply"])
+    with pytest.raises(SystemExit):
+        writer.main()
+    assert snapshot(isolated) == before
+
+
+def test_replication_repair_prevalidates_before_write(isolated, monkeypatch):
+    writer.TARGET.write_text(yaml.safe_dump(writer.build_record()))
+    invalid = writer.build_record()
+    invalid["unknown_field"] = "invalid"
+    monkeypatch.setattr(writer, "correct_replication_bound", lambda current: invalid)
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound", "--apply"])
+    with pytest.raises(Exception):
+        writer.main()
+    assert snapshot(isolated) == before
+
+
+def test_replication_repair_leaves_correct_first_pass_unchanged(isolated, monkeypatch):
+    run(monkeypatch, True)
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-replication-bound", "--apply"])
+    assert writer.main() == 0
+    assert snapshot(isolated) == before
+    detached = writer.correct_replication_bound(writer.build_record())
+    detached["evidence"][1]["notes"] = "Changed"
+    assert "at least three" in writer.build_record()["evidence"][1]["notes"]
