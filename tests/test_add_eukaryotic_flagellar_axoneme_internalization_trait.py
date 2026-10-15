@@ -24,8 +24,9 @@ def isolated(tmp_path, monkeypatch):
     return tmp_path
 
 
-def run(monkeypatch, apply=False):
-    monkeypatch.setattr(sys, "argv", ["writer"] + (["--apply"] if apply else []))
+def run(monkeypatch, apply=False, repair=False):
+    flags = (["--apply"] if apply else []) + (["--correct-expansion-locator"] if repair else [])
+    monkeypatch.setattr(sys, "argv", ["writer"] + flags)
     return writer.main()
 
 
@@ -58,7 +59,8 @@ def test_source_roles_and_scope():
     assert "Long et al. 2025" in context["notes"]
     assert "native NOT_IN_ABSTRACT" in context["notes"]
     assert "S3F-H" in context["notes"] and "4.5-fold" in context["notes"]
-    assert "5.5 +/- 0.2" in context["notes"]
+    assert "5.5 +/- 0.2 in Results S6 (Supplemental Figure S3A-B)" in context["notes"]
+    assert "Methods/S3B" not in context["notes"]
     assert "no organism-level disjointness" in record["discussions"][0]["rationale"]
     assert "broader cilium-disassembly program" in record["discussions"][0]["rationale"]
     assert "complete retractions" in record["discussions"][2]["rationale"]
@@ -150,4 +152,73 @@ def test_result_prevalidated_before_any_write(isolated, monkeypatch):
     before = snapshot(isolated)
     with pytest.raises(Exception):
         run(monkeypatch, True)
+    assert snapshot(isolated) == before
+
+
+def original_locator_record():
+    record = writer.build_record()
+    notes = record["discussions"][0]["evidence"][0]
+    notes["notes"] = notes["notes"].replace(
+        "Results S6 (Supplemental Figure S3A-B)", "Methods/S3B"
+    )
+    return record
+
+
+def test_locator_repair_dry_run_apply_replay(isolated, monkeypatch):
+    original = original_locator_record()
+    writer.TARGET.write_text(yaml.safe_dump(original))
+    before = snapshot(isolated)
+    assert run(monkeypatch, repair=True) == 0
+    assert snapshot(isolated) == before
+    assert run(monkeypatch, apply=True, repair=True) == 0
+    corrected = yaml.safe_load(writer.TARGET.read_text())
+    assert corrected == writer.correct_expansion_locator(original)
+    expected = writer.build_record()
+    event = corrected["curation_history"].pop()
+    assert corrected == expected
+    assert event["action"] == "CORRECT_EVIDENCE_LOCATOR"
+    assert event["timestamp"] == writer.LOCATOR_CORRECTION_TIMESTAMP
+    assert "#1950" in event["changes"]
+    assert not writer.PROPOSAL.exists()
+    after = snapshot(isolated)
+    assert run(monkeypatch, apply=True, repair=True) == 0
+    assert snapshot(isolated) == after
+    with pytest.raises(SystemExit, match="Existing target differs"):
+        run(monkeypatch, apply=True)
+    assert snapshot(isolated) == after
+
+
+def test_locator_repair_requires_existing_record(isolated, monkeypatch):
+    before = snapshot(isolated)
+    with pytest.raises(SystemExit, match="requires the existing target"):
+        run(monkeypatch, apply=True, repair=True)
+    assert snapshot(isolated) == before
+
+
+@pytest.mark.parametrize("field", ["evidence", "definition", "curation_history", "discussions"])
+def test_locator_repair_refuses_unreviewed_changes(isolated, monkeypatch, field):
+    record = original_locator_record()
+    record[field] = [] if isinstance(record[field], list) else "Later curation"
+    writer.TARGET.write_text(yaml.safe_dump(record))
+    before = snapshot(isolated)
+    with pytest.raises(SystemExit, match="reviewed locator-repair input"):
+        run(monkeypatch, apply=True, repair=True)
+    assert snapshot(isolated) == before
+
+
+def test_locator_repair_prevalidates_before_writing(isolated, monkeypatch):
+    writer.TARGET.write_text(yaml.safe_dump(original_locator_record()))
+    invalid = writer.build_record()
+    invalid["unknown_field"] = "invalid"
+    monkeypatch.setattr(writer, "correct_expansion_locator", lambda current: invalid)
+    before = snapshot(isolated)
+    with pytest.raises(Exception):
+        run(monkeypatch, apply=True, repair=True)
+    assert snapshot(isolated) == before
+
+
+def test_correct_first_pass_needs_no_repair(isolated, monkeypatch):
+    assert run(monkeypatch, apply=True) == 0
+    before = snapshot(isolated)
+    assert run(monkeypatch, apply=True, repair=True) == 0
     assert snapshot(isolated) == before

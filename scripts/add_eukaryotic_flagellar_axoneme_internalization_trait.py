@@ -24,6 +24,7 @@ SOURCE_SHA256 = "ed4a62de23eee33700a4f731cf2068335e715d2c6d5c35d9f63412c20dbe073
 IDENTIFIER = "traitmech:000734"
 METPO_ID = "METPO:1068700"
 TIMESTAMP = "2026-10-15T20:08:47.827435+00:00"
+LOCATOR_CORRECTION_TIMESTAMP = "2026-10-15T21:05:50Z"
 RECORD = {
     "identifier": IDENTIFIER,
     "label": "eukaryotic flagellar axoneme internalization",
@@ -125,7 +126,8 @@ RECORD = {
                         "Figure 4, all supplement text and visual supplement pages 4, 7 and "
                         "8 were inspected. The main-text S2 pointer concerns a transcriptomic "
                         "figure; the relevant centriole panels are S3F-H. Figure 4's caption "
-                        "gives about 4.5-fold expansion, versus 5.5 +/- 0.2 in Methods/S3B; "
+                        "gives about 4.5-fold expansion, versus 5.5 +/- 0.2 in Results S6 "
+                        "(Supplemental Figure S3A-B); "
                         "no absolute-size conversion is inferred. Figure 4F counts 16, 3, "
                         "26 and 41 sporangia across categories from three to five independent "
                         "experiments, not retraction events. The two-hour timeline is "
@@ -240,10 +242,49 @@ def proposal_tsv(record: dict) -> str:
     return stream.getvalue()
 
 
+def correct_expansion_locator(current: dict) -> dict:
+    expected = build_record()
+    original = copy.deepcopy(expected)
+    original["discussions"][0]["evidence"][0]["notes"] = original[
+        "discussions"
+    ][0]["evidence"][0]["notes"].replace(
+        "Results S6 (Supplemental Figure S3A-B)", "Methods/S3B"
+    )
+    corrected = copy.deepcopy(expected)
+    record_curation_event(
+        corrected, curator="codex", action="CORRECT_EVIDENCE_LOCATOR",
+        changes=(
+            "Corrected the 2025 expansion-factor locator from Methods/S3B to Results S6, "
+            "MTOC remodeling from mitosis to ciliogenesis, first paragraph, citing "
+            "Supplemental Figure S3A-B. Cached JATS S6/S15 and actual Figure S3 were "
+            "reread for issue #1950. Preserved values, discrepancy, definition, source "
+            "roles, snippets and previous history."
+        ),
+        llm_assisted=True, timestamp=LOCATOR_CORRECTION_TIMESTAMP,
+    )
+    if current == expected or current == corrected:
+        return copy.deepcopy(current)
+    if current != original:
+        raise SystemExit("Existing target differs from reviewed locator-repair input")
+    return corrected
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--correct-expansion-locator", action="store_true")
     args = parser.parse_args()
+    if args.correct_expansion_locator:
+        if not TARGET.is_file():
+            raise SystemExit("Locator repair requires the existing target")
+        current = yaml.safe_load(TARGET.read_text())
+        record = correct_expansion_locator(current)
+        with tempfile.TemporaryDirectory() as temporary:
+            write_validated_trait(record, Path(temporary) / TARGET.name)
+        if args.apply and record != current:
+            write_validated_trait(record, TARGET)
+        print("Applied locator repair" if args.apply else "Validated locator repair dry run")
+        return 0
     record = build_record()
     proposal = proposal_tsv(record)
     if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:

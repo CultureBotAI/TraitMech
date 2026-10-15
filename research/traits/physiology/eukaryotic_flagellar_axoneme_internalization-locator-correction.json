@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_LOCATOR_CORRECTION_NOT_NEW_BIOLOGICAL_EVIDENCE",
+  "record": "traitmech:000734",
+  "record_path": "data/traits/physiology/eukaryotic_flagellar_axoneme_internalization.yaml",
+  "recorded_at": "2026-10-15T21:05:50Z",
+  "issue": "https://github.com/CultureBotAI/TraitMech/issues/1950",
+  "initial_review": "reviews/structured/20261015T204954Z-axoneme-internalization-locator-finding/review.yaml",
+  "prior_record_revision": "8886062340d71ebcec623416c3fffe37c8abe292",
+  "source": {
+    "reference": "DOI:10.1091/mbc.E24-12-0577",
+    "pmid": "40833813",
+    "pmcid_version": "PMC12659703.2",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12659703/fullTextXML",
+    "cached_path": "/tmp/traitmech-next-axoneme-2025-primary-20261015.xml",
+    "sha256": "3c45fd8706025eedf7deaf7dde3469b67d0213dc81543072c7b8731129b3b51d",
+    "correct_locator": "Results, JATS S6, MTOC remodeling from mitosis to ciliogenesis, first paragraph, citing Supplemental Figure S3A-B",
+    "incorrect_locator": "Methods/S3B",
+    "reading": "The S6 value paragraph and Methods S15 were reread from the hash-checked XML. The value is present in S6, not S15. Actual supplemental Figure S3 was visually reread on PDF page 4; panel B compares U-ExM and TEM raw centriole widths, not a displayed 5.5 label.",
+    "supplement_sha256": "58ac9be4e79f5c5f67411915aec849c3dd7e3d32a30bad2009436f6a2267ba47"
+  },
+  "preserved_predecessors": [
+    {
+      "path": "research/traits/physiology/eukaryotic_flagellar_axoneme_internalization-source-verification.json",
+      "sha256": "36ac8e5dfecfdf07e8090c334334277fe84754e6269008aebe364323e97ad49b",
+      "disposition": "Original source-verification receipt and its historical input hashes are retained unchanged; this successor corrects only the locator carried from earlier research notes."
+    },
+    {
+      "path": "/tmp/traitmech-next-axoneme-primary-followup-20261015.json",
+      "sha256": "e731660b3dc444e35990432758e1568de3d388cbed98f7b3bb32dacddea0a395",
+      "disposition": "Historical Methods/S3B attribution is superseded by the precise Results S6 locator, not silently rewritten."
+    }
+  ],
+  "limits": "Cached-source reread, not new acquisition, a new study, raw-data reanalysis or human sign-off. Preserve 4.5-fold in Figure 4's caption versus 5.5 +/- 0.2 in Results S6. Do not reconcile these into an absolute-size conversion. Definition, supporting citations, snippets, native NOT_IN_ABSTRACT outcomes, proposal and all prior histories/reviews remain unchanged."
+}

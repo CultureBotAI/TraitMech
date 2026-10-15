@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/eukaryotic_flagellar_axoneme_internalization.yaml
+  slug: eukaryotic_flagellar_axoneme_internalization
+session:
+  id: 2026-10-15T210641Z-codex-d719db
+  timestamp: '2026-10-15T21:06:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1950
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct the expansion-factor source locator
+  details: 'Corrected discussions[0].evidence[0].notes and the guarded writer: the 2025 value
+    5.5 +/- 0.2 is in Results S6, MTOC remodeling from mitosis to ciliogenesis, first paragraph,
+    citing Supplemental Figure S3A-B, not Methods/S3B. Cached JATS S6 and S15 and actual Figure
+    S3 were reread. Preserved the 4.5 versus 5.5 discrepancy, biological definition, supporting
+    sources, excerpts, native verdicts, proposal and prior research/history/review observations.
+    This supplements history/records/eukaryotic_flagellar_axoneme_internalization/2026-10-15T201607Z-codex-b269cd.yaml.
+    Issue #1950 tracks the locator correction and successor review.'

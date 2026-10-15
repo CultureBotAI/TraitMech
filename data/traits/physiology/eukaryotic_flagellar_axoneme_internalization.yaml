@@ -73,12 +73,12 @@ discussions:
       Actual Figure 4, all supplement text and visual supplement pages 4, 7 and 8
       were inspected. The main-text S2 pointer concerns a transcriptomic figure; the
       relevant centriole panels are S3F-H. Figure 4's caption gives about 4.5-fold
-      expansion, versus 5.5 +/- 0.2 in Methods/S3B; no absolute-size conversion is
-      inferred. Figure 4F counts 16, 3, 26 and 41 sporangia across categories from
-      three to five independent experiments, not retraction events. The two-hour timeline
-      is attributed to 2020, not a new measurement. Other actual main figures, the
-      main PDF and other supplement pages were not visually inspected. The preprint
-      is another version, not another study.
+      expansion, versus 5.5 +/- 0.2 in Results S6 (Supplemental Figure S3A-B); no
+      absolute-size conversion is inferred. Figure 4F counts 16, 3, 26 and 41 sporangia
+      across categories from three to five independent experiments, not retraction
+      events. The two-hour timeline is attributed to 2020, not a new measurement.
+      Other actual main figures, the main PDF and other supplement pages were not
+      visually inspected. The preprint is another version, not another study.
   posed_by: codex
   posed_date: '2026-10-15'
 - discussion_id: eukaryotic-axoneme-internalization-metpo
@@ -144,4 +144,13 @@ curation_history:
     PR checks. Preserved source-access and assay limitations; no obsolete identifier,
     canonical taxon, exact mapping or universal protein mechanism is inferred. The
     timestamp is the observed allocation decision, not source acquisition.
+  llm_assisted: true
+- timestamp: '2026-10-15T21:05:50Z'
+  curator: codex
+  action: CORRECT_EVIDENCE_LOCATOR
+  changes: 'Corrected the 2025 expansion-factor locator from Methods/S3B to Results
+    S6, MTOC remodeling from mitosis to ciliogenesis, first paragraph, citing Supplemental
+    Figure S3A-B. Cached JATS S6/S15 and actual Figure S3 were reread for issue #1950.
+    Preserved values, discrepancy, definition, source roles, snippets and previous
+    history.'
   llm_assisted: true
