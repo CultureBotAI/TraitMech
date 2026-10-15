@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/stalk_contraction.yaml
+  slug: stalk_contraction
+session:
+  id: 2026-10-15T035509Z-codex-b2e06c
+  timestamp: '2026-10-15T03:55:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add stalk contraction
+  details: Added one PROPOSED stalk-contraction phenotype, defined by active reduction of
+    end-to-end stalk extension, supported by Kamiguri et al. 2012 and Ryu et al. 2012. Directly
+    checked 19/14-word full-text result snippets retain native NOT_IN_ABSTRACT. Amos 1971
+    provides separate 17-word anatomical context with native UNRESOLVED, not an additional
+    supporting experiment. Preserved contour-length, replication, model, source-access and
+    culture/taxonomy limits. Reserved 000730, v606 and 1068300-1068399 after ignored/hidden,
+    retained-history, full-range and open/draft PR checks. v606 copies the unchanged v605
+    parent declaration and emits the child axiom. No universal protein mechanism, exact synonym,
+    xref or canonical taxon inferred. The record timestamp is observed acceptance, not a fabricated
+    PDF request time.

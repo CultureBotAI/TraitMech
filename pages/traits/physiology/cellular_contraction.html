@@ -96,12 +96,14 @@
 
 
     <div class="card">
-      <h2>Children (2)</h2>
+      <h2>Children (3)</h2>
       <ul>
 
         <li><a href="../../traits/physiology/cell_body_contraction.html">cell-body contraction <code>traitmech:000728</code></a></li>
 
         <li><a href="../../traits/physiology/rapid_axopodial_contraction.html">rapid axopodial contraction <code>traitmech:000682</code></a></li>
+
+        <li><a href="../../traits/physiology/stalk_contraction.html">stalk contraction <code>traitmech:000730</code></a></li>
 
       </ul>
     </div>
@@ -151,7 +153,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Require active reduction of cell-body length or the extension of a cytoplasmic projection. Generic force production or isometric contractility alone is insufficient. Extracellular pilus retraction, injection-system contraction, contractile-vacuole cycling and cytokinetic constriction alone do not establish this endpoint. Neither passive osmotic shrinkage, death-associated shortening nor static short-cell morphology suffices. The existing body and rapid axopodial traits are narrower children; stalk contraction remains a possible future child, not a new allocation here. Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily shortening. Active denotes the cellular response, not demonstrated ATP-driven motor action. No universal speed, fractional shortening, trigger, calcium threshold, ATP dependence, ecological role, exact synonym for generic contractility or organism-level disjointness is asserted.</p>
+        <p>Require active reduction of cell-body length or the extension of a cytoplasmic projection. Generic force production or isometric contractility alone is insufficient. Extracellular pilus retraction, injection-system contraction, contractile-vacuole cycling and cytokinetic constriction alone do not establish this endpoint. Neither passive osmotic shrinkage, death-associated shortening nor static short-cell morphology suffices. The existing body and rapid axopodial traits are narrower children; stalk contraction traitmech:000730 is now a narrower child, defined by active reduction of stalk end-to-end extension. This does not require shortening of the stalk contour or make its sheath cytoplasm. Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily shortening. Active denotes the cellular response, not demonstrated ATP-driven motor action. No universal speed, fractional shortening, trigger, calcium threshold, ATP dependence, ecological role, exact synonym for generic contractility or organism-level disjointness is asserted.</p>
 
 
 
@@ -242,6 +244,12 @@
           <p class="changes">Replaced the parenthetical label cellular contraction (body or cytoplasmic projection shortening) with cell body or cytoplasmic projection contraction. Preserved definition, endpoint qualifier, evidence, discussions, identifier and earlier history. The v605 template also emits the two existing child subclass axioms without modifying historical v558/v604 cohorts. Addresses external review issues #1941 and #1942; no new biology or human review promotion. Timestamp records observed acceptance of the refinements.</p>
         </li>
 
+        <li>
+          <time>2026-10-15T03:51:31Z</time> ·
+          <strong>LINK_STALK_CONTRACTION_CHILD</strong> · codex
+          <p class="changes">Linked the accepted stalk-contraction child traitmech:000730 in place of the future-lead sentence. Preserved the parent&#39;s definition, evidence, hierarchy and prior history; independent scope and mechanism questions remain OPEN. No new parent experiment or universal mechanism is asserted.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -257,6 +265,12 @@
           <ul><li><strong>EDIT</strong> — Refine contraction label and emit proposed child hierarchy
             <p>Address external PR 1940 review issues 1941 and 1942. Replace the parenthetical label with cell body or cytoplasmic projection contraction while preserving definition, scope, evidence, discussions, identifier and prior history. Re-emit historical child IDs 1063500 and 1068100 below 1068200 in v605, preserving their original definition annotations and all v558/v604 bytes. Child TraitRecords are unchanged by this follow-up; their original coupled hierarchy events remain. No new biological claim or human review promotion.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cellular_contraction/2026-10-15T000059Z-codex-057ea1.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-15T03:55:11Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Link stalk-contraction child
+            <p>Replaced only the stalk-contraction future-lead sentence in cellular-contraction-scope-and-mappings with the accepted child traitmech:000730 and its extension endpoint. Preserved parent definition, evidence, hierarchy, prior history and other discussion prose. Independent scope and mechanism questions remain OPEN. Historical v605 remains unchanged. No new parent experiment or universal mechanism is asserted.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cellular_contraction/2026-10-15T035511Z-codex-f2de8f.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -312,9 +326,9 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-15 00:00 UTC
+      Record as of 2026-10-15 03:55 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1124 TraitRecords
+      · 1125 TraitRecords
       · embedding coverage 42.4%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>

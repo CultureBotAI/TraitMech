@@ -11619,7 +11619,7 @@ window.searchData = [
   "source_id": "traitmech:000729",
   "source_file": "cellular_contraction.yaml",
   "attaches_to": [],
-  "rationale": "Require active reduction of cell-body length or the extension of a cytoplasmic projection. Generic force production or isometric contractility alone is insufficient. Extracellular pilus retraction, injection-system contraction, contractile-vacuole cycling and cytokinetic constriction alone do not establish this endpoint. Neither passive osmotic shrinkage, death-associated shortening nor static short-cell morphology suffices. The existing body and rapid axopodial traits are narrower children; stalk contraction remains a possible future child, not a new allocation here. Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily shortening. Active denotes the cellular response, not demonstrated ATP-driven motor action. No universal speed, fractional shortening, trigger, calcium threshold, ATP dependence, ecological role, exact synonym for generic contractility or organism-level disjointness is asserted.",
+  "rationale": "Require active reduction of cell-body length or the extension of a cytoplasmic projection. Generic force production or isometric contractility alone is insufficient. Extracellular pilus retraction, injection-system contraction, contractile-vacuole cycling and cytokinetic constriction alone do not establish this endpoint. Neither passive osmotic shrinkage, death-associated shortening nor static short-cell morphology suffices. The existing body and rapid axopodial traits are narrower children; stalk contraction traitmech:000730 is now a narrower child, defined by active reduction of stalk end-to-end extension. This does not require shortening of the stalk contour or make its sheath cytoplasm. Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily shortening. Active denotes the cellular response, not demonstrated ATP-driven motor action. No universal speed, fractional shortening, trigger, calcium threshold, ATP dependence, ecological role, exact synonym for generic contractility or organism-level disjointness is asserted.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -14725,6 +14725,59 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/sos_response.html#sos-response-xref-gap"
  },
  {
+  "discussion_id": "stalk-contraction-scope-and-parent",
+  "prompt": "Review the stalk-extension endpoint and its projection-contraction parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "stalk contraction",
+  "source_id": "traitmech:000730",
+  "source_file": "stalk_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "The measured endpoint is reduced end-to-end stalk extension, not necessarily reduced contour length. Coiling is observed, not a universal geometric requirement. Require active cellular contraction; static stalk morphology, reduced developmental growth, passive bending, detachment and isometric force alone do not establish it. Stalk-induced body displacement is not cell-body contraction traitmech:000728, and the endpoint differs from rapid axopodial contraction traitmech:000682. The direct parent is cell body or cytoplasmic projection contraction traitmech:000729, by definition-based inference. Amos's publisher abstract places the spasmoneme within cytoplasm and a sheath. The stalk is composite; its whole sheath is not asserted to be cytoplasm. Neither locomotion nor a universal ATP-driven motor is required by this parent choice. No exact synonym or organism-level disjointness is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/229127a0"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/stalk_contraction.html#stalk-contraction-scope-and-parent"
+ },
+ {
+  "discussion_id": "stalk-contraction-metpo-assessment",
+  "prompt": "Review the proposed stalk-contraction class without reviving obsolete morphology.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "stalk contraction",
+  "source_id": "traitmech:000730",
+  "source_file": "stalk_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Pinned and inspected current METPO release/editor/template owners contain no active exact contraction class in the bounded assessment. METPO:1000288 obsolete stalk is deprecated, under ObsoleteClass, with OMO:0001000 as its recorded reason and no replacement or consider annotation observed. It is a historical morphology label, not an active exact contraction phenotype; neither revive it nor put it in xrefs. The reason code alone does not invalidate the biology. v606 reserves METPO:1068300 in block 1068300-1068399 and repeats the unchanged v605 parent declaration METPO:1068200 so the standalone proposal emits the actual parent hierarchy. Historical v605 and the ontology pin remain unchanged. No external equivalence or SSSOM mapping is accepted; upstream adoption and human sign-off remain open.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/stalk_contraction.html#stalk-contraction-metpo-assessment"
+ },
+ {
+  "discussion_id": "stalk-contraction-provenance-and-mechanism",
+  "prompt": "Resolve source isolates and endpoint-specific mechanisms before adding taxa or proteins.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "stalk contraction",
+  "source_id": "traitmech:000730",
+  "source_file": "stalk_contraction.yaml",
+  "attaches_to": [],
+  "rationale": "Keep study organism names as qualified observations until culture provenance and current taxonomic identities are independently verified. Two distinct experimental papers support the endpoint; Part II of the Kamiguri study is not counted as independent replication. Preserve stimulus, load, viscosity, cell state, geometry, sampling and temporal resolution when comparing assays. Do not generalize calcium-wave models, spasmoneme chemistry, force estimates or energy claims to all microbial stalks. Protein sequence features alone cannot establish this phenotype. A protein-resolved causal graph needs authority-checked taxon-paired accessions and edge-specific experimental support. Mechanism is deferred, not asserted absent. MED/Crossref notice-field and limited publisher checks are not comprehensive correction/retraction clearance; failed retrievals and uninspected supplements remain explicit source-access limits.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/stalk_contraction.html#stalk-contraction-provenance-and-mechanism"
+ },
+ {
   "discussion_id": "tetrapolar-mating-scope-and-hierarchy",
   "prompt": "Keep mating compatibility separate from partner dependence and MAT inventory.",
   "kind": "CURATION_TODO",
@@ -15151,9 +15204,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 764,
- "total_knowledge_gaps": 471,
- "total_source_entries": 595,
+ "total_discussions": 767,
+ "total_knowledge_gaps": 472,
+ "total_source_entries": 596,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
