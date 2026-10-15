@@ -23,6 +23,9 @@ SOURCE_SHA256 = "72af61de0c6d741f00271b48d1656ee47c313fbde38ce953b6cfb81c7a76aae
 IDENTIFIER = "traitmech:000732"
 METPO_ID = "METPO:1068500"
 TIMESTAMP = "2026-10-15T11:39:29Z"
+LOCATOR_CORRECTION_TIMESTAMP = "2026-10-15T13:07:41Z"
+OLD_LOCATOR = "third paragraph; Figure 1G"
+SOURCE_LOCATOR = "sole paragraph (HTML anchor article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure 1G"
 RECORD = {
     "identifier": "traitmech:000732",
     "label": "bacterial polar flagellar ejection",
@@ -38,7 +41,7 @@ RECORD = {
         {
             "reference": "DOI:10.1371/journal.pbio.3000165",
             "snippet": "Plesiomonas cells consistently lose their flagella at the base of the hook",
-            "notes": "Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, third paragraph; Figure 1G. Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts and relic/assembly comparisons support ejection rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion conditions vary among assays; minimal medium containing glucose is not complete carbon starvation. All 25 main PDF pages and six figures were inspected, not raw supplementary data. Energy conservation and leakage prevention are interpretations."
+            "notes": "Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, " + SOURCE_LOCATOR + ". Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts and relic/assembly comparisons support ejection rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion conditions vary among assays; minimal medium containing glucose is not complete carbon starvation. All 25 main PDF pages and six figures were inspected, not raw supplementary data. Energy conservation and leakage prevention are interpretations."
         },
         {
             "reference": "DOI:10.1111/mmi.14511",
@@ -123,10 +126,47 @@ def proposal_tsv(record: dict) -> str:
     return stream.getvalue()
 
 
+def correct_source_locator(current: dict) -> dict:
+    expected = build_record()
+    original = copy.deepcopy(expected)
+    original["evidence"][0]["notes"] = original["evidence"][0]["notes"].replace(
+        SOURCE_LOCATOR, OLD_LOCATOR
+    )
+    corrected = copy.deepcopy(expected)
+    record_curation_event(
+        corrected, curator="codex", action="CORRECT_EVIDENCE_LOCATOR",
+        changes=(
+            "Corrected the Ferreira 2019 third-paragraph locator to the sole "
+            "subsection paragraph, HTML anchor article1.body1.sec2.sec4.p1, "
+            "spanning PDF pages 4-5. Preserved the verbatim excerpt, native "
+            "NOT_IN_ABSTRACT outcome, biological claims and prior history. "
+            "Source HTML and PDF pages were rechecked for issue #1947."
+        ),
+        llm_assisted=True, timestamp=LOCATOR_CORRECTION_TIMESTAMP,
+    )
+    if current == expected or current == corrected:
+        return copy.deepcopy(current)
+    if current != original:
+        raise SystemExit("Existing target differs from reviewed locator-repair input")
+    return corrected
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--correct-source-locator", action="store_true")
     args = parser.parse_args()
+    if args.correct_source_locator:
+        if not TARGET.is_file():
+            raise SystemExit("Locator repair requires the existing target")
+        current = yaml.safe_load(TARGET.read_text())
+        record = correct_source_locator(current)
+        with tempfile.TemporaryDirectory() as temporary:
+            write_validated_trait(record, Path(temporary) / TARGET.name)
+        if args.apply and record != current:
+            write_validated_trait(record, TARGET)
+        print("Applied locator repair" if args.apply else "Validated locator repair dry run")
+        return 0
     record = build_record()
     proposal = proposal_tsv(record)
     if TARGET.exists() and yaml.safe_load(TARGET.read_text()) != record:

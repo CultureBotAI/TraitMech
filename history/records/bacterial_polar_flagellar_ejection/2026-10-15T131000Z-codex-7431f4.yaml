@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  slug: bacterial_polar_flagellar_ejection
+session:
+  id: 2026-10-15T131000Z-codex-7431f4
+  timestamp: '2026-10-15T13:10:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1947
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1946
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct Ferreira source paragraph locator
+  details: 'Corrected evidence[0].notes and maintained writer, source receipt and proposal
+    to the sole paragraph at publisher anchor article1.body1.sec2.sec4.p1, spanning PDF pages
+    4-5. Direct HTML and PDF inspection confirmed that the quote is verbatim, including Plesiomonas
+    cells. Preserved biological content, native snippet outcomes and previous curation/history/review
+    bytes. This supplements history/records/bacterial_polar_flagellar_ejection/2026-10-15T114344Z-codex-e46fbc.yaml;
+    the original review missed the paragraph ordinal. Issue #1947 tracks the correction and
+    successor review.'

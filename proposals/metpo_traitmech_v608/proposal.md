@@ -27,8 +27,9 @@ causal graphs are added. Sequence features alone cannot establish the phenotype.
 
 1. [Ferreira et al. 2019](https://doi.org/10.1371/journal.pbio.3000165),
    PMID:30889173, PMC6424402, is the definition authority. The 12-word Results
-   snippet is directly matched to publisher HTML in the third paragraph of
+   snippet is directly matched to publisher HTML in the sole paragraph of
    "Shed hook-filament structures accumulate in P. shigelloides supernatant",
+   anchor `article1.body1.sec2.sec4.p1` (PDF pp. 4-5),
    with Figure 1G. Native `NOT_IN_ABSTRACT` is retained. All 25 main PDF pages
    and six actual figures were inspected, not raw supplemental data.
    Hook-bearing released material, population measurements and relic/assembly

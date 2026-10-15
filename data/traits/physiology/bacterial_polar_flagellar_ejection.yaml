@@ -12,13 +12,14 @@ evidence:
 - reference: DOI:10.1371/journal.pbio.3000165
   snippet: Plesiomonas cells consistently lose their flagella at the base of the hook
   notes: Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament
-    structures accumulate in P. shigelloides supernatant, third paragraph; Figure
-    1G. Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released
-    structures, population counts and relic/assembly comparisons support ejection
-    rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion
-    conditions vary among assays; minimal medium containing glucose is not complete
-    carbon starvation. All 25 main PDF pages and six figures were inspected, not raw
-    supplementary data. Energy conservation and leakage prevention are interpretations.
+    structures accumulate in P. shigelloides supernatant, sole paragraph (HTML anchor
+    article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure 1G. Direct publisher full-text
+    match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts
+    and relic/assembly comparisons support ejection rather than daughter-cell dilution
+    or passive midfilament breakage. Nutrient-depletion conditions vary among assays;
+    minimal medium containing glucose is not complete carbon starvation. All 25 main
+    PDF pages and six figures were inspected, not raw supplementary data. Energy conservation
+    and leakage prevention are interpretations.
 - reference: DOI:10.1111/mmi.14511
   snippet: bacteria can actively abandon flagella after prolonged stationary culturing
   notes: Zhuang et al. 2020, PMID:32259388, scientific abstract, sentence beginning
@@ -115,4 +116,12 @@ curation_history:
     CommunityMech PR2018 worktree. No obsolete identifier, exact mapping, canonical
     taxon or universal molecular mechanism is inferred. Timestamp records observed
     acceptance, not source acquisition.
+  llm_assisted: true
+- timestamp: '2026-10-15T13:07:41Z'
+  curator: codex
+  action: CORRECT_EVIDENCE_LOCATOR
+  changes: 'Corrected the Ferreira 2019 third-paragraph locator to the sole subsection
+    paragraph, HTML anchor article1.body1.sec2.sec4.p1, spanning PDF pages 4-5. Preserved
+    the verbatim excerpt, native NOT_IN_ABSTRACT outcome, biological claims and prior
+    history. Source HTML and PDF pages were rechecked for issue #1947.'
   llm_assisted: true

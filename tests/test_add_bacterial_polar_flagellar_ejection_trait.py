@@ -63,6 +63,7 @@ def test_source_roles_and_scope():
         "DOI:10.1038/s41467-026-75593-6"]
     assert [len(e["snippet"].split()) for e in record["evidence"]] == [12, 9, 15]
     assert "native NOT_IN_ABSTRACT" in record["evidence"][0]["notes"]
+    assert writer.SOURCE_LOCATOR in record["evidence"][0]["notes"]
     assert "native VERIFIED" in record["evidence"][1]["notes"]
     assert "not the actual figures or supplement" in record["evidence"][1]["notes"]
     assert "native NOT_IN_ABSTRACT" in record["evidence"][2]["notes"]
@@ -137,4 +138,62 @@ def test_result_prevalidated_before_any_write(isolated, monkeypatch):
     before = snapshot(isolated)
     with pytest.raises(Exception):
         run(monkeypatch, True)
+    assert snapshot(isolated) == before
+
+
+def test_locator_agrees_across_maintained_owners():
+    receipt = json.loads((writer.ROOT / "research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json").read_text())
+    assert writer.SOURCE_LOCATOR in receipt["rows"][0]["locator"]
+    assert receipt["rows"][0]["assessment"] == writer.RECORD["evidence"][0]["notes"]
+    proposal = (writer.ROOT / "proposals/metpo_traitmech_v608/proposal.md").read_text()
+    assert "article1.body1.sec2.sec4.p1" in proposal
+    assert "third paragraph" not in proposal
+
+
+def test_locator_repair_is_narrow_dry_run_and_idempotent(isolated, monkeypatch):
+    original = writer.build_record()
+    original["evidence"][0]["notes"] = original["evidence"][0]["notes"].replace(
+        writer.SOURCE_LOCATOR, writer.OLD_LOCATOR
+    )
+    writer.TARGET.write_text(yaml.safe_dump(original))
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-source-locator"])
+    assert writer.main() == 0
+    assert snapshot(isolated) == before
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-source-locator", "--apply"])
+    assert writer.main() == 0
+    corrected = yaml.safe_load(writer.TARGET.read_text())
+    assert corrected["curation_history"][:-1] == original["curation_history"]
+    assert corrected["curation_history"][-1]["action"] == "CORRECT_EVIDENCE_LOCATOR"
+    assert corrected["curation_history"][-1]["timestamp"] == writer.LOCATOR_CORRECTION_TIMESTAMP
+    assert corrected["evidence"][0]["notes"] == writer.RECORD["evidence"][0]["notes"]
+    restored = copy.deepcopy(corrected)
+    restored["curation_history"].pop()
+    restored["evidence"][0]["notes"] = original["evidence"][0]["notes"]
+    assert restored == original
+    after = snapshot(isolated)
+    assert writer.main() == 0
+    assert snapshot(isolated) == after
+    with pytest.raises(SystemExit):
+        run(monkeypatch, True)
+    assert snapshot(isolated) == after
+
+
+@pytest.mark.parametrize("field", ["identifier", "definition", "evidence", "curation_history"])
+def test_locator_repair_preserves_unreviewed_changes(isolated, monkeypatch, field):
+    current = writer.build_record()
+    current[field] = [] if isinstance(current[field], list) else "Unreviewed change"
+    writer.TARGET.write_text(yaml.safe_dump(current))
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-source-locator", "--apply"])
+    with pytest.raises(SystemExit):
+        writer.main()
+    assert snapshot(isolated) == before
+
+
+def test_locator_repair_requires_existing_record(isolated, monkeypatch):
+    before = snapshot(isolated)
+    monkeypatch.setattr(sys, "argv", ["writer", "--correct-source-locator", "--apply"])
+    with pytest.raises(SystemExit):
+        writer.main()
     assert snapshot(isolated) == before
