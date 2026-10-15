@@ -3,6 +3,15 @@
   "accepted_at": "2026-10-14T22:35:09Z",
   "checked_at": "2026-10-14T22:41:40.249492+00:00",
   "status": "Author assessment of one new PROPOSED parent and two coupled child repairs; not independent review or human sign-off.",
+  "review_refinements": {
+    "accepted_at": "2026-10-14T23:56:33Z",
+    "issues": [1941, 1942],
+    "current_label": "cell body or cytoplasmic projection contraction",
+    "label_scope": "Direct phrasing replaces the parenthetical gloss without changing the definition or endpoint. allocation.label retains the historical label at initial acceptance.",
+    "proposal_scope": "v605 now contains the new parent row and repeated existing child rows METPO:1063500 and METPO:1068100, each with parent METPO:1068200. Historical v558/v604 cohorts, child definitions and definition-source annotations are preserved. No child ID was newly allocated.",
+    "historical_plan_scope": "The child_repair safeguards retain the pre-curation plan, including its prose-only child-axiom request. That approach is superseded by the emitted template rows described here; earlier receipts and immutable reviews are not rewritten.",
+    "validation_scope": "Template and record changes are written; final regeneration, emitted-RDF verification and successor review are recorded separately, not asserted by this source receipt."
+  },
   "rows": [
     {
       "reference": "DOI:10.1242/jeb.189.1.163",

@@ -2,8 +2,8 @@
 
 ## Scope
 
-Propose `METPO:1068200`, **cellular contraction (body or cytoplasmic projection
-shortening)**, for `traitmech:000729` (`PHYSIOLOGY`, `CLASS`, `PROPOSED`).
+Propose `METPO:1068200`, **cell body or cytoplasmic projection contraction**,
+for `traitmech:000729` (`PHYSIOLOGY`, `CLASS`, `PROPOSED`).
 
 Definition: A physiological phenotype in which a microbial cell actively
 contracts its body or a cytoplasmic projection, reducing its length or extension.
@@ -26,16 +26,18 @@ the label is qualified and no exact generic-contractility synonym is asserted.
 
 The same branch refines the direct parents of two accepted narrower phenotypes:
 
-| Child | Historical Placeholder | Requested Additional Upstream Axiom |
+| Child | Historical Placeholder | Emitted Additional Upstream Axiom |
 |---|---|---|
 | rapid axopodial contraction, `traitmech:000682` | v558 `METPO:1063500` | `METPO:1063500 rdfs:subClassOf METPO:1068200` |
 | cell-body contraction, `traitmech:000728` | v604 `METPO:1068100` | `METPO:1068100 rdfs:subClassOf METPO:1068200` |
 
 These are definition-based subclass inferences, not new experiments. Historical
-cohorts remain byte-preserved; only the new parent is declared in this cohort's
-TSV. The requested child axioms are documented here for upstream integration,
-not asserted as already present in the emitted standalone proposal OWL.
-Phenotype remains an ancestor of both children.
+cohorts remain byte-preserved. Following v501, this cohort repeats each existing
+child ID with the refined parent, retaining its historical label, definition,
+definition-source annotations and other identity cells. The three-row template
+emits both child axioms together with the new parent. No child identifier is
+minted again; phenotype remains an ancestor of both children. The broader
+historical phenotype assertions are compatible with the more specific axioms.
 
 Both child definitions, excerpts and prior curation events are retained. Their
 historical parent-discussion rationales remain intact. The axopodial discussion
@@ -75,13 +77,18 @@ is a future discovery lead, not a third child allocation on this branch.
    of independent contraction replication. Microtubule disassembly accompanies
    shortening; the study explicitly does not establish force production.
 
-Only Katoh and the local curation record annotate the proposal definition.
+Only Katoh and the local curation record annotate the new parent definition.
 Khan and Febvre provide supporting phenotype evidence, not extra definition
 annotations. Source-specific calcium, speed, ATP, protein and ecological-role
 claims are not generalized. Study names are not canonical taxon assertions.
 Floyd 2023 was inspected as corroborating context but is not an additional
 counted parent citation or a new quote here. No common sequence-derived
 mechanism is asserted.
+
+Repeated child rows retain their historical definition annotations: Khan 2003
+and `DOI:10.1111/j.1550-7408.2001.tb00187.x` for rapid axopodial contraction,
+and `DOI:10.1126/sciadv.add6550` for cell-body contraction. These are not added
+as parent evidence or counted as new parent citations.
 
 The [verification sidecar](../../research/traits/physiology/cellular_contraction-source-verification.json)
 retains hashes, source URLs, selected sections and actual native outcomes.
@@ -95,6 +102,12 @@ Accepted at `2026-10-14T22:35:09Z` on clean main
 `ab8be94cd147cc60bf7c5d3795abef1b3171e91a`. Reserve `traitmech:000729`,
 `metpo_traitmech_v605`, and the entire **1068200-1068299** block; only
 `METPO:1068200` is populated. Subset: `metpo_traitmech_2026_10`.
+
+External review in PR #1940 prompted two bounded refinements: #1941 adds the
+machine-readable child axioms, and #1942 replaces the parenthetical label with
+the direct qualified phrase above. The allocation receipt retains the label at
+initial acceptance; the biological definition and scope are unchanged. Existing
+child IDs remain owned by their historical blocks, not by 1068200-1068299.
 
 Ignored and hidden files were included in 199 known locations. The refreshed
 reservation/bare-contraction scan checked 149 retained heads, 25,093 TraitMech
@@ -139,13 +152,14 @@ PR files were not reconstructed. Refresh reservations before publication.
 
 ## Verification And Upstream Path
 
-The one-row template uses the canonical 11-column headers checked at
+The three-row template uses the canonical 11-column headers checked at
 KG-Microbe `b4b4cee330768083494f6f7e556314b25d75f2b6`. Run the maintained
 proposal verifier and ROBOT/ELK wrapper, then inspect the emitted RDF for the
-actual `https://w3id.org/metpo/` parent IRIs and definition annotations. This
+actual `https://w3id.org/metpo/` parent IRIs, both child subclass axioms and
+unchanged child definition annotations. This
 narrative does not claim that unrun validation or review gates passed.
 
-After review, submit the parent template and requested child axioms to METPO.
+After review, submit this parent-and-child template to METPO.
 The placeholders are not released identifiers. On upstream acceptance and
 release, separately review exact scope, update the ontology pin, re-seed and
 migrate local identifiers while retaining their old spellings for traceability.

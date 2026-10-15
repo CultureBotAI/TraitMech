@@ -1,5 +1,5 @@
 identifier: traitmech:000729
-label: cellular contraction (body or cytoplasmic projection shortening)
+label: cell body or cytoplasmic projection contraction
 definition: A physiological phenotype in which a microbial cell actively contracts
   its body or a cytoplasmic projection, reducing its length or extension.
 definition_source: DOI:10.1242/jeb.189.1.163
@@ -109,4 +109,15 @@ curation_history:
     full proposal-range inspection. Resolved the body and axopodial parent gaps while
     keeping assay and mechanism questions open. No universal molecular mechanism or
     canonical taxon inferred. Timestamp records observed allocation and curation acceptance.
+  llm_assisted: true
+- timestamp: '2026-10-14T23:56:33Z'
+  curator: codex
+  action: REFINE_CONTRACTION_LABEL
+  changes: 'Replaced the parenthetical label cellular contraction (body or cytoplasmic
+    projection shortening) with cell body or cytoplasmic projection contraction. Preserved
+    definition, endpoint qualifier, evidence, discussions, identifier and earlier
+    history. The v605 template also emits the two existing child subclass axioms without
+    modifying historical v558/v604 cohorts. Addresses external review issues #1941
+    and #1942; no new biology or human review promotion. Timestamp records observed
+    acceptance of the refinements.'
   llm_assisted: true
