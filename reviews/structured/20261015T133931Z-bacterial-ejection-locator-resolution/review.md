@@ -1,0 +1,968 @@
+# Bacterial polar flagellar ejection: corrected source locator
+
+- Review: 20261015T133931Z-bacterial-ejection-locator-resolution
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-15T13:28:40Z
+- Finished UTC: 2026-10-15T13:39:31Z
+- Reviewer: codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One confirmed minor locator defect is corrected. The complete bounded trait retains its source-supported identity, evidence and four OPEN discussions. Status remains PROPOSED; this is author self-review, not human sign-off.
+
+## Scope And Provenance
+
+Complete trait and maintained owners, with source-locator correction and explicit preservation of the earlier biological assessment.
+
+Selection: Exact traitmech:000732 and maintained owners; no sampling.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 48ea96efedc3b3160761a74230f39d627a2716e2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000732 | data/traits/physiology/bacterial_polar_flagellar_ejection.yaml | maintained | bacterial polar flagellar ejection |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator --apply | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator --apply | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/new_history_record.py --kind record --slug bacterial_polar_flagellar_ejection --target-root data/traits/physiology --event EDIT --outcome changed --sections evidence --summary 'Correct Ferreira source paragraph locator' --details 'Corrected evidence[0].notes and maintained writer, source receipt and proposal to the sole paragraph at publisher anchor article1.body1.sec2.sec4.p1, spanning PDF pages 4-5. Direct HTML and PDF inspection confirmed that the quote is verbatim, including Plesiomonas cells. Preserved biological content, native snippet outcomes and previous curation/history/review bytes. This supplements history/records/bacterial_polar_flagellar_ejection/2026-10-15T114344Z-codex-e46fbc.yaml; the original review missed the paragraph ordinal. Issue #1947 tracks the correction and successor review.' --actor-name codex --model GPT-5 --agent-tool Codex --issue https://github.com/CultureBotAI/TraitMech/issues/1947 --pr https://github.com/CultureBotAI/TraitMech/pull/1946 | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/bacterial_polar_flagellar_ejection.yaml | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_strict.py data/traits/physiology/bacterial_polar_flagellar_ejection.yaml | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_history_links.py history/records/bacterial_polar_flagellar_ejection | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python -m pytest -q tests/test_add_bacterial_polar_flagellar_ejection_trait.py tests/test_readme_artifacts.py tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff check src scripts tests | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just audit-proposals | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just ground-predicates | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just ground-nodes | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just audit-graphs | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just audit-graph-protein-taxa | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just audit-predicate-domains | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just check-biolink-coverage | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just audit-snippets | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just gen-discussions-data | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just gen-qc-dashboard | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just gen-pages | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just gen-priority-dashboard | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just qc | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just validate-history | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just validate-products | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just verify-proposal metpo_traitmech_v608 | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| just robot-validate-proposal metpo_traitmech_v608 | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/audit_history_records.py --base 616a97577299f7a33d9b6c98ab29c28b30c64758 | passed | True | traitmech:000732 | Executed on the corrective working tree/checkpoint; successful native command. |
+| preservation | passed | True | traitmech:000732 | Structured comparison proves that only the first source locator and append-only history changed in the record. Receipt changes only two locator-bearing fields. The prior review, all earlier history, sources, proposal TSV and other records remain unchanged. |
+| publisher | passed | True | traitmech:000732 | Source-native anchor article1.body1.sec2.sec4.p1 is unique and identifies the sole paragraph of its subsection. The exact 12-word quote matches, including the genus name. PDF pages 4-5 were visually reread. |
+| browser | passed | True | traitmech:000732 | Corrected page and two history links inspected at 1440 and 390 pixels, with source anchor and curation event visible. No overflow or page errors; browse navigation and dashboard count/image checks passed. |
+| Retained original full-suite evidence | passed | False | traitmech:000732 | 4777 tests passed at original checkpoint d7c11c8a6a66cba9ce10828051e78894d2fa81da. This full local suite was not rerun after the locator correction; focused tests and native QC were rerun. Protected CI on the published corrected head remains a separate merge gate. |
+
+## Scientific And Domain Assessments
+
+### Active basal release phenotype
+
+identity: supported. Targets: traitmech:000732.
+
+Reusable organismal phenotype, not a sequence feature or a motility/assembly defect. Basal release is supported without imposing the same released components, exact molecular cut, stimulus or nonmotility on every instance.
+
+### Phenotype and deprecated identifiers
+
+grounding: supported. Targets: traitmech:000732.
+
+Phenotype is strictly broader by definition. Possession or arrangement is not ejection; deprecated terms and replacements are not exact xrefs. The pin remains unchanged.
+
+### Distinct experimental endpoints
+
+evidence: supported. Targets: traitmech:000732.
+
+Recovered hook-bearing structures, stationary-culture imaging and the nutrient-associated relic comparison support the bounded trait. Population proxies, cell/tomogram counts, biological replicates and trajectories remain distinct. Native full-text misses are not mislabeled VERIFIED.
+
+### No universal added-plug or rod-cut claim
+
+evidence: supported. Targets: traitmech:000732.
+
+The newer FlgI closure interpretation prevents imposing an unidentified added plug. Neither gate-deletion assembly defects nor gene/domain possession establishes ejection failure or organismal phenotype. Cryo-ET states are not a longitudinal trajectory.
+
+### Proposal and rendered artifacts
+
+consistency: supported. Targets: traitmech:000732.
+
+One canonical class row emits the correct w3id parent chain and role-correct definition annotation. Counts, links and dashboards match 1127 records; prior scientific bytes are preserved.
+
+### Authority and mechanism gaps
+
+completeness: unknown. Targets: traitmech:000732.
+
+Canonical strain/taxon provenance, protein-resolved causal graph and exact external mappings remain deferred. Unread figures/supplements and unavailable pages limit the evidence assessment without negating the bounded phenotype.
+
+### Confirmed publisher locator and guarded correction
+
+provenance: supported. Targets: traitmech:000732.
+
+The original review missed an erroneous paragraph ordinal. The sole subsection paragraph is now identified by its stable HTML anchor and PDF span, with exact quote and biological claims unchanged. Native VERIFIED only denotes returned-text matching; it is not independent biological verification. Existing evidence-locator, guarded-write and successor-review instructions cover this failure, so no skill change is warranted.
+
+## Findings
+
+### ferreira-locator: First supporting excerpt has an incorrect paragraph locator
+
+minor / resolved / confirmed; issue key: bacterial-polar-ejection-ferreira-locator.
+
+The excerpt is verbatim but the third-paragraph locator is false; publisher anchor sec4.p1 identifies the sole paragraph. GitHub issue https://github.com/CultureBotAI/TraitMech/issues/1947 tracks correction.
+
+Disposition: Corrected all maintained locators to the source-native sole paragraph and PDF pp. 4-5; verified exact quote preservation. Guarded dry run/apply/replay, regression tests, regeneration and native gates pass. Historical reviews and prior curation/history bytes remain unchanged.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| source-0 | DOI:10.1371/journal.pbio.3000165; Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, sole paragraph (HTML anchor article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure 1G; https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000165 | supports | Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament structures accumulate in P. shigelloides supernatant, sole paragraph (HTML anchor article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure 1G. Direct publisher full-text match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts and relic/assembly comparisons support ejection rather than daughter-cell dilution or passive midfilament breakage. Nutrient-depletion conditions vary among assays; minimal medium containing glucose is not complete carbon starvation. All 25 main PDF pages and six figures were inspected, not raw supplementary data. Energy conservation and leakage prevention are interpretations. Source-native HTML structure and the typeset paragraph spanning pages 4-5 were inspected during this follow-up. Cached source SHA-256 was rechecked; no new acquisition is claimed. |
+| source-1 | DOI:10.1111/mmi.14511; Scientific abstract; sentence beginning Interestingly, we observed; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:32259388%20AND%20SRC:MED&amp;format=json&amp;resultType=core | supports | Zhuang et al. 2020, PMID:32259388, scientific abstract, sentence beginning Interestingly. Direct MED/publisher match and native VERIFIED. Main publisher text and six figure captions were subsequently read, not the actual figures or supplement. Sections 2.4-2.7 separate daughter-cell dilution from stationary-phase shedding. OD times flagellated fraction is a population proxy, not a direct cell count. VIO5 and engineered EGFP-FliG strain NMB344 are distinct; red/green panels in Figure 3 are not the same cells. Two-color experiments in Figures 5-6 support basal release, but rod breakage is inferred, not a directly imaged cut. Surface immobilization and medium exchanges constrain the assay. Publisher abstract, Results 2.7 and Methods 4.5-4.6 were reaccessed during formal review. Actual figures, PDF and supplement remain unread. Rod severing is inferred, and 69/72 shedding cases are not biological replicates. Timestamp records cached-source hash recheck, not original acquisition. Retained earlier source assessment; original access timestamp and source bytes are unchanged. Not freshly reread in this locator-only follow-up. |
+| source-2 | DOI:10.1038/s41467-026-75593-6; Results, Two distinct in situ architectures of the flagellar motor in V. cholerae; Supplementary Figure 4 and Table 4; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13521929/fullTextXML | supports | Guo et al. 2026, PMID:42660870, PMC13521929.1, Results, Two distinct in situ architectures of the flagellar motor in V. cholerae, and Supplementary Figure 4. Direct JATS match; native NOT_IN_ABSTRACT. FOMC denotes the flagellar outer membrane complex. The quoted experiment uses wild-type V. cholerae; delta-flhG structural samples are distinct. All 12 main PDF pages and six main figures were inspected, plus the actual supplementary Figure 4 and supplementary tables. Its 81/273 observations are cells in the figure caption and tomograms in Methods/Table 4, not biological replicates or ejection rates. The main-text Table 3 pointer instead corresponds to Table 4. Other supplements remain incompletely read. The direct JATS Results paragraph was reread during formal review. Earlier reading covered all main PDF pages/figures and the specified supplementary figure/tables, not all supplementary assets. Timestamp records cached-source hash recheck, not original acquisition. Retained earlier source assessment; original access timestamp and source bytes are unchanged. Not freshly reread in this locator-only follow-up. |
+| identity | data/traits/physiology/bacterial_polar_flagellar_ejection.yaml; Complete record and four OPEN discussions | supports | Active basal release of assembled polar flagellar structures is distinct from possession, arrangement, failed assembly, motor arrest, reduced motility, daughter-cell dilution, passive breakage, periplasmic resorption and eukaryotic axonemal autotomy. No exact synonym, xref, canonical taxon or universal molecular mechanism is asserted. |
+| implementation | scripts/add_bacterial_polar_flagellar_ejection_trait.py; Whole writer, paired tests and histories | supports | Read the complete updated writer and tests. First-pass creation uses the corrected locator. The explicit --correct-source-locator path accepts only the exact original or reviewed corrected record, prevalidates, appends one curation event, and is idempotent. Unreviewed identity, definition, evidence and history changes are refused. Normal creation still refuses later curation. |
+| novelty | proposals/metpo_traitmech_v608/proposal.md; Scope, retired identifiers and allocation assessment | supports | Deprecated flagellar identifiers are not revived. Active locomotory possession and polar arrangement do not denote ejection. Exact candidate tokens and narrow competing ranges were not identified within the recorded bounded search. The emitted canonical class is below phenotype; upstream acceptance remains open. Only its Ferreira paragraph locator changed; allocation and identity evidence were preserved, not newly repeated. |
+| provenance | research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json; Complete compact source receipt | supports | The 17014-byte receipt corrects only its first locator and assessment. Source assets, quotes, native outcomes, acquisition/access failures and allocation evidence are structurally preserved. Original reviews and histories remain immutable; an EDIT history links issue #1947. |
+| products | reports/proposal_citation_audit.tsv; Generated products and separate preservation/RDF/browser checks | supports | All maintained generation recipes reran. Relative to the first published head, the target page reflects the source locator and second history link/event. Dashboard and browse/category/graph/UMAP metadata changes are timestamp-only. Counts, proposal TSV, embeddings, other trait pages and reports remain unchanged. |
+
+## Limits And Additional Notes
+
+- Author self-review; no human scientific sign-off or independent replication implied.
+- All Ferreira and Guo main PDF pages/figures were read during research; formal review reread relevant source passages, not all pages. Raw data and some supplemental assets remain unread.
+- Wiley full main text/captions were read, and selected passages reaccessed during review; actual figures, PDF and supplement remain unread after access failures.
+- Bounded publisher/MED notice checks do not establish comprehensive correction/retraction clearance. Native NOT_IN_ABSTRACT is not full-text verification.
+- No canonical strain/taxon, universal trigger, protein mechanism, same-cell cryo-ET trajectory or exact external equivalence is inferred.
+- Known-copy searches are bounded; temporary local audit files are not guaranteed permanent availability. No literature exhaustion or atomic reservation claimed.
+- Configured embedding sources unavailable; prior artifacts retained. No paid research used.
+- Only Ferreira source structure and PDF pages 4-5 were reread for the correction; other source readings are explicitly retained from the original review. The 4777-test full suite is prior-checkpoint evidence, not a current-head rerun. Current-head CI and external reviews are still required before merging.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T133931Z-bacterial-ejection-locator-resolution
+kind: record
+repository: CultureBotAI/TraitMech
+title: 'Bacterial polar flagellar ejection: corrected source locator'
+started_at: '2026-10-15T13:28:40Z'
+finished_at: '2026-10-15T13:39:31Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author falsification-oriented source review, not independent
+    or human scientific approval. External review requests and CI do not change this
+    attribution.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: One confirmed minor locator defect is corrected. The complete bounded trait
+  retains its source-supported identity, evidence and four OPEN discussions. Status
+  remains PROPOSED; this is author self-review, not human sign-off.
+source:
+  git_revision: 48ea96efedc3b3160761a74230f39d627a2716e2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: a9cb4e5e6180e0cd7c62943174af5eb70d558eaa76901b004ac29ca9389f0d90
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/metpo-proposal/SKILL.md
+    sha256: 03f008c011e6f0d45cafb7516a01a3383c0a7e8d11bfc5c9cb31efaeca51275f
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: README.md
+    sha256: fd60e21d42b2fb83aed34746be1512d5d2daaa8943249978cbf5d939131fa798
+    role: context
+  - path: app/dashboard/priority.json
+    sha256: aeca45d21b1437d03e49580520a63a444f58ec0ea3a120134aa454ee770477ca
+    role: context
+  - path: app/discussions/data.js
+    sha256: e578d9a683fd5632006c2bcfde2cbd85917cd474ccf58b3ade8860416fed2765
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: dashboard/coverage.png
+    sha256: 3e23fc5cae5d8b5e75fa071d79216037e6b253c3d0eb8b5a537a390fc223f59d
+    role: context
+  - path: dashboard/index.html
+    sha256: 2af9461a9dfa93958bb9e606e005aae15bfd5b373142a5435e868ffd06113c28
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    sha256: 6db8657e3504202ba495f77be2487d63c479c433a032d81f93cbf522d0dcf007
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: history/records/bacterial_polar_flagellar_ejection/2026-10-15T114344Z-codex-e46fbc.yaml
+    sha256: 6ad09d60b79e4b1543dff6e76991415cfeba29a4293d96e0c63c403c74a5fbde
+    role: context
+  - path: history/records/bacterial_polar_flagellar_ejection/2026-10-15T131000Z-codex-7431f4.yaml
+    sha256: dfa722dc4e1428ded3987af6b636f23680a23fede820f2c4c63c6bfe743d4398
+    role: context
+  - path: pages/browse.html
+    sha256: 7bdad71c3feabc1ae7b39983a3e1534b4edf70e4d1b4ef27b9f1e16cf33adcec
+    role: context
+  - path: pages/traits/physiology/bacterial_polar_flagellar_ejection.html
+    sha256: 12743ffb4679645b8f99e76bad4d5dbe29694c3b9a1a415bccb9a9a90760ef0c
+    role: context
+  - path: pages/traits/upper/phenotype.html
+    sha256: d745090aca4aaff49a8d78bc9342416ef850df700f07d1973621e9f29ad6c69a
+    role: context
+  - path: proposals/metpo_traitmech_v607/metpo_proposal_classes_robot.tsv
+    sha256: 72af61de0c6d741f00271b48d1656ee47c313fbde38ce953b6cfb81c7a76aae3
+    role: context
+  - path: proposals/metpo_traitmech_v608/metpo_proposal_classes_robot.tsv
+    sha256: 24a186fd10b1bd4c4729e86197cc7b5ab4824df57422912fce0bb8e55ca1f529
+    role: context
+  - path: proposals/metpo_traitmech_v608/proposal.md
+    sha256: 6300d9136eb51371c20609807efcb6ae4a3a5346a972ee8c60e672ea9662fb5b
+    role: context
+  - path: reports/proposal_citation_audit.tsv
+    sha256: 93e0296300fc8e261d328361b0475ed36fd2fb6fdba9f368b23f143d8fd6b4d9
+    role: context
+  - path: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+    sha256: 95f8a98801c2086b79c0bc5add0dba890c18042a68992c10524d405284692f48
+    role: context
+  - path: reviews/structured/20261015T123901Z-bacterial-polar-flagellar-ejection/review.yaml
+    sha256: cf340ae130d22b3ae3742968365ffd8df83b48e2cb3c93241a8e48239a2796de
+    role: context
+  - path: reviews/structured/20261015T130948Z-bacterial-ejection-locator-finding/review.yaml
+    sha256: 3eb8a515e3f6f292eedc321429d91d3178a7ba7761724ab7e3506dfb602f2fac
+    role: context
+  - path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    sha256: 14460fdd19f508383f32c2f562b650ecdce7ba6e7c1983aeb3c5122c266d73cf
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_add_bacterial_polar_flagellar_ejection_trait.py
+    sha256: af63ccfca0830c83e3094f4204d087ec797d16f8101d9d23bd732095366e2dca
+    role: context
+targets:
+- target_id: traitmech:000732
+  path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  label: bacterial polar flagellar ejection
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    role: guarded_writer
+scope:
+  description: Complete trait and maintained owners, with source-locator correction
+    and explicit preservation of the earlier biological assessment.
+  selection: Exact traitmech:000732 and maintained owners; no sampling.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000732
+  exclusions:
+  - target: Other 1126 records
+    reason: Automated corpus validation and byte preservation, not fresh scientific
+      review.
+  - target: data/traits/physiology/spore_germination.yaml
+    reason: Protected by DO_NOT_WORK; unchanged and not curated.
+checks:
+- check_id: correction-write-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-write-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+    --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+    --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-write-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+    --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_bacterial_polar_flagellar_ejection_trait.py --correct-source-locator
+    --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-history-0
+  name: '/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug bacterial_polar_flagellar_ejection
+    --target-root data/traits/physiology --event EDIT --outcome changed --sections
+    evidence --summary ''Correct Ferreira source paragraph locator'' --details ''Corrected
+    evidence[0].notes and maintained writer, source receipt and proposal to the sole
+    paragraph at publisher anchor article1.body1.sec2.sec4.p1, spanning PDF pages
+    4-5. Direct HTML and PDF inspection confirmed that the quote is verbatim, including
+    Plesiomonas cells. Preserved biological content, native snippet outcomes and previous
+    curation/history/review bytes. This supplements history/records/bacterial_polar_flagellar_ejection/2026-10-15T114344Z-codex-e46fbc.yaml;
+    the original review missed the paragraph ordinal. Issue #1947 tracks the correction
+    and successor review.'' --actor-name codex --model GPT-5 --agent-tool Codex --issue
+    https://github.com/CultureBotAI/TraitMech/issues/1947 --pr https://github.com/CultureBotAI/TraitMech/pull/1946'
+  command: '/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug bacterial_polar_flagellar_ejection
+    --target-root data/traits/physiology --event EDIT --outcome changed --sections
+    evidence --summary ''Correct Ferreira source paragraph locator'' --details ''Corrected
+    evidence[0].notes and maintained writer, source receipt and proposal to the sole
+    paragraph at publisher anchor article1.body1.sec2.sec4.p1, spanning PDF pages
+    4-5. Direct HTML and PDF inspection confirmed that the quote is verbatim, including
+    Plesiomonas cells. Preserved biological content, native snippet outcomes and previous
+    curation/history/review bytes. This supplements history/records/bacterial_polar_flagellar_ejection/2026-10-15T114344Z-codex-e46fbc.yaml;
+    the original review missed the paragraph ordinal. Issue #1947 tracks the correction
+    and successor review.'' --actor-name codex --model GPT-5 --agent-tool Codex --issue
+    https://github.com/CultureBotAI/TraitMech/issues/1947 --pr https://github.com/CultureBotAI/TraitMech/pull/1946'
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-records-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-records-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-records-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/bacterial_polar_flagellar_ejection
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/bacterial_polar_flagellar_ejection
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-focused-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_add_bacterial_polar_flagellar_ejection_trait.py tests/test_readme_artifacts.py
+    tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_add_bacterial_polar_flagellar_ejection_trait.py tests/test_readme_artifacts.py
+    tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-focused-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-0
+  name: just audit-proposals
+  command: just audit-proposals
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-1
+  name: just ground-predicates
+  command: just ground-predicates
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-2
+  name: just ground-nodes
+  command: just ground-nodes
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-3
+  name: just audit-graphs
+  command: just audit-graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-4
+  name: just audit-graph-protein-taxa
+  command: just audit-graph-protein-taxa
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-5
+  name: just audit-predicate-domains
+  command: just audit-predicate-domains
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-6
+  name: just check-biolink-coverage
+  command: just check-biolink-coverage
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-7
+  name: just audit-snippets
+  command: just audit-snippets
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-8
+  name: just gen-discussions-data
+  command: just gen-discussions-data
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-9
+  name: just gen-qc-dashboard
+  command: just gen-qc-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-10
+  name: just gen-pages
+  command: just gen-pages
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-generate-11
+  name: just gen-priority-dashboard
+  command: just gen-priority-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-0
+  name: just qc
+  command: just qc
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-1
+  name: just validate-history
+  command: just validate-history
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-2
+  name: just validate-products
+  command: just validate-products
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-3
+  name: just verify-proposal metpo_traitmech_v608
+  command: just verify-proposal metpo_traitmech_v608
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-4
+  name: just robot-validate-proposal metpo_traitmech_v608
+  command: just robot-validate-proposal metpo_traitmech_v608
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: correction-verify-5
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base 616a97577299f7a33d9b6c98ab29c28b30c64758
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base 616a97577299f7a33d9b6c98ab29c28b30c64758
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000732
+  summary: Executed on the corrective working tree/checkpoint; successful native command.
+- check_id: preservation
+  name: preservation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000732
+  summary: Structured comparison proves that only the first source locator and append-only
+    history changed in the record. Receipt changes only two locator-bearing fields.
+    The prior review, all earlier history, sources, proposal TSV and other records
+    remain unchanged.
+- check_id: publisher
+  name: publisher
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000732
+  summary: Source-native anchor article1.body1.sec2.sec4.p1 is unique and identifies
+    the sole paragraph of its subsection. The exact 12-word quote matches, including
+    the genus name. PDF pages 4-5 were visually reread.
+- check_id: browser
+  name: browser
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000732
+  summary: Corrected page and two history links inspected at 1440 and 390 pixels,
+    with source anchor and curation event visible. No overflow or page errors; browse
+    navigation and dashboard count/image checks passed.
+- check_id: prior-suite
+  name: Retained original full-suite evidence
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000732
+  summary: 4777 tests passed at original checkpoint d7c11c8a6a66cba9ce10828051e78894d2fa81da.
+    This full local suite was not rerun after the locator correction; focused tests
+    and native QC were rerun. Protected CI on the published corrected head remains
+    a separate merge gate.
+evidence:
+- evidence_id: source-0
+  kind: primary_source
+  reference: DOI:10.1371/journal.pbio.3000165
+  locator: Results, Shed hook-filament structures accumulate in P. shigelloides supernatant,
+    sole paragraph (HTML anchor article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure
+    1G; https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000165
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: ae764839eb4744db1307bd422cc836504005ab51e24908150e1d5ca17071a7ba
+  summary: Ferreira et al. 2019, PMID:30889173, PMC6424402. Results, Shed hook-filament
+    structures accumulate in P. shigelloides supernatant, sole paragraph (HTML anchor
+    article1.body1.sec2.sec4.p1; PDF pp. 4-5); Figure 1G. Direct publisher full-text
+    match; native NOT_IN_ABSTRACT. Hook-bearing released structures, population counts
+    and relic/assembly comparisons support ejection rather than daughter-cell dilution
+    or passive midfilament breakage. Nutrient-depletion conditions vary among assays;
+    minimal medium containing glucose is not complete carbon starvation. All 25 main
+    PDF pages and six figures were inspected, not raw supplementary data. Energy conservation
+    and leakage prevention are interpretations. Source-native HTML structure and the
+    typeset paragraph spanning pages 4-5 were inspected during this follow-up. Cached
+    source SHA-256 was rechecked; no new acquisition is claimed.
+- evidence_id: source-1
+  kind: primary_source
+  reference: DOI:10.1111/mmi.14511
+  locator: Scientific abstract; sentence beginning Interestingly, we observed; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:32259388%20AND%20SRC:MED&format=json&resultType=core
+  accessed_at: '2026-10-15T12:39:01Z'
+  support: supports
+  snapshot_sha256: 02f8c92aa90d05daa118f1cf2cfdd5735caeafeb695f2f733278c53680d31240
+  summary: Zhuang et al. 2020, PMID:32259388, scientific abstract, sentence beginning
+    Interestingly. Direct MED/publisher match and native VERIFIED. Main publisher
+    text and six figure captions were subsequently read, not the actual figures or
+    supplement. Sections 2.4-2.7 separate daughter-cell dilution from stationary-phase
+    shedding. OD times flagellated fraction is a population proxy, not a direct cell
+    count. VIO5 and engineered EGFP-FliG strain NMB344 are distinct; red/green panels
+    in Figure 3 are not the same cells. Two-color experiments in Figures 5-6 support
+    basal release, but rod breakage is inferred, not a directly imaged cut. Surface
+    immobilization and medium exchanges constrain the assay. Publisher abstract, Results
+    2.7 and Methods 4.5-4.6 were reaccessed during formal review. Actual figures,
+    PDF and supplement remain unread. Rod severing is inferred, and 69/72 shedding
+    cases are not biological replicates. Timestamp records cached-source hash recheck,
+    not original acquisition. Retained earlier source assessment; original access
+    timestamp and source bytes are unchanged. Not freshly reread in this locator-only
+    follow-up.
+- evidence_id: source-2
+  kind: primary_source
+  reference: DOI:10.1038/s41467-026-75593-6
+  locator: Results, Two distinct in situ architectures of the flagellar motor in V.
+    cholerae; Supplementary Figure 4 and Table 4; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13521929/fullTextXML
+  accessed_at: '2026-10-15T12:39:01Z'
+  support: supports
+  snapshot_sha256: 0f4ef185dfeca2420817818579dfcfac5f78d637b16735ae136747c30352f81e
+  summary: Guo et al. 2026, PMID:42660870, PMC13521929.1, Results, Two distinct in
+    situ architectures of the flagellar motor in V. cholerae, and Supplementary Figure
+    4. Direct JATS match; native NOT_IN_ABSTRACT. FOMC denotes the flagellar outer
+    membrane complex. The quoted experiment uses wild-type V. cholerae; delta-flhG
+    structural samples are distinct. All 12 main PDF pages and six main figures were
+    inspected, plus the actual supplementary Figure 4 and supplementary tables. Its
+    81/273 observations are cells in the figure caption and tomograms in Methods/Table
+    4, not biological replicates or ejection rates. The main-text Table 3 pointer
+    instead corresponds to Table 4. Other supplements remain incompletely read. The
+    direct JATS Results paragraph was reread during formal review. Earlier reading
+    covered all main PDF pages/figures and the specified supplementary figure/tables,
+    not all supplementary assets. Timestamp records cached-source hash recheck, not
+    original acquisition. Retained earlier source assessment; original access timestamp
+    and source bytes are unchanged. Not freshly reread in this locator-only follow-up.
+- evidence_id: identity
+  kind: record_content
+  reference: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  locator: Complete record and four OPEN discussions
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: 6db8657e3504202ba495f77be2487d63c479c433a032d81f93cbf522d0dcf007
+  summary: Active basal release of assembled polar flagellar structures is distinct
+    from possession, arrangement, failed assembly, motor arrest, reduced motility,
+    daughter-cell dilution, passive breakage, periplasmic resorption and eukaryotic
+    axonemal autotomy. No exact synonym, xref, canonical taxon or universal molecular
+    mechanism is asserted.
+- evidence_id: implementation
+  kind: record_content
+  reference: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+  locator: Whole writer, paired tests and histories
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: 14460fdd19f508383f32c2f562b650ecdce7ba6e7c1983aeb3c5122c266d73cf
+  summary: Read the complete updated writer and tests. First-pass creation uses the
+    corrected locator. The explicit --correct-source-locator path accepts only the
+    exact original or reviewed corrected record, prevalidates, appends one curation
+    event, and is idempotent. Unreviewed identity, definition, evidence and history
+    changes are refused. Normal creation still refuses later curation.
+- evidence_id: novelty
+  kind: search
+  reference: proposals/metpo_traitmech_v608/proposal.md
+  locator: Scope, retired identifiers and allocation assessment
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: 6300d9136eb51371c20609807efcb6ae4a3a5346a972ee8c60e672ea9662fb5b
+  summary: Deprecated flagellar identifiers are not revived. Active locomotory possession
+    and polar arrangement do not denote ejection. Exact candidate tokens and narrow
+    competing ranges were not identified within the recorded bounded search. The emitted
+    canonical class is below phenotype; upstream acceptance remains open. Only its
+    Ferreira paragraph locator changed; allocation and identity evidence were preserved,
+    not newly repeated.
+  search_scope: 'Ignored/hidden current files in 204 known locations; 295 retained
+    heads, 86276 TraitMech and 9268 CommunityMech unique regular blobs. Nine unavailable
+    locations explicit. All 458 biological and 66 allocation windows assessed. Full
+    ranges: 189221 owner contexts, 2636 unique contents, 27 general-envelope overlaps.
+    Refreshed 13 open/draft PRs, 812 nonremoved changed blobs and 587 upstream owners.
+    CommunityMech PR2018 and its changed local worktree were rechecked; the 11:39:13
+    UTC guard was unchanged. Lost ignored/untracked history, arbitrary archives, symlink
+    targets and unchanged PR files were not reconstructed. Not global exhaustion or
+    an atomic reservation. Publication refresh additionally checked 205 current locations
+    including ignored/hidden files; exact tokens occur only in the owned worktree.
+    Current remote snapshot has 823 changed blobs. CommunityMech PR2018 advanced to
+    be3299e47d79a51f90a28e008409c793fb939eeb: its revised description, 11 changed/additional
+    full contents and stable local current files were reassessed. No new candidate
+    or wrapped-range matches; 37 local contexts are unchanged from the prior assessed
+    set.'
+- evidence_id: provenance
+  kind: record_content
+  reference: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+  locator: Complete compact source receipt
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: 95f8a98801c2086b79c0bc5add0dba890c18042a68992c10524d405284692f48
+  summary: 'The 17014-byte receipt corrects only its first locator and assessment.
+    Source assets, quotes, native outcomes, acquisition/access failures and allocation
+    evidence are structurally preserved. Original reviews and histories remain immutable;
+    an EDIT history links issue #1947.'
+- evidence_id: products
+  kind: validation
+  reference: reports/proposal_citation_audit.tsv
+  locator: Generated products and separate preservation/RDF/browser checks
+  accessed_at: '2026-10-15T13:39:31Z'
+  support: supports
+  snapshot_sha256: 93e0296300fc8e261d328361b0475ed36fd2fb6fdba9f368b23f143d8fd6b4d9
+  summary: All maintained generation recipes reran. Relative to the first published
+    head, the target page reflects the source locator and second history link/event.
+    Dashboard and browse/category/graph/UMAP metadata changes are timestamp-only.
+    Counts, proposal TSV, embeddings, other trait pages and reports remain unchanged.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Active basal release phenotype
+  summary: Reusable organismal phenotype, not a sequence feature or a motility/assembly
+    defect. Basal release is supported without imposing the same released components,
+    exact molecular cut, stimulus or nonmotility on every instance.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - identity
+  - source-0
+  - source-1
+  - source-2
+  outcome: supported
+- assessment_id: parent
+  area: grounding
+  topic: Phenotype and deprecated identifiers
+  summary: Phenotype is strictly broader by definition. Possession or arrangement
+    is not ejection; deprecated terms and replacements are not exact xrefs. The pin
+    remains unchanged.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - identity
+  - novelty
+  outcome: supported
+- assessment_id: evidence
+  area: evidence
+  topic: Distinct experimental endpoints
+  summary: Recovered hook-bearing structures, stationary-culture imaging and the nutrient-associated
+    relic comparison support the bounded trait. Population proxies, cell/tomogram
+    counts, biological replicates and trajectories remain distinct. Native full-text
+    misses are not mislabeled VERIFIED.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - source-0
+  - source-1
+  - source-2
+  - provenance
+  outcome: supported
+- assessment_id: mechanism
+  area: evidence
+  topic: No universal added-plug or rod-cut claim
+  summary: The newer FlgI closure interpretation prevents imposing an unidentified
+    added plug. Neither gate-deletion assembly defects nor gene/domain possession
+    establishes ejection failure or organismal phenotype. Cryo-ET states are not a
+    longitudinal trajectory.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - identity
+  - source-0
+  - source-1
+  - source-2
+  outcome: supported
+- assessment_id: products
+  area: consistency
+  topic: Proposal and rendered artifacts
+  summary: One canonical class row emits the correct w3id parent chain and role-correct
+    definition annotation. Counts, links and dashboards match 1127 records; prior
+    scientific bytes are preserved.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - novelty
+  - products
+  outcome: supported
+- assessment_id: limits
+  area: completeness
+  topic: Authority and mechanism gaps
+  summary: Canonical strain/taxon provenance, protein-resolved causal graph and exact
+    external mappings remain deferred. Unread figures/supplements and unavailable
+    pages limit the evidence assessment without negating the bounded phenotype.
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - identity
+  - provenance
+  outcome: unknown
+- assessment_id: locator-resolution
+  area: provenance
+  topic: Confirmed publisher locator and guarded correction
+  outcome: supported
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - source-0
+  - implementation
+  - provenance
+  summary: The original review missed an erroneous paragraph ordinal. The sole subsection
+    paragraph is now identified by its stable HTML anchor and PDF span, with exact
+    quote and biological claims unchanged. Native VERIFIED only denotes returned-text
+    matching; it is not independent biological verification. Existing evidence-locator,
+    guarded-write and successor-review instructions cover this failure, so no skill
+    change is warranted.
+findings:
+- finding_id: ferreira-locator
+  issue_key: bacterial-polar-ejection-ferreira-locator
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  target_ids:
+  - traitmech:000732
+  field_paths:
+  - evidence[0].notes
+  evidence_ids:
+  - source-0
+  - implementation
+  - provenance
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+    role: maintained_provenance
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v608/proposal.md
+    role: maintained_provenance
+  title: First supporting excerpt has an incorrect paragraph locator
+  description: The excerpt is verbatim but the third-paragraph locator is false; publisher
+    anchor sec4.p1 identifies the sole paragraph. GitHub issue https://github.com/CultureBotAI/TraitMech/issues/1947
+    tracks correction.
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261015T130948Z-bacterial-ejection-locator-finding
+    finding_id: ferreira-locator
+  disposition_reason: Corrected all maintained locators to the source-native sole
+    paragraph and PDF pp. 4-5; verified exact quote preservation. Guarded dry run/apply/replay,
+    regression tests, regeneration and native gates pass. Historical reviews and prior
+    curation/history bytes remain unchanged.
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1947
+actions: []
+limitations:
+- Author self-review; no human scientific sign-off or independent replication implied.
+- All Ferreira and Guo main PDF pages/figures were read during research; formal review
+  reread relevant source passages, not all pages. Raw data and some supplemental assets
+  remain unread.
+- Wiley full main text/captions were read, and selected passages reaccessed during
+  review; actual figures, PDF and supplement remain unread after access failures.
+- Bounded publisher/MED notice checks do not establish comprehensive correction/retraction
+  clearance. Native NOT_IN_ABSTRACT is not full-text verification.
+- No canonical strain/taxon, universal trigger, protein mechanism, same-cell cryo-ET
+  trajectory or exact external equivalence is inferred.
+- Known-copy searches are bounded; temporary local audit files are not guaranteed
+  permanent availability. No literature exhaustion or atomic reservation claimed.
+- Configured embedding sources unavailable; prior artifacts retained. No paid research
+  used.
+- Only Ferreira source structure and PDF pages 4-5 were reread for the correction;
+  other source readings are explicitly retained from the original review. The 4777-test
+  full suite is prior-checkpoint evidence, not a current-head rerun. Current-head
+  CI and external reviews are still required before merging.
+links:
+- https://doi.org/10.1371/journal.pbio.3000165
+- https://doi.org/10.1111/mmi.14511
+- https://doi.org/10.1038/s41467-026-75593-6
+- https://github.com/CultureBotAI/TraitMech/issues/1947
+- https://github.com/CultureBotAI/TraitMech/pull/1946
+tags:
+- add-trait
+- flagellar-ejection
+- self-review
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261015T123901Z-bacterial-polar-flagellar-ejection
+  relationship: Corrects the missed locator error while retaining the explicitly bounded
+    earlier scientific assessment; does not rewrite the original observation.
+- repository: CultureBotAI/TraitMech
+  review_id: 20261015T130948Z-bacterial-ejection-locator-finding
+  relationship: Resolves the exact confirmed source-locator finding with direct source
+    evidence and a guarded correction.
+```

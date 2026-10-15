@@ -1,0 +1,166 @@
+schema_version: 1.0.0
+review_id: 20261015T130948Z-bacterial-ejection-locator-finding
+kind: record
+repository: CultureBotAI/TraitMech
+title: Ferreira evidence locator mismatch
+started_at: '2026-10-15T13:07:39Z'
+finished_at: '2026-10-15T13:09:48Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author follow-up to an external source spot-check suggestion;
+    not independent scientific approval.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: false
+summary: Confirmed minor source-locator error. The quoted words are unchanged and
+  directly supported; biological claims are not reassessed by this bounded provenance
+  observation. This deliberately historical observation assesses published head 5205c78,
+  not the subsequently edited working tree.
+source:
+  git_revision: 5205c78ea60805a5975f96f6daf56566264a8cbd
+  state: git_commit
+  inputs:
+  - path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    sha256: ec434e45b6a24f45ddea632ebb7ba7b05b6a0fff2bd8a0b5852f2e21d40d4a20
+    role: target
+  - path: proposals/metpo_traitmech_v608/proposal.md
+    sha256: 8aa59bda73af3c43851d60ddc4df38d249dcbddfde6e4befe2691c989a234e22
+    role: context
+  - path: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+    sha256: 31af39e246daa316f57051b4c526a703d79f3b8d492a5853f0fa4ad72be1f331
+    role: context
+  - path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    sha256: 2ec2141a827cb62dfa27b8ace73ece4c224bd8836675a7483ceaecbc505adfac
+    role: context
+targets:
+- target_id: traitmech:000732
+  path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  label: bacterial polar flagellar ejection
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    role: guarded_writer
+scope:
+  description: First evidence locator and its maintained copies.
+  selection: Exact trait and first source; no sampling.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000732
+  exclusions:
+  - target: Whole-record scientific adjudication
+    reason: Earlier review remains historical; this observation addresses locator
+      provenance only.
+checks:
+- check_id: source-locator
+  name: Publisher HTML structure and PDF text inspection
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000732
+  summary: Source-native anchor sec4.p1 belongs to the sole subsection paragraph.
+    PDF paragraph spans pages 4-5. Successful check confirms a defect, not acceptance.
+evidence:
+- evidence_id: publisher
+  kind: primary_source
+  reference: DOI:10.1371/journal.pbio.3000165
+  locator: Publisher HTML article1.body1.sec2.sec4.p1; PDF pp. 4-5; Figure 1G
+  accessed_at: '2026-10-15T13:07:41Z'
+  support: supports
+  snapshot_sha256: ae764839eb4744db1307bd422cc836504005ab51e24908150e1d5ca17071a7ba
+  summary: The subsection has one paragraph, not three. Its exact excerpt includes
+    Plesiomonas cells; no genus substitution was made.
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+  locator: evidence[0].notes and maintained writer/receipt/proposal copies
+  accessed_at: '2026-10-15T13:07:41Z'
+  support: supports
+  snapshot_sha256: ec434e45b6a24f45ddea632ebb7ba7b05b6a0fff2bd8a0b5852f2e21d40d4a20
+  summary: All maintained copies incorrectly identify the third paragraph.
+assessments:
+- assessment_id: locator
+  area: provenance
+  topic: Source-native evidence location
+  outcome: concern
+  target_ids:
+  - traitmech:000732
+  evidence_ids:
+  - publisher
+  - record
+  summary: Use the source-native paragraph anchor and PDF page span instead of the
+    incorrect ordinal.
+findings:
+- finding_id: ferreira-locator
+  issue_key: bacterial-polar-ejection-ferreira-locator
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - traitmech:000732
+  field_paths:
+  - evidence[0].notes
+  evidence_ids:
+  - publisher
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+    role: maintained_provenance
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v608/proposal.md
+    role: maintained_provenance
+  title: First supporting excerpt has an incorrect paragraph locator
+  description: The excerpt is verbatim but the third-paragraph locator is false; publisher
+    anchor sec4.p1 identifies the sole paragraph. GitHub issue https://github.com/CultureBotAI/TraitMech/issues/1947
+    tracks correction.
+actions:
+- action_id: correct-locator
+  description: Correct maintained locators, append curation history, regenerate and
+    test, then save a linked successor disposition.
+  finding_ids:
+  - ferreira-locator
+  target_ids:
+  - traitmech:000732
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_polar_flagellar_ejection_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/bacterial_polar_flagellar_ejection-source-verification.json
+    role: maintained_provenance
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v608/proposal.md
+    role: maintained_provenance
+  acceptance_checks:
+  - Source-native anchor and PDF pp. 4-5 agree across maintained owners.
+  - Quote, native outcome, biological fields and historical review bytes preserved.
+  - Guarded edit and regression checks pass.
+limitations:
+- Provenance-only follow-up. Not a repeat of the complete scientific review or an
+  independent review.
+- Initial unsaved YAML validation failed because the serializer emitted aliases. This
+  alias-free historical observation preserves its original inspected bytes; no earlier
+  saved review was changed.
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/1947
+- https://github.com/CultureBotAI/TraitMech/pull/1946

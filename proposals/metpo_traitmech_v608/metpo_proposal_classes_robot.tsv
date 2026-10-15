@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1068500	bacterial polar flagellar ejection	A physiological phenotype in which a bacterium actively ejects previously assembled axial structures of a polar flagellum by separation at its base.	TraitMech:data/traits/physiology/bacterial_polar_flagellar_ejection.yaml|DOI:10.1371/journal.pbio.3000165	METPO:1000059			metpo_traitmech_2026_10	MEDIUM		traitmech:000732
