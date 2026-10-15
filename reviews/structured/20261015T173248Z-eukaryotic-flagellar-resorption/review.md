@@ -1,0 +1,1052 @@
+# Eukaryotic flagellar resorption: complete corrected assessment
+
+- Review: 20261015T173248Z-eukaryotic-flagellar-resorption
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-15T17:21:56Z
+- Finished UTC: 2026-10-15T17:32:48Z
+- Reviewer: codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The bounded axonemal-disassembly phenotype is supported by two primary publications. One minor quantitative-provenance finding is resolved. Four discussions remain OPEN and status remains PROPOSED.
+
+## Scope And Provenance
+
+Complete new trait, maintained writer/tests, source evidence, v609 proposal, histories and generated surfaces after lower-bound correction.
+
+Selection: Exact traitmech:000733 and maintained owners; no sampling.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 86afd7b4a1e85fe2c44b12de23fc16dcef32e312.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000733 | data/traits/physiology/eukaryotic_flagellar_resorption.yaml | maintained | eukaryotic flagellar resorption |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound --apply | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound --apply | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/new_history_record.py --kind record --slug eukaryotic_flagellar_resorption --target-root data/traits/physiology --event EDIT --outcome changed --sections evidence --summary 'Preserve the replication lower bound' --details 'Corrected evidence[1].notes and the maintained guarded writer to retain at least three independent cultures, as stated in the 2003 Methods on page 11 of 12, Timecourses and flagella length measurements. Source XML and the typeset page were reread. The biological definition, source roles, verbatim snippets, native resolver outcomes, proposal, other records and earlier curation/history/review bytes are unchanged. This supplements history/records/eukaryotic_flagellar_resorption/2026-10-15T160819Z-codex-d37ea9.yaml. Issue #1948 tracks the quantitative-provenance wording correction and successor review.' --actor-name codex --model GPT-5 --agent-tool Codex --issue https://github.com/CultureBotAI/TraitMech/issues/1948 | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/eukaryotic_flagellar_resorption.yaml | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_strict.py data/traits/physiology/eukaryotic_flagellar_resorption.yaml | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_history_links.py history/records/eukaryotic_flagellar_resorption | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just audit-proposals | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just ground-predicates | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just ground-nodes | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just audit-graphs | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just audit-graph-protein-taxa | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just audit-predicate-domains | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just check-biolink-coverage | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just audit-snippets | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just gen-discussions-data | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just gen-qc-dashboard | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just gen-pages | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just gen-priority-dashboard | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python -m pytest -q tests/test_add_eukaryotic_flagellar_resorption_trait.py tests/test_readme_artifacts.py tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff check src scripts tests | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just qc | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just validate-history | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just validate-products | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just verify-proposal metpo_traitmech_v609 | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| just robot-validate-proposal metpo_traitmech_v609 | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/audit_history_records.py --base 565b6ef5602922935029943db3229c91968da10d | passed | True | traitmech:000733 | Executed on the corrected working tree/checkpoint. Corpus validation is not corpus-wide scientific review. Products without authority adapters remain SKIPPED_NO_ADAPTER. |
+| prior-suite | passed | False | traitmech:000733 | 4796 tests passed with no failures, errors or skips at checkpoint 10ca4ec1fc5370a1835d30622382ac1296e54288. Full suite was not rerun after the lower-bound correction; current focused/native gates and protected exact-head CI are separate. |
+| preservation | passed | True | traitmech:000733 | Structured correction proof restores the original record exactly after removing only the lower-bound qualifier and appended event. All 1127 prior records, protected spore germination, prior histories/reviews, proposal, source receipt, embeddings and shared templates remain unchanged. |
+| rdf | passed | True | traitmech:000733 | Parsed proposal, merged and inferred RDF contain 15/12628/12632 triples. The w3id child-parent-quality chain is correct; definition annotation contains only the local record and 1985 definition-authority DOI. Proposal bytes are unchanged by correction. |
+| browser | passed | True | traitmech:000733 | Corrected target/evidence and dashboard screenshots inspected at 1440 and 390 pixels. Two history links, local identifier, lower-bound note, four OPEN discussions, three excerpts, browse navigation and 1128-count dashboard image pass without overflow/page errors. |
+| whitespace | passed | True | traitmech:000733 | Original ordinary staged check identified only required trailing empty cells on ROBOT template line 2. Eleven columns and exact-template blank-at-eol exception passed; all other paths passed. Correction has no template change; no global whitespace settings weakened. |
+| allocation | passed | True | traitmech:000733 | Ignored/hidden-aware allocation and full-range checks were supplemented by a bounded 208-location publication reassessment. Remote/main freshness must still be guarded immediately before push; no atomic reservation or global absence implied. |
+| Configured embedding sources | not_applicable | False | traitmech:000733 | Both exact configured sources absent in main and owned layouts. Existing artifacts retained, not regenerated. Isolated shared generator matched its pinned 645 source blobs. |
+
+## Scientific And Domain Assessments
+
+### Shortening established eukaryotic axonemes
+
+identity: supported. Targets: traitmech:000733.
+
+Reusable physiological phenotype; the 1985 induction follows regrowth, not failed assembly. The 2003 mutant comparison supports disassembly without making mutant provenance or exact trigger universal.
+
+### Phenotype rather than flagellar possession or autotomy
+
+grounding: supported. Targets: traitmech:000733.
+
+Definition-based parent is strictly broader. Autotomy and bacterial ejection differ in apparatus/endpoints; no organism-level disjointness asserted. Historical terms and active replacements are not exact resorption classes.
+
+### Assay-bounded sources and context
+
+evidence: supported. Targets: traitmech:000733.
+
+Coiling and incomplete resorption, fraction exceeding seven micrometers, low but nonzero calcium, at least 70 cells and at least three cultures retain their separate meanings. Remnants preclude imposing complete disappearance; daughter-cluster spots are not a rate.
+
+### No universal direction or molecular inference
+
+evidence: supported. Targets: traitmech:000733.
+
+Do not impose tip/base direction, severing, IFT, calcium, sequence profile, cell cycle or complete recycling. No canonical taxa, protein graph, exact synonyms or xrefs added without authority/claim-level support.
+
+### Retained lower-bound qualifier
+
+quantity: supported. Targets: traitmech:000733.
+
+Issue #1948 is corrected in both maintained notes with guarded mutation and append-only provenance. Existing add-trait instructions already require source-faithful quantities and successor reviews; no skill update is warranted for this application error.
+
+### Canonical proposal and rendered output
+
+consistency: supported. Targets: traitmech:000733.
+
+Proposal uses the w3id parent chain and role-correct definition annotation. Rendered local identity, evidence, history and corpus totals agree. Original records and immutable observations remain preserved.
+
+### Authority and mechanistic gaps
+
+completeness: unknown. Targets: traitmech:000733.
+
+Strain provenance, canonical taxa, exact mappings, protein-resolved mechanism and upstream eukaryotic scope remain open. Unread context-source figures and limited notice access are explicit.
+
+## Findings
+
+### replication-lower-bound: Replication note drops the reported lower-bound qualifier
+
+minor / resolved / confirmed; issue key: eukaryotic-resorption-replication-lower-bound.
+
+The source says at least three independent cultures. The note should retain that lower bound instead of implying exactly three. This is a bounded provenance correction, not an identity or evidence-sufficiency failure.
+
+Disposition: Both maintained notes now retain at least three independent cultures. Direct Methods and typeset page agree. Guarded dry run/apply/replay, regression tests, append-only history, native regeneration and relevant gates pass; biological claims and prior observations are preserved.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| source-0 | DOI:10.1083/jcb.100.2.457; Printed page 458, Results, Monitoring of Flagellar Length during In Vivo Labeling, sole paragraph; Figure 2 on page 459.; https://pmc-oa-opendata.s3.amazonaws.com/PMC2113451.1/PMC2113451.1.xml?md5=83cdf332f386e5da92347393a3a82ce8 | supports | L'Hernault and Rosenbaum 1985, PMID:3968171, PMCID:PMC2113451.1, printed page 458, Results, Monitoring of Flagellar Length during In Vivo Labeling, sole paragraph; Figure 2 on page 459. Contiguous typeset and whitespace-normalized OCR match; native NOT_IN_ABSTRACT retained. The XML body is a single OCR preformat block, not a section-structured JATS paragraph. Source-designated wild-type Chlamydomonas reinhardtii 21gr was mechanically deflagellated and pulse-chase labelled during regeneration before resorption was induced with 15 mM sodium pyrophosphate at pH 7.5 plus cycloheximide; HEPES was the control. The shortening concerns regenerated flagella, not failed assembly. Apparent flagellalessness after 90 minutes still permits the reported short stubs. Protein fractionation supports transfer to the cell body, not complete recycling. All six main PDF pages, three figures and Table I were inspected; raw data were not reanalyzed. Figure 1's two determinations and Table I's two gels per sample are not established biological-replicate counts. Formal review reread the Results excerpt/context and typeset page 458, not all six PDF pages again. This timestamp is a cached-byte hash recheck, not new acquisition. The 2010 paper supports the remnant limitation only, not a third definition citation. |
+| source-1 | DOI:10.1186/1471-2121-4-11; Figure 7 caption, first sentence, page 9 of 12; JATS F7 under sec9/sec5.; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC194436/fullTextXML | supports | Parker and Quarmby 2003, PMID:12930563, PMCID:PMC194436, Figure 7 caption, first sentence, page 9 of 12; JATS F7 under sec9/sec5. Direct caption and typeset match; native NOT_IN_ABSTRACT retained. The acid-shock experiments concern Chlamydomonas fa1, fa2 and adf1 mutants, with coiling and incomplete resorption described; wild-type cells instead shed and regrow their flagella in this comparison. Figure 7 scores the fraction of cells with flagella longer than 7 micrometers, not a resorption rate or count of released organelles. The separate fla10 temperature experiments must not be merged with this assay. Low-calcium HEPES is not calcium-free: Methods retain trace calcium and do not add chelators. The main length measurements count at least 70 cells per time point and use at least three independent cultures. All twelve main PDF pages and eight figures were inspected. Proposed basal disassembly and shared severing machinery are not universal requirements of this class. Formal review reread the disassembly section and typeset pages 9 and 11, including Figure 7 and Methods. The corrected lower bound agrees with the Methods. This timestamp is a cached-byte hash recheck, not new acquisition. The 2010 paper supports the remnant limitation only, not a third definition citation. |
+| source-2 | DOI:10.1002/cm.20454; Scientific abstract, JATS paragraph P2, third sentence.; https://pmc-oa-opendata.s3.amazonaws.com/PMC2897710.1/PMC2897710.1.xml?md5=eb24c0d3fac83950e8450e87018ecef9 | supports | Parker et al. 2010, PMID:20506243, PMCID:PMC2897710.1, scientific abstract, JATS paragraph P2, third sentence. Direct JATS and MED scientific-abstract matches; native VERIFIED retained. Main text, Methods, Results, Discussion, Conclusions and three captions were read, not the actual figures, PDF, supplementary video, supplementary legend or raw data. Live pf6 CC1029 observations and wild-type 137c mt- CC124 electron microscopy concern different preparations. Paired spots in daughter-cell clusters are not a flagellar-resorption rate. Remnants may remain in the wall or be expelled; do not universalize this premitotic context to every resorption stimulus. Formal review reread scientific abstract P2 and the daughter-cluster Results paragraph. Actual figures, PDF, video and supplementary legend remain unread. This timestamp is a cached-byte hash recheck, not new acquisition. The 2010 paper supports the remnant limitation only, not a third definition citation. |
+| identity | data/traits/physiology/eukaryotic_flagellar_resorption.yaml; Complete record and four OPEN discussions | supports | Shortening established microbial eukaryotic axonemes through disassembly is distinct from static morphology, failed assembly, motor arrest, coiling alone, passive breakage and intact shedding alone. Neither complete disappearance/recycling nor a universal stimulus, cell-cycle phase or disassembly direction is required. |
+| implementation | scripts/add_eukaryotic_flagellar_resorption_trait.py; Whole writer, tests and two histories | supports | Explicit apply, prevalidation, deep copies, hash-guarded proposal header, exact-input correction and idempotence preserve later curation. Lower-bound repair appends one event; normal first-pass mode refuses the later corrected record. Actual actor is codex; status remains PROPOSED. |
+| novelty | proposals/metpo_traitmech_v609/proposal.md; Identity, parent, retired identifiers and allocation | supports | Phenotype METPO:1000059 is broader by definition; flagellar possession, arrangement and locomotion do not denote resorption. Deprecated identifiers are not revived or mapped exactly. Parent assignment and microbial-eukaryote scope still need upstream maintainer consideration; ontology pin is unchanged. |
+| provenance | research/traits/physiology/eukaryotic_flagellar_resorption-source-verification.json; Complete source receipt and explicit access/notice limits | supports | Two distinct primary publications support the definition; the 2010 source is remnant context. Native outcomes NOT_IN_ABSTRACT/NOT_IN_ABSTRACT/VERIFIED remain distinct from direct matching and biological support. Source receipt and original CREATE history remain unchanged. No independent-laboratory replication or comprehensive notice clearance is implied. |
+| products | reports/proposal_citation_audit.tsv; Native products, preservation proof, RDF and rendered surfaces | supports | 1128 total records. Original generation changed 1126 prior pages only in corpus footer, and phenotype adds one child/link. The correction changes target evidence/history rendering and latest-curation timestamp metadata only; counts, proposal and other record pages are unchanged. |
+
+## Limits And Additional Notes
+
+- Author self-review, not human scientific sign-off or independent-laboratory replication.
+- All 1985 and 2003 main PDF pages/figures were read during research; formal review reread selected Results, figures and Methods, not every page again. Raw data were not reanalyzed.
+- 2010 text and captions read; actual figures, PDF, video and supplementary legend remain unread. This source is context only, not counted definition evidence.
+- Publisher/MED/Crossref notice checks are bounded; access failures remain failures, not comprehensive clearance. Native snippet verdicts are not independent biological verification.
+- Full local suite is pre-correction checkpoint evidence. Focused tests and native gates reran after correction; current-head CI and external review remain separate merge gates.
+- Known-copy searches are bounded; temporary audit assets may not remain available. No global absence, atomic reservation or literature exhaustion claimed.
+- Configured embedding sources unavailable; prior artifacts retained. No paid research used.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T173248Z-eukaryotic-flagellar-resorption
+kind: record
+repository: CultureBotAI/TraitMech
+title: 'Eukaryotic flagellar resorption: complete corrected assessment'
+started_at: '2026-10-15T17:21:56Z'
+finished_at: '2026-10-15T17:32:48Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author falsification-oriented source review, not independent
+    or human scientific approval. External review requests and CI do not alter attribution.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The bounded axonemal-disassembly phenotype is supported by two primary publications.
+  One minor quantitative-provenance finding is resolved. Four discussions remain OPEN
+  and status remains PROPOSED.
+source:
+  git_revision: 86afd7b4a1e85fe2c44b12de23fc16dcef32e312
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: a9cb4e5e6180e0cd7c62943174af5eb70d558eaa76901b004ac29ca9389f0d90
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/metpo-proposal/SKILL.md
+    sha256: 03f008c011e6f0d45cafb7516a01a3383c0a7e8d11bfc5c9cb31efaeca51275f
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: README.md
+    sha256: 10b4a23f12a2eb53c092be7e85b348e85bfa6d2828d860675316ac19af212fb5
+    role: context
+  - path: app/dashboard/priority.json
+    sha256: 181c5377fe876e932457adca74eeab7532095f59fb5c24ec03c6aaa2f8fb56a3
+    role: context
+  - path: app/discussions/data.js
+    sha256: cddb20e5709aa9b456dfe5df2dfcd09d76095b1223e77825f9bf9adfc4e3eb0f
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: dashboard/coverage.png
+    sha256: 50ec1378b59601b7627bad324cb3e6436910480e04c135a5a388f0b8dd93d2bb
+    role: context
+  - path: dashboard/index.html
+    sha256: 2e40952a504735490a021f4ce82975f8cacf27f285ab4ef556f5b437d2da088f
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/morphology/flagellar_arrangement.yaml
+    sha256: 1b944448f88de4fa9ff773e155866a2c592f7e843a4c7dc152534676d4e4f329
+    role: context
+  - path: data/traits/morphology/flagellated.yaml
+    sha256: ef50cfb498de5c66a4f2fb904a2038f4c97fa2615e6090a652758051ad25250b
+    role: context
+  - path: data/traits/morphology/palmelloid_formation.yaml
+    sha256: 6fec9c7538d049e5301536724aa6ce611e41ebfcdd8d32a9155eeba384eefe1a
+    role: context
+  - path: data/traits/physiology/bacterial_polar_flagellar_ejection.yaml
+    sha256: 6db8657e3504202ba495f77be2487d63c479c433a032d81f93cbf522d0dcf007
+    role: context
+  - path: data/traits/physiology/eukaryotic_flagellar_autotomy.yaml
+    sha256: e4d4924721768cd6c677b9cdc4781960a0526aa83537b182c7e9df1ba07f3bdc
+    role: context
+  - path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+    sha256: 9f87ec0e0e3eee6386f0e4937a9b98bcd5dd91ea713ea90874f4c3c7568f16fc
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: data/traits/upper/quality.yaml
+    sha256: 16a6aca8b74ea96e3c889d10264328e240e1b63729715ba99a9131ef7009c66d
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: history/records/eukaryotic_flagellar_resorption/2026-10-15T160819Z-codex-d37ea9.yaml
+    sha256: e2a6148a09bf6d1d58faca085cbc57460d7e2cd19c8ff8dcb30699b6441f0015
+    role: context
+  - path: history/records/eukaryotic_flagellar_resorption/2026-10-15T170635Z-codex-b0d688.yaml
+    sha256: 43af184133cc8068e86cd4c1eb48260645c935af518609ef5738f6db4c909ce8
+    role: context
+  - path: pages/browse.html
+    sha256: c73fce3bbdab02ea92a0c5314a7dae04aa1d75344ee6c3105eb3d03e97ce948b
+    role: context
+  - path: pages/traits/physiology/eukaryotic_flagellar_resorption.html
+    sha256: c96e6a2e2f7a0b8fce430a00947aaedc621f8775bb28b310e7a02514bc70bcca
+    role: context
+  - path: pages/traits/upper/phenotype.html
+    sha256: 440c79e381d0ac44a202e68f11f962c1135adcaa5b207837a37752208ab96ec6
+    role: context
+  - path: proposals/metpo_traitmech_v608/metpo_proposal_classes_robot.tsv
+    sha256: 24a186fd10b1bd4c4729e86197cc7b5ab4824df57422912fce0bb8e55ca1f529
+    role: context
+  - path: proposals/metpo_traitmech_v609/metpo_proposal_classes_robot.tsv
+    sha256: ed4a62de23eee33700a4f731cf2068335e715d2c6d5c35d9f63412c20dbe0737
+    role: context
+  - path: proposals/metpo_traitmech_v609/proposal.md
+    sha256: 86fb7454a9631408b5d58c1f538e886ff51a9403306784386bd5b81ece49ea70
+    role: context
+  - path: reports/proposal_citation_audit.tsv
+    sha256: d7141228f1d6fb643078d67a3bc518fe97138877c583c513af4024359660c47d
+    role: context
+  - path: research/traits/physiology/eukaryotic_flagellar_resorption-source-verification.json
+    sha256: 546ed21f2c6b3abed59883db4a357a64e31641d97c319cca08c11cf1fa1995bd
+    role: context
+  - path: reviews/structured/20261015T170517Z-eukaryotic-resorption-replication-finding/review.yaml
+    sha256: 65a4177bcaf10417d1f503ff032233fcfb16a0f746d05593adf90bb21e231ccd
+    role: context
+  - path: scripts/add_eukaryotic_flagellar_resorption_trait.py
+    sha256: e38fe2b7d91dd7a4d7e2e190b51cb3317094a8c69b2534ed098fb8417b2ae4ba
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/templates/trait.html
+    sha256: 00b07955f2d9bf860ff9ffa9fbffe679e1b7a0d7710e95a88fc02eb5e4a07def
+    role: context
+  - path: tests/test_add_eukaryotic_flagellar_resorption_trait.py
+    sha256: 13d3f687e0be52e70d99fc110999ed93d7d3c3e0f58a008678482d140ae35ec4
+    role: context
+targets:
+- target_id: traitmech:000733
+  path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  label: eukaryotic flagellar resorption
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_eukaryotic_flagellar_resorption_trait.py
+    role: guarded_writer
+scope:
+  description: Complete new trait, maintained writer/tests, source evidence, v609
+    proposal, histories and generated surfaces after lower-bound correction.
+  selection: Exact traitmech:000733 and maintained owners; no sampling.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000733
+  exclusions:
+  - target: Other 1127 records
+    reason: Automated corpus validation and byte preservation, not fresh scientific
+      review.
+  - target: data/traits/physiology/spore_germination.yaml
+    reason: Protected by DO_NOT_WORK; unchanged and not curated.
+checks:
+- check_id: correction-write-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-write-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+    --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+    --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-write-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+    --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/add_eukaryotic_flagellar_resorption_trait.py --correct-replication-bound
+    --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-history-0
+  name: '/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug eukaryotic_flagellar_resorption
+    --target-root data/traits/physiology --event EDIT --outcome changed --sections
+    evidence --summary ''Preserve the replication lower bound'' --details ''Corrected
+    evidence[1].notes and the maintained guarded writer to retain at least three independent
+    cultures, as stated in the 2003 Methods on page 11 of 12, Timecourses and flagella
+    length measurements. Source XML and the typeset page were reread. The biological
+    definition, source roles, verbatim snippets, native resolver outcomes, proposal,
+    other records and earlier curation/history/review bytes are unchanged. This supplements
+    history/records/eukaryotic_flagellar_resorption/2026-10-15T160819Z-codex-d37ea9.yaml.
+    Issue #1948 tracks the quantitative-provenance wording correction and successor
+    review.'' --actor-name codex --model GPT-5 --agent-tool Codex --issue https://github.com/CultureBotAI/TraitMech/issues/1948'
+  command: '/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug eukaryotic_flagellar_resorption
+    --target-root data/traits/physiology --event EDIT --outcome changed --sections
+    evidence --summary ''Preserve the replication lower bound'' --details ''Corrected
+    evidence[1].notes and the maintained guarded writer to retain at least three independent
+    cultures, as stated in the 2003 Methods on page 11 of 12, Timecourses and flagella
+    length measurements. Source XML and the typeset page were reread. The biological
+    definition, source roles, verbatim snippets, native resolver outcomes, proposal,
+    other records and earlier curation/history/review bytes are unchanged. This supplements
+    history/records/eukaryotic_flagellar_resorption/2026-10-15T160819Z-codex-d37ea9.yaml.
+    Issue #1948 tracks the quantitative-provenance wording correction and successor
+    review.'' --actor-name codex --model GPT-5 --agent-tool Codex --issue https://github.com/CultureBotAI/TraitMech/issues/1948'
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-records-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-records-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-records-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/eukaryotic_flagellar_resorption
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/eukaryotic_flagellar_resorption
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-0
+  name: just audit-proposals
+  command: just audit-proposals
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-1
+  name: just ground-predicates
+  command: just ground-predicates
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-2
+  name: just ground-nodes
+  command: just ground-nodes
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-3
+  name: just audit-graphs
+  command: just audit-graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-4
+  name: just audit-graph-protein-taxa
+  command: just audit-graph-protein-taxa
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-5
+  name: just audit-predicate-domains
+  command: just audit-predicate-domains
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-6
+  name: just check-biolink-coverage
+  command: just check-biolink-coverage
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-7
+  name: just audit-snippets
+  command: just audit-snippets
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-8
+  name: just gen-discussions-data
+  command: just gen-discussions-data
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-9
+  name: just gen-qc-dashboard
+  command: just gen-qc-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-10
+  name: just gen-pages
+  command: just gen-pages
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-generate-11
+  name: just gen-priority-dashboard
+  command: just gen-priority-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-focused-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_add_eukaryotic_flagellar_resorption_trait.py tests/test_readme_artifacts.py
+    tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_add_eukaryotic_flagellar_resorption_trait.py tests/test_readme_artifacts.py
+    tests/test_trait_priority.py tests/test_qc_dashboard_artifacts.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-focused-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-0
+  name: just qc
+  command: just qc
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-1
+  name: just validate-history
+  command: just validate-history
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-2
+  name: just validate-products
+  command: just validate-products
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-3
+  name: just verify-proposal metpo_traitmech_v609
+  command: just verify-proposal metpo_traitmech_v609
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-4
+  name: just robot-validate-proposal metpo_traitmech_v609
+  command: just robot-validate-proposal metpo_traitmech_v609
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: correction-verify-5
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base 565b6ef5602922935029943db3229c91968da10d
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base 565b6ef5602922935029943db3229c91968da10d
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000733
+  summary: Executed on the corrected working tree/checkpoint. Corpus validation is
+    not corpus-wide scientific review. Products without authority adapters remain
+    SKIPPED_NO_ADAPTER.
+- check_id: prior-suite
+  name: prior-suite
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000733
+  summary: 4796 tests passed with no failures, errors or skips at checkpoint 10ca4ec1fc5370a1835d30622382ac1296e54288.
+    Full suite was not rerun after the lower-bound correction; current focused/native
+    gates and protected exact-head CI are separate.
+- check_id: preservation
+  name: preservation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000733
+  summary: Structured correction proof restores the original record exactly after
+    removing only the lower-bound qualifier and appended event. All 1127 prior records,
+    protected spore germination, prior histories/reviews, proposal, source receipt,
+    embeddings and shared templates remain unchanged.
+- check_id: rdf
+  name: rdf
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000733
+  summary: Parsed proposal, merged and inferred RDF contain 15/12628/12632 triples.
+    The w3id child-parent-quality chain is correct; definition annotation contains
+    only the local record and 1985 definition-authority DOI. Proposal bytes are unchanged
+    by correction.
+- check_id: browser
+  name: browser
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000733
+  summary: Corrected target/evidence and dashboard screenshots inspected at 1440 and
+    390 pixels. Two history links, local identifier, lower-bound note, four OPEN discussions,
+    three excerpts, browse navigation and 1128-count dashboard image pass without
+    overflow/page errors.
+- check_id: whitespace
+  name: whitespace
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000733
+  summary: Original ordinary staged check identified only required trailing empty
+    cells on ROBOT template line 2. Eleven columns and exact-template blank-at-eol
+    exception passed; all other paths passed. Correction has no template change; no
+    global whitespace settings weakened.
+- check_id: allocation
+  name: allocation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000733
+  summary: Ignored/hidden-aware allocation and full-range checks were supplemented
+    by a bounded 208-location publication reassessment. Remote/main freshness must
+    still be guarded immediately before push; no atomic reservation or global absence
+    implied.
+- check_id: embeddings
+  name: Configured embedding sources
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000733
+  summary: Both exact configured sources absent in main and owned layouts. Existing
+    artifacts retained, not regenerated. Isolated shared generator matched its pinned
+    645 source blobs.
+evidence:
+- evidence_id: source-0
+  kind: primary_source
+  reference: DOI:10.1083/jcb.100.2.457
+  locator: Printed page 458, Results, Monitoring of Flagellar Length during In Vivo
+    Labeling, sole paragraph; Figure 2 on page 459.; https://pmc-oa-opendata.s3.amazonaws.com/PMC2113451.1/PMC2113451.1.xml?md5=83cdf332f386e5da92347393a3a82ce8
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: a33d99bbd9187566e8245fe149fc469f71618cc2a2505653969fba570496057c
+  summary: L'Hernault and Rosenbaum 1985, PMID:3968171, PMCID:PMC2113451.1, printed
+    page 458, Results, Monitoring of Flagellar Length during In Vivo Labeling, sole
+    paragraph; Figure 2 on page 459. Contiguous typeset and whitespace-normalized
+    OCR match; native NOT_IN_ABSTRACT retained. The XML body is a single OCR preformat
+    block, not a section-structured JATS paragraph. Source-designated wild-type Chlamydomonas
+    reinhardtii 21gr was mechanically deflagellated and pulse-chase labelled during
+    regeneration before resorption was induced with 15 mM sodium pyrophosphate at
+    pH 7.5 plus cycloheximide; HEPES was the control. The shortening concerns regenerated
+    flagella, not failed assembly. Apparent flagellalessness after 90 minutes still
+    permits the reported short stubs. Protein fractionation supports transfer to the
+    cell body, not complete recycling. All six main PDF pages, three figures and Table
+    I were inspected; raw data were not reanalyzed. Figure 1's two determinations
+    and Table I's two gels per sample are not established biological-replicate counts.
+    Formal review reread the Results excerpt/context and typeset page 458, not all
+    six PDF pages again. This timestamp is a cached-byte hash recheck, not new acquisition.
+    The 2010 paper supports the remnant limitation only, not a third definition citation.
+- evidence_id: source-1
+  kind: primary_source
+  reference: DOI:10.1186/1471-2121-4-11
+  locator: Figure 7 caption, first sentence, page 9 of 12; JATS F7 under sec9/sec5.;
+    https://www.ebi.ac.uk/europepmc/webservices/rest/PMC194436/fullTextXML
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: 0b91015e94682c644e8164bebc8961ce0651fa339179aedfaccb09ebe4fa5566
+  summary: 'Parker and Quarmby 2003, PMID:12930563, PMCID:PMC194436, Figure 7 caption,
+    first sentence, page 9 of 12; JATS F7 under sec9/sec5. Direct caption and typeset
+    match; native NOT_IN_ABSTRACT retained. The acid-shock experiments concern Chlamydomonas
+    fa1, fa2 and adf1 mutants, with coiling and incomplete resorption described; wild-type
+    cells instead shed and regrow their flagella in this comparison. Figure 7 scores
+    the fraction of cells with flagella longer than 7 micrometers, not a resorption
+    rate or count of released organelles. The separate fla10 temperature experiments
+    must not be merged with this assay. Low-calcium HEPES is not calcium-free: Methods
+    retain trace calcium and do not add chelators. The main length measurements count
+    at least 70 cells per time point and use at least three independent cultures.
+    All twelve main PDF pages and eight figures were inspected. Proposed basal disassembly
+    and shared severing machinery are not universal requirements of this class. Formal
+    review reread the disassembly section and typeset pages 9 and 11, including Figure
+    7 and Methods. The corrected lower bound agrees with the Methods. This timestamp
+    is a cached-byte hash recheck, not new acquisition. The 2010 paper supports the
+    remnant limitation only, not a third definition citation.'
+- evidence_id: source-2
+  kind: primary_source
+  reference: DOI:10.1002/cm.20454
+  locator: Scientific abstract, JATS paragraph P2, third sentence.; https://pmc-oa-opendata.s3.amazonaws.com/PMC2897710.1/PMC2897710.1.xml?md5=eb24c0d3fac83950e8450e87018ecef9
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: c0449b68e840512edbd47c494de31683d472f02f25a46aee9a86321d00d04a77
+  summary: Parker et al. 2010, PMID:20506243, PMCID:PMC2897710.1, scientific abstract,
+    JATS paragraph P2, third sentence. Direct JATS and MED scientific-abstract matches;
+    native VERIFIED retained. Main text, Methods, Results, Discussion, Conclusions
+    and three captions were read, not the actual figures, PDF, supplementary video,
+    supplementary legend or raw data. Live pf6 CC1029 observations and wild-type 137c
+    mt- CC124 electron microscopy concern different preparations. Paired spots in
+    daughter-cell clusters are not a flagellar-resorption rate. Remnants may remain
+    in the wall or be expelled; do not universalize this premitotic context to every
+    resorption stimulus. Formal review reread scientific abstract P2 and the daughter-cluster
+    Results paragraph. Actual figures, PDF, video and supplementary legend remain
+    unread. This timestamp is a cached-byte hash recheck, not new acquisition. The
+    2010 paper supports the remnant limitation only, not a third definition citation.
+- evidence_id: identity
+  kind: record_content
+  reference: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+  locator: Complete record and four OPEN discussions
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: 9f87ec0e0e3eee6386f0e4937a9b98bcd5dd91ea713ea90874f4c3c7568f16fc
+  summary: Shortening established microbial eukaryotic axonemes through disassembly
+    is distinct from static morphology, failed assembly, motor arrest, coiling alone,
+    passive breakage and intact shedding alone. Neither complete disappearance/recycling
+    nor a universal stimulus, cell-cycle phase or disassembly direction is required.
+- evidence_id: implementation
+  kind: record_content
+  reference: scripts/add_eukaryotic_flagellar_resorption_trait.py
+  locator: Whole writer, tests and two histories
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: e38fe2b7d91dd7a4d7e2e190b51cb3317094a8c69b2534ed098fb8417b2ae4ba
+  summary: Explicit apply, prevalidation, deep copies, hash-guarded proposal header,
+    exact-input correction and idempotence preserve later curation. Lower-bound repair
+    appends one event; normal first-pass mode refuses the later corrected record.
+    Actual actor is codex; status remains PROPOSED.
+- evidence_id: novelty
+  kind: search
+  reference: proposals/metpo_traitmech_v609/proposal.md
+  locator: Identity, parent, retired identifiers and allocation
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: 86fb7454a9631408b5d58c1f538e886ff51a9403306784386bd5b81ece49ea70
+  summary: Phenotype METPO:1000059 is broader by definition; flagellar possession,
+    arrangement and locomotion do not denote resorption. Deprecated identifiers are
+    not revived or mapped exactly. Parent assignment and microbial-eukaryote scope
+    still need upstream maintainer consideration; ontology pin is unchanged.
+  search_scope: Allocation searched ignored/hidden files in 207 known locations, 303
+    retained heads, 87457 TraitMech and 9308 CommunityMech unique regular blobs; ten
+    unavailable locations explicit. All 75 biological contexts inherited hash-matched
+    earlier assessments; 81 allocation contexts assessed. Complete ranges covered
+    197791 owner contexts, 2623 unique contents and twelve full open/draft PR descriptions.
+    General editor envelopes, embedding decimals, GMELIN number and nine NCBI taxonomy
+    fixture fields are not competing METPO reservations. Publication refresh covered
+    208 locations and 58811 current proposal owners; only the two owned v609 contents
+    were new. Twelve PR heads/descriptions and upstream heads were unchanged at the
+    recorded guard. Unavailable ignored history, arbitrary archives, symlink targets
+    and unchanged PR files are not reconstructed. Not literature exhaustion or an
+    atomic reservation.
+- evidence_id: provenance
+  kind: record_content
+  reference: research/traits/physiology/eukaryotic_flagellar_resorption-source-verification.json
+  locator: Complete source receipt and explicit access/notice limits
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: 546ed21f2c6b3abed59883db4a357a64e31641d97c319cca08c11cf1fa1995bd
+  summary: Two distinct primary publications support the definition; the 2010 source
+    is remnant context. Native outcomes NOT_IN_ABSTRACT/NOT_IN_ABSTRACT/VERIFIED remain
+    distinct from direct matching and biological support. Source receipt and original
+    CREATE history remain unchanged. No independent-laboratory replication or comprehensive
+    notice clearance is implied.
+- evidence_id: products
+  kind: validation
+  reference: reports/proposal_citation_audit.tsv
+  locator: Native products, preservation proof, RDF and rendered surfaces
+  accessed_at: '2026-10-15T17:32:48Z'
+  support: supports
+  snapshot_sha256: d7141228f1d6fb643078d67a3bc518fe97138877c583c513af4024359660c47d
+  summary: 1128 total records. Original generation changed 1126 prior pages only in
+    corpus footer, and phenotype adds one child/link. The correction changes target
+    evidence/history rendering and latest-curation timestamp metadata only; counts,
+    proposal and other record pages are unchanged.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Shortening established eukaryotic axonemes
+  summary: Reusable physiological phenotype; the 1985 induction follows regrowth,
+    not failed assembly. The 2003 mutant comparison supports disassembly without making
+    mutant provenance or exact trigger universal.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - identity
+  - source-0
+  - source-1
+  outcome: supported
+- assessment_id: parent
+  area: grounding
+  topic: Phenotype rather than flagellar possession or autotomy
+  summary: Definition-based parent is strictly broader. Autotomy and bacterial ejection
+    differ in apparatus/endpoints; no organism-level disjointness asserted. Historical
+    terms and active replacements are not exact resorption classes.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - identity
+  - novelty
+  outcome: supported
+- assessment_id: evidence
+  area: evidence
+  topic: Assay-bounded sources and context
+  summary: Coiling and incomplete resorption, fraction exceeding seven micrometers,
+    low but nonzero calcium, at least 70 cells and at least three cultures retain
+    their separate meanings. Remnants preclude imposing complete disappearance; daughter-cluster
+    spots are not a rate.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - source-0
+  - source-1
+  - source-2
+  - provenance
+  outcome: supported
+- assessment_id: mechanism
+  area: evidence
+  topic: No universal direction or molecular inference
+  summary: Do not impose tip/base direction, severing, IFT, calcium, sequence profile,
+    cell cycle or complete recycling. No canonical taxa, protein graph, exact synonyms
+    or xrefs added without authority/claim-level support.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - identity
+  - source-0
+  - source-1
+  - source-2
+  outcome: supported
+- assessment_id: replication-resolution
+  area: quantity
+  topic: Retained lower-bound qualifier
+  summary: 'Issue #1948 is corrected in both maintained notes with guarded mutation
+    and append-only provenance. Existing add-trait instructions already require source-faithful
+    quantities and successor reviews; no skill update is warranted for this application
+    error.'
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - source-1
+  - implementation
+  - provenance
+  outcome: supported
+- assessment_id: products
+  area: consistency
+  topic: Canonical proposal and rendered output
+  summary: Proposal uses the w3id parent chain and role-correct definition annotation.
+    Rendered local identity, evidence, history and corpus totals agree. Original records
+    and immutable observations remain preserved.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - novelty
+  - products
+  - implementation
+  outcome: supported
+- assessment_id: gaps
+  area: completeness
+  topic: Authority and mechanistic gaps
+  summary: Strain provenance, canonical taxa, exact mappings, protein-resolved mechanism
+    and upstream eukaryotic scope remain open. Unread context-source figures and limited
+    notice access are explicit.
+  target_ids:
+  - traitmech:000733
+  evidence_ids:
+  - identity
+  - provenance
+  outcome: unknown
+findings:
+- finding_id: replication-lower-bound
+  issue_key: eukaryotic-resorption-replication-lower-bound
+  category: quantity
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Replication note drops the reported lower-bound qualifier
+  description: The source says at least three independent cultures. The note should
+    retain that lower bound instead of implying exactly three. This is a bounded provenance
+    correction, not an identity or evidence-sufficiency failure.
+  target_ids:
+  - traitmech:000733
+  field_paths:
+  - evidence[1].notes
+  evidence_ids:
+  - source-1
+  - implementation
+  - provenance
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/eukaryotic_flagellar_resorption.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_eukaryotic_flagellar_resorption_trait.py
+    role: guarded_writer
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1948
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261015T170517Z-eukaryotic-resorption-replication-finding
+    finding_id: replication-lower-bound
+  disposition_reason: Both maintained notes now retain at least three independent
+    cultures. Direct Methods and typeset page agree. Guarded dry run/apply/replay,
+    regression tests, append-only history, native regeneration and relevant gates
+    pass; biological claims and prior observations are preserved.
+actions: []
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261015T170517Z-eukaryotic-resorption-replication-finding
+  relationship: Resolves the exact minor replication-lower-bound finding while adding
+    the complete bounded scientific assessment; preserves the original observation.
+limitations:
+- Author self-review, not human scientific sign-off or independent-laboratory replication.
+- All 1985 and 2003 main PDF pages/figures were read during research; formal review
+  reread selected Results, figures and Methods, not every page again. Raw data were
+  not reanalyzed.
+- 2010 text and captions read; actual figures, PDF, video and supplementary legend
+  remain unread. This source is context only, not counted definition evidence.
+- Publisher/MED/Crossref notice checks are bounded; access failures remain failures,
+  not comprehensive clearance. Native snippet verdicts are not independent biological
+  verification.
+- Full local suite is pre-correction checkpoint evidence. Focused tests and native
+  gates reran after correction; current-head CI and external review remain separate
+  merge gates.
+- Known-copy searches are bounded; temporary audit assets may not remain available.
+  No global absence, atomic reservation or literature exhaustion claimed.
+- Configured embedding sources unavailable; prior artifacts retained. No paid research
+  used.
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/1948
+- https://doi.org/10.1083/jcb.100.2.457
+- https://doi.org/10.1186/1471-2121-4-11
+- https://doi.org/10.1002/cm.20454
+tags:
+- add-trait
+- flagellar-resorption
+- self-review
+```
