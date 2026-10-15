@@ -44,7 +44,7 @@
       <li>
         <a href="https://doi.org/10.2108/zsj.20.1367" rel="nofollow noreferrer"><code>DOI:10.2108/zsj.20.1367</code></a>
         <blockquote>Axopodial contraction of the centrohelid heliozoon Raphidiophrys contractilis was induced by mechanical or electrical stimulation.</blockquote>
-        <p class="meta">Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:14624035&amp;resultType=core&amp;format=json. Abstract-only access; full Methods and figures were not inspected. The study reports contraction faster than 3.0 mm/sec, followed by re-elongation initially about 0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium dependence is restricted to this stimulation assay, not a universal defining threshold. Failure to detect other filaments with the reported fixation method does not prove their biological absence. Source taxon spelling is retained; natural culture provenance and current taxonomic identity are not established here.</p>
+        <p class="meta">Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035%20AND%20SRC%3AMED&amp;resultType=core&amp;format=json. Abstract-only access; full Methods and figures were not inspected. The study reports contraction faster than 3.0 mm/sec, followed by re-elongation initially about 0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium dependence is restricted to this stimulation assay, not a universal defining threshold. Failure to detect other filaments with the reported fixation method does not prove their biological absence. Source taxon spelling is retained; natural culture provenance and current taxonomic identity are not established here.</p>
       </li>
 
       <li>
@@ -82,7 +82,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/physiology/cellular_contraction.html" >cell body or cytoplasmic projection contraction <code>traitmech:000729</code></a></li>
 
       </ul>
     </div>
@@ -111,7 +111,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(3)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -121,7 +121,7 @@
         <p class="discussion-prompt">Resolve a closer cellular-contractility parent and assay boundaries.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>axopodial-contraction-scope-and-parent</code>
           · raised by codex
           · 2026-10-08
@@ -140,6 +140,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> Added cellular contraction (body or cytoplasmic projection shortening) traitmech:000729 as the direct broader phenotype. This is a definition-based subclass inference, not a new child experiment or evidence of a common molecular mechanism. Phenotype METPO:1000059 remains an ancestor. Preserved the historical rationale and endpoint boundaries; the v605 proposal requests the child axiom without rewriting the historical proposal cohort. Only the hierarchy question is resolved here. The independent time-resolved assay question is retained OPEN in axopodial-contraction-assay-comparability; provenance and mechanism remain OPEN.</p>
 
 
 
@@ -176,6 +178,36 @@
 
       </div>
 
+
+      <div class="discussion" id="axopodial-contraction-assay-comparability">
+        <p class="discussion-prompt">Establish comparable time-resolved assays for rapid axopodial contraction.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>axopodial-contraction-assay-comparability</code>
+          · raised by codex
+          · 2026-10-14
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Carried forward from axopodial-contraction-scope-and-parent when only its hierarchy gap was resolved. Preserve stimulus, cell state, projection identity, length readout and temporal resolution when comparing assays. The published speed is not a universal cutoff; re-elongation, slow structural loss and drug-induced microtubule disassembly alone do not establish the rapid physiological response. No new comparative assay or biological experiment was performed by this hierarchy repair.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -189,6 +221,12 @@
           <p class="changes">Added rapid axopodial contraction with two primary DOI sources and contiguous scientific-abstract snippets checked directly. Ignored-and-hidden main/worktree/open-PR checks support 000682 and v558 block 1063500-1063599. Kept natural culture provenance, closer hierarchy and protein mechanism unresolved. Distinguished rapid response from locomotion and induced structural breakdown. Existing records unchanged. Timestamp is observed UTC.</p>
         </li>
 
+        <li>
+          <time>2026-10-14T22:35:09Z</time> ·
+          <strong>REFINE_CELLULAR_CONTRACTION_PARENT</strong> · codex
+          <p class="changes">Refined the direct parent to cellular contraction traitmech:000729 by definition-based inference. Preserved child definition, supporting excerpts, prior curation history and independent provenance/mechanism gaps. Resolved only the parent question. No new experiment, canonical taxon or molecular mechanism is asserted. Retained the independent assay-comparability question OPEN and qualified the Khan Europe PMC URL to SRC:MED using the verified identity.</p>
+        </li>
+
       </ol>
 
       <h3>Recorded curation sessions</h3>
@@ -198,6 +236,12 @@
           <ul><li><strong>CREATE</strong> — Add evidence-backed rapid axopodial contraction
             <p>Added traitmech:000682 with two primary DOI scientific-abstract snippets, broad phenotype parent and proposal v558. Deferred natural culture exemplars, closer hierarchy and protein mechanism; no existing records changed.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/rapid_axopodial_contraction/2026-10-08T145708Z-codex-2f9679.yaml">Read this curation session</a>
+        </li>
+        <li><time>2026-10-14T22:39:43Z</time>
+           · codex
+          <ul><li><strong>EDIT</strong> — Refine cellular contraction hierarchy
+            <p>Refined the direct parent to cellular contraction traitmech:000729 by definition-based inference. Preserved child definition, evidence excerpts, prior history, original rationale and independent provenance/mechanism gap. Resolved only the hierarchy component of the combined discussion and carried assay comparability into a linked OPEN discussion. Qualified the Khan Europe PMC source URL with SRC:MED after checking PMID, source, title and DOI. v558 remains unchanged and v605 requests the additional upstream child axiom. No comparative assay was performed.</p></li></ul>
+          <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/rapid_axopodial_contraction/2026-10-14T223943Z-codex-966313.yaml">Read this curation session</a>
         </li></ul>
 
 
@@ -253,10 +297,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-08 14:57 UTC
+      Record as of 2026-10-14 22:39 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 1123 TraitRecords
-      · embedding coverage 42.5%
+      · 1124 TraitRecords
+      · embedding coverage 42.4%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

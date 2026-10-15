@@ -1,0 +1,1600 @@
+# Cellular contraction: external findings resolved
+
+- Review: 20261015T011608Z-cellular-contraction-external-resolution
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-15T00:14:43Z
+- Finished UTC: 2026-10-15T01:16:08Z
+- Reviewer: codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The complete new parent and bounded child repairs remain supported. All three findings are resolved: historical parent-state provenance, emitted child axioms, and direct qualified label. Final validation covers the refined checkpoint; PROPOSED status and source-access limits remain.
+
+## Scope And Provenance
+
+Complete new parent and bounded hierarchy/discussion/source-URL/history changes to two children, including evidence sidecar, guarded writer/tests, skill, proposal and generated surfaces.
+
+Selection: Exact three trait IDs on the cellular-contraction branch; no sampling.
+Coverage: partial; 3 reviewed / 3 in the declared population.
+Source: working_tree at Git base 4a42f52dfa66a2a00a2f24434816ca95f54e2e6d.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000729 | data/traits/physiology/cellular_contraction.yaml | maintained | cell body or cytoplasmic projection contraction |
+| traitmech:000728 | data/traits/physiology/cell_body_contraction.yaml | maintained | cell-body contraction |
+| traitmech:000682 | data/traits/physiology/rapid_axopodial_contraction.yaml | maintained | rapid axopodial contraction |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/refine_cellular_contraction_proposal.py | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/refine_cellular_contraction_proposal.py --apply | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/refine_cellular_contraction_proposal.py --apply | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/new_history_record.py --kind record --slug cellular_contraction --target-root data/traits/physiology --event EDIT --outcome changed --sections identity --summary 'Refine contraction label and emit proposed child hierarchy' --details 'Address external PR 1940 review issues 1941 and 1942. Replace the parenthetical label with cell body or cytoplasmic projection contraction while preserving definition, scope, evidence, discussions, identifier and prior history. Re-emit historical child IDs 1063500 and 1068100 below 1068200 in v605, preserving their original definition annotations and all v558/v604 bytes. Child TraitRecords are unchanged by this follow-up; their original coupled hierarchy events remain. No new biological claim or human review promotion.' --actor-name codex --model GPT-5 --agent-tool Codex | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cellular_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_strict.py data/traits/physiology/cellular_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_history_links.py history/records/cellular_contraction | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/verify_snippets.py --record data/traits/physiology/cellular_contraction.yaml --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cellular_contraction-native.tsv | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cell_body_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_strict.py data/traits/physiology/cell_body_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_history_links.py history/records/cell_body_contraction | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/verify_snippets.py --record data/traits/physiology/cell_body_contraction.yaml --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cell_body_contraction-native.tsv | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/rapid_axopodial_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_strict.py data/traits/physiology/rapid_axopodial_contraction.yaml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/validate_history_links.py history/records/rapid_axopodial_contraction | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/verify_snippets.py --record data/traits/physiology/rapid_axopodial_contraction.yaml --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/rapid_axopodial_contraction-native.tsv | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just verify-proposal metpo_traitmech_v605 | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just robot-validate-proposal metpo_traitmech_v605 | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just audit-proposals | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just ground-predicates | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just ground-nodes | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just audit-graphs | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just audit-graph-protein-taxa | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just audit-predicate-domains | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just check-biolink-coverage | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just audit-snippets | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just gen-discussions-data | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just gen-qc-dashboard | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just gen-pages | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just gen-priority-dashboard | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python -m pytest -q tests/test_refine_cellular_contraction_proposal.py tests/test_add_cellular_contraction_trait.py tests/test_add_axopodial_contraction_trait.py tests/test_add_cell_body_contraction_trait.py | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff check src scripts tests | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just qc | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just validate-history | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just validate-products | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just verify-proposal metpo_traitmech_v605 | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| just robot-validate-proposal metpo_traitmech_v605 | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/audit_canonical_examples.py --no-resolve | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/run_trait_graph_audit.py --verify | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python scripts/audit_history_records.py --base ab8be94cd147cc60bf7c5d3795abef1b3171e91a | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python -m pytest -q --junitxml=/tmp/traitmech-cellular-contraction-external-fix-checks-20261014/pytest.xml | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Completed on the refined content; command arguments define the validation scope. Product adapter skips remain skips, not authority validation. |
+| full-suite | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | 4731 tests passed on the refined checkpoint, zero failures/errors/skips. |
+| product-integrity | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | {"base": "ab8be94cd147cc60bf7c5d3795abef1b3171e91a", "records": 1124, "prior_records_byte_preserved": 1121, "repaired_children_preserve_definitions_snippets_and_prior_history": true, "independent_axopodial_assay_question_open": true, "protected_record_unchanged": true, "prior_history_reviews_proposals_embeddings_templates_baseline_preserved": true, "old_pages_footer_only": 1120, "nonfooter_pages": ["pages/traits/physiology/cell_body_contraction.html", "pages/traits/physiology/rapid_axopodial_contraction.html", "pages/traits/upper/phenotype.html"], "priority_deltas": {"METPO:1000059": {"children": [204, 203]}}, "rdf_triples": {"classes": 35, "merged": 12648, "reasoned": 12652}, "definition_citation": "TraitMech:data/traits/physiology/cellular_contraction.yaml&#124;DOI:10.1242/jeb.189.1.163", "child_axioms": "Both existing children emitted below the new parent with unchanged historical definitions and source annotations.", "label_refinement_only": true, "original_source_receipts_preserved": true} |
+| browser | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Chrome 1440/390 checks and eight inspected screenshots verify the direct qualified label, two parent history entries, child-parent navigation, unchanged evidence and OPEN assay question, dashboard and no overflow/errors. |
+| skill | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | skill-creator quick_validate passed for add-trait; new guidance emits coupled child-parent axioms without rewriting historical cohorts. |
+| whitespace | passed | True | traitmech:000729, traitmech:000728, traitmech:000682 | Canonical 11-column TSV directive has three required empty trailing cells. Non-TSV and exact-path blank-at-eol checks passed; no global exemption or baseline change. |
+
+## Scientific And Domain Assessments
+
+### Observable shortening phenotype
+
+identity: supported. Targets: traitmech:000729.
+
+The qualified label and endpoint distinguish active body/projection shortening from generic contractility, locomotion, molecular machines and static morphology.
+
+### Strictly broader parent
+
+grounding: supported. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+Both child definitions entail the new parent. Phenotype remains their ancestor; no disjoint taxa, process equivalence or common molecular mechanism follows.
+
+### Primary-result scope and source fidelity
+
+evidence: supported. Targets: traitmech:000729.
+
+Three concise primary-result excerpts support shortening. Living cells and extracted preparations, body and head-to-stalk length, natural and slowed responses, and native abstract versus direct PDF verdicts remain distinct. The percentage and calcium observations are not universal.
+
+### Child scope and independent questions
+
+consistency: supported. Targets: traitmech:000728, traitmech:000682.
+
+Only the hierarchy question is resolved; prior rationales, definitions, excerpts and histories remain, and the axopodial assay question is explicitly OPEN.
+
+### Guarded curation and histories
+
+provenance: supported. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+Exact preimages, replay refusal, prevalidation, agent-attributed events and native histories protect the scoped changes.
+
+### Temporal parent state
+
+provenance: supported. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+Explicit pre_change_parent/post_change_parent and plan_scope separate the historical research checklist from written hierarchy. The focused regression checks both child YAMLs; no trait, source quotation, evidence verdict, prior receipt or history was changed.
+
+### Proposal and rendered products
+
+consistency: supported. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+Maintained products agree with the direct label and both emitted child axioms. Original definition/evidence and child records remain unchanged; both historical cohorts are preserved.
+
+### Taxonomic and molecular gaps
+
+completeness: unknown. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+No canonical taxa or proteins are asserted. Isolate identities, mechanisms, exact mappings and comparative assays remain open, not falsely completed by sequence evidence or hierarchy repair.
+
+### v605 does not emit the coupled child subclass axioms
+
+grounding: supported. Targets: traitmech:000729, traitmech:000728, traitmech:000682.
+
+v605 contains one new parent plus the two historical child IDs below 1068200. Parsed classes, merged and reasoned graphs contain both subclass axioms and unchanged child definition/source annotations. v558/v604 bytes remain unchanged.
+
+### Replace the parenthetical gloss with a direct qualified label
+
+identity: supported. Targets: traitmech:000729.
+
+The direct label cell body or cytoplasmic projection contraction retains the endpoint restriction without a parenthetical gloss. Only label and an appended event change the parent YAML; definition, evidence, discussions and prior history are unchanged. Proposal and regenerated views agree.
+
+## Findings
+
+### sidecar-parent-state: Source sidecar presents the pre-change direct parent as current
+
+minor / resolved / confirmed; issue key: cellular-contraction-sidecar-parent-state.
+
+The post-curation sidecar carries child_repair.current_parent=METPO:1000059 from the research plan. The written children instead have direct parent traitmech:000729; phenotype remains an ancestor. Separate historical and applied state so provenance readers do not receive conflicting direct-parent assertions.
+
+Disposition: Explicit pre_change_parent/post_change_parent and plan_scope separate the historical research checklist from written hierarchy. The focused regression checks both child YAMLs; no trait, source quotation, evidence verdict, prior receipt or history was changed.
+
+### proposal-child-axioms: v605 does not emit the coupled child subclass axioms
+
+minor / resolved / confirmed; issue key: cellular-contraction-emitted-child-axioms.
+
+The local hierarchy is repaired, but the one-row v605 template emits neither child axiom. v501 provides a direct precedent for repeating existing child IDs with refined parents without changing historical cohorts. Re-emit 1063500 and 1068100 below 1068200 with unchanged child definitions and evidence annotations.
+
+Disposition: v605 contains one new parent plus the two historical child IDs below 1068200. Parsed classes, merged and reasoned graphs contain both subclass axioms and unchanged child definition/source annotations. v558/v604 bytes remain unchanged.
+
+### label-form: Replace the parenthetical gloss with a direct qualified label
+
+minor / resolved / confirmed; issue key: cellular-contraction-direct-qualified-label.
+
+The external review raises a label-form concern. Uniqueness of parentheses alone does not prove invalid biology or a prohibited format. Adopt the direct noun phrase cell body or cytoplasmic projection contraction while retaining the endpoint qualifier, rather than the suggested unqualified cellular contraction. Definition, identity and evidence are unchanged.
+
+Disposition: The direct label cell body or cytoplasmic projection contraction retains the endpoint restriction without a parenthetical gloss. Only label and an appended event change the parent YAML; definition, evidence, discussions and prior history are unchanged. Proposal and regenerated views agree.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| source-0 | DOI:10.1242/jeb.189.1.163; Scientific abstract, numbered item 3, first clause; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9317557+AND+SRC%3AMED&amp;resultType=core&amp;format=json. Access time records cached-source reread and hash verification, not first acquisition. | supports | Katoh and Naitoh 1994, PMID:9317557, scientific Abstract item 3, first clause. Direct namespace-qualified Europe PMC MED match; native VERIFIED. The same sentence contrasts graded cell-body shrinkage with all-or-nothing stalk coiling. This supports the curator-synthesized body/projection-shortening parent, not a universal calcium threshold. Other abstract items use Triton-extracted preparations, not the living-cell injection assay. Calcium-induced calcium release is an assumption, not direct molecular proof. Publisher requests returned 403; full Methods, figures and strain provenance were not accessed. |
+| source-1 | DOI:10.2108/zsj.20.1367; Scientific abstract, opening sentence; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035+AND+SRC%3AMED&amp;resultType=core&amp;format=json. Access time records cached-source reread and hash verification, not first acquisition. | supports | Khan et al. 2003, PMID:14624035, scientific Abstract opening sentence. Direct namespace-qualified Europe PMC MED match; native VERIFIED. This supports stimulated shortening of a cytoplasmic projection rather than whole-cell locomotion. Reported calcium dependence and speed apply to this assay, not every member of the parent class. Non-detection of other filaments after fixation is not proof of their absence. Full Methods and figures were not accessed; the publisher's HTTP 200 response was an access challenge, not readable article content. Current taxonomic and culture identities remain unresolved. |
+| source-2 | DOI:10.1083/jcb.118.3.585; Results, Kinetics of the Contraction, printed page 588, right column; https://pdfs.semanticscholar.org/20fc/996490bf001a841702e28a552eee5f6e50e7.pdf. Access time records cached-source reread and hash verification, not first acquisition. | supports | Febvre-Chevalier and Febvre 1992, PMID:1639845, PMCID:PMC2289557, Results, Kinetics of the Contraction, printed page 588, right column. Direct extracted-PDF match with the typeset passage visually checked; native NOT_IN_ABSTRACT retained. The primary PDF was retrieved from its Semantic Scholar mirror after official PDF attempts failed. Selected Methods/Results and actual Figures 1 and 3-6 were inspected. Length was measured from head top to stalk base, not isolated cell-body length; graph axes use stalk length. The percentage is study-specific. Natural-seawater responses differ from artificially slowed responses. The specimens were collected near Villefranche and cultured at 14-18 C; current taxonomic identity is not verified. The n=20 initial-length sample is not asserted as independent contraction replication. Microtubule disassembly accompanies shortening, but this study expressly does not establish force production. Its disassembly half-time is not automatically contraction duration. The accessible JATS contains an abstract and PDF pointer, not the complete experimental text. |
+| hierarchy | data/traits/physiology/cellular_contraction.yaml; Complete new record and both child definitions, parent_traits, discussions and histories. | supports | A shortening-defined physiological phenotype, not force production in general, locomotion, a protein sequence, an organelle or assay row. Both child definitions entail this broader endpoint. Their prior rationales/evidence/history remain intact; only the parent component is resolved and axopodial assay comparability remains OPEN. |
+| implementation | scripts/add_cellular_contraction_trait.py; Complete writer, controlled-fixture tests, three append-only histories and skill clarification. | supports | Dry-run default; exact structured preimage hashes and whole-result replay checks; all three records prevalidated before production writes. Source URL qualification preserves scientific excerpts. Every changed trait has a per-record event and native history. No human review promotion; all remain PROPOSED. The separate refinement writer preserves creation preimages, validates before writing, refuses drift, defaults to dry-run and replays without additional events. |
+| novelty | proposals/metpo_traitmech_v605/proposal.md; Identity/allocation section and captured source-sidecar receipts. | supports | The retained bounded identity/allocation assessment distinguishes the new shortening parent from two narrower children, unrelated endpoints and numeric lookalikes. The current v605 template contains one newly allocated parent and repeats two existing child IDs with refined parents. Historical cohorts and the ontology pin remain unchanged; the direct label neither broadens the biological scope nor allocates another identifier. |
+| products | reports/proposal_citation_audit.tsv; Native generated products plus independent preservation, parsed-RDF and browser checks. | supports | Maintained generation agrees with the new parent and two child repairs; only intended scientific owners change. Unrelated page churn is corpus-footer counts, not curation. |
+| sidecar | research/traits/physiology/cellular_contraction-source-verification.json; child_repair.pre_change_parent, post_change_parent and plan_scope; both child YAML parents; regression test. | supports | Explicit pre_change_parent/post_change_parent and plan_scope separate the historical research checklist from written hierarchy. The focused regression checks both child YAMLs; no trait, source quotation, evidence verdict, prior receipt or history was changed. |
+| proposal-child-axioms | proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv; Current owned bytes; external review https://github.com/CultureBotAI/TraitMech/pull/1940#pullrequestreview-5526233346 | supports | v605 contains one new parent plus the two historical child IDs below 1068200. Parsed classes, merged and reasoned graphs contain both subclass axioms and unchanged child definition/source annotations. v558/v604 bytes remain unchanged. |
+| label-form | data/traits/physiology/cellular_contraction.yaml; Current owned bytes; external review https://github.com/CultureBotAI/TraitMech/pull/1940#pullrequestreview-5526233346 | supports | The direct label cell body or cytoplasmic projection contraction retains the endpoint restriction without a parenthetical gloss. Only label and an appended event change the parent YAML; definition, evidence, discussions and prior history are unchanged. Proposal and regenerated views agree. |
+
+## Limits And Additional Notes
+
+- Self-review and PROPOSED curation, not independent review or human sign-off.
+- Complete parent assessment; children only for the coupled changes and preservation, not their entire literature.
+- Katoh and Khan scientific abstracts accessible; full Methods/figures unavailable. Publisher 200 for Khan was an access challenge. Febvre selected printed pages 585/586/588 and actual Figures 1/3-6 inspected; other rendered pages were not treated as viewed. Reread printed 588 during formal review.
+- Febvre native NOT_IN_ABSTRACT remains unchanged despite a verified primary-PDF match. Its total-length endpoint is not isolated body length; microtubule breakdown is not demonstrated force production.
+- Correction/retraction checks cover specific MED/Crossref fields and available sources, not comprehensive clearance.
+- No universal trigger, speed, shortening fraction, calcium threshold, ATP mechanism, ecological role, exact synonym or external equivalence inferred. Protein sequence features alone do not establish the phenotype.
+- Source acquisition and reservation receipts are retained with stable URLs/hashes; temporary raw files are not guaranteed long-term availability. Known-copy searches do not establish exhaustive global discovery.
+- Embedding inputs unavailable; existing embeddings preserved. No paid research used.
+- External reviewer could not access primary full text; original directly inspected source receipts remain the source basis. Its review is not human curator sign-off. The parenthetical-label criticism is treated as a bounded terminology refinement, not a proven prohibition.
+- Historical child discussion notes and original allocation receipts retain the old label/prose-only plan as historical provenance. review_refinements explicitly records the current label and machine-readable template approach.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T011608Z-cellular-contraction-external-resolution
+kind: batch
+repository: CultureBotAI/TraitMech
+title: 'Cellular contraction: external findings resolved'
+started_at: '2026-10-15T00:14:43Z'
+finished_at: '2026-10-15T01:16:08Z'
+reviewer:
+  identity: codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author falsification-oriented pass, not independent or human
+    scientific sign-off. External requests and CI do not change this attribution.
+skill: .claude/skills/add-trait/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'The complete new parent and bounded child repairs remain supported. All
+  three findings are resolved: historical parent-state provenance, emitted child axioms,
+  and direct qualified label. Final validation covers the refined checkpoint; PROPOSED
+  status and source-access limits remain.'
+source:
+  git_revision: 4a42f52dfa66a2a00a2f24434816ca95f54e2e6d
+  state: working_tree
+  inputs:
+  - path: .claude/skills/add-trait/SKILL.md
+    sha256: a9cb4e5e6180e0cd7c62943174af5eb70d558eaa76901b004ac29ca9389f0d90
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/metpo-proposal/SKILL.md
+    sha256: 03f008c011e6f0d45cafb7516a01a3383c0a7e8d11bfc5c9cb31efaeca51275f
+    role: context
+  - path: .claude/skills/metpo-proposal/reference/conventions.md
+    sha256: 8f0fb0093a8fad591148a4a72fcac4be3b44d0a1b5e96be5207ba817d07d6cd0
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: README.md
+    sha256: 84a47d0765c124cbe62105fb2dc4e3d87b32f13948f3b0d60f103e458af24ba2
+    role: context
+  - path: app/dashboard/priority.html
+    sha256: 4a6b6e1e92bacaebb091bcef05fa9462ae0bdc5392bab8f5394e68a350a220c3
+    role: context
+  - path: app/dashboard/priority.json
+    sha256: 5a27f017e8a156bed405f795000d325ff89faef80086c50a9c9b9efc1ba370b0
+    role: context
+  - path: app/discussions/data.js
+    sha256: 105fe27abde073bad4ebfaff5beb20ac83aee5735f7b16ab329d6ce709706ebb
+    role: context
+  - path: app/discussions/index.html
+    sha256: f9c315ab6577de4ac4153205d0edf7237ad1ddce769bdd983997f6d332c7850d
+    role: context
+  - path: app/discussions/theme-toggle.js
+    sha256: 8b34063c7251d55e81f74da73bf8ac872f294bfab96acd7095036c7764af4f72
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: dashboard/coverage.png
+    sha256: 14cb7b04eb072ca6ee0445b3ed971eb41cb149f109e2497f70491072b817bc6a
+    role: context
+  - path: dashboard/index.html
+    sha256: c4b136c3efb22c4d965716492a714a49a2fbc3f0855b70b9aceb0a41b897178b
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/physiology/cell_body_contraction.yaml
+    sha256: 74efcfa3e5e6312569c3f18f667912492bad7c492fb07341914e12fc67275ed9
+    role: target
+  - path: data/traits/physiology/cellular_contraction.yaml
+    sha256: b3cb9d256766266bffbb2f54e59035f01364f2ea3ad0435104051d1bbd22ef42
+    role: target
+  - path: data/traits/physiology/rapid_axopodial_contraction.yaml
+    sha256: 83a7e6a81235b86017f9f1325e404fe976d4e85538ddae125d63905e737f9ebb
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/MERGE_QUEUE.md
+    sha256: d3d88b6cb78d755f92e0f72898e75b70ac076cad110f729693fcb9661d27473e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T173532Z-codex-c9af70.yaml
+    sha256: defd3d917ca15678d1f8a62ebcdd1355b385607ad595729bcf0e9f071eb30038
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T175927Z-codex-09ab48.yaml
+    sha256: c7bf5a1d09f3e269900fe4776134b4ecaec9c9fdf078b1479cc11b6c67de24d6
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T185654Z-codex-d5ad35.yaml
+    sha256: f8a41772bbf07d728e6b99c075741522a069e897a4403d49cb12d3b76ffb44f5
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T190521Z-codex-9d794a.yaml
+    sha256: eb998e1af17a67d234ddcab7d8acfdc82472691a44d7c5a52ecaebd102fa08ac
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T223940Z-codex-c0f579.yaml
+    sha256: 5de1b4c2948160eb6cc77a2af4fae3a2454807ea0084dabb78c7cd731461c7f1
+    role: context
+  - path: history/records/cellular_contraction/2026-10-14T223936Z-codex-5fdb55.yaml
+    sha256: c27d8cca7a482933849be9451b8be9407cebfca08ea5e0822254d2b0c3f76ea2
+    role: context
+  - path: history/records/cellular_contraction/2026-10-15T000059Z-codex-057ea1.yaml
+    sha256: aa455dfb438d7f42f2c6e287d8faadde6eddcc4655906e69c17deb70d3eed6a8
+    role: context
+  - path: history/records/rapid_axopodial_contraction/2026-10-08T145708Z-codex-2f9679.yaml
+    sha256: 3888a98801b3ad44dc19ef29445f8d433af27a82fcf16d1e7470f19d131c031d
+    role: context
+  - path: history/records/rapid_axopodial_contraction/2026-10-14T223943Z-codex-966313.yaml
+    sha256: 410b41709cf405543a4acd60c075e0c4e5ad9c51546474f50bead509a6de01f6
+    role: context
+  - path: justfile
+    sha256: e6047ea612115a6a78d100b281483ba824c860c3def59bcd0d40e7fb56b3526a
+    role: context
+  - path: pages/browse.html
+    sha256: 8c362f8119ef46dea7a0dc42432e35d42ef931a60cf95d39dacd01251e8fe4b6
+    role: context
+  - path: pages/traits/physiology/cell_body_contraction.html
+    sha256: 677ac0021639f6139dbc6d7da5ce7f11164a80e303514db519b4b8fe4de0fe19
+    role: context
+  - path: pages/traits/physiology/cellular_contraction.html
+    sha256: 0639d7cc10364e9281020f4d06c8249a2cf7fe250ad87545d732961acb6fc412
+    role: context
+  - path: pages/traits/physiology/rapid_axopodial_contraction.html
+    sha256: 155485eae83a891c2d7925dbbd2dda0fe464bd8c999cf575e2d1156a52b5393c
+    role: context
+  - path: pages/traits/upper/phenotype.html
+    sha256: 074f32ca6fab2d91328a95cbae9d01f89fa73b13721eeade46ffd473843a9c82
+    role: context
+  - path: proposals/metpo_traitmech_v501/metpo_proposal_classes_robot.tsv
+    sha256: 435ee4d17c2e1a2dfcf94925806ab9cd22b75bdaaa955da2d6b1d01ca93f7bcf
+    role: context
+  - path: proposals/metpo_traitmech_v501/proposal.md
+    sha256: e45d832237f51303d4ce9e0b4293443575ef69bfc63556ddd132bdd2e754caf1
+    role: context
+  - path: proposals/metpo_traitmech_v558/metpo_proposal_classes_robot.tsv
+    sha256: dad8ccb2031b4e7f518efa57ee3094a1137ff60af3fe5de783b0a6d8cd8d5655
+    role: context
+  - path: proposals/metpo_traitmech_v558/proposal.md
+    sha256: 12c05618afe97eb140bf296e529151f37a08a4b727fdfe13b309d141ed01e5de
+    role: context
+  - path: proposals/metpo_traitmech_v604/metpo_proposal_classes_robot.tsv
+    sha256: d6ff228db4e4814e7f789aff4b5958c0681514792e1f14e8c2cf48c5af293d13
+    role: context
+  - path: proposals/metpo_traitmech_v604/proposal.md
+    sha256: b5e96c8ab282fa1d31a87bf7b273a9442c1e7e11636fa6b519aae53332e01e1c
+    role: context
+  - path: proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv
+    sha256: 32cd061487da118a9349366f581f4064486dd0dec771027f4a7eb7f7585c4b25
+    role: context
+  - path: proposals/metpo_traitmech_v605/proposal.md
+    sha256: 2df4d3d587d1fa7db19d74263cf7a13bc4c91e394fc6334d22043008934ec833
+    role: context
+  - path: reports/proposal_citation_audit.tsv
+    sha256: 98275d4165e89a998586c413c87259ef5361398b0f7598a07f0de5e55b7b0707
+    role: context
+  - path: research/traits/physiology/cellular_contraction-source-verification.json
+    sha256: ea5fadc6f21f4cca523da77ff44fa31e8d9d1867f8c68b2e649c6762d5a46e32
+    role: context
+  - path: reviews/structured/20261014T230107Z-cellular-contraction-initial/review.md
+    sha256: 817ed1090cf298ae3683bda20a191ac71b343a16ee30d01eb7d62515154c825d
+    role: context
+  - path: reviews/structured/20261014T230107Z-cellular-contraction-initial/review.yaml
+    sha256: ec623b0c94999d90d69e70160dad6a006fe248c6e385faed7cefb18058c8d2a2
+    role: context
+  - path: reviews/structured/20261014T232219Z-cellular-contraction-resolution/review.md
+    sha256: 7c5da4c0ad8c4f6dfe81b9cee1fb4796eb0b72bf5b452d0d93d3deeb500c8387
+    role: context
+  - path: reviews/structured/20261014T232219Z-cellular-contraction-resolution/review.yaml
+    sha256: c30d04891861b441c5d83297ec1d6c32e9af1a54d98c58ea95b5b1d11aed173e
+    role: context
+  - path: reviews/structured/20261014T235735Z-cellular-contraction-external-findings/review.md
+    sha256: 09e89b469be0a7b41a34daf208287604aa217d50953747166c0566fd77b9ba32
+    role: context
+  - path: reviews/structured/20261014T235735Z-cellular-contraction-external-findings/review.yaml
+    sha256: d8fe8d2998df36ff1368586ee69a87c85de63369436c864e716344da6509deca
+    role: context
+  - path: scripts/add_cellular_contraction_trait.py
+    sha256: e924e40ae9145b59f7e6ec4a43c337ff64cf118c0b6f621abb83c4ceb98be5ee
+    role: context
+  - path: scripts/refine_cellular_contraction_proposal.py
+    sha256: fbb44f299bc654bfeaa6c01a17a3bc6d7505f732a828c5b195a591c10945f07b
+    role: context
+  - path: scripts/verify_snippets.py
+    sha256: e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc
+    role: context
+  - path: src/traitmech/curate/curation_event.py
+    sha256: d9b3e70539bbf13f9130544e18ed7664ff2c3b7c60bcc2cae5185663fe25badd
+    role: context
+  - path: src/traitmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+  - path: tests/test_add_axopodial_contraction_trait.py
+    sha256: a5fabdbd5b528f183a9cd3c2532e6f9c70d75937f1baeb0899bdaa9c797b29ae
+    role: context
+  - path: tests/test_add_cell_body_contraction_trait.py
+    sha256: 6bc91e9fdb3db3d758ef7095a8e666d78c3d8157a0ba3dadac0cc2ec7539466b
+    role: context
+  - path: tests/test_add_cellular_contraction_trait.py
+    sha256: c1033b542bd17f14ce7663a2af2de674613b7778798c3c9d3699df241e6e949c
+    role: context
+  - path: tests/test_refine_cellular_contraction_proposal.py
+    sha256: 60ea993ea1c68b544a16b3abfc558046e0a10d027967a63206caa3e7395fbf66
+    role: context
+targets:
+- target_id: traitmech:000729
+  path: data/traits/physiology/cellular_contraction.yaml
+  label: cell body or cytoplasmic projection contraction
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/cellular_contraction.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_cellular_contraction_trait.py
+    role: guarded_writer
+  - repository: CultureBotAI/TraitMech
+    path: scripts/refine_cellular_contraction_proposal.py
+    role: guarded refinement writer
+- target_id: traitmech:000728
+  path: data/traits/physiology/cell_body_contraction.yaml
+  label: cell-body contraction
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/cell_body_contraction.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_cellular_contraction_trait.py
+    role: guarded_writer
+- target_id: traitmech:000682
+  path: data/traits/physiology/rapid_axopodial_contraction.yaml
+  label: rapid axopodial contraction
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/rapid_axopodial_contraction.yaml
+    role: curated_record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_cellular_contraction_trait.py
+    role: guarded_writer
+scope:
+  description: Complete new parent and bounded hierarchy/discussion/source-URL/history
+    changes to two children, including evidence sidecar, guarded writer/tests, skill,
+    proposal and generated surfaces.
+  selection: Exact three trait IDs on the cellular-contraction branch; no sampling.
+  coverage: partial
+  population_size: 3
+  reviewed_target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  exclusions:
+  - target: Unchanged child scientific claims
+    reason: Read for hierarchy and preservation; not a fresh complete source/figure
+      audit of both children.
+  - target: Other 1121 TraitRecords
+    reason: Automated checks and preservation comparisons, not scientific adjudication.
+  - target: data/traits/physiology/spore_germination.yaml
+    reason: Protected by DO_NOT_WORK; byte-preserved and not curated.
+checks:
+- check_id: write-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: write-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: write-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py --apply
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/refine_cellular_contraction_proposal.py --apply
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: history-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug cellular_contraction --target-root
+    data/traits/physiology --event EDIT --outcome changed --sections identity --summary
+    'Refine contraction label and emit proposed child hierarchy' --details 'Address
+    external PR 1940 review issues 1941 and 1942. Replace the parenthetical label
+    with cell body or cytoplasmic projection contraction while preserving definition,
+    scope, evidence, discussions, identifier and prior history. Re-emit historical
+    child IDs 1063500 and 1068100 below 1068200 in v605, preserving their original
+    definition annotations and all v558/v604 bytes. Child TraitRecords are unchanged
+    by this follow-up; their original coupled hierarchy events remain. No new biological
+    claim or human review promotion.' --actor-name codex --model GPT-5 --agent-tool
+    Codex
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/new_history_record.py --kind record --slug cellular_contraction --target-root
+    data/traits/physiology --event EDIT --outcome changed --sections identity --summary
+    'Refine contraction label and emit proposed child hierarchy' --details 'Address
+    external PR 1940 review issues 1941 and 1942. Replace the parenthetical label
+    with cell body or cytoplasmic projection contraction while preserving definition,
+    scope, evidence, discussions, identifier and prior history. Re-emit historical
+    child IDs 1063500 and 1068100 below 1068200 in v605, preserving their original
+    definition annotations and all v558/v604 bytes. Child TraitRecords are unchanged
+    by this follow-up; their original coupled hierarchy events remain. No new biological
+    claim or human review promotion.' --actor-name codex --model GPT-5 --agent-tool
+    Codex
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cellular_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cellular_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/cellular_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/cellular_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-2
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/cellular_contraction
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/cellular_contraction
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-3
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/cellular_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cellular_contraction-native.tsv
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/cellular_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cellular_contraction-native.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-4
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cell_body_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/cell_body_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-5
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/cell_body_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/cell_body_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-6
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/cell_body_contraction
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/cell_body_contraction
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-7
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/cell_body_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cell_body_contraction-native.tsv
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/cell_body_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/cell_body_contraction-native.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-8
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/rapid_axopodial_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/linkml-validate
+    -s src/traitmech/schema/traitmech.yaml --target-class TraitRecord data/traits/physiology/rapid_axopodial_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-9
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/rapid_axopodial_contraction.yaml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_strict.py data/traits/physiology/rapid_axopodial_contraction.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-10
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/rapid_axopodial_contraction
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/validate_history_links.py history/records/rapid_axopodial_contraction
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: records-11
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/rapid_axopodial_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/rapid_axopodial_contraction-native.tsv
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/verify_snippets.py --record data/traits/physiology/rapid_axopodial_contraction.yaml
+    --out /tmp/traitmech-cellular-contraction-external-fix-checks-20261014/rapid_axopodial_contraction-native.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: proposal-0
+  name: just verify-proposal metpo_traitmech_v605
+  command: just verify-proposal metpo_traitmech_v605
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: proposal-1
+  name: just robot-validate-proposal metpo_traitmech_v605
+  command: just robot-validate-proposal metpo_traitmech_v605
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-0
+  name: just audit-proposals
+  command: just audit-proposals
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-1
+  name: just ground-predicates
+  command: just ground-predicates
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-2
+  name: just ground-nodes
+  command: just ground-nodes
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-3
+  name: just audit-graphs
+  command: just audit-graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-4
+  name: just audit-graph-protein-taxa
+  command: just audit-graph-protein-taxa
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-5
+  name: just audit-predicate-domains
+  command: just audit-predicate-domains
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-6
+  name: just check-biolink-coverage
+  command: just check-biolink-coverage
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-7
+  name: just audit-snippets
+  command: just audit-snippets
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-8
+  name: just gen-discussions-data
+  command: just gen-discussions-data
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-9
+  name: just gen-qc-dashboard
+  command: just gen-qc-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-10
+  name: just gen-pages
+  command: just gen-pages
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: generate-11
+  name: just gen-priority-dashboard
+  command: just gen-priority-dashboard
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: focused-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_refine_cellular_contraction_proposal.py tests/test_add_cellular_contraction_trait.py
+    tests/test_add_axopodial_contraction_trait.py tests/test_add_cell_body_contraction_trait.py
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q tests/test_refine_cellular_contraction_proposal.py tests/test_add_cellular_contraction_trait.py
+    tests/test_add_axopodial_contraction_trait.py tests/test_add_cell_body_contraction_trait.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: focused-1
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/ruff
+    check src scripts tests
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-0
+  name: just qc
+  command: just qc
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-1
+  name: just validate-history
+  command: just validate-history
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-2
+  name: just validate-products
+  command: just validate-products
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-3
+  name: just verify-proposal metpo_traitmech_v605
+  command: just verify-proposal metpo_traitmech_v605
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-4
+  name: just robot-validate-proposal metpo_traitmech_v605
+  command: just robot-validate-proposal metpo_traitmech_v605
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-5
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_canonical_examples.py --no-resolve
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_canonical_examples.py --no-resolve
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-6
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/run_trait_graph_audit.py --verify
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/run_trait_graph_audit.py --verify
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: verify-7
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base ab8be94cd147cc60bf7c5d3795abef1b3171e91a
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    scripts/audit_history_records.py --base ab8be94cd147cc60bf7c5d3795abef1b3171e91a
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: tests-0
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q --junitxml=/tmp/traitmech-cellular-contraction-external-fix-checks-20261014/pytest.xml
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python
+    -m pytest -q --junitxml=/tmp/traitmech-cellular-contraction-external-fix-checks-20261014/pytest.xml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Completed on the refined content; command arguments define the validation
+    scope. Product adapter skips remain skips, not authority validation.
+- check_id: full-suite
+  name: full-suite
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: 4731 tests passed on the refined checkpoint, zero failures/errors/skips.
+- check_id: product-integrity
+  name: product-integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: '{"base": "ab8be94cd147cc60bf7c5d3795abef1b3171e91a", "records": 1124,
+    "prior_records_byte_preserved": 1121, "repaired_children_preserve_definitions_snippets_and_prior_history":
+    true, "independent_axopodial_assay_question_open": true, "protected_record_unchanged":
+    true, "prior_history_reviews_proposals_embeddings_templates_baseline_preserved":
+    true, "old_pages_footer_only": 1120, "nonfooter_pages": ["pages/traits/physiology/cell_body_contraction.html",
+    "pages/traits/physiology/rapid_axopodial_contraction.html", "pages/traits/upper/phenotype.html"],
+    "priority_deltas": {"METPO:1000059": {"children": [204, 203]}}, "rdf_triples":
+    {"classes": 35, "merged": 12648, "reasoned": 12652}, "definition_citation": "TraitMech:data/traits/physiology/cellular_contraction.yaml|DOI:10.1242/jeb.189.1.163",
+    "child_axioms": "Both existing children emitted below the new parent with unchanged
+    historical definitions and source annotations.", "label_refinement_only": true,
+    "original_source_receipts_preserved": true}'
+- check_id: browser
+  name: browser
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Chrome 1440/390 checks and eight inspected screenshots verify the direct
+    qualified label, two parent history entries, child-parent navigation, unchanged
+    evidence and OPEN assay question, dashboard and no overflow/errors.
+- check_id: skill
+  name: skill
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: skill-creator quick_validate passed for add-trait; new guidance emits coupled
+    child-parent axioms without rewriting historical cohorts.
+- check_id: whitespace
+  name: whitespace
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  summary: Canonical 11-column TSV directive has three required empty trailing cells.
+    Non-TSV and exact-path blank-at-eol checks passed; no global exemption or baseline
+    change.
+evidence:
+- evidence_id: source-0
+  kind: primary_source
+  reference: DOI:10.1242/jeb.189.1.163
+  locator: Scientific abstract, numbered item 3, first clause; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9317557+AND+SRC%3AMED&resultType=core&format=json.
+    Access time records cached-source reread and hash verification, not first acquisition.
+  accessed_at: '2026-10-14T23:22:19Z'
+  support: supports
+  snapshot_sha256: e0ca327e3218fec881bbed883eea7c892e2858131c01382e12f7f936e0d445b4
+  summary: Katoh and Naitoh 1994, PMID:9317557, scientific Abstract item 3, first
+    clause. Direct namespace-qualified Europe PMC MED match; native VERIFIED. The
+    same sentence contrasts graded cell-body shrinkage with all-or-nothing stalk coiling.
+    This supports the curator-synthesized body/projection-shortening parent, not a
+    universal calcium threshold. Other abstract items use Triton-extracted preparations,
+    not the living-cell injection assay. Calcium-induced calcium release is an assumption,
+    not direct molecular proof. Publisher requests returned 403; full Methods, figures
+    and strain provenance were not accessed.
+- evidence_id: source-1
+  kind: primary_source
+  reference: DOI:10.2108/zsj.20.1367
+  locator: Scientific abstract, opening sentence; https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035+AND+SRC%3AMED&resultType=core&format=json.
+    Access time records cached-source reread and hash verification, not first acquisition.
+  accessed_at: '2026-10-14T23:22:19Z'
+  support: supports
+  snapshot_sha256: ceac41c64cf671b769bc3d43666fbae0c2057ba177efbf899a2622c1c2bd1e90
+  summary: Khan et al. 2003, PMID:14624035, scientific Abstract opening sentence.
+    Direct namespace-qualified Europe PMC MED match; native VERIFIED. This supports
+    stimulated shortening of a cytoplasmic projection rather than whole-cell locomotion.
+    Reported calcium dependence and speed apply to this assay, not every member of
+    the parent class. Non-detection of other filaments after fixation is not proof
+    of their absence. Full Methods and figures were not accessed; the publisher's
+    HTTP 200 response was an access challenge, not readable article content. Current
+    taxonomic and culture identities remain unresolved.
+- evidence_id: source-2
+  kind: primary_source
+  reference: DOI:10.1083/jcb.118.3.585
+  locator: Results, Kinetics of the Contraction, printed page 588, right column; https://pdfs.semanticscholar.org/20fc/996490bf001a841702e28a552eee5f6e50e7.pdf.
+    Access time records cached-source reread and hash verification, not first acquisition.
+  accessed_at: '2026-10-14T23:22:19Z'
+  support: supports
+  snapshot_sha256: 40e9c083574fa7f845ac304286c40116e135881485508d70214ed5b28746fda1
+  summary: Febvre-Chevalier and Febvre 1992, PMID:1639845, PMCID:PMC2289557, Results,
+    Kinetics of the Contraction, printed page 588, right column. Direct extracted-PDF
+    match with the typeset passage visually checked; native NOT_IN_ABSTRACT retained.
+    The primary PDF was retrieved from its Semantic Scholar mirror after official
+    PDF attempts failed. Selected Methods/Results and actual Figures 1 and 3-6 were
+    inspected. Length was measured from head top to stalk base, not isolated cell-body
+    length; graph axes use stalk length. The percentage is study-specific. Natural-seawater
+    responses differ from artificially slowed responses. The specimens were collected
+    near Villefranche and cultured at 14-18 C; current taxonomic identity is not verified.
+    The n=20 initial-length sample is not asserted as independent contraction replication.
+    Microtubule disassembly accompanies shortening, but this study expressly does
+    not establish force production. Its disassembly half-time is not automatically
+    contraction duration. The accessible JATS contains an abstract and PDF pointer,
+    not the complete experimental text.
+- evidence_id: hierarchy
+  kind: record_content
+  reference: data/traits/physiology/cellular_contraction.yaml
+  locator: Complete new record and both child definitions, parent_traits, discussions
+    and histories.
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: b3cb9d256766266bffbb2f54e59035f01364f2ea3ad0435104051d1bbd22ef42
+  summary: A shortening-defined physiological phenotype, not force production in general,
+    locomotion, a protein sequence, an organelle or assay row. Both child definitions
+    entail this broader endpoint. Their prior rationales/evidence/history remain intact;
+    only the parent component is resolved and axopodial assay comparability remains
+    OPEN.
+- evidence_id: implementation
+  kind: record_content
+  reference: scripts/add_cellular_contraction_trait.py
+  locator: Complete writer, controlled-fixture tests, three append-only histories
+    and skill clarification.
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: e924e40ae9145b59f7e6ec4a43c337ff64cf118c0b6f621abb83c4ceb98be5ee
+  summary: Dry-run default; exact structured preimage hashes and whole-result replay
+    checks; all three records prevalidated before production writes. Source URL qualification
+    preserves scientific excerpts. Every changed trait has a per-record event and
+    native history. No human review promotion; all remain PROPOSED. The separate refinement
+    writer preserves creation preimages, validates before writing, refuses drift,
+    defaults to dry-run and replays without additional events.
+- evidence_id: novelty
+  kind: search
+  reference: proposals/metpo_traitmech_v605/proposal.md
+  locator: Identity/allocation section and captured source-sidecar receipts.
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: 2df4d3d587d1fa7db19d74263cf7a13bc4c91e394fc6334d22043008934ec833
+  summary: The retained bounded identity/allocation assessment distinguishes the new
+    shortening parent from two narrower children, unrelated endpoints and numeric
+    lookalikes. The current v605 template contains one newly allocated parent and
+    repeats two existing child IDs with refined parents. Historical cohorts and the
+    ontology pin remain unchanged; the direct label neither broadens the biological
+    scope nor allocates another identifier.
+  search_scope: Ignored/hidden current files in 199 known locations; 149 retained
+    heads; all changed nonremoved blobs in 13 open/draft PRs plus 587 selected upstream
+    owners. Original 1722 lexical variants assessed at maintained-owner level; added
+    bare-contraction matches checked. Full-content ranges include 52939 owner contexts
+    and 2637 unique contents. Not a whole-host crawl, archive/symlink reconstruction,
+    unchanged-PR-tree audit or literature exhaustion. Earlier catalogue guard failure
+    remains documented and was superseded by a fresh stable acceptance scan.
+- evidence_id: products
+  kind: validation
+  reference: reports/proposal_citation_audit.tsv
+  locator: Native generated products plus independent preservation, parsed-RDF and
+    browser checks.
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: 98275d4165e89a998586c413c87259ef5361398b0f7598a07f0de5e55b7b0707
+  summary: Maintained generation agrees with the new parent and two child repairs;
+    only intended scientific owners change. Unrelated page churn is corpus-footer
+    counts, not curation.
+- evidence_id: sidecar
+  kind: record_content
+  reference: research/traits/physiology/cellular_contraction-source-verification.json
+  locator: child_repair.pre_change_parent, post_change_parent and plan_scope; both
+    child YAML parents; regression test.
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: ea5fadc6f21f4cca523da77ff44fa31e8d9d1867f8c68b2e649c6762d5a46e32
+  summary: Explicit pre_change_parent/post_change_parent and plan_scope separate the
+    historical research checklist from written hierarchy. The focused regression checks
+    both child YAMLs; no trait, source quotation, evidence verdict, prior receipt
+    or history was changed.
+- evidence_id: proposal-child-axioms
+  kind: record_content
+  reference: proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv
+  locator: Current owned bytes; external review https://github.com/CultureBotAI/TraitMech/pull/1940#pullrequestreview-5526233346
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: 32cd061487da118a9349366f581f4064486dd0dec771027f4a7eb7f7585c4b25
+  summary: v605 contains one new parent plus the two historical child IDs below 1068200.
+    Parsed classes, merged and reasoned graphs contain both subclass axioms and unchanged
+    child definition/source annotations. v558/v604 bytes remain unchanged.
+- evidence_id: label-form
+  kind: record_content
+  reference: data/traits/physiology/cellular_contraction.yaml
+  locator: Current owned bytes; external review https://github.com/CultureBotAI/TraitMech/pull/1940#pullrequestreview-5526233346
+  accessed_at: '2026-10-15T01:16:08Z'
+  support: supports
+  snapshot_sha256: b3cb9d256766266bffbb2f54e59035f01364f2ea3ad0435104051d1bbd22ef42
+  summary: The direct label cell body or cytoplasmic projection contraction retains
+    the endpoint restriction without a parenthetical gloss. Only label and an appended
+    event change the parent YAML; definition, evidence, discussions and prior history
+    are unchanged. Proposal and regenerated views agree.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Observable shortening phenotype
+  summary: The qualified label and endpoint distinguish active body/projection shortening
+    from generic contractility, locomotion, molecular machines and static morphology.
+  target_ids:
+  - traitmech:000729
+  evidence_ids:
+  - hierarchy
+  - source-0
+  - source-1
+  - novelty
+  outcome: supported
+- assessment_id: hierarchy
+  area: grounding
+  topic: Strictly broader parent
+  summary: Both child definitions entail the new parent. Phenotype remains their ancestor;
+    no disjoint taxa, process equivalence or common molecular mechanism follows.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - hierarchy
+  - source-0
+  - source-1
+  outcome: supported
+- assessment_id: sources
+  area: evidence
+  topic: Primary-result scope and source fidelity
+  summary: Three concise primary-result excerpts support shortening. Living cells
+    and extracted preparations, body and head-to-stalk length, natural and slowed
+    responses, and native abstract versus direct PDF verdicts remain distinct. The
+    percentage and calcium observations are not universal.
+  target_ids:
+  - traitmech:000729
+  evidence_ids:
+  - source-0
+  - source-1
+  - source-2
+  outcome: supported
+- assessment_id: preservation
+  area: consistency
+  topic: Child scope and independent questions
+  summary: Only the hierarchy question is resolved; prior rationales, definitions,
+    excerpts and histories remain, and the axopodial assay question is explicitly
+    OPEN.
+  target_ids:
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - hierarchy
+  - products
+  outcome: supported
+- assessment_id: mutation
+  area: provenance
+  topic: Guarded curation and histories
+  summary: Exact preimages, replay refusal, prevalidation, agent-attributed events
+    and native histories protect the scoped changes.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - implementation
+  outcome: supported
+- assessment_id: sidecar
+  area: provenance
+  topic: Temporal parent state
+  summary: Explicit pre_change_parent/post_change_parent and plan_scope separate the
+    historical research checklist from written hierarchy. The focused regression checks
+    both child YAMLs; no trait, source quotation, evidence verdict, prior receipt
+    or history was changed.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - sidecar
+  - hierarchy
+  outcome: supported
+- assessment_id: products
+  area: consistency
+  topic: Proposal and rendered products
+  summary: Maintained products agree with the direct label and both emitted child
+    axioms. Original definition/evidence and child records remain unchanged; both
+    historical cohorts are preserved.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - products
+  - novelty
+  outcome: supported
+- assessment_id: limits
+  area: completeness
+  topic: Taxonomic and molecular gaps
+  summary: No canonical taxa or proteins are asserted. Isolate identities, mechanisms,
+    exact mappings and comparative assays remain open, not falsely completed by sequence
+    evidence or hierarchy repair.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - hierarchy
+  - source-0
+  - source-1
+  - source-2
+  outcome: unknown
+- assessment_id: proposal-child-axioms
+  area: grounding
+  topic: v605 does not emit the coupled child subclass axioms
+  summary: v605 contains one new parent plus the two historical child IDs below 1068200.
+    Parsed classes, merged and reasoned graphs contain both subclass axioms and unchanged
+    child definition/source annotations. v558/v604 bytes remain unchanged.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  evidence_ids:
+  - proposal-child-axioms
+  outcome: supported
+- assessment_id: label-form
+  area: identity
+  topic: Replace the parenthetical gloss with a direct qualified label
+  summary: The direct label cell body or cytoplasmic projection contraction retains
+    the endpoint restriction without a parenthetical gloss. Only label and an appended
+    event change the parent YAML; definition, evidence, discussions and prior history
+    are unchanged. Proposal and regenerated views agree.
+  target_ids:
+  - traitmech:000729
+  evidence_ids:
+  - label-form
+  outcome: supported
+findings:
+- finding_id: sidecar-parent-state
+  issue_key: cellular-contraction-sidecar-parent-state
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Source sidecar presents the pre-change direct parent as current
+  description: The post-curation sidecar carries child_repair.current_parent=METPO:1000059
+    from the research plan. The written children instead have direct parent traitmech:000729;
+    phenotype remains an ancestor. Separate historical and applied state so provenance
+    readers do not receive conflicting direct-parent assertions.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  field_paths:
+  - child_repair.current_parent
+  evidence_ids:
+  - sidecar
+  - hierarchy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: research/traits/physiology/cellular_contraction-source-verification.json
+    role: maintained evidence provenance
+  - repository: CultureBotAI/TraitMech
+    path: tests/test_add_cellular_contraction_trait.py
+    role: regression assertions
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1939
+  disposition_reason: Explicit pre_change_parent/post_change_parent and plan_scope
+    separate the historical research checklist from written hierarchy. The focused
+    regression checks both child YAMLs; no trait, source quotation, evidence verdict,
+    prior receipt or history was changed.
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261014T230107Z-cellular-contraction-initial
+    finding_id: sidecar-parent-state
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261014T232219Z-cellular-contraction-resolution
+    finding_id: sidecar-parent-state
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261014T235735Z-cellular-contraction-external-findings
+    finding_id: sidecar-parent-state
+- finding_id: proposal-child-axioms
+  issue_key: cellular-contraction-emitted-child-axioms
+  category: grounding
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: v605 does not emit the coupled child subclass axioms
+  description: The local hierarchy is repaired, but the one-row v605 template emits
+    neither child axiom. v501 provides a direct precedent for repeating existing child
+    IDs with refined parents without changing historical cohorts. Re-emit 1063500
+    and 1068100 below 1068200 with unchanged child definitions and evidence annotations.
+  target_ids:
+  - traitmech:000729
+  - traitmech:000728
+  - traitmech:000682
+  field_paths:
+  - parent
+  evidence_ids:
+  - proposal-child-axioms
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv
+    role: maintained curation owner
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1941
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261014T235735Z-cellular-contraction-external-findings
+    finding_id: proposal-child-axioms
+  disposition_reason: v605 contains one new parent plus the two historical child IDs
+    below 1068200. Parsed classes, merged and reasoned graphs contain both subclass
+    axioms and unchanged child definition/source annotations. v558/v604 bytes remain
+    unchanged.
+- finding_id: label-form
+  issue_key: cellular-contraction-direct-qualified-label
+  category: identity
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Replace the parenthetical gloss with a direct qualified label
+  description: The external review raises a label-form concern. Uniqueness of parentheses
+    alone does not prove invalid biology or a prohibited format. Adopt the direct
+    noun phrase cell body or cytoplasmic projection contraction while retaining the
+    endpoint qualifier, rather than the suggested unqualified cellular contraction.
+    Definition, identity and evidence are unchanged.
+  target_ids:
+  - traitmech:000729
+  field_paths:
+  - label
+  evidence_ids:
+  - label-form
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/cellular_contraction.yaml
+    role: maintained curation owner
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1942
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261014T235735Z-cellular-contraction-external-findings
+    finding_id: label-form
+  disposition_reason: The direct label cell body or cytoplasmic projection contraction
+    retains the endpoint restriction without a parenthetical gloss. Only label and
+    an appended event change the parent YAML; definition, evidence, discussions and
+    prior history are unchanged. Proposal and regenerated views agree.
+actions: []
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261014T235735Z-cellular-contraction-external-findings
+  relationship: Successor resolving both external findings while retaining all original
+    targets and the resolved sidecar finding. All earlier bundles remain immutable.
+limitations:
+- Self-review and PROPOSED curation, not independent review or human sign-off.
+- Complete parent assessment; children only for the coupled changes and preservation,
+  not their entire literature.
+- Katoh and Khan scientific abstracts accessible; full Methods/figures unavailable.
+  Publisher 200 for Khan was an access challenge. Febvre selected printed pages 585/586/588
+  and actual Figures 1/3-6 inspected; other rendered pages were not treated as viewed.
+  Reread printed 588 during formal review.
+- Febvre native NOT_IN_ABSTRACT remains unchanged despite a verified primary-PDF match.
+  Its total-length endpoint is not isolated body length; microtubule breakdown is
+  not demonstrated force production.
+- Correction/retraction checks cover specific MED/Crossref fields and available sources,
+  not comprehensive clearance.
+- No universal trigger, speed, shortening fraction, calcium threshold, ATP mechanism,
+  ecological role, exact synonym or external equivalence inferred. Protein sequence
+  features alone do not establish the phenotype.
+- Source acquisition and reservation receipts are retained with stable URLs/hashes;
+  temporary raw files are not guaranteed long-term availability. Known-copy searches
+  do not establish exhaustive global discovery.
+- Embedding inputs unavailable; existing embeddings preserved. No paid research used.
+- External reviewer could not access primary full text; original directly inspected
+  source receipts remain the source basis. Its review is not human curator sign-off.
+  The parenthetical-label criticism is treated as a bounded terminology refinement,
+  not a proven prohibition.
+- Historical child discussion notes and original allocation receipts retain the old
+  label/prose-only plan as historical provenance. review_refinements explicitly records
+  the current label and machine-readable template approach.
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/1939
+- https://github.com/CultureBotAI/TraitMech/pull/1940#pullrequestreview-5526233346
+- https://github.com/CultureBotAI/TraitMech/issues/1941
+- https://github.com/CultureBotAI/TraitMech/issues/1942
+tags:
+- add-trait
+- cellular-contraction
+- self-review
+```

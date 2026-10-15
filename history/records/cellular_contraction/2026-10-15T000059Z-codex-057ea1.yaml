@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_contraction.yaml
+  slug: cellular_contraction
+session:
+  id: 2026-10-15T000059Z-codex-057ea1
+  timestamp: '2026-10-15T00:00:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Refine contraction label and emit proposed child hierarchy
+  details: Address external PR 1940 review issues 1941 and 1942. Replace the parenthetical
+    label with cell body or cytoplasmic projection contraction while preserving definition,
+    scope, evidence, discussions, identifier and prior history. Re-emit historical child IDs
+    1063500 and 1068100 below 1068200 in v605, preserving their original definition annotations
+    and all v558/v604 bytes. Child TraitRecords are unchanged by this follow-up; their original
+    coupled hierarchy events remain. No new biological claim or human review promotion.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cell_body_contraction.yaml
+  slug: cell_body_contraction
+session:
+  id: 2026-10-14T223940Z-codex-c0f579
+  timestamp: '2026-10-14T22:39:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Refine cellular contraction hierarchy
+  details: Refined the direct parent to cellular contraction traitmech:000729 and resolved
+    the parent-gap discussion by definition-based inference. Preserved the child definition,
+    all supporting evidence and previous curation history, the historical discussion rationale,
+    and independent METPO/provenance/mechanism questions. v604 remains a historical cohort;
+    v605 requests the additional upstream child axiom. No new experiment or universal protein
+    mechanism is asserted.

@@ -7,13 +7,13 @@ trait_category: PHYSIOLOGY
 term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
-- METPO:1000059
+- traitmech:000729
 evidence:
 - reference: DOI:10.2108/zsj.20.1367
   snippet: Axopodial contraction of the centrohelid heliozoon Raphidiophrys contractilis
     was induced by mechanical or electrical stimulation.
   notes: Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC
-    for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:14624035&resultType=core&format=json.
+    for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035%20AND%20SRC%3AMED&resultType=core&format=json.
     Abstract-only access; full Methods and figures were not inspected. The study reports
     contraction faster than 3.0 mm/sec, followed by re-elongation initially about
     0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium
@@ -36,7 +36,7 @@ discussions:
 - discussion_id: axopodial-contraction-scope-and-parent
   prompt: Resolve a closer cellular-contractility parent and assay boundaries.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: Phenotype METPO:1000059 is a broad parent. Existing motile METPO:1000702
     is curated around organismal locomotion; rapid shortening of a cellular projection
     does not alone establish whole-cell locomotion. Keep axopodial contraction separate
@@ -47,6 +47,15 @@ discussions:
     comparable time-resolved assays remain open.
   posed_by: codex
   posed_date: '2026-10-08'
+  resolved_date: '2026-10-14'
+  resolution_note: Added cellular contraction (body or cytoplasmic projection shortening)
+    traitmech:000729 as the direct broader phenotype. This is a definition-based subclass
+    inference, not a new child experiment or evidence of a common molecular mechanism.
+    Phenotype METPO:1000059 remains an ancestor. Preserved the historical rationale
+    and endpoint boundaries; the v605 proposal requests the child axiom without rewriting
+    the historical proposal cohort. Only the hierarchy question is resolved here.
+    The independent time-resolved assay question is retained OPEN in axopodial-contraction-assay-comparability;
+    provenance and mechanism remain OPEN.
 - discussion_id: axopodial-contraction-provenance-and-mechanism
   prompt: Resolve culture provenance and taxon-specific contraction mechanisms.
   kind: KNOWLEDGE_GAP
@@ -61,6 +70,19 @@ discussions:
     not claimed absent; tubulin sequence features alone do not establish this response.
   posed_by: codex
   posed_date: '2026-10-08'
+- discussion_id: axopodial-contraction-assay-comparability
+  prompt: Establish comparable time-resolved assays for rapid axopodial contraction.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Carried forward from axopodial-contraction-scope-and-parent when only
+    its hierarchy gap was resolved. Preserve stimulus, cell state, projection identity,
+    length readout and temporal resolution when comparing assays. The published speed
+    is not a universal cutoff; re-elongation, slow structural loss and drug-induced
+    microtubule disassembly alone do not establish the rapid physiological response.
+    No new comparative assay or biological experiment was performed by this hierarchy
+    repair.
+  posed_by: codex
+  posed_date: '2026-10-14'
 curation_history:
 - timestamp: '2026-10-08T14:52:39Z'
   curator: codex
@@ -71,4 +93,14 @@ curation_history:
     closer hierarchy and protein mechanism unresolved. Distinguished rapid response
     from locomotion and induced structural breakdown. Existing records unchanged.
     Timestamp is observed UTC.
+  llm_assisted: true
+- timestamp: '2026-10-14T22:35:09Z'
+  curator: codex
+  action: REFINE_CELLULAR_CONTRACTION_PARENT
+  changes: Refined the direct parent to cellular contraction traitmech:000729 by definition-based
+    inference. Preserved child definition, supporting excerpts, prior curation history
+    and independent provenance/mechanism gaps. Resolved only the parent question.
+    No new experiment, canonical taxon or molecular mechanism is asserted. Retained
+    the independent assay-comparability question OPEN and qualified the Khan Europe
+    PMC URL to SRC:MED using the verified identity.
   llm_assisted: true
