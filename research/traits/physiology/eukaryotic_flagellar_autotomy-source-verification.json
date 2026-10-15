@@ -1,0 +1,188 @@
+{
+  "trait_id": "traitmech:000731",
+  "accepted_at": "2026-10-15T07:50:51Z",
+  "compiled_at": "2026-10-15T08:04:35.201141+00:00",
+  "status": "Author evidence assessment; not independent review or human sign-off.",
+  "prepublication_remote_reassessment": {
+    "guard_at": "2026-10-15T08:09:24.485875+00:00",
+    "changed_input": "CultureBotAI/CommunityMech#2013",
+    "head": "a1c66812a65bf25bd694d0b8c07bc49303c47da1",
+    "nonremoved_files_checked": 88,
+    "biological_or_exact_token_hits": 0,
+    "overlapping_ranges": 0,
+    "binary_limits": [],
+    "title_body_hits": 0,
+    "interpretation": "Only this PR changed in the guard. All 88 current changed-file blobs and updated title/body were rechecked at the stable revised head; other immutable inputs retain their prior assessments. Not an atomic reservation."
+  },
+  "post_restoration_native_verification": {
+    "completed_at": "2026-10-15T08:03:38.528756+00:00",
+    "command": "scripts/verify_snippets.py --record data/traits/physiology/eukaryotic_flagellar_autotomy.yaml",
+    "exit": 0,
+    "verdicts": [
+      "VERIFIED",
+      "NOT_IN_ABSTRACT",
+      "NOT_IN_ABSTRACT"
+    ],
+    "interpretation": "Network-enabled retry matched the earlier outcomes; the prior DNS-failed run was not verification. Full-text matches remain direct reading assessments, not native VERIFIED verdicts."
+  },
+  "rows": [
+    {
+      "reference": "DOI:10.1186/1471-2121-4-11",
+      "pmid": "12930563",
+      "pmcid": "PMC194436",
+      "stable_url": "https://doi.org/10.1186/1471-2121-4-11",
+      "role": "definition_support",
+      "snippet": "fla10 cells lose flagella by deflagellation at 33 degrees C.",
+      "words": 10,
+      "locator": "Direct Europe PMC MED scientific abstract, Results, second sentence",
+      "native_verdict": "VERIFIED",
+      "native_checked_at": "2026-10-15T06:18:24.560296+00:00",
+      "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+      "direct_source_match": true,
+      "assessment": "Parker and Quarmby 2003, PMID:12930563, PMCID:PMC194436, scientific abstract Results, second sentence. Direct MED text match; native VERIFIED applies to that text, not the PDF degree-symbol typography. Background distinguishes basal axonemal severing from resorption. The quoted response concerns source-named Chlamydomonas fla10 in calcium-containing medium, not reference strain WTB214. Released flagella were counted per 100 cells, with the initial count subtracted; lengths are a separate endpoint. Low calcium is not calcium-free, and buffer exchange is a confound. All twelve main PDF pages and eight figures were inspected. No universal IFT or calcium requirement follows.",
+      "assets": [
+        {
+          "path": "/tmp/traitmech-next-flagellar-2003-primary-20261015/primary.pdf",
+          "sha256": "7ff9d25f30d82e320b27a51137931864a43b83113a41e08b14bcf3ba0553a36c",
+          "url": "https://link.springer.com/content/pdf/10.1186/1471-2121-4-11.pdf",
+          "started_at": "2026-10-15T06:09:57.690008+00:00",
+          "finished_at": "2026-10-15T06:10:00.456139+00:00"
+        },
+        {
+          "path": "/tmp/traitmech-next-flagellar-2003-primary-20261015/primary.xml",
+          "sha256": "0b91015e94682c644e8164bebc8961ce0651fa339179aedfaccb09ebe4fa5566",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC194436/fullTextXML",
+          "started_at": "2026-10-15T06:10:00.456484+00:00",
+          "finished_at": "2026-10-15T06:10:01.894256+00:00"
+        }
+      ]
+    },
+    {
+      "reference": "DOI:10.1534/g3.116.034264",
+      "pmid": "27520959",
+      "pmcid": "PMC5068960.1",
+      "stable_url": "https://doi.org/10.1534/g3.116.034264",
+      "role": "supporting_phenotype_observation",
+      "snippet": "Wild-type cells deflagellate completely in response to pH shock or dibucaine, regardless of the temperature",
+      "words": 15,
+      "locator": "Results and Discussion, ADF2 and ADF4 remain unassigned, first paragraph; printed p. 3416, Figure 4A context",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_checked_at": "2026-10-15T06:10:08.721150+00:00",
+      "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+      "direct_source_match": true,
+      "assessment": "Hilton et al. 2016, PMID:27520959, PMCID:PMC5068960.1, page 3416, Results and Discussion subsection ADF2 and ADF4 remain unassigned, first paragraph and Figure 4A. Contiguous JATS and typeset match; native NOT_IN_ABSTRACT retained. The comparison is 21 versus 33 degrees C after six hours, not every temperature. The assay scores the control-normalized decrease in biflagellate cells per 100 cells, not a direct count of released flagella or proof that every responding cell loses both. Figure 4A reports three independent experiments with SD. All ten main pages, four figures and three tables were inspected; supplements remain unread. Phototaxis screening alone is not the shedding endpoint.",
+      "assets": [
+        {
+          "path": "/tmp/traitmech-next-flagellar-2016-cloud-assets-20261015/PMC5068960.1.pdf",
+          "sha256": "82ffecba6256551e65400492d97cea7d954b7cd31cbfb97f94104928966dbaf7",
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5068960.1/PMC5068960.1.pdf?md5=d2b988425cbe2af96f1645d3c70ffebc",
+          "started_at": "2026-10-15T05:56:10.753948+00:00",
+          "finished_at": "2026-10-15T05:56:11.716261+00:00"
+        },
+        {
+          "path": "/tmp/traitmech-next-flagellar-2016-cloud-assets-20261015/PMC5068960.1.xml",
+          "sha256": "9d0a3e7e68e9d2cc2dfc461ab3e57219026d79c85c929f72ddca152a62f440c3",
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5068960.1/PMC5068960.1.xml?md5=549148b4b484f9f5069520972502914d",
+          "started_at": "2026-10-15T05:56:11.723761+00:00",
+          "finished_at": "2026-10-15T05:56:12.378274+00:00"
+        }
+      ]
+    }
+  ],
+  "mechanism_limitation": {
+    "reference": "DOI:10.1242/jcs.096941",
+    "pmid": "22467860",
+    "pmcid": "PMC3516377",
+    "stable_url": "https://doi.org/10.1242/jcs.096941",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3516377/",
+    "role": "Supports a bounded mechanism limitation, not counted definition support.",
+    "snippet": "microtubule severing activity of p60 is not required for deflagellation",
+    "words": 10,
+    "locator": "Discussion, Is katanin required for flagellar excision in Chlamydomonas?",
+    "native_verdict": "NOT_IN_ABSTRACT",
+    "native_checked_at": "2026-10-15T06:53:43.566622+00:00",
+    "checker_sha256": "e235ef0a80ba564f929b8255e80ef1265bfdd016f74c627bcb7e7b86e033ddcc",
+    "direct_source_match": true,
+    "inspected": "Both contiguous spans read on the accessible PMC HTML through web.run; all six linked main figures visually inspected. The local HTML acquisition instead returned reCAPTCHA and is not source text. No PDF or supplements read.",
+    "assessment": "Dymek and Smith 2012, PMID:22467860, PMCID:PMC3516377, Discussion subsection Is katanin required for flagellar excision in Chlamydomonas? Direct HTML match; native NOT_IN_ABSTRACT retained. Main text and all six figures were inspected; supplements were not. Figure 5A assays cellular shedding; Figure 2 assays purified protein. Transcript knockdown is not verified protein depletion. The reference A54-e18 carries listed mutations, and the tested mutants are not nulls."
+  },
+  "allocation": {
+    "base": "982e7239752041073343fad00e24fbd9474e4776",
+    "accepted_at": "2026-10-15T07:50:51Z",
+    "trait_id": "traitmech:000731",
+    "cohort": "metpo_traitmech_v607",
+    "proposed_id": "METPO:1068400",
+    "reserved_block": [
+      1068400,
+      1068499
+    ],
+    "parent": "METPO:1000059",
+    "parent_basis": "Definition-based phenotype inference",
+    "preallocation_guard": {
+      "at": "2026-10-15T07:49:31.120288+00:00",
+      "unchanged": true,
+      "main": "982e7239752041073343fad00e24fbd9474e4776",
+      "prs": 13,
+      "differences": [],
+      "original_snapshot": "/tmp/traitmech-flagellar-autotomy-supplement-20261015/remote",
+      "allocated": false,
+      "limit": "Stable commit/base/description comparison reuses inspected immutable content; not an atomic reservation."
+    },
+    "local_search": {
+      "at": "2026-10-15T07:17:38.077971+00:00",
+      "paths": 202,
+      "retained_heads": 291,
+      "unique_blobs": {
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech": 85118,
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech": 9178
+      },
+      "catalog_unchanged": false,
+      "binary_limits": [],
+      "pattern": "deflagell|de.?flagellat|deciliat|autotom|(flagell|cili).{0,35}\\b(absciss\\w*|shed(?:ding)?|sever(?:ing|ed|ance|s)?|eject\\w*|resorp\\w*|resorb\\w*|retract\\w*|disassembl\\w*|excis\\w*|amput\\w*|loss)\\b|\\b(absciss\\w*|shedding|sever(?:ing|ed|ance|s)?|eject\\w*|resorp\\w*|resorb\\w*|retract\\w*|disassembl\\w*|excis\\w*|amput\\w*|loss)\\b.{0,35}(flagell|cili)|10\\.1093/genetics/149\\.2\\.927|10\\.1186/1471-2121-4-11|10\\.1534/g3\\.116\\.034264|10\\.1371/journal\\.pbio\\.3000165|10\\.1038/s41564-023-01401-2|9611203|12930563|27520959|30889173|PMC1460167|PMC194436|PMC5068960|PMC6424402|PMC2200158",
+      "limits": "Known copies include ignored/hidden files, and retained regular Git blobs. No symlink targets, arbitrary archives or lost ignored files. Catalogue changes require explicit assessment, not loss of completed pinned results."
+    },
+    "unavailable_locations": [
+      "/private/tmp/traitmech-fungal-nematophagy-20261013",
+      "/private/tmp/traitmech-lethal-nematicidal-activity-20261013",
+      "/private/tmp/traitmech-nematode-attracting-activity-20261013",
+      "/private/tmp/traitmech-reversible-nematode-paralyzing-activity-20261014",
+      "/private/tmp/traitmech-nematode-egg-hatching-inhibitory-activity-20261014",
+      "/private/tmp/traitmech-nematode-egg-hatching-stimulatory-activity-20261014",
+      "/private/tmp/traitmech-fungal-nematode-endoparasitism-20261014",
+      "/private/tmp/traitmech-cell-body-contraction-20261014",
+      "/private/tmp/traitmech-cellular-contraction-20261014"
+    ],
+    "supplementary_search": {
+      "complete": true,
+      "current_scans": 202,
+      "history_included": true,
+      "windows": 64,
+      "completed_at": "2026-10-15T07:46:44.618848Z"
+    },
+    "full_range_check": {
+      "at": "2026-10-15T07:41:05.662927+00:00",
+      "owners": 184357,
+      "unique_contents": 2662,
+      "overlapping_contents": 26,
+      "interpretation": "All overlapping intervals were the general 1000000-1999999 editor envelope; no exact candidate token.",
+      "binary_limits": [],
+      "complete_local_audit": {
+        "path": "/tmp/traitmech-flagellar-autotomy-full-ranges-20261015.json",
+        "sha256": "c6b45179180dc59c71238d9b8c0c33061f7242c37792cfb227b091360faa6bea",
+        "limit": "Complete temporary audit is retained locally, not guaranteed permanent availability. Count, scope and disposition remain in this tracked summary."
+      }
+    },
+    "drift_reconciliation": "Original three and final two changed CommunityMech locations were separately checked; final scan completed 07:49:45 UTC. No exact candidate token or overlapping range. Pinned checks do not freeze concurrent files."
+  },
+  "source_access_limits": [
+    "Two trait-support papers are from the Quarmby group, not independent-laboratory replication.",
+    "2016 supplements remain unread. Nine substantive assets matched supplied MD5; supplementary index expected 5bd6a8ff7d77795b90896a37c2c5a619 but actual 84ea7d917c5b26991e7fac51b7b2e369.",
+    "2012 main HTML and six figures read; no PDF or supplements. Local PMC response was a challenge page, not article text; Europe PMC XML failed with 500 and OA metadata with 404.",
+    "Bounded MED/Crossref and accessible publisher/PubMed notice checks are not comprehensive clearance. 2012 Crossref has-review is not a correction notice.",
+    "Follow-up DOI requests failed; some PMC requests returned challenges and 2003 PubMed yielded no usable text. These failures do not supersede earlier successful primary retrievals.",
+    "A post-restoration native snippet run failed DNS for all three references; the failure is retained in the check logs and is not verification. Earlier native outcomes above are actual successful source lookups.",
+    "Source-named strains are not authority-verified canonical taxa. No raw-data reanalysis, universal protein requirement, exact synonym or xref is asserted.",
+    "Search covers known ignored/hidden current files and retained regular tracked blobs, not lost ignored/untracked history, symlink targets, arbitrary archives or unchanged PR files."
+  ],
+  "skill_assessment": "Existing add-trait guidance already separates phenotype evidence, sequence features, molecular inference, quote verification and exact identity. No maintained-skill defect established by these temporary acquisition/parsing failures; no skill edit made."
+}
