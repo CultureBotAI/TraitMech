@@ -60,12 +60,14 @@ discussions:
     cycling and cytokinetic constriction alone do not establish this endpoint. Neither
     passive osmotic shrinkage, death-associated shortening nor static short-cell morphology
     suffices. The existing body and rapid axopodial traits are narrower children;
-    stalk contraction remains a possible future child, not a new allocation here.
-    Motility METPO:1000701 and motile METPO:1000702 concern locomotion, not necessarily
-    shortening. Active denotes the cellular response, not demonstrated ATP-driven
-    motor action. No universal speed, fractional shortening, trigger, calcium threshold,
-    ATP dependence, ecological role, exact synonym for generic contractility or organism-level
-    disjointness is asserted.
+    stalk contraction traitmech:000730 is now a narrower child, defined by active
+    reduction of stalk end-to-end extension. This does not require shortening of the
+    stalk contour or make its sheath cytoplasm. Motility METPO:1000701 and motile
+    METPO:1000702 concern locomotion, not necessarily shortening. Active denotes the
+    cellular response, not demonstrated ATP-driven motor action. No universal speed,
+    fractional shortening, trigger, calcium threshold, ATP dependence, ecological
+    role, exact synonym for generic contractility or organism-level disjointness is
+    asserted.
   posed_by: codex
   posed_date: '2026-10-14'
 - discussion_id: cellular-contraction-metpo-assessment
@@ -120,4 +122,12 @@ curation_history:
     modifying historical v558/v604 cohorts. Addresses external review issues #1941
     and #1942; no new biology or human review promotion. Timestamp records observed
     acceptance of the refinements.'
+  llm_assisted: true
+- timestamp: '2026-10-15T03:51:31Z'
+  curator: codex
+  action: LINK_STALK_CONTRACTION_CHILD
+  changes: Linked the accepted stalk-contraction child traitmech:000730 in place of
+    the future-lead sentence. Preserved the parent's definition, evidence, hierarchy
+    and prior history; independent scope and mechanism questions remain OPEN. No new
+    parent experiment or universal mechanism is asserted.
   llm_assisted: true

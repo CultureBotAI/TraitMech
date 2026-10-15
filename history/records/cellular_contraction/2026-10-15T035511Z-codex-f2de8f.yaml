@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cellular_contraction.yaml
+  slug: cellular_contraction
+session:
+  id: 2026-10-15T035511Z-codex-f2de8f
+  timestamp: '2026-10-15T03:55:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Link stalk-contraction child
+  details: Replaced only the stalk-contraction future-lead sentence in cellular-contraction-scope-and-mappings
+    with the accepted child traitmech:000730 and its extension endpoint. Preserved parent
+    definition, evidence, hierarchy, prior history and other discussion prose. Independent
+    scope and mechanism questions remain OPEN. Historical v605 remains unchanged. No new parent
+    experiment or universal mechanism is asserted.

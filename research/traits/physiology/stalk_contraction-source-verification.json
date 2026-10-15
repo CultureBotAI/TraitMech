@@ -1,0 +1,763 @@
+{
+  "trait_id": "traitmech:000730",
+  "accepted_at": "2026-10-15T03:51:31Z",
+  "checked_at": "2026-10-15T03:56:29.563911+00:00",
+  "status": "Author assessment of one PROPOSED child and a bounded parent discussion update; not independent review or human sign-off.",
+  "rows": [
+    {
+      "reference": "DOI:10.2142/biophysics.8.1",
+      "identity": {
+        "name": "part-i",
+        "doi": "10.2142/biophysics.8.1",
+        "pmid": "27857602",
+        "pmcid": "PMC5070450",
+        "title": "Contraction behaviors of <i>Vorticella</i> sp. stalk investigated using high-speed video camera. I: Nucleation and growth model.",
+        "med_notice_fields": {},
+        "med_publication_types": {
+          "pubType": [
+            "research-article",
+            "Journal Article"
+          ]
+        },
+        "crossref_notice_fields": {
+          "relation": {}
+        }
+      },
+      "role": "definition_support",
+      "snippet": "The stalk is straight at the initial stage. Then, it bends and coils into a helix near the zooid.",
+      "words": 19,
+      "locator": "Printed p.3, Results and Discussion, first paragraph, left column",
+      "direct_source_match": true,
+      "typeset_passage_inspected": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[0]",
+      "source_url": "https://www.jstage.jst.go.jp/article/biophysics/8/0/8_0_1/_pdf/-char/en",
+      "stable_url": "https://doi.org/10.2142/biophysics.8.1",
+      "assets": [
+        {
+          "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/part-i.pdf",
+          "sha256": "b2936552f1777c14df6baa8252a2ab88b7542bacecf6e8508eea7034175f305d"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/extraction.json",
+          "sha256": "e1df30a1298c5a12592cb5ff7255774e335cf7022d25f5fa5c1b5c50347c07b1"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/pages/page-3.png",
+          "sha256": "c3810f9cf4b9e930432c025cce78b55cb6d28b5e196ef92d766650548196d876"
+        }
+      ],
+      "assessment": "Kamiguri et al. 2012, PMID:27857602, PMCID:PMC5070450, printed page 3, Results and Discussion first paragraph, left column. Direct contiguous PDF match with whitespace-only line-wrap normalization and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. Junko Kamiguri is the first author; the running header says Hashimoto et al. Living source-named Vorticella sp. from activated sludge attached to glass rods was stimulated by hitting the dish; eight cells were observed at 6000 frames/s. Figures 3 and 5 show coiling and decreased end-to-end extension. The same paragraph says contour length does not change. All nine main-paper pages were inspected; raw videos were not reanalyzed. Model fits are not molecular proof. The primary PDF came from J-STAGE; an acquisition-helper failure left no original request timestamp or header receipt. Those missing fields are not reconstructed. Current taxonomic and culture identities remain unresolved."
+    },
+    {
+      "reference": "DOI:10.1016/j.bpj.2012.07.038",
+      "identity": {
+        "name": "ryu",
+        "doi": "10.1016/j.bpj.2012.07.038",
+        "pmid": "23009835",
+        "pmcid": "PMC3433611",
+        "title": "Maximal force characteristics of the Ca(2+)-powered actuator of Vorticella convallaria.",
+        "med_notice_fields": {},
+        "med_publication_types": {
+          "pubType": [
+            "research-article",
+            "Research Support, U.S. Gov't, Non-P.H.S.",
+            "Journal Article"
+          ]
+        },
+        "crossref_notice_fields": {
+          "relation": {},
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "Maximal Force Characteristics of the Ca2+-Powered Actuator of Vorticella convallaria",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Biophysical Journal",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/j.bpj.2012.07.038",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "Copyright \u00a9 2012 Biophysical Society. Published by Elsevier Inc. All rights reserved.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ]
+        }
+      },
+      "role": "supporting_phenotype_observation",
+      "snippet": "The stalk contraction was stalled more as the fluid viscosity and/or flow rate increased.",
+      "words": 14,
+      "locator": "Printed p.862, Figure 2 caption, panel A, sentence beginning The stalk contraction",
+      "direct_source_match": true,
+      "typeset_passage_inspected": true,
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_locator": "evidence[1]",
+      "source_url": "https://lab.prd.vanderbilt.edu/lang-lab/wp-content/uploads/sites/195/2023/01/MaximalForceCharacteristicsoftheCa2D-PoweredActuatorofVorticellaconvallaria2012.pdf",
+      "stable_url": "https://doi.org/10.1016/j.bpj.2012.07.038",
+      "assets": [
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/response.bin",
+          "sha256": "ffcfac34712cef3a989f9f6f029ca49b73c396405100749e7908be3bc5c16570"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/extraction.json",
+          "sha256": "4e0fad179da6fa6ad51eb1fb60056007b9868d8e1a7356f67410c382cb2e4d67"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-3.png",
+          "sha256": "735d18aad3d337b12c1a5dc8568215f1e8d485b7d7f05731b59d14e43d93fda2"
+        }
+      ],
+      "assessment": "Ryu et al. 2012, PMID:23009835, PMCID:PMC3433611, printed page 862, Figure 2A caption, sentence beginning The stalk contraction. Direct contiguous PDF match and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. The primary PDF was retrieved from the Vanderbilt Lang Lab mirror. Source-named Vorticella convallaria contracted in microfluidic channels under varied flow and viscosity. Four to five contractions per cell per condition are not independent cells. Figure 3 uses six cells; Figure 4C uses fifteen in a separate analysis. Isometric force is extrapolated through a hydrodynamic model, not directly measured zero-shortening force. All eight main-paper pages and actual Figures 1-5 were inspected; the supplement was not. Projection and geometry assumptions remain relevant. Some extracted micrometre symbols appear as mm; no such numeric extraction is quoted. Culture/taxonomy correspondence is unresolved. No universal rate, force, calcium threshold, ATP independence or protein mechanism follows."
+    }
+  ],
+  "context_only": [
+    {
+      "reference": "DOI:10.1038/229127a0",
+      "role": "anatomical_context_only_not_counted_support",
+      "snippet": "The coiling is produced by the contraction of an intracytoplasmic thread, the spasmoneme, within a cylindrical sheath.",
+      "words": 17,
+      "locator": "Publisher Abstract, second sentence, #Abs1-content",
+      "source": {
+        "name": "amos1971-publisher",
+        "request_url": "https://www.nature.com/articles/229127a0",
+        "started_at": "2026-10-15T02:27:06.625601+00:00",
+        "final_url": "https://www.nature.com/articles/229127a0",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "path": "/tmp/traitmech-stalk-contraction-anatomy-20261015/amos1971-publisher.response",
+        "bytes": 238569,
+        "sha256": "0e3c9c6344b0843df9a2fad2e87a9826c8ef0dbcf1d23279a907153baef39504",
+        "finished_at": "2026-10-15T02:27:08.679956+00:00"
+      },
+      "direct_source_match": true,
+      "native_verdict": "UNRESOLVED",
+      "explanation": "Anatomical background for interpreting the parent, not an additional inspected experimental result or counted trait support. The curated hierarchy is an inference, not an ontology assertion made by this paper.",
+      "notes": "Amos 1971, publisher Abstract second sentence, #Abs1-content. Direct issuing-publisher HTML match; DOI/title/author metadata checked. Native UNRESOLVED retained, not relabeled VERIFIED or unindexed. Full article and historical experiments were not inspected. No comprehensive notice clearance is claimed."
+    }
+  ],
+  "allocation": {
+    "accepted_at": "2026-10-15T03:51:31Z",
+    "trait_id": "traitmech:000730",
+    "label": "stalk contraction",
+    "definition": "A physiological phenotype in which a microbial cell actively reduces the end-to-end extension of its stalk.",
+    "category": "PHYSIOLOGY",
+    "mapping_status": "PROPOSED",
+    "base": "f815ad06c3f6b1d1c3f37e18dc37c8579267d880",
+    "cohort": "metpo_traitmech_v606",
+    "proposed_id": "METPO:1068300",
+    "reserved_block": [
+      1068300,
+      1068399
+    ],
+    "parent": {
+      "identifier": "traitmech:000729",
+      "label": "cell body or cytoplasmic projection contraction",
+      "proposed_metpo": "METPO:1068200",
+      "inference": "End-to-end contraction of the cell stalk is a narrower projection-contraction endpoint. The stalk includes an intracellular spasmoneme and a sheath; the entire sheath is not called cytoplasm."
+    },
+    "fresh_remote": {
+      "main": "f815ad06c3f6b1d1c3f37e18dc37c8579267d880",
+      "pending": {
+        "CultureBotAI/TraitMech": [
+          [
+            1938,
+            "0af267aa2455e0723eb6758096aba47a2798168d",
+            false
+          ],
+          [
+            1937,
+            "4bf40537837c32d6b059cdef78d99d087186af8a",
+            false
+          ],
+          [
+            1936,
+            "2896ca8db089d85ff3951a8b2b26327483dddb80",
+            false
+          ],
+          [
+            973,
+            "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+            false
+          ],
+          [
+            924,
+            "e61ce120b8da953da097b9f94bfed7f292e5675a",
+            true
+          ]
+        ],
+        "CultureBotAI/CommunityMech": [
+          [
+            2011,
+            "041d6a0d643dc5977b619b0ded7da3a66edc6c50",
+            false
+          ],
+          [
+            935,
+            "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+            true
+          ]
+        ],
+        "berkeleybop/metpo": [
+          [
+            644,
+            "627963b839cd7fd993ec892da9d5f663dbc3963d",
+            false
+          ],
+          [
+            643,
+            "b5051800f0d46753e5cab17043e6740bc357917a",
+            false
+          ],
+          [
+            641,
+            "9681aeacff5ea06a0dd8907906475d270ad61285",
+            false
+          ],
+          [
+            640,
+            "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+            false
+          ],
+          [
+            638,
+            "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+            false
+          ],
+          [
+            629,
+            "32e9fa86d36092156919b748dbe51b21df2bf702",
+            false
+          ]
+        ]
+      },
+      "upstream": {
+        "CultureBotAI/CommunityMech": "f293d9358f9bed6c4fac74db6687e6dbe3fe52a9",
+        "berkeleybop/metpo": "1efc8c73009200b9cb74d125df6a0ea5dc36cb93",
+        "Knowledge-Graph-Hub/kg-microbe": "1acb8b61fcae24fafc0640b1bf6e5be669f315f9"
+      }
+    },
+    "local": {
+      "paths": 153,
+      "retained_heads": 152,
+      "unique_blobs": {
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech": 25115,
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech": 6855
+      },
+      "new_biological_contexts": 0,
+      "numeric_false_positive": "Extracellular-sample abundance 1068386.556 in Table S5, not an ID."
+    },
+    "full_ranges": {
+      "owners": 30818,
+      "unique_contents": 2596,
+      "disposition": "General editor envelopes and one embedding component only."
+    },
+    "semantic_scope": "Prior canonical identities and proposals remain applicable to the identical refreshed contexts. Nine unique contraction-related research/cache contexts were inspected separately: prior evidence leads, endpoint boundaries and a parent follow-up, not an exact existing stalk-contraction record. The Amos DOI was included in the fresh search.",
+    "receipts": [
+      {
+        "path": "/tmp/traitmech-stalk-contraction-research-handoff-20261015.json",
+        "sha256": "d426371f0b077adc211cd2accc907c7e125b2893e637cd426c7c26e5537540d3"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-local-20261015/local/completion.json",
+        "sha256": "d9ae2a113b6ccc0671ef0e5928a777b5ed85f973577d61751606df9879bd6129"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-local-20261015/local/biological-contexts.json",
+        "sha256": "9005f9fb2ef278d9f04e2e82aeecfa91d8178dbb4823c10a02475e0300a07192"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-local-20261015/local/numeric-contexts.json",
+        "sha256": "3c3fdfb310a0efd81e6ffb075e737d6c54b5c2af0cd1a5573ef8b8d6383b15a6"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-ranges-20261015.json",
+        "sha256": "edc3de99a38f5669911fdd03a5d50999ed64476fe0d97d70fad7c5e25ea989ed"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-remote-20261015/semantic-assessment.json",
+        "sha256": "5543a1a046a9cf343ce8abdc39818f15ac55f6e31a2bd22b0d5c62d655653b2b"
+      },
+      {
+        "path": "/tmp/traitmech-stalk-contraction-allocation-remote-20261015/prior-disposition-reuse.json",
+        "sha256": "6693eb416fc33a3c3325d3a42d42a91de359b6dbeec0d7756f912eae25ac474a"
+      }
+    ],
+    "limits": "Author acceptance for PROPOSED curation, not human sign-off. Ignored/hidden registered worktrees and retained regular blobs refreshed; earlier unregistered-copy observations remain dated. No lost untracked history, symlink targets or arbitrary archives reconstructed. Bounded identity assessment is not atomic allocation or global literature exhaustion. Refresh before publication. No universal mechanism, exact xref, synonym or canonical taxon."
+  },
+  "native_record_verification": {
+    "command": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/stalk_contraction.yaml",
+        "--out",
+        "/tmp/traitmech-stalk-contraction-checks-20261015/stalk_contraction-native.tsv"
+      ],
+      "exit": 0,
+      "seconds": 5.464028951246291,
+      "completed_at": "2026-10-15T03:55:27.334169+00:00",
+      "log": "/tmp/traitmech-stalk-contraction-checks-20261015/records-03.log"
+    },
+    "report": {
+      "path": "/tmp/traitmech-stalk-contraction-checks-20261015/stalk_contraction-native.tsv",
+      "bytes": 724,
+      "sha256": "46bb4fd6ae9e163981f92dffcbd694d870025955f0690172e2613268361d7dae"
+    },
+    "rows": [
+      {
+        "file": "data/traits/physiology/stalk_contraction.yaml",
+        "locator": "evidence[0]",
+        "reference": "DOI:10.2142/biophysics.8.1",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.38",
+        "snippet": "The stalk is straight at the initial stage. Then, it bends and coils into a helix near the zooid.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/stalk_contraction.yaml",
+        "locator": "evidence[1]",
+        "reference": "DOI:10.1016/j.bpj.2012.07.038",
+        "verdict": "NOT_IN_ABSTRACT",
+        "similarity": "0.39",
+        "snippet": "The stalk contraction was stalled more as the fluid viscosity and/or flow rate increased.",
+        "nearest_sentence": ""
+      },
+      {
+        "file": "data/traits/physiology/stalk_contraction.yaml",
+        "locator": "discussion:stalk-contraction-scope-and-parent[0]",
+        "reference": "DOI:10.1038/229127a0",
+        "verdict": "UNRESOLVED",
+        "similarity": "0.00",
+        "snippet": "The coiling is produced by the contraction of an intracytoplasmic thread, the spasmoneme, within a cylindrical sheath.",
+        "nearest_sentence": ""
+      }
+    ],
+    "interpretation": "Actual canonical-record outcomes; direct full-text matching does not upgrade an abstract verdict."
+  },
+  "parent_native_verification": {
+    "command": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/.venv/bin/python",
+        "scripts/verify_snippets.py",
+        "--record",
+        "data/traits/physiology/cellular_contraction.yaml",
+        "--out",
+        "/tmp/traitmech-stalk-contraction-checks-20261015/cellular_contraction-native.tsv"
+      ],
+      "exit": 0,
+      "seconds": 5.884317172691226,
+      "completed_at": "2026-10-15T03:55:40.984112+00:00",
+      "log": "/tmp/traitmech-stalk-contraction-checks-20261015/records-07.log"
+    },
+    "report": {
+      "path": "/tmp/traitmech-stalk-contraction-checks-20261015/cellular_contraction-native.tsv",
+      "bytes": 718,
+      "sha256": "dc49d5c5b4423600f3808b9c97556c021376134e93cf3f99394d513ed48936dc"
+    }
+  },
+  "ontology": {
+    "pin": {
+      "path": "/tmp/traitmech-stalk-contraction-20261015/data/raw/metpo.owl",
+      "bytes": 1115523,
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415"
+    },
+    "triples": 12617,
+    "historical_match": {
+      "identifier": "METPO:1000288",
+      "deprecated": true,
+      "triples": [
+        [
+          "http://purl.obolibrary.org/obo/IAO_0000231",
+          "http://purl.obolibrary.org/obo/OMO_0001000"
+        ],
+        [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://www.w3.org/2002/07/owl#Class"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#label",
+          "obsolete stalk"
+        ],
+        [
+          "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
+        ],
+        [
+          "http://www.w3.org/2002/07/owl#deprecated",
+          "true"
+        ]
+      ]
+    },
+    "prior_assessment": {
+      "path": "/tmp/traitmech-stalk-contraction-ontology-assessment-20261014.json",
+      "bytes": 11951,
+      "sha256": "e1dd8af9f6f83a01c869fc6fef5157da26baede702f6a48a402197cb9c9dec8c"
+    },
+    "limits": "Prior assessment contains a now-deleted worktree path; the byte-identical main/new-worktree pin is re-parsed here. Current upstream heads remain as checked at acceptance. Editor stub is not an imports closure."
+  },
+  "historical_inspections": [
+    {
+      "at": "2026-10-15T00:24:38.590641+00:00",
+      "status": "LEAD_ONLY_NOT_ALLOCATED",
+      "sources": [
+        {
+          "part": "I",
+          "actual_pdf_pages_viewed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "actual_figures_viewed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "actual_tables_viewed": [
+            1,
+            2
+          ],
+          "assets": [
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/part-i.pdf",
+              "bytes": 2864748,
+              "sha256": "b2936552f1777c14df6baa8252a2ab88b7542bacecf6e8508eea7034175f305d"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/extraction.json",
+              "bytes": 28679,
+              "sha256": "e1df30a1298c5a12592cb5ff7255774e335cf7022d25f5fa5c1b5c50347c07b1"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/pages/page-1.png",
+              "bytes": 579646,
+              "sha256": "6fc09a19d6dbf0aa80d152bc92cd6ef8781312053b837432c310374f8936a3f0"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/pages/page-2.png",
+              "bytes": 731042,
+              "sha256": "6ba07cfed92b6fd1284f1be1582e078e74801d3c66ecf30587d2e0efb47c4c53"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/pages/page-3.png",
+              "bytes": 659566,
+              "sha256": "c3810f9cf4b9e930432c025cce78b55cb6d28b5e196ef92d766650548196d876"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/pages/page-4.png",
+              "bytes": 604977,
+              "sha256": "0441b70f24341c05f37a0b4e33d17994bef2af7e982794dedcae9e1bb58f7099"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/more-pages/page-5.png",
+              "bytes": 709597,
+              "sha256": "69cbf9193289839c1b2115a52a2c87c4e0dd63db91af234a4d4894ece0011895"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/more-pages/page-6.png",
+              "bytes": 422846,
+              "sha256": "e3c190d696c38934b71111d4a1df0355ed2c6a16b250f374d5717c9ec2029a9c"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/final-pages/page-7.png",
+              "bytes": 439869,
+              "sha256": "ed3890a05e283e3ff65f9b00f9ab8e3791fa62fbbb9ab428a1aba965705c0dec"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/final-pages/page-8.png",
+              "bytes": 755297,
+              "sha256": "7416acc14c510ea6c4f37b4bb3ac8ecc23f1d9a55571ba33563b10d5f92517fb"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-primary-pdf-20261014/final-pages/page-9.png",
+              "bytes": 547731,
+              "sha256": "c498a56ae7611eef4285487e3db0a3ecc21f9f908a7fc8f3062a39a769c1fe8c"
+            }
+          ]
+        },
+        {
+          "part": "II",
+          "actual_pdf_pages_viewed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "actual_figures_viewed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "actual_tables_viewed": [
+            1
+          ],
+          "assets": [
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/part-ii.pdf",
+              "bytes": 1923383,
+              "sha256": "87c16136107b3f3f3c43c0a9e9102985830666f566513f4fcc9124721133af4c"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/extraction.json",
+              "bytes": 34638,
+              "sha256": "dd03bb4b530bccbcf6f31863788c1869a25a8735094f9acd82e1b6e29268b3f8"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-1.png",
+              "bytes": 583932,
+              "sha256": "d91828fc9f658f41631006ff4edae1d75c9837fedd743dbba2145648f652ff2b"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-2.png",
+              "bytes": 799060,
+              "sha256": "b47655636dcd1342c68c63e906fdbfd0f2490bcf9fe5e5d15d4b7206da0e370e"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-3.png",
+              "bytes": 736590,
+              "sha256": "9dc2ad4ae960a52b150afc2c10cb1c53c86621aa616c8df96fa83c45d18d5e97"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-4.png",
+              "bytes": 845318,
+              "sha256": "295d33c6d44c46bb1b845fef1bc943581a9369d28eeb9693fa4c7e07501fc9c1"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-5.png",
+              "bytes": 521437,
+              "sha256": "e3c0790200b5225857af762447bbe73d366ee67fb4145d33f9477a62814120fd"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/pages/page-6.png",
+              "bytes": 634806,
+              "sha256": "3442f095f91ea8a09550c113a4bc6f9edfa58b767df6cabdfcc3a8f317333a85"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/more-pages/page-7.png",
+              "bytes": 686396,
+              "sha256": "b49f4a7e1ff0937d6e69ad5efaa85024aeb7ebb259ac9fd1f0e4c2a0fedf8902"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/more-pages/page-8.png",
+              "bytes": 845027,
+              "sha256": "8672fae2b37b1c370c00aceeb927b4bcc4d8e66ec7ca1514e7bbf6321603e1fc"
+            },
+            {
+              "path": "/tmp/traitmech-stalk-contraction-part-ii-20261014/more-pages/page-9.png",
+              "bytes": 148274,
+              "sha256": "ae994e8000dd6f06c0b25fa22d9fce7f94dc2a6fd8528cff67c5d8816457333a"
+            }
+          ]
+        }
+      ],
+      "part_i_assessment": "All nine typeset pages have now been read/visually inspected across the earlier and this follow-up. Printed p.3 Results distinguishes unchanged length along the stalk from decreasing extension during coiling. Figure 8/Table 2 show eight source-labelled cell profiles with fitted stretched-exponential parameters; Figure 9 compares fits and Figure 10 is a proposed model, not molecular proof. No universal speed or contour-shortening claim is accepted.",
+      "part_ii_assessment": "All nine typeset pages were inspected in this follow-up. Printed p.13 Experiments reports two cells, each used for two polymer types, with repeated measurements. Figure 3 shows observed reduced-length traces and model fits with shifted display time origins, not a continuous common time series. Printed p.16 distinguishes projection artifacts when the zooid rises in dense Ficoll from actual length change; recalculated values in Figure 7 use a geometric correction. Neither fitted rates nor viscosity exponents establish a universal trait threshold or molecular mechanism.",
+      "shared_limits": "Same research group and related experiments, not asserted as independent broad replication. No strain/taxonomy grounding, exact identity/novelty decision, selected snippet, identifier allocation or curation. Supplements and correction/retraction status remain unassessed here. Prior failed acquisition and figure challenges remain preserved; this receipt does not relabel them successful.",
+      "source_links": [
+        "https://doi.org/10.2142/biophysics.8.1",
+        "https://doi.org/10.2142/biophysics.8.11"
+      ]
+    },
+    {
+      "at": "2026-10-15T00:53:30.791047+00:00",
+      "status": "RESEARCH_LEAD_NOT_ALLOCATED",
+      "doi": "10.1016/j.bpj.2012.07.038",
+      "pmid": "23009835",
+      "pmcid": "PMC3433611",
+      "source_url": "https://lab.prd.vanderbilt.edu/lang-lab/wp-content/uploads/sites/195/2023/01/MaximalForceCharacteristicsoftheCa2D-PoweredActuatorofVorticellaconvallaria2012.pdf",
+      "actual_pdf_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "printed_pages": "860-867",
+      "actual_figures_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "assets": [
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/response.bin",
+          "bytes": 596753,
+          "sha256": "ffcfac34712cef3a989f9f6f029ca49b73c396405100749e7908be3bc5c16570"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/extraction.json",
+          "bytes": 43627,
+          "sha256": "4e0fad179da6fa6ad51eb1fb60056007b9868d8e1a7356f67410c382cb2e4d67"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-1.png",
+          "bytes": 735121,
+          "sha256": "6b37a50d6277c008b1b5da55ee873d262146f5d66c113923cf3e3cefab011f06"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-2.png",
+          "bytes": 950575,
+          "sha256": "4be3ea7f4e1ae59264e7f7dcde0f5504e9fe77b6801b93e4bc4dd64edce08449"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-3.png",
+          "bytes": 1107786,
+          "sha256": "735d18aad3d337b12c1a5dc8568215f1e8d485b7d7f05731b59d14e43d93fda2"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-4.png",
+          "bytes": 887745,
+          "sha256": "51b9cdc9674b538c93441507bd4e600d6e4288b7af12a7c03a5fd5da4a8e1dbf"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-5.png",
+          "bytes": 818872,
+          "sha256": "bb9090b0dfb0692fe6084d49b21880b4a044eb0bcde38b642805434bec603eb3"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-6.png",
+          "bytes": 784040,
+          "sha256": "0a4d3748f25f42416e97d4ea96ca5b56bfe1188aebd29246622ec62812f4a963"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-7.png",
+          "bytes": 851761,
+          "sha256": "58e1f812c6a24a161925f8d70ee79fefa0f22f64eef19bb522837e7ccea9b0f2"
+        },
+        {
+          "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/pages/page-8.png",
+          "bytes": 321415,
+          "sha256": "0867e330af164133d638d016670e111628638ebc7f44384d30a3cb17f9dd45cc"
+        }
+      ],
+      "assessment": "Figure 2 directly shows contracted stalks and time-dependent projected lengths under varied viscosity and flow. Methods record 4-5 contractions per cell and condition, with rest periods and exclusion of abnormal contractions. Figure 3 reports six cells; Figure 4C reports fifteen. These are different analysis scopes, not independent replicates per trace. Figure 1 defines projection geometry. Isometric force is extrapolated with hydrodynamic assumptions, not directly measured at zero shortening. Figure 5 is a conceptual model, not molecular proof. The paper supports an observed stalk-contraction phenotype, not a universal rate, force threshold or protein mechanism.",
+      "limits": "Supplementary figures, tables and movies were not inspected. Strain and taxonomy grounding remain unresolved. No selected excerpt, canonical example or identifier allocation. Earlier JATS HTTP 500 and web PDF access failure remain failures, not repaired receipts.",
+      "extraction_caution": "The PDF text layer renders micrometre symbols as mm in places. Typeset page images show micrometres; numeric/unit claims must use the image context, not uncorrected extraction."
+    }
+  ],
+  "historical_receipts": [
+    {
+      "path": "/tmp/traitmech-stalk-contraction-excerpt-leads-v2-20261014.json",
+      "sha256": "3c50bfe492aead0242d4f99e2d74d0bd604f33ff77eb5d806053259752d89787"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-native-main-20261015/result.json",
+      "sha256": "f33aa1b21f107791e614127106145056c76195e9794d5573433687f3e1300322"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-anatomy-20261015/assessment.json",
+      "sha256": "3a1d90b2e89786e4d1630b88f324c9d1c8a1b3157cf0737d4ffafa1a189ad838"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-anatomy-20261015/native-result-v2.json",
+      "sha256": "427cb5e3fddc008128843e34803183e0595590a0b95f78054bedd16f1cf3438b"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-source-followup-20261014/assessment.json",
+      "sha256": "ddf260777a8db971b3c7f4d2b946d9b6d4757d55a73b14f962b5926831fd1466"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-ontology-assessment-20261014.json",
+      "sha256": "e1dd8af9f6f83a01c869fc6fef5157da26baede702f6a48a402197cb9c9dec8c"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-semantic-checkpoint-20261015.json",
+      "sha256": "6f3b274226eca3d63b958cb73689b8b53ab9c1a9777505c44e631d38fb5f39bf"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-reservation-assessment-20261015.json",
+      "sha256": "20725f75645609e8fdd988bd8b5c576a828160433dfbc7f10c2fda67cdd1859a"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-ryu-pdf-20261014/inspection.json",
+      "sha256": "f41a51d4f85c50f8abf83e1d13261c60b8bd792ab78467ed822610d400b51ea2"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-pdf-followup-inspection-20261014.json",
+      "sha256": "08c1b6d54d082c7f0ec9e0bae4e125ee1ff9671f1e5ffe9d321d0dbd441b7781"
+    },
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/raw/metpo.owl",
+      "sha256": "8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415"
+    },
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/data/traits/physiology/cellular_contraction.yaml",
+      "sha256": "b3cb9d256766266bffbb2f54e59035f01364f2ea3ad0435104051d1bbd22ef42"
+    },
+    {
+      "path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech/proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv",
+      "sha256": "32cd061487da118a9349366f581f4064486dd0dec771027f4a7eb7f7585c4b25"
+    },
+    {
+      "path": "/tmp/traitmech-stalk-contraction-accepted-20261015.json",
+      "bytes": 5465,
+      "sha256": "4fcfe606a790a3d98c3e08a2ca112b5bf3c0fc615586c6c4b78e5b23058a4891"
+    }
+  ],
+  "historical_receipt_interpretation": "LEAD_ONLY, NOT_RUN and unallocated wording in earlier receipts describes their creation time. Canonical-record validation above is a new execution, not a rewritten old receipt.",
+  "source_status_limits": "Metadata identity and bounded returned notice fields only, not comprehensive correction/retraction clearance. HTTP success is not proof of readable full text or an inspected supplement. No allocation or curation.",
+  "parent_update": {
+    "path": "data/traits/physiology/cellular_contraction.yaml",
+    "current_change": "Linked the accepted stalk-contraction child traitmech:000730 in place of the future-lead sentence. Preserved the parent's definition, evidence, hierarchy and prior history; independent scope and mechanism questions remain OPEN. No new parent experiment or universal mechanism is asserted.",
+    "old_sentence": "stalk contraction remains a possible future child, not a new allocation here.",
+    "new_sentence": "stalk contraction traitmech:000730 is now a narrower child, defined by active reduction of stalk end-to-end extension. This does not require shortening of the stalk contour or make its sheath cytoplasm.",
+    "status": "Existing scope and mechanism discussions remain OPEN."
+  },
+  "omissions": [
+    "No canonical taxa, protein accessions, causal graph, synonyms, xrefs or SSSOM mapping.",
+    "No universal contour shortening, speed, force, calcium threshold, ATP independence or common molecular mechanism.",
+    "Part II is related research, not counted as independent support; Amos is context only."
+  ],
+  "skill_assessment": "Existing sequence-feature, source-role, native-verdict, proposal-dependency and open-question safeguards were applied; no further skill edit needed for this bounded addition.",
+  "limits": [
+    "Author acceptance for PROPOSED curation, not human sign-off. Ignored/hidden registered worktrees and retained regular blobs refreshed; earlier unregistered-copy observations remain dated. No lost untracked history, symlink targets or arbitrary archives reconstructed. Bounded identity assessment is not atomic allocation or global literature exhaustion. Refresh before publication. No universal mechanism, exact xref, synonym or canonical taxon.",
+    "Raw sources and screenshots remain at retained temporary paths, identified by stable URLs and hashes. Historical source receipts remain unchanged.",
+    "Part I lacks its original PDF HTTP/timestamp receipt. No missing request metadata is reconstructed.",
+    "Main-paper figures were inspected; uninspected supplements and raw videos are not implied to have been reanalyzed."
+  ]
+}
