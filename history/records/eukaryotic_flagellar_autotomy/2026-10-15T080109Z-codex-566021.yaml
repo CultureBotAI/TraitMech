@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/eukaryotic_flagellar_autotomy.yaml
+  slug: eukaryotic_flagellar_autotomy
+session:
+  id: 2026-10-15T080109Z-codex-566021
+  timestamp: '2026-10-15T08:01:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add eukaryotic flagellar autotomy
+  details: Added one PROPOSED microbial eukaryotic basal-axoneme shedding phenotype, with
+    two primary DOI sources and checked 10/15-word snippets. Native VERIFIED and NOT_IN_ABSTRACT
+    remain distinct from direct source verification. Separate 10-word Dymek and Smith 2012
+    evidence supports only a bounded mechanism limitation, with native NOT_IN_ABSTRACT. Preserved
+    assay, strain, replication and source-access limits. Reserved 000731, v607 and 1068400-1068499
+    after ignored/hidden current-file, retained-history, full-range and open/draft PR checks.
+    Parent METPO:1000059 is a definition-based inference. No obsolete identifier, canonical
+    taxon, exact mapping or universal protein requirement is inferred. Acceptance timestamp
+    is observed, not a reconstructed acquisition time.

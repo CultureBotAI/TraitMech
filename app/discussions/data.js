@@ -12307,6 +12307,76 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/er_phagy.html#er-phagy-exemplars-and-route-mechanisms"
  },
  {
+  "discussion_id": "eukaryotic-flagellar-autotomy-scope",
+  "prompt": "Review the basal axonemal shedding endpoint and its phenotype parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar autotomy",
+  "source_id": "traitmech:000731",
+  "source_file": "eukaryotic_flagellar_autotomy.yaml",
+  "attaches_to": [],
+  "rationale": "This organism-level phenotype concerns regulated release of a eukaryotic cilium or flagellum, not possession, arrangement, assembly failure or nonmotility. Resorption, retained-organelle disassembly, passive breakage, distal vesicle release and premitotic basal-body release alone do not establish the endpoint. Bacterial flagellar ejection or resorption involves a different apparatus and is outside this qualified class. The phenotype parent METPO:1000059 is a definition-based inference; motility is not a required parent. Palmelloid formation traitmech:000654 does not require flagellar loss. No exact synonyms, organism-level disjointness or universal stimulus threshold are asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-scope"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-autotomy-metpo",
+  "prompt": "Review current ontology scope without reviving obsolete morphology identifiers.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar autotomy",
+  "source_id": "traitmech:000731",
+  "source_file": "eukaryotic_flagellar_autotomy.yaml",
+  "attaches_to": [],
+  "rationale": "The inspected pinned and current METPO release/editor/template scope has no active exact shedding class. Historical METPO:0000089 and METPO:000090 are deprecated with OMO:0001000; METPO:1000381 is deprecated with IAO:0000226. All point to METPO:1000704, which denotes locomotory flagellar possession, not autotomy. Deprecated ciliated METPO:0000093 and METPO:000094 carry OMO:0001000, while METPO:1000385 carries IAO:0000226; no replacement or consider annotation was observed for these or deprecated flagellum METPO:1000123, whose recorded reason is OMO:0001000. Those historical morphology terms are not exact xrefs and are not reactivated. METPO issue https://github.com/berkeleybop/metpo/issues/521 records unresolved reason-code interpretation. Current upstream describes a bacterial/archaeal focus, so adoption of this microbial-eukaryote proposal requires maintainer review. The ontology pin stays unchanged. Proposal v607 reserves METPO:1068400 within 1068400-1068499; no upstream release or human sign-off is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-metpo"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-autotomy-mechanism",
+  "prompt": "Keep the shedding phenotype separate from universal katanin or sequence-based mechanism claims.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar autotomy",
+  "source_id": "traitmech:000731",
+  "source_file": "eukaryotic_flagellar_autotomy.yaml",
+  "attaches_to": [],
+  "rationale": "A protein-resolved graph requires taxon-paired authority-checked accessions and edge-specific experiments. Domain, motif, gene or mutant names alone do not establish the organismal phenotype. The p60 study constrains a proposed universal severing mechanism; it does not establish dispensability of every katanin function. No universal FA1, FA2, TRP15, IFT or calcium requirement is asserted. Mechanisms are deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1242/jcs.096941"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-mechanism"
+ },
+ {
+  "discussion_id": "eukaryotic-flagellar-autotomy-provenance",
+  "prompt": "Resolve strain provenance and preserve source-access limits before adding canonical taxa.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar autotomy",
+  "source_id": "traitmech:000731",
+  "source_file": "eukaryotic_flagellar_autotomy.yaml",
+  "attaches_to": [],
+  "rationale": "Study organism and strain names remain qualified observations, not canonical taxon assertions. Distinct papers from the Quarmby group are not independent-laboratory replication. MED/Crossref fields and available PubMed/publisher records were checked for notices; this is not comprehensive correction/retraction clearance. Publisher DOI requests failed in the follow-up, some PMC requests returned challenge pages, and the 2003 PubMed page yielded no usable text. Those failures do not negate earlier directly retrieved primary materials, but are not successful source checks. The 2016 supplementary index digest mismatch remains recorded; nine substantive assets matched supplied digests. No paid research, human sign-off or raw-data reanalysis is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-provenance"
+ },
+ {
   "discussion_id": "exocytosis-scope-and-mapping",
   "prompt": "Separate the secretion phenotype from its component steps.",
   "kind": "CURATION_TODO",
@@ -15204,9 +15274,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 767,
- "total_knowledge_gaps": 472,
- "total_source_entries": 596,
+ "total_discussions": 771,
+ "total_knowledge_gaps": 474,
+ "total_source_entries": 597,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

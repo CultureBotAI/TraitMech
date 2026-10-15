@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	synonyms	xrefs	subset	priority	observations	traits_addressed
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			
+METPO:1068400	eukaryotic flagellar autotomy	A physiological phenotype in which a microbial eukaryote sheds its cilia or flagella by regulated severing of their axonemes near the base.	TraitMech:data/traits/physiology/eukaryotic_flagellar_autotomy.yaml|DOI:10.1186/1471-2121-4-11	METPO:1000059			metpo_traitmech_2026_10	MEDIUM		traitmech:000731
