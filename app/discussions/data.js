@@ -12445,6 +12445,76 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_autotomy.html#eukaryotic-flagellar-autotomy-provenance"
  },
  {
+  "discussion_id": "eukaryotic-axoneme-internalization-scope",
+  "prompt": "Review intact withdrawal separately from later axonemal disassembly.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar axoneme internalization",
+  "source_id": "traitmech:000734",
+  "source_file": "eukaryotic_flagellar_axoneme_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "The defining endpoint is internalization of the cell's own intact eukaryotic axoneme. Static internal localization, uptake of another cell's material, external coiling, failed assembly, motor arrest, passive breakage or shedding alone do not establish it. Venard et al. 2020 place internalization within a broader cilium-disassembly program while distinguishing subsequent degradation. The operational resorption record traitmech:000733 requires shortening through axonemal disassembly, not intact withdrawal alone. Later degradation can occur after internalization; no organism-level disjointness or permanently intact internal axoneme is asserted. Autotomy traitmech:000731 and bacterial polar flagellar ejection traitmech:000732 have different endpoints; bacterial periplasmic flagella and type IV pili are different structures. Phenotype METPO:1000059 is a definition-based parent inference, without a locomotion requirement.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1091/mbc.E24-12-0577"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_axoneme_internalization.html#eukaryotic-axoneme-internalization-scope"
+ },
+ {
+  "discussion_id": "eukaryotic-axoneme-internalization-metpo",
+  "prompt": "Review microbial-eukaryote scope and the proposed phenotype parent.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "eukaryotic flagellar axoneme internalization",
+  "source_id": "traitmech:000734",
+  "source_file": "eukaryotic_flagellar_axoneme_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "No active exact term was identified in the inspected pinned/current METPO release, editor and templates. Deprecated METPO:0000089 and METPO:000090 carry OMO:0001000; METPO:1000381 carries IAO:0000226. Their active replacement METPO:1000704 denotes locomotory flagellar possession, not internalization. Deprecated ciliated METPO:0000093 and METPO:000094 carry OMO:0001000, while METPO:1000385 carries IAO:0000226; no replacement or consider annotation was observed for those or deprecated flagellum METPO:1000123 with OMO:0001000. Historical identifiers are not exact xrefs and are not reactivated. https://github.com/berkeleybop/metpo/issues/521 leaves reason-code interpretation unresolved. Upstream's bacterial/archaeal focus requires maintainer review of microbial-eukaryote inclusion. Proposal v610 reserves METPO:1068700 in 1068700-1068799, not a released identifier or human-approved mapping. The ontology pin is unchanged.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_axoneme_internalization.html#eukaryotic-axoneme-internalization-metpo"
+ },
+ {
+  "discussion_id": "eukaryotic-axoneme-internalization-mechanism",
+  "prompt": "Keep observable internalization separate from universal molecular mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar axoneme internalization",
+  "source_id": "traitmech:000734",
+  "source_file": "eukaryotic_flagellar_axoneme_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "Do not require a universal reeling, lash-around, membrane-loss, cortical tethering, actin-dependent, dynein-dependent or proteolytic mechanism. The 2020 latrunculin live-movie analysis selected complete retractions and excluded cells retaining cilia; its conditional results cannot establish all-cell retraction probabilities. Do not transfer 2017 pseudopod perturbations or 2025 transcript/orthology patterns to this phenotype. A gene, domain, motif or profile alone does not establish intact axoneme internalization. A protein-resolved graph requires taxon-paired, authority-checked accessions and edge-specific evidence. No universal rate, cell-cycle stage, complete degradation, protein recycling, exact synonym or equivalent external mapping is asserted.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_axoneme_internalization.html#eukaryotic-axoneme-internalization-mechanism"
+ },
+ {
+  "discussion_id": "eukaryotic-axoneme-internalization-provenance",
+  "prompt": "Resolve canonical strain provenance while preserving source-access limits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "eukaryotic flagellar axoneme internalization",
+  "source_id": "traitmech:000734",
+  "source_file": "eukaryotic_flagellar_axoneme_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "The named laboratory strains remain qualified life-stage observations, not authority-verified canonical taxa or proof of natural provenance. Two distinct supporting publications are not a claim of independent-lab replication. The 2025 follow-up shares authors with earlier work and is scope context, not a third definition citation. Qualified MED/Crossref identities and available notice fields were checked, not comprehensive correction/retraction clearance. The linked 2017 Comment/Editorial, DOI:10.1080/15384101.2017.1360655, PMID:28820330, PMC5628642, has no returned abstract and its content remains unread; it is not counted evidence. Publisher/PMC access failures remain failures. The 2020 supplement endpoint returned an API error with HTTP 200, not a ZIP; no actual supplement contents are inferred. No raw-data reanalysis, paid research or human scientific sign-off is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/eukaryotic_flagellar_axoneme_internalization.html#eukaryotic-axoneme-internalization-provenance"
+ },
+ {
   "discussion_id": "eukaryotic-flagellar-resorption-scope",
   "prompt": "Review shortening through disassembly without requiring complete disappearance.",
   "kind": "CURATION_TODO",
@@ -15412,9 +15482,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 779,
- "total_knowledge_gaps": 478,
- "total_source_entries": 599,
+ "total_discussions": 783,
+ "total_knowledge_gaps": 480,
+ "total_source_entries": 600,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

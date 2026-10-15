@@ -1,0 +1,395 @@
+{
+  "at": "2026-10-15T20:08:47.827435+00:00",
+  "action": "ALLOCATE_FOR_PROPOSED_LOCAL_CURATION",
+  "identifier": "traitmech:000734",
+  "cohort": "metpo_traitmech_v610",
+  "block": [
+    1068700,
+    1068799
+  ],
+  "populated_metpo_id": "METPO:1068700",
+  "main": "a1db3a44599b96d564d7c3bd5ecc0ace19add76e",
+  "inputs": {
+    "/tmp/traitmech-axoneme-internalization-reservations-20261015/local/completion.json": "87da5eb09b5a2cde79e3765851ddc4fddc01d68e7a5c50ad86da769f99c7f864",
+    "/tmp/traitmech-axoneme-internalization-reservations-20261015/local/scans.json": "05d4de98cd46a543d217debd7722bdf804382037c4bd7131d6efc592b0e6998d",
+    "/tmp/traitmech-axoneme-internalization-allocation-contexts-20261015.json": "bc046db3fde2a56826338a82b6e96c0cb1a500e302d29219b9fedfada235afa5",
+    "/tmp/traitmech-axoneme-internalization-window-inheritance-20261015.json": "71313031ae9ead064153d24273e5b836d110dd9abbe96f7efe33a05d3765a85b",
+    "/tmp/traitmech-axoneme-internalization-remote-assessment-20261015.json": "87982069d3b42e9b646bf2896f5150820b196d788f49c0928caef0537f76616e",
+    "/tmp/traitmech-axoneme-internalization-full-ranges-20261015.json": "bb239d43aa58d7789bb1efe056552cbba4b28ed722cf3068a9894e34c9a3dc0b",
+    "/tmp/traitmech-axoneme-internalization-preallocation-guard-20261015/result.json": "4e6d5c75cdc3c3ae163c9440570e77954cb73285fd4e3cbee71fcac4066fdbb4",
+    "/tmp/traitmech-axoneme-internalization-reservations-20261015/remote/pending-prs.json": "4f060174e1b60aff79baad786af86bee0e97e5128a5f54fbe0f43e3e5a026357"
+  },
+  "local": {
+    "paths": 210,
+    "retained_heads": 306,
+    "unique_blobs": {
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/TraitMech": 88636,
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/CommunityMech": 9308
+    },
+    "unavailable": 11,
+    "biological_contexts": 76,
+    "allocation_contexts": 74,
+    "disposition": "All 74 local numeric/range contexts were manually read and concern only the general editor envelope; no exact allocation token."
+  },
+  "full_ranges": {
+    "owners": 203913,
+    "owner_scopes": {
+      "current_proposals": 60037,
+      "retained_proposals": 142493,
+      "pending-checks.json": 784,
+      "upstream-checks.json": 587,
+      "pending_pr_description": 12
+    },
+    "unique_contents": 2625,
+    "matched_contents": [
+      {
+        "sha256": "3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c",
+        "paths": [
+          "proposals/metpo_traitmech_v587/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "bc19472ff40da3499688589344580939502e393e75887c6f3ba74846698217a1",
+        "paths": [
+          "proposals/metpo_traitmech_v590/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "18af5011341f6ff2eaf933a2bb7601f788d987c081421b2616939138f97bad0d",
+        "paths": [
+          "proposals/metpo_traitmech_v591/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "4b863ebfb0ace533262c2707bca76644f526ec01e99e5b58d313b38e689de442",
+        "paths": [
+          "proposals/metpo_traitmech_v594/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "2cdd6f7e7c5453c6f5acc8641ed73eb3e091cbf9da987095b47100b469b4d971",
+        "paths": [
+          "proposals/metpo_traitmech_v595/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "93b2f8fa4a19a6a96d95039ec447f3f4375d74a998f6e6ee3423f547f5463191",
+        "paths": [
+          "proposals/metpo_traitmech_v596/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "84a8c1970b684b82dd692b7134d2255a4fceebd4d3a5fe059b11229f9b1a868f",
+        "paths": [
+          "proposals/metpo_traitmech_v597/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "19c7473186debec52847a658483efda5870047d3270120fa13aaebfdb7169a75",
+        "paths": [
+          "proposals/metpo_traitmech_v598/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "fe537b4ed4a242adae69cf9c0e156e6e8e188733f1c9df3a49b5b3433f9a019d",
+        "paths": [
+          "proposals/metpo_traitmech_v599/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "90bfcfed58e4bb064f603823b7d99e154abe1557b07ee1a8d18a7554e86d7021",
+        "paths": [
+          "proposals/metpo_traitmech_v600/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "b3f0ed4c2c28aec793bba3690cfb6922dbdc2f963f52a1af8e3970ed029821a4",
+        "paths": [
+          "proposals/metpo_traitmech_v601/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "00fed39f6dfe10aabddb2e8975b7836054d9ca7f59d2003d9f97aaa2b6a6a04e",
+        "paths": [
+          "proposals/metpo_traitmech_v602/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "2b117a11696f475a75eea18c450bfde9f90168faba7ddf9deb6e93ee0c2f93a1",
+        "paths": [
+          "proposals/metpo_traitmech_v603/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "b5e96c8ab282fa1d31a87bf7b273a9442c1e7e11636fa6b519aae53332e01e1c",
+        "paths": [
+          "proposals/metpo_traitmech_v604/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "2df4d3d587d1fa7db19d74263cf7a13bc4c91e394fc6334d22043008934ec833",
+        "paths": [
+          "proposals/metpo_traitmech_v605/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "bb93c063a2599bb54a2f6faa3b62e27ca65b6e3161d8489777270c824328ccdf",
+        "paths": [
+          "proposals/metpo_traitmech_v606/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "161e52bf8f19987ff2af6e0340e8c303c49816be10adac942e1cbb2525624436",
+        "paths": [
+          "proposals/metpo_traitmech_v607/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "6300d9136eb51371c20609807efcb6ae4a3a5346a972ee8c60e672ea9662fb5b",
+        "paths": [
+          "proposals/metpo_traitmech_v608/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "86fb7454a9631408b5d58c1f538e886ff51a9403306784386bd5b81ece49ea70",
+        "paths": [
+          "proposals/metpo_traitmech_v609/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "b329dc54a85fdf1a4afb8a9fcabfb71cf769e4de2308d35c6e06e203503f908b",
+        "paths": [
+          "proposals/metpo_traitmech_v605/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "f1b6fdd60a7ccfdf07eb5072fbf8748297f37cd31bdfe21e62fd3cd0f7b4bdae",
+        "paths": [
+          "proposals/metpo_traitmech_v596/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "786c03d21f9272b425f843cff1e7ed1f56087ff6a69a6f576af7559334d780a9",
+        "paths": [
+          "proposals/metpo_traitmech_v596/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "a43c9cb8c7b7252ee0c7ace347ba39b805d0d1ba8a3bb5635b3ed0322fe7c45d",
+        "paths": [
+          "proposals/metpo_traitmech_v587/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "8aa59bda73af3c43851d60ddc4df38d249dcbddfde6e4befe2691c989a234e22",
+        "paths": [
+          "proposals/metpo_traitmech_v608/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "0153ce974256c28c47a797b3b49e0ceaf4d636ecc170d6e43d50b303a716f6de",
+        "paths": [
+          "proposals/metpo_traitmech_v596/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "cc89da7504601f74b6b8672580901d2cf7570ca2511ae6ada2eb9dfd7efaee47",
+        "paths": [
+          "proposals/metpo_traitmech_v596/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "ba39ab7c23611b15914677d44e31d87c3ee3630a995848d2afb4e4007ccf4398",
+        "paths": [
+          "proposals/metpo_traitmech_v604/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "087bac5d724e60c76e8644d5e6a3395453dba623fb14fc9a35a14012d72bb6a3",
+        "paths": [
+          "proposals/metpo_traitmech_v602/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "c14076b9e4f47780555b847f97762e44682de6c6a11a4388e940d0a912777b56",
+        "paths": [
+          "proposals/metpo_traitmech_v604/proposal.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "b4bf8d0b4449036d19fb90d282d89b76cbbc7b5e752559604599651f111fe489",
+        "paths": [
+          "data/embeddings/deepwalk_traits.tsv.gz"
+        ],
+        "disposition": "Manually read and separately parsed numeric decimal embedding cells, not identifiers."
+      },
+      {
+        "sha256": "07a56007ac0e60e77095ffbf5ea6017f40d80cabcbdc40c7fc0357aa5140ca6c",
+        "paths": [
+          "docs/metpo_id_ranges_research.md"
+        ],
+        "disposition": "Manually read: general editor envelope or prior documentation thereof, not a narrower reservation."
+      },
+      {
+        "sha256": "1e240619347c314381a1fdeda21f69d5d6a9ccc8393ebd5d01f9b6dd74792c81",
+        "paths": [
+          "mappings/kgmicrobe_unified_entity_mappings.sssom.tsv.gz"
+        ],
+        "disposition": "Manually read GMELIN chemical identifier mapped to CHEBI:32552, not METPO."
+      }
+    ]
+  },
+  "remote_prs": [
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1938,
+      "head": "0af267aa2455e0723eb6758096aba47a2798168d",
+      "draft": false,
+      "files": 8,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1937,
+      "head": "4bf40537837c32d6b059cdef78d99d087186af8a",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 1936,
+      "head": "2896ca8db089d85ff3951a8b2b26327483dddb80",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 973,
+      "head": "331f9517bbdf4d2c9fa97b338ee59a8986f2f174",
+      "draft": false,
+      "files": 3,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "CultureBotAI/TraitMech",
+      "number": 924,
+      "head": "e61ce120b8da953da097b9f94bfed7f292e5675a",
+      "draft": true,
+      "files": 692,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "CultureBotAI/CommunityMech",
+      "number": 935,
+      "head": "29995b01e01ecb392b0d217479f2c2453e49ffdb",
+      "draft": true,
+      "files": 64,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 644,
+      "head": "627963b839cd7fd993ec892da9d5f663dbc3963d",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 643,
+      "head": "b5051800f0d46753e5cab17043e6740bc357917a",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 641,
+      "head": "9681aeacff5ea06a0dd8907906475d270ad61285",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 640,
+      "head": "653ac70425dba225bdbbfb1a46d03c4837bc4cab",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 638,
+      "head": "d6005ffbab2fab328f118db4a5f1024d1d07be03",
+      "draft": false,
+      "files": 1,
+      "body_hits": {
+        "hits": []
+      }
+    },
+    {
+      "repository": "berkeleybop/metpo",
+      "number": 629,
+      "head": "32e9fa86d36092156919b748dbe51b21df2bf702",
+      "draft": false,
+      "files": 15,
+      "body_hits": {
+        "hits": []
+      }
+    }
+  ],
+  "guard_at": "2026-10-15T20:08:05.338409+00:00",
+  "limits": "Includes ignored/hidden current files and retained regular Git blobs. Eleven unavailable copies, lost ignored/untracked history, arbitrary archives, symlink targets and unchanged PR files remain outside the reconstructed scope. Lexical/semantic checks are bounded and non-atomic, not literature exhaustion or upstream acceptance."
+}
