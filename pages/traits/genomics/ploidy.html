@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ploidy</h1>
     <p class="curie"><code>traitmech:000100</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>ploidy</strong>
+            <code>traitmech:000100</code>
             <span class="edge-predicate">enables</span>
             <strong>recombinational repair of damaged DNA</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0000725" rel="nofollow noreferrer"><code>GO:0000725</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Extra genome copies provide templates for recombinational repair of DNA damage.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ploidy</strong>
+            <code>traitmech:000100</code>
             <span class="edge-predicate">contributes to</span>
             <strong>long-term survival</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Polyploidy underpins desiccation resistance and large cell sizes observed in extreme polyploid lineages.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>phosphate starvation</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>genome copy number per cell</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Polyploid prokaryotes reduce chromosomal copy number under phosphate starvation.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>genome copy number per cell</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>growth in absence of environmental phosphate</strong>
-            <code>METPO:2007700</code>
+
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Consuming extra genome copies as a phosphate source confers growth in the absence of external phosphate; monoploid E. coli cannot.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>genome copy number per cell</strong>
+
             <span class="edge-predicate">has function</span>
             <strong>genomic DNA as phosphate storage polymer</strong>
-            <code>RO:0000085</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0000085" rel="nofollow noreferrer"><code>RO:0000085</code></a>
             <p>Genomic DNA copies act as a phosphate storage polymer that can be consumed under starvation.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>ploidy</strong>
+            <code>traitmech:000100</code>
             <span class="edge-predicate">increases</span>
             <strong>segregational drift</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Higher ploidy increases stochastic segregation of alleles on polyploid replicons during division.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>segregational drift</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>loss of beneficial resistance alleles</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Segregational drift drives frequent loss of beneficial resistance alleles on multicopy replicons.</p>
             <ul>
 
@@ -258,7 +283,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>PATO:0001374</code></li>
+        <li><a href="http://purl.obolibrary.org/obo/PATO_0001374" rel="nofollow noreferrer"><code>PATO:0001374</code></a></li>
       </ul>
     </div>
 
@@ -293,43 +318,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/plasmid_carriage.html">plasmid carriage</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/prophage.html">prophage</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -865,7 +890,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking multiple genome copies to homologous-recombination repair templates and survival under desiccation and starvation.", "edges": [{"description": "Extra genome copies provide templates for recombinational repair of DNA damage.", "evidence": [{"notes": "Soppa reviews polyploidy supporting damage tolerance via redundant chromosomes.", "reference": "DOI:10.1159/000368855"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ploidy_trait", "target": "dna_recombinational_repair"}, {"description": "Polyploidy underpins desiccation resistance and large cell sizes observed in extreme polyploid lineages.", "evidence": [{"notes": "Mendell et al. document extreme polyploidy in Epulopiscium supporting giant cell size.", "reference": "DOI:10.1073/pnas.0707522105"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ploidy_trait", "target": "long_term_survival"}, {"description": "Polyploid prokaryotes reduce chromosomal copy number under phosphate starvation.", "evidence": [{"notes": "All five characterized polyploid prokaryotic species grow without environmental phosphate by reducing genome copy numbers.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "phosphate_starvation", "target": "genome_copy_number"}, {"description": "Consuming extra genome copies as a phosphate source confers growth in the absence of external phosphate; monoploid E. coli cannot.", "evidence": [{"notes": "Multiple polyploid prokaryotes grow without external phosphate by reducing intracellular genome copy number; monoploid E. coli showed no growth without phosphate.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "genome_copy_number", "target": "growth_without_phosphate"}, {"description": "Genomic DNA copies act as a phosphate storage polymer that can be consumed under starvation.", "evidence": [{"notes": "Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-5", "is_orphan": false, "predicate": "has function", "predicate_id": "RO:0000085", "source": "genome_copy_number", "target": "dna_phosphate_storage"}, {"description": "Higher ploidy increases stochastic segregation of alleles on polyploid replicons during division.", "evidence": [{"notes": "Alleles on polyploid replicons segregate stochastically during cell division, termed segregational drift; shown with experiments and modeling.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "ploidy_trait", "target": "segregational_drift"}, {"description": "Segregational drift drives frequent loss of beneficial resistance alleles on multicopy replicons.", "evidence": [{"notes": "Resistance alleles in polyploid elements are lost frequently versus monoploid elements due to segregational drift.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "segregational_drift", "target": "beneficial_allele_loss"}], "evidence_rows": [{"description": "Extra genome copies provide templates for recombinational repair of DNA damage.", "edge_id": "edge-1", "evidence": [{"notes": "Soppa reviews polyploidy supporting damage tolerance via redundant chromosomes.", "reference": "DOI:10.1159/000368855"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ploidy", "target": "recombinational repair of damaged DNA"}, {"description": "Polyploidy underpins desiccation resistance and large cell sizes observed in extreme polyploid lineages.", "edge_id": "edge-2", "evidence": [{"notes": "Mendell et al. document extreme polyploidy in Epulopiscium supporting giant cell size.", "reference": "DOI:10.1073/pnas.0707522105"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ploidy", "target": "long-term survival"}, {"description": "Polyploid prokaryotes reduce chromosomal copy number under phosphate starvation.", "edge_id": "edge-3", "evidence": [{"notes": "All five characterized polyploid prokaryotic species grow without environmental phosphate by reducing genome copy numbers.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "phosphate starvation", "target": "genome copy number per cell"}, {"description": "Consuming extra genome copies as a phosphate source confers growth in the absence of external phosphate; monoploid E. coli cannot.", "edge_id": "edge-4", "evidence": [{"notes": "Multiple polyploid prokaryotes grow without external phosphate by reducing intracellular genome copy number; monoploid E. coli showed no growth without phosphate.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "genome copy number per cell", "target": "growth in absence of environmental phosphate"}, {"description": "Genomic DNA copies act as a phosphate storage polymer that can be consumed under starvation.", "edge_id": "edge-5", "evidence": [{"notes": "Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "has function", "predicate_id": "RO:0000085", "source": "genome copy number per cell", "target": "genomic DNA as phosphate storage polymer"}, {"description": "Higher ploidy increases stochastic segregation of alleles on polyploid replicons during division.", "edge_id": "edge-6", "evidence": [{"notes": "Alleles on polyploid replicons segregate stochastically during cell division, termed segregational drift; shown with experiments and modeling.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "ploidy", "target": "segregational drift"}, {"description": "Segregational drift drives frequent loss of beneficial resistance alleles on multicopy replicons.", "edge_id": "edge-7", "evidence": [{"notes": "Resistance alleles in polyploid elements are lost frequently versus monoploid elements due to segregational drift.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "segregational drift", "target": "loss of beneficial resistance alleles"}], "graph_id": "ploidy_repair_survival", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Stochastic loss of beneficial alleles carried on multicopy replicons.", "grounding": null, "id": "beneficial_allele_loss", "is_orphan": false, "label": "loss of beneficial resistance alleles", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Use of genomic DNA copies as an intracellular phosphate reservoir.", "grounding": null, "id": "dna_phosphate_storage", "is_orphan": false, "label": "genomic DNA as phosphate storage polymer", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Homologous recombination using sister chromosome as repair template.", "grounding": "GO:0000725", "id": "dna_recombinational_repair", "is_orphan": false, "label": "recombinational repair of damaged DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of chromosomal genome copies maintained per cell.", "grounding": null, "id": "genome_copy_number", "is_orphan": false, "label": "genome copy number per cell", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ability to grow when external phosphate is unavailable.", "grounding": null, "id": "growth_without_phosphate", "is_orphan": false, "label": "growth in absence of environmental phosphate", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Persistence under desiccation, starvation, and damage.", "grounding": null, "id": "long_term_survival", "is_orphan": false, "label": "long-term survival", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Absence or limitation of environmental phosphate.", "grounding": null, "id": "phosphate_starvation", "is_orphan": false, "label": "phosphate starvation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number of complete genome copies per cell.", "grounding": "traitmech:000100", "id": "ploidy_trait", "is_orphan": false, "label": "ploidy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stochastic segregation of alleles on polyploid replicons during cell division.", "grounding": null, "id": "segregational_drift", "is_orphan": false, "label": "segregational drift", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Polyploidy supports DNA repair and long-term survival"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking multiple genome copies to homologous-recombination repair templates and survival under desiccation and starvation.", "edges": [{"description": "Extra genome copies provide templates for recombinational repair of DNA damage.", "evidence": [{"notes": "Soppa reviews polyploidy supporting damage tolerance via redundant chromosomes.", "reference": "DOI:10.1159/000368855"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ploidy_trait", "target": "dna_recombinational_repair"}, {"description": "Polyploidy underpins desiccation resistance and large cell sizes observed in extreme polyploid lineages.", "evidence": [{"notes": "Mendell et al. document extreme polyploidy in Epulopiscium supporting giant cell size.", "reference": "DOI:10.1073/pnas.0707522105"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ploidy_trait", "target": "long_term_survival"}, {"description": "Polyploid prokaryotes reduce chromosomal copy number under phosphate starvation.", "evidence": [{"notes": "All five characterized polyploid prokaryotic species grow without environmental phosphate by reducing genome copy numbers.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "phosphate_starvation", "target": "genome_copy_number"}, {"description": "Consuming extra genome copies as a phosphate source confers growth in the absence of external phosphate; monoploid E. coli cannot.", "evidence": [{"notes": "Multiple polyploid prokaryotes grow without external phosphate by reducing intracellular genome copy number; monoploid E. coli showed no growth without phosphate.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "genome_copy_number", "target": "growth_without_phosphate"}, {"description": "Genomic DNA copies act as a phosphate storage polymer that can be consumed under starvation.", "evidence": [{"notes": "Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.", "reference": "DOI:10.3390/microorganisms11092267"}], "id": "edge-5", "is_orphan": false, "predicate": "has function", "predicate_id": "RO:0000085", "source": "genome_copy_number", "target": "dna_phosphate_storage"}, {"description": "Higher ploidy increases stochastic segregation of alleles on polyploid replicons during division.", "evidence": [{"notes": "Alleles on polyploid replicons segregate stochastically during cell division, termed segregational drift; shown with experiments and modeling.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "ploidy_trait", "target": "segregational_drift"}, {"description": "Segregational drift drives frequent loss of beneficial resistance alleles on multicopy replicons.", "evidence": [{"notes": "Resistance alleles in polyploid elements are lost frequently versus monoploid elements due to segregational drift.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "segregational_drift", "target": "beneficial_allele_loss"}], "evidence_rows": [{"description": "Extra genome copies provide templates for recombinational repair of DNA damage.", "edge_id": "edge-1", "evidence": [{"notes": "Soppa reviews polyploidy supporting damage tolerance via redundant chromosomes.", "reference": "DOI:10.1159/000368855"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ploidy", "source_grounding": "traitmech:000100", "target": "recombinational repair of damaged DNA", "target_grounding": "GO:0000725"}, {"description": "Polyploidy underpins desiccation resistance and large cell sizes observed in extreme polyploid lineages.", "edge_id": "edge-2", "evidence": [{"notes": "Mendell et al. document extreme polyploidy in Epulopiscium supporting giant cell size.", "reference": "DOI:10.1073/pnas.0707522105"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ploidy", "source_grounding": "traitmech:000100", "target": "long-term survival", "target_grounding": null}, {"description": "Polyploid prokaryotes reduce chromosomal copy number under phosphate starvation.", "edge_id": "edge-3", "evidence": [{"notes": "All five characterized polyploid prokaryotic species grow without environmental phosphate by reducing genome copy numbers.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "phosphate starvation", "source_grounding": null, "target": "genome copy number per cell", "target_grounding": null}, {"description": "Consuming extra genome copies as a phosphate source confers growth in the absence of external phosphate; monoploid E. coli cannot.", "edge_id": "edge-4", "evidence": [{"notes": "Multiple polyploid prokaryotes grow without external phosphate by reducing intracellular genome copy number; monoploid E. coli showed no growth without phosphate.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "genome copy number per cell", "source_grounding": null, "target": "growth in absence of environmental phosphate", "target_grounding": null}, {"description": "Genomic DNA copies act as a phosphate storage polymer that can be consumed under starvation.", "edge_id": "edge-5", "evidence": [{"notes": "Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.", "reference": "DOI:10.3390/microorganisms11092267"}], "predicate": "has function", "predicate_id": "RO:0000085", "source": "genome copy number per cell", "source_grounding": null, "target": "genomic DNA as phosphate storage polymer", "target_grounding": null}, {"description": "Higher ploidy increases stochastic segregation of alleles on polyploid replicons during division.", "edge_id": "edge-6", "evidence": [{"notes": "Alleles on polyploid replicons segregate stochastically during cell division, termed segregational drift; shown with experiments and modeling.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "ploidy", "source_grounding": "traitmech:000100", "target": "segregational drift", "target_grounding": null}, {"description": "Segregational drift drives frequent loss of beneficial resistance alleles on multicopy replicons.", "edge_id": "edge-7", "evidence": [{"notes": "Resistance alleles in polyploid elements are lost frequently versus monoploid elements due to segregational drift.", "reference": "DOI:10.1371/journal.pgen.1010829"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "segregational drift", "source_grounding": null, "target": "loss of beneficial resistance alleles", "target_grounding": null}], "graph_id": "ploidy_repair_survival", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Stochastic loss of beneficial alleles carried on multicopy replicons.", "grounding": null, "id": "beneficial_allele_loss", "is_orphan": false, "label": "loss of beneficial resistance alleles", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Use of genomic DNA copies as an intracellular phosphate reservoir.", "grounding": null, "id": "dna_phosphate_storage", "is_orphan": false, "label": "genomic DNA as phosphate storage polymer", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Homologous recombination using sister chromosome as repair template.", "grounding": "GO:0000725", "id": "dna_recombinational_repair", "is_orphan": false, "label": "recombinational repair of damaged DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of chromosomal genome copies maintained per cell.", "grounding": null, "id": "genome_copy_number", "is_orphan": false, "label": "genome copy number per cell", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ability to grow when external phosphate is unavailable.", "grounding": null, "id": "growth_without_phosphate", "is_orphan": false, "label": "growth in absence of environmental phosphate", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Persistence under desiccation, starvation, and damage.", "grounding": null, "id": "long_term_survival", "is_orphan": false, "label": "long-term survival", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Absence or limitation of environmental phosphate.", "grounding": null, "id": "phosphate_starvation", "is_orphan": false, "label": "phosphate starvation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number of complete genome copies per cell.", "grounding": "traitmech:000100", "id": "ploidy_trait", "is_orphan": false, "label": "ploidy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stochastic segregation of alleles on polyploid replicons during cell division.", "grounding": null, "id": "segregational_drift", "is_orphan": false, "label": "segregational drift", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Polyploidy supports DNA repair and long-term survival"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -885,13 +910,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 06:15 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

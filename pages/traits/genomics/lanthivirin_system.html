@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>lanthivirin system</h1>
     <p class="curie"><code>traitmech:000416</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>lanthivirin biosynthetic gene cluster</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>lanthivirin maturation</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>A lanthivirin biosynthetic gene cluster encodes the machinery required for lanthivirin maturation.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>lanthivirin maturation</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage DNA replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Mature lanthivirins are associated with a phage-protein-dependent inhibition of phage DNA replication.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>lanthivirin maturation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>lanthivirin system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000416</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Lanthivirin maturation realizes the anti-phage activity of the lanthivirin system.</p>
             <ul>
 
@@ -172,8 +189,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>lanthivirin system</strong>
+            <code>traitmech:000416</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Lanthivirin system possession is a phage-defense-system trait.</p>
             <ul>
@@ -246,11 +265,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -410,6 +493,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -743,7 +831,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a lanthivirin biosynthetic gene cluster to anti-phage activity and lanthivirin system possession.", "edges": [{"description": "A lanthivirin biosynthetic gene cluster encodes the machinery required for lanthivirin maturation.", "evidence": [{"notes": "Serra et al. support the requirement for lanthivirin maturation in anti-phage activity.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "lanthivirin maturation is required for anti-phage activity"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphA                                |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphB1                               |"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "lanthivirin_bgc", "target": "lanthivirin_maturation"}, {"description": "Mature lanthivirins are associated with a phage-protein-dependent inhibition of phage DNA replication.", "evidence": [{"notes": "Serra et al. link lanthivirins to inhibition of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "phage-protein-dependent inhibition of phage DNA replication"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "lanthivirin_maturation", "target": "phage_dna_replication"}, {"description": "Lanthivirin maturation realizes the anti-phage activity of the lanthivirin system.", "evidence": [{"notes": "Serra et al. support native Streptomyces anti-phage activity and activity from multiple heterologously expressed lanthivirin systems.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "We demonstrate anti-phage activity both in a native Streptomyces context and through heterologous expression of six distinct lanthivirin systems."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lanthivirin_maturation", "target": "lanthivirin_system_trait"}, {"description": "Lanthivirin system possession is a phage-defense-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lanthiphage source key to the lanthipeptide anti-phage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lanthiphage | 10\\.1101/2024\\.06\\.26\\.600839 | A family of lanthipeptides with anti-phage function |"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lanthivirin_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A lanthivirin biosynthetic gene cluster encodes the machinery required for lanthivirin maturation.", "edge_id": "edge-1", "evidence": [{"notes": "Serra et al. support the requirement for lanthivirin maturation in anti-phage activity.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "lanthivirin maturation is required for anti-phage activity"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphA                                |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphB1                               |"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "lanthivirin biosynthetic gene cluster", "target": "lanthivirin maturation"}, {"description": "Mature lanthivirins are associated with a phage-protein-dependent inhibition of phage DNA replication.", "edge_id": "edge-2", "evidence": [{"notes": "Serra et al. link lanthivirins to inhibition of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "phage-protein-dependent inhibition of phage DNA replication"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "lanthivirin maturation", "target": "phage DNA replication"}, {"description": "Lanthivirin maturation realizes the anti-phage activity of the lanthivirin system.", "edge_id": "edge-3", "evidence": [{"notes": "Serra et al. support native Streptomyces anti-phage activity and activity from multiple heterologously expressed lanthivirin systems.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "We demonstrate anti-phage activity both in a native Streptomyces context and through heterologous expression of six distinct lanthivirin systems."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lanthivirin maturation", "target": "lanthivirin system"}, {"description": "Lanthivirin system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lanthiphage source key to the lanthipeptide anti-phage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lanthiphage | 10\\.1101/2024\\.06\\.26\\.600839 | A family of lanthipeptides with anti-phage function |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lanthivirin system", "target": "phage defense system"}], "graph_id": "lanthivirin_bgc_inhibits_phage_dna_replication", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A lanthivirin biosynthetic gene cluster represented in the pinned DefenseFinder HMM inventory by Lanthiphage custom profiles.", "grounding": null, "id": "lanthivirin_bgc", "is_orphan": false, "label": "lanthivirin biosynthetic gene cluster", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maturation of a lanthivirin lanthipeptide by its biosynthetic gene cluster.", "grounding": null, "id": "lanthivirin_maturation", "is_orphan": false, "label": "lanthivirin maturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded lanthivirin anti-phage system.", "grounding": "traitmech:000416", "id": "lanthivirin_system_trait", "is_orphan": false, "label": "lanthivirin system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of infecting bacteriophage DNA.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures lanthivirins at the biosynthetic gene cluster and anti-phage-output level without asserting the full native host range, exact Lanthiphage profile-to-component model, complete phage target breadth, or a DefenseFinder detection rule absent from the pinned rules table.", "scope_status": "NONMECHANISTIC", "title": "Lanthivirin BGCs mediate anti-phage activity"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a lanthivirin biosynthetic gene cluster to anti-phage activity and lanthivirin system possession.", "edges": [{"description": "A lanthivirin biosynthetic gene cluster encodes the machinery required for lanthivirin maturation.", "evidence": [{"notes": "Serra et al. support the requirement for lanthivirin maturation in anti-phage activity.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "lanthivirin maturation is required for anti-phage activity"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphA                                |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphB1                               |"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "lanthivirin_bgc", "target": "lanthivirin_maturation"}, {"description": "Mature lanthivirins are associated with a phage-protein-dependent inhibition of phage DNA replication.", "evidence": [{"notes": "Serra et al. link lanthivirins to inhibition of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "phage-protein-dependent inhibition of phage DNA replication"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "lanthivirin_maturation", "target": "phage_dna_replication"}, {"description": "Lanthivirin maturation realizes the anti-phage activity of the lanthivirin system.", "evidence": [{"notes": "Serra et al. support native Streptomyces anti-phage activity and activity from multiple heterologously expressed lanthivirin systems.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "We demonstrate anti-phage activity both in a native Streptomyces context and through heterologous expression of six distinct lanthivirin systems."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lanthivirin_maturation", "target": "lanthivirin_system_trait"}, {"description": "Lanthivirin system possession is a phage-defense-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lanthiphage source key to the lanthipeptide anti-phage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lanthiphage | 10\\.1101/2024\\.06\\.26\\.600839 | A family of lanthipeptides with anti-phage function |"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lanthivirin_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A lanthivirin biosynthetic gene cluster encodes the machinery required for lanthivirin maturation.", "edge_id": "edge-1", "evidence": [{"notes": "Serra et al. support the requirement for lanthivirin maturation in anti-phage activity.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "lanthivirin maturation is required for anti-phage activity"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphA as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphA                                |"}, {"notes": "The pinned DefenseFinder HMM inventory records Lanthiphage__LphB1 as a custom Lanthiphage profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Lanthiphage__LphB1                               |"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "lanthivirin biosynthetic gene cluster", "source_grounding": null, "target": "lanthivirin maturation", "target_grounding": null}, {"description": "Mature lanthivirins are associated with a phage-protein-dependent inhibition of phage DNA replication.", "edge_id": "edge-2", "evidence": [{"notes": "Serra et al. link lanthivirins to inhibition of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "phage-protein-dependent inhibition of phage DNA replication"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "lanthivirin maturation", "source_grounding": null, "target": "phage DNA replication", "target_grounding": null}, {"description": "Lanthivirin maturation realizes the anti-phage activity of the lanthivirin system.", "edge_id": "edge-3", "evidence": [{"notes": "Serra et al. support native Streptomyces anti-phage activity and activity from multiple heterologously expressed lanthivirin systems.", "reference": "DOI:10.1016/j.chom.2026.06.017", "snippet": "We demonstrate anti-phage activity both in a native Streptomyces context and through heterologous expression of six distinct lanthivirin systems."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lanthivirin maturation", "source_grounding": null, "target": "lanthivirin system", "target_grounding": "traitmech:000416"}, {"description": "Lanthivirin system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Lanthiphage source key to the lanthipeptide anti-phage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Lanthiphage | 10\\.1101/2024\\.06\\.26\\.600839 | A family of lanthipeptides with anti-phage function |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "lanthivirin system", "source_grounding": "traitmech:000416", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "lanthivirin_bgc_inhibits_phage_dna_replication", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A lanthivirin biosynthetic gene cluster represented in the pinned DefenseFinder HMM inventory by Lanthiphage custom profiles.", "grounding": null, "id": "lanthivirin_bgc", "is_orphan": false, "label": "lanthivirin biosynthetic gene cluster", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maturation of a lanthivirin lanthipeptide by its biosynthetic gene cluster.", "grounding": null, "id": "lanthivirin_maturation", "is_orphan": false, "label": "lanthivirin maturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded lanthivirin anti-phage system.", "grounding": "traitmech:000416", "id": "lanthivirin_system_trait", "is_orphan": false, "label": "lanthivirin system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of infecting bacteriophage DNA.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures lanthivirins at the biosynthetic gene cluster and anti-phage-output level without asserting the full native host range, exact Lanthiphage profile-to-component model, complete phage target breadth, or a DefenseFinder detection rule absent from the pinned rules table.", "scope_status": "NONMECHANISTIC", "title": "Lanthivirin BGCs mediate anti-phage activity"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -763,13 +851,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 20:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

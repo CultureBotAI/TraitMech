@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Viperin system</h1>
     <p class="curie"><code>traitmech:000263</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Viperin locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>modified ribonucleotide production</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Viperin locus encodes a pVip-class radical-SAM enzyme that produces modified ribonucleotides.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>modified ribonucleotide production</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>T7 phage transcription inhibition</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Prokaryotic viperin products can inhibit T7 phage polymerase-dependent transcription.</p>
             <ul>
 
@@ -143,9 +158,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>T7 phage transcription inhibition</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Viperin system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000263</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Inhibition of phage transcription is a source-backed antiviral output that realizes the Viperin system trait.</p>
             <ul>
 
@@ -160,8 +177,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Viperin system</strong>
+            <code>traitmech:000263</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Viperin system possession is a phage-defense-system trait.</p>
             <ul>
@@ -234,11 +253,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -362,6 +445,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -695,7 +783,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a prokaryotic viperin locus to modified ribonucleotide production and inhibited phage transcription.", "edges": [{"description": "The Viperin locus encodes a pVip-class radical-SAM enzyme that produces modified ribonucleotides.", "evidence": [{"notes": "Bernheim et al. support modified ribonucleotide production as a pVip output.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Prokaryotic viperins produce a set of modified ribonucleotides"}, {"notes": "The DefenseFinder rules table supports pVip as the required Viperin system profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Viperin\tViperin\t1\t1\tViperin__pVip"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "viperin_locus", "target": "modified_ribonucleotide_production"}, {"description": "Prokaryotic viperin products can inhibit T7 phage polymerase-dependent transcription.", "evidence": [{"notes": "Bernheim et al. connect prokaryotic viperin activity to inhibition of T7 transcription.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "modified_ribonucleotide_production", "target": "t7_phage_transcription_inhibition"}, {"description": "Inhibition of phage transcription is a source-backed antiviral output that realizes the Viperin system trait.", "evidence": [{"notes": "Bernheim et al. support pVip-mediated protection from T7 phage infection.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_transcription_inhibition", "target": "viperin_system_trait"}, {"description": "Viperin system possession is a phage-defense-system trait.", "evidence": [{"notes": "Bernheim et al. support Viperin as a prokaryotic phage-defense system.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Here we show that eukaryotic viperin originated from a clade of bacterial and archaeal proteins that protect against phage infection"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "viperin_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Viperin locus encodes a pVip-class radical-SAM enzyme that produces modified ribonucleotides.", "edge_id": "edge-1", "evidence": [{"notes": "Bernheim et al. support modified ribonucleotide production as a pVip output.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Prokaryotic viperins produce a set of modified ribonucleotides"}, {"notes": "The DefenseFinder rules table supports pVip as the required Viperin system profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Viperin\tViperin\t1\t1\tViperin__pVip"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Viperin locus", "target": "modified ribonucleotide production"}, {"description": "Prokaryotic viperin products can inhibit T7 phage polymerase-dependent transcription.", "edge_id": "edge-2", "evidence": [{"notes": "Bernheim et al. connect prokaryotic viperin activity to inhibition of T7 transcription.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "modified ribonucleotide production", "target": "T7 phage transcription inhibition"}, {"description": "Inhibition of phage transcription is a source-backed antiviral output that realizes the Viperin system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Bernheim et al. support pVip-mediated protection from T7 phage infection.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage transcription inhibition", "target": "Viperin system"}, {"description": "Viperin system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bernheim et al. support Viperin as a prokaryotic phage-defense system.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Here we show that eukaryotic viperin originated from a clade of bacterial and archaeal proteins that protect against phage infection"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Viperin system", "target": "phage defense system"}], "graph_id": "viperin_modified_ribonucleotides_restrict_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Production of modified ribonucleotides by prokaryotic viperin enzymes.", "grounding": null, "id": "modified_ribonucleotide_production", "is_orphan": false, "label": "modified ribonucleotide production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of T7 phage polymerase-dependent transcription.", "grounding": null, "id": "t7_phage_transcription_inhibition", "is_orphan": false, "label": "T7 phage transcription inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A prokaryotic viperin phage-defense locus satisfying a DefenseFinder rule over the pVip profile.", "grounding": null, "id": "viperin_locus", "is_orphan": false, "label": "Viperin locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded prokaryotic viperin phage-defense locus.", "grounding": "traitmech:000263", "id": "viperin_system_trait", "is_orphan": false, "label": "Viperin system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures characterized pVip-mediated modified ribonucleotide production and T7 transcription inhibition without asserting one universal nucleotide product, viral polymerase target, accessory-gene architecture, or phage range across all Viperin loci.", "scope_status": "NONMECHANISTIC", "title": "Prokaryotic viperins produce antiviral ribonucleotides"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a prokaryotic viperin locus to modified ribonucleotide production and inhibited phage transcription.", "edges": [{"description": "The Viperin locus encodes a pVip-class radical-SAM enzyme that produces modified ribonucleotides.", "evidence": [{"notes": "Bernheim et al. support modified ribonucleotide production as a pVip output.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Prokaryotic viperins produce a set of modified ribonucleotides"}, {"notes": "The DefenseFinder rules table supports pVip as the required Viperin system profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Viperin\tViperin\t1\t1\tViperin__pVip"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "viperin_locus", "target": "modified_ribonucleotide_production"}, {"description": "Prokaryotic viperin products can inhibit T7 phage polymerase-dependent transcription.", "evidence": [{"notes": "Bernheim et al. connect prokaryotic viperin activity to inhibition of T7 transcription.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "modified_ribonucleotide_production", "target": "t7_phage_transcription_inhibition"}, {"description": "Inhibition of phage transcription is a source-backed antiviral output that realizes the Viperin system trait.", "evidence": [{"notes": "Bernheim et al. support pVip-mediated protection from T7 phage infection.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_transcription_inhibition", "target": "viperin_system_trait"}, {"description": "Viperin system possession is a phage-defense-system trait.", "evidence": [{"notes": "Bernheim et al. support Viperin as a prokaryotic phage-defense system.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Here we show that eukaryotic viperin originated from a clade of bacterial and archaeal proteins that protect against phage infection"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "viperin_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Viperin locus encodes a pVip-class radical-SAM enzyme that produces modified ribonucleotides.", "edge_id": "edge-1", "evidence": [{"notes": "Bernheim et al. support modified ribonucleotide production as a pVip output.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Prokaryotic viperins produce a set of modified ribonucleotides"}, {"notes": "The DefenseFinder rules table supports pVip as the required Viperin system profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Viperin\tViperin\t1\t1\tViperin__pVip"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Viperin locus", "source_grounding": null, "target": "modified ribonucleotide production", "target_grounding": null}, {"description": "Prokaryotic viperin products can inhibit T7 phage polymerase-dependent transcription.", "edge_id": "edge-2", "evidence": [{"notes": "Bernheim et al. connect prokaryotic viperin activity to inhibition of T7 transcription.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "modified ribonucleotide production", "source_grounding": null, "target": "T7 phage transcription inhibition", "target_grounding": null}, {"description": "Inhibition of phage transcription is a source-backed antiviral output that realizes the Viperin system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Bernheim et al. support pVip-mediated protection from T7 phage infection.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "prokaryotic viperins protect against T7 phage infection by inhibiting viral polymerase-dependent transcription"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage transcription inhibition", "source_grounding": null, "target": "Viperin system", "target_grounding": "traitmech:000263"}, {"description": "Viperin system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bernheim et al. support Viperin as a prokaryotic phage-defense system.", "reference": "DOI:10.1038/s41586-020-2762-2", "snippet": "Here we show that eukaryotic viperin originated from a clade of bacterial and archaeal proteins that protect against phage infection"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Viperin system", "source_grounding": "traitmech:000263", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "viperin_modified_ribonucleotides_restrict_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Production of modified ribonucleotides by prokaryotic viperin enzymes.", "grounding": null, "id": "modified_ribonucleotide_production", "is_orphan": false, "label": "modified ribonucleotide production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of T7 phage polymerase-dependent transcription.", "grounding": null, "id": "t7_phage_transcription_inhibition", "is_orphan": false, "label": "T7 phage transcription inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A prokaryotic viperin phage-defense locus satisfying a DefenseFinder rule over the pVip profile.", "grounding": null, "id": "viperin_locus", "is_orphan": false, "label": "Viperin locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded prokaryotic viperin phage-defense locus.", "grounding": "traitmech:000263", "id": "viperin_system_trait", "is_orphan": false, "label": "Viperin system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures characterized pVip-mediated modified ribonucleotide production and T7 transcription inhibition without asserting one universal nucleotide product, viral polymerase target, accessory-gene architecture, or phage range across all Viperin loci.", "scope_status": "NONMECHANISTIC", "title": "Prokaryotic viperins produce antiviral ribonucleotides"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -715,13 +803,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-19 04:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

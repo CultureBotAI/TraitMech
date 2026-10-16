@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protein sequence embedding map (ESM-2 pLM) — TraitMech</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">TraitMech</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="map.html">Text map</a>
+      <a href="sequence-map.html">Sequence map (pLM)</a>
+      <a href="umap.html">Embedding space</a>
+      <a href="graph.html">Graph layout</a>
+      <a href="data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<header>
+  <p class="breadcrumb"><a href="index.html">TraitMech</a> <span>›</span> Protein sequence map (pLM)</p>
+  <h1>Protein sequence embedding map (ESM-2 pLM + PaCMAP)</h1>
+  <p class="tagline">PaCMAP 2D projection of <strong>156</strong> curated UniProtKB protein
+    examples across TraitMech causal graphs, embedded with the evolutionary protein language model
+    <code>facebook/esm2_t33_650M_UR50D</code> (1,280-D mean-pooled residue representations).
+    Hover to inspect protein and organism; click to open the trait record.</p>
+</header>
+
+<div class="browse-layout">
+<aside class="facets facet-sidebar" id="facet-panel" aria-label="Filter proteins"></aside>
+<div class="browse-main">
+<section class="umap-controls">
+  <label class="umap-search-label">Search
+    <input type="search" id="search-input" disabled placeholder="Search by UniProt ID, protein, gene, taxon, or trait…">
+  </label>
+  <span class="meta" id="visible-count">Loading…</span>
+</section>
+
+<p id="map-status" role="status">Loading protein sequence map…</p>
+<button id="map-retry" type="button" hidden>Retry loading map</button>
+<div id="umap-plot"></div>
+<div id="umap-tooltip" class="umap-tooltip"></div>
+
+<details class="data-table-details">
+  <summary>View protein embeddings as table</summary>
+  <div class="data-table-actions"><a id="csv-download" hidden download="trait_sequence_map.csv">Download CSV</a></div>
+  <div class="data-table-scroll">
+    <table class="data-table" id="data-table">
+      <thead><tr><th>Protein</th><th>UniProt</th><th>Gene</th><th>Taxon</th><th>Trait</th><th>Length (aa)</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</details>
+</div>
+</div>
+
+<script src="d3.v7.min.js"></script>
+<script>
+let loading = false;
+function loadMap() {
+  if (loading) return;
+  loading = true;
+  document.getElementById("map-retry").hidden = true;
+  document.getElementById("map-status").textContent = "Loading protein sequence map…";
+  document.getElementById("visible-count").textContent = "Loading…";
+  return fetch("data/sequence_map.json")
+  .then(r => { if (!r.ok) throw new Error("Map request failed"); return r.json(); })
+  .then(raw => {
+    const points = Array.isArray(raw) ? raw : (raw.points || []);
+    if (!Array.isArray(points) || !points.length) {
+      throw new Error("Invalid sequence map data");
+    }
+    const plotEl = document.getElementById("umap-plot");
+    plotEl.replaceChildren();
+    const W = Math.max(520, Math.min(820, (plotEl.clientWidth || 820) - 16));
+    const H = 560;
+    const margin = { top: 24, right: 24, bottom: 32, left: 32 };
+
+    const svg = d3.select("#umap-plot").append("svg")
+      .attr("width", W).attr("height", H);
+    const g = svg.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const xExtent = d3.extent(points, d => d.x);
+    const yExtent = d3.extent(points, d => d.y);
+    const x = d3.scaleLinear().domain(xExtent).range([0, W - margin.left - margin.right]).nice();
+    const y = d3.scaleLinear().domain(yExtent).range([H - margin.top - margin.bottom, 0]).nice();
+
+    const cats = Array.from(new Set(points.map(d => d.primary_category || "OTHER"))).sort();
+    const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    const tooltip = d3.select("#umap-tooltip");
+
+    const dots = g.selectAll("circle").data(points).join("circle")
+      .attr("cx", d => x(d.x))
+      .attr("cy", d => y(d.y))
+      .attr("r", 6.5)
+      .attr("fill", d => color(d.primary_category || "OTHER"))
+      .attr("opacity", 0.85)
+      .style("cursor", "pointer")
+      .on("mouseover", (e, d) => {
+        const gene = d.gene_symbol ? ` (${esc(d.gene_symbol)})` : "";
+        tooltip.style("display", "block")
+          .html(`<strong>${esc(d.protein_label)}${gene}</strong><br>` +
+                `<span class="muted">${esc(d.uniprot_id)} · ${esc(d.seq_len)} aa · <em>${esc(d.taxon_label || d.taxon_id)}</em></span><br>` +
+                `<span class="muted">Trait: ${esc(d.primary_trait)} (${esc(d.primary_category)})</span>`);
+      })
+      .on("mousemove", (e) => {
+        tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
+      })
+      .on("mouseout", () => tooltip.style("display", "none"))
+      .on("click", (e, d) => {
+        if (d.primary_href) window.location.href = d.primary_href;
+      });
+
+    const activeCategories = new Set(cats);
+
+    function buildFacets() {
+      const panel = document.getElementById("facet-panel");
+      if (!panel) return;
+      panel.innerHTML = '<h3>Filter proteins</h3>';
+      const groups = document.createElement("div");
+      groups.className = "facet-groups";
+
+      const catCounts = {};
+      points.forEach(d => { const v = d.primary_category || "OTHER"; catCounts[v] = (catCounts[v] || 0) + 1; });
+      const catGrp = document.createElement("div");
+      catGrp.className = "facet-group";
+      catGrp.innerHTML = '<div class="facet-title">Trait category</div>';
+      Object.keys(catCounts).sort().forEach(v => {
+        const lab = document.createElement("label");
+        lab.className = "facet-opt";
+        lab.innerHTML = `<input type="checkbox" checked><span>${esc(v)}</span><span class="cnt">${catCounts[v].toLocaleString()}</span>`;
+        lab.querySelector("input").addEventListener("change", (e) => {
+          if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
+          update();
+        });
+        catGrp.appendChild(lab);
+      });
+      groups.appendChild(catGrp);
+      panel.appendChild(groups);
+
+      const showing = document.createElement("div");
+      showing.className = "facet-showing";
+      showing.innerHTML = `Showing <b id="facet-count">${points.length.toLocaleString()}</b> of ${points.length.toLocaleString()} proteins`;
+      panel.appendChild(showing);
+    }
+
+    function update() {
+      const searchEl = document.getElementById("search-input");
+      const q = searchEl.value.toLowerCase().trim();
+      const url = new URL(window.location.href);
+      if (q) url.searchParams.set("q", searchEl.value.trim());
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+
+      let visible = 0;
+      dots.each(function(d) {
+        const inFacet = activeCategories.has(d.primary_category || "OTHER");
+        const hay = `${d.uniprot_id} ${d.protein_label} ${d.gene_symbol || ""} ${d.taxon_label || ""} ${d.primary_trait || ""} ${d.primary_category || ""}`.toLowerCase();
+        const pass = inFacet && (!q || hay.includes(q));
+        if (pass) visible++;
+        d3.select(this)
+          .style("display", inFacet ? null : "none")
+          .style("pointer-events", pass ? "auto" : "none")
+          .attr("opacity", pass ? 0.85 : 0.08);
+      });
+      document.getElementById("visible-count").textContent = `${visible} visible`;
+      const fc = document.getElementById("facet-count");
+      if (fc) fc.textContent = visible.toLocaleString();
+    }
+
+    const initQ = new URLSearchParams(window.location.search).get("q") || "";
+    if (initQ) document.getElementById("search-input").value = initQ;
+    document.getElementById("search-input").oninput = update;
+    buildFacets();
+    update();
+
+    function buildDataTable() {
+      const tbody = document.querySelector("#data-table tbody");
+      if (!tbody) return;
+      const rows = points.slice().sort((a, b) => (a.protein_label || "").localeCompare(b.protein_label || ""));
+      tbody.innerHTML = rows.map(d => {
+        const traitLink = d.primary_href ? `<a href="${esc(d.primary_href)}">${esc(d.primary_trait)}</a>` : esc(d.primary_trait);
+        return `<tr><td>${esc(d.protein_label)}</td><td><code>${esc(d.uniprot_id)}</code></td><td>${esc(d.gene_symbol || "")}</td>` +
+          `<td><em>${esc(d.taxon_label || d.taxon_id)}</em></td><td>${traitLink}</td><td class="num">${d.seq_len}</td>` +
+          `<td class="num">${(+d.x).toFixed(3)}</td><td class="num">${(+d.y).toFixed(3)}</td></tr>`;
+      }).join("");
+      const csvRows = [["protein_label", "uniprot_id", "gene_symbol", "taxon_label", "primary_trait", "primary_category", "seq_len", "x", "y"]].concat(
+        rows.map(d => [d.protein_label, d.uniprot_id, d.gene_symbol, d.taxon_label, d.primary_trait, d.primary_category, d.seq_len, d.x, d.y]));
+      const csv = csvRows.map(r => r.map(v => {
+        const s = String(v == null ? "" : v);
+        return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      }).join(",")).join("\n");
+      const link = document.getElementById("csv-download");
+      if (link) link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+    }
+    buildDataTable();
+    document.getElementById("search-input").disabled = false;
+    document.getElementById("csv-download").hidden = false;
+    document.getElementById("map-status").textContent = points.length + " proteins loaded.";
+  }).catch(() => {
+    document.getElementById("umap-plot").replaceChildren();
+    document.getElementById("facet-panel").replaceChildren();
+    document.querySelector("#data-table tbody").replaceChildren();
+    document.getElementById("visible-count").textContent = "Unavailable";
+    document.getElementById("map-status").textContent =
+      "Sequence map data could not be loaded.";
+    document.getElementById("map-retry").hidden = false;
+    document.getElementById("search-input").disabled = true;
+  }).finally(() => { loading = false; });
+}
+document.getElementById("map-retry").addEventListener("click", loadMap);
+loadMap();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
+    </div>
+    <div>
+      Corpus as of 2026-10-16 01:41 UTC
+      · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 1130 TraitRecords
+      · embedding coverage 100.0%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+<script src="theme-toggle.js"></script>
+</body>
+</html>

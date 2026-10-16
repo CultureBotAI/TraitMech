@@ -7,11 +7,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="{{ root }}index.html">TraitMech</a>
-      <span>›</span>
-      <a href="{{ root }}category/{{ trait.trait_category|lower }}.html">{{ trait.trait_category }}</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="{{ root }}index.html">TraitMech</a>
+        <span>›</span>
+        <a href="{{ root }}category/{{ trait.trait_category|lower }}.html">{{ trait.trait_category }}</a>
+      </p>
+      <form class="page-search" action="{{ root }}browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>{{ trait.label }}</h1>
     <p class="curie"><code>{{ trait.identifier }}</code> · {{ trait.term_kind }} · {{ trait.mapping_status }}</p>
     {% if trait.definition %}
@@ -71,9 +77,11 @@
           {% for edge in graph.evidence_rows %}
           <li id="{{ graph_dom_id }}-{{ edge.edge_id }}">
             <strong>{{ edge.source }}</strong>
+            {% if edge.source_grounding %}{% set sg_url = edge.source_grounding | curie_url %}{% if sg_url %}<a href="{{ sg_url }}" rel="nofollow noreferrer"><code>{{ edge.source_grounding }}</code></a>{% else %}<code>{{ edge.source_grounding }}</code>{% endif %}{% endif %}
             <span class="edge-predicate">{{ edge.predicate }}</span>
             <strong>{{ edge.target }}</strong>
-            {% if edge.predicate_id %}<code>{{ edge.predicate_id }}</code>{% endif %}
+            {% if edge.target_grounding %}{% set tg_url = edge.target_grounding | curie_url %}{% if tg_url %}<a href="{{ tg_url }}" rel="nofollow noreferrer"><code>{{ edge.target_grounding }}</code></a>{% else %}<code>{{ edge.target_grounding }}</code>{% endif %}{% endif %}
+            {% if edge.predicate_id %}{% set pid_url = edge.predicate_id | curie_url %}{% if pid_url %}<a href="{{ pid_url }}" rel="nofollow noreferrer"><code>{{ edge.predicate_id }}</code></a>{% else %}<code>{{ edge.predicate_id }}</code>{% endif %}{% endif %}
             {% if edge.description %}<p>{{ edge.description }}</p>{% endif %}
             <ul>
               {% for ev in edge.evidence %}
@@ -235,7 +243,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        {% for x in trait.xrefs %}<li><code>{{ x }}</code></li>{% endfor %}
+        {% for x in trait.xrefs %}{% set x_url = x | curie_url %}<li>{% if x_url %}<a href="{{ x_url }}" rel="nofollow noreferrer"><code>{{ x }}</code></a>{% else %}<code>{{ x }}</code>{% endif %}</li>{% endfor %}
       </ul>
     </div>
     {% endif %}

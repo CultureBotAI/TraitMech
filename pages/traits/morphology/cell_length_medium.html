@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>cell length medium</h1>
     <p class="curie"><code>METPO:1000885</code> · CLASS · REVIEWED</p>
 
@@ -79,8 +90,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>moderate growth rate</strong>
+
             <span class="edge-predicate">feeds into</span>
             <strong>growth-rate size law</strong>
+
 
             <p>Moderate exponential growth rates engage the growth-rate size law.</p>
             <ul>
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>growth-rate size law</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>cell length medium</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000885" rel="nofollow noreferrer"><code>METPO:1000885</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>At moderate growth rates the size law produces medium cell length.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>cell length medium</strong>
+            <a href="https://w3id.org/metpo/1000885" rel="nofollow noreferrer"><code>METPO:1000885</code></a>
             <span class="edge-predicate">is a</span>
             <strong>cell length</strong>
+            <a href="https://w3id.org/metpo/1000881" rel="nofollow noreferrer"><code>METPO:1000881</code></a>
             <code>rdfs:subClassOf</code>
             <p>Medium cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>RodA-PBP2 complex</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>peptidoglycan insertion during elongation</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>RodA glycosyltransferase and PBP2 transpeptidase together enable peptidoglycan insertion that drives elongation.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>MreC/MreD balance</strong>
+
             <span class="edge-predicate">modulates</span>
             <strong>PBP2 transpeptidase activity</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>The balance between MreC and MreD modulates PBP2, the essential elongation transpeptidase.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Rod complex (elongasome)</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>peptidoglycan density / mechanical strength</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>An intact Rod complex builds dense peptidoglycan; loss yields PG with large holes and reduced mechanical strength.</p>
             <ul>
 
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>peptidoglycan density / mechanical strength</strong>
+
             <span class="edge-predicate">maintains</span>
             <strong>rod shape</strong>
+
 
             <p>Dense peptidoglycan produced by the elongation machinery maintains rod shape, the morphology context for medium cell length.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>membrane synthesis</strong>
+
             <span class="edge-predicate">balances with PG synthesis to maintain</span>
             <strong>PG-membrane envelope balance</strong>
+
 
             <p>Balanced membrane and peptidoglycan synthesis is critical; reducing membrane synthesis restores balance when PG capacity is limited.</p>
             <ul>
@@ -875,7 +902,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate elongation rate and the growth-rate size law to a medium cell-length range (2\u20133 \u03bcm).", "edges": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "moderate_growth_rate", "target": "growth_rate_size_law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "growth_rate_size_law", "target": "cell_length_medium_trait"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_medium_trait", "target": "cell_length_trait"}, {"description": "RodA glycosyltransferase and PBP2 transpeptidase together enable peptidoglycan insertion that drives elongation.", "evidence": [{"notes": "RodA is a glycosyltransferase and PBP2 a transpeptidase required for cell elongation; Rod-complex rotation supports even PG insertion along the cylinder (broadly curatable general rod-bacterium mechanism).", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rodA_pbp2_complex", "target": "pg_insertion_elongation"}, {"description": "The balance between MreC and MreD modulates PBP2, the essential elongation transpeptidase.", "evidence": [{"notes": "\"the balance between MreC and MreD modulates PBP2 activity\" - mechanistic edge for elongation control.", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-5", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "mreC_mreD_balance", "target": "pbp2_activity"}, {"description": "An intact Rod complex builds dense peptidoglycan; loss yields PG with large holes and reduced mechanical strength.", "evidence": [{"notes": "\"The Rod complex may be a determinant not only for the whole shape of peptidoglycan but also for its highly dense structure.\"", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "rod_complex", "target": "pg_density"}, {"description": "Dense peptidoglycan produced by the elongation machinery maintains rod shape, the morphology context for medium cell length.", "evidence": [{"notes": "\"PG determines bacterial cell shape\" - elongation machinery and dense PG determine whole-cell rod shape.", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-7", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "pg_density", "target": "rod_shape"}, {"description": "Balanced membrane and peptidoglycan synthesis is critical; reducing membrane synthesis restores balance when PG capacity is limited.", "evidence": [{"notes": "\"Balanced synthesis of the peptidoglycan cell wall and the cell membrane is critical\" - broader envelope-balance mechanism affecting elongation and shape.", "reference": "DOI:10.1128/mbio.00475-23"}], "id": "edge-8", "is_orphan": false, "predicate": "balances with PG synthesis to maintain", "predicate_id": null, "source": "membrane_synthesis", "target": "envelope_balance_state"}], "evidence_rows": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "feeds into", "predicate_id": null, "source": "moderate growth rate", "target": "growth-rate size law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "growth-rate size law", "target": "cell length medium"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length medium", "target": "cell length"}, {"description": "RodA glycosyltransferase and PBP2 transpeptidase together enable peptidoglycan insertion that drives elongation.", "edge_id": "edge-4", "evidence": [{"notes": "RodA is a glycosyltransferase and PBP2 a transpeptidase required for cell elongation; Rod-complex rotation supports even PG insertion along the cylinder (broadly curatable general rod-bacterium mechanism).", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "RodA-PBP2 complex", "target": "peptidoglycan insertion during elongation"}, {"description": "The balance between MreC and MreD modulates PBP2, the essential elongation transpeptidase.", "edge_id": "edge-5", "evidence": [{"notes": "\"the balance between MreC and MreD modulates PBP2 activity\" - mechanistic edge for elongation control.", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "MreC/MreD balance", "target": "PBP2 transpeptidase activity"}, {"description": "An intact Rod complex builds dense peptidoglycan; loss yields PG with large holes and reduced mechanical strength.", "edge_id": "edge-6", "evidence": [{"notes": "\"The Rod complex may be a determinant not only for the whole shape of peptidoglycan but also for its highly dense structure.\"", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "Rod complex (elongasome)", "target": "peptidoglycan density / mechanical strength"}, {"description": "Dense peptidoglycan produced by the elongation machinery maintains rod shape, the morphology context for medium cell length.", "edge_id": "edge-7", "evidence": [{"notes": "\"PG determines bacterial cell shape\" - elongation machinery and dense PG determine whole-cell rod shape.", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan density / mechanical strength", "target": "rod shape"}, {"description": "Balanced membrane and peptidoglycan synthesis is critical; reducing membrane synthesis restores balance when PG capacity is limited.", "edge_id": "edge-8", "evidence": [{"notes": "\"Balanced synthesis of the peptidoglycan cell wall and the cell membrane is critical\" - broader envelope-balance mechanism affecting elongation and shape.", "reference": "DOI:10.1128/mbio.00475-23"}], "predicate": "balances with PG synthesis to maintain", "predicate_id": null, "source": "membrane synthesis", "target": "PG-membrane envelope balance"}], "graph_id": "cell_length_medium_growth_rate", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length approximately 2\u20133 \u03bcm.", "grounding": "METPO:1000885", "id": "cell_length_medium_trait", "is_orphan": false, "label": "cell length medium", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Balanced synthesis of peptidoglycan cell wall and cell membrane required for normal growth and shape.", "grounding": null, "id": "envelope_balance_state", "is_orphan": false, "label": "PG-membrane envelope balance", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Empirical scaling of average cell size with growth rate.", "grounding": null, "id": "growth_rate_size_law", "is_orphan": false, "label": "growth-rate size law", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of membrane lipids (fatty acid/phospholipid synthesis).", "grounding": null, "id": "membrane_synthesis", "is_orphan": false, "label": "membrane synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Moderate exponential growth rate typical of common bacterial culture.", "grounding": null, "id": "moderate_growth_rate", "is_orphan": false, "label": "moderate growth rate", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Relative levels of MreC and MreD that tune elongasome transpeptidase activity.", "grounding": null, "id": "mreC_mreD_balance", "is_orphan": false, "label": "MreC/MreD balance", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Essential elongation transpeptidase activity of penicillin-binding protein 2.", "grounding": null, "id": "pbp2_activity", "is_orphan": false, "label": "PBP2 transpeptidase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Density and mechanical integrity of the peptidoglycan sacculus.", "grounding": null, "id": "pg_density", "is_orphan": false, "label": "peptidoglycan density / mechanical strength", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Insertion of new peptidoglycan along the cell cylinder driving elongation.", "grounding": null, "id": "pg_insertion_elongation", "is_orphan": false, "label": "peptidoglycan insertion during elongation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS glycosyltransferase RodA paired with transpeptidase PBP2, the core PG-synthesizing pair of the elongasome.", "grounding": null, "id": "rodA_pbp2_complex", "is_orphan": false, "label": "RodA-PBP2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Elongasome machinery (MreB/MreC/MreD/RodA/PBP2) directing lateral peptidoglycan synthesis.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex (elongasome)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical (rod) cell morphology.", "grounding": null, "id": "rod_shape", "is_orphan": false, "label": "rod shape", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a numerical cell-length bin. Its graph illustrates contextual growth and division factors but is not a single protein-mediated causal mechanism.", "scope_status": "NONMECHANISTIC", "title": "Medium cell-length under moderate growth"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate elongation rate and the growth-rate size law to a medium cell-length range (2\u20133 \u03bcm).", "edges": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "moderate_growth_rate", "target": "growth_rate_size_law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "growth_rate_size_law", "target": "cell_length_medium_trait"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_medium_trait", "target": "cell_length_trait"}, {"description": "RodA glycosyltransferase and PBP2 transpeptidase together enable peptidoglycan insertion that drives elongation.", "evidence": [{"notes": "RodA is a glycosyltransferase and PBP2 a transpeptidase required for cell elongation; Rod-complex rotation supports even PG insertion along the cylinder (broadly curatable general rod-bacterium mechanism).", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rodA_pbp2_complex", "target": "pg_insertion_elongation"}, {"description": "The balance between MreC and MreD modulates PBP2, the essential elongation transpeptidase.", "evidence": [{"notes": "\"the balance between MreC and MreD modulates PBP2 activity\" - mechanistic edge for elongation control.", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-5", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "mreC_mreD_balance", "target": "pbp2_activity"}, {"description": "An intact Rod complex builds dense peptidoglycan; loss yields PG with large holes and reduced mechanical strength.", "evidence": [{"notes": "\"The Rod complex may be a determinant not only for the whole shape of peptidoglycan but also for its highly dense structure.\"", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "rod_complex", "target": "pg_density"}, {"description": "Dense peptidoglycan produced by the elongation machinery maintains rod shape, the morphology context for medium cell length.", "evidence": [{"notes": "\"PG determines bacterial cell shape\" - elongation machinery and dense PG determine whole-cell rod shape.", "reference": "DOI:10.1002/mbo3.1385"}], "id": "edge-7", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "pg_density", "target": "rod_shape"}, {"description": "Balanced membrane and peptidoglycan synthesis is critical; reducing membrane synthesis restores balance when PG capacity is limited.", "evidence": [{"notes": "\"Balanced synthesis of the peptidoglycan cell wall and the cell membrane is critical\" - broader envelope-balance mechanism affecting elongation and shape.", "reference": "DOI:10.1128/mbio.00475-23"}], "id": "edge-8", "is_orphan": false, "predicate": "balances with PG synthesis to maintain", "predicate_id": null, "source": "membrane_synthesis", "target": "envelope_balance_state"}], "evidence_rows": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "feeds into", "predicate_id": null, "source": "moderate growth rate", "source_grounding": null, "target": "growth-rate size law", "target_grounding": null}, {"description": "At moderate growth rates the size law produces medium cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "growth-rate size law", "source_grounding": null, "target": "cell length medium", "target_grounding": "METPO:1000885"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length medium", "source_grounding": "METPO:1000885", "target": "cell length", "target_grounding": "METPO:1000881"}, {"description": "RodA glycosyltransferase and PBP2 transpeptidase together enable peptidoglycan insertion that drives elongation.", "edge_id": "edge-4", "evidence": [{"notes": "RodA is a glycosyltransferase and PBP2 a transpeptidase required for cell elongation; Rod-complex rotation supports even PG insertion along the cylinder (broadly curatable general rod-bacterium mechanism).", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "RodA-PBP2 complex", "source_grounding": null, "target": "peptidoglycan insertion during elongation", "target_grounding": null}, {"description": "The balance between MreC and MreD modulates PBP2, the essential elongation transpeptidase.", "edge_id": "edge-5", "evidence": [{"notes": "\"the balance between MreC and MreD modulates PBP2 activity\" - mechanistic edge for elongation control.", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "MreC/MreD balance", "source_grounding": null, "target": "PBP2 transpeptidase activity", "target_grounding": null}, {"description": "An intact Rod complex builds dense peptidoglycan; loss yields PG with large holes and reduced mechanical strength.", "edge_id": "edge-6", "evidence": [{"notes": "\"The Rod complex may be a determinant not only for the whole shape of peptidoglycan but also for its highly dense structure.\"", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "Rod complex (elongasome)", "source_grounding": null, "target": "peptidoglycan density / mechanical strength", "target_grounding": null}, {"description": "Dense peptidoglycan produced by the elongation machinery maintains rod shape, the morphology context for medium cell length.", "edge_id": "edge-7", "evidence": [{"notes": "\"PG determines bacterial cell shape\" - elongation machinery and dense PG determine whole-cell rod shape.", "reference": "DOI:10.1002/mbo3.1385"}], "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan density / mechanical strength", "source_grounding": null, "target": "rod shape", "target_grounding": null}, {"description": "Balanced membrane and peptidoglycan synthesis is critical; reducing membrane synthesis restores balance when PG capacity is limited.", "edge_id": "edge-8", "evidence": [{"notes": "\"Balanced synthesis of the peptidoglycan cell wall and the cell membrane is critical\" - broader envelope-balance mechanism affecting elongation and shape.", "reference": "DOI:10.1128/mbio.00475-23"}], "predicate": "balances with PG synthesis to maintain", "predicate_id": null, "source": "membrane synthesis", "source_grounding": null, "target": "PG-membrane envelope balance", "target_grounding": null}], "graph_id": "cell_length_medium_growth_rate", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length approximately 2\u20133 \u03bcm.", "grounding": "METPO:1000885", "id": "cell_length_medium_trait", "is_orphan": false, "label": "cell length medium", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Balanced synthesis of peptidoglycan cell wall and cell membrane required for normal growth and shape.", "grounding": null, "id": "envelope_balance_state", "is_orphan": false, "label": "PG-membrane envelope balance", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Empirical scaling of average cell size with growth rate.", "grounding": null, "id": "growth_rate_size_law", "is_orphan": false, "label": "growth-rate size law", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of membrane lipids (fatty acid/phospholipid synthesis).", "grounding": null, "id": "membrane_synthesis", "is_orphan": false, "label": "membrane synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Moderate exponential growth rate typical of common bacterial culture.", "grounding": null, "id": "moderate_growth_rate", "is_orphan": false, "label": "moderate growth rate", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Relative levels of MreC and MreD that tune elongasome transpeptidase activity.", "grounding": null, "id": "mreC_mreD_balance", "is_orphan": false, "label": "MreC/MreD balance", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Essential elongation transpeptidase activity of penicillin-binding protein 2.", "grounding": null, "id": "pbp2_activity", "is_orphan": false, "label": "PBP2 transpeptidase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Density and mechanical integrity of the peptidoglycan sacculus.", "grounding": null, "id": "pg_density", "is_orphan": false, "label": "peptidoglycan density / mechanical strength", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Insertion of new peptidoglycan along the cell cylinder driving elongation.", "grounding": null, "id": "pg_insertion_elongation", "is_orphan": false, "label": "peptidoglycan insertion during elongation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS glycosyltransferase RodA paired with transpeptidase PBP2, the core PG-synthesizing pair of the elongasome.", "grounding": null, "id": "rodA_pbp2_complex", "is_orphan": false, "label": "RodA-PBP2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Elongasome machinery (MreB/MreC/MreD/RodA/PBP2) directing lateral peptidoglycan synthesis.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex (elongasome)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical (rod) cell morphology.", "grounding": null, "id": "rod_shape", "is_orphan": false, "label": "rod shape", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a numerical cell-length bin. Its graph illustrates contextual growth and division factors but is not a single protein-mediated causal mechanism.", "scope_status": "NONMECHANISTIC", "title": "Medium cell-length under moderate growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -895,13 +922,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

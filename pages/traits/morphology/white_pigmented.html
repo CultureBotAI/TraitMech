@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>white pigmented</h1>
     <p class="curie"><code>METPO:1003029</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>CrtOPQMN staphyloxanthin enzyme module</strong>
+
             <span class="edge-predicate">catalyzes</span>
             <strong>staphyloxanthin biosynthesis</strong>
-            <code>METPO:2007813</code>
+
+            <a href="https://w3id.org/metpo/2007813" rel="nofollow noreferrer"><code>METPO:2007813</code></a>
             <p>The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>staphyloxanthin biosynthesis</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>staphyloxanthin</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:71690" rel="nofollow noreferrer"><code>CHEBI:71690</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Staphyloxanthin biosynthesis produces the golden carotenoid pigment.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>low visible chromophore accumulation</strong>
+
             <span class="edge-predicate">results from reduced</span>
             <strong>staphyloxanthin biosynthesis</strong>
+
 
             <p>Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>low visible chromophore accumulation</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>visible white color</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Lack of accumulated chromophore yields a white or nonpigmented colony appearance.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>visible white color</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>white pigmented</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1003029" rel="nofollow noreferrer"><code>METPO:1003029</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Visible white colony color manifests the white-pigmented trait.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>melanin biosynthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0042438" rel="nofollow noreferrer"><code>GO:0042438</code></a>
             <span class="edge-predicate">has output</span>
             <strong>melanin</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:89634" rel="nofollow noreferrer"><code>CHEBI:89634</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>PKS-mediated melanin biosynthesis produces the melanin chromophore.</p>
             <ul>
 
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>reduced melanin accumulation</strong>
+
             <span class="edge-predicate">results from reduced</span>
             <strong>melanin biosynthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0042438" rel="nofollow noreferrer"><code>GO:0042438</code></a>
 
             <p>Reduced melanin biosynthesis lowers melanin chromophore accumulation.</p>
             <ul>
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>reduced melanin accumulation</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>visible white color</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Loss of melanin chromophore yields a white colony surface / white cells.</p>
             <ul>
 
@@ -215,9 +242,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>SigB (sigma factor B)</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>staphyloxanthin biosynthesis</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Sigma factor B positively regulates staphyloxanthin biosynthesis genes; its loss reduces pigment.</p>
             <ul>
 
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>GlmS</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>SigB (sigma factor B)</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment regulatory cascade.</p>
             <ul>
 
@@ -969,7 +1000,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking white colony pigmentation to reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery, and absence or silencing of carotenoid production in representative bacteria.", "edges": [{"description": "The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "METPO:2007813", "source": "staphyloxanthin_enzyme_module", "target": "staphyloxanthin_biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "staphyloxanthin_biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "id": "edge-3", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "low_visible_chromophore", "target": "staphyloxanthin_biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "low_visible_chromophore", "target": "visible_white_color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_white_color", "target": "white_pigmented_trait"}, {"description": "PKS-mediated melanin biosynthesis produces the melanin chromophore.", "evidence": [{"notes": "pks1 mutation abolishes melanization / decreased DHN melanin accumulation, establishing the PKS biosynthetic route to melanin.", "reference": "DOI:10.1007/s00792-024-01354-2"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "melanin_biosynthesis", "target": "melanin"}, {"description": "Reduced melanin biosynthesis lowers melanin chromophore accumulation.", "evidence": [{"notes": "Knockout of PKS gene (pksA) reduced melanin production, yielding melanin-deficient cells.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "id": "edge-7", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "reduced_melanin", "target": "melanin_biosynthesis"}, {"description": "Loss of melanin chromophore yields a white colony surface / white cells.", "evidence": [{"notes": "Mel- colonies are uneven with a white surface and white conidia; generic melanin-loss to white-pigment link.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reduced_melanin", "target": "visible_white_color"}, {"description": "Sigma factor B positively regulates staphyloxanthin biosynthesis genes; its loss reduces pigment.", "evidence": [{"notes": "SigB positively regulates genes involved in staphyloxanthin synthesis; disruptive sigB mutations give white colonies.", "reference": "DOI:10.1128/mbio.00346-24"}], "id": "edge-9", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "sigB", "target": "staphyloxanthin_biosynthesis"}, {"description": "GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment regulatory cascade.", "evidence": [{"notes": "GlmS directly upregulates sigB transcription (dual-luciferase and EMSA promoter binding); glmS knockout reduces sigB and golden pigment.", "reference": "DOI:10.1080/21505594.2024.2352476"}], "id": "edge-10", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "glmS", "target": "sigB"}], "evidence_rows": [{"description": "The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "predicate": "catalyzes", "predicate_id": "METPO:2007813", "source": "CrtOPQMN staphyloxanthin enzyme module", "target": "staphyloxanthin biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "staphyloxanthin biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "predicate": "results from reduced", "predicate_id": null, "source": "low visible chromophore accumulation", "target": "staphyloxanthin biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "low visible chromophore accumulation", "target": "visible white color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible white color", "target": "white pigmented"}, {"description": "PKS-mediated melanin biosynthesis produces the melanin chromophore.", "edge_id": "edge-6", "evidence": [{"notes": "pks1 mutation abolishes melanization / decreased DHN melanin accumulation, establishing the PKS biosynthetic route to melanin.", "reference": "DOI:10.1007/s00792-024-01354-2"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "melanin biosynthesis", "target": "melanin"}, {"description": "Reduced melanin biosynthesis lowers melanin chromophore accumulation.", "edge_id": "edge-7", "evidence": [{"notes": "Knockout of PKS gene (pksA) reduced melanin production, yielding melanin-deficient cells.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "predicate": "results from reduced", "predicate_id": null, "source": "reduced melanin accumulation", "target": "melanin biosynthesis"}, {"description": "Loss of melanin chromophore yields a white colony surface / white cells.", "edge_id": "edge-8", "evidence": [{"notes": "Mel- colonies are uneven with a white surface and white conidia; generic melanin-loss to white-pigment link.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reduced melanin accumulation", "target": "visible white color"}, {"description": "Sigma factor B positively regulates staphyloxanthin biosynthesis genes; its loss reduces pigment.", "edge_id": "edge-9", "evidence": [{"notes": "SigB positively regulates genes involved in staphyloxanthin synthesis; disruptive sigB mutations give white colonies.", "reference": "DOI:10.1128/mbio.00346-24"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "SigB (sigma factor B)", "target": "staphyloxanthin biosynthesis"}, {"description": "GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment regulatory cascade.", "edge_id": "edge-10", "evidence": [{"notes": "GlmS directly upregulates sigB transcription (dual-luciferase and EMSA promoter binding); glmS knockout reduces sigB and golden pigment.", "reference": "DOI:10.1080/21505594.2024.2352476"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "GlmS", "target": "SigB (sigma factor B)"}], "graph_id": "white_pigmented_low_chromophore", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Glucosamine-6-phosphate synthase; transcriptional upregulator of sigB.", "grounding": null, "id": "glmS", "is_orphan": false, "label": "GlmS", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Absence or low accumulation of colored pigment molecules.", "grounding": null, "id": "low_visible_chromophore", "is_orphan": false, "label": "low visible chromophore accumulation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dark brown/black chromophore pigment class; a major visible microbial pigment.", "grounding": "CHEBI:89634", "id": "melanin", "is_orphan": false, "label": "melanin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "PKS-type biosynthesis of melanin pigments (e.g. DHN melanin) in fungi and bacteria.", "grounding": "GO:0042438", "id": "melanin_biosynthesis", "is_orphan": false, "label": "melanin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Absent or lowered accumulation of melanin chromophore.", "grounding": null, "id": "reduced_melanin", "is_orphan": false, "label": "reduced melanin accumulation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Alternative sigma factor B; positive regulator of staphyloxanthin biosynthesis genes.", "grounding": null, "id": "sigB", "is_orphan": false, "label": "SigB (sigma factor B)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Golden carotenoid pigment of Staphylococcus aureus.", "grounding": "CHEBI:71690", "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis of the golden carotenoid pigment staphyloxanthin.", "grounding": null, "id": "staphyloxanthin_biosynthesis", "is_orphan": false, "label": "staphyloxanthin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "S. aureus carotenoid enzymes for staphyloxanthin production.", "grounding": null, "id": "staphyloxanthin_enzyme_module", "is_orphan": false, "label": "CrtOPQMN staphyloxanthin enzyme module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Observed white or nonpigmented colony color.", "grounding": null, "id": "visible_white_color", "is_orphan": false, "label": "visible white color", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "White or nonpigmented microbial colony or cell appearance.", "grounding": "METPO:1003029", "id": "white_pigmented_trait", "is_orphan": false, "label": "white pigmented", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "White pigmentation is a visual color classification produced by several unrelated low-chromophore or regulatory states. The graph is illustrative context, not one universal protein-mediated mechanism.", "scope_status": "NONMECHANISTIC", "title": "White pigmentation low-chromophore mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking white colony pigmentation to reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery, and absence or silencing of carotenoid production in representative bacteria.", "edges": [{"description": "The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "METPO:2007813", "source": "staphyloxanthin_enzyme_module", "target": "staphyloxanthin_biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "staphyloxanthin_biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "id": "edge-3", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "low_visible_chromophore", "target": "staphyloxanthin_biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "low_visible_chromophore", "target": "visible_white_color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_white_color", "target": "white_pigmented_trait"}, {"description": "PKS-mediated melanin biosynthesis produces the melanin chromophore.", "evidence": [{"notes": "pks1 mutation abolishes melanization / decreased DHN melanin accumulation, establishing the PKS biosynthetic route to melanin.", "reference": "DOI:10.1007/s00792-024-01354-2"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "melanin_biosynthesis", "target": "melanin"}, {"description": "Reduced melanin biosynthesis lowers melanin chromophore accumulation.", "evidence": [{"notes": "Knockout of PKS gene (pksA) reduced melanin production, yielding melanin-deficient cells.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "id": "edge-7", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "reduced_melanin", "target": "melanin_biosynthesis"}, {"description": "Loss of melanin chromophore yields a white colony surface / white cells.", "evidence": [{"notes": "Mel- colonies are uneven with a white surface and white conidia; generic melanin-loss to white-pigment link.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reduced_melanin", "target": "visible_white_color"}, {"description": "Sigma factor B positively regulates staphyloxanthin biosynthesis genes; its loss reduces pigment.", "evidence": [{"notes": "SigB positively regulates genes involved in staphyloxanthin synthesis; disruptive sigB mutations give white colonies.", "reference": "DOI:10.1128/mbio.00346-24"}], "id": "edge-9", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "sigB", "target": "staphyloxanthin_biosynthesis"}, {"description": "GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment regulatory cascade.", "evidence": [{"notes": "GlmS directly upregulates sigB transcription (dual-luciferase and EMSA promoter binding); glmS knockout reduces sigB and golden pigment.", "reference": "DOI:10.1080/21505594.2024.2352476"}], "id": "edge-10", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "glmS", "target": "sigB"}], "evidence_rows": [{"description": "The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "predicate": "catalyzes", "predicate_id": "METPO:2007813", "source": "CrtOPQMN staphyloxanthin enzyme module", "source_grounding": null, "target": "staphyloxanthin biosynthesis", "target_grounding": null}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "staphyloxanthin biosynthesis", "source_grounding": null, "target": "staphyloxanthin", "target_grounding": "CHEBI:71690"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "predicate": "results from reduced", "predicate_id": null, "source": "low visible chromophore accumulation", "source_grounding": null, "target": "staphyloxanthin biosynthesis", "target_grounding": null}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "low visible chromophore accumulation", "source_grounding": null, "target": "visible white color", "target_grounding": null}, {"description": "Visible white colony color manifests the white-pigmented trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible white color", "source_grounding": null, "target": "white pigmented", "target_grounding": "METPO:1003029"}, {"description": "PKS-mediated melanin biosynthesis produces the melanin chromophore.", "edge_id": "edge-6", "evidence": [{"notes": "pks1 mutation abolishes melanization / decreased DHN melanin accumulation, establishing the PKS biosynthetic route to melanin.", "reference": "DOI:10.1007/s00792-024-01354-2"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "melanin biosynthesis", "source_grounding": "GO:0042438", "target": "melanin", "target_grounding": "CHEBI:89634"}, {"description": "Reduced melanin biosynthesis lowers melanin chromophore accumulation.", "edge_id": "edge-7", "evidence": [{"notes": "Knockout of PKS gene (pksA) reduced melanin production, yielding melanin-deficient cells.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "predicate": "results from reduced", "predicate_id": null, "source": "reduced melanin accumulation", "source_grounding": null, "target": "melanin biosynthesis", "target_grounding": "GO:0042438"}, {"description": "Loss of melanin chromophore yields a white colony surface / white cells.", "edge_id": "edge-8", "evidence": [{"notes": "Mel- colonies are uneven with a white surface and white conidia; generic melanin-loss to white-pigment link.", "reference": "DOI:10.1080/21501203.2023.2249010"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reduced melanin accumulation", "source_grounding": null, "target": "visible white color", "target_grounding": null}, {"description": "Sigma factor B positively regulates staphyloxanthin biosynthesis genes; its loss reduces pigment.", "edge_id": "edge-9", "evidence": [{"notes": "SigB positively regulates genes involved in staphyloxanthin synthesis; disruptive sigB mutations give white colonies.", "reference": "DOI:10.1128/mbio.00346-24"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "SigB (sigma factor B)", "source_grounding": null, "target": "staphyloxanthin biosynthesis", "target_grounding": null}, {"description": "GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment regulatory cascade.", "edge_id": "edge-10", "evidence": [{"notes": "GlmS directly upregulates sigB transcription (dual-luciferase and EMSA promoter binding); glmS knockout reduces sigB and golden pigment.", "reference": "DOI:10.1080/21505594.2024.2352476"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "GlmS", "source_grounding": null, "target": "SigB (sigma factor B)", "target_grounding": null}], "graph_id": "white_pigmented_low_chromophore", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Glucosamine-6-phosphate synthase; transcriptional upregulator of sigB.", "grounding": null, "id": "glmS", "is_orphan": false, "label": "GlmS", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Absence or low accumulation of colored pigment molecules.", "grounding": null, "id": "low_visible_chromophore", "is_orphan": false, "label": "low visible chromophore accumulation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dark brown/black chromophore pigment class; a major visible microbial pigment.", "grounding": "CHEBI:89634", "id": "melanin", "is_orphan": false, "label": "melanin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "PKS-type biosynthesis of melanin pigments (e.g. DHN melanin) in fungi and bacteria.", "grounding": "GO:0042438", "id": "melanin_biosynthesis", "is_orphan": false, "label": "melanin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Absent or lowered accumulation of melanin chromophore.", "grounding": null, "id": "reduced_melanin", "is_orphan": false, "label": "reduced melanin accumulation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Alternative sigma factor B; positive regulator of staphyloxanthin biosynthesis genes.", "grounding": null, "id": "sigB", "is_orphan": false, "label": "SigB (sigma factor B)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Golden carotenoid pigment of Staphylococcus aureus.", "grounding": "CHEBI:71690", "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis of the golden carotenoid pigment staphyloxanthin.", "grounding": null, "id": "staphyloxanthin_biosynthesis", "is_orphan": false, "label": "staphyloxanthin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "S. aureus carotenoid enzymes for staphyloxanthin production.", "grounding": null, "id": "staphyloxanthin_enzyme_module", "is_orphan": false, "label": "CrtOPQMN staphyloxanthin enzyme module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Observed white or nonpigmented colony color.", "grounding": null, "id": "visible_white_color", "is_orphan": false, "label": "visible white color", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "White or nonpigmented microbial colony or cell appearance.", "grounding": "METPO:1003029", "id": "white_pigmented_trait", "is_orphan": false, "label": "white pigmented", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "White pigmentation is a visual color classification produced by several unrelated low-chromophore or regulatory states. The graph is illustrative context, not one universal protein-mediated mechanism.", "scope_status": "NONMECHANISTIC", "title": "White pigmentation low-chromophore mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -989,13 +1020,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 11:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

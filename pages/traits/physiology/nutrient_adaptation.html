@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>nutrient adaptation</h1>
     <p class="curie"><code>METPO:1000731</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>ambient nutrient concentration</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>nutrient sensing</strong>
-            <code>biolink:causes</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009594" rel="nofollow noreferrer"><code>GO:0009594</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Ambient nutrient levels are detected by cellular sensing systems.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>nutrient sensing</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009594" rel="nofollow noreferrer"><code>GO:0009594</code></a>
             <span class="edge-predicate">controls</span>
             <strong>resource allocation strategy</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Sensing of nutrient status shifts allocation between growth and maintenance functions.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>resource allocation strategy</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>copiotrophic</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000642" rel="nofollow noreferrer"><code>METPO:1000642</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>resource allocation strategy</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>oligotrophic</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000654" rel="nofollow noreferrer"><code>METPO:1000654</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>copiotrophic</strong>
+            <a href="https://w3id.org/metpo/1000642" rel="nofollow noreferrer"><code>METPO:1000642</code></a>
             <span class="edge-predicate">is a</span>
             <strong>nutrient adaptation</strong>
+            <a href="https://w3id.org/metpo/1000731" rel="nofollow noreferrer"><code>METPO:1000731</code></a>
             <code>rdfs:subClassOf</code>
             <p>Copiotrophy is a child phenotype of nutrient adaptation.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>oligotrophic</strong>
+            <a href="https://w3id.org/metpo/1000654" rel="nofollow noreferrer"><code>METPO:1000654</code></a>
             <span class="edge-predicate">is a</span>
             <strong>nutrient adaptation</strong>
+            <a href="https://w3id.org/metpo/1000731" rel="nofollow noreferrer"><code>METPO:1000731</code></a>
             <code>rdfs:subClassOf</code>
             <p>Oligotrophy is a child phenotype of nutrient adaptation.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>chronic nutrient limitation</strong>
+
             <span class="edge-predicate">selects for</span>
             <strong>genome streamlining</strong>
-            <code>METPO:2007401</code>
+
+            <a href="https://w3id.org/metpo/2007401" rel="nofollow noreferrer"><code>METPO:2007401</code></a>
             <p>Chronic nutrient limitation selects for streamlined small cells and genomes.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>rrn operon copy number</strong>
+
             <span class="edge-predicate">positively correlates with</span>
             <strong>maximum growth potential</strong>
+
 
             <p>Higher rrn operon copy number associates with higher maximum growth potential.</p>
             <ul>
@@ -907,7 +934,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient nutrient availability to sensing, resource-allocation strategy, and the copiotroph/oligotroph life-history phenotypes that fall under nutrient adaptation.", "edges": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient_nutrient_concentration", "target": "nutrient_sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "id": "edge-2", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient_sensing", "target": "resource_allocation"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "copiotrophic_phenotype"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "oligotrophic_phenotype"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Chronic nutrient limitation selects for streamlined small cells and genomes.", "evidence": [{"notes": "Streamlining theory attributes small cells and genomes to selection for efficient use of nutrients where nutrients limit; broad across oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-7", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "nutrient_limitation", "target": "genome_streamlining"}, {"description": "Higher rrn operon copy number associates with higher maximum growth potential.", "evidence": [{"notes": "Secondary life-history dimension correlated with ribosomal gene copy number; positive correlation between potential growth and rrn copy number.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "id": "edge-8", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "rrn_copy_number", "target": "maximum_growth_potential"}], "evidence_rows": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "edge_id": "edge-1", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient nutrient concentration", "target": "nutrient sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient sensing", "target": "resource allocation strategy"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "target": "copiotrophic"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "target": "oligotrophic"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic", "target": "nutrient adaptation"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic", "target": "nutrient adaptation"}, {"description": "Chronic nutrient limitation selects for streamlined small cells and genomes.", "edge_id": "edge-7", "evidence": [{"notes": "Streamlining theory attributes small cells and genomes to selection for efficient use of nutrients where nutrients limit; broad across oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "chronic nutrient limitation", "target": "genome streamlining"}, {"description": "Higher rrn operon copy number associates with higher maximum growth potential.", "edge_id": "edge-8", "evidence": [{"notes": "Secondary life-history dimension correlated with ribosomal gene copy number; positive correlation between potential growth and rrn copy number.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "predicate": "positively correlates with", "predicate_id": null, "source": "rrn operon copy number", "target": "maximum growth potential"}], "graph_id": "nutrient_adaptation_life_history_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Concentration of carbon, nitrogen, and phosphorus available in the habitat.", "grounding": null, "id": "ambient_nutrient_concentration", "is_orphan": false, "label": "ambient nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring fast growth in nutrient-rich conditions.", "grounding": "METPO:1000642", "id": "copiotrophic_phenotype", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selection-driven reduction of cell and genome size and regulatory complexity under nutrient limitation.", "grounding": null, "id": "genome_streamlining", "is_orphan": false, "label": "genome streamlining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maximum potential growth rate of an organism or community.", "grounding": null, "id": "maximum_growth_potential", "is_orphan": false, "label": "maximum growth potential", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological and metabolic adaptation to specific nutrient availability regimes.", "grounding": "METPO:1000731", "id": "nutrient_adaptation_trait", "is_orphan": false, "label": "nutrient adaptation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Persistently low nutrient availability imposing selection for efficient resource use.", "grounding": null, "id": "nutrient_limitation", "is_orphan": false, "label": "chronic nutrient limitation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular detection of nutrient status that adjusts gene expression and growth.", "grounding": "GO:0009594", "id": "nutrient_sensing", "is_orphan": false, "label": "nutrient sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring efficient growth in nutrient-poor conditions.", "grounding": "METPO:1000654", "id": "oligotrophic_phenotype", "is_orphan": false, "label": "oligotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Allocation of cellular resources between rapid growth machinery and high-affinity uptake or stress tolerance.", "grounding": null, "id": "resource_allocation", "is_orphan": false, "label": "resource allocation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of ribosomal RNA operons in a genome, a proxy for growth potential.", "grounding": null, "id": "rrn_copy_number", "is_orphan": false, "label": "rrn operon copy number", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This is a comparative life-history classification and association graph, not a concrete molecular mechanism. Its gene nodes are heterogeneous functional-category or relative-abundance signatures rather than individual causal protein families, so canonical-taxon and UniProt-example requirements do not apply.", "scope_status": "NONMECHANISTIC", "title": "Nutrient adaptation life-history axis"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient nutrient availability to sensing, resource-allocation strategy, and the copiotroph/oligotroph life-history phenotypes that fall under nutrient adaptation.", "edges": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient_nutrient_concentration", "target": "nutrient_sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "id": "edge-2", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient_sensing", "target": "resource_allocation"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "copiotrophic_phenotype"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "oligotrophic_phenotype"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Chronic nutrient limitation selects for streamlined small cells and genomes.", "evidence": [{"notes": "Streamlining theory attributes small cells and genomes to selection for efficient use of nutrients where nutrients limit; broad across oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-7", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "nutrient_limitation", "target": "genome_streamlining"}, {"description": "Higher rrn operon copy number associates with higher maximum growth potential.", "evidence": [{"notes": "Secondary life-history dimension correlated with ribosomal gene copy number; positive correlation between potential growth and rrn copy number.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "id": "edge-8", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "rrn_copy_number", "target": "maximum_growth_potential"}], "evidence_rows": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "edge_id": "edge-1", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient nutrient concentration", "source_grounding": null, "target": "nutrient sensing", "target_grounding": "GO:0009594"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient sensing", "source_grounding": "GO:0009594", "target": "resource allocation strategy", "target_grounding": null}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "source_grounding": null, "target": "copiotrophic", "target_grounding": "METPO:1000642"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "source_grounding": null, "target": "oligotrophic", "target_grounding": "METPO:1000654"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic", "source_grounding": "METPO:1000642", "target": "nutrient adaptation", "target_grounding": "METPO:1000731"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic", "source_grounding": "METPO:1000654", "target": "nutrient adaptation", "target_grounding": "METPO:1000731"}, {"description": "Chronic nutrient limitation selects for streamlined small cells and genomes.", "edge_id": "edge-7", "evidence": [{"notes": "Streamlining theory attributes small cells and genomes to selection for efficient use of nutrients where nutrients limit; broad across oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "chronic nutrient limitation", "source_grounding": null, "target": "genome streamlining", "target_grounding": null}, {"description": "Higher rrn operon copy number associates with higher maximum growth potential.", "edge_id": "edge-8", "evidence": [{"notes": "Secondary life-history dimension correlated with ribosomal gene copy number; positive correlation between potential growth and rrn copy number.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "predicate": "positively correlates with", "predicate_id": null, "source": "rrn operon copy number", "source_grounding": null, "target": "maximum growth potential", "target_grounding": null}], "graph_id": "nutrient_adaptation_life_history_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Concentration of carbon, nitrogen, and phosphorus available in the habitat.", "grounding": null, "id": "ambient_nutrient_concentration", "is_orphan": false, "label": "ambient nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring fast growth in nutrient-rich conditions.", "grounding": "METPO:1000642", "id": "copiotrophic_phenotype", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selection-driven reduction of cell and genome size and regulatory complexity under nutrient limitation.", "grounding": null, "id": "genome_streamlining", "is_orphan": false, "label": "genome streamlining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maximum potential growth rate of an organism or community.", "grounding": null, "id": "maximum_growth_potential", "is_orphan": false, "label": "maximum growth potential", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological and metabolic adaptation to specific nutrient availability regimes.", "grounding": "METPO:1000731", "id": "nutrient_adaptation_trait", "is_orphan": false, "label": "nutrient adaptation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Persistently low nutrient availability imposing selection for efficient resource use.", "grounding": null, "id": "nutrient_limitation", "is_orphan": false, "label": "chronic nutrient limitation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular detection of nutrient status that adjusts gene expression and growth.", "grounding": "GO:0009594", "id": "nutrient_sensing", "is_orphan": false, "label": "nutrient sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring efficient growth in nutrient-poor conditions.", "grounding": "METPO:1000654", "id": "oligotrophic_phenotype", "is_orphan": false, "label": "oligotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Allocation of cellular resources between rapid growth machinery and high-affinity uptake or stress tolerance.", "grounding": null, "id": "resource_allocation", "is_orphan": false, "label": "resource allocation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of ribosomal RNA operons in a genome, a proxy for growth potential.", "grounding": null, "id": "rrn_copy_number", "is_orphan": false, "label": "rrn operon copy number", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This is a comparative life-history classification and association graph, not a concrete molecular mechanism. Its gene nodes are heterogeneous functional-category or relative-abundance signatures rather than individual causal protein families, so canonical-taxon and UniProt-example requirements do not apply.", "scope_status": "NONMECHANISTIC", "title": "Nutrient adaptation life-history axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -927,13 +954,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 11:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

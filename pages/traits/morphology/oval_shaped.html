@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>oval shaped</h1>
     <p class="curie"><code>METPO:1000678</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>PBP2b</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR047982/" rel="nofollow noreferrer"><code>InterPro:IPR047982</code></a>
             <span class="edge-predicate">enables</span>
             <strong>peripheral peptidoglycan synthesis</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>MapZ/FtsZ division-positioning system</strong>
+
             <span class="edge-predicate">positions</span>
             <strong>septal peptidoglycan synthesis</strong>
+
 
             <p>MapZ/FtsZ positioning organizes the division-associated wall synthesis zone.</p>
             <ul>
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>peripheral peptidoglycan synthesis</strong>
+
             <span class="edge-predicate">combines with</span>
             <strong>septal peptidoglycan synthesis</strong>
+
 
             <p>Peripheral and septal synthesis together generate the ovococcal growth pattern.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>septal peptidoglycan synthesis</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>ellipsoidal geometry</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Coordinated septal and peripheral synthesis shapes an ellipsoidal cell body.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ellipsoidal geometry</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>oval shaped</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000678" rel="nofollow noreferrer"><code>METPO:1000678</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Rounded ellipsoidal geometry manifests the oval-shaped trait.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>peripheral peptidoglycan synthesis</strong>
+
             <span class="edge-predicate">positively influences</span>
             <strong>oval shaped</strong>
+            <a href="https://w3id.org/metpo/1000678" rel="nofollow noreferrer"><code>METPO:1000678</code></a>
 
             <p>Peripheral PG synthesis extends the cell prior to septal synthesis, producing elongated ovoid geometry.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>MreC</strong>
+
             <span class="edge-predicate">positively influences</span>
             <strong>oval shaped</strong>
+            <a href="https://w3id.org/metpo/1000678" rel="nofollow noreferrer"><code>METPO:1000678</code></a>
 
             <p>Loss of mreC yields smaller, more spherical cells, indicating MreC promotes elongated ovoid shape.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>RodA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001182/" rel="nofollow noreferrer"><code>InterPro:IPR001182</code></a>
             <span class="edge-predicate">positively influences</span>
             <strong>oval shaped</strong>
+            <a href="https://w3id.org/metpo/1000678" rel="nofollow noreferrer"><code>METPO:1000678</code></a>
 
             <p>Loss of rodA yields smaller, more spherical cells, indicating RodA promotes elongated ovoid shape.</p>
             <ul>
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>PBP2b</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR047982/" rel="nofollow noreferrer"><code>InterPro:IPR047982</code></a>
             <span class="edge-predicate">positively influences</span>
             <strong>oval shaped</strong>
+            <a href="https://w3id.org/metpo/1000678" rel="nofollow noreferrer"><code>METPO:1000678</code></a>
 
             <p>Loss of pbp2B yields smaller, more spherical cells, indicating PBP2b promotes elongated ovoid shape.</p>
             <ul>
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>RodA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001182/" rel="nofollow noreferrer"><code>InterPro:IPR001182</code></a>
             <span class="edge-predicate">part of</span>
             <strong>Rod complex (elongasome) peptidoglycan synthesis</strong>
-            <code>biolink:part_of</code>
+
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>RodA together with MreC and PBP2b forms the Rod complex driving peripheral elongation PG synthesis.</p>
             <ul>
 
@@ -249,9 +280,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>MapZ/FtsZ division-positioning system</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>correct septum placement / division-site marking</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>MapZ/LocZ mark division sites and ensure correct septum placement.</p>
             <ul>
 
@@ -416,20 +449,20 @@
 
         <li>
           <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/fungal_nematode_endoparasitism.html">fungal nematode endoparasitism</a>
+          <span class="sim">0.233</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
           <a href="../../traits/ecology/animal_pathogen.html">animal pathogen</a>
           <span class="sim">0.233</span>
         </li>
 
         <li>
           <span class="nn-cat">ecology</span>
-          <a href="../../traits/ecology/biosafety_level_2.html">biosafety level 2</a>
-          <span class="sim">0.221</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/microaerophilic.html">microaerophilic</a>
-          <span class="sim">0.219</span>
+          <a href="../../traits/ecology/fungal_nematode_egg_parasitism.html">fungal nematode egg parasitism</a>
+          <span class="sim">0.233</span>
         </li>
 
       </ul>
@@ -1000,7 +1033,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking oval morphology to peripheral and septal peptidoglycan synthesis, PBP2b-associated elongation, MapZ/FtsZ division positioning, and rounded ellipsoidal geometry.", "edges": [{"description": "PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.", "evidence": [{"notes": "Supports PBP2b as a key ovococcal elongation factor.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "PBP2b of ovococci"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pbp2b", "target": "peripheral_peptidoglycan_synthesis"}, {"description": "MapZ/FtsZ positioning organizes the division-associated wall synthesis zone.", "evidence": [{"notes": "Supports MapZ/FtsZ involvement in S. pneumoniae cell division.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "id": "edge-2", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mapZ_ftsZ_system", "target": "septal_peptidoglycan_synthesis"}, {"description": "Peripheral and septal synthesis together generate the ovococcal growth pattern.", "evidence": [{"notes": "Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "dynamics of peptidoglycan assembly"}], "id": "edge-3", "is_orphan": false, "predicate": "combines with", "predicate_id": null, "source": "peripheral_peptidoglycan_synthesis", "target": "septal_peptidoglycan_synthesis"}, {"description": "Coordinated septal and peripheral synthesis shapes an ellipsoidal cell body.", "evidence": [{"notes": "Supports the ellipsoidal ovococcal morphology endpoint.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ovococci that are ellipsoid"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "septal_peptidoglycan_synthesis", "target": "ellipsoidal_geometry"}, {"description": "Rounded ellipsoidal geometry manifests the oval-shaped trait.", "evidence": [{"notes": "Supports oval shape as an ellipsoidal bacterial morphology.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ellipsoid"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ellipsoidal_geometry", "target": "oval_shaped_trait"}, {"description": "Peripheral PG synthesis extends the cell prior to septal synthesis, producing elongated ovoid geometry.", "evidence": [{"notes": "Ovococcal division model: \"the cell synthesizes peripheral PG alone for a short time to extend the cell before septal PG synthesis is initiated\".", "reference": "DOI:10.1128/spectrum.04750-22"}], "id": "edge-6", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "peripheral_peptidoglycan_synthesis", "target": "oval_shaped_trait"}, {"description": "Loss of mreC yields smaller, more spherical cells, indicating MreC promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - MreC supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-7", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "mreC", "target": "oval_shaped_trait"}, {"description": "Loss of rodA yields smaller, more spherical cells, indicating RodA promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - RodA supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-8", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "rodA", "target": "oval_shaped_trait"}, {"description": "Loss of pbp2B yields smaller, more spherical cells, indicating PBP2b promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - PBP2b supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-9", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "pbp2b", "target": "oval_shaped_trait"}, {"description": "RodA together with MreC and PBP2b forms the Rod complex driving peripheral elongation PG synthesis.", "evidence": [{"notes": "mreC, pbp2B, and rodA act together in the elongation machinery whose loss makes cells spherical.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-10", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "rodA", "target": "rod_complex_elongasome"}, {"description": "MapZ/LocZ mark division sites and ensure correct septum placement.", "evidence": [{"notes": "\"MapZ and LocZ are reported as proteins that mark division sites and ensure correct septum placement, respectively\".", "reference": "DOI:10.1042/bsr20221664"}], "id": "edge-11", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "mapZ_ftsZ_system", "target": "division_site_placement"}], "evidence_rows": [{"description": "PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports PBP2b as a key ovococcal elongation factor.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "PBP2b of ovococci"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PBP2b", "target": "peripheral peptidoglycan synthesis"}, {"description": "MapZ/FtsZ positioning organizes the division-associated wall synthesis zone.", "edge_id": "edge-2", "evidence": [{"notes": "Supports MapZ/FtsZ involvement in S. pneumoniae cell division.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "predicate": "positions", "predicate_id": null, "source": "MapZ/FtsZ division-positioning system", "target": "septal peptidoglycan synthesis"}, {"description": "Peripheral and septal synthesis together generate the ovococcal growth pattern.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "dynamics of peptidoglycan assembly"}], "predicate": "combines with", "predicate_id": null, "source": "peripheral peptidoglycan synthesis", "target": "septal peptidoglycan synthesis"}, {"description": "Coordinated septal and peripheral synthesis shapes an ellipsoidal cell body.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the ellipsoidal ovococcal morphology endpoint.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ovococci that are ellipsoid"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "septal peptidoglycan synthesis", "target": "ellipsoidal geometry"}, {"description": "Rounded ellipsoidal geometry manifests the oval-shaped trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports oval shape as an ellipsoidal bacterial morphology.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ellipsoid"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ellipsoidal geometry", "target": "oval shaped"}, {"description": "Peripheral PG synthesis extends the cell prior to septal synthesis, producing elongated ovoid geometry.", "edge_id": "edge-6", "evidence": [{"notes": "Ovococcal division model: \"the cell synthesizes peripheral PG alone for a short time to extend the cell before septal PG synthesis is initiated\".", "reference": "DOI:10.1128/spectrum.04750-22"}], "predicate": "positively influences", "predicate_id": null, "source": "peripheral peptidoglycan synthesis", "target": "oval shaped"}, {"description": "Loss of mreC yields smaller, more spherical cells, indicating MreC promotes elongated ovoid shape.", "edge_id": "edge-7", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - MreC supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "MreC", "target": "oval shaped"}, {"description": "Loss of rodA yields smaller, more spherical cells, indicating RodA promotes elongated ovoid shape.", "edge_id": "edge-8", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - RodA supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "RodA", "target": "oval shaped"}, {"description": "Loss of pbp2B yields smaller, more spherical cells, indicating PBP2b promotes elongated ovoid shape.", "edge_id": "edge-9", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - PBP2b supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "PBP2b", "target": "oval shaped"}, {"description": "RodA together with MreC and PBP2b forms the Rod complex driving peripheral elongation PG synthesis.", "edge_id": "edge-10", "evidence": [{"notes": "mreC, pbp2B, and rodA act together in the elongation machinery whose loss makes cells spherical.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "RodA", "target": "Rod complex (elongasome) peptidoglycan synthesis"}, {"description": "MapZ/LocZ mark division sites and ensure correct septum placement.", "edge_id": "edge-11", "evidence": [{"notes": "\"MapZ and LocZ are reported as proteins that mark division sites and ensure correct septum placement, respectively\".", "reference": "DOI:10.1042/bsr20221664"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "MapZ/FtsZ division-positioning system", "target": "correct septum placement / division-site marking"}], "graph_id": "oval_shaped_ovococcal_pg_synthesis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Spatial marking and placement of the division site ensuring correct septum positioning.", "grounding": null, "id": "division_site_placement", "is_orphan": false, "label": "correct septum placement / division-site marking", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rounded elongated cell-body geometry.", "grounding": null, "id": "ellipsoidal_geometry", "is_orphan": false, "label": "ellipsoidal geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins involved in positioning and organizing ovococcal division.", "grounding": null, "id": "mapZ_ftsZ_system", "is_orphan": false, "label": "MapZ/FtsZ division-positioning system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongasome scaffolding protein required for peripheral peptidoglycan synthesis and elongated cell shape.", "grounding": null, "id": "mreC", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Rounded ellipsoidal bacterial cell morphology.", "grounding": "METPO:1000678", "id": "oval_shaped_trait", "is_orphan": false, "label": "oval shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Peptidoglycan synthase associated with elongation in ovococci.", "grounding": "InterPro:IPR047982", "id": "pbp2b", "is_orphan": false, "label": "PBP2b", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "The R6-derived depletion study directly connects PBP2b levels to cell morphology; UniProt verifies the reviewed strain-level protein entry.", "reference": "DOI:10.1128/JB.00184-13", "snippet": "PBP2b is essential for peripheral peptidoglycan synthesis"}], "gene_symbol": "penA", "protein_label": "Penicillin-binding protein 2B", "retrieved_on": "2026-08-25", "role": "R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity required to maintain elongated oval pneumococcal morphology.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A3M6"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Peripheral wall synthesis contributing to ovococcal elongation.", "grounding": null, "id": "peripheral_peptidoglycan_synthesis", "is_orphan": false, "label": "peripheral peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS-family peptidoglycan glycosyltransferase of the Rod complex driving sidewall/peripheral elongation.", "grounding": "InterPro:IPR001182", "id": "rodA", "is_orphan": false, "label": "RodA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Conserved peripheral/sidewall peptidoglycan synthesis machinery (RodA, MreC, PBP2b) driving cell elongation.", "grounding": null, "id": "rod_complex_elongasome", "is_orphan": false, "label": "Rod complex (elongasome) peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Division-site wall synthesis.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "The R6-derived depletion study directly connects PBP2b levels to cell morphology; UniProt verifies the reviewed strain-level protein entry.", "reference": "DOI:10.1128/JB.00184-13", "snippet": "PBP2b is essential for peripheral peptidoglycan synthesis"}], "gene_symbol": "penA", "node_id": "pbp2b", "node_label": "PBP2b", "protein_label": "Penicillin-binding protein 2B", "retrieved_on": "2026-08-25", "role": "R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity required to maintain elongated oval pneumococcal morphology.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A3M6"}], "scope_notes": "The graph represents the pneumococcal septal/peripheral peptidoglycan mechanism. The R6 PBP2b example anchors a protein in the elongation branch; aggregate systems remain semantic or reviewed label-only nodes.", "scope_status": "MECHANISTIC", "title": "Oval-shape ovococcal peptidoglycan mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking oval morphology to peripheral and septal peptidoglycan synthesis, PBP2b-associated elongation, MapZ/FtsZ division positioning, and rounded ellipsoidal geometry.", "edges": [{"description": "PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.", "evidence": [{"notes": "Supports PBP2b as a key ovococcal elongation factor.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "PBP2b of ovococci"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pbp2b", "target": "peripheral_peptidoglycan_synthesis"}, {"description": "MapZ/FtsZ positioning organizes the division-associated wall synthesis zone.", "evidence": [{"notes": "Supports MapZ/FtsZ involvement in S. pneumoniae cell division.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "id": "edge-2", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mapZ_ftsZ_system", "target": "septal_peptidoglycan_synthesis"}, {"description": "Peripheral and septal synthesis together generate the ovococcal growth pattern.", "evidence": [{"notes": "Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "dynamics of peptidoglycan assembly"}], "id": "edge-3", "is_orphan": false, "predicate": "combines with", "predicate_id": null, "source": "peripheral_peptidoglycan_synthesis", "target": "septal_peptidoglycan_synthesis"}, {"description": "Coordinated septal and peripheral synthesis shapes an ellipsoidal cell body.", "evidence": [{"notes": "Supports the ellipsoidal ovococcal morphology endpoint.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ovococci that are ellipsoid"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "septal_peptidoglycan_synthesis", "target": "ellipsoidal_geometry"}, {"description": "Rounded ellipsoidal geometry manifests the oval-shaped trait.", "evidence": [{"notes": "Supports oval shape as an ellipsoidal bacterial morphology.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ellipsoid"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ellipsoidal_geometry", "target": "oval_shaped_trait"}, {"description": "Peripheral PG synthesis extends the cell prior to septal synthesis, producing elongated ovoid geometry.", "evidence": [{"notes": "Ovococcal division model: \"the cell synthesizes peripheral PG alone for a short time to extend the cell before septal PG synthesis is initiated\".", "reference": "DOI:10.1128/spectrum.04750-22"}], "id": "edge-6", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "peripheral_peptidoglycan_synthesis", "target": "oval_shaped_trait"}, {"description": "Loss of mreC yields smaller, more spherical cells, indicating MreC promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - MreC supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-7", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "mreC", "target": "oval_shaped_trait"}, {"description": "Loss of rodA yields smaller, more spherical cells, indicating RodA promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - RodA supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-8", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "rodA", "target": "oval_shaped_trait"}, {"description": "Loss of pbp2B yields smaller, more spherical cells, indicating PBP2b promotes elongated ovoid shape.", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - PBP2b supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-9", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "pbp2b", "target": "oval_shaped_trait"}, {"description": "RodA together with MreC and PBP2b forms the Rod complex driving peripheral elongation PG synthesis.", "evidence": [{"notes": "mreC, pbp2B, and rodA act together in the elongation machinery whose loss makes cells spherical.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "id": "edge-10", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "rodA", "target": "rod_complex_elongasome"}, {"description": "MapZ/LocZ mark division sites and ensure correct septum placement.", "evidence": [{"notes": "\"MapZ and LocZ are reported as proteins that mark division sites and ensure correct septum placement, respectively\".", "reference": "DOI:10.1042/bsr20221664"}], "id": "edge-11", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "mapZ_ftsZ_system", "target": "division_site_placement"}], "evidence_rows": [{"description": "PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports PBP2b as a key ovococcal elongation factor.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "PBP2b of ovococci"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PBP2b", "source_grounding": "InterPro:IPR047982", "target": "peripheral peptidoglycan synthesis", "target_grounding": null}, {"description": "MapZ/FtsZ positioning organizes the division-associated wall synthesis zone.", "edge_id": "edge-2", "evidence": [{"notes": "Supports MapZ/FtsZ involvement in S. pneumoniae cell division.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "predicate": "positions", "predicate_id": null, "source": "MapZ/FtsZ division-positioning system", "source_grounding": null, "target": "septal peptidoglycan synthesis", "target_grounding": null}, {"description": "Peripheral and septal synthesis together generate the ovococcal growth pattern.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "dynamics of peptidoglycan assembly"}], "predicate": "combines with", "predicate_id": null, "source": "peripheral peptidoglycan synthesis", "source_grounding": null, "target": "septal peptidoglycan synthesis", "target_grounding": null}, {"description": "Coordinated septal and peripheral synthesis shapes an ellipsoidal cell body.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the ellipsoidal ovococcal morphology endpoint.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ovococci that are ellipsoid"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "septal peptidoglycan synthesis", "source_grounding": null, "target": "ellipsoidal geometry", "target_grounding": null}, {"description": "Rounded ellipsoidal geometry manifests the oval-shaped trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports oval shape as an ellipsoidal bacterial morphology.", "reference": "DOI:10.1089/mdr.2014.0032", "snippet": "ellipsoid"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ellipsoidal geometry", "source_grounding": null, "target": "oval shaped", "target_grounding": "METPO:1000678"}, {"description": "Peripheral PG synthesis extends the cell prior to septal synthesis, producing elongated ovoid geometry.", "edge_id": "edge-6", "evidence": [{"notes": "Ovococcal division model: \"the cell synthesizes peripheral PG alone for a short time to extend the cell before septal PG synthesis is initiated\".", "reference": "DOI:10.1128/spectrum.04750-22"}], "predicate": "positively influences", "predicate_id": null, "source": "peripheral peptidoglycan synthesis", "source_grounding": null, "target": "oval shaped", "target_grounding": "METPO:1000678"}, {"description": "Loss of mreC yields smaller, more spherical cells, indicating MreC promotes elongated ovoid shape.", "edge_id": "edge-7", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - MreC supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "MreC", "source_grounding": null, "target": "oval shaped", "target_grounding": "METPO:1000678"}, {"description": "Loss of rodA yields smaller, more spherical cells, indicating RodA promotes elongated ovoid shape.", "edge_id": "edge-8", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - RodA supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "RodA", "source_grounding": "InterPro:IPR001182", "target": "oval shaped", "target_grounding": "METPO:1000678"}, {"description": "Loss of pbp2B yields smaller, more spherical cells, indicating PBP2b promotes elongated ovoid shape.", "edge_id": "edge-9", "evidence": [{"notes": "\"cells lacking mreC, pbp2B, and rodA appeared smaller and more spherical\" - PBP2b supports ovoid elongation.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "positively influences", "predicate_id": null, "source": "PBP2b", "source_grounding": "InterPro:IPR047982", "target": "oval shaped", "target_grounding": "METPO:1000678"}, {"description": "RodA together with MreC and PBP2b forms the Rod complex driving peripheral elongation PG synthesis.", "edge_id": "edge-10", "evidence": [{"notes": "mreC, pbp2B, and rodA act together in the elongation machinery whose loss makes cells spherical.", "reference": "DOI:10.1038/s41467-023-38904-9"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "RodA", "source_grounding": "InterPro:IPR001182", "target": "Rod complex (elongasome) peptidoglycan synthesis", "target_grounding": null}, {"description": "MapZ/LocZ mark division sites and ensure correct septum placement.", "edge_id": "edge-11", "evidence": [{"notes": "\"MapZ and LocZ are reported as proteins that mark division sites and ensure correct septum placement, respectively\".", "reference": "DOI:10.1042/bsr20221664"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "MapZ/FtsZ division-positioning system", "source_grounding": null, "target": "correct septum placement / division-site marking", "target_grounding": null}], "graph_id": "oval_shaped_ovococcal_pg_synthesis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Spatial marking and placement of the division site ensuring correct septum positioning.", "grounding": null, "id": "division_site_placement", "is_orphan": false, "label": "correct septum placement / division-site marking", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rounded elongated cell-body geometry.", "grounding": null, "id": "ellipsoidal_geometry", "is_orphan": false, "label": "ellipsoidal geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins involved in positioning and organizing ovococcal division.", "grounding": null, "id": "mapZ_ftsZ_system", "is_orphan": false, "label": "MapZ/FtsZ division-positioning system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongasome scaffolding protein required for peripheral peptidoglycan synthesis and elongated cell shape.", "grounding": null, "id": "mreC", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Rounded ellipsoidal bacterial cell morphology.", "grounding": "METPO:1000678", "id": "oval_shaped_trait", "is_orphan": false, "label": "oval shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Peptidoglycan synthase associated with elongation in ovococci.", "grounding": "InterPro:IPR047982", "id": "pbp2b", "is_orphan": false, "label": "PBP2b", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "The R6-derived depletion study directly connects PBP2b levels to cell morphology; UniProt verifies the reviewed strain-level protein entry.", "reference": "DOI:10.1128/JB.00184-13", "snippet": "PBP2b is essential for peripheral peptidoglycan synthesis"}], "gene_symbol": "penA", "protein_label": "Penicillin-binding protein 2B", "retrieved_on": "2026-08-25", "role": "R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity required to maintain elongated oval pneumococcal morphology.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A3M6"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Peripheral wall synthesis contributing to ovococcal elongation.", "grounding": null, "id": "peripheral_peptidoglycan_synthesis", "is_orphan": false, "label": "peripheral peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS-family peptidoglycan glycosyltransferase of the Rod complex driving sidewall/peripheral elongation.", "grounding": "InterPro:IPR001182", "id": "rodA", "is_orphan": false, "label": "RodA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Conserved peripheral/sidewall peptidoglycan synthesis machinery (RodA, MreC, PBP2b) driving cell elongation.", "grounding": null, "id": "rod_complex_elongasome", "is_orphan": false, "label": "Rod complex (elongasome) peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Division-site wall synthesis.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "The R6-derived depletion study directly connects PBP2b levels to cell morphology; UniProt verifies the reviewed strain-level protein entry.", "reference": "DOI:10.1128/JB.00184-13", "snippet": "PBP2b is essential for peripheral peptidoglycan synthesis"}], "gene_symbol": "penA", "node_id": "pbp2b", "node_label": "PBP2b", "protein_label": "Penicillin-binding protein 2B", "retrieved_on": "2026-08-25", "role": "R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity required to maintain elongated oval pneumococcal morphology.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A3M6"}], "scope_notes": "The graph represents the pneumococcal septal/peripheral peptidoglycan mechanism. The R6 PBP2b example anchors a protein in the elongation branch; aggregate systems remain semantic or reviewed label-only nodes.", "scope_status": "MECHANISTIC", "title": "Oval-shape ovococcal peptidoglycan mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1020,13 +1053,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

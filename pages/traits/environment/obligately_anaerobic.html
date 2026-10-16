@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>obligately anaerobic</h1>
     <p class="curie"><code>METPO:1000607</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">inhibits</span>
             <strong>obligately anaerobic</strong>
-            <code>RO:0002212</code>
+            <a href="https://w3id.org/metpo/1000607" rel="nofollow noreferrer"><code>METPO:1000607</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Oxygen blocks growth of obligate anaerobes.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>anaerobic metabolism</strong>
+
             <span class="edge-predicate">depends on</span>
             <strong>low-potential metal centres</strong>
-            <code>RO:0002502</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002502" rel="nofollow noreferrer"><code>RO:0002502</code></a>
             <p>Obligate anaerobic metabolism often relies on oxygen-sensitive radical chemistry and low-potential metal centers.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">poisons</span>
             <strong>low-potential metal centres</strong>
+
 
             <p>Dioxygen can directly poison catalytic sites central to anaerobic metabolism.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>reactive oxygen species</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26523" rel="nofollow noreferrer"><code>CHEBI:26523</code></a>
             <span class="edge-predicate">damages</span>
             <strong>low-potential metal centres</strong>
+
 
             <p>ROS provide an additional route for damage to oxygen-sensitive anaerobic enzymes.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>oxygen exposure</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>reactive oxygen species</strong>
-            <code>biolink:causes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26523" rel="nofollow noreferrer"><code>CHEBI:26523</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl radicals.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>oxygen exposure</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>oxidative damage to biomolecules</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>O2 exposure causes oxidative stress damaging biomolecules.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>hydrogen peroxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16240" rel="nofollow noreferrer"><code>CHEBI:16240</code></a>
             <span class="edge-predicate">causes</span>
             <strong>hydroxyl radical</strong>
-            <code>biolink:causes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29191" rel="nofollow noreferrer"><code>CHEBI:29191</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ferrous iron (Fe(II))</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>hydroxyl radical</strong>
-            <code>biolink:causes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29191" rel="nofollow noreferrer"><code>CHEBI:29191</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Fe(II) drives hydroxyl-radical generation via the Fenton reaction.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>hydroxyl radical</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29191" rel="nofollow noreferrer"><code>CHEBI:29191</code></a>
             <span class="edge-predicate">causes</span>
             <strong>DNA damage</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Hydroxyl radicals create irreparable lesions and block replication.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">inactivates</span>
             <strong>pyruvate formate-lyase (PFL)</strong>
+
 
             <p>O2 rapidly inactivates the glycyl-radical enzyme PFL.</p>
             <ul>
@@ -255,8 +286,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">inactivates</span>
             <strong>pyruvate:ferredoxin oxidoreductase (PFOR)</strong>
+
 
             <p>O2 directly inactivates the metalloenzyme PFOR.</p>
             <ul>
@@ -272,8 +305,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">inactivates</span>
             <strong>[FeFe]-hydrogenase</strong>
+
 
             <p>O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.</p>
             <ul>
@@ -394,7 +429,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/hydrogenotrophic_methanogenesis.html">hydrogenotrophic methanogenesis</a>
+          <span class="sim">0.332</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetoclastic_methanogenesis.html">acetoclastic methanogenesis</a>
+          <span class="sim">0.332</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/methanogenesis.html">Methanogenesis</a>
+          <span class="sim">0.332</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/methyl_based_methanogenesis.html">methyl-based methanogenesis</a>
           <span class="sim">0.332</span>
         </li>
 
@@ -402,24 +455,6 @@
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/oxygen_preference.html">oxygen preference</a>
           <span class="sim">0.324</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/hyperthermophilic.html">hyperthermophilic</a>
-          <span class="sim">0.320</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemoorganoheterotrophic.html">chemoorganoheterotrophic</a>
-          <span class="sim">0.315</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/organoheterotrophic.html">organoheterotrophic</a>
-          <span class="sim">0.305</span>
         </li>
 
       </ul>
@@ -972,7 +1007,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking obligate anaerobiosis to oxygen-blocked growth and oxygen-sensitive metabolic chemistry.", "edges": [{"description": "Oxygen blocks growth of obligate anaerobes.", "evidence": [{"notes": "Review identifies blocked growth as the defining trait of obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-1", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "obligate_anaerobic_trait"}, {"description": "Obligate anaerobic metabolism often relies on oxygen-sensitive radical chemistry and low-potential metal centers.", "evidence": [{"notes": "Supports low-potential metal centers as anaerobic metabolic features.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "radical chemistry and low-potential metal centres"}], "id": "edge-2", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "anaerobic_metabolism", "target": "low_potential_metal_centres"}, {"description": "Dioxygen can directly poison catalytic sites central to anaerobic metabolism.", "evidence": [{"notes": "Supports oxygen-sensitive catalytic sites as a mechanism of growth inhibition.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "poisons", "predicate_id": null, "source": "molecular_oxygen", "target": "low_potential_metal_centres"}, {"description": "ROS provide an additional route for damage to oxygen-sensitive anaerobic enzymes.", "evidence": [{"notes": "Supports ROS-mediated impairment of anaerobic catalytic sites.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "low_potential_metal_centres"}, {"description": "O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl radicals.", "evidence": [{"notes": "As a consequence of oxygenation, reactive oxygen species like superoxide, peroxides, and hydroxyl radicals are produced.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen_exposure", "target": "reactive_oxygen_species"}, {"description": "O2 exposure causes oxidative stress damaging biomolecules.", "evidence": [{"notes": "ROS cause oxidative stress due to damage to biomolecules like proteins and nucleic acids.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen_exposure", "target": "oxidative_damage_biomolecules"}, {"description": "H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "hydroxyl_radical"}, {"description": "Fe(II) drives hydroxyl-radical generation via the Fenton reaction.", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ferrous_iron", "target": "hydroxyl_radical"}, {"description": "Hydroxyl radicals create irreparable lesions and block replication.", "evidence": [{"notes": "hydroxyl radicals create irreparable lesions and block replication.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydroxyl_radical", "target": "dna_damage"}, {"description": "O2 rapidly inactivates the glycyl-radical enzyme PFL.", "evidence": [{"notes": "PFL is rapidly inactivated by O2; even low O2 levels can inactivate PFL within seconds.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-10", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "pyruvate_formate_lyase"}, {"description": "O2 directly inactivates the metalloenzyme PFOR.", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes (e.g., PFOR).", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-11", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "pyruvate_ferredoxin_oxidoreductase"}, {"description": "O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes... hydrogenases.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-12", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "fefe_hydrogenase"}], "evidence_rows": [{"description": "Oxygen blocks growth of obligate anaerobes.", "edge_id": "edge-1", "evidence": [{"notes": "Review identifies blocked growth as the defining trait of obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "target": "obligately anaerobic"}, {"description": "Obligate anaerobic metabolism often relies on oxygen-sensitive radical chemistry and low-potential metal centers.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low-potential metal centers as anaerobic metabolic features.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "radical chemistry and low-potential metal centres"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "anaerobic metabolism", "target": "low-potential metal centres"}, {"description": "Dioxygen can directly poison catalytic sites central to anaerobic metabolism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen-sensitive catalytic sites as a mechanism of growth inhibition.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "predicate": "poisons", "predicate_id": null, "source": "molecular oxygen", "target": "low-potential metal centres"}, {"description": "ROS provide an additional route for damage to oxygen-sensitive anaerobic enzymes.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ROS-mediated impairment of anaerobic catalytic sites.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "target": "low-potential metal centres"}, {"description": "O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl radicals.", "edge_id": "edge-5", "evidence": [{"notes": "As a consequence of oxygenation, reactive oxygen species like superoxide, peroxides, and hydroxyl radicals are produced.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen exposure", "target": "reactive oxygen species"}, {"description": "O2 exposure causes oxidative stress damaging biomolecules.", "edge_id": "edge-6", "evidence": [{"notes": "ROS cause oxidative stress due to damage to biomolecules like proteins and nucleic acids.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen exposure", "target": "oxidative damage to biomolecules"}, {"description": "H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).", "edge_id": "edge-7", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "target": "hydroxyl radical"}, {"description": "Fe(II) drives hydroxyl-radical generation via the Fenton reaction.", "edge_id": "edge-8", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "ferrous iron (Fe(II))", "target": "hydroxyl radical"}, {"description": "Hydroxyl radicals create irreparable lesions and block replication.", "edge_id": "edge-9", "evidence": [{"notes": "hydroxyl radicals create irreparable lesions and block replication.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydroxyl radical", "target": "DNA damage"}, {"description": "O2 rapidly inactivates the glycyl-radical enzyme PFL.", "edge_id": "edge-10", "evidence": [{"notes": "PFL is rapidly inactivated by O2; even low O2 levels can inactivate PFL within seconds.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "pyruvate formate-lyase (PFL)"}, {"description": "O2 directly inactivates the metalloenzyme PFOR.", "edge_id": "edge-11", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes (e.g., PFOR).", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "pyruvate:ferredoxin oxidoreductase (PFOR)"}, {"description": "O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.", "edge_id": "edge-12", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes... hydrogenases.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "[FeFe]-hydrogenase"}], "graph_id": "obligate_anaerobe_oxygen_toxicity", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy metabolism optimized for anoxic conditions.", "grounding": null, "id": "anaerobic_metabolism", "is_orphan": false, "label": "anaerobic metabolism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Irreparable lesions blocking replication caused by hydroxyl radicals.", "grounding": null, "id": "dna_damage", "is_orphan": false, "label": "DNA damage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-sensitive low-potential redox enzyme.", "grounding": null, "id": "fefe_hydrogenase", "is_orphan": false, "label": "[FeFe]-hydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(II) reactant driving hydroxyl-radical generation via Fenton reaction.", "grounding": null, "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron (Fe(II))", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species; substrate for Fenton chemistry.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Highly damaging ROS produced via Fenton chemistry.", "grounding": "CHEBI:29191", "id": "hydroxyl_radical", "is_orphan": false, "label": "hydroxyl radical", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Oxygen-sensitive catalytic centers used in anaerobic metabolism.", "grounding": null, "id": "low_potential_metal_centres", "is_orphan": false, "label": "low-potential metal centres", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen exposure that blocks obligate anaerobe growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Molecular oxygen inhibits or prevents growth.", "grounding": "METPO:1000607", "id": "obligate_anaerobic_trait", "is_orphan": false, "label": "obligately anaerobic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ROS-mediated oxidative damage to proteins and nucleic acids.", "grounding": null, "id": "oxidative_damage_biomolecules", "is_orphan": false, "label": "oxidative damage to biomolecules", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Exposure of anaerobic cells to molecular oxygen, triggering oxidative stress.", "grounding": null, "id": "oxygen_exposure", "is_orphan": false, "label": "oxygen exposure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "O2-sensitive anaerobic metalloenzyme.", "grounding": null, "id": "pyruvate_ferredoxin_oxidoreductase", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase (PFOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Glycyl-radical enzyme rapidly inactivated by O2.", "grounding": null, "id": "pyruvate_formate_lyase", "is_orphan": false, "label": "pyruvate formate-lyase (PFL)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants such as superoxide and hydrogen peroxide.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Obligate anaerobe oxygen-toxicity mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking obligate anaerobiosis to oxygen-blocked growth and oxygen-sensitive metabolic chemistry.", "edges": [{"description": "Oxygen blocks growth of obligate anaerobes.", "evidence": [{"notes": "Review identifies blocked growth as the defining trait of obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-1", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "obligate_anaerobic_trait"}, {"description": "Obligate anaerobic metabolism often relies on oxygen-sensitive radical chemistry and low-potential metal centers.", "evidence": [{"notes": "Supports low-potential metal centers as anaerobic metabolic features.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "radical chemistry and low-potential metal centres"}], "id": "edge-2", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "anaerobic_metabolism", "target": "low_potential_metal_centres"}, {"description": "Dioxygen can directly poison catalytic sites central to anaerobic metabolism.", "evidence": [{"notes": "Supports oxygen-sensitive catalytic sites as a mechanism of growth inhibition.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "poisons", "predicate_id": null, "source": "molecular_oxygen", "target": "low_potential_metal_centres"}, {"description": "ROS provide an additional route for damage to oxygen-sensitive anaerobic enzymes.", "evidence": [{"notes": "Supports ROS-mediated impairment of anaerobic catalytic sites.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "low_potential_metal_centres"}, {"description": "O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl radicals.", "evidence": [{"notes": "As a consequence of oxygenation, reactive oxygen species like superoxide, peroxides, and hydroxyl radicals are produced.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen_exposure", "target": "reactive_oxygen_species"}, {"description": "O2 exposure causes oxidative stress damaging biomolecules.", "evidence": [{"notes": "ROS cause oxidative stress due to damage to biomolecules like proteins and nucleic acids.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen_exposure", "target": "oxidative_damage_biomolecules"}, {"description": "H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "hydroxyl_radical"}, {"description": "Fe(II) drives hydroxyl-radical generation via the Fenton reaction.", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ferrous_iron", "target": "hydroxyl_radical"}, {"description": "Hydroxyl radicals create irreparable lesions and block replication.", "evidence": [{"notes": "hydroxyl radicals create irreparable lesions and block replication.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydroxyl_radical", "target": "dna_damage"}, {"description": "O2 rapidly inactivates the glycyl-radical enzyme PFL.", "evidence": [{"notes": "PFL is rapidly inactivated by O2; even low O2 levels can inactivate PFL within seconds.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-10", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "pyruvate_formate_lyase"}, {"description": "O2 directly inactivates the metalloenzyme PFOR.", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes (e.g., PFOR).", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-11", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "pyruvate_ferredoxin_oxidoreductase"}, {"description": "O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes... hydrogenases.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "id": "edge-12", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "fefe_hydrogenase"}], "evidence_rows": [{"description": "Oxygen blocks growth of obligate anaerobes.", "edge_id": "edge-1", "evidence": [{"notes": "Review identifies blocked growth as the defining trait of obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "obligately anaerobic", "target_grounding": "METPO:1000607"}, {"description": "Obligate anaerobic metabolism often relies on oxygen-sensitive radical chemistry and low-potential metal centers.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low-potential metal centers as anaerobic metabolic features.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "radical chemistry and low-potential metal centres"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "anaerobic metabolism", "source_grounding": null, "target": "low-potential metal centres", "target_grounding": null}, {"description": "Dioxygen can directly poison catalytic sites central to anaerobic metabolism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen-sensitive catalytic sites as a mechanism of growth inhibition.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "predicate": "poisons", "predicate_id": null, "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "low-potential metal centres", "target_grounding": null}, {"description": "ROS provide an additional route for damage to oxygen-sensitive anaerobic enzymes.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ROS-mediated impairment of anaerobic catalytic sites.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "direct poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "source_grounding": "CHEBI:26523", "target": "low-potential metal centres", "target_grounding": null}, {"description": "O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl radicals.", "edge_id": "edge-5", "evidence": [{"notes": "As a consequence of oxygenation, reactive oxygen species like superoxide, peroxides, and hydroxyl radicals are produced.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen exposure", "source_grounding": null, "target": "reactive oxygen species", "target_grounding": "CHEBI:26523"}, {"description": "O2 exposure causes oxidative stress damaging biomolecules.", "edge_id": "edge-6", "evidence": [{"notes": "ROS cause oxidative stress due to damage to biomolecules like proteins and nucleic acids.", "reference": "DOI:10.1186/s40168-024-01909-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "oxygen exposure", "source_grounding": null, "target": "oxidative damage to biomolecules", "target_grounding": null}, {"description": "H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).", "edge_id": "edge-7", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "source_grounding": "CHEBI:16240", "target": "hydroxyl radical", "target_grounding": "CHEBI:29191"}, {"description": "Fe(II) drives hydroxyl-radical generation via the Fenton reaction.", "edge_id": "edge-8", "evidence": [{"notes": "Fe(II)+H2O2 produces hydroxyl radicals.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "ferrous iron (Fe(II))", "source_grounding": null, "target": "hydroxyl radical", "target_grounding": "CHEBI:29191"}, {"description": "Hydroxyl radicals create irreparable lesions and block replication.", "edge_id": "edge-9", "evidence": [{"notes": "hydroxyl radicals create irreparable lesions and block replication.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydroxyl radical", "source_grounding": "CHEBI:29191", "target": "DNA damage", "target_grounding": null}, {"description": "O2 rapidly inactivates the glycyl-radical enzyme PFL.", "edge_id": "edge-10", "evidence": [{"notes": "PFL is rapidly inactivated by O2; even low O2 levels can inactivate PFL within seconds.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "pyruvate formate-lyase (PFL)", "target_grounding": null}, {"description": "O2 directly inactivates the metalloenzyme PFOR.", "edge_id": "edge-11", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes (e.g., PFOR).", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "pyruvate:ferredoxin oxidoreductase (PFOR)", "target_grounding": null}, {"description": "O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.", "edge_id": "edge-12", "evidence": [{"notes": "O2 directly inactivates diverse metalloenzymes... hydrogenases.", "reference": "DOI:10.1038/s41579-021-00583-y"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "[FeFe]-hydrogenase", "target_grounding": null}], "graph_id": "obligate_anaerobe_oxygen_toxicity", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy metabolism optimized for anoxic conditions.", "grounding": null, "id": "anaerobic_metabolism", "is_orphan": false, "label": "anaerobic metabolism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Irreparable lesions blocking replication caused by hydroxyl radicals.", "grounding": null, "id": "dna_damage", "is_orphan": false, "label": "DNA damage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-sensitive low-potential redox enzyme.", "grounding": null, "id": "fefe_hydrogenase", "is_orphan": false, "label": "[FeFe]-hydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(II) reactant driving hydroxyl-radical generation via Fenton reaction.", "grounding": null, "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron (Fe(II))", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species; substrate for Fenton chemistry.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Highly damaging ROS produced via Fenton chemistry.", "grounding": "CHEBI:29191", "id": "hydroxyl_radical", "is_orphan": false, "label": "hydroxyl radical", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Oxygen-sensitive catalytic centers used in anaerobic metabolism.", "grounding": null, "id": "low_potential_metal_centres", "is_orphan": false, "label": "low-potential metal centres", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen exposure that blocks obligate anaerobe growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Molecular oxygen inhibits or prevents growth.", "grounding": "METPO:1000607", "id": "obligate_anaerobic_trait", "is_orphan": false, "label": "obligately anaerobic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ROS-mediated oxidative damage to proteins and nucleic acids.", "grounding": null, "id": "oxidative_damage_biomolecules", "is_orphan": false, "label": "oxidative damage to biomolecules", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Exposure of anaerobic cells to molecular oxygen, triggering oxidative stress.", "grounding": null, "id": "oxygen_exposure", "is_orphan": false, "label": "oxygen exposure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "O2-sensitive anaerobic metalloenzyme.", "grounding": null, "id": "pyruvate_ferredoxin_oxidoreductase", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase (PFOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Glycyl-radical enzyme rapidly inactivated by O2.", "grounding": null, "id": "pyruvate_formate_lyase", "is_orphan": false, "label": "pyruvate formate-lyase (PFL)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants such as superoxide and hydrogen peroxide.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Obligate anaerobe oxygen-toxicity mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -992,13 +1027,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

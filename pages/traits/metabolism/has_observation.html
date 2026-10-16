@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>has observation</h1>
     <p class="curie"><code>METPO:2000511</code> · OBJECT_PROPERTY · DEPRECATED</p>
 
@@ -102,6 +113,24 @@
       <ul class="nn-list">
 
         <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polar_flagellation.html">polar flagellation</a>
+          <span class="sim">0.110</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.102</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.100</span>
+        </li>
+
+        <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/gc_mid1.html">GC mid1</a>
           <span class="sim">0.099</span>
@@ -129,24 +158,6 @@
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/cell_length_medium.html">cell length medium</a>
           <span class="sim">0.083</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/has_growth_ph_observation.html">has growth pH observation</a>
-          <span class="sim">0.079</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemoheterotrophic.html">chemoheterotrophic</a>
-          <span class="sim">0.079</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/pink_pigmented.html">pink pigmented</a>
-          <span class="sim">0.078</span>
         </li>
 
       </ul>
@@ -246,13 +257,20 @@ stay deprecated&#39;, for the rationale.
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-05-17 22:30 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

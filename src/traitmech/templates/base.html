@@ -13,7 +13,12 @@
     <nav>
       <a href="{{ root }}index.html">Home</a>
       <a href="{{ root }}browse.html">Browse</a>
+      <a href="{{ root }}map.html">Text map</a>
+      <a href="{{ root }}sequence-map.html">Sequence map (pLM)</a>
       <a href="{{ root }}umap.html">Embedding space</a>
+      <a href="{{ root }}graph.html">Graph layout</a>
+      <a href="{{ root }}data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -33,7 +38,14 @@
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="{{ root }}data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       {% if generated_at %}{{ stamp_scope | default('Corpus') }} as of {{ generated_at }}{% else %}TraitMech{% endif %}

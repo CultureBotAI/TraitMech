@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>flagellated</h1>
     <p class="curie"><code>METPO:1000704</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>flagellar filament</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009420" rel="nofollow noreferrer"><code>GO:0009420</code></a>
             <span class="edge-predicate">confers</span>
             <strong>flagellated</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000704" rel="nofollow noreferrer"><code>METPO:1000704</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>A flagellar filament is the locomotory appendage of flagellated cells.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>flagellar hook</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009424" rel="nofollow noreferrer"><code>GO:0009424</code></a>
             <span class="edge-predicate">connects</span>
             <strong>flagellar filament</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009420" rel="nofollow noreferrer"><code>GO:0009420</code></a>
 
             <p>The hook couples the motor to the filament.</p>
             <ul>
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>flagellar basal body</strong>
+
             <span class="edge-predicate">rotates</span>
             <strong>flagellar filament</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009420" rel="nofollow noreferrer"><code>GO:0009420</code></a>
 
             <p>The basal body motor rotates the filament for propulsion.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>chemotaxis signaling</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a>
             <span class="edge-predicate">regulates</span>
             <strong>flagellated</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1000704" rel="nofollow noreferrer"><code>METPO:1000704</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Chemotaxis signaling changes flagellar motor behavior and movement direction.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>flagellar type III secretion system</strong>
+
             <span class="edge-predicate">exports</span>
             <strong>flagellar structural subunits</strong>
-            <code>METPO:2007804</code>
+
+            <a href="https://w3id.org/metpo/2007804" rel="nofollow noreferrer"><code>METPO:2007804</code></a>
             <p>The fT3SS exports flagellar structural subunits to the distal assembly site.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>FliH-FliI-FliJ ATPase complex</strong>
+
             <span class="edge-predicate">part of</span>
             <strong>flagellar type III secretion system</strong>
-            <code>biolink:part_of</code>
+
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>The FliH-FliI-FliJ ATPase complex powers flagellar protein export by the fT3SS.</p>
             <ul>
 
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>FliD filament cap</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>flagellar filament polymerization</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>The FliD filament cap aids polymerization of flagellin into the filament.</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>FlgK/FlgL hook-filament junction</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>flagellar filament polymerization</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>FlgK/FlgL hook-filament junction proteins are required for filament polymerization.</p>
             <ul>
 
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>flagellar filament polymerization</strong>
+
             <span class="edge-predicate">results in formation of</span>
             <strong>flagellar filament</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009420" rel="nofollow noreferrer"><code>GO:0009420</code></a>
 
             <p>Polymerization of flagellin subunits forms the flagellar filament.</p>
             <ul>
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>CheY-P</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>flagellar rotational switching</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>CheY-P binding to the C ring causes flagellar rotational switching (CCW/CW).</p>
             <ul>
 
@@ -249,9 +280,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>flagellar rotational switching</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>flagellated</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1000704" rel="nofollow noreferrer"><code>METPO:1000704</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Switching of motor rotation direction modulates flagellated motility behavior.</p>
             <ul>
 
@@ -266,9 +299,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>flagellar structural subunits</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>flagellar filament</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009420" rel="nofollow noreferrer"><code>GO:0009420</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Exported flagellin structural subunits assemble to form the flagellar filament that realizes the morphology.</p>
             <ul>
 
@@ -412,19 +447,7 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/monotrichous.html">monotrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
+          <a href="../../traits/morphology/flagellar_arrangement.html">flagellar arrangement</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -436,26 +459,38 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/flagellar_arrangement.html">flagellar arrangement</a>
+          <a href="../../traits/morphology/monotrichous.html">monotrichous</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
-          <span class="sim">0.443</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
-          <span class="sim">0.437</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
-          <span class="sim">0.433</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.764</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.743</span>
         </li>
 
       </ul>
@@ -1083,7 +1118,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the flagellated phenotype to flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.", "edges": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar_filament", "target": "flagellated_trait"}, {"description": "The hook couples the motor to the filament.", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "id": "edge-2", "is_orphan": false, "predicate": "connects", "predicate_id": null, "source": "flagellar_hook", "target": "flagellar_filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "id": "edge-3", "is_orphan": false, "predicate": "rotates", "predicate_id": null, "source": "flagellar_basal_body", "target": "flagellar_filament"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "flagellated_trait"}, {"description": "The fT3SS exports flagellar structural subunits to the distal assembly site.", "evidence": [{"notes": "\"a flagellar type III secretion system (fT3SS) at the base exports structural subunits from the cytoplasm through a narrow central channel to the distal tip where assembly occurs\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-5", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "ft3ss_export_system", "target": "flagellar_structural_subunits"}, {"description": "The FliH-FliI-FliJ ATPase complex powers flagellar protein export by the fT3SS.", "evidence": [{"notes": "\"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis for export\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "flii_atpase_complex", "target": "ft3ss_export_system"}, {"description": "The FliD filament cap aids polymerization of flagellin into the filament.", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament aided by a five-subunit FliD cap\"", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "fld_filament_cap", "target": "filament_polymerization"}, {"description": "FlgK/FlgL hook-filament junction proteins are required for filament polymerization.", "evidence": [{"notes": "\"absence of FlgK/FlgL/FliD prevents filament polymerization\"", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hook_filament_junction", "target": "filament_polymerization"}, {"description": "Polymerization of flagellin subunits forms the flagellar filament.", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament\" forming the helical filament.", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-9", "is_orphan": false, "predicate": "results in formation of", "predicate_id": null, "source": "filament_polymerization", "target": "flagellar_filament"}, {"description": "CheY-P binding to the C ring causes flagellar rotational switching (CCW/CW).", "evidence": [{"notes": "\"Directional switching is triggered by the chemotaxis regulator CheY-P binding to FliM, causing full reversal of rotation\"", "reference": "DOI:10.1038/s41564-024-01630-z"}], "id": "edge-10", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chey_p", "target": "rotational_switching"}, {"description": "Switching of motor rotation direction modulates flagellated motility behavior.", "evidence": [{"notes": "\"the C ring switches its conformational state\" changing the direction of flagella-driven motility.", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-11", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "rotational_switching", "target": "flagellated_trait"}, {"description": "Exported flagellin structural subunits assemble to form the flagellar filament that realizes the morphology.", "evidence": [{"notes": "Verified against the open review full text; this connects the exported-subunit module to the assembled structural filament.", "reference": "DOI:10.3390/biom11020186", "snippet": "Around 20,000 subunits of flagellin assemble to form the flagellar filament"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellar_structural_subunits", "target": "flagellar_filament"}], "evidence_rows": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar filament", "target": "flagellated"}, {"description": "The hook couples the motor to the filament.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "predicate": "connects", "predicate_id": null, "source": "flagellar hook", "target": "flagellar filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "edge_id": "edge-3", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "predicate": "rotates", "predicate_id": null, "source": "flagellar basal body", "target": "flagellar filament"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "edge_id": "edge-4", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "target": "flagellated"}, {"description": "The fT3SS exports flagellar structural subunits to the distal assembly site.", "edge_id": "edge-5", "evidence": [{"notes": "\"a flagellar type III secretion system (fT3SS) at the base exports structural subunits from the cytoplasm through a narrow central channel to the distal tip where assembly occurs\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "flagellar type III secretion system", "target": "flagellar structural subunits"}, {"description": "The FliH-FliI-FliJ ATPase complex powers flagellar protein export by the fT3SS.", "edge_id": "edge-6", "evidence": [{"notes": "\"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis for export\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "FliH-FliI-FliJ ATPase complex", "target": "flagellar type III secretion system"}, {"description": "The FliD filament cap aids polymerization of flagellin into the filament.", "edge_id": "edge-7", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament aided by a five-subunit FliD cap\"", "reference": "DOI:10.3390/biom14121488"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FliD filament cap", "target": "flagellar filament polymerization"}, {"description": "FlgK/FlgL hook-filament junction proteins are required for filament polymerization.", "edge_id": "edge-8", "evidence": [{"notes": "\"absence of FlgK/FlgL/FliD prevents filament polymerization\"", "reference": "DOI:10.3390/biom14121488"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FlgK/FlgL hook-filament junction", "target": "flagellar filament polymerization"}, {"description": "Polymerization of flagellin subunits forms the flagellar filament.", "edge_id": "edge-9", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament\" forming the helical filament.", "reference": "DOI:10.3390/biom14121488"}], "predicate": "results in formation of", "predicate_id": null, "source": "flagellar filament polymerization", "target": "flagellar filament"}, {"description": "CheY-P binding to the C ring causes flagellar rotational switching (CCW/CW).", "edge_id": "edge-10", "evidence": [{"notes": "\"Directional switching is triggered by the chemotaxis regulator CheY-P binding to FliM, causing full reversal of rotation\"", "reference": "DOI:10.1038/s41564-024-01630-z"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CheY-P", "target": "flagellar rotational switching"}, {"description": "Switching of motor rotation direction modulates flagellated motility behavior.", "edge_id": "edge-11", "evidence": [{"notes": "\"the C ring switches its conformational state\" changing the direction of flagella-driven motility.", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "flagellar rotational switching", "target": "flagellated"}, {"description": "Exported flagellin structural subunits assemble to form the flagellar filament that realizes the morphology.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open review full text; this connects the exported-subunit module to the assembled structural filament.", "reference": "DOI:10.3390/biom11020186", "snippet": "Around 20,000 subunits of flagellin assemble to form the flagellar filament"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellar structural subunits", "target": "flagellar filament"}], "graph_id": "flagellated_flagellar_motor", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulation of flagellar rotation and movement direction.", "grounding": "GO:0006935", "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phosphorylated chemotaxis response regulator that binds the C ring to control rotation.", "grounding": null, "id": "chey_p", "is_orphan": false, "label": "CheY-P", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization of flagellin subunits into the helical filament.", "grounding": null, "id": "filament_polymerization", "is_orphan": false, "label": "flagellar filament polymerization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor complex embedded in the cell envelope.", "grounding": null, "id": "flagellar_basal_body", "is_orphan": false, "label": "flagellar basal body", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Helical filament that acts as a propeller or molecular screw.", "grounding": "GO:0009420", "id": "flagellar_filament", "is_orphan": false, "label": "flagellar filament", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Universal-joint-like connector between motor and filament.", "grounding": "GO:0009424", "id": "flagellar_hook", "is_orphan": false, "label": "flagellar hook", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Axial protein subunits exported through the central channel for distal assembly.", "grounding": null, "id": "flagellar_structural_subunits", "is_orphan": false, "label": "flagellar structural subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:28117390", "snippet": "flagellin is the structural subunit of the flagellar filament"}], "gene_symbol": "fliC", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-08-25", "role": "FliC is the polymerizing E. coli K-12 flagellar-filament subunit, not an example of the complete flagellum.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P04949"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of flagella for locomotion.", "grounding": "METPO:1000704", "id": "flagellated_trait", "is_orphan": false, "label": "flagellated", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pentameric cap at the filament tip that aids flagellin polymerization.", "grounding": null, "id": "fld_filament_cap", "is_orphan": false, "label": "FliD filament cap", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic ATPase ring complex providing ATP hydrolysis to drive flagellar protein export.", "grounding": null, "id": "flii_atpase_complex", "is_orphan": false, "label": "FliH-FliI-FliJ ATPase complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "fT3SS at the flagellar base that exports structural subunits to the assembly site.", "grounding": null, "id": "ft3ss_export_system", "is_orphan": false, "label": "flagellar type III secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adapter proteins connecting hook to filament and required for filament polymerization.", "grounding": null, "id": "hook_filament_junction", "is_orphan": false, "label": "FlgK/FlgL hook-filament junction", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Switching of flagellar motor rotation between CCW and CW states.", "grounding": null, "id": "rotational_switching", "is_orphan": false, "label": "flagellar rotational switching", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:28117390", "snippet": "flagellin is the structural subunit of the flagellar filament"}], "gene_symbol": "fliC", "node_id": "flagellar_structural_subunits", "node_label": "flagellar structural subunits", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-08-25", "role": "FliC is the polymerizing E. coli K-12 flagellar-filament subunit, not an example of the complete flagellum.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P04949"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Flagellated locomotion mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the flagellated phenotype to flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.", "edges": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar_filament", "target": "flagellated_trait"}, {"description": "The hook couples the motor to the filament.", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "id": "edge-2", "is_orphan": false, "predicate": "connects", "predicate_id": null, "source": "flagellar_hook", "target": "flagellar_filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "id": "edge-3", "is_orphan": false, "predicate": "rotates", "predicate_id": null, "source": "flagellar_basal_body", "target": "flagellar_filament"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "flagellated_trait"}, {"description": "The fT3SS exports flagellar structural subunits to the distal assembly site.", "evidence": [{"notes": "\"a flagellar type III secretion system (fT3SS) at the base exports structural subunits from the cytoplasm through a narrow central channel to the distal tip where assembly occurs\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-5", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "ft3ss_export_system", "target": "flagellar_structural_subunits"}, {"description": "The FliH-FliI-FliJ ATPase complex powers flagellar protein export by the fT3SS.", "evidence": [{"notes": "\"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis for export\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "flii_atpase_complex", "target": "ft3ss_export_system"}, {"description": "The FliD filament cap aids polymerization of flagellin into the filament.", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament aided by a five-subunit FliD cap\"", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "fld_filament_cap", "target": "filament_polymerization"}, {"description": "FlgK/FlgL hook-filament junction proteins are required for filament polymerization.", "evidence": [{"notes": "\"absence of FlgK/FlgL/FliD prevents filament polymerization\"", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hook_filament_junction", "target": "filament_polymerization"}, {"description": "Polymerization of flagellin subunits forms the flagellar filament.", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament\" forming the helical filament.", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-9", "is_orphan": false, "predicate": "results in formation of", "predicate_id": null, "source": "filament_polymerization", "target": "flagellar_filament"}, {"description": "CheY-P binding to the C ring causes flagellar rotational switching (CCW/CW).", "evidence": [{"notes": "\"Directional switching is triggered by the chemotaxis regulator CheY-P binding to FliM, causing full reversal of rotation\"", "reference": "DOI:10.1038/s41564-024-01630-z"}], "id": "edge-10", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chey_p", "target": "rotational_switching"}, {"description": "Switching of motor rotation direction modulates flagellated motility behavior.", "evidence": [{"notes": "\"the C ring switches its conformational state\" changing the direction of flagella-driven motility.", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "id": "edge-11", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "rotational_switching", "target": "flagellated_trait"}, {"description": "Exported flagellin structural subunits assemble to form the flagellar filament that realizes the morphology.", "evidence": [{"notes": "Verified against the open review full text; this connects the exported-subunit module to the assembled structural filament.", "reference": "DOI:10.3390/biom11020186", "snippet": "Around 20,000 subunits of flagellin assemble to form the flagellar filament"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellar_structural_subunits", "target": "flagellar_filament"}], "evidence_rows": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar filament", "source_grounding": "GO:0009420", "target": "flagellated", "target_grounding": "METPO:1000704"}, {"description": "The hook couples the motor to the filament.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "predicate": "connects", "predicate_id": null, "source": "flagellar hook", "source_grounding": "GO:0009424", "target": "flagellar filament", "target_grounding": "GO:0009420"}, {"description": "The basal body motor rotates the filament for propulsion.", "edge_id": "edge-3", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "predicate": "rotates", "predicate_id": null, "source": "flagellar basal body", "source_grounding": null, "target": "flagellar filament", "target_grounding": "GO:0009420"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "edge_id": "edge-4", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "source_grounding": "GO:0006935", "target": "flagellated", "target_grounding": "METPO:1000704"}, {"description": "The fT3SS exports flagellar structural subunits to the distal assembly site.", "edge_id": "edge-5", "evidence": [{"notes": "\"a flagellar type III secretion system (fT3SS) at the base exports structural subunits from the cytoplasm through a narrow central channel to the distal tip where assembly occurs\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "flagellar type III secretion system", "source_grounding": null, "target": "flagellar structural subunits", "target_grounding": null}, {"description": "The FliH-FliI-FliJ ATPase complex powers flagellar protein export by the fT3SS.", "edge_id": "edge-6", "evidence": [{"notes": "\"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis for export\"", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "FliH-FliI-FliJ ATPase complex", "source_grounding": null, "target": "flagellar type III secretion system", "target_grounding": null}, {"description": "The FliD filament cap aids polymerization of flagellin into the filament.", "edge_id": "edge-7", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament aided by a five-subunit FliD cap\"", "reference": "DOI:10.3390/biom14121488"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FliD filament cap", "source_grounding": null, "target": "flagellar filament polymerization", "target_grounding": null}, {"description": "FlgK/FlgL hook-filament junction proteins are required for filament polymerization.", "edge_id": "edge-8", "evidence": [{"notes": "\"absence of FlgK/FlgL/FliD prevents filament polymerization\"", "reference": "DOI:10.3390/biom14121488"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FlgK/FlgL hook-filament junction", "source_grounding": null, "target": "flagellar filament polymerization", "target_grounding": null}, {"description": "Polymerization of flagellin subunits forms the flagellar filament.", "edge_id": "edge-9", "evidence": [{"notes": "\"flagellin subunits (~30,000) polymerize into a filament\" forming the helical filament.", "reference": "DOI:10.3390/biom14121488"}], "predicate": "results in formation of", "predicate_id": null, "source": "flagellar filament polymerization", "source_grounding": null, "target": "flagellar filament", "target_grounding": "GO:0009420"}, {"description": "CheY-P binding to the C ring causes flagellar rotational switching (CCW/CW).", "edge_id": "edge-10", "evidence": [{"notes": "\"Directional switching is triggered by the chemotaxis regulator CheY-P binding to FliM, causing full reversal of rotation\"", "reference": "DOI:10.1038/s41564-024-01630-z"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CheY-P", "source_grounding": null, "target": "flagellar rotational switching", "target_grounding": null}, {"description": "Switching of motor rotation direction modulates flagellated motility behavior.", "edge_id": "edge-11", "evidence": [{"notes": "\"the C ring switches its conformational state\" changing the direction of flagella-driven motility.", "reference": "DOI:10.1128/ecosalplus.esp-0011-2023"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "flagellar rotational switching", "source_grounding": null, "target": "flagellated", "target_grounding": "METPO:1000704"}, {"description": "Exported flagellin structural subunits assemble to form the flagellar filament that realizes the morphology.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open review full text; this connects the exported-subunit module to the assembled structural filament.", "reference": "DOI:10.3390/biom11020186", "snippet": "Around 20,000 subunits of flagellin assemble to form the flagellar filament"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "flagellar structural subunits", "source_grounding": null, "target": "flagellar filament", "target_grounding": "GO:0009420"}], "graph_id": "flagellated_flagellar_motor", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulation of flagellar rotation and movement direction.", "grounding": "GO:0006935", "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phosphorylated chemotaxis response regulator that binds the C ring to control rotation.", "grounding": null, "id": "chey_p", "is_orphan": false, "label": "CheY-P", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization of flagellin subunits into the helical filament.", "grounding": null, "id": "filament_polymerization", "is_orphan": false, "label": "flagellar filament polymerization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor complex embedded in the cell envelope.", "grounding": null, "id": "flagellar_basal_body", "is_orphan": false, "label": "flagellar basal body", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Helical filament that acts as a propeller or molecular screw.", "grounding": "GO:0009420", "id": "flagellar_filament", "is_orphan": false, "label": "flagellar filament", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Universal-joint-like connector between motor and filament.", "grounding": "GO:0009424", "id": "flagellar_hook", "is_orphan": false, "label": "flagellar hook", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Axial protein subunits exported through the central channel for distal assembly.", "grounding": null, "id": "flagellar_structural_subunits", "is_orphan": false, "label": "flagellar structural subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:28117390", "snippet": "flagellin is the structural subunit of the flagellar filament"}], "gene_symbol": "fliC", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-08-25", "role": "FliC is the polymerizing E. coli K-12 flagellar-filament subunit, not an example of the complete flagellum.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P04949"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of flagella for locomotion.", "grounding": "METPO:1000704", "id": "flagellated_trait", "is_orphan": false, "label": "flagellated", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pentameric cap at the filament tip that aids flagellin polymerization.", "grounding": null, "id": "fld_filament_cap", "is_orphan": false, "label": "FliD filament cap", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic ATPase ring complex providing ATP hydrolysis to drive flagellar protein export.", "grounding": null, "id": "flii_atpase_complex", "is_orphan": false, "label": "FliH-FliI-FliJ ATPase complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "fT3SS at the flagellar base that exports structural subunits to the assembly site.", "grounding": null, "id": "ft3ss_export_system", "is_orphan": false, "label": "flagellar type III secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adapter proteins connecting hook to filament and required for filament polymerization.", "grounding": null, "id": "hook_filament_junction", "is_orphan": false, "label": "FlgK/FlgL hook-filament junction", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Switching of flagellar motor rotation between CCW and CW states.", "grounding": null, "id": "rotational_switching", "is_orphan": false, "label": "flagellar rotational switching", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:28117390", "snippet": "flagellin is the structural subunit of the flagellar filament"}], "gene_symbol": "fliC", "node_id": "flagellar_structural_subunits", "node_label": "flagellar structural subunits", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-08-25", "role": "FliC is the polymerizing E. coli K-12 flagellar-filament subunit, not an example of the complete flagellum.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P04949"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Flagellated locomotion mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1103,13 +1138,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 06:16 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

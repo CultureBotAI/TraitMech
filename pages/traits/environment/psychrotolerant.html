@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>psychrotolerant</h1>
     <p class="curie"><code>METPO:1000618</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>low temperature</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001306" rel="nofollow noreferrer"><code>PATO:0001306</code></a>
             <span class="edge-predicate">decreases</span>
             <strong>membrane fluidity</strong>
-            <code>RO:0002212</code>
+            <a href="https://w3id.org/metpo/1007505" rel="nofollow noreferrer"><code>METPO:1007505</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Low temperature reduces membrane fluidity, requiring compensation.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>facultative lipid remodeling</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1007505" rel="nofollow noreferrer"><code>METPO:1007505</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Facultative lipid remodeling maintains workable membrane fluidity at low temperature.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>cold-shock response</strong>
+            <code>traitmech:000206</code>
             <span class="edge-predicate">confers</span>
             <strong>psychrotolerant</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000618" rel="nofollow noreferrer"><code>METPO:1000618</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The cold-shock response enables acclimation to low temperature without obligate cold dedication.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>facultative lipid remodeling</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>psychrotolerant</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000618" rel="nofollow noreferrer"><code>METPO:1000618</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Facultative lipid remodeling at low temperature manifests the psychrotolerant trait in representative organisms.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>low temperature</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001306" rel="nofollow noreferrer"><code>PATO:0001306</code></a>
             <span class="edge-predicate">causes</span>
             <strong>membrane rigidification and thickening</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>A low-temperature shift causes membrane rigidification and thickening toward a gel-phase transition.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>low temperature</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001306" rel="nofollow noreferrer"><code>PATO:0001306</code></a>
             <span class="edge-predicate">increases</span>
             <strong>unsaturated hopanoids</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Decreasing growth temperature increases the unsaturated hopanoid fraction as a compositional cold adaptation.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>compatible solute accumulation</strong>
+
             <span class="edge-predicate">protects</span>
             <strong>protein and membrane stability under cold stress</strong>
+
 
             <p>Compatible solute accumulation stabilizes proteins and membranes during low-temperature stress.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>extracellular polymeric substances (EPS)</strong>
+
             <span class="edge-predicate">provides</span>
             <strong>cryoprotection against freeze-thaw cycles</strong>
+
 
             <p>EPS surrounding cells provide cryoprotection against freeze-thaw cycles.</p>
             <ul>
@@ -311,27 +338,27 @@
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/nacl_range.html">NaCl range</a>
-          <span class="sim">0.474</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/methyl_red_test_positive.html">methyl red test positive</a>
+          <span class="sim">0.504</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
-          <span class="sim">0.465</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test_negative.html">indole test negative</a>
+          <span class="sim">0.494</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/persister_cell_formation.html">persister cell formation</a>
-          <span class="sim">0.465</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test_negative.html">Voges-Proskauer test negative</a>
+          <span class="sim">0.491</span>
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/phenotype.html">phenotype</a>
-          <span class="sim">0.465</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test_positive.html">Voges-Proskauer test positive</a>
+          <span class="sim">0.490</span>
         </li>
 
       </ul>
@@ -965,7 +992,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking psychrotolerance to low-temperature membrane and enzyme acclimation that does not preclude growth at moderate ambient temperatures.", "edges": [{"description": "Low temperature reduces membrane fluidity, requiring compensation.", "evidence": [{"notes": "Supports cold-end membrane stress as the physical challenge for psychrotolerant growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-1", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Facultative lipid remodeling maintains workable membrane fluidity at low temperature.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism employed under cold exposure.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "facultative_lipid_remodeling", "target": "membrane_fluidity"}, {"description": "The cold-shock response enables acclimation to low temperature without obligate cold dedication.", "evidence": [{"notes": "Supports cold-shock proteins as a hallmark facultative-cold adaptation.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cold_shock_response", "target": "psychrotolerant_trait"}, {"description": "Facultative lipid remodeling at low temperature manifests the psychrotolerant trait in representative organisms.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/ijs.0.65141-0", "snippet": "Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "facultative_lipid_remodeling", "target": "psychrotolerant_trait"}, {"description": "A low-temperature shift causes membrane rigidification and thickening toward a gel-phase transition.", "evidence": [{"notes": "Cold shock causes membrane rigidification and concomitant thickening, potentially culminating in a gel-phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "low_temperature", "target": "membrane_rigidity"}, {"description": "Decreasing growth temperature increases the unsaturated hopanoid fraction as a compositional cold adaptation.", "evidence": [{"notes": "As the growth temperature decreased from 20 to 4 C, the total percent of unsaturated hopanoids increased from 27 to 49%.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_temperature", "target": "unsaturated_hopanoids"}, {"description": "Compatible solute accumulation stabilizes proteins and membranes during low-temperature stress.", "evidence": [{"notes": "Compatible solutes depress freezing point, stabilize proteins and membranes, scavenge radicals, and act as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-7", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "protein_membrane_stability"}, {"description": "EPS surrounding cells provide cryoprotection against freeze-thaw cycles.", "evidence": [{"notes": "EPS surrounding cells play a critical role in cold adaptation by providing protection against freeze-thaw cycles and acting as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-8", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "extracellular_polymeric_substances", "target": "freeze_thaw_cryoprotection"}], "evidence_rows": [{"description": "Low temperature reduces membrane fluidity, requiring compensation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-end membrane stress as the physical challenge for psychrotolerant growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "target": "membrane fluidity"}, {"description": "Facultative lipid remodeling maintains workable membrane fluidity at low temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism employed under cold exposure.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "facultative lipid remodeling", "target": "membrane fluidity"}, {"description": "The cold-shock response enables acclimation to low temperature without obligate cold dedication.", "edge_id": "edge-3", "evidence": [{"notes": "Supports cold-shock proteins as a hallmark facultative-cold adaptation.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cold-shock response", "target": "psychrotolerant"}, {"description": "Facultative lipid remodeling at low temperature manifests the psychrotolerant trait in representative organisms.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/ijs.0.65141-0", "snippet": "Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "facultative lipid remodeling", "target": "psychrotolerant"}, {"description": "A low-temperature shift causes membrane rigidification and thickening toward a gel-phase transition.", "edge_id": "edge-5", "evidence": [{"notes": "Cold shock causes membrane rigidification and concomitant thickening, potentially culminating in a gel-phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "low temperature", "target": "membrane rigidification and thickening"}, {"description": "Decreasing growth temperature increases the unsaturated hopanoid fraction as a compositional cold adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "As the growth temperature decreased from 20 to 4 C, the total percent of unsaturated hopanoids increased from 27 to 49%.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low temperature", "target": "unsaturated hopanoids"}, {"description": "Compatible solute accumulation stabilizes proteins and membranes during low-temperature stress.", "edge_id": "edge-7", "evidence": [{"notes": "Compatible solutes depress freezing point, stabilize proteins and membranes, scavenge radicals, and act as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "protects", "predicate_id": null, "source": "compatible solute accumulation", "target": "protein and membrane stability under cold stress"}, {"description": "EPS surrounding cells provide cryoprotection against freeze-thaw cycles.", "edge_id": "edge-8", "evidence": [{"notes": "EPS surrounding cells play a critical role in cold adaptation by providing protection against freeze-thaw cycles and acting as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "provides", "predicate_id": null, "source": "extracellular polymeric substances (EPS)", "target": "cryoprotection against freeze-thaw cycles"}], "graph_id": "psychrotolerant_facultative_cold_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cold-shock-protein induction supporting transient low-temperature acclimation.", "grounding": "traitmech:000206", "id": "cold_shock_response", "is_orphan": false, "label": "cold-shock response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of compatible solutes that stabilize proteins and membranes under cold stress.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Secreted polymeric matrix surrounding cells that acts as a cryoprotectant.", "grounding": null, "id": "extracellular_polymeric_substances", "is_orphan": false, "label": "extracellular polymeric substances (EPS)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-induced shifts in lipid composition without obligate low-temperature specialization.", "grounding": null, "id": "facultative_lipid_remodeling", "is_orphan": false, "label": "facultative lipid remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection of cells from damage during freeze-thaw cycling.", "grounding": null, "id": "freeze_thaw_cryoprotection", "is_orphan": false, "label": "cryoprotection against freeze-thaw cycles", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature below the mesophile optimum range.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cold-induced increase in membrane order and bilayer thickness approaching a gel-phase transition.", "grounding": null, "id": "membrane_rigidity", "is_orphan": false, "label": "membrane rigidification and thickening", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained integrity of proteins and membranes during low-temperature stress.", "grounding": null, "id": "protein_membrane_stability", "is_orphan": false, "label": "protein and membrane stability under cold stress", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low temperatures without an obligate low-temperature preference.", "grounding": "METPO:1000618", "id": "psychrotolerant_trait", "is_orphan": false, "label": "psychrotolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Hopanoid lipids whose unsaturation rises at low temperature, aiding membrane homeostasis.", "grounding": null, "id": "unsaturated_hopanoids", "is_orphan": false, "label": "unsaturated hopanoids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Psychrotolerant facultative cold-adaptation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking psychrotolerance to low-temperature membrane and enzyme acclimation that does not preclude growth at moderate ambient temperatures.", "edges": [{"description": "Low temperature reduces membrane fluidity, requiring compensation.", "evidence": [{"notes": "Supports cold-end membrane stress as the physical challenge for psychrotolerant growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-1", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Facultative lipid remodeling maintains workable membrane fluidity at low temperature.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism employed under cold exposure.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "facultative_lipid_remodeling", "target": "membrane_fluidity"}, {"description": "The cold-shock response enables acclimation to low temperature without obligate cold dedication.", "evidence": [{"notes": "Supports cold-shock proteins as a hallmark facultative-cold adaptation.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cold_shock_response", "target": "psychrotolerant_trait"}, {"description": "Facultative lipid remodeling at low temperature manifests the psychrotolerant trait in representative organisms.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/ijs.0.65141-0", "snippet": "Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "facultative_lipid_remodeling", "target": "psychrotolerant_trait"}, {"description": "A low-temperature shift causes membrane rigidification and thickening toward a gel-phase transition.", "evidence": [{"notes": "Cold shock causes membrane rigidification and concomitant thickening, potentially culminating in a gel-phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "low_temperature", "target": "membrane_rigidity"}, {"description": "Decreasing growth temperature increases the unsaturated hopanoid fraction as a compositional cold adaptation.", "evidence": [{"notes": "As the growth temperature decreased from 20 to 4 C, the total percent of unsaturated hopanoids increased from 27 to 49%.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_temperature", "target": "unsaturated_hopanoids"}, {"description": "Compatible solute accumulation stabilizes proteins and membranes during low-temperature stress.", "evidence": [{"notes": "Compatible solutes depress freezing point, stabilize proteins and membranes, scavenge radicals, and act as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-7", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "protein_membrane_stability"}, {"description": "EPS surrounding cells provide cryoprotection against freeze-thaw cycles.", "evidence": [{"notes": "EPS surrounding cells play a critical role in cold adaptation by providing protection against freeze-thaw cycles and acting as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-8", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "extracellular_polymeric_substances", "target": "freeze_thaw_cryoprotection"}], "evidence_rows": [{"description": "Low temperature reduces membrane fluidity, requiring compensation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-end membrane stress as the physical challenge for psychrotolerant growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "source_grounding": "PATO:0001306", "target": "membrane fluidity", "target_grounding": "METPO:1007505"}, {"description": "Facultative lipid remodeling maintains workable membrane fluidity at low temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism employed under cold exposure.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "facultative lipid remodeling", "source_grounding": null, "target": "membrane fluidity", "target_grounding": "METPO:1007505"}, {"description": "The cold-shock response enables acclimation to low temperature without obligate cold dedication.", "edge_id": "edge-3", "evidence": [{"notes": "Supports cold-shock proteins as a hallmark facultative-cold adaptation.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cold-shock response", "source_grounding": "traitmech:000206", "target": "psychrotolerant", "target_grounding": "METPO:1000618"}, {"description": "Facultative lipid remodeling at low temperature manifests the psychrotolerant trait in representative organisms.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/ijs.0.65141-0", "snippet": "Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "facultative lipid remodeling", "source_grounding": null, "target": "psychrotolerant", "target_grounding": "METPO:1000618"}, {"description": "A low-temperature shift causes membrane rigidification and thickening toward a gel-phase transition.", "edge_id": "edge-5", "evidence": [{"notes": "Cold shock causes membrane rigidification and concomitant thickening, potentially culminating in a gel-phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "low temperature", "source_grounding": "PATO:0001306", "target": "membrane rigidification and thickening", "target_grounding": null}, {"description": "Decreasing growth temperature increases the unsaturated hopanoid fraction as a compositional cold adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "As the growth temperature decreased from 20 to 4 C, the total percent of unsaturated hopanoids increased from 27 to 49%.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low temperature", "source_grounding": "PATO:0001306", "target": "unsaturated hopanoids", "target_grounding": null}, {"description": "Compatible solute accumulation stabilizes proteins and membranes during low-temperature stress.", "edge_id": "edge-7", "evidence": [{"notes": "Compatible solutes depress freezing point, stabilize proteins and membranes, scavenge radicals, and act as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "protects", "predicate_id": null, "source": "compatible solute accumulation", "source_grounding": null, "target": "protein and membrane stability under cold stress", "target_grounding": null}, {"description": "EPS surrounding cells provide cryoprotection against freeze-thaw cycles.", "edge_id": "edge-8", "evidence": [{"notes": "EPS surrounding cells play a critical role in cold adaptation by providing protection against freeze-thaw cycles and acting as cryoprotectants.", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "provides", "predicate_id": null, "source": "extracellular polymeric substances (EPS)", "source_grounding": null, "target": "cryoprotection against freeze-thaw cycles", "target_grounding": null}], "graph_id": "psychrotolerant_facultative_cold_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cold-shock-protein induction supporting transient low-temperature acclimation.", "grounding": "traitmech:000206", "id": "cold_shock_response", "is_orphan": false, "label": "cold-shock response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of compatible solutes that stabilize proteins and membranes under cold stress.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Secreted polymeric matrix surrounding cells that acts as a cryoprotectant.", "grounding": null, "id": "extracellular_polymeric_substances", "is_orphan": false, "label": "extracellular polymeric substances (EPS)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-induced shifts in lipid composition without obligate low-temperature specialization.", "grounding": null, "id": "facultative_lipid_remodeling", "is_orphan": false, "label": "facultative lipid remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection of cells from damage during freeze-thaw cycling.", "grounding": null, "id": "freeze_thaw_cryoprotection", "is_orphan": false, "label": "cryoprotection against freeze-thaw cycles", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature below the mesophile optimum range.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cold-induced increase in membrane order and bilayer thickness approaching a gel-phase transition.", "grounding": null, "id": "membrane_rigidity", "is_orphan": false, "label": "membrane rigidification and thickening", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained integrity of proteins and membranes during low-temperature stress.", "grounding": null, "id": "protein_membrane_stability", "is_orphan": false, "label": "protein and membrane stability under cold stress", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low temperatures without an obligate low-temperature preference.", "grounding": "METPO:1000618", "id": "psychrotolerant_trait", "is_orphan": false, "label": "psychrotolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Hopanoid lipids whose unsaturation rises at low temperature, aiding membrane homeostasis.", "grounding": null, "id": "unsaturated_hopanoids", "is_orphan": false, "label": "unsaturated hopanoids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Psychrotolerant facultative cold-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -985,13 +1012,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 05:32 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

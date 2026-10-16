@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Disproportionation</h1>
     <p class="curie"><code>METPO:1000806</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Disproportionation</strong>
+            <a href="https://w3id.org/metpo/1000806" rel="nofollow noreferrer"><code>METPO:1000806</code></a>
             <span class="edge-predicate">occurs in</span>
             <strong>anoxic condition</strong>
-            <code>biolink:occurs_in</code>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001456" rel="nofollow noreferrer"><code>PATO:0001456</code></a>
+            <a href="https://w3id.org/biolink/vocab/occurs_in" rel="nofollow noreferrer"><code>biolink:occurs_in</code></a>
             <p>Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>inorganic sulfur intermediate</strong>
+
             <span class="edge-predicate">serves as electron donor and acceptor</span>
             <strong>Disproportionation</strong>
-            <code>METPO:2007603</code>
+            <a href="https://w3id.org/metpo/1000806" rel="nofollow noreferrer"><code>METPO:1000806</code></a>
+            <a href="https://w3id.org/metpo/2007603" rel="nofollow noreferrer"><code>METPO:2007603</code></a>
             <p>A single sulfur intermediate provides both donor and acceptor halves.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>elemental sulfur</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26833" rel="nofollow noreferrer"><code>CHEBI:26833</code></a>
             <span class="edge-predicate">example of</span>
             <strong>inorganic sulfur intermediate</strong>
+
             <code>rdfs:subClassOf</code>
             <p>Elemental sulfur is a disproportionation substrate.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>thiosulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16094" rel="nofollow noreferrer"><code>CHEBI:16094</code></a>
             <span class="edge-predicate">example of</span>
             <strong>inorganic sulfur intermediate</strong>
+
             <code>rdfs:subClassOf</code>
             <p>Thiosulfate is a disproportionation substrate.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>inorganic sulfur intermediate</strong>
+
             <span class="edge-predicate">reduced to</span>
             <strong>sulfide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15138" rel="nofollow noreferrer"><code>CHEBI:15138</code></a>
 
             <p>One fraction of the substrate is reduced to sulfide.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>inorganic sulfur intermediate</strong>
+
             <span class="edge-predicate">oxidized to</span>
             <strong>sulfate</strong>
-            <code>METPO:2007405</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16189" rel="nofollow noreferrer"><code>CHEBI:16189</code></a>
+            <a href="https://w3id.org/metpo/2007405" rel="nofollow noreferrer"><code>METPO:2007405</code></a>
             <p>One fraction of the substrate is oxidized to sulfate.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>reverse sulfate reduction pathway</strong>
+
             <span class="edge-predicate">participates in</span>
             <strong>Disproportionation</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://w3id.org/metpo/1000806" rel="nofollow noreferrer"><code>METPO:1000806</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Some disproportionating microbes use reversed sulfate-reduction enzymes.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>thiosulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16094" rel="nofollow noreferrer"><code>CHEBI:16094</code></a>
             <span class="edge-predicate">derives into</span>
             <strong>sulfate</strong>
-            <code>RO:0001001</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16189" rel="nofollow noreferrer"><code>CHEBI:16189</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0001001" rel="nofollow noreferrer"><code>RO:0001001</code></a>
             <p>Thiosulfate disproportionation yields sulfate as the oxidized product.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>thiosulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16094" rel="nofollow noreferrer"><code>CHEBI:16094</code></a>
             <span class="edge-predicate">derives into</span>
             <strong>sulfide</strong>
-            <code>RO:0001001</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15138" rel="nofollow noreferrer"><code>CHEBI:15138</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0001001" rel="nofollow noreferrer"><code>RO:0001001</code></a>
             <p>Thiosulfate disproportionation yields sulfide as the reduced product.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>TsdA thiosulfate dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0050338" rel="nofollow noreferrer"><code>GO:0050338</code></a>
             <span class="edge-predicate">catalyzes oxidation of</span>
             <strong>thiosulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16094" rel="nofollow noreferrer"><code>CHEBI:16094</code></a>
 
             <p>TsdA oxidizes thiosulfate to tetrathionate, the entry step of the S4 intermediate pathway.</p>
             <ul>
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>TsdA thiosulfate dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0050338" rel="nofollow noreferrer"><code>GO:0050338</code></a>
             <span class="edge-predicate">produces</span>
             <strong>tetrathionate</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>TetH tetrathionate hydrolase</strong>
+
             <span class="edge-predicate">disproportionates</span>
             <strong>tetrathionate</strong>
-            <code>METPO:2007811</code>
+
+            <a href="https://w3id.org/metpo/2007811" rel="nofollow noreferrer"><code>METPO:2007811</code></a>
             <p>TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur, thiosulfate, and sulfate.</p>
             <ul>
 
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>SOR sulfur oxygenase reductase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0033755" rel="nofollow noreferrer"><code>GO:0033755</code></a>
             <span class="edge-predicate">disproportionates</span>
             <strong>elemental sulfur</strong>
-            <code>METPO:2007811</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26833" rel="nofollow noreferrer"><code>CHEBI:26833</code></a>
+            <a href="https://w3id.org/metpo/2007811" rel="nofollow noreferrer"><code>METPO:2007811</code></a>
             <p>SOR catalyzes disproportionation of elemental sulfur, releasing sulfite and sulfide.</p>
             <ul>
 
@@ -306,9 +343,11 @@
 
           <li id="pathograph-1-edge-14">
             <strong>SOR sulfur oxygenase reductase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0033755" rel="nofollow noreferrer"><code>GO:0033755</code></a>
             <span class="edge-predicate">produces</span>
             <strong>sulfite</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Sulfite is the oxidized product of SOR-catalyzed elemental sulfur disproportionation.</p>
             <ul>
 
@@ -323,8 +362,10 @@
 
           <li id="pathograph-1-edge-15">
             <strong>iron-sulfide mineral formation</strong>
+
             <span class="edge-predicate">scavenges</span>
             <strong>sulfide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15138" rel="nofollow noreferrer"><code>CHEBI:15138</code></a>
 
             <p>Formation of Fe-sulfide minerals scavenges produced sulfide, relieving product inhibition of sulfur disproportionation.</p>
             <ul>
@@ -487,13 +528,13 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/hydrocarbon_degradation.html">hydrocarbon degradation</a>
           <span class="sim">0.932</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
+          <a href="../../traits/metabolism/xylan_degradation.html">xylan degradation</a>
           <span class="sim">0.932</span>
         </li>
 
@@ -1110,7 +1151,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking a single sulfur intermediate to simultaneous oxidation and reduction products under anoxic conditions.", "edges": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "disproportionation_trait", "target": "anoxic_condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "id": "edge-2", "is_orphan": false, "predicate": "serves as electron donor and acceptor", "predicate_id": "METPO:2007603", "source": "inorganic_sulfur_intermediate", "target": "disproportionation_trait"}, {"description": "Elemental sulfur is a disproportionation substrate.", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental_sulfur", "target": "inorganic_sulfur_intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "target": "inorganic_sulfur_intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic_sulfur_intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse_sulfate_reduction_pathway", "target": "disproportionation_trait"}, {"description": "Thiosulfate disproportionation yields sulfate as the oxidized product.", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-8", "is_orphan": false, "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfate"}, {"description": "Thiosulfate disproportionation yields sulfide as the reduced product.", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-9", "is_orphan": false, "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfide"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate, the entry step of the S4 intermediate pathway.", "evidence": [{"notes": "tsdA (and doxDA) catalyze conversion of thiosulfate (S2O3 2-) to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-10", "is_orphan": false, "predicate": "catalyzes oxidation of", "predicate_id": null, "source": "tsda_thiosulfate_dehydrogenase", "target": "thiosulfate"}, {"description": "Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.", "evidence": [{"notes": "tsdA catalyzes conversion of thiosulfate to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-11", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "tsda_thiosulfate_dehydrogenase", "target": "tetrathionate"}, {"description": "TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur, thiosulfate, and sulfate.", "evidence": [{"notes": "Tetrathionate can be subsequently disproportionated via tetH to form S0, S2O3 2-, and SO4 2-.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-12", "is_orphan": false, "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "teth_tetrathionate_hydrolase", "target": "tetrathionate"}, {"description": "SOR catalyzes disproportionation of elemental sulfur, releasing sulfite and sulfide.", "evidence": [{"notes": "The SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "id": "edge-13", "is_orphan": false, "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "sor_sulfur_oxygenase_reductase", "target": "elemental_sulfur"}, {"description": "Sulfite is the oxidized product of SOR-catalyzed elemental sulfur disproportionation.", "evidence": [{"notes": "SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "id": "edge-14", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "sor_sulfur_oxygenase_reductase", "target": "sulfite"}, {"description": "Formation of Fe-sulfide minerals scavenges produced sulfide, relieving product inhibition of sulfur disproportionation.", "evidence": [{"notes": "Ferrihydrite scavenges produced sulfide as Fe-sulfide.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-15", "is_orphan": false, "predicate": "scavenges", "predicate_id": null, "source": "iron_sulfide_mineral", "target": "sulfide"}], "evidence_rows": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "Disproportionation", "target": "anoxic condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "edge_id": "edge-2", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "predicate": "serves as electron donor and acceptor", "predicate_id": "METPO:2007603", "source": "inorganic sulfur intermediate", "target": "Disproportionation"}, {"description": "Elemental sulfur is a disproportionation substrate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental sulfur", "target": "inorganic sulfur intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "target": "inorganic sulfur intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "edge_id": "edge-5", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "reduced to", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "edge_id": "edge-6", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic sulfur intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse sulfate reduction pathway", "target": "Disproportionation"}, {"description": "Thiosulfate disproportionation yields sulfate as the oxidized product.", "edge_id": "edge-8", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfate"}, {"description": "Thiosulfate disproportionation yields sulfide as the reduced product.", "edge_id": "edge-9", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfide"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate, the entry step of the S4 intermediate pathway.", "edge_id": "edge-10", "evidence": [{"notes": "tsdA (and doxDA) catalyze conversion of thiosulfate (S2O3 2-) to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "catalyzes oxidation of", "predicate_id": null, "source": "TsdA thiosulfate dehydrogenase", "target": "thiosulfate"}, {"description": "Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.", "edge_id": "edge-11", "evidence": [{"notes": "tsdA catalyzes conversion of thiosulfate to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "TsdA thiosulfate dehydrogenase", "target": "tetrathionate"}, {"description": "TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur, thiosulfate, and sulfate.", "edge_id": "edge-12", "evidence": [{"notes": "Tetrathionate can be subsequently disproportionated via tetH to form S0, S2O3 2-, and SO4 2-.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "TetH tetrathionate hydrolase", "target": "tetrathionate"}, {"description": "SOR catalyzes disproportionation of elemental sulfur, releasing sulfite and sulfide.", "edge_id": "edge-13", "evidence": [{"notes": "The SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "SOR sulfur oxygenase reductase", "target": "elemental sulfur"}, {"description": "Sulfite is the oxidized product of SOR-catalyzed elemental sulfur disproportionation.", "edge_id": "edge-14", "evidence": [{"notes": "SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "SOR sulfur oxygenase reductase", "target": "sulfite"}, {"description": "Formation of Fe-sulfide minerals scavenges produced sulfide, relieving product inhibition of sulfur disproportionation.", "edge_id": "edge-15", "evidence": [{"notes": "Ferrihydrite scavenges produced sulfide as Fe-sulfide.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "scavenges", "predicate_id": null, "source": "iron-sulfide mineral formation", "target": "sulfide"}], "graph_id": "sulfur_disproportionation_redox_split", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-free condition for many microbial sulfur disproportionation processes.", "grounding": "PATO:0001456", "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Metabolism in which one substrate is both oxidized and reduced.", "grounding": "METPO:1000806", "id": "disproportionation_trait", "is_orphan": false, "label": "Disproportionation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur compound that can act as both electron donor and acceptor.", "grounding": null, "id": "inorganic_sulfur_intermediate", "is_orphan": false, "label": "inorganic sulfur intermediate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe-sulfide mineral (e.g., FeSx) formed when produced sulfide is scavenged, removing inhibitory sulfide.", "grounding": null, "id": "iron_sulfide_mineral", "is_orphan": false, "label": "iron-sulfide mineral formation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic route proposed for some sulfur disproportionators.", "grounding": null, "id": "reverse_sulfate_reduction_pathway", "is_orphan": false, "label": "reverse sulfate reduction pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing O2-dependent disproportionation of elemental sulfur into sulfite and sulfide.", "grounding": "GO:0033755", "id": "sor_sulfur_oxygenase_reductase", "is_orphan": false, "label": "SOR sulfur oxygenase reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "The primary structural and biochemical study establishes the reaction and self-compartmentalized SOR assembly; UniProtKB P29082 is the reviewed A. ambivalens sor product.", "reference": "DOI:10.1126/science.1120306", "snippet": "catalyzes an oxygen-dependent disproportionation of elemental sulfur"}], "gene_symbol": "sor", "protein_label": "Sulfur oxygenase/reductase", "retrieved_on": "2026-08-24", "role": "Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent elemental-sulfur disproportionation in A. ambivalens.", "sequence_version": 3, "taxon_id": "NCBITaxon:2283", "taxon_label": "Acidianus ambivalens", "uniprot_id": "UniProtKB:P29082"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur product.", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur oxyanion product of elemental sulfur disproportionation by SOR.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that hydrolyzes/disproportionates tetrathionate to elemental sulfur, thiosulfate, and sulfate.", "grounding": null, "id": "teth_tetrathionate_hydrolase", "is_orphan": false, "label": "TetH tetrathionate hydrolase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "S4-intermediate (S4O6 2-) produced from thiosulfate oxidation in the S4I pathway.", "grounding": null, "id": "tetrathionate", "is_orphan": false, "label": "tetrathionate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": "CHEBI:16094", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing thiosulfate to tetrathionate, entry step of the S4 intermediate pathway.", "grounding": "GO:0050338", "id": "tsda_thiosulfate_dehydrogenase", "is_orphan": false, "label": "TsdA thiosulfate dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "The primary structural and biochemical study establishes the reaction and self-compartmentalized SOR assembly; UniProtKB P29082 is the reviewed A. ambivalens sor product.", "reference": "DOI:10.1126/science.1120306", "snippet": "catalyzes an oxygen-dependent disproportionation of elemental sulfur"}], "gene_symbol": "sor", "node_id": "sor_sulfur_oxygenase_reductase", "node_label": "SOR sulfur oxygenase reductase", "protein_label": "Sulfur oxygenase/reductase", "retrieved_on": "2026-08-24", "role": "Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent elemental-sulfur disproportionation in A. ambivalens.", "sequence_version": 3, "taxon_id": "NCBITaxon:2283", "taxon_label": "Acidianus ambivalens", "uniprot_id": "UniProtKB:P29082"}], "scope_notes": "This cross-taxon graph combines the canonical anaerobic phenotype with chemically explicit TsdA/TetH and oxygen-dependent SOR branches. SOR supports an enzymatic sulfur-disproportionation reaction but is not asserted as the mechanism of anaerobic D. sulfexigens growth; TsdA and TetH occurrence alone is not diagnostic.", "scope_status": "MECHANISTIC", "title": "Sulfur disproportionation redox split"}];
+  var graphs = [{"description": "DOI-backed graph linking a single sulfur intermediate to simultaneous oxidation and reduction products under anoxic conditions.", "edges": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "disproportionation_trait", "target": "anoxic_condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "id": "edge-2", "is_orphan": false, "predicate": "serves as electron donor and acceptor", "predicate_id": "METPO:2007603", "source": "inorganic_sulfur_intermediate", "target": "disproportionation_trait"}, {"description": "Elemental sulfur is a disproportionation substrate.", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental_sulfur", "target": "inorganic_sulfur_intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "target": "inorganic_sulfur_intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic_sulfur_intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse_sulfate_reduction_pathway", "target": "disproportionation_trait"}, {"description": "Thiosulfate disproportionation yields sulfate as the oxidized product.", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-8", "is_orphan": false, "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfate"}, {"description": "Thiosulfate disproportionation yields sulfide as the reduced product.", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-9", "is_orphan": false, "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "target": "sulfide"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate, the entry step of the S4 intermediate pathway.", "evidence": [{"notes": "tsdA (and doxDA) catalyze conversion of thiosulfate (S2O3 2-) to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-10", "is_orphan": false, "predicate": "catalyzes oxidation of", "predicate_id": null, "source": "tsda_thiosulfate_dehydrogenase", "target": "thiosulfate"}, {"description": "Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.", "evidence": [{"notes": "tsdA catalyzes conversion of thiosulfate to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-11", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "tsda_thiosulfate_dehydrogenase", "target": "tetrathionate"}, {"description": "TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur, thiosulfate, and sulfate.", "evidence": [{"notes": "Tetrathionate can be subsequently disproportionated via tetH to form S0, S2O3 2-, and SO4 2-.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-12", "is_orphan": false, "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "teth_tetrathionate_hydrolase", "target": "tetrathionate"}, {"description": "SOR catalyzes disproportionation of elemental sulfur, releasing sulfite and sulfide.", "evidence": [{"notes": "The SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "id": "edge-13", "is_orphan": false, "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "sor_sulfur_oxygenase_reductase", "target": "elemental_sulfur"}, {"description": "Sulfite is the oxidized product of SOR-catalyzed elemental sulfur disproportionation.", "evidence": [{"notes": "SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "id": "edge-14", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "sor_sulfur_oxygenase_reductase", "target": "sulfite"}, {"description": "Formation of Fe-sulfide minerals scavenges produced sulfide, relieving product inhibition of sulfur disproportionation.", "evidence": [{"notes": "Ferrihydrite scavenges produced sulfide as Fe-sulfide.", "reference": "DOI:10.1128/msystems.00954-22"}], "id": "edge-15", "is_orphan": false, "predicate": "scavenges", "predicate_id": null, "source": "iron_sulfide_mineral", "target": "sulfide"}], "evidence_rows": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "Disproportionation", "source_grounding": "METPO:1000806", "target": "anoxic condition", "target_grounding": "PATO:0001456"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "edge_id": "edge-2", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "predicate": "serves as electron donor and acceptor", "predicate_id": "METPO:2007603", "source": "inorganic sulfur intermediate", "source_grounding": null, "target": "Disproportionation", "target_grounding": "METPO:1000806"}, {"description": "Elemental sulfur is a disproportionation substrate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental sulfur", "source_grounding": "CHEBI:26833", "target": "inorganic sulfur intermediate", "target_grounding": null}, {"description": "Thiosulfate is a disproportionation substrate.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "source_grounding": "CHEBI:16094", "target": "inorganic sulfur intermediate", "target_grounding": null}, {"description": "One fraction of the substrate is reduced to sulfide.", "edge_id": "edge-5", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "reduced to", "predicate_id": null, "source": "inorganic sulfur intermediate", "source_grounding": null, "target": "sulfide", "target_grounding": "CHEBI:15138"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "edge_id": "edge-6", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic sulfur intermediate", "source_grounding": null, "target": "sulfate", "target_grounding": "CHEBI:16189"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse sulfate reduction pathway", "source_grounding": null, "target": "Disproportionation", "target_grounding": "METPO:1000806"}, {"description": "Thiosulfate disproportionation yields sulfate as the oxidized product.", "edge_id": "edge-8", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "source_grounding": "CHEBI:16094", "target": "sulfate", "target_grounding": "CHEBI:16189"}, {"description": "Thiosulfate disproportionation yields sulfide as the reduced product.", "edge_id": "edge-9", "evidence": [{"notes": "Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O -\u003e SO4(2-) + HS- + H+.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "derives into", "predicate_id": "RO:0001001", "source": "thiosulfate", "source_grounding": "CHEBI:16094", "target": "sulfide", "target_grounding": "CHEBI:15138"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate, the entry step of the S4 intermediate pathway.", "edge_id": "edge-10", "evidence": [{"notes": "tsdA (and doxDA) catalyze conversion of thiosulfate (S2O3 2-) to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "catalyzes oxidation of", "predicate_id": null, "source": "TsdA thiosulfate dehydrogenase", "source_grounding": "GO:0050338", "target": "thiosulfate", "target_grounding": "CHEBI:16094"}, {"description": "Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.", "edge_id": "edge-11", "evidence": [{"notes": "tsdA catalyzes conversion of thiosulfate to tetrathionate (S4O6 2-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "TsdA thiosulfate dehydrogenase", "source_grounding": "GO:0050338", "target": "tetrathionate", "target_grounding": null}, {"description": "TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur, thiosulfate, and sulfate.", "edge_id": "edge-12", "evidence": [{"notes": "Tetrathionate can be subsequently disproportionated via tetH to form S0, S2O3 2-, and SO4 2-.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "TetH tetrathionate hydrolase", "source_grounding": null, "target": "tetrathionate", "target_grounding": null}, {"description": "SOR catalyzes disproportionation of elemental sulfur, releasing sulfite and sulfide.", "edge_id": "edge-13", "evidence": [{"notes": "The SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "predicate": "disproportionates", "predicate_id": "METPO:2007811", "source": "SOR sulfur oxygenase reductase", "source_grounding": "GO:0033755", "target": "elemental sulfur", "target_grounding": "CHEBI:26833"}, {"description": "Sulfite is the oxidized product of SOR-catalyzed elemental sulfur disproportionation.", "edge_id": "edge-14", "evidence": [{"notes": "SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2- and HS-.", "reference": "DOI:10.1007/978-3-031-54306-7_15"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "SOR sulfur oxygenase reductase", "source_grounding": "GO:0033755", "target": "sulfite", "target_grounding": null}, {"description": "Formation of Fe-sulfide minerals scavenges produced sulfide, relieving product inhibition of sulfur disproportionation.", "edge_id": "edge-15", "evidence": [{"notes": "Ferrihydrite scavenges produced sulfide as Fe-sulfide.", "reference": "DOI:10.1128/msystems.00954-22"}], "predicate": "scavenges", "predicate_id": null, "source": "iron-sulfide mineral formation", "source_grounding": null, "target": "sulfide", "target_grounding": "CHEBI:15138"}], "graph_id": "sulfur_disproportionation_redox_split", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-free condition for many microbial sulfur disproportionation processes.", "grounding": "PATO:0001456", "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Metabolism in which one substrate is both oxidized and reduced.", "grounding": "METPO:1000806", "id": "disproportionation_trait", "is_orphan": false, "label": "Disproportionation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur compound that can act as both electron donor and acceptor.", "grounding": null, "id": "inorganic_sulfur_intermediate", "is_orphan": false, "label": "inorganic sulfur intermediate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe-sulfide mineral (e.g., FeSx) formed when produced sulfide is scavenged, removing inhibitory sulfide.", "grounding": null, "id": "iron_sulfide_mineral", "is_orphan": false, "label": "iron-sulfide mineral formation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic route proposed for some sulfur disproportionators.", "grounding": null, "id": "reverse_sulfate_reduction_pathway", "is_orphan": false, "label": "reverse sulfate reduction pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing O2-dependent disproportionation of elemental sulfur into sulfite and sulfide.", "grounding": "GO:0033755", "id": "sor_sulfur_oxygenase_reductase", "is_orphan": false, "label": "SOR sulfur oxygenase reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "The primary structural and biochemical study establishes the reaction and self-compartmentalized SOR assembly; UniProtKB P29082 is the reviewed A. ambivalens sor product.", "reference": "DOI:10.1126/science.1120306", "snippet": "catalyzes an oxygen-dependent disproportionation of elemental sulfur"}], "gene_symbol": "sor", "protein_label": "Sulfur oxygenase/reductase", "retrieved_on": "2026-08-24", "role": "Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent elemental-sulfur disproportionation in A. ambivalens.", "sequence_version": 3, "taxon_id": "NCBITaxon:2283", "taxon_label": "Acidianus ambivalens", "uniprot_id": "UniProtKB:P29082"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur product.", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur oxyanion product of elemental sulfur disproportionation by SOR.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that hydrolyzes/disproportionates tetrathionate to elemental sulfur, thiosulfate, and sulfate.", "grounding": null, "id": "teth_tetrathionate_hydrolase", "is_orphan": false, "label": "TetH tetrathionate hydrolase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "S4-intermediate (S4O6 2-) produced from thiosulfate oxidation in the S4I pathway.", "grounding": null, "id": "tetrathionate", "is_orphan": false, "label": "tetrathionate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": "CHEBI:16094", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing thiosulfate to tetrathionate, entry step of the S4 intermediate pathway.", "grounding": "GO:0050338", "id": "tsda_thiosulfate_dehydrogenase", "is_orphan": false, "label": "TsdA thiosulfate dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "The primary structural and biochemical study establishes the reaction and self-compartmentalized SOR assembly; UniProtKB P29082 is the reviewed A. ambivalens sor product.", "reference": "DOI:10.1126/science.1120306", "snippet": "catalyzes an oxygen-dependent disproportionation of elemental sulfur"}], "gene_symbol": "sor", "node_id": "sor_sulfur_oxygenase_reductase", "node_label": "SOR sulfur oxygenase reductase", "protein_label": "Sulfur oxygenase/reductase", "retrieved_on": "2026-08-24", "role": "Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent elemental-sulfur disproportionation in A. ambivalens.", "sequence_version": 3, "taxon_id": "NCBITaxon:2283", "taxon_label": "Acidianus ambivalens", "uniprot_id": "UniProtKB:P29082"}], "scope_notes": "This cross-taxon graph combines the canonical anaerobic phenotype with chemically explicit TsdA/TetH and oxygen-dependent SOR branches. SOR supports an enzymatic sulfur-disproportionation reaction but is not asserted as the mechanism of anaerobic D. sulfexigens growth; TsdA and TetH occurrence alone is not diagnostic.", "scope_status": "MECHANISTIC", "title": "Sulfur disproportionation redox split"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1130,13 +1171,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-24 10:15 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

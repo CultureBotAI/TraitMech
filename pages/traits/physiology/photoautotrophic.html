@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>photoautotrophic</h1>
     <p class="curie"><code>METPO:1000656</code> · CLASS · REVIEWED</p>
 
@@ -91,9 +102,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>photoautotrophic</strong>
+            <a href="https://w3id.org/metpo/1000656" rel="nofollow noreferrer"><code>METPO:1000656</code></a>
             <span class="edge-predicate">has energy source</span>
             <strong>light</strong>
-            <code>METPO:2007807</code>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001717" rel="nofollow noreferrer"><code>PATO:0001717</code></a>
+            <a href="https://w3id.org/metpo/2007807" rel="nofollow noreferrer"><code>METPO:2007807</code></a>
             <p>Photoautotrophy uses light as the energy source.</p>
             <ul>
 
@@ -108,9 +121,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>photosystem II</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009523" rel="nofollow noreferrer"><code>GO:0009523</code></a>
             <span class="edge-predicate">oxidizes</span>
             <strong>water</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377" rel="nofollow noreferrer"><code>CHEBI:15377</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Oxygenic photosynthesis extracts electrons from water through PSII.</p>
             <ul>
 
@@ -125,9 +140,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>water</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377" rel="nofollow noreferrer"><code>CHEBI:15377</code></a>
             <span class="edge-predicate">oxidized to</span>
             <strong>molecular oxygen</strong>
-            <code>METPO:2007405</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
+            <a href="https://w3id.org/metpo/2007405" rel="nofollow noreferrer"><code>METPO:2007405</code></a>
             <p>Water oxidation releases molecular oxygen.</p>
             <ul>
 
@@ -142,9 +159,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>photosystem II</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009523" rel="nofollow noreferrer"><code>GO:0009523</code></a>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>photosynthetic electron transport</strong>
-            <code>METPO:2007402</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
+            <a href="https://w3id.org/metpo/2007402" rel="nofollow noreferrer"><code>METPO:2007402</code></a>
             <p>PSII feeds electrons into the photosynthetic electron transport chain.</p>
             <ul>
 
@@ -159,9 +178,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>photosynthetic electron transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
             <span class="edge-predicate">has output</span>
             <strong>ATP and NADPH</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Photosynthetic electron transport generates ATP and NADPH.</p>
             <ul>
 
@@ -176,9 +197,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
             <span class="edge-predicate">fixed by</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>METPO:2007404</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="https://w3id.org/metpo/2007404" rel="nofollow noreferrer"><code>METPO:2007404</code></a>
             <p>CO2 is assimilated through the Calvin-Benson cycle in many photoautotrophs.</p>
             <ul>
 
@@ -193,9 +216,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>RuBisCO</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
             <span class="edge-predicate">catalyzes</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>biolink:catalyzes</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="https://w3id.org/biolink/vocab/catalyzes" rel="nofollow noreferrer"><code>biolink:catalyzes</code></a>
             <p>RuBisCO is a key carboxylating enzyme for Calvin-Benson CO2 fixation.</p>
             <ul>
 
@@ -210,9 +235,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>Calvin-Benson cycle</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
             <span class="edge-predicate">has output</span>
             <strong>biomass</strong>
-            <code>RO:0002234</code>
+            <a href="https://w3id.org/metpo/1007501" rel="nofollow noreferrer"><code>METPO:1007501</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Fixed carbon supports biosynthesis and biomass production.</p>
             <ul>
 
@@ -227,9 +254,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>photosynthetic electron transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
             <span class="edge-predicate">enables</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Light-driven photosynthetic electron transport supplies the energy/reductant that drives CBB-cycle CO2 fixation.</p>
             <ul>
 
@@ -244,8 +273,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>carbon-concentrating mechanism</strong>
+
             <span class="edge-predicate">lowers</span>
             <strong>RuBisCO oxygenase activity</strong>
+
 
             <p>The CCM enriches intracellular inorganic carbon, suppressing the wasteful RuBisCO oxygenase reaction.</p>
             <ul>
@@ -261,8 +292,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>bicarbonate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17544" rel="nofollow noreferrer"><code>CHEBI:17544</code></a>
             <span class="edge-predicate">diffuses into</span>
             <strong>carboxysome</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031470" rel="nofollow noreferrer"><code>GO:0031470</code></a>
 
             <p>Cytoplasmic bicarbonate enters the carboxysome where it is converted to CO2 for fixation.</p>
             <ul>
@@ -278,8 +311,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>carboxysomal carbonic anhydrase</strong>
+
             <span class="edge-predicate">converts</span>
             <strong>bicarbonate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17544" rel="nofollow noreferrer"><code>CHEBI:17544</code></a>
 
             <p>Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to feed RuBisCO.</p>
             <ul>
@@ -295,9 +330,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>light</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001717" rel="nofollow noreferrer"><code>PATO:0001717</code></a>
             <span class="edge-predicate">enables</span>
             <strong>photosynthetic electron transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Captured light enables the high-energy electron transfer through the photosystems that constitutes photosynthetic electron transport.</p>
             <ul>
 
@@ -312,9 +349,11 @@
 
           <li id="pathograph-1-edge-14">
             <strong>carbon-concentrating mechanism</strong>
+
             <span class="edge-predicate">includes</span>
             <strong>carboxysome</strong>
-            <code>biolink:has_part</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031470" rel="nofollow noreferrer"><code>GO:0031470</code></a>
+            <a href="https://w3id.org/biolink/vocab/has_part" rel="nofollow noreferrer"><code>biolink:has_part</code></a>
             <p>The cyanobacterial carbon-concentrating mechanism includes the carboxysome microcompartment as a functional component.</p>
             <ul>
 
@@ -329,9 +368,11 @@
 
           <li id="pathograph-1-edge-15">
             <strong>carboxysome</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031470" rel="nofollow noreferrer"><code>GO:0031470</code></a>
             <span class="edge-predicate">includes</span>
             <strong>RuBisCO</strong>
-            <code>biolink:has_part</code>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
+            <a href="https://w3id.org/biolink/vocab/has_part" rel="nofollow noreferrer"><code>biolink:has_part</code></a>
             <p>The carboxysome houses RuBisCO for concentrated CO2 fixation.</p>
             <ul>
 
@@ -476,6 +517,12 @@
 
         <li>
           <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/aerobic_anoxygenic_phototrophy.html">aerobic anoxygenic phototrophy</a>
+          <span class="sim">0.637</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic</a>
           <span class="sim">0.637</span>
         </li>
@@ -514,12 +561,6 @@
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithoautotrophic.html">lithoautotrophic</a>
           <span class="sim">0.445</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/photolithoautotrophic.html">photolithoautotrophic</a>
-          <span class="sim">0.439</span>
         </li>
 
       </ul>
@@ -1156,7 +1197,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking light capture, photosynthetic electron transport, ATP/reductant supply, and Calvin-Benson carbon fixation.", "edges": [{"description": "Photoautotrophy uses light as the energy source.", "evidence": [{"notes": "Supports light capture by cyanobacteria under photoautotrophic metabolism.", "reference": "DOI:10.3390/life10050071", "snippet": "capture solar energy"}], "id": "edge-1", "is_orphan": false, "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "photoautotrophic_trait", "target": "light"}, {"description": "Oxygenic photosynthesis extracts electrons from water through PSII.", "evidence": [{"notes": "Supports water splitting by PSII in cyanobacteria.", "reference": "DOI:10.3390/life10050071", "snippet": "uses it to split H2O"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem_ii", "target": "water"}, {"description": "Water oxidation releases molecular oxygen.", "evidence": [{"notes": "Supports oxygen as the product of water splitting.", "reference": "DOI:10.3390/life10050071", "snippet": "split H2O molecules into O2"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "PSII feeds electrons into the photosynthetic electron transport chain.", "evidence": [{"notes": "Supports electron flow from PSII/plastoquinol into photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "passes its reducing equivalents to an electron transfer chain"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "photosystem_ii", "target": "photosynthetic_electron_transport"}, {"description": "Photosynthetic electron transport generates ATP and NADPH.", "evidence": [{"notes": "Supports ATP and NADPH generation by photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "generate chemical energy (ATP) and reducing power (NADPH)"}], "id": "edge-5", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "photosynthetic_electron_transport", "target": "atp_nadph"}, {"description": "CO2 is assimilated through the Calvin-Benson cycle in many photoautotrophs.", "evidence": [{"notes": "Supports Calvin-Benson cycle as an autotrophic CO2-fixation route.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "calvin_benson_cycle"}, {"description": "RuBisCO is a key carboxylating enzyme for Calvin-Benson CO2 fixation.", "evidence": [{"notes": "Supports RuBisCO as a Calvin-cycle enzyme tied to CO2 fixation rate.", "reference": "DOI:10.3390/life10050071", "snippet": "Calvin cycle enzymes, RuBisCO"}], "id": "edge-7", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "rubisco", "target": "calvin_benson_cycle"}, {"description": "Fixed carbon supports biosynthesis and biomass production.", "evidence": [{"notes": "Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.", "reference": "DOI:10.3390/life10050071", "snippet": "fix ... CO2 into ... biomass"}], "id": "edge-8", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "calvin_benson_cycle", "target": "biomass"}, {"description": "Light-driven photosynthetic electron transport supplies the energy/reductant that drives CBB-cycle CO2 fixation.", "evidence": [{"notes": "Phototrophs use light energy to drive a photosynthetic electron transport chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_electron_transport", "target": "calvin_benson_cycle"}, {"description": "The CCM enriches intracellular inorganic carbon, suppressing the wasteful RuBisCO oxygenase reaction.", "evidence": [{"notes": "The CCM lowers RuBisCO\u0027s oxygenase reaction to below ~1% by enriching intracellular inorganic carbon.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "id": "edge-10", "is_orphan": false, "predicate": "lowers", "predicate_id": null, "source": "carbon_concentrating_mechanism", "target": "rubisco_oxygenase_activity"}, {"description": "Cytoplasmic bicarbonate enters the carboxysome where it is converted to CO2 for fixation.", "evidence": [{"notes": "Cytoplasmic HCO3- diffuses into the carboxysome.", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-11", "is_orphan": false, "predicate": "diffuses into", "predicate_id": null, "source": "bicarbonate", "target": "carboxysome"}, {"description": "Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to feed RuBisCO.", "evidence": [{"notes": "Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes (CA produces CO2).", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-12", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "carboxysomal_carbonic_anhydrase", "target": "bicarbonate"}, {"description": "Captured light enables the high-energy electron transfer through the photosystems that constitutes photosynthetic electron transport.", "evidence": [{"notes": "The review directly links light harvesting to electron transfer through PSII and PSI in cyanobacterial photosynthesis.", "reference": "DOI:10.1111/1751-7915.14519", "snippet": "Photosynthesis in cyanobacteria requires effective light harvesting and the transfer of high-energy electrons through two photosystems"}], "id": "edge-13", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "light", "target": "photosynthetic_electron_transport"}, {"description": "The cyanobacterial carbon-concentrating mechanism includes the carboxysome microcompartment as a functional component.", "evidence": [{"notes": "A primary structural and biochemical study identifies carboxysomes as a critical component of cyanobacterial CCM function.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "Proteinaceous microcompartments, called carboxysomes, play a critical role in CCM function"}], "id": "edge-14", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carbon_concentrating_mechanism", "target": "carboxysome"}, {"description": "The carboxysome houses RuBisCO for concentrated CO2 fixation.", "evidence": [{"notes": "The primary study explicitly places RuBisCO within the carboxysome together with carbonic anhydrase.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "carboxysomes that house CA and Rubisco"}], "id": "edge-15", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carboxysome", "target": "rubisco"}], "evidence_rows": [{"description": "Photoautotrophy uses light as the energy source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports light capture by cyanobacteria under photoautotrophic metabolism.", "reference": "DOI:10.3390/life10050071", "snippet": "capture solar energy"}], "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "photoautotrophic", "target": "light"}, {"description": "Oxygenic photosynthesis extracts electrons from water through PSII.", "edge_id": "edge-2", "evidence": [{"notes": "Supports water splitting by PSII in cyanobacteria.", "reference": "DOI:10.3390/life10050071", "snippet": "uses it to split H2O"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem II", "target": "water"}, {"description": "Water oxidation releases molecular oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen as the product of water splitting.", "reference": "DOI:10.3390/life10050071", "snippet": "split H2O molecules into O2"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular oxygen"}, {"description": "PSII feeds electrons into the photosynthetic electron transport chain.", "edge_id": "edge-4", "evidence": [{"notes": "Supports electron flow from PSII/plastoquinol into photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "passes its reducing equivalents to an electron transfer chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "photosystem II", "target": "photosynthetic electron transport"}, {"description": "Photosynthetic electron transport generates ATP and NADPH.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP and NADPH generation by photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "generate chemical energy (ATP) and reducing power (NADPH)"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "photosynthetic electron transport", "target": "ATP and NADPH"}, {"description": "CO2 is assimilated through the Calvin-Benson cycle in many photoautotrophs.", "edge_id": "edge-6", "evidence": [{"notes": "Supports Calvin-Benson cycle as an autotrophic CO2-fixation route.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "Calvin-Benson cycle"}, {"description": "RuBisCO is a key carboxylating enzyme for Calvin-Benson CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports RuBisCO as a Calvin-cycle enzyme tied to CO2 fixation rate.", "reference": "DOI:10.3390/life10050071", "snippet": "Calvin cycle enzymes, RuBisCO"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "RuBisCO", "target": "Calvin-Benson cycle"}, {"description": "Fixed carbon supports biosynthesis and biomass production.", "edge_id": "edge-8", "evidence": [{"notes": "Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.", "reference": "DOI:10.3390/life10050071", "snippet": "fix ... CO2 into ... biomass"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "Calvin-Benson cycle", "target": "biomass"}, {"description": "Light-driven photosynthetic electron transport supplies the energy/reductant that drives CBB-cycle CO2 fixation.", "edge_id": "edge-9", "evidence": [{"notes": "Phototrophs use light energy to drive a photosynthetic electron transport chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "target": "Calvin-Benson cycle"}, {"description": "The CCM enriches intracellular inorganic carbon, suppressing the wasteful RuBisCO oxygenase reaction.", "edge_id": "edge-10", "evidence": [{"notes": "The CCM lowers RuBisCO\u0027s oxygenase reaction to below ~1% by enriching intracellular inorganic carbon.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "predicate": "lowers", "predicate_id": null, "source": "carbon-concentrating mechanism", "target": "RuBisCO oxygenase activity"}, {"description": "Cytoplasmic bicarbonate enters the carboxysome where it is converted to CO2 for fixation.", "edge_id": "edge-11", "evidence": [{"notes": "Cytoplasmic HCO3- diffuses into the carboxysome.", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "diffuses into", "predicate_id": null, "source": "bicarbonate", "target": "carboxysome"}, {"description": "Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to feed RuBisCO.", "edge_id": "edge-12", "evidence": [{"notes": "Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes (CA produces CO2).", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "converts", "predicate_id": null, "source": "carboxysomal carbonic anhydrase", "target": "bicarbonate"}, {"description": "Captured light enables the high-energy electron transfer through the photosystems that constitutes photosynthetic electron transport.", "edge_id": "edge-13", "evidence": [{"notes": "The review directly links light harvesting to electron transfer through PSII and PSI in cyanobacterial photosynthesis.", "reference": "DOI:10.1111/1751-7915.14519", "snippet": "Photosynthesis in cyanobacteria requires effective light harvesting and the transfer of high-energy electrons through two photosystems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "light", "target": "photosynthetic electron transport"}, {"description": "The cyanobacterial carbon-concentrating mechanism includes the carboxysome microcompartment as a functional component.", "edge_id": "edge-14", "evidence": [{"notes": "A primary structural and biochemical study identifies carboxysomes as a critical component of cyanobacterial CCM function.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "Proteinaceous microcompartments, called carboxysomes, play a critical role in CCM function"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carbon-concentrating mechanism", "target": "carboxysome"}, {"description": "The carboxysome houses RuBisCO for concentrated CO2 fixation.", "edge_id": "edge-15", "evidence": [{"notes": "The primary study explicitly places RuBisCO within the carboxysome together with carbonic anhydrase.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "carboxysomes that house CA and Rubisco"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carboxysome", "target": "RuBisCO"}], "graph_id": "photoautotrophic_cyanobacterial_carbon_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy and reductant supply for CO2 assimilation.", "grounding": null, "id": "atp_nadph", "is_orphan": false, "label": "ATP and NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon species accumulated and converted to CO2 for fixation.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cellular material formed from fixed carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive pentose phosphate CO2-fixation cycle.", "grounding": "GO:0019253", "id": "calvin_benson_cycle", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inorganic carbon-concentrating mechanism that elevates CO2 around RuBisCO.", "grounding": null, "id": "carbon_concentrating_mechanism", "is_orphan": false, "label": "carbon-concentrating mechanism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Primary inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carbonic anhydrase that dehydrates bicarbonate to CO2 inside the carboxysome.", "grounding": null, "id": "carboxysomal_carbonic_anhydrase", "is_orphan": false, "label": "carboxysomal carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Proteinaceous microcompartment housing RuBisCO and carbonic anhydrase for CO2 fixation.", "grounding": "GO:0031470", "id": "carboxysome", "is_orphan": false, "label": "carboxysome", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Energy source for photoautotrophic metabolism.", "grounding": "PATO:0001717", "id": "light", "is_orphan": false, "label": "light", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Product of oxygenic water splitting.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using light energy and carbon dioxide for biosynthesis.", "grounding": "METPO:1000656", "id": "photoautotrophic_trait", "is_orphan": false, "label": "photoautotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer pathway generating ATP and NADPH.", "grounding": "GO:0009767", "id": "photosynthetic_electron_transport", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygenic photosystem that extracts electrons from water in cyanobacteria.", "grounding": "GO:0009523", "id": "photosystem_ii", "is_orphan": false, "label": "photosystem II", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson cycle.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Wasteful oxygenation side-reaction of RuBisCO leading to photorespiration.", "grounding": null, "id": "rubisco_oxygenase_activity", "is_orphan": false, "label": "RuBisCO oxygenase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "node_id": "photosystem_ii", "node_label": "photosystem II", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "scope_notes": "This graph specifically represents oxygenic cyanobacterial photoautotrophy, even though the trait also has an anoxygenic canonical example. The Synechocystis protein example is the D1 component of photosystem II and does not denote the complete multisubunit complex.", "scope_status": "MECHANISTIC", "title": "Photoautotrophic light-powered CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking light capture, photosynthetic electron transport, ATP/reductant supply, and Calvin-Benson carbon fixation.", "edges": [{"description": "Photoautotrophy uses light as the energy source.", "evidence": [{"notes": "Supports light capture by cyanobacteria under photoautotrophic metabolism.", "reference": "DOI:10.3390/life10050071", "snippet": "capture solar energy"}], "id": "edge-1", "is_orphan": false, "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "photoautotrophic_trait", "target": "light"}, {"description": "Oxygenic photosynthesis extracts electrons from water through PSII.", "evidence": [{"notes": "Supports water splitting by PSII in cyanobacteria.", "reference": "DOI:10.3390/life10050071", "snippet": "uses it to split H2O"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem_ii", "target": "water"}, {"description": "Water oxidation releases molecular oxygen.", "evidence": [{"notes": "Supports oxygen as the product of water splitting.", "reference": "DOI:10.3390/life10050071", "snippet": "split H2O molecules into O2"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "PSII feeds electrons into the photosynthetic electron transport chain.", "evidence": [{"notes": "Supports electron flow from PSII/plastoquinol into photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "passes its reducing equivalents to an electron transfer chain"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "photosystem_ii", "target": "photosynthetic_electron_transport"}, {"description": "Photosynthetic electron transport generates ATP and NADPH.", "evidence": [{"notes": "Supports ATP and NADPH generation by photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "generate chemical energy (ATP) and reducing power (NADPH)"}], "id": "edge-5", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "photosynthetic_electron_transport", "target": "atp_nadph"}, {"description": "CO2 is assimilated through the Calvin-Benson cycle in many photoautotrophs.", "evidence": [{"notes": "Supports Calvin-Benson cycle as an autotrophic CO2-fixation route.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "calvin_benson_cycle"}, {"description": "RuBisCO is a key carboxylating enzyme for Calvin-Benson CO2 fixation.", "evidence": [{"notes": "Supports RuBisCO as a Calvin-cycle enzyme tied to CO2 fixation rate.", "reference": "DOI:10.3390/life10050071", "snippet": "Calvin cycle enzymes, RuBisCO"}], "id": "edge-7", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "rubisco", "target": "calvin_benson_cycle"}, {"description": "Fixed carbon supports biosynthesis and biomass production.", "evidence": [{"notes": "Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.", "reference": "DOI:10.3390/life10050071", "snippet": "fix ... CO2 into ... biomass"}], "id": "edge-8", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "calvin_benson_cycle", "target": "biomass"}, {"description": "Light-driven photosynthetic electron transport supplies the energy/reductant that drives CBB-cycle CO2 fixation.", "evidence": [{"notes": "Phototrophs use light energy to drive a photosynthetic electron transport chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_electron_transport", "target": "calvin_benson_cycle"}, {"description": "The CCM enriches intracellular inorganic carbon, suppressing the wasteful RuBisCO oxygenase reaction.", "evidence": [{"notes": "The CCM lowers RuBisCO\u0027s oxygenase reaction to below ~1% by enriching intracellular inorganic carbon.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "id": "edge-10", "is_orphan": false, "predicate": "lowers", "predicate_id": null, "source": "carbon_concentrating_mechanism", "target": "rubisco_oxygenase_activity"}, {"description": "Cytoplasmic bicarbonate enters the carboxysome where it is converted to CO2 for fixation.", "evidence": [{"notes": "Cytoplasmic HCO3- diffuses into the carboxysome.", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-11", "is_orphan": false, "predicate": "diffuses into", "predicate_id": null, "source": "bicarbonate", "target": "carboxysome"}, {"description": "Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to feed RuBisCO.", "evidence": [{"notes": "Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes (CA produces CO2).", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-12", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "carboxysomal_carbonic_anhydrase", "target": "bicarbonate"}, {"description": "Captured light enables the high-energy electron transfer through the photosystems that constitutes photosynthetic electron transport.", "evidence": [{"notes": "The review directly links light harvesting to electron transfer through PSII and PSI in cyanobacterial photosynthesis.", "reference": "DOI:10.1111/1751-7915.14519", "snippet": "Photosynthesis in cyanobacteria requires effective light harvesting and the transfer of high-energy electrons through two photosystems"}], "id": "edge-13", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "light", "target": "photosynthetic_electron_transport"}, {"description": "The cyanobacterial carbon-concentrating mechanism includes the carboxysome microcompartment as a functional component.", "evidence": [{"notes": "A primary structural and biochemical study identifies carboxysomes as a critical component of cyanobacterial CCM function.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "Proteinaceous microcompartments, called carboxysomes, play a critical role in CCM function"}], "id": "edge-14", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carbon_concentrating_mechanism", "target": "carboxysome"}, {"description": "The carboxysome houses RuBisCO for concentrated CO2 fixation.", "evidence": [{"notes": "The primary study explicitly places RuBisCO within the carboxysome together with carbonic anhydrase.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "carboxysomes that house CA and Rubisco"}], "id": "edge-15", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carboxysome", "target": "rubisco"}], "evidence_rows": [{"description": "Photoautotrophy uses light as the energy source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports light capture by cyanobacteria under photoautotrophic metabolism.", "reference": "DOI:10.3390/life10050071", "snippet": "capture solar energy"}], "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "photoautotrophic", "source_grounding": "METPO:1000656", "target": "light", "target_grounding": "PATO:0001717"}, {"description": "Oxygenic photosynthesis extracts electrons from water through PSII.", "edge_id": "edge-2", "evidence": [{"notes": "Supports water splitting by PSII in cyanobacteria.", "reference": "DOI:10.3390/life10050071", "snippet": "uses it to split H2O"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem II", "source_grounding": "GO:0009523", "target": "water", "target_grounding": "CHEBI:15377"}, {"description": "Water oxidation releases molecular oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen as the product of water splitting.", "reference": "DOI:10.3390/life10050071", "snippet": "split H2O molecules into O2"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "source_grounding": "CHEBI:15377", "target": "molecular oxygen", "target_grounding": "CHEBI:15379"}, {"description": "PSII feeds electrons into the photosynthetic electron transport chain.", "edge_id": "edge-4", "evidence": [{"notes": "Supports electron flow from PSII/plastoquinol into photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "passes its reducing equivalents to an electron transfer chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "photosystem II", "source_grounding": "GO:0009523", "target": "photosynthetic electron transport", "target_grounding": "GO:0009767"}, {"description": "Photosynthetic electron transport generates ATP and NADPH.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP and NADPH generation by photosynthetic electron transport.", "reference": "DOI:10.3390/life10050071", "snippet": "generate chemical energy (ATP) and reducing power (NADPH)"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "photosynthetic electron transport", "source_grounding": "GO:0009767", "target": "ATP and NADPH", "target_grounding": null}, {"description": "CO2 is assimilated through the Calvin-Benson cycle in many photoautotrophs.", "edge_id": "edge-6", "evidence": [{"notes": "Supports Calvin-Benson cycle as an autotrophic CO2-fixation route.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "source_grounding": "CHEBI:16526", "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}, {"description": "RuBisCO is a key carboxylating enzyme for Calvin-Benson CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports RuBisCO as a Calvin-cycle enzyme tied to CO2 fixation rate.", "reference": "DOI:10.3390/life10050071", "snippet": "Calvin cycle enzymes, RuBisCO"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "RuBisCO", "source_grounding": "InterPro:IPR033966", "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}, {"description": "Fixed carbon supports biosynthesis and biomass production.", "edge_id": "edge-8", "evidence": [{"notes": "Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.", "reference": "DOI:10.3390/life10050071", "snippet": "fix ... CO2 into ... biomass"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "Calvin-Benson cycle", "source_grounding": "GO:0019253", "target": "biomass", "target_grounding": "METPO:1007501"}, {"description": "Light-driven photosynthetic electron transport supplies the energy/reductant that drives CBB-cycle CO2 fixation.", "edge_id": "edge-9", "evidence": [{"notes": "Phototrophs use light energy to drive a photosynthetic electron transport chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "source_grounding": "GO:0009767", "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}, {"description": "The CCM enriches intracellular inorganic carbon, suppressing the wasteful RuBisCO oxygenase reaction.", "edge_id": "edge-10", "evidence": [{"notes": "The CCM lowers RuBisCO\u0027s oxygenase reaction to below ~1% by enriching intracellular inorganic carbon.", "reference": "DOI:10.3389/fpls.2024.1417680"}], "predicate": "lowers", "predicate_id": null, "source": "carbon-concentrating mechanism", "source_grounding": null, "target": "RuBisCO oxygenase activity", "target_grounding": null}, {"description": "Cytoplasmic bicarbonate enters the carboxysome where it is converted to CO2 for fixation.", "edge_id": "edge-11", "evidence": [{"notes": "Cytoplasmic HCO3- diffuses into the carboxysome.", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "diffuses into", "predicate_id": null, "source": "bicarbonate", "source_grounding": "CHEBI:17544", "target": "carboxysome", "target_grounding": "GO:0031470"}, {"description": "Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to feed RuBisCO.", "edge_id": "edge-12", "evidence": [{"notes": "Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes (CA produces CO2).", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "converts", "predicate_id": null, "source": "carboxysomal carbonic anhydrase", "source_grounding": null, "target": "bicarbonate", "target_grounding": "CHEBI:17544"}, {"description": "Captured light enables the high-energy electron transfer through the photosystems that constitutes photosynthetic electron transport.", "edge_id": "edge-13", "evidence": [{"notes": "The review directly links light harvesting to electron transfer through PSII and PSI in cyanobacterial photosynthesis.", "reference": "DOI:10.1111/1751-7915.14519", "snippet": "Photosynthesis in cyanobacteria requires effective light harvesting and the transfer of high-energy electrons through two photosystems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "light", "source_grounding": "PATO:0001717", "target": "photosynthetic electron transport", "target_grounding": "GO:0009767"}, {"description": "The cyanobacterial carbon-concentrating mechanism includes the carboxysome microcompartment as a functional component.", "edge_id": "edge-14", "evidence": [{"notes": "A primary structural and biochemical study identifies carboxysomes as a critical component of cyanobacterial CCM function.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "Proteinaceous microcompartments, called carboxysomes, play a critical role in CCM function"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carbon-concentrating mechanism", "source_grounding": null, "target": "carboxysome", "target_grounding": "GO:0031470"}, {"description": "The carboxysome houses RuBisCO for concentrated CO2 fixation.", "edge_id": "edge-15", "evidence": [{"notes": "The primary study explicitly places RuBisCO within the carboxysome together with carbonic anhydrase.", "reference": "DOI:10.1126/sciadv.adk7283", "snippet": "carboxysomes that house CA and Rubisco"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "carboxysome", "source_grounding": "GO:0031470", "target": "RuBisCO", "target_grounding": "InterPro:IPR033966"}], "graph_id": "photoautotrophic_cyanobacterial_carbon_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy and reductant supply for CO2 assimilation.", "grounding": null, "id": "atp_nadph", "is_orphan": false, "label": "ATP and NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon species accumulated and converted to CO2 for fixation.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cellular material formed from fixed carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive pentose phosphate CO2-fixation cycle.", "grounding": "GO:0019253", "id": "calvin_benson_cycle", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inorganic carbon-concentrating mechanism that elevates CO2 around RuBisCO.", "grounding": null, "id": "carbon_concentrating_mechanism", "is_orphan": false, "label": "carbon-concentrating mechanism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Primary inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carbonic anhydrase that dehydrates bicarbonate to CO2 inside the carboxysome.", "grounding": null, "id": "carboxysomal_carbonic_anhydrase", "is_orphan": false, "label": "carboxysomal carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Proteinaceous microcompartment housing RuBisCO and carbonic anhydrase for CO2 fixation.", "grounding": "GO:0031470", "id": "carboxysome", "is_orphan": false, "label": "carboxysome", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Energy source for photoautotrophic metabolism.", "grounding": "PATO:0001717", "id": "light", "is_orphan": false, "label": "light", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Product of oxygenic water splitting.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using light energy and carbon dioxide for biosynthesis.", "grounding": "METPO:1000656", "id": "photoautotrophic_trait", "is_orphan": false, "label": "photoautotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer pathway generating ATP and NADPH.", "grounding": "GO:0009767", "id": "photosynthetic_electron_transport", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygenic photosystem that extracts electrons from water in cyanobacteria.", "grounding": "GO:0009523", "id": "photosystem_ii", "is_orphan": false, "label": "photosystem II", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson cycle.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Wasteful oxygenation side-reaction of RuBisCO leading to photorespiration.", "grounding": null, "id": "rubisco_oxygenase_activity", "is_orphan": false, "label": "RuBisCO oxygenase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "node_id": "photosystem_ii", "node_label": "photosystem II", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "scope_notes": "This graph specifically represents oxygenic cyanobacterial photoautotrophy, even though the trait also has an anoxygenic canonical example. The Synechocystis protein example is the D1 component of photosystem II and does not denote the complete multisubunit complex.", "scope_status": "MECHANISTIC", "title": "Photoautotrophic light-powered CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1176,13 +1217,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-30 20:17 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

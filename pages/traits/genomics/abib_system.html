@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AbiB system</h1>
     <p class="curie"><code>traitmech:000319</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>abiB locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>AbiB antiphage activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The abiB-family locus encodes an abortive-infection phage-resistance determinant, and DefenseFinder models AbiB as a one-profile system.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>AbiB antiphage activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>sensitive phage transcript degradation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>AbiB activity promotes rapid degradation of sensitive phage transcripts after infection.</p>
             <ul>
 
@@ -167,9 +182,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>sensitive phage transcript degradation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>sensitive phage development arrest</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Transcript decay probably arrests development of AbiB-sensitive phages.</p>
             <ul>
 
@@ -184,9 +201,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>sensitive phage development arrest</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AbiB system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000319</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Arrest of sensitive lactococcal phage development realizes the AbiB abortive-infection trait.</p>
             <ul>
 
@@ -207,8 +226,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>AbiB system</strong>
+            <code>traitmech:000319</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>AbiB system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -279,11 +300,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -408,6 +493,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -741,7 +831,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking an abiB-family locus to AbiB antiphage activity, sensitive-phage transcript degradation, sensitive-phage arrest, and abortive-infection system possession without asserting the unresolved phage trigger or nuclease effector.", "edges": [{"description": "The abiB-family locus encodes an abortive-infection phage-resistance determinant, and DefenseFinder models AbiB as a one-profile system.", "evidence": [{"notes": "Parreira et al. identify AbiB as an abortive-infection determinant that blocks sensitive phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder rules table models AbiB as a one-component system requiring the AbiB__AbiB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiB\tAbiB\t1\t1\tAbiB__AbiB"}, {"notes": "The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiB__AbiB                                       | AbiB__AbiB                                       | AbiB                   | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abib_locus", "target": "abib_antiphage_activity"}, {"description": "AbiB activity promotes rapid degradation of sensitive phage transcripts after infection.", "evidence": [{"notes": "Parreira et al. connect AbiB to rapid decay of sensitive phage transcripts.", "reference": "PMID:8825768", "snippet": "AbiB promotes a dramatic degradation of sensitive phage transcripts, starting 10-15 min after infection"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abib_antiphage_activity", "target": "sensitive_phage_transcript_degradation"}, {"description": "Transcript decay probably arrests development of AbiB-sensitive phages.", "evidence": [{"notes": "Parreira et al. interpret phage transcript decay as the likely cause of sensitive phage developmental arrest.", "reference": "PMID:8825768", "snippet": "The decay of the transcripts is the probable cause of the arrest of the sensitive phage development"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sensitive_phage_transcript_degradation", "target": "sensitive_phage_development_arrest"}, {"description": "Arrest of sensitive lactococcal phage development realizes the AbiB abortive-infection trait.", "evidence": [{"notes": "Parreira et al. show that AbiB prevents sensitive lactococcal phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder article registry maps the named AbiB model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiB | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sensitive_phage_development_arrest", "target": "abib_system_trait"}, {"description": "AbiB system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Parreira et al. place AbiB in the abortive-infection class of phage defense.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abib_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiB-family locus encodes an abortive-infection phage-resistance determinant, and DefenseFinder models AbiB as a one-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Parreira et al. identify AbiB as an abortive-infection determinant that blocks sensitive phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder rules table models AbiB as a one-component system requiring the AbiB__AbiB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiB\tAbiB\t1\t1\tAbiB__AbiB"}, {"notes": "The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiB__AbiB                                       | AbiB__AbiB                                       | AbiB                   | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiB locus", "target": "AbiB antiphage activity"}, {"description": "AbiB activity promotes rapid degradation of sensitive phage transcripts after infection.", "edge_id": "edge-2", "evidence": [{"notes": "Parreira et al. connect AbiB to rapid decay of sensitive phage transcripts.", "reference": "PMID:8825768", "snippet": "AbiB promotes a dramatic degradation of sensitive phage transcripts, starting 10-15 min after infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiB antiphage activity", "target": "sensitive phage transcript degradation"}, {"description": "Transcript decay probably arrests development of AbiB-sensitive phages.", "edge_id": "edge-3", "evidence": [{"notes": "Parreira et al. interpret phage transcript decay as the likely cause of sensitive phage developmental arrest.", "reference": "PMID:8825768", "snippet": "The decay of the transcripts is the probable cause of the arrest of the sensitive phage development"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sensitive phage transcript degradation", "target": "sensitive phage development arrest"}, {"description": "Arrest of sensitive lactococcal phage development realizes the AbiB abortive-infection trait.", "edge_id": "edge-4", "evidence": [{"notes": "Parreira et al. show that AbiB prevents sensitive lactococcal phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder article registry maps the named AbiB model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiB | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sensitive phage development arrest", "target": "AbiB system"}, {"description": "AbiB system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Parreira et al. place AbiB in the abortive-infection class of phage defense.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiB system", "target": "abortive infection system"}], "graph_id": "abib_locus_degrades_sensitive_phage_transcripts", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection phage resistance mediated by the AbiB system.", "grounding": null, "id": "abib_antiphage_activity", "is_orphan": false, "label": "AbiB antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An abiB-family abortive-infection locus represented by the DefenseFinder AbiB__AbiB profile.", "grounding": null, "id": "abib_locus", "is_orphan": false, "label": "abiB locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiB abortive-infection phage-defense system.", "grounding": "traitmech:000319", "id": "abib_system_trait", "is_orphan": false, "label": "AbiB system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Failure of AbiB-sensitive bIL170 phages to complete productive growth on Lactococcus lactis IL1403.", "grounding": null, "id": "sensitive_phage_development_arrest", "is_orphan": false, "label": "sensitive phage development arrest", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid decay of sensitive lactococcal phage transcripts in an AbiB-containing infected host.", "grounding": null, "id": "sensitive_phage_transcript_degradation", "is_orphan": false, "label": "sensitive phage transcript degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiB as a named DefenseFinder single-profile abortive-infection system whose IL1403 prototype restricts bIL170 phage by promoting rapid sensitive-phage transcript degradation. It leaves the direct phage trigger, AbiB molecular function, RNase effector identity, natural locus breadth, and phage escape routes unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiB activity degrades sensitive lactococcal phage transcripts"}];
+  var graphs = [{"description": "Conservative system-level sketch linking an abiB-family locus to AbiB antiphage activity, sensitive-phage transcript degradation, sensitive-phage arrest, and abortive-infection system possession without asserting the unresolved phage trigger or nuclease effector.", "edges": [{"description": "The abiB-family locus encodes an abortive-infection phage-resistance determinant, and DefenseFinder models AbiB as a one-profile system.", "evidence": [{"notes": "Parreira et al. identify AbiB as an abortive-infection determinant that blocks sensitive phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder rules table models AbiB as a one-component system requiring the AbiB__AbiB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiB\tAbiB\t1\t1\tAbiB__AbiB"}, {"notes": "The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiB__AbiB                                       | AbiB__AbiB                                       | AbiB                   | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abib_locus", "target": "abib_antiphage_activity"}, {"description": "AbiB activity promotes rapid degradation of sensitive phage transcripts after infection.", "evidence": [{"notes": "Parreira et al. connect AbiB to rapid decay of sensitive phage transcripts.", "reference": "PMID:8825768", "snippet": "AbiB promotes a dramatic degradation of sensitive phage transcripts, starting 10-15 min after infection"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abib_antiphage_activity", "target": "sensitive_phage_transcript_degradation"}, {"description": "Transcript decay probably arrests development of AbiB-sensitive phages.", "evidence": [{"notes": "Parreira et al. interpret phage transcript decay as the likely cause of sensitive phage developmental arrest.", "reference": "PMID:8825768", "snippet": "The decay of the transcripts is the probable cause of the arrest of the sensitive phage development"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sensitive_phage_transcript_degradation", "target": "sensitive_phage_development_arrest"}, {"description": "Arrest of sensitive lactococcal phage development realizes the AbiB abortive-infection trait.", "evidence": [{"notes": "Parreira et al. show that AbiB prevents sensitive lactococcal phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder article registry maps the named AbiB model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiB | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sensitive_phage_development_arrest", "target": "abib_system_trait"}, {"description": "AbiB system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Parreira et al. place AbiB in the abortive-infection class of phage defense.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abib_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiB-family locus encodes an abortive-infection phage-resistance determinant, and DefenseFinder models AbiB as a one-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Parreira et al. identify AbiB as an abortive-infection determinant that blocks sensitive phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder rules table models AbiB as a one-component system requiring the AbiB__AbiB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiB\tAbiB\t1\t1\tAbiB__AbiB"}, {"notes": "The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiB__AbiB                                       | AbiB__AbiB                                       | AbiB                   | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiB locus", "source_grounding": null, "target": "AbiB antiphage activity", "target_grounding": null}, {"description": "AbiB activity promotes rapid degradation of sensitive phage transcripts after infection.", "edge_id": "edge-2", "evidence": [{"notes": "Parreira et al. connect AbiB to rapid decay of sensitive phage transcripts.", "reference": "PMID:8825768", "snippet": "AbiB promotes a dramatic degradation of sensitive phage transcripts, starting 10-15 min after infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiB antiphage activity", "source_grounding": null, "target": "sensitive phage transcript degradation", "target_grounding": null}, {"description": "Transcript decay probably arrests development of AbiB-sensitive phages.", "edge_id": "edge-3", "evidence": [{"notes": "Parreira et al. interpret phage transcript decay as the likely cause of sensitive phage developmental arrest.", "reference": "PMID:8825768", "snippet": "The decay of the transcripts is the probable cause of the arrest of the sensitive phage development"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sensitive phage transcript degradation", "source_grounding": null, "target": "sensitive phage development arrest", "target_grounding": null}, {"description": "Arrest of sensitive lactococcal phage development realizes the AbiB abortive-infection trait.", "edge_id": "edge-4", "evidence": [{"notes": "Parreira et al. show that AbiB prevents sensitive lactococcal phage growth.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB prevents growth of the sensitive phage bIL170"}, {"notes": "The DefenseFinder article registry maps the named AbiB model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiB | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sensitive phage development arrest", "source_grounding": null, "target": "AbiB system", "target_grounding": "traitmech:000319"}, {"description": "AbiB system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Parreira et al. place AbiB in the abortive-infection class of phage defense.", "reference": "PMID:8825768", "snippet": "The abortive infection determinant AbiB"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiB system", "source_grounding": "traitmech:000319", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "abib_locus_degrades_sensitive_phage_transcripts", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection phage resistance mediated by the AbiB system.", "grounding": null, "id": "abib_antiphage_activity", "is_orphan": false, "label": "AbiB antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An abiB-family abortive-infection locus represented by the DefenseFinder AbiB__AbiB profile.", "grounding": null, "id": "abib_locus", "is_orphan": false, "label": "abiB locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiB abortive-infection phage-defense system.", "grounding": "traitmech:000319", "id": "abib_system_trait", "is_orphan": false, "label": "AbiB system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Failure of AbiB-sensitive bIL170 phages to complete productive growth on Lactococcus lactis IL1403.", "grounding": null, "id": "sensitive_phage_development_arrest", "is_orphan": false, "label": "sensitive phage development arrest", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid decay of sensitive lactococcal phage transcripts in an AbiB-containing infected host.", "grounding": null, "id": "sensitive_phage_transcript_degradation", "is_orphan": false, "label": "sensitive phage transcript degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiB as a named DefenseFinder single-profile abortive-infection system whose IL1403 prototype restricts bIL170 phage by promoting rapid sensitive-phage transcript degradation. It leaves the direct phage trigger, AbiB molecular function, RNase effector identity, natural locus breadth, and phage escape routes unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiB activity degrades sensitive lactococcal phage transcripts"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -761,13 +851,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-20 21:21 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

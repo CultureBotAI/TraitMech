@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Hna system</h1>
     <p class="curie"><code>traitmech:000241</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Hna locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Hna nuclease activation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>phage SSB stimulation</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>Hna nuclease activation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.</p>
             <ul>
 
@@ -149,9 +164,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Hna nuclease activation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>abortive infection response</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.</p>
             <ul>
 
@@ -172,9 +189,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>abortive infection response</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Hna system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000241</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.</p>
             <ul>
 
@@ -189,8 +208,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Hna system</strong>
+            <code>traitmech:000241</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Hna system possession is a phage-defense-system trait.</p>
             <ul>
@@ -261,11 +282,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -391,6 +476,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -724,7 +814,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking an Hna locus to phage single-stranded DNA-binding protein challenge, dysregulated helicase/nuclease activity, abortive infection, and inhibition of phage spread.", "edges": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_locus", "target": "hna_nuclease_activation"}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_ssb_stimulation", "target": "hna_nuclease_activation"}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_nuclease_activation", "target": "abortive_infection_response"}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive_infection_response", "target": "hna_system_trait"}, {"description": "Hna system possession is a phage-defense-system trait.", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "hna_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "edge_id": "edge-1", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna locus", "target": "Hna nuclease activation"}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "edge_id": "edge-2", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage SSB stimulation", "target": "Hna nuclease activation"}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "edge_id": "edge-3", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna nuclease activation", "target": "abortive infection response"}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive infection response", "target": "Hna system"}, {"description": "Hna system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Hna system", "target": "phage defense system"}], "graph_id": "hna_ssb_triggered_abortive_infection", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Host cell death after infection that prevents release of bacteriophage progeny.", "grounding": null, "id": "abortive_infection_response", "is_orphan": false, "label": "abortive infection response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-effector Hna phage-defense locus encoding an SF2 helicase/nuclease immune protein.", "grounding": null, "id": "hna_locus", "is_orphan": false, "label": "Hna locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Dysregulated activation of Hna nuclease activity after phage single-stranded DNA-binding protein challenge.", "grounding": null, "id": "hna_nuclease_activation", "is_orphan": false, "label": "Hna nuclease activation", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Hna phage-defense system.", "grounding": "traitmech:000241", "id": "hna_system_trait", "is_orphan": false, "label": "Hna system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stimulation of Hna by a phage-encoded single-stranded DNA-binding protein.", "grounding": null, "id": "phage_ssb_stimulation", "is_orphan": false, "label": "phage SSB stimulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Sather et al. and Hooper et al. Hna phage-SSB-triggered abortive infection evidence without asserting one universal phage trigger, escape route, DNA substrate, ATP-concentration gate, or host-cell-death timing across all Hna homologs.", "scope_status": "NONMECHANISTIC", "title": "Hna nuclease activation couples phage SSB challenge to abortive infection"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking an Hna locus to phage single-stranded DNA-binding protein challenge, dysregulated helicase/nuclease activity, abortive infection, and inhibition of phage spread.", "edges": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_locus", "target": "hna_nuclease_activation"}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_ssb_stimulation", "target": "hna_nuclease_activation"}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_nuclease_activation", "target": "abortive_infection_response"}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive_infection_response", "target": "hna_system_trait"}, {"description": "Hna system possession is a phage-defense-system trait.", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "hna_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "edge_id": "edge-1", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna locus", "source_grounding": null, "target": "Hna nuclease activation", "target_grounding": null}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "edge_id": "edge-2", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage SSB stimulation", "source_grounding": null, "target": "Hna nuclease activation", "target_grounding": null}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "edge_id": "edge-3", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna nuclease activation", "source_grounding": null, "target": "abortive infection response", "target_grounding": null}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive infection response", "source_grounding": null, "target": "Hna system", "target_grounding": "traitmech:000241"}, {"description": "Hna system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Hna system", "source_grounding": "traitmech:000241", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "hna_ssb_triggered_abortive_infection", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Host cell death after infection that prevents release of bacteriophage progeny.", "grounding": null, "id": "abortive_infection_response", "is_orphan": false, "label": "abortive infection response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-effector Hna phage-defense locus encoding an SF2 helicase/nuclease immune protein.", "grounding": null, "id": "hna_locus", "is_orphan": false, "label": "Hna locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Dysregulated activation of Hna nuclease activity after phage single-stranded DNA-binding protein challenge.", "grounding": null, "id": "hna_nuclease_activation", "is_orphan": false, "label": "Hna nuclease activation", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Hna phage-defense system.", "grounding": "traitmech:000241", "id": "hna_system_trait", "is_orphan": false, "label": "Hna system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stimulation of Hna by a phage-encoded single-stranded DNA-binding protein.", "grounding": null, "id": "phage_ssb_stimulation", "is_orphan": false, "label": "phage SSB stimulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Sather et al. and Hooper et al. Hna phage-SSB-triggered abortive infection evidence without asserting one universal phage trigger, escape route, DNA substrate, ATP-concentration gate, or host-cell-death timing across all Hna homologs.", "scope_status": "NONMECHANISTIC", "title": "Hna nuclease activation couples phage SSB challenge to abortive infection"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -744,13 +834,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-18 12:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

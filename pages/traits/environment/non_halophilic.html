@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>non halophilic</h1>
     <p class="curie"><code>METPO:1000624</code> · CLASS · REVIEWED</p>
 
@@ -91,9 +102,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>low-to-moderate salinity</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>non halophilic</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000624" rel="nofollow noreferrer"><code>METPO:1000624</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Non-halophilic organisms do not require elevated salinity for growth.</p>
             <ul>
 
@@ -108,9 +121,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>high osmolarity</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001657" rel="nofollow noreferrer"><code>PATO:0001657</code></a>
             <span class="edge-predicate">regulates</span>
             <strong>water flux across cytoplasmic membrane</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Hyperosmotic stress alters cellular water balance and can impair non-halophilic growth.</p>
             <ul>
 
@@ -125,9 +140,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>potassium ion</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29103" rel="nofollow noreferrer"><code>CHEBI:29103</code></a>
             <span class="edge-predicate">mitigates</span>
             <strong>water flux across cytoplasmic membrane</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Rapid potassium accumulation helps adjust cytoplasmic osmotic potential after osmotic upshift.</p>
             <ul>
 
@@ -142,9 +159,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>proline</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17203" rel="nofollow noreferrer"><code>CHEBI:17203</code></a>
             <span class="edge-predicate">mitigates</span>
             <strong>water flux across cytoplasmic membrane</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Proline accumulation supports osmoadaptation under sustained high-osmolarity conditions.</p>
             <ul>
 
@@ -159,9 +178,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>compatible-solute uptake systems</strong>
+
             <span class="edge-predicate">imports</span>
             <strong>proline</strong>
-            <code>METPO:2007805</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17203" rel="nofollow noreferrer"><code>CHEBI:17203</code></a>
+            <a href="https://w3id.org/metpo/2007805" rel="nofollow noreferrer"><code>METPO:2007805</code></a>
             <p>Uptake systems can import osmoprotectants that relieve high osmolarity.</p>
             <ul>
 
@@ -176,8 +197,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>proline</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17203" rel="nofollow noreferrer"><code>CHEBI:17203</code></a>
             <span class="edge-predicate">enables tolerance of</span>
             <strong>high osmolarity</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001657" rel="nofollow noreferrer"><code>PATO:0001657</code></a>
 
             <p>Proline acts as an osmoprotectant enabling survival or growth under salt stress without making salt a growth requirement.</p>
             <ul>
@@ -193,9 +216,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>osmotic upshift</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>water efflux and cytoplasmic volume decrease</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor decrease.</p>
             <ul>
 
@@ -210,8 +235,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>osmotic upshift</strong>
+
             <span class="edge-predicate">induces</span>
             <strong>rapid potassium uptake</strong>
+
 
             <p>Cells import large amounts of K+ as the primary emergency response to osmotic upshift.</p>
             <ul>
@@ -227,8 +254,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>rapid potassium uptake</strong>
+
             <span class="edge-predicate">requires counterion balancing by</span>
             <strong>L-glutamate</strong>
+
 
             <p>Glutamate is imported or synthesized as the counterion to balance accumulated K+ and maintain electroneutrality.</p>
             <ul>
@@ -244,8 +273,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>rapid potassium uptake</strong>
+
             <span class="edge-predicate">promotes replacement by</span>
             <strong>compatible solute accumulation</strong>
+
 
             <p>High intracellular K+/ionic strength is mitigated by secondary accumulation of neutral compatible solutes that replace K+.</p>
             <ul>
@@ -981,7 +1012,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking non-halophily to lack of salt requirement, high-osmolarity stress, potassium uptake, and compatible-solute protection.", "edges": [{"description": "Non-halophilic organisms do not require elevated salinity for growth.", "evidence": [{"notes": "Bacillus subtilis is used here as a non-halophilic model for salt stress responses rather than salt-requiring growth.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "soil-dwelling bacterium Bacillus subtilis"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low_to_moderate_salinity", "target": "non_halophilic_trait"}, {"description": "Hyperosmotic stress alters cellular water balance and can impair non-halophilic growth.", "evidence": [{"notes": "Supports high-osmolarity growth inhibition through water loss and turgor decrease.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "outflow of water, drop in turgor, and the ensuing growth arrest"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "high_osmolarity", "target": "water_flux"}, {"description": "Rapid potassium accumulation helps adjust cytoplasmic osmotic potential after osmotic upshift.", "evidence": [{"notes": "Supports potassium uptake as an initial osmotic response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "potassium_ion", "target": "water_flux"}, {"description": "Proline accumulation supports osmoadaptation under sustained high-osmolarity conditions.", "evidence": [{"notes": "Supports de novo proline synthesis in Bacillus subtilis osmotic defense.", "reference": "DOI:10.1128/JB.00778-11", "snippet": "proline production is required"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "proline", "target": "water_flux"}, {"description": "Uptake systems can import osmoprotectants that relieve high osmolarity.", "evidence": [{"notes": "Supports uptake systems for compatible solutes in Bacillus subtilis.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "osmotically controlled uptake systems"}], "id": "edge-5", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2007805", "source": "compatible_solute_uptake", "target": "proline"}, {"description": "Proline acts as an osmoprotectant enabling survival or growth under salt stress without making salt a growth requirement.", "evidence": [{"notes": "Supports proline-mediated protection in a non-halophilic bacterial model.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "proline as an osmoprotectant"}], "id": "edge-6", "is_orphan": false, "predicate": "enables tolerance of", "predicate_id": null, "source": "proline", "target": "high_osmolarity"}, {"description": "Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor decrease.", "evidence": [{"notes": "Under hypertonic stress water exits cells within milliseconds, causing cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased ionic strength.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "osmotic_upshift", "target": "water_efflux_volume_decrease"}, {"description": "Cells import large amounts of K+ as the primary emergency response to osmotic upshift.", "evidence": [{"notes": "Cells commonly import large amounts of K+ during osmotic upshift; generic across non-halophilic bacteria.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-8", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "osmotic_upshift", "target": "rapid_k_uptake"}, {"description": "Glutamate is imported or synthesized as the counterion to balance accumulated K+ and maintain electroneutrality.", "evidence": [{"notes": "Glutamate commonly imported or synthesized as the counterion to maintain electroneutrality during K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-9", "is_orphan": false, "predicate": "requires counterion balancing by", "predicate_id": null, "source": "rapid_k_uptake", "target": "glutamate"}, {"description": "High intracellular K+/ionic strength is mitigated by secondary accumulation of neutral compatible solutes that replace K+.", "evidence": [{"notes": "Bacteria such as E. coli and B. subtilis accumulate/synthesize neutral compatible solutes to replace K+; compatible-solute accumulation is a secondary response following primary K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-10", "is_orphan": false, "predicate": "promotes replacement by", "predicate_id": null, "source": "rapid_k_uptake", "target": "compatible_solute_accumulation"}], "evidence_rows": [{"description": "Non-halophilic organisms do not require elevated salinity for growth.", "edge_id": "edge-1", "evidence": [{"notes": "Bacillus subtilis is used here as a non-halophilic model for salt stress responses rather than salt-requiring growth.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "soil-dwelling bacterium Bacillus subtilis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low-to-moderate salinity", "target": "non halophilic"}, {"description": "Hyperosmotic stress alters cellular water balance and can impair non-halophilic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports high-osmolarity growth inhibition through water loss and turgor decrease.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "outflow of water, drop in turgor, and the ensuing growth arrest"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "high osmolarity", "target": "water flux across cytoplasmic membrane"}, {"description": "Rapid potassium accumulation helps adjust cytoplasmic osmotic potential after osmotic upshift.", "edge_id": "edge-3", "evidence": [{"notes": "Supports potassium uptake as an initial osmotic response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "potassium ion", "target": "water flux across cytoplasmic membrane"}, {"description": "Proline accumulation supports osmoadaptation under sustained high-osmolarity conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports de novo proline synthesis in Bacillus subtilis osmotic defense.", "reference": "DOI:10.1128/JB.00778-11", "snippet": "proline production is required"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "proline", "target": "water flux across cytoplasmic membrane"}, {"description": "Uptake systems can import osmoprotectants that relieve high osmolarity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports uptake systems for compatible solutes in Bacillus subtilis.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "osmotically controlled uptake systems"}], "predicate": "imports", "predicate_id": "METPO:2007805", "source": "compatible-solute uptake systems", "target": "proline"}, {"description": "Proline acts as an osmoprotectant enabling survival or growth under salt stress without making salt a growth requirement.", "edge_id": "edge-6", "evidence": [{"notes": "Supports proline-mediated protection in a non-halophilic bacterial model.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "proline as an osmoprotectant"}], "predicate": "enables tolerance of", "predicate_id": null, "source": "proline", "target": "high osmolarity"}, {"description": "Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor decrease.", "edge_id": "edge-7", "evidence": [{"notes": "Under hypertonic stress water exits cells within milliseconds, causing cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased ionic strength.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "osmotic upshift", "target": "water efflux and cytoplasmic volume decrease"}, {"description": "Cells import large amounts of K+ as the primary emergency response to osmotic upshift.", "edge_id": "edge-8", "evidence": [{"notes": "Cells commonly import large amounts of K+ during osmotic upshift; generic across non-halophilic bacteria.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "induces", "predicate_id": null, "source": "osmotic upshift", "target": "rapid potassium uptake"}, {"description": "Glutamate is imported or synthesized as the counterion to balance accumulated K+ and maintain electroneutrality.", "edge_id": "edge-9", "evidence": [{"notes": "Glutamate commonly imported or synthesized as the counterion to maintain electroneutrality during K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "requires counterion balancing by", "predicate_id": null, "source": "rapid potassium uptake", "target": "L-glutamate"}, {"description": "High intracellular K+/ionic strength is mitigated by secondary accumulation of neutral compatible solutes that replace K+.", "edge_id": "edge-10", "evidence": [{"notes": "Bacteria such as E. coli and B. subtilis accumulate/synthesize neutral compatible solutes to replace K+; compatible-solute accumulation is a secondary response following primary K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "promotes replacement by", "predicate_id": null, "source": "rapid potassium uptake", "target": "compatible solute accumulation"}], "graph_id": "non_halophilic_salt_stress_response", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Accumulation/synthesis of neutral compatible solutes replacing K+ as a secondary osmoadaptive response.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transporters importing glycine betaine, proline, ectoine, or other osmoprotectants.", "grounding": null, "id": "compatible_solute_uptake", "is_orphan": false, "label": "compatible-solute uptake systems", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Counterion accumulated/synthesized to balance K+ and maintain electroneutrality.", "grounding": null, "id": "glutamate", "is_orphan": false, "label": "L-glutamate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Hyperosmotic condition that can inhibit growth of non-halophiles.", "grounding": "PATO:0001657", "id": "high_osmolarity", "is_orphan": false, "label": "high osmolarity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Non-elevated salinity condition compatible with non-halophilic growth.", "grounding": null, "id": "low_to_moderate_salinity", "is_orphan": false, "label": "low-to-moderate salinity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth does not require or prefer elevated salt concentration.", "grounding": "METPO:1000624", "id": "non_halophilic_trait", "is_orphan": false, "label": "non halophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Hypertonic/NaCl upshift imposing increased external osmolarity.", "grounding": null, "id": "osmotic_upshift", "is_orphan": false, "label": "osmotic upshift", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Ion accumulated as an early osmotic-stress response.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute synthesized by Bacillus subtilis during osmotic adaptation.", "grounding": "CHEBI:17203", "id": "proline", "is_orphan": false, "label": "proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Emergency K+ import as the primary early osmotic-upshift response.", "grounding": null, "id": "rapid_k_uptake", "is_orphan": false, "label": "rapid potassium uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid loss of water and drop in cytoplasmic volume/turgor after hypertonic stress.", "grounding": null, "id": "water_efflux_volume_decrease", "is_orphan": false, "label": "water efflux and cytoplasmic volume decrease", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmotically driven water movement during osmotic upshift or downshift.", "grounding": null, "id": "water_flux", "is_orphan": false, "label": "water flux across cytoplasmic membrane", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Non-halophilic salt-stress response mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking non-halophily to lack of salt requirement, high-osmolarity stress, potassium uptake, and compatible-solute protection.", "edges": [{"description": "Non-halophilic organisms do not require elevated salinity for growth.", "evidence": [{"notes": "Bacillus subtilis is used here as a non-halophilic model for salt stress responses rather than salt-requiring growth.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "soil-dwelling bacterium Bacillus subtilis"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low_to_moderate_salinity", "target": "non_halophilic_trait"}, {"description": "Hyperosmotic stress alters cellular water balance and can impair non-halophilic growth.", "evidence": [{"notes": "Supports high-osmolarity growth inhibition through water loss and turgor decrease.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "outflow of water, drop in turgor, and the ensuing growth arrest"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "high_osmolarity", "target": "water_flux"}, {"description": "Rapid potassium accumulation helps adjust cytoplasmic osmotic potential after osmotic upshift.", "evidence": [{"notes": "Supports potassium uptake as an initial osmotic response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "potassium_ion", "target": "water_flux"}, {"description": "Proline accumulation supports osmoadaptation under sustained high-osmolarity conditions.", "evidence": [{"notes": "Supports de novo proline synthesis in Bacillus subtilis osmotic defense.", "reference": "DOI:10.1128/JB.00778-11", "snippet": "proline production is required"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "proline", "target": "water_flux"}, {"description": "Uptake systems can import osmoprotectants that relieve high osmolarity.", "evidence": [{"notes": "Supports uptake systems for compatible solutes in Bacillus subtilis.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "osmotically controlled uptake systems"}], "id": "edge-5", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2007805", "source": "compatible_solute_uptake", "target": "proline"}, {"description": "Proline acts as an osmoprotectant enabling survival or growth under salt stress without making salt a growth requirement.", "evidence": [{"notes": "Supports proline-mediated protection in a non-halophilic bacterial model.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "proline as an osmoprotectant"}], "id": "edge-6", "is_orphan": false, "predicate": "enables tolerance of", "predicate_id": null, "source": "proline", "target": "high_osmolarity"}, {"description": "Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor decrease.", "evidence": [{"notes": "Under hypertonic stress water exits cells within milliseconds, causing cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased ionic strength.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "osmotic_upshift", "target": "water_efflux_volume_decrease"}, {"description": "Cells import large amounts of K+ as the primary emergency response to osmotic upshift.", "evidence": [{"notes": "Cells commonly import large amounts of K+ during osmotic upshift; generic across non-halophilic bacteria.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-8", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "osmotic_upshift", "target": "rapid_k_uptake"}, {"description": "Glutamate is imported or synthesized as the counterion to balance accumulated K+ and maintain electroneutrality.", "evidence": [{"notes": "Glutamate commonly imported or synthesized as the counterion to maintain electroneutrality during K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-9", "is_orphan": false, "predicate": "requires counterion balancing by", "predicate_id": null, "source": "rapid_k_uptake", "target": "glutamate"}, {"description": "High intracellular K+/ionic strength is mitigated by secondary accumulation of neutral compatible solutes that replace K+.", "evidence": [{"notes": "Bacteria such as E. coli and B. subtilis accumulate/synthesize neutral compatible solutes to replace K+; compatible-solute accumulation is a secondary response following primary K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-10", "is_orphan": false, "predicate": "promotes replacement by", "predicate_id": null, "source": "rapid_k_uptake", "target": "compatible_solute_accumulation"}], "evidence_rows": [{"description": "Non-halophilic organisms do not require elevated salinity for growth.", "edge_id": "edge-1", "evidence": [{"notes": "Bacillus subtilis is used here as a non-halophilic model for salt stress responses rather than salt-requiring growth.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "soil-dwelling bacterium Bacillus subtilis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low-to-moderate salinity", "source_grounding": null, "target": "non halophilic", "target_grounding": "METPO:1000624"}, {"description": "Hyperosmotic stress alters cellular water balance and can impair non-halophilic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports high-osmolarity growth inhibition through water loss and turgor decrease.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "outflow of water, drop in turgor, and the ensuing growth arrest"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "high osmolarity", "source_grounding": "PATO:0001657", "target": "water flux across cytoplasmic membrane", "target_grounding": null}, {"description": "Rapid potassium accumulation helps adjust cytoplasmic osmotic potential after osmotic upshift.", "edge_id": "edge-3", "evidence": [{"notes": "Supports potassium uptake as an initial osmotic response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "potassium ion", "source_grounding": "CHEBI:29103", "target": "water flux across cytoplasmic membrane", "target_grounding": null}, {"description": "Proline accumulation supports osmoadaptation under sustained high-osmolarity conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports de novo proline synthesis in Bacillus subtilis osmotic defense.", "reference": "DOI:10.1128/JB.00778-11", "snippet": "proline production is required"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "proline", "source_grounding": "CHEBI:17203", "target": "water flux across cytoplasmic membrane", "target_grounding": null}, {"description": "Uptake systems can import osmoprotectants that relieve high osmolarity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports uptake systems for compatible solutes in Bacillus subtilis.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "osmotically controlled uptake systems"}], "predicate": "imports", "predicate_id": "METPO:2007805", "source": "compatible-solute uptake systems", "source_grounding": null, "target": "proline", "target_grounding": "CHEBI:17203"}, {"description": "Proline acts as an osmoprotectant enabling survival or growth under salt stress without making salt a growth requirement.", "edge_id": "edge-6", "evidence": [{"notes": "Supports proline-mediated protection in a non-halophilic bacterial model.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "proline as an osmoprotectant"}], "predicate": "enables tolerance of", "predicate_id": null, "source": "proline", "source_grounding": "CHEBI:17203", "target": "high osmolarity", "target_grounding": "PATO:0001657"}, {"description": "Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor decrease.", "edge_id": "edge-7", "evidence": [{"notes": "Under hypertonic stress water exits cells within milliseconds, causing cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased ionic strength.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "osmotic upshift", "source_grounding": null, "target": "water efflux and cytoplasmic volume decrease", "target_grounding": null}, {"description": "Cells import large amounts of K+ as the primary emergency response to osmotic upshift.", "edge_id": "edge-8", "evidence": [{"notes": "Cells commonly import large amounts of K+ during osmotic upshift; generic across non-halophilic bacteria.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "induces", "predicate_id": null, "source": "osmotic upshift", "source_grounding": null, "target": "rapid potassium uptake", "target_grounding": null}, {"description": "Glutamate is imported or synthesized as the counterion to balance accumulated K+ and maintain electroneutrality.", "edge_id": "edge-9", "evidence": [{"notes": "Glutamate commonly imported or synthesized as the counterion to maintain electroneutrality during K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "requires counterion balancing by", "predicate_id": null, "source": "rapid potassium uptake", "source_grounding": null, "target": "L-glutamate", "target_grounding": null}, {"description": "High intracellular K+/ionic strength is mitigated by secondary accumulation of neutral compatible solutes that replace K+.", "edge_id": "edge-10", "evidence": [{"notes": "Bacteria such as E. coli and B. subtilis accumulate/synthesize neutral compatible solutes to replace K+; compatible-solute accumulation is a secondary response following primary K+ accumulation.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "promotes replacement by", "predicate_id": null, "source": "rapid potassium uptake", "source_grounding": null, "target": "compatible solute accumulation", "target_grounding": null}], "graph_id": "non_halophilic_salt_stress_response", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Accumulation/synthesis of neutral compatible solutes replacing K+ as a secondary osmoadaptive response.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transporters importing glycine betaine, proline, ectoine, or other osmoprotectants.", "grounding": null, "id": "compatible_solute_uptake", "is_orphan": false, "label": "compatible-solute uptake systems", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Counterion accumulated/synthesized to balance K+ and maintain electroneutrality.", "grounding": null, "id": "glutamate", "is_orphan": false, "label": "L-glutamate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Hyperosmotic condition that can inhibit growth of non-halophiles.", "grounding": "PATO:0001657", "id": "high_osmolarity", "is_orphan": false, "label": "high osmolarity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Non-elevated salinity condition compatible with non-halophilic growth.", "grounding": null, "id": "low_to_moderate_salinity", "is_orphan": false, "label": "low-to-moderate salinity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth does not require or prefer elevated salt concentration.", "grounding": "METPO:1000624", "id": "non_halophilic_trait", "is_orphan": false, "label": "non halophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Hypertonic/NaCl upshift imposing increased external osmolarity.", "grounding": null, "id": "osmotic_upshift", "is_orphan": false, "label": "osmotic upshift", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Ion accumulated as an early osmotic-stress response.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute synthesized by Bacillus subtilis during osmotic adaptation.", "grounding": "CHEBI:17203", "id": "proline", "is_orphan": false, "label": "proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Emergency K+ import as the primary early osmotic-upshift response.", "grounding": null, "id": "rapid_k_uptake", "is_orphan": false, "label": "rapid potassium uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid loss of water and drop in cytoplasmic volume/turgor after hypertonic stress.", "grounding": null, "id": "water_efflux_volume_decrease", "is_orphan": false, "label": "water efflux and cytoplasmic volume decrease", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmotically driven water movement during osmotic upshift or downshift.", "grounding": null, "id": "water_flux", "is_orphan": false, "label": "water flux across cytoplasmic membrane", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Non-halophilic salt-stress response mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1001,13 +1032,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-03 17:10 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

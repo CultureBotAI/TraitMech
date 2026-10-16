@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>BrcWGS21 system</h1>
     <p class="curie"><code>traitmech:000520</code> · CLASS · PROPOSED</p>
 
@@ -126,9 +137,11 @@ KP5</blockquote>
 
           <li id="pathograph-1-edge-1">
             <strong>BrcWGS21 integron cassette</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>BrcWGS21 phage resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The gcuWGS21/BrcWGS21 integron cassette contributes to phage resistance during phage-panel assays.</p>
             <ul>
 
@@ -149,9 +162,11 @@ KP5</blockquote>
 
           <li id="pathograph-1-edge-2">
             <strong>BrcWGS21 phage resistance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>BrcWGS21 system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000520</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>BrcWGS21-linked phage resistance realizes the BrcWGS21 system possession trait.</p>
             <ul>
 
@@ -178,8 +193,10 @@ KP5</blockquote>
 
           <li id="pathograph-1-edge-3">
             <strong>BrcWGS21 system</strong>
+            <code>traitmech:000520</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>BrcWGS21 system possession is a phage-defense-system trait.</p>
             <ul>
@@ -269,11 +286,75 @@ brc23</span>
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -449,6 +530,11 @@ KP5</blockquote>
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -782,7 +868,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a gcuWGS21/BrcWGS21 bacteriophage-resistance integron cassette to phage resistance and BrcWGS21 system possession.", "edges": [{"description": "The gcuWGS21/BrcWGS21 integron cassette contributes to phage resistance during phage-panel assays.", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "brcwgs21_integron_cassette", "target": "brcwgs21_phage_resistance"}, {"description": "BrcWGS21-linked phage resistance realizes the BrcWGS21 system possession trait.", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}, {"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "brcwgs21_phage_resistance", "target": "brcwgs21_system_trait"}, {"description": "BrcWGS21 system possession is a phage-defense-system trait.", "evidence": [{"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}, {"notes": "Kieffer et al. include brcWGS21 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}, {"notes": "The pinned DefenseFinder article registry maps the gcuWGS21 source key to the Kieffer et al. mobile-integron BRiC paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| gcuWGS21 | 10\\.1126/science\\.ads0915 | Mobile integrons encode phage defense systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brcwgs21_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The gcuWGS21/BrcWGS21 integron cassette contributes to phage resistance during phage-panel assays.", "edge_id": "edge-1", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BrcWGS21 integron cassette", "target": "BrcWGS21 phage resistance"}, {"description": "BrcWGS21-linked phage resistance realizes the BrcWGS21 system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}, {"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "BrcWGS21 phage resistance", "target": "BrcWGS21 system"}, {"description": "BrcWGS21 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}, {"notes": "Kieffer et al. include brcWGS21 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}, {"notes": "The pinned DefenseFinder article registry maps the gcuWGS21 source key to the Kieffer et al. mobile-integron BRiC paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| gcuWGS21 | 10\\.1126/science\\.ads0915 | Mobile integrons encode phage defense systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BrcWGS21 system", "target": "phage defense system"}], "graph_id": "brcwgs21_integron_cassette_confers_phage_resistance", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A mobile integron gene cassette named by the gcuWGS21 source key and curated as BrcWGS21.", "grounding": null, "id": "brcwgs21_integron_cassette", "is_orphan": false, "label": "BrcWGS21 integron cassette", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced phage inhibition in cells carrying the gcuWGS21/BrcWGS21 integron cassette.", "grounding": null, "id": "brcwgs21_phage_resistance", "is_orphan": false, "label": "BrcWGS21 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded BrcWGS21 phage-defense system.", "grounding": "traitmech:000520", "id": "brcwgs21_system_trait", "is_orphan": false, "label": "BrcWGS21 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures BrcWGS21 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth outside the reported panels, direct molecular substrate, or a DefenseFinder HMM/rules profile absent from the pinned snapshot.", "scope_status": "NONMECHANISTIC", "title": "BrcWGS21 BRiCs confer phage resistance"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a gcuWGS21/BrcWGS21 bacteriophage-resistance integron cassette to phage resistance and BrcWGS21 system possession.", "edges": [{"description": "The gcuWGS21/BrcWGS21 integron cassette contributes to phage resistance during phage-panel assays.", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "brcwgs21_integron_cassette", "target": "brcwgs21_phage_resistance"}, {"description": "BrcWGS21-linked phage resistance realizes the BrcWGS21 system possession trait.", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}, {"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "brcwgs21_phage_resistance", "target": "brcwgs21_system_trait"}, {"description": "BrcWGS21 system possession is a phage-defense-system trait.", "evidence": [{"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}, {"notes": "Kieffer et al. include brcWGS21 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}, {"notes": "The pinned DefenseFinder article registry maps the gcuWGS21 source key to the Kieffer et al. mobile-integron BRiC paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| gcuWGS21 | 10\\.1126/science\\.ads0915 | Mobile integrons encode phage defense systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brcwgs21_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The gcuWGS21/BrcWGS21 integron cassette contributes to phage resistance during phage-panel assays.", "edge_id": "edge-1", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BrcWGS21 integron cassette", "source_grounding": null, "target": "BrcWGS21 phage resistance", "target_grounding": null}, {"description": "BrcWGS21-linked phage resistance realizes the BrcWGS21 system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 low-MOI heatmap row; the visible cells show reduced inhibition, including 88.6% for MS2, 60.5% for T7, 93.4% for HK544, 77.2% for F13, 25.6% for Vs1, 0% for Px4, and 93.4% for Px5.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 L 88.6 60.5 93.4 77.2 25.6 0 93.4"}, {"notes": "Manual transcription of the Supplementary Fig. S2 BrcWGS21 high-MOI heatmap row; the visible cells show reduced inhibition, including 95.6% for MS2, 98.2% for phi80, 84.9% for HK544, 98.0% for F13, 24.9% for Vs1, and 78.4% for Px4.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brcWGS21 H 95.6 98.2 84.9 98.0 24.9 78.4"}, {"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "BrcWGS21 phage resistance", "source_grounding": null, "target": "BrcWGS21 system", "target_grounding": "traitmech:000520"}, {"description": "BrcWGS21 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Kieffer et al. classify positive integron cassettes as BRiCs and compare their defense profiles across a phage panel.", "reference": "DOI:10.1126/science.ads0915", "snippet": "defense profiles of identified Bacteriophage Resistance integron Cassettes (BRiCs) against a panel of different phages"}, {"notes": "Kieffer et al. include brcWGS21 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}, {"notes": "The pinned DefenseFinder article registry maps the gcuWGS21 source key to the Kieffer et al. mobile-integron BRiC paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| gcuWGS21 | 10\\.1126/science\\.ads0915 | Mobile integrons encode phage defense systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BrcWGS21 system", "source_grounding": "traitmech:000520", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "brcwgs21_integron_cassette_confers_phage_resistance", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A mobile integron gene cassette named by the gcuWGS21 source key and curated as BrcWGS21.", "grounding": null, "id": "brcwgs21_integron_cassette", "is_orphan": false, "label": "BrcWGS21 integron cassette", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced phage inhibition in cells carrying the gcuWGS21/BrcWGS21 integron cassette.", "grounding": null, "id": "brcwgs21_phage_resistance", "is_orphan": false, "label": "BrcWGS21 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded BrcWGS21 phage-defense system.", "grounding": "traitmech:000520", "id": "brcwgs21_system_trait", "is_orphan": false, "label": "BrcWGS21 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures BrcWGS21 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth outside the reported panels, direct molecular substrate, or a DefenseFinder HMM/rules profile absent from the pinned snapshot.", "scope_status": "NONMECHANISTIC", "title": "BrcWGS21 BRiCs confer phage resistance"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -802,13 +888,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-01 17:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

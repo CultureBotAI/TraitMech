@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Fermentation</h1>
     <p class="curie"><code>METPO:1002005</code> · CLASS · REVIEWED</p>
 
@@ -85,8 +96,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
             <span class="edge-predicate">uses</span>
             <strong>organic substrate</strong>
+
 
             <p>Fermentation uses an organic substrate as both electron donor and acceptor source.</p>
             <ul>
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>organic substrate</strong>
+
             <span class="edge-predicate">oxidation reduces</span>
             <strong>reduced redox cofactors</strong>
+
 
             <p>Substrate oxidation generates reduced redox cofactors.</p>
             <ul>
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>reduced redox cofactors</strong>
+
             <span class="edge-predicate">reoxidized by</span>
             <strong>fermentation products</strong>
+
 
             <p>Product-forming reductions regenerate oxidized cofactors.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
             <span class="edge-predicate">conserves energy by</span>
             <strong>substrate-level phosphorylation</strong>
+            <a href="https://w3id.org/metpo/1000804" rel="nofollow noreferrer"><code>METPO:1000804</code></a>
 
             <p>Substrate-level phosphorylation is a major fermentative energy-conservation route.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>substrate-level phosphorylation</strong>
+            <a href="https://w3id.org/metpo/1000804" rel="nofollow noreferrer"><code>METPO:1000804</code></a>
             <span class="edge-predicate">has output</span>
             <strong>ATP</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" rel="nofollow noreferrer"><code>CHEBI:30616</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Substrate-level phosphorylation directly forms ATP.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
             <span class="edge-predicate">excludes</span>
             <strong>external inorganic terminal electron acceptor</strong>
+
 
             <p>Fermentation excludes use of external inorganic terminal electron acceptors, distinguishing it from anaerobic respiration.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>glycolysis (Embden-Meyerhof-Parnas pathway)</strong>
+
             <span class="edge-predicate">feeds into</span>
             <strong>pyruvate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15361" rel="nofollow noreferrer"><code>CHEBI:15361</code></a>
 
             <p>Glycolysis (EMP) feeds carbon flux to pyruvate, the entry point for fermentation branches.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>pyruvate:ferredoxin oxidoreductase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011895/" rel="nofollow noreferrer"><code>InterPro:IPR011895</code></a>
             <span class="edge-predicate">produces</span>
             <strong>reduced ferredoxin</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate and produces reduced ferredoxin.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>ferredoxin:NAD+ oxidoreductase</strong>
+
             <span class="edge-predicate">transfers electrons from reduced ferredoxin to</span>
             <strong>NAD+</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15846" rel="nofollow noreferrer"><code>CHEBI:15846</code></a>
 
             <p>Ferredoxin:NAD+ oxidoreductase reoxidizes reduced ferredoxin by transferring electrons to NAD+.</p>
             <ul>
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>flavin-based electron bifurcation</strong>
+
             <span class="edge-predicate">reduces</span>
             <strong>reduced ferredoxin</strong>
-            <code>METPO:2007802</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>Flavin-based electron bifurcation couples exergonic and endergonic redox reactions, reducing low-potential ferredoxin.</p>
             <ul>
 
@@ -255,8 +286,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>ion-motive force</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>ATP synthase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0045259" rel="nofollow noreferrer"><code>GO:0045259</code></a>
 
             <p>Ion-motive force generated during fermentation drives ATP synthase-mediated ATP formation.</p>
             <ul>
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>ATP synthase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0045259" rel="nofollow noreferrer"><code>GO:0045259</code></a>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" rel="nofollow noreferrer"><code>CHEBI:30616</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>ATP synthase forms ATP using the ion-motive force.</p>
             <ul>
 
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>glycolysis (Embden-Meyerhof-Parnas pathway)</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Fermentation</strong>
-            <code>RO:0002326</code>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>EMP glycolysis supplies pyruvate to downstream fermentation branches.</p>
             <ul>
 
@@ -306,9 +343,11 @@
 
           <li id="pathograph-1-edge-14">
             <strong>pyruvate:ferredoxin oxidoreductase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011895/" rel="nofollow noreferrer"><code>InterPro:IPR011895</code></a>
             <span class="edge-predicate">oxidizes</span>
             <strong>pyruvate</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15361" rel="nofollow noreferrer"><code>CHEBI:15361</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing ferredoxin.</p>
             <ul>
 
@@ -323,9 +362,11 @@
 
           <li id="pathograph-1-edge-15">
             <strong>ferredoxin:NAD+ oxidoreductase</strong>
+
             <span class="edge-predicate">oxidizes</span>
             <strong>reduced ferredoxin</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing NAD+.</p>
             <ul>
 
@@ -454,7 +495,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0006113</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0006113" rel="nofollow noreferrer"><code>GO:0006113</code></a></li>
       </ul>
     </div>
 
@@ -483,7 +524,7 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/mixed_acid_fermentation.html">mixed-acid fermentation</a>
+          <a href="../../traits/metabolism/butanediol_fermentation.html">2,3-butanediol fermentation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -501,6 +542,12 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetone_butanol_ethanol_fermentation.html">acetone-butanol-ethanol fermentation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/ethanol_fermentation.html">ethanol fermentation</a>
           <span class="sim">1.000</span>
         </li>
@@ -513,20 +560,14 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/respiration.html">respiration</a>
-          <span class="sim">0.644</span>
+          <a href="../../traits/metabolism/butyric_acid_fermentation.html">butyric acid fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
-          <span class="sim">0.600</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
-          <span class="sim">0.600</span>
+          <a href="../../traits/metabolism/citrate_fermentation.html">citrate fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -1169,7 +1210,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking organic substrate redox balancing to fermentative ATP generation.", "edges": [{"description": "Fermentation uses an organic substrate as both electron donor and acceptor source.", "evidence": [{"notes": "Supports organic substrate donor/acceptor role.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate of a fermentation has to serve as electron donor as well as acceptor"}], "id": "edge-1", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "fermentation_trait", "target": "organic_substrate"}, {"description": "Substrate oxidation generates reduced redox cofactors.", "evidence": [{"notes": "Review describes substrate oxidation with cofactor reduction in fermentation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "a substrate is oxidized to an intermediate"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidation reduces", "predicate_id": null, "source": "organic_substrate", "target": "reduced_redox_cofactors"}, {"description": "Product-forming reductions regenerate oxidized cofactors.", "evidence": [{"notes": "Supports product-side reduction and redox cofactor regeneration.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "after which the intermediate is reduced"}], "id": "edge-3", "is_orphan": false, "predicate": "reoxidized by", "predicate_id": null, "source": "reduced_redox_cofactors", "target": "fermentation_products"}, {"description": "Substrate-level phosphorylation is a major fermentative energy-conservation route.", "evidence": [{"notes": "Supports SLP as a fermentative energy mechanism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "main sources of energy under fermentative conditions"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves energy by", "predicate_id": null, "source": "fermentation_trait", "target": "substrate_level_phosphorylation"}, {"description": "Substrate-level phosphorylation directly forms ATP.", "evidence": [{"notes": "Supports SLP as ATP-linked energy conservation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "energy-rich bonds (for example via substrate-level phosphorylation)"}], "id": "edge-5", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "substrate_level_phosphorylation", "target": "atp"}, {"description": "Fermentation excludes use of external inorganic terminal electron acceptors, distinguishing it from anaerobic respiration.", "evidence": [{"notes": "Excludes processes that use external inorganic terminal acceptors, explicitly naming nitrate and sulfur respiration.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-6", "is_orphan": false, "predicate": "excludes", "predicate_id": null, "source": "fermentation_trait", "target": "external_inorganic_acceptor"}, {"description": "Glycolysis (EMP) feeds carbon flux to pyruvate, the entry point for fermentation branches.", "evidence": [{"notes": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-7", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "glycolysis_emp", "target": "pyruvate"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate and produces reduced ferredoxin.", "evidence": [{"notes": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pfor", "target": "reduced_ferredoxin"}, {"description": "Ferredoxin:NAD+ oxidoreductase reoxidizes reduced ferredoxin by transferring electrons to NAD+.", "evidence": [{"notes": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-9", "is_orphan": false, "predicate": "transfers electrons from reduced ferredoxin to", "predicate_id": null, "source": "fnor", "target": "nad_plus"}, {"description": "Flavin-based electron bifurcation couples exergonic and endergonic redox reactions, reducing low-potential ferredoxin.", "evidence": [{"notes": "Couples an exergonic and an endergonic redox reaction within a single soluble enzyme complex, typically reducing low-potential ferredoxin.", "reference": "DOI:10.1038/s41467-023-41212-x"}], "id": "edge-10", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "flavin_based_electron_bifurcation", "target": "reduced_ferredoxin"}, {"description": "Ion-motive force generated during fermentation drives ATP synthase-mediated ATP formation.", "evidence": [{"notes": "Ion gradients drive ATP synthesis via ATP synthases; links fermentation to chemiosmotic ATP conservation.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-11", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "ion_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase forms ATP using the ion-motive force.", "evidence": [{"notes": "ATP synthesis via ATP synthases driven by ion gradients during fermentation.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-12", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "atp_synthase", "target": "atp"}, {"description": "EMP glycolysis supplies pyruvate to downstream fermentation branches.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate."}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycolysis_emp", "target": "fermentation_trait"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing ferredoxin.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing."}], "id": "edge-14", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "pfor", "target": "pyruvate"}, {"description": "Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing NAD+.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge."}], "id": "edge-15", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "fnor", "target": "reduced_ferredoxin"}], "evidence_rows": [{"description": "Fermentation uses an organic substrate as both electron donor and acceptor source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic substrate donor/acceptor role.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate of a fermentation has to serve as electron donor as well as acceptor"}], "predicate": "uses", "predicate_id": null, "source": "Fermentation", "target": "organic substrate"}, {"description": "Substrate oxidation generates reduced redox cofactors.", "edge_id": "edge-2", "evidence": [{"notes": "Review describes substrate oxidation with cofactor reduction in fermentation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "a substrate is oxidized to an intermediate"}], "predicate": "oxidation reduces", "predicate_id": null, "source": "organic substrate", "target": "reduced redox cofactors"}, {"description": "Product-forming reductions regenerate oxidized cofactors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports product-side reduction and redox cofactor regeneration.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "after which the intermediate is reduced"}], "predicate": "reoxidized by", "predicate_id": null, "source": "reduced redox cofactors", "target": "fermentation products"}, {"description": "Substrate-level phosphorylation is a major fermentative energy-conservation route.", "edge_id": "edge-4", "evidence": [{"notes": "Supports SLP as a fermentative energy mechanism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "main sources of energy under fermentative conditions"}], "predicate": "conserves energy by", "predicate_id": null, "source": "Fermentation", "target": "substrate-level phosphorylation"}, {"description": "Substrate-level phosphorylation directly forms ATP.", "edge_id": "edge-5", "evidence": [{"notes": "Supports SLP as ATP-linked energy conservation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "energy-rich bonds (for example via substrate-level phosphorylation)"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "substrate-level phosphorylation", "target": "ATP"}, {"description": "Fermentation excludes use of external inorganic terminal electron acceptors, distinguishing it from anaerobic respiration.", "edge_id": "edge-6", "evidence": [{"notes": "Excludes processes that use external inorganic terminal acceptors, explicitly naming nitrate and sulfur respiration.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "excludes", "predicate_id": null, "source": "Fermentation", "target": "external inorganic terminal electron acceptor"}, {"description": "Glycolysis (EMP) feeds carbon flux to pyruvate, the entry point for fermentation branches.", "edge_id": "edge-7", "evidence": [{"notes": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "feeds into", "predicate_id": null, "source": "glycolysis (Embden-Meyerhof-Parnas pathway)", "target": "pyruvate"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate and produces reduced ferredoxin.", "edge_id": "edge-8", "evidence": [{"notes": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate:ferredoxin oxidoreductase", "target": "reduced ferredoxin"}, {"description": "Ferredoxin:NAD+ oxidoreductase reoxidizes reduced ferredoxin by transferring electrons to NAD+.", "edge_id": "edge-9", "evidence": [{"notes": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "transfers electrons from reduced ferredoxin to", "predicate_id": null, "source": "ferredoxin:NAD+ oxidoreductase", "target": "NAD+"}, {"description": "Flavin-based electron bifurcation couples exergonic and endergonic redox reactions, reducing low-potential ferredoxin.", "edge_id": "edge-10", "evidence": [{"notes": "Couples an exergonic and an endergonic redox reaction within a single soluble enzyme complex, typically reducing low-potential ferredoxin.", "reference": "DOI:10.1038/s41467-023-41212-x"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "flavin-based electron bifurcation", "target": "reduced ferredoxin"}, {"description": "Ion-motive force generated during fermentation drives ATP synthase-mediated ATP formation.", "edge_id": "edge-11", "evidence": [{"notes": "Ion gradients drive ATP synthesis via ATP synthases; links fermentation to chemiosmotic ATP conservation.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "drives", "predicate_id": null, "source": "ion-motive force", "target": "ATP synthase"}, {"description": "ATP synthase forms ATP using the ion-motive force.", "edge_id": "edge-12", "evidence": [{"notes": "ATP synthesis via ATP synthases driven by ion gradients during fermentation.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP synthase", "target": "ATP"}, {"description": "EMP glycolysis supplies pyruvate to downstream fermentation branches.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycolysis (Embden-Meyerhof-Parnas pathway)", "target": "Fermentation"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing ferredoxin.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing."}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "pyruvate:ferredoxin oxidoreductase", "target": "pyruvate"}, {"description": "Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing NAD+.", "edge_id": "edge-15", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge."}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "ferredoxin:NAD+ oxidoreductase", "target": "reduced ferredoxin"}], "graph_id": "fermentation_redox_energy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cellular energy currency generated by fermentation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane complex synthesizing ATP from an ion-motive force.", "grounding": "GO:0045259", "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "External inorganic acceptors (e.g. nitrate, sulfur compounds) used in anaerobic respiration but excluded by fermentation.", "grounding": null, "id": "external_inorganic_acceptor", "is_orphan": false, "label": "external inorganic terminal electron acceptor", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced products that restore cofactor redox balance.", "grounding": null, "id": "fermentation_products", "is_orphan": false, "label": "fermentation products", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic redox metabolism using organic substrates and products.", "grounding": "METPO:1002005", "id": "fermentation_trait", "is_orphan": false, "label": "Fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mechanism coupling an exergonic and an endergonic redox reaction within a single enzyme complex.", "grounding": null, "id": "flavin_based_electron_bifurcation", "is_orphan": false, "label": "flavin-based electron bifurcation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.18.1.3) transferring electrons from reduced ferredoxin to NAD+.", "grounding": null, "id": "fnor", "is_orphan": false, "label": "ferredoxin:NAD+ oxidoreductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Central catabolic pathway oxidizing glucose to pyruvate, feeding fermentation branches.", "grounding": null, "id": "glycolysis_emp", "is_orphan": false, "label": "glycolysis (Embden-Meyerhof-Parnas pathway)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transmembrane ion gradient generated by ferredoxin-oxidizing complexes.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion-motive force", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized nicotinamide cofactor regenerated during fermentative redox balancing.", "grounding": "CHEBI:15846", "id": "nad_plus", "is_orphan": false, "label": "NAD+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fermented carbon and energy source.", "grounding": null, "id": "organic_substrate", "is_orphan": false, "label": "organic substrate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.2.7.1) oxidatively decarboxylating pyruvate and reducing ferredoxin.", "grounding": "InterPro:IPR011895", "id": "pfor", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 152, "evidence": [{"notes": "The primary fluxomic, transcriptomic, and proteomic study identifies CA_C2229 as the expressed PFOR locus and describes production of reduced ferredoxin, CO2, and acetyl-CoA. UniProtKB Q97GY6 is its exact unreviewed entry in reference proteome UP000000814.", "reference": "DOI:10.1128/mbio.01808-15", "snippet": "Under all conditions, only CA_C2229 was transcribed and translated."}], "protein_label": "Pyruvate:ferredoxin oxidoreductase", "proteome_id": "UP000000814", "retrieved_on": "2026-08-24", "role": "PFOR encoded by locus CA_C2229, the expressed enzyme linking pyruvate oxidation to reduced ferredoxin in fermentative C. acetobutylicum ATCC 824.", "sequence_version": 1, "taxon_id": "NCBITaxon:272562", "taxon_label": "Clostridium acetobutylicum ATCC 824", "uniprot_id": "UniProtKB:Q97GY6"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central branch-point metabolite feeding fermentation product pathways.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential electron carrier central to anaerobic redox balancing.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced cofactors generated during substrate oxidation.", "grounding": null, "id": "reduced_redox_cofactors", "is_orphan": false, "label": "reduced redox cofactors", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct ATP formation by phosphoryl transfer from metabolic intermediates.", "grounding": "METPO:1000804", "id": "substrate_level_phosphorylation", "is_orphan": false, "label": "substrate-level phosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 152, "evidence": [{"notes": "The primary fluxomic, transcriptomic, and proteomic study identifies CA_C2229 as the expressed PFOR locus and describes production of reduced ferredoxin, CO2, and acetyl-CoA. UniProtKB Q97GY6 is its exact unreviewed entry in reference proteome UP000000814.", "reference": "DOI:10.1128/mbio.01808-15", "snippet": "Under all conditions, only CA_C2229 was transcribed and translated."}], "node_id": "pfor", "node_label": "pyruvate:ferredoxin oxidoreductase", "protein_label": "Pyruvate:ferredoxin oxidoreductase", "proteome_id": "UP000000814", "retrieved_on": "2026-08-24", "role": "PFOR encoded by locus CA_C2229, the expressed enzyme linking pyruvate oxidation to reduced ferredoxin in fermentative C. acetobutylicum ATCC 824.", "sequence_version": 1, "taxon_id": "NCBITaxon:272562", "taxon_label": "Clostridium acetobutylicum ATCC 824", "uniprot_id": "UniProtKB:Q97GY6"}], "scope_notes": "This composite graph combines substrate-level phosphorylation with ferredoxin-linked and ion-gradient modules found in subsets of fermenters. The C. acetobutylicum ATCC 824 PFOR example supports the pyruvate-to-reduced-ferredoxin branch and is not a universal fermentation marker.", "scope_status": "MECHANISTIC", "title": "Fermentation redox and substrate-level phosphorylation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking organic substrate redox balancing to fermentative ATP generation.", "edges": [{"description": "Fermentation uses an organic substrate as both electron donor and acceptor source.", "evidence": [{"notes": "Supports organic substrate donor/acceptor role.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate of a fermentation has to serve as electron donor as well as acceptor"}], "id": "edge-1", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "fermentation_trait", "target": "organic_substrate"}, {"description": "Substrate oxidation generates reduced redox cofactors.", "evidence": [{"notes": "Review describes substrate oxidation with cofactor reduction in fermentation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "a substrate is oxidized to an intermediate"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidation reduces", "predicate_id": null, "source": "organic_substrate", "target": "reduced_redox_cofactors"}, {"description": "Product-forming reductions regenerate oxidized cofactors.", "evidence": [{"notes": "Supports product-side reduction and redox cofactor regeneration.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "after which the intermediate is reduced"}], "id": "edge-3", "is_orphan": false, "predicate": "reoxidized by", "predicate_id": null, "source": "reduced_redox_cofactors", "target": "fermentation_products"}, {"description": "Substrate-level phosphorylation is a major fermentative energy-conservation route.", "evidence": [{"notes": "Supports SLP as a fermentative energy mechanism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "main sources of energy under fermentative conditions"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves energy by", "predicate_id": null, "source": "fermentation_trait", "target": "substrate_level_phosphorylation"}, {"description": "Substrate-level phosphorylation directly forms ATP.", "evidence": [{"notes": "Supports SLP as ATP-linked energy conservation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "energy-rich bonds (for example via substrate-level phosphorylation)"}], "id": "edge-5", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "substrate_level_phosphorylation", "target": "atp"}, {"description": "Fermentation excludes use of external inorganic terminal electron acceptors, distinguishing it from anaerobic respiration.", "evidence": [{"notes": "Excludes processes that use external inorganic terminal acceptors, explicitly naming nitrate and sulfur respiration.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-6", "is_orphan": false, "predicate": "excludes", "predicate_id": null, "source": "fermentation_trait", "target": "external_inorganic_acceptor"}, {"description": "Glycolysis (EMP) feeds carbon flux to pyruvate, the entry point for fermentation branches.", "evidence": [{"notes": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-7", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "glycolysis_emp", "target": "pyruvate"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate and produces reduced ferredoxin.", "evidence": [{"notes": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pfor", "target": "reduced_ferredoxin"}, {"description": "Ferredoxin:NAD+ oxidoreductase reoxidizes reduced ferredoxin by transferring electrons to NAD+.", "evidence": [{"notes": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-9", "is_orphan": false, "predicate": "transfers electrons from reduced ferredoxin to", "predicate_id": null, "source": "fnor", "target": "nad_plus"}, {"description": "Flavin-based electron bifurcation couples exergonic and endergonic redox reactions, reducing low-potential ferredoxin.", "evidence": [{"notes": "Couples an exergonic and an endergonic redox reaction within a single soluble enzyme complex, typically reducing low-potential ferredoxin.", "reference": "DOI:10.1038/s41467-023-41212-x"}], "id": "edge-10", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "flavin_based_electron_bifurcation", "target": "reduced_ferredoxin"}, {"description": "Ion-motive force generated during fermentation drives ATP synthase-mediated ATP formation.", "evidence": [{"notes": "Ion gradients drive ATP synthesis via ATP synthases; links fermentation to chemiosmotic ATP conservation.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-11", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "ion_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase forms ATP using the ion-motive force.", "evidence": [{"notes": "ATP synthesis via ATP synthases driven by ion gradients during fermentation.", "reference": "DOI:10.1093/femsre/fuae016"}], "id": "edge-12", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "atp_synthase", "target": "atp"}, {"description": "EMP glycolysis supplies pyruvate to downstream fermentation branches.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate."}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycolysis_emp", "target": "fermentation_trait"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing ferredoxin.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing."}], "id": "edge-14", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "pfor", "target": "pyruvate"}, {"description": "Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing NAD+.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge."}], "id": "edge-15", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "fnor", "target": "reduced_ferredoxin"}], "evidence_rows": [{"description": "Fermentation uses an organic substrate as both electron donor and acceptor source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic substrate donor/acceptor role.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate of a fermentation has to serve as electron donor as well as acceptor"}], "predicate": "uses", "predicate_id": null, "source": "Fermentation", "source_grounding": "METPO:1002005", "target": "organic substrate", "target_grounding": null}, {"description": "Substrate oxidation generates reduced redox cofactors.", "edge_id": "edge-2", "evidence": [{"notes": "Review describes substrate oxidation with cofactor reduction in fermentation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "a substrate is oxidized to an intermediate"}], "predicate": "oxidation reduces", "predicate_id": null, "source": "organic substrate", "source_grounding": null, "target": "reduced redox cofactors", "target_grounding": null}, {"description": "Product-forming reductions regenerate oxidized cofactors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports product-side reduction and redox cofactor regeneration.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "after which the intermediate is reduced"}], "predicate": "reoxidized by", "predicate_id": null, "source": "reduced redox cofactors", "source_grounding": null, "target": "fermentation products", "target_grounding": null}, {"description": "Substrate-level phosphorylation is a major fermentative energy-conservation route.", "edge_id": "edge-4", "evidence": [{"notes": "Supports SLP as a fermentative energy mechanism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "main sources of energy under fermentative conditions"}], "predicate": "conserves energy by", "predicate_id": null, "source": "Fermentation", "source_grounding": "METPO:1002005", "target": "substrate-level phosphorylation", "target_grounding": "METPO:1000804"}, {"description": "Substrate-level phosphorylation directly forms ATP.", "edge_id": "edge-5", "evidence": [{"notes": "Supports SLP as ATP-linked energy conservation.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "energy-rich bonds (for example via substrate-level phosphorylation)"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "substrate-level phosphorylation", "source_grounding": "METPO:1000804", "target": "ATP", "target_grounding": "CHEBI:30616"}, {"description": "Fermentation excludes use of external inorganic terminal electron acceptors, distinguishing it from anaerobic respiration.", "edge_id": "edge-6", "evidence": [{"notes": "Excludes processes that use external inorganic terminal acceptors, explicitly naming nitrate and sulfur respiration.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "excludes", "predicate_id": null, "source": "Fermentation", "source_grounding": "METPO:1002005", "target": "external inorganic terminal electron acceptor", "target_grounding": null}, {"description": "Glycolysis (EMP) feeds carbon flux to pyruvate, the entry point for fermentation branches.", "edge_id": "edge-7", "evidence": [{"notes": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "feeds into", "predicate_id": null, "source": "glycolysis (Embden-Meyerhof-Parnas pathway)", "source_grounding": null, "target": "pyruvate", "target_grounding": "CHEBI:15361"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate and produces reduced ferredoxin.", "edge_id": "edge-8", "evidence": [{"notes": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate:ferredoxin oxidoreductase", "source_grounding": "InterPro:IPR011895", "target": "reduced ferredoxin", "target_grounding": "CHEBI:17513"}, {"description": "Ferredoxin:NAD+ oxidoreductase reoxidizes reduced ferredoxin by transferring electrons to NAD+.", "edge_id": "edge-9", "evidence": [{"notes": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "transfers electrons from reduced ferredoxin to", "predicate_id": null, "source": "ferredoxin:NAD+ oxidoreductase", "source_grounding": null, "target": "NAD+", "target_grounding": "CHEBI:15846"}, {"description": "Flavin-based electron bifurcation couples exergonic and endergonic redox reactions, reducing low-potential ferredoxin.", "edge_id": "edge-10", "evidence": [{"notes": "Couples an exergonic and an endergonic redox reaction within a single soluble enzyme complex, typically reducing low-potential ferredoxin.", "reference": "DOI:10.1038/s41467-023-41212-x"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "flavin-based electron bifurcation", "source_grounding": null, "target": "reduced ferredoxin", "target_grounding": "CHEBI:17513"}, {"description": "Ion-motive force generated during fermentation drives ATP synthase-mediated ATP formation.", "edge_id": "edge-11", "evidence": [{"notes": "Ion gradients drive ATP synthesis via ATP synthases; links fermentation to chemiosmotic ATP conservation.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "drives", "predicate_id": null, "source": "ion-motive force", "source_grounding": null, "target": "ATP synthase", "target_grounding": "GO:0045259"}, {"description": "ATP synthase forms ATP using the ion-motive force.", "edge_id": "edge-12", "evidence": [{"notes": "ATP synthesis via ATP synthases driven by ion gradients during fermentation.", "reference": "DOI:10.1093/femsre/fuae016"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP synthase", "source_grounding": "GO:0045259", "target": "ATP", "target_grounding": "CHEBI:30616"}, {"description": "EMP glycolysis supplies pyruvate to downstream fermentation branches.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycolysis (Embden-Meyerhof-Parnas pathway)", "source_grounding": null, "target": "Fermentation", "target_grounding": "METPO:1002005"}, {"description": "Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing ferredoxin.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central to redox balancing."}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "pyruvate:ferredoxin oxidoreductase", "source_grounding": "InterPro:IPR011895", "target": "pyruvate", "target_grounding": "CHEBI:15361"}, {"description": "Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing NAD+.", "edge_id": "edge-15", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1093/femsre/fuae016", "snippet": "Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin to NAD+; strong redox-balancing edge."}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "ferredoxin:NAD+ oxidoreductase", "source_grounding": null, "target": "reduced ferredoxin", "target_grounding": "CHEBI:17513"}], "graph_id": "fermentation_redox_energy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cellular energy currency generated by fermentation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane complex synthesizing ATP from an ion-motive force.", "grounding": "GO:0045259", "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "External inorganic acceptors (e.g. nitrate, sulfur compounds) used in anaerobic respiration but excluded by fermentation.", "grounding": null, "id": "external_inorganic_acceptor", "is_orphan": false, "label": "external inorganic terminal electron acceptor", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced products that restore cofactor redox balance.", "grounding": null, "id": "fermentation_products", "is_orphan": false, "label": "fermentation products", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic redox metabolism using organic substrates and products.", "grounding": "METPO:1002005", "id": "fermentation_trait", "is_orphan": false, "label": "Fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mechanism coupling an exergonic and an endergonic redox reaction within a single enzyme complex.", "grounding": null, "id": "flavin_based_electron_bifurcation", "is_orphan": false, "label": "flavin-based electron bifurcation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.18.1.3) transferring electrons from reduced ferredoxin to NAD+.", "grounding": null, "id": "fnor", "is_orphan": false, "label": "ferredoxin:NAD+ oxidoreductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Central catabolic pathway oxidizing glucose to pyruvate, feeding fermentation branches.", "grounding": null, "id": "glycolysis_emp", "is_orphan": false, "label": "glycolysis (Embden-Meyerhof-Parnas pathway)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transmembrane ion gradient generated by ferredoxin-oxidizing complexes.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion-motive force", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized nicotinamide cofactor regenerated during fermentative redox balancing.", "grounding": "CHEBI:15846", "id": "nad_plus", "is_orphan": false, "label": "NAD+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fermented carbon and energy source.", "grounding": null, "id": "organic_substrate", "is_orphan": false, "label": "organic substrate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.2.7.1) oxidatively decarboxylating pyruvate and reducing ferredoxin.", "grounding": "InterPro:IPR011895", "id": "pfor", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 152, "evidence": [{"notes": "The primary fluxomic, transcriptomic, and proteomic study identifies CA_C2229 as the expressed PFOR locus and describes production of reduced ferredoxin, CO2, and acetyl-CoA. UniProtKB Q97GY6 is its exact unreviewed entry in reference proteome UP000000814.", "reference": "DOI:10.1128/mbio.01808-15", "snippet": "Under all conditions, only CA_C2229 was transcribed and translated."}], "protein_label": "Pyruvate:ferredoxin oxidoreductase", "proteome_id": "UP000000814", "retrieved_on": "2026-08-24", "role": "PFOR encoded by locus CA_C2229, the expressed enzyme linking pyruvate oxidation to reduced ferredoxin in fermentative C. acetobutylicum ATCC 824.", "sequence_version": 1, "taxon_id": "NCBITaxon:272562", "taxon_label": "Clostridium acetobutylicum ATCC 824", "uniprot_id": "UniProtKB:Q97GY6"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central branch-point metabolite feeding fermentation product pathways.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential electron carrier central to anaerobic redox balancing.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced cofactors generated during substrate oxidation.", "grounding": null, "id": "reduced_redox_cofactors", "is_orphan": false, "label": "reduced redox cofactors", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct ATP formation by phosphoryl transfer from metabolic intermediates.", "grounding": "METPO:1000804", "id": "substrate_level_phosphorylation", "is_orphan": false, "label": "substrate-level phosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 152, "evidence": [{"notes": "The primary fluxomic, transcriptomic, and proteomic study identifies CA_C2229 as the expressed PFOR locus and describes production of reduced ferredoxin, CO2, and acetyl-CoA. UniProtKB Q97GY6 is its exact unreviewed entry in reference proteome UP000000814.", "reference": "DOI:10.1128/mbio.01808-15", "snippet": "Under all conditions, only CA_C2229 was transcribed and translated."}], "node_id": "pfor", "node_label": "pyruvate:ferredoxin oxidoreductase", "protein_label": "Pyruvate:ferredoxin oxidoreductase", "proteome_id": "UP000000814", "retrieved_on": "2026-08-24", "role": "PFOR encoded by locus CA_C2229, the expressed enzyme linking pyruvate oxidation to reduced ferredoxin in fermentative C. acetobutylicum ATCC 824.", "sequence_version": 1, "taxon_id": "NCBITaxon:272562", "taxon_label": "Clostridium acetobutylicum ATCC 824", "uniprot_id": "UniProtKB:Q97GY6"}], "scope_notes": "This composite graph combines substrate-level phosphorylation with ferredoxin-linked and ion-gradient modules found in subsets of fermenters. The C. acetobutylicum ATCC 824 PFOR example supports the pyruvate-to-reduced-ferredoxin branch and is not a universal fermentation marker.", "scope_status": "MECHANISTIC", "title": "Fermentation redox and substrate-level phosphorylation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1189,13 +1230,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 12:15 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

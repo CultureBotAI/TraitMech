@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Hachiman system</h1>
     <p class="curie"><code>traitmech:000219</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Hachiman locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>HamAB complex assembly</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Hachiman loci encode HamA and HamB components that assemble into HamAB nuclease-helicase complexes.</p>
             <ul>
 
@@ -132,9 +145,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>HamAB complex assembly</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>Hachiman DNA cleavage</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>HamA/HamB complexation enables ATP-dependent DNA cleavage by Hachiman systems.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Hachiman DNA cleavage</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage particle production</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Hachiman-mediated DNA degradation inhibits the generation of new phage particles.</p>
             <ul>
 
@@ -178,9 +195,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Hachiman DNA cleavage</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Hachiman system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000219</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.</p>
             <ul>
 
@@ -195,8 +214,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Hachiman system</strong>
+            <code>traitmech:000219</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Hachiman system possession is a phage-defense-system trait.</p>
             <ul>
@@ -280,11 +301,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -434,6 +519,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -767,7 +857,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a Hachiman locus to HamAB nuclease-helicase activity, cellular DNA degradation, and inhibition of bacteriophage progeny production.", "edges": [{"description": "Hachiman loci encode HamA and HamB components that assemble into HamAB nuclease-helicase complexes.", "evidence": [{"notes": "Tuck et al. support HamA/HamB as the two-gene Hachiman locus core.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "One such system is Hachiman, a two-gene locus encoding HamA"}, {"notes": "Cui et al. also support HamA/HamB as the core Hachiman components.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system comprising HamA and HamB proteins"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hachiman_locus", "target": "hamab_complex_assembly"}, {"description": "HamA/HamB complexation enables ATP-dependent DNA cleavage by Hachiman systems.", "evidence": [{"notes": "Tuck et al. connect HamAB activation with HamA nuclease activity.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "When the HamAB complex detects DNA damage, HamB helicase activity activates HamA, unleashing nuclease activity"}, {"notes": "Cui et al. support ATP-hydrolysis-coupled DNA cleavage by a type I-B HamAB heterodimer.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "HamA interacts with HamB to form a heterodimer HamAB to mediate ATP hydrolysis and execute DNA cleavage"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hamab_complex_assembly", "target": "hachiman_dna_cleavage"}, {"description": "Hachiman-mediated DNA degradation inhibits the generation of new phage particles.", "evidence": [{"notes": "Tuck et al. support DNA degradation as the activated Hachiman output.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "Hachiman activation degrades all DNA in the cell"}, {"notes": "Tuck et al. connect Hachiman activity to restriction of phage progeny production.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "We confirmed that Hachiman limits the production of new phage particles"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "hachiman_dna_cleavage", "target": "phage_particle_production"}, {"description": "HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.", "evidence": [{"notes": "Cui et al. support DNA cleavage as an antiphage output of the Hachiman complex.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "execute DNA cleavage, thus implementing antiphage defense"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "hachiman_dna_cleavage", "target": "hachiman_system_trait"}, {"description": "Hachiman system possession is a phage-defense-system trait.", "evidence": [{"notes": "Cui et al. place Hachiman in the antiphage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "hachiman_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Hachiman loci encode HamA and HamB components that assemble into HamAB nuclease-helicase complexes.", "edge_id": "edge-1", "evidence": [{"notes": "Tuck et al. support HamA/HamB as the two-gene Hachiman locus core.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "One such system is Hachiman, a two-gene locus encoding HamA"}, {"notes": "Cui et al. also support HamA/HamB as the core Hachiman components.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system comprising HamA and HamB proteins"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hachiman locus", "target": "HamAB complex assembly"}, {"description": "HamA/HamB complexation enables ATP-dependent DNA cleavage by Hachiman systems.", "edge_id": "edge-2", "evidence": [{"notes": "Tuck et al. connect HamAB activation with HamA nuclease activity.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "When the HamAB complex detects DNA damage, HamB helicase activity activates HamA, unleashing nuclease activity"}, {"notes": "Cui et al. support ATP-hydrolysis-coupled DNA cleavage by a type I-B HamAB heterodimer.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "HamA interacts with HamB to form a heterodimer HamAB to mediate ATP hydrolysis and execute DNA cleavage"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "HamAB complex assembly", "target": "Hachiman DNA cleavage"}, {"description": "Hachiman-mediated DNA degradation inhibits the generation of new phage particles.", "edge_id": "edge-3", "evidence": [{"notes": "Tuck et al. support DNA degradation as the activated Hachiman output.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "Hachiman activation degrades all DNA in the cell"}, {"notes": "Tuck et al. connect Hachiman activity to restriction of phage progeny production.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "We confirmed that Hachiman limits the production of new phage particles"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Hachiman DNA cleavage", "target": "phage particle production"}, {"description": "HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Cui et al. support DNA cleavage as an antiphage output of the Hachiman complex.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "execute DNA cleavage, thus implementing antiphage defense"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Hachiman DNA cleavage", "target": "Hachiman system"}, {"description": "Hachiman system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Cui et al. place Hachiman in the antiphage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Hachiman system", "target": "phage defense system"}], "graph_id": "hachiman_hamab_dna_cleavage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "HamAB-mediated cleavage or degradation of DNA during Hachiman activation.", "grounding": null, "id": "hachiman_dna_cleavage", "is_orphan": false, "label": "Hachiman DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Hachiman antiphage locus encoding a HamA/HamB core. This graph describes characterized type-I systems, not the HamC-containing type-II architecture represented by traitmech:000574.", "grounding": null, "id": "hachiman_locus", "is_orphan": false, "label": "Hachiman locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Hachiman antiphage defense locus.", "grounding": "traitmech:000219", "id": "hachiman_system_trait", "is_orphan": false, "label": "Hachiman system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Formation of a Hachiman HamA/HamB nuclease-helicase complex capable of ATP-dependent DNA processing.", "grounding": null, "id": "hamab_complex_assembly", "is_orphan": false, "label": "HamAB complex assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Production of new infectious bacteriophage particles inside an infected bacterial host.", "grounding": null, "id": "phage_particle_production", "is_orphan": false, "label": "phage particle production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures characterized type I-A and type I-B Hachiman nuclease-helicase outputs without asserting one universal DNA-damage trigger, DNA substrate, active nuclease domain, HamC accessory role, Cap4 architecture, phage breadth, or abortive-infection pathway across all Hachiman loci.", "scope_status": "NONMECHANISTIC", "title": "Hachiman HamAB complexes cleave DNA during antiphage defense"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a Hachiman locus to HamAB nuclease-helicase activity, cellular DNA degradation, and inhibition of bacteriophage progeny production.", "edges": [{"description": "Hachiman loci encode HamA and HamB components that assemble into HamAB nuclease-helicase complexes.", "evidence": [{"notes": "Tuck et al. support HamA/HamB as the two-gene Hachiman locus core.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "One such system is Hachiman, a two-gene locus encoding HamA"}, {"notes": "Cui et al. also support HamA/HamB as the core Hachiman components.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system comprising HamA and HamB proteins"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hachiman_locus", "target": "hamab_complex_assembly"}, {"description": "HamA/HamB complexation enables ATP-dependent DNA cleavage by Hachiman systems.", "evidence": [{"notes": "Tuck et al. connect HamAB activation with HamA nuclease activity.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "When the HamAB complex detects DNA damage, HamB helicase activity activates HamA, unleashing nuclease activity"}, {"notes": "Cui et al. support ATP-hydrolysis-coupled DNA cleavage by a type I-B HamAB heterodimer.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "HamA interacts with HamB to form a heterodimer HamAB to mediate ATP hydrolysis and execute DNA cleavage"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hamab_complex_assembly", "target": "hachiman_dna_cleavage"}, {"description": "Hachiman-mediated DNA degradation inhibits the generation of new phage particles.", "evidence": [{"notes": "Tuck et al. support DNA degradation as the activated Hachiman output.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "Hachiman activation degrades all DNA in the cell"}, {"notes": "Tuck et al. connect Hachiman activity to restriction of phage progeny production.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "We confirmed that Hachiman limits the production of new phage particles"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "hachiman_dna_cleavage", "target": "phage_particle_production"}, {"description": "HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.", "evidence": [{"notes": "Cui et al. support DNA cleavage as an antiphage output of the Hachiman complex.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "execute DNA cleavage, thus implementing antiphage defense"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "hachiman_dna_cleavage", "target": "hachiman_system_trait"}, {"description": "Hachiman system possession is a phage-defense-system trait.", "evidence": [{"notes": "Cui et al. place Hachiman in the antiphage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "hachiman_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Hachiman loci encode HamA and HamB components that assemble into HamAB nuclease-helicase complexes.", "edge_id": "edge-1", "evidence": [{"notes": "Tuck et al. support HamA/HamB as the two-gene Hachiman locus core.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "One such system is Hachiman, a two-gene locus encoding HamA"}, {"notes": "Cui et al. also support HamA/HamB as the core Hachiman components.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system comprising HamA and HamB proteins"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hachiman locus", "source_grounding": null, "target": "HamAB complex assembly", "target_grounding": null}, {"description": "HamA/HamB complexation enables ATP-dependent DNA cleavage by Hachiman systems.", "edge_id": "edge-2", "evidence": [{"notes": "Tuck et al. connect HamAB activation with HamA nuclease activity.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "When the HamAB complex detects DNA damage, HamB helicase activity activates HamA, unleashing nuclease activity"}, {"notes": "Cui et al. support ATP-hydrolysis-coupled DNA cleavage by a type I-B HamAB heterodimer.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "HamA interacts with HamB to form a heterodimer HamAB to mediate ATP hydrolysis and execute DNA cleavage"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "HamAB complex assembly", "source_grounding": null, "target": "Hachiman DNA cleavage", "target_grounding": null}, {"description": "Hachiman-mediated DNA degradation inhibits the generation of new phage particles.", "edge_id": "edge-3", "evidence": [{"notes": "Tuck et al. support DNA degradation as the activated Hachiman output.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "Hachiman activation degrades all DNA in the cell"}, {"notes": "Tuck et al. connect Hachiman activity to restriction of phage progeny production.", "reference": "DOI:10.1016/j.cell.2024.09.020", "snippet": "We confirmed that Hachiman limits the production of new phage particles"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Hachiman DNA cleavage", "source_grounding": null, "target": "phage particle production", "target_grounding": null}, {"description": "HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Cui et al. support DNA cleavage as an antiphage output of the Hachiman complex.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "execute DNA cleavage, thus implementing antiphage defense"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Hachiman DNA cleavage", "source_grounding": null, "target": "Hachiman system", "target_grounding": "traitmech:000219"}, {"description": "Hachiman system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Cui et al. place Hachiman in the antiphage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57851-1", "snippet": "The Hachiman system is a novel prokaryotic antiphage defense system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Hachiman system", "source_grounding": "traitmech:000219", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "hachiman_hamab_dna_cleavage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "HamAB-mediated cleavage or degradation of DNA during Hachiman activation.", "grounding": null, "id": "hachiman_dna_cleavage", "is_orphan": false, "label": "Hachiman DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Hachiman antiphage locus encoding a HamA/HamB core. This graph describes characterized type-I systems, not the HamC-containing type-II architecture represented by traitmech:000574.", "grounding": null, "id": "hachiman_locus", "is_orphan": false, "label": "Hachiman locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Hachiman antiphage defense locus.", "grounding": "traitmech:000219", "id": "hachiman_system_trait", "is_orphan": false, "label": "Hachiman system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Formation of a Hachiman HamA/HamB nuclease-helicase complex capable of ATP-dependent DNA processing.", "grounding": null, "id": "hamab_complex_assembly", "is_orphan": false, "label": "HamAB complex assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Production of new infectious bacteriophage particles inside an infected bacterial host.", "grounding": null, "id": "phage_particle_production", "is_orphan": false, "label": "phage particle production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures characterized type I-A and type I-B Hachiman nuclease-helicase outputs without asserting one universal DNA-damage trigger, DNA substrate, active nuclease domain, HamC accessory role, Cap4 architecture, phage breadth, or abortive-infection pathway across all Hachiman loci.", "scope_status": "NONMECHANISTIC", "title": "Hachiman HamAB complexes cleave DNA during antiphage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -787,13 +877,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-03 18:41 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>proteolysis</h1>
     <p class="curie"><code>traitmech:000116</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>secreted proteases</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>proteolysis</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000116</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Secreted proteases drive extracellular protein hydrolysis.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>proteolysis</strong>
+            <code>traitmech:000116</code>
             <span class="edge-predicate">produces</span>
             <strong>amino acids / short peptides</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Protein hydrolysis releases amino acids and short peptides.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>proteolysis</strong>
+            <code>traitmech:000116</code>
             <span class="edge-predicate">produces</span>
             <strong>peptides / oligopeptides</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>peptide transport systems (Opp/DtpT/Dpp)</strong>
+
             <span class="edge-predicate">imports</span>
             <strong>peptides / oligopeptides</strong>
-            <code>METPO:2007805</code>
+
+            <a href="https://w3id.org/metpo/2007805" rel="nofollow noreferrer"><code>METPO:2007805</code></a>
             <p>Peptide transporters import peptides short enough for uptake.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>intracellular peptidases</strong>
+
             <span class="edge-predicate">hydrolyzes</span>
             <strong>peptides / oligopeptides</strong>
-            <code>METPO:2007808</code>
+
+            <a href="https://w3id.org/metpo/2007808" rel="nofollow noreferrer"><code>METPO:2007808</code></a>
             <p>Intracellular peptidases further hydrolyze imported peptides.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>intracellular peptidases</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>amino acids / short peptides</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Intracellular peptidases produce free amino acids used for growth.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>large extracellular proteins</strong>
+
             <span class="edge-predicate">necessitates</span>
             <strong>proteolysis</strong>
+            <code>traitmech:000116</code>
 
             <p>Proteins too large for direct uptake necessitate extracellular hydrolysis.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>substrate source / concentration / C:N stoichiometry</strong>
+
             <span class="edge-predicate">controls expression of</span>
             <strong>secreted proteases</strong>
+
 
             <p>Substrate source/concentration/C:N stoichiometry filters expression of secreted proteases.</p>
             <ul>
@@ -343,13 +370,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
+          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -361,31 +400,19 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
+          <a href="../../traits/metabolism/hydrocarbon_degradation.html">hydrocarbon degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/iron_oxidation.html">iron oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/oxygenic_photosynthesis.html">oxygenic photosynthesis</a>
+          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -942,7 +969,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking secreted bacterial proteases to extracellular hydrolysis of proteins/peptides into amino acids and short peptides.", "edges": [{"description": "Secreted proteases drive extracellular protein hydrolysis.", "evidence": [{"notes": "Rao et al. review microbial proteases and their depolymerizing nutritional role.", "reference": "DOI:10.1128/mmbr.62.3.597-635.1998"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extracellular_protease", "target": "proteolysis_trait"}, {"description": "Protein hydrolysis releases amino acids and short peptides.", "evidence": [{"notes": "Bacillus protease review covers extracellular protease activities.", "reference": "DOI:10.1093/femsre/fuab046"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis_trait", "target": "amino_acids"}, {"description": "Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).", "evidence": [{"notes": "\"protein to oligopeptides\" / \"producing peptides of roughly 4-30 amino acids\"; extracellular proteolytic enzymes produce peptides.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis_trait", "target": "peptides"}, {"description": "Peptide transporters import peptides short enough for uptake.", "evidence": [{"notes": "Peptides \"taken up by dedicated transporters: oligopeptide permease (Opp, an ATP-driven system)\", DtpT and ABC transporter Dpp.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2007805", "source": "peptide_transport_systems", "target": "peptides"}, {"description": "Intracellular peptidases further hydrolyze imported peptides.", "evidence": [{"notes": "\"Inside the cell, multiple peptidases... further hydrolyze peptides\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-5", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "intracellular_peptidases", "target": "peptides"}, {"description": "Intracellular peptidases produce free amino acids used for growth.", "evidence": [{"notes": "\"further hydrolyze peptides to free amino acids used for growth\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "intracellular_peptidases", "target": "amino_acids"}, {"description": "Proteins too large for direct uptake necessitate extracellular hydrolysis.", "evidence": [{"notes": "\"proteins are too large for direct uptake by prokaryotic transporter systems... explaining the need for extracellular cleavage\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "id": "edge-7", "is_orphan": false, "predicate": "necessitates", "predicate_id": null, "source": "large_proteins", "target": "proteolysis_trait"}, {"description": "Substrate source/concentration/C:N stoichiometry filters expression of secreted proteases.", "evidence": [{"notes": "\"the substrate\u0027s source, concentration and stoichiometry impose strong filtering on the expression of extracellular enzymes\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "id": "edge-8", "is_orphan": false, "predicate": "controls expression of", "predicate_id": null, "source": "substrate_stoichiometry", "target": "extracellular_protease"}], "evidence_rows": [{"description": "Secreted proteases drive extracellular protein hydrolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Rao et al. review microbial proteases and their depolymerizing nutritional role.", "reference": "DOI:10.1128/mmbr.62.3.597-635.1998"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "secreted proteases", "target": "proteolysis"}, {"description": "Protein hydrolysis releases amino acids and short peptides.", "edge_id": "edge-2", "evidence": [{"notes": "Bacillus protease review covers extracellular protease activities.", "reference": "DOI:10.1093/femsre/fuab046"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis", "target": "amino acids / short peptides"}, {"description": "Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).", "edge_id": "edge-3", "evidence": [{"notes": "\"protein to oligopeptides\" / \"producing peptides of roughly 4-30 amino acids\"; extracellular proteolytic enzymes produce peptides.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis", "target": "peptides / oligopeptides"}, {"description": "Peptide transporters import peptides short enough for uptake.", "edge_id": "edge-4", "evidence": [{"notes": "Peptides \"taken up by dedicated transporters: oligopeptide permease (Opp, an ATP-driven system)\", DtpT and ABC transporter Dpp.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "imports", "predicate_id": "METPO:2007805", "source": "peptide transport systems (Opp/DtpT/Dpp)", "target": "peptides / oligopeptides"}, {"description": "Intracellular peptidases further hydrolyze imported peptides.", "edge_id": "edge-5", "evidence": [{"notes": "\"Inside the cell, multiple peptidases... further hydrolyze peptides\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "intracellular peptidases", "target": "peptides / oligopeptides"}, {"description": "Intracellular peptidases produce free amino acids used for growth.", "edge_id": "edge-6", "evidence": [{"notes": "\"further hydrolyze peptides to free amino acids used for growth\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "intracellular peptidases", "target": "amino acids / short peptides"}, {"description": "Proteins too large for direct uptake necessitate extracellular hydrolysis.", "edge_id": "edge-7", "evidence": [{"notes": "\"proteins are too large for direct uptake by prokaryotic transporter systems... explaining the need for extracellular cleavage\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "predicate": "necessitates", "predicate_id": null, "source": "large extracellular proteins", "target": "proteolysis"}, {"description": "Substrate source/concentration/C:N stoichiometry filters expression of secreted proteases.", "edge_id": "edge-8", "evidence": [{"notes": "\"the substrate\u0027s source, concentration and stoichiometry impose strong filtering on the expression of extracellular enzymes\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "predicate": "controls expression of", "predicate_id": null, "source": "substrate source / concentration / C:N stoichiometry", "target": "secreted proteases"}], "graph_id": "proteolysis_extracellular_protease", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Assimilable nutrients released from protein hydrolysis.", "grounding": null, "id": "amino_acids", "is_orphan": false, "label": "amino acids / short peptides", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Extracellular microbial proteases acting on protein substrates.", "grounding": null, "id": "extracellular_protease", "is_orphan": false, "label": "secreted proteases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "The primary cloning study identifies the B. subtilis I168 subtilisin structural gene and its expressed protease activity. UniProtKB P04189 is the reviewed AprE entry from strain 168.", "reference": "DOI:10.1128/jb.158.2.411-418.1984", "snippet": "a fivefold increase in serine protease activity was observed"}], "gene_symbol": "aprE", "protein_label": "Subtilisin E", "retrieved_on": "2026-08-24", "role": "Major extracellular alkaline serine protease AprE, representing one component of the broader secreted-protease node.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis 168", "uniprot_id": "UniProtKB:P04189"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic exo-/endo-peptidases that further hydrolyze imported peptides to free amino acids.", "grounding": null, "id": "intracellular_peptidases", "is_orphan": false, "label": "intracellular peptidases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intact extracellular proteins too large for direct uptake by prokaryotic transporters.", "grounding": null, "id": "large_proteins", "is_orphan": false, "label": "large extracellular proteins", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane transporters (oligopeptide permease Opp, DtpT, ABC transporter Dpp) importing peptides short enough for uptake.", "grounding": null, "id": "peptide_transport_systems", "is_orphan": false, "label": "peptide transport systems (Opp/DtpT/Dpp)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oligopeptides (~4-30 aa) released by extracellular protease cleavage of proteins.", "grounding": null, "id": "peptides", "is_orphan": false, "label": "peptides / oligopeptides", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Secreted-protease hydrolysis of extracellular proteins.", "grounding": "traitmech:000116", "id": "proteolysis_trait", "is_orphan": false, "label": "proteolysis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Environmental substrate characteristics that filter expression of secreted extracellular proteases.", "grounding": null, "id": "substrate_stoichiometry", "is_orphan": false, "label": "substrate source / concentration / C:N stoichiometry", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "The primary cloning study identifies the B. subtilis I168 subtilisin structural gene and its expressed protease activity. UniProtKB P04189 is the reviewed AprE entry from strain 168.", "reference": "DOI:10.1128/jb.158.2.411-418.1984", "snippet": "a fivefold increase in serine protease activity was observed"}], "gene_symbol": "aprE", "node_id": "extracellular_protease", "node_label": "secreted proteases", "protein_label": "Subtilisin E", "retrieved_on": "2026-08-24", "role": "Major extracellular alkaline serine protease AprE, representing one component of the broader secreted-protease node.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis 168", "uniprot_id": "UniProtKB:P04189"}], "scope_notes": "The graph summarizes extracellular protein hydrolysis, peptide uptake, and intracellular hydrolysis. AprE is one experimentally characterized extracellular protease component and is not presented as the complete proteolytic system.", "scope_status": "MECHANISTIC", "title": "Proteolysis hydrolyzes extracellular proteins to amino acids"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking secreted bacterial proteases to extracellular hydrolysis of proteins/peptides into amino acids and short peptides.", "edges": [{"description": "Secreted proteases drive extracellular protein hydrolysis.", "evidence": [{"notes": "Rao et al. review microbial proteases and their depolymerizing nutritional role.", "reference": "DOI:10.1128/mmbr.62.3.597-635.1998"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extracellular_protease", "target": "proteolysis_trait"}, {"description": "Protein hydrolysis releases amino acids and short peptides.", "evidence": [{"notes": "Bacillus protease review covers extracellular protease activities.", "reference": "DOI:10.1093/femsre/fuab046"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis_trait", "target": "amino_acids"}, {"description": "Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).", "evidence": [{"notes": "\"protein to oligopeptides\" / \"producing peptides of roughly 4-30 amino acids\"; extracellular proteolytic enzymes produce peptides.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis_trait", "target": "peptides"}, {"description": "Peptide transporters import peptides short enough for uptake.", "evidence": [{"notes": "Peptides \"taken up by dedicated transporters: oligopeptide permease (Opp, an ATP-driven system)\", DtpT and ABC transporter Dpp.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2007805", "source": "peptide_transport_systems", "target": "peptides"}, {"description": "Intracellular peptidases further hydrolyze imported peptides.", "evidence": [{"notes": "\"Inside the cell, multiple peptidases... further hydrolyze peptides\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-5", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "intracellular_peptidases", "target": "peptides"}, {"description": "Intracellular peptidases produce free amino acids used for growth.", "evidence": [{"notes": "\"further hydrolyze peptides to free amino acids used for growth\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "intracellular_peptidases", "target": "amino_acids"}, {"description": "Proteins too large for direct uptake necessitate extracellular hydrolysis.", "evidence": [{"notes": "\"proteins are too large for direct uptake by prokaryotic transporter systems... explaining the need for extracellular cleavage\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "id": "edge-7", "is_orphan": false, "predicate": "necessitates", "predicate_id": null, "source": "large_proteins", "target": "proteolysis_trait"}, {"description": "Substrate source/concentration/C:N stoichiometry filters expression of secreted proteases.", "evidence": [{"notes": "\"the substrate\u0027s source, concentration and stoichiometry impose strong filtering on the expression of extracellular enzymes\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "id": "edge-8", "is_orphan": false, "predicate": "controls expression of", "predicate_id": null, "source": "substrate_stoichiometry", "target": "extracellular_protease"}], "evidence_rows": [{"description": "Secreted proteases drive extracellular protein hydrolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Rao et al. review microbial proteases and their depolymerizing nutritional role.", "reference": "DOI:10.1128/mmbr.62.3.597-635.1998"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "secreted proteases", "source_grounding": null, "target": "proteolysis", "target_grounding": "traitmech:000116"}, {"description": "Protein hydrolysis releases amino acids and short peptides.", "edge_id": "edge-2", "evidence": [{"notes": "Bacillus protease review covers extracellular protease activities.", "reference": "DOI:10.1093/femsre/fuab046"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis", "source_grounding": "traitmech:000116", "target": "amino acids / short peptides", "target_grounding": null}, {"description": "Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).", "edge_id": "edge-3", "evidence": [{"notes": "\"protein to oligopeptides\" / \"producing peptides of roughly 4-30 amino acids\"; extracellular proteolytic enzymes produce peptides.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "proteolysis", "source_grounding": "traitmech:000116", "target": "peptides / oligopeptides", "target_grounding": null}, {"description": "Peptide transporters import peptides short enough for uptake.", "edge_id": "edge-4", "evidence": [{"notes": "Peptides \"taken up by dedicated transporters: oligopeptide permease (Opp, an ATP-driven system)\", DtpT and ABC transporter Dpp.", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "imports", "predicate_id": "METPO:2007805", "source": "peptide transport systems (Opp/DtpT/Dpp)", "source_grounding": null, "target": "peptides / oligopeptides", "target_grounding": null}, {"description": "Intracellular peptidases further hydrolyze imported peptides.", "edge_id": "edge-5", "evidence": [{"notes": "\"Inside the cell, multiple peptidases... further hydrolyze peptides\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "intracellular peptidases", "source_grounding": null, "target": "peptides / oligopeptides", "target_grounding": null}, {"description": "Intracellular peptidases produce free amino acids used for growth.", "edge_id": "edge-6", "evidence": [{"notes": "\"further hydrolyze peptides to free amino acids used for growth\".", "reference": "DOI:10.1186/s43014-023-00165-w"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "intracellular peptidases", "source_grounding": null, "target": "amino acids / short peptides", "target_grounding": null}, {"description": "Proteins too large for direct uptake necessitate extracellular hydrolysis.", "edge_id": "edge-7", "evidence": [{"notes": "\"proteins are too large for direct uptake by prokaryotic transporter systems... explaining the need for extracellular cleavage\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "predicate": "necessitates", "predicate_id": null, "source": "large extracellular proteins", "source_grounding": null, "target": "proteolysis", "target_grounding": "traitmech:000116"}, {"description": "Substrate source/concentration/C:N stoichiometry filters expression of secreted proteases.", "edge_id": "edge-8", "evidence": [{"notes": "\"the substrate\u0027s source, concentration and stoichiometry impose strong filtering on the expression of extracellular enzymes\".", "reference": "DOI:10.1128/spectrum.03036-23"}], "predicate": "controls expression of", "predicate_id": null, "source": "substrate source / concentration / C:N stoichiometry", "source_grounding": null, "target": "secreted proteases", "target_grounding": null}], "graph_id": "proteolysis_extracellular_protease", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Assimilable nutrients released from protein hydrolysis.", "grounding": null, "id": "amino_acids", "is_orphan": false, "label": "amino acids / short peptides", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Extracellular microbial proteases acting on protein substrates.", "grounding": null, "id": "extracellular_protease", "is_orphan": false, "label": "secreted proteases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "The primary cloning study identifies the B. subtilis I168 subtilisin structural gene and its expressed protease activity. UniProtKB P04189 is the reviewed AprE entry from strain 168.", "reference": "DOI:10.1128/jb.158.2.411-418.1984", "snippet": "a fivefold increase in serine protease activity was observed"}], "gene_symbol": "aprE", "protein_label": "Subtilisin E", "retrieved_on": "2026-08-24", "role": "Major extracellular alkaline serine protease AprE, representing one component of the broader secreted-protease node.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis 168", "uniprot_id": "UniProtKB:P04189"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic exo-/endo-peptidases that further hydrolyze imported peptides to free amino acids.", "grounding": null, "id": "intracellular_peptidases", "is_orphan": false, "label": "intracellular peptidases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intact extracellular proteins too large for direct uptake by prokaryotic transporters.", "grounding": null, "id": "large_proteins", "is_orphan": false, "label": "large extracellular proteins", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane transporters (oligopeptide permease Opp, DtpT, ABC transporter Dpp) importing peptides short enough for uptake.", "grounding": null, "id": "peptide_transport_systems", "is_orphan": false, "label": "peptide transport systems (Opp/DtpT/Dpp)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oligopeptides (~4-30 aa) released by extracellular protease cleavage of proteins.", "grounding": null, "id": "peptides", "is_orphan": false, "label": "peptides / oligopeptides", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Secreted-protease hydrolysis of extracellular proteins.", "grounding": "traitmech:000116", "id": "proteolysis_trait", "is_orphan": false, "label": "proteolysis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Environmental substrate characteristics that filter expression of secreted extracellular proteases.", "grounding": null, "id": "substrate_stoichiometry", "is_orphan": false, "label": "substrate source / concentration / C:N stoichiometry", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "The primary cloning study identifies the B. subtilis I168 subtilisin structural gene and its expressed protease activity. UniProtKB P04189 is the reviewed AprE entry from strain 168.", "reference": "DOI:10.1128/jb.158.2.411-418.1984", "snippet": "a fivefold increase in serine protease activity was observed"}], "gene_symbol": "aprE", "node_id": "extracellular_protease", "node_label": "secreted proteases", "protein_label": "Subtilisin E", "retrieved_on": "2026-08-24", "role": "Major extracellular alkaline serine protease AprE, representing one component of the broader secreted-protease node.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis 168", "uniprot_id": "UniProtKB:P04189"}], "scope_notes": "The graph summarizes extracellular protein hydrolysis, peptide uptake, and intracellular hydrolysis. AprE is one experimentally characterized extracellular protease component and is not presented as the complete proteolytic system.", "scope_status": "MECHANISTIC", "title": "Proteolysis hydrolyzes extracellular proteins to amino acids"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -962,13 +989,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-24 09:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

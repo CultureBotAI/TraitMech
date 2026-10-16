@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>saprotrophy</h1>
     <p class="curie"><code>traitmech:000055</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>saprotrophy</strong>
+            <code>traitmech:000055</code>
             <span class="edge-predicate">enables</span>
             <strong>organic matter decomposition</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Saprotrophic activity breaks down dead organic matter.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>organic matter decomposition</strong>
+
             <span class="edge-predicate">consumes</span>
             <strong>dead organic matter</strong>
-            <code>biolink:consumes</code>
+
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>Decomposition uses dead organic matter as substrate.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>extracellular exoenzymes</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>soluble organic compounds</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Extracellular exoenzymes contribute soluble decomposition products by acting on complex organic compounds.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>cellulolytic enzyme system</strong>
+
             <span class="edge-predicate">hydrolyzes</span>
             <strong>cellulose</strong>
-            <code>METPO:2007808</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18246" rel="nofollow noreferrer"><code>CHEBI:18246</code></a>
+            <a href="https://w3id.org/metpo/2007808" rel="nofollow noreferrer"><code>METPO:2007808</code></a>
             <p>Cellobiohydrolases, endoglucanases, and beta-glucosidases act in concert to break down cellulose.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>cellulose</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18246" rel="nofollow noreferrer"><code>CHEBI:18246</code></a>
             <span class="edge-predicate">is hydrolyzed to</span>
             <strong>glucose</strong>
-            <code>RO:0001001</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17234" rel="nofollow noreferrer"><code>CHEBI:17234</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0001001" rel="nofollow noreferrer"><code>RO:0001001</code></a>
             <p>Cellulose hydrolysis yields glucose.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>carbohydrate-active enzymes (CAZymes)</strong>
+
             <span class="edge-predicate">hydrolyzes</span>
             <strong>hemicellulose</strong>
-            <code>METPO:2007808</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:61266" rel="nofollow noreferrer"><code>CHEBI:61266</code></a>
+            <a href="https://w3id.org/metpo/2007808" rel="nofollow noreferrer"><code>METPO:2007808</code></a>
             <p>Extracellular CAZymes hydrolyze hemicellulose polysaccharides at glycosidic bonds.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>laccase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR017761/" rel="nofollow noreferrer"><code>InterPro:IPR017761</code></a>
             <span class="edge-predicate">oxidizes</span>
             <strong>lignin</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:6457" rel="nofollow noreferrer"><code>CHEBI:6457</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Laccase oxidatively degrades lignin and phenolic substrates via electron transfer.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>manganese peroxidase (MnP)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0016689" rel="nofollow noreferrer"><code>GO:0016689</code></a>
             <span class="edge-predicate">oxidizes</span>
             <strong>lignin</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:6457" rel="nofollow noreferrer"><code>CHEBI:6457</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Manganese peroxidase performs H2O2-dependent oxidative degradation of lignin.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>glucose</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17234" rel="nofollow noreferrer"><code>CHEBI:17234</code></a>
             <span class="edge-predicate">negatively regulates</span>
             <strong>lignocellulolytic gene expression</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Simple sugars/glucose trigger carbon catabolite repression that represses lignocellulolytic gene expression.</p>
             <ul>
 
@@ -315,50 +344,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/soil_dwelling.html">soil-dwelling</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/rhizosphere_association.html">rhizosphere association</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/predatory_bacterium.html">predatory bacterium</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/periplasmic_bacterial_predation.html">periplasmic bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/symbiosis.html">symbiosis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/er_phagy.html">ER-phagy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/biomineralization.html">biomineralization</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -945,7 +974,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking decomposer activity on dead organic matter to carbon and nutrient cycling.", "edges": [{"description": "Saprotrophic activity breaks down dead organic matter.", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer abstract; the edge links decomposer activity to organic matter turnover without asserting a single mechanism.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "rate of OM breakdown in the rhizosphere and in detritus"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "saprotrophy_trait", "target": "decomposition"}, {"description": "Decomposition uses dead organic matter as substrate.", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer text; dead detrital organic structures are retained as substrates that require extracellular breakdown.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "exoenzyme breakdown is necessary for microbes to metabolize them"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "decomposition", "target": "dead_organic_matter"}, {"description": "Extracellular exoenzymes contribute soluble decomposition products by acting on complex organic compounds.", "evidence": [{"notes": "Verified against the open Wang et al. text; the edge keeps a broad substrate-cross-feeding claim about diffusible exoenzyme products in soil.", "reference": "DOI:10.1093/ismejo/wrae073", "snippet": "products released by extracellular reactions of exoenzymes produced by another group"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular_exoenzymes", "target": "soluble_organic_compounds"}, {"description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases act in concert to break down cellulose.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellobiohydrolases, endoglucanases, and beta-glucosidases are retained as a cellulolytic enzyme-system node.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "degradation of cellulose into glucose involves a concerted action of several enzymes"}], "id": "edge-4", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cellulolytic_enzymes", "target": "cellulose"}, {"description": "Cellulose hydrolysis yields glucose.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellulose is retained as a substrate that derives into glucose after enzymatic hydrolysis.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "The complete degradation of cellulose into glucose"}], "id": "edge-5", "is_orphan": false, "predicate": "is hydrolyzed to", "predicate_id": "RO:0001001", "source": "cellulose", "target": "glucose"}, {"description": "Extracellular CAZymes hydrolyze hemicellulose polysaccharides at glycosidic bonds.", "evidence": [{"notes": "Verified against the open Cragg et al. full text; the broad CAZyme node is retained for hemicellulose-active enzymes.", "reference": "DOI:10.1016/j.cbpa.2015.10.018", "snippet": "The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes"}], "id": "edge-6", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cazymes", "target": "hemicellulose"}, {"description": "Laccase oxidatively degrades lignin and phenolic substrates via electron transfer.", "evidence": [{"notes": "Verified against the open Gurovic et al. figure text; laccase is retained as a contextual fungal and bacterial ligninolytic enzyme.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "Laccases and peroxidases degrade not only lignin but also the corresponding monomers and other phenolic substrates"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "laccase", "target": "lignin"}, {"description": "Manganese peroxidase performs H2O2-dependent oxidative degradation of lignin.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is grounded to the canonical oxidative predicate for the fungal MnP ligninolysis claim.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing a variety of oxidative reactions"}], "id": "edge-8", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "manganese_peroxidase", "target": "lignin"}, {"description": "Simple sugars/glucose trigger carbon catabolite repression that represses lignocellulolytic gene expression.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is a broad carbon-catabolite-repression regulatory edge.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "glucose is a repressor of fungal cellulolytic enzymes"}], "id": "edge-9", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "glucose", "target": "lignocellulolytic_gene_expression"}], "evidence_rows": [{"description": "Saprotrophic activity breaks down dead organic matter.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer abstract; the edge links decomposer activity to organic matter turnover without asserting a single mechanism.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "rate of OM breakdown in the rhizosphere and in detritus"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "saprotrophy", "target": "organic matter decomposition"}, {"description": "Decomposition uses dead organic matter as substrate.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer text; dead detrital organic structures are retained as substrates that require extracellular breakdown.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "exoenzyme breakdown is necessary for microbes to metabolize them"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "organic matter decomposition", "target": "dead organic matter"}, {"description": "Extracellular exoenzymes contribute soluble decomposition products by acting on complex organic compounds.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Wang et al. text; the edge keeps a broad substrate-cross-feeding claim about diffusible exoenzyme products in soil.", "reference": "DOI:10.1093/ismejo/wrae073", "snippet": "products released by extracellular reactions of exoenzymes produced by another group"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular exoenzymes", "target": "soluble organic compounds"}, {"description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases act in concert to break down cellulose.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellobiohydrolases, endoglucanases, and beta-glucosidases are retained as a cellulolytic enzyme-system node.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "degradation of cellulose into glucose involves a concerted action of several enzymes"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cellulolytic enzyme system", "target": "cellulose"}, {"description": "Cellulose hydrolysis yields glucose.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellulose is retained as a substrate that derives into glucose after enzymatic hydrolysis.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "The complete degradation of cellulose into glucose"}], "predicate": "is hydrolyzed to", "predicate_id": "RO:0001001", "source": "cellulose", "target": "glucose"}, {"description": "Extracellular CAZymes hydrolyze hemicellulose polysaccharides at glycosidic bonds.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Cragg et al. full text; the broad CAZyme node is retained for hemicellulose-active enzymes.", "reference": "DOI:10.1016/j.cbpa.2015.10.018", "snippet": "The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "carbohydrate-active enzymes (CAZymes)", "target": "hemicellulose"}, {"description": "Laccase oxidatively degrades lignin and phenolic substrates via electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Gurovic et al. figure text; laccase is retained as a contextual fungal and bacterial ligninolytic enzyme.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "Laccases and peroxidases degrade not only lignin but also the corresponding monomers and other phenolic substrates"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "laccase", "target": "lignin"}, {"description": "Manganese peroxidase performs H2O2-dependent oxidative degradation of lignin.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is grounded to the canonical oxidative predicate for the fungal MnP ligninolysis claim.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing a variety of oxidative reactions"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "manganese peroxidase (MnP)", "target": "lignin"}, {"description": "Simple sugars/glucose trigger carbon catabolite repression that represses lignocellulolytic gene expression.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is a broad carbon-catabolite-repression regulatory edge.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "glucose is a repressor of fungal cellulolytic enzymes"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "glucose", "target": "lignocellulolytic gene expression"}], "graph_id": "saprotrophy_decomposition_cycling", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzymes acting on glycosidic bonds of plant cell-wall polysaccharides.", "grounding": null, "id": "cazymes", "is_orphan": false, "label": "carbohydrate-active enzymes (CAZymes)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases acting in concert.", "grounding": null, "id": "cellulolytic_enzymes", "is_orphan": false, "label": "cellulolytic enzyme system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Beta-1,4-linked glucose polymer, major plant cell-wall polysaccharide.", "grounding": "CHEBI:18246", "id": "cellulose", "is_orphan": false, "label": "cellulose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Plant litter, detritus, and other non-living organic substrates.", "grounding": null, "id": "dead_organic_matter", "is_orphan": false, "label": "dead organic matter", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Microbial mineralization of organic matter releasing CO2 and inorganic nutrients.", "grounding": null, "id": "decomposition", "is_orphan": false, "label": "organic matter decomposition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secreted hydrolytic/oxidative enzymes acting outside the cell on organic matter.", "grounding": null, "id": "extracellular_exoenzymes", "is_orphan": false, "label": "extracellular exoenzymes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Monosaccharide product of cellulose depolymerization.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Heterogeneous matrix polysaccharides of plant cell walls.", "grounding": "CHEBI:61266", "id": "hemicellulose", "is_orphan": false, "label": "hemicellulose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Multicopper oxidase that oxidizes lignin and phenolic substrates.", "grounding": "InterPro:IPR017761", "id": "laccase", "is_orphan": false, "label": "laccase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Complex aromatic polymer in plant cell walls.", "grounding": "CHEBI:6457", "id": "lignin", "is_orphan": false, "label": "lignin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of genes encoding lignocellulose-degrading enzymes.", "grounding": null, "id": "lignocellulolytic_gene_expression", "is_orphan": false, "label": "lignocellulolytic gene expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "H2O2-dependent fungal ligninolytic peroxidase.", "grounding": "GO:0016689", "id": "manganese_peroxidase", "is_orphan": false, "label": "manganese peroxidase (MnP)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Feeding on dead or decaying organic matter.", "grounding": "traitmech:000055", "id": "saprotrophy_trait", "is_orphan": false, "label": "saprotrophy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-molecular-weight soluble products available for microbial uptake.", "grounding": null, "id": "soluble_organic_compounds", "is_orphan": false, "label": "soluble organic compounds", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Saprotrophy decomposes dead organic matter and drives nutrient cycling"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking decomposer activity on dead organic matter to carbon and nutrient cycling.", "edges": [{"description": "Saprotrophic activity breaks down dead organic matter.", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer abstract; the edge links decomposer activity to organic matter turnover without asserting a single mechanism.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "rate of OM breakdown in the rhizosphere and in detritus"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "saprotrophy_trait", "target": "decomposition"}, {"description": "Decomposition uses dead organic matter as substrate.", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer text; dead detrital organic structures are retained as substrates that require extracellular breakdown.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "exoenzyme breakdown is necessary for microbes to metabolize them"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "decomposition", "target": "dead_organic_matter"}, {"description": "Extracellular exoenzymes contribute soluble decomposition products by acting on complex organic compounds.", "evidence": [{"notes": "Verified against the open Wang et al. text; the edge keeps a broad substrate-cross-feeding claim about diffusible exoenzyme products in soil.", "reference": "DOI:10.1093/ismejo/wrae073", "snippet": "products released by extracellular reactions of exoenzymes produced by another group"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular_exoenzymes", "target": "soluble_organic_compounds"}, {"description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases act in concert to break down cellulose.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellobiohydrolases, endoglucanases, and beta-glucosidases are retained as a cellulolytic enzyme-system node.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "degradation of cellulose into glucose involves a concerted action of several enzymes"}], "id": "edge-4", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cellulolytic_enzymes", "target": "cellulose"}, {"description": "Cellulose hydrolysis yields glucose.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellulose is retained as a substrate that derives into glucose after enzymatic hydrolysis.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "The complete degradation of cellulose into glucose"}], "id": "edge-5", "is_orphan": false, "predicate": "is hydrolyzed to", "predicate_id": "RO:0001001", "source": "cellulose", "target": "glucose"}, {"description": "Extracellular CAZymes hydrolyze hemicellulose polysaccharides at glycosidic bonds.", "evidence": [{"notes": "Verified against the open Cragg et al. full text; the broad CAZyme node is retained for hemicellulose-active enzymes.", "reference": "DOI:10.1016/j.cbpa.2015.10.018", "snippet": "The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes"}], "id": "edge-6", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cazymes", "target": "hemicellulose"}, {"description": "Laccase oxidatively degrades lignin and phenolic substrates via electron transfer.", "evidence": [{"notes": "Verified against the open Gurovic et al. figure text; laccase is retained as a contextual fungal and bacterial ligninolytic enzyme.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "Laccases and peroxidases degrade not only lignin but also the corresponding monomers and other phenolic substrates"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "laccase", "target": "lignin"}, {"description": "Manganese peroxidase performs H2O2-dependent oxidative degradation of lignin.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is grounded to the canonical oxidative predicate for the fungal MnP ligninolysis claim.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing a variety of oxidative reactions"}], "id": "edge-8", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "manganese_peroxidase", "target": "lignin"}, {"description": "Simple sugars/glucose trigger carbon catabolite repression that represses lignocellulolytic gene expression.", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is a broad carbon-catabolite-repression regulatory edge.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "glucose is a repressor of fungal cellulolytic enzymes"}], "id": "edge-9", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "glucose", "target": "lignocellulolytic_gene_expression"}], "evidence_rows": [{"description": "Saprotrophic activity breaks down dead organic matter.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer abstract; the edge links decomposer activity to organic matter turnover without asserting a single mechanism.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "rate of OM breakdown in the rhizosphere and in detritus"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "saprotrophy", "source_grounding": "traitmech:000055", "target": "organic matter decomposition", "target_grounding": null}, {"description": "Decomposition uses dead organic matter as substrate.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the open Schimel and Schaeffer text; dead detrital organic structures are retained as substrates that require extracellular breakdown.", "reference": "DOI:10.3389/fmicb.2012.00348", "snippet": "exoenzyme breakdown is necessary for microbes to metabolize them"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "organic matter decomposition", "source_grounding": null, "target": "dead organic matter", "target_grounding": null}, {"description": "Extracellular exoenzymes contribute soluble decomposition products by acting on complex organic compounds.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Wang et al. text; the edge keeps a broad substrate-cross-feeding claim about diffusible exoenzyme products in soil.", "reference": "DOI:10.1093/ismejo/wrae073", "snippet": "products released by extracellular reactions of exoenzymes produced by another group"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular exoenzymes", "source_grounding": null, "target": "soluble organic compounds", "target_grounding": null}, {"description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases act in concert to break down cellulose.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellobiohydrolases, endoglucanases, and beta-glucosidases are retained as a cellulolytic enzyme-system node.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "degradation of cellulose into glucose involves a concerted action of several enzymes"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "cellulolytic enzyme system", "source_grounding": null, "target": "cellulose", "target_grounding": "CHEBI:18246"}, {"description": "Cellulose hydrolysis yields glucose.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Gurovic et al. text; cellulose is retained as a substrate that derives into glucose after enzymatic hydrolysis.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "The complete degradation of cellulose into glucose"}], "predicate": "is hydrolyzed to", "predicate_id": "RO:0001001", "source": "cellulose", "source_grounding": "CHEBI:18246", "target": "glucose", "target_grounding": "CHEBI:17234"}, {"description": "Extracellular CAZymes hydrolyze hemicellulose polysaccharides at glycosidic bonds.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Cragg et al. full text; the broad CAZyme node is retained for hemicellulose-active enzymes.", "reference": "DOI:10.1016/j.cbpa.2015.10.018", "snippet": "The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "carbohydrate-active enzymes (CAZymes)", "source_grounding": null, "target": "hemicellulose", "target_grounding": "CHEBI:61266"}, {"description": "Laccase oxidatively degrades lignin and phenolic substrates via electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Gurovic et al. figure text; laccase is retained as a contextual fungal and bacterial ligninolytic enzyme.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "Laccases and peroxidases degrade not only lignin but also the corresponding monomers and other phenolic substrates"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "laccase", "source_grounding": "InterPro:IPR017761", "target": "lignin", "target_grounding": "CHEBI:6457"}, {"description": "Manganese peroxidase performs H2O2-dependent oxidative degradation of lignin.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is grounded to the canonical oxidative predicate for the fungal MnP ligninolysis claim.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing a variety of oxidative reactions"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "manganese peroxidase (MnP)", "source_grounding": "GO:0016689", "target": "lignin", "target_grounding": "CHEBI:6457"}, {"description": "Simple sugars/glucose trigger carbon catabolite repression that represses lignocellulolytic gene expression.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Gurovic et al. text; the edge is a broad carbon-catabolite-repression regulatory edge.", "reference": "DOI:10.1093/jambio/lxac002", "snippet": "glucose is a repressor of fungal cellulolytic enzymes"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "glucose", "source_grounding": "CHEBI:17234", "target": "lignocellulolytic gene expression", "target_grounding": null}], "graph_id": "saprotrophy_decomposition_cycling", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzymes acting on glycosidic bonds of plant cell-wall polysaccharides.", "grounding": null, "id": "cazymes", "is_orphan": false, "label": "carbohydrate-active enzymes (CAZymes)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cellobiohydrolases, endoglucanases, and beta-glucosidases acting in concert.", "grounding": null, "id": "cellulolytic_enzymes", "is_orphan": false, "label": "cellulolytic enzyme system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Beta-1,4-linked glucose polymer, major plant cell-wall polysaccharide.", "grounding": "CHEBI:18246", "id": "cellulose", "is_orphan": false, "label": "cellulose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Plant litter, detritus, and other non-living organic substrates.", "grounding": null, "id": "dead_organic_matter", "is_orphan": false, "label": "dead organic matter", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Microbial mineralization of organic matter releasing CO2 and inorganic nutrients.", "grounding": null, "id": "decomposition", "is_orphan": false, "label": "organic matter decomposition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secreted hydrolytic/oxidative enzymes acting outside the cell on organic matter.", "grounding": null, "id": "extracellular_exoenzymes", "is_orphan": false, "label": "extracellular exoenzymes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Monosaccharide product of cellulose depolymerization.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Heterogeneous matrix polysaccharides of plant cell walls.", "grounding": "CHEBI:61266", "id": "hemicellulose", "is_orphan": false, "label": "hemicellulose", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Multicopper oxidase that oxidizes lignin and phenolic substrates.", "grounding": "InterPro:IPR017761", "id": "laccase", "is_orphan": false, "label": "laccase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Complex aromatic polymer in plant cell walls.", "grounding": "CHEBI:6457", "id": "lignin", "is_orphan": false, "label": "lignin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of genes encoding lignocellulose-degrading enzymes.", "grounding": null, "id": "lignocellulolytic_gene_expression", "is_orphan": false, "label": "lignocellulolytic gene expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "H2O2-dependent fungal ligninolytic peroxidase.", "grounding": "GO:0016689", "id": "manganese_peroxidase", "is_orphan": false, "label": "manganese peroxidase (MnP)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Feeding on dead or decaying organic matter.", "grounding": "traitmech:000055", "id": "saprotrophy_trait", "is_orphan": false, "label": "saprotrophy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-molecular-weight soluble products available for microbial uptake.", "grounding": null, "id": "soluble_organic_compounds", "is_orphan": false, "label": "soluble organic compounds", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Saprotrophy decomposes dead organic matter and drives nutrient cycling"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -965,13 +994,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-07 20:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

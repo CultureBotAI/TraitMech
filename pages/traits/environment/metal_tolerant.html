@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>metal tolerant</h1>
     <p class="curie"><code>traitmech:000012</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>toxic heavy-metal ion</strong>
+
             <span class="edge-predicate">challenges</span>
             <strong>metal tolerant</strong>
-            <code>METPO:2007406</code>
+            <code>traitmech:000012</code>
+            <a href="https://w3id.org/metpo/2007406" rel="nofollow noreferrer"><code>METPO:2007406</code></a>
             <p>Elevated heavy-metal concentrations are the environmental challenge the trait counters.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>metal efflux pump</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>metal ion transmembrane export</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>metal ion transmembrane export</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
             <span class="edge-predicate">confers</span>
             <strong>metal tolerant</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000012</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ArsC arsenate reductase</strong>
+
             <span class="edge-predicate">converts</span>
             <strong>arsenate As(V)</strong>
+
 
             <p>ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification step.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>arsenate As(V)</strong>
+
             <span class="edge-predicate">is converted to</span>
             <strong>arsenite As(III)</strong>
+
 
             <p>Arsenate is reduced to arsenite, the species handled by efflux pumps.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Ars detoxification protein module</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>arsenic tolerance</strong>
-            <code>METPO:2007700</code>
+
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The ArsC plus ArsB/Acr3 protein module mediates arsenate reduction and arsenite extrusion conferring arsenic tolerance.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>arsenic tolerance</strong>
+
             <span class="edge-predicate">is a</span>
             <strong>metal tolerant</strong>
+            <code>traitmech:000012</code>
             <code>rdfs:subClassOf</code>
             <p>Arsenic (metalloid) tolerance is a component of the broad metal-tolerant phenotype.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>metal efflux pump</strong>
+
             <span class="edge-predicate">mediates</span>
             <strong>metal tolerant</strong>
+            <code>traitmech:000012</code>
 
             <p>P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal resistance in most bacteria.</p>
             <ul>
@@ -318,49 +345,49 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <a href="../../traits/environment/mercury_tolerant.html">mercury tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <a href="../../traits/environment/ionizing_radiation_tolerant.html">ionizing radiation tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -908,7 +935,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking heavy-metal exposure to efflux-pump-mediated detoxification underlying broad metal tolerance.", "edges": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "heavy_metal_ion", "target": "metal_tolerant_trait"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "efflux_pump", "target": "metal_ion_export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "metal_ion_export", "target": "metal_tolerant_trait"}, {"description": "ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification step.", "evidence": [{"notes": "Review: \"ArsC converting As(V) to As(III) followed by extrusion\"; general across bacteria.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-4", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "arsc_reductase", "target": "arsenate"}, {"description": "Arsenate is reduced to arsenite, the species handled by efflux pumps.", "evidence": [{"notes": "Review: ArsC converts As(V) to As(III) followed by extrusion.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-5", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "arsenate", "target": "arsenite"}, {"description": "The ArsC plus ArsB/Acr3 protein module mediates arsenate reduction and arsenite extrusion conferring arsenic tolerance.", "evidence": [{"notes": "\"a cooperative mechanism involving detoxification through arsenate reduction\" via ArsC/ArsA/ArsB/Acr3 proteins across mixed soil taxa.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ars_detoxification_proteins", "target": "arsenic_tolerance"}, {"description": "Arsenic (metalloid) tolerance is a component of the broad metal-tolerant phenotype.", "evidence": [{"notes": "Arsenic detoxification (reduction + efflux) is part of generic bacterial heavy-metal/metalloid resistance.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "arsenic_tolerance", "target": "metal_tolerant_trait"}, {"description": "P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal resistance in most bacteria.", "evidence": [{"notes": "\"resistance in most bacteria is mediated by P-type ATPase efflux, diffusion facilitator transporters of cations and RND\" - generic review.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "efflux_pump", "target": "metal_tolerant_trait"}], "evidence_rows": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "toxic heavy-metal ion", "target": "metal tolerant"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal efflux pump", "target": "metal ion transmembrane export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "metal ion transmembrane export", "target": "metal tolerant"}, {"description": "ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification step.", "edge_id": "edge-4", "evidence": [{"notes": "Review: \"ArsC converting As(V) to As(III) followed by extrusion\"; general across bacteria.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "converts", "predicate_id": null, "source": "ArsC arsenate reductase", "target": "arsenate As(V)"}, {"description": "Arsenate is reduced to arsenite, the species handled by efflux pumps.", "edge_id": "edge-5", "evidence": [{"notes": "Review: ArsC converts As(V) to As(III) followed by extrusion.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "is converted to", "predicate_id": null, "source": "arsenate As(V)", "target": "arsenite As(III)"}, {"description": "The ArsC plus ArsB/Acr3 protein module mediates arsenate reduction and arsenite extrusion conferring arsenic tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "\"a cooperative mechanism involving detoxification through arsenate reduction\" via ArsC/ArsA/ArsB/Acr3 proteins across mixed soil taxa.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Ars detoxification protein module", "target": "arsenic tolerance"}, {"description": "Arsenic (metalloid) tolerance is a component of the broad metal-tolerant phenotype.", "edge_id": "edge-7", "evidence": [{"notes": "Arsenic detoxification (reduction + efflux) is part of generic bacterial heavy-metal/metalloid resistance.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "arsenic tolerance", "target": "metal tolerant"}, {"description": "P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal resistance in most bacteria.", "edge_id": "edge-8", "evidence": [{"notes": "\"resistance in most bacteria is mediated by P-type ATPase efflux, diffusion facilitator transporters of cations and RND\" - generic review.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "mediates", "predicate_id": null, "source": "metal efflux pump", "target": "metal tolerant"}], "graph_id": "metal_tolerance_efflux_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "ArsC reductase plus ArsB/Acr3 arsenite-efflux proteins.", "grounding": null, "id": "ars_detoxification_proteins", "is_orphan": false, "label": "Ars detoxification protein module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic reductase converting arsenate to arsenite prior to extrusion.", "grounding": null, "id": "arsc_reductase", "is_orphan": false, "label": "ArsC arsenate reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized arsenic oxyanion taken up by phosphate transporters.", "grounding": null, "id": "arsenate", "is_orphan": false, "label": "arsenate As(V)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Detoxification-mediated tolerance of arsenic oxyanions.", "grounding": null, "id": "arsenic_tolerance", "is_orphan": false, "label": "arsenic tolerance", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced arsenic species substrate for arsenite efflux pumps.", "grounding": null, "id": "arsenite", "is_orphan": false, "label": "arsenite As(III)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators exporting metals.", "grounding": null, "id": "efflux_pump", "is_orphan": false, "label": "metal efflux pump", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Cytoplasmic excess of a transition-metal or metalloid cation.", "grounding": null, "id": "heavy_metal_ion", "is_orphan": false, "label": "toxic heavy-metal ion", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transport of metal cations across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "metal_ion_export", "is_orphan": false, "label": "metal ion transmembrane export", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated heavy-metal or metalloid concentrations.", "grounding": "traitmech:000012", "id": "metal_tolerant_trait", "is_orphan": false, "label": "metal tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Metal tolerance via active efflux of heavy-metal ions"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking heavy-metal exposure to efflux-pump-mediated detoxification underlying broad metal tolerance.", "edges": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "heavy_metal_ion", "target": "metal_tolerant_trait"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "efflux_pump", "target": "metal_ion_export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "metal_ion_export", "target": "metal_tolerant_trait"}, {"description": "ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification step.", "evidence": [{"notes": "Review: \"ArsC converting As(V) to As(III) followed by extrusion\"; general across bacteria.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-4", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "arsc_reductase", "target": "arsenate"}, {"description": "Arsenate is reduced to arsenite, the species handled by efflux pumps.", "evidence": [{"notes": "Review: ArsC converts As(V) to As(III) followed by extrusion.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-5", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "arsenate", "target": "arsenite"}, {"description": "The ArsC plus ArsB/Acr3 protein module mediates arsenate reduction and arsenite extrusion conferring arsenic tolerance.", "evidence": [{"notes": "\"a cooperative mechanism involving detoxification through arsenate reduction\" via ArsC/ArsA/ArsB/Acr3 proteins across mixed soil taxa.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ars_detoxification_proteins", "target": "arsenic_tolerance"}, {"description": "Arsenic (metalloid) tolerance is a component of the broad metal-tolerant phenotype.", "evidence": [{"notes": "Arsenic detoxification (reduction + efflux) is part of generic bacterial heavy-metal/metalloid resistance.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "arsenic_tolerance", "target": "metal_tolerant_trait"}, {"description": "P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal resistance in most bacteria.", "evidence": [{"notes": "\"resistance in most bacteria is mediated by P-type ATPase efflux, diffusion facilitator transporters of cations and RND\" - generic review.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "efflux_pump", "target": "metal_tolerant_trait"}], "evidence_rows": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "toxic heavy-metal ion", "source_grounding": null, "target": "metal tolerant", "target_grounding": "traitmech:000012"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal efflux pump", "source_grounding": null, "target": "metal ion transmembrane export", "target_grounding": "GO:0030001"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "metal ion transmembrane export", "source_grounding": "GO:0030001", "target": "metal tolerant", "target_grounding": "traitmech:000012"}, {"description": "ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification step.", "edge_id": "edge-4", "evidence": [{"notes": "Review: \"ArsC converting As(V) to As(III) followed by extrusion\"; general across bacteria.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "converts", "predicate_id": null, "source": "ArsC arsenate reductase", "source_grounding": null, "target": "arsenate As(V)", "target_grounding": null}, {"description": "Arsenate is reduced to arsenite, the species handled by efflux pumps.", "edge_id": "edge-5", "evidence": [{"notes": "Review: ArsC converts As(V) to As(III) followed by extrusion.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "is converted to", "predicate_id": null, "source": "arsenate As(V)", "source_grounding": null, "target": "arsenite As(III)", "target_grounding": null}, {"description": "The ArsC plus ArsB/Acr3 protein module mediates arsenate reduction and arsenite extrusion conferring arsenic tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "\"a cooperative mechanism involving detoxification through arsenate reduction\" via ArsC/ArsA/ArsB/Acr3 proteins across mixed soil taxa.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Ars detoxification protein module", "source_grounding": null, "target": "arsenic tolerance", "target_grounding": null}, {"description": "Arsenic (metalloid) tolerance is a component of the broad metal-tolerant phenotype.", "edge_id": "edge-7", "evidence": [{"notes": "Arsenic detoxification (reduction + efflux) is part of generic bacterial heavy-metal/metalloid resistance.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "arsenic tolerance", "source_grounding": null, "target": "metal tolerant", "target_grounding": "traitmech:000012"}, {"description": "P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal resistance in most bacteria.", "edge_id": "edge-8", "evidence": [{"notes": "\"resistance in most bacteria is mediated by P-type ATPase efflux, diffusion facilitator transporters of cations and RND\" - generic review.", "reference": "DOI:10.52700/jmmg.v5i1.155"}], "predicate": "mediates", "predicate_id": null, "source": "metal efflux pump", "source_grounding": null, "target": "metal tolerant", "target_grounding": "traitmech:000012"}], "graph_id": "metal_tolerance_efflux_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "ArsC reductase plus ArsB/Acr3 arsenite-efflux proteins.", "grounding": null, "id": "ars_detoxification_proteins", "is_orphan": false, "label": "Ars detoxification protein module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic reductase converting arsenate to arsenite prior to extrusion.", "grounding": null, "id": "arsc_reductase", "is_orphan": false, "label": "ArsC arsenate reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized arsenic oxyanion taken up by phosphate transporters.", "grounding": null, "id": "arsenate", "is_orphan": false, "label": "arsenate As(V)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Detoxification-mediated tolerance of arsenic oxyanions.", "grounding": null, "id": "arsenic_tolerance", "is_orphan": false, "label": "arsenic tolerance", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced arsenic species substrate for arsenite efflux pumps.", "grounding": null, "id": "arsenite", "is_orphan": false, "label": "arsenite As(III)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators exporting metals.", "grounding": null, "id": "efflux_pump", "is_orphan": false, "label": "metal efflux pump", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Cytoplasmic excess of a transition-metal or metalloid cation.", "grounding": null, "id": "heavy_metal_ion", "is_orphan": false, "label": "toxic heavy-metal ion", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transport of metal cations across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "metal_ion_export", "is_orphan": false, "label": "metal ion transmembrane export", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated heavy-metal or metalloid concentrations.", "grounding": "traitmech:000012", "id": "metal_tolerant_trait", "is_orphan": false, "label": "metal tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Metal tolerance via active efflux of heavy-metal ions"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -928,13 +955,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

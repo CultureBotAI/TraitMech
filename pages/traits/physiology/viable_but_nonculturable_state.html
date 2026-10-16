@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>viable but nonculturable state</h1>
     <p class="curie"><code>traitmech:000081</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>environmental stress</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>viable but nonculturable state</strong>
-            <code>biolink:causes</code>
+            <code>traitmech:000081</code>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Stress drives cells into the viable-but-nonculturable state.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dormancy process</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022611" rel="nofollow noreferrer"><code>GO:0022611</code></a>
             <span class="edge-predicate">confers</span>
             <strong>viable but nonculturable state</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000081</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The VBNC state is a form of microbial dormancy.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>oxidative stress / ROS accumulation</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>viable but nonculturable state</strong>
-            <code>RO:0002213</code>
+            <code>traitmech:000081</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Oxidative stress / ROS accumulation promotes entry into the VBNC state.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>(p)ppGpp</strong>
+
             <span class="edge-predicate">enhances</span>
             <strong>stress resistance</strong>
+
 
             <p>(p)ppGpp accumulation enhances stress resistance during VBNC.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>stress resistance</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>viable but nonculturable state</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000081</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Enhanced stress resistance supports maintenance of the VBNC state.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>RpoS sigma factor</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR012761/" rel="nofollow noreferrer"><code>InterPro:IPR012761</code></a>
             <span class="edge-predicate">required for</span>
             <strong>resuscitation from VBNC</strong>
+
 
             <p>RpoS is required for resuscitation from the VBNC state.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>RpoS sigma factor</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR012761/" rel="nofollow noreferrer"><code>InterPro:IPR012761</code></a>
             <span class="edge-predicate">promotes</span>
             <strong>viable but nonculturable state</strong>
-            <code>RO:0002213</code>
+            <code>traitmech:000081</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>RpoS promotes persistence and retained resuscitation competence in the E. coli VBNC state.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ATP</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>resuscitation from VBNC</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>ATP availability promotes resuscitation efficiency from VBNC.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>ATP</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>NAD+ biosynthesis</strong>
+
 
             <p>Residual ATP drives NAD+ synthesis during the resuscitating lag phase.</p>
             <ul>
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>NAD+ biosynthesis</strong>
+
             <span class="edge-predicate">restores</span>
             <strong>TCA cycle flux and oxidative phosphorylation</strong>
+
 
             <p>NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation during resuscitation.</p>
             <ul>
@@ -374,50 +405,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -968,7 +999,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking stress to a dormant viable-but-nonculturable state that resuscitates later.", "edges": [{"description": "Stress drives cells into the viable-but-nonculturable state.", "evidence": [{"notes": "Oliver reviews stress-induced entry into the VBNC state.", "reference": "DOI:10.1111/j.1574-6976.2009.00200.x"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "stress", "target": "vbnc_trait"}, {"description": "The VBNC state is a form of microbial dormancy.", "evidence": [{"notes": "Lennon \u0026 Jones frame VBNC within microbial dormancy.", "reference": "DOI:10.1038/nrmicro2504"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "vbnc_trait"}, {"description": "Oxidative stress / ROS accumulation promotes entry into the VBNC state.", "evidence": [{"notes": "Oxidative stress is a major trigger: ROS increase during VBNC entry (review across foodborne pathogens, mechanistically broad).", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-3", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "oxidative_stress", "target": "vbnc_trait"}, {"description": "(p)ppGpp accumulation enhances stress resistance during VBNC.", "evidence": [{"notes": "Accumulation of (p)ppGpp, enhancing stress resistance, supports the regulatory layer upstream of VBNC maintenance.", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-4", "is_orphan": false, "predicate": "enhances", "predicate_id": null, "source": "ppgpp", "target": "stress_resistance"}, {"description": "Enhanced stress resistance supports maintenance of the VBNC state.", "evidence": [{"notes": "Stress resistance enhanced via (p)ppGpp underlies persistence in the VBNC state.", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stress_resistance", "target": "vbnc_trait"}, {"description": "RpoS is required for resuscitation from the VBNC state.", "evidence": [{"notes": "RpoS is expressed in VBNC cells and required for resuscitation; RpoS mutants fail to resuscitate.", "reference": "DOI:10.3390/microorganisms12010039"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "rpos", "target": "resuscitation"}, {"description": "RpoS promotes persistence and retained resuscitation competence in the E. coli VBNC state.", "evidence": [{"notes": "The primary loss-of-function comparison supports RpoS involvement in VBNC persistence.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "rpos", "target": "vbnc_trait"}, {"description": "ATP availability promotes resuscitation efficiency from VBNC.", "evidence": [{"notes": "Higher ATP levels correlated with higher resuscitation efficiency.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "atp", "target": "resuscitation"}, {"description": "Residual ATP drives NAD+ synthesis during the resuscitating lag phase.", "evidence": [{"notes": "Part of cellular ATP is consumed during the lag phase to synthesize NAD+.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-9", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "atp", "target": "nad_synthesis"}, {"description": "NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation during resuscitation.", "evidence": [{"notes": "ATP-mediated NAD+ synthesis increases NAD+ availability, restoring TCA cycle flux and driving oxidative phosphorylation.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-10", "is_orphan": false, "predicate": "restores", "predicate_id": null, "source": "nad_synthesis", "target": "tca_oxphos"}], "evidence_rows": [{"description": "Stress drives cells into the viable-but-nonculturable state.", "edge_id": "edge-1", "evidence": [{"notes": "Oliver reviews stress-induced entry into the VBNC state.", "reference": "DOI:10.1111/j.1574-6976.2009.00200.x"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "environmental stress", "target": "viable but nonculturable state"}, {"description": "The VBNC state is a form of microbial dormancy.", "edge_id": "edge-2", "evidence": [{"notes": "Lennon \u0026 Jones frame VBNC within microbial dormancy.", "reference": "DOI:10.1038/nrmicro2504"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "target": "viable but nonculturable state"}, {"description": "Oxidative stress / ROS accumulation promotes entry into the VBNC state.", "edge_id": "edge-3", "evidence": [{"notes": "Oxidative stress is a major trigger: ROS increase during VBNC entry (review across foodborne pathogens, mechanistically broad).", "reference": "DOI:10.3390/foods12061179"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "oxidative stress / ROS accumulation", "target": "viable but nonculturable state"}, {"description": "(p)ppGpp accumulation enhances stress resistance during VBNC.", "edge_id": "edge-4", "evidence": [{"notes": "Accumulation of (p)ppGpp, enhancing stress resistance, supports the regulatory layer upstream of VBNC maintenance.", "reference": "DOI:10.3390/foods12061179"}], "predicate": "enhances", "predicate_id": null, "source": "(p)ppGpp", "target": "stress resistance"}, {"description": "Enhanced stress resistance supports maintenance of the VBNC state.", "edge_id": "edge-5", "evidence": [{"notes": "Stress resistance enhanced via (p)ppGpp underlies persistence in the VBNC state.", "reference": "DOI:10.3390/foods12061179"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stress resistance", "target": "viable but nonculturable state"}, {"description": "RpoS is required for resuscitation from the VBNC state.", "edge_id": "edge-6", "evidence": [{"notes": "RpoS is expressed in VBNC cells and required for resuscitation; RpoS mutants fail to resuscitate.", "reference": "DOI:10.3390/microorganisms12010039"}], "predicate": "required for", "predicate_id": null, "source": "RpoS sigma factor", "target": "resuscitation from VBNC"}, {"description": "RpoS promotes persistence and retained resuscitation competence in the E. coli VBNC state.", "edge_id": "edge-7", "evidence": [{"notes": "The primary loss-of-function comparison supports RpoS involvement in VBNC persistence.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "RpoS sigma factor", "target": "viable but nonculturable state"}, {"description": "ATP availability promotes resuscitation efficiency from VBNC.", "edge_id": "edge-8", "evidence": [{"notes": "Higher ATP levels correlated with higher resuscitation efficiency.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "ATP", "target": "resuscitation from VBNC"}, {"description": "Residual ATP drives NAD+ synthesis during the resuscitating lag phase.", "edge_id": "edge-9", "evidence": [{"notes": "Part of cellular ATP is consumed during the lag phase to synthesize NAD+.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "drives", "predicate_id": null, "source": "ATP", "target": "NAD+ biosynthesis"}, {"description": "NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation during resuscitation.", "edge_id": "edge-10", "evidence": [{"notes": "ATP-mediated NAD+ synthesis increases NAD+ availability, restoring TCA cycle flux and driving oxidative phosphorylation.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "restores", "predicate_id": null, "source": "NAD+ biosynthesis", "target": "TCA cycle flux and oxidative phosphorylation"}], "graph_id": "vbnc_stress_induced_dormancy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cellular ATP whose residual availability drives resuscitation metabolism.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry into a reversible quiescent state.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "NAD+ synthesis during the resuscitating lag phase.", "grounding": null, "id": "nad_synthesis", "is_orphan": false, "label": "NAD+ biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reactive oxygen species accumulation acting as a major VBNC trigger.", "grounding": null, "id": "oxidative_stress", "is_orphan": false, "label": "oxidative stress / ROS accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Alarmone nucleotide accumulating during VBNC entry, mediating the stringent response.", "grounding": null, "id": "ppgpp", "is_orphan": false, "label": "(p)ppGpp", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recovery of culturability from the viable-but-nonculturable state.", "grounding": null, "id": "resuscitation", "is_orphan": false, "label": "resuscitation from VBNC", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Stationary-phase/general stress sigma factor expressed in VBNC cells.", "grounding": "InterPro:IPR012761", "id": "rpos", "is_orphan": false, "label": "RpoS sigma factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 207, "evidence": [{"notes": "The primary mutant study supports an RpoS-dependent VBNC survival phenotype in E. coli; UniProt verifies the reviewed K-12 RpoS entry.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "gene_symbol": "rpoS", "protein_label": "RNA polymerase sigma factor RpoS", "retrieved_on": "2026-08-24", "role": "E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation competence under cold oligotrophic stress.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P13445"}], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Stress driving cells into the VBNC state.", "grounding": null, "id": "stress", "is_orphan": false, "label": "environmental stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Enhanced tolerance to stress supporting VBNC maintenance.", "grounding": null, "id": "stress_resistance", "is_orphan": false, "label": "stress resistance", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Central energy metabolism restored during resuscitation.", "grounding": null, "id": "tca_oxphos", "is_orphan": false, "label": "TCA cycle flux and oxidative phosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Viable, minimally active, non-culturable dormant state.", "grounding": "traitmech:000081", "id": "vbnc_trait", "is_orphan": false, "label": "viable but nonculturable state", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 207, "evidence": [{"notes": "The primary mutant study supports an RpoS-dependent VBNC survival phenotype in E. coli; UniProt verifies the reviewed K-12 RpoS entry.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "gene_symbol": "rpoS", "node_id": "rpos", "node_label": "RpoS sigma factor", "protein_label": "RNA polymerase sigma factor RpoS", "retrieved_on": "2026-08-24", "role": "E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation competence under cold oligotrophic stress.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P13445"}], "scope_notes": "This graph represents a stress-induced VBNC program and subsequent resuscitation. The E. coli K-12 RpoS example anchors the persistence branch and does not imply that one sigma factor is the sole VBNC mechanism across taxa.", "scope_status": "MECHANISTIC", "title": "Stress-induced viable-but-nonculturable state"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking stress to a dormant viable-but-nonculturable state that resuscitates later.", "edges": [{"description": "Stress drives cells into the viable-but-nonculturable state.", "evidence": [{"notes": "Oliver reviews stress-induced entry into the VBNC state.", "reference": "DOI:10.1111/j.1574-6976.2009.00200.x"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "stress", "target": "vbnc_trait"}, {"description": "The VBNC state is a form of microbial dormancy.", "evidence": [{"notes": "Lennon \u0026 Jones frame VBNC within microbial dormancy.", "reference": "DOI:10.1038/nrmicro2504"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "vbnc_trait"}, {"description": "Oxidative stress / ROS accumulation promotes entry into the VBNC state.", "evidence": [{"notes": "Oxidative stress is a major trigger: ROS increase during VBNC entry (review across foodborne pathogens, mechanistically broad).", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-3", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "oxidative_stress", "target": "vbnc_trait"}, {"description": "(p)ppGpp accumulation enhances stress resistance during VBNC.", "evidence": [{"notes": "Accumulation of (p)ppGpp, enhancing stress resistance, supports the regulatory layer upstream of VBNC maintenance.", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-4", "is_orphan": false, "predicate": "enhances", "predicate_id": null, "source": "ppgpp", "target": "stress_resistance"}, {"description": "Enhanced stress resistance supports maintenance of the VBNC state.", "evidence": [{"notes": "Stress resistance enhanced via (p)ppGpp underlies persistence in the VBNC state.", "reference": "DOI:10.3390/foods12061179"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stress_resistance", "target": "vbnc_trait"}, {"description": "RpoS is required for resuscitation from the VBNC state.", "evidence": [{"notes": "RpoS is expressed in VBNC cells and required for resuscitation; RpoS mutants fail to resuscitate.", "reference": "DOI:10.3390/microorganisms12010039"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "rpos", "target": "resuscitation"}, {"description": "RpoS promotes persistence and retained resuscitation competence in the E. coli VBNC state.", "evidence": [{"notes": "The primary loss-of-function comparison supports RpoS involvement in VBNC persistence.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "rpos", "target": "vbnc_trait"}, {"description": "ATP availability promotes resuscitation efficiency from VBNC.", "evidence": [{"notes": "Higher ATP levels correlated with higher resuscitation efficiency.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "atp", "target": "resuscitation"}, {"description": "Residual ATP drives NAD+ synthesis during the resuscitating lag phase.", "evidence": [{"notes": "Part of cellular ATP is consumed during the lag phase to synthesize NAD+.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-9", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "atp", "target": "nad_synthesis"}, {"description": "NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation during resuscitation.", "evidence": [{"notes": "ATP-mediated NAD+ synthesis increases NAD+ availability, restoring TCA cycle flux and driving oxidative phosphorylation.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "id": "edge-10", "is_orphan": false, "predicate": "restores", "predicate_id": null, "source": "nad_synthesis", "target": "tca_oxphos"}], "evidence_rows": [{"description": "Stress drives cells into the viable-but-nonculturable state.", "edge_id": "edge-1", "evidence": [{"notes": "Oliver reviews stress-induced entry into the VBNC state.", "reference": "DOI:10.1111/j.1574-6976.2009.00200.x"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "environmental stress", "source_grounding": null, "target": "viable but nonculturable state", "target_grounding": "traitmech:000081"}, {"description": "The VBNC state is a form of microbial dormancy.", "edge_id": "edge-2", "evidence": [{"notes": "Lennon \u0026 Jones frame VBNC within microbial dormancy.", "reference": "DOI:10.1038/nrmicro2504"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "source_grounding": "GO:0022611", "target": "viable but nonculturable state", "target_grounding": "traitmech:000081"}, {"description": "Oxidative stress / ROS accumulation promotes entry into the VBNC state.", "edge_id": "edge-3", "evidence": [{"notes": "Oxidative stress is a major trigger: ROS increase during VBNC entry (review across foodborne pathogens, mechanistically broad).", "reference": "DOI:10.3390/foods12061179"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "oxidative stress / ROS accumulation", "source_grounding": null, "target": "viable but nonculturable state", "target_grounding": "traitmech:000081"}, {"description": "(p)ppGpp accumulation enhances stress resistance during VBNC.", "edge_id": "edge-4", "evidence": [{"notes": "Accumulation of (p)ppGpp, enhancing stress resistance, supports the regulatory layer upstream of VBNC maintenance.", "reference": "DOI:10.3390/foods12061179"}], "predicate": "enhances", "predicate_id": null, "source": "(p)ppGpp", "source_grounding": null, "target": "stress resistance", "target_grounding": null}, {"description": "Enhanced stress resistance supports maintenance of the VBNC state.", "edge_id": "edge-5", "evidence": [{"notes": "Stress resistance enhanced via (p)ppGpp underlies persistence in the VBNC state.", "reference": "DOI:10.3390/foods12061179"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stress resistance", "source_grounding": null, "target": "viable but nonculturable state", "target_grounding": "traitmech:000081"}, {"description": "RpoS is required for resuscitation from the VBNC state.", "edge_id": "edge-6", "evidence": [{"notes": "RpoS is expressed in VBNC cells and required for resuscitation; RpoS mutants fail to resuscitate.", "reference": "DOI:10.3390/microorganisms12010039"}], "predicate": "required for", "predicate_id": null, "source": "RpoS sigma factor", "source_grounding": "InterPro:IPR012761", "target": "resuscitation from VBNC", "target_grounding": null}, {"description": "RpoS promotes persistence and retained resuscitation competence in the E. coli VBNC state.", "edge_id": "edge-7", "evidence": [{"notes": "The primary loss-of-function comparison supports RpoS involvement in VBNC persistence.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "RpoS sigma factor", "source_grounding": "InterPro:IPR012761", "target": "viable but nonculturable state", "target_grounding": "traitmech:000081"}, {"description": "ATP availability promotes resuscitation efficiency from VBNC.", "edge_id": "edge-8", "evidence": [{"notes": "Higher ATP levels correlated with higher resuscitation efficiency.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "ATP", "source_grounding": null, "target": "resuscitation from VBNC", "target_grounding": null}, {"description": "Residual ATP drives NAD+ synthesis during the resuscitating lag phase.", "edge_id": "edge-9", "evidence": [{"notes": "Part of cellular ATP is consumed during the lag phase to synthesize NAD+.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "drives", "predicate_id": null, "source": "ATP", "source_grounding": null, "target": "NAD+ biosynthesis", "target_grounding": null}, {"description": "NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation during resuscitation.", "edge_id": "edge-10", "evidence": [{"notes": "ATP-mediated NAD+ synthesis increases NAD+ availability, restoring TCA cycle flux and driving oxidative phosphorylation.", "reference": "DOI:10.1016/j.jare.2023.08.002"}], "predicate": "restores", "predicate_id": null, "source": "NAD+ biosynthesis", "source_grounding": null, "target": "TCA cycle flux and oxidative phosphorylation", "target_grounding": null}], "graph_id": "vbnc_stress_induced_dormancy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cellular ATP whose residual availability drives resuscitation metabolism.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry into a reversible quiescent state.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "NAD+ synthesis during the resuscitating lag phase.", "grounding": null, "id": "nad_synthesis", "is_orphan": false, "label": "NAD+ biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reactive oxygen species accumulation acting as a major VBNC trigger.", "grounding": null, "id": "oxidative_stress", "is_orphan": false, "label": "oxidative stress / ROS accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Alarmone nucleotide accumulating during VBNC entry, mediating the stringent response.", "grounding": null, "id": "ppgpp", "is_orphan": false, "label": "(p)ppGpp", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recovery of culturability from the viable-but-nonculturable state.", "grounding": null, "id": "resuscitation", "is_orphan": false, "label": "resuscitation from VBNC", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Stationary-phase/general stress sigma factor expressed in VBNC cells.", "grounding": "InterPro:IPR012761", "id": "rpos", "is_orphan": false, "label": "RpoS sigma factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 207, "evidence": [{"notes": "The primary mutant study supports an RpoS-dependent VBNC survival phenotype in E. coli; UniProt verifies the reviewed K-12 RpoS entry.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "gene_symbol": "rpoS", "protein_label": "RNA polymerase sigma factor RpoS", "retrieved_on": "2026-08-24", "role": "E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation competence under cold oligotrophic stress.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P13445"}], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Stress driving cells into the VBNC state.", "grounding": null, "id": "stress", "is_orphan": false, "label": "environmental stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Enhanced tolerance to stress supporting VBNC maintenance.", "grounding": null, "id": "stress_resistance", "is_orphan": false, "label": "stress resistance", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Central energy metabolism restored during resuscitation.", "grounding": null, "id": "tca_oxphos", "is_orphan": false, "label": "TCA cycle flux and oxidative phosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Viable, minimally active, non-culturable dormant state.", "grounding": "traitmech:000081", "id": "vbnc_trait", "is_orphan": false, "label": "viable but nonculturable state", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 207, "evidence": [{"notes": "The primary mutant study supports an RpoS-dependent VBNC survival phenotype in E. coli; UniProt verifies the reviewed K-12 RpoS entry.", "reference": "DOI:10.1046/j.1462-2920.2003.00497.x", "snippet": "rpoS mutants lost culturability earlier and retained resuscitation capability for less time"}], "gene_symbol": "rpoS", "node_id": "rpos", "node_label": "RpoS sigma factor", "protein_label": "RNA polymerase sigma factor RpoS", "retrieved_on": "2026-08-24", "role": "E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation competence under cold oligotrophic stress.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P13445"}], "scope_notes": "This graph represents a stress-induced VBNC program and subsequent resuscitation. The E. coli K-12 RpoS example anchors the persistence branch and does not imply that one sigma factor is the sole VBNC mechanism across taxa.", "scope_status": "MECHANISTIC", "title": "Stress-induced viable-but-nonculturable state"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -988,13 +1019,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

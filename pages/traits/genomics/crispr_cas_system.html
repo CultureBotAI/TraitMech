@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>CRISPR-Cas system</h1>
     <p class="curie"><code>traitmech:000094</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Cas9 effector protein</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR028629/" rel="nofollow noreferrer"><code>InterPro:IPR028629</code></a>
             <span class="edge-predicate">confers</span>
             <strong>CRISPR-Cas system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000094</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>CRISPR-Cas system</strong>
+            <code>traitmech:000094</code>
             <span class="edge-predicate">participates in</span>
             <strong>defense response to virus</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051607" rel="nofollow noreferrer"><code>GO:0051607</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>CRISPR-Cas mounts sequence-specific defense against invading genetic elements.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Cas1-Cas2 complex</strong>
+
             <span class="edge-predicate">integrates spacers via</span>
             <strong>spacer acquisition (adaptation)</strong>
+
 
             <p>Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>CRISPR array transcription and processing</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>crRNA</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Transcription and processing of the CRISPR array yields mature crRNAs.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>crRNA</strong>
+
             <span class="edge-predicate">guides</span>
             <strong>crRNA-Cas effector complex</strong>
+
 
             <p>crRNA assembles with Cas effector(s) to form the interference-competent effector complex.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>crRNA-Cas effector complex</strong>
+
             <span class="edge-predicate">cleaves</span>
             <strong>invading nucleic acid target</strong>
+
 
             <p>The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>phage and plasmid pressure</strong>
+
             <span class="edge-predicate">selects for</span>
             <strong>CRISPR-Cas system</strong>
-            <code>METPO:2007401</code>
+            <code>traitmech:000094</code>
+            <a href="https://w3id.org/metpo/2007401" rel="nofollow noreferrer"><code>METPO:2007401</code></a>
             <p>Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>crRNA-Cas effector complex</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>CRISPR-Cas system</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000094</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>crRNA-guided interference by the effector complex realizes the adaptive-defense trait.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>Cas1-Cas2 complex</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>CRISPR-Cas system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000094</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.</p>
             <ul>
 
@@ -364,43 +393,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -978,7 +1007,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery to defense against invading mobile genetic elements.", "edges": [{"description": "Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.", "evidence": [{"notes": "Makarova et al. classify type II CRISPR-Cas systems by Cas9 content; the protein example is restricted to this branch.", "reference": "DOI:10.1038/s41579-019-0299-x"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cas9_effector", "target": "crispr_trait"}, {"description": "CRISPR-Cas mounts sequence-specific defense against invading genetic elements.", "evidence": [{"notes": "Barrangou \u0026 Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.", "reference": "DOI:10.1016/j.molcel.2014.03.011"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "crispr_trait", "target": "defense_response_to_virus"}, {"description": "Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.", "evidence": [{"notes": "Cas1-Cas2 complexes function as molecular recorders to integrate spacers; core adaptation edge, broad across canonical CRISPR-Cas systems.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-3", "is_orphan": false, "predicate": "integrates spacers via", "predicate_id": null, "source": "cas1_cas2_complex", "target": "spacer_acquisition"}, {"description": "Transcription and processing of the CRISPR array yields mature crRNAs.", "evidence": [{"notes": "CRISPR arrays are transcribed and processed into crRNAs; general edge across systems.", "reference": "DOI:10.1016/j.heliyon.2024.e39538"}], "id": "edge-4", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "crispr_array_transcription", "target": "crrna"}, {"description": "crRNA assembles with Cas effector(s) to form the interference-competent effector complex.", "evidence": [{"notes": "Effector-crRNA complexes drive the RNA-guided interference pathways.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-5", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "crrna", "target": "crrna_effector_complex"}, {"description": "The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.", "evidence": [{"notes": "Effector-crRNA complexes perform RNA-guided interference against invading targets; high-level interference edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-6", "is_orphan": false, "predicate": "cleaves", "predicate_id": null, "source": "crrna_effector_complex", "target": "invading_nucleic_acid"}, {"description": "Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.", "evidence": [{"notes": "CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids; broad ecological selection edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-7", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "phage_plasmid_pressure", "target": "crispr_trait"}, {"description": "crRNA-guided interference by the effector complex realizes the adaptive-defense trait.", "evidence": [{"notes": "The connector is scoped to the interference branch and does not universalize one effector subtype.", "reference": "DOI:10.5483/bmbrep.2023-0050", "snippet": "Effector-crRNA complexes perform RNA-guided interference against invading targets"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crrna_effector_complex", "target": "crispr_trait"}, {"description": "Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.", "evidence": [{"notes": "The primary study directly tests the Cas1-Cas2 adaptation complex; this branch is not projected onto interference-only systems.", "reference": "DOI:10.1038/nsmb.2820", "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition"}], "id": "edge-9", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cas1_cas2_complex", "target": "crispr_trait"}], "evidence_rows": [{"description": "Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.", "edge_id": "edge-1", "evidence": [{"notes": "Makarova et al. classify type II CRISPR-Cas systems by Cas9 content; the protein example is restricted to this branch.", "reference": "DOI:10.1038/s41579-019-0299-x"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Cas9 effector protein", "target": "CRISPR-Cas system"}, {"description": "CRISPR-Cas mounts sequence-specific defense against invading genetic elements.", "edge_id": "edge-2", "evidence": [{"notes": "Barrangou \u0026 Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.", "reference": "DOI:10.1016/j.molcel.2014.03.011"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "CRISPR-Cas system", "target": "defense response to virus"}, {"description": "Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.", "edge_id": "edge-3", "evidence": [{"notes": "Cas1-Cas2 complexes function as molecular recorders to integrate spacers; core adaptation edge, broad across canonical CRISPR-Cas systems.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "integrates spacers via", "predicate_id": null, "source": "Cas1-Cas2 complex", "target": "spacer acquisition (adaptation)"}, {"description": "Transcription and processing of the CRISPR array yields mature crRNAs.", "edge_id": "edge-4", "evidence": [{"notes": "CRISPR arrays are transcribed and processed into crRNAs; general edge across systems.", "reference": "DOI:10.1016/j.heliyon.2024.e39538"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "CRISPR array transcription and processing", "target": "crRNA"}, {"description": "crRNA assembles with Cas effector(s) to form the interference-competent effector complex.", "edge_id": "edge-5", "evidence": [{"notes": "Effector-crRNA complexes drive the RNA-guided interference pathways.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "guides", "predicate_id": null, "source": "crRNA", "target": "crRNA-Cas effector complex"}, {"description": "The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.", "edge_id": "edge-6", "evidence": [{"notes": "Effector-crRNA complexes perform RNA-guided interference against invading targets; high-level interference edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "cleaves", "predicate_id": null, "source": "crRNA-Cas effector complex", "target": "invading nucleic acid target"}, {"description": "Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.", "edge_id": "edge-7", "evidence": [{"notes": "CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids; broad ecological selection edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "phage and plasmid pressure", "target": "CRISPR-Cas system"}, {"description": "crRNA-guided interference by the effector complex realizes the adaptive-defense trait.", "edge_id": "edge-8", "evidence": [{"notes": "The connector is scoped to the interference branch and does not universalize one effector subtype.", "reference": "DOI:10.5483/bmbrep.2023-0050", "snippet": "Effector-crRNA complexes perform RNA-guided interference against invading targets"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crRNA-Cas effector complex", "target": "CRISPR-Cas system"}, {"description": "Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.", "edge_id": "edge-9", "evidence": [{"notes": "The primary study directly tests the Cas1-Cas2 adaptation complex; this branch is not projected onto interference-only systems.", "reference": "DOI:10.1038/nsmb.2820", "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Cas1-Cas2 complex", "target": "CRISPR-Cas system"}], "graph_id": "crispr_adaptive_immunity", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cas1-Cas2 integrase complex that captures and integrates new spacers.", "grounding": null, "id": "cas1_cas2_complex", "is_orphan": false, "label": "Cas1-Cas2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA-guided type II CRISPR endonuclease that cleaves complementary target DNA.", "grounding": "InterPro:IPR028629", "id": "cas9_effector", "is_orphan": false, "label": "Cas9 effector protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The primary biochemical study purified S. pyogenes Cas9 and established dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.", "reference": "DOI:10.1126/science.1225829", "snippet": "Cas9 endonuclease family can be programmed"}], "gene_symbol": "cas9", "protein_label": "CRISPR-associated endonuclease Cas9", "retrieved_on": "2026-08-25", "role": "S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.", "sequence_version": 1, "taxon_id": "NCBITaxon:301447", "taxon_label": "Streptococcus pyogenes serotype M1", "uniprot_id": "UniProtKB:Q99ZW2"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the CRISPR array and processing of the precursor into mature crRNAs.", "grounding": null, "id": "crispr_array_transcription", "is_orphan": false, "label": "CRISPR array transcription and processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of CRISPR arrays and Cas proteins for adaptive immunity.", "grounding": "traitmech:000094", "id": "crispr_trait", "is_orphan": false, "label": "CRISPR-Cas system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Mature CRISPR RNA that guides Cas effectors to complementary targets.", "grounding": null, "id": "crrna", "is_orphan": false, "label": "crRNA", "node_type": "RNA", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Ribonucleoprotein complex of crRNA and Cas effector(s) performing interference.", "grounding": null, "id": "crrna_effector_complex", "is_orphan": false, "label": "crRNA-Cas effector complex", "node_type": "RNA", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of invading viral or plasmid nucleic acids.", "grounding": "GO:0051607", "id": "defense_response_to_virus", "is_orphan": false, "label": "defense response to virus", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Foreign DNA or RNA from phages, plasmids, or other mobile genetic elements.", "grounding": null, "id": "invading_nucleic_acid", "is_orphan": false, "label": "invading nucleic acid target", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Selective pressure from invading bacteriophages and plasmids.", "grounding": null, "id": "phage_plasmid_pressure", "is_orphan": false, "label": "phage and plasmid pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Integration of invader-derived fragments as new spacers into the CRISPR array.", "grounding": null, "id": "spacer_acquisition", "is_orphan": false, "label": "spacer acquisition (adaptation)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The primary biochemical study purified S. pyogenes Cas9 and established dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.", "reference": "DOI:10.1126/science.1225829", "snippet": "Cas9 endonuclease family can be programmed"}], "gene_symbol": "cas9", "node_id": "cas9_effector", "node_label": "Cas9 effector protein", "protein_label": "CRISPR-associated endonuclease Cas9", "retrieved_on": "2026-08-25", "role": "S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.", "sequence_version": 1, "taxon_id": "NCBITaxon:301447", "taxon_label": "Streptococcus pyogenes serotype M1", "uniprot_id": "UniProtKB:Q99ZW2"}], "scope_notes": "The protein example anchors the experimentally resolved S. pyogenes type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and the Cas9 accession is not presented as an example of every CRISPR-Cas type.", "scope_status": "MECHANISTIC", "title": "CRISPR-Cas adaptive immunity against invading nucleic acids"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery to defense against invading mobile genetic elements.", "edges": [{"description": "Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.", "evidence": [{"notes": "Makarova et al. classify type II CRISPR-Cas systems by Cas9 content; the protein example is restricted to this branch.", "reference": "DOI:10.1038/s41579-019-0299-x"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cas9_effector", "target": "crispr_trait"}, {"description": "CRISPR-Cas mounts sequence-specific defense against invading genetic elements.", "evidence": [{"notes": "Barrangou \u0026 Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.", "reference": "DOI:10.1016/j.molcel.2014.03.011"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "crispr_trait", "target": "defense_response_to_virus"}, {"description": "Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.", "evidence": [{"notes": "Cas1-Cas2 complexes function as molecular recorders to integrate spacers; core adaptation edge, broad across canonical CRISPR-Cas systems.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-3", "is_orphan": false, "predicate": "integrates spacers via", "predicate_id": null, "source": "cas1_cas2_complex", "target": "spacer_acquisition"}, {"description": "Transcription and processing of the CRISPR array yields mature crRNAs.", "evidence": [{"notes": "CRISPR arrays are transcribed and processed into crRNAs; general edge across systems.", "reference": "DOI:10.1016/j.heliyon.2024.e39538"}], "id": "edge-4", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "crispr_array_transcription", "target": "crrna"}, {"description": "crRNA assembles with Cas effector(s) to form the interference-competent effector complex.", "evidence": [{"notes": "Effector-crRNA complexes drive the RNA-guided interference pathways.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-5", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "crrna", "target": "crrna_effector_complex"}, {"description": "The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.", "evidence": [{"notes": "Effector-crRNA complexes perform RNA-guided interference against invading targets; high-level interference edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-6", "is_orphan": false, "predicate": "cleaves", "predicate_id": null, "source": "crrna_effector_complex", "target": "invading_nucleic_acid"}, {"description": "Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.", "evidence": [{"notes": "CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids; broad ecological selection edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "id": "edge-7", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "phage_plasmid_pressure", "target": "crispr_trait"}, {"description": "crRNA-guided interference by the effector complex realizes the adaptive-defense trait.", "evidence": [{"notes": "The connector is scoped to the interference branch and does not universalize one effector subtype.", "reference": "DOI:10.5483/bmbrep.2023-0050", "snippet": "Effector-crRNA complexes perform RNA-guided interference against invading targets"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crrna_effector_complex", "target": "crispr_trait"}, {"description": "Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.", "evidence": [{"notes": "The primary study directly tests the Cas1-Cas2 adaptation complex; this branch is not projected onto interference-only systems.", "reference": "DOI:10.1038/nsmb.2820", "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition"}], "id": "edge-9", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cas1_cas2_complex", "target": "crispr_trait"}], "evidence_rows": [{"description": "Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.", "edge_id": "edge-1", "evidence": [{"notes": "Makarova et al. classify type II CRISPR-Cas systems by Cas9 content; the protein example is restricted to this branch.", "reference": "DOI:10.1038/s41579-019-0299-x"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Cas9 effector protein", "source_grounding": "InterPro:IPR028629", "target": "CRISPR-Cas system", "target_grounding": "traitmech:000094"}, {"description": "CRISPR-Cas mounts sequence-specific defense against invading genetic elements.", "edge_id": "edge-2", "evidence": [{"notes": "Barrangou \u0026 Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.", "reference": "DOI:10.1016/j.molcel.2014.03.011"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "CRISPR-Cas system", "source_grounding": "traitmech:000094", "target": "defense response to virus", "target_grounding": "GO:0051607"}, {"description": "Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.", "edge_id": "edge-3", "evidence": [{"notes": "Cas1-Cas2 complexes function as molecular recorders to integrate spacers; core adaptation edge, broad across canonical CRISPR-Cas systems.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "integrates spacers via", "predicate_id": null, "source": "Cas1-Cas2 complex", "source_grounding": null, "target": "spacer acquisition (adaptation)", "target_grounding": null}, {"description": "Transcription and processing of the CRISPR array yields mature crRNAs.", "edge_id": "edge-4", "evidence": [{"notes": "CRISPR arrays are transcribed and processed into crRNAs; general edge across systems.", "reference": "DOI:10.1016/j.heliyon.2024.e39538"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "CRISPR array transcription and processing", "source_grounding": null, "target": "crRNA", "target_grounding": null}, {"description": "crRNA assembles with Cas effector(s) to form the interference-competent effector complex.", "edge_id": "edge-5", "evidence": [{"notes": "Effector-crRNA complexes drive the RNA-guided interference pathways.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "guides", "predicate_id": null, "source": "crRNA", "source_grounding": null, "target": "crRNA-Cas effector complex", "target_grounding": null}, {"description": "The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.", "edge_id": "edge-6", "evidence": [{"notes": "Effector-crRNA complexes perform RNA-guided interference against invading targets; high-level interference edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "cleaves", "predicate_id": null, "source": "crRNA-Cas effector complex", "source_grounding": null, "target": "invading nucleic acid target", "target_grounding": null}, {"description": "Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.", "edge_id": "edge-7", "evidence": [{"notes": "CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids; broad ecological selection edge.", "reference": "DOI:10.5483/bmbrep.2023-0050"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "phage and plasmid pressure", "source_grounding": null, "target": "CRISPR-Cas system", "target_grounding": "traitmech:000094"}, {"description": "crRNA-guided interference by the effector complex realizes the adaptive-defense trait.", "edge_id": "edge-8", "evidence": [{"notes": "The connector is scoped to the interference branch and does not universalize one effector subtype.", "reference": "DOI:10.5483/bmbrep.2023-0050", "snippet": "Effector-crRNA complexes perform RNA-guided interference against invading targets"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crRNA-Cas effector complex", "source_grounding": null, "target": "CRISPR-Cas system", "target_grounding": "traitmech:000094"}, {"description": "Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.", "edge_id": "edge-9", "evidence": [{"notes": "The primary study directly tests the Cas1-Cas2 adaptation complex; this branch is not projected onto interference-only systems.", "reference": "DOI:10.1038/nsmb.2820", "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Cas1-Cas2 complex", "source_grounding": null, "target": "CRISPR-Cas system", "target_grounding": "traitmech:000094"}], "graph_id": "crispr_adaptive_immunity", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cas1-Cas2 integrase complex that captures and integrates new spacers.", "grounding": null, "id": "cas1_cas2_complex", "is_orphan": false, "label": "Cas1-Cas2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA-guided type II CRISPR endonuclease that cleaves complementary target DNA.", "grounding": "InterPro:IPR028629", "id": "cas9_effector", "is_orphan": false, "label": "Cas9 effector protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The primary biochemical study purified S. pyogenes Cas9 and established dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.", "reference": "DOI:10.1126/science.1225829", "snippet": "Cas9 endonuclease family can be programmed"}], "gene_symbol": "cas9", "protein_label": "CRISPR-associated endonuclease Cas9", "retrieved_on": "2026-08-25", "role": "S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.", "sequence_version": 1, "taxon_id": "NCBITaxon:301447", "taxon_label": "Streptococcus pyogenes serotype M1", "uniprot_id": "UniProtKB:Q99ZW2"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the CRISPR array and processing of the precursor into mature crRNAs.", "grounding": null, "id": "crispr_array_transcription", "is_orphan": false, "label": "CRISPR array transcription and processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of CRISPR arrays and Cas proteins for adaptive immunity.", "grounding": "traitmech:000094", "id": "crispr_trait", "is_orphan": false, "label": "CRISPR-Cas system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Mature CRISPR RNA that guides Cas effectors to complementary targets.", "grounding": null, "id": "crrna", "is_orphan": false, "label": "crRNA", "node_type": "RNA", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Ribonucleoprotein complex of crRNA and Cas effector(s) performing interference.", "grounding": null, "id": "crrna_effector_complex", "is_orphan": false, "label": "crRNA-Cas effector complex", "node_type": "RNA", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of invading viral or plasmid nucleic acids.", "grounding": "GO:0051607", "id": "defense_response_to_virus", "is_orphan": false, "label": "defense response to virus", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Foreign DNA or RNA from phages, plasmids, or other mobile genetic elements.", "grounding": null, "id": "invading_nucleic_acid", "is_orphan": false, "label": "invading nucleic acid target", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Selective pressure from invading bacteriophages and plasmids.", "grounding": null, "id": "phage_plasmid_pressure", "is_orphan": false, "label": "phage and plasmid pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Integration of invader-derived fragments as new spacers into the CRISPR array.", "grounding": null, "id": "spacer_acquisition", "is_orphan": false, "label": "spacer acquisition (adaptation)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The primary biochemical study purified S. pyogenes Cas9 and established dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.", "reference": "DOI:10.1126/science.1225829", "snippet": "Cas9 endonuclease family can be programmed"}], "gene_symbol": "cas9", "node_id": "cas9_effector", "node_label": "Cas9 effector protein", "protein_label": "CRISPR-associated endonuclease Cas9", "retrieved_on": "2026-08-25", "role": "S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.", "sequence_version": 1, "taxon_id": "NCBITaxon:301447", "taxon_label": "Streptococcus pyogenes serotype M1", "uniprot_id": "UniProtKB:Q99ZW2"}], "scope_notes": "The protein example anchors the experimentally resolved S. pyogenes type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and the Cas9 accession is not presented as an example of every CRISPR-Cas type.", "scope_status": "MECHANISTIC", "title": "CRISPR-Cas adaptive immunity against invading nucleic acids"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -998,13 +1027,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 07:55 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

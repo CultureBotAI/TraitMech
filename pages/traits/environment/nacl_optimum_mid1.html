@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>NaCl optimum mid1</h1>
     <p class="curie"><code>METPO:1000466</code> · CLASS · REVIEWED</p>
 
@@ -79,8 +90,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>seawater-like NaCl</strong>
+
             <span class="edge-predicate">engages</span>
             <strong>modest osmoadaptation</strong>
+
 
             <p>Seawater-like NaCl engages a moderate osmoadaptive program.</p>
             <ul>
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>modest osmoadaptation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>NaCl optimum mid1</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000466" rel="nofollow noreferrer"><code>METPO:1000466</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>A modest osmoadaptive program yields a 1–3% NaCl-optimum setpoint.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>NaCl optimum mid1</strong>
+            <a href="https://w3id.org/metpo/1000466" rel="nofollow noreferrer"><code>METPO:1000466</code></a>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
+            <a href="https://w3id.org/metpo/1000333" rel="nofollow noreferrer"><code>METPO:1000333</code></a>
             <code>rdfs:subClassOf</code>
             <p>NaCl optimum mid1 is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>NaCl optimum mid1</strong>
+            <a href="https://w3id.org/metpo/1000466" rel="nofollow noreferrer"><code>METPO:1000466</code></a>
             <span class="edge-predicate">defines</span>
             <strong>slight halophile / halotolerant physiology</strong>
-            <code>METPO:2007500</code>
+
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>slight halophile / halotolerant physiology</strong>
+
             <span class="edge-predicate">associated with</span>
             <strong>salt-in osmoregulation strategy</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Slight-halophile physiology is broadly associated with the salt-in (K+ accumulation) strategy.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>slight halophile / halotolerant physiology</strong>
+
             <span class="edge-predicate">associated with</span>
             <strong>compatible-solute osmoregulation strategy</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Slight-halophile physiology is broadly associated with the compatible-solute (salt-out) strategy.</p>
             <ul>
 
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>elevated external NaCl</strong>
+
             <span class="edge-predicate">induces accumulation of</span>
             <strong>glycine betaine</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17750" rel="nofollow noreferrer"><code>CHEBI:17750</code></a>
 
             <p>Rising external NaCl increases intracellular glycine betaine.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>elevated external NaCl</strong>
+
             <span class="edge-predicate">induces accumulation of</span>
             <strong>L-proline</strong>
+
 
             <p>Rising external NaCl increases intracellular L-proline.</p>
             <ul>
@@ -891,7 +918,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking modest osmoadaptive activity at seawater-like NaCl to a 1\u20133% (w/v) NaCl-optimum (slight halophile).", "edges": [{"description": "Seawater-like NaCl engages a moderate osmoadaptive program.", "evidence": [{"notes": "Supports seawater-range NaCl as the context for slight-halophile optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "seawater_nacl", "target": "modest_osmoadaptation"}, {"description": "A modest osmoadaptive program yields a 1\u20133% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 1\u20133% optimum as the slight-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "modest_osmoadaptation", "target": "nacl_optimum_mid1_trait"}, {"description": "NaCl optimum mid1 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 1\u20133% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_mid1_trait", "target": "nacl_optimum"}, {"description": "A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.", "evidence": [{"notes": "\"slight halophiles (0.2-0.5 M or 1-3% NaCl)\" - supports trait scope/boundary.", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-4", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "nacl_optimum_mid1_trait", "target": "slight_halophile_physiology"}, {"description": "Slight-halophile physiology is broadly associated with the salt-in (K+ accumulation) strategy.", "evidence": [{"notes": "\"The salt-in strategy involves maintaining a high intracellular concentration of inorganic salts, mainly potassium\" - general mechanism across halotolerant/halophilic microbes.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "id": "edge-5", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight_halophile_physiology", "target": "salt_in_strategy"}, {"description": "Slight-halophile physiology is broadly associated with the compatible-solute (salt-out) strategy.", "evidence": [{"notes": "\"The salt-out strategy relies on biosynthesis or uptake of compatible solutes\" - general osmoadaptation mechanism.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "id": "edge-6", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight_halophile_physiology", "target": "compatible_solute_strategy"}, {"description": "Rising external NaCl increases intracellular glycine betaine.", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - directional relationship is broadly applicable.", "reference": "DOI:10.1128/aem.00145-24"}], "id": "edge-7", "is_orphan": false, "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated_nacl", "target": "glycine_betaine"}, {"description": "Rising external NaCl increases intracellular L-proline.", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - proline is a general osmolyte.", "reference": "DOI:10.1128/aem.00145-24"}], "id": "edge-8", "is_orphan": false, "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated_nacl", "target": "l_proline"}], "evidence_rows": [{"description": "Seawater-like NaCl engages a moderate osmoadaptive program.", "edge_id": "edge-1", "evidence": [{"notes": "Supports seawater-range NaCl as the context for slight-halophile optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "predicate": "engages", "predicate_id": null, "source": "seawater-like NaCl", "target": "modest osmoadaptation"}, {"description": "A modest osmoadaptive program yields a 1\u20133% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20133% optimum as the slight-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "modest osmoadaptation", "target": "NaCl optimum mid1"}, {"description": "NaCl optimum mid1 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 1\u20133% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum mid1", "target": "NaCl optimum"}, {"description": "A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.", "edge_id": "edge-4", "evidence": [{"notes": "\"slight halophiles (0.2-0.5 M or 1-3% NaCl)\" - supports trait scope/boundary.", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "NaCl optimum mid1", "target": "slight halophile / halotolerant physiology"}, {"description": "Slight-halophile physiology is broadly associated with the salt-in (K+ accumulation) strategy.", "edge_id": "edge-5", "evidence": [{"notes": "\"The salt-in strategy involves maintaining a high intracellular concentration of inorganic salts, mainly potassium\" - general mechanism across halotolerant/halophilic microbes.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight halophile / halotolerant physiology", "target": "salt-in osmoregulation strategy"}, {"description": "Slight-halophile physiology is broadly associated with the compatible-solute (salt-out) strategy.", "edge_id": "edge-6", "evidence": [{"notes": "\"The salt-out strategy relies on biosynthesis or uptake of compatible solutes\" - general osmoadaptation mechanism.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight halophile / halotolerant physiology", "target": "compatible-solute osmoregulation strategy"}, {"description": "Rising external NaCl increases intracellular glycine betaine.", "edge_id": "edge-7", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - directional relationship is broadly applicable.", "reference": "DOI:10.1128/aem.00145-24"}], "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated external NaCl", "target": "glycine betaine"}, {"description": "Rising external NaCl increases intracellular L-proline.", "edge_id": "edge-8", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - proline is a general osmolyte.", "reference": "DOI:10.1128/aem.00145-24"}], "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated external NaCl", "target": "L-proline"}], "graph_id": "nacl_optimum_mid1_slight_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Biosynthesis or uptake of small organic osmolytes (salt-out strategy) to offset osmotic stress.", "grounding": null, "id": "compatible_solute_strategy", "is_orphan": false, "label": "compatible-solute osmoregulation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Increased external NaCl concentration imposing osmotic stress.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated external NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:17750) accumulated under osmotic stress.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:17203) accumulated under osmotic stress.", "grounding": null, "id": "l_proline", "is_orphan": false, "label": "L-proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Compatible-solute accumulation and ion homeostasis tuned for seawater-range NaCl.", "grounding": null, "id": "modest_osmoadaptation", "is_orphan": false, "label": "modest osmoadaptation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 1\u20133% w/v.", "grounding": "METPO:1000466", "id": "nacl_optimum_mid1_trait", "is_orphan": false, "label": "NaCl optimum mid1", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of inorganic ions (notably K+) and exclusion of Na+ to balance external salinity.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in osmoregulation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Marine or estuarine external NaCl ~1\u20133% w/v.", "grounding": null, "id": "seawater_nacl", "is_orphan": false, "label": "seawater-like NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physiology of microbes with best growth at ~1-3% NaCl.", "grounding": null, "id": "slight_halophile_physiology", "is_orphan": false, "label": "slight halophile / halotolerant physiology", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-optimum-mid1 slight-halophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking modest osmoadaptive activity at seawater-like NaCl to a 1\u20133% (w/v) NaCl-optimum (slight halophile).", "edges": [{"description": "Seawater-like NaCl engages a moderate osmoadaptive program.", "evidence": [{"notes": "Supports seawater-range NaCl as the context for slight-halophile optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "seawater_nacl", "target": "modest_osmoadaptation"}, {"description": "A modest osmoadaptive program yields a 1\u20133% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 1\u20133% optimum as the slight-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "modest_osmoadaptation", "target": "nacl_optimum_mid1_trait"}, {"description": "NaCl optimum mid1 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 1\u20133% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_mid1_trait", "target": "nacl_optimum"}, {"description": "A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.", "evidence": [{"notes": "\"slight halophiles (0.2-0.5 M or 1-3% NaCl)\" - supports trait scope/boundary.", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-4", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "nacl_optimum_mid1_trait", "target": "slight_halophile_physiology"}, {"description": "Slight-halophile physiology is broadly associated with the salt-in (K+ accumulation) strategy.", "evidence": [{"notes": "\"The salt-in strategy involves maintaining a high intracellular concentration of inorganic salts, mainly potassium\" - general mechanism across halotolerant/halophilic microbes.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "id": "edge-5", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight_halophile_physiology", "target": "salt_in_strategy"}, {"description": "Slight-halophile physiology is broadly associated with the compatible-solute (salt-out) strategy.", "evidence": [{"notes": "\"The salt-out strategy relies on biosynthesis or uptake of compatible solutes\" - general osmoadaptation mechanism.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "id": "edge-6", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight_halophile_physiology", "target": "compatible_solute_strategy"}, {"description": "Rising external NaCl increases intracellular glycine betaine.", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - directional relationship is broadly applicable.", "reference": "DOI:10.1128/aem.00145-24"}], "id": "edge-7", "is_orphan": false, "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated_nacl", "target": "glycine_betaine"}, {"description": "Rising external NaCl increases intracellular L-proline.", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - proline is a general osmolyte.", "reference": "DOI:10.1128/aem.00145-24"}], "id": "edge-8", "is_orphan": false, "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated_nacl", "target": "l_proline"}], "evidence_rows": [{"description": "Seawater-like NaCl engages a moderate osmoadaptive program.", "edge_id": "edge-1", "evidence": [{"notes": "Supports seawater-range NaCl as the context for slight-halophile optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "predicate": "engages", "predicate_id": null, "source": "seawater-like NaCl", "source_grounding": null, "target": "modest osmoadaptation", "target_grounding": null}, {"description": "A modest osmoadaptive program yields a 1\u20133% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20133% optimum as the slight-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "slight halophile"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "modest osmoadaptation", "source_grounding": null, "target": "NaCl optimum mid1", "target_grounding": "METPO:1000466"}, {"description": "NaCl optimum mid1 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 1\u20133% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum mid1", "source_grounding": "METPO:1000466", "target": "NaCl optimum", "target_grounding": "METPO:1000333"}, {"description": "A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.", "edge_id": "edge-4", "evidence": [{"notes": "\"slight halophiles (0.2-0.5 M or 1-3% NaCl)\" - supports trait scope/boundary.", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "NaCl optimum mid1", "source_grounding": "METPO:1000466", "target": "slight halophile / halotolerant physiology", "target_grounding": null}, {"description": "Slight-halophile physiology is broadly associated with the salt-in (K+ accumulation) strategy.", "edge_id": "edge-5", "evidence": [{"notes": "\"The salt-in strategy involves maintaining a high intracellular concentration of inorganic salts, mainly potassium\" - general mechanism across halotolerant/halophilic microbes.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight halophile / halotolerant physiology", "source_grounding": null, "target": "salt-in osmoregulation strategy", "target_grounding": null}, {"description": "Slight-halophile physiology is broadly associated with the compatible-solute (salt-out) strategy.", "edge_id": "edge-6", "evidence": [{"notes": "\"The salt-out strategy relies on biosynthesis or uptake of compatible solutes\" - general osmoadaptation mechanism.", "reference": "DOI:10.3389/frmbi.2023.1329925"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "slight halophile / halotolerant physiology", "source_grounding": null, "target": "compatible-solute osmoregulation strategy", "target_grounding": null}, {"description": "Rising external NaCl increases intracellular glycine betaine.", "edge_id": "edge-7", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - directional relationship is broadly applicable.", "reference": "DOI:10.1128/aem.00145-24"}], "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated external NaCl", "source_grounding": null, "target": "glycine betaine", "target_grounding": "CHEBI:17750"}, {"description": "Rising external NaCl increases intracellular L-proline.", "edge_id": "edge-8", "evidence": [{"notes": "\"The intracellular content of compatible solutes, including glycine betaine, glutamate, and proline, increases with rising salinity levels\" - proline is a general osmolyte.", "reference": "DOI:10.1128/aem.00145-24"}], "predicate": "induces accumulation of", "predicate_id": null, "source": "elevated external NaCl", "source_grounding": null, "target": "L-proline", "target_grounding": null}], "graph_id": "nacl_optimum_mid1_slight_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Biosynthesis or uptake of small organic osmolytes (salt-out strategy) to offset osmotic stress.", "grounding": null, "id": "compatible_solute_strategy", "is_orphan": false, "label": "compatible-solute osmoregulation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Increased external NaCl concentration imposing osmotic stress.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated external NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:17750) accumulated under osmotic stress.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:17203) accumulated under osmotic stress.", "grounding": null, "id": "l_proline", "is_orphan": false, "label": "L-proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Compatible-solute accumulation and ion homeostasis tuned for seawater-range NaCl.", "grounding": null, "id": "modest_osmoadaptation", "is_orphan": false, "label": "modest osmoadaptation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 1\u20133% w/v.", "grounding": "METPO:1000466", "id": "nacl_optimum_mid1_trait", "is_orphan": false, "label": "NaCl optimum mid1", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of inorganic ions (notably K+) and exclusion of Na+ to balance external salinity.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in osmoregulation strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Marine or estuarine external NaCl ~1\u20133% w/v.", "grounding": null, "id": "seawater_nacl", "is_orphan": false, "label": "seawater-like NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physiology of microbes with best growth at ~1-3% NaCl.", "grounding": null, "id": "slight_halophile_physiology", "is_orphan": false, "label": "slight halophile / halotolerant physiology", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-optimum-mid1 slight-halophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -911,13 +938,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

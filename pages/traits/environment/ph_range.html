@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>pH range</h1>
     <p class="curie"><code>METPO:1000332</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>external pH</strong>
+
             <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            <code>METPO:2007500</code>
+
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>External pH defines the axis over which the growth window is bounded.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>acid tolerance</strong>
+
             <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            <code>METPO:2007500</code>
+
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>Acid tolerance sets the lower bound of the pH growth window.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>alkaline tolerance</strong>
+
             <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            <code>METPO:2007500</code>
+
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>Alkaline tolerance sets the upper bound of the pH growth window.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>bounded pH growth window</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>pH range</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000332" rel="nofollow noreferrer"><code>METPO:1000332</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>The bounded pH growth window manifests the pH-range phenotype.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>transmembrane pH gradient (ΔpH)</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>bounded pH growth window</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The transmembrane pH gradient sets whether cytoplasmic pH can be maintained across the external pH range.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>membrane potential (Δψ)</strong>
+
             <span class="edge-predicate">compensates for</span>
             <strong>external pH</strong>
+
 
             <p>Adjustment or reversal of the membrane-potential PMF component offsets extreme external pH stress.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>cytoplasmic pH homeostasis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
             <span class="edge-predicate">enables</span>
             <strong>bounded pH growth window</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Keeping cytoplasmic pH compatible with protein function enables growth across the external pH range.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>membrane proton impermeability</strong>
+
             <span class="edge-predicate">extends</span>
             <strong>acid tolerance</strong>
+
 
             <p>Reduced proton leak helps maintain cytoplasmic pH and extends growth to lower external pH.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>Mrp Na+/H+ antiporter activity</strong>
+
             <span class="edge-predicate">supports</span>
             <strong>alkaline tolerance</strong>
+
 
             <p>Na+/H+ exchange imports protons and is a principal strategy for alkaline pH homeostasis.</p>
             <ul>
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>amino-acid decarboxylation</strong>
+
             <span class="edge-predicate">alkalinizes</span>
             <strong>cytoplasmic pH homeostasis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
 
             <p>Glutamate or arginine decarboxylation consumes intracellular protons, supporting cytoplasmic pH at acidic external pH.</p>
             <ul>
@@ -951,7 +982,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking acid- and alkaline-tolerance to the bounded span of growth-supporting external pH.", "edges": [{"description": "External pH defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external_ph", "target": "bounded_growth_window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid_tolerance", "target": "bounded_growth_window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "ph_range_trait"}, {"description": "The transmembrane pH gradient sets whether cytoplasmic pH can be maintained across the external pH range.", "evidence": [{"notes": "PMF architecture (\u0394\u03c8 \u2212 59 \u0394pH) determines the range of pHout over which bacteria can tolerate or grow.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ph_gradient", "target": "bounded_growth_window"}, {"description": "Adjustment or reversal of the membrane-potential PMF component offsets extreme external pH stress.", "evidence": [{"notes": "Under strong pH stress the orientation of a PMF component can reverse to maintain homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "compensates for", "predicate_id": null, "source": "membrane_potential", "target": "external_ph"}, {"description": "Keeping cytoplasmic pH compatible with protein function enables growth across the external pH range.", "evidence": [{"notes": "Bacteria maintain a distinct cytoplasmic pH required for protein function, bounding the phenotype.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "bounded_growth_window"}, {"description": "Reduced proton leak helps maintain cytoplasmic pH and extends growth to lower external pH.", "evidence": [{"notes": "Modification of membrane lipid composition to reduce proton permeability is a general acid-stress mechanism.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "id": "edge-8", "is_orphan": false, "predicate": "extends", "predicate_id": null, "source": "membrane_proton_impermeability", "target": "acid_tolerance"}, {"description": "Na+/H+ exchange imports protons and is a principal strategy for alkaline pH homeostasis.", "evidence": [{"notes": "Na+/H+ antiport is the principal strategy for cytoplasmic pH homeostasis at high external pH.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-9", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "mrp_antiporter_activity", "target": "alkaline_tolerance"}, {"description": "Glutamate or arginine decarboxylation consumes intracellular protons, supporting cytoplasmic pH at acidic external pH.", "evidence": [{"notes": "Decarboxylation of glutamate or arginine is a recurring proton-consuming acid-response module.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "id": "edge-10", "is_orphan": false, "predicate": "alkalinizes", "predicate_id": null, "source": "amino_acid_decarboxylation", "target": "cytoplasmic_ph_homeostasis"}], "evidence_rows": [{"description": "External pH defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external pH", "target": "bounded pH growth window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid tolerance", "target": "bounded pH growth window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline tolerance", "target": "bounded pH growth window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded pH growth window", "target": "pH range"}, {"description": "The transmembrane pH gradient sets whether cytoplasmic pH can be maintained across the external pH range.", "edge_id": "edge-5", "evidence": [{"notes": "PMF architecture (\u0394\u03c8 \u2212 59 \u0394pH) determines the range of pHout over which bacteria can tolerate or grow.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transmembrane pH gradient (\u0394pH)", "target": "bounded pH growth window"}, {"description": "Adjustment or reversal of the membrane-potential PMF component offsets extreme external pH stress.", "edge_id": "edge-6", "evidence": [{"notes": "Under strong pH stress the orientation of a PMF component can reverse to maintain homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "compensates for", "predicate_id": null, "source": "membrane potential (\u0394\u03c8)", "target": "external pH"}, {"description": "Keeping cytoplasmic pH compatible with protein function enables growth across the external pH range.", "edge_id": "edge-7", "evidence": [{"notes": "Bacteria maintain a distinct cytoplasmic pH required for protein function, bounding the phenotype.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "bounded pH growth window"}, {"description": "Reduced proton leak helps maintain cytoplasmic pH and extends growth to lower external pH.", "edge_id": "edge-8", "evidence": [{"notes": "Modification of membrane lipid composition to reduce proton permeability is a general acid-stress mechanism.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "predicate": "extends", "predicate_id": null, "source": "membrane proton impermeability", "target": "acid tolerance"}, {"description": "Na+/H+ exchange imports protons and is a principal strategy for alkaline pH homeostasis.", "edge_id": "edge-9", "evidence": [{"notes": "Na+/H+ antiport is the principal strategy for cytoplasmic pH homeostasis at high external pH.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "supports", "predicate_id": null, "source": "Mrp Na+/H+ antiporter activity", "target": "alkaline tolerance"}, {"description": "Glutamate or arginine decarboxylation consumes intracellular protons, supporting cytoplasmic pH at acidic external pH.", "edge_id": "edge-10", "evidence": [{"notes": "Decarboxylation of glutamate or arginine is a recurring proton-consuming acid-response module.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "predicate": "alkalinizes", "predicate_id": null, "source": "amino-acid decarboxylation", "target": "cytoplasmic pH homeostasis"}], "graph_id": "ph_range_bounded_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an inward H+ gradient at low external pH.", "grounding": null, "id": "acid_tolerance", "is_orphan": false, "label": "acid tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an outward H+ gradient at high external pH.", "grounding": null, "id": "alkaline_tolerance", "is_orphan": false, "label": "alkaline tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Glutamate or arginine decarboxylation that consumes intracellular protons and alkalinizes the cytoplasm.", "grounding": null, "id": "amino_acid_decarboxylation", "is_orphan": false, "label": "amino-acid decarboxylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span of external pH between the minimum and maximum that supports growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded pH growth window", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a near-constant cytoplasmic pH compatible with macromolecular function.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electrical component of the proton motive force across the cell membrane.", "grounding": null, "id": "membrane_potential", "is_orphan": false, "label": "membrane potential (\u0394\u03c8)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced proton leak across the cell membrane that limits passive H+ influx.", "grounding": null, "id": "membrane_proton_impermeability", "is_orphan": false, "label": "membrane proton impermeability", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Cation/proton antiport that imports protons while exporting Na+ to support pH homeostasis.", "grounding": null, "id": "mrp_antiporter_activity", "is_orphan": false, "label": "Mrp Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Difference between external and cytoplasmic pH, a component of the proton motive force.", "grounding": null, "id": "ph_gradient", "is_orphan": false, "label": "transmembrane pH gradient (\u0394pH)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range_trait", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "pH-range bounded cytoplasmic homeostasis"}];
+  var graphs = [{"description": "DOI-backed graph linking acid- and alkaline-tolerance to the bounded span of growth-supporting external pH.", "edges": [{"description": "External pH defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external_ph", "target": "bounded_growth_window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid_tolerance", "target": "bounded_growth_window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "ph_range_trait"}, {"description": "The transmembrane pH gradient sets whether cytoplasmic pH can be maintained across the external pH range.", "evidence": [{"notes": "PMF architecture (\u0394\u03c8 \u2212 59 \u0394pH) determines the range of pHout over which bacteria can tolerate or grow.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ph_gradient", "target": "bounded_growth_window"}, {"description": "Adjustment or reversal of the membrane-potential PMF component offsets extreme external pH stress.", "evidence": [{"notes": "Under strong pH stress the orientation of a PMF component can reverse to maintain homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "compensates for", "predicate_id": null, "source": "membrane_potential", "target": "external_ph"}, {"description": "Keeping cytoplasmic pH compatible with protein function enables growth across the external pH range.", "evidence": [{"notes": "Bacteria maintain a distinct cytoplasmic pH required for protein function, bounding the phenotype.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "bounded_growth_window"}, {"description": "Reduced proton leak helps maintain cytoplasmic pH and extends growth to lower external pH.", "evidence": [{"notes": "Modification of membrane lipid composition to reduce proton permeability is a general acid-stress mechanism.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "id": "edge-8", "is_orphan": false, "predicate": "extends", "predicate_id": null, "source": "membrane_proton_impermeability", "target": "acid_tolerance"}, {"description": "Na+/H+ exchange imports protons and is a principal strategy for alkaline pH homeostasis.", "evidence": [{"notes": "Na+/H+ antiport is the principal strategy for cytoplasmic pH homeostasis at high external pH.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-9", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "mrp_antiporter_activity", "target": "alkaline_tolerance"}, {"description": "Glutamate or arginine decarboxylation consumes intracellular protons, supporting cytoplasmic pH at acidic external pH.", "evidence": [{"notes": "Decarboxylation of glutamate or arginine is a recurring proton-consuming acid-response module.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "id": "edge-10", "is_orphan": false, "predicate": "alkalinizes", "predicate_id": null, "source": "amino_acid_decarboxylation", "target": "cytoplasmic_ph_homeostasis"}], "evidence_rows": [{"description": "External pH defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external pH", "source_grounding": null, "target": "bounded pH growth window", "target_grounding": null}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid tolerance", "source_grounding": null, "target": "bounded pH growth window", "target_grounding": null}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline tolerance", "source_grounding": null, "target": "bounded pH growth window", "target_grounding": null}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded pH growth window", "source_grounding": null, "target": "pH range", "target_grounding": "METPO:1000332"}, {"description": "The transmembrane pH gradient sets whether cytoplasmic pH can be maintained across the external pH range.", "edge_id": "edge-5", "evidence": [{"notes": "PMF architecture (\u0394\u03c8 \u2212 59 \u0394pH) determines the range of pHout over which bacteria can tolerate or grow.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transmembrane pH gradient (\u0394pH)", "source_grounding": null, "target": "bounded pH growth window", "target_grounding": null}, {"description": "Adjustment or reversal of the membrane-potential PMF component offsets extreme external pH stress.", "edge_id": "edge-6", "evidence": [{"notes": "Under strong pH stress the orientation of a PMF component can reverse to maintain homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "compensates for", "predicate_id": null, "source": "membrane potential (\u0394\u03c8)", "source_grounding": null, "target": "external pH", "target_grounding": null}, {"description": "Keeping cytoplasmic pH compatible with protein function enables growth across the external pH range.", "edge_id": "edge-7", "evidence": [{"notes": "Bacteria maintain a distinct cytoplasmic pH required for protein function, bounding the phenotype.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "source_grounding": "GO:0051453", "target": "bounded pH growth window", "target_grounding": null}, {"description": "Reduced proton leak helps maintain cytoplasmic pH and extends growth to lower external pH.", "edge_id": "edge-8", "evidence": [{"notes": "Modification of membrane lipid composition to reduce proton permeability is a general acid-stress mechanism.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "predicate": "extends", "predicate_id": null, "source": "membrane proton impermeability", "source_grounding": null, "target": "acid tolerance", "target_grounding": null}, {"description": "Na+/H+ exchange imports protons and is a principal strategy for alkaline pH homeostasis.", "edge_id": "edge-9", "evidence": [{"notes": "Na+/H+ antiport is the principal strategy for cytoplasmic pH homeostasis at high external pH.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "supports", "predicate_id": null, "source": "Mrp Na+/H+ antiporter activity", "source_grounding": null, "target": "alkaline tolerance", "target_grounding": null}, {"description": "Glutamate or arginine decarboxylation consumes intracellular protons, supporting cytoplasmic pH at acidic external pH.", "edge_id": "edge-10", "evidence": [{"notes": "Decarboxylation of glutamate or arginine is a recurring proton-consuming acid-response module.", "reference": "DOI:10.3389/fmicb.2020.556140"}], "predicate": "alkalinizes", "predicate_id": null, "source": "amino-acid decarboxylation", "source_grounding": null, "target": "cytoplasmic pH homeostasis", "target_grounding": "GO:0051453"}], "graph_id": "ph_range_bounded_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an inward H+ gradient at low external pH.", "grounding": null, "id": "acid_tolerance", "is_orphan": false, "label": "acid tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an outward H+ gradient at high external pH.", "grounding": null, "id": "alkaline_tolerance", "is_orphan": false, "label": "alkaline tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Glutamate or arginine decarboxylation that consumes intracellular protons and alkalinizes the cytoplasm.", "grounding": null, "id": "amino_acid_decarboxylation", "is_orphan": false, "label": "amino-acid decarboxylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span of external pH between the minimum and maximum that supports growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded pH growth window", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a near-constant cytoplasmic pH compatible with macromolecular function.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electrical component of the proton motive force across the cell membrane.", "grounding": null, "id": "membrane_potential", "is_orphan": false, "label": "membrane potential (\u0394\u03c8)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced proton leak across the cell membrane that limits passive H+ influx.", "grounding": null, "id": "membrane_proton_impermeability", "is_orphan": false, "label": "membrane proton impermeability", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Cation/proton antiport that imports protons while exporting Na+ to support pH homeostasis.", "grounding": null, "id": "mrp_antiporter_activity", "is_orphan": false, "label": "Mrp Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Difference between external and cytoplasmic pH, a component of the proton motive force.", "grounding": null, "id": "ph_gradient", "is_orphan": false, "label": "transmembrane pH gradient (\u0394pH)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range_trait", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "pH-range bounded cytoplasmic homeostasis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -971,13 +1002,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

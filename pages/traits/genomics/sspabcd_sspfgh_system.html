@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>SspABCD-SspFGH system</h1>
     <p class="curie"><code>traitmech:000223</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>SspABCD-SspFGH locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Ssp single-stranded DNA phosphorothioation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The SspABCD-family modification module installs single-stranded PT marks on host DNA.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>SspABCD-SspFGH locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>SspFGH-dependent non-PT DNA damage</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent restriction activity against DNA lacking PT marks.</p>
             <ul>
 
@@ -143,9 +158,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Ssp single-stranded DNA phosphorothioation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Ssp PT self/nonself discrimination</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate self DNA from invading non-PT DNA.</p>
             <ul>
 
@@ -160,9 +177,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Ssp PT self/nonself discrimination</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>SspFGH-dependent non-PT DNA damage</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Ssp PT self/nonself discrimination leads to SspFGH-dependent damage of non-PT phage DNA.</p>
             <ul>
 
@@ -177,9 +196,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>SspFGH-dependent non-PT DNA damage</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage DNA replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>SspFGH-dependent damage of phage DNA suppresses phage DNA replication.</p>
             <ul>
 
@@ -194,9 +215,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>SspFGH-dependent non-PT DNA damage</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>SspABCD-SspFGH system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000223</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage defense trait.</p>
             <ul>
 
@@ -211,8 +234,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>SspABCD-SspFGH system</strong>
+            <code>traitmech:000223</code>
             <span class="edge-predicate">is a</span>
             <strong>phosphorothioate defense system</strong>
+            <code>traitmech:000213</code>
             <code>rdfs:subClassOf</code>
             <p>SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.</p>
             <ul>
@@ -283,11 +308,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -375,6 +464,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -708,7 +802,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking an SspABCD-SspFGH locus to single-stranded host DNA phosphorothioation, SspFGH-dependent damage of non-phosphorothioated phage DNA, and reduced phage DNA replication.", "edges": [{"description": "The SspABCD-family modification module installs single-stranded PT marks on host DNA.", "evidence": [{"notes": "Wang et al. support single-stranded host-DNA phosphorothioation by the FF-93 IscS-SspBCD module.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "IscS and SspBCD in FF-93 also confer DNA PT modification at 5\u0027-CPSCA-3\u0027 consensus sequences"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sspabcd_sspfgh_locus", "target": "ssp_single_stranded_dna_phosphorothioation"}, {"description": "SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent restriction activity against DNA lacking PT marks.", "evidence": [{"notes": "Wang et al. support the paired Ssp phosphorothioation and SspFGH restriction architecture.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based defense barrier"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sspabcd_sspfgh_locus", "target": "sspfgh_non_pt_dna_damage"}, {"description": "SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate self DNA from invading non-PT DNA.", "evidence": [{"notes": "Wang et al. support PT-dependent self/nonself discrimination by the SspFGH barrier.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH employs ssDNA PT modification as a recognition tag to introduce damage to non-PT-modified phage genomes"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ssp_single_stranded_dna_phosphorothioation", "target": "ssp_pt_self_nonself_discrimination"}, {"description": "Ssp PT self/nonself discrimination leads to SspFGH-dependent damage of non-PT phage DNA.", "evidence": [{"notes": "Wang et al. connect SspFGH non-PT DNA damage to the restriction output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH introduces damage to non-PT DNA and consequently impairs phage DNA replication"}], "id": "edge-4", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "ssp_pt_self_nonself_discrimination", "target": "sspfgh_non_pt_dna_damage"}, {"description": "SspFGH-dependent damage of phage DNA suppresses phage DNA replication.", "evidence": [{"notes": "Wang et al. directly connect the SspFGH barrier to impaired phage DNA replication.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "its DNA replication was markedly suppressed in the presence of IscS-SspBCD-SspFGH"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "sspfgh_non_pt_dna_damage", "target": "phage_dna_replication"}, {"description": "SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage defense trait.", "evidence": [{"notes": "Wang et al. support phage restriction as the SspFGH system output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH provided moderate levels of protection against phages"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sspfgh_non_pt_dna_damage", "target": "sspabcd_sspfgh_system_trait"}, {"description": "SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.", "evidence": [{"notes": "Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based defense systems.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "new type of ssDNA PT-based SspABCD-SspFGH defense system"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "sspabcd_sspfgh_system_trait", "target": "phosphorothioate_defense_system_trait"}], "evidence_rows": [{"description": "The SspABCD-family modification module installs single-stranded PT marks on host DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. support single-stranded host-DNA phosphorothioation by the FF-93 IscS-SspBCD module.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "IscS and SspBCD in FF-93 also confer DNA PT modification at 5\u0027-CPSCA-3\u0027 consensus sequences"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SspABCD-SspFGH locus", "target": "Ssp single-stranded DNA phosphorothioation"}, {"description": "SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent restriction activity against DNA lacking PT marks.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. support the paired Ssp phosphorothioation and SspFGH restriction architecture.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based defense barrier"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SspABCD-SspFGH locus", "target": "SspFGH-dependent non-PT DNA damage"}, {"description": "SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate self DNA from invading non-PT DNA.", "edge_id": "edge-3", "evidence": [{"notes": "Wang et al. support PT-dependent self/nonself discrimination by the SspFGH barrier.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH employs ssDNA PT modification as a recognition tag to introduce damage to non-PT-modified phage genomes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Ssp single-stranded DNA phosphorothioation", "target": "Ssp PT self/nonself discrimination"}, {"description": "Ssp PT self/nonself discrimination leads to SspFGH-dependent damage of non-PT phage DNA.", "edge_id": "edge-4", "evidence": [{"notes": "Wang et al. connect SspFGH non-PT DNA damage to the restriction output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH introduces damage to non-PT DNA and consequently impairs phage DNA replication"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Ssp PT self/nonself discrimination", "target": "SspFGH-dependent non-PT DNA damage"}, {"description": "SspFGH-dependent damage of phage DNA suppresses phage DNA replication.", "edge_id": "edge-5", "evidence": [{"notes": "Wang et al. directly connect the SspFGH barrier to impaired phage DNA replication.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "its DNA replication was markedly suppressed in the presence of IscS-SspBCD-SspFGH"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "SspFGH-dependent non-PT DNA damage", "target": "phage DNA replication"}, {"description": "SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage defense trait.", "edge_id": "edge-6", "evidence": [{"notes": "Wang et al. support phage restriction as the SspFGH system output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH provided moderate levels of protection against phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "SspFGH-dependent non-PT DNA damage", "target": "SspABCD-SspFGH system"}, {"description": "SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based defense systems.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "new type of ssDNA PT-based SspABCD-SspFGH defense system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "SspABCD-SspFGH system", "target": "phosphorothioate defense system"}], "graph_id": "sspabcd_sspfgh_non_pt_dna_damage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host cell entry.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded phosphorothioate-based phage defense system.", "grounding": "traitmech:000213", "id": "phosphorothioate_defense_system_trait", "is_orphan": false, "label": "phosphorothioate defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Use of Ssp phosphorothioate marks to distinguish phosphorothioated host DNA from invading DNA that lacks host phosphorothioate marks.", "grounding": null, "id": "ssp_pt_self_nonself_discrimination", "is_orphan": false, "label": "Ssp PT self/nonself discrimination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "SspABCD-family installation of single-stranded phosphorothioate marks on host DNA.", "grounding": null, "id": "ssp_single_stranded_dna_phosphorothioation", "is_orphan": false, "label": "Ssp single-stranded DNA phosphorothioation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An Ssp phosphorothioation-dependent restriction locus pairing an SspABCD-family DNA modification module with SspFGH restriction activity.", "grounding": null, "id": "sspabcd_sspfgh_locus", "is_orphan": false, "label": "SspABCD-SspFGH locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded SspABCD-SspFGH restriction-modification defense system.", "grounding": "traitmech:000223", "id": "sspabcd_sspfgh_system_trait", "is_orphan": false, "label": "SspABCD-SspFGH system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "SspFGH-dependent damage of DNA molecules that lack host single-stranded phosphorothioate marks.", "grounding": null, "id": "sspfgh_non_pt_dna_damage", "is_orphan": false, "label": "SspFGH-dependent non-PT DNA damage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures SspABCD-SspFGH restriction at the system level without asserting one universal host taxon, PT frequency, a DNA-damage chemistry, a complete SspFGH subunit cycle, or relationship to SspE and archaeal PT antiviral systems.", "scope_status": "NONMECHANISTIC", "title": "SspABCD-SspFGH systems couple Ssp PT marks to foreign-DNA damage"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking an SspABCD-SspFGH locus to single-stranded host DNA phosphorothioation, SspFGH-dependent damage of non-phosphorothioated phage DNA, and reduced phage DNA replication.", "edges": [{"description": "The SspABCD-family modification module installs single-stranded PT marks on host DNA.", "evidence": [{"notes": "Wang et al. support single-stranded host-DNA phosphorothioation by the FF-93 IscS-SspBCD module.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "IscS and SspBCD in FF-93 also confer DNA PT modification at 5\u0027-CPSCA-3\u0027 consensus sequences"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sspabcd_sspfgh_locus", "target": "ssp_single_stranded_dna_phosphorothioation"}, {"description": "SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent restriction activity against DNA lacking PT marks.", "evidence": [{"notes": "Wang et al. support the paired Ssp phosphorothioation and SspFGH restriction architecture.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based defense barrier"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sspabcd_sspfgh_locus", "target": "sspfgh_non_pt_dna_damage"}, {"description": "SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate self DNA from invading non-PT DNA.", "evidence": [{"notes": "Wang et al. support PT-dependent self/nonself discrimination by the SspFGH barrier.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH employs ssDNA PT modification as a recognition tag to introduce damage to non-PT-modified phage genomes"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ssp_single_stranded_dna_phosphorothioation", "target": "ssp_pt_self_nonself_discrimination"}, {"description": "Ssp PT self/nonself discrimination leads to SspFGH-dependent damage of non-PT phage DNA.", "evidence": [{"notes": "Wang et al. connect SspFGH non-PT DNA damage to the restriction output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH introduces damage to non-PT DNA and consequently impairs phage DNA replication"}], "id": "edge-4", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "ssp_pt_self_nonself_discrimination", "target": "sspfgh_non_pt_dna_damage"}, {"description": "SspFGH-dependent damage of phage DNA suppresses phage DNA replication.", "evidence": [{"notes": "Wang et al. directly connect the SspFGH barrier to impaired phage DNA replication.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "its DNA replication was markedly suppressed in the presence of IscS-SspBCD-SspFGH"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "sspfgh_non_pt_dna_damage", "target": "phage_dna_replication"}, {"description": "SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage defense trait.", "evidence": [{"notes": "Wang et al. support phage restriction as the SspFGH system output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH provided moderate levels of protection against phages"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "sspfgh_non_pt_dna_damage", "target": "sspabcd_sspfgh_system_trait"}, {"description": "SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.", "evidence": [{"notes": "Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based defense systems.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "new type of ssDNA PT-based SspABCD-SspFGH defense system"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "sspabcd_sspfgh_system_trait", "target": "phosphorothioate_defense_system_trait"}], "evidence_rows": [{"description": "The SspABCD-family modification module installs single-stranded PT marks on host DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. support single-stranded host-DNA phosphorothioation by the FF-93 IscS-SspBCD module.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "IscS and SspBCD in FF-93 also confer DNA PT modification at 5\u0027-CPSCA-3\u0027 consensus sequences"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SspABCD-SspFGH locus", "source_grounding": null, "target": "Ssp single-stranded DNA phosphorothioation", "target_grounding": null}, {"description": "SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent restriction activity against DNA lacking PT marks.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. support the paired Ssp phosphorothioation and SspFGH restriction architecture.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based defense barrier"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SspABCD-SspFGH locus", "source_grounding": null, "target": "SspFGH-dependent non-PT DNA damage", "target_grounding": null}, {"description": "SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate self DNA from invading non-PT DNA.", "edge_id": "edge-3", "evidence": [{"notes": "Wang et al. support PT-dependent self/nonself discrimination by the SspFGH barrier.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH employs ssDNA PT modification as a recognition tag to introduce damage to non-PT-modified phage genomes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Ssp single-stranded DNA phosphorothioation", "source_grounding": null, "target": "Ssp PT self/nonself discrimination", "target_grounding": null}, {"description": "Ssp PT self/nonself discrimination leads to SspFGH-dependent damage of non-PT phage DNA.", "edge_id": "edge-4", "evidence": [{"notes": "Wang et al. connect SspFGH non-PT DNA damage to the restriction output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH introduces damage to non-PT DNA and consequently impairs phage DNA replication"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Ssp PT self/nonself discrimination", "source_grounding": null, "target": "SspFGH-dependent non-PT DNA damage", "target_grounding": null}, {"description": "SspFGH-dependent damage of phage DNA suppresses phage DNA replication.", "edge_id": "edge-5", "evidence": [{"notes": "Wang et al. directly connect the SspFGH barrier to impaired phage DNA replication.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "its DNA replication was markedly suppressed in the presence of IscS-SspBCD-SspFGH"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "SspFGH-dependent non-PT DNA damage", "source_grounding": null, "target": "phage DNA replication", "target_grounding": null}, {"description": "SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage defense trait.", "edge_id": "edge-6", "evidence": [{"notes": "Wang et al. support phage restriction as the SspFGH system output.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "SspFGH provided moderate levels of protection against phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "SspFGH-dependent non-PT DNA damage", "source_grounding": null, "target": "SspABCD-SspFGH system", "target_grounding": "traitmech:000223"}, {"description": "SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based defense systems.", "reference": "DOI:10.1128/mbio.00613-21", "snippet": "new type of ssDNA PT-based SspABCD-SspFGH defense system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "SspABCD-SspFGH system", "source_grounding": "traitmech:000223", "target": "phosphorothioate defense system", "target_grounding": "traitmech:000213"}], "graph_id": "sspabcd_sspfgh_non_pt_dna_damage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host cell entry.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded phosphorothioate-based phage defense system.", "grounding": "traitmech:000213", "id": "phosphorothioate_defense_system_trait", "is_orphan": false, "label": "phosphorothioate defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Use of Ssp phosphorothioate marks to distinguish phosphorothioated host DNA from invading DNA that lacks host phosphorothioate marks.", "grounding": null, "id": "ssp_pt_self_nonself_discrimination", "is_orphan": false, "label": "Ssp PT self/nonself discrimination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "SspABCD-family installation of single-stranded phosphorothioate marks on host DNA.", "grounding": null, "id": "ssp_single_stranded_dna_phosphorothioation", "is_orphan": false, "label": "Ssp single-stranded DNA phosphorothioation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An Ssp phosphorothioation-dependent restriction locus pairing an SspABCD-family DNA modification module with SspFGH restriction activity.", "grounding": null, "id": "sspabcd_sspfgh_locus", "is_orphan": false, "label": "SspABCD-SspFGH locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded SspABCD-SspFGH restriction-modification defense system.", "grounding": "traitmech:000223", "id": "sspabcd_sspfgh_system_trait", "is_orphan": false, "label": "SspABCD-SspFGH system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "SspFGH-dependent damage of DNA molecules that lack host single-stranded phosphorothioate marks.", "grounding": null, "id": "sspfgh_non_pt_dna_damage", "is_orphan": false, "label": "SspFGH-dependent non-PT DNA damage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures SspABCD-SspFGH restriction at the system level without asserting one universal host taxon, PT frequency, a DNA-damage chemistry, a complete SspFGH subunit cycle, or relationship to SspE and archaeal PT antiviral systems.", "scope_status": "NONMECHANISTIC", "title": "SspABCD-SspFGH systems couple Ssp PT marks to foreign-DNA damage"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -728,13 +822,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 17:06 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

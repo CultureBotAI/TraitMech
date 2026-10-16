@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>temperature delta</h1>
     <p class="curie"><code>METPO:1000303</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>thermal-adaptation flexibility</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>temperature tolerance breadth</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Thermal-adaptation flexibility enables broad temperature tolerance.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>temperature tolerance breadth</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>temperature delta</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000303" rel="nofollow noreferrer"><code>METPO:1000303</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>The breadth between minimum and maximum growth-supporting ambient temperatures manifests the temperature-delta phenotype.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>unsaturated fatty acids</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27208" rel="nofollow noreferrer"><code>CHEBI:27208</code></a>
             <span class="edge-predicate">increases</span>
             <strong>membrane fluidity</strong>
-            <code>RO:0002213</code>
+            <a href="https://w3id.org/metpo/1007505" rel="nofollow noreferrer"><code>METPO:1007505</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane transition temperature, and increase fluidity.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>unsaturated fatty acids</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27208" rel="nofollow noreferrer"><code>CHEBI:27208</code></a>
             <span class="edge-predicate">supports</span>
             <strong>membrane function and growth at low temperature</strong>
+
 
             <p>Incorporation of more unsaturated fatty acids optimizes membrane function for growth at lower temperatures, extending the low-temperature end of the range.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>anteiso-branched-chain fatty acids</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>membrane fluidity</strong>
-            <code>RO:0002213</code>
+            <a href="https://w3id.org/metpo/1007505" rel="nofollow noreferrer"><code>METPO:1007505</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Anteiso-branched-chain fatty acids disrupt lipid packing and lower the membrane transition temperature, increasing fluidity.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>anteiso-branched-chain fatty acids</strong>
+
             <span class="edge-predicate">required for</span>
             <strong>membrane function and growth at low temperature</strong>
+
 
             <p>Membrane function and growth at low temperature require both anteiso-branched-chain fatty acids and unsaturated fatty acids.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>membrane function and growth at low temperature</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>temperature tolerance breadth</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Supporting growth at the low-temperature end widens the span between minimum and maximum growth-supporting temperatures.</p>
             <ul>
 
@@ -886,7 +911,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the flexibility of membrane and enzyme adaptation to the breadth of the temperature growth range (delta = max \u2212 min).", "edges": [{"description": "Thermal-adaptation flexibility enables broad temperature tolerance.", "evidence": [{"notes": "Supports membrane-remodeling flexibility as the basis of broad thermal tolerance.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermal_adaptation_flexibility", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting ambient temperatures manifests the temperature-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint via thermal adaptation across a span.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "temperature_delta_trait"}, {"description": "cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane transition temperature, and increase fluidity.", "evidence": [{"notes": "cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity; foundational and broadly applicable.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Incorporation of more unsaturated fatty acids optimizes membrane function for growth at lower temperatures, extending the low-temperature end of the range.", "evidence": [{"notes": "bacteria respond to decreasing growth temperature by incorporating proportionally more unsaturated fatty acids, optimizing cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-4", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "low_temperature_growth"}, {"description": "Anteiso-branched-chain fatty acids disrupt lipid packing and lower the membrane transition temperature, increasing fluidity.", "evidence": [{"notes": "anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm; generalized across bacteria using branched lipids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "anteiso_branched_chain_fatty_acids", "target": "membrane_fluidity"}, {"description": "Membrane function and growth at low temperature require both anteiso-branched-chain fatty acids and unsaturated fatty acids.", "evidence": [{"notes": "Membrane function/growth at low temperature requires both anteiso-branched-chain fatty acids (a-BCFAs) and unsaturated fatty acids (UFAs).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "anteiso_branched_chain_fatty_acids", "target": "low_temperature_growth"}, {"description": "Supporting growth at the low-temperature end widens the span between minimum and maximum growth-supporting temperatures.", "evidence": [{"notes": "Membrane homeoviscous adaptation extends low-temperature growth, broadening the temperature tolerance span (delta).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "low_temperature_growth", "target": "tolerance_breadth"}], "evidence_rows": [{"description": "Thermal-adaptation flexibility enables broad temperature tolerance.", "edge_id": "edge-1", "evidence": [{"notes": "Supports membrane-remodeling flexibility as the basis of broad thermal tolerance.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermal-adaptation flexibility", "target": "temperature tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting ambient temperatures manifests the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the trait endpoint via thermal adaptation across a span.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "temperature tolerance breadth", "target": "temperature delta"}, {"description": "cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane transition temperature, and increase fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity; foundational and broadly applicable.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated fatty acids", "target": "membrane fluidity"}, {"description": "Incorporation of more unsaturated fatty acids optimizes membrane function for growth at lower temperatures, extending the low-temperature end of the range.", "edge_id": "edge-4", "evidence": [{"notes": "bacteria respond to decreasing growth temperature by incorporating proportionally more unsaturated fatty acids, optimizing cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "supports", "predicate_id": null, "source": "unsaturated fatty acids", "target": "membrane function and growth at low temperature"}, {"description": "Anteiso-branched-chain fatty acids disrupt lipid packing and lower the membrane transition temperature, increasing fluidity.", "edge_id": "edge-5", "evidence": [{"notes": "anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm; generalized across bacteria using branched lipids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "anteiso-branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Membrane function and growth at low temperature require both anteiso-branched-chain fatty acids and unsaturated fatty acids.", "edge_id": "edge-6", "evidence": [{"notes": "Membrane function/growth at low temperature requires both anteiso-branched-chain fatty acids (a-BCFAs) and unsaturated fatty acids (UFAs).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "required for", "predicate_id": null, "source": "anteiso-branched-chain fatty acids", "target": "membrane function and growth at low temperature"}, {"description": "Supporting growth at the low-temperature end widens the span between minimum and maximum growth-supporting temperatures.", "edge_id": "edge-7", "evidence": [{"notes": "Membrane homeoviscous adaptation extends low-temperature growth, broadening the temperature tolerance span (delta).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane function and growth at low temperature", "target": "temperature tolerance breadth"}], "graph_id": "temperature_delta_thermal_flexibility", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Branched-chain fatty acids that disrupt lipid packing and lower the membrane transition temperature.", "grounding": null, "id": "anteiso_branched_chain_fatty_acids", "is_orphan": false, "label": "anteiso-branched-chain fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of membrane function supporting growth at the low-temperature end of the range.", "grounding": null, "id": "low_temperature_growth", "is_orphan": false, "label": "membrane function and growth at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the lipid bilayer; higher fluidity corresponds to lower lipid order and lower transition temperature.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta_trait", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel membrane lipid composition and enzyme repertoire across a wide span of ambient temperatures.", "grounding": null, "id": "thermal_adaptation_flexibility", "is_orphan": false, "label": "thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting ambient temperatures.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "temperature tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fatty acids bearing cis double bonds incorporated into membrane lipids.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-delta thermal-adaptation flexibility"}];
+  var graphs = [{"description": "DOI-backed graph linking the flexibility of membrane and enzyme adaptation to the breadth of the temperature growth range (delta = max \u2212 min).", "edges": [{"description": "Thermal-adaptation flexibility enables broad temperature tolerance.", "evidence": [{"notes": "Supports membrane-remodeling flexibility as the basis of broad thermal tolerance.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermal_adaptation_flexibility", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting ambient temperatures manifests the temperature-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint via thermal adaptation across a span.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "temperature_delta_trait"}, {"description": "cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane transition temperature, and increase fluidity.", "evidence": [{"notes": "cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity; foundational and broadly applicable.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Incorporation of more unsaturated fatty acids optimizes membrane function for growth at lower temperatures, extending the low-temperature end of the range.", "evidence": [{"notes": "bacteria respond to decreasing growth temperature by incorporating proportionally more unsaturated fatty acids, optimizing cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-4", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "low_temperature_growth"}, {"description": "Anteiso-branched-chain fatty acids disrupt lipid packing and lower the membrane transition temperature, increasing fluidity.", "evidence": [{"notes": "anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm; generalized across bacteria using branched lipids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "anteiso_branched_chain_fatty_acids", "target": "membrane_fluidity"}, {"description": "Membrane function and growth at low temperature require both anteiso-branched-chain fatty acids and unsaturated fatty acids.", "evidence": [{"notes": "Membrane function/growth at low temperature requires both anteiso-branched-chain fatty acids (a-BCFAs) and unsaturated fatty acids (UFAs).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "anteiso_branched_chain_fatty_acids", "target": "low_temperature_growth"}, {"description": "Supporting growth at the low-temperature end widens the span between minimum and maximum growth-supporting temperatures.", "evidence": [{"notes": "Membrane homeoviscous adaptation extends low-temperature growth, broadening the temperature tolerance span (delta).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "low_temperature_growth", "target": "tolerance_breadth"}], "evidence_rows": [{"description": "Thermal-adaptation flexibility enables broad temperature tolerance.", "edge_id": "edge-1", "evidence": [{"notes": "Supports membrane-remodeling flexibility as the basis of broad thermal tolerance.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermal-adaptation flexibility", "source_grounding": null, "target": "temperature tolerance breadth", "target_grounding": null}, {"description": "The breadth between minimum and maximum growth-supporting ambient temperatures manifests the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the trait endpoint via thermal adaptation across a span.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "temperature tolerance breadth", "source_grounding": null, "target": "temperature delta", "target_grounding": "METPO:1000303"}, {"description": "cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane transition temperature, and increase fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity; foundational and broadly applicable.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated fatty acids", "source_grounding": "CHEBI:27208", "target": "membrane fluidity", "target_grounding": "METPO:1007505"}, {"description": "Incorporation of more unsaturated fatty acids optimizes membrane function for growth at lower temperatures, extending the low-temperature end of the range.", "edge_id": "edge-4", "evidence": [{"notes": "bacteria respond to decreasing growth temperature by incorporating proportionally more unsaturated fatty acids, optimizing cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "supports", "predicate_id": null, "source": "unsaturated fatty acids", "source_grounding": "CHEBI:27208", "target": "membrane function and growth at low temperature", "target_grounding": null}, {"description": "Anteiso-branched-chain fatty acids disrupt lipid packing and lower the membrane transition temperature, increasing fluidity.", "edge_id": "edge-5", "evidence": [{"notes": "anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm; generalized across bacteria using branched lipids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "anteiso-branched-chain fatty acids", "source_grounding": null, "target": "membrane fluidity", "target_grounding": "METPO:1007505"}, {"description": "Membrane function and growth at low temperature require both anteiso-branched-chain fatty acids and unsaturated fatty acids.", "edge_id": "edge-6", "evidence": [{"notes": "Membrane function/growth at low temperature requires both anteiso-branched-chain fatty acids (a-BCFAs) and unsaturated fatty acids (UFAs).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "required for", "predicate_id": null, "source": "anteiso-branched-chain fatty acids", "source_grounding": null, "target": "membrane function and growth at low temperature", "target_grounding": null}, {"description": "Supporting growth at the low-temperature end widens the span between minimum and maximum growth-supporting temperatures.", "edge_id": "edge-7", "evidence": [{"notes": "Membrane homeoviscous adaptation extends low-temperature growth, broadening the temperature tolerance span (delta).", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane function and growth at low temperature", "source_grounding": null, "target": "temperature tolerance breadth", "target_grounding": null}], "graph_id": "temperature_delta_thermal_flexibility", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Branched-chain fatty acids that disrupt lipid packing and lower the membrane transition temperature.", "grounding": null, "id": "anteiso_branched_chain_fatty_acids", "is_orphan": false, "label": "anteiso-branched-chain fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of membrane function supporting growth at the low-temperature end of the range.", "grounding": null, "id": "low_temperature_growth", "is_orphan": false, "label": "membrane function and growth at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the lipid bilayer; higher fluidity corresponds to lower lipid order and lower transition temperature.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta_trait", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel membrane lipid composition and enzyme repertoire across a wide span of ambient temperatures.", "grounding": null, "id": "thermal_adaptation_flexibility", "is_orphan": false, "label": "thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting ambient temperatures.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "temperature tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fatty acids bearing cis double bonds incorporated into membrane lipids.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-delta thermal-adaptation flexibility"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -906,13 +931,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

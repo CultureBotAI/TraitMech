@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Detocs system</h1>
     <p class="curie"><code>traitmech:000302</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Detocs locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>phage-associated ATP and dATP degradation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors to phage-associated ATP and dATP degradation and discovered Detocs from ATP nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB, and dtcC-family profiles.</p>
             <ul>
 
@@ -168,9 +181,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>phage-associated ATP and dATP degradation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>halted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>ATP and dATP degradation during infection contributes to halted phage propagation.</p>
             <ul>
 
@@ -185,9 +200,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>halted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Detocs system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000302</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Detocs-associated ATP and dATP depletion realizes the Detocs system trait.</p>
             <ul>
 
@@ -214,8 +231,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Detocs system</strong>
+            <code>traitmech:000302</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Detocs system possession is a phage-defense-system trait.</p>
             <ul>
@@ -292,11 +311,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -420,6 +503,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -753,7 +841,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a Detocs locus to phage-associated ATP and dATP degradation, halted phage propagation, and the Detocs system trait without asserting the direct phage trigger or component-specific activation mechanism.", "edges": [{"description": "Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors to phage-associated ATP and dATP degradation and discovered Detocs from ATP nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB, and dtcC-family profiles.", "evidence": [{"notes": "Rousset et al. identify Detocs from homologs of immune ATP nucleosidase domains.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "By analyzing homologs of the immune ATP nucleosidase domain, we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "Rousset et al. support ATP and dATP degradation as a phage-triggered bacterial immune output.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "upon phage infection, degrade cellular adenosine triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"}, {"notes": "The DefenseFinder rules table models the core Detocs system with required dtcA and dtcB profiles and an optional dtcC profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Detocs\tDetocs\t2\t2\tDetocs__dtcA, Detocs__dtcB\tDetocs__dtcC"}, {"notes": "The DefenseFinder HMM inventory records dtcA under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcA                                     | Detocs__dtcA                                     | Detocs                 | Custom                  | 30     |"}, {"notes": "The DefenseFinder HMM inventory records dtcB under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcB                                     | Detocs__dtcB                                     | Detocs                 | Custom                  | 40     |"}, {"notes": "The DefenseFinder HMM inventory records dtcC under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcC                                     | Detocs__dtcC                                     | Detocs                 | Custom                  | 40     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "detocs_locus", "target": "phage_associated_atp_degradation"}, {"description": "ATP and dATP degradation during infection contributes to halted phage propagation.", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to halted phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_associated_atp_degradation", "target": "halted_phage_propagation"}, {"description": "Detocs-associated ATP and dATP depletion realizes the Detocs system trait.", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to inhibition of phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}, {"notes": "Rousset et al. support Detocs as a named bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "halted_phage_propagation", "target": "detocs_system_trait"}, {"description": "Detocs system possession is a phage-defense-system trait.", "evidence": [{"notes": "Rousset et al. place Detocs in a bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "detocs_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors to phage-associated ATP and dATP degradation and discovered Detocs from ATP nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB, and dtcC-family profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. identify Detocs from homologs of immune ATP nucleosidase domains.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "By analyzing homologs of the immune ATP nucleosidase domain, we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "Rousset et al. support ATP and dATP degradation as a phage-triggered bacterial immune output.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "upon phage infection, degrade cellular adenosine triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"}, {"notes": "The DefenseFinder rules table models the core Detocs system with required dtcA and dtcB profiles and an optional dtcC profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Detocs\tDetocs\t2\t2\tDetocs__dtcA, Detocs__dtcB\tDetocs__dtcC"}, {"notes": "The DefenseFinder HMM inventory records dtcA under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcA                                     | Detocs__dtcA                                     | Detocs                 | Custom                  | 30     |"}, {"notes": "The DefenseFinder HMM inventory records dtcB under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcB                                     | Detocs__dtcB                                     | Detocs                 | Custom                  | 40     |"}, {"notes": "The DefenseFinder HMM inventory records dtcC under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcC                                     | Detocs__dtcC                                     | Detocs                 | Custom                  | 40     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Detocs locus", "target": "phage-associated ATP and dATP degradation"}, {"description": "ATP and dATP degradation during infection contributes to halted phage propagation.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to halted phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage-associated ATP and dATP degradation", "target": "halted phage propagation"}, {"description": "Detocs-associated ATP and dATP depletion realizes the Detocs system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to inhibition of phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}, {"notes": "Rousset et al. support Detocs as a named bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "halted phage propagation", "target": "Detocs system"}, {"description": "Detocs system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Rousset et al. place Detocs in a bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Detocs system", "target": "phage defense system"}], "graph_id": "detocs_locus_depletes_atp", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A Detocs anti-phage defense locus represented in DefenseFinder by dtcA and dtcB profiles plus an optional dtcC-family profile.", "grounding": null, "id": "detocs_locus", "is_orphan": false, "label": "Detocs locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Detocs ATP-depletion phage-defense system.", "grounding": "traitmech:000302", "id": "detocs_system_trait", "is_orphan": false, "label": "Detocs system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Blockage of bacteriophage propagation after ATP-and-dATP degradation during infection.", "grounding": null, "id": "halted_phage_propagation", "is_orphan": false, "label": "halted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP nucleosidase-mediated degradation of cellular ATP and dATP during phage infection.", "grounding": null, "id": "phage_associated_atp_degradation", "is_orphan": false, "label": "phage-associated ATP and dATP degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Detocs as a named ATP-depletion anti-phage system with DtcA, DtcB, and DtcC-family DefenseFinder profiles while leaving the direct phage trigger, component-specific phosphotransfer sequence, DtcC-variant effects, and universal system boundary unresolved.", "scope_status": "NONMECHANISTIC", "title": "Detocs loci connect phage infection to ATP depletion"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a Detocs locus to phage-associated ATP and dATP degradation, halted phage propagation, and the Detocs system trait without asserting the direct phage trigger or component-specific activation mechanism.", "edges": [{"description": "Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors to phage-associated ATP and dATP degradation and discovered Detocs from ATP nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB, and dtcC-family profiles.", "evidence": [{"notes": "Rousset et al. identify Detocs from homologs of immune ATP nucleosidase domains.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "By analyzing homologs of the immune ATP nucleosidase domain, we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "Rousset et al. support ATP and dATP degradation as a phage-triggered bacterial immune output.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "upon phage infection, degrade cellular adenosine triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"}, {"notes": "The DefenseFinder rules table models the core Detocs system with required dtcA and dtcB profiles and an optional dtcC profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Detocs\tDetocs\t2\t2\tDetocs__dtcA, Detocs__dtcB\tDetocs__dtcC"}, {"notes": "The DefenseFinder HMM inventory records dtcA under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcA                                     | Detocs__dtcA                                     | Detocs                 | Custom                  | 30     |"}, {"notes": "The DefenseFinder HMM inventory records dtcB under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcB                                     | Detocs__dtcB                                     | Detocs                 | Custom                  | 40     |"}, {"notes": "The DefenseFinder HMM inventory records dtcC under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcC                                     | Detocs__dtcC                                     | Detocs                 | Custom                  | 40     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "detocs_locus", "target": "phage_associated_atp_degradation"}, {"description": "ATP and dATP degradation during infection contributes to halted phage propagation.", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to halted phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_associated_atp_degradation", "target": "halted_phage_propagation"}, {"description": "Detocs-associated ATP and dATP depletion realizes the Detocs system trait.", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to inhibition of phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}, {"notes": "Rousset et al. support Detocs as a named bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "halted_phage_propagation", "target": "detocs_system_trait"}, {"description": "Detocs system possession is a phage-defense-system trait.", "evidence": [{"notes": "Rousset et al. place Detocs in a bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "detocs_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors to phage-associated ATP and dATP degradation and discovered Detocs from ATP nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB, and dtcC-family profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. identify Detocs from homologs of immune ATP nucleosidase domains.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "By analyzing homologs of the immune ATP nucleosidase domain, we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "Rousset et al. support ATP and dATP degradation as a phage-triggered bacterial immune output.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "upon phage infection, degrade cellular adenosine triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"}, {"notes": "The DefenseFinder rules table models the core Detocs system with required dtcA and dtcB profiles and an optional dtcC profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Detocs\tDetocs\t2\t2\tDetocs__dtcA, Detocs__dtcB\tDetocs__dtcC"}, {"notes": "The DefenseFinder HMM inventory records dtcA under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcA                                     | Detocs__dtcA                                     | Detocs                 | Custom                  | 30     |"}, {"notes": "The DefenseFinder HMM inventory records dtcB under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcB                                     | Detocs__dtcB                                     | Detocs                 | Custom                  | 40     |"}, {"notes": "The DefenseFinder HMM inventory records dtcC under the Detocs model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Detocs__dtcC                                     | Detocs__dtcC                                     | Detocs                 | Custom                  | 40     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Detocs locus", "source_grounding": null, "target": "phage-associated ATP and dATP degradation", "target_grounding": null}, {"description": "ATP and dATP degradation during infection contributes to halted phage propagation.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to halted phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage-associated ATP and dATP degradation", "source_grounding": null, "target": "halted phage propagation", "target_grounding": null}, {"description": "Detocs-associated ATP and dATP depletion realizes the Detocs system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Rousset et al. connect ATP and dATP degradation to inhibition of phage propagation.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "ATP and dATP degradation during infection halts phage propagation"}, {"notes": "Rousset et al. support Detocs as a named bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "halted phage propagation", "source_grounding": null, "target": "Detocs system", "target_grounding": "traitmech:000302"}, {"description": "Detocs system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Rousset et al. place Detocs in a bacterial defense-system family.", "reference": "DOI:10.1016/j.cell.2023.07.020", "snippet": "we discover and characterize Detocs, a family of bacterial defense systems"}, {"notes": "The DefenseFinder article registry maps the named Detocs system to the Rousset et al. ATP-cleavage preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Detocs | 10\\.1101/2023\\.01\\.24\\.525353 | A conserved family of immune effectors cleaves cellular ATP upon viral infection"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Detocs system", "source_grounding": "traitmech:000302", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "detocs_locus_depletes_atp", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A Detocs anti-phage defense locus represented in DefenseFinder by dtcA and dtcB profiles plus an optional dtcC-family profile.", "grounding": null, "id": "detocs_locus", "is_orphan": false, "label": "Detocs locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Detocs ATP-depletion phage-defense system.", "grounding": "traitmech:000302", "id": "detocs_system_trait", "is_orphan": false, "label": "Detocs system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Blockage of bacteriophage propagation after ATP-and-dATP degradation during infection.", "grounding": null, "id": "halted_phage_propagation", "is_orphan": false, "label": "halted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP nucleosidase-mediated degradation of cellular ATP and dATP during phage infection.", "grounding": null, "id": "phage_associated_atp_degradation", "is_orphan": false, "label": "phage-associated ATP and dATP degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Detocs as a named ATP-depletion anti-phage system with DtcA, DtcB, and DtcC-family DefenseFinder profiles while leaving the direct phage trigger, component-specific phosphotransfer sequence, DtcC-variant effects, and universal system boundary unresolved.", "scope_status": "NONMECHANISTIC", "title": "Detocs loci connect phage infection to ATP depletion"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -773,13 +861,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-20 07:11 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

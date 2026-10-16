@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Thoeris system</h1>
     <p class="curie"><code>traitmech:000216</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Thoeris locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Thoeris TIR cADPR-isomer production</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Thoeris locus encodes TIR-domain proteins that produce a cADPR-like signal during phage infection.</p>
             <ul>
 
@@ -120,9 +133,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>phage infection</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>Thoeris TIR cADPR-isomer production</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Phage infection activates production of the Thoeris TIR-domain cADPR-like signal.</p>
             <ul>
 
@@ -137,9 +152,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Thoeris TIR cADPR-isomer production</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>ThsA NAD depletion</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>The Thoeris cADPR-like signal activates ThsA, which then depletes cellular NAD.</p>
             <ul>
 
@@ -154,9 +171,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ThsA NAD depletion</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>ThsA NAD depletion helps inhibit bacteriophage replication.</p>
             <ul>
 
@@ -171,9 +190,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ThsA NAD depletion</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Thoeris system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000216</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>ThsA NAD depletion is the antiviral output that realizes the Thoeris system defense phenotype.</p>
             <ul>
 
@@ -188,8 +209,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Thoeris system</strong>
+            <code>traitmech:000216</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Thoeris system possession is a phage-defense-system trait.</p>
             <ul>
@@ -262,11 +285,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -392,6 +479,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -725,7 +817,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a Thoeris locus to phage-triggered TIR-domain signalling, ThsA-dependent NAD depletion, and inhibition of bacteriophage replication.", "edges": [{"description": "The Thoeris locus encodes TIR-domain proteins that produce a cADPR-like signal during phage infection.", "evidence": [{"notes": "Ofir et al. support Thoeris TIR-domain proteins as phage-triggered cADPR-isomer producers.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thoeris_locus", "target": "thoeris_tir_signal_production"}, {"description": "Phage infection activates production of the Thoeris TIR-domain cADPR-like signal.", "evidence": [{"notes": "Ofir et al. support phage-triggered Thoeris signal production.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_infection", "target": "thoeris_tir_signal_production"}, {"description": "The Thoeris cADPR-like signal activates ThsA, which then depletes cellular NAD.", "evidence": [{"notes": "Ofir et al. connect the TIR-derived signal to ThsA-mediated NAD depletion.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "This molecular signal activates a second protein, ThsA, which then depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD)"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "thoeris_tir_signal_production", "target": "thsa_nad_depletion"}, {"description": "ThsA NAD depletion helps inhibit bacteriophage replication.", "evidence": [{"notes": "Ka et al. place ThsA-linked NAD degradation in Thoeris antiphage resistance.", "reference": "DOI:10.1038/s41467-020-16703-w", "snippet": "highlighting a unique strategy for bacterial antiphage resistance via NAD+ degradation"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "thsa_nad_depletion", "target": "phage_replication"}, {"description": "ThsA NAD depletion is the antiviral output that realizes the Thoeris system defense phenotype.", "evidence": [{"notes": "Ofir et al. support NAD depletion as the Thoeris output that drives abortive infection.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD) and leads to abortive infection and cell death"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "thsa_nad_depletion", "target": "thoeris_system_trait"}, {"description": "Thoeris system possession is a phage-defense-system trait.", "evidence": [{"notes": "Ofir et al. place Thoeris in the bacterial antiphage-defense-system family.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "bacterial anti-phage defence system called Thoeris"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "thoeris_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Thoeris locus encodes TIR-domain proteins that produce a cADPR-like signal during phage infection.", "edge_id": "edge-1", "evidence": [{"notes": "Ofir et al. support Thoeris TIR-domain proteins as phage-triggered cADPR-isomer producers.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Thoeris locus", "target": "Thoeris TIR cADPR-isomer production"}, {"description": "Phage infection activates production of the Thoeris TIR-domain cADPR-like signal.", "edge_id": "edge-2", "evidence": [{"notes": "Ofir et al. support phage-triggered Thoeris signal production.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage infection", "target": "Thoeris TIR cADPR-isomer production"}, {"description": "The Thoeris cADPR-like signal activates ThsA, which then depletes cellular NAD.", "edge_id": "edge-3", "evidence": [{"notes": "Ofir et al. connect the TIR-derived signal to ThsA-mediated NAD depletion.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "This molecular signal activates a second protein, ThsA, which then depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD)"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Thoeris TIR cADPR-isomer production", "target": "ThsA NAD depletion"}, {"description": "ThsA NAD depletion helps inhibit bacteriophage replication.", "edge_id": "edge-4", "evidence": [{"notes": "Ka et al. place ThsA-linked NAD degradation in Thoeris antiphage resistance.", "reference": "DOI:10.1038/s41467-020-16703-w", "snippet": "highlighting a unique strategy for bacterial antiphage resistance via NAD+ degradation"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "ThsA NAD depletion", "target": "phage replication"}, {"description": "ThsA NAD depletion is the antiviral output that realizes the Thoeris system defense phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Ofir et al. support NAD depletion as the Thoeris output that drives abortive infection.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD) and leads to abortive infection and cell death"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ThsA NAD depletion", "target": "Thoeris system"}, {"description": "Thoeris system possession is a phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Ofir et al. place Thoeris in the bacterial antiphage-defense-system family.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "bacterial anti-phage defence system called Thoeris"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Thoeris system", "target": "phage defense system"}], "graph_id": "thoeris_tir_signal_nad_depletion_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry and replication attempt by a bacteriophage inside a bacterial host.", "grounding": null, "id": "phage_infection", "is_orphan": false, "label": "phage infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host-cell entry.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Thoeris antiphage defense locus encoding a ThsA NADase effector and one or more Thoeris TIR-domain sensor proteins.", "grounding": null, "id": "thoeris_locus", "is_orphan": false, "label": "Thoeris locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Thoeris antiphage defense locus.", "grounding": "traitmech:000216", "id": "thoeris_system_trait", "is_orphan": false, "label": "Thoeris system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phage-triggered production of a cyclic-ADP-ribose isomer by Thoeris TIR-domain proteins.", "grounding": null, "id": "thoeris_tir_signal_production", "is_orphan": false, "label": "Thoeris TIR cADPR-isomer production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Thoeris signal-activated ThsA NADase activity that depletes intracellular nicotinamide adenine dinucleotide.", "grounding": null, "id": "thsa_nad_depletion", "is_orphan": false, "label": "ThsA NAD depletion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the characterized Thoeris TIR-signal and ThsA NADase outputs without asserting one universal number of TIR-domain proteins, exact cADPR isomer structure, ThsA oligomeric state, cell-death pathway, or phage trigger across all Thoeris loci.", "scope_status": "NONMECHANISTIC", "title": "Thoeris TIR signalling activates ThsA NAD depletion"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a Thoeris locus to phage-triggered TIR-domain signalling, ThsA-dependent NAD depletion, and inhibition of bacteriophage replication.", "edges": [{"description": "The Thoeris locus encodes TIR-domain proteins that produce a cADPR-like signal during phage infection.", "evidence": [{"notes": "Ofir et al. support Thoeris TIR-domain proteins as phage-triggered cADPR-isomer producers.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thoeris_locus", "target": "thoeris_tir_signal_production"}, {"description": "Phage infection activates production of the Thoeris TIR-domain cADPR-like signal.", "evidence": [{"notes": "Ofir et al. support phage-triggered Thoeris signal production.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_infection", "target": "thoeris_tir_signal_production"}, {"description": "The Thoeris cADPR-like signal activates ThsA, which then depletes cellular NAD.", "evidence": [{"notes": "Ofir et al. connect the TIR-derived signal to ThsA-mediated NAD depletion.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "This molecular signal activates a second protein, ThsA, which then depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD)"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "thoeris_tir_signal_production", "target": "thsa_nad_depletion"}, {"description": "ThsA NAD depletion helps inhibit bacteriophage replication.", "evidence": [{"notes": "Ka et al. place ThsA-linked NAD degradation in Thoeris antiphage resistance.", "reference": "DOI:10.1038/s41467-020-16703-w", "snippet": "highlighting a unique strategy for bacterial antiphage resistance via NAD+ degradation"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "thsa_nad_depletion", "target": "phage_replication"}, {"description": "ThsA NAD depletion is the antiviral output that realizes the Thoeris system defense phenotype.", "evidence": [{"notes": "Ofir et al. support NAD depletion as the Thoeris output that drives abortive infection.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD) and leads to abortive infection and cell death"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "thsa_nad_depletion", "target": "thoeris_system_trait"}, {"description": "Thoeris system possession is a phage-defense-system trait.", "evidence": [{"notes": "Ofir et al. place Thoeris in the bacterial antiphage-defense-system family.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "bacterial anti-phage defence system called Thoeris"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "thoeris_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Thoeris locus encodes TIR-domain proteins that produce a cADPR-like signal during phage infection.", "edge_id": "edge-1", "evidence": [{"notes": "Ofir et al. support Thoeris TIR-domain proteins as phage-triggered cADPR-isomer producers.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Thoeris locus", "source_grounding": null, "target": "Thoeris TIR cADPR-isomer production", "target_grounding": null}, {"description": "Phage infection activates production of the Thoeris TIR-domain cADPR-like signal.", "edge_id": "edge-2", "evidence": [{"notes": "Ofir et al. support phage-triggered Thoeris signal production.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "phage infection triggers Thoeris TIR-domain proteins to produce an isomer of cyclic ADP-ribose"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage infection", "source_grounding": null, "target": "Thoeris TIR cADPR-isomer production", "target_grounding": null}, {"description": "The Thoeris cADPR-like signal activates ThsA, which then depletes cellular NAD.", "edge_id": "edge-3", "evidence": [{"notes": "Ofir et al. connect the TIR-derived signal to ThsA-mediated NAD depletion.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "This molecular signal activates a second protein, ThsA, which then depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD)"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Thoeris TIR cADPR-isomer production", "source_grounding": null, "target": "ThsA NAD depletion", "target_grounding": null}, {"description": "ThsA NAD depletion helps inhibit bacteriophage replication.", "edge_id": "edge-4", "evidence": [{"notes": "Ka et al. place ThsA-linked NAD degradation in Thoeris antiphage resistance.", "reference": "DOI:10.1038/s41467-020-16703-w", "snippet": "highlighting a unique strategy for bacterial antiphage resistance via NAD+ degradation"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "ThsA NAD depletion", "source_grounding": null, "target": "phage replication", "target_grounding": null}, {"description": "ThsA NAD depletion is the antiviral output that realizes the Thoeris system defense phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Ofir et al. support NAD depletion as the Thoeris output that drives abortive infection.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "depletes the cell of the essential molecule nicotinamide adenine dinucleotide (NAD) and leads to abortive infection and cell death"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ThsA NAD depletion", "source_grounding": null, "target": "Thoeris system", "target_grounding": "traitmech:000216"}, {"description": "Thoeris system possession is a phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Ofir et al. place Thoeris in the bacterial antiphage-defense-system family.", "reference": "DOI:10.1038/s41586-021-04098-7", "snippet": "bacterial anti-phage defence system called Thoeris"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Thoeris system", "source_grounding": "traitmech:000216", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "thoeris_tir_signal_nad_depletion_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry and replication attempt by a bacteriophage inside a bacterial host.", "grounding": null, "id": "phage_infection", "is_orphan": false, "label": "phage infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host-cell entry.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Thoeris antiphage defense locus encoding a ThsA NADase effector and one or more Thoeris TIR-domain sensor proteins.", "grounding": null, "id": "thoeris_locus", "is_orphan": false, "label": "Thoeris locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Thoeris antiphage defense locus.", "grounding": "traitmech:000216", "id": "thoeris_system_trait", "is_orphan": false, "label": "Thoeris system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phage-triggered production of a cyclic-ADP-ribose isomer by Thoeris TIR-domain proteins.", "grounding": null, "id": "thoeris_tir_signal_production", "is_orphan": false, "label": "Thoeris TIR cADPR-isomer production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Thoeris signal-activated ThsA NADase activity that depletes intracellular nicotinamide adenine dinucleotide.", "grounding": null, "id": "thsa_nad_depletion", "is_orphan": false, "label": "ThsA NAD depletion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the characterized Thoeris TIR-signal and ThsA NADase outputs without asserting one universal number of TIR-domain proteins, exact cADPR isomer structure, ThsA oligomeric state, cell-death pathway, or phage trigger across all Thoeris loci.", "scope_status": "NONMECHANISTIC", "title": "Thoeris TIR signalling activates ThsA NAD depletion"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -745,13 +837,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 13:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>dissimilatory sulfate reduction</h1>
     <p class="curie"><code>traitmech:000105</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>sulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16189" rel="nofollow noreferrer"><code>CHEBI:16189</code></a>
             <span class="edge-predicate">oxidized to</span>
             <strong>sulfide</strong>
-            <code>METPO:2007405</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15138" rel="nofollow noreferrer"><code>CHEBI:15138</code></a>
+            <a href="https://w3id.org/metpo/2007405" rel="nofollow noreferrer"><code>METPO:2007405</code></a>
             <p>Sulfate is reduced stepwise to sulfide.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dissimilatory sulfate reduction</strong>
+            <code>traitmech:000105</code>
             <span class="edge-predicate">participates in</span>
             <strong>anaerobic respiration</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009061" rel="nofollow noreferrer"><code>GO:0009061</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Sulfate respiration is a major form of anaerobic respiration.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>sulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16189" rel="nofollow noreferrer"><code>CHEBI:16189</code></a>
             <span class="edge-predicate">activated by</span>
             <strong>ATP sulfurylase (Sat)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004781" rel="nofollow noreferrer"><code>GO:0004781</code></a>
 
             <p>Sulfate is activated by ATP sulfurylase (Sat).</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ATP sulfurylase (Sat)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004781" rel="nofollow noreferrer"><code>GO:0004781</code></a>
             <span class="edge-predicate">produces</span>
             <strong>adenosine-5′-phosphosulfate (APS)</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Sat activates sulfate to form APS.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>APS reductase AprAB</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009973" rel="nofollow noreferrer"><code>GO:0009973</code></a>
             <span class="edge-predicate">reduces</span>
             <strong>adenosine-5′-phosphosulfate (APS)</strong>
-            <code>METPO:2007802</code>
+
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>APS reductase AprAB reduces APS to sulfite.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>APS reductase AprAB</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009973" rel="nofollow noreferrer"><code>GO:0009973</code></a>
             <span class="edge-predicate">produces</span>
             <strong>sulfite</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>AprAB reduction of APS yields sulfite.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>DsrAB with DsrC</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>DsrC-trisulfide</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>DsrAB produces a DsrC-trisulfide from sulfite and DsrC.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>DsrMK(JOP) membrane complex</strong>
+
             <span class="edge-predicate">reduces</span>
             <strong>DsrC-trisulfide</strong>
-            <code>METPO:2007802</code>
+
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing sulfide with energy conservation.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>DsrMK(JOP) membrane complex</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>sulfide</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15138" rel="nofollow noreferrer"><code>CHEBI:15138</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Terminal reduction of the DsrC-trisulfide releases sulfide.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>DsrAB with DsrC</strong>
+
             <span class="edge-predicate">marker for</span>
             <strong>sulfate/sulfite-reducing microorganisms</strong>
+
 
             <p>The dissimilatory sulfite reductase encoded by dsrAB is a hallmark of sulfate/sulfite-reducing microorganisms.</p>
             <ul>
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>sulfate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16189" rel="nofollow noreferrer"><code>CHEBI:16189</code></a>
             <span class="edge-predicate">participates in</span>
             <strong>dissimilatory sulfate reduction</strong>
-            <code>biolink:participates_in</code>
+            <code>traitmech:000105</code>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Sulfate participates in dissimilatory sulfate reduction as the alternative terminal electron acceptor.</p>
             <ul>
 
@@ -402,7 +435,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0019420</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0019420" rel="nofollow noreferrer"><code>GO:0019420</code></a></li>
       </ul>
     </div>
 
@@ -431,37 +464,13 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
+          <a href="../../traits/metabolism/thiosulfate_respiration.html">thiosulfate respiration</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/denitrification.html">denitrification</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_manganese_reduction.html">dissimilatory manganese reduction</a>
+          <a href="../../traits/metabolism/chlorate_respiration.html">chlorate respiration</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -473,8 +482,32 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/respiration.html">respiration</a>
-          <span class="sim">0.968</span>
+          <a href="../../traits/metabolism/dissimilatory_manganese_reduction.html">dissimilatory manganese reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/trimethylamine_n_oxide_respiration.html">trimethylamine N-oxide respiration</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/iodate_respiration.html">iodate respiration</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -1030,7 +1063,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking sulfate as terminal electron acceptor to sulfide production in anoxic anaerobic respiration.", "edges": [{"description": "Sulfate is reduced stepwise to sulfide.", "evidence": [{"notes": "Muyzer \u0026 Stams review sulfate-reducing bacteria respiring sulfate to sulfide.", "reference": "DOI:10.1038/nrmicro1892"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfate", "target": "sulfide"}, {"description": "Sulfate respiration is a major form of anaerobic respiration.", "evidence": [{"notes": "Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria within anaerobic respiration.", "reference": "DOI:10.3389/fmicb.2011.00081"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate_reduction_trait", "target": "anaerobic_respiration"}, {"description": "Sulfate is activated by ATP sulfurylase (Sat).", "evidence": [{"notes": "Sulfate is taken up and activated by the enzyme ATP sulfurylase (Sat) to form APS.", "reference": "DOI:10.3390/antiox12030767"}], "id": "edge-3", "is_orphan": false, "predicate": "activated by", "predicate_id": null, "source": "sulfate", "target": "sat_enzyme"}, {"description": "Sat activates sulfate to form APS.", "evidence": [{"notes": "Activated by ATP sulfurylase (Sat) to form adenosine-5\u2032-phosphosulfate (APS).", "reference": "DOI:10.3390/antiox12030767"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "sat_enzyme", "target": "aps"}, {"description": "APS reductase AprAB reduces APS to sulfite.", "evidence": [{"notes": "The APS reductase AprAB reduces APS to sulfite, serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-5", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "aprab_complex", "target": "aps"}, {"description": "AprAB reduction of APS yields sulfite.", "evidence": [{"notes": "APS is reduced to sulfite serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "aprab_complex", "target": "sulfite"}, {"description": "DsrAB produces a DsrC-trisulfide from sulfite and DsrC.", "evidence": [{"notes": "DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "dsrab_dsrc", "target": "dsrc_trisulfide"}, {"description": "DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing sulfide with energy conservation.", "evidence": [{"notes": "DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling DsrC and releasing sulfide while coupling to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "dsrmkjop_complex", "target": "dsrc_trisulfide"}, {"description": "Terminal reduction of the DsrC-trisulfide releases sulfide.", "evidence": [{"notes": "DsrMK(JOP) reduction releases sulfide while coupling this reduction to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "dsrmkjop_complex", "target": "sulfide"}, {"description": "The dissimilatory sulfite reductase encoded by dsrAB is a hallmark of sulfate/sulfite-reducing microorganisms.", "evidence": [{"notes": "A hallmark of SRM is the dissimilatory sulfite reductase encoded by the genes dsrAB.", "reference": "DOI:10.1093/femsre/fuad058"}], "id": "edge-10", "is_orphan": false, "predicate": "marker for", "predicate_id": null, "source": "dsrab_dsrc", "target": "srm"}, {"description": "Sulfate participates in dissimilatory sulfate reduction as the alternative terminal electron acceptor.", "evidence": [{"notes": "Verified against the public PMC full text; this bridges the named respiratory trait to its existing Sat-Apr-Dsr pathway.", "reference": "DOI:10.3390/antiox12030767", "snippet": "Sulfate can be used as an alternative terminal electron acceptor under anaerobic conditions"}], "id": "edge-11", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate", "target": "sulfate_reduction_trait"}], "evidence_rows": [{"description": "Sulfate is reduced stepwise to sulfide.", "edge_id": "edge-1", "evidence": [{"notes": "Muyzer \u0026 Stams review sulfate-reducing bacteria respiring sulfate to sulfide.", "reference": "DOI:10.1038/nrmicro1892"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfate", "target": "sulfide"}, {"description": "Sulfate respiration is a major form of anaerobic respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria within anaerobic respiration.", "reference": "DOI:10.3389/fmicb.2011.00081"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "dissimilatory sulfate reduction", "target": "anaerobic respiration"}, {"description": "Sulfate is activated by ATP sulfurylase (Sat).", "edge_id": "edge-3", "evidence": [{"notes": "Sulfate is taken up and activated by the enzyme ATP sulfurylase (Sat) to form APS.", "reference": "DOI:10.3390/antiox12030767"}], "predicate": "activated by", "predicate_id": null, "source": "sulfate", "target": "ATP sulfurylase (Sat)"}, {"description": "Sat activates sulfate to form APS.", "edge_id": "edge-4", "evidence": [{"notes": "Activated by ATP sulfurylase (Sat) to form adenosine-5\u2032-phosphosulfate (APS).", "reference": "DOI:10.3390/antiox12030767"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP sulfurylase (Sat)", "target": "adenosine-5\u2032-phosphosulfate (APS)"}, {"description": "APS reductase AprAB reduces APS to sulfite.", "edge_id": "edge-5", "evidence": [{"notes": "The APS reductase AprAB reduces APS to sulfite, serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "APS reductase AprAB", "target": "adenosine-5\u2032-phosphosulfate (APS)"}, {"description": "AprAB reduction of APS yields sulfite.", "edge_id": "edge-6", "evidence": [{"notes": "APS is reduced to sulfite serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "APS reductase AprAB", "target": "sulfite"}, {"description": "DsrAB produces a DsrC-trisulfide from sulfite and DsrC.", "edge_id": "edge-7", "evidence": [{"notes": "DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "DsrAB with DsrC", "target": "DsrC-trisulfide"}, {"description": "DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing sulfide with energy conservation.", "edge_id": "edge-8", "evidence": [{"notes": "DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling DsrC and releasing sulfide while coupling to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "DsrMK(JOP) membrane complex", "target": "DsrC-trisulfide"}, {"description": "Terminal reduction of the DsrC-trisulfide releases sulfide.", "edge_id": "edge-9", "evidence": [{"notes": "DsrMK(JOP) reduction releases sulfide while coupling this reduction to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "DsrMK(JOP) membrane complex", "target": "sulfide"}, {"description": "The dissimilatory sulfite reductase encoded by dsrAB is a hallmark of sulfate/sulfite-reducing microorganisms.", "edge_id": "edge-10", "evidence": [{"notes": "A hallmark of SRM is the dissimilatory sulfite reductase encoded by the genes dsrAB.", "reference": "DOI:10.1093/femsre/fuad058"}], "predicate": "marker for", "predicate_id": null, "source": "DsrAB with DsrC", "target": "sulfate/sulfite-reducing microorganisms"}, {"description": "Sulfate participates in dissimilatory sulfate reduction as the alternative terminal electron acceptor.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC full text; this bridges the named respiratory trait to its existing Sat-Apr-Dsr pathway.", "reference": "DOI:10.3390/antiox12030767", "snippet": "Sulfate can be used as an alternative terminal electron acceptor under anaerobic conditions"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate", "target": "dissimilatory sulfate reduction"}], "graph_id": "sulfate_reduction_to_sulfide", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy-conserving respiration with non-O2 acceptor.", "grounding": "GO:0009061", "id": "anaerobic_respiration", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduces APS to sulfite.", "grounding": "GO:0009973", "id": "aprab_complex", "is_orphan": false, "label": "APS reductase AprAB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Activated sulfate intermediate reduced to sulfite.", "grounding": null, "id": "aps", "is_orphan": false, "label": "adenosine-5\u2032-phosphosulfate (APS)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Dissimilatory sulfite reductase DsrAB acting with DsrC protein.", "grounding": null, "id": "dsrab_dsrc", "is_orphan": false, "label": "DsrAB with DsrC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "The primary structure is from D. vulgaris Hildenborough and identifies DsrA within the DsrAB-DsrC assembly; UniProtKB P45574 verifies the reviewed alpha subunit and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsrA", "protein_label": "Sulfite reductase, dissimilatory-type subunit alpha", "retrieved_on": "2026-08-24", "role": "DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this accession is not presented as the complete assembly.", "sequence_version": 3, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45574"}, {"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "The primary structure resolves DsrC bound to DsrAB in D. vulgaris Hildenborough; UniProtKB P45573 verifies the reviewed gamma/DsrC protein and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsvC", "protein_label": "Sulfite reductase, dissimilatory-type subunit gamma", "retrieved_on": "2026-08-24", "role": "DsrC/gamma partner bound to DsrAB in the source-backed assembly; this accession is not presented as DsrAB itself.", "sequence_version": 2, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45573"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Protein-bound trisulfide intermediate from sulfite reduction.", "grounding": null, "id": "dsrc_trisulfide", "is_orphan": false, "label": "DsrC-trisulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduces DsrC-trisulfide to sulfide, recycling DsrC and conserving energy.", "grounding": null, "id": "dsrmkjop_complex", "is_orphan": false, "label": "DsrMK(JOP) membrane complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfate adenylyltransferase that activates sulfate to APS.", "grounding": "GO:0004781", "id": "sat_enzyme", "is_orphan": false, "label": "ATP sulfurylase (Sat)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Microorganisms capable of dissimilatory sulfate/sulfite reduction.", "grounding": null, "id": "srm", "is_orphan": false, "label": "sulfate/sulfite-reducing microorganisms", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in this respiration.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on sulfate as terminal electron acceptor.", "grounding": "traitmech:000105", "id": "sulfate_reduction_trait", "is_orphan": false, "label": "dissimilatory sulfate reduction", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Final reduction product released to anoxic habitats.", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate produced from APS, substrate of the Dsr cascade.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "The primary structure is from D. vulgaris Hildenborough and identifies DsrA within the DsrAB-DsrC assembly; UniProtKB P45574 verifies the reviewed alpha subunit and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsrA", "node_id": "dsrab_dsrc", "node_label": "DsrAB with DsrC", "protein_label": "Sulfite reductase, dissimilatory-type subunit alpha", "retrieved_on": "2026-08-24", "role": "DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this accession is not presented as the complete assembly.", "sequence_version": 3, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45574"}, {"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "The primary structure resolves DsrC bound to DsrAB in D. vulgaris Hildenborough; UniProtKB P45573 verifies the reviewed gamma/DsrC protein and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsvC", "node_id": "dsrab_dsrc", "node_label": "DsrAB with DsrC", "protein_label": "Sulfite reductase, dissimilatory-type subunit gamma", "retrieved_on": "2026-08-24", "role": "DsrC/gamma partner bound to DsrAB in the source-backed assembly; this accession is not presented as DsrAB itself.", "sequence_version": 2, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45573"}], "scope_notes": "Represents the canonical Sat-Apr-Dsr route and uses explicit DsrA and DsrC components from N. vulgaris Hildenborough. One accession is not treated as denoting the DsrAB-DsrC assembly or the separate DsrMKJOP membrane complex.", "scope_status": "MECHANISTIC", "title": "Dissimilatory sulfate reduction respires sulfate to sulfide"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking sulfate as terminal electron acceptor to sulfide production in anoxic anaerobic respiration.", "edges": [{"description": "Sulfate is reduced stepwise to sulfide.", "evidence": [{"notes": "Muyzer \u0026 Stams review sulfate-reducing bacteria respiring sulfate to sulfide.", "reference": "DOI:10.1038/nrmicro1892"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfate", "target": "sulfide"}, {"description": "Sulfate respiration is a major form of anaerobic respiration.", "evidence": [{"notes": "Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria within anaerobic respiration.", "reference": "DOI:10.3389/fmicb.2011.00081"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate_reduction_trait", "target": "anaerobic_respiration"}, {"description": "Sulfate is activated by ATP sulfurylase (Sat).", "evidence": [{"notes": "Sulfate is taken up and activated by the enzyme ATP sulfurylase (Sat) to form APS.", "reference": "DOI:10.3390/antiox12030767"}], "id": "edge-3", "is_orphan": false, "predicate": "activated by", "predicate_id": null, "source": "sulfate", "target": "sat_enzyme"}, {"description": "Sat activates sulfate to form APS.", "evidence": [{"notes": "Activated by ATP sulfurylase (Sat) to form adenosine-5\u2032-phosphosulfate (APS).", "reference": "DOI:10.3390/antiox12030767"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "sat_enzyme", "target": "aps"}, {"description": "APS reductase AprAB reduces APS to sulfite.", "evidence": [{"notes": "The APS reductase AprAB reduces APS to sulfite, serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-5", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "aprab_complex", "target": "aps"}, {"description": "AprAB reduction of APS yields sulfite.", "evidence": [{"notes": "APS is reduced to sulfite serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "aprab_complex", "target": "sulfite"}, {"description": "DsrAB produces a DsrC-trisulfide from sulfite and DsrC.", "evidence": [{"notes": "DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "dsrab_dsrc", "target": "dsrc_trisulfide"}, {"description": "DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing sulfide with energy conservation.", "evidence": [{"notes": "DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling DsrC and releasing sulfide while coupling to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "dsrmkjop_complex", "target": "dsrc_trisulfide"}, {"description": "Terminal reduction of the DsrC-trisulfide releases sulfide.", "evidence": [{"notes": "DsrMK(JOP) reduction releases sulfide while coupling this reduction to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "dsrmkjop_complex", "target": "sulfide"}, {"description": "The dissimilatory sulfite reductase encoded by dsrAB is a hallmark of sulfate/sulfite-reducing microorganisms.", "evidence": [{"notes": "A hallmark of SRM is the dissimilatory sulfite reductase encoded by the genes dsrAB.", "reference": "DOI:10.1093/femsre/fuad058"}], "id": "edge-10", "is_orphan": false, "predicate": "marker for", "predicate_id": null, "source": "dsrab_dsrc", "target": "srm"}, {"description": "Sulfate participates in dissimilatory sulfate reduction as the alternative terminal electron acceptor.", "evidence": [{"notes": "Verified against the public PMC full text; this bridges the named respiratory trait to its existing Sat-Apr-Dsr pathway.", "reference": "DOI:10.3390/antiox12030767", "snippet": "Sulfate can be used as an alternative terminal electron acceptor under anaerobic conditions"}], "id": "edge-11", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate", "target": "sulfate_reduction_trait"}], "evidence_rows": [{"description": "Sulfate is reduced stepwise to sulfide.", "edge_id": "edge-1", "evidence": [{"notes": "Muyzer \u0026 Stams review sulfate-reducing bacteria respiring sulfate to sulfide.", "reference": "DOI:10.1038/nrmicro1892"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfate", "source_grounding": "CHEBI:16189", "target": "sulfide", "target_grounding": "CHEBI:15138"}, {"description": "Sulfate respiration is a major form of anaerobic respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria within anaerobic respiration.", "reference": "DOI:10.3389/fmicb.2011.00081"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "dissimilatory sulfate reduction", "source_grounding": "traitmech:000105", "target": "anaerobic respiration", "target_grounding": "GO:0009061"}, {"description": "Sulfate is activated by ATP sulfurylase (Sat).", "edge_id": "edge-3", "evidence": [{"notes": "Sulfate is taken up and activated by the enzyme ATP sulfurylase (Sat) to form APS.", "reference": "DOI:10.3390/antiox12030767"}], "predicate": "activated by", "predicate_id": null, "source": "sulfate", "source_grounding": "CHEBI:16189", "target": "ATP sulfurylase (Sat)", "target_grounding": "GO:0004781"}, {"description": "Sat activates sulfate to form APS.", "edge_id": "edge-4", "evidence": [{"notes": "Activated by ATP sulfurylase (Sat) to form adenosine-5\u2032-phosphosulfate (APS).", "reference": "DOI:10.3390/antiox12030767"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP sulfurylase (Sat)", "source_grounding": "GO:0004781", "target": "adenosine-5\u2032-phosphosulfate (APS)", "target_grounding": null}, {"description": "APS reductase AprAB reduces APS to sulfite.", "edge_id": "edge-5", "evidence": [{"notes": "The APS reductase AprAB reduces APS to sulfite, serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "APS reductase AprAB", "source_grounding": "GO:0009973", "target": "adenosine-5\u2032-phosphosulfate (APS)", "target_grounding": null}, {"description": "AprAB reduction of APS yields sulfite.", "edge_id": "edge-6", "evidence": [{"notes": "APS is reduced to sulfite serving as substrate of the Dsr cascade.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "APS reductase AprAB", "source_grounding": "GO:0009973", "target": "sulfite", "target_grounding": null}, {"description": "DsrAB produces a DsrC-trisulfide from sulfite and DsrC.", "edge_id": "edge-7", "evidence": [{"notes": "DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "DsrAB with DsrC", "source_grounding": null, "target": "DsrC-trisulfide", "target_grounding": null}, {"description": "DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing sulfide with energy conservation.", "edge_id": "edge-8", "evidence": [{"notes": "DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling DsrC and releasing sulfide while coupling to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "DsrMK(JOP) membrane complex", "source_grounding": null, "target": "DsrC-trisulfide", "target_grounding": null}, {"description": "Terminal reduction of the DsrC-trisulfide releases sulfide.", "edge_id": "edge-9", "evidence": [{"notes": "DsrMK(JOP) reduction releases sulfide while coupling this reduction to energy conservation.", "reference": "DOI:10.1038/s41396-023-01477-y"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "DsrMK(JOP) membrane complex", "source_grounding": null, "target": "sulfide", "target_grounding": "CHEBI:15138"}, {"description": "The dissimilatory sulfite reductase encoded by dsrAB is a hallmark of sulfate/sulfite-reducing microorganisms.", "edge_id": "edge-10", "evidence": [{"notes": "A hallmark of SRM is the dissimilatory sulfite reductase encoded by the genes dsrAB.", "reference": "DOI:10.1093/femsre/fuad058"}], "predicate": "marker for", "predicate_id": null, "source": "DsrAB with DsrC", "source_grounding": null, "target": "sulfate/sulfite-reducing microorganisms", "target_grounding": null}, {"description": "Sulfate participates in dissimilatory sulfate reduction as the alternative terminal electron acceptor.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC full text; this bridges the named respiratory trait to its existing Sat-Apr-Dsr pathway.", "reference": "DOI:10.3390/antiox12030767", "snippet": "Sulfate can be used as an alternative terminal electron acceptor under anaerobic conditions"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "sulfate", "source_grounding": "CHEBI:16189", "target": "dissimilatory sulfate reduction", "target_grounding": "traitmech:000105"}], "graph_id": "sulfate_reduction_to_sulfide", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy-conserving respiration with non-O2 acceptor.", "grounding": "GO:0009061", "id": "anaerobic_respiration", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduces APS to sulfite.", "grounding": "GO:0009973", "id": "aprab_complex", "is_orphan": false, "label": "APS reductase AprAB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Activated sulfate intermediate reduced to sulfite.", "grounding": null, "id": "aps", "is_orphan": false, "label": "adenosine-5\u2032-phosphosulfate (APS)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Dissimilatory sulfite reductase DsrAB acting with DsrC protein.", "grounding": null, "id": "dsrab_dsrc", "is_orphan": false, "label": "DsrAB with DsrC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "The primary structure is from D. vulgaris Hildenborough and identifies DsrA within the DsrAB-DsrC assembly; UniProtKB P45574 verifies the reviewed alpha subunit and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsrA", "protein_label": "Sulfite reductase, dissimilatory-type subunit alpha", "retrieved_on": "2026-08-24", "role": "DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this accession is not presented as the complete assembly.", "sequence_version": 3, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45574"}, {"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "The primary structure resolves DsrC bound to DsrAB in D. vulgaris Hildenborough; UniProtKB P45573 verifies the reviewed gamma/DsrC protein and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsvC", "protein_label": "Sulfite reductase, dissimilatory-type subunit gamma", "retrieved_on": "2026-08-24", "role": "DsrC/gamma partner bound to DsrAB in the source-backed assembly; this accession is not presented as DsrAB itself.", "sequence_version": 2, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45573"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Protein-bound trisulfide intermediate from sulfite reduction.", "grounding": null, "id": "dsrc_trisulfide", "is_orphan": false, "label": "DsrC-trisulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduces DsrC-trisulfide to sulfide, recycling DsrC and conserving energy.", "grounding": null, "id": "dsrmkjop_complex", "is_orphan": false, "label": "DsrMK(JOP) membrane complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfate adenylyltransferase that activates sulfate to APS.", "grounding": "GO:0004781", "id": "sat_enzyme", "is_orphan": false, "label": "ATP sulfurylase (Sat)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Microorganisms capable of dissimilatory sulfate/sulfite reduction.", "grounding": null, "id": "srm", "is_orphan": false, "label": "sulfate/sulfite-reducing microorganisms", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in this respiration.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on sulfate as terminal electron acceptor.", "grounding": "traitmech:000105", "id": "sulfate_reduction_trait", "is_orphan": false, "label": "dissimilatory sulfate reduction", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Final reduction product released to anoxic habitats.", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate produced from APS, substrate of the Dsr cascade.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "The primary structure is from D. vulgaris Hildenborough and identifies DsrA within the DsrAB-DsrC assembly; UniProtKB P45574 verifies the reviewed alpha subunit and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsrA", "node_id": "dsrab_dsrc", "node_label": "DsrAB with DsrC", "protein_label": "Sulfite reductase, dissimilatory-type subunit alpha", "retrieved_on": "2026-08-24", "role": "DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this accession is not presented as the complete assembly.", "sequence_version": 3, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45574"}, {"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "The primary structure resolves DsrC bound to DsrAB in D. vulgaris Hildenborough; UniProtKB P45573 verifies the reviewed gamma/DsrC protein and current taxon.", "reference": "DOI:10.1074/jbc.M805643200", "snippet": "the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC protein"}], "gene_symbol": "dsvC", "node_id": "dsrab_dsrc", "node_label": "DsrAB with DsrC", "protein_label": "Sulfite reductase, dissimilatory-type subunit gamma", "retrieved_on": "2026-08-24", "role": "DsrC/gamma partner bound to DsrAB in the source-backed assembly; this accession is not presented as DsrAB itself.", "sequence_version": 2, "taxon_id": "NCBITaxon:882", "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough", "uniprot_id": "UniProtKB:P45573"}], "scope_notes": "Represents the canonical Sat-Apr-Dsr route and uses explicit DsrA and DsrC components from N. vulgaris Hildenborough. One accession is not treated as denoting the DsrAB-DsrC assembly or the separate DsrMKJOP membrane complex.", "scope_status": "MECHANISTIC", "title": "Dissimilatory sulfate reduction respires sulfate to sulfide"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1050,13 +1083,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-08 00:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

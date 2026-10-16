@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Tab system</h1>
     <p class="curie"><code>traitmech:000413</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Tab prophage locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>Tab-mediated virion assembly inhibition</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>A prophage-associated tab locus expresses the Tab protein that mediates virion-assembly inhibition.</p>
             <ul>
 
@@ -120,9 +133,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Tab-mediated virion assembly inhibition</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage tail assembly</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Tab-mediated virion assembly inhibition blocks assembly of invading phage tails.</p>
             <ul>
 
@@ -137,9 +152,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Tab-mediated virion assembly inhibition</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>infectious virion formation</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>By blocking tail assembly, Tab-mediated defence prevents formation and release of infectious phage progeny.</p>
             <ul>
 
@@ -154,9 +171,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Tab-mediated virion assembly inhibition</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Tab system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000413</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Virion assembly inhibition realizes the Tab system trait.</p>
             <ul>
 
@@ -171,8 +190,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Tab system</strong>
+            <code>traitmech:000413</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Tab system possession is a phage-defense-system trait.</p>
             <ul>
@@ -243,11 +264,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -380,6 +465,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -713,7 +803,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a Tab prophage-associated locus to inhibition of invading phage tail assembly, blocked infectious virion formation, and Tab system possession.", "edges": [{"description": "A prophage-associated tab locus expresses the Tab protein that mediates virion-assembly inhibition.", "evidence": [{"notes": "Patel et al. name Tab as the protein mediating this prophage anti-phage defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "The protein that mediates this defence, which we call Tab"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "tab_locus", "target": "tab_virion_assembly_inhibition"}, {"description": "Tab-mediated virion assembly inhibition blocks assembly of invading phage tails.", "evidence": [{"notes": "Patel et al. connect Tab to blockade of phage-tail assembly.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "blocks assembly of the phage tail, thus preventing formation of infectious virions"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tab_virion_assembly_inhibition", "target": "phage_tail_assembly"}, {"description": "By blocking tail assembly, Tab-mediated defence prevents formation and release of infectious phage progeny.", "evidence": [{"notes": "Patel et al. report no infectious phage progeny release under Tab-mediated defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "there is no release of infectious phage progeny, and the bacterial community is thereby protected from a phage epidemic"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tab_virion_assembly_inhibition", "target": "infectious_virion_formation"}, {"description": "Virion assembly inhibition realizes the Tab system trait.", "evidence": [{"notes": "Patel et al. frame Tab-mediated virion assembly inhibition as a new anti-phage defence type.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "Tab-mediated inhibition of virion assembly provides a new type of anti-phage defence"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "tab_virion_assembly_inhibition", "target": "tab_system_trait"}, {"description": "Tab system possession is a phage-defense-system trait.", "evidence": [{"notes": "Patel et al. place Tab in anti-phage defence by virion assembly pathway interference.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "a type of anti-phage defence that interferes with the virion assembly pathway of invading phages"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tab_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A prophage-associated tab locus expresses the Tab protein that mediates virion-assembly inhibition.", "edge_id": "edge-1", "evidence": [{"notes": "Patel et al. name Tab as the protein mediating this prophage anti-phage defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "The protein that mediates this defence, which we call Tab"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Tab prophage locus", "target": "Tab-mediated virion assembly inhibition"}, {"description": "Tab-mediated virion assembly inhibition blocks assembly of invading phage tails.", "edge_id": "edge-2", "evidence": [{"notes": "Patel et al. connect Tab to blockade of phage-tail assembly.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "blocks assembly of the phage tail, thus preventing formation of infectious virions"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Tab-mediated virion assembly inhibition", "target": "phage tail assembly"}, {"description": "By blocking tail assembly, Tab-mediated defence prevents formation and release of infectious phage progeny.", "edge_id": "edge-3", "evidence": [{"notes": "Patel et al. report no infectious phage progeny release under Tab-mediated defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "there is no release of infectious phage progeny, and the bacterial community is thereby protected from a phage epidemic"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Tab-mediated virion assembly inhibition", "target": "infectious virion formation"}, {"description": "Virion assembly inhibition realizes the Tab system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Patel et al. frame Tab-mediated virion assembly inhibition as a new anti-phage defence type.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "Tab-mediated inhibition of virion assembly provides a new type of anti-phage defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Tab-mediated virion assembly inhibition", "target": "Tab system"}, {"description": "Tab system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Patel et al. place Tab in anti-phage defence by virion assembly pathway interference.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "a type of anti-phage defence that interferes with the virion assembly pathway of invading phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Tab system", "target": "phage defense system"}], "graph_id": "tab_blocks_virion_assembly", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Formation and release of infectious phage progeny.", "grounding": null, "id": "infectious_virion_formation", "is_orphan": false, "label": "infectious virion formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of the phage tail during productive virion morphogenesis.", "grounding": null, "id": "phage_tail_assembly", "is_orphan": false, "label": "phage tail assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A prophage locus expressing Tab, a phage tail assembly blocker.", "grounding": null, "id": "tab_locus", "is_orphan": false, "label": "Tab prophage locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Tab phage-defense system.", "grounding": "traitmech:000413", "id": "tab_system_trait", "is_orphan": false, "label": "Tab system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Tab-mediated interference with the virion assembly pathway of invading phages.", "grounding": null, "id": "tab_virion_assembly_inhibition", "is_orphan": false, "label": "Tab-mediated virion assembly inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Tab as a prophage-encoded virion-assembly-inhibition system without asserting the full host range, full sensitive-phage range, Tab counter-defence specificity, or profile-to-component DefenseFinder modeling.", "scope_status": "NONMECHANISTIC", "title": "Tab blocks phage virion assembly"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a Tab prophage-associated locus to inhibition of invading phage tail assembly, blocked infectious virion formation, and Tab system possession.", "edges": [{"description": "A prophage-associated tab locus expresses the Tab protein that mediates virion-assembly inhibition.", "evidence": [{"notes": "Patel et al. name Tab as the protein mediating this prophage anti-phage defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "The protein that mediates this defence, which we call Tab"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "tab_locus", "target": "tab_virion_assembly_inhibition"}, {"description": "Tab-mediated virion assembly inhibition blocks assembly of invading phage tails.", "evidence": [{"notes": "Patel et al. connect Tab to blockade of phage-tail assembly.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "blocks assembly of the phage tail, thus preventing formation of infectious virions"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tab_virion_assembly_inhibition", "target": "phage_tail_assembly"}, {"description": "By blocking tail assembly, Tab-mediated defence prevents formation and release of infectious phage progeny.", "evidence": [{"notes": "Patel et al. report no infectious phage progeny release under Tab-mediated defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "there is no release of infectious phage progeny, and the bacterial community is thereby protected from a phage epidemic"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tab_virion_assembly_inhibition", "target": "infectious_virion_formation"}, {"description": "Virion assembly inhibition realizes the Tab system trait.", "evidence": [{"notes": "Patel et al. frame Tab-mediated virion assembly inhibition as a new anti-phage defence type.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "Tab-mediated inhibition of virion assembly provides a new type of anti-phage defence"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "tab_virion_assembly_inhibition", "target": "tab_system_trait"}, {"description": "Tab system possession is a phage-defense-system trait.", "evidence": [{"notes": "Patel et al. place Tab in anti-phage defence by virion assembly pathway interference.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "a type of anti-phage defence that interferes with the virion assembly pathway of invading phages"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tab_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A prophage-associated tab locus expresses the Tab protein that mediates virion-assembly inhibition.", "edge_id": "edge-1", "evidence": [{"notes": "Patel et al. name Tab as the protein mediating this prophage anti-phage defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "The protein that mediates this defence, which we call Tab"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Tab prophage locus", "source_grounding": null, "target": "Tab-mediated virion assembly inhibition", "target_grounding": null}, {"description": "Tab-mediated virion assembly inhibition blocks assembly of invading phage tails.", "edge_id": "edge-2", "evidence": [{"notes": "Patel et al. connect Tab to blockade of phage-tail assembly.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "blocks assembly of the phage tail, thus preventing formation of infectious virions"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Tab-mediated virion assembly inhibition", "source_grounding": null, "target": "phage tail assembly", "target_grounding": null}, {"description": "By blocking tail assembly, Tab-mediated defence prevents formation and release of infectious phage progeny.", "edge_id": "edge-3", "evidence": [{"notes": "Patel et al. report no infectious phage progeny release under Tab-mediated defence.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "there is no release of infectious phage progeny, and the bacterial community is thereby protected from a phage epidemic"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Tab-mediated virion assembly inhibition", "source_grounding": null, "target": "infectious virion formation", "target_grounding": null}, {"description": "Virion assembly inhibition realizes the Tab system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Patel et al. frame Tab-mediated virion assembly inhibition as a new anti-phage defence type.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "Tab-mediated inhibition of virion assembly provides a new type of anti-phage defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Tab-mediated virion assembly inhibition", "source_grounding": null, "target": "Tab system", "target_grounding": "traitmech:000413"}, {"description": "Tab system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Patel et al. place Tab in anti-phage defence by virion assembly pathway interference.", "reference": "DOI:10.1038/s41467-024-45892-x", "snippet": "a type of anti-phage defence that interferes with the virion assembly pathway of invading phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Tab system", "source_grounding": "traitmech:000413", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "tab_blocks_virion_assembly", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Formation and release of infectious phage progeny.", "grounding": null, "id": "infectious_virion_formation", "is_orphan": false, "label": "infectious virion formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of the phage tail during productive virion morphogenesis.", "grounding": null, "id": "phage_tail_assembly", "is_orphan": false, "label": "phage tail assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A prophage locus expressing Tab, a phage tail assembly blocker.", "grounding": null, "id": "tab_locus", "is_orphan": false, "label": "Tab prophage locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Tab phage-defense system.", "grounding": "traitmech:000413", "id": "tab_system_trait", "is_orphan": false, "label": "Tab system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Tab-mediated interference with the virion assembly pathway of invading phages.", "grounding": null, "id": "tab_virion_assembly_inhibition", "is_orphan": false, "label": "Tab-mediated virion assembly inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Tab as a prophage-encoded virion-assembly-inhibition system without asserting the full host range, full sensitive-phage range, Tab counter-defence specificity, or profile-to-component DefenseFinder modeling.", "scope_status": "NONMECHANISTIC", "title": "Tab blocks phage virion assembly"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -733,13 +823,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 17:41 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

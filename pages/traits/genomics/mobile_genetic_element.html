@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>mobile genetic element</h1>
     <p class="curie"><code>traitmech:000089</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>mobile genetic element</strong>
+            <code>traitmech:000089</code>
             <span class="edge-predicate">enables</span>
             <strong>horizontal gene transfer</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>MGEs serve as the vehicles of horizontal gene transfer.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>horizontal gene transfer</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>genome plasticity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>HGT mediated by MGEs drives gene gain/loss and rearrangement.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>relaxase</strong>
+
             <span class="edge-predicate">nicks/unwinds at</span>
             <strong>origin of transfer (oriT)</strong>
+
 
             <p>Relaxase nicks and unwinds DNA at oriT, covalently attaching to the 5-prime end to initiate transfer.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>type IV coupling protein</strong>
+
             <span class="edge-predicate">recruits substrate to</span>
             <strong>type IV secretion system</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043684" rel="nofollow noreferrer"><code>GO:0043684</code></a>
 
             <p>The cognate coupling protein recruits the relaxase-DNA substrate to the secretion apparatus.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>type IV secretion system</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043684" rel="nofollow noreferrer"><code>GO:0043684</code></a>
             <span class="edge-predicate">mediates</span>
             <strong>conjugative DNA transfer</strong>
+
 
             <p>VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between donor and recipient.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>conjugative DNA transfer</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>horizontal gene transfer</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Conjugative DNA transfer is a major route of MGE-mediated horizontal gene transfer.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>integrase and excisionase</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>ICE excision and circularization</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Integrase and excisionase mediate ICE excision and circular dsDNA intermediate formation.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ICE excision and circularization</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>conjugative DNA transfer</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Excision and circularization produce the transferable form required for conjugative transfer.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>integron integrase (IntI)</strong>
+
             <span class="edge-predicate">catalyzes</span>
             <strong>attI/attC cassette recombination</strong>
-            <code>biolink:catalyzes</code>
+
+            <a href="https://w3id.org/biolink/vocab/catalyzes" rel="nofollow noreferrer"><code>biolink:catalyzes</code></a>
             <p>Integron integrase catalyzes site-specific recombination at attI/attC to capture or excise cassettes.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>mobile genetic element</strong>
+            <code>traitmech:000089</code>
             <span class="edge-predicate">enables</span>
             <strong>transposition</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0032196" rel="nofollow noreferrer"><code>GO:0032196</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Insertion sequences and transposons excise and move within or between regions of the genome.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>transposition</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0032196" rel="nofollow noreferrer"><code>GO:0032196</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>genome plasticity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Transposition drives genome rearrangement and gene gain/loss.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>transduction of host DNA</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>horizontal gene transfer</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Prophage induction and lytic infection package and transduce host DNA, a route of HGT.</p>
             <ul>
 
@@ -289,8 +324,10 @@
 
           <li id="pathograph-1-edge-13">
             <strong>antibiotic selective pressure</strong>
+
             <span class="edge-predicate">enriches</span>
             <strong>antimicrobial resistance gene cargo</strong>
+
 
             <p>Antibiotic selective pressure enriches AMR genes on self-transmissible ICEs and genomic islands.</p>
             <ul>
@@ -403,43 +440,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -993,7 +1030,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking MGE possession to horizontal gene transfer and resulting genome plasticity.", "edges": [{"description": "MGEs serve as the vehicles of horizontal gene transfer.", "evidence": [{"notes": "Frost et al. frame MGEs as the agents of horizontal gene transfer.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mge_trait", "target": "horizontal_gene_transfer"}, {"description": "HGT mediated by MGEs drives gene gain/loss and rearrangement.", "evidence": [{"notes": "Siguier et al. review insertion-sequence-driven genome plasticity.", "reference": "DOI:10.1111/1574-6976.12067"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "horizontal_gene_transfer", "target": "genome_plasticity"}, {"description": "Relaxase nicks and unwinds DNA at oriT, covalently attaching to the 5-prime end to initiate transfer.", "evidence": [{"notes": "nicking/unwinding by a relaxase at oriT, covalent attachment of relaxase to the 5-prime end.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-3", "is_orphan": false, "predicate": "nicks/unwinds at", "predicate_id": null, "source": "relaxase", "target": "orit"}, {"description": "The cognate coupling protein recruits the relaxase-DNA substrate to the secretion apparatus.", "evidence": [{"notes": "the secretion apparatus by the cognate coupling protein TraD; type IV coupling proteins (T4CPs).", "reference": "DOI:10.1093/nar/gkac1079"}], "id": "edge-4", "is_orphan": false, "predicate": "recruits substrate to", "predicate_id": null, "source": "coupling_protein", "target": "t4ss"}, {"description": "VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between donor and recipient.", "evidence": [{"notes": "VirB4 and VirD4 ATPases of the Type IV secretion system (T4SS) mediate conjugative transfer.", "reference": "DOI:10.1093/nar/gkad024"}], "id": "edge-5", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "t4ss", "target": "conjugative_dna_transfer"}, {"description": "Conjugative DNA transfer is a major route of MGE-mediated horizontal gene transfer.", "evidence": [{"notes": "transfer of a single-stranded DNA molecule, followed by integration into the recipient chromosome.", "reference": "DOI:10.1111/1751-7915.14408"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugative_dna_transfer", "target": "horizontal_gene_transfer"}, {"description": "Integrase and excisionase mediate ICE excision and circular dsDNA intermediate formation.", "evidence": [{"notes": "excision mediated by an integrase (recombinase) and an excisionase, formation of a circular dsDNA intermediate.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrase_excisionase", "target": "ice_excision"}, {"description": "Excision and circularization produce the transferable form required for conjugative transfer.", "evidence": [{"notes": "Circular dsDNA intermediate is the transferable form prior to conjugation.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ice_excision", "target": "conjugative_dna_transfer"}, {"description": "Integron integrase catalyzes site-specific recombination at attI/attC to capture or excise cassettes.", "evidence": [{"notes": "IntI recognises attI/attC and catalyses site-specific recombination inserting cassettes.", "reference": "DOI:10.1111/1751-7915.14408"}], "id": "edge-9", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "integron_integrase", "target": "cassette_recombination"}, {"description": "Insertion sequences and transposons excise and move within or between regions of the genome.", "evidence": [{"notes": "transposons and insertion sequences excise and move or transpose between regions of the genome.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mge_trait", "target": "transposition"}, {"description": "Transposition drives genome rearrangement and gene gain/loss.", "evidence": [{"notes": "IS/transposon mobility reshapes replicons, contributing to genome plasticity.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transposition", "target": "genome_plasticity"}, {"description": "Prophage induction and lytic infection package and transduce host DNA, a route of HGT.", "evidence": [{"notes": "host DNA packaged and transduced during both prophage induction and lytic infection.", "reference": "DOI:10.1093/nar/gkae489"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transduction", "target": "horizontal_gene_transfer"}, {"description": "Antibiotic selective pressure enriches AMR genes on self-transmissible ICEs and genomic islands.", "evidence": [{"notes": "antibiotic selective pressure tied to the accumulation and spread of resistance on self-transmissible ICEs.", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-13", "is_orphan": false, "predicate": "enriches", "predicate_id": null, "source": "antibiotic_selection", "target": "amr_cargo"}], "evidence_rows": [{"description": "MGEs serve as the vehicles of horizontal gene transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Frost et al. frame MGEs as the agents of horizontal gene transfer.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mobile genetic element", "target": "horizontal gene transfer"}, {"description": "HGT mediated by MGEs drives gene gain/loss and rearrangement.", "edge_id": "edge-2", "evidence": [{"notes": "Siguier et al. review insertion-sequence-driven genome plasticity.", "reference": "DOI:10.1111/1574-6976.12067"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "horizontal gene transfer", "target": "genome plasticity"}, {"description": "Relaxase nicks and unwinds DNA at oriT, covalently attaching to the 5-prime end to initiate transfer.", "edge_id": "edge-3", "evidence": [{"notes": "nicking/unwinding by a relaxase at oriT, covalent attachment of relaxase to the 5-prime end.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "nicks/unwinds at", "predicate_id": null, "source": "relaxase", "target": "origin of transfer (oriT)"}, {"description": "The cognate coupling protein recruits the relaxase-DNA substrate to the secretion apparatus.", "edge_id": "edge-4", "evidence": [{"notes": "the secretion apparatus by the cognate coupling protein TraD; type IV coupling proteins (T4CPs).", "reference": "DOI:10.1093/nar/gkac1079"}], "predicate": "recruits substrate to", "predicate_id": null, "source": "type IV coupling protein", "target": "type IV secretion system"}, {"description": "VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between donor and recipient.", "edge_id": "edge-5", "evidence": [{"notes": "VirB4 and VirD4 ATPases of the Type IV secretion system (T4SS) mediate conjugative transfer.", "reference": "DOI:10.1093/nar/gkad024"}], "predicate": "mediates", "predicate_id": null, "source": "type IV secretion system", "target": "conjugative DNA transfer"}, {"description": "Conjugative DNA transfer is a major route of MGE-mediated horizontal gene transfer.", "edge_id": "edge-6", "evidence": [{"notes": "transfer of a single-stranded DNA molecule, followed by integration into the recipient chromosome.", "reference": "DOI:10.1111/1751-7915.14408"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugative DNA transfer", "target": "horizontal gene transfer"}, {"description": "Integrase and excisionase mediate ICE excision and circular dsDNA intermediate formation.", "edge_id": "edge-7", "evidence": [{"notes": "excision mediated by an integrase (recombinase) and an excisionase, formation of a circular dsDNA intermediate.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrase and excisionase", "target": "ICE excision and circularization"}, {"description": "Excision and circularization produce the transferable form required for conjugative transfer.", "edge_id": "edge-8", "evidence": [{"notes": "Circular dsDNA intermediate is the transferable form prior to conjugation.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ICE excision and circularization", "target": "conjugative DNA transfer"}, {"description": "Integron integrase catalyzes site-specific recombination at attI/attC to capture or excise cassettes.", "edge_id": "edge-9", "evidence": [{"notes": "IntI recognises attI/attC and catalyses site-specific recombination inserting cassettes.", "reference": "DOI:10.1111/1751-7915.14408"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "integron integrase (IntI)", "target": "attI/attC cassette recombination"}, {"description": "Insertion sequences and transposons excise and move within or between regions of the genome.", "edge_id": "edge-10", "evidence": [{"notes": "transposons and insertion sequences excise and move or transpose between regions of the genome.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mobile genetic element", "target": "transposition"}, {"description": "Transposition drives genome rearrangement and gene gain/loss.", "edge_id": "edge-11", "evidence": [{"notes": "IS/transposon mobility reshapes replicons, contributing to genome plasticity.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transposition", "target": "genome plasticity"}, {"description": "Prophage induction and lytic infection package and transduce host DNA, a route of HGT.", "edge_id": "edge-12", "evidence": [{"notes": "host DNA packaged and transduced during both prophage induction and lytic infection.", "reference": "DOI:10.1093/nar/gkae489"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transduction of host DNA", "target": "horizontal gene transfer"}, {"description": "Antibiotic selective pressure enriches AMR genes on self-transmissible ICEs and genomic islands.", "edge_id": "edge-13", "evidence": [{"notes": "antibiotic selective pressure tied to the accumulation and spread of resistance on self-transmissible ICEs.", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "enriches", "predicate_id": null, "source": "antibiotic selective pressure", "target": "antimicrobial resistance gene cargo"}], "graph_id": "mge_horizontal_gene_transfer", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Accumulation of antimicrobial resistance genes carried on self-transmissible ICEs and genomic islands.", "grounding": null, "id": "amr_cargo", "is_orphan": false, "label": "antimicrobial resistance gene cargo", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Selective pressure from antibiotics that enriches resistance gene cargo on mobile elements.", "grounding": null, "id": "antibiotic_selection", "is_orphan": false, "label": "antibiotic selective pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Site-specific recombination inserting or excising integron gene cassettes.", "grounding": null, "id": "cassette_recombination", "is_orphan": false, "label": "attI/attC cassette recombination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of single-stranded DNA through the mating apparatus.", "grounding": null, "id": "conjugative_dna_transfer", "is_orphan": false, "label": "conjugative DNA transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "VirD4/TraD-like ATPase that recruits the relaxase-DNA substrate to the T4SS.", "grounding": null, "id": "coupling_protein", "is_orphan": false, "label": "type IV coupling protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity of a genome for rearrangement and gene gain/loss.", "grounding": null, "id": "genome_plasticity", "is_orphan": false, "label": "genome plasticity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Excision of an integrated conjugative element to form a circular dsDNA transfer intermediate.", "grounding": null, "id": "ice_excision", "is_orphan": false, "label": "ICE excision and circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Recombinase plus recombination directionality factor that mediate ICE/IME excision.", "grounding": null, "id": "integrase_excisionase", "is_orphan": false, "label": "integrase and excisionase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Site-specific recombinase that captures and excises gene cassettes at attI/attC sites.", "grounding": null, "id": "integron_integrase", "is_orphan": false, "label": "integron integrase (IntI)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of DNA segments that move within or between genomes.", "grounding": "traitmech:000089", "id": "mge_trait", "is_orphan": false, "label": "mobile genetic element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "DNA site where the relaxase nicks to initiate rolling-circle conjugative transfer.", "grounding": null, "id": "orit", "is_orphan": false, "label": "origin of transfer (oriT)", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Conjugation enzyme that nicks and unwinds DNA at oriT and covalently attaches to the 5-prime end.", "grounding": null, "id": "relaxase", "is_orphan": false, "label": "relaxase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "VirB4/VirD4-containing macromolecular machine that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "t4ss", "is_orphan": false, "label": "type IV secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phage-mediated packaging and transfer of host DNA during prophage induction or lytic infection.", "grounding": null, "id": "transduction", "is_orphan": false, "label": "transduction of host DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Movement of insertion sequences and transposons within or between replicons.", "grounding": "GO:0032196", "id": "transposition", "is_orphan": false, "label": "transposition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Mobile genetic elements mediate horizontal gene transfer"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking MGE possession to horizontal gene transfer and resulting genome plasticity.", "edges": [{"description": "MGEs serve as the vehicles of horizontal gene transfer.", "evidence": [{"notes": "Frost et al. frame MGEs as the agents of horizontal gene transfer.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mge_trait", "target": "horizontal_gene_transfer"}, {"description": "HGT mediated by MGEs drives gene gain/loss and rearrangement.", "evidence": [{"notes": "Siguier et al. review insertion-sequence-driven genome plasticity.", "reference": "DOI:10.1111/1574-6976.12067"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "horizontal_gene_transfer", "target": "genome_plasticity"}, {"description": "Relaxase nicks and unwinds DNA at oriT, covalently attaching to the 5-prime end to initiate transfer.", "evidence": [{"notes": "nicking/unwinding by a relaxase at oriT, covalent attachment of relaxase to the 5-prime end.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-3", "is_orphan": false, "predicate": "nicks/unwinds at", "predicate_id": null, "source": "relaxase", "target": "orit"}, {"description": "The cognate coupling protein recruits the relaxase-DNA substrate to the secretion apparatus.", "evidence": [{"notes": "the secretion apparatus by the cognate coupling protein TraD; type IV coupling proteins (T4CPs).", "reference": "DOI:10.1093/nar/gkac1079"}], "id": "edge-4", "is_orphan": false, "predicate": "recruits substrate to", "predicate_id": null, "source": "coupling_protein", "target": "t4ss"}, {"description": "VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between donor and recipient.", "evidence": [{"notes": "VirB4 and VirD4 ATPases of the Type IV secretion system (T4SS) mediate conjugative transfer.", "reference": "DOI:10.1093/nar/gkad024"}], "id": "edge-5", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "t4ss", "target": "conjugative_dna_transfer"}, {"description": "Conjugative DNA transfer is a major route of MGE-mediated horizontal gene transfer.", "evidence": [{"notes": "transfer of a single-stranded DNA molecule, followed by integration into the recipient chromosome.", "reference": "DOI:10.1111/1751-7915.14408"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugative_dna_transfer", "target": "horizontal_gene_transfer"}, {"description": "Integrase and excisionase mediate ICE excision and circular dsDNA intermediate formation.", "evidence": [{"notes": "excision mediated by an integrase (recombinase) and an excisionase, formation of a circular dsDNA intermediate.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrase_excisionase", "target": "ice_excision"}, {"description": "Excision and circularization produce the transferable form required for conjugative transfer.", "evidence": [{"notes": "Circular dsDNA intermediate is the transferable form prior to conjugation.", "reference": "DOI:10.1128/AEM.01360-24"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ice_excision", "target": "conjugative_dna_transfer"}, {"description": "Integron integrase catalyzes site-specific recombination at attI/attC to capture or excise cassettes.", "evidence": [{"notes": "IntI recognises attI/attC and catalyses site-specific recombination inserting cassettes.", "reference": "DOI:10.1111/1751-7915.14408"}], "id": "edge-9", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "integron_integrase", "target": "cassette_recombination"}, {"description": "Insertion sequences and transposons excise and move within or between regions of the genome.", "evidence": [{"notes": "transposons and insertion sequences excise and move or transpose between regions of the genome.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mge_trait", "target": "transposition"}, {"description": "Transposition drives genome rearrangement and gene gain/loss.", "evidence": [{"notes": "IS/transposon mobility reshapes replicons, contributing to genome plasticity.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transposition", "target": "genome_plasticity"}, {"description": "Prophage induction and lytic infection package and transduce host DNA, a route of HGT.", "evidence": [{"notes": "host DNA packaged and transduced during both prophage induction and lytic infection.", "reference": "DOI:10.1093/nar/gkae489"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transduction", "target": "horizontal_gene_transfer"}, {"description": "Antibiotic selective pressure enriches AMR genes on self-transmissible ICEs and genomic islands.", "evidence": [{"notes": "antibiotic selective pressure tied to the accumulation and spread of resistance on self-transmissible ICEs.", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-13", "is_orphan": false, "predicate": "enriches", "predicate_id": null, "source": "antibiotic_selection", "target": "amr_cargo"}], "evidence_rows": [{"description": "MGEs serve as the vehicles of horizontal gene transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Frost et al. frame MGEs as the agents of horizontal gene transfer.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mobile genetic element", "source_grounding": "traitmech:000089", "target": "horizontal gene transfer", "target_grounding": "GO:0009292"}, {"description": "HGT mediated by MGEs drives gene gain/loss and rearrangement.", "edge_id": "edge-2", "evidence": [{"notes": "Siguier et al. review insertion-sequence-driven genome plasticity.", "reference": "DOI:10.1111/1574-6976.12067"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "horizontal gene transfer", "source_grounding": "GO:0009292", "target": "genome plasticity", "target_grounding": null}, {"description": "Relaxase nicks and unwinds DNA at oriT, covalently attaching to the 5-prime end to initiate transfer.", "edge_id": "edge-3", "evidence": [{"notes": "nicking/unwinding by a relaxase at oriT, covalent attachment of relaxase to the 5-prime end.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "nicks/unwinds at", "predicate_id": null, "source": "relaxase", "source_grounding": null, "target": "origin of transfer (oriT)", "target_grounding": null}, {"description": "The cognate coupling protein recruits the relaxase-DNA substrate to the secretion apparatus.", "edge_id": "edge-4", "evidence": [{"notes": "the secretion apparatus by the cognate coupling protein TraD; type IV coupling proteins (T4CPs).", "reference": "DOI:10.1093/nar/gkac1079"}], "predicate": "recruits substrate to", "predicate_id": null, "source": "type IV coupling protein", "source_grounding": null, "target": "type IV secretion system", "target_grounding": "GO:0043684"}, {"description": "VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between donor and recipient.", "edge_id": "edge-5", "evidence": [{"notes": "VirB4 and VirD4 ATPases of the Type IV secretion system (T4SS) mediate conjugative transfer.", "reference": "DOI:10.1093/nar/gkad024"}], "predicate": "mediates", "predicate_id": null, "source": "type IV secretion system", "source_grounding": "GO:0043684", "target": "conjugative DNA transfer", "target_grounding": null}, {"description": "Conjugative DNA transfer is a major route of MGE-mediated horizontal gene transfer.", "edge_id": "edge-6", "evidence": [{"notes": "transfer of a single-stranded DNA molecule, followed by integration into the recipient chromosome.", "reference": "DOI:10.1111/1751-7915.14408"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugative DNA transfer", "source_grounding": null, "target": "horizontal gene transfer", "target_grounding": "GO:0009292"}, {"description": "Integrase and excisionase mediate ICE excision and circular dsDNA intermediate formation.", "edge_id": "edge-7", "evidence": [{"notes": "excision mediated by an integrase (recombinase) and an excisionase, formation of a circular dsDNA intermediate.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrase and excisionase", "source_grounding": null, "target": "ICE excision and circularization", "target_grounding": null}, {"description": "Excision and circularization produce the transferable form required for conjugative transfer.", "edge_id": "edge-8", "evidence": [{"notes": "Circular dsDNA intermediate is the transferable form prior to conjugation.", "reference": "DOI:10.1128/AEM.01360-24"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ICE excision and circularization", "source_grounding": null, "target": "conjugative DNA transfer", "target_grounding": null}, {"description": "Integron integrase catalyzes site-specific recombination at attI/attC to capture or excise cassettes.", "edge_id": "edge-9", "evidence": [{"notes": "IntI recognises attI/attC and catalyses site-specific recombination inserting cassettes.", "reference": "DOI:10.1111/1751-7915.14408"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "integron integrase (IntI)", "source_grounding": null, "target": "attI/attC cassette recombination", "target_grounding": null}, {"description": "Insertion sequences and transposons excise and move within or between regions of the genome.", "edge_id": "edge-10", "evidence": [{"notes": "transposons and insertion sequences excise and move or transpose between regions of the genome.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mobile genetic element", "source_grounding": "traitmech:000089", "target": "transposition", "target_grounding": "GO:0032196"}, {"description": "Transposition drives genome rearrangement and gene gain/loss.", "edge_id": "edge-11", "evidence": [{"notes": "IS/transposon mobility reshapes replicons, contributing to genome plasticity.", "reference": "DOI:10.1146/annurev-micro-032521-022006"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transposition", "source_grounding": "GO:0032196", "target": "genome plasticity", "target_grounding": null}, {"description": "Prophage induction and lytic infection package and transduce host DNA, a route of HGT.", "edge_id": "edge-12", "evidence": [{"notes": "host DNA packaged and transduced during both prophage induction and lytic infection.", "reference": "DOI:10.1093/nar/gkae489"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "transduction of host DNA", "source_grounding": null, "target": "horizontal gene transfer", "target_grounding": "GO:0009292"}, {"description": "Antibiotic selective pressure enriches AMR genes on self-transmissible ICEs and genomic islands.", "edge_id": "edge-13", "evidence": [{"notes": "antibiotic selective pressure tied to the accumulation and spread of resistance on self-transmissible ICEs.", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "enriches", "predicate_id": null, "source": "antibiotic selective pressure", "source_grounding": null, "target": "antimicrobial resistance gene cargo", "target_grounding": null}], "graph_id": "mge_horizontal_gene_transfer", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Accumulation of antimicrobial resistance genes carried on self-transmissible ICEs and genomic islands.", "grounding": null, "id": "amr_cargo", "is_orphan": false, "label": "antimicrobial resistance gene cargo", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Selective pressure from antibiotics that enriches resistance gene cargo on mobile elements.", "grounding": null, "id": "antibiotic_selection", "is_orphan": false, "label": "antibiotic selective pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Site-specific recombination inserting or excising integron gene cassettes.", "grounding": null, "id": "cassette_recombination", "is_orphan": false, "label": "attI/attC cassette recombination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of single-stranded DNA through the mating apparatus.", "grounding": null, "id": "conjugative_dna_transfer", "is_orphan": false, "label": "conjugative DNA transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "VirD4/TraD-like ATPase that recruits the relaxase-DNA substrate to the T4SS.", "grounding": null, "id": "coupling_protein", "is_orphan": false, "label": "type IV coupling protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity of a genome for rearrangement and gene gain/loss.", "grounding": null, "id": "genome_plasticity", "is_orphan": false, "label": "genome plasticity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Excision of an integrated conjugative element to form a circular dsDNA transfer intermediate.", "grounding": null, "id": "ice_excision", "is_orphan": false, "label": "ICE excision and circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Recombinase plus recombination directionality factor that mediate ICE/IME excision.", "grounding": null, "id": "integrase_excisionase", "is_orphan": false, "label": "integrase and excisionase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Site-specific recombinase that captures and excises gene cassettes at attI/attC sites.", "grounding": null, "id": "integron_integrase", "is_orphan": false, "label": "integron integrase (IntI)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of DNA segments that move within or between genomes.", "grounding": "traitmech:000089", "id": "mge_trait", "is_orphan": false, "label": "mobile genetic element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "DNA site where the relaxase nicks to initiate rolling-circle conjugative transfer.", "grounding": null, "id": "orit", "is_orphan": false, "label": "origin of transfer (oriT)", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Conjugation enzyme that nicks and unwinds DNA at oriT and covalently attaches to the 5-prime end.", "grounding": null, "id": "relaxase", "is_orphan": false, "label": "relaxase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "VirB4/VirD4-containing macromolecular machine that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "t4ss", "is_orphan": false, "label": "type IV secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phage-mediated packaging and transfer of host DNA during prophage induction or lytic infection.", "grounding": null, "id": "transduction", "is_orphan": false, "label": "transduction of host DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Movement of insertion sequences and transposons within or between replicons.", "grounding": "GO:0032196", "id": "transposition", "is_orphan": false, "label": "transposition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Mobile genetic elements mediate horizontal gene transfer"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1013,13 +1050,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

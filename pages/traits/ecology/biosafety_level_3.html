@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>biosafety level 3</h1>
     <p class="curie"><code>METPO:1001104</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>serious pathogen hazard</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>biosafety level 3</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Serious pathogen hazard with aerosol risk yields BSL-3 classification.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>biosafety level 3</strong>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
+            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
             <code>rdfs:subClassOf</code>
             <p>BSL-3 is a member of the biosafety-level classification.</p>
             <ul>
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>aerosol transmission risk</strong>
+
             <span class="edge-predicate">necessitates</span>
             <strong>biosafety level 3</strong>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
 
             <p>Risk of severe/lethal disease via aerosol route necessitates BSL-3 containment.</p>
             <ul>
@@ -130,8 +147,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>biosafety level 3</strong>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
             <span class="edge-predicate">implemented by</span>
             <strong>negative pressure directional airflow</strong>
+
 
             <p>BSL-3 containment is implemented by negative-pressure directional airflow.</p>
             <ul>
@@ -147,8 +166,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>biosafety level 3</strong>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
             <span class="edge-predicate">implemented by</span>
             <strong>HEPA filtration of exhaust air</strong>
+
 
             <p>BSL-3 containment is implemented by HEPA filtration of exhaust air.</p>
             <ul>
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>biosafety level 3</strong>
+            <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
             <span class="edge-predicate">verified by</span>
             <strong>boundary integrity testing</strong>
+
 
             <p>BSL-3 containment integrity is verified by quantitative boundary integrity testing.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>boundary integrity testing</strong>
+
             <span class="edge-predicate">utilizes</span>
             <strong>pressure decay testing</strong>
+
 
             <p>Boundary integrity testing utilizes pressure decay testing under steady negative pressure.</p>
             <ul>
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ISO 35001 biorisk management system</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>laboratory-acquired infection</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>ISO 35001 biorisk management systems mitigate laboratory-acquired infections.</p>
             <ul>
 
@@ -310,32 +337,32 @@
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/eleos_system.html">Eleos system</a>
           <span class="sim">0.252</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/transposable_element.html">transposable element</a>
+          <a href="../../traits/genomics/endpacf1_system.html">ENDPaCF1 system</a>
           <span class="sim">0.252</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <a href="../../traits/genomics/erebus_system.html">Erebus system</a>
           <span class="sim">0.252</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <a href="../../traits/genomics/esos_system.html">Esos system</a>
           <span class="sim">0.252</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/epona_system.html">Epona system</a>
           <span class="sim">0.252</span>
         </li>
 
@@ -958,7 +985,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking serious/lethal disease potential and aerosol transmission risk to BSL-3 classification.", "edges": [{"description": "Serious pathogen hazard with aerosol risk yields BSL-3 classification.", "evidence": [{"notes": "Supports high virulence with aerosol transmissibility as the basis of BSL-3 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "serious_pathogen_hazard", "target": "bsl3_trait"}, {"description": "BSL-3 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-3 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl3_trait", "target": "biosafety_level"}, {"description": "Risk of severe/lethal disease via aerosol route necessitates BSL-3 containment.", "evidence": [{"notes": "\"can cause severe or lethal disease by aerosol route... requires respiratory protection\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-3", "is_orphan": false, "predicate": "necessitates", "predicate_id": null, "source": "aerosol_transmission_risk", "target": "bsl3_trait"}, {"description": "BSL-3 containment is implemented by negative-pressure directional airflow.", "evidence": [{"notes": "\"negative pressure (2.5 to 10 Pascals) with inward airflow\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-4", "is_orphan": false, "predicate": "implemented by", "predicate_id": null, "source": "bsl3_trait", "target": "negative_pressure_airflow"}, {"description": "BSL-3 containment is implemented by HEPA filtration of exhaust air.", "evidence": [{"notes": "\"HEPA-filtered exhaust (eliminating 99.97% of particles \u003e=0.3 um)\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-5", "is_orphan": false, "predicate": "implemented by", "predicate_id": null, "source": "bsl3_trait", "target": "hepa_filtration"}, {"description": "BSL-3 containment integrity is verified by quantitative boundary integrity testing.", "evidence": [{"notes": "\"quantitative leakage testing to verify it meets minimum requirements\"", "reference": "DOI:10.1089/apb.2023.0017"}], "id": "edge-6", "is_orphan": false, "predicate": "verified by", "predicate_id": null, "source": "bsl3_trait", "target": "boundary_integrity_testing"}, {"description": "Boundary integrity testing utilizes pressure decay testing under steady negative pressure.", "evidence": [{"notes": "\"maintain a steady negative pressure during leakage testing\"", "reference": "DOI:10.1089/apb.2023.0017"}], "id": "edge-7", "is_orphan": false, "predicate": "utilizes", "predicate_id": null, "source": "boundary_integrity_testing", "target": "pressure_decay_testing"}, {"description": "ISO 35001 biorisk management systems mitigate laboratory-acquired infections.", "evidence": [{"notes": "\"safety management systems generally improve health and safety performance\"", "reference": "DOI:10.26686/nzjhsp.v1i2.9540"}], "id": "edge-8", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "iso_35001_biorisk_management", "target": "laboratory_acquired_infection"}], "evidence_rows": [{"description": "Serious pathogen hazard with aerosol risk yields BSL-3 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports high virulence with aerosol transmissibility as the basis of BSL-3 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "serious pathogen hazard", "target": "biosafety level 3"}, {"description": "BSL-3 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-3 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 3", "target": "biosafety level"}, {"description": "Risk of severe/lethal disease via aerosol route necessitates BSL-3 containment.", "edge_id": "edge-3", "evidence": [{"notes": "\"can cause severe or lethal disease by aerosol route... requires respiratory protection\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "necessitates", "predicate_id": null, "source": "aerosol transmission risk", "target": "biosafety level 3"}, {"description": "BSL-3 containment is implemented by negative-pressure directional airflow.", "edge_id": "edge-4", "evidence": [{"notes": "\"negative pressure (2.5 to 10 Pascals) with inward airflow\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "implemented by", "predicate_id": null, "source": "biosafety level 3", "target": "negative pressure directional airflow"}, {"description": "BSL-3 containment is implemented by HEPA filtration of exhaust air.", "edge_id": "edge-5", "evidence": [{"notes": "\"HEPA-filtered exhaust (eliminating 99.97% of particles \u003e=0.3 um)\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "implemented by", "predicate_id": null, "source": "biosafety level 3", "target": "HEPA filtration of exhaust air"}, {"description": "BSL-3 containment integrity is verified by quantitative boundary integrity testing.", "edge_id": "edge-6", "evidence": [{"notes": "\"quantitative leakage testing to verify it meets minimum requirements\"", "reference": "DOI:10.1089/apb.2023.0017"}], "predicate": "verified by", "predicate_id": null, "source": "biosafety level 3", "target": "boundary integrity testing"}, {"description": "Boundary integrity testing utilizes pressure decay testing under steady negative pressure.", "edge_id": "edge-7", "evidence": [{"notes": "\"maintain a steady negative pressure during leakage testing\"", "reference": "DOI:10.1089/apb.2023.0017"}], "predicate": "utilizes", "predicate_id": null, "source": "boundary integrity testing", "target": "pressure decay testing"}, {"description": "ISO 35001 biorisk management systems mitigate laboratory-acquired infections.", "edge_id": "edge-8", "evidence": [{"notes": "\"safety management systems generally improve health and safety performance\"", "reference": "DOI:10.26686/nzjhsp.v1i2.9540"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "ISO 35001 biorisk management system", "target": "laboratory-acquired infection"}], "graph_id": "biosafety_level_3_serious_hazard", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Risk of agent transmission via aerosols, driving need for high containment.", "grounding": null, "id": "aerosol_transmission_risk", "is_orphan": false, "label": "aerosol transmission risk", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Quantitative leakage/porosity testing verifying that a containment room meets minimum requirements.", "grounding": null, "id": "boundary_integrity_testing", "is_orphan": false, "label": "boundary integrity testing", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Agents causing serious or potentially lethal disease, often via inhalation; specialized containment required.", "grounding": "METPO:1001104", "id": "bsl3_trait", "is_orphan": false, "label": "biosafety level 3", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "HEPA-filtered exhaust removing 99.97% of particles \u003e=0.3 um as a BSL-3 engineering control.", "grounding": null, "id": "hepa_filtration", "is_orphan": false, "label": "HEPA filtration of exhaust air", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Plan-Do-Check-Act biorisk management-system standard for laboratory biosafety.", "grounding": null, "id": "iso_35001_biorisk_management", "is_orphan": false, "label": "ISO 35001 biorisk management system", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Infection acquired by personnel during laboratory work with biological agents.", "grounding": null, "id": "laboratory_acquired_infection", "is_orphan": false, "label": "laboratory-acquired infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Inward directional airflow with negative pressure (2.5-10 Pa) used as a BSL-3 engineering control.", "grounding": null, "id": "negative_pressure_airflow", "is_orphan": false, "label": "negative pressure directional airflow", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Leakage test maintaining steady negative pressure to quantify containment integrity.", "grounding": null, "id": "pressure_decay_testing", "is_orphan": false, "label": "pressure decay testing", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Highly virulent pathogens with aerosol transmission potential causing serious or lethal disease.", "grounding": null, "id": "serious_pathogen_hazard", "is_orphan": false, "label": "serious pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-3 serious-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking serious/lethal disease potential and aerosol transmission risk to BSL-3 classification.", "edges": [{"description": "Serious pathogen hazard with aerosol risk yields BSL-3 classification.", "evidence": [{"notes": "Supports high virulence with aerosol transmissibility as the basis of BSL-3 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "serious_pathogen_hazard", "target": "bsl3_trait"}, {"description": "BSL-3 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-3 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl3_trait", "target": "biosafety_level"}, {"description": "Risk of severe/lethal disease via aerosol route necessitates BSL-3 containment.", "evidence": [{"notes": "\"can cause severe or lethal disease by aerosol route... requires respiratory protection\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-3", "is_orphan": false, "predicate": "necessitates", "predicate_id": null, "source": "aerosol_transmission_risk", "target": "bsl3_trait"}, {"description": "BSL-3 containment is implemented by negative-pressure directional airflow.", "evidence": [{"notes": "\"negative pressure (2.5 to 10 Pascals) with inward airflow\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-4", "is_orphan": false, "predicate": "implemented by", "predicate_id": null, "source": "bsl3_trait", "target": "negative_pressure_airflow"}, {"description": "BSL-3 containment is implemented by HEPA filtration of exhaust air.", "evidence": [{"notes": "\"HEPA-filtered exhaust (eliminating 99.97% of particles \u003e=0.3 um)\"", "reference": "DOI:10.64483/jmph-115"}], "id": "edge-5", "is_orphan": false, "predicate": "implemented by", "predicate_id": null, "source": "bsl3_trait", "target": "hepa_filtration"}, {"description": "BSL-3 containment integrity is verified by quantitative boundary integrity testing.", "evidence": [{"notes": "\"quantitative leakage testing to verify it meets minimum requirements\"", "reference": "DOI:10.1089/apb.2023.0017"}], "id": "edge-6", "is_orphan": false, "predicate": "verified by", "predicate_id": null, "source": "bsl3_trait", "target": "boundary_integrity_testing"}, {"description": "Boundary integrity testing utilizes pressure decay testing under steady negative pressure.", "evidence": [{"notes": "\"maintain a steady negative pressure during leakage testing\"", "reference": "DOI:10.1089/apb.2023.0017"}], "id": "edge-7", "is_orphan": false, "predicate": "utilizes", "predicate_id": null, "source": "boundary_integrity_testing", "target": "pressure_decay_testing"}, {"description": "ISO 35001 biorisk management systems mitigate laboratory-acquired infections.", "evidence": [{"notes": "\"safety management systems generally improve health and safety performance\"", "reference": "DOI:10.26686/nzjhsp.v1i2.9540"}], "id": "edge-8", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "iso_35001_biorisk_management", "target": "laboratory_acquired_infection"}], "evidence_rows": [{"description": "Serious pathogen hazard with aerosol risk yields BSL-3 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports high virulence with aerosol transmissibility as the basis of BSL-3 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "serious pathogen hazard", "source_grounding": null, "target": "biosafety level 3", "target_grounding": "METPO:1001104"}, {"description": "BSL-3 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-3 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 3", "source_grounding": "METPO:1001104", "target": "biosafety level", "target_grounding": "METPO:1001101"}, {"description": "Risk of severe/lethal disease via aerosol route necessitates BSL-3 containment.", "edge_id": "edge-3", "evidence": [{"notes": "\"can cause severe or lethal disease by aerosol route... requires respiratory protection\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "necessitates", "predicate_id": null, "source": "aerosol transmission risk", "source_grounding": null, "target": "biosafety level 3", "target_grounding": "METPO:1001104"}, {"description": "BSL-3 containment is implemented by negative-pressure directional airflow.", "edge_id": "edge-4", "evidence": [{"notes": "\"negative pressure (2.5 to 10 Pascals) with inward airflow\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "implemented by", "predicate_id": null, "source": "biosafety level 3", "source_grounding": "METPO:1001104", "target": "negative pressure directional airflow", "target_grounding": null}, {"description": "BSL-3 containment is implemented by HEPA filtration of exhaust air.", "edge_id": "edge-5", "evidence": [{"notes": "\"HEPA-filtered exhaust (eliminating 99.97% of particles \u003e=0.3 um)\"", "reference": "DOI:10.64483/jmph-115"}], "predicate": "implemented by", "predicate_id": null, "source": "biosafety level 3", "source_grounding": "METPO:1001104", "target": "HEPA filtration of exhaust air", "target_grounding": null}, {"description": "BSL-3 containment integrity is verified by quantitative boundary integrity testing.", "edge_id": "edge-6", "evidence": [{"notes": "\"quantitative leakage testing to verify it meets minimum requirements\"", "reference": "DOI:10.1089/apb.2023.0017"}], "predicate": "verified by", "predicate_id": null, "source": "biosafety level 3", "source_grounding": "METPO:1001104", "target": "boundary integrity testing", "target_grounding": null}, {"description": "Boundary integrity testing utilizes pressure decay testing under steady negative pressure.", "edge_id": "edge-7", "evidence": [{"notes": "\"maintain a steady negative pressure during leakage testing\"", "reference": "DOI:10.1089/apb.2023.0017"}], "predicate": "utilizes", "predicate_id": null, "source": "boundary integrity testing", "source_grounding": null, "target": "pressure decay testing", "target_grounding": null}, {"description": "ISO 35001 biorisk management systems mitigate laboratory-acquired infections.", "edge_id": "edge-8", "evidence": [{"notes": "\"safety management systems generally improve health and safety performance\"", "reference": "DOI:10.26686/nzjhsp.v1i2.9540"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "ISO 35001 biorisk management system", "source_grounding": null, "target": "laboratory-acquired infection", "target_grounding": null}], "graph_id": "biosafety_level_3_serious_hazard", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Risk of agent transmission via aerosols, driving need for high containment.", "grounding": null, "id": "aerosol_transmission_risk", "is_orphan": false, "label": "aerosol transmission risk", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Quantitative leakage/porosity testing verifying that a containment room meets minimum requirements.", "grounding": null, "id": "boundary_integrity_testing", "is_orphan": false, "label": "boundary integrity testing", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Agents causing serious or potentially lethal disease, often via inhalation; specialized containment required.", "grounding": "METPO:1001104", "id": "bsl3_trait", "is_orphan": false, "label": "biosafety level 3", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "HEPA-filtered exhaust removing 99.97% of particles \u003e=0.3 um as a BSL-3 engineering control.", "grounding": null, "id": "hepa_filtration", "is_orphan": false, "label": "HEPA filtration of exhaust air", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Plan-Do-Check-Act biorisk management-system standard for laboratory biosafety.", "grounding": null, "id": "iso_35001_biorisk_management", "is_orphan": false, "label": "ISO 35001 biorisk management system", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Infection acquired by personnel during laboratory work with biological agents.", "grounding": null, "id": "laboratory_acquired_infection", "is_orphan": false, "label": "laboratory-acquired infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Inward directional airflow with negative pressure (2.5-10 Pa) used as a BSL-3 engineering control.", "grounding": null, "id": "negative_pressure_airflow", "is_orphan": false, "label": "negative pressure directional airflow", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Leakage test maintaining steady negative pressure to quantify containment integrity.", "grounding": null, "id": "pressure_decay_testing", "is_orphan": false, "label": "pressure decay testing", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Highly virulent pathogens with aerosol transmission potential causing serious or lethal disease.", "grounding": null, "id": "serious_pathogen_hazard", "is_orphan": false, "label": "serious pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-3 serious-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -978,13 +1005,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

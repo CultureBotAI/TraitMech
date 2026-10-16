@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>biosafety level 5</h1>
     <p class="curie"><code>METPO:1001106</code> · CLASS · REVIEWED</p>
 
@@ -85,8 +96,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>enhanced pathogen hazard</strong>
+
             <span class="edge-predicate">motivates</span>
             <strong>biosafety level 5</strong>
+            <a href="https://w3id.org/metpo/1001106" rel="nofollow noreferrer"><code>METPO:1001106</code></a>
 
             <p>Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.</p>
             <ul>
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>biosafety level 5</strong>
+            <a href="https://w3id.org/metpo/1001106" rel="nofollow noreferrer"><code>METPO:1001106</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
+            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
             <code>rdfs:subClassOf</code>
             <p>BSL-5 is a proposed member of the biosafety-level classification.</p>
             <ul>
@@ -206,38 +221,38 @@
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hailong_system.html">Hailong system</a>
           <span class="sim">0.870</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/transposable_element.html">transposable element</a>
+          <a href="../../traits/genomics/hec_02_system.html">HEC-02 system</a>
           <span class="sim">0.870</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <a href="../../traits/genomics/hec_03_system.html">HEC-03 system</a>
           <span class="sim">0.870</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <a href="../../traits/genomics/hec_04_system.html">HEC-04 system</a>
           <span class="sim">0.870</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/prophage.html">prophage</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">0.870</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/ploidy.html">ploidy</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">0.870</span>
         </li>
 
@@ -781,7 +796,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha retained only as record-level historical name-use evidence.", "edges": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "motivates", "predicate_id": null, "source": "enhanced_pathogen_hazard", "target": "bsl5_trait"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl5_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "motivates", "predicate_id": null, "source": "enhanced pathogen hazard", "target": "biosafety level 5"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 5", "target": "biosafety level"}], "graph_id": "biosafety_level_5_proposed_enhanced_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Proposed enhanced-containment classification beyond BSL-4 for hypothetical extreme-hazard agents.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hypothetical pathogen hazards judged to exceed the transmissibility, severity, or treatability thresholds covered by BSL-4.", "grounding": null, "id": "enhanced_pathogen_hazard", "is_orphan": false, "label": "enhanced pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 proposed enhanced-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha retained only as record-level historical name-use evidence.", "edges": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "motivates", "predicate_id": null, "source": "enhanced_pathogen_hazard", "target": "bsl5_trait"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl5_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "motivates", "predicate_id": null, "source": "enhanced pathogen hazard", "source_grounding": null, "target": "biosafety level 5", "target_grounding": "METPO:1001106"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 5", "source_grounding": "METPO:1001106", "target": "biosafety level", "target_grounding": "METPO:1001101"}], "graph_id": "biosafety_level_5_proposed_enhanced_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Proposed enhanced-containment classification beyond BSL-4 for hypothetical extreme-hazard agents.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hypothetical pathogen hazards judged to exceed the transmissibility, severity, or treatability thresholds covered by BSL-4.", "grounding": null, "id": "enhanced_pathogen_hazard", "is_orphan": false, "label": "enhanced pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 proposed enhanced-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -801,13 +816,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-07 07:24 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>TIR-IV system</h1>
     <p class="curie"><code>traitmech:000482</code> · CLASS · PROPOSED</p>
 
@@ -104,9 +115,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>TIR-IV locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>inhibited bacteriophage plaquing</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder records two custom TIR-IV system profiles.</p>
             <ul>
 
@@ -128,9 +141,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>inhibited bacteriophage plaquing</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>TIR-IV system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000482</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>TIR-IV-mediated inhibition of bacteriophage plaquing realizes the TIR-IV system trait.</p>
             <ul>
 
@@ -145,8 +160,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>TIR-IV system</strong>
+            <code>traitmech:000482</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>TIR-IV system possession is a phage-defense-system trait.</p>
             <ul>
@@ -221,11 +238,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -365,6 +446,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -698,7 +784,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a TIR-IV locus to inhibited bacteriophage plaquing and TIR-IV system possession.", "edges": [{"description": "Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder records two custom TIR-IV system profiles.", "evidence": [{"notes": "Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage defense systems with activity against variable phage subsets.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "Twelve systems have defense activities against a variable number of phages, and 9 of them are new defense systems and named TIR-I to IX"}, {"notes": "The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles under the TIR-IV system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TIR-IV__TIR-IV_A                                 |                                                  | TIR-IV                 | Custom                  | 100    |\n| TIR-IV__TIR-IV_B                                 |                                                  | TIR-IV                 | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tir_iv_locus", "target": "inhibited_phage_plaquing"}, {"description": "TIR-IV-mediated inhibition of bacteriophage plaquing realizes the TIR-IV system trait.", "evidence": [{"notes": "Wang et al. measured cloned TIR-system activity by inhibited plaque formation relative to an empty-vector control.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "The defense activity of the TIR systems against each phage was determined based on their ability to inhibit plaque formation compared to the pSEC1 empty vector control"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "inhibited_phage_plaquing", "target": "tir_iv_system_trait"}, {"description": "TIR-IV system possession is a phage-defense-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the named TIR-IV system to the Wang et al. TIR-domain anti-phage system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TIR-IV | 10\\.1038/s41467-024-51738-3 | The role of TIR domain-containing proteins in bacterial defense against phages |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tir_iv_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder records two custom TIR-IV system profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage defense systems with activity against variable phage subsets.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "Twelve systems have defense activities against a variable number of phages, and 9 of them are new defense systems and named TIR-I to IX"}, {"notes": "The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles under the TIR-IV system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TIR-IV__TIR-IV_A                                 |                                                  | TIR-IV                 | Custom                  | 100    |\n| TIR-IV__TIR-IV_B                                 |                                                  | TIR-IV                 | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "TIR-IV locus", "target": "inhibited bacteriophage plaquing"}, {"description": "TIR-IV-mediated inhibition of bacteriophage plaquing realizes the TIR-IV system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. measured cloned TIR-system activity by inhibited plaque formation relative to an empty-vector control.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "The defense activity of the TIR systems against each phage was determined based on their ability to inhibit plaque formation compared to the pSEC1 empty vector control"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "inhibited bacteriophage plaquing", "target": "TIR-IV system"}, {"description": "TIR-IV system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the named TIR-IV system to the Wang et al. TIR-domain anti-phage system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TIR-IV | 10\\.1038/s41467-024-51738-3 | The role of TIR domain-containing proteins in bacterial defense against phages |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "TIR-IV system", "target": "phage defense system"}], "graph_id": "tir_iv_locus_inhibits_phage_plaquing", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophages in cells carrying a complete TIR-IV system.", "grounding": null, "id": "inhibited_phage_plaquing", "is_orphan": false, "label": "inhibited bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A TIR-IV phage-defense locus represented in the pinned DefenseFinder HMM inventory by TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles.", "grounding": null, "id": "tir_iv_locus", "is_orphan": false, "label": "TIR-IV locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded TIR-IV phage-defense system.", "grounding": "traitmech:000482", "id": "tir_iv_system_trait", "is_orphan": false, "label": "TIR-IV system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures TIR-IV at TIR-system and anti-phage assay level without asserting exact native-host breadth, one universal domain architecture, a direct phage trigger, TIR-domain catalytic output, accession-level components, or a DefenseFinder detection rule absent from the pinned rules table.", "scope_status": "NONMECHANISTIC", "title": "TIR-IV loci inhibit bacteriophage plaquing"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a TIR-IV locus to inhibited bacteriophage plaquing and TIR-IV system possession.", "edges": [{"description": "Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder records two custom TIR-IV system profiles.", "evidence": [{"notes": "Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage defense systems with activity against variable phage subsets.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "Twelve systems have defense activities against a variable number of phages, and 9 of them are new defense systems and named TIR-I to IX"}, {"notes": "The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles under the TIR-IV system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TIR-IV__TIR-IV_A                                 |                                                  | TIR-IV                 | Custom                  | 100    |\n| TIR-IV__TIR-IV_B                                 |                                                  | TIR-IV                 | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tir_iv_locus", "target": "inhibited_phage_plaquing"}, {"description": "TIR-IV-mediated inhibition of bacteriophage plaquing realizes the TIR-IV system trait.", "evidence": [{"notes": "Wang et al. measured cloned TIR-system activity by inhibited plaque formation relative to an empty-vector control.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "The defense activity of the TIR systems against each phage was determined based on their ability to inhibit plaque formation compared to the pSEC1 empty vector control"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "inhibited_phage_plaquing", "target": "tir_iv_system_trait"}, {"description": "TIR-IV system possession is a phage-defense-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the named TIR-IV system to the Wang et al. TIR-domain anti-phage system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TIR-IV | 10\\.1038/s41467-024-51738-3 | The role of TIR domain-containing proteins in bacterial defense against phages |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tir_iv_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Wang et al. linked TIR-IV to anti-phage activity, and DefenseFinder records two custom TIR-IV system profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. report that TIR-IV belongs to nine newly named TIR-domain anti-phage defense systems with activity against variable phage subsets.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "Twelve systems have defense activities against a variable number of phages, and 9 of them are new defense systems and named TIR-I to IX"}, {"notes": "The pinned DefenseFinder HMM inventory records TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles under the TIR-IV system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TIR-IV__TIR-IV_A                                 |                                                  | TIR-IV                 | Custom                  | 100    |\n| TIR-IV__TIR-IV_B                                 |                                                  | TIR-IV                 | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "TIR-IV locus", "source_grounding": null, "target": "inhibited bacteriophage plaquing", "target_grounding": null}, {"description": "TIR-IV-mediated inhibition of bacteriophage plaquing realizes the TIR-IV system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. measured cloned TIR-system activity by inhibited plaque formation relative to an empty-vector control.", "reference": "DOI:10.1038/s41467-024-51738-3", "snippet": "The defense activity of the TIR systems against each phage was determined based on their ability to inhibit plaque formation compared to the pSEC1 empty vector control"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "inhibited bacteriophage plaquing", "source_grounding": null, "target": "TIR-IV system", "target_grounding": "traitmech:000482"}, {"description": "TIR-IV system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the named TIR-IV system to the Wang et al. TIR-domain anti-phage system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TIR-IV | 10\\.1038/s41467-024-51738-3 | The role of TIR domain-containing proteins in bacterial defense against phages |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "TIR-IV system", "source_grounding": "traitmech:000482", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "tir_iv_locus_inhibits_phage_plaquing", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophages in cells carrying a complete TIR-IV system.", "grounding": null, "id": "inhibited_phage_plaquing", "is_orphan": false, "label": "inhibited bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A TIR-IV phage-defense locus represented in the pinned DefenseFinder HMM inventory by TIR-IV__TIR-IV_A and TIR-IV__TIR-IV_B custom profiles.", "grounding": null, "id": "tir_iv_locus", "is_orphan": false, "label": "TIR-IV locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded TIR-IV phage-defense system.", "grounding": "traitmech:000482", "id": "tir_iv_system_trait", "is_orphan": false, "label": "TIR-IV system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures TIR-IV at TIR-system and anti-phage assay level without asserting exact native-host breadth, one universal domain architecture, a direct phage trigger, TIR-domain catalytic output, accession-level components, or a DefenseFinder detection rule absent from the pinned rules table.", "scope_status": "NONMECHANISTIC", "title": "TIR-IV loci inhibit bacteriophage plaquing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -718,13 +804,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-30 04:30 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

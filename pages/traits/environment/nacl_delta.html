@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>NaCl delta</h1>
     <p class="curie"><code>METPO:1000335</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>osmoadaptive flexibility</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>euryhaline physiology</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Osmoadaptive flexibility enables euryhaline growth.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>euryhaline physiology</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>tolerance breadth</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Euryhaline physiology produces a wide growth-supporting NaCl range.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>tolerance breadth</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>NaCl delta</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000335" rel="nofollow noreferrer"><code>METPO:1000335</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>compatible solute accumulation</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>response to osmotic stress</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006970" rel="nofollow noreferrer"><code>GO:0006970</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Compatible-solute uptake or synthesis enables osmoadaptation after an osmotic upshift.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>hyperosmotic upshift</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>potassium ion uptake</strong>
-            <code>biolink:causes</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:1990573" rel="nofollow noreferrer"><code>GO:1990573</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive response.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>potassium ion uptake</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:1990573" rel="nofollow noreferrer"><code>GO:1990573</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>response to osmotic stress</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006970" rel="nofollow noreferrer"><code>GO:0006970</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>K+ accumulation is a core early osmoadaptive response to increased NaCl.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>compatible solute accumulation</strong>
+
             <span class="edge-predicate">part of</span>
             <strong>salt-out strategy</strong>
-            <code>biolink:part_of</code>
+
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>Compatible-solute import or synthesis is part of the salt-out osmoadaptation strategy.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>salt-in strategy</strong>
+            <a href="https://w3id.org/metpo/1007720" rel="nofollow noreferrer"><code>METPO:1007720</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>high maximal NaCl tolerance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The salt-in strategy contributes to growth under very high ambient NaCl in haloarchaeal lineages.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>mechanosensitive channels (MscL/MscS)</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>hypoosmotic shock</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic shocks at the low-salinity end of the range.</p>
             <ul>
 
@@ -945,7 +974,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking osmoadaptive flexibility to the breadth of the NaCl growth range (delta = max \u2212 min).", "edges": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive_flexibility", "target": "euryhaline_physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "euryhaline_physiology", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "nacl_delta_trait"}, {"description": "Compatible-solute uptake or synthesis enables osmoadaptation after an osmotic upshift.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; compatible-solute uptake and synthesis are retained as a broad bacterial osmotic-upshift response.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "secondary response involving uptake or synthesis of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solute_accumulation", "target": "osmoadaptation"}, {"description": "Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive response.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; K+ uptake is retained as the immediate bacterial response to hyperosmotic stress.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "In response to an osmotic upshift (hyperosmotic stress), bacteria import potassium ions"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hyperosmotic_upshift", "target": "potassium_uptake"}, {"description": "K+ accumulation is a core early osmoadaptive response to increased NaCl.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; the early K+ import and later compatible-solute response are framed as limiting water loss and maintaining turgor.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "This allows the cell to limit the loss of water and maintain turgor"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium_uptake", "target": "osmoadaptation"}, {"description": "Compatible-solute import or synthesis is part of the salt-out osmoadaptation strategy.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the edge is reversed to ground the component-process relation.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "The second phase starts with the import or de novo synthesis of the compatible solute"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "compatible_solute_accumulation", "target": "salt_out_strategy"}, {"description": "The salt-in strategy contributes to growth under very high ambient NaCl in haloarchaeal lineages.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; salt-in is retained as a high-salt osmoadaptation strategy, not as a direct determinant of an exact NaCl-delta interval.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "haloarchaea favors the salt-in strategy at high salt concentrations in the medium"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salt_in_strategy", "target": "high_maximal_nacl_tolerance"}, {"description": "Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic shocks at the low-salinity end of the range.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the broad MscL/MscS label is kept reviewed-label-only in this nonmechanistic quantitative graph.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "mechanosensitive channels, which serve as safety valves"}], "id": "edge-9", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mechanosensitive_channels", "target": "hypoosmotic_shock"}], "evidence_rows": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive flexibility", "target": "euryhaline physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "euryhaline physiology", "target": "tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance breadth", "target": "NaCl delta"}, {"description": "Compatible-solute uptake or synthesis enables osmoadaptation after an osmotic upshift.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Pham et al. introduction; compatible-solute uptake and synthesis are retained as a broad bacterial osmotic-upshift response.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "secondary response involving uptake or synthesis of compatible solutes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible solute accumulation", "target": "response to osmotic stress"}, {"description": "Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive response.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Pham et al. introduction; K+ uptake is retained as the immediate bacterial response to hyperosmotic stress.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "In response to an osmotic upshift (hyperosmotic stress), bacteria import potassium ions"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hyperosmotic upshift", "target": "potassium ion uptake"}, {"description": "K+ accumulation is a core early osmoadaptive response to increased NaCl.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Pham et al. introduction; the early K+ import and later compatible-solute response are framed as limiting water loss and maintaining turgor.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "This allows the cell to limit the loss of water and maintain turgor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium ion uptake", "target": "response to osmotic stress"}, {"description": "Compatible-solute import or synthesis is part of the salt-out osmoadaptation strategy.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the edge is reversed to ground the component-process relation.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "The second phase starts with the import or de novo synthesis of the compatible solute"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "compatible solute accumulation", "target": "salt-out strategy"}, {"description": "The salt-in strategy contributes to growth under very high ambient NaCl in haloarchaeal lineages.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against public Bonnaud et al. text; salt-in is retained as a high-salt osmoadaptation strategy, not as a direct determinant of an exact NaCl-delta interval.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "haloarchaea favors the salt-in strategy at high salt concentrations in the medium"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salt-in strategy", "target": "high maximal NaCl tolerance"}, {"description": "Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic shocks at the low-salinity end of the range.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the broad MscL/MscS label is kept reviewed-label-only in this nonmechanistic quantitative graph.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "mechanosensitive channels, which serve as safety valves"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mechanosensitive channels (MscL/MscS)", "target": "hypoosmotic shock"}], "graph_id": "nacl_delta_euryhaline_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Accumulation or synthesis of neutral compatible solutes (glycine betaine, trehalose, ectoine, proline).", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Physiology supporting growth over a broad salinity range.", "grounding": null, "id": "euryhaline_physiology", "is_orphan": false, "label": "euryhaline physiology", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity to grow at very high, near-saturating NaCl concentrations.", "grounding": null, "id": "high_maximal_nacl_tolerance", "is_orphan": false, "label": "high maximal NaCl tolerance", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A rise in ambient NaCl/osmolarity imposing osmotic stress.", "grounding": null, "id": "hyperosmotic_upshift", "is_orphan": false, "label": "hyperosmotic upshift", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A sudden drop in ambient salinity causing turgor stress.", "grounding": null, "id": "hypoosmotic_shock", "is_orphan": false, "label": "hypoosmotic shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane safety-valve channels releasing solutes during sudden hypoosmotic shocks.", "grounding": null, "id": "mechanosensitive_channels", "is_orphan": false, "label": "mechanosensitive channels (MscL/MscS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta_trait", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular adjustment of osmolyte and ion pools in response to osmotic stress.", "grounding": "GO:0006970", "id": "osmoadaptation", "is_orphan": false, "label": "response to osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel osmolyte pools and ion transport across a wide span of ambient salinities.", "grounding": null, "id": "osmoadaptive_flexibility", "is_orphan": false, "label": "osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid import of K+ as the principal cytoplasmic cation during osmotic upshift.", "grounding": "GO:1990573", "id": "potassium_uptake", "is_orphan": false, "label": "potassium ion uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmoadaptation by accumulating intracellular KCl matching environmental salinity, favored at very high salt.", "grounding": "METPO:1007720", "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmoadaptation by excluding Na+ while accumulating organic compatible solutes.", "grounding": null, "id": "salt_out_strategy", "is_orphan": false, "label": "salt-out strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting NaCl.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-delta euryhaline tolerance breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking osmoadaptive flexibility to the breadth of the NaCl growth range (delta = max \u2212 min).", "edges": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive_flexibility", "target": "euryhaline_physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "euryhaline_physiology", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "nacl_delta_trait"}, {"description": "Compatible-solute uptake or synthesis enables osmoadaptation after an osmotic upshift.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; compatible-solute uptake and synthesis are retained as a broad bacterial osmotic-upshift response.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "secondary response involving uptake or synthesis of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solute_accumulation", "target": "osmoadaptation"}, {"description": "Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive response.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; K+ uptake is retained as the immediate bacterial response to hyperosmotic stress.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "In response to an osmotic upshift (hyperosmotic stress), bacteria import potassium ions"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hyperosmotic_upshift", "target": "potassium_uptake"}, {"description": "K+ accumulation is a core early osmoadaptive response to increased NaCl.", "evidence": [{"notes": "Verified against the open Pham et al. introduction; the early K+ import and later compatible-solute response are framed as limiting water loss and maintaining turgor.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "This allows the cell to limit the loss of water and maintain turgor"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium_uptake", "target": "osmoadaptation"}, {"description": "Compatible-solute import or synthesis is part of the salt-out osmoadaptation strategy.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the edge is reversed to ground the component-process relation.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "The second phase starts with the import or de novo synthesis of the compatible solute"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "compatible_solute_accumulation", "target": "salt_out_strategy"}, {"description": "The salt-in strategy contributes to growth under very high ambient NaCl in haloarchaeal lineages.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; salt-in is retained as a high-salt osmoadaptation strategy, not as a direct determinant of an exact NaCl-delta interval.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "haloarchaea favors the salt-in strategy at high salt concentrations in the medium"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salt_in_strategy", "target": "high_maximal_nacl_tolerance"}, {"description": "Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic shocks at the low-salinity end of the range.", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the broad MscL/MscS label is kept reviewed-label-only in this nonmechanistic quantitative graph.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "mechanosensitive channels, which serve as safety valves"}], "id": "edge-9", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mechanosensitive_channels", "target": "hypoosmotic_shock"}], "evidence_rows": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive flexibility", "source_grounding": null, "target": "euryhaline physiology", "target_grounding": null}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "euryhaline physiology", "source_grounding": null, "target": "tolerance breadth", "target_grounding": null}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance breadth", "source_grounding": null, "target": "NaCl delta", "target_grounding": "METPO:1000335"}, {"description": "Compatible-solute uptake or synthesis enables osmoadaptation after an osmotic upshift.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Pham et al. introduction; compatible-solute uptake and synthesis are retained as a broad bacterial osmotic-upshift response.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "secondary response involving uptake or synthesis of compatible solutes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible solute accumulation", "source_grounding": null, "target": "response to osmotic stress", "target_grounding": "GO:0006970"}, {"description": "Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive response.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Pham et al. introduction; K+ uptake is retained as the immediate bacterial response to hyperosmotic stress.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "In response to an osmotic upshift (hyperosmotic stress), bacteria import potassium ions"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hyperosmotic upshift", "source_grounding": null, "target": "potassium ion uptake", "target_grounding": "GO:1990573"}, {"description": "K+ accumulation is a core early osmoadaptive response to increased NaCl.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Pham et al. introduction; the early K+ import and later compatible-solute response are framed as limiting water loss and maintaining turgor.", "reference": "DOI:10.1371/journal.pgen.1007574", "snippet": "This allows the cell to limit the loss of water and maintain turgor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium ion uptake", "source_grounding": "GO:1990573", "target": "response to osmotic stress", "target_grounding": "GO:0006970"}, {"description": "Compatible-solute import or synthesis is part of the salt-out osmoadaptation strategy.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the edge is reversed to ground the component-process relation.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "The second phase starts with the import or de novo synthesis of the compatible solute"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "compatible solute accumulation", "source_grounding": null, "target": "salt-out strategy", "target_grounding": null}, {"description": "The salt-in strategy contributes to growth under very high ambient NaCl in haloarchaeal lineages.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against public Bonnaud et al. text; salt-in is retained as a high-salt osmoadaptation strategy, not as a direct determinant of an exact NaCl-delta interval.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "haloarchaea favors the salt-in strategy at high salt concentrations in the medium"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salt-in strategy", "source_grounding": "METPO:1007720", "target": "high maximal NaCl tolerance", "target_grounding": null}, {"description": "Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic shocks at the low-salinity end of the range.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against public Bonnaud et al. text; the broad MscL/MscS label is kept reviewed-label-only in this nonmechanistic quantitative graph.", "reference": "DOI:10.3390/microorganisms12081738", "snippet": "mechanosensitive channels, which serve as safety valves"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mechanosensitive channels (MscL/MscS)", "source_grounding": null, "target": "hypoosmotic shock", "target_grounding": null}], "graph_id": "nacl_delta_euryhaline_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Accumulation or synthesis of neutral compatible solutes (glycine betaine, trehalose, ectoine, proline).", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Physiology supporting growth over a broad salinity range.", "grounding": null, "id": "euryhaline_physiology", "is_orphan": false, "label": "euryhaline physiology", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity to grow at very high, near-saturating NaCl concentrations.", "grounding": null, "id": "high_maximal_nacl_tolerance", "is_orphan": false, "label": "high maximal NaCl tolerance", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A rise in ambient NaCl/osmolarity imposing osmotic stress.", "grounding": null, "id": "hyperosmotic_upshift", "is_orphan": false, "label": "hyperosmotic upshift", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A sudden drop in ambient salinity causing turgor stress.", "grounding": null, "id": "hypoosmotic_shock", "is_orphan": false, "label": "hypoosmotic shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane safety-valve channels releasing solutes during sudden hypoosmotic shocks.", "grounding": null, "id": "mechanosensitive_channels", "is_orphan": false, "label": "mechanosensitive channels (MscL/MscS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta_trait", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular adjustment of osmolyte and ion pools in response to osmotic stress.", "grounding": "GO:0006970", "id": "osmoadaptation", "is_orphan": false, "label": "response to osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel osmolyte pools and ion transport across a wide span of ambient salinities.", "grounding": null, "id": "osmoadaptive_flexibility", "is_orphan": false, "label": "osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid import of K+ as the principal cytoplasmic cation during osmotic upshift.", "grounding": "GO:1990573", "id": "potassium_uptake", "is_orphan": false, "label": "potassium ion uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmoadaptation by accumulating intracellular KCl matching environmental salinity, favored at very high salt.", "grounding": "METPO:1007720", "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Osmoadaptation by excluding Na+ while accumulating organic compatible solutes.", "grounding": null, "id": "salt_out_strategy", "is_orphan": false, "label": "salt-out strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting NaCl.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-delta euryhaline tolerance breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -965,13 +994,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-04 07:20 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

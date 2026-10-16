@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DdmDE system</h1>
     <p class="curie"><code>traitmech:000275</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>DdmDE locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>DdmDE target DNA recognition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The DdmDE locus encodes DdmE and DdmD components that support DdmDE target DNA recognition.</p>
             <ul>
 
@@ -138,8 +151,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>DdmDE target DNA recognition</strong>
+
             <span class="edge-predicate">triggers</span>
             <strong>processive plasmid destruction</strong>
+
 
             <p>DdmDE DNA recognition triggers processive plasmid destruction.</p>
             <ul>
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>processive plasmid destruction</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>plasmid clearance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Processive DdmDE-mediated plasmid DNA destruction clears invasive plasmids.</p>
             <ul>
 
@@ -172,9 +189,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>plasmid clearance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>DdmDE system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000275</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DdmDE-mediated clearance of small multicopy plasmids realizes the DdmDE system trait.</p>
             <ul>
 
@@ -244,11 +263,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -397,6 +480,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -730,7 +818,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Process sketch linking a DdmDE locus to target DNA recognition, processive plasmid destruction, plasmid clearance, and the DdmDE system trait.", "edges": [{"description": "The DdmDE locus encodes DdmE and DdmD components that support DdmDE target DNA recognition.", "evidence": [{"notes": "Bravo et al. define DdmE as the DNA-guided DdmDE pAgo component.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo"}, {"notes": "Bravo et al. connect DdmD to target-DNA loading and the monomeric active state.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "helicase-nuclease DdmD transitions from an autoinhibited, dimeric complex to a monomeric state upon loading of single-stranded DNA targets"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ddmde_locus", "target": "ddmde_dna_recognition"}, {"description": "DdmDE DNA recognition triggers processive plasmid destruction.", "evidence": [{"notes": "Bravo et al. place plasmid destruction downstream of DNA recognition by DdmDE.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DNA recognition triggers processive plasmid destruction"}], "id": "edge-2", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "ddmde_dna_recognition", "target": "processive_plasmid_destruction"}, {"description": "Processive DdmDE-mediated plasmid DNA destruction clears invasive plasmids.", "evidence": [{"notes": "Bravo et al. frame DdmD as the ancillary factor that helps a pAgo clear plasmids.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "pAgos utilize ancillary factors to achieve plasmid clearance"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "processive_plasmid_destruction", "target": "plasmid_clearance"}, {"description": "DdmDE-mediated clearance of small multicopy plasmids realizes the DdmDE system trait.", "evidence": [{"notes": "Bravo et al. support plasmid elimination as the DdmDE defense output.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmDE system, which rapidly eliminates small, multicopy plasmids"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "plasmid_clearance", "target": "ddmde_system_trait"}], "evidence_rows": [{"description": "The DdmDE locus encodes DdmE and DdmD components that support DdmDE target DNA recognition.", "edge_id": "edge-1", "evidence": [{"notes": "Bravo et al. define DdmE as the DNA-guided DdmDE pAgo component.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo"}, {"notes": "Bravo et al. connect DdmD to target-DNA loading and the monomeric active state.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "helicase-nuclease DdmD transitions from an autoinhibited, dimeric complex to a monomeric state upon loading of single-stranded DNA targets"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DdmDE locus", "target": "DdmDE target DNA recognition"}, {"description": "DdmDE DNA recognition triggers processive plasmid destruction.", "edge_id": "edge-2", "evidence": [{"notes": "Bravo et al. place plasmid destruction downstream of DNA recognition by DdmDE.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DNA recognition triggers processive plasmid destruction"}], "predicate": "triggers", "predicate_id": null, "source": "DdmDE target DNA recognition", "target": "processive plasmid destruction"}, {"description": "Processive DdmDE-mediated plasmid DNA destruction clears invasive plasmids.", "edge_id": "edge-3", "evidence": [{"notes": "Bravo et al. frame DdmD as the ancillary factor that helps a pAgo clear plasmids.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "pAgos utilize ancillary factors to achieve plasmid clearance"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "processive plasmid destruction", "target": "plasmid clearance"}, {"description": "DdmDE-mediated clearance of small multicopy plasmids realizes the DdmDE system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bravo et al. support plasmid elimination as the DdmDE defense output.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmDE system, which rapidly eliminates small, multicopy plasmids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "plasmid clearance", "target": "DdmDE system"}], "graph_id": "ddmde_pago_helicase_plasmid_destruction", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DdmDE DNA recognition coordinated by the DNA-targeting pAgo DdmE and helicase-nuclease DdmD.", "grounding": null, "id": "ddmde_dna_recognition", "is_orphan": false, "label": "DdmDE target DNA recognition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An anti-plasmid defense locus encoding DdmD and DdmE components.", "grounding": null, "id": "ddmde_locus", "is_orphan": false, "label": "DdmDE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DdmDE anti-plasmid defense system.", "grounding": "traitmech:000275", "id": "ddmde_system_trait", "is_orphan": false, "label": "DdmDE system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Elimination of invasive small multicopy plasmids.", "grounding": null, "id": "plasmid_clearance", "is_orphan": false, "label": "plasmid clearance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Processive destruction of plasmid DNA after DdmDE target recognition.", "grounding": null, "id": "processive_plasmid_destruction", "is_orphan": false, "label": "processive plasmid destruction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the DdmDE activation pathway resolved by Bravo et al. without asserting every guide-maturation route, native plasmid substrate, DdmABC cooperation mode, or Vibrio-specific locus boundary as universal for all DdmDE systems.", "scope_status": "NONMECHANISTIC", "title": "DdmDE couples DNA recognition to plasmid destruction"}];
+  var graphs = [{"description": "Process sketch linking a DdmDE locus to target DNA recognition, processive plasmid destruction, plasmid clearance, and the DdmDE system trait.", "edges": [{"description": "The DdmDE locus encodes DdmE and DdmD components that support DdmDE target DNA recognition.", "evidence": [{"notes": "Bravo et al. define DdmE as the DNA-guided DdmDE pAgo component.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo"}, {"notes": "Bravo et al. connect DdmD to target-DNA loading and the monomeric active state.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "helicase-nuclease DdmD transitions from an autoinhibited, dimeric complex to a monomeric state upon loading of single-stranded DNA targets"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ddmde_locus", "target": "ddmde_dna_recognition"}, {"description": "DdmDE DNA recognition triggers processive plasmid destruction.", "evidence": [{"notes": "Bravo et al. place plasmid destruction downstream of DNA recognition by DdmDE.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DNA recognition triggers processive plasmid destruction"}], "id": "edge-2", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "ddmde_dna_recognition", "target": "processive_plasmid_destruction"}, {"description": "Processive DdmDE-mediated plasmid DNA destruction clears invasive plasmids.", "evidence": [{"notes": "Bravo et al. frame DdmD as the ancillary factor that helps a pAgo clear plasmids.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "pAgos utilize ancillary factors to achieve plasmid clearance"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "processive_plasmid_destruction", "target": "plasmid_clearance"}, {"description": "DdmDE-mediated clearance of small multicopy plasmids realizes the DdmDE system trait.", "evidence": [{"notes": "Bravo et al. support plasmid elimination as the DdmDE defense output.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmDE system, which rapidly eliminates small, multicopy plasmids"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "plasmid_clearance", "target": "ddmde_system_trait"}], "evidence_rows": [{"description": "The DdmDE locus encodes DdmE and DdmD components that support DdmDE target DNA recognition.", "edge_id": "edge-1", "evidence": [{"notes": "Bravo et al. define DdmE as the DNA-guided DdmDE pAgo component.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo"}, {"notes": "Bravo et al. connect DdmD to target-DNA loading and the monomeric active state.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "helicase-nuclease DdmD transitions from an autoinhibited, dimeric complex to a monomeric state upon loading of single-stranded DNA targets"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DdmDE locus", "source_grounding": null, "target": "DdmDE target DNA recognition", "target_grounding": null}, {"description": "DdmDE DNA recognition triggers processive plasmid destruction.", "edge_id": "edge-2", "evidence": [{"notes": "Bravo et al. place plasmid destruction downstream of DNA recognition by DdmDE.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DNA recognition triggers processive plasmid destruction"}], "predicate": "triggers", "predicate_id": null, "source": "DdmDE target DNA recognition", "source_grounding": null, "target": "processive plasmid destruction", "target_grounding": null}, {"description": "Processive DdmDE-mediated plasmid DNA destruction clears invasive plasmids.", "edge_id": "edge-3", "evidence": [{"notes": "Bravo et al. frame DdmD as the ancillary factor that helps a pAgo clear plasmids.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "pAgos utilize ancillary factors to achieve plasmid clearance"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "processive plasmid destruction", "source_grounding": null, "target": "plasmid clearance", "target_grounding": null}, {"description": "DdmDE-mediated clearance of small multicopy plasmids realizes the DdmDE system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bravo et al. support plasmid elimination as the DdmDE defense output.", "reference": "DOI:10.1038/s41586-024-07515-9", "snippet": "DdmDE system, which rapidly eliminates small, multicopy plasmids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "plasmid clearance", "source_grounding": null, "target": "DdmDE system", "target_grounding": "traitmech:000275"}], "graph_id": "ddmde_pago_helicase_plasmid_destruction", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DdmDE DNA recognition coordinated by the DNA-targeting pAgo DdmE and helicase-nuclease DdmD.", "grounding": null, "id": "ddmde_dna_recognition", "is_orphan": false, "label": "DdmDE target DNA recognition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An anti-plasmid defense locus encoding DdmD and DdmE components.", "grounding": null, "id": "ddmde_locus", "is_orphan": false, "label": "DdmDE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DdmDE anti-plasmid defense system.", "grounding": "traitmech:000275", "id": "ddmde_system_trait", "is_orphan": false, "label": "DdmDE system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Elimination of invasive small multicopy plasmids.", "grounding": null, "id": "plasmid_clearance", "is_orphan": false, "label": "plasmid clearance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Processive destruction of plasmid DNA after DdmDE target recognition.", "grounding": null, "id": "processive_plasmid_destruction", "is_orphan": false, "label": "processive plasmid destruction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the DdmDE activation pathway resolved by Bravo et al. without asserting every guide-maturation route, native plasmid substrate, DdmABC cooperation mode, or Vibrio-specific locus boundary as universal for all DdmDE systems.", "scope_status": "NONMECHANISTIC", "title": "DdmDE couples DNA recognition to plasmid destruction"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -750,13 +838,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 22:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

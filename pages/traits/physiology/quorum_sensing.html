@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>quorum sensing</h1>
     <p class="curie"><code>traitmech:000084</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>LuxI AHL synthase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0061579" rel="nofollow noreferrer"><code>GO:0061579</code></a>
             <span class="edge-predicate">produces</span>
             <strong>N-acyl homoserine lactone autoinducer</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:71338" rel="nofollow noreferrer"><code>CHEBI:71338</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>A. fischeri LuxI produces the AHL autoinducer that initiates the canonical LuxI/LuxR quorum-sensing circuit.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>N-acyl homoserine lactone autoinducer</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:71338" rel="nofollow noreferrer"><code>CHEBI:71338</code></a>
             <span class="edge-predicate">participates in</span>
             <strong>quorum sensing</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009372" rel="nofollow noreferrer"><code>GO:0009372</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Autoinducer accumulation drives quorum sensing.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>quorum sensing</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009372" rel="nofollow noreferrer"><code>GO:0009372</code></a>
             <span class="edge-predicate">confers</span>
             <strong>quorum sensing</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000084</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The sensing process realizes the quorum-sensing trait.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>threshold autoinducer concentration</strong>
+
             <span class="edge-predicate">triggers</span>
             <strong>quorum sensing</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009372" rel="nofollow noreferrer"><code>GO:0009372</code></a>
 
             <p>A threshold autoinducer concentration triggers the population-wide quorum-sensing response.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>LuxR-family AHL receptor</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000792/" rel="nofollow noreferrer"><code>InterPro:IPR000792</code></a>
             <span class="edge-predicate">positively regulates</span>
             <strong>LuxI AHL synthase</strong>
-            <code>RO:0002213</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0061579" rel="nofollow noreferrer"><code>GO:0061579</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Activated signal-receptor complex promotes autoinducer synthase transcription, forming the autoinduction positive-feedback loop.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>AiiA quorum-quenching AHL lactonase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR054870/" rel="nofollow noreferrer"><code>InterPro:IPR054870</code></a>
             <span class="edge-predicate">inactivates</span>
             <strong>N-acyl homoserine lactone autoinducer</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:71338" rel="nofollow noreferrer"><code>CHEBI:71338</code></a>
 
             <p>Quorum-quenching enzymes degrade/inactivate QS autoinducer signals, interrupting quorum sensing.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>quorum-sensing inhibitor</strong>
+
             <span class="edge-predicate">inhibits</span>
             <strong>LuxR-family AHL receptor</strong>
-            <code>RO:0002212</code>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000792/" rel="nofollow noreferrer"><code>InterPro:IPR000792</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>QS inhibitors chemically disrupt quorum sensing by inhibiting signal receptors / QS pathways.</p>
             <ul>
 
@@ -334,7 +359,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0009372</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0009372" rel="nofollow noreferrer"><code>GO:0009372</code></a></li>
       </ul>
     </div>
 
@@ -362,50 +387,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -986,7 +1011,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking accumulating autoinducer signals to coordinated population-wide gene expression.", "edges": [{"description": "A. fischeri LuxI produces the AHL autoinducer that initiates the canonical LuxI/LuxR quorum-sensing circuit.", "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "autoinducer_synthase", "target": "autoinducer"}, {"description": "Autoinducer accumulation drives quorum sensing.", "evidence": [{"notes": "The primary confinement study describes production and sensing of the AHL autoinducer in the V. fischeri LuxI/LuxR circuit.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "Individual cells release small molecules, known as autoinducers, into their local environment while also responding to the local concentration of the same molecule."}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "autoinducer", "target": "quorum_sensing_process"}, {"description": "The sensing process realizes the quorum-sensing trait.", "evidence": [{"notes": "The V. fischeri LuxI/LuxR experiment links autoinducer accumulation to the coordinated population response that realizes this trait.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "A density of bacteria sufficient to raise the local concentration of AI above a threshold then triggers changes in gene expression throughout the population."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "quorum_sensing_process", "target": "quorum_sensing_trait"}, {"description": "A threshold autoinducer concentration triggers the population-wide quorum-sensing response.", "evidence": [{"notes": "This review statement supports the threshold-to-response relation across bacterial quorum-sensing systems without assigning it to a single receptor architecture.", "reference": "DOI:10.1146/annurev.micro.55.1.165", "snippet": "The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression."}], "id": "edge-4", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "threshold_autoinducer_concentration", "target": "quorum_sensing_process"}, {"description": "Activated signal-receptor complex promotes autoinducer synthase transcription, forming the autoinduction positive-feedback loop.", "evidence": [{"notes": "This primary P. aeruginosa study supports the LuxR-family positive-feedback branch; positive signal autoregulation is not universal to all quorum-sensing systems.", "reference": "DOI:10.1128/mbio.01079-17", "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs"}], "id": "edge-5", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "signal_receptor", "target": "autoinducer_synthase"}, {"description": "Quorum-quenching enzymes degrade/inactivate QS autoinducer signals, interrupting quorum sensing.", "evidence": [{"notes": "The primary structural and catalytic study demonstrates this relation for AiiA from B. thuringiensis and AHL signals specifically.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "lactonases that hydrolyze AHLs into inactive products, thereby blocking the quorum-sensing systems"}], "id": "edge-6", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "quorum_quenching_enzyme", "target": "autoinducer"}, {"description": "QS inhibitors chemically disrupt quorum sensing by inhibiting signal receptors / QS pathways.", "evidence": [{"notes": "The primary structure-function study supports competitive antagonism of the CviR LuxR-family receptor; it does not establish that every quorum-sensing inhibitor acts at a receptor.", "reference": "DOI:10.1016/j.molcel.2011.04.003", "snippet": "CviR from Chromobacterium violaceum is potently antagonized by molecules that bind in place of the native acylated homoserine lactone autoinducer"}], "id": "edge-7", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "qs_inhibitor", "target": "signal_receptor"}], "evidence_rows": [{"description": "A. fischeri LuxI produces the AHL autoinducer that initiates the canonical LuxI/LuxR quorum-sensing circuit.", "edge_id": "edge-1", "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "LuxI AHL synthase", "target": "N-acyl homoserine lactone autoinducer"}, {"description": "Autoinducer accumulation drives quorum sensing.", "edge_id": "edge-2", "evidence": [{"notes": "The primary confinement study describes production and sensing of the AHL autoinducer in the V. fischeri LuxI/LuxR circuit.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "Individual cells release small molecules, known as autoinducers, into their local environment while also responding to the local concentration of the same molecule."}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "N-acyl homoserine lactone autoinducer", "target": "quorum sensing"}, {"description": "The sensing process realizes the quorum-sensing trait.", "edge_id": "edge-3", "evidence": [{"notes": "The V. fischeri LuxI/LuxR experiment links autoinducer accumulation to the coordinated population response that realizes this trait.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "A density of bacteria sufficient to raise the local concentration of AI above a threshold then triggers changes in gene expression throughout the population."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "quorum sensing", "target": "quorum sensing"}, {"description": "A threshold autoinducer concentration triggers the population-wide quorum-sensing response.", "edge_id": "edge-4", "evidence": [{"notes": "This review statement supports the threshold-to-response relation across bacterial quorum-sensing systems without assigning it to a single receptor architecture.", "reference": "DOI:10.1146/annurev.micro.55.1.165", "snippet": "The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression."}], "predicate": "triggers", "predicate_id": null, "source": "threshold autoinducer concentration", "target": "quorum sensing"}, {"description": "Activated signal-receptor complex promotes autoinducer synthase transcription, forming the autoinduction positive-feedback loop.", "edge_id": "edge-5", "evidence": [{"notes": "This primary P. aeruginosa study supports the LuxR-family positive-feedback branch; positive signal autoregulation is not universal to all quorum-sensing systems.", "reference": "DOI:10.1128/mbio.01079-17", "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "LuxR-family AHL receptor", "target": "LuxI AHL synthase"}, {"description": "Quorum-quenching enzymes degrade/inactivate QS autoinducer signals, interrupting quorum sensing.", "edge_id": "edge-6", "evidence": [{"notes": "The primary structural and catalytic study demonstrates this relation for AiiA from B. thuringiensis and AHL signals specifically.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "lactonases that hydrolyze AHLs into inactive products, thereby blocking the quorum-sensing systems"}], "predicate": "inactivates", "predicate_id": null, "source": "AiiA quorum-quenching AHL lactonase", "target": "N-acyl homoserine lactone autoinducer"}, {"description": "QS inhibitors chemically disrupt quorum sensing by inhibiting signal receptors / QS pathways.", "edge_id": "edge-7", "evidence": [{"notes": "The primary structure-function study supports competitive antagonism of the CviR LuxR-family receptor; it does not establish that every quorum-sensing inhibitor acts at a receptor.", "reference": "DOI:10.1016/j.molcel.2011.04.003", "snippet": "CviR from Chromobacterium violaceum is potently antagonized by molecules that bind in place of the native acylated homoserine lactone autoinducer"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "quorum-sensing inhibitor", "target": "LuxR-family AHL receptor"}], "graph_id": "quorum_sensing_autoinducer", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Diffusible signal whose concentration tracks cell density.", "grounding": "CHEBI:71338", "id": "autoinducer", "is_orphan": false, "label": "N-acyl homoserine lactone autoinducer", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Synthase producing the 3-oxo-C6-HSL autoinducer in the canonical A. fischeri LuxI/LuxR circuit.", "grounding": "GO:0061579", "id": "autoinducer_synthase", "is_orphan": false, "label": "LuxI AHL synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 verifies the protein identity and source taxon.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent quorum-sensing circuit in A. fischeri.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Small molecule that disrupts QS by inhibiting signal receptors or pathways.", "grounding": null, "id": "qs_inhibitor", "is_orphan": false, "label": "quorum-sensing inhibitor", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Metallo-dependent AiiA lactonase that hydrolyzes AHL autoinducers and interrupts quorum sensing.", "grounding": "InterPro:IPR054870", "id": "quorum_quenching_enzyme", "is_orphan": false, "label": "AiiA quorum-quenching AHL lactonase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "The primary structural, catalytic, and mutagenesis study establishes AiiA-mediated AHL hydrolysis in B. thuringiensis; UniProtKB P0CJ63 verifies the reviewed protein and taxon.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "quorum-quenching N-acyl-L-homoserine lactone hydrolase"}], "gene_symbol": "aiiA", "protein_label": "N-acyl homoserine lactonase AiiA", "retrieved_on": "2026-08-23", "role": "Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone signals, thereby interrupting the AHL/LuxR signaling branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:29339", "taxon_label": "Bacillus thuringiensis subsp. kurstaki", "uniprot_id": "UniProtKB:P0CJ63"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Detection of autoinducer and population-wide response.", "grounding": "GO:0009372", "id": "quorum_sensing_process", "is_orphan": false, "label": "quorum sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cell-density-dependent coordinated regulation.", "grounding": "traitmech:000084", "id": "quorum_sensing_trait", "is_orphan": false, "label": "quorum sensing", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cognate sensor protein/receptor that detects accumulated autoinducer and alters gene expression.", "grounding": "InterPro:IPR000792", "id": "signal_receptor", "is_orphan": false, "label": "LuxR-family AHL receptor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Threshold accumulated autoinducer concentration (high cell density) that triggers QS activation.", "grounding": null, "id": "threshold_autoinducer_concentration", "is_orphan": false, "label": "threshold autoinducer concentration", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 verifies the protein identity and source taxon.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "node_id": "autoinducer_synthase", "node_label": "LuxI AHL synthase", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent quorum-sensing circuit in A. fischeri.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}, {"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "The primary structural, catalytic, and mutagenesis study establishes AiiA-mediated AHL hydrolysis in B. thuringiensis; UniProtKB P0CJ63 verifies the reviewed protein and taxon.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "quorum-quenching N-acyl-L-homoserine lactone hydrolase"}], "gene_symbol": "aiiA", "node_id": "quorum_quenching_enzyme", "node_label": "AiiA quorum-quenching AHL lactonase", "protein_label": "N-acyl homoserine lactonase AiiA", "retrieved_on": "2026-08-23", "role": "Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone signals, thereby interrupting the AHL/LuxR signaling branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:29339", "taxon_label": "Bacillus thuringiensis subsp. kurstaki", "uniprot_id": "UniProtKB:P0CJ63"}], "scope_notes": "This graph is reviewed as the AHL/LuxR branch of quorum sensing plus a specific AiiA lactonase interruption mechanism; it does not generalize AiiA to peptide or AI-2 signaling systems.", "scope_status": "MECHANISTIC", "title": "Autoinducer-mediated quorum sensing"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking accumulating autoinducer signals to coordinated population-wide gene expression.", "edges": [{"description": "A. fischeri LuxI produces the AHL autoinducer that initiates the canonical LuxI/LuxR quorum-sensing circuit.", "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "autoinducer_synthase", "target": "autoinducer"}, {"description": "Autoinducer accumulation drives quorum sensing.", "evidence": [{"notes": "The primary confinement study describes production and sensing of the AHL autoinducer in the V. fischeri LuxI/LuxR circuit.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "Individual cells release small molecules, known as autoinducers, into their local environment while also responding to the local concentration of the same molecule."}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "autoinducer", "target": "quorum_sensing_process"}, {"description": "The sensing process realizes the quorum-sensing trait.", "evidence": [{"notes": "The V. fischeri LuxI/LuxR experiment links autoinducer accumulation to the coordinated population response that realizes this trait.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "A density of bacteria sufficient to raise the local concentration of AI above a threshold then triggers changes in gene expression throughout the population."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "quorum_sensing_process", "target": "quorum_sensing_trait"}, {"description": "A threshold autoinducer concentration triggers the population-wide quorum-sensing response.", "evidence": [{"notes": "This review statement supports the threshold-to-response relation across bacterial quorum-sensing systems without assigning it to a single receptor architecture.", "reference": "DOI:10.1146/annurev.micro.55.1.165", "snippet": "The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression."}], "id": "edge-4", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "threshold_autoinducer_concentration", "target": "quorum_sensing_process"}, {"description": "Activated signal-receptor complex promotes autoinducer synthase transcription, forming the autoinduction positive-feedback loop.", "evidence": [{"notes": "This primary P. aeruginosa study supports the LuxR-family positive-feedback branch; positive signal autoregulation is not universal to all quorum-sensing systems.", "reference": "DOI:10.1128/mbio.01079-17", "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs"}], "id": "edge-5", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "signal_receptor", "target": "autoinducer_synthase"}, {"description": "Quorum-quenching enzymes degrade/inactivate QS autoinducer signals, interrupting quorum sensing.", "evidence": [{"notes": "The primary structural and catalytic study demonstrates this relation for AiiA from B. thuringiensis and AHL signals specifically.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "lactonases that hydrolyze AHLs into inactive products, thereby blocking the quorum-sensing systems"}], "id": "edge-6", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "quorum_quenching_enzyme", "target": "autoinducer"}, {"description": "QS inhibitors chemically disrupt quorum sensing by inhibiting signal receptors / QS pathways.", "evidence": [{"notes": "The primary structure-function study supports competitive antagonism of the CviR LuxR-family receptor; it does not establish that every quorum-sensing inhibitor acts at a receptor.", "reference": "DOI:10.1016/j.molcel.2011.04.003", "snippet": "CviR from Chromobacterium violaceum is potently antagonized by molecules that bind in place of the native acylated homoserine lactone autoinducer"}], "id": "edge-7", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "qs_inhibitor", "target": "signal_receptor"}], "evidence_rows": [{"description": "A. fischeri LuxI produces the AHL autoinducer that initiates the canonical LuxI/LuxR quorum-sensing circuit.", "edge_id": "edge-1", "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "LuxI AHL synthase", "source_grounding": "GO:0061579", "target": "N-acyl homoserine lactone autoinducer", "target_grounding": "CHEBI:71338"}, {"description": "Autoinducer accumulation drives quorum sensing.", "edge_id": "edge-2", "evidence": [{"notes": "The primary confinement study describes production and sensing of the AHL autoinducer in the V. fischeri LuxI/LuxR circuit.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "Individual cells release small molecules, known as autoinducers, into their local environment while also responding to the local concentration of the same molecule."}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "N-acyl homoserine lactone autoinducer", "source_grounding": "CHEBI:71338", "target": "quorum sensing", "target_grounding": "GO:0009372"}, {"description": "The sensing process realizes the quorum-sensing trait.", "edge_id": "edge-3", "evidence": [{"notes": "The V. fischeri LuxI/LuxR experiment links autoinducer accumulation to the coordinated population response that realizes this trait.", "reference": "DOI:10.1007/s10867-010-9186-4", "snippet": "A density of bacteria sufficient to raise the local concentration of AI above a threshold then triggers changes in gene expression throughout the population."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "quorum sensing", "source_grounding": "GO:0009372", "target": "quorum sensing", "target_grounding": "traitmech:000084"}, {"description": "A threshold autoinducer concentration triggers the population-wide quorum-sensing response.", "edge_id": "edge-4", "evidence": [{"notes": "This review statement supports the threshold-to-response relation across bacterial quorum-sensing systems without assigning it to a single receptor architecture.", "reference": "DOI:10.1146/annurev.micro.55.1.165", "snippet": "The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression."}], "predicate": "triggers", "predicate_id": null, "source": "threshold autoinducer concentration", "source_grounding": null, "target": "quorum sensing", "target_grounding": "GO:0009372"}, {"description": "Activated signal-receptor complex promotes autoinducer synthase transcription, forming the autoinduction positive-feedback loop.", "edge_id": "edge-5", "evidence": [{"notes": "This primary P. aeruginosa study supports the LuxR-family positive-feedback branch; positive signal autoregulation is not universal to all quorum-sensing systems.", "reference": "DOI:10.1128/mbio.01079-17", "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "LuxR-family AHL receptor", "source_grounding": "InterPro:IPR000792", "target": "LuxI AHL synthase", "target_grounding": "GO:0061579"}, {"description": "Quorum-quenching enzymes degrade/inactivate QS autoinducer signals, interrupting quorum sensing.", "edge_id": "edge-6", "evidence": [{"notes": "The primary structural and catalytic study demonstrates this relation for AiiA from B. thuringiensis and AHL signals specifically.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "lactonases that hydrolyze AHLs into inactive products, thereby blocking the quorum-sensing systems"}], "predicate": "inactivates", "predicate_id": null, "source": "AiiA quorum-quenching AHL lactonase", "source_grounding": "InterPro:IPR054870", "target": "N-acyl homoserine lactone autoinducer", "target_grounding": "CHEBI:71338"}, {"description": "QS inhibitors chemically disrupt quorum sensing by inhibiting signal receptors / QS pathways.", "edge_id": "edge-7", "evidence": [{"notes": "The primary structure-function study supports competitive antagonism of the CviR LuxR-family receptor; it does not establish that every quorum-sensing inhibitor acts at a receptor.", "reference": "DOI:10.1016/j.molcel.2011.04.003", "snippet": "CviR from Chromobacterium violaceum is potently antagonized by molecules that bind in place of the native acylated homoserine lactone autoinducer"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "quorum-sensing inhibitor", "source_grounding": null, "target": "LuxR-family AHL receptor", "target_grounding": "InterPro:IPR000792"}], "graph_id": "quorum_sensing_autoinducer", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Diffusible signal whose concentration tracks cell density.", "grounding": "CHEBI:71338", "id": "autoinducer", "is_orphan": false, "label": "N-acyl homoserine lactone autoinducer", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Synthase producing the 3-oxo-C6-HSL autoinducer in the canonical A. fischeri LuxI/LuxR circuit.", "grounding": "GO:0061579", "id": "autoinducer_synthase", "is_orphan": false, "label": "LuxI AHL synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 verifies the protein identity and source taxon.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent quorum-sensing circuit in A. fischeri.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Small molecule that disrupts QS by inhibiting signal receptors or pathways.", "grounding": null, "id": "qs_inhibitor", "is_orphan": false, "label": "quorum-sensing inhibitor", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Metallo-dependent AiiA lactonase that hydrolyzes AHL autoinducers and interrupts quorum sensing.", "grounding": "InterPro:IPR054870", "id": "quorum_quenching_enzyme", "is_orphan": false, "label": "AiiA quorum-quenching AHL lactonase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "The primary structural, catalytic, and mutagenesis study establishes AiiA-mediated AHL hydrolysis in B. thuringiensis; UniProtKB P0CJ63 verifies the reviewed protein and taxon.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "quorum-quenching N-acyl-L-homoserine lactone hydrolase"}], "gene_symbol": "aiiA", "protein_label": "N-acyl homoserine lactonase AiiA", "retrieved_on": "2026-08-23", "role": "Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone signals, thereby interrupting the AHL/LuxR signaling branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:29339", "taxon_label": "Bacillus thuringiensis subsp. kurstaki", "uniprot_id": "UniProtKB:P0CJ63"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Detection of autoinducer and population-wide response.", "grounding": "GO:0009372", "id": "quorum_sensing_process", "is_orphan": false, "label": "quorum sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cell-density-dependent coordinated regulation.", "grounding": "traitmech:000084", "id": "quorum_sensing_trait", "is_orphan": false, "label": "quorum sensing", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cognate sensor protein/receptor that detects accumulated autoinducer and alters gene expression.", "grounding": "InterPro:IPR000792", "id": "signal_receptor", "is_orphan": false, "label": "LuxR-family AHL receptor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Threshold accumulated autoinducer concentration (high cell density) that triggers QS activation.", "grounding": null, "id": "threshold_autoinducer_concentration", "is_orphan": false, "label": "threshold autoinducer concentration", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 verifies the protein identity and source taxon.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "node_id": "autoinducer_synthase", "node_label": "LuxI AHL synthase", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent quorum-sensing circuit in A. fischeri.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}, {"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "The primary structural, catalytic, and mutagenesis study establishes AiiA-mediated AHL hydrolysis in B. thuringiensis; UniProtKB P0CJ63 verifies the reviewed protein and taxon.", "reference": "DOI:10.1073/pnas.0504996102", "snippet": "quorum-quenching N-acyl-L-homoserine lactone hydrolase"}], "gene_symbol": "aiiA", "node_id": "quorum_quenching_enzyme", "node_label": "AiiA quorum-quenching AHL lactonase", "protein_label": "N-acyl homoserine lactonase AiiA", "retrieved_on": "2026-08-23", "role": "Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone signals, thereby interrupting the AHL/LuxR signaling branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:29339", "taxon_label": "Bacillus thuringiensis subsp. kurstaki", "uniprot_id": "UniProtKB:P0CJ63"}], "scope_notes": "This graph is reviewed as the AHL/LuxR branch of quorum sensing plus a specific AiiA lactonase interruption mechanism; it does not generalize AiiA to peptide or AI-2 signaling systems.", "scope_status": "MECHANISTIC", "title": "Autoinducer-mediated quorum sensing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1006,13 +1031,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:09 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

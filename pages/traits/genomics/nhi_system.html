@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Nhi system</h1>
     <p class="curie"><code>traitmech:000332</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Nhi locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Nhi nuclease-helicase immunity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Nhi locus encodes a single-enzyme nuclease-helicase immunity system, and DefenseFinder models Nhi as a one-profile system.</p>
             <ul>
 
@@ -144,9 +157,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Nhi nuclease-helicase immunity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>phage-specific replication intermediate degradation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Nhi nuclease-helicase immunity is inferred to target and degrade phage-specific replication intermediates.</p>
             <ul>
 
@@ -161,9 +176,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>phage-specific replication intermediate degradation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>phage DNA accumulation prevention</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Degradation of phage-specific replication intermediates explains Nhi-dependent prevention of phage DNA accumulation.</p>
             <ul>
 
@@ -184,9 +201,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>phage DNA accumulation prevention</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Nhi system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000332</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Preventing phage DNA accumulation realizes the Nhi phage-defense trait.</p>
             <ul>
 
@@ -207,8 +226,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Nhi system</strong>
+            <code>traitmech:000332</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Nhi system possession is a bacterial phage-defense system.</p>
             <ul>
@@ -279,11 +300,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -408,6 +493,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -741,7 +831,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking an Nhi locus to nuclease-helicase immunity, phage-replication-intermediate degradation, prevention of phage DNA accumulation, and the Nhi system trait.", "edges": [{"description": "The Nhi locus encodes a single-enzyme nuclease-helicase immunity system, and DefenseFinder models Nhi as a one-profile system.", "evidence": [{"notes": "Bari et al. describe Nhi as immunity mediated by one enzyme with nuclease and helicase activities.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Here, we describe a unique mode of nucleic acid immunity mediated by a single enzyme with nuclease and helicase activities, herein referred to as Nhi (nuclease-helicase immunity)"}, {"notes": "The DefenseFinder rules table models Nhi as a one-component system requiring the Nhi__Nhi profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Nhi\tNhi\t1\t1\tNhi__Nhi"}, {"notes": "The DefenseFinder HMM inventory records Nhi__Nhi under the Nhi model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Nhi__Nhi                                         | Nhi__Nhi                                         | Nhi                    | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nhi_locus", "target": "nhi_nuclease_helicase_immunity"}, {"description": "Nhi nuclease-helicase immunity is inferred to target and degrade phage-specific replication intermediates.", "evidence": [{"notes": "Bari et al. support this as a model for Nhi rather than as a completely resolved direct-substrate assignment.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nhi_nuclease_helicase_immunity", "target": "phage_specific_replication_intermediate_degradation"}, {"description": "Degradation of phage-specific replication intermediates explains Nhi-dependent prevention of phage DNA accumulation.", "evidence": [{"notes": "Bari et al. directly observed prevention of phage DNA accumulation in Nhi-containing cells; the replication-intermediate target is recorded as the authors\u0027 model.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "Bari et al. model Nhi as targeting and degrading phage-specific replication intermediates.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_specific_replication_intermediate_degradation", "target": "phage_dna_accumulation_prevention"}, {"description": "Preventing phage DNA accumulation realizes the Nhi phage-defense trait.", "evidence": [{"notes": "Bari et al. connect Nhi to protection against staphylococcal phages and to prevention of phage DNA accumulation.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "The DefenseFinder article registry maps the named Nhi model namespace to the Bari et al. nuclease-helicase immunity preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Nhi | 10\\.1101/776245 | A unique mode of nucleic acid immunity performed by a single multifunctional enzyme"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage_dna_accumulation_prevention", "target": "nhi_system_trait"}, {"description": "Nhi system possession is a bacterial phage-defense system.", "evidence": [{"notes": "Bari et al. place Nhi among compact anti-phage defense systems.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "highlighting the versatility of such compact weapons as major players in antiphage defense"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nhi_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Nhi locus encodes a single-enzyme nuclease-helicase immunity system, and DefenseFinder models Nhi as a one-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Bari et al. describe Nhi as immunity mediated by one enzyme with nuclease and helicase activities.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Here, we describe a unique mode of nucleic acid immunity mediated by a single enzyme with nuclease and helicase activities, herein referred to as Nhi (nuclease-helicase immunity)"}, {"notes": "The DefenseFinder rules table models Nhi as a one-component system requiring the Nhi__Nhi profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Nhi\tNhi\t1\t1\tNhi__Nhi"}, {"notes": "The DefenseFinder HMM inventory records Nhi__Nhi under the Nhi model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Nhi__Nhi                                         | Nhi__Nhi                                         | Nhi                    | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Nhi locus", "target": "Nhi nuclease-helicase immunity"}, {"description": "Nhi nuclease-helicase immunity is inferred to target and degrade phage-specific replication intermediates.", "edge_id": "edge-2", "evidence": [{"notes": "Bari et al. support this as a model for Nhi rather than as a completely resolved direct-substrate assignment.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Nhi nuclease-helicase immunity", "target": "phage-specific replication intermediate degradation"}, {"description": "Degradation of phage-specific replication intermediates explains Nhi-dependent prevention of phage DNA accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Bari et al. directly observed prevention of phage DNA accumulation in Nhi-containing cells; the replication-intermediate target is recorded as the authors\u0027 model.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "Bari et al. model Nhi as targeting and degrading phage-specific replication intermediates.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage-specific replication intermediate degradation", "target": "phage DNA accumulation prevention"}, {"description": "Preventing phage DNA accumulation realizes the Nhi phage-defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bari et al. connect Nhi to protection against staphylococcal phages and to prevention of phage DNA accumulation.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "The DefenseFinder article registry maps the named Nhi model namespace to the Bari et al. nuclease-helicase immunity preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Nhi | 10\\.1101/776245 | A unique mode of nucleic acid immunity performed by a single multifunctional enzyme"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage DNA accumulation prevention", "target": "Nhi system"}, {"description": "Nhi system possession is a bacterial phage-defense system.", "edge_id": "edge-5", "evidence": [{"notes": "Bari et al. place Nhi among compact anti-phage defense systems.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "highlighting the versatility of such compact weapons as major players in antiphage defense"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Nhi system", "target": "phage defense system"}], "graph_id": "nhi_locus_restricts_staphylococcal_phages", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An Nhi-family anti-phage defense locus represented by the DefenseFinder Nhi__Nhi profile.", "grounding": null, "id": "nhi_locus", "is_orphan": false, "label": "Nhi locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Nucleic acid immunity mediated by one enzyme with nuclease and helicase activities.", "grounding": null, "id": "nhi_nuclease_helicase_immunity", "is_orphan": false, "label": "Nhi nuclease-helicase immunity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Nhi nuclease-helicase phage-defense system.", "grounding": "traitmech:000332", "id": "nhi_system_trait", "is_orphan": false, "label": "Nhi system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Prevention of phage DNA accumulation during Nhi anti-phage activity.", "grounding": null, "id": "phage_dna_accumulation_prevention", "is_orphan": false, "label": "phage DNA accumulation prevention", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Targeting and degradation of phage-specific replication intermediates by Nhi.", "grounding": null, "id": "phage_specific_replication_intermediate_degradation", "is_orphan": false, "label": "phage-specific replication intermediate degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Nhi as a named single-profile phage defense system without asserting the direct phage trigger, the exact nuclease-helicase substrate, an accession-level natural host protein, or the full taxonomic breadth of functional homologs.", "scope_status": "NONMECHANISTIC", "title": "Nhi loci provide nuclease-helicase phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking an Nhi locus to nuclease-helicase immunity, phage-replication-intermediate degradation, prevention of phage DNA accumulation, and the Nhi system trait.", "edges": [{"description": "The Nhi locus encodes a single-enzyme nuclease-helicase immunity system, and DefenseFinder models Nhi as a one-profile system.", "evidence": [{"notes": "Bari et al. describe Nhi as immunity mediated by one enzyme with nuclease and helicase activities.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Here, we describe a unique mode of nucleic acid immunity mediated by a single enzyme with nuclease and helicase activities, herein referred to as Nhi (nuclease-helicase immunity)"}, {"notes": "The DefenseFinder rules table models Nhi as a one-component system requiring the Nhi__Nhi profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Nhi\tNhi\t1\t1\tNhi__Nhi"}, {"notes": "The DefenseFinder HMM inventory records Nhi__Nhi under the Nhi model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Nhi__Nhi                                         | Nhi__Nhi                                         | Nhi                    | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nhi_locus", "target": "nhi_nuclease_helicase_immunity"}, {"description": "Nhi nuclease-helicase immunity is inferred to target and degrade phage-specific replication intermediates.", "evidence": [{"notes": "Bari et al. support this as a model for Nhi rather than as a completely resolved direct-substrate assignment.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nhi_nuclease_helicase_immunity", "target": "phage_specific_replication_intermediate_degradation"}, {"description": "Degradation of phage-specific replication intermediates explains Nhi-dependent prevention of phage DNA accumulation.", "evidence": [{"notes": "Bari et al. directly observed prevention of phage DNA accumulation in Nhi-containing cells; the replication-intermediate target is recorded as the authors\u0027 model.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "Bari et al. model Nhi as targeting and degrading phage-specific replication intermediates.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_specific_replication_intermediate_degradation", "target": "phage_dna_accumulation_prevention"}, {"description": "Preventing phage DNA accumulation realizes the Nhi phage-defense trait.", "evidence": [{"notes": "Bari et al. connect Nhi to protection against staphylococcal phages and to prevention of phage DNA accumulation.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "The DefenseFinder article registry maps the named Nhi model namespace to the Bari et al. nuclease-helicase immunity preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Nhi | 10\\.1101/776245 | A unique mode of nucleic acid immunity performed by a single multifunctional enzyme"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage_dna_accumulation_prevention", "target": "nhi_system_trait"}, {"description": "Nhi system possession is a bacterial phage-defense system.", "evidence": [{"notes": "Bari et al. place Nhi among compact anti-phage defense systems.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "highlighting the versatility of such compact weapons as major players in antiphage defense"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nhi_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Nhi locus encodes a single-enzyme nuclease-helicase immunity system, and DefenseFinder models Nhi as a one-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Bari et al. describe Nhi as immunity mediated by one enzyme with nuclease and helicase activities.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Here, we describe a unique mode of nucleic acid immunity mediated by a single enzyme with nuclease and helicase activities, herein referred to as Nhi (nuclease-helicase immunity)"}, {"notes": "The DefenseFinder rules table models Nhi as a one-component system requiring the Nhi__Nhi profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Nhi\tNhi\t1\t1\tNhi__Nhi"}, {"notes": "The DefenseFinder HMM inventory records Nhi__Nhi under the Nhi model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Nhi__Nhi                                         | Nhi__Nhi                                         | Nhi                    | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Nhi locus", "source_grounding": null, "target": "Nhi nuclease-helicase immunity", "target_grounding": null}, {"description": "Nhi nuclease-helicase immunity is inferred to target and degrade phage-specific replication intermediates.", "edge_id": "edge-2", "evidence": [{"notes": "Bari et al. support this as a model for Nhi rather than as a completely resolved direct-substrate assignment.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Nhi nuclease-helicase immunity", "source_grounding": null, "target": "phage-specific replication intermediate degradation", "target_grounding": null}, {"description": "Degradation of phage-specific replication intermediates explains Nhi-dependent prevention of phage DNA accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Bari et al. directly observed prevention of phage DNA accumulation in Nhi-containing cells; the replication-intermediate target is recorded as the authors\u0027 model.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "Bari et al. model Nhi as targeting and degrading phage-specific replication intermediates.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "Our observations support a model in which Nhi targets and degrades phage-specific replication intermediates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage-specific replication intermediate degradation", "source_grounding": null, "target": "phage DNA accumulation prevention", "target_grounding": null}, {"description": "Preventing phage DNA accumulation realizes the Nhi phage-defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bari et al. connect Nhi to protection against staphylococcal phages and to prevention of phage DNA accumulation.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "This enzyme provides robust protection against diverse staphylococcal phages and prevents phage DNA accumulation in cells stripped of all other known defenses"}, {"notes": "The DefenseFinder article registry maps the named Nhi model namespace to the Bari et al. nuclease-helicase immunity preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Nhi | 10\\.1101/776245 | A unique mode of nucleic acid immunity performed by a single multifunctional enzyme"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage DNA accumulation prevention", "source_grounding": null, "target": "Nhi system", "target_grounding": "traitmech:000332"}, {"description": "Nhi system possession is a bacterial phage-defense system.", "edge_id": "edge-5", "evidence": [{"notes": "Bari et al. place Nhi among compact anti-phage defense systems.", "reference": "DOI:10.1016/j.chom.2022.03.001", "snippet": "highlighting the versatility of such compact weapons as major players in antiphage defense"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Nhi system", "source_grounding": "traitmech:000332", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "nhi_locus_restricts_staphylococcal_phages", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An Nhi-family anti-phage defense locus represented by the DefenseFinder Nhi__Nhi profile.", "grounding": null, "id": "nhi_locus", "is_orphan": false, "label": "Nhi locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Nucleic acid immunity mediated by one enzyme with nuclease and helicase activities.", "grounding": null, "id": "nhi_nuclease_helicase_immunity", "is_orphan": false, "label": "Nhi nuclease-helicase immunity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Nhi nuclease-helicase phage-defense system.", "grounding": "traitmech:000332", "id": "nhi_system_trait", "is_orphan": false, "label": "Nhi system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Prevention of phage DNA accumulation during Nhi anti-phage activity.", "grounding": null, "id": "phage_dna_accumulation_prevention", "is_orphan": false, "label": "phage DNA accumulation prevention", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Targeting and degradation of phage-specific replication intermediates by Nhi.", "grounding": null, "id": "phage_specific_replication_intermediate_degradation", "is_orphan": false, "label": "phage-specific replication intermediate degradation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Nhi as a named single-profile phage defense system without asserting the direct phage trigger, the exact nuclease-helicase substrate, an accession-level natural host protein, or the full taxonomic breadth of functional homologs.", "scope_status": "NONMECHANISTIC", "title": "Nhi loci provide nuclease-helicase phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -761,13 +851,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-21 16:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

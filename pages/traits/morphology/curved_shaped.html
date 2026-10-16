@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>curved shaped</h1>
     <p class="curie"><code>METPO:1000670</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>curvature scaffold</strong>
+
             <span class="edge-predicate">localizes to</span>
             <strong>inner cell curvature</strong>
-            <code>biolink:located_in</code>
+
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>Curvature scaffolds mark or constrain the inner curve of the cell.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>curvature scaffold</strong>
+
             <span class="edge-predicate">guides</span>
             <strong>peptidoglycan growth pattern</strong>
+
 
             <p>Curvature scaffolds bias wall growth or structural constraints along the inner curve.</p>
             <ul>
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>peptidoglycan growth pattern</strong>
+
             <span class="edge-predicate">generates</span>
             <strong>cell-body curvature</strong>
-            <code>biolink:produces</code>
+
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Spatially patterned wall growth or constraint generates cell-body curvature.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>cell-body curvature</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>curved shaped</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000670" rel="nofollow noreferrer"><code>METPO:1000670</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Cell-body curvature produces the curved-shape trait.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>MreB cytoskeletal guidance</strong>
+
             <span class="edge-predicate">directs</span>
             <strong>peptidoglycan growth pattern</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>MreB localizes to specific curvature regions and directs localized cell-wall synthesis, supporting scaffold-guided PG remodeling.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>peptidoglycan growth pattern</strong>
+
             <span class="edge-predicate">occurs via</span>
             <strong>spatially constrained (zonal) peptidoglycan remodeling</strong>
+
 
             <p>Because PG synthesis is constrained in space, all cell-wall growth and remodeling is &#34;zonal&#34;, the route through which shape determinants act.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>curved shaped</strong>
+            <a href="https://w3id.org/metpo/1000670" rel="nofollow noreferrer"><code>METPO:1000670</code></a>
             <span class="edge-predicate">optimized for</span>
             <strong>motility in viscous environments</strong>
+
 
             <p>Curved/helical morphology appears optimized for motility, especially in viscous solutions (broad expert synthesis).</p>
             <ul>
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>curved shaped</strong>
+            <a href="https://w3id.org/metpo/1000670" rel="nofollow noreferrer"><code>METPO:1000670</code></a>
             <span class="edge-predicate">promotes</span>
             <strong>surface colonization, motility and virulence</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Curved and helical shapes are widespread among bacteria, promoting surface colonization, motility in viscous environments and virulence.</p>
             <ul>
 
@@ -299,13 +326,13 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a>
+          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
           <span class="sim">0.689</span>
         </li>
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
+          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
           <span class="sim">0.689</span>
         </li>
 
@@ -323,7 +350,7 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
+          <a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a>
           <span class="sim">0.689</span>
         </li>
 
@@ -892,7 +919,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking curved bacterial morphology to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.", "edges": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature_scaffold", "target": "inner_cell_curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "curvature_scaffold", "target": "peptidoglycan_growth_pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan_growth_pattern", "target": "cell_body_curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_body_curvature", "target": "curved_shaped_trait"}, {"description": "MreB localizes to specific curvature regions and directs localized cell-wall synthesis, supporting scaffold-guided PG remodeling.", "evidence": [{"notes": "the actin-like protein MreB localizes to specific curvature regions and directs localized cell-wall synthesis (broad mechanistic class).", "reference": "DOI:10.3389/fmicb.2017.01264"}], "id": "edge-5", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "mreb_cytoskeletal_guidance", "target": "peptidoglycan_growth_pattern"}, {"description": "Because PG synthesis is constrained in space, all cell-wall growth and remodeling is \"zonal\", the route through which shape determinants act.", "evidence": [{"notes": "Because PG synthesis is constrained in space, all cell wall growth and remodeling can be described as \"zonal\" growth.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "id": "edge-6", "is_orphan": false, "predicate": "occurs via", "predicate_id": null, "source": "peptidoglycan_growth_pattern", "target": "zonal_peptidoglycan_remodeling"}, {"description": "Curved/helical morphology appears optimized for motility, especially in viscous solutions (broad expert synthesis).", "evidence": [{"notes": "helical and curved cells appear to be optimized for motility, especially in viscous solutions.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "id": "edge-7", "is_orphan": false, "predicate": "optimized for", "predicate_id": null, "source": "curved_shaped_trait", "target": "motility_in_viscous_environments"}, {"description": "Curved and helical shapes are widespread among bacteria, promoting surface colonization, motility in viscous environments and virulence.", "evidence": [{"notes": "curved and helical cell shapes ... are widespread among bacteria, promoting surface colonization, motility in viscous environments, and virulence.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "curved_shaped_trait", "target": "surface_colonization_motility_virulence"}], "evidence_rows": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature scaffold", "target": "inner cell curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "edge_id": "edge-2", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "predicate": "guides", "predicate_id": null, "source": "curvature scaffold", "target": "peptidoglycan growth pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "edge_id": "edge-3", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan growth pattern", "target": "cell-body curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell-body curvature", "target": "curved shaped"}, {"description": "MreB localizes to specific curvature regions and directs localized cell-wall synthesis, supporting scaffold-guided PG remodeling.", "edge_id": "edge-5", "evidence": [{"notes": "the actin-like protein MreB localizes to specific curvature regions and directs localized cell-wall synthesis (broad mechanistic class).", "reference": "DOI:10.3389/fmicb.2017.01264"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "MreB cytoskeletal guidance", "target": "peptidoglycan growth pattern"}, {"description": "Because PG synthesis is constrained in space, all cell-wall growth and remodeling is \"zonal\", the route through which shape determinants act.", "edge_id": "edge-6", "evidence": [{"notes": "Because PG synthesis is constrained in space, all cell wall growth and remodeling can be described as \"zonal\" growth.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "predicate": "occurs via", "predicate_id": null, "source": "peptidoglycan growth pattern", "target": "spatially constrained (zonal) peptidoglycan remodeling"}, {"description": "Curved/helical morphology appears optimized for motility, especially in viscous solutions (broad expert synthesis).", "edge_id": "edge-7", "evidence": [{"notes": "helical and curved cells appear to be optimized for motility, especially in viscous solutions.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "predicate": "optimized for", "predicate_id": null, "source": "curved shaped", "target": "motility in viscous environments"}, {"description": "Curved and helical shapes are widespread among bacteria, promoting surface colonization, motility in viscous environments and virulence.", "edge_id": "edge-8", "evidence": [{"notes": "curved and helical cell shapes ... are widespread among bacteria, promoting surface colonization, motility in viscous environments, and virulence.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "curved shaped", "target": "surface colonization, motility and virulence"}], "graph_id": "curved_shaped_scaffolded_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Curving of the bacterial cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Shape-determining scaffold such as crescentin or CrvA that marks the inner curve.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bent or curved bacterial cell-body morphology.", "grounding": "METPO:1000670", "id": "curved_shaped_trait", "is_orphan": false, "label": "curved shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Concave region of a curved bacterial cell body.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell motility, especially efficient swimming through viscous solutions.", "grounding": null, "id": "motility_in_viscous_environments", "is_orphan": false, "label": "motility in viscous environments", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein MreB that localizes to curvature regions and directs localized cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeletal_guidance", "is_orphan": false, "label": "MreB cytoskeletal guidance", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial pattern of wall synthesis and remodeling that shapes the cell body.", "grounding": null, "id": "peptidoglycan_growth_pattern", "is_orphan": false, "label": "peptidoglycan growth pattern", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Fitness-relevant processes (surface colonization, motility in viscous environments, virulence) promoted by curved/helical shape.", "grounding": null, "id": "surface_colonization_motility_virulence", "is_orphan": false, "label": "surface colonization, motility and virulence", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatially constrained (\"zonal\") cell-wall growth and remodeling through which shape determinants act.", "grounding": null, "id": "zonal_peptidoglycan_remodeling", "is_orphan": false, "label": "spatially constrained (zonal) peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Curved-shape scaffolded morphogenesis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking curved bacterial morphology to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.", "edges": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature_scaffold", "target": "inner_cell_curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "curvature_scaffold", "target": "peptidoglycan_growth_pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan_growth_pattern", "target": "cell_body_curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_body_curvature", "target": "curved_shaped_trait"}, {"description": "MreB localizes to specific curvature regions and directs localized cell-wall synthesis, supporting scaffold-guided PG remodeling.", "evidence": [{"notes": "the actin-like protein MreB localizes to specific curvature regions and directs localized cell-wall synthesis (broad mechanistic class).", "reference": "DOI:10.3389/fmicb.2017.01264"}], "id": "edge-5", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "mreb_cytoskeletal_guidance", "target": "peptidoglycan_growth_pattern"}, {"description": "Because PG synthesis is constrained in space, all cell-wall growth and remodeling is \"zonal\", the route through which shape determinants act.", "evidence": [{"notes": "Because PG synthesis is constrained in space, all cell wall growth and remodeling can be described as \"zonal\" growth.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "id": "edge-6", "is_orphan": false, "predicate": "occurs via", "predicate_id": null, "source": "peptidoglycan_growth_pattern", "target": "zonal_peptidoglycan_remodeling"}, {"description": "Curved/helical morphology appears optimized for motility, especially in viscous solutions (broad expert synthesis).", "evidence": [{"notes": "helical and curved cells appear to be optimized for motility, especially in viscous solutions.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "id": "edge-7", "is_orphan": false, "predicate": "optimized for", "predicate_id": null, "source": "curved_shaped_trait", "target": "motility_in_viscous_environments"}, {"description": "Curved and helical shapes are widespread among bacteria, promoting surface colonization, motility in viscous environments and virulence.", "evidence": [{"notes": "curved and helical cell shapes ... are widespread among bacteria, promoting surface colonization, motility in viscous environments, and virulence.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "curved_shaped_trait", "target": "surface_colonization_motility_virulence"}], "evidence_rows": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature scaffold", "source_grounding": null, "target": "inner cell curvature", "target_grounding": null}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "edge_id": "edge-2", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "predicate": "guides", "predicate_id": null, "source": "curvature scaffold", "source_grounding": null, "target": "peptidoglycan growth pattern", "target_grounding": null}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "edge_id": "edge-3", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan growth pattern", "source_grounding": null, "target": "cell-body curvature", "target_grounding": null}, {"description": "Cell-body curvature produces the curved-shape trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell-body curvature", "source_grounding": null, "target": "curved shaped", "target_grounding": "METPO:1000670"}, {"description": "MreB localizes to specific curvature regions and directs localized cell-wall synthesis, supporting scaffold-guided PG remodeling.", "edge_id": "edge-5", "evidence": [{"notes": "the actin-like protein MreB localizes to specific curvature regions and directs localized cell-wall synthesis (broad mechanistic class).", "reference": "DOI:10.3389/fmicb.2017.01264"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "MreB cytoskeletal guidance", "source_grounding": null, "target": "peptidoglycan growth pattern", "target_grounding": null}, {"description": "Because PG synthesis is constrained in space, all cell-wall growth and remodeling is \"zonal\", the route through which shape determinants act.", "edge_id": "edge-6", "evidence": [{"notes": "Because PG synthesis is constrained in space, all cell wall growth and remodeling can be described as \"zonal\" growth.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "predicate": "occurs via", "predicate_id": null, "source": "peptidoglycan growth pattern", "source_grounding": null, "target": "spatially constrained (zonal) peptidoglycan remodeling", "target_grounding": null}, {"description": "Curved/helical morphology appears optimized for motility, especially in viscous solutions (broad expert synthesis).", "edge_id": "edge-7", "evidence": [{"notes": "helical and curved cells appear to be optimized for motility, especially in viscous solutions.", "reference": "DOI:10.1371/journal.pbio.1002565"}], "predicate": "optimized for", "predicate_id": null, "source": "curved shaped", "source_grounding": "METPO:1000670", "target": "motility in viscous environments", "target_grounding": null}, {"description": "Curved and helical shapes are widespread among bacteria, promoting surface colonization, motility in viscous environments and virulence.", "edge_id": "edge-8", "evidence": [{"notes": "curved and helical cell shapes ... are widespread among bacteria, promoting surface colonization, motility in viscous environments, and virulence.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "curved shaped", "source_grounding": "METPO:1000670", "target": "surface colonization, motility and virulence", "target_grounding": null}], "graph_id": "curved_shaped_scaffolded_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Curving of the bacterial cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Shape-determining scaffold such as crescentin or CrvA that marks the inner curve.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bent or curved bacterial cell-body morphology.", "grounding": "METPO:1000670", "id": "curved_shaped_trait", "is_orphan": false, "label": "curved shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Concave region of a curved bacterial cell body.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell motility, especially efficient swimming through viscous solutions.", "grounding": null, "id": "motility_in_viscous_environments", "is_orphan": false, "label": "motility in viscous environments", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein MreB that localizes to curvature regions and directs localized cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeletal_guidance", "is_orphan": false, "label": "MreB cytoskeletal guidance", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial pattern of wall synthesis and remodeling that shapes the cell body.", "grounding": null, "id": "peptidoglycan_growth_pattern", "is_orphan": false, "label": "peptidoglycan growth pattern", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Fitness-relevant processes (surface colonization, motility in viscous environments, virulence) promoted by curved/helical shape.", "grounding": null, "id": "surface_colonization_motility_virulence", "is_orphan": false, "label": "surface colonization, motility and virulence", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatially constrained (\"zonal\") cell-wall growth and remodeling through which shape determinants act.", "grounding": null, "id": "zonal_peptidoglycan_remodeling", "is_orphan": false, "label": "spatially constrained (zonal) peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Curved-shape scaffolded morphogenesis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -912,13 +939,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

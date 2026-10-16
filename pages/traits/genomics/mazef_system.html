@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>MazEF system</h1>
     <p class="curie"><code>traitmech:000345</code> · CLASS · PROPOSED</p>
 
@@ -127,9 +138,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>MazEF locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>RNA phage replication interference</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Native mazEF contributes to reduced Escherichia coli susceptibility to the MS2 and Qbeta RNA phages.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>RNA phage replication interference</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>MazEF system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000345</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>MazEF-associated reduction of RNA phage susceptibility realizes the MazEF system trait.</p>
             <ul>
 
@@ -167,8 +182,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>MazEF system</strong>
+            <code>traitmech:000345</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>MazEF system possession is a phage-defense-system trait.</p>
             <ul>
@@ -251,11 +268,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -380,6 +461,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -713,7 +799,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a MazEF locus to native RNA phage defense and the MazEF system possession trait.", "edges": [{"description": "Native mazEF contributes to reduced Escherichia coli susceptibility to the MS2 and Qbeta RNA phages.", "evidence": [{"notes": "Nikolic et al. connect native mazEF presence to reduced RNA phage susceptibility.", "reference": "PMID:40494395", "snippet": "the native presence of mazEF moderately reduced population susceptibility"}, {"notes": "Nikolic et al. distinguish MazEF-mediated intracellular interference from blocked RNA phage adsorption.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/", "snippet": "MazEF interferes with RNA phage replication within already infected cells"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "mazef_locus", "target": "rna_phage_replication_interference"}, {"description": "MazEF-associated reduction of RNA phage susceptibility realizes the MazEF system trait.", "evidence": [{"notes": "Nikolic et al. frame the MazEF result as support for RNA-degrading toxin-antitoxin systems as RNA phage defense elements.", "reference": "PMID:40494395", "snippet": "RNA-degrading toxin-antitoxin systems may also help defend against RNA phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "rna_phage_replication_interference", "target": "mazef_system_trait"}, {"description": "MazEF system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates MazEF with the Nikolic et al. RNA-phage defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "MazEF | 10\\.1098/rsbl\\.2025\\.0080 | A bacterial toxin-antitoxin system as a native defence element against RNA phages"}, {"notes": "The DefenseFinder rules table models MazEF as a two-profile system requiring MazE and MazF profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "MazEF\tMazEF\t2\t2\tMazEF__MazE, MazEF__MazF"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "mazef_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Native mazEF contributes to reduced Escherichia coli susceptibility to the MS2 and Qbeta RNA phages.", "edge_id": "edge-1", "evidence": [{"notes": "Nikolic et al. connect native mazEF presence to reduced RNA phage susceptibility.", "reference": "PMID:40494395", "snippet": "the native presence of mazEF moderately reduced population susceptibility"}, {"notes": "Nikolic et al. distinguish MazEF-mediated intracellular interference from blocked RNA phage adsorption.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/", "snippet": "MazEF interferes with RNA phage replication within already infected cells"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "MazEF locus", "target": "RNA phage replication interference"}, {"description": "MazEF-associated reduction of RNA phage susceptibility realizes the MazEF system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Nikolic et al. frame the MazEF result as support for RNA-degrading toxin-antitoxin systems as RNA phage defense elements.", "reference": "PMID:40494395", "snippet": "RNA-degrading toxin-antitoxin systems may also help defend against RNA phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "RNA phage replication interference", "target": "MazEF system"}, {"description": "MazEF system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates MazEF with the Nikolic et al. RNA-phage defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "MazEF | 10\\.1098/rsbl\\.2025\\.0080 | A bacterial toxin-antitoxin system as a native defence element against RNA phages"}, {"notes": "The DefenseFinder rules table models MazEF as a two-profile system requiring MazE and MazF profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "MazEF\tMazEF\t2\t2\tMazEF__MazE, MazEF__MazF"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "MazEF system", "target": "phage defense system"}], "graph_id": "mazef_rna_phage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-component toxin-antitoxin locus represented by MazE and MazF profiles.", "grounding": null, "id": "mazef_locus", "is_orphan": false, "label": "MazEF locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded MazEF toxin-antitoxin phage-defense system.", "grounding": "traitmech:000345", "id": "mazef_system_trait", "is_orphan": false, "label": "MazEF system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced RNA phage replication or survival of RNA phage-infected cells associated with native mazEF.", "grounding": null, "id": "rna_phage_replication_interference", "is_orphan": false, "label": "RNA phage replication interference", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures native MazEF protection against RNA phages without asserting a phage-triggered MazF activation route, a resolved direct phage-RNA cleavage event, MazEF-mediated DNA-phage defense breadth, or a generic abortive-infection output.", "scope_status": "NONMECHANISTIC", "title": "MazEF loci reduce RNA phage susceptibility"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a MazEF locus to native RNA phage defense and the MazEF system possession trait.", "edges": [{"description": "Native mazEF contributes to reduced Escherichia coli susceptibility to the MS2 and Qbeta RNA phages.", "evidence": [{"notes": "Nikolic et al. connect native mazEF presence to reduced RNA phage susceptibility.", "reference": "PMID:40494395", "snippet": "the native presence of mazEF moderately reduced population susceptibility"}, {"notes": "Nikolic et al. distinguish MazEF-mediated intracellular interference from blocked RNA phage adsorption.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/", "snippet": "MazEF interferes with RNA phage replication within already infected cells"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "mazef_locus", "target": "rna_phage_replication_interference"}, {"description": "MazEF-associated reduction of RNA phage susceptibility realizes the MazEF system trait.", "evidence": [{"notes": "Nikolic et al. frame the MazEF result as support for RNA-degrading toxin-antitoxin systems as RNA phage defense elements.", "reference": "PMID:40494395", "snippet": "RNA-degrading toxin-antitoxin systems may also help defend against RNA phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "rna_phage_replication_interference", "target": "mazef_system_trait"}, {"description": "MazEF system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates MazEF with the Nikolic et al. RNA-phage defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "MazEF | 10\\.1098/rsbl\\.2025\\.0080 | A bacterial toxin-antitoxin system as a native defence element against RNA phages"}, {"notes": "The DefenseFinder rules table models MazEF as a two-profile system requiring MazE and MazF profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "MazEF\tMazEF\t2\t2\tMazEF__MazE, MazEF__MazF"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "mazef_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Native mazEF contributes to reduced Escherichia coli susceptibility to the MS2 and Qbeta RNA phages.", "edge_id": "edge-1", "evidence": [{"notes": "Nikolic et al. connect native mazEF presence to reduced RNA phage susceptibility.", "reference": "PMID:40494395", "snippet": "the native presence of mazEF moderately reduced population susceptibility"}, {"notes": "Nikolic et al. distinguish MazEF-mediated intracellular interference from blocked RNA phage adsorption.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/", "snippet": "MazEF interferes with RNA phage replication within already infected cells"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "MazEF locus", "source_grounding": null, "target": "RNA phage replication interference", "target_grounding": null}, {"description": "MazEF-associated reduction of RNA phage susceptibility realizes the MazEF system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Nikolic et al. frame the MazEF result as support for RNA-degrading toxin-antitoxin systems as RNA phage defense elements.", "reference": "PMID:40494395", "snippet": "RNA-degrading toxin-antitoxin systems may also help defend against RNA phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "RNA phage replication interference", "source_grounding": null, "target": "MazEF system", "target_grounding": "traitmech:000345"}, {"description": "MazEF system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates MazEF with the Nikolic et al. RNA-phage defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "MazEF | 10\\.1098/rsbl\\.2025\\.0080 | A bacterial toxin-antitoxin system as a native defence element against RNA phages"}, {"notes": "The DefenseFinder rules table models MazEF as a two-profile system requiring MazE and MazF profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "MazEF\tMazEF\t2\t2\tMazEF__MazE, MazEF__MazF"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "MazEF system", "source_grounding": "traitmech:000345", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "mazef_rna_phage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-component toxin-antitoxin locus represented by MazE and MazF profiles.", "grounding": null, "id": "mazef_locus", "is_orphan": false, "label": "MazEF locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded MazEF toxin-antitoxin phage-defense system.", "grounding": "traitmech:000345", "id": "mazef_system_trait", "is_orphan": false, "label": "MazEF system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced RNA phage replication or survival of RNA phage-infected cells associated with native mazEF.", "grounding": null, "id": "rna_phage_replication_interference", "is_orphan": false, "label": "RNA phage replication interference", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures native MazEF protection against RNA phages without asserting a phage-triggered MazF activation route, a resolved direct phage-RNA cleavage event, MazEF-mediated DNA-phage defense breadth, or a generic abortive-infection output.", "scope_status": "NONMECHANISTIC", "title": "MazEF loci reduce RNA phage susceptibility"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -733,13 +819,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-21 21:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

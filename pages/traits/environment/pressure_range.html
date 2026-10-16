@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>pressure range</h1>
     <p class="curie"><code>traitmech:000005</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>hydrostatic pressure</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001025" rel="nofollow noreferrer"><code>PATO:0001025</code></a>
             <span class="edge-predicate">defines</span>
             <strong>pressure range</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000005</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The hydrostatic-pressure axis defines the min/max bounds bracketed by the pressure range.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>pressure range</strong>
+            <code>traitmech:000005</code>
             <span class="edge-predicate">associated with</span>
             <strong>growth-permissive pressure span</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>The pressure range records the bounded interval of permissive hydrostatic pressures.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>polyunsaturated fatty acid biosynthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006636" rel="nofollow noreferrer"><code>GO:0006636</code></a>
             <span class="edge-predicate">increases</span>
             <strong>membrane fluidity under high hydrostatic pressure</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>PUFA biosynthesis increases membrane fluidity to counter pressure-induced membrane ordering.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>unsaturated membrane lipids</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>pressure range</strong>
-            <code>RO:0002213</code>
+            <code>traitmech:000005</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Unsaturated membrane lipids support growth across high hydrostatic pressures.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>membrane fluidity under high hydrostatic pressure</strong>
+
             <span class="edge-predicate">expands</span>
             <strong>pressure range</strong>
+            <code>traitmech:000005</code>
 
             <p>Maintaining membrane fluidity under pressure expands the growth-supporting pressure range.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>trimethylamine N-oxide (TMAO)</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>protein stabilization via preferential hydration</strong>
+
 
             <p>TMAO stabilizes proteins via preferential hydration (preferential exclusion from hydration layer).</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>compatible solute accumulation</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>protein stabilization via preferential hydration</strong>
+
 
             <p>Compatible solutes stabilize proteins via preferential hydration.</p>
             <ul>
@@ -271,49 +296,49 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <a href="../../traits/environment/pressure_optimum.html">pressure optimum</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/pressure_delta.html">pressure delta</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -867,7 +892,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed sketch linking the hydrostatic-pressure axis to the minimum/maximum bounds within which growth is sustained.", "edges": [{"description": "The hydrostatic-pressure axis defines the min/max bounds bracketed by the pressure range.", "evidence": [{"notes": "Pressure-adaptation review frames the bounded span of growth-permissive pressure as a defining quantitative descriptor.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic_pressure", "target": "pressure_range_trait"}, {"description": "The pressure range records the bounded interval of permissive hydrostatic pressures.", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting pressure span (80-140 MPa).", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure_range_trait", "target": "bounded_growth_span"}, {"description": "PUFA biosynthesis increases membrane fluidity to counter pressure-induced membrane ordering.", "evidence": [{"notes": "PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure; broad mechanism across taxa.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "pufa_biosynthesis", "target": "membrane_fluidity_hhp"}, {"description": "Unsaturated membrane lipids support growth across high hydrostatic pressures.", "evidence": [{"notes": "Mutants with reduced C18:1 could not withstand high pressure; unsaturation counters pressure ordering.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated_membrane_lipids", "target": "pressure_range_trait"}, {"description": "Maintaining membrane fluidity under pressure expands the growth-supporting pressure range.", "evidence": [{"notes": "Pressure compacts membranes; organisms restore membrane disorder/function via unsaturation to sustain growth.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-5", "is_orphan": false, "predicate": "expands", "predicate_id": null, "source": "membrane_fluidity_hhp", "target": "pressure_range_trait"}, {"description": "TMAO stabilizes proteins via preferential hydration (preferential exclusion from hydration layer).", "evidence": [{"notes": "TMAO preferentially excluded from protein hydration layer causing preferential hydration; biophysical mechanism, not microbe-specific.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-6", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "tmao", "target": "protein_stabilization"}, {"description": "Compatible solutes stabilize proteins via preferential hydration.", "evidence": [{"notes": "Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by preferential hydration, displacing protein-bound water.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "protein_stabilization"}], "evidence_rows": [{"description": "The hydrostatic-pressure axis defines the min/max bounds bracketed by the pressure range.", "edge_id": "edge-1", "evidence": [{"notes": "Pressure-adaptation review frames the bounded span of growth-permissive pressure as a defining quantitative descriptor.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic pressure", "target": "pressure range"}, {"description": "The pressure range records the bounded interval of permissive hydrostatic pressures.", "edge_id": "edge-2", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting pressure span (80-140 MPa).", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure range", "target": "growth-permissive pressure span"}, {"description": "PUFA biosynthesis increases membrane fluidity to counter pressure-induced membrane ordering.", "edge_id": "edge-3", "evidence": [{"notes": "PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure; broad mechanism across taxa.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "polyunsaturated fatty acid biosynthesis", "target": "membrane fluidity under high hydrostatic pressure"}, {"description": "Unsaturated membrane lipids support growth across high hydrostatic pressures.", "edge_id": "edge-4", "evidence": [{"notes": "Mutants with reduced C18:1 could not withstand high pressure; unsaturation counters pressure ordering.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated membrane lipids", "target": "pressure range"}, {"description": "Maintaining membrane fluidity under pressure expands the growth-supporting pressure range.", "edge_id": "edge-5", "evidence": [{"notes": "Pressure compacts membranes; organisms restore membrane disorder/function via unsaturation to sustain growth.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "expands", "predicate_id": null, "source": "membrane fluidity under high hydrostatic pressure", "target": "pressure range"}, {"description": "TMAO stabilizes proteins via preferential hydration (preferential exclusion from hydration layer).", "edge_id": "edge-6", "evidence": [{"notes": "TMAO preferentially excluded from protein hydration layer causing preferential hydration; biophysical mechanism, not microbe-specific.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "stabilizes", "predicate_id": null, "source": "trimethylamine N-oxide (TMAO)", "target": "protein stabilization via preferential hydration"}, {"description": "Compatible solutes stabilize proteins via preferential hydration.", "edge_id": "edge-7", "evidence": [{"notes": "Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by preferential hydration, displacing protein-bound water.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "stabilizes", "predicate_id": null, "source": "compatible solute accumulation", "target": "protein stabilization via preferential hydration"}], "graph_id": "pressure_range_growth_bounded_span", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Continuous interval of hydrostatic pressures supporting growth.", "grounding": null, "id": "bounded_growth_span", "is_orphan": false, "label": "growth-permissive pressure span", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of compatible solutes (betaine, glutamate, beta-hydroxybutyrate) acting as piezolytes.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025", "id": "hydrostatic_pressure", "is_orphan": false, "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Degree of membrane lipid disorder/fluidity maintained against pressure-induced ordering.", "grounding": null, "id": "membrane_fluidity_hhp", "is_orphan": false, "label": "membrane fluidity under high hydrostatic pressure", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bounded min-to-max hydrostatic pressure supporting growth.", "grounding": "traitmech:000005", "id": "pressure_range_trait", "is_orphan": false, "label": "pressure range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of native protein structure by preferential exclusion of cosolutes.", "grounding": null, "id": "protein_stabilization", "is_orphan": false, "label": "protein stabilization via preferential hydration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Synthesis of polyunsaturated fatty acids incorporated into membrane lipids.", "grounding": "GO:0006636", "id": "pufa_biosynthesis", "is_orphan": false, "label": "polyunsaturated fatty acid biosynthesis", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute / piezolyte excluded from the protein hydration layer.", "grounding": null, "id": "tmao", "is_orphan": false, "label": "trimethylamine N-oxide (TMAO)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Unsaturated fatty acids in membrane phospholipids that counter pressure-induced ordering.", "grounding": null, "id": "unsaturated_membrane_lipids", "is_orphan": false, "label": "unsaturated membrane lipids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Pressure range: bounded hydrostatic-pressure span supporting growth"}];
+  var graphs = [{"description": "Evidence-backed sketch linking the hydrostatic-pressure axis to the minimum/maximum bounds within which growth is sustained.", "edges": [{"description": "The hydrostatic-pressure axis defines the min/max bounds bracketed by the pressure range.", "evidence": [{"notes": "Pressure-adaptation review frames the bounded span of growth-permissive pressure as a defining quantitative descriptor.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic_pressure", "target": "pressure_range_trait"}, {"description": "The pressure range records the bounded interval of permissive hydrostatic pressures.", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting pressure span (80-140 MPa).", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure_range_trait", "target": "bounded_growth_span"}, {"description": "PUFA biosynthesis increases membrane fluidity to counter pressure-induced membrane ordering.", "evidence": [{"notes": "PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure; broad mechanism across taxa.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "pufa_biosynthesis", "target": "membrane_fluidity_hhp"}, {"description": "Unsaturated membrane lipids support growth across high hydrostatic pressures.", "evidence": [{"notes": "Mutants with reduced C18:1 could not withstand high pressure; unsaturation counters pressure ordering.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated_membrane_lipids", "target": "pressure_range_trait"}, {"description": "Maintaining membrane fluidity under pressure expands the growth-supporting pressure range.", "evidence": [{"notes": "Pressure compacts membranes; organisms restore membrane disorder/function via unsaturation to sustain growth.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-5", "is_orphan": false, "predicate": "expands", "predicate_id": null, "source": "membrane_fluidity_hhp", "target": "pressure_range_trait"}, {"description": "TMAO stabilizes proteins via preferential hydration (preferential exclusion from hydration layer).", "evidence": [{"notes": "TMAO preferentially excluded from protein hydration layer causing preferential hydration; biophysical mechanism, not microbe-specific.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-6", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "tmao", "target": "protein_stabilization"}, {"description": "Compatible solutes stabilize proteins via preferential hydration.", "evidence": [{"notes": "Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by preferential hydration, displacing protein-bound water.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "protein_stabilization"}], "evidence_rows": [{"description": "The hydrostatic-pressure axis defines the min/max bounds bracketed by the pressure range.", "edge_id": "edge-1", "evidence": [{"notes": "Pressure-adaptation review frames the bounded span of growth-permissive pressure as a defining quantitative descriptor.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic pressure", "source_grounding": "PATO:0001025", "target": "pressure range", "target_grounding": "traitmech:000005"}, {"description": "The pressure range records the bounded interval of permissive hydrostatic pressures.", "edge_id": "edge-2", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting pressure span (80-140 MPa).", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure range", "source_grounding": "traitmech:000005", "target": "growth-permissive pressure span", "target_grounding": null}, {"description": "PUFA biosynthesis increases membrane fluidity to counter pressure-induced membrane ordering.", "edge_id": "edge-3", "evidence": [{"notes": "PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure; broad mechanism across taxa.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "polyunsaturated fatty acid biosynthesis", "source_grounding": "GO:0006636", "target": "membrane fluidity under high hydrostatic pressure", "target_grounding": null}, {"description": "Unsaturated membrane lipids support growth across high hydrostatic pressures.", "edge_id": "edge-4", "evidence": [{"notes": "Mutants with reduced C18:1 could not withstand high pressure; unsaturation counters pressure ordering.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated membrane lipids", "source_grounding": null, "target": "pressure range", "target_grounding": "traitmech:000005"}, {"description": "Maintaining membrane fluidity under pressure expands the growth-supporting pressure range.", "edge_id": "edge-5", "evidence": [{"notes": "Pressure compacts membranes; organisms restore membrane disorder/function via unsaturation to sustain growth.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "expands", "predicate_id": null, "source": "membrane fluidity under high hydrostatic pressure", "source_grounding": null, "target": "pressure range", "target_grounding": "traitmech:000005"}, {"description": "TMAO stabilizes proteins via preferential hydration (preferential exclusion from hydration layer).", "edge_id": "edge-6", "evidence": [{"notes": "TMAO preferentially excluded from protein hydration layer causing preferential hydration; biophysical mechanism, not microbe-specific.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "stabilizes", "predicate_id": null, "source": "trimethylamine N-oxide (TMAO)", "source_grounding": null, "target": "protein stabilization via preferential hydration", "target_grounding": null}, {"description": "Compatible solutes stabilize proteins via preferential hydration.", "edge_id": "edge-7", "evidence": [{"notes": "Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by preferential hydration, displacing protein-bound water.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "stabilizes", "predicate_id": null, "source": "compatible solute accumulation", "source_grounding": null, "target": "protein stabilization via preferential hydration", "target_grounding": null}], "graph_id": "pressure_range_growth_bounded_span", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Continuous interval of hydrostatic pressures supporting growth.", "grounding": null, "id": "bounded_growth_span", "is_orphan": false, "label": "growth-permissive pressure span", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of compatible solutes (betaine, glutamate, beta-hydroxybutyrate) acting as piezolytes.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025", "id": "hydrostatic_pressure", "is_orphan": false, "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Degree of membrane lipid disorder/fluidity maintained against pressure-induced ordering.", "grounding": null, "id": "membrane_fluidity_hhp", "is_orphan": false, "label": "membrane fluidity under high hydrostatic pressure", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bounded min-to-max hydrostatic pressure supporting growth.", "grounding": "traitmech:000005", "id": "pressure_range_trait", "is_orphan": false, "label": "pressure range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of native protein structure by preferential exclusion of cosolutes.", "grounding": null, "id": "protein_stabilization", "is_orphan": false, "label": "protein stabilization via preferential hydration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Synthesis of polyunsaturated fatty acids incorporated into membrane lipids.", "grounding": "GO:0006636", "id": "pufa_biosynthesis", "is_orphan": false, "label": "polyunsaturated fatty acid biosynthesis", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute / piezolyte excluded from the protein hydration layer.", "grounding": null, "id": "tmao", "is_orphan": false, "label": "trimethylamine N-oxide (TMAO)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Unsaturated fatty acids in membrane phospholipids that counter pressure-induced ordering.", "grounding": null, "id": "unsaturated_membrane_lipids", "is_orphan": false, "label": "unsaturated membrane lipids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Pressure range: bounded hydrostatic-pressure span supporting growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -887,13 +912,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

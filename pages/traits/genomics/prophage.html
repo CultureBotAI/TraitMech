@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>prophage</h1>
     <p class="curie"><code>traitmech:000091</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>prophage</strong>
+            <code>traitmech:000091</code>
             <span class="edge-predicate">enables</span>
             <strong>lysogeny</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Prophage carriage is the genomic state realized during lysogeny.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>prophage</strong>
+            <code>traitmech:000091</code>
             <span class="edge-predicate">contributes to</span>
             <strong>host phenotype</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Prophage-encoded genes can alter host virulence or fitness (lysogenic conversion).</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>prophage</strong>
+            <code>traitmech:000091</code>
             <span class="edge-predicate">integrates into</span>
             <strong>bacterial chromosome</strong>
+
 
             <p>Temperate prophages canonically integrate into the host chromosome (though some persist extrachromosomally).</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>CI master repressor</strong>
+
             <span class="edge-predicate">represses</span>
             <strong>lytic gene expression</strong>
+
 
             <p>Lysogeny is maintained by a phage-encoded CI repressor that binds the lysis promoter PR to block lytic gene expression.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>DNA damage / replication stress</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>RecA-LexA SOS response</strong>
-            <code>RO:0002213</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009432" rel="nofollow noreferrer"><code>GO:0009432</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>DNA damage / replication stress generates ssDNA that triggers the RecA-LexA SOS response.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>RecA* nucleoprotein filament</strong>
+
             <span class="edge-predicate">promotes autocleavage of</span>
             <strong>LexA repressor</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR050077/" rel="nofollow noreferrer"><code>InterPro:IPR050077</code></a>
 
             <p>Activated RecA* promotes LexA autoproteolysis, de-repressing the SOS regulon.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>RecA* nucleoprotein filament</strong>
+
             <span class="edge-predicate">promotes autocleavage of</span>
             <strong>CI master repressor</strong>
+
 
             <p>RecA* stimulates self-cleavage/inactivation of the phage CI repressor, de-repressing lysis and triggering induction.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>CI master repressor</strong>
+
             <span class="edge-predicate">prevents</span>
             <strong>prophage induction</strong>
-            <code>RO:0002212</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0098689" rel="nofollow noreferrer"><code>GO:0098689</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>While intact, the CI repressor maintains lysogeny and prevents prophage induction; its inactivation triggers induction.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>phage-plasmid</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>extrachromosomal prophage maintenance</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Phage-plasmids are temperate phages maintained extrachromosomally, so prophages need not be integrated.</p>
             <ul>
 
@@ -320,43 +349,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -934,7 +963,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking prophage carriage to lysogenic maintenance and lysogenic conversion of the host.", "edges": [{"description": "Prophage carriage is the genomic state realized during lysogeny.", "evidence": [{"notes": "Canchaya et al. document widespread prophage maintenance in sequenced bacterial genomes.", "reference": "DOI:10.1128/MMBR.67.2.238-276.2003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "prophage_trait", "target": "lysogeny"}, {"description": "Prophage-encoded genes can alter host virulence or fitness (lysogenic conversion).", "evidence": [{"notes": "Howard-Varona et al. review host-phenotype effects of lysogeny in nature.", "reference": "DOI:10.1038/ismej.2017.16"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prophage_trait", "target": "host_phenotype"}, {"description": "Temperate prophages canonically integrate into the host chromosome (though some persist extrachromosomally).", "evidence": [{"notes": "Temperate phages remain dormant as prophages integrated into the host genome and passed to host progeny.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-3", "is_orphan": false, "predicate": "integrates into", "predicate_id": null, "source": "prophage_trait", "target": "host_chromosome"}, {"description": "Lysogeny is maintained by a phage-encoded CI repressor that binds the lysis promoter PR to block lytic gene expression.", "evidence": [{"notes": "cI repressor binds the lysis promoter (PR) to block lytic gene expression.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-4", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "ci_repressor", "target": "lytic_gene_expression"}, {"description": "DNA damage / replication stress generates ssDNA that triggers the RecA-LexA SOS response.", "evidence": [{"notes": "Replication inhibition creates ssDNA gaps that trigger the classical SOS response.", "reference": "DOI:10.1073/pnas.2407832121"}], "id": "edge-5", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "dna_damage", "target": "sos_response"}, {"description": "Activated RecA* promotes LexA autoproteolysis, de-repressing the SOS regulon.", "evidence": [{"notes": "RecA* activation induces LexA autoproteolysis; SOS response is mediated by RecA and LexA.", "reference": "DOI:10.1128/aem.01716-22"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes autocleavage of", "predicate_id": null, "source": "reca_filament", "target": "lexa_repressor"}, {"description": "RecA* stimulates self-cleavage/inactivation of the phage CI repressor, de-repressing lysis and triggering induction.", "evidence": [{"notes": "Host RecA activation leads to autoproteolysis and inactivation of cI, de-repressing lysis.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes autocleavage of", "predicate_id": null, "source": "reca_filament", "target": "ci_repressor"}, {"description": "While intact, the CI repressor maintains lysogeny and prevents prophage induction; its inactivation triggers induction.", "evidence": [{"notes": "CI repression must be relieved (cI inactivation) to de-repress lysis and drive prophage induction.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-8", "is_orphan": false, "predicate": "prevents", "predicate_id": "RO:0002212", "source": "ci_repressor", "target": "prophage_induction"}, {"description": "Phage-plasmids are temperate phages maintained extrachromosomally, so prophages need not be integrated.", "evidence": [{"notes": "Phage-plasmids are temperate phages maintained extrachromosomally as low-copy-number episomal forms.", "reference": "DOI:10.1038/s41467-024-45757-3"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "phage_plasmid", "target": "extrachromosomal_maintenance"}], "evidence_rows": [{"description": "Prophage carriage is the genomic state realized during lysogeny.", "edge_id": "edge-1", "evidence": [{"notes": "Canchaya et al. document widespread prophage maintenance in sequenced bacterial genomes.", "reference": "DOI:10.1128/MMBR.67.2.238-276.2003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "prophage", "target": "lysogeny"}, {"description": "Prophage-encoded genes can alter host virulence or fitness (lysogenic conversion).", "edge_id": "edge-2", "evidence": [{"notes": "Howard-Varona et al. review host-phenotype effects of lysogeny in nature.", "reference": "DOI:10.1038/ismej.2017.16"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prophage", "target": "host phenotype"}, {"description": "Temperate prophages canonically integrate into the host chromosome (though some persist extrachromosomally).", "edge_id": "edge-3", "evidence": [{"notes": "Temperate phages remain dormant as prophages integrated into the host genome and passed to host progeny.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "integrates into", "predicate_id": null, "source": "prophage", "target": "bacterial chromosome"}, {"description": "Lysogeny is maintained by a phage-encoded CI repressor that binds the lysis promoter PR to block lytic gene expression.", "edge_id": "edge-4", "evidence": [{"notes": "cI repressor binds the lysis promoter (PR) to block lytic gene expression.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "represses", "predicate_id": null, "source": "CI master repressor", "target": "lytic gene expression"}, {"description": "DNA damage / replication stress generates ssDNA that triggers the RecA-LexA SOS response.", "edge_id": "edge-5", "evidence": [{"notes": "Replication inhibition creates ssDNA gaps that trigger the classical SOS response.", "reference": "DOI:10.1073/pnas.2407832121"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "DNA damage / replication stress", "target": "RecA-LexA SOS response"}, {"description": "Activated RecA* promotes LexA autoproteolysis, de-repressing the SOS regulon.", "edge_id": "edge-6", "evidence": [{"notes": "RecA* activation induces LexA autoproteolysis; SOS response is mediated by RecA and LexA.", "reference": "DOI:10.1128/aem.01716-22"}], "predicate": "promotes autocleavage of", "predicate_id": null, "source": "RecA* nucleoprotein filament", "target": "LexA repressor"}, {"description": "RecA* stimulates self-cleavage/inactivation of the phage CI repressor, de-repressing lysis and triggering induction.", "edge_id": "edge-7", "evidence": [{"notes": "Host RecA activation leads to autoproteolysis and inactivation of cI, de-repressing lysis.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "promotes autocleavage of", "predicate_id": null, "source": "RecA* nucleoprotein filament", "target": "CI master repressor"}, {"description": "While intact, the CI repressor maintains lysogeny and prevents prophage induction; its inactivation triggers induction.", "edge_id": "edge-8", "evidence": [{"notes": "CI repression must be relieved (cI inactivation) to de-repress lysis and drive prophage induction.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "prevents", "predicate_id": "RO:0002212", "source": "CI master repressor", "target": "prophage induction"}, {"description": "Phage-plasmids are temperate phages maintained extrachromosomally, so prophages need not be integrated.", "edge_id": "edge-9", "evidence": [{"notes": "Phage-plasmids are temperate phages maintained extrachromosomally as low-copy-number episomal forms.", "reference": "DOI:10.1038/s41467-024-45757-3"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "phage-plasmid", "target": "extrachromosomal prophage maintenance"}], "graph_id": "prophage_lysogeny", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Phage-encoded cI-family repressor that maintains lysogeny by blocking lytic gene expression.", "grounding": null, "id": "ci_repressor", "is_orphan": false, "label": "CI master repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Genotoxic stress or replication inhibition that generates ssDNA and triggers the SOS response.", "grounding": null, "id": "dna_damage", "is_orphan": false, "label": "DNA damage / replication stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a temperate phage genome episomally rather than integrated in the chromosome.", "grounding": null, "id": "extrachromosomal_maintenance", "is_orphan": false, "label": "extrachromosomal prophage maintenance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Host genomic DNA into which a temperate prophage integrates.", "grounding": null, "id": "host_chromosome", "is_orphan": false, "label": "bacterial chromosome", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Phage-encoded gene functions expressed in the lysogen.", "grounding": null, "id": "host_phenotype", "is_orphan": false, "label": "host phenotype", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Host SOS master repressor inactivated by RecA*-stimulated autoproteolysis.", "grounding": "InterPro:IPR050077", "id": "lexa_repressor", "is_orphan": false, "label": "LexA repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a temperate phage genome within the host without lysis.", "grounding": null, "id": "lysogeny", "is_orphan": false, "label": "lysogeny", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Expression of phage lytic genes (from promoter PR) leading to the lytic cycle.", "grounding": null, "id": "lytic_gene_expression", "is_orphan": false, "label": "lytic gene expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Hybrid mobile genetic element; a temperate phage maintained extrachromosomally as a plasmid.", "grounding": null, "id": "phage_plasmid", "is_orphan": false, "label": "phage-plasmid", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Switch from lysogeny to the lytic cycle following derepression of phage lytic genes.", "grounding": "GO:0098689", "id": "prophage_induction", "is_orphan": false, "label": "prophage induction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of an integrated or maintained temperate phage genome.", "grounding": "traitmech:000091", "id": "prophage_trait", "is_orphan": false, "label": "prophage", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Activated RecA nucleoprotein filament that promotes autocleavage of LexA and phage repressors.", "grounding": null, "id": "reca_filament", "is_orphan": false, "label": "RecA* nucleoprotein filament", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacterial DNA-damage-inducible SOS response mediated by RecA and LexA.", "grounding": "GO:0009432", "id": "sos_response", "is_orphan": false, "label": "RecA-LexA SOS response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Prophage maintenance during lysogeny alters host phenotype"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking prophage carriage to lysogenic maintenance and lysogenic conversion of the host.", "edges": [{"description": "Prophage carriage is the genomic state realized during lysogeny.", "evidence": [{"notes": "Canchaya et al. document widespread prophage maintenance in sequenced bacterial genomes.", "reference": "DOI:10.1128/MMBR.67.2.238-276.2003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "prophage_trait", "target": "lysogeny"}, {"description": "Prophage-encoded genes can alter host virulence or fitness (lysogenic conversion).", "evidence": [{"notes": "Howard-Varona et al. review host-phenotype effects of lysogeny in nature.", "reference": "DOI:10.1038/ismej.2017.16"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prophage_trait", "target": "host_phenotype"}, {"description": "Temperate prophages canonically integrate into the host chromosome (though some persist extrachromosomally).", "evidence": [{"notes": "Temperate phages remain dormant as prophages integrated into the host genome and passed to host progeny.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-3", "is_orphan": false, "predicate": "integrates into", "predicate_id": null, "source": "prophage_trait", "target": "host_chromosome"}, {"description": "Lysogeny is maintained by a phage-encoded CI repressor that binds the lysis promoter PR to block lytic gene expression.", "evidence": [{"notes": "cI repressor binds the lysis promoter (PR) to block lytic gene expression.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-4", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "ci_repressor", "target": "lytic_gene_expression"}, {"description": "DNA damage / replication stress generates ssDNA that triggers the RecA-LexA SOS response.", "evidence": [{"notes": "Replication inhibition creates ssDNA gaps that trigger the classical SOS response.", "reference": "DOI:10.1073/pnas.2407832121"}], "id": "edge-5", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "dna_damage", "target": "sos_response"}, {"description": "Activated RecA* promotes LexA autoproteolysis, de-repressing the SOS regulon.", "evidence": [{"notes": "RecA* activation induces LexA autoproteolysis; SOS response is mediated by RecA and LexA.", "reference": "DOI:10.1128/aem.01716-22"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes autocleavage of", "predicate_id": null, "source": "reca_filament", "target": "lexa_repressor"}, {"description": "RecA* stimulates self-cleavage/inactivation of the phage CI repressor, de-repressing lysis and triggering induction.", "evidence": [{"notes": "Host RecA activation leads to autoproteolysis and inactivation of cI, de-repressing lysis.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes autocleavage of", "predicate_id": null, "source": "reca_filament", "target": "ci_repressor"}, {"description": "While intact, the CI repressor maintains lysogeny and prevents prophage induction; its inactivation triggers induction.", "evidence": [{"notes": "CI repression must be relieved (cI inactivation) to de-repress lysis and drive prophage induction.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "id": "edge-8", "is_orphan": false, "predicate": "prevents", "predicate_id": "RO:0002212", "source": "ci_repressor", "target": "prophage_induction"}, {"description": "Phage-plasmids are temperate phages maintained extrachromosomally, so prophages need not be integrated.", "evidence": [{"notes": "Phage-plasmids are temperate phages maintained extrachromosomally as low-copy-number episomal forms.", "reference": "DOI:10.1038/s41467-024-45757-3"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "phage_plasmid", "target": "extrachromosomal_maintenance"}], "evidence_rows": [{"description": "Prophage carriage is the genomic state realized during lysogeny.", "edge_id": "edge-1", "evidence": [{"notes": "Canchaya et al. document widespread prophage maintenance in sequenced bacterial genomes.", "reference": "DOI:10.1128/MMBR.67.2.238-276.2003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "prophage", "source_grounding": "traitmech:000091", "target": "lysogeny", "target_grounding": null}, {"description": "Prophage-encoded genes can alter host virulence or fitness (lysogenic conversion).", "edge_id": "edge-2", "evidence": [{"notes": "Howard-Varona et al. review host-phenotype effects of lysogeny in nature.", "reference": "DOI:10.1038/ismej.2017.16"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prophage", "source_grounding": "traitmech:000091", "target": "host phenotype", "target_grounding": null}, {"description": "Temperate prophages canonically integrate into the host chromosome (though some persist extrachromosomally).", "edge_id": "edge-3", "evidence": [{"notes": "Temperate phages remain dormant as prophages integrated into the host genome and passed to host progeny.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "integrates into", "predicate_id": null, "source": "prophage", "source_grounding": "traitmech:000091", "target": "bacterial chromosome", "target_grounding": null}, {"description": "Lysogeny is maintained by a phage-encoded CI repressor that binds the lysis promoter PR to block lytic gene expression.", "edge_id": "edge-4", "evidence": [{"notes": "cI repressor binds the lysis promoter (PR) to block lytic gene expression.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "represses", "predicate_id": null, "source": "CI master repressor", "source_grounding": null, "target": "lytic gene expression", "target_grounding": null}, {"description": "DNA damage / replication stress generates ssDNA that triggers the RecA-LexA SOS response.", "edge_id": "edge-5", "evidence": [{"notes": "Replication inhibition creates ssDNA gaps that trigger the classical SOS response.", "reference": "DOI:10.1073/pnas.2407832121"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "DNA damage / replication stress", "source_grounding": null, "target": "RecA-LexA SOS response", "target_grounding": "GO:0009432"}, {"description": "Activated RecA* promotes LexA autoproteolysis, de-repressing the SOS regulon.", "edge_id": "edge-6", "evidence": [{"notes": "RecA* activation induces LexA autoproteolysis; SOS response is mediated by RecA and LexA.", "reference": "DOI:10.1128/aem.01716-22"}], "predicate": "promotes autocleavage of", "predicate_id": null, "source": "RecA* nucleoprotein filament", "source_grounding": null, "target": "LexA repressor", "target_grounding": "InterPro:IPR050077"}, {"description": "RecA* stimulates self-cleavage/inactivation of the phage CI repressor, de-repressing lysis and triggering induction.", "edge_id": "edge-7", "evidence": [{"notes": "Host RecA activation leads to autoproteolysis and inactivation of cI, de-repressing lysis.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "promotes autocleavage of", "predicate_id": null, "source": "RecA* nucleoprotein filament", "source_grounding": null, "target": "CI master repressor", "target_grounding": null}, {"description": "While intact, the CI repressor maintains lysogeny and prevents prophage induction; its inactivation triggers induction.", "edge_id": "edge-8", "evidence": [{"notes": "CI repression must be relieved (cI inactivation) to de-repress lysis and drive prophage induction.", "reference": "DOI:10.1038/s41586-023-06376-y"}], "predicate": "prevents", "predicate_id": "RO:0002212", "source": "CI master repressor", "source_grounding": null, "target": "prophage induction", "target_grounding": "GO:0098689"}, {"description": "Phage-plasmids are temperate phages maintained extrachromosomally, so prophages need not be integrated.", "edge_id": "edge-9", "evidence": [{"notes": "Phage-plasmids are temperate phages maintained extrachromosomally as low-copy-number episomal forms.", "reference": "DOI:10.1038/s41467-024-45757-3"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "phage-plasmid", "source_grounding": null, "target": "extrachromosomal prophage maintenance", "target_grounding": null}], "graph_id": "prophage_lysogeny", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Phage-encoded cI-family repressor that maintains lysogeny by blocking lytic gene expression.", "grounding": null, "id": "ci_repressor", "is_orphan": false, "label": "CI master repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Genotoxic stress or replication inhibition that generates ssDNA and triggers the SOS response.", "grounding": null, "id": "dna_damage", "is_orphan": false, "label": "DNA damage / replication stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a temperate phage genome episomally rather than integrated in the chromosome.", "grounding": null, "id": "extrachromosomal_maintenance", "is_orphan": false, "label": "extrachromosomal prophage maintenance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Host genomic DNA into which a temperate prophage integrates.", "grounding": null, "id": "host_chromosome", "is_orphan": false, "label": "bacterial chromosome", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Phage-encoded gene functions expressed in the lysogen.", "grounding": null, "id": "host_phenotype", "is_orphan": false, "label": "host phenotype", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Host SOS master repressor inactivated by RecA*-stimulated autoproteolysis.", "grounding": "InterPro:IPR050077", "id": "lexa_repressor", "is_orphan": false, "label": "LexA repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a temperate phage genome within the host without lysis.", "grounding": null, "id": "lysogeny", "is_orphan": false, "label": "lysogeny", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Expression of phage lytic genes (from promoter PR) leading to the lytic cycle.", "grounding": null, "id": "lytic_gene_expression", "is_orphan": false, "label": "lytic gene expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Hybrid mobile genetic element; a temperate phage maintained extrachromosomally as a plasmid.", "grounding": null, "id": "phage_plasmid", "is_orphan": false, "label": "phage-plasmid", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Switch from lysogeny to the lytic cycle following derepression of phage lytic genes.", "grounding": "GO:0098689", "id": "prophage_induction", "is_orphan": false, "label": "prophage induction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of an integrated or maintained temperate phage genome.", "grounding": "traitmech:000091", "id": "prophage_trait", "is_orphan": false, "label": "prophage", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Activated RecA nucleoprotein filament that promotes autocleavage of LexA and phage repressors.", "grounding": null, "id": "reca_filament", "is_orphan": false, "label": "RecA* nucleoprotein filament", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacterial DNA-damage-inducible SOS response mediated by RecA and LexA.", "grounding": "GO:0009432", "id": "sos_response", "is_orphan": false, "label": "RecA-LexA SOS response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Prophage maintenance during lysogeny alters host phenotype"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -954,13 +983,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 06:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

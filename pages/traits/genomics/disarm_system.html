@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DISARM system</h1>
     <p class="curie"><code>traitmech:000211</code> · CLASS · PROPOSED</p>
 
@@ -97,9 +108,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>DrmAB core complex</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>DISARM DrmAB activation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DrmA DNA binding, DrmA ATP hydrolysis, and DrmAB heterodimer formation are required for DISARM activation and phage targeting.</p>
             <ul>
 
@@ -114,9 +127,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>DISARM host DNA methylation</strong>
+
             <span class="edge-predicate">negatively regulates</span>
             <strong>DISARM DrmAB activation</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>DISARM host-DNA methylation limits DrmAB activation by self DNA.</p>
             <ul>
 
@@ -131,9 +146,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>DISARM 5-prime-overhang DNA sensing</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>DISARM DrmAB activation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Unmethylated 5-prime-overhang DNA dislodges the DrmA trigger loop to activate DrmAB.</p>
             <ul>
 
@@ -148,9 +165,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>DISARM DrmAB activation</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage DNA circularization</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Activated DISARM blocks early phage DNA circularization and replication after phage entry.</p>
             <ul>
 
@@ -165,9 +184,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>DISARM DrmAB activation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>DISARM system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000211</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DrmAB activation realizes DISARM-mediated anti-phage defense.</p>
             <ul>
 
@@ -182,8 +203,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>DISARM system</strong>
+            <code>traitmech:000211</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>DISARM possession is a methyltransferase-associated phage-defense-system trait.</p>
             <ul>
@@ -341,11 +364,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -471,6 +558,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -804,7 +896,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking DISARM methylation and 5-prime-overhang DNA sensing to DrmAB activation and blocked early phage DNA circularization.", "edges": [{"description": "DrmA DNA binding, DrmA ATP hydrolysis, and DrmAB heterodimer formation are required for DISARM activation and phage targeting.", "evidence": [{"notes": "Bravo et al. established the structural and functional importance of the DrmA-DrmB core complex.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "DNA binding, and DrmAB heterodimer formation are essential for phage targeting by DISARM"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "drmab_core_complex", "target": "drmab_activation"}, {"description": "DISARM host-DNA methylation limits DrmAB activation by self DNA.", "evidence": [{"notes": "Bravo et al. support methylation-sensitive DrmAB activation as a self/non-self filter.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "methylated DNA limits the ATPase activity of DrmAB which is essential for anti-phage defense"}], "id": "edge-2", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "host_dna_methylation", "target": "drmab_activation"}, {"description": "Unmethylated 5-prime-overhang DNA dislodges the DrmA trigger loop to activate DrmAB.", "evidence": [{"notes": "Bravo et al. structurally support 5-prime-overhang-triggered DrmAB activation.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "binding to DNA substrates containing a 5\u2032 overhang dislodges the TL, initiating a long-range structural rearrangement for DrmAB activation"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "five_prime_overhang_dna_sensing", "target": "drmab_activation"}, {"description": "Activated DISARM blocks early phage DNA circularization and replication after phage entry.", "evidence": [{"notes": "Ofir et al. showed that DISARM blocks an early intracellular step after phage adsorption.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "phi3T was not able to circularize its genome or form detectible lysogens in DISARM-containing cells"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "drmab_activation", "target": "phage_dna_circularization"}, {"description": "DrmAB activation realizes DISARM-mediated anti-phage defense.", "evidence": [{"notes": "Bravo et al. linked DNA-interacting DrmA residues to DISARM anti-phage protection in vivo.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "provide the mechanism of targeting a wide range of phage by DISARM"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "drmab_activation", "target": "disarm_system_trait"}, {"description": "DISARM possession is a methyltransferase-associated phage-defense-system trait.", "evidence": [{"notes": "Ofir et al. establish DISARM in the phage defense system family.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Our results establish DISARM as a new defence system"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "disarm_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DrmA DNA binding, DrmA ATP hydrolysis, and DrmAB heterodimer formation are required for DISARM activation and phage targeting.", "edge_id": "edge-1", "evidence": [{"notes": "Bravo et al. established the structural and functional importance of the DrmA-DrmB core complex.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "DNA binding, and DrmAB heterodimer formation are essential for phage targeting by DISARM"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DrmAB core complex", "target": "DISARM DrmAB activation"}, {"description": "DISARM host-DNA methylation limits DrmAB activation by self DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Bravo et al. support methylation-sensitive DrmAB activation as a self/non-self filter.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "methylated DNA limits the ATPase activity of DrmAB which is essential for anti-phage defense"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "DISARM host DNA methylation", "target": "DISARM DrmAB activation"}, {"description": "Unmethylated 5-prime-overhang DNA dislodges the DrmA trigger loop to activate DrmAB.", "edge_id": "edge-3", "evidence": [{"notes": "Bravo et al. structurally support 5-prime-overhang-triggered DrmAB activation.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "binding to DNA substrates containing a 5\u2032 overhang dislodges the TL, initiating a long-range structural rearrangement for DrmAB activation"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "DISARM 5-prime-overhang DNA sensing", "target": "DISARM DrmAB activation"}, {"description": "Activated DISARM blocks early phage DNA circularization and replication after phage entry.", "edge_id": "edge-4", "evidence": [{"notes": "Ofir et al. showed that DISARM blocks an early intracellular step after phage adsorption.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "phi3T was not able to circularize its genome or form detectible lysogens in DISARM-containing cells"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "DISARM DrmAB activation", "target": "phage DNA circularization"}, {"description": "DrmAB activation realizes DISARM-mediated anti-phage defense.", "edge_id": "edge-5", "evidence": [{"notes": "Bravo et al. linked DNA-interacting DrmA residues to DISARM anti-phage protection in vivo.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "provide the mechanism of targeting a wide range of phage by DISARM"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "DISARM DrmAB activation", "target": "DISARM system"}, {"description": "DISARM possession is a methyltransferase-associated phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Ofir et al. establish DISARM in the phage defense system family.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Our results establish DISARM as a new defence system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DISARM system", "target": "phage defense system"}], "graph_id": "disarm_dna_sensing_antiphage_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded DISARM phage defense system.", "grounding": "traitmech:000211", "id": "disarm_system_trait", "is_orphan": false, "label": "DISARM system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DNA-triggered activation of the DISARM DrmAB core complex.", "grounding": null, "id": "drmab_activation", "is_orphan": false, "label": "DISARM DrmAB activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Heterodimeric DISARM DrmA-DrmB core complex that binds invading DNA and undergoes long-range activation upon 5-prime-overhang substrate loading.", "grounding": null, "id": "drmab_core_complex", "is_orphan": false, "label": "DrmAB core complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmA accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmA", "protein_label": "DISARM protein DrmA", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmA is the helicase-domain component of the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW05"}, {"entry_status": "REVIEWED", "entry_version": 9, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmB accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmB", "protein_label": "DISARM protein DrmB", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmB is the DUF1998 component paired with DrmA in the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW06"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DrmAB-associated recognition of foreign DNA substrates carrying a 5-prime single-stranded overhang.", "grounding": null, "id": "five_prime_overhang_dna_sensing", "is_orphan": false, "label": "DISARM 5-prime-overhang DNA sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DISARM methyltransferase-mediated methylation of host DNA at cognate motifs.", "grounding": null, "id": "host_dna_methylation", "is_orphan": false, "label": "DISARM host DNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Circularization of injected bacteriophage genomic DNA after adsorption and DNA entry.", "grounding": null, "id": "phage_dna_circularization", "is_orphan": false, "label": "phage DNA circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmA accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmA", "node_id": "drmab_core_complex", "node_label": "DrmAB core complex", "protein_label": "DISARM protein DrmA", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmA is the helicase-domain component of the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW05"}, {"entry_status": "REVIEWED", "entry_version": 9, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmB accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmB", "node_id": "drmab_core_complex", "node_label": "DrmAB core complex", "protein_label": "DISARM protein DrmB", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmB is the DUF1998 component paired with DrmA in the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW06"}], "scope_notes": "The graph captures host DNA methylation, 5-prime-overhang sensing, DrmAB activation, and early phage DNA restriction without asserting the unresolved downstream nuclease or replication-block coupling.", "scope_status": "MECHANISTIC", "title": "DISARM senses phage DNA to activate DrmAB defense"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking DISARM methylation and 5-prime-overhang DNA sensing to DrmAB activation and blocked early phage DNA circularization.", "edges": [{"description": "DrmA DNA binding, DrmA ATP hydrolysis, and DrmAB heterodimer formation are required for DISARM activation and phage targeting.", "evidence": [{"notes": "Bravo et al. established the structural and functional importance of the DrmA-DrmB core complex.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "DNA binding, and DrmAB heterodimer formation are essential for phage targeting by DISARM"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "drmab_core_complex", "target": "drmab_activation"}, {"description": "DISARM host-DNA methylation limits DrmAB activation by self DNA.", "evidence": [{"notes": "Bravo et al. support methylation-sensitive DrmAB activation as a self/non-self filter.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "methylated DNA limits the ATPase activity of DrmAB which is essential for anti-phage defense"}], "id": "edge-2", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "host_dna_methylation", "target": "drmab_activation"}, {"description": "Unmethylated 5-prime-overhang DNA dislodges the DrmA trigger loop to activate DrmAB.", "evidence": [{"notes": "Bravo et al. structurally support 5-prime-overhang-triggered DrmAB activation.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "binding to DNA substrates containing a 5\u2032 overhang dislodges the TL, initiating a long-range structural rearrangement for DrmAB activation"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "five_prime_overhang_dna_sensing", "target": "drmab_activation"}, {"description": "Activated DISARM blocks early phage DNA circularization and replication after phage entry.", "evidence": [{"notes": "Ofir et al. showed that DISARM blocks an early intracellular step after phage adsorption.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "phi3T was not able to circularize its genome or form detectible lysogens in DISARM-containing cells"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "drmab_activation", "target": "phage_dna_circularization"}, {"description": "DrmAB activation realizes DISARM-mediated anti-phage defense.", "evidence": [{"notes": "Bravo et al. linked DNA-interacting DrmA residues to DISARM anti-phage protection in vivo.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "provide the mechanism of targeting a wide range of phage by DISARM"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "drmab_activation", "target": "disarm_system_trait"}, {"description": "DISARM possession is a methyltransferase-associated phage-defense-system trait.", "evidence": [{"notes": "Ofir et al. establish DISARM in the phage defense system family.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Our results establish DISARM as a new defence system"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "disarm_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DrmA DNA binding, DrmA ATP hydrolysis, and DrmAB heterodimer formation are required for DISARM activation and phage targeting.", "edge_id": "edge-1", "evidence": [{"notes": "Bravo et al. established the structural and functional importance of the DrmA-DrmB core complex.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "DNA binding, and DrmAB heterodimer formation are essential for phage targeting by DISARM"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DrmAB core complex", "source_grounding": null, "target": "DISARM DrmAB activation", "target_grounding": null}, {"description": "DISARM host-DNA methylation limits DrmAB activation by self DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Bravo et al. support methylation-sensitive DrmAB activation as a self/non-self filter.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "methylated DNA limits the ATPase activity of DrmAB which is essential for anti-phage defense"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "DISARM host DNA methylation", "source_grounding": null, "target": "DISARM DrmAB activation", "target_grounding": null}, {"description": "Unmethylated 5-prime-overhang DNA dislodges the DrmA trigger loop to activate DrmAB.", "edge_id": "edge-3", "evidence": [{"notes": "Bravo et al. structurally support 5-prime-overhang-triggered DrmAB activation.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "binding to DNA substrates containing a 5\u2032 overhang dislodges the TL, initiating a long-range structural rearrangement for DrmAB activation"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "DISARM 5-prime-overhang DNA sensing", "source_grounding": null, "target": "DISARM DrmAB activation", "target_grounding": null}, {"description": "Activated DISARM blocks early phage DNA circularization and replication after phage entry.", "edge_id": "edge-4", "evidence": [{"notes": "Ofir et al. showed that DISARM blocks an early intracellular step after phage adsorption.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "phi3T was not able to circularize its genome or form detectible lysogens in DISARM-containing cells"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "DISARM DrmAB activation", "source_grounding": null, "target": "phage DNA circularization", "target_grounding": null}, {"description": "DrmAB activation realizes DISARM-mediated anti-phage defense.", "edge_id": "edge-5", "evidence": [{"notes": "Bravo et al. linked DNA-interacting DrmA residues to DISARM anti-phage protection in vivo.", "reference": "DOI:10.1038/s41467-022-30673-1", "snippet": "provide the mechanism of targeting a wide range of phage by DISARM"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "DISARM DrmAB activation", "source_grounding": null, "target": "DISARM system", "target_grounding": "traitmech:000211"}, {"description": "DISARM possession is a methyltransferase-associated phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Ofir et al. establish DISARM in the phage defense system family.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Our results establish DISARM as a new defence system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DISARM system", "source_grounding": "traitmech:000211", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "disarm_dna_sensing_antiphage_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded DISARM phage defense system.", "grounding": "traitmech:000211", "id": "disarm_system_trait", "is_orphan": false, "label": "DISARM system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DNA-triggered activation of the DISARM DrmAB core complex.", "grounding": null, "id": "drmab_activation", "is_orphan": false, "label": "DISARM DrmAB activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Heterodimeric DISARM DrmA-DrmB core complex that binds invading DNA and undergoes long-range activation upon 5-prime-overhang substrate loading.", "grounding": null, "id": "drmab_core_complex", "is_orphan": false, "label": "DrmAB core complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmA accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmA", "protein_label": "DISARM protein DrmA", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmA is the helicase-domain component of the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW05"}, {"entry_status": "REVIEWED", "entry_version": 9, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmB accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmB", "protein_label": "DISARM protein DrmB", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmB is the DUF1998 component paired with DrmA in the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW06"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DrmAB-associated recognition of foreign DNA substrates carrying a 5-prime single-stranded overhang.", "grounding": null, "id": "five_prime_overhang_dna_sensing", "is_orphan": false, "label": "DISARM 5-prime-overhang DNA sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "DISARM methyltransferase-mediated methylation of host DNA at cognate motifs.", "grounding": null, "id": "host_dna_methylation", "is_orphan": false, "label": "DISARM host DNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Circularization of injected bacteriophage genomic DNA after adsorption and DNA entry.", "grounding": null, "id": "phage_dna_circularization", "is_orphan": false, "label": "phage DNA circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmA accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmA", "node_id": "drmab_core_complex", "node_label": "DrmAB core complex", "protein_label": "DISARM protein DrmA", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmA is the helicase-domain component of the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW05"}, {"entry_status": "REVIEWED", "entry_version": 9, "evidence": [{"notes": "Ofir et al. tested scarless deletions in the native B. paralicheniformis ATCC 9945a DISARM locus; UniProt verifies the reviewed DrmB accession.", "reference": "DOI:10.1038/s41564-017-0051-0", "snippet": "Deletions of drmA (helicase domain), drmB (DUF1998 domain) and drmE (unknown function) abolished DISARM protection against all phages tested"}], "gene_symbol": "drmB", "node_id": "drmab_core_complex", "node_label": "DrmAB core complex", "protein_label": "DISARM protein DrmB", "retrieved_on": "2026-09-15", "role": "B. paralicheniformis ATCC 9945a DrmB is the DUF1998 component paired with DrmA in the class 2 DISARM DrmAB core.", "sequence_version": 1, "taxon_id": "NCBITaxon:766760", "taxon_label": "Bacillus paralicheniformis ATCC 9945a", "uniprot_id": "UniProtKB:P0DW06"}], "scope_notes": "The graph captures host DNA methylation, 5-prime-overhang sensing, DrmAB activation, and early phage DNA restriction without asserting the unresolved downstream nuclease or replication-block coupling.", "scope_status": "MECHANISTIC", "title": "DISARM senses phage DNA to activate DrmAB defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -824,13 +916,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

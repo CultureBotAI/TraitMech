@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>pH range high</h1>
     <p class="curie"><code>METPO:1000464</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>extreme-alkaliphile Na+/H+ antiport</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>pH range high</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000464" rel="nofollow noreferrer"><code>METPO:1000464</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Robust Na+/H+ antiport enables growth at pH &gt; 10.</p>
             <ul>
 
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>pH range high</strong>
+            <a href="https://w3id.org/metpo/1000464" rel="nofollow noreferrer"><code>METPO:1000464</code></a>
             <span class="edge-predicate">is a</span>
             <strong>pH range</strong>
+            <a href="https://w3id.org/metpo/1000332" rel="nofollow noreferrer"><code>METPO:1000332</code></a>
             <code>rdfs:subClassOf</code>
             <p>pH range high is a quantitative bin of the pH-range phenotype.</p>
             <ul>
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Mrp Na+/H+ antiporter complex</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>pH range high</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000464" rel="nofollow noreferrer"><code>METPO:1000464</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The hetero-oligomeric Mrp antiporter has an indispensable role in growth at high pH.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>transmembrane potential (delta-psi)</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>Mrp Na+/H+ antiporter complex</strong>
+
 
             <p>A large transmembrane potential drives electrogenic Na+/H+ antiport that imports H+.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Na+/solute symporters</strong>
+
             <span class="edge-predicate">supplies</span>
             <strong>cytoplasmic Na+</strong>
+
 
             <p>Na+/solute symporters supply the cytoplasmic Na+ required to sustain antiport activity.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>cytoplasmic Na+</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>extreme-alkaliphile Na+/H+ antiport</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile antiport activity.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>F1Fo-ATP synthase</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>alkaline pH homeostasis</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Proton uptake accompanying ATP synthesis contributes to alkaliphile pH homeostasis.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>alkaline pH homeostasis</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>pH range high</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000464" rel="nofollow noreferrer"><code>METPO:1000464</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Maintenance of cytoplasmic pH homeostasis enables growth at strongly alkaline external pH.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>external pH &gt; 10.3</strong>
+
             <span class="edge-predicate">shifts speciation toward</span>
             <strong>carbonate (CO3 2-) speciation</strong>
+
 
             <p>External pH above ~10.3 shifts dissolved inorganic carbon speciation toward carbonate.</p>
             <ul>
@@ -891,7 +920,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity to a pH growth range extending above 10.", "edges": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme_alkaliphile_antiport", "target": "ph_range_high_trait"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_high_trait", "target": "ph_range"}, {"description": "The hetero-oligomeric Mrp antiporter has an indispensable role in growth at high pH.", "evidence": [{"notes": "The unusual hetero-oligomeric Mrp antiporter has an indispensable role at high pH.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "mrp_antiporter_complex", "target": "ph_range_high_trait"}, {"description": "A large transmembrane potential drives electrogenic Na+/H+ antiport that imports H+.", "evidence": [{"notes": "A large transmembrane potential is essential to drive electrogenic Na+/H+ and K+/H+ antiporters that import H+.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "membrane_potential", "target": "mrp_antiporter_complex"}, {"description": "Na+/solute symporters supply the cytoplasmic Na+ required to sustain antiport activity.", "evidence": [{"notes": "The ongoing requirement for cytoplasmic Na+ to support high levels of alkaliphile antiport activity is met by numerous Na+/solute symporters.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-5", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "na_solute_symporters", "target": "cytoplasmic_na"}, {"description": "Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile antiport activity.", "evidence": [{"notes": "Cytoplasmic Na+ is required to support high levels of alkaliphile antiport activity.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_na", "target": "extreme_alkaliphile_antiport"}, {"description": "Proton uptake accompanying ATP synthesis contributes to alkaliphile pH homeostasis.", "evidence": [{"notes": "The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase contributes to alkaliphile pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "f1fo_atp_synthase", "target": "alkaline_ph_homeostasis"}, {"description": "Maintenance of cytoplasmic pH homeostasis enables growth at strongly alkaline external pH.", "evidence": [{"notes": "Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH 10.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "alkaline_ph_homeostasis", "target": "ph_range_high_trait"}, {"description": "External pH above ~10.3 shifts dissolved inorganic carbon speciation toward carbonate.", "evidence": [{"notes": "DIC speciation shifts strongly with pH, toward CO3= above ~10.3.", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-9", "is_orphan": false, "predicate": "shifts speciation toward", "predicate_id": null, "source": "external_ph_high", "target": "carbonate_speciation"}], "evidence_rows": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "edge_id": "edge-1", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme-alkaliphile Na+/H+ antiport", "target": "pH range high"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range high", "target": "pH range"}, {"description": "The hetero-oligomeric Mrp antiporter has an indispensable role in growth at high pH.", "edge_id": "edge-3", "evidence": [{"notes": "The unusual hetero-oligomeric Mrp antiporter has an indispensable role at high pH.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Mrp Na+/H+ antiporter complex", "target": "pH range high"}, {"description": "A large transmembrane potential drives electrogenic Na+/H+ antiport that imports H+.", "edge_id": "edge-4", "evidence": [{"notes": "A large transmembrane potential is essential to drive electrogenic Na+/H+ and K+/H+ antiporters that import H+.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "drives", "predicate_id": null, "source": "transmembrane potential (delta-psi)", "target": "Mrp Na+/H+ antiporter complex"}, {"description": "Na+/solute symporters supply the cytoplasmic Na+ required to sustain antiport activity.", "edge_id": "edge-5", "evidence": [{"notes": "The ongoing requirement for cytoplasmic Na+ to support high levels of alkaliphile antiport activity is met by numerous Na+/solute symporters.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "supplies", "predicate_id": null, "source": "Na+/solute symporters", "target": "cytoplasmic Na+"}, {"description": "Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile antiport activity.", "edge_id": "edge-6", "evidence": [{"notes": "Cytoplasmic Na+ is required to support high levels of alkaliphile antiport activity.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic Na+", "target": "extreme-alkaliphile Na+/H+ antiport"}, {"description": "Proton uptake accompanying ATP synthesis contributes to alkaliphile pH homeostasis.", "edge_id": "edge-7", "evidence": [{"notes": "The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase contributes to alkaliphile pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "F1Fo-ATP synthase", "target": "alkaline pH homeostasis"}, {"description": "Maintenance of cytoplasmic pH homeostasis enables growth at strongly alkaline external pH.", "edge_id": "edge-8", "evidence": [{"notes": "Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH 10.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "alkaline pH homeostasis", "target": "pH range high"}, {"description": "External pH above ~10.3 shifts dissolved inorganic carbon speciation toward carbonate.", "edge_id": "edge-9", "evidence": [{"notes": "DIC speciation shifts strongly with pH, toward CO3= above ~10.3.", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "shifts speciation toward", "predicate_id": null, "source": "external pH \u003e 10.3", "target": "carbonate (CO3 2-) speciation"}], "graph_id": "ph_range_high_extreme_alkaliphile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against a strongly alkaline exterior.", "grounding": null, "id": "alkaline_ph_homeostasis", "is_orphan": false, "label": "alkaline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Shift of dissolved inorganic carbon toward carbonate at high pH.", "grounding": null, "id": "carbonate_speciation", "is_orphan": false, "label": "carbonate (CO3 2-) speciation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular sodium pool required to sustain alkaliphile antiport activity.", "grounding": null, "id": "cytoplasmic_na", "is_orphan": false, "label": "cytoplasmic Na+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Strongly alkaline external pH above ~10.3.", "grounding": null, "id": "external_ph_high", "is_orphan": false, "label": "external pH \u003e 10.3", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Robust Na+/H+ antiporter activity importing H+ at strongly alkaline external pH.", "grounding": null, "id": "extreme_alkaliphile_antiport", "is_orphan": false, "label": "extreme-alkaliphile Na+/H+ antiport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proton-translocating ATP synthase whose proton uptake contributes to pH homeostasis.", "grounding": null, "id": "f1fo_atp_synthase", "is_orphan": false, "label": "F1Fo-ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Large transmembrane electrical potential energizing electrogenic cation/H+ antiport.", "grounding": null, "id": "membrane_potential", "is_orphan": false, "label": "transmembrane potential (delta-psi)", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Hetero-oligomeric CPA3-family Na+/H+ antiporter complex essential at high external pH.", "grounding": null, "id": "mrp_antiporter_complex", "is_orphan": false, "label": "Mrp Na+/H+ antiporter complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Symporters re-importing Na+ with solutes to supply cytoplasmic Na+ for antiport.", "grounding": null, "id": "na_solute_symporters", "is_orphan": false, "label": "Na+/solute symporters", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range extending above ~10.", "grounding": "METPO:1000464", "id": "ph_range_high_trait", "is_orphan": false, "label": "pH range high", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "pH-range-high extreme-alkaliphile range"}];
+  var graphs = [{"description": "DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity to a pH growth range extending above 10.", "edges": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme_alkaliphile_antiport", "target": "ph_range_high_trait"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_high_trait", "target": "ph_range"}, {"description": "The hetero-oligomeric Mrp antiporter has an indispensable role in growth at high pH.", "evidence": [{"notes": "The unusual hetero-oligomeric Mrp antiporter has an indispensable role at high pH.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "mrp_antiporter_complex", "target": "ph_range_high_trait"}, {"description": "A large transmembrane potential drives electrogenic Na+/H+ antiport that imports H+.", "evidence": [{"notes": "A large transmembrane potential is essential to drive electrogenic Na+/H+ and K+/H+ antiporters that import H+.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "membrane_potential", "target": "mrp_antiporter_complex"}, {"description": "Na+/solute symporters supply the cytoplasmic Na+ required to sustain antiport activity.", "evidence": [{"notes": "The ongoing requirement for cytoplasmic Na+ to support high levels of alkaliphile antiport activity is met by numerous Na+/solute symporters.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-5", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "na_solute_symporters", "target": "cytoplasmic_na"}, {"description": "Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile antiport activity.", "evidence": [{"notes": "Cytoplasmic Na+ is required to support high levels of alkaliphile antiport activity.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_na", "target": "extreme_alkaliphile_antiport"}, {"description": "Proton uptake accompanying ATP synthesis contributes to alkaliphile pH homeostasis.", "evidence": [{"notes": "The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase contributes to alkaliphile pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "f1fo_atp_synthase", "target": "alkaline_ph_homeostasis"}, {"description": "Maintenance of cytoplasmic pH homeostasis enables growth at strongly alkaline external pH.", "evidence": [{"notes": "Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH 10.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "alkaline_ph_homeostasis", "target": "ph_range_high_trait"}, {"description": "External pH above ~10.3 shifts dissolved inorganic carbon speciation toward carbonate.", "evidence": [{"notes": "DIC speciation shifts strongly with pH, toward CO3= above ~10.3.", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-9", "is_orphan": false, "predicate": "shifts speciation toward", "predicate_id": null, "source": "external_ph_high", "target": "carbonate_speciation"}], "evidence_rows": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "edge_id": "edge-1", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme-alkaliphile Na+/H+ antiport", "source_grounding": null, "target": "pH range high", "target_grounding": "METPO:1000464"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range high", "source_grounding": "METPO:1000464", "target": "pH range", "target_grounding": "METPO:1000332"}, {"description": "The hetero-oligomeric Mrp antiporter has an indispensable role in growth at high pH.", "edge_id": "edge-3", "evidence": [{"notes": "The unusual hetero-oligomeric Mrp antiporter has an indispensable role at high pH.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Mrp Na+/H+ antiporter complex", "source_grounding": null, "target": "pH range high", "target_grounding": "METPO:1000464"}, {"description": "A large transmembrane potential drives electrogenic Na+/H+ antiport that imports H+.", "edge_id": "edge-4", "evidence": [{"notes": "A large transmembrane potential is essential to drive electrogenic Na+/H+ and K+/H+ antiporters that import H+.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "drives", "predicate_id": null, "source": "transmembrane potential (delta-psi)", "source_grounding": null, "target": "Mrp Na+/H+ antiporter complex", "target_grounding": null}, {"description": "Na+/solute symporters supply the cytoplasmic Na+ required to sustain antiport activity.", "edge_id": "edge-5", "evidence": [{"notes": "The ongoing requirement for cytoplasmic Na+ to support high levels of alkaliphile antiport activity is met by numerous Na+/solute symporters.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "supplies", "predicate_id": null, "source": "Na+/solute symporters", "source_grounding": null, "target": "cytoplasmic Na+", "target_grounding": null}, {"description": "Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile antiport activity.", "edge_id": "edge-6", "evidence": [{"notes": "Cytoplasmic Na+ is required to support high levels of alkaliphile antiport activity.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic Na+", "source_grounding": null, "target": "extreme-alkaliphile Na+/H+ antiport", "target_grounding": null}, {"description": "Proton uptake accompanying ATP synthesis contributes to alkaliphile pH homeostasis.", "edge_id": "edge-7", "evidence": [{"notes": "The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase contributes to alkaliphile pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "F1Fo-ATP synthase", "source_grounding": null, "target": "alkaline pH homeostasis", "target_grounding": null}, {"description": "Maintenance of cytoplasmic pH homeostasis enables growth at strongly alkaline external pH.", "edge_id": "edge-8", "evidence": [{"notes": "Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH 10.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "alkaline pH homeostasis", "source_grounding": null, "target": "pH range high", "target_grounding": "METPO:1000464"}, {"description": "External pH above ~10.3 shifts dissolved inorganic carbon speciation toward carbonate.", "edge_id": "edge-9", "evidence": [{"notes": "DIC speciation shifts strongly with pH, toward CO3= above ~10.3.", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "shifts speciation toward", "predicate_id": null, "source": "external pH \u003e 10.3", "source_grounding": null, "target": "carbonate (CO3 2-) speciation", "target_grounding": null}], "graph_id": "ph_range_high_extreme_alkaliphile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against a strongly alkaline exterior.", "grounding": null, "id": "alkaline_ph_homeostasis", "is_orphan": false, "label": "alkaline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Shift of dissolved inorganic carbon toward carbonate at high pH.", "grounding": null, "id": "carbonate_speciation", "is_orphan": false, "label": "carbonate (CO3 2-) speciation", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular sodium pool required to sustain alkaliphile antiport activity.", "grounding": null, "id": "cytoplasmic_na", "is_orphan": false, "label": "cytoplasmic Na+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Strongly alkaline external pH above ~10.3.", "grounding": null, "id": "external_ph_high", "is_orphan": false, "label": "external pH \u003e 10.3", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Robust Na+/H+ antiporter activity importing H+ at strongly alkaline external pH.", "grounding": null, "id": "extreme_alkaliphile_antiport", "is_orphan": false, "label": "extreme-alkaliphile Na+/H+ antiport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proton-translocating ATP synthase whose proton uptake contributes to pH homeostasis.", "grounding": null, "id": "f1fo_atp_synthase", "is_orphan": false, "label": "F1Fo-ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Large transmembrane electrical potential energizing electrogenic cation/H+ antiport.", "grounding": null, "id": "membrane_potential", "is_orphan": false, "label": "transmembrane potential (delta-psi)", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Hetero-oligomeric CPA3-family Na+/H+ antiporter complex essential at high external pH.", "grounding": null, "id": "mrp_antiporter_complex", "is_orphan": false, "label": "Mrp Na+/H+ antiporter complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Symporters re-importing Na+ with solutes to supply cytoplasmic Na+ for antiport.", "grounding": null, "id": "na_solute_symporters", "is_orphan": false, "label": "Na+/solute symporters", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range extending above ~10.", "grounding": "METPO:1000464", "id": "ph_range_high_trait", "is_orphan": false, "label": "pH range high", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "pH-range-high extreme-alkaliphile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -911,13 +940,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
