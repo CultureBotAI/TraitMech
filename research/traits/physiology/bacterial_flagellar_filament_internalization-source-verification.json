@@ -1,0 +1,405 @@
+{
+  "at": "2026-10-15T23:17:45.888222+00:00",
+  "status": "SOURCE_VERIFICATION_NOT_ALLOCATION",
+  "candidate": "bacterial flagellar filament internalization",
+  "rows": [
+    {
+      "reference": "DOI:10.1038/s41564-023-01401-2",
+      "snippet": "most or all of the filament was internalized to the periplasm",
+      "role": "definition_support",
+      "native_verdict": "NOT_IN_ABSTRACT",
+      "native_checked_at": "2026-10-15T21:24:36.445199+00:00",
+      "direct_full_text_match": true,
+      "locator": "Results S3",
+      "source_sha256": "6288c2a9aa29a833565e2c0561f3ef2237856971d8da54e5a2c12947649eaee4",
+      "independence": "primary experiment"
+    },
+    {
+      "reference": "DOI:10.1063/pt.nkma.bqid",
+      "snippet": "B. bacteriovorus retracts its extracellular hook and filament into its own periplasmic space",
+      "role": "definition_support",
+      "native_verdict": "UNRESOLVED",
+      "native_checked_at": "2026-10-15T21:24:37.036553+00:00",
+      "direct_full_text_match": true,
+      "locator": "Figure 5 caption",
+      "source_sha256": "c80795701cc34a52d70dcbe7aeb52653c8d1ace7b8b19a0c1ee380e7de6a1755",
+      "independence": "author perspective on the same 2023 experiment; not independent replication"
+    }
+  ],
+  "scope_context": {
+    "reference": "DOI:10.1111/j.1365-2958.2006.05081.x",
+    "snippet": "In our experiments unshed flagella were seen early during the establishment of an infection.",
+    "role": "comparison_only_not_definition_support",
+    "supports": "NO_EVIDENCE",
+    "native_verdict": "NOT_IN_ABSTRACT",
+    "native_checked_at": "2026-10-15T23:10:15.365520+00:00",
+    "direct_full_text_match": true,
+    "locator": "Results, Flagella are not always shed upon prey entry",
+    "source_sha256": "13b4024c10eed886fa3e86480d109d0adf532259d258feb9a018a7e2f0026ebc"
+  },
+  "source_assets": [
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-public-apis-20261015/pmc-efetch.xml",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11061892",
+      "inspected": "PMC11061892.1; Results S3, Discussion S6, Methods S8-S12, Figure 3 caption and Data availability S17",
+      "sha256": "6288c2a9aa29a833565e2c0561f3ef2237856971d8da54e5a2c12947649eaee4"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-publisher-assets-20261015/figure3.png",
+      "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41564-023-01401-2/MediaObjects/41564_2023_1401_Fig3_HTML.png",
+      "inspected": "Actual full Figure 3 viewed; 100 nm main scale bar differs from manuscript caption 50 nm",
+      "sha256": "dde1fc29702528dce06260cf655cadf43627ff37bf3a2047c100ad15becfc4a4"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-public-supplement-late-20261015/supplement.pdf",
+      "url": "https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41564-023-01401-2/MediaObjects/41564_2023_1401_MOESM1_ESM.pdf",
+      "inspected": "67 pages; visual inspection limited to pages 1, 22-35, 66-67; selected S14-S22/Table S1-S2 text, not all contents",
+      "sha256": "b3111bb29f9ca2b5cca99e9bdf42bdfcfd2ffa42c480ec14ea8afc6cdc19fe20"
+    },
+    {
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2024-publisher.html",
+      "url": "https://physicstoday.aip.org/features/the-connection-between-darwins-finches-and-bacterial-flagellar-motors",
+      "inspected": "Disassembly processes, Figure 5 caption and reference 16",
+      "sha256": "c80795701cc34a52d70dcbe7aeb52653c8d1ace7b8b19a0c1ee380e7de6a1755"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-sources-20261015/2006.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1453311/fullTextXML",
+      "inspected": "PMC1453311.1; unshed-flagella Results, Discussion, Electron microscopy Methods and Figure 1 caption",
+      "sha256": "13b4024c10eed886fa3e86480d109d0adf532259d258feb9a018a7e2f0026ebc"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2006-figure-20261015/figure1.jpg",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/69f6/1453311/5ca737fb2a9c/mmi_5081_f1.jpg",
+      "inspected": "Actual full 456 by 390 pixel Figure 1 viewed; not the larger original mentioned in JATS",
+      "sha256": "1f905d7fca196b7d8739722acf6c961f0a630f2d4411be75d9ece59bad1d8768"
+    }
+  ],
+  "research_receipts": [
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-primary-assessment-20261015.json",
+      "bytes": 2742,
+      "sha256": "51207c99c98287922929e65ddaf59b927094270b63e3de3576567adcb956a3f0"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2023-manuscript-assessment-20261015.json",
+      "bytes": 4934,
+      "sha256": "316b109a17c944877b96c2bee46a55a3e5325fd724dd4c827e1276f404237f2e"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2023-figure-assessment-20261015.json",
+      "bytes": 2920,
+      "sha256": "c7bc107b71eb545297f4c17e577c892796d8e2a2b8ed32c5b81b8f3a452b90f4"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2023-supplement-assessment-20261015.json",
+      "bytes": 2848,
+      "sha256": "df142a817af013dfc3e8f8b3d84f692f4f09bb4f1751277beefa8a279636c526"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-author-perspective-20261015.json",
+      "bytes": 1586,
+      "sha256": "de6b4bccef93e3256563716142ddec23b1e3b0fbfdf9e9b538a6c17d20201338"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2024-figure-assessment-20261015.json",
+      "bytes": 2419,
+      "sha256": "936dbca906dd82eaff4f0db67e3e96e754ccd83b8766b3f810b40e613b3cd10e"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-native-assessment-20261015.json",
+      "bytes": 2293,
+      "sha256": "2fe25ca2cb11ee51b8cc0d789ae30216a4e44b700ae1b81f5da5c5adeb9b27c2"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-scope-note-20261015.json",
+      "bytes": 1201,
+      "sha256": "f94e84bf33b59932e071f85dcb97d7475694052bd4c0ebdbb6ea5416c75c979c"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-pinned-metpo-scope-20261015.json",
+      "bytes": 1521,
+      "sha256": "f173a635496c2d72f2f6cd46717bd01d2d1bf0de4e5a0ed090b4a53af2995b06"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-current-remote-assessment-20261015.json",
+      "bytes": 6053,
+      "sha256": "a69104e9e1b8e0343f4bb610e20e227c9db7b35e54f9d8ff26eaa79e60e66e0a"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-window-assessment-20261015.json",
+      "bytes": 9864,
+      "sha256": "ab8661716605c870d271702c87643f8b14e16fc29403b28c774d02dae471ec9e"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2006-figure-assessment-20261015.json",
+      "bytes": 3605,
+      "sha256": "b83e85947207130105736cc50b5353d939b5cd7f456d4ba1f95875d93c187e84"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-taxonomy-20261015/rank-discrepancy-correction.json",
+      "bytes": 2147,
+      "sha256": "7ef247ee6c0a1c1e0b3ebd0b54d72fcd5b1f3eed96aa624c0c8828b9e4c17dd9"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-retained-screen-20261015/local/completion.json",
+      "bytes": 866,
+      "sha256": "e4159bc81de2aa52128782590d20ba3c123c7b160e7902b0599873770074de7a"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-remote-20261015/result.json",
+      "bytes": 85201,
+      "sha256": "8b39ef2f04e6dd234227c5086019877e751bd8d575f72b0698bba83f4a73735b"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-remote-20261015/description-stability.json",
+      "bytes": 262,
+      "sha256": "a396e4be0028a848064d314dce6283fa566eb721a7087582a55ea155f4142e39"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-before-delete-screen-20261015/result.json",
+      "bytes": 174809,
+      "sha256": "4349f78db935d3c9473554eca9cf31ac6b1926b60df63a842e73a7fbb66e4d90"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-after-delete-screen-20261015/result.json",
+      "bytes": 174808,
+      "sha256": "c83cb94695cc80ab7faaa2a71e577c087ad74cd123fef88713a89db189ce051a"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-handoff-20261015.json",
+      "sha256": "cbcf550c1f4034c2a92cb442a87c1db8f7e03ef888d993409ef4590a6b83f435"
+    },
+    {
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/result.json",
+      "sha256": "6a21258c4ee45184963d3cbb4f56f5bc2d62f4887bdb53008a9369d4a6ddfe1e"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-snippets-assets-20261015/receipt.json",
+      "sha256": "fe89bc8fb20758b738a4f9ef98a8263f9fc3710fb58488f7d1bf2421566d0b50"
+    },
+    {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2024-figure5-20261015.png",
+      "sha256": "cf5532267e6750722e247ac8ccea40872d7fe7cdd307eb8dc19d317fd9e2b896"
+    }
+  ],
+  "metadata": [
+    {
+      "source": "Crossref",
+      "doi": "10.1038/s41564-023-01401-2",
+      "title": [
+        "Bdellovibrio predation cycle characterized at nanometre-scale resolution with cryo-electron tomography"
+      ],
+      "type": "journal-article",
+      "relation": {
+        "has-review": [
+          {
+            "id-type": "doi",
+            "id": "10.3410/f.742690890.793599662",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "update-to": null,
+      "updated-by": null,
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            22
+          ]
+        ]
+      }
+    },
+    {
+      "source": "MED",
+      "doi": "10.1038/s41564-023-01401-2",
+      "id": "37349588",
+      "title": "Bdellovibrio predation cycle characterized at nanometre-scale resolution with cryo-electron tomography.",
+      "pubTypeList": {
+        "pubType": [
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ]
+      },
+      "commentCorrectionList": null,
+      "versionList": null
+    },
+    {
+      "source": "Crossref",
+      "doi": "10.1063/pt.nkma.bqid",
+      "title": [
+        "The connection between Darwin\u2019s finches and bacterial flagellar motors"
+      ],
+      "type": "journal-article",
+      "relation": {},
+      "update-to": null,
+      "updated-by": null,
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "source": "Crossref",
+      "doi": "10.1111/j.1365-2958.2006.05081.x",
+      "title": [
+        "Characterizing the flagellar filament and the role of motility in bacterial prey\u2010penetration by\n                    <i>Bdellovibrio bacteriovorus</i>"
+      ],
+      "type": "journal-article",
+      "relation": {},
+      "update-to": null,
+      "updated-by": null,
+      "published": {
+        "date-parts": [
+          [
+            2006,
+            3,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "source": "MED",
+      "doi": "10.1111/j.1365-2958.2006.05081.x",
+      "id": "16573680",
+      "title": "Characterizing the flagellar filament and the role of motility in bacterial prey-penetration by Bdellovibrio bacteriovorus.",
+      "pubTypeList": {
+        "pubType": [
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "commentCorrectionList": null,
+      "versionList": null
+    }
+  ],
+  "metadata_requests": [
+    {
+      "requested_at": "2026-10-15T23:10:10.690657+00:00",
+      "url": "https://api.crossref.org/works/10.1038/s41564-023-01401-2",
+      "params": null,
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1038/s41564-023-01401-2",
+      "content_type": "application/json",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2023-crossref.json",
+      "bytes": 37921,
+      "sha256": "ad23a4d015fe885db6483b0c30099bb8a21affce2ce7d0d1a3c792a1a1178fea",
+      "completed_at": "2026-10-15T23:10:11.285439+00:00"
+    },
+    {
+      "requested_at": "2026-10-15T23:10:11.287720+00:00",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:37349588 AND SRC:MED",
+        "resultType": "core",
+        "format": "json"
+      },
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37349588+AND+SRC%3AMED&resultType=core&format=json",
+      "content_type": "application/json;charset=UTF-8",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2023-med.json",
+      "bytes": 8405,
+      "sha256": "f2fb23685f7bd9d32abd76992491b23e9f19d997a5c19a783ee38ebb95817871",
+      "completed_at": "2026-10-15T23:10:12.193480+00:00"
+    },
+    {
+      "requested_at": "2026-10-15T23:10:12.195297+00:00",
+      "url": "https://api.crossref.org/works/10.1063/pt.nkma.bqid",
+      "params": null,
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1063/pt.nkma.bqid",
+      "content_type": "application/json",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2024-crossref.json",
+      "bytes": 6444,
+      "sha256": "a7efba5ef96e697f901b17214cbf6493a321f63d56ae4328687e1d39ff02c19d",
+      "completed_at": "2026-10-15T23:10:12.525282+00:00"
+    },
+    {
+      "requested_at": "2026-10-15T23:10:12.526989+00:00",
+      "url": "https://api.crossref.org/works/10.1111/j.1365-2958.2006.05081.x",
+      "params": null,
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1111/j.1365-2958.2006.05081.x",
+      "content_type": "application/json",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2006-crossref.json",
+      "bytes": 8268,
+      "sha256": "917863e290cc6033a185a13d4f3504484c00571fee54765c29642b7ebf2d58c0",
+      "completed_at": "2026-10-15T23:10:12.845995+00:00"
+    },
+    {
+      "requested_at": "2026-10-15T23:10:12.847415+00:00",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "params": {
+        "query": "EXT_ID:16573680 AND SRC:MED",
+        "resultType": "core",
+        "format": "json"
+      },
+      "status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16573680+AND+SRC%3AMED&resultType=core&format=json",
+      "content_type": "application/json;charset=UTF-8",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2006-med.json",
+      "bytes": 6698,
+      "sha256": "acb0b66b32729645e0444b9968c72a982a3bf1b5229414d65712c8ace2f957b1",
+      "completed_at": "2026-10-15T23:10:13.553573+00:00"
+    },
+    {
+      "requested_at": "2026-10-15T23:10:14.545463+00:00",
+      "url": "https://physicstoday.aip.org/features/the-connection-between-darwins-finches-and-bacterial-flagellar-motors",
+      "params": null,
+      "status": 200,
+      "final_url": "https://physicstoday.aip.org/features/the-connection-between-darwins-finches-and-bacterial-flagellar-motors",
+      "content_type": "text/html;charset=UTF-8",
+      "path": "/tmp/traitmech-bacterial-internalization-source-refresh-20261015/2024-publisher.html",
+      "bytes": 260488,
+      "sha256": "c80795701cc34a52d70dcbe7aeb52653c8d1ace7b8b19a0c1ee380e7de6a1755",
+      "completed_at": "2026-10-15T23:10:15.354788+00:00"
+    }
+  ],
+  "actual_2024_figure_assessment": {
+    "status": "RESEARCH_ASSESSMENT_NO_ACCEPTANCE_OR_ALLOCATION",
+    "date": "2026-10-15",
+    "doi": "10.1063/pt.nkma.bqid",
+    "publisher_url": "https://physicstoday.aip.org/features/the-connection-between-darwins-finches-and-bacterial-flagellar-motors",
+    "crossref": {
+      "path": "/tmp/traitmech-next-bacterial-internalization-2024-crossref-20261015.json",
+      "sha256": "a7efba5ef96e697f901b17214cbf6493a321f63d56ae4328687e1d39ff02c19d",
+      "checked": "Exact DOI/title, Mohammed Kaplan authorship, issued 2024-03-01, journal-article type, empty relation and null returned update-to/updated-by fields. These are bounded metadata checks, not comprehensive notice clearance."
+    },
+    "figure5": {
+      "url": "https://k1-prod-aip.s3.us-east-2.amazonaws.com/brightspot/PTO.v77.i3.28_1.f5.png",
+      "path": "/tmp/traitmech-next-bacterial-internalization-2024-figure5-20261015.png",
+      "sha256": "cf5532267e6750722e247ac8ccea40872d7fe7cdd307eb8dc19d317fd9e2b896",
+      "acquisition": "The publisher image-resizing endpoint timed out in the web tool. The underlying public image URL exposed by that link downloaded successfully; both outcomes remain distinct.",
+      "direct_visual_assessment": "Inspected the complete actual Figure 5. It is a colored rendering/segmentation, not an unlabeled raw tomographic slice or longitudinal movie. The red filament continues outside and along the predator's own periplasm; an inset labels the displaced motor and inner/outer membranes. The green prey cell is separate. No new rate, replicate count or raw-data reanalysis follows from this rendering."
+    },
+    "candidate_excerpt": {
+      "text": "B. bacteriovorus retracts its extracellular hook and filament into its own periplasmic space",
+      "words": 13,
+      "locator": "Figure 5 caption, second sentence, contiguous span in directly read publisher HTML.",
+      "native_verdict": "NOT_YET_RUN",
+      "role": "Author-perspective support for the endpoint/terminology, not another independent experiment. Reference 16 is the same author's 2023 primary study."
+    },
+    "remaining": "Do not impose digestion, universal motor displacement or evolutionary origin of spirochaete endoflagella. Source 2023 still needs fuller direct Methods/figure/supplement review. Establish phenotype scope and role-qualified two-citation support, native snippet outcomes, live METPO assessment and ignored/hidden-aware novelty/reservations before acceptance."
+  },
+  "source_limits": [
+    "Fixed cryo-ET stages are not same-cell temporal observations. Minicell enrichment and possible physiology effects constrain generalization.",
+    "The 2024 perspective describes the same 2023 experiment, not an independent replication. The 2006 comparison does not show the defining internalization.",
+    "The 2023 main PDF, other actual main figures, unselected supplementary images/movies and peer-response files remain unread. The 2006 other actual figures, supplements and main PDF remain unread.",
+    "Native NOT_IN_ABSTRACT and UNRESOLVED are retained separately from direct full-text matching. Failed publisher, PMC and PubMed requests are not successful full-text access.",
+    "Returned Crossref/MED notice fields are bounded metadata checks, not comprehensive correction or retraction clearance. The linked post-publication review DOI:10.3410/f.742690890.793599662 remains unread after unsuccessful public access.",
+    "The source manuscript/publisher scale-bar discrepancy is retained; no absolute dimension, rate, all-cell prevalence, universal molecular mechanism or taxon-level disjointness is inferred."
+  ],
+  "taxonomy": "Authority research is retained in the handoff, including its rank-endpoint discrepancy correction. No canonical taxon is asserted by this receipt.",
+  "unchanged_source_text": "No full abstracts, full article text or source images are copied into this curation receipt."
+}
