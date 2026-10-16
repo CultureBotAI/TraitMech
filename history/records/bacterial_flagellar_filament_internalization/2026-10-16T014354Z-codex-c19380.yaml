@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/bacterial_flagellar_filament_internalization.yaml
+  slug: bacterial_flagellar_filament_internalization
+session:
+  id: 2026-10-16T014354Z-codex-c19380
+  timestamp: '2026-10-16T01:43:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add bacterial flagellar filament internalization
+  details: Added one PROPOSED own-flagellar-filament withdrawal phenotype with primary DOI:10.1038/s41564-023-01401-2
+    and author-perspective DOI:10.1063/pt.nkma.bqid. Checked 11/13-word full-text excerpts;
+    the perspective describes the same experiment, not independent replication. Kept DOI:10.1111/j.1365-2958.2006.05081.x
+    and its 14-word excerpt as comparison context with NO_EVIDENCE, not a definition citation.
+    Preserved native NOT_IN_ABSTRACT/UNRESOLVED/NOT_IN_ABSTRACT. Reserved traitmech:000735,
+    v611 and full block 1068800-1068899 after ignored/hidden current-file, retained-history,
+    complete-range and open/draft PR checks plus fresh state guard. Preserved partial-withdrawal,
+    frozen-stage, scale-bar and preparation limits. No canonical taxon, exact synonym/xref
+    or universal molecular graph is asserted. Per-record timestamp is the observed allocation
+    decision, not source acquisition.

@@ -11253,6 +11253,76 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/autophagy.html#autophagy-exemplar-and-mechanism"
  },
  {
+  "discussion_id": "bacterial-flagellar-internalization-scope",
+  "prompt": "Review the withdrawal endpoint without making universal entry-time claims.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bacterial flagellar filament internalization",
+  "source_id": "traitmech:000735",
+  "source_file": "bacterial_flagellar_filament_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "Cell-body periplasm distinguishes withdrawal from an external flagellar sheath lumen, static endoflagella, abnormal assembly, import of free flagellin, uptake of another cell's material and predator entry into the prey's periplasm. Partial withdrawal counts; permanent intactness and complete withdrawal are not required. Bacterial polar ejection traitmech:000732 releases structures externally; eukaryotic axoneme internalization traitmech:000734 involves a different apparatus. These distinctions do not imply disjoint organisms. Earlier 109J observations of externally retained filaments constrain universal early-entry claims but neither demonstrate own-periplasmic withdrawal nor establish its absence. Different strains and preparations are not pooled into one time series.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/j.1365-2958.2006.05081.x"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bacterial_flagellar_filament_internalization.html#bacterial-flagellar-internalization-scope"
+ },
+ {
+  "discussion_id": "bacterial-flagellar-internalization-metpo",
+  "prompt": "Review the proposed phenotype parent and unresolved ontology equivalence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "bacterial flagellar filament internalization",
+  "source_id": "traitmech:000735",
+  "source_file": "bacterial_flagellar_filament_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "Phenotype METPO:1000059, below quality METPO:1000188, is a broader definition-based parent inference, not an assertion of locomotion. No active exact withdrawal term was identified in the inspected pinned and current METPO release/templates. Axially filamented METPO:1000705 describes static periplasmic location under motile; flagellated METPO:1000704 describes locomotory possession. Neither is equivalent to withdrawal. Deprecated METPO:0000089 and METPO:000090 carry OMO:0001000; METPO:1000381 carries IAO:0000226. Their replacement is METPO:1000704. Deprecated flagellum METPO:1000123 carries OMO:0001000 with no observed replacement or consider annotation. These historical identifiers are not revived or asserted as exact xrefs. The ontology pin is unchanged; no upstream acceptance or human sign-off is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bacterial_flagellar_filament_internalization.html#bacterial-flagellar-internalization-metpo"
+ },
+ {
+  "discussion_id": "bacterial-flagellar-internalization-mechanism",
+  "prompt": "Separate observed internalization from universal molecular mechanisms.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "bacterial flagellar filament internalization",
+  "source_id": "traitmech:000735",
+  "source_file": "bacterial_flagellar_filament_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "Motor displacement and P/L-ring separation are structural observations, not universal requirements. Sheath/outer-membrane zippering and lipid effects are hypotheses. A missing motor can reflect the cryo-ET missing wedge; vesicles may reflect sample preparation. No universal force, protease, complete digestion, recycling, rate or order of events is asserted. A sequence feature or flagellin expression alone does not establish this phenotype. A protein-resolved causal graph requires edge-specific evidence and authority-checked, taxon-paired accessions; mechanism curation is deferred, not claimed absent.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bacterial_flagellar_filament_internalization.html#bacterial-flagellar-internalization-mechanism"
+ },
+ {
+  "discussion_id": "bacterial-flagellar-internalization-provenance",
+  "prompt": "Preserve transient-state, source-version and replication limits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "bacterial flagellar filament internalization",
+  "source_id": "traitmech:000735",
+  "source_file": "bacterial_flagellar_filament_internalization.yaml",
+  "attaches_to": [],
+  "rationale": "HD100 is a qualified experimental observation, not an unqualified archetypal taxon assertion. Canonical examples remain omitted pending strain-provenance and representative-state review. The 2024 perspective and 2023 study satisfy two distinct supporting citations, not two independent experiments; supplements are part of the same study. Crossref and qualified MED identities and returned notice fields were checked, not comprehensive correction/retraction clearance. The 2023 linked post-publication review remains unread; unsuccessful publisher/PubMed access does not prove that no notice exists. Source scale-bar and preparation discrepancies are retained rather than silently harmonized. No raw-data reanalysis, exact synonym, equivalent external mapping, paid research or human scientific approval is implied.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/bacterial_flagellar_filament_internalization.html#bacterial-flagellar-internalization-provenance"
+ },
+ {
   "discussion_id": "bacterial-polar-flagellar-ejection-scope",
   "prompt": "Review active basal release separately from possession, loss and resorption.",
   "kind": "CURATION_TODO",
@@ -15482,9 +15552,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 783,
- "total_knowledge_gaps": 480,
- "total_source_entries": 600,
+ "total_discussions": 787,
+ "total_knowledge_gaps": 482,
+ "total_source_entries": 601,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
