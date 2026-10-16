@@ -72,6 +72,12 @@ function loadMap() {
     const cats = Array.from(new Set(points.map(d => d.primary_category || "OTHER"))).sort();
     const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
 
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
     const tooltip = d3.select("#umap-tooltip");
 
     const dots = g.selectAll("circle").data(points).join("circle")
@@ -82,11 +88,11 @@ function loadMap() {
       .attr("opacity", 0.85)
       .style("cursor", "pointer")
       .on("mouseover", (e, d) => {
-        const gene = d.gene_symbol ? ` (${d.gene_symbol})` : "";
+        const gene = d.gene_symbol ? ` (${esc(d.gene_symbol)})` : "";
         tooltip.style("display", "block")
-          .html(`<strong>${d.protein_label}${gene}</strong><br>` +
-                `<span class="muted">${d.uniprot_id} · ${d.seq_len} aa · <em>${d.taxon_label || d.taxon_id}</em></span><br>` +
-                `<span class="muted">Trait: ${d.primary_trait} (${d.primary_category})</span>`);
+          .html(`<strong>${esc(d.protein_label)}${gene}</strong><br>` +
+                `<span class="muted">${esc(d.uniprot_id)} · ${esc(d.seq_len)} aa · <em>${esc(d.taxon_label || d.taxon_id)}</em></span><br>` +
+                `<span class="muted">Trait: ${esc(d.primary_trait)} (${esc(d.primary_category)})</span>`);
       })
       .on("mousemove", (e) => {
         tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
@@ -113,7 +119,7 @@ function loadMap() {
       Object.keys(catCounts).sort().forEach(v => {
         const lab = document.createElement("label");
         lab.className = "facet-opt";
-        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${catCounts[v].toLocaleString()}</span>`;
+        lab.innerHTML = `<input type="checkbox" checked><span>${esc(v)}</span><span class="cnt">${catCounts[v].toLocaleString()}</span>`;
         lab.querySelector("input").addEventListener("change", (e) => {
           if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
           update();
@@ -145,6 +151,7 @@ function loadMap() {
         if (pass) visible++;
         d3.select(this)
           .style("display", inFacet ? null : "none")
+          .style("pointer-events", pass ? "auto" : "none")
           .attr("opacity", pass ? 0.85 : 0.08);
       });
       document.getElementById("visible-count").textContent = `${visible} visible`;
@@ -158,10 +165,6 @@ function loadMap() {
     buildFacets();
     update();
 
-    function esc(s) {
-      return String(s == null ? "" : s)
-        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
     function buildDataTable() {
       const tbody = document.querySelector("#data-table tbody");
       if (!tbody) return;

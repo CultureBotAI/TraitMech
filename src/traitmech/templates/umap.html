@@ -74,6 +74,12 @@ function loadMap() {
     const cats = Array.from(new Set(points.map(d => d.category))).sort();
     const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
 
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
     const tooltip = d3.select("#umap-tooltip");
 
     const dots = g.selectAll("circle").data(points).join("circle")
@@ -85,7 +91,7 @@ function loadMap() {
       .style("cursor", "pointer")
       .on("mouseover", (e, d) => {
         tooltip.style("display", "block")
-          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category}</span>`);
+          .html(`<strong>${esc(d.label)}</strong><br><span class="muted">${esc(d.id)} · ${esc(d.category)}</span>`);
       })
       .on("mousemove", (e) => {
         tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
@@ -129,7 +135,7 @@ function loadMap() {
       Object.keys(counts).sort().forEach(v => {
         const lab = document.createElement("label");
         lab.className = "facet-opt";
-        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${counts[v].toLocaleString()}</span>`;
+        lab.innerHTML = `<input type="checkbox" checked><span>${esc(v)}</span><span class="cnt">${counts[v].toLocaleString()}</span>`;
         lab.querySelector("input").addEventListener("change", (e) => {
           if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
           update();
@@ -159,6 +165,7 @@ function loadMap() {
         if (pass) visible++;
         d3.select(this)
           .style("display", activeCategories.has(facetCat(d)) ? null : "none")
+          .style("pointer-events", pass ? "auto" : "none")
           .attr("opacity", pass ? 0.78 : 0.05);
       });
       document.getElementById("visible-count").textContent = `${visible} visible`;
@@ -172,10 +179,6 @@ function loadMap() {
     update();
 
     // --- Data-table fallback: same points as the plot, keyboard-reachable ---
-    function esc(s) {
-      return String(s == null ? "" : s)
-        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
     function buildDataTable() {
       const tbody = document.querySelector("#data-table tbody");
       if (!tbody) return;
